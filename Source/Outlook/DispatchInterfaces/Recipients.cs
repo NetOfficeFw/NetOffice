@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OutlookApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866751.aspx </remarks>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Recipients : COMObject, IEnumerable<NetOffice.OutlookApi.Recipient>
+	public class Recipients : COMObject, IEnumerableProvider<NetOffice.OutlookApi.Recipient>
 	{
 		#pragma warning disable
 
@@ -235,7 +236,23 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.OutlookApi.Recipient> Member
+        #region IEnumerableProvider<NetOffice.OutlookApi.Recipient>
+
+        ICOMObject IEnumerableProvider<NetOffice.OutlookApi.Recipient>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OutlookApi.Recipient>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi.Recipient item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.Recipient>
 
         /// <summary>
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16
@@ -252,7 +269,7 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16

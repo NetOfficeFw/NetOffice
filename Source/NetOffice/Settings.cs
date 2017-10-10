@@ -9,7 +9,7 @@ namespace NetOffice
     /// Core Settings
     /// </summary>
     [TypeConverter(typeof(Converter.ExpandableSettingsConverter))]
-    public class Settings
+    public class Settings : INotifyPropertyChanged
     {
         #region Constants
 
@@ -55,8 +55,19 @@ namespace NetOffice
         /// </summary>
         public Settings()
         {
-            _messageFilter = new RetryMessageFilter();
-            _performanceTrace = new PerformanceTrace();
+            _messageFilter = new RetryMessageFilter(OnPropertyChanged);
+            _performanceTrace = new PerformanceTrace(OnPropertyChanged);
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="settings">settings to load from</param>
+        public Settings(Settings settings)
+        {
+            _messageFilter = new RetryMessageFilter(OnPropertyChanged);
+            _performanceTrace = new PerformanceTrace(OnPropertyChanged);
+            LoadFrom(settings);
         }
 
         #endregion
@@ -103,7 +114,11 @@ namespace NetOffice
             }
             set
             {
-                _enableProxyManagement = value;
+                if (value != _enableProxyManagement)
+                { 
+                    _enableProxyManagement = value;
+                    OnPropertyChanged("EnableProxyManagement");
+                }
             }
         }
 
@@ -119,7 +134,11 @@ namespace NetOffice
             }
             set
             {
-                _enableDynamicObjects = value;
+                if (value != _enableDynamicObjects)
+                {
+                    _enableDynamicObjects = value;
+                    OnPropertyChanged("EnableDynamicObjects");
+                }
             }
         }
         
@@ -135,7 +154,11 @@ namespace NetOffice
             }
             set
             {
-                _enableKnownReferenceInspection = value;
+                if (value != _enableKnownReferenceInspection)
+                {
+                    _enableKnownReferenceInspection = value;
+                    OnPropertyChanged("EnableKnownReferenceInspection");
+                }
             }
         }
 
@@ -151,7 +174,11 @@ namespace NetOffice
             }
             set
             {
-                _enableAutoDisposeEventArguments = value;
+                if (value != _enableAutoDisposeEventArguments)
+                {
+                    _enableAutoDisposeEventArguments = value;
+                    OnPropertyChanged("EnableAutoDisposeEventArguments");
+                }
             }
         }
 
@@ -167,7 +194,11 @@ namespace NetOffice
             }
             set
             {
-                _enableDynamicEventArguments = value;
+                if (value != _enableDynamicEventArguments)
+                {
+                    _enableDynamicEventArguments = value;
+                    OnPropertyChanged("EnableDynamicEventArguments");
+                }
             }
         }
 
@@ -184,7 +215,11 @@ namespace NetOffice
             }
             set
             {
-                _exceptionMessageBehavior = value;
+                if (value != _exceptionMessageBehavior)
+                { 
+                    _exceptionMessageBehavior = value;
+                    OnPropertyChanged("ExceptionMessageBehavior");
+                }
             }
         }
 
@@ -201,7 +236,11 @@ namespace NetOffice
             }
             set
             {
-                _exceptionDefaultMessage = value;
+                if (value != _exceptionDefaultMessage)
+                {
+                    _exceptionDefaultMessage = value;
+                    OnPropertyChanged("ExceptionDefaultMessage");
+                }
             }
         }
 
@@ -219,7 +258,11 @@ namespace NetOffice
             }
             set
             {
-                _exceptionDiagnosticsMessage = value;
+                if (value != _exceptionDiagnosticsMessage)
+                {
+                    _exceptionDiagnosticsMessage = value;
+                    OnPropertyChanged("ExceptionDiagnosticsMessage");
+                }
             }
         }
 
@@ -252,7 +295,12 @@ namespace NetOffice
             {
                 if (null == value)
                     throw new ArgumentNullException("ThreadCulture must have a value");
-                _cultureInfo = value;
+
+                if (value != _cultureInfo)
+                {
+                    _cultureInfo = value;
+                    OnPropertyChanged("ThreadCulture");
+                }
             }
         }
 
@@ -268,7 +316,11 @@ namespace NetOffice
             }
             set
             {
-                _eventsEnabled = value;
+                if (value != _eventsEnabled)
+                {
+                    _eventsEnabled = value;
+                    OnPropertyChanged("EnableEvents");
+                }
             }
         }
 
@@ -296,7 +348,11 @@ namespace NetOffice
             }
             set
             {
-                _enableAutomaticQuit = value;
+                if (value != _enableAutomaticQuit)
+                {
+                    _enableAutomaticQuit = value;
+                    OnPropertyChanged("EnableAutomaticQuit");
+                }
             }
         }
 
@@ -312,7 +368,11 @@ namespace NetOffice
             }
             set
             {
-                _enableSafeMode = value;
+                if (value != _enableSafeMode)
+                {
+                    _enableSafeMode = value;
+                    OnPropertyChanged("EnableSafeMode");
+                }
             }
         }
 
@@ -329,7 +389,11 @@ namespace NetOffice
             }
             set
             {
-                _enableAdHocLoading = value;
+                if (value != _enableAdHocLoading)
+                {
+                    _enableAdHocLoading = value;
+                    OnPropertyChanged("EnableAdHocLoading");
+                }
             }
         }
 
@@ -346,7 +410,11 @@ namespace NetOffice
             }
             set
             {
-                _enableDeepLoading = value;
+                if (value != _enableDeepLoading)
+                {
+                    _enableDeepLoading = value;
+                    OnPropertyChanged("EnableDeepLoading");
+                }
             }
         }
 
@@ -362,7 +430,11 @@ namespace NetOffice
             }
             set
             {
-                _enableMoreDebugOutput = value;
+                if (value != _enableMoreDebugOutput)
+                {
+                    _enableMoreDebugOutput = value;
+                    OnPropertyChanged("EnableMoreDebugOutput");
+                }
             }
         }
 
@@ -378,7 +450,11 @@ namespace NetOffice
             }
             set
             {
-                _enableEventDebugOutput = value;
+                if (value != _enableEventDebugOutput)
+                {
+                    _enableEventDebugOutput = value;
+                    OnPropertyChanged("EnableEventDebugOutput");
+                }
             }
         }
 
@@ -394,7 +470,11 @@ namespace NetOffice
             }
             set
             {
-                _cacheOptions = value;
+                if (value != _cacheOptions)
+                {
+                    _cacheOptions = value;
+                    OnPropertyChanged("CacheOptions");
+                }
             }
         }
 
@@ -410,7 +490,11 @@ namespace NetOffice
             }
             set
             {
-                _enableOperatorOverlads = value;
+                if (value != _enableOperatorOverlads)
+                {
+                    _enableOperatorOverlads = value;
+                    OnPropertyChanged("EnableOperatorOverlads");
+                }
             }
         }
 
@@ -426,8 +510,107 @@ namespace NetOffice
             }
             set
             {
-                _loadAssembliesUnsafe = value;
+                if (value != _loadAssembliesUnsafe)
+                {
+                    _loadAssembliesUnsafe = value;
+                    OnPropertyChanged("LoadAssembliesUnsafe");
+                }
             }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Returns information given settings is different from instance
+        /// </summary>
+        /// <param name="settings">settings to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        public bool IsEqualTo(Settings settings)
+        {
+            if (null == settings || settings == this)
+                return true;
+           
+            // todo: handle that better by reflection
+
+            if (PerformanceTrace.Enabled != settings.PerformanceTrace.Enabled || EnableProxyManagement != settings.EnableProxyManagement ||
+                EnableDynamicObjects != settings.EnableDynamicObjects || EnableDynamicEventArguments != settings.EnableDynamicEventArguments)
+                return false;
+
+            if ( EnableAutoDisposeEventArguments != settings.EnableAutoDisposeEventArguments || EnableDynamicEventArguments != settings.EnableDynamicEventArguments ||
+                 ExceptionMessageBehavior != settings.ExceptionMessageBehavior || ExceptionDefaultMessage != settings.ExceptionDefaultMessage)
+                return false;
+
+            if (ExceptionDiagnosticsMessage != settings.ExceptionDiagnosticsMessage || ThreadCulture != settings.ThreadCulture ||
+                EnableEvents != settings.EnableEvents || MessageFilter.Enabled != settings.MessageFilter.Enabled)
+                return false;
+
+            if (MessageFilter.RetryMode != settings.MessageFilter.RetryMode || MessageFilter.LogMode != settings.MessageFilter.LogMode ||
+               EnableAutomaticQuit != settings.EnableAutomaticQuit || EnableSafeMode != EnableSafeMode)
+                return false;
+
+            if (EnableAdHocLoading != settings.EnableAdHocLoading || EnableDeepLoading != settings.EnableDeepLoading ||
+                 EnableMoreDebugOutput != settings.EnableMoreDebugOutput || EnableEventDebugOutput != settings.EnableEventDebugOutput)
+                return false;
+
+            if (CacheOptions != settings.CacheOptions || EnableOperatorOverlads != settings.EnableOperatorOverlads ||
+                LoadAssembliesUnsafe != settings.LoadAssembliesUnsafe)
+                return false;
+
+            return true;
+        }
+
+        /// <summary>
+        /// Load settings from another settings instance
+        /// </summary>
+        /// <param name="settings">settings to load from</param>
+        public void LoadFrom(Settings settings)
+        {
+            if (null == settings || settings == this)
+                return;
+            PerformanceTrace.Enabled = settings.PerformanceTrace.Enabled;
+            EnableProxyManagement = settings.EnableProxyManagement;
+            EnableDynamicObjects = settings.EnableDynamicObjects;
+            EnableKnownReferenceInspection = settings.EnableKnownReferenceInspection;
+
+            EnableAutoDisposeEventArguments = settings.EnableAutoDisposeEventArguments;
+            EnableDynamicEventArguments = settings.EnableDynamicEventArguments;
+            ExceptionMessageBehavior = settings.ExceptionMessageBehavior;
+            ExceptionDefaultMessage = settings.ExceptionDefaultMessage;
+
+            ExceptionDiagnosticsMessage = settings.ExceptionDiagnosticsMessage;
+            ThreadCulture = settings.ThreadCulture;
+            EnableEvents = settings.EnableEvents;
+            MessageFilter.Enabled = settings.MessageFilter.Enabled;
+
+            MessageFilter.RetryMode = settings.MessageFilter.RetryMode;
+            MessageFilter.LogMode = settings.MessageFilter.LogMode;
+            EnableAutomaticQuit = settings.EnableAutomaticQuit;
+            EnableSafeMode = settings.EnableSafeMode;
+
+            EnableAdHocLoading = settings.EnableAdHocLoading;
+            EnableDeepLoading = settings.EnableDeepLoading;
+            EnableMoreDebugOutput = settings.EnableMoreDebugOutput;
+            EnableEventDebugOutput = settings.EnableEventDebugOutput;
+
+            CacheOptions = settings.CacheOptions;
+            EnableOperatorOverlads = settings.EnableOperatorOverlads;
+            LoadAssembliesUnsafe = settings.LoadAssembliesUnsafe;
+        }
+
+        #endregion
+
+        #region INotifyPropertyChanged
+
+        /// <summary>
+        /// Occurs when a property value changes.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #endregion

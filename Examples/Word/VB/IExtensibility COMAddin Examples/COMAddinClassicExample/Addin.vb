@@ -2,14 +2,13 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("E5F0B1CB-7760-467F-8789-29C5276A3207"), ProgIdAttribute("WordAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("E5F0B1CB-7760-467F-8789-29C5276A3207"), ProgId("WordAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -27,8 +26,8 @@ Public Class Addin
     Private Shared ReadOnly _contextName As String = "Sample ContextMenu VB4"
     Private Shared ReadOnly _contextMenuButtonName As String = "Sample ContextButton VB4"
 
-    Dim _wordApplication As Word.Application = Nothing
-    Dim _normalDotTemplate As Word.Template = Nothing
+    Private _wordApplication As Word.Application = Nothing
+    Private _normalDotTemplate As Word.Template = Nothing
 
 #Region "IDTExtensibility2 Members"
 

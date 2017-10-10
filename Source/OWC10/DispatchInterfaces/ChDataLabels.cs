@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OWC10Api
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class ChDataLabels : COMObject , IEnumerable<NetOffice.OWC10Api.ChDataLabel>
+	public class ChDataLabels : COMObject, IEnumerableProvider<NetOffice.OWC10Api.ChDataLabel>
 	{
 		#pragma warning disable
 
@@ -416,45 +417,62 @@ namespace NetOffice.OWC10Api
 			 Factory.ExecuteMethod(this, "Select");
 		}
 
-		#endregion
-       #region IEnumerable<NetOffice.OWC10Api.ChDataLabel> Member
-        
-        /// <summary>
-		/// SupportByVersion OWC10, 1
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
-        [CustomEnumerator]
-       public IEnumerator<NetOffice.OWC10Api.ChDataLabel> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OWC10Api.ChDataLabel item in innerEnumerator)
-               yield return item;
-       }
+        #endregion
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion OWC10, 1
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
+        #region IEnumerableProvider<NetOffice.OWC10Api.ChDataLabel>
+
+        ICOMObject IEnumerableProvider<NetOffice.OWC10Api.ChDataLabel>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OWC10Api.ChDataLabel>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OWC10Api.ChDataLabel item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OWC10Api.ChDataLabel>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        [CustomEnumerator]
+        public IEnumerator<NetOffice.OWC10Api.ChDataLabel> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OWC10Api.ChDataLabel item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

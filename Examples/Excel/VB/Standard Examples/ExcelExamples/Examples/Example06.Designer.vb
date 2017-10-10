@@ -40,7 +40,7 @@ Partial Class Example06
         'panelSelection
         '
         Me.panelSelection.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.panelSelection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.panelSelection.Controls.Add(Me.radioButton8)
         Me.panelSelection.Controls.Add(Me.radioButton7)
@@ -140,8 +140,8 @@ Partial Class Example06
         'textBoxDescription
         '
         Me.textBoxDescription.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.textBoxDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.textBoxDescription.Location = New System.Drawing.Point(25, 77)
@@ -149,14 +149,14 @@ Partial Class Example06
         Me.textBoxDescription.Name = "textBoxDescription"
         Me.textBoxDescription.Size = New System.Drawing.Size(507, 205)
         Me.textBoxDescription.TabIndex = 20
-        Me.textBoxDescription.Text = "This example contains code to work with dialogs." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start excel and it shows the se" & _
-            "lected Dialog" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and waits for user input. Excel has more than 50 different dialog" & _
-            "s, this is only a sample selection."
+        Me.textBoxDescription.Text = "This example contains code to work with dialogs." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start excel and it shows the se" &
+    "lected Dialog" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and waits for user input. Excel has more than 50 different dialog" &
+    "s, this is only a sample selection."
         '
         'buttonStartExample
         '
         Me.buttonStartExample.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.buttonStartExample.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttonStartExample.Image = CType(resources.GetObject("buttonStartExample.Image"), System.Drawing.Image)
@@ -172,7 +172,7 @@ Partial Class Example06
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Controls.Add(Me.panelSelection)
         Me.Controls.Add(Me.textBoxDescription)
         Me.Controls.Add(Me.buttonStartExample)

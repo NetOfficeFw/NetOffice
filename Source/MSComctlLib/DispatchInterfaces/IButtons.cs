@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.MSComctlLibApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.MSComctlLibApi
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IButtons : COMObject , IEnumerable<NetOffice.MSComctlLibApi.IButton>
+	public class IButtons : COMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.IButton>
 	{
 		#pragma warning disable
 
@@ -284,32 +285,46 @@ namespace NetOffice.MSComctlLibApi
 			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IButton>(this, "Add", index, key, caption, style);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.MSComctlLibApi.IButton> Member
-        
+        #region IEnumerableProvider<NetOffice.MSComctlLibApi.IButton>
+
+        ICOMObject IEnumerableProvider<NetOffice.MSComctlLibApi.IButton>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.MSComctlLibApi.IButton>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.MSComctlLibApi.IButton>
+
         /// <summary>
-		/// SupportByVersion MSComctlLib, 6
-		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
-       public IEnumerator<NetOffice.MSComctlLibApi.IButton> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.MSComctlLibApi.IButton item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion MSComctlLib, 6
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
+        public IEnumerator<NetOffice.MSComctlLibApi.IButton> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.MSComctlLibApi.IButton item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion MSComctlLib, 6
-		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion MSComctlLib, 6
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

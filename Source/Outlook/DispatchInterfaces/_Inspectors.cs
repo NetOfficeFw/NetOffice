@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _Inspectors : COMObject , IEnumerable<NetOffice.OutlookApi.Inspector>
+	public class _Inspectors : COMObject, IEnumerableProvider<NetOffice.OutlookApi.Inspector>
 	{
 		#pragma warning disable
 
@@ -214,7 +215,23 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.OutlookApi.Inspector> Member
+        #region IEnumerableProvider<NetOffice.OutlookApi.Inspector>
+
+        ICOMObject IEnumerableProvider<NetOffice.OutlookApi.Inspector>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OutlookApi.Inspector>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi.Inspector item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.Inspector>
 
         /// <summary>
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16
@@ -231,7 +248,7 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16

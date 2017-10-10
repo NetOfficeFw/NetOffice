@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class _CustomXMLSchemaCollection : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.CustomXMLSchema>
+	public class _CustomXMLSchemaCollection : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLSchema>
 	{
 		#pragma warning disable
 
@@ -269,7 +270,21 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.CustomXMLSchema> Member
+        #region IEnumerableProvider<NetOffice.OfficeApi.CustomXMLSchema>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.CustomXMLSchema>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.CustomXMLSchema>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.CustomXMLSchema>
 
         /// <summary>
         /// SupportByVersion Office, 12,14,15,16
@@ -284,7 +299,7 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Office, 12,14,15,16
@@ -292,7 +307,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

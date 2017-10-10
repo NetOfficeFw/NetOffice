@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Shapes : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.Shape>
+	public class Shapes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.Shape>
 	{
 		#pragma warning disable
 
@@ -668,8 +669,22 @@ namespace NetOffice.OfficeApi
 		}
 
         #endregion
+       
+        #region IEnumerableProvider<NetOffice.OfficeApi.Shape>
 
-        #region IEnumerable<NetOffice.OfficeApi.Shape> Member
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.Shape>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.Shape>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.Shape>
 
         /// <summary>
         /// SupportByVersion Office, 9,10,11,12,14,15,16
@@ -684,7 +699,7 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Office, 9,10,11,12,14,15,16
@@ -692,7 +707,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

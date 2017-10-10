@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _OrderFields : COMObject, IEnumerable<NetOffice.OutlookApi._OrderField>
+	public class _OrderFields : COMObject, IEnumerableProvider<NetOffice.OutlookApi._OrderField>
 	{
 		#pragma warning disable
 
@@ -274,7 +275,23 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.OutlookApi._OrderField> Member
+        #region IEnumerableProvider<NetOffice.OutlookApi._OrderField>
+
+        ICOMObject IEnumerableProvider<NetOffice.OutlookApi._OrderField>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OutlookApi._OrderField>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi._OrderField item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi._OrderField>
 
         /// <summary>
         /// SupportByVersion Outlook, 12,14,15,16
@@ -291,7 +308,7 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Outlook, 12,14,15,16

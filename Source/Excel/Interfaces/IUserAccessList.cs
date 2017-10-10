@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class IUserAccessList : COMObject , IEnumerable<NetOffice.ExcelApi.UserAccess>
+	public class IUserAccessList : COMObject, IEnumerableProvider<NetOffice.ExcelApi.UserAccess>
 	{
 		#pragma warning disable
 
@@ -161,32 +162,46 @@ namespace NetOffice.ExcelApi
 			return Factory.ExecuteInt32MethodGet(this, "DeleteAll");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ExcelApi.UserAccess> Member
-        
+        #region IEnumerableProvider<NetOffice.ExcelApi.UserAccess>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.UserAccess>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.UserAccess>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.UserAccess>
+
         /// <summary>
-		/// SupportByVersion Excel, 10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.ExcelApi.UserAccess> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ExcelApi.UserAccess item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.ExcelApi.UserAccess> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.UserAccess item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Excel, 10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

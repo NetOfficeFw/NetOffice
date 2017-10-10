@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861846.aspx </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class SearchFolders : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.ScopeFolder>
+	public class SearchFolders : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.ScopeFolder>
 	{
 		#pragma warning disable
 
@@ -167,6 +168,20 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
+        #region IEnumerableProvider<NetOffice.OfficeApi.ScopeFolder>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.ScopeFolder>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.ScopeFolder>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
         #region IEnumerable<NetOffice.OfficeApi.ScopeFolder> Member
 
         /// <summary>
@@ -190,7 +205,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
-
 using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
@@ -45,12 +39,12 @@ namespace OutlookExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return "Example06"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Events" : "Ereignisse"; }
+            get { return "Events"; }
         }
 
         public void Connect(IHost hostApplication)
@@ -84,8 +78,8 @@ namespace OutlookExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // start outlook
-            Outlook.Application outlookApplication = new Outlook.Application();
+            // start outlook by trying to access running application first
+            Outlook.Application outlookApplication = new Outlook.Application(true);
 
             // create MailItem and register close event
             Outlook.MailItem mailItem = outlookApplication.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;
@@ -100,7 +94,8 @@ namespace OutlookExamplesCS4
             mailItem.Close(OlInspectorClose.olDiscard);
 
             // close outlook and dispose
-            outlookApplication.Quit();
+            if (!outlookApplication.FromProxyService)
+                outlookApplication.Quit();
             outlookApplication.Dispose();
         }
 

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192425.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class ContentControls : COMObject , IEnumerable<NetOffice.WordApi.ContentControl>
+	public class ContentControls : COMObject, IEnumerableProvider<NetOffice.WordApi.ContentControl>
 	{
 		#pragma warning disable
 
@@ -220,32 +221,46 @@ namespace NetOffice.WordApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.ContentControl>(this, "Add", NetOffice.WordApi.ContentControl.LateBindingApiWrapperType, type);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.ContentControl> Member
-        
+        #region IEnumerableProvider<NetOffice.WordApi.ContentControl>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.ContentControl>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.ContentControl>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.ContentControl>
+
         /// <summary>
-		/// SupportByVersion Word, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 12,14,15,16)]
-       public IEnumerator<NetOffice.WordApi.ContentControl> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.ContentControl item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.ContentControl> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.ContentControl item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Word, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Word, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

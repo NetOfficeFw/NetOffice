@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229516.aspx </remarks>
 	[SupportByVersion("Excel", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
-	public class FullSeriesCollection : COMObject , IEnumerable<NetOffice.ExcelApi.Series>
+	public class FullSeriesCollection : COMObject, IEnumerableProvider<NetOffice.ExcelApi.Series>
 	{
 		#pragma warning disable
 
@@ -185,32 +186,46 @@ namespace NetOffice.ExcelApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ExcelApi.Series> Member
-        
+        #region IEnumerableProvider<NetOffice.ExcelApi.Series>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.Series>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.Series>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Series>
+
         /// <summary>
-		/// SupportByVersion Excel, 15, 16
-		/// </summary>
-		[SupportByVersion("Excel", 15, 16)]
-       public IEnumerator<NetOffice.ExcelApi.Series> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ExcelApi.Series item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
+        public IEnumerator<NetOffice.ExcelApi.Series> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.Series item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Excel, 15, 16
-		/// </summary>
-		[SupportByVersion("Excel", 15, 16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.MSProjectApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.MSProjectApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920674(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class ReportTemplates : COMObject , IEnumerable<NetOffice.MSProjectApi.ReportTemplate>
+	public class ReportTemplates : COMObject, IEnumerableProvider<NetOffice.MSProjectApi.ReportTemplate>
 	{
 		#pragma warning disable
 
@@ -138,36 +139,50 @@ namespace NetOffice.MSProjectApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.MSProjectApi.ReportTemplate> Member
-        
+        #region IEnumerableProvider<NetOffice.MSProjectApi.ReportTemplate>
+
+        ICOMObject IEnumerableProvider<NetOffice.MSProjectApi.ReportTemplate>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.MSProjectApi.ReportTemplate>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.ReportTemplate>
+
         /// <summary>
-		/// SupportByVersion MSProject, 11,12,14
-		/// </summary>
-		[SupportByVersion("MSProject", 11,12,14)]
-       public IEnumerator<NetOffice.MSProjectApi.ReportTemplate> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.MSProjectApi.ReportTemplate item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
+        public IEnumerator<NetOffice.MSProjectApi.ReportTemplate> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.MSProjectApi.ReportTemplate item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion MSProject, 11,12,14
-		/// </summary>
-		[SupportByVersion("MSProject", 11,12,14)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

@@ -1,4 +1,5 @@
 ﻿using System;
+using NetOffice.Exceptions;
 
 namespace NetOffice
 {
@@ -7,6 +8,11 @@ namespace NetOffice
     /// </summary>
     public interface ICOMObject : ICOMObjectProxy, ICOMObjectDisposable, ICOMObjectTable, ICOMObjectTableDisposable, ICOMObjectEvents, ICOMObjectAvaility, ICloneable
     {
+        /// <summary>
+        /// Monitor Lock
+        /// </summary>
+        object SyncRoot { get; }
+
         /// <summary>
         /// The associated factory
         /// </summary>
@@ -26,5 +32,13 @@ namespace NetOffice
         /// The associated console
         /// </summary>
         DebugConsole Console { get; }
+
+        /// <summary>
+        /// Clone instance as target type of T
+        /// </summary>
+        /// <typeparam name="T">any other type to convert</typeparam>
+        /// <returns>cloned instance</returns>
+        /// <exception cref="CloneException">An unexpected error occurs.</exception>
+        T To<T>() where T : class, ICOMObject;
     }
 }

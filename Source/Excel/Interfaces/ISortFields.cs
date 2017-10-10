@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class ISortFields : COMObject , IEnumerable<NetOffice.ExcelApi.SortField>
+	public class ISortFields : COMObject, IEnumerableProvider<NetOffice.ExcelApi.SortField>
 	{
 		#pragma warning disable
 
@@ -254,32 +255,46 @@ namespace NetOffice.ExcelApi
 			return Factory.ExecuteInt32MethodGet(this, "Clear");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ExcelApi.SortField> Member
-        
+        #region IEnumerableProvider<NetOffice.ExcelApi.SortField>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.SortField>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.SortField>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.SortField>
+
         /// <summary>
-		/// SupportByVersion Excel, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 12,14,15,16)]
-       public IEnumerator<NetOffice.ExcelApi.SortField> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ExcelApi.SortField item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.ExcelApi.SortField> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.SortField item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Excel, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

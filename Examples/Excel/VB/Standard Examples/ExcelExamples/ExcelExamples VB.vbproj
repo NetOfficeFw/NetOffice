@@ -81,7 +81,8 @@
     <CodeAnalysisRuleDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExampleBase">
+    <Reference Include="ExampleBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\ExampleBase.dll</HintPath>
     </Reference>
     <Reference Include="ExcelApi">
@@ -142,6 +143,7 @@
     <Compile Include="Examples\Example09.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Examples\Example10.vb" />
     <Compile Include="FormMain.vb">
       <SubType>Form</SubType>
     </Compile>

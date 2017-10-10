@@ -1,15 +1,15 @@
 ﻿Imports ExampleBase
-Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
-Imports NetOffice.ExcelApi.Tools.Utils
+Imports NetOffice.ExcelApi.Tools.Contribution
 
+''' <summary>
+'''  Example 2 - Font Attributes and Alignment for Cells
+''' </summary>
 Public Class Example02
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -17,7 +17,7 @@ Public Class Example02
         Dim excelApplication As New Excel.Application()
         excelApplication.DisplayAlerts = False
 
-        ' create a utils instance, not need for but helpful to keep the lines of code low
+        ' create a utils instance, no need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(excelApplication)
 
         ' add a new workbook
@@ -85,7 +85,7 @@ Public Class Example02
         workSheet.Rows(9).RowHeight = 25
 
         ' save the book 
-        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example02", Excel.Tools.DocumentFormat.Normal)
+        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example02", DocumentFormat.Normal)
         workBook.SaveAs(workbookFile)
 
         ' close excel and dispose reference
@@ -99,13 +99,13 @@ Public Class Example02
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example02", "Beispiel02")
+            Return "Example02"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Font Attributes and Alignment for Cells", "Schrifteigenschaften und Ausrichtung in Zellen")
+            Return "Font Attributes and Alignment for Cells"
         End Get
     End Property
 
@@ -120,7 +120,5 @@ Public Class Example02
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _Results : COMObject , IEnumerable<object>
+	public class _Results : COMObject, IEnumerableProvider<object>
 	{
 		#pragma warning disable
 
@@ -319,8 +320,24 @@ namespace NetOffice.OutlookApi
 		}
 
         #endregion
+       
+        #region IEnumerableProvider<NetOffice.OutlookApi._Reminder>
 
-        #region IEnumerable<object> Member
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (object item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion Outlook, 10,11,12,14,15,16
@@ -337,7 +354,7 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Outlook, 10,11,12,14,15,16

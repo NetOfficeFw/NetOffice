@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OWC10Api
 {
@@ -303,7 +304,6 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>
@@ -312,7 +312,7 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class _Range : _Range_ , IEnumerable<object>
+	public class _Range : _Range_, IEnumerableProvider<object>
 	{
 		#pragma warning disable
 
@@ -1916,7 +1916,21 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerableProvider<object>
+
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion OWC10, 1
@@ -1931,7 +1945,7 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion OWC10, 1
@@ -1939,7 +1953,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, true);
 		}
 
 		#endregion

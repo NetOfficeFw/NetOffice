@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using Extensibility;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
 using Outlook = NetOffice.OutlookApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OutlookApi.Enums;
@@ -15,8 +14,8 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("9516CD2B-9421-4F26-9181-1A646DDC8C35"), ProgId("OutlookAddinCS4.TaskPaneAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2 , Office.ICustomTaskPaneConsumer
+    [Guid("9516CD2B-9421-4F26-9181-1A646DDC8C35"), ProgId("OutlookAddinCS4.TaskPaneAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2 , Office.Native.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Outlook\\AddIns\\";
         private static readonly string _prodId                  = "OutlookAddinCS4.TaskPaneAddin";

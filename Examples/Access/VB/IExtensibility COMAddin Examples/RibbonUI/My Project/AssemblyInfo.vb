@@ -9,9 +9,9 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("COMAddinRibbonExample")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("http://netoffice.codeplex.com")> 
-<Assembly: AssemblyProduct("NetOffice")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("https://github.com/NetOfficeFw/NetOffice")>
 <Assembly: AssemblyCopyright("Copyright © 2011 Sebastian Lange")> 
 <Assembly: AssemblyTrademark("")> 
 

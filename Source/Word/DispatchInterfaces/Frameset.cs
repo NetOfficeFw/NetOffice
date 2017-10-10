@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838922.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
-	public class Frameset : COMObject , IEnumerable<object>
+	public class Frameset : COMObject, IEnumerableProvider<object>
 	{
 		#pragma warning disable
 
@@ -461,32 +462,46 @@ namespace NetOffice.WordApi
 			 Factory.ExecuteMethod(this, "Delete");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<object> Member
-        
+        #region IEnumerableProvider<object>
+
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, true);
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<object>
+
         /// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-       public IEnumerator<object> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (object item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<object> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (object item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, true);
 		}
 
 		#endregion

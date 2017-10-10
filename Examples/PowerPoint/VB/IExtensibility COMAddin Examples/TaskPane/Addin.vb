@@ -3,24 +3,23 @@ Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 Imports System.Reflection
 Imports Extensibility
-
 Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("AD5FBAB7-D362-4492-8FBC-6DDEE1E76237"), ProgIdAttribute("PPointAddinVB4.TaskPaneAddin"), ComVisible(True)> _
+<Guid("AD5FBAB7-D362-4492-8FBC-6DDEE1E76237"), ProgId("PPointAddinVB4.TaskPaneAddin"), ComVisible(True)>
 Public Class Addin
-    Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
+    Implements IDTExtensibility2, Office.Native.ICustomTaskPaneConsumer
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\"
     Private Shared ReadOnly _progId As String = "PPointAddinVB4.TaskPaneAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Task Pane"
 
-    Shared _sampleControl As SampleControl
-    Shared _powerApplication As PowerPoint.Application
+    Private Shared _sampleControl As SampleControl
+    Private Shared _powerApplication As PowerPoint.Application
 
     Public Shared ReadOnly Property Application() As PowerPoint.Application
         Get
@@ -30,7 +29,7 @@ Public Class Addin
 
 #Region "ICustomTaskPaneConsumer Member"
 
-    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements NetOffice.OfficeApi.ICustomTaskPaneConsumer.CTPFactoryAvailable
+    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements NetOffice.OfficeApi.Native.ICustomTaskPaneConsumer.CTPFactoryAvailable
 
         Try
 

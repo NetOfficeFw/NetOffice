@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Globalization;
 using ExampleBase;
-using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Tools.Utils;
+using NetOffice.ExcelApi.Tools.Contribution;
 
 namespace ExcelExamplesCS4
 {
@@ -13,15 +11,13 @@ namespace ExcelExamplesCS4
     /// </summary>
     class Example05 : IExample
     {
-        #region IExample Member
-
         public void RunExample()
-        {      
+        {
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
 
-            // create a utils instance, not need for but helpful to keep the lines of code low
+            // create a utils instance, no need for but helpful to keep the lines of code low
             CommonUtils utils = new CommonUtils(excelApplication);
 
             // add a new workbook
@@ -36,49 +32,16 @@ namespace ExcelExamplesCS4
             chart.Chart.SetSourceData(dataRange);
 
             // save the book 
-            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example05", Excel.Tools.DocumentFormat.Normal);
+            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example05", DocumentFormat.Normal);
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
             excelApplication.Quit();
             excelApplication.Dispose();
 
-            // show dialog for the user(you!)
+            // show end dialog
             HostApplication.ShowFinishDialog(null, workbookFile);
         }
-
-        public void Connect(IHost hostApplication)
-        {
-            HostApplication = hostApplication;
-        }
-
-        public string Caption
-        {
-            get { return HostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
-        }
-
-        public string Description
-        {
-            get { return HostApplication.LCID == 1033 ? "Working with Charts" : "Arbeiten mit Charts"; }
-        }
-
-        public UserControl Panel
-        {
-            get { return null; }
-        }
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Current Example Host
-        /// </summary>
-        internal IHost HostApplication { get; private set; }
-
-        #endregion
-
-        #region Helper
 
         private static Excel.Range PutSampleData(Excel.Worksheet workSheet)
         {
@@ -109,6 +72,26 @@ namespace ExcelExamplesCS4
             return workSheet.Range("$B2:$E6");
         }
 
-        #endregion
+        public void Connect(IHost hostApplication)
+        {
+            HostApplication = hostApplication;
+        }
+
+        public string Caption
+        {
+            get { return "Example05"; }
+        }
+
+        public string Description
+        {
+            get { return "Working with Charts"; }
+        }
+
+        public UserControl Panel
+        {
+            get { return null; }
+        }
+
+        internal IHost HostApplication { get; private set; }
     }
 }

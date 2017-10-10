@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838263.aspx </remarks>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class UsedObjects : COMObject, IEnumerable<object>
+	public class UsedObjects : COMObject, IEnumerableProvider<object>
 	{
 		#pragma warning disable
 
@@ -189,7 +190,21 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerableProvider<object>
+
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion Excel, 10,11,12,14,15,16
@@ -204,7 +219,7 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Excel, 10,11,12,14,15,16
@@ -212,7 +227,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, true);
 		}
 
 		#endregion

@@ -7,12 +7,10 @@ Public Class Example04
 
     Dim _hostApplication As ExampleBase.IHost
 
-#Region "IExample Member"
-
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
-        ' start outlook
-        Dim outlookApplication = New Outlook.Application()
+        ' start outlook by trying to access running application first
+        Dim outlookApplication = New Outlook.Application(True)
 
         ' SendAndReceive is supported from Outlooks 2007 or higher. we check at runtime the feature is available
         If outlookApplication.Session.EntityIsAvailable("SendAndReceive") Then
@@ -23,7 +21,9 @@ Public Class Example04
         End If
 
         'close outlook and dispose
-        outlookApplication.Quit()
+        If Not outlookApplication.FromProxyService Then
+            outlookApplication.Quit()
+        End If
         outlookApplication.Dispose()
 
         _hostApplication.ShowFinishDialog("Done!", Nothing)
@@ -32,13 +32,13 @@ Public Class Example04
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example04", "Beispiel04")
+            Return "Example04"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Send and Recieve", "Senden und empfangen")
+            Return "Send and Recieve"
         End Get
     End Property
 
@@ -53,7 +53,5 @@ Public Class Example04
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

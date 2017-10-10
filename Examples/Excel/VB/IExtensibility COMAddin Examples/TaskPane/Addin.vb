@@ -1,24 +1,23 @@
 ﻿Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("20B04286-C912-432E-9546-AEBC81986EDE"), ProgIdAttribute("ExcelAddinVB4.TaskPaneAddin"), ComVisible(True)> _
+<Guid("20B04286-C912-432E-9546-AEBC81986EDE"), ProgId("ExcelAddinVB4.TaskPaneAddin"), ComVisible(True)>
 Public Class Addin
-    Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
+    Implements IDTExtensibility2, Office.Native.ICustomTaskPaneConsumer
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
     Private Shared ReadOnly _progId As String = "ExcelAddinVB4.TaskPaneAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Task Pane"
 
-    Shared _sampleControl As SampleControl
-    Shared _excelApplication As Excel.Application
+    Private Shared _sampleControl As SampleControl
+    Private Shared _excelApplication As Excel.Application
 
     Public Shared ReadOnly Property Application() As Excel.Application
         Get
@@ -28,7 +27,7 @@ Public Class Addin
 
 #Region "ICustomTaskPaneConsumer Member"
 
-    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements NetOffice.OfficeApi.ICustomTaskPaneConsumer.CTPFactoryAvailable
+    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements NetOffice.OfficeApi.Native.ICustomTaskPaneConsumer.CTPFactoryAvailable
 
         Try
 

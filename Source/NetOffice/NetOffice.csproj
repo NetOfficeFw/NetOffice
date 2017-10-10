@@ -80,12 +80,17 @@
     <Compile Include="Attributes\CustomIndexerAttribute.cs" />
     <Compile Include="Attributes\DuplicateAttribute.cs" />
     <Compile Include="Attributes\InternalEntityAttribute.cs" />
+    <Compile Include="Attributes\KnownIssueAttribute.cs" />
     <Compile Include="Attributes\ModuleBaseTypeAttribute.cs" />
     <Compile Include="Attributes\ModuleProviderAttribute.cs" />
+    <Compile Include="Attributes\NativeCaller.cs" />
     <Compile Include="Attributes\NativeResultAttribute.cs" />
     <Compile Include="Attributes\ProxyResultAttribute.cs" />
     <Compile Include="Attributes\SinkArgumentAttribute.cs" />
+    <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
     <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
+    <Compile Include="ComTypes\TypeDescriptor.cs" />
+    <Compile Include="Contribution\CollectionsGeneric\DisposableSequence.cs" />
     <Compile Include="Contribution\Controls\InstanceMonitor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +146,9 @@
     <Compile Include="Exceptions\PropertySetCOMException.cs" />
     <Compile Include="Exceptions\RegisterException.cs" />
     <Compile Include="Exceptions\UnregisterException.cs" />
+    <Compile Include="Extensions\ConversionExtensions.cs" />
+    <Compile Include="Extensions\InvokerExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Filtering\IMessageFilter.cs" />
     <Compile Include="Filtering\INTERFACEINFO.cs" />
     <Compile Include="Filtering\RetryMessageFilterLogMode.cs" />
@@ -192,7 +200,7 @@
     <Compile Include="Running\ChildWindowBatchEnumerator.cs" />
     <Compile Include="Running\Win32.cs" />
     <Compile Include="Trace\DebugConsoleMode.cs" />
-    <Compile Include="Contribution\CollectionsGeneric\IDisposableEnumeration.cs" />
+    <Compile Include="CollectionsGeneric\IDisposableSequence.cs" />
     <Compile Include="Trace\PerformanceTrace.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -233,7 +241,7 @@
     <Compile Include="Interfaces\IEventBinding.cs" />
     <Compile Include="Availity\SupportedEntityType.cs" />
     <Compile Include="Tools\COMAddinEventHandler.cs" />
-    <Compile Include="Tools\IDTExtensibility2.cs" />
+    <Compile Include="Tools\Native\IDTExtensibility2.cs" />
     <Compile Include="Running\ChildWindowEnumerator.cs" />
     <Compile Include="Trace\PerformanceTraceSetting.cs" />
     <Compile Include="Trace\PerformanceTraceSettingCollection.cs" />

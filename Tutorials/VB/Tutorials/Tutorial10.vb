@@ -1,44 +1,54 @@
-﻿Public Class Tutorial10
+﻿Imports NetOffice
+Imports Excel = NetOffice.ExcelApi
+
+Public Class Tutorial10
     Implements ITutorial
 
     Dim _hostApplication As IHost
 
-#Region "ITutorial Member"
-
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
-        'this property allows you to disable any events from Office applications
-        Dim enableEvents As Boolean = NetOffice.Settings.Default.EnableEvents
+        ' Enable and trigger trace alert
+        NetOffice.Settings.Default.PerformanceTrace.Enabled = True
+        Dim traceHandler As PerformanceTrace.PerformanceAlertEventHandler = AddressOf TraceAlert
+        AddHandler NetOffice.Settings.Default.PerformanceTrace.Alert, traceHandler
 
+        ' Criteria 1
+        ' Enable performance trace in excel generaly. set interval limit to 100ms to see all actions there need >= 100 milliseconds
+        NetOffice.Settings.Default.PerformanceTrace("NetOffice.ExcelApi").Enabled = True
+        NetOffice.Settings.Default.PerformanceTrace("NetOffice.ExcelApi").IntervalMS = 100
 
-        ' this property is the common threadculture for accessing Office.
-        ' default is en-us(1033)
-        Dim threadCulture As System.Globalization.CultureInfo = NetOffice.Settings.Default.ThreadCulture
+        ' Criteria 2
+        ' Enable additional performance trace for all members of WorkSheet in excel. set interval limit to 20ms to see all actions there need >=20 milliseconds
+        NetOffice.Settings.Default.PerformanceTrace("NetOffice.ExcelApi", "Worksheet").Enabled = True
+        NetOffice.Settings.Default.PerformanceTrace("NetOffice.ExcelApi", "Worksheet").IntervalMS = 20
 
+        ' Criteria 3
+        ' Enable additional performance trace for WorkSheet Range property in excel. set interval limit to 0ms to see all calls anywhere
+        NetOffice.Settings.Default.PerformanceTrace("NetOffice.ExcelApi", "Worksheet", "Range").Enabled = True
+        NetOffice.Settings.Default.PerformanceTrace("NetOffice.ExcelApi", "Worksheet", "Range").IntervalMS = 0
 
-        ' this property allows you to enable NetOffice call Quit() for Application objects automaticly while Dispose()
-        ' false by default
-        Dim automaticQuit As Boolean = NetOffice.Settings.Default.EnableAutomaticQuit
+        ' do some stuff
+        Dim application As New Excel.Application()
+        application.DisplayAlerts = False
+        Dim book As Excel.Workbook = application.Workbooks.Add()
+        Dim sheet As Excel.Worksheet = book.Sheets.Add()
+        For index = 1 To 5
+            Dim range As Excel.Range = sheet.Range("A" + index.ToString())
+            range.Value = "Test123"
+            range(1, 1).Value = "Test234"
+        Next
 
+        application.Quit()
+        application.Dispose()
 
-        ' this property allows to enable a COM Message filter
-        ' you may know the problem with RPC_Rejected exceptions(the host application is currently busy)
-        ' the message filter is waiting for you(shortly) and try the call again
-        Dim messageFilter As Boolean = NetOffice.Settings.Default.MessageFilter.Enabled
-         
+        _hostApplication.ShowFinishDialog()
 
-        ' the safemode is a feature that checks automaticly at runtime the methods oder properties you use are
-        ' available in current office version. if it doesnt an EntityNotSupportedException was thrown
-        ' false by default
-        Dim safeMode As Boolean = NetOffice.Settings.Default.EnableSafeMode
+    End Sub
 
+    Public Sub TraceAlert(sender As NetOffice.PerformanceTrace, args As NetOffice.PerformanceTrace.PerformanceAlertEventArgs)
 
-        'get or set NetOffice logs essential system steps in the NetOffice DebugConsole
-        Dim debugOutput As Boolean = NetOffice.Settings.Default.EnableDebugOutput
-
-
-        Dim message As String = String.Format("Events enabled:{0}{6}Thread:{1}{6}AutomaticQuit enabled:{2}{6}MessageFilter enabled:{3}{6}SafeMode enabled:{4}{6}DebugOutput enabled:{5}{6}", enableEvents, threadCulture.LCID, automaticQuit, messageFilter, safeMode, debugOutput, Environment.NewLine)
-        MessageBox.Show(message, "Settings", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Console.WriteLine("{0} {1}:{2} in {3} Milliseconds ({4} Ticks)", args.CallType, args.EntityName, args.MethodName, args.TimeElapsedMS, args.Ticks)
 
     End Sub
 
@@ -50,17 +60,13 @@
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "NetOffice Settings", "Einstellungsmöglichkeiten für NetOffice")
+            Return "Measure Performance"
         End Get
     End Property
 
     Public Sub Connect(ByVal hostApplication As TutorialsBase.IHost) Implements TutorialsBase.ITutorial.Connect
 
         _hostApplication = hostApplication
-
-    End Sub
-
-    Public Sub ChangeLanguage(ByVal lcid As Integer) Implements TutorialsBase.ITutorial.ChangeLanguage
 
     End Sub
 
@@ -74,13 +80,10 @@
         End Get
     End Property
 
-
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial10_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial10_DE_VB")
+            Return FormMain.DocumentationBase & "Tutorial10_EN_VB.html"
         End Get
     End Property
-
-#End Region
 
 End Class

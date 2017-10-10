@@ -186,7 +186,6 @@ namespace NetOffice.PublisherApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>

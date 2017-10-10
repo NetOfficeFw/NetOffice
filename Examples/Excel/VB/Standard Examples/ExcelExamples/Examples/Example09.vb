@@ -32,13 +32,13 @@ Public Class Example09
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example09", "Beispiel09")
+            Return "Example09"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Customize classic UI without ribbons and recieve click events", "Erweitern der klassischen Oberfläche und beziehen von Click Events")
+            Return "Customize classic UI without ribbons and recieve click events"
         End Get
     End Property
 

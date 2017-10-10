@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PowerPointApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745537.aspx </remarks>
 	[SupportByVersion("PowerPoint", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
-	public class Trendlines : COMObject, IEnumerable<NetOffice.PowerPointApi.Trendline>
+	public class Trendlines : COMObject, IEnumerableProvider<NetOffice.PowerPointApi.Trendline>
 	{
 		#pragma warning disable
 
@@ -341,7 +342,21 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.PowerPointApi.Trendline> Member
+        #region IEnumerableProvider<NetOffice.PowerPointApi.Trendline>
+
+        ICOMObject IEnumerableProvider<NetOffice.PowerPointApi.Trendline>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.PowerPointApi.Trendline>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.PowerPointApi.Trendline>
 
         /// <summary>
         /// SupportByVersion PowerPoint, 14,15,16
@@ -356,7 +371,7 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion PowerPoint, 14,15,16
@@ -364,7 +379,7 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

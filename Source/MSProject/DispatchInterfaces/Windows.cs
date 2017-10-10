@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.MSProjectApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.MSProjectApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920767(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Windows : COMObject , IEnumerable<NetOffice.MSProjectApi.Window>
+	public class Windows : COMObject , IEnumerableProvider<NetOffice.MSProjectApi.Window>
 	{
 		#pragma warning disable
 
@@ -178,49 +179,66 @@ namespace NetOffice.MSProjectApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-       #region IEnumerable<NetOffice.MSProjectApi.Window> Member
-        
+        #endregion
+
+        #region IEnumerableProvider<NetOffice.MSProjectApi.Window>
+
+        ICOMObject IEnumerableProvider<NetOffice.MSProjectApi.Window>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.MSProjectApi.Window>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.MSProjectApi.Window item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.Window> Member
+
         /// <summary>
-		/// SupportByVersion MSProject, 11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("MSProject", 11,12,14)]
+        /// SupportByVersion MSProject, 11,12,14
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
         [CustomEnumerator]
-       public IEnumerator<NetOffice.MSProjectApi.Window> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.MSProjectApi.Window item in innerEnumerator)
-               yield return item;
-       }
+        public IEnumerator<NetOffice.MSProjectApi.Window> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.MSProjectApi.Window item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion MSProject, 11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("MSProject", 11,12,14)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

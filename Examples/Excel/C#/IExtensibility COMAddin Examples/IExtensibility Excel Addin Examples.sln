@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - ClassicUI", "ClassicUI\IDTExtensibility2 - ClassicUI.csproj", "{E8CAA9A6-DF1F-4C93-8075-28F705369EA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - RibbonUI", "RibbonUI\IDTExtensibility2 - RibbonUI.csproj", "{9ADAAB8C-1785-4956-B210-08E592674E63}"

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class Points : COMObject , IEnumerable<NetOffice.OfficeApi.ChartPoint>
+	public class Points : COMObject, IEnumerableProvider<NetOffice.OfficeApi.ChartPoint>
 	{
 		#pragma warning disable
 
@@ -178,36 +179,50 @@ namespace NetOffice.OfficeApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.ChartPoint> Member
-        
+        #region IEnumerableProvider<NetOffice.OfficeApi.ChartPoint>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.ChartPoint>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.ChartPoint>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.ChartPoint>
+
         /// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.ChartPoint> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.ChartPoint item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.ChartPoint> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.ChartPoint item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

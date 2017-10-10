@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VisioApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.VisioApi
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class LPVISIOSTATUSBARS : COMObject , IEnumerable<NetOffice.VisioApi.IVStatusBar>
+	public class LPVISIOSTATUSBARS : COMObject, IEnumerableProvider<NetOffice.VisioApi.IVStatusBar>
 	{
 		#pragma warning disable
 
@@ -200,32 +201,46 @@ namespace NetOffice.VisioApi
 			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVStatusBar>(this, "AddAtID", lID);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VisioApi.IVStatusBar> Member
-        
+        #region IEnumerableProvider<NetOffice.VisioApi.IVStatusBar>
+
+        ICOMObject IEnumerableProvider<NetOffice.VisioApi.IVStatusBar>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.VisioApi.IVStatusBar>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVStatusBar>
+
         /// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
-       public IEnumerator<NetOffice.VisioApi.IVStatusBar> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VisioApi.IVStatusBar item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.VisioApi.IVStatusBar> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VisioApi.IVStatusBar item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

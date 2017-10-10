@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194885.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Conflicts : COMObject , IEnumerable<NetOffice.WordApi.Conflict>
+	public class Conflicts : COMObject, IEnumerableProvider<NetOffice.WordApi.Conflict>
 	{
 		#pragma warning disable
 
@@ -205,32 +206,46 @@ namespace NetOffice.WordApi
 			 Factory.ExecuteMethod(this, "RejectAll");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.Conflict> Member
-        
+        #region IEnumerableProvider<NetOffice.WordApi.Conflict>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.Conflict>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.Conflict>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.Conflict>
+
         /// <summary>
-		/// SupportByVersion Word, 14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-       public IEnumerator<NetOffice.WordApi.Conflict> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.Conflict item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.Conflict> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.Conflict item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Word, 14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Word, 14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

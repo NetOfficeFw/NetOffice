@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using NetOffice.Exceptions;
+using System.Runtime.InteropServices;
 
 namespace NetOffice
 {
     /// <summary>
     /// Represents an ICOMObject Parent/Child relation in NetOffice proxy management
     /// </summary>
+    [ComVisible(false)]
     public interface ICOMObjectTable
     {
         /// <summary>

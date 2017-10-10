@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
 using ExampleBase;
 
 namespace ExcelExamplesCS4
 {
-    public partial class FormMain : FormBase
+    public partial class FormMain : ExampleForm
     {
         public FormMain()
         {

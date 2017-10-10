@@ -7,7 +7,7 @@ namespace NetOffice.Tools
 {
     /// <summary>
     /// COMAddin Register/Unregister methods want add/remove "Codebase" registry key.
-    /// A missing Codebase attribute means a Codebase(true) attribute by default 
+    /// A missing Codebase attribute means a Codebase(true) attribute by default for backward compatibility.
     /// </summary>
     [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = false)]
     public class CodebaseAttribute : System.Attribute

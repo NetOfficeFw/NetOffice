@@ -1,14 +1,13 @@
 ﻿Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("12C5CABD-5058-4AD6-8C5B-E3ABDEC91943"), ProgIdAttribute("ExcelAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("12C5CABD-5058-4AD6-8C5B-E3ABDEC91943"), ProgId("ExcelAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -26,10 +25,10 @@ Public Class Addin
     Private Shared ReadOnly _contextName As String = "Sample ContextMenu VB4"
     Private Shared ReadOnly _contextMenuButtonName As String = "Sample ContextButton VB4"
 
-    Dim _excelApplication As Excel.Application
+    Private _excelApplication As Excel.Application
 
 #Region "IDTExtensibility2 Members"
-     
+
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
 
         Try

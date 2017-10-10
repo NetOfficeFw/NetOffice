@@ -330,9 +330,11 @@ namespace NetOffice.ExcelApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
-
             if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
                 return;
+
+            RegisterHandleCodebase(type, InstallScope.System);
+            RegisterHandleProgrammable(type, InstallScope.System);
 
             MethodInfo registerMethod = null;
             RegisterFunctionAttribute registerAttribute = null;
@@ -358,9 +360,11 @@ namespace NetOffice.ExcelApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
-
             if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
                 return;
+
+            UnregisterHandleProgrammable(type, InstallScope.System);
+            UnregisterHandleCodebase(type, InstallScope.System);
 
             MethodInfo registerMethod = null;
             UnRegisterFunctionAttribute registerAttribute = null;
@@ -377,25 +381,6 @@ namespace NetOffice.ExcelApi.Tools
             }
         }
 
-        [ComRegisterCall]
-        private static void OptimizedRegisterFunction(Type type, int scope, int keyState)
-        {
-            // not supported yet
-        }
-
-        [ComUnregisterCall]
-        private static void OptimizedUnregisterFunction(Type type, int scope, int keyState)
-        {
-            // not supported yet
-        }
-
-        /// <summary>
-        /// Derived UnRegister Call Helper
-        /// </summary>
-        /// <param name="registerMethod">the method to call</param>
-        /// <param name="type">type for derived class</param>
-        /// <param name="scope">current register scope</param>
-        /// <returns>true if no exception occurs, otherwise false</returns>
         private static bool TryCallDerivedUnRegisterMethod(MethodInfo registerMethod, Type type, InstallScope scope)
         {
             try
@@ -427,13 +412,6 @@ namespace NetOffice.ExcelApi.Tools
             }
         }
 
-        /// <summary>
-        /// Derived Register Call Helper
-        /// </summary>
-        /// <param name="registerMethod">the method to call</param>
-        /// <param name="type">type for derived class</param>
-        /// <param name="scope">current register scope</param>
-        /// <returns>true if no exception occurs, otherwise false</returns>
         private static bool TryCallDerivedRegisterMethod(MethodInfo registerMethod, Type type, InstallScope scope)
         {
             try
@@ -462,6 +440,92 @@ namespace NetOffice.ExcelApi.Tools
             catch (Exception)
             {
                 return false;
+            }
+        }
+
+        private static void RegisterHandleProgrammable(Type type, InstallScope scope)
+        {
+            try
+            {
+                RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
+                bool isSystemComponent = location.IsMachineComponentTarget(scope);
+                ProgrammableAttribute programmable = AttributeReflector.GetProgrammableAttribute(type);
+                if (null != programmable)
+                {
+                    ProgrammableAttribute.CreateKeys(type.GUID, isSystemComponent);
+
+                }
+            }
+            catch (Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                    throw;
+            }
+        }
+
+        private static void UnregisterHandleProgrammable(Type type, InstallScope scope)
+        {
+            try
+            {
+                ProgrammableAttribute programmable = AttributeReflector.GetProgrammableAttribute(type);
+                if (null != programmable)
+                {
+                    RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
+                    bool isSystemComponent = location.IsMachineComponentTarget(scope);
+                    ProgrammableAttribute.DeleteKeys(type.GUID, isSystemComponent, false);
+                }
+            }
+            catch (Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception))
+                    throw;
+            }
+        }
+
+        private static void RegisterHandleCodebase(Type type, InstallScope scope)
+        {
+            try
+            {
+                CodebaseAttribute codebase = AttributeReflector.GetCodebaseAttribute(type);
+                if (null != codebase && codebase.Value)
+                {
+                    RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
+                    bool isSystemComponent = location.IsMachineComponentTarget(scope);
+                    Assembly thisAssembly = Assembly.GetAssembly(type);
+                    string assemblyVersion = thisAssembly.GetName().Version.ToString();
+                    CodebaseAttribute.CreateValue(type.GUID, isSystemComponent, assemblyVersion, thisAssembly.CodeBase);
+
+                }
+            }
+            catch (Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                    throw;
+            }
+        }
+
+        private static void UnregisterHandleCodebase(Type type, InstallScope scope)
+        {
+            try
+            {
+                CodebaseAttribute codebase = AttributeReflector.GetCodebaseAttribute(type);
+                if (null != codebase && codebase.Value == true)
+                {
+                    RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
+                    bool isSystemComponent = location.IsMachineComponentTarget(scope);
+                    Assembly thisAssembly = Assembly.GetAssembly(type);
+                    string assemblyVersion = thisAssembly.GetName().Version.ToString();
+                    CodebaseAttribute.DeleteValue(type.GUID, isSystemComponent, assemblyVersion, false);
+                }
+            }
+            catch (Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception))
+                    throw;
             }
         }
 

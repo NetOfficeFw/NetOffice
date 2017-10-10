@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
@@ -13,7 +12,7 @@ using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("63F67DE9-5AF4-459D-9666-819083029003"), ProgId("ExcelAddinCS4.SimpleAddin"), ComVisible(true)]
+    [Guid("63F67DE9-5AF4-459D-9666-819083029003"), ProgId("ExcelAddinCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
@@ -30,7 +29,7 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _contextName            = "Sample ContextMenu CS4";
         private static readonly string _contextMenuButtonName  = "Sample ContextButton CS4";
 
-        Excel.Application _excelApplication;
+        private Excel.Application _excelApplication;
 
         #region IDTExtensibility2 Members
 

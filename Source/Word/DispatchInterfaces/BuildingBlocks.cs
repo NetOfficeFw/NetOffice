@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837526.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class BuildingBlocks : COMObject , IEnumerable<NetOffice.WordApi.BuildingBlock>
+	public class BuildingBlocks : COMObject, IEnumerableProvider<NetOffice.WordApi.BuildingBlock>
 	{
 		#pragma warning disable
 
@@ -226,45 +227,62 @@ namespace NetOffice.WordApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.BuildingBlock>(this, "Add", NetOffice.WordApi.BuildingBlock.LateBindingApiWrapperType, name, range, description);
 		}
 
-		#endregion
-       #region IEnumerable<NetOffice.WordApi.BuildingBlock> Member
-        
-        /// <summary>
-		/// SupportByVersion Word, 12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Word", 12,14,15,16)]
-        [CustomEnumerator]
-       public IEnumerator<NetOffice.WordApi.BuildingBlock> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.BuildingBlock item in innerEnumerator)
-               yield return item;
-       }
+        #endregion
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion Word, 12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Word", 12,14,15,16)]
+        #region IEnumerableProvider<NetOffice.WordApi.BuildingBlock>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.BuildingBlock>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.BuildingBlock>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.BuildingBlock item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.BuildingBlock> Member
+
+        /// <summary>
+        /// SupportByVersion Word, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        [CustomEnumerator]
+        public IEnumerator<NetOffice.WordApi.BuildingBlock> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.BuildingBlock item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Word, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

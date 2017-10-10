@@ -39,7 +39,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisLogFile>bin\Debug\TutorialsCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
@@ -63,25 +63,35 @@
     <CodeAnalysisRuleDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExcelApi">
+    <Reference Include="ExcelApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=9084b9221296229e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="NetOffice">
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NetOffice, Version=1.7.4.1, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="OfficeApi">
-      <HintPath>..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
+    <Reference Include="OfficeApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TutorialsBase">
+    <Reference Include="TutorialsBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TutorialsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="VBIDEApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -104,13 +114,22 @@
     <Compile Include="Tutorial04.cs" />
     <Compile Include="Tutorial05.cs" />
     <Compile Include="Tutorial06.cs" />
+    <Compile Include="Tutorial11.cs" />
+    <Compile Include="Tutorial13.cs" />
+    <Compile Include="Tutorial15.cs" />
+    <Compile Include="Tutorial14.cs" />
+    <Compile Include="Tutorial10.cs" />
+    <Compile Include="Tutorial16.cs" />
+    <Compile Include="Tutorial17.cs" />
+    <Compile Include="Tutorial12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tutorial12.Designer.cs">
+      <DependentUpon>Tutorial12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial09.cs" />
     <Compile Include="Tutorial07.cs" />
     <Compile Include="Tutorial08.cs" />
-    <Compile Include="Tutorial09.cs" />
-    <Compile Include="Tutorial10.cs" />
-    <Compile Include="Tutorial11.cs" />
-    <Compile Include="Tutorial12.cs" />
-    <Compile Include="Tutorial13.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +146,9 @@
     <EmbeddedResource Include="Tutorial03.resx">
       <DependentUpon>Tutorial03.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial12.resx">
+      <DependentUpon>Tutorial12.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -137,7 +159,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

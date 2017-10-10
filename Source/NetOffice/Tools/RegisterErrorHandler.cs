@@ -14,10 +14,10 @@ namespace NetOffice.Tools
         /// <summary>
         /// Checks for a static method, signed with the ErrorHandlerAttribute and call them if its available
         /// </summary>
-        /// <param name="type">type information for the class wtih static method </param>
+        /// <param name="type">type information for the class with static method </param>
         /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        /// <returns>true if error is handled by derived method an we can proceed</returns>
+        /// <returns>true if error is handled by derived method and we can proceed</returns>
         public static bool RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, System.Exception exception)
         {
             MethodInfo errorMethod = AttributeReflector.GetRegisterErrorMethod(type);

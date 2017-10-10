@@ -56,16 +56,14 @@ namespace NetOffice.Tools
 
                 if (null != programmable)
                 {
-                    if(!ProgrammableAttribute.DeleteKeys(type.GUID, isSystemComponent, false))
-                        NetOffice.DebugConsole.Default.WriteLine("Failed to delete programmable.");
+                    ProgrammableAttribute.DeleteKeys(type.GUID, isSystemComponent, false);
                 }
 
                 if (null != codebase && codebase.Value == true)
                 {
                     Assembly thisAssembly = Assembly.GetAssembly(type);
                     string assemblyVersion = thisAssembly.GetName().Version.ToString();
-                    if (!CodebaseAttribute.DeleteValue(type.GUID, isSystemComponent, assemblyVersion, false))
-                        NetOffice.DebugConsole.Default.WriteLine("Failed to delete codebase.");
+                    CodebaseAttribute.DeleteValue(type.GUID, isSystemComponent, assemblyVersion, false);
                 }
 
                 if (keyState == OfficeUnRegisterKeyState.NeedToDelete)
@@ -85,7 +83,8 @@ namespace NetOffice.Tools
             catch (System.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
-                RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception))
+                    throw;
             }
         }
 

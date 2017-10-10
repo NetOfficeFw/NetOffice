@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.DAOApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Workspaces : _DynaCollection , IEnumerable<NetOffice.DAOApi.Workspace>
+	public class Workspaces : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi.Workspace>
 	{
 		#pragma warning disable
 
@@ -150,32 +151,46 @@ namespace NetOffice.DAOApi
 			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.DAOApi.Workspace> Member
-        
+        #region IEnumerableProvider<NetOffice.DAOApi.Workspace>
+
+        ICOMObject IEnumerableProvider<NetOffice.DAOApi.Workspace>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.DAOApi.Workspace>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.DAOApi.Workspace>
+
         /// <summary>
-		/// SupportByVersion DAO, 3.6,12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-       public IEnumerator<NetOffice.DAOApi.Workspace> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.DAOApi.Workspace item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion DAO, 3.6,12.0
+        /// </summary>
+        [SupportByVersion("DAO", 3.6, 12.0)]
+        public IEnumerator<NetOffice.DAOApi.Workspace> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.DAOApi.Workspace item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion DAO, 3.6,12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion DAO, 3.6,12.0
+        /// </summary>
+        [SupportByVersion("DAO", 3.6,12.0)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

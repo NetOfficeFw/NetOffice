@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839227.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class Panes : COMObject, IEnumerable<NetOffice.ExcelApi.Pane>
+	public class Panes : COMObject, IEnumerableProvider<NetOffice.ExcelApi.Pane>
 	{
 		#pragma warning disable
 
@@ -188,7 +189,23 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.ExcelApi.Pane> Member
+        #region IEnumerableProvider<NetOffice.ExcelApi.Pane>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.Pane>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.Pane>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.Pane item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Pane>
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
@@ -205,7 +222,7 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16

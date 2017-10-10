@@ -1,12 +1,9 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Globalization;
 using ExampleBase;
-using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
-using NetOffice.ExcelApi.Tools.Utils;
+using NetOffice.ExcelApi.Tools.Contribution;
 
 namespace ExcelExamplesCS4
 {
@@ -15,15 +12,13 @@ namespace ExcelExamplesCS4
     /// </summary>
     internal class Example02 : IExample
     {
-        #region IExample Member
-
         public void RunExample()
-        {            
+        {
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
 
-            // create a utils instance, not need for but helpful to keep the lines of code low
+            // create a utils instance, no need for but helpful to keep the lines of code low
             CommonUtils utils = new CommonUtils(excelApplication);
 
             // add a new workbook
@@ -90,15 +85,15 @@ namespace ExcelExamplesCS4
             workSheet.Columns[5].ColumnWidth = 25;
             workSheet.Rows[9].RowHeight = 25;
 
-            // save the book 
-            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", Excel.Tools.DocumentFormat.Normal);
+            // save the book - utils want build the filename for us
+            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", DocumentFormat.Normal);
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
             excelApplication.Quit();
             excelApplication.Dispose();
 
-            // show dialog for the user(you!)
+            // show end dialog
             HostApplication.ShowFinishDialog(null, workbookFile);
         }
 
@@ -109,12 +104,12 @@ namespace ExcelExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
+            get { return "Example02"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Font Attributes and Alignment for Cells" : "Schrifteigenschaften und Ausrichtung in Zellen"; }
+            get { return "Font Attributes and Alignment for Cells"; }
         }
 
         public UserControl Panel
@@ -122,15 +117,6 @@ namespace ExcelExamplesCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Current Example Host
-        /// </summary>
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

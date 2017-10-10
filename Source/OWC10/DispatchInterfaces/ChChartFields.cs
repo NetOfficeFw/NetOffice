@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OWC10Api
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class ChChartFields : COMObject , IEnumerable<NetOffice.OWC10Api.ChChartField>
+	public class ChChartFields : COMObject, IEnumerableProvider<NetOffice.OWC10Api.ChChartField>
 	{
 		#pragma warning disable
 
@@ -150,49 +151,66 @@ namespace NetOffice.OWC10Api
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-       #region IEnumerable<NetOffice.OWC10Api.ChChartField> Member
-        
+        #endregion
+
+        #region IEnumerableProvider<NetOffice.OWC10Api.ChChartField>
+
+        ICOMObject IEnumerableProvider<NetOffice.OWC10Api.ChChartField>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OWC10Api.ChChartField>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OWC10Api.ChChartField item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OWC10Api.ChChartField> Member
+
         /// <summary>
-		/// SupportByVersion OWC10, 1
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
+        /// SupportByVersion OWC10, 1
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
         [CustomEnumerator]
-       public IEnumerator<NetOffice.OWC10Api.ChChartField> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OWC10Api.ChChartField item in innerEnumerator)
-               yield return item;
-       }
+        public IEnumerator<NetOffice.OWC10Api.ChChartField> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OWC10Api.ChChartField item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion OWC10, 1
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

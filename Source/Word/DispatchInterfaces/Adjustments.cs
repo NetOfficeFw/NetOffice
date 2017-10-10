@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840113.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Adjustments : COMObject, IEnumerable<Single>
+	public class Adjustments : COMObject, IEnumerableProvider<Single>
 	{
 		#pragma warning disable
 
@@ -192,7 +193,23 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable<Single> Member
+        #region IEnumerableProvider<Single>
+
+        ICOMObject IEnumerableProvider<Single>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<Single>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (Single item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<Single>
 
         /// <summary>
         /// SupportByVersion Word, 9,10,11,12,14,15,16
@@ -209,7 +226,7 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Word, 9,10,11,12,14,15,16

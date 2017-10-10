@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Globalization;
 using ExampleBase;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
-using NetOffice.ExcelApi.Tools.Utils;
+using NetOffice.ExcelApi.Tools.Contribution;
 
 namespace ExcelExamplesCS4
 {
     /// <summary>
-    /// Example 10 - Create PDF Document
+    /// Example 10 - Create PDF Document (Microsoft PDF printer must be run)
     /// </summary>
     internal class Example10 : IExample
     {
-        #region IExample
-
         public void RunExample()
         {
             // start excel and turn off msg boxes
@@ -50,17 +47,17 @@ namespace ExcelExamplesCS4
                 workSheet.ExportAsFixedFormat(XlFixedFormatType.xlTypePDF, workbookFile, XlFixedFormatQuality.xlQualityStandard);
             }
             else
-            {   
+            {
                 // we are sorry - pdf export is not supported in Excel 2003 or below
-                workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example10", Excel.Tools.DocumentFormat.Normal);
+                workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example10", DocumentFormat.Normal);
                 workBook.SaveAs(workbookFile);
             }
- 
+
             // close excel and dispose reference
             excelApplication.Quit();
             excelApplication.Dispose();
 
-            // show dialog for the user(you!)
+            // show end dialog
             HostApplication.ShowFinishDialog(null, workbookFile);
         }
 
@@ -71,12 +68,12 @@ namespace ExcelExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example10" : "Beispiel10"; }
+            get { return "Example10"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Create a PDF Document" : "Ein PDF Dokument erstellen"; }
+            get { return "Create a PDF Document"; }
         }
 
         public UserControl Panel
@@ -84,15 +81,6 @@ namespace ExcelExamplesCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Current Example Host
-        /// </summary>
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

@@ -2,12 +2,11 @@
 using System.Windows.Forms;
 using System.Globalization;
 using ExampleBase;
-using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
-using NetOffice.ExcelApi.Tools.Utils;
+using NetOffice.ExcelApi.Tools.Contribution;
 
 namespace ExcelExamplesCS4
 {
@@ -16,15 +15,13 @@ namespace ExcelExamplesCS4
     /// </summary>
     internal class Example07 : IExample
     {
-        #region IExample Member
-
         public void RunExample()
         {
             bool isFailed = false;
             string workbookFile = null;
             Excel.Application excelApplication = null;
             try
-            {           
+            {
                 // start excel and turn off msg boxes
                 excelApplication = new Excel.Application();
                 excelApplication.DisplayAlerts = false;
@@ -56,7 +53,7 @@ namespace ExcelExamplesCS4
 
                 // save the book 
                 XlFileFormat fileFormat = GetFileFormat(excelApplication);
-                workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example07", Excel.Tools.DocumentFormat.Macros);
+                workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example07", DocumentFormat.Macros);
                 workBook.SaveAs(workbookFile, fileFormat);
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
@@ -82,29 +79,20 @@ namespace ExcelExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return "Example07"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set." : "Dynamisches hinzufügen von VBA Code zu einem Workbook. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
+            get { return "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set."; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
-  
-        #endregion
 
-        #region Properties
-
-        /// <summary>
-        /// Current Example Host
-        /// </summary>
         internal IHost HostApplication { get; private set; }
-
-        #endregion
 
         #region Helper
 

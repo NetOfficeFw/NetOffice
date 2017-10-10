@@ -96,7 +96,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TutorialsBase">
+    <Reference Include="TutorialsBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TutorialsBase.dll</HintPath>
     </Reference>
     <Reference Include="VBIDEApi">
@@ -154,8 +155,17 @@
     <Compile Include="Tutorial09.vb" />
     <Compile Include="Tutorial10.vb" />
     <Compile Include="Tutorial11.vb" />
-    <Compile Include="Tutorial12.vb" />
+    <Compile Include="Tutorial12.Designer.vb">
+      <DependentUpon>Tutorial12.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial12.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Tutorial13.vb" />
+    <Compile Include="Tutorial14.vb" />
+    <Compile Include="Tutorial15.vb" />
+    <Compile Include="Tutorial16.vb" />
+    <Compile Include="Tutorial17.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormMain.resx">
@@ -169,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tutorial03.resx">
       <DependentUpon>Tutorial03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial12.resx">
+      <DependentUpon>Tutorial12.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

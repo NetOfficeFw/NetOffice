@@ -245,7 +245,7 @@ namespace NetOffice.VBIDEApi.Tools
 
         #region IDTExtensibility2 Members
 
-        void IDTExtensibility2.OnStartupComplete(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
             try
             {             
@@ -260,7 +260,7 @@ namespace NetOffice.VBIDEApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -281,14 +281,14 @@ namespace NetOffice.VBIDEApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             try
             {                 
                 try
-                {
-                    Tweaks.DisposeTweaks(Factory, this, Type);
+                {                  
                     RaiseOnDisconnection(RemoveMode, ref custom);
+                    Tweaks.DisposeTweaks(Factory, this, Type);
                 }
                 catch (System.Exception exception)
                 {
@@ -312,7 +312,7 @@ namespace NetOffice.VBIDEApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
             try
             {
@@ -325,7 +325,7 @@ namespace NetOffice.VBIDEApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnBeginShutdown(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
             try
             {
@@ -435,9 +435,12 @@ namespace NetOffice.VBIDEApi.Tools
         /// <param name="type">Type information for the class</param>
         [ComRegisterFunction, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
-        {         
+        {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             COMAddinRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, OfficeRegisterKeyState.NeedToCreate);
         }
 
@@ -450,6 +453,9 @@ namespace NetOffice.VBIDEApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             COMAddinUnRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, OfficeUnRegisterKeyState.NeedToDelete);
         }
 
@@ -464,6 +470,8 @@ namespace NetOffice.VBIDEApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
 
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
             COMAddinRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, currentKeyState);
@@ -480,7 +488,9 @@ namespace NetOffice.VBIDEApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
-         
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
             COMAddinUnRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, currentKeyState);
         }

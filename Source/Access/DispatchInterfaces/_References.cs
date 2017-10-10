@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _References : COMObject, IEnumerable<NetOffice.AccessApi.Reference>
+	public class _References : COMObject, IEnumerableProvider<NetOffice.AccessApi.Reference>
 	{
 		#pragma warning disable
 
@@ -204,7 +205,21 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.AccessApi.Reference> Member
+        #region IEnumerableProvider<NetOffice.AccessApi.Reference>
+
+        ICOMObject IEnumerableProvider<NetOffice.AccessApi.Reference>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.AccessApi.Reference>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi.Reference>
 
         /// <summary>
         /// SupportByVersion Access, 9,10,11,12,14,15,16
@@ -219,7 +234,7 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Access, 9,10,11,12,14,15,16
@@ -227,7 +242,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

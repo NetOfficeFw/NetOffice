@@ -5,6 +5,9 @@ Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
+''' <summary>
+''' Example 7 - Customize classic UI
+''' </summary>
 Public Class Example07
     Implements IExample
 
@@ -31,13 +34,13 @@ Public Class Example07
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example07", "Beispiel07")
+            Return "Example07"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Customize classic UI without ribbons and recieve click events", "Erweitern der klassischen Oberfläche und beziehen von Click Events")
+            Return "Customize classic UI without ribbons and recieve click events"
         End Get
     End Property
 

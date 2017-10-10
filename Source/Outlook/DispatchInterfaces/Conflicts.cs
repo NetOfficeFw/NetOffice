@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OutlookApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868978.aspx </remarks>
 	[SupportByVersion("Outlook", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Conflicts : COMObject, IEnumerable<NetOffice.OutlookApi.Conflict>
+	public class Conflicts : COMObject, IEnumerableProvider<NetOffice.OutlookApi.Conflict>
 	{
 		#pragma warning disable
 
@@ -185,7 +186,8 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
-		#region Methods
+		
+        #region Methods
 
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15, 16
@@ -242,8 +244,24 @@ namespace NetOffice.OutlookApi
 		}
 
         #endregion
+        
+        #region IEnumerableProvider<NetOffice.OutlookApi.Conflict>
 
-        #region IEnumerable<NetOffice.OutlookApi.Conflict> Member
+        ICOMObject IEnumerableProvider<NetOffice.OutlookApi.Conflict>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OutlookApi.Conflict>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi.Conflict item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.Conflict>
 
         /// <summary>
         /// SupportByVersion Outlook, 11,12,14,15,16
@@ -260,7 +278,7 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Outlook, 11,12,14,15,16

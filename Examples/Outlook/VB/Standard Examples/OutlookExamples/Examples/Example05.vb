@@ -7,8 +7,6 @@ Public Class Example05
 
     Dim _hostApplication As ExampleBase.IHost
 
-#Region "IExample Member"
-
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' its an example with an own visual control
@@ -18,13 +16,13 @@ Public Class Example05
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example05", "Beispiel05")
+            Return "Example05"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "List all contacts", "Alle Kontakte auflisten")
+            Return "List all contacts"
         End Get
     End Property
 
@@ -40,20 +38,16 @@ Public Class Example05
         End Get
     End Property
 
-#End Region
-
-#Region "UI Trigger"
-
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
-        ' start outlook
-        Dim outlookApplication = New Outlook.Application()
+        ' start outlook by trying to access running application first
+        Dim outlookApplication = New Outlook.Application(True)
 
         ' enum contacts 
         Dim index As Integer
         Dim contactFolder As Outlook.MAPIFolder = outlookApplication.Session.GetDefaultFolder(OlDefaultFolders.olFolderContacts)
 
-        For Each item As COMObject In contactFolder.Items
+        For Each item As ICOMObject In contactFolder.Items
 
             If (TypeName(item) = "ContactItem") Then
                 index += 1
@@ -64,12 +58,14 @@ Public Class Example05
 
         Next
 
+
         'close outlook and dispose
-        outlookApplication.Quit()
+        If Not outlookApplication.FromProxyService Then
+            outlookApplication.Quit()
+        End If
         outlookApplication.Dispose()
 
     End Sub
 
-#End Region
 
 End Class

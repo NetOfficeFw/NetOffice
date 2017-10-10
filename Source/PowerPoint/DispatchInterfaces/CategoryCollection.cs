@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PowerPointApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227558.aspx </remarks>
 	[SupportByVersion("PowerPoint", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "_Default")]
-	public class CategoryCollection : COMObject, IEnumerable<NetOffice.PowerPointApi.ChartCategory>
+	public class CategoryCollection : COMObject, IEnumerableProvider<NetOffice.PowerPointApi.ChartCategory>
 	{
 		#pragma warning disable
 
@@ -187,7 +188,23 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.PowerPointApi.ChartCategory> Member
+        #region IEnumerableProvider<NetOffice.PowerPointApi.ChartCategory>
+
+        ICOMObject IEnumerableProvider<NetOffice.PowerPointApi.ChartCategory>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.PowerPointApi.ChartCategory>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.PowerPointApi.ChartCategory item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.PowerPointApi.ChartCategory>
 
         /// <summary>
         /// SupportByVersion PowerPoint, 15, 16
@@ -204,7 +221,7 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion PowerPoint, 15, 16

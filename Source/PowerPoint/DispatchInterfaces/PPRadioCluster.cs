@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PowerPointApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class PPRadioCluster : PPControl, IEnumerable<NetOffice.PowerPointApi.PPRadioButton>
+	public class PPRadioCluster : PPControl, IEnumerableProvider<NetOffice.PowerPointApi.PPRadioButton>
 	{
 		#pragma warning disable
 
@@ -184,8 +185,24 @@ namespace NetOffice.PowerPointApi
 		}
 
         #endregion
-        
-        #region IEnumerable<NetOffice.PowerPointApi.PPRadioButton> Member
+
+        #region IEnumerableProvider<NetOffice.PowerPointApi.PPRadioButton>
+
+        ICOMObject IEnumerableProvider<NetOffice.PowerPointApi.PPRadioButton>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.PowerPointApi.PPRadioButton>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.PowerPointApi.PPRadioButton item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.PowerPointApi.PPRadioButton>
 
         /// <summary>
         /// SupportByVersion PowerPoint, 9
@@ -202,7 +219,7 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion PowerPoint, 9

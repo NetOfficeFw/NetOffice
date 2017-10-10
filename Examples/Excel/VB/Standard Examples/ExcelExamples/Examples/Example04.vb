@@ -1,16 +1,15 @@
 ﻿Imports ExampleBase
-Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
-Imports NetOffice.ExcelApi.Enums
 Imports NetOffice.OfficeApi.Enums
-Imports NetOffice.ExcelApi.Tools.Utils
+Imports NetOffice.ExcelApi.Tools.Contribution
 
+''' <summary>
+''' Example 4 - Shapes, WordArts, Pictures, 3D-Effects
+''' </summary>
 Public Class Example04
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -18,7 +17,7 @@ Public Class Example04
         Dim excelApplication As New Excel.Application()
         excelApplication.DisplayAlerts = False
 
-        ' create a utils instance, not need for but helpful to keep the lines of code low
+        ' create a utils instance, no need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(excelApplication)
 
         ' add a new workbook
@@ -36,16 +35,16 @@ Public Class Example04
         textBox.TextFrame.Characters().Font.Size = 14
 
         ' create a wordart
-        Dim textEffect As Excel.Shape = workSheet.Shapes.AddTextEffect(MsoPresetTextEffect.msoTextEffect14, "WordArt", "Arial", 12, _
+        Dim textEffect As Excel.Shape = workSheet.Shapes.AddTextEffect(MsoPresetTextEffect.msoTextEffect14, "WordArt", "Arial", 12,
                                                                                 MsoTriState.msoTrue, MsoTriState.msoFalse, 10, 250)
 
         ' create text effect
-        Dim textDiagram As Excel.Shape = workSheet.Shapes.AddTextEffect(MsoPresetTextEffect.msoTextEffect11, "Effect", "Arial", 14, _
+        Dim textDiagram As Excel.Shape = workSheet.Shapes.AddTextEffect(MsoPresetTextEffect.msoTextEffect11, "Effect", "Arial", 14,
                                                                      MsoTriState.msoFalse, MsoTriState.msoFalse, 10, 350)
 
 
         ' save the book 
-        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example04", Excel.Tools.DocumentFormat.Normal)
+        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example04", DocumentFormat.Normal)
         workBook.SaveAs(workbookFile)
 
         ' close excel and dispose reference
@@ -59,13 +58,13 @@ Public Class Example04
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example04", "Beispiel04")
+            Return "Example04"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Shapes, WordArts, Pictures, 3D-Effects", "Shapes, WordArts, Pictures, 3D-Effects")
+            Return "Shapes, WordArts, Pictures, 3D-Effects"
         End Get
     End Property
 
@@ -80,7 +79,5 @@ Public Class Example04
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

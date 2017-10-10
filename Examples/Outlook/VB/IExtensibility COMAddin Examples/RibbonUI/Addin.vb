@@ -2,23 +2,22 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 Imports NetOffice.OutlookApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("D3898317-C21D-4140-88BE-5BC9026319A7"), ProgIdAttribute("OutlookAddinVB4.RibbonAddin"), ComVisible(True)> _
+<Guid("D3898317-C21D-4140-88BE-5BC9026319A7"), ProgId("OutlookAddinVB4.RibbonAddin"), ComVisible(True)>
 Public Class Addin
-    Implements IDTExtensibility2, Office.IRibbonExtensibility
+    Implements IDTExtensibility2, Office.Native.IRibbonExtensibility
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Outlook\\AddIns\\"
     Private Shared ReadOnly _progId As String = "OutlookAddinVB4.RibbonAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Ribbon UI"
 
-    Dim _outlookApplication As Outlook.Application = Nothing
+    Private _outlookApplication As Outlook.Application = Nothing
 
 #Region "IDTExtensibility2 Members"
 
@@ -66,7 +65,7 @@ Public Class Addin
 
 #Region "IRibbonExtensibility Members"
 
-    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
+    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements Office.Native.IRibbonExtensibility.GetCustomUI
 
         Try
 

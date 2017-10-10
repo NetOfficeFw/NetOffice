@@ -51,7 +51,7 @@ namespace NetOffice
             if (value.Assemblies.Count == 0)
                 return null;
 
-            string className = TypeDescriptor.GetClassName(comProxy);
+            string className = ComTypes.TypeDescriptor.GetClassName(comProxy);
             Guid typeid = TypeGuid(comProxy);
             Guid hostGuid = GetParentLibraryGuid(value, comProxy, typeid);
 

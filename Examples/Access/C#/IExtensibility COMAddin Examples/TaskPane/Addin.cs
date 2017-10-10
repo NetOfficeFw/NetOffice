@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
@@ -13,8 +12,8 @@ using NetOffice.AccessApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("4975A488-98EA-4318-8EF6-409C5B0389E0"), ProgId("AccessAddinCS4.TaskPaneAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
+    [Guid("4975A488-98EA-4318-8EF6-409C5B0389E0"), ProgId("AccessAddinCS4.TaskPaneAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\AddIns\\";
         private static readonly string _progId                  = "AccessAddinCS4.TaskPaneAddin";

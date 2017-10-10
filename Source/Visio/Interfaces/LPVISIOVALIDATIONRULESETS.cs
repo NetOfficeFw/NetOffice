@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VisioApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.VisioApi
 	/// </summary>
 	[SupportByVersion("Visio", 14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class LPVISIOVALIDATIONRULESETS : COMObject , IEnumerable<NetOffice.VisioApi.IVValidationRuleSet>
+	public class LPVISIOVALIDATIONRULESETS : COMObject, IEnumerableProvider<NetOffice.VisioApi.IVValidationRuleSet>
 	{
 		#pragma warning disable
 
@@ -254,32 +255,46 @@ namespace NetOffice.VisioApi
 			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVValidationRuleSet>(this, "AddCopy", ruleSet);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VisioApi.IVValidationRuleSet> Member
-        
+        #region IEnumerableProvider<NetOffice.VisioApi.IVValidationRuleSet>
+
+        ICOMObject IEnumerableProvider<NetOffice.VisioApi.IVValidationRuleSet>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.VisioApi.IVValidationRuleSet>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVValidationRuleSet>
+
         /// <summary>
-		/// SupportByVersion Visio, 14,15,16
-		/// </summary>
-		[SupportByVersion("Visio", 14,15,16)]
-       public IEnumerator<NetOffice.VisioApi.IVValidationRuleSet> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VisioApi.IVValidationRuleSet item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Visio, 14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 14, 15, 16)]
+        public IEnumerator<NetOffice.VisioApi.IVValidationRuleSet> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VisioApi.IVValidationRuleSet item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Visio, 14,15,16
-		/// </summary>
-		[SupportByVersion("Visio", 14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Visio, 14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Text;
-using System.Globalization;
 using ExampleBase;
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
@@ -10,7 +7,7 @@ using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.VBIDEApi.Enums;
-using NetOffice.PowerPointApi.Tools.Utils;
+using NetOffice.PowerPointApi.Tools.Contribution;
 
 namespace PowerPointExamplesCS4
 {
@@ -19,8 +16,6 @@ namespace PowerPointExamplesCS4
     /// </summary>
     internal  class Example03 : IExample
     {
-        #region IExample
-
         public void RunExample()
         {
             bool isFailed = false;
@@ -31,7 +26,7 @@ namespace PowerPointExamplesCS4
                 // start powerpoint
                 powerApplication = new PowerPoint.Application();
 
-                // create a utils instance, not need for but helpful to keep the lines of code low
+                // create a utils instance, no need for but helpful to keep the lines of code low
                 CommonUtils utils = new CommonUtils(powerApplication);
 
                 // add a new presentation with one new slide
@@ -50,7 +45,7 @@ namespace PowerPointExamplesCS4
                 button.ActionSettings[PpMouseActivation.ppMouseClick].Run = "NetOfficeTestMacro";
                
                 // save the document 
-                documentFile =  utils.File.Combine(HostApplication.RootDirectory, "Example03", PowerPoint.Tools.DocumentFormat.Macros);
+                documentFile =  utils.File.Combine(HostApplication.RootDirectory, "Example03", DocumentFormat.Macros);
                 presentation.SaveAs(documentFile);
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
@@ -79,12 +74,12 @@ namespace PowerPointExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
+            get { return "Example03"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Create an run macros. the option 'Trust access to Visual Basic Project' must be set" : "Makros erstellen und ausführen. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
+            get { return "Create and run macros. the option 'Trust access to Visual Basic Project' must be set"; }
         }
 
         public UserControl Panel
@@ -92,12 +87,6 @@ namespace PowerPointExamplesCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

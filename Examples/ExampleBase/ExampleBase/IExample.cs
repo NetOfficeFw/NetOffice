@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Text;
 
 namespace ExampleBase
 {
     /// <summary>
-    /// the primary interface for an example
+    /// Represents a single example
     /// </summary>
     public interface IExample
     {
@@ -21,14 +19,14 @@ namespace ExampleBase
         string Description { get; }
 
         /// <summary>
-        /// Visual panel from the example, can be null
+        /// Visual panel from the example, can be null(Nothing in Visual Basic)
         /// </summary>
         UserControl Panel { get; }
-
+        
         /// <summary>
-        /// called from IHost after construction
+        /// Called from IHost while connecting to host application
         /// </summary>
-        /// <param name="hostApplication">the Host Application for the examples</param>
+        /// <param name="hostApplication">the host application for the example</param>
         void Connect(IHost hostApplication);
 
         /// <summary>

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.DAOApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Users : _DynaCollection, IEnumerable<NetOffice.DAOApi.User>
+	public class Users : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi.User>
 	{
 		#pragma warning disable
 
@@ -124,9 +125,23 @@ namespace NetOffice.DAOApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
+
+        #endregion
+
+        #region IEnumerableProvider<NetOffice.DAOApi.User>
+
+        ICOMObject IEnumerableProvider<NetOffice.DAOApi.User>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.DAOApi.User>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
 
         #endregion
 
@@ -153,7 +168,7 @@ namespace NetOffice.DAOApi
         [SupportByVersion("DAO", 3.6,12.0)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

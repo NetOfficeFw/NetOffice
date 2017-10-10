@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class IAllowEditRanges : COMObject , IEnumerable<NetOffice.ExcelApi.AllowEditRange>
+	public class IAllowEditRanges : COMObject, IEnumerableProvider<NetOffice.ExcelApi.AllowEditRange>
 	{
 		#pragma warning disable
 
@@ -165,32 +166,46 @@ namespace NetOffice.ExcelApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AllowEditRange>(this, "Add", NetOffice.ExcelApi.AllowEditRange.LateBindingApiWrapperType, title, range);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ExcelApi.AllowEditRange> Member
-        
+        #region IEnumerableProvider<NetOffice.ExcelApi.AllowEditRange>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.AllowEditRange>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.AllowEditRange>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.AllowEditRange>
+
         /// <summary>
-		/// SupportByVersion Excel, 10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.ExcelApi.AllowEditRange> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ExcelApi.AllowEditRange item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.ExcelApi.AllowEditRange> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.AllowEditRange item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Excel, 10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

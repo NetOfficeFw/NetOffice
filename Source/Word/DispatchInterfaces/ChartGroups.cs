@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193629.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class ChartGroups : COMObject, IEnumerable<NetOffice.WordApi.ChartGroup>
+	public class ChartGroups : COMObject, IEnumerableProvider<NetOffice.WordApi.ChartGroup>
 	{
 		#pragma warning disable
 
@@ -188,7 +189,21 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.WordApi.ChartGroup> Member
+        #region IEnumerableProvider<NetOffice.WordApi.ChartGroup>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.ChartGroup>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.ChartGroup>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.ChartGroup>
 
         /// <summary>
         /// SupportByVersion Word, 14,15,16
@@ -203,7 +218,7 @@ namespace NetOffice.WordApi
 
         #endregion
         
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Word, 14,15,16
@@ -211,7 +226,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

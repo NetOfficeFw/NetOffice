@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace NetOffice.OutlookApi.Tools
 {
@@ -40,7 +37,7 @@ namespace NetOffice.OutlookApi.Tools
             RibbonID = _mainWindowRibbonID;
             Value = value;
         }
-        
+
         /// <summary>
         /// Creates an instance of the Attribute
         /// </summary>
@@ -62,15 +59,44 @@ namespace NetOffice.OutlookApi.Tools
         /// </summary>
         /// <param name="ribbonID">Target Window ID</param>
         /// <param name="value">Full qualified location</param>
+        public OlCustomUIAttribute(OlRibbonType ribbonID, string value)
+        {
+            if (String.IsNullOrEmpty(value))
+                throw new ArgumentException("value");
+
+            RibbonID = ribbonID.ToString().Replace("_", ".");
+            Value = value;
+        }
+
+        /// <summary>
+        /// Creates an instance of the Attribute
+        /// </summary>
+        /// <param name="ribbonID">Target Window ID</param>
+        /// <param name="value">Full qualified location</param>
         /// <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
         public OlCustomUIAttribute(string ribbonID, string value, bool useAssemblyNamespace)
         {
             if (String.IsNullOrEmpty(ribbonID))
-                throw new ArgumentException("ribbonID");
+                ribbonID = _mainWindowRibbonID;
             if (String.IsNullOrEmpty(value))
                 throw new ArgumentException("value");
 
             RibbonID = ribbonID;
+            Value = value;
+            UseAssemblyNamespace = useAssemblyNamespace;
+        }
+
+        /// <summary>
+        /// Creates an instance of the Attribute
+        /// </summary>
+        /// <param name="ribbonID">Target Window ID</param>
+        /// <param name="value">Full qualified location</param>
+        /// <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
+        public OlCustomUIAttribute(OlRibbonType ribbonID, string value, bool useAssemblyNamespace)
+        {
+            if (String.IsNullOrEmpty(value))
+                throw new ArgumentException("value");
+            RibbonID = ribbonID.ToString().Replace("_", ".");
             Value = value;
             UseAssemblyNamespace = useAssemblyNamespace;
         }

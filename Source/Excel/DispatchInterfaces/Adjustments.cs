@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -15,7 +16,7 @@ namespace NetOffice.ExcelApi
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
     [Duplicate("NetOffice.OfficeApi.Adjustments")]
-    public class Adjustments : NetOffice.OfficeApi._IMsoDispObj , IEnumerable<Single>
+    public class Adjustments : NetOffice.OfficeApi._IMsoDispObj, IEnumerableProvider<Single>
 	{
 		#pragma warning disable
 
@@ -165,7 +166,21 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable<Single> Member
+        #region IEnumerableProvider<Single>
+
+        ICOMObject IEnumerableProvider<Single>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<Single>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<Single>
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
@@ -182,7 +197,7 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16

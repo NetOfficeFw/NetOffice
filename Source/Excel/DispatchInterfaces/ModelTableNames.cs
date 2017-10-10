@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229977.aspx </remarks>
 	[SupportByVersion("Excel", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class ModelTableNames : COMObject, IEnumerable<string>
+	public class ModelTableNames : COMObject, IEnumerableProvider<string>
 	{
 		#pragma warning disable
 
@@ -188,7 +189,23 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable<string> Member
+        #region IEnumerableProvider<string>
+
+        ICOMObject IEnumerableProvider<string>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<string>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (string item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<string>
 
         /// <summary>
         /// SupportByVersion Excel, 15, 16
@@ -205,7 +222,7 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Excel, 15, 16

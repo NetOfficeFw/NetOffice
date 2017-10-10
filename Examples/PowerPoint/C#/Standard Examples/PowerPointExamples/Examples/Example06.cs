@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
-
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
@@ -51,12 +45,12 @@ namespace PowerPointExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return "Example06"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
+            get { return "Using Events"; }
         }
 
         public UserControl Panel

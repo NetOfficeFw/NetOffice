@@ -3,21 +3,22 @@ Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports NetOffice.OfficeApi.Enums
-Imports NetOffice.PowerPointApi.Tools.Utils
+Imports NetOffice.PowerPointApi.Tools.Contribution
 
+''' <summary>
+''' Example 4 - Create blend animation 
+''' </summary>
 Public Class Example04
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start powerpoint
         Dim powerApplication As New PowerPoint.Application()
 
-        ' create a utils instance, not need for but helpful to keep the lines of code low
+        ' create a utils instance, no need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(powerApplication)
 
         ' add a new presentation with two new slides
@@ -37,27 +38,27 @@ Public Class Example04
         slide2.SlideShowTransition.Speed = PpTransitionSpeed.ppTransitionSpeedFast
 
         ' save the document 
-        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example04", PowerPoint.Tools.DocumentFormat.Normal)
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example04", DocumentFormat.Normal)
         presentation.SaveAs(documentFile)
 
         ' close power point and dispose reference
         powerApplication.Quit()
         powerApplication.Dispose()
 
-        ' show dialog for the user(you!)
+        ' show end dialog
         _hostApplication.ShowFinishDialog(Nothing, documentFile)
 
     End Sub
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example04", "Beispiel04")
+            Return "Example04"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create blend animation", "Eine Blend Animation erstellen")
+            Return "Create blend animation"
         End Get
     End Property
 
@@ -72,7 +73,5 @@ Public Class Example04
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

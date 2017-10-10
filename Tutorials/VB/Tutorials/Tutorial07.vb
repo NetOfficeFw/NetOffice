@@ -1,35 +1,34 @@
-﻿Imports Excel = NetOffice.ExcelApi
+﻿Imports NetOffice
 
 Public Class Tutorial07
     Implements ITutorial
 
     Dim _hostApplication As IHost
 
-#Region "ITutorial Member"
-
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
-        ' this examples shows a special method to ask at runtime for a particular method oder property
-        ' morevover you can enable the option NetOffice.Settings.EnableSafeMode. 
-        ' NetOffice checks(cache supported) for any method or property you call and
-        ' throws a EntitiyNotSupportedException if missing
+        ' NetOffice Core supports a so-called managed C# dynamic
+        ' with proxy management services. No need for additional NetOffice Api assemblies.
 
-        ' create new instance
-        Dim application As New Excel.Application()
+        ' In Visual Basic it is just an Object for late binding -
+        ' but with all NetOffice proxy management services.
 
-        ' check for support at runtime
-        Dim enableLivePreviewSupport As Boolean = application.EntityIsAvailable("EnableLivePreview")
-        Dim openDatabaseSupport As Boolean = application.Workbooks.EntityIsAvailable("OpenDatabase")
+        ' NetOffice want convert a proxy to COMDynamicObject each time if its failed to resolve
+        ' a corresponding wrapper type.
 
-        Dim result As String = "Excel Runtime Check: " + Environment.NewLine
-        result += "Support EnableLivePreview: " + enableLivePreviewSupport.ToString() + Environment.NewLine
-        result += "Support OpenDatabase:      " + openDatabaseSupport.ToString() + Environment.NewLine
+        Dim application As Object = New COMDynamicObject("Excel.Application")
+        application.DisplayAlerts = False
+        Dim book As Object = application.Workbooks.Add()
 
-        ' quit and dispose
+        For Each sheet As Object In book.Sheets
+            Console.WriteLine(sheet)
+        Next sheet
+
+        'quit and dispose all open proxies
         application.Quit()
         application.Dispose()
 
-        _hostApplication.ShowMessage(result)
+        _hostApplication.ShowFinishDialog()
 
     End Sub
 
@@ -41,17 +40,13 @@ Public Class Tutorial07
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Versionindependent Development", "Versionsunabhängige Entwicklung")
+            Return "Managed Dynamics"
         End Get
     End Property
 
     Public Sub Connect(ByVal hostApplication As TutorialsBase.IHost) Implements TutorialsBase.ITutorial.Connect
 
         _hostApplication = hostApplication
-
-    End Sub
-
-    Public Sub ChangeLanguage(ByVal lcid As Integer) Implements TutorialsBase.ITutorial.ChangeLanguage
 
     End Sub
 
@@ -67,10 +62,8 @@ Public Class Tutorial07
 
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial07_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial07_DE_VB")
+            Return FormMain.DocumentationBase & "Tutorial07_EN_VB.html"
         End Get
     End Property
-
-#End Region
 
 End Class

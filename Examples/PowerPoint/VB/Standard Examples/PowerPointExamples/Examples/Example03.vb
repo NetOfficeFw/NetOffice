@@ -5,14 +5,15 @@ Imports NetOffice.PowerPointApi.Enums
 Imports NetOffice.OfficeApi.Enums
 Imports VB = NetOffice.VBIDEApi
 Imports NetOffice.VBIDEApi.Enums
-Imports NetOffice.PowerPointApi.Tools.Utils
+Imports NetOffice.PowerPointApi.Tools.Contribution
 
+''' <summary>
+''' Create macro
+''' </summary>
 Public Class Example03
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -25,7 +26,7 @@ Public Class Example03
             ' start powerpoint
             powerApplication = New PowerPoint.Application()
 
-            ' create a utils instance, not need for but helpful to keep the lines of code low
+            ' create a utils instance, no need for but helpful to keep the lines of code low
             Dim utils As CommonUtils = New CommonUtils(powerApplication)
 
             ' add a new presentation with one new slide
@@ -45,7 +46,7 @@ Public Class Example03
             button.ActionSettings(PpMouseActivation.ppMouseClick).Run = "NetOfficeTestMacro"
 
             ' save the document 
-            documentFile = utils.File.Combine(_hostApplication.RootDirectory, "Example03", PowerPoint.Tools.DocumentFormat.Macros)
+            documentFile = utils.File.Combine(_hostApplication.RootDirectory, "Example03", DocumentFormat.Macros)
             presentation.SaveAs(documentFile)
 
         Catch throwedException As Exception
@@ -60,7 +61,7 @@ Public Class Example03
             powerApplication.Dispose()
 
             If (Not IsNothing(documentFile) And Not isFailed) Then
-                ' show dialog for the user(you!)
+                ' show end dialog
                 _hostApplication.ShowFinishDialog(Nothing, documentFile)
             End If
 
@@ -70,13 +71,13 @@ Public Class Example03
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example03", "Beispiel03")
+            Return "Example03"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create an run macros. the option 'Trust access to Visual Basic Project' must be set", "Makros erstellen und ausführen. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein.")
+            Return "Create and run macros. the option 'Trust access to Visual Basic Project' must be set"
         End Get
     End Property
 
@@ -91,7 +92,5 @@ Public Class Example03
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

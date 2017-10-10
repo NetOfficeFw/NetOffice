@@ -270,42 +270,89 @@ namespace NetOffice.VisioApi.Tools
 
         #region IDTExtensibility2 Members
 
-        void IDTExtensibility2.OnStartupComplete(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
-            LoadingTimeElapsed = (DateTime.Now - _creationTime);
-            Roots = OnCreateRoots();
-            RaiseOnStartupComplete(ref custom);
+            try
+            {
+                LoadingTimeElapsed = (DateTime.Now - _creationTime);
+                Roots = OnCreateRoots();
+                RaiseOnStartupComplete(ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnStartupComplete, exception);
+            }
         }
 
-        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-			this.Application = new Visio.Application(null, application);          
-            RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
+            try
+            {
+                this.Application = new Visio.Application(null, application);
+                RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
+            }
+            catch (System.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnConnection, exception);
+            }
         }
 
-        void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
-            RaiseOnDisconnection(RemoveMode, ref custom);
+            try
+            {
+                try
+                {
+                    RaiseOnDisconnection(RemoveMode, ref custom);
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    NetOffice.DebugConsole.Default.WriteException(exception);
+                }
 
-             try
-			 { 
-				 if (!Application.IsDisposed)
-                    Application.Dispose();
-			 }
-			 catch(NetRuntimeSystem.Exception exception)
-			 {
-				 NetOffice.DebugConsole.Default.WriteException(exception);
-			 }	
+                try
+                {
+                    if (!Application.IsDisposed)
+                        Application.Dispose();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    NetOffice.DebugConsole.Default.WriteException(exception);
+                }
+            }
+            catch (System.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnDisconnection, exception);
+            }
         }
 
-        void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
-            RaiseOnAddInsUpdate(ref custom);
+            try
+            {
+                RaiseOnAddInsUpdate(ref custom);
+            }
+            catch (System.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnAddInsUpdate, exception);
+            }
         }
 
-        void IDTExtensibility2.OnBeginShutdown(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
-            RaiseOnBeginShutdown(ref custom);
+            try
+            {
+                RaiseOnBeginShutdown(ref custom);
+            }
+            catch (System.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnBeginShutdown, exception);
+            }
         }
 
         #endregion
@@ -333,6 +380,11 @@ namespace NetOffice.VisioApi.Tools
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
+            if (null == type)
+                throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
         }
 
@@ -343,6 +395,11 @@ namespace NetOffice.VisioApi.Tools
         [ComUnregisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
         {
+            if (null == type)
+                throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             COMAddinUnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
         }
 
@@ -357,6 +414,9 @@ namespace NetOffice.VisioApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             InstallScope currentScope = (InstallScope)scope;
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
 
@@ -374,6 +434,9 @@ namespace NetOffice.VisioApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             InstallScope currentScope = (InstallScope)scope;
             OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
 

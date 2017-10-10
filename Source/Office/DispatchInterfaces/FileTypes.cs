@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -13,8 +14,8 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862049.aspx </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class FileTypes : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.Enums.MsoFileType>
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class FileTypes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.Enums.MsoFileType>
 	{
 		#pragma warning disable
 
@@ -167,7 +168,21 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.Enums.MsoFileType> Member
+        #region IEnumerableProvider<NetOffice.OfficeApi.Enums.MsoFileType>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.Enums.MsoFileType>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.Enums.MsoFileType>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.Enums.MsoFileType>
 
         /// <summary>
         /// SupportByVersion Office, 10,11,12,14,15,16
@@ -182,7 +197,7 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Office, 10,11,12,14,15,16
@@ -190,7 +205,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetScalarEnumeratorAsProperty(this);
 		}
 
 		#endregion

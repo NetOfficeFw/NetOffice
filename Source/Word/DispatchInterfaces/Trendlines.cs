@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845131.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
-	public class Trendlines : COMObject, IEnumerable<NetOffice.WordApi.Trendline>
+	public class Trendlines : COMObject, IEnumerableProvider<NetOffice.WordApi.Trendline>
 	{
 		#pragma warning disable
 
@@ -343,7 +344,21 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.WordApi.Trendline> Member
+        #region IEnumerableProvider<NetOffice.WordApi.Trendline>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.Trendline>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.Trendline>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.Trendline>
 
         /// <summary>
         /// SupportByVersion Word, 14,15,16
@@ -358,7 +373,7 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Word, 14,15,16
@@ -366,7 +381,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

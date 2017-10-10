@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
-
 using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
@@ -37,12 +31,12 @@ namespace OutlookExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
+            get { return "Example01"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Inbox Folder" : "Posteingang"; }
+            get { return "Inbox Folder"; }
         }
 
         public void Connect(IHost hostApplication)
@@ -67,19 +61,19 @@ namespace OutlookExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // start outlook
-            Outlook.Application outlookApplication = new Outlook.Application();
-
+            // start outlook by trying to access running application first
+            Outlook.Application outlookApplication = new Outlook.Application(true);
+            
             // get inbox 
             Outlook._NameSpace outlookNS = outlookApplication.GetNamespace("MAPI");
             Outlook.MAPIFolder inboxFolder = outlookNS.GetDefaultFolder(OlDefaultFolders.olFolderInbox);
 
-            // setup gui
+            // setup ui
             listViewInboxFolder.Items.Clear();
-            labelItemsCount.Text = string.Format("You have {0} e-mails.", inboxFolder.Items.Count);
+            labelItemsCount.Text = string.Format("You have {0} e-mail(s).", inboxFolder.Items.Count);
 
-            // we fetch the inbox folder items.
-            foreach (COMObject item in inboxFolder.Items)
+            // we fetch the inbox folder items by a custom enumerator
+            foreach (ICOMObject item in inboxFolder.Items)
             {
                 // not every item in the inbox is a mail item
                 Outlook.MailItem mailItem = item as Outlook.MailItem;
@@ -91,10 +85,11 @@ namespace OutlookExamplesCS4
             }
 
             // close outlook and dispose
-            outlookApplication.Quit();
+            if(!outlookApplication.FromProxyService)
+                outlookApplication.Quit();
             outlookApplication.Dispose();
         }
-        
+
         #endregion
     }
 }

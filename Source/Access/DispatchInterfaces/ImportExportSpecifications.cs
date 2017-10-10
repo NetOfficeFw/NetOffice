@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.AccessApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198252.aspx </remarks>
 	[SupportByVersion("Access", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class ImportExportSpecifications : COMObject, IEnumerable<NetOffice.AccessApi.ImportExportSpecification>
+	public class ImportExportSpecifications : COMObject, IEnumerableProvider<NetOffice.AccessApi.ImportExportSpecification>
 	{
 		#pragma warning disable
 
@@ -197,7 +198,21 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.AccessApi.ImportExportSpecification> Member
+        #region IEnumerableProvider<NetOffice.AccessApi.ImportExportSpecification>
+
+        ICOMObject IEnumerableProvider<NetOffice.AccessApi.ImportExportSpecification>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.AccessApi.ImportExportSpecification>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi.ImportExportSpecification>
 
         /// <summary>
         /// SupportByVersion Access, 12,14,15,16
@@ -212,7 +227,7 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Access, 12,14,15,16
@@ -220,7 +235,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

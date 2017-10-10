@@ -12,21 +12,28 @@ using NetOffice.Tools;
 using NetOffice.OfficeApi.Tools;
 using Office = NetOffice.OfficeApi;
 using Outlook = NetOffice.OutlookApi;
+using NetOffice.OutlookApi.Enums;
+using System.Runtime.CompilerServices;
 
 namespace NetOffice.OutlookApi.Tools
-{
+{  
     /// <summary>
     /// NetOffice MS-Outlook COM Addin
     /// </summary>
 	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
-    public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
+    public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin, Native.FormRegionStartup
     {
         #region Fields
 
         /// <summary>
-        /// MS-Outlook Registry Path 
+        /// MS-Outlook Addin Registry Path 
         /// </summary>
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Outlook\\Addins\\";
+
+        /// <summary>
+        /// MS-Outlook FormRegion Registry Path 
+        /// </summary>
+        private static readonly string _formRegionsOfficeRegistryKey = "Software\\Microsoft\\Office\\Outlook\\FormRegions\\";
 
         /// <summary>
         /// First field in OnConnection custom argument array
@@ -57,6 +64,7 @@ namespace NetOffice.OutlookApi.Tools
                 _factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
 			TaskPaneInstances = new List<ITaskPane>();
+            OpenFormRegions = new List<OpenFormRegion>();
         }
 
         #endregion
@@ -81,7 +89,7 @@ namespace NetOffice.OutlookApi.Tools
         /// <summary>
         /// TaskPaneFactory from CTPFactoryAvailable
         /// </summary>
-        protected Office.ICTPFactory TaskPaneFactory { get; set; }
+        public Office.ICTPFactory TaskPaneFactory { get; set; }
 
 		/// <summary>
         /// ITaskPane Instances
@@ -146,6 +154,8 @@ namespace NetOffice.OutlookApi.Tools
         public event OnAddInsUpdateEventHandler OnAddInsUpdate;
 
         /// <summary>
+        /// Shutdown Changes for Outlook 2010: https://msdn.microsoft.com/library/office/ee720183.aspx
+        /// ------------------------------------------------------------------------------------------
         /// The OnBeginShutdown event occurs when the host application begins its shutdown routines, 
         /// in the case where the application closes while the COM add-in is still loaded. 
         /// If the add-in is not loaded when the application closes, 
@@ -226,19 +236,6 @@ namespace NetOffice.OutlookApi.Tools
 
         #endregion
        
-        #region Ribbon Support
-
-        /// <summary>
-        /// Pre-defined Ribbon Loader
-        /// </summary>
-        /// <param name="ribbonUI"></param>
-        public virtual void CustomUI_OnLoad(Office.IRibbonUI ribbonUI)
-        {
-            RibbonUI = ribbonUI;
-        }
-
-        #endregion
-
         #region COMAddinBase
 
         /// <summary>
@@ -286,7 +283,7 @@ namespace NetOffice.OutlookApi.Tools
 
         #region IDTExtensibility2 Members
 
-        void IDTExtensibility2.OnStartupComplete(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
             try
             {
@@ -302,7 +299,7 @@ namespace NetOffice.OutlookApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -324,10 +321,21 @@ namespace NetOffice.OutlookApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             try
             {
+                try
+                {
+                    RaiseOnDisconnection(RemoveMode, ref custom);
+                    Tweaks.DisposeTweaks(Factory, this, Type);                   
+                    Utils.Dispose();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
+                }
+
                 foreach (ITaskPane item in TaskPaneInstances)
                 {
                     try
@@ -340,6 +348,30 @@ namespace NetOffice.OutlookApi.Tools
                     }
                 }
 
+                try
+                {
+                    foreach (var item in OpenFormRegions)
+                    {
+                        try
+                        {
+                            IDisposable disposable = item as IDisposable;
+                            if (null != disposable)
+                                disposable.Dispose();
+                            else
+                                item.UnderlyingRegion.Dispose();
+                        }
+                        catch (NetRuntimeSystem.Exception exception)
+                        {
+                            NetOffice.DebugConsole.Default.WriteException(exception);
+                        }
+                    }
+                    OpenFormRegions.Clear();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    NetOffice.DebugConsole.Default.WriteException(exception);
+                }
+                
                 foreach (var item in TaskPanes)
                 {
                     try
@@ -365,13 +397,15 @@ namespace NetOffice.OutlookApi.Tools
 
                 try
                 {
-                    Tweaks.DisposeTweaks(Factory, this, Type);
-                    RaiseOnDisconnection(RemoveMode, ref custom);
-                    Utils.Dispose();
+                    if (null != RibbonUI)
+                    {
+                        RibbonUI.Dispose();
+                        RibbonUI = null;
+                    }
                 }
                 catch (NetRuntimeSystem.Exception exception)
                 {
-                    Factory.Console.WriteException(exception);
+                    NetOffice.DebugConsole.Default.WriteException(exception);
                 }
 
                 try
@@ -391,7 +425,7 @@ namespace NetOffice.OutlookApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
             try
             {
@@ -404,7 +438,7 @@ namespace NetOffice.OutlookApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnBeginShutdown(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
             try
             {
@@ -424,7 +458,7 @@ namespace NetOffice.OutlookApi.Tools
         /// <summary>
         /// IRibbonExtensibility implementation
         /// </summary>
-        /// <param name="RibbonID">target ribbon id, use OlCustomUIAttribute for a custom outlook behavior</param>
+        /// <param name="RibbonID">target ribbon id</param>
         /// <returns>XML content or String.Empty</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public virtual string GetCustomUI(string RibbonID)
@@ -438,7 +472,7 @@ namespace NetOffice.OutlookApi.Tools
                 }
                 else
                 {
-                    CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type);
+                    CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, RibbonID);
                     if (null != ribbon)
                         return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                     else
@@ -452,7 +486,24 @@ namespace NetOffice.OutlookApi.Tools
                 return String.Empty;
             } 
         }
-         
+
+        /// <summary>
+        /// Pre-defined Ribbon Loader
+        /// </summary>
+        /// <param name="ribbonUI">actual ribbon ui</param>
+        public virtual void CustomUI_OnLoad(Office.Native.IRibbonUI ribbonUI)
+        {
+            try
+            {
+                RibbonUI = COMObject.Create<OfficeApi.IRibbonUI>(Factory, ribbonUI);
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.GetCustomUI, exception);
+            }
+        }
+
         #endregion
 
         #region ICustomTaskPaneConsumer Member
@@ -625,6 +676,182 @@ namespace NetOffice.OutlookApi.Tools
 
         #endregion
 
+        #region FormRegionStartup
+
+        /// <summary>
+        /// Current open Form Regions
+        /// </summary>
+        protected List<OpenFormRegion> OpenFormRegions { get; private set; }
+
+        /// <summary>
+        /// Occurs after a form region has been opened
+        /// </summary>
+        public event FormRegionEventHandler FormRegionOpen;
+
+        /// <summary>
+        /// Occurs after a form region has been closed
+        /// </summary>
+        public event FormRegionEventHandler FormRegionClose;
+
+        /// <summary>
+        /// Raise the FormRegionOpen event
+        /// </summary>
+        /// <param name="form"></param>
+        protected virtual void OnFormRegionOpen(OpenFormRegion form)
+        {
+            FormRegionOpen?.Invoke(form);
+        }
+
+        /// <summary>
+        /// Raise the FormRegionClose event
+        /// </summary>
+        /// <param name="form"></param>
+        protected virtual void OnFormRegionClose(OpenFormRegion form)
+        {
+            FormRegionClose?.Invoke(form);
+        }
+
+        /// <summary>
+        /// Creates an new instance of OpenFormRegion
+        /// </summary>
+        /// <param name="form">underlying form region</param>
+        /// <returns>new instance of OpenFormRegion</returns>
+        protected virtual OpenFormRegion OnCreateOpenFormRegion(FormRegion form)
+        {
+            OpenFormRegion openForm = new OpenFormRegion(form);
+            return openForm;
+        }
+
+        /// <summary>
+        /// Obtains appropriate storage for a form region based on the specified information.
+        /// </summary>
+        /// <param name="formRegionName">The internal name of the form region. This can be indicated by the name tag in the corresponding form region XML manifest.</param>
+        /// <param name="item">The Outlook item object that caused the loading of the form region.</param>
+        /// <param name="lcid">The current locale ID.</param>
+        /// <param name="formRegionMode">The mode that the form region is being loaded into.</param>
+        /// <param name="formRegionSize">The type of form region being loaded, either adjoining or separate.</param>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public virtual object GetFormRegionStorage(object formRegionName, object item, object lcid, object formRegionMode, object formRegionSize)
+        {
+            try
+            {
+                FormRegionAttribute attribute = FormRegionAttribute.GetAttribute(Type, (string)formRegionName, (int)lcid);
+                if (null != attribute)
+                    return Utils.Resource.ReadBytes(CustomUIAttribute.BuildPath(attribute.StorageFile, true, Type.Namespace));
+                else
+                    return null;
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                OnOutlookError(OutlookErrorMethodKind.GetFormRegionStorage, exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Allows an add-in to update the user interface of a form region before it is displayed. 
+        /// </summary>
+        /// <param name="formRegion">The FormRegion object representing the form region that is to be displayed</param>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public virtual void BeforeFormRegionShow(object formRegion)
+        {
+            try
+            {
+                FormRegion form = new Outlook.FormRegion(null, formRegion);
+                OpenFormRegion openForm = OnCreateOpenFormRegion(form);
+                if (null == openForm)
+                    openForm = new OpenFormRegion(form);
+                openForm.Close += OpenForm_Close;
+                OpenFormRegions.Add(openForm);
+                OnFormRegionOpen(openForm);
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                OnOutlookError(OutlookErrorMethodKind.BeforeFormRegionShow, exception);
+            }
+        }
+
+        /// <summary>
+        /// Obtains the XML manifest for a form region.
+        /// </summary>
+        /// <param name="FormRegionName">The name of the form region which is the name used when registering the form region in the Windows registry. </param>
+        /// <param name="LCID">The locale ID that identifies the language that Outlook is currently using. This value is used to obtain the localization strings corresponding to this language for the form region.</param>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public virtual object GetFormRegionManifest([MarshalAs(19)] [In] string FormRegionName, [In] int LCID)
+        {
+            try
+            {
+                FormRegionAttribute attribute = FormRegionAttribute.GetAttribute(Type, (string)FormRegionName, (int)LCID);
+                if (null != attribute)
+                    return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(attribute.ManifestFile, true, Type.Namespace));
+                else
+                    return null;
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                OnOutlookError(OutlookErrorMethodKind.GetFormRegionManifest, exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Obtains an icon image that will be displayed for a particular type of icon for the form region.
+        /// </summary>
+        /// <param name="formRegionName">The name of the form region which is the name used when registering the form region in the Windows registry. </param>
+        /// <param name="lcid">The locale ID that identifies the language that Outlook is currently using. This value is used to obtain the localization strings corresponding to this language for the form region.</param>
+        /// <param name="icon">A constant that identifies the type of icon.</param>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public virtual object GetFormRegionIcon(object formRegionName, object lcid, object icon)
+        {
+            try
+            {
+                FormRegionAttribute attribute = FormRegionAttribute.GetAttribute(Type, (string)formRegionName, (int)lcid);
+                if (null != attribute)
+                {
+                    Enums.OlFormRegionIcon olIcon = (Enums.OlFormRegionIcon)icon;
+                    if (attribute.OlIconWildcard)
+                    {
+                        var readIcon = Utils.Resource.ReadIcon(attribute.IconFile);
+                        return Utils.Image.ToPicture(readIcon);
+                    }
+                    if (attribute.OlIcon == olIcon)
+                    {
+                        var readIcon = Utils.Resource.ReadIcon(attribute.IconFile);
+                        return Utils.Image.ToPicture(readIcon);
+                    }
+                    return null;
+                }
+                else
+                    return null;
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                OnOutlookError(OutlookErrorMethodKind.GetFormRegionIcon, exception);
+                return null;
+            }
+        }
+
+        private void OpenForm_Close(OpenFormRegion form)
+        {
+            try
+            {
+                OpenFormRegions.Remove(form);
+                OnFormRegionClose(form);
+                IDisposable disposable = form as IDisposable;
+                if (null != disposable)
+                    disposable.Dispose();
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                OnOutlookError(OutlookErrorMethodKind.CloseOpenFormRegion, exception);
+            }
+        }
+
+        #endregion
+
         #region Tweaks
 
         /// <summary>
@@ -787,7 +1014,17 @@ namespace NetOffice.OutlookApi.Tools
         {
 
         }
-        
+
+        /// <summary>
+        /// Custom outlook-specific error handler
+        /// </summary>
+        /// <param name="methodKind">origin method where the error comes from</param>
+        /// <param name="exception">occured exception</param>
+        protected virtual void OnOutlookError(OutlookErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
+        {
+
+        }
+
         #endregion
 
         #region COM Register Functions
@@ -799,7 +1036,14 @@ namespace NetOffice.OutlookApi.Tools
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
+            if (null == type)
+                throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
+            RegisterHandleRequireShutdownNotificationAttribute(type);
+            RegisterHandleFormRegionAttribute(type);
         }
 
         /// <summary>
@@ -809,7 +1053,13 @@ namespace NetOffice.OutlookApi.Tools
         [ComUnregisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
         {
+            if (null == type)
+                throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             COMAddinUnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
+            UnregisterHandleFormRegionAttribute(type);
         }
 
         /// <summary>
@@ -823,10 +1073,15 @@ namespace NetOffice.OutlookApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             InstallScope currentScope = (InstallScope)scope;
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
 
             COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
+            RegisterHandleRequireShutdownNotificationAttribute(type);
+            RegisterHandleFormRegionAttribute(type);
         }
 
         /// <summary>
@@ -840,9 +1095,13 @@ namespace NetOffice.OutlookApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             InstallScope currentScope = (InstallScope)scope;
             OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
 
+            UnregisterHandleFormRegionAttribute(type);
             COMAddinUnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
@@ -862,6 +1121,70 @@ namespace NetOffice.OutlookApi.Tools
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
 
             return RegExportHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
+        }
+
+        private static void RegisterHandleRequireShutdownNotificationAttribute(Type type)
+        {
+            try
+            {
+                if (null != RequireShutdownNotificationAttribute.GetAttribute(type))
+                {
+                    RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
+                    bool isSystem = location.IsMachineAddinTarget();
+                    ProgIdAttribute progId = AttributeReflector.GetProgIDAttribute(type);
+                    RequireShutdownNotificationAttribute.CreateApplicationKey(isSystem, _addinOfficeRegistryKey, progId.Value);
+                }
+
+            }
+            catch (System.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                    throw;
+            }
+        }
+
+        private static void RegisterHandleFormRegionAttribute(Type type)
+        {
+            try
+            {
+                var formAttributes = FormRegionAttribute.GetAttributes(type);
+                foreach (var item in formAttributes)
+                {
+                    RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
+                    bool isSystem = location.IsMachineAddinTarget();
+                    ProgIdAttribute progId = AttributeReflector.GetProgIDAttribute(type);
+                    FormRegionAttribute.CreateKey(isSystem, _formRegionsOfficeRegistryKey, progId.Value, item.Category, item.Name);
+                }
+            }
+            catch (System.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                if(!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                    throw;
+            }
+        }
+
+        private static void UnregisterHandleFormRegionAttribute(Type type)
+        {
+            try
+            {
+                var formAttributes = FormRegionAttribute.GetAttributes(type);
+                foreach (var item in formAttributes)
+                {
+                    RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
+                    bool isSystem = location.IsMachineAddinTarget();
+                    ProgIdAttribute progId = AttributeReflector.GetProgIDAttribute(type);
+                    FormRegionAttribute.TryDeleteKey(isSystem, _formRegionsOfficeRegistryKey, progId.Value, item.Category, item.Name);
+                }
+
+            }
+            catch (System.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                if(!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                    throw;
+            }
         }
 
         #endregion

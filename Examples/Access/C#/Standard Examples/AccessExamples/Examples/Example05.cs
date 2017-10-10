@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.IO;
-using System.Text;
-using System.Data;
-using System.Data.OleDb;
 using ExampleBase;
 using NetOffice;
 using Access = NetOffice.AccessApi;
@@ -16,7 +9,7 @@ using NetOffice.OfficeApi.Enums;
 using DAO = NetOffice.DAOApi;
 using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
-using NetOffice.AccessApi.Tools.Utils;
+using NetOffice.AccessApi.Tools.Contribution;
 
 namespace AccessExamplesCS4
 {
@@ -58,12 +51,12 @@ namespace AccessExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
+            get { return "Example05"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Customize UI" : "Erweitern der klassischen Oberfläche"; }
+            get { return "Customize UI"; }
         }
 
         public UserControl Panel

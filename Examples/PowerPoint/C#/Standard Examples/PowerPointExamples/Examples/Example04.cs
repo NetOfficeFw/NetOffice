@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Text;
 using System.Globalization;
 using ExampleBase;
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
-using NetOffice.PowerPointApi.Tools.Utils;
+using NetOffice.PowerPointApi.Tools.Contribution;
 
 namespace PowerPointExamplesCS4
 {
@@ -17,14 +15,12 @@ namespace PowerPointExamplesCS4
     /// </summary>
     internal class Example04 : IExample
     {
-        #region IExample
-
         public void RunExample()
         {
             // start powerpoint 
             PowerPoint.Application powerApplication = new PowerPoint.Application();
          
-            // create a utils instance, not need for but helpful to keep the lines of code low
+            // create a utils instance, no need for but helpful to keep the lines of code low
             CommonUtils utils = new CommonUtils(powerApplication);
 
             // add a new presentation with two new slides
@@ -44,14 +40,14 @@ namespace PowerPointExamplesCS4
             slide2.SlideShowTransition.Speed = PpTransitionSpeed.ppTransitionSpeedFast;
 
             // save the document 
-            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", PowerPoint.Tools.DocumentFormat.Normal); 
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", DocumentFormat.Normal); 
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
             powerApplication.Quit();
             powerApplication.Dispose();
 
-            // show dialog for the user(you!)
+            // show end dialog
             HostApplication.ShowFinishDialog(null, documentFile);
         }
 
@@ -62,12 +58,12 @@ namespace PowerPointExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
+            get { return "Example04"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Create blend animation" : "Eine Blend Animation erstellen"; }
+            get { return "Create blend animation"; }
         }
 
         public UserControl Panel
@@ -75,30 +71,6 @@ namespace PowerPointExamplesCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
-
-        #region Helper
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".ppt" or ".pptx"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(PowerPoint.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".pptx";
-            else
-                return ".ppt";
-        }
-
-        #endregion
     }
 }

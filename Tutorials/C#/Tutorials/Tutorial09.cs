@@ -1,37 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
-using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
 namespace TutorialsCS4
 {
     public class Tutorial09 : ITutorial
     {
-        #region ITutorial
-
         public void Run()
         {
-            // In some situations you want use NetOffice with a already running application.
-            // this examples show you how its possible.
+            // NetOffice instances implements the IClonable interface
+            // and deal with underlying proxies as well
 
-            // GetActiveInstance take the first instance in memory
-            Excel.Application excelApplication = Excel.Application.GetActiveInstance();
+            Excel.Application application = new NetOffice.ExcelApi.Application();
+            application.DisplayAlerts = false;
+            Excel.Workbook book = application.Workbooks.Add();
 
-            // another method is GetActiveInstances:
-            // 
-            // GetActiveInstances takes all instances in memory. dont forget to dispose the instances.
-            //            
-            // Excel.Application[] excelApplications = Excel.Application.GetActiveInstances();
+            // clone the book
+            Excel.Workbook cloneBook = book.Clone() as Excel.Workbook;
 
-            excelApplication.Quit();
-            excelApplication.Dispose();
+            // dispose the origin book keep the underlying proxy alive
+            // until the clone is disposed
+            book.Dispose();
+
+            // alive and works even the origin book is disposed
+            foreach (Excel.Worksheet sheet in cloneBook.Sheets)
+            {
+                Console.WriteLine(sheet);
+            }
+
+            application.Quit();
+            application.Dispose();
 
             HostApplication.ShowFinishDialog();
         }
@@ -46,14 +45,9 @@ namespace TutorialsCS4
 
         }
 
-        public void ChangeLanguage(int lcid)
-        {
-
-        }
-
         public string Uri
         {
-            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial09_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial09_DE_CS"; }
+            get { return Program.DocumentationBase + "Tutorial09_EN_CS.html"; }
         }
 
         public string Caption
@@ -61,9 +55,10 @@ namespace TutorialsCS4
             get { return "Tutorial09"; }
         }
 
+
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Create a NetOffice Excel Application Object with given COM Proxy" : "Ein NetOffice Excel Objekt Application basierend auf einem COM Proxy erstellen"; }
+            get { return "Cloning Instances"; }
         }
 
         public UserControl Panel
@@ -71,12 +66,6 @@ namespace TutorialsCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

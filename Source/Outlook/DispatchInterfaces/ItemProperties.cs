@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OutlookApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863357.aspx </remarks>
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class ItemProperties : COMObject, IEnumerable<NetOffice.OutlookApi.ItemProperty>
+	public class ItemProperties : COMObject, IEnumerableProvider<NetOffice.OutlookApi.ItemProperty>
 	{
 		#pragma warning disable
 
@@ -255,7 +256,23 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.OutlookApi.ItemProperty> Member
+        #region IEnumerableProvider<NetOffice.OutlookApi.ItemProperty>
+
+        ICOMObject IEnumerableProvider<NetOffice.OutlookApi.ItemProperty>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OutlookApi.ItemProperty>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi.ItemProperty item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.ItemProperty>
 
         /// <summary>
         /// SupportByVersion Outlook, 10,11,12,14,15,16
@@ -270,7 +287,7 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Outlook, 10,11,12,14,15,16
@@ -278,7 +295,7 @@ namespace NetOffice.OutlookApi
         [SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
@@ -14,36 +8,45 @@ namespace TutorialsCS4
 {
     public class Tutorial10 : ITutorial
     {
-        #region ITutorial
-
         public void Run()
         {
-            // this property allows you to disable any events from Office applications
-            bool enableEvents = NetOffice.Settings.Default.EnableEvents;
+            // Enable and trigger trace alert
+            NetOffice.Settings.Default.PerformanceTrace.Enabled = true;
+            NetOffice.Settings.Default.PerformanceTrace.Alert += delegate(NetOffice.PerformanceTrace sender, NetOffice.PerformanceTrace.PerformanceAlertEventArgs args)
+            {
+                Console.WriteLine("{0} {1}:{2} in {3} Milliseconds ({4} Ticks)", args.CallType, args.EntityName, args.MethodName, args.TimeElapsedMS, args.Ticks);
+            };
 
-            // this property is the common threadculture for accessing Office.
-            // default is en-us(1033)
-            System.Globalization.CultureInfo threadCulture = NetOffice.Settings.Default.ThreadCulture;
-             
-            // this property allows to enable a COM Message filter
-            // you may know the problem with RPC_Rejected exceptions(the host application is currently busy)
-            // the message filter is waiting for you(shortly) and try the call again
-            bool messageFilter = NetOffice.Settings.Default.MessageFilter.Enabled;
-              
-            // the safemode is a feature that checks automaticly at runtime the methods oder properties you use are
-            // available in current office version. if it doesnt an EntityNotSupportedException was thrown
-            // false by default
-            bool safeMode = NetOffice.Settings.Default.EnableSafeMode;
-            
-            // get or set NetOffice logs essential system steps in the NetOffice DebugConsole
-            bool debugOutput = NetOffice.Settings.Default.EnableDebugOutput;
+            // Criteria 1
+            // Enable performance trace in excel generaly. set interval limit to 100ms to see all actions there need >= 100 milliseconds
+            NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi"].Enabled = true;
+            NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi"].IntervalMS = 100;
 
-            // this property allows you to enable NetOffice call Quit() for Application objects automaticly while Dispose()
-            // false by default
-            bool automaticQuit = NetOffice.Settings.Default.EnableAutomaticQuit;
+            // Criteria 2
+            // Enable additional performance trace for all members of WorkSheet in excel. set interval limit to 20ms to see all actions there need >=20 milliseconds
+            NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet"].Enabled = true;
+            NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet"].IntervalMS = 20;
 
-            string message = string.Format("Events enabled:{0}{6}Thread:{1}{6}AutomaticQuit enabled:{2}{6}MessageFilter enabled:{3}{6}SafeMode enabled:{4}{6}DebugOutput enabled:{5}{6}", enableEvents, threadCulture.LCID, automaticQuit, messageFilter, safeMode, debugOutput, Environment.NewLine);
-            MessageBox.Show(message, "Settings", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Criteria 3
+            // Enable additional performance trace for WorkSheet Range property in excel. set interval limit to 0ms to see all calls anywhere
+            NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet", "Range"].Enabled = true;
+            NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet", "Range"].IntervalMS = 0;
+ 
+            // do some stuff
+            Excel.Application application = new NetOffice.ExcelApi.Application();
+            application.DisplayAlerts = false;
+            Excel.Workbook book = application.Workbooks.Add();
+            Excel.Worksheet sheet = book.Sheets.Add() as Excel.Worksheet;
+            for (int i = 1; i <= 5; i++)
+            {
+                Excel.Range range = sheet.Range("A" + i.ToString());
+                range.Value = "Test123";
+                range[1, 1].Value = "Test234";
+            }
+            application.Quit();
+            application.Dispose();
+
+            HostApplication.ShowFinishDialog();
         }
 
         public void Connect(IHost hostApplication)
@@ -56,25 +59,19 @@ namespace TutorialsCS4
 
         }
 
-        public void ChangeLanguage(int lcid)
-        {
-
-        }
-
         public string Uri
         {
-            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial10_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial10_DE_CS"; }
+            get { return Program.DocumentationBase + "Tutorial10_EN_CS.html"; }
         }
 
         public string Caption
         {
             get { return "Tutorial10"; }
         }
-
-
+        
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "NetOffice Settings" : "Einstellungsmöglichkeiten für NetOffice"; }
+            get { return "Measure Performance"; }
         }
 
         public UserControl Panel
@@ -82,12 +79,6 @@ namespace TutorialsCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

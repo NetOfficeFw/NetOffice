@@ -5,7 +5,6 @@ using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using Access = NetOffice.AccessApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.AccessApi.Enums;
@@ -13,7 +12,7 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("DA980628-557A-4244-97FB-E809172F3895"), ProgId("AccessAddinCS4.SimpleAddin"), ComVisible(true)]
+    [Guid("DA980628-557A-4244-97FB-E809172F3895"), ProgId("AccessAddinCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\AddIns\\";
@@ -28,7 +27,7 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _menuName                = "Sample Menu CS4";
         private static readonly string _menuButtonName          = "Sample Button CS4";
 
-        Access.Application _accessApplication;
+        private Access.Application _accessApplication;
           
         #region IDTExtensibility2 Members
           

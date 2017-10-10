@@ -233,7 +233,6 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>

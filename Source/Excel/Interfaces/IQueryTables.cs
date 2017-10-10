@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class IQueryTables : COMObject , IEnumerable<NetOffice.ExcelApi.QueryTable>
+	public class IQueryTables : COMObject, IEnumerableProvider<NetOffice.ExcelApi.QueryTable>
 	{
 		#pragma warning disable
 
@@ -205,32 +206,46 @@ namespace NetOffice.ExcelApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.QueryTable>(this, "Add", NetOffice.ExcelApi.QueryTable.LateBindingApiWrapperType, connection, destination);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ExcelApi.QueryTable> Member
-        
+        #region IEnumerableProvider<NetOffice.ExcelApi.QueryTable>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.QueryTable>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.QueryTable>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.QueryTable>
+
         /// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.ExcelApi.QueryTable> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ExcelApi.QueryTable item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.ExcelApi.QueryTable> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.QueryTable item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

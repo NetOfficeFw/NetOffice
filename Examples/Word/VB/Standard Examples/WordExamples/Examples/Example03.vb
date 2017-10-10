@@ -2,14 +2,15 @@
 Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
-Imports NetOffice.WordApi.Tools.Utils
+Imports NetOffice.WordApi.Tools.Contribution
 
+''' <summary>
+''' Example 3 - Using templates
+''' </summary>
 Public Class Example03
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -98,27 +99,27 @@ Public Class Example03
         wordApplication.Selection.TypeText("Questions & Answers")
 
         'save document
-        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", Word.Tools.DocumentFormat.Normal)
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", DocumentFormat.Normal)
         newDocument.SaveAs(documentFile)
 
         ' close word and dispose reference
         wordApplication.Quit()
         wordApplication.Dispose()
 
-        ' show dialog for the user(you!)
+        ' show end dialog
         _hostApplication.ShowFinishDialog(Nothing, documentFile)
 
     End Sub
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example03", "Beispiel03")
+            Return "Example03"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Using templates", "Verwendung von Templates")
+            Return "Using templates"
         End Get
     End Property
 
@@ -133,7 +134,5 @@ Public Class Example03
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

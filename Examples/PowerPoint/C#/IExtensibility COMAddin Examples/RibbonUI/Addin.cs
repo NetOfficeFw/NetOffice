@@ -5,7 +5,6 @@ using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using PowerPoint = NetOffice.PowerPointApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.PowerPointApi.Enums;
@@ -13,15 +12,15 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("B1EF4706-D318-4BE9-93FA-7C57D3A3C6F0"), ProgId("PPointAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    [Guid("B1EF4706-D318-4BE9-93FA-7C57D3A3C6F0"), ProgId("PPointAddinCS4.RibbonAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";
         private static readonly string _progId                  = "PPointAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        PowerPoint.Application _powerApplication;
+        private PowerPoint.Application _powerApplication;
 
         #region IDTExtensibility2 Members
          

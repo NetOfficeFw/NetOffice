@@ -2,14 +2,13 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("A48F84DF-BD64-4A8F-95B0-452989733AE2"), ProgIdAttribute("AccessAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("A48F84DF-BD64-4A8F-95B0-452989733AE2"), ProgId("AccessAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -25,10 +24,10 @@ Public Class Addin
     Private Shared ReadOnly _menuName As String = "Sample Menu VB4"
     Private Shared ReadOnly _menuButtonName As String = "Sample Button VB4"
 
-    Dim _accessApplication As Access.Application
+    Private _accessApplication As Access.Application
 
 #Region "IDTExtensibility2 Members"
-     
+
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
 

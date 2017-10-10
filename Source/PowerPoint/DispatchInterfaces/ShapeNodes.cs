@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PowerPointApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744776.aspx </remarks>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class ShapeNodes : COMObject, IEnumerable<NetOffice.PowerPointApi.ShapeNode>
+	public class ShapeNodes : COMObject, IEnumerableProvider<NetOffice.PowerPointApi.ShapeNode>
 	{
 		#pragma warning disable
 
@@ -325,7 +326,21 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.PowerPointApi.ShapeNode> Member
+        #region IEnumerableProvider<NetOffice.PowerPointApi.ShapeNode>
+
+        ICOMObject IEnumerableProvider<NetOffice.PowerPointApi.ShapeNode>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.PowerPointApi.ShapeNode>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.PowerPointApi.ShapeNode>
 
         /// <summary>
         /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
@@ -340,7 +355,7 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
@@ -348,7 +363,7 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

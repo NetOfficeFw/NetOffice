@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864653.aspx </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class ServerPolicy : _IMsoDispObj , IEnumerable<NetOffice.OfficeApi.PolicyItem>
+	public class ServerPolicy : _IMsoDispObj , IEnumerableProvider<NetOffice.OfficeApi.PolicyItem>
 	{
 		#pragma warning disable
 
@@ -224,49 +225,66 @@ namespace NetOffice.OfficeApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-       #region IEnumerable<NetOffice.OfficeApi.PolicyItem> Member
-        
+        #endregion
+
+        #region IEnumerableProvider<NetOffice.OfficeApi.SearchScope>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.PolicyItem>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.PolicyItem>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.PolicyItem item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.PolicyItem> Member
+
         /// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
+        /// SupportByVersion Office, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [CustomEnumerator]
-       public IEnumerator<NetOffice.OfficeApi.PolicyItem> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.PolicyItem item in innerEnumerator)
-               yield return item;
-       }
+        public IEnumerator<NetOffice.OfficeApi.PolicyItem> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.PolicyItem item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

@@ -10,7 +10,7 @@ using ExampleBase;
 
 namespace WordExamplesCS4
 {
-    public partial class FormMain : FormBase
+    public partial class FormMain : ExampleForm
     {
         public FormMain()
         {

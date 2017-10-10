@@ -944,8 +944,8 @@
     <Compile Include="DispatchInterfaces\DiagramNodes.cs" />
     <Compile Include="DispatchInterfaces\DiagramNodeChildren.cs" />
     <Compile Include="DispatchInterfaces\DiagramNode.cs" />
-    <Compile Include="NativeInterfaces\IRTDUpdateEvent.cs" />
-    <Compile Include="NativeInterfaces\IRtdServer.cs" />
+    <Compile Include="Native\IRTDUpdateEvent.cs" />
+    <Compile Include="Native\IRtdServer.cs" />
     <Compile Include="DispatchInterfaces\CellFormat.cs" />
     <Compile Include="DispatchInterfaces\UsedObjects.cs" />
     <Compile Include="DispatchInterfaces\CustomProperties.cs" />

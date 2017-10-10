@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-
 using ExampleBase;
 
 namespace PowerPointExamplesCS4
 {
-    public partial class FormMain : FormBase
+    public partial class FormMain : ExampleForm
     {
         public FormMain()
         {

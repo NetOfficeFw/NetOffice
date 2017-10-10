@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Reflection;
-using System.Text;
-using System.Globalization;
 using ExampleBase;
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
-using NetOffice.WordApi.Tools.Utils;
+using NetOffice.WordApi.Tools.Contribution;
 
 namespace WordExamplesCS4
 {
@@ -19,8 +15,6 @@ namespace WordExamplesCS4
     /// </summary>
     internal class Example04 : IExample
     {
-        #region IExample
-
         public void RunExample()
         {
             // create simple a csv-file as datasource
@@ -31,7 +25,7 @@ namespace WordExamplesCS4
                 File.Delete(fileName);
 
             File.AppendAllText(fileName, string.Format("{0},{1}{2}", "ProjectName", "ProjectLink", Environment.NewLine));
-            File.AppendAllText(fileName, string.Format("{0},{1}{2}", "NetOffice", "http://netoffice.codeplex.com", Environment.NewLine));
+            File.AppendAllText(fileName, string.Format("{0},{1}{2}", "NetOffice", "https://github.com/NetOfficeFw/NetOffice", Environment.NewLine));
 
             // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
@@ -71,14 +65,14 @@ namespace WordExamplesCS4
             wordApplication.ActiveWindow.View.ShowFieldCodes = false;
 
             // save the document
-            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", Word.Tools.DocumentFormat.Normal);
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", DocumentFormat.Normal);
             newDocument.SaveAs(documentFile);
 
             // close word and dispose reference
             wordApplication.Quit();
             wordApplication.Dispose();
 
-            // show dialog for the user(you!)
+            // show end dialog
             HostApplication.ShowFinishDialog(null, documentFile);
         }
 
@@ -89,25 +83,19 @@ namespace WordExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
+            get { return "Example04"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Using data source" : "Verwendung von DataSource"; }
+            get { return "Using data source"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
-
-        #endregion
-
-        #region Properties
-
+        
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

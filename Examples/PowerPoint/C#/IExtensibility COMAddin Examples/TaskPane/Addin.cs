@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
@@ -13,8 +12,8 @@ using NetOffice.PowerPointApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("40C8F944-BD8D-41D7-8314-2C99343F148C"), ProgId("PPointAddinCS4.TaskPaneAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
+    [Guid("40C8F944-BD8D-41D7-8314-2C99343F148C"), ProgId("PPointAddinCS4.TaskPaneAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";
         private static readonly string _progId                  = "PPointAddinCS4.TaskPaneAddin";

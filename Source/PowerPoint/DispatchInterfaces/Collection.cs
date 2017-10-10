@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PowerPointApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
-	public class Collection : COMObject, IEnumerable<object>
+	public class Collection : COMObject, IEnumerableProvider<object>
 	{
 		#pragma warning disable
 
@@ -138,7 +139,21 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerableProvider<object>
+
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
@@ -153,7 +168,7 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
@@ -161,7 +176,7 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, true);
 		}
 
 		#endregion

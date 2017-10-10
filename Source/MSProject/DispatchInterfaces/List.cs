@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.MSProjectApi
 {
@@ -13,8 +14,8 @@ namespace NetOffice.MSProjectApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920623(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class List : COMObject , IEnumerable<string>
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class List : COMObject, IEnumerableProvider<string>
 	{
 		#pragma warning disable
 
@@ -165,36 +166,50 @@ namespace NetOffice.MSProjectApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-
-       #region IEnumerable<string> Member
-        
-        /// <summary>
-		/// SupportByVersion MSProject, 11,12,14
-		/// </summary>
-		[SupportByVersion("MSProject", 11,12,14)]
-       public IEnumerator<string> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (string item in innerEnumerator)
-               yield return item;
-       }
-
-       #endregion
-          
-		#region IEnumerable Members
+        #endregion
        
-		/// <summary>
-		/// SupportByVersion MSProject, 11,12,14
-		/// </summary>
-		[SupportByVersion("MSProject", 11,12,14)]
+        #region IEnumerableProvider<string>
+
+        ICOMObject IEnumerableProvider<string>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<string>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<string>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
+        public IEnumerator<string> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (string item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetScalarEnumeratorAsProperty(this);
 		}
 
 		#endregion

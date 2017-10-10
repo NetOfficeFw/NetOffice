@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.AccessApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191896.aspx </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Controls : COMObject, IEnumerable<object>
+	public class Controls : COMObject, IEnumerableProvider<object>
 	{
 		#pragma warning disable
 
@@ -186,7 +187,21 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerableProvider<object>
+
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion Access, 9,10,11,12,14,15,16
@@ -201,7 +216,7 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Access, 9,10,11,12,14,15,16
@@ -209,7 +224,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, true);
 		}
 
 		#endregion

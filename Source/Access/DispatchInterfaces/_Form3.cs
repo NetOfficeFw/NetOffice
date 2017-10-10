@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
@@ -13,8 +14,8 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
-	public class _Form3 : _Form2, IEnumerable<object>
-	{
+	public class _Form3 : _Form2, IEnumerableProvider<object>
+    {
 		#pragma warning disable
 
 		#region Type Information
@@ -1488,13 +1489,27 @@ namespace NetOffice.AccessApi
 			return get_SectionOld(index);
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
+
+        #endregion
+      
+        #region IEnumerableProvider<object>
+
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion Access, 12,14,15,16
@@ -1509,7 +1524,7 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Access, 12,14,15,16
@@ -1517,7 +1532,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, true);
 		}
 
 		#endregion

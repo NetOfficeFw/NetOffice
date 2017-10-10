@@ -4,14 +4,15 @@ Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 Imports VB = NetOffice.VBIDEApi
 Imports NetOffice.VBIDEApi.Enums
-Imports NetOffice.ExcelApi.Tools.Utils
+Imports NetOffice.ExcelApi.Tools.Contribution
 
+''' <summary>
+''' Example 7 - Attach VBA Code to a workbook
+''' </summary>
 Public Class Example07
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -26,7 +27,7 @@ Public Class Example07
             excelApplication.DisplayAlerts = False
             excelApplication.Visible = False
 
-            ' create a utils instance, not need for but helpful to keep the lines of code low
+            ' create a utils instance, no need for but helpful to keep the lines of code low
             Dim utils As CommonUtils = New CommonUtils(excelApplication)
 
             ' add a new workbook
@@ -52,7 +53,7 @@ Public Class Example07
 
             ' save the book 
             Dim fileFormat As XlFileFormat = GetFileFormat(excelApplication)
-            workbookFile = utils.File.Combine(_hostApplication.RootDirectory, "Example07", Excel.Tools.DocumentFormat.Macros)
+            workbookFile = utils.File.Combine(_hostApplication.RootDirectory, "Example07", DocumentFormat.Macros)
             workBook.SaveAs(workbookFile, fileFormat)
 
         Catch throwedException As System.Runtime.InteropServices.COMException
@@ -77,13 +78,13 @@ Public Class Example07
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example07", "Beispiel07")
+            Return "Example07"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set.", "Dynamisches hinzufügen von VBA Code zu einem Workbook. Die Option 'Visual Basic Projekten vertrauen muss aktiviert sein.")
+            Return "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set."
         End Get
     End Property
 
@@ -99,10 +100,6 @@ Public Class Example07
         End Get
     End Property
 
-#End Region
-
-#Region "Helper"
-
     Private Function GetFileFormat(ByVal application As Excel.Application) As XlFileFormat
 
         Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
@@ -113,7 +110,5 @@ Public Class Example07
         End If
 
     End Function
-
-#End Region
 
 End Class

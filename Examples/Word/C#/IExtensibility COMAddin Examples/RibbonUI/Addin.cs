@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.WordApi.Enums;
@@ -13,15 +12,15 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("65E09829-E3FE-4E27-89D9-AA3D7408B736"), ProgId("WordAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    [Guid("65E09829-E3FE-4E27-89D9-AA3D7408B736"), ProgId("WordAddinCS4.RibbonAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
         private static readonly string _prodId                  = "WordAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        Word.Application _wordApplication;
+        private Word.Application _wordApplication;
 
         #region IDTExtensibility2 Members
          

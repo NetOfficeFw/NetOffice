@@ -31,13 +31,13 @@ Public Class Example06
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example06", "Beispiel06")
+            Return "Example06"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Events", "Ereignisse")
+            Return "Events"
         End Get
     End Property
 
@@ -59,8 +59,8 @@ Public Class Example06
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
-        ' start outlook
-        Dim outlookApplication As New Outlook.Application()
+        ' start outlook by trying to access running application first
+        Dim outlookApplication = New Outlook.Application(True)
 
         ' we register some events. note: the event trigger was called from word, means an other Thread
         Dim mailItem As Outlook.MailItem = outlookApplication.CreateItem(OlItemType.olMailItem)
@@ -77,8 +77,10 @@ Public Class Example06
         mailItem.Display()
         mailItem.Close(OlInspectorClose.olDiscard)
 
-        ' close word and dispose reference
-        outlookApplication.Quit()
+        'close outlook and dispose
+        If Not outlookApplication.FromProxyService Then
+            outlookApplication.Quit()
+        End If
         outlookApplication.Dispose()
 
 

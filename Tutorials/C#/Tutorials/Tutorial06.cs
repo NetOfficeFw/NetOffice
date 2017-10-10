@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
@@ -14,13 +8,11 @@ namespace TutorialsCS4
 {
     public class Tutorial06 : ITutorial 
     {
-        #region ITutorial
-
         public void Run()
         {
-            // this examples shows how i can use variant types(object in NetOffice) at runtime
+            // this examples shows how to use variant types(object in NetOffice) at runtime
             // the reason for the most variant definitions in office is a more flexible value set.(95%)
-            // here is the code to demonstrate this
+            // here is some code to demonstrate this
 
             // start application
             Excel.Application application = new Excel.Application();
@@ -32,7 +24,7 @@ namespace TutorialsCS4
             Excel.Range range = sheet.Cells[1, 1];
             Excel.Style myStyle = book.Styles.Add("myUniqueStyle");
  
-            // Range.Style is defined as Variant in Excel and represents as object in NetOffice
+            // Range.Style is defined as Variant in Excel and as object in NetOffice
             // You got always an Excel.Style instance if you ask for
             Excel.Style style = (Excel.Style)range.Style;
 
@@ -62,14 +54,9 @@ namespace TutorialsCS4
 
         }
 
-        public void ChangeLanguage(int lcid)
-        {
-
-        }
-
         public string Uri
         {
-            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial06_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial06_DE_CS"; }
+            get { return Program.DocumentationBase + "Tutorial06_EN_CS.html"; }
         }
 
         public string Caption
@@ -79,7 +66,7 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Understanding Variant" : "Verstehen und verwenden von Variant Typen"; }
+            get { return "Understanding Variants"; }
         }
 
         public UserControl Panel
@@ -87,12 +74,6 @@ namespace TutorialsCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

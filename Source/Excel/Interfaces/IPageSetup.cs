@@ -117,8 +117,7 @@ namespace NetOffice.ExcelApi
 
 		#region Methods
 
-		#endregion
-
+		#endregion   
 	}
 
 	/// <summary>

@@ -1,46 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
-using NetOffice;
 using Excel = NetOffice.ExcelApi;
+using NetOffice;
 
 namespace TutorialsCS4
 {
-    public class Tutorial08 : ITutorial 
+    /// <summary>
+    /// Ouer custom Excel.Workbook
+    /// </summary>
+    public class MyWorkbook : Excel.Workbook
     {
-        #region ITutorial
+        public MyWorkbook(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy) { }
+        public MyWorkbook(ICOMObject parentObject, object comProxy, Type comProxyType) : base(parentObject, comProxy, comProxyType) { }
 
+        // Sample property
+        public bool Has3Sheets
+        {
+            get
+            {
+                return Sheets.Count == 3;
+            }
+        }
+    }
+
+    public class Tutorial08 : ITutorial
+    {
         public void Run()
         {
-            // this example demonstrate the NetOffice low-level interface for latebinding calls
+            // Replace Excel.Workbook with MyWorkbook
+            NetOffice.Core.Default.CreateInstance += delegate(Core sender, Core.OnCreateInstanceEventArgs args)
+            {
+                if (args.Instance.InstanceType == typeof(Excel.Workbook))
+                    args.Replace = typeof(MyWorkbook);
+            };
 
             Excel.Application application = new Excel.Application();
             application.DisplayAlerts = false;
-            application.Workbooks.Add();
 
-            Excel.Worksheet sheet = (Excel.Worksheet)application.Workbooks[1].Worksheets[1];
-            Excel.Range sampleRange = sheet.Cells[1, 1];
-
-            // we set the COMVariant ColorIndex from Font of ouer sample range with the invoker class
-            Invoker.Default.PropertySet(sampleRange.Font, "ColorIndex", 1);
-
-            // creates a native unmanaged ComProxy with the invoker an release immediately
-            object comProxy = Invoker.Default.PropertyGet(application, "Workbooks");
-            Marshal.ReleaseComObject(comProxy);
-
+            // add and cast book to MyWorkbook
+            MyWorkbook book = application.Workbooks.Add() as MyWorkbook;
+            if (book.Has3Sheets)
+                Console.WriteLine("Book has 3 sheets.");
+            
             application.Quit();
             application.Dispose();
 
             HostApplication.ShowFinishDialog();
         }
-
+        
         public void Connect(IHost hostApplication)
         {
             HostApplication = hostApplication;
@@ -51,15 +59,9 @@ namespace TutorialsCS4
 
         }
 
-        public void ChangeLanguage(int lcid)
-        {
-
-        }
-
         public string Uri
         {
-            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial08_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial08_DE_CS"; }
-
+            get { return Program.DocumentationBase + "Tutorial08_EN_CS.html"; }
         }
 
         public string Caption
@@ -67,9 +69,10 @@ namespace TutorialsCS4
             get { return "Tutorial08"; }
         }
 
+
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Using the Invoker" : "Den Invoker verwenden"; }
+            get { return "Custom Instances"; }
         }
 
         public UserControl Panel
@@ -77,12 +80,6 @@ namespace TutorialsCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

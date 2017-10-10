@@ -3,21 +3,22 @@ Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports NetOffice.OfficeApi.Enums
-Imports NetOffice.PowerPointApi.Tools.Utils
+Imports NetOffice.PowerPointApi.Tools.Contribution
 
+''' <summary>
+''' Example 1 - Create a presentation with 1 empty slide
+''' </summary>
 Public Class Example01
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start powerpoint
         Dim powerApplication As PowerPoint.Application = New PowerPoint.Application()
 
-        ' create a utils instance, not need for but helpful to keep the lines of code low
+        ' create a utils instance, no need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(powerApplication)
 
         ' add a new presentation with one new slide
@@ -25,27 +26,27 @@ Public Class Example01
         presentation.Slides.Add(1, PpSlideLayout.ppLayoutClipArtAndVerticalText)
 
         ' save the document 
-        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example01", PowerPoint.Tools.DocumentFormat.Normal)
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example01", DocumentFormat.Normal)
         presentation.SaveAs(documentFile)
 
         ' close power point and dispose reference
         powerApplication.Quit()
         powerApplication.Dispose()
 
-        ' show dialog for the user(you!)
+        ' show end dialog
         _hostApplication.ShowFinishDialog(Nothing, documentFile)
 
     End Sub
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example01", "Beispiel01")
+            Return "Example01"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create a presentation with 1 empty slide", "Eine neue Präsentation erstellen")
+            Return "Create a presentation with 1 empty slide"
         End Get
     End Property
 
@@ -60,7 +61,5 @@ Public Class Example01
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

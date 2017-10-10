@@ -45,7 +45,13 @@ namespace NetOffice.Attributes
         /// <summary>
         /// Entity is native COMImport interface
         /// </summary>
-        IsNativeInterface = 7
+        IsNativeInterface = 7,
+
+        /// <summary>
+        /// Entity is wrapper arround a native COMImport interface
+        /// That means the instance performs early-bind calls
+        /// </summary>
+        IsNativeInterfaceCaller = 8
     }
 
     /// <summary>

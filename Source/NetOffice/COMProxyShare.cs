@@ -20,7 +20,7 @@ namespace NetOffice
         Thats why we spend this lifetime wrapper arround to have multiple 
         Netoffice wrapper instances with same RCW proxy and keep the managed proxy alive as long we need.
     */
- 
+
     /// <summary>
     /// Provides shared access to managed COM proxies(System._ComObject) by implement a reference counter.  
     /// </summary>
@@ -62,7 +62,12 @@ namespace NetOffice
         /// Instance is marked as enumerator provider
         /// </summary>
         private bool _isEnumerator;
-        
+
+        /// <summary>
+        /// Used Core
+        /// </summary>
+        private Core _factory;
+
         /// <summary>
         /// Invalid proxy error message
         /// </summary>
@@ -75,31 +80,35 @@ namespace NetOffice
         /// <summary>
         /// Creates an instance of the class and aquire the given proxy
         /// </summary>
+        /// <param name="factory">used core</param>
         /// <param name="proxy">com proxy as any</param>
         /// <exception cref="ArgumentNullException">throws when proxy is null</exception>
-        internal COMProxyShare(object proxy)
-        {    
+        internal COMProxyShare(Core factory, object proxy)
+        {
             if (null == proxy)
                 throw new ArgumentNullException("proxy");
             if (!(proxy is MarshalByRefObject))
                 throw new ArgumentException(_invalidComProxy);
+            _factory = null != factory ? factory : Core.Default;
             _isEnumerator = proxy is ICustomAdapter;
             _proxy = proxy;
             Acquire();
         }
-        
+
         /// <summary>
         ///  Creates an instance of the class and aquire the given proxy
         /// </summary>
+        /// <param name="factory">used core</param>
         /// <param name="proxy">com proxy as any</param>
         /// <param name="isEnumerator">indicates proxy is an enumerator</param>
         /// <exception cref="ArgumentNullException">throws when proxy is null</exception>
-        internal COMProxyShare(object proxy, bool isEnumerator)
+        internal COMProxyShare(Core factory, object proxy, bool isEnumerator)
         {
             if (null == proxy)
                 throw new ArgumentNullException("proxy");
             if (false == isEnumerator && false == (proxy is MarshalByRefObject))
                 throw new ArgumentException(_invalidComProxy);
+            _factory = null != factory ? factory : Core.Default;
             _isEnumerator = isEnumerator;
             _proxy = proxy;
             Acquire();
@@ -108,16 +117,18 @@ namespace NetOffice
         /// <summary>
         ///  Creates an instance of the class and aquire the given proxy
         /// </summary>
+        /// <param name="factory">used core</param>
         /// <param name="proxy">com proxy as any</param>
         /// <param name="isEnumerator">indicates proxy is an enumerator</param>
         /// <param name="suppressReleaseExceptions">ignore exceptions when release underlying managed proxy</param>
         /// <exception cref="ArgumentNullException">throws when proxy is null</exception>
-        internal COMProxyShare(object proxy, bool isEnumerator, bool suppressReleaseExceptions)
+        internal COMProxyShare(Core factory, object proxy, bool isEnumerator, bool suppressReleaseExceptions)
         {
             if (null == proxy)
                 throw new ArgumentNullException("proxy");
             if (false == isEnumerator && false == (proxy is MarshalByRefObject))
                 throw new ArgumentException(_invalidComProxy);
+            _factory = null != factory ? factory : Core.Default;
             _isEnumerator = isEnumerator;
             _proxy = proxy;
             SuppressReleaseExceptions = suppressReleaseExceptions;
@@ -145,6 +156,17 @@ namespace NetOffice
             get
             {
                 return _released;
+            }
+        }
+
+        /// <summary>
+        /// Used Factory Core
+        /// </summary>
+        public Core Factory
+        {
+            get
+            {
+                return _factory;
             }
         }
 
@@ -217,7 +239,7 @@ namespace NetOffice
                     _count--;
                     if (0 == _count)
                     {
-                        ReleaseComObject();
+                        ReleaseComObject();                    
                         _released = true;
                         return true;
                     }
@@ -225,8 +247,9 @@ namespace NetOffice
                         return false;
                 }                
             }
-            catch 
+            catch(Exception exception)
             {
+                Factory.Console.WriteException(exception);
                 if (!SuppressReleaseExceptions)
                     throw;
                 else

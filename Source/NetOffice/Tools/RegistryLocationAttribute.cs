@@ -20,7 +20,6 @@ namespace NetOffice.Tools
         /// </summary>
         InstallScope = 1,
 
-
         /// <summary>
         /// CurrentUser Key
         /// </summary>
@@ -65,7 +64,20 @@ namespace NetOffice.Tools
                 return Value == RegistrySaveLocation.LocalMachine;
         }
 
-                /// <summary>
+        /// <summary>
+        /// Returns info RegAsm default addin registration is system addin
+        /// </summary>
+        /// <returns>true if machine otherwise false</returns>
+        public bool IsMachineAddinTarget()
+        {
+            if (Value == RegistrySaveLocation.InstallScopeCurrentUser)
+                return false;
+            if (Value == RegistrySaveLocation.CurrentUser)
+                return false;
+            return true;
+        }
+
+        /// <summary>
         /// Returns info the current combination of RegistryLocation and InstallScope means system key for component register
         /// </summary>
         /// <param name="scope">scope target</param>

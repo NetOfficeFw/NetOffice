@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Collections.Generic;
+using System.Linq;
 using System.ComponentModel;
 
 namespace NetOffice.Tools
@@ -120,18 +120,26 @@ namespace NetOffice.Tools
             }
             return false;
         }
-        
+
         /// <summary>
         /// Looks for the CustomUIAttribute
         /// </summary>
         /// <param name="type">the type you want looking for the attribute</param>
+        /// <param name="ribbonID">given ribbon id from Office</param>
         /// <returns>CustomUIAttribute or null</returns>
-        public static CustomUIAttribute GetRibbonAttribute(Type type)
+        public static CustomUIAttribute GetRibbonAttribute(Type type, string ribbonID)
         {
             object[] array = type.GetCustomAttributes(typeof(CustomUIAttribute), false);
             if (array.Length == 0)
                 return null;
-            return array[0] as CustomUIAttribute;
+            CustomUIAttribute attribute = array[0] as CustomUIAttribute;
+            if (String.IsNullOrWhiteSpace(attribute.RibbonID))
+                return attribute;
+
+            if (attribute.RibbonIDs.Contains(ribbonID))
+                return attribute;
+            else
+                return null;
         }
 
         /// <summary>
@@ -205,7 +213,6 @@ namespace NetOffice.Tools
         /// <returns>LockbackAttribute or null</returns>
         public static LockbackAttribute GetLockbackAttribute(Type type)
         {
-
             object[] array = type.GetCustomAttributes(typeof(LockbackAttribute), false);
             if (array.Length == 0)
                 return null;

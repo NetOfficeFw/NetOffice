@@ -2,14 +2,15 @@
 Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
-Imports NetOffice.WordApi.Tools.Utils
+Imports NetOffice.WordApi.Tools.Contribution
 
+''' <summary>
+''' Create a document write text and save
+''' </summary>
 Public Class Example01
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -25,7 +26,7 @@ Public Class Example01
         newDocument = wordApplication.Documents.Add()
 
         ' insert some text
-        wordApplication.Selection.TypeText("This text is written by NetOffice")
+        wordApplication.Selection.TypeText("This text is written by automation")
 
         wordApplication.Selection.HomeKey(WdUnits.wdLine, WdMovementType.wdExtend)
         wordApplication.Selection.Font.Color = WdColor.wdColorSeaGreen
@@ -33,27 +34,27 @@ Public Class Example01
         wordApplication.Selection.Font.Size = 18
 
         'save document
-        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example01", Word.Tools.DocumentFormat.Normal)
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example01", DocumentFormat.Normal)
         newDocument.SaveAs(documentFile)
 
         ' close word and dispose reference
         wordApplication.Quit()
         wordApplication.Dispose()
 
-        ' show dialog for the user(you!)
+        ' show end dialog
         _hostApplication.ShowFinishDialog(Nothing, documentFile)
 
     End Sub
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example01", "Beispiel01")
+            Return "Example01"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create a document write text and save", "Dokument erstellen, Text schreiben und speichern")
+            Return "Create a document write text and save"
         End Get
     End Property
 
@@ -68,7 +69,5 @@ Public Class Example01
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

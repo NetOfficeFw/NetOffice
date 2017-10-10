@@ -134,7 +134,6 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>

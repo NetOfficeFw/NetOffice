@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Reflection;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
-
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
@@ -54,12 +48,12 @@ namespace PowerPointExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return  "Example07"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Customize classic UI without ribbons and recieve click events" : "Erweitern der klassischen Oberfläche und beziehen von Click Events"; }
+            get { return "Customize classic UI without ribbons and recieve click events"; }
         }
      
         public UserControl Panel

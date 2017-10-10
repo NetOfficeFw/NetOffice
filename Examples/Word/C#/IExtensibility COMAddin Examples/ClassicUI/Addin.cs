@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.WordApi.Enums;
@@ -13,7 +12,7 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("1C401FCE-7D5E-4C6D-AE88-71BF01FC159B"), ProgId("WordAddinCS4.SimpleAddin"), ComVisible(true)]
+    [Guid("1C401FCE-7D5E-4C6D-AE88-71BF01FC159B"), ProgId("WordAddinCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
@@ -30,8 +29,8 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _contextName             = "Sample ContextMenu CS4";
         private static readonly string _contextMenuButtonName   = "Sample ContextButton CS4";
 
-        Word.Application _wordApplication;
-        Word.Template    _normalDotTemplate; 
+        private Word.Application _wordApplication;
+        private Word.Template    _normalDotTemplate; 
 
         #region IDTExtensibility2 Members
 

@@ -1,16 +1,14 @@
 ﻿Imports ExampleBase
-Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
-Imports NetOffice.ExcelApi.Enums
-Imports NetOffice.OfficeApi.Enums
-Imports NetOffice.ExcelApi.Tools.Utils
+Imports NetOffice.ExcelApi.Tools.Contribution
 
+''' <summary>
+''' Example 5 - Working with Charts
+''' </summary>
 Public Class Example05
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -18,7 +16,7 @@ Public Class Example05
         Dim excelApplication As New Excel.Application()
         excelApplication.DisplayAlerts = False
 
-        ' create a utils instance, not need for but helpful to keep the lines of code low
+        ' create a utils instance, no need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(excelApplication)
 
         ' add a new workbook
@@ -34,7 +32,7 @@ Public Class Example05
         chart.Chart.SetSourceData(dataRange)
 
         ' save the book 
-        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example05", Excel.Tools.DocumentFormat.Normal)
+        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example05", DocumentFormat.Normal)
         workBook.SaveAs(workbookFile)
 
         ' close excel and dispose reference
@@ -45,34 +43,6 @@ Public Class Example05
         _hostApplication.ShowFinishDialog(Nothing, workbookFile)
 
     End Sub
-
-    Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
-        Get
-            Return IIf(_hostApplication.LCID = 1033, "Example05", "Beispiel05")
-        End Get
-    End Property
-
-    Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
-        Get
-            Return IIf(_hostApplication.LCID = 1033, "Working with Charts", "Arbeiten mit Charts")
-        End Get
-    End Property
-
-    Public Sub Connect(ByVal hostApplication As ExampleBase.IHost) Implements ExampleBase.IExample.Connect
-
-        _hostApplication = hostApplication
-
-    End Sub
-
-    Public ReadOnly Property Panel As System.Windows.Forms.UserControl Implements ExampleBase.IExample.Panel
-        Get
-            Return Nothing
-        End Get
-    End Property
-
-#End Region
-
-#Region "Helper"
 
     Private Function PutSampleData(ByVal workSheet As Excel.Worksheet) As Excel.Range
 
@@ -104,6 +74,28 @@ Public Class Example05
 
     End Function
 
-#End Region
+    Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
+        Get
+            Return "Example05"
+        End Get
+    End Property
+
+    Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
+        Get
+            Return "Working with Charts"
+        End Get
+    End Property
+
+    Public Sub Connect(ByVal hostApplication As ExampleBase.IHost) Implements ExampleBase.IExample.Connect
+
+        _hostApplication = hostApplication
+
+    End Sub
+
+    Public ReadOnly Property Panel As System.Windows.Forms.UserControl Implements ExampleBase.IExample.Panel
+        Get
+            Return Nothing
+        End Get
+    End Property
 
 End Class

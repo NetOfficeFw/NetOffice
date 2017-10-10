@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class SchemaRelationships : COMObject , IEnumerable<NetOffice.OWC10Api.SchemaRelationship>
+	public class SchemaRelationships : COMObject, IEnumerable<NetOffice.OWC10Api.SchemaRelationship>
 	{
 		#pragma warning disable
 
@@ -180,32 +180,32 @@ namespace NetOffice.OWC10Api
 			 Factory.ExecuteMethod(this, "Delete", index);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OWC10Api.SchemaRelationship> Member
-        
+        #region IEnumerable<NetOffice.OWC10Api.SchemaRelationship> Member
+
         /// <summary>
-		/// SupportByVersion OWC10, 1
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
-       public IEnumerator<NetOffice.OWC10Api.SchemaRelationship> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OWC10Api.SchemaRelationship item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        public IEnumerator<NetOffice.OWC10Api.SchemaRelationship> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OWC10Api.SchemaRelationship item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion OWC10, 1
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

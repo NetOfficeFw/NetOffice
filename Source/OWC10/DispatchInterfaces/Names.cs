@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OWC10Api
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Names : COMObject , IEnumerable<NetOffice.OWC10Api.Name>
+	public class Names : COMObject, IEnumerableProvider<NetOffice.OWC10Api.Name>
 	{
 		#pragma warning disable
 
@@ -585,7 +586,21 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #region IEnumerable<NetOffice.OWC10Api.Name> Member
+        #region IEnumerableProvider<NetOffice.OWC10Api.Name>
+
+        ICOMObject IEnumerableProvider<NetOffice.OWC10Api.Name>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OWC10Api.Name>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OWC10Api.Name>
 
         /// <summary>
         /// SupportByVersion OWC10, 1
@@ -600,7 +615,7 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion OWC10, 1
@@ -608,7 +623,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

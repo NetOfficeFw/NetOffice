@@ -1,10 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VisioApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.VisioApi
 	/// </summary>
 	[SupportByVersion("Visio", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IVDataRecordsets : COMObject, IEnumerable<NetOffice.VisioApi.IVDataRecordset>
+	public class IVDataRecordsets : COMObject, IEnumerableProvider<NetOffice.VisioApi.IVDataRecordset>
 	{
 		#pragma warning disable
 
@@ -336,7 +337,21 @@ namespace NetOffice.VisioApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.VisioApi.IVDataRecordset> Member
+        #region IEnumerableProvider<NetOffice.VisioApi.IVDataRecordset>
+
+        ICOMObject IEnumerableProvider<NetOffice.VisioApi.IVDataRecordset>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.VisioApi.IVDataRecordset>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVDataRecordset>
 
         /// <summary>
         /// SupportByVersion Visio, 12,14,15,16
@@ -351,7 +366,7 @@ namespace NetOffice.VisioApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Visio, 12,14,15,16
@@ -359,7 +374,7 @@ namespace NetOffice.VisioApi
         [SupportByVersion("Visio", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

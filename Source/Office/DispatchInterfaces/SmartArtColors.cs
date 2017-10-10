@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863429.aspx </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class SmartArtColors : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.SmartArtColor>
+	public class SmartArtColors : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SmartArtColor>
 	{
 		#pragma warning disable
 
@@ -159,6 +160,20 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
+        #region IEnumerableProvider<NetOffice.OfficeApi.SmartArtColor>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.SmartArtColor>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.SmartArtColor>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
         #region IEnumerable<NetOffice.OfficeApi.SmartArtColor> Member
 
         /// <summary>
@@ -182,7 +197,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

@@ -1,28 +1,35 @@
-﻿Imports Excel = NetOffice.ExcelApi
+﻿Imports NetOffice
+Imports Excel = NetOffice.ExcelApi
 
 Public Class Tutorial09
     Implements ITutorial
 
     Dim _hostApplication As IHost
 
-#Region "ITutorial Member"
-
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
-        ' In some situations you want use NetOffice with a already running application.
-        ' this examples show you how its possible.
+        ' NetOffice instances implements the IClonable interface
+        ' and deal with underlying proxies as well
 
-        ' GetActiveInstance take the first instance in memory
-        Dim excelApplication As Excel.Application = Excel.Application.GetActiveInstance()
+        ' start application
+        Dim application As New Excel.Application()
+        application.DisplayAlerts = False
+        Dim book As Excel.Workbook = application.Workbooks.Add()
 
-        ' another method is GetActiveInstances:
-        ' 
-        ' GetActiveInstances takes all instances in memory. dont forget to dispose the instances.
-        '            
-        ' Dim excelApplications() As Excel.Application = Excel.Application.GetActiveInstance()
+        ' clone the book
+        Dim cloneBook As Excel.Workbook = book.Clone()
 
-        excelApplication.Quit()
-        excelApplication.Dispose()
+        ' dispose the origin book keep the underlying proxy alive
+        ' until the clone Is disposed
+        book.Dispose()
+
+        ' alive and works even the origin book is disposed
+        For Each sheet As Object In cloneBook.Sheets
+            Console.WriteLine(sheet)
+        Next sheet
+
+        application.Quit()
+        application.Dispose()
 
         _hostApplication.ShowFinishDialog()
 
@@ -36,17 +43,13 @@ Public Class Tutorial09
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create a NetOffice Excel Application Object with given COM Proxy", "Eine NetOffice Excel Application Objekt basierend auf einem COM Proxy erstellen")
+            Return "Cloning Instances"
         End Get
     End Property
 
     Public Sub Connect(ByVal hostApplication As TutorialsBase.IHost) Implements TutorialsBase.ITutorial.Connect
 
         _hostApplication = hostApplication
-
-    End Sub
-
-    Public Sub ChangeLanguage(ByVal lcid As Integer) Implements TutorialsBase.ITutorial.ChangeLanguage
 
     End Sub
 
@@ -60,13 +63,10 @@ Public Class Tutorial09
         End Get
     End Property
 
-
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial09_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial09_DE_VB")
+            Return FormMain.DocumentationBase & "Tutorial09_EN_VB.html"
         End Get
     End Property
-
-#End Region
 
 End Class

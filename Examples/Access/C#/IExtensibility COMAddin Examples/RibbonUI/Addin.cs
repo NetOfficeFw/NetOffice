@@ -5,7 +5,6 @@ using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using Access = NetOffice.AccessApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.AccessApi.Enums;
@@ -13,15 +12,15 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("44665894-708B-45B2-B2D8-6D2C8D2CA0A6"), ProgId("AccessAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    [Guid("44665894-708B-45B2-B2D8-6D2C8D2CA0A6"), ProgId("AccessAddinCS4.RibbonAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\AddIns\\";
         private static readonly string _progId                  = "AccessAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        Access.Application _accessApplication;
+        private Access.Application _accessApplication;
 
         #region IDTExtensibility2 Members
         

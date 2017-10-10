@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.MSComctlLibApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.MSComctlLibApi
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IColumnHeaders : COMObject , IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader>
+	public class IColumnHeaders : COMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.IColumnHeader>
 	{
 		#pragma warning disable
 
@@ -371,32 +372,46 @@ namespace NetOffice.MSComctlLibApi
 			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[]{ index, key, text, width, alignment });
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader> Member
-        
+        #region IEnumerableProvider<NetOffice.MSComctlLibApi.IColumnHeader>
+
+        ICOMObject IEnumerableProvider<NetOffice.MSComctlLibApi.IColumnHeader>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.MSComctlLibApi.IColumnHeader>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader>
+
         /// <summary>
-		/// SupportByVersion MSComctlLib, 6
-		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
-       public IEnumerator<NetOffice.MSComctlLibApi.IColumnHeader> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.MSComctlLibApi.IColumnHeader item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion MSComctlLib, 6
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
+        public IEnumerator<NetOffice.MSComctlLibApi.IColumnHeader> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.MSComctlLibApi.IColumnHeader item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion MSComctlLib, 6
-		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion MSComctlLib, 6
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

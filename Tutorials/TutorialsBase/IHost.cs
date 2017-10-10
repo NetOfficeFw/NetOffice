@@ -43,20 +43,8 @@ namespace TutorialsBase
         void ShowMessage(string message);
 
         /// <summary>
-        /// the host application select a tutorial
-        /// </summary>
-        /// <param name="index">zero based index from the target tutorial</param>
-        void NavigateToTutorial(int index);
-
-        /// <summary>
         /// Helper icon for some examples
         /// </summary>
-        Icon DisplayIcon { get; }
-
-        /// <summary>
-        /// Current Language. only english or german (1033 or 1031)
-        /// </summary>
-        int LCID { get; }
-        
+        Icon DisplayIcon { get; }     
     }
 }

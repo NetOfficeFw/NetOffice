@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
@@ -16,8 +10,7 @@ namespace TutorialsCS4
     {
         #region Fields
         
-        IHost _hostApplication;
-        Excel.Application _application;
+        private Excel.Application _application;
 
         #endregion
 
@@ -26,9 +19,13 @@ namespace TutorialsCS4
         public Tutorial03()
         {
             InitializeComponent();
-
-            // add event trigger to ProxyCountChanged event
-            NetOffice.Core.Default.ProxyCountChanged += new Core.ProxyCountChangedHandler(ProxyCountChanged);
+            CreateHandle();
+            // update proxy count label
+            NetOffice.Core.Default.ProxyCountChanged += delegate (int proxyCount)
+            {
+                Action<int> update = delegate(int i) { labelProxyCount.Text = i.ToString(); };
+                labelProxyCount.Invoke(update, proxyCount);
+            };
         }
 
         #endregion
@@ -36,17 +33,23 @@ namespace TutorialsCS4
         #region ITutorial
 
         public void Run()
-        { 
-            // this example shows you both ways in NetOffice to see how many com proxies
+        {
+            // this tutorial shows you 3 ways in NetOffice to see how many com proxies
             // was currently alive in your application
             //
-            // 1.) the static property: int NetOffice.Factory.ProxyCount
-            // 2.) the static event: NetOffice.Factory.ProxyCountChanged
+            // 1.) the property: int NetOffice.Core.ProxyCount
+            // 2.) the event: NetOffice.Core.ProxyCountChanged
+            // 3.) the events: NetOffice.Core ProxyAdded, ProxyRemoved, ProxyCleared
+            //     used from NetOffice.Contribution.Controls.InstanceMonitor
+
+            // Note: Sometimes you may wondering why an instance is disposed.
+            // For troubleshooting you can trigger ICOMObject.OnDispose event and see strack trace 
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
+            instanceMonitor1.Factory = NetOffice.Core.Default;
         }
 
         public void Disconnect()
@@ -55,18 +58,14 @@ namespace TutorialsCS4
             {
                 _application.Quit();
                 _application.Dispose();
+                _application = null;
             }
-        }
-
-        public void ChangeLanguage(int lcid)
-        {
-
+            instanceMonitor1.Factory = null;
         }
 
         public string Uri
         {
-            get { return _hostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial03_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial03_DE_CS"; }
-
+            get { return Program.DocumentationBase + "Tutorial03_EN_CS.html"; }
         }
 
         public string Caption
@@ -77,7 +76,7 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Observable COM Proxy Count" : "Die Anzahl COM Proxies überwachen"; }
+            get { return "Observable COM proxies"; }
         }
 
         public UserControl Panel
@@ -99,23 +98,24 @@ namespace TutorialsCS4
         {
             if (null == _application)
             {
-                // start application
+                // create application
                 _application = new Excel.Application();
                 _application.DisplayAlerts = false;
                 buttonExcel.Text = "Quit Excel";
                 buttonWorkbook.Enabled = true;
                 buttonAddins.Enabled = true;
-                buttonAddRemoveWorkbook.Enabled = true;
+                buttonDisposeChildInstances.Enabled = true;
             }
             else
             {
+                // dispose application
                 _application.Quit();
                 _application.Dispose();
                 _application = null;
                 buttonExcel.Text = "Start Excel";
                 buttonWorkbook.Enabled = false;
                 buttonAddins.Enabled = false;
-                buttonAddRemoveWorkbook.Enabled = false;
+                buttonDisposeChildInstances.Enabled = false;
             }
         }
 
@@ -136,55 +136,10 @@ namespace TutorialsCS4
             }
         }
 
-        private void buttonAddRemoveWorkbook_Click(object sender, EventArgs e)
+        private void buttonDisposeChildInstances_Click(object sender, EventArgs e)
         {
-            // add a new worbook and a new worksheet to the workbook
-            // the worksheet is a child proxy from worbook, after dispose the workbook
-            // creates 4 new proxies
-            // the open proxy count is the same as before
-
-            int proxyCount = NetOffice.Core.Default.ProxyCount;
-
-            Excel.Workbook book = _application.Workbooks.Add();
-            book.Worksheets.Add();
-
-            int proxyCountAfterCreate = NetOffice.Core.Default.ProxyCount;
-
             // dispose all child instances from application
             _application.DisposeChildInstances();
-
-            int proxyCountAfterDispose = NetOffice.Core.Default.ProxyCount;
-
-            string message = string.Format(
-                                           "ProxyCount before create is {0}\r\n" +
-                                           "ProxyCount after create is {1}\r\n" +
-                                           "ProxyCount after dispose all childs from application is {2}", proxyCount, proxyCountAfterCreate, proxyCountAfterDispose);
-
-            MessageBox.Show(message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        #endregion
-
-        #region ProxyCountChanged Trigger
-
-        // its possible the event comes from a different thread, the method is an invoke helper to avoid a CrossThreadException
-        private void UpdateLabel()
-        {
-            labelProxyCount.Text = labelProxyCount.Tag as string;
-        }
-
-        void ProxyCountChanged(int proxyCount)
-        {
-            if (labelProxyCount.InvokeRequired)
-            {
-                labelProxyCount.Tag = proxyCount.ToString();
-                labelProxyCount.Invoke(new MethodInvoker(UpdateLabel));
-            }
-            else
-            {
-
-            }
-                labelProxyCount.Text = proxyCount.ToString();
         }
 
         #endregion

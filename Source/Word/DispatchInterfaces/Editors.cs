@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836293.aspx </remarks>
 	[SupportByVersion("Word", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Editors : COMObject, IEnumerable<NetOffice.WordApi.Editor>
+	public class Editors : COMObject, IEnumerableProvider<NetOffice.WordApi.Editor>
 	{
 		#pragma warning disable
 
@@ -198,7 +199,23 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.WordApi.Editor> Member
+        #region IEnumerableProvider<NetOffice.WordApi.Editor>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.Editor>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.Editor>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.Editor item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.Editor>
 
         /// <summary>
         /// SupportByVersion Word, 11,12,14,15,16
@@ -215,7 +232,7 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Word, 11,12,14,15,16

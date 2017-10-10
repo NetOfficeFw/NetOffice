@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class AnswerWizardFiles : _IMsoDispObj, IEnumerable<string>
+	public class AnswerWizardFiles : _IMsoDispObj, IEnumerableProvider<string>
 	{
 		#pragma warning disable
 
@@ -177,7 +178,23 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable<string> Member
+        #region IEnumerableProvider<string>
+
+        ICOMObject IEnumerableProvider<string>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<string>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (Single item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<string>
 
         /// <summary>
         /// SupportByVersion Office, 9,10,11,12,14,15,16
@@ -194,7 +211,7 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Office, 9,10,11,12,14,15,16

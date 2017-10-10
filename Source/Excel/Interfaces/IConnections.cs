@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class IConnections : COMObject , IEnumerable<NetOffice.ExcelApi.WorkbookConnection>
+	public class IConnections : COMObject, IEnumerableProvider<NetOffice.ExcelApi.WorkbookConnection>
 	{
 		#pragma warning disable
 
@@ -316,32 +317,46 @@ namespace NetOffice.ExcelApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, name, description, connectionString, commandText);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ExcelApi.WorkbookConnection> Member
-        
+        #region IEnumerableProvider<NetOffice.ExcelApi.WorkbookConnection>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.WorkbookConnection>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.WorkbookConnection>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.WorkbookConnection>
+
         /// <summary>
-		/// SupportByVersion Excel, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 12,14,15,16)]
-       public IEnumerator<NetOffice.ExcelApi.WorkbookConnection> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ExcelApi.WorkbookConnection item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.ExcelApi.WorkbookConnection> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.WorkbookConnection item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Excel, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

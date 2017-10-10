@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class SeriesCollection : COMObject , IEnumerable<NetOffice.OfficeApi.IMsoSeries>
+	public class SeriesCollection : COMObject, IEnumerableProvider<NetOffice.OfficeApi.IMsoSeries>
 	{
 		#pragma warning disable
 
@@ -364,32 +365,46 @@ namespace NetOffice.OfficeApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "NewSeries", NetOffice.OfficeApi.IMsoSeries.LateBindingApiWrapperType);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.IMsoSeries> Member
-        
+        #region IEnumerableProvider<NetOffice.OfficeApi.IMsoSeries>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.IMsoSeries>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.IMsoSeries>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.IMsoSeries>
+
         /// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.IMsoSeries> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.IMsoSeries item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.IMsoSeries> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.IMsoSeries item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

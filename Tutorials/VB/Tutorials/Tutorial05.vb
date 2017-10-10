@@ -7,8 +7,6 @@ Public Class Tutorial05
 
     Dim _hostApplication As IHost
 
-#Region "ITutorial Member"
-
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
         ' this is a simple demonstration how i can convert unkown types at runtime
@@ -50,17 +48,13 @@ Public Class Tutorial05
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Understanding unkown Types", "Richtiges verwenden von unbekannten COM Objekten")
+            Return "Understanding unkown Types"
         End Get
     End Property
 
     Public Sub Connect(ByVal hostApplication As TutorialsBase.IHost) Implements TutorialsBase.ITutorial.Connect
 
         _hostApplication = hostApplication
-
-    End Sub
-
-    Public Sub ChangeLanguage(ByVal lcid As Integer) Implements TutorialsBase.ITutorial.ChangeLanguage
 
     End Sub
 
@@ -77,10 +71,8 @@ Public Class Tutorial05
 
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial05_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial05_DE_VB")
+            Return FormMain.DocumentationBase & "Tutorial05_EN_VB.html"
         End Get
     End Property
-
-#End Region
 
 End Class

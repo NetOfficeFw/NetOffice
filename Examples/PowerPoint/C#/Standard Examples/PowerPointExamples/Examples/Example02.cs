@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Text;
-using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
-using NetOffice.PowerPointApi.Tools.Utils;
+using NetOffice.PowerPointApi.Tools.Contribution;
 
 namespace PowerPointExamplesCS4
 {
@@ -18,14 +14,12 @@ namespace PowerPointExamplesCS4
     /// </summary>
     internal class Example02 : IExample
     {
-        #region IExample
-
         public void RunExample()
         {
             // start powerpoint 
             PowerPoint.Application powerApplication = new PowerPoint.Application();
 
-            // create a utils instance, not need for but helpful to keep the lines of code low
+            // create a utils instance, no need for but helpful to keep the lines of code low
             CommonUtils utils = new CommonUtils(powerApplication);
 
             // add a new presentation with one new slide
@@ -47,14 +41,14 @@ namespace PowerPointExamplesCS4
             slide.Shapes.AddShape(MsoAutoShapeType.msoShape24pointStar, 200, 200, 250, 250);
 
             // save the document 
-            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", PowerPoint.Tools.DocumentFormat.Normal); 
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", DocumentFormat.Normal); 
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
             powerApplication.Quit();
             powerApplication.Dispose();
 
-            // show dialog for the user(you!)
+            // show end dialog
             HostApplication.ShowFinishDialog(null, documentFile);
         }
 
@@ -65,12 +59,12 @@ namespace PowerPointExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
+            get { return "Example02"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Create some kind of shapes" : "Verschiede Shapes erstellen"; }
+            get { return "Create some kind of shapes"; }
         }
 
         public UserControl Panel
@@ -78,12 +72,6 @@ namespace PowerPointExamplesCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

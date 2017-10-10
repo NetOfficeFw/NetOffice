@@ -140,6 +140,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             // copy proxy
             ICOMProxyShareProvider shareProvider = replacedObject as ICOMProxyShareProvider;
@@ -182,7 +183,8 @@ namespace NetOffice
                 Factory = replacedObject.Factory;
             else
                 Factory = Core.Default;
-            
+            SyncRoot = new object();
+
             // copy proxy
             ICOMProxyShareProvider shareProvider = replacedObject as ICOMProxyShareProvider;
             if (null != shareProvider)
@@ -226,6 +228,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
             _underlyingType = comProxy.GetType();
@@ -250,6 +253,7 @@ namespace NetOffice
                 Factory = parentObject.Factory;
             else
                 Factory = Core.Default;
+            SyncRoot = new object();
 
             _parentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
@@ -274,6 +278,7 @@ namespace NetOffice
                 throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
 
             Factory = Core.Default;
+            SyncRoot = new object();
 
             _parentObject = null;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
@@ -299,6 +304,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             _parentObject = parentObject;
             _proxyShare = proxyShare;
@@ -329,6 +335,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             _parentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
@@ -358,6 +365,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             _parentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy, isEnumerator);
@@ -389,6 +397,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             _parentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy, isEnumerator);
@@ -420,6 +429,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             _parentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
@@ -453,6 +463,7 @@ namespace NetOffice
                 Factory = parentObject.Factory;
             else
                 Factory = Core.Default;
+            SyncRoot = new object();
 
             _parentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
@@ -484,6 +495,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             CreateFromProgId(progId);
             Factory.AddObjectToList(this);
@@ -501,6 +513,7 @@ namespace NetOffice
             if (String.IsNullOrEmpty(progId))
                 throw new ArgumentNullException("progId");          
             Factory = Core.Default;
+            SyncRoot = new object();
             CreateFromProgId(progId);
             Factory.AddObjectToList(this);
              
@@ -655,7 +668,12 @@ namespace NetOffice
         #endregion
 
         #region ICOMObject
-       
+
+        /// <summary>
+        /// Monitor Lock
+        /// </summary>
+        public object SyncRoot { get; private set; }
+
         /// <summary>
         /// NetOffice property: the associated factory
         /// </summary>
@@ -719,7 +737,27 @@ namespace NetOffice
                     return DebugConsole.Default;
             }
         }
-        
+
+        /// <summary>
+        /// Clone instance as target type
+        /// </summary>
+        /// <typeparam name="T">any other type to convert</typeparam>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public T To<T>() where T : class, ICOMObject
+        {
+            try
+            {
+                ICOMObject clone = Activator.CreateInstance(typeof(T), new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+                ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
+                shareProvider.SetProxyShare(_proxyShare);
+                return clone as T;
+            }
+            catch (Exception exception)
+            {
+                throw new CloneException(exception);
+            }
+        }
+
         #endregion
 
         #region ICOMObjectProxy

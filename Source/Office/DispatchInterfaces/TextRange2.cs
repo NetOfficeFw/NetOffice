@@ -5,6 +5,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -449,7 +450,6 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>
@@ -459,7 +459,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863528.aspx </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class TextRange2 : TextRange2_ , IEnumerable<NetOffice.OfficeApi.TextRange2>
+	public class TextRange2 : TextRange2_, IEnumerableProvider<NetOffice.OfficeApi.TextRange2>
 	{
 		#pragma warning disable
 
@@ -1224,32 +1224,46 @@ namespace NetOffice.OfficeApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertChartField", NetOffice.OfficeApi.TextRange2.LateBindingApiWrapperType, chartFieldType, formula);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.TextRange2> Member
-        
+        #region IEnumerableProvider<NetOffice.OfficeApi.TextRange2>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.TextRange2>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.TextRange2>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.TextRange2>
+
         /// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.TextRange2> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.TextRange2 item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.TextRange2> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.TextRange2 item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

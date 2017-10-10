@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Text;
-using System.Globalization;
 using ExampleBase;
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
-using NetOffice.WordApi.Tools.Utils;
+using NetOffice.WordApi.Tools.Contribution;
 
 namespace WordExamplesCS4
 {
@@ -18,8 +13,6 @@ namespace WordExamplesCS4
     /// </summary>
     internal class Example02 : IExample
     {
-        #region IExample
-
         public void RunExample()
         {
             // start word and turn off msg boxes
@@ -55,14 +48,14 @@ namespace WordExamplesCS4
             wordApplication.Selection.TypeText("NetOffice");
 
             // save the document
-            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", Word.Tools.DocumentFormat.Normal);
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", DocumentFormat.Normal);
             newDocument.SaveAs(documentFile);
 
             // close word and dispose reference
             wordApplication.Quit();
             wordApplication.Dispose();
 
-            // show dialog for the user(you!)
+            // show end dialog
             HostApplication.ShowFinishDialog(null, documentFile);
         }
 
@@ -73,12 +66,12 @@ namespace WordExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
+            get { return "Example02"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Insert a table to document" : "Eine Tabelle erstellen"; }
+            get { return "Insert a table to document"; }
         }
 
         public UserControl Panel
@@ -86,12 +79,7 @@ namespace WordExamplesCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
 
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

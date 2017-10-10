@@ -7,8 +7,6 @@ Public Class Example03
 
     Dim _hostApplication As ExampleBase.IHost
 
-#Region "IExample Member"
-
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' its an example with an own visual control
@@ -18,13 +16,13 @@ Public Class Example03
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example03", "Beispiel03")
+            Return "Example03"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Send an E- Mail", "Eine E-Mail verschicken")
+            Return "Send an E- Mail"
         End Get
     End Property
 
@@ -40,14 +38,11 @@ Public Class Example03
         End Get
     End Property
 
-#End Region
-
-#Region "UI Trigger"
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
-        ' start outlook
-        Dim outlookApplication = New Outlook.Application()
+        ' start outlook by trying to access running application first
+        Dim outlookApplication = New Outlook.Application(True)
 
         ' Create a new MailItem.
         Dim mailItem As Outlook.MailItem = outlookApplication.CreateItem(OlItemType.olMailItem)
@@ -59,13 +54,13 @@ Public Class Example03
         mailItem.Send()
 
         'close outlook and dispose
-        outlookApplication.Quit()
+        If Not outlookApplication.FromProxyService Then
+            outlookApplication.Quit()
+        End If
         outlookApplication.Dispose()
 
         _hostApplication.ShowFinishDialog("Done!", Nothing)
 
     End Sub
-
-#End Region
 
 End Class

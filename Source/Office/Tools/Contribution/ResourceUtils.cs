@@ -32,6 +32,21 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         #endregion
 
         #region Methods
+        
+        /// <summary>
+        /// Read bytes from resource in executing assembly
+        /// </summary>
+        /// <param name="resourceAddress">full qualified resource address</param>
+        /// <returns>resource stream</returns>
+        public byte[] ReadBytes(string resourceAddress)
+        {
+            using (Stream stream = ReadStream(resourceAddress, _owner.OwnerAssembly))
+            {
+                byte[] bytes = new byte[stream.Length];
+                stream.Read(bytes, 0, Convert.ToInt32(stream.Length));
+                return bytes;
+            }
+        }
 
         /// <summary>
         /// Read stream from resource in executing assembly

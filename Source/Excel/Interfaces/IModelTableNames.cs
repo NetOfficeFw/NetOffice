@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 15, 16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class IModelTableNames : COMObject , IEnumerable<string>
+	public class IModelTableNames : COMObject, IEnumerableProvider<string>
 	{
 		#pragma warning disable
 
@@ -177,49 +178,64 @@ namespace NetOffice.ExcelApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-       #region IEnumerable<string> Member
-        
+        #endregion
+
+        #region IEnumerableProvider<string>
+
+        ICOMObject IEnumerableProvider<string>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<string>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<string> Member
+
         /// <summary>
-		/// SupportByVersion Excel, 15, 16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Excel", 15, 16)]
+        /// SupportByVersion Excel, 15, 16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
         [CustomEnumerator]
-       public IEnumerator<string> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (string item in innerEnumerator)
-               yield return item;
-       }
+        public IEnumerator<string> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (string item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion Excel, 15, 16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Excel", 15, 16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             string[] enumeratorObjects = new string[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (string item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

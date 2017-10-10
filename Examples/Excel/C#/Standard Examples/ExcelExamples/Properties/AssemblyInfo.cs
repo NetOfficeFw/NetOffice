@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NetOffice Excel Examples in C#")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("http://netoffice.codeplex.com")]
+[assembly: AssemblyCompany("https://github.com/NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]
 [assembly: AssemblyCopyright("Copyright © 2012 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]

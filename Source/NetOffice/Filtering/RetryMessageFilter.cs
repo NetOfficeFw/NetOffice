@@ -14,13 +14,41 @@ namespace NetOffice.Filtering
         #region Fields / Imports
 
         [DllImport("ole32.dll")]
-        static extern int CoRegisterMessageFilter(IMessageFilter lpMessageFilter, out IMessageFilter lplpMessageFilter);
+        private static extern int CoRegisterMessageFilter(IMessageFilter lpMessageFilter, out IMessageFilter lplpMessageFilter);
 
         private IMessageFilter _messageFilter;
+        private RetryMessageFilterMode _retryMode;
+        private RetryMessageFilterLogMode _logMode;
+
+        #endregion
+
+        #region Ctor 
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        public RetryMessageFilter()
+        {
+
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="onPropertyChanged">occurs when a property value changes</param>
+        public RetryMessageFilter(Action<string> onPropertyChanged)
+        {
+            OnPropertyChanged = onPropertyChanged;
+        }
 
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Occurs when a property value changes
+        /// </summary>
+        private Action<string> OnPropertyChanged { get; set; }
 
         /// <summary>
         /// Get or set the message filter is enabled
@@ -34,24 +62,57 @@ namespace NetOffice.Filtering
             }
             set
             {
-                if (value)
-                    RegisterFilter();
-                else
-                    UnregisterFilter();
+                if( value != (_messageFilter != null))
+                { 
+                    if (value)
+                        RegisterFilter();
+                    else
+                        UnregisterFilter();
+                    OnPropertyChanged?.Invoke("RetryMessageFilter.Enabled");
+                }
             }
         }
-
+    
         /// <summary>
         /// Get or set retry options
         /// </summary>
         [Description("Get or set retry options"), DefaultValue(typeof(RetryMessageFilterMode), "Immediately"), Category("RetryMessageFilter")]
-        public RetryMessageFilterMode RetryMode { get; set; }
+        public RetryMessageFilterMode RetryMode
+        {
+            get
+            {
+                return _retryMode;
+            }
+            set
+            {
+                if (value != _retryMode)
+                {
+                    _retryMode = value;
+                    OnPropertyChanged?.Invoke("RetryMessageFilter.RetryMode");
+                }
+            }
+        }
 
         /// <summary>
         /// Get or set log options
         /// </summary>
         [Description("Get or set log options"), DefaultValue(typeof(RetryMessageFilterLogMode), "None"), Category("RetryMessageFilter")]
-        public RetryMessageFilterLogMode LogMode { get; set; }
+        public RetryMessageFilterLogMode LogMode
+        {
+            get
+            {
+                return _logMode;
+            }
+            set
+            {
+                if (value != _logMode)
+                {
+                    _logMode = value;
+                    OnPropertyChanged?.Invoke("RetryMessageFilter.LogMode");
+                }
+            }
+        }
+
 
         #endregion
 

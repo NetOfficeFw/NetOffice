@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class IRecentFiles : COMObject , IEnumerable<NetOffice.ExcelApi.RecentFile>
+	public class IRecentFiles : COMObject, IEnumerableProvider<NetOffice.ExcelApi.RecentFile>
 	{
 		#pragma warning disable
 
@@ -208,32 +209,46 @@ namespace NetOffice.ExcelApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.RecentFile>(this, "Add", NetOffice.ExcelApi.RecentFile.LateBindingApiWrapperType, name);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ExcelApi.RecentFile> Member
-        
+        #region IEnumerableProvider<NetOffice.ExcelApi.RecentFile>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.RecentFile>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.RecentFile>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.RecentFile>
+
         /// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.ExcelApi.RecentFile> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ExcelApi.RecentFile item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.ExcelApi.RecentFile> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.RecentFile item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

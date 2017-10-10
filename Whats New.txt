@@ -1,16 +1,27 @@
-1.) The tutorials demonstrate most of the new core features.
+01.) The tutorials demonstrate most of the new core features(dynamics, cloning, etc)
 
-2.) Skip support for old .Net Runtime versions - minimum is .Net 4.0(Client Profile)
-    Want to support .Net 4 as long as possible because it is the last WindowsXP compatible Runtime.
-    (NetOffice 1.7.3 with .Net 2/3 support is still available in the download section)
+02.) Skip support for old .Net Runtime versions - minimum is .Net 4.0(Client Profile)
+     Want to support .Net 4(and any higher of course) as long as possible because it is the last WindowsXP compatible Runtime.
+     (NetOffice 1.7.3 with .Net 2/3 support is still available in the download section)
 
-3.) Microsoft Publisher is now into play.
+03.) Microsoft Publisher is now into play.
 
-4.) Total size of the assemblies is 25% smaller
+04.) Add MSFormsApi.dll to support VBE ui controls
 
-5.) New base class for Excel RTD Server
+05.) Total size of the assemblies is 25% smaller
 
-6.) Actual Developer Toolbox is currently not available
-    because need to publish this release before codeplex goes into read-only mode
+06.) Extended support for MS-Excel RTD Server (see COMAddin examples)
 
-7.) Official repository on github is "netofficefw" - NOT "netoffice"
+07.) Extended support for Document Inspector in MS-Word (see COMAddin examples)
+
+08.) Extended support for custom MS-Outlook property pages and Form Regions (see COMAddin examples)
+
+09.) CustomUI attribute can handle ribbon id's now
+
+10.) Suppress outlook security is now available in NetOffice.OutlookApi.Tools.Contribution.Security
+
+11.) Spend Contribution utils as optional service for common tasks
+
+12.) Developer Toolbox source is available on https://osdn.net/projects/netoffice or SVN: https://svn.osdn.net/svnroot/netoffice
+
+13.) Official mirror on github is "netofficefw" - NOT "netoffice"

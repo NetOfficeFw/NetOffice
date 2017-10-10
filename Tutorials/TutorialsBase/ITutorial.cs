@@ -25,11 +25,6 @@ namespace TutorialsBase
         /// </summary>
         string Uri { get; }
 
-        /// <summary>
-        /// The language in the host application was changed
-        /// </summary>
-        /// <param name="lcid">1031(german) or 1033(english)</param>
-        void ChangeLanguage(int lcid);
 
         /// <summary>
         /// Visual panel from the example

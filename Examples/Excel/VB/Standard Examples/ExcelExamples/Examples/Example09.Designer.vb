@@ -33,7 +33,7 @@ Partial Class Example09
         'buttonQuitExample
         '
         Me.buttonQuitExample.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.buttonQuitExample.Enabled = False
         Me.buttonQuitExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.buttonQuitExample.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -49,7 +49,7 @@ Partial Class Example09
         'labelEventLogHeader
         '
         Me.labelEventLogHeader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.labelEventLogHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.labelEventLogHeader.Location = New System.Drawing.Point(31, 180)
         Me.labelEventLogHeader.Name = "labelEventLogHeader"
@@ -60,8 +60,8 @@ Partial Class Example09
         'textBoxEvents
         '
         Me.textBoxEvents.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxEvents.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.textBoxEvents.Location = New System.Drawing.Point(30, 205)
         Me.textBoxEvents.Multiline = True
@@ -73,7 +73,7 @@ Partial Class Example09
         'textBoxDescription
         '
         Me.textBoxDescription.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.textBoxDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.textBoxDescription.Location = New System.Drawing.Point(29, 100)
@@ -86,7 +86,7 @@ Partial Class Example09
         'buttonStartExample
         '
         Me.buttonStartExample.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.buttonStartExample.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttonStartExample.Image = CType(resources.GetObject("buttonStartExample.Image"), System.Drawing.Image)
@@ -102,7 +102,7 @@ Partial Class Example09
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Controls.Add(Me.buttonQuitExample)
         Me.Controls.Add(Me.labelEventLogHeader)
         Me.Controls.Add(Me.textBoxEvents)

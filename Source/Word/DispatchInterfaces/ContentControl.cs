@@ -673,7 +673,8 @@ namespace NetOffice.WordApi
 		/// <param name="range">optional NetOffice.WordApi.Range Range = 0</param>
 		/// <param name="text">optional string Text = </param>
 		[SupportByVersion("Word", 12,14,15,16)]
-		public void SetPlaceholderText(object buildingBlock, object range, object text)
+        [KnownIssue]
+		public virtual void SetPlaceholderText(object buildingBlock, object range, object text)
 		{
 			 Factory.ExecuteMethod(this, "SetPlaceholderText", buildingBlock, range, text);
 		}
@@ -684,7 +685,8 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838691.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public void SetPlaceholderText()
+        [KnownIssue]
+        public virtual void SetPlaceholderText()
 		{
 			 Factory.ExecuteMethod(this, "SetPlaceholderText");
 		}
@@ -696,7 +698,8 @@ namespace NetOffice.WordApi
 		/// <param name="buildingBlock">optional NetOffice.WordApi.BuildingBlock BuildingBlock = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public void SetPlaceholderText(object buildingBlock)
+        [KnownIssue]
+        public virtual void SetPlaceholderText(object buildingBlock)
 		{
 			 Factory.ExecuteMethod(this, "SetPlaceholderText", buildingBlock);
 		}
@@ -709,7 +712,8 @@ namespace NetOffice.WordApi
 		/// <param name="range">optional NetOffice.WordApi.Range Range = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public void SetPlaceholderText(object buildingBlock, object range)
+        [KnownIssue]
+        public virtual void SetPlaceholderText(object buildingBlock, object range)
 		{
 			 Factory.ExecuteMethod(this, "SetPlaceholderText", buildingBlock, range);
 		}

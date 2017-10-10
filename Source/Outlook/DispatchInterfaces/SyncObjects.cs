@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OutlookApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867391.aspx </remarks>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class SyncObjects : COMObject , IEnumerable<NetOffice.OutlookApi.SyncObject>
+	public class SyncObjects : COMObject, IEnumerableProvider<NetOffice.OutlookApi.SyncObject>
 	{
 		#pragma warning disable
 
@@ -216,45 +217,62 @@ namespace NetOffice.OutlookApi
 			}
 		}
 
-		#endregion
-       #region IEnumerable<NetOffice.OutlookApi.SyncObject> Member
-        
-        /// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-        [CustomEnumerator]
-       public IEnumerator<NetOffice.OutlookApi.SyncObject> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OutlookApi.SyncObject item in innerEnumerator)
-               yield return item;
-       }
+        #endregion
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        #region IEnumerableProvider<NetOffice.OutlookApi.SyncObject>
+
+        ICOMObject IEnumerableProvider<NetOffice.OutlookApi.SyncObject>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OutlookApi.SyncObject>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi.SyncObject item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.SyncObject>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [CustomEnumerator]
+        public IEnumerator<NetOffice.OutlookApi.SyncObject> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi.SyncObject item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

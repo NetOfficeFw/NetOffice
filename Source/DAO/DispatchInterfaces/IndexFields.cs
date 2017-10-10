@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.DAOApi
 {
@@ -84,7 +85,6 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>
@@ -93,7 +93,7 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IndexFields : IndexFields_, IEnumerable<object>
+	public class IndexFields : IndexFields_
 	{
 		#pragma warning disable
 

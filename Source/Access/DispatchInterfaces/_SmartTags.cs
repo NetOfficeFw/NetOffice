@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class _SmartTags : COMObject, IEnumerable<NetOffice.AccessApi._SmartTag>
+	public class _SmartTags : COMObject, IEnumerableProvider<NetOffice.AccessApi._SmartTag>
 	{
 		#pragma warning disable
 
@@ -197,7 +198,21 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.AccessApi._SmartTag> Member
+        #region IEnumerableProvider<NetOffice.AccessApi._SmartTag>
+
+        ICOMObject IEnumerableProvider<NetOffice.AccessApi._SmartTag>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.AccessApi._SmartTag>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi._SmartTag>
 
         /// <summary>
         /// SupportByVersion Access, 11,12,14,15,16
@@ -212,7 +227,7 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Access, 11,12,14,15,16
@@ -220,7 +235,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

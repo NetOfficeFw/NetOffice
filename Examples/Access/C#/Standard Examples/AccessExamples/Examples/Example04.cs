@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.IO;
-using System.Text;
-using System.Data;
-using System.Data.OleDb;
 using ExampleBase;
-
 using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
@@ -47,12 +39,12 @@ namespace AccessExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
+            get { return "Example04"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Database informations" : "Datenbankinformationen auslesen"; }
+            get { return "Database informations"; }
         }
 
         public UserControl Panel

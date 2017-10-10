@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.MSFormsApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.MSFormsApi
 	/// </summary>
 	[SupportByVersion("MSForms", 2)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Pages : COMObject , IEnumerable<object>
+	public class Pages : COMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<object>
 	{
 		#pragma warning disable
 
@@ -259,32 +260,46 @@ namespace NetOffice.MSFormsApi
 			 Factory.ExecuteMethod(this, "Clear");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<object> Member
-        
+        #region IEnumerableProvider<object>
+
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<object>
+
         /// <summary>
-		/// SupportByVersion MSForms, 2
-		/// </summary>
-		[SupportByVersion("MSForms", 2)]
-       public IEnumerator<object> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (object item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion MSForms, 2
+        /// </summary>
+        [SupportByVersion("MSForms", 2)]
+        public IEnumerator<object> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (object item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion MSForms, 2
-		/// </summary>
-		[SupportByVersion("MSForms", 2)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion MSForms, 2
+        /// </summary>
+        [SupportByVersion("MSForms", 2)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, true);
 		}
 
 		#endregion

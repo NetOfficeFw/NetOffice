@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864958.aspx </remarks>
 	[SupportByVersion("Office", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class SharedWorkspaceTasks : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.SharedWorkspaceTask>
+	public class SharedWorkspaceTasks : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SharedWorkspaceTask>
 	{
 		#pragma warning disable
 
@@ -260,7 +261,21 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.SharedWorkspaceTask> Member
+        #region IEnumerableProvider<NetOffice.OfficeApi.SharedWorkspaceTask>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.SharedWorkspaceTask>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.SharedWorkspaceTask>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.SharedWorkspaceTask>
 
         /// <summary>
         /// SupportByVersion Office, 11,12,14,15,16
@@ -275,7 +290,7 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable 
 
         /// <summary>
         /// SupportByVersion Office, 11,12,14,15,16
@@ -283,7 +298,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

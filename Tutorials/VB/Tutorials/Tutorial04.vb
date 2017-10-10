@@ -5,8 +5,6 @@ Public Class Tutorial04
 
     Dim _hostApplication As IHost
 
-#Region "ITutorial Member"
-
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
         ' this example shows you how i still can recieve events from an disposed proxy.
@@ -48,17 +46,13 @@ Public Class Tutorial04
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Using Dispose with event exporting Objects", "Verwenden von Dispose mit Objekten die Ereignisse auslösen")
+            Return "Using Dispose with event exporting Objects"
         End Get
     End Property
 
     Public Sub Connect(ByVal hostApplication As TutorialsBase.IHost) Implements TutorialsBase.ITutorial.Connect
 
         _hostApplication = hostApplication
-
-    End Sub
-
-    Public Sub ChangeLanguage(ByVal lcid As Integer) Implements TutorialsBase.ITutorial.ChangeLanguage
 
     End Sub
 
@@ -72,16 +66,15 @@ Public Class Tutorial04
         End Get
     End Property
 
-
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial04_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial04_DE_VB")
+            Return FormMain.DocumentationBase & "Tutorial04_EN_VB.html"
         End Get
     End Property
 
-#End Region
-
     Public Sub book_BeforeCloseEvent(ByRef Cancel As Boolean)
+
+        Console.WriteLine("book_BeforeCloseEvent")
 
     End Sub
 

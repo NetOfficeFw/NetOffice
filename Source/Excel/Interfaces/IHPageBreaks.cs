@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class IHPageBreaks : COMObject , IEnumerable<NetOffice.ExcelApi.HPageBreak>
+	public class IHPageBreaks : COMObject, IEnumerableProvider<NetOffice.ExcelApi.HPageBreak>
 	{
 		#pragma warning disable
 
@@ -191,32 +192,46 @@ namespace NetOffice.ExcelApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.HPageBreak>(this, "Add", NetOffice.ExcelApi.HPageBreak.LateBindingApiWrapperType, before);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ExcelApi.HPageBreak> Member
-        
+        #region IEnumerableProvider<NetOffice.ExcelApi.HPageBreak>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.HPageBreak>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.HPageBreak>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.HPageBreak>
+
         /// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.ExcelApi.HPageBreak> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ExcelApi.HPageBreak item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.ExcelApi.HPageBreak> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ExcelApi.HPageBreak item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

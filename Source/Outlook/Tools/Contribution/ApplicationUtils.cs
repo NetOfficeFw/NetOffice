@@ -49,5 +49,34 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         }
 
         #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Try get PropertyPageSite(container) from PropertyPage
+        /// </summary>
+        /// <param name="page">target page</param>
+        /// <returns>page container</returns>
+        public static NetOffice.OutlookApi.Native.PropertyPageSite TryGetPageContainer(Native.PropertyPage page)
+        {
+            try
+            {
+                Type myType = typeof(object);
+                string assembly = System.Text.RegularExpressions.Regex.Replace(myType.Assembly.CodeBase, "mscorlib.dll", "System.Windows.Forms.dll");
+                assembly = System.Text.RegularExpressions.Regex.Replace(assembly, "file:///", "");
+                assembly = System.Reflection.AssemblyName.GetAssemblyName(assembly).FullName;
+                Type unmanaged = Type.GetType(System.Reflection.Assembly.CreateQualifiedName(assembly, "System.Windows.Forms.UnsafeNativeMethods"));
+                Type oleObj = unmanaged.GetNestedType("IOleObject");
+                System.Reflection.MethodInfo mi = oleObj.GetMethod("GetClientSite");
+                object myppSite = mi.Invoke(page, null);
+                return myppSite as Native.PropertyPageSite;
+            }
+            catch
+            {
+                return null;
+            }           
+        }
+
+        #endregion
     }
 }

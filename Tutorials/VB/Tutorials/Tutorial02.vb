@@ -5,8 +5,6 @@ Public Class Tutorial02
 
     Dim _hostApplication As IHost
 
-#Region "ITutorial Member"
-
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
         ' this example shows you another dispose method: DisposeChildInstances
@@ -55,7 +53,7 @@ Public Class Tutorial02
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Using Dispose & DisposeChildInstances", "Verwenden von Dispose und DisposeChildInstances")
+            Return "Using Dispose & DisposeChildInstances"
         End Get
     End Property
 
@@ -65,9 +63,6 @@ Public Class Tutorial02
 
     End Sub
 
-    Public Sub ChangeLanguage(ByVal lcid As Integer) Implements TutorialsBase.ITutorial.ChangeLanguage
-
-    End Sub
 
     Public Sub Disconnect() Implements TutorialsBase.ITutorial.Disconnect
 
@@ -82,10 +77,8 @@ Public Class Tutorial02
 
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial02_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial02_DE_VB")
+            Return FormMain.DocumentationBase & "Tutorial02_EN_VB.html"
         End Get
     End Property
-
-#End Region
 
 End Class

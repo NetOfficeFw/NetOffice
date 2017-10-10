@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PublisherApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.PublisherApi
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class WebHiddenFields : COMObject , IEnumerable<string>
+	public class WebHiddenFields : COMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<string>
 	{
 		#pragma warning disable
 
@@ -198,45 +199,62 @@ namespace NetOffice.PublisherApi
 			return Factory.ExecuteStringMethodGet(this, "Name", index);
 		}
 
-		#endregion
-       #region IEnumerable<string> Member
-        
-        /// <summary>
-		/// SupportByVersion Publisher, 14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Publisher", 14,15,16)]
-        [CustomEnumerator]
-       public IEnumerator<string> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (string item in innerEnumerator)
-               yield return item;
-       }
+        #endregion
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion Publisher, 14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Publisher", 14,15,16)]
+        #region IEnumerableProvider<string>
+
+        ICOMObject IEnumerableProvider<string>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<string>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (string item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<string>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        [CustomEnumerator]
+        public IEnumerator<string> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (string item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             string[] enumeratorObjects = new string[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (string item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

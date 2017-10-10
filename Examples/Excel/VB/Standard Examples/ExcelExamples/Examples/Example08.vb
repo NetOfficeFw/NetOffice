@@ -29,13 +29,13 @@ Public Class Example08
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example08", "Beispiel08")
+            Return "Example08"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Using Events", "Verwenden von Ereignissen")
+            Return "Using Events"
         End Get
     End Property
 

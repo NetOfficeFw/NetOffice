@@ -1194,6 +1194,25 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             }
         }
 
+        /// <summary>
+        /// Displays a message box with specified text
+        /// </summary>
+        /// <param name="text">specified text</param>
+        public static void ShowMessageBox(string text)
+        {
+            MessageBox.Show(text);
+        }
+
+        /// <summary>
+        /// Displays a message box with specified text and caption
+        /// </summary>
+        /// <param name="text">specified text</param>
+        /// <param name="caption">The text display in the title bar</param>
+        public static void ShowMessageBox(string text, string caption)
+        {
+            MessageBox.Show(text, caption);
+        }
+
         #endregion
 
         #region Trigger

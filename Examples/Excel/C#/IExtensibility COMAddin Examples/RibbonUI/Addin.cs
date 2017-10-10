@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
@@ -13,15 +12,15 @@ using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("32883BAD-012A-4B48-A972-3F918C2D54CD"), ProgId("ExcelAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    [Guid("32883BAD-012A-4B48-A972-3F918C2D54CD"), ProgId("ExcelAddinCS4.RibbonAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
         private static readonly string _progId                  = "ExcelAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        Excel.Application _excelApplication;
+        private Excel.Application _excelApplication;
 
         #region IDTExtensibility2 Members
          

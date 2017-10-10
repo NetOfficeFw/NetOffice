@@ -5,5 +5,4 @@
    You may have to change some event trigger code
    from COMObject to ICOMObject.
 
-
-
+2) Some native interop interfaces has been moved to .Native namespace

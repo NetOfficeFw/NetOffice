@@ -232,7 +232,6 @@ namespace NetOffice.MSFormsApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>

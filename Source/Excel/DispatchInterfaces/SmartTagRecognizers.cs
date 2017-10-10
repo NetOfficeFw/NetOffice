@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class SmartTagRecognizers : COMObject, IEnumerable<NetOffice.ExcelApi.SmartTagRecognizer>
+	public class SmartTagRecognizers : COMObject, IEnumerableProvider<NetOffice.ExcelApi.SmartTagRecognizer>
 	{
 		#pragma warning disable
 
@@ -200,7 +201,21 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.ExcelApi.SmartTagRecognizer> Member
+        #region IEnumerableProvider<NetOffice.ExcelApi.SmartTagRecognizer>
+
+        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.SmartTagRecognizer>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.SmartTagRecognizer>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.SmartTagRecognizer>
 
         /// <summary>
         /// SupportByVersion Excel, 10,11,12,14,15,16
@@ -215,7 +230,7 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Excel, 10,11,12,14,15,16
@@ -223,7 +238,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

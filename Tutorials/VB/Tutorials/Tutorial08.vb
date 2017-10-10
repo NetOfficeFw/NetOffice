@@ -1,37 +1,64 @@
-﻿Imports System.Runtime.InteropServices
-Imports NetOffice
+﻿Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
+
+''' <summary>
+''' Ouer custom Excel.Workbook
+''' </summary>
+Public Class MyWorkbook
+    Inherits Excel.Workbook
+
+    Public Sub New(parentObject As ICOMObject, comProxy As Object)
+        MyBase.New(parentObject, comProxy)
+
+    End Sub
+
+    Public Sub New(parentObject As ICOMObject, comProxy As Object, comProxyType As Type)
+        MyBase.New(parentObject, comProxy)
+
+    End Sub
+
+    ' Sample property
+    Public ReadOnly Property Has3Sheets As Boolean
+        Get
+            Return Sheets.Count = 3
+        End Get
+    End Property
+
+End Class
 
 Public Class Tutorial08
     Implements ITutorial
 
     Dim _hostApplication As IHost
 
-#Region "ITutorial Member"
-
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
-        ' this example demonstrate the NetOffice low-level interface for latebinding calls
+        'Replace Excel.Workbook with MyWorkbook
+        Dim createHandler As Core.OnCreateInstanceEventHandler = AddressOf Me.OnCreate
+        AddHandler NetOffice.Core.Default.CreateInstance, createHandler
 
         ' start application
         Dim application As New Excel.Application()
         application.DisplayAlerts = False
 
-        ' create new Workbook
-        Dim book As Excel.Workbook = application.Workbooks.Add()
-
-        Dim sheet As Excel.Worksheet = application.Workbooks(1).Worksheets(1)
-        Dim sampleRange As Excel.Range = sheet.Cells(1, 1)
-
-        'we set the COMVariant ColorIndex from Font of ouer sample range with the invoker class
-        Invoker.Default.PropertySet(sampleRange.Font, "ColorIndex", 1)
-
-        ' creates a native unmanaged ComProxy with the invoker
-        Dim comProxy As Object = Invoker.Default.PropertyGet(application, "Workbooks")
-        Marshal.ReleaseComObject(comProxy)
+        'add and cast book to MyWorkbook
+        Dim book As MyWorkbook = application.Workbooks.Add()
+        If book.Has3Sheets Then
+            Console.WriteLine("Book has 3 sheets.")
+        End If
 
         application.Quit()
         application.Dispose()
+
+        _hostApplication.ShowFinishDialog()
+
+    End Sub
+
+    Public Sub OnCreate(sender As Core, args As Core.OnCreateInstanceEventArgs)
+
+        If args.Instance.InstanceType = GetType(Excel.Workbook) Then
+            args.Replace = GetType(MyWorkbook)
+        End If
 
     End Sub
 
@@ -43,17 +70,13 @@ Public Class Tutorial08
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Using the Invoker", "Den Invoker verwenden")
+            Return "Custom Instances"
         End Get
     End Property
 
     Public Sub Connect(ByVal hostApplication As TutorialsBase.IHost) Implements TutorialsBase.ITutorial.Connect
 
         _hostApplication = hostApplication
-
-    End Sub
-
-    Public Sub ChangeLanguage(ByVal lcid As Integer) Implements TutorialsBase.ITutorial.ChangeLanguage
 
     End Sub
 
@@ -67,13 +90,10 @@ Public Class Tutorial08
         End Get
     End Property
 
-
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial08_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial08_DE_VB")
+            Return FormMain.DocumentationBase & "Tutorial08_EN_VB.html"
         End Get
     End Property
-
-#End Region
 
 End Class

@@ -1,66 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Tools;
-using NetOffice.ExcelApi.Tools.Utils;
 
 namespace TutorialsCS4
 {
     public class Tutorial13 : ITutorial
     {
-        #region ITutorial
-
         public void Run()
         {
-            // Any MS-Office application in NetOffice has a custom utils provider for common tasks
-            // Moreover its available as instance property in NetOffice.Tools.COMAddin
-            // If you have suggestions for the utils please feel free to contact the project
-            // This tutorial shows only few features in MS-Excel
-
-            // start excel and disable alerts
+            // this examples shows a special method to ask at runtime for a particular method oder property
+            // morevover you can enable the option NetOffice.Settings.EnableSafeMode. 
+            // NetOffice checks(cache supported) for any method or property you call and
+            // throws a EntitiyNotSupportedException if missing
+            
+            // create new instance
             Excel.Application application = new Excel.Application();
-            application.DisplayAlerts = false;
 
+            // any reference type in NetOffice implements the EntityIsAvailable method.
+            // you check here your property or method is available.
 
-            // Create an instance of excel utils
-            CommonUtils utils = new CommonUtils(application, typeof(Tutorial13).Assembly);
+            // we check the support for 2 properties  at runtime
+            bool enableLivePreviewSupport = application.EntityIsAvailable("EnableLivePreview");
+            bool openDatabaseSupport = application.Workbooks.EntityIsAvailable("OpenDatabase");
 
-
-            // the file part of the utils makes it easier to deal with file extensions depedent on the current version
-
-
-            // get default(xls or xlsx) , template with macros(xlt or xltm) - extension and build a valid file path
-            string extensionNormal = utils.File.FileExtension(DocumentFormat.Normal);
-            string extensionTemplateWithMacros = utils.File.FileExtension(DocumentFormat.TemplateMacros);
-            string exampleFilePath = utils.File.Combine("C:\\MyFiles", "MyWorkbook", DocumentFormat.Normal);
-
-            // the dialog part of the utils allows you to show default dialogs/messageboxes or you own dialogs
-
-
-            // dialogs want be suppressed by default if the office application is currently in automation or not visible
-            // you can also trigger the DialogShow and DialogShown event to observe dialog popups
-            // we disable any suppress behavior here
-            utils.Dialog.SuppressOnAutomation = false; 
-            utils.Dialog.SuppressOnHide = false;
-
-
-            // show a simple message box. Have a look at the last argument. Its a default result and used if the messagebox is not shown.
-            // In this tutorial, excel is in automation and hidden. Remove one or both of the 2 code lines above and the message box is not shown.
-            // We got the default result in this case
-            DialogResult userResult = utils.Dialog.ShowMessageBox("Hello World from NetOffice tutorial", "NO tutorial", MessageBoxButtons.YesNo, DialogResult.No);
-
-
+            string result = "Excel Runtime Check: " + Environment.NewLine;
+            result += "Support EnableLivePreview: " + enableLivePreviewSupport.ToString() + Environment.NewLine;
+            result += "Support OpenDatabase:      " + openDatabaseSupport.ToString() + Environment.NewLine;
+            
+            // quit and dispose
             application.Quit();
             application.Dispose();
-  
-            HostApplication.ShowFinishDialog();
+
+            HostApplication.ShowMessage(result);
         }
 
         public void Connect(IHost hostApplication)
@@ -73,14 +46,9 @@ namespace TutorialsCS4
 
         }
 
-        public void ChangeLanguage(int lcid)
-        {
-
-        }
-
         public string Uri
         {
-            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial13_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial13_DE_CS"; }
+            get { return Program.DocumentationBase + "Tutorial13_EN_CS.html"; }
         }
 
         public string Caption
@@ -88,10 +56,9 @@ namespace TutorialsCS4
             get { return "Tutorial13"; }
         }
 
-
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "NetOffice Utils" : "NetOffice Utils"; }
+            get { return  "Version-independent development"; }
         }
 
         public UserControl Panel
@@ -99,12 +66,6 @@ namespace TutorialsCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

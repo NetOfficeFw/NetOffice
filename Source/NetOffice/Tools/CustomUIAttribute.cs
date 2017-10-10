@@ -17,12 +17,22 @@ namespace NetOffice.Tools
         public readonly string Value;
 
         /// <summary>
+        /// Target ribbon id(s) - comma separated or empty as wildcard
+        /// </summary>
+        public readonly string RibbonID;
+
+        /// <summary>
         /// Use root namespace of the calling instance
         /// </summary>
         public readonly bool UseAssemblyNamespace;
 
         /// <summary>
-        /// Creates an instance of the Attribute
+        /// Processed Ribbon ID's
+        /// </summary>
+        internal readonly string[] RibbonIDs;
+
+        /// <summary>
+        /// Creates an instance of the attribute
         /// </summary>
         /// <param name="value">Full qualified location</param>
         public CustomUIAttribute(string value)
@@ -34,7 +44,23 @@ namespace NetOffice.Tools
         }
 
         /// <summary>
-        /// Creates an instance of the Attribute
+        /// Creates an instance of the attribute
+        /// </summary>
+        /// <param name="ribbonID">target ribbon id(s) - comma separated or empty as wildcard</param>
+        /// <param name="value">Full qualified location</param>
+        public CustomUIAttribute(string ribbonID, string value)
+        {
+            if (String.IsNullOrEmpty(value))
+                throw new ArgumentException("value");
+
+            RibbonID = null != ribbonID ? ribbonID : String.Empty;
+            Value = value;
+
+            RibbonIDs = RibbonID.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        /// <summary>
+        /// Creates an instance of the attribute
         /// </summary>
         /// <param name="value">Full qualified location</param>
         /// <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
@@ -45,6 +71,25 @@ namespace NetOffice.Tools
 
             Value = value;
             UseAssemblyNamespace = useAssemblyNamespace;
+
+            RibbonIDs = new string[0];
+        }
+
+        /// <summary>
+        /// Creates an instance of the attribute
+        /// </summary>
+        /// <param name="ribbonID">target ribbon id(s) - comma separated or empty as wildcard</param>
+        /// <param name="value">Full qualified location</param>
+        /// <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
+        public CustomUIAttribute(string ribbonID, string value, bool useAssemblyNamespace)
+        {
+            if (String.IsNullOrEmpty(value))
+                throw new ArgumentException("value");
+            RibbonID = RibbonID = null != ribbonID ? ribbonID : String.Empty;
+            Value = value;
+            UseAssemblyNamespace = useAssemblyNamespace;
+
+            RibbonIDs = RibbonID.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
         }
 
         /// <summary>

@@ -32,7 +32,7 @@ Partial Class Example08
         'labelEventLogHeader
         '
         Me.labelEventLogHeader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.labelEventLogHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.labelEventLogHeader.Location = New System.Drawing.Point(27, 134)
         Me.labelEventLogHeader.Name = "labelEventLogHeader"
@@ -43,8 +43,8 @@ Partial Class Example08
         'textBoxEvents
         '
         Me.textBoxEvents.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxEvents.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.textBoxEvents.Location = New System.Drawing.Point(27, 159)
         Me.textBoxEvents.Multiline = True
@@ -56,7 +56,7 @@ Partial Class Example08
         'textBoxDescription
         '
         Me.textBoxDescription.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.textBoxDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.textBoxDescription.Location = New System.Drawing.Point(27, 72)
@@ -64,13 +64,13 @@ Partial Class Example08
         Me.textBoxDescription.Name = "textBoxDescription"
         Me.textBoxDescription.Size = New System.Drawing.Size(683, 49)
         Me.textBoxDescription.TabIndex = 19
-        Me.textBoxDescription.Text = "This example contains code to catch events in excel." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "example 9 shows you how to " & _
-            "catch click events from excel gui." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.textBoxDescription.Text = "This example contains code to catch events in excel." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "example 9 shows you how to " &
+    "catch click events from excel gui." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'buttonStartExample
         '
         Me.buttonStartExample.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.buttonStartExample.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttonStartExample.Image = CType(resources.GetObject("buttonStartExample.Image"), System.Drawing.Image)
@@ -86,7 +86,7 @@ Partial Class Example08
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Controls.Add(Me.labelEventLogHeader)
         Me.Controls.Add(Me.textBoxEvents)
         Me.Controls.Add(Me.textBoxDescription)

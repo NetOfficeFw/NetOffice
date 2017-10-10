@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 15, 16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class CategoryCollection : COMObject , IEnumerable<NetOffice.OfficeApi.IMsoCategory>
+	public class CategoryCollection : COMObject, IEnumerableProvider<NetOffice.OfficeApi.IMsoCategory>
 	{
 		#pragma warning disable
 
@@ -178,49 +179,66 @@ namespace NetOffice.OfficeApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-       #region IEnumerable<NetOffice.OfficeApi.IMsoCategory> Member
-        
+        #endregion
+
+        #region IEnumerableProvider<NetOffice.OfficeApi.IMsoCategory>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.IMsoCategory>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.IMsoCategory>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.IMsoCategory item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.IMsoCategory> Member
+
         /// <summary>
-		/// SupportByVersion Office, 15, 16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Office", 15, 16)]
+        /// SupportByVersion Office, 15, 16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Office", 15, 16)]
         [CustomEnumerator]
-       public IEnumerator<NetOffice.OfficeApi.IMsoCategory> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.IMsoCategory item in innerEnumerator)
-               yield return item;
-       }
+        public IEnumerator<NetOffice.OfficeApi.IMsoCategory> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.IMsoCategory item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion Office, 15, 16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Office", 15, 16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 15, 16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Office", 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

@@ -5,7 +5,6 @@ using Microsoft.Win32;
 using Extensibility;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
 using Office = NetOffice.OfficeApi;
@@ -28,7 +27,7 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _menuName                = "Sample Menu CS4";
         private static readonly string _menuButtonName          = "Sample Button CS4";
 
-        Outlook.Application _outlookApplication;
+        private Outlook.Application _outlookApplication;
 
         #region IDTExtensibility2 Members
          

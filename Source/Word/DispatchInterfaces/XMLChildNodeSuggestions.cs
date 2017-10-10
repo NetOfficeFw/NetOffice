@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class XMLChildNodeSuggestions : COMObject, IEnumerable<NetOffice.WordApi.XMLChildNodeSuggestion>
+	public class XMLChildNodeSuggestions : COMObject, IEnumerableProvider<NetOffice.WordApi.XMLChildNodeSuggestion>
 	{
 		#pragma warning disable
 
@@ -182,7 +183,21 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.WordApi.XMLChildNodeSuggestion> Member
+        #region IEnumerableProvider<NetOffice.WordApi.XMLChildNodeSuggestion>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.XMLChildNodeSuggestion>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.XMLChildNodeSuggestion>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.XMLChildNodeSuggestion>
 
         /// <summary>
         /// SupportByVersion Word, 11,12,14,15,16
@@ -197,7 +212,7 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Word, 11,12,14,15,16
@@ -205,7 +220,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OWC10Api
 {
@@ -13,7 +14,7 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class SchemaParameters : COMObject , IEnumerable<NetOffice.OWC10Api.SchemaParameter>
+	public class SchemaParameters : COMObject, IEnumerableProvider<NetOffice.OWC10Api.SchemaParameter>
 	{
 		#pragma warning disable
 
@@ -221,32 +222,46 @@ namespace NetOffice.OWC10Api
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, new object[]{ name, dataType, size, scale, precision });
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OWC10Api.SchemaParameter> Member
-        
+        #region IEnumerableProvider<NetOffice.OWC10Api.SchemaParameter>
+
+        ICOMObject IEnumerableProvider<NetOffice.OWC10Api.SchemaParameter>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OWC10Api.SchemaParameter>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OWC10Api.SchemaParameter>
+
         /// <summary>
-		/// SupportByVersion OWC10, 1
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
-       public IEnumerator<NetOffice.OWC10Api.SchemaParameter> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OWC10Api.SchemaParameter item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        public IEnumerator<NetOffice.OWC10Api.SchemaParameter> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OWC10Api.SchemaParameter item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion OWC10, 1
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.DAOApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Indexes : _DynaCollection, IEnumerable<NetOffice.DAOApi.Index>
+	public class Indexes : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi.Index>
 	{
 		#pragma warning disable
 
@@ -124,13 +125,27 @@ namespace NetOffice.DAOApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
         #endregion
 
-        #region IEnumerable<NetOffice.DAOApi.Index> Member
+        #region IEnumerableProvider<NetOffice.DAOApi.Index>
+
+        ICOMObject IEnumerableProvider<NetOffice.DAOApi.Index>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.DAOApi.Index>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.DAOApi.Index>
 
         /// <summary>
         /// SupportByVersion DAO, 3.6,12.0
@@ -145,7 +160,7 @@ namespace NetOffice.DAOApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion DAO, 3.6,12.0
@@ -153,7 +168,7 @@ namespace NetOffice.DAOApi
         [SupportByVersion("DAO", 3.6,12.0)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

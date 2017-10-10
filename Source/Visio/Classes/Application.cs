@@ -2,7 +2,7 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
-using NetOffice.Contribution.CollectionsGeneric;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VisioApi
 {

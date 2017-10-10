@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
-
 using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
@@ -48,12 +42,12 @@ namespace OutlookExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return "Example07"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Customize UI" : "UI Items erstellen"; }
+            get { return "Customize UI"; }
         }
 
         public void Connect(IHost hostApplication)

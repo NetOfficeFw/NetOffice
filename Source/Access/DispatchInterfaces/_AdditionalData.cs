@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class _AdditionalData : COMObject , IEnumerable<NetOffice.AccessApi._AdditionalData>
+	public class _AdditionalData : COMObject, IEnumerableProvider<NetOffice.AccessApi._AdditionalData>
 	{
 		#pragma warning disable
 
@@ -184,32 +185,46 @@ namespace NetOffice.AccessApi
 			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.AccessApi._AdditionalData> Member
-        
+        #region IEnumerableProvider<NetOffice.AccessApi._AdditionalData>
+
+        ICOMObject IEnumerableProvider<NetOffice.AccessApi._AdditionalData>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.AccessApi._AdditionalData>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi._AdditionalData>
+
         /// <summary>
-		/// SupportByVersion Access, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Access", 11,12,14,15,16)]
-       public IEnumerator<NetOffice.AccessApi._AdditionalData> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.AccessApi._AdditionalData item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Access, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.AccessApi._AdditionalData> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.AccessApi._AdditionalData item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Access, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Access", 11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Access, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

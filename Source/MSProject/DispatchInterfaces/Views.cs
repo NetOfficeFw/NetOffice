@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.MSProjectApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.MSProjectApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920747(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Views : COMObject, IEnumerable<NetOffice.MSProjectApi.View>
+	public class Views : COMObject, IEnumerableProvider<NetOffice.MSProjectApi.View>
 	{
 		#pragma warning disable
 
@@ -183,7 +184,21 @@ namespace NetOffice.MSProjectApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.MSProjectApi.View> Member
+        #region IEnumerableProvider<NetOffice.MSProjectApi.View>
+
+        ICOMObject IEnumerableProvider<NetOffice.MSProjectApi.View>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.MSProjectApi.View>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.View>
 
         /// <summary>
         /// SupportByVersion MSProject, 11,12,14
@@ -198,7 +213,7 @@ namespace NetOffice.MSProjectApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion MSProject, 11,12,14
@@ -206,7 +221,7 @@ namespace NetOffice.MSProjectApi
         [SupportByVersion("MSProject", 11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861518.aspx </remarks>
 	[SupportByVersion("Office", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Permission : _IMsoDispObj , IEnumerable<NetOffice.OfficeApi.UserPermission>
+	public class Permission : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.UserPermission>
 	{
 		#pragma warning disable
 
@@ -349,32 +350,46 @@ namespace NetOffice.OfficeApi
 			 Factory.ExecuteMethod(this, "RemoveAll");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.UserPermission> Member
-        
+        #region IEnumerableProvider<NetOffice.OfficeApi.UserPermission>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.UserPermission>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.UserPermission>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.UserPermission>
+
         /// <summary>
-		/// SupportByVersion Office, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.UserPermission> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.UserPermission item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.UserPermission> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.UserPermission item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Office, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Office, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

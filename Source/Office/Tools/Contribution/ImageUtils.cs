@@ -22,6 +22,18 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             }
         }
 
+        private class ConvertIcon : System.Windows.Forms.AxHost
+        {
+            private ConvertIcon() : base(null)
+            {
+            }
+
+            public static stdole.IPictureDisp Convert(Icon icon)
+            {
+                return (stdole.IPictureDisp)GetIPictureDispFromPicture(icon.ToBitmap());
+            }
+        }
+
         #endregion
 
         #region Fields
@@ -46,6 +58,18 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Converts an icon to IPictureDisp
+        /// </summary>
+        /// <param name="icon">target icon to convert</param>
+        /// <returns>IPictureDisp instance</returns>
+        public stdole.IPictureDisp ToPicture(Icon icon)
+        {
+            if (null == icon)
+                throw new ArgumentNullException("icon");
+            return ConvertIcon.Convert(icon);
+        }
 
         /// <summary>
         /// Converts an image to IPictureDisp

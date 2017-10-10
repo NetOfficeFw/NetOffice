@@ -40,51 +40,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormError.cs">
+    <Compile Include="AreaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormError.Designer.cs">
-      <DependentUpon>FormError.cs</DependentUpon>
+    <Compile Include="AreaForm.Designer.cs">
+      <DependentUpon>AreaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFinish.cs">
+    <Compile Include="ErrorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFinish.Designer.cs">
-      <DependentUpon>FormFinish.cs</DependentUpon>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBase.cs">
+    <Compile Include="ExampleViewItem.cs" />
+    <Compile Include="FinishForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBase.Designer.cs">
-      <DependentUpon>FormBase.cs</DependentUpon>
+    <Compile Include="FinishForm.Designer.cs">
+      <DependentUpon>FinishForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOptions.cs">
+    <Compile Include="ExampleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOptions.Designer.cs">
-      <DependentUpon>FormOptions.cs</DependentUpon>
+    <Compile Include="ExampleForm.Designer.cs">
+      <DependentUpon>ExampleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IExample.cs" />
     <Compile Include="IHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Translator.cs" />
+    <Compile Include="SortableBindingList.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormError.resx">
-      <DependentUpon>FormError.cs</DependentUpon>
+    <EmbeddedResource Include="AreaForm.resx">
+      <DependentUpon>AreaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFinish.resx">
-      <DependentUpon>FormFinish.cs</DependentUpon>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBase.resx">
-      <DependentUpon>FormBase.cs</DependentUpon>
+    <EmbeddedResource Include="FinishForm.resx">
+      <DependentUpon>FinishForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOptions.resx">
-      <DependentUpon>FormOptions.cs</DependentUpon>
+    <EmbeddedResource Include="ExampleForm.resx">
+      <DependentUpon>ExampleForm.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="FormBase.txt" />
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

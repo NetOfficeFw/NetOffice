@@ -1,16 +1,15 @@
-﻿Imports System.Globalization
-Imports ExampleBase
+﻿Imports ExampleBase
 Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
-Imports NetOffice.ExcelApi.Enums
-Imports NetOffice.ExcelApi.Tools.Utils
+Imports NetOffice.ExcelApi.Tools.Contribution
 
+''' <summary>
+''' Example 3 - Using Numberformats
+''' </summary>
 Public Class Example03
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -18,7 +17,7 @@ Public Class Example03
         Dim excelApplication As New Excel.Application()
         excelApplication.DisplayAlerts = False
 
-        ' create a utils instance, not need for but helpful to keep the lines of code low
+        ' create a utils instance, no need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(excelApplication)
 
         ' add a new workbook
@@ -108,7 +107,7 @@ Public Class Example03
         workSheet.Columns(4).AutoFit()
 
         ' save the book 
-        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", Excel.Tools.DocumentFormat.Normal)
+        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", DocumentFormat.Normal)
         workBook.SaveAs(workbookFile)
 
         ' close excel and dispose reference
@@ -122,13 +121,13 @@ Public Class Example03
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example03", "Beispiel03")
+            Return "Example03"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Using Numberformats", "Zellen formatieren mit NumberFormat")
+            Return "Using Numberformats"
         End Get
     End Property
 
@@ -143,7 +142,5 @@ Public Class Example03
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

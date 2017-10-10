@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PowerPointApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744037.aspx </remarks>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Adjustments : COMObject , IEnumerable<Single>
+	public class Adjustments : COMObject, IEnumerableProvider<Single>
 	{
 		#pragma warning disable
 
@@ -187,49 +188,66 @@ namespace NetOffice.PowerPointApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-       #region IEnumerable<Single> Member
-        
+        #endregion
+
+        #region IEnumerableProvider<Single>
+
+        ICOMObject IEnumerableProvider<Single>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<Single>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (Single item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<Single> Member
+
         /// <summary>
-		/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [CustomEnumerator]
-       public IEnumerator<Single> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (Single item in innerEnumerator)
-               yield return item;
-       }
+        public IEnumerator<Single> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (Single item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             Single[] enumeratorObjects = new Single[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (Single item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

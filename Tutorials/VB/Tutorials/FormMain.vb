@@ -1,5 +1,7 @@
 ﻿Public Class FormMain
 
+    Public Shared ReadOnly DocumentationBase As String = "https://netoffice.io/documentation/"
+
     Public Sub New()
 
         InitializeComponent()
@@ -23,7 +25,10 @@
         LoadTutorial(New Tutorial11())
         LoadTutorial(New Tutorial12())
         LoadTutorial(New Tutorial13())
-        NavigateToTutorial(0)
+        LoadTutorial(New Tutorial14())
+        LoadTutorial(New Tutorial15())
+        LoadTutorial(New Tutorial16())
+        LoadTutorial(New Tutorial17())
 
     End Sub
 

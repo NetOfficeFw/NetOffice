@@ -88,7 +88,7 @@ namespace NetOffice.Tools
                     {
                         errorBlock = 2;
                         throw;
-                    }                   
+                    }
                 }
 
                 if (null != codebase && codebase.Value)
@@ -139,7 +139,8 @@ namespace NetOffice.Tools
             {
                 NetOffice.DebugConsole.Default.WriteLine("RegisterHandler Exception.Block:{0}", errorBlock);
                 NetOffice.DebugConsole.Default.WriteException(exception);
-                RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                    throw;
             }
         }
 

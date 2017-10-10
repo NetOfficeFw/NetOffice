@@ -44,6 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="NativeCaller\IRibbonUI.cs" />
+    <Compile Include="Native\EncryptionProvider.cs" />
+    <Compile Include="Native\IBlogExtensibility.cs" />
+    <Compile Include="Native\IBlogPictureExtensibility.cs" />
+    <Compile Include="Native\IDocumentInspector.cs" />
+    <Compile Include="Native\SignatureProvider.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -544,10 +550,10 @@
     <Compile Include="DispatchInterfaces\_CustomTaskPane.cs" />
     <Compile Include="DispatchInterfaces\CustomTaskPaneEvents.cs" />
     <Compile Include="DispatchInterfaces\ICTPFactory.cs" />
-    <Compile Include="NativeInterfaces\ICustomTaskPaneConsumer.cs" />
-    <Compile Include="NativeInterfaces\IRibbonUI.cs" />
-    <Compile Include="NativeInterfaces\IRibbonControl.cs" />
-    <Compile Include="NativeInterfaces\IRibbonExtensibility.cs" />
+    <Compile Include="Native\ICustomTaskPaneConsumer.cs" />
+    <Compile Include="Native\IRibbonUI.cs" />
+    <Compile Include="Native\IRibbonControl.cs" />
+    <Compile Include="Native\IRibbonExtensibility.cs" />
     <Compile Include="DispatchInterfaces\IAssistance.cs" />
     <Compile Include="DispatchInterfaces\IMsoChartData.cs" />
     <Compile Include="DispatchInterfaces\IMsoChart.cs" />

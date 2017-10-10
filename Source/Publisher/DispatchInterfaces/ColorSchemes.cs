@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PublisherApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.PublisherApi
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class ColorSchemes : COMObject , IEnumerable<NetOffice.PublisherApi.ColorScheme>
+	public class ColorSchemes : COMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.ColorScheme>
 	{
 		#pragma warning disable
 
@@ -164,36 +165,50 @@ namespace NetOffice.PublisherApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.PublisherApi.ColorScheme> Member
-        
+        #region IEnumerableProvider<NetOffice.PublisherApi.ColorScheme>
+
+        ICOMObject IEnumerableProvider<NetOffice.PublisherApi.ColorScheme>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.PublisherApi.ColorScheme>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.PublisherApi.ColorScheme>
+
         /// <summary>
-		/// SupportByVersion Publisher, 14,15,16
-		/// </summary>
-		[SupportByVersion("Publisher", 14,15,16)]
-       public IEnumerator<NetOffice.PublisherApi.ColorScheme> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.PublisherApi.ColorScheme item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        public IEnumerator<NetOffice.PublisherApi.ColorScheme> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.PublisherApi.ColorScheme item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Publisher, 14,15,16
-		/// </summary>
-		[SupportByVersion("Publisher", 14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

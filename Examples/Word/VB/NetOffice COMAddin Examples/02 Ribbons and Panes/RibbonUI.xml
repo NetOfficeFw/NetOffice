@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--PLEASE NOTE: The CustomUI_OnLoad method is a virtual member of the COMAddin base class -->
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="CustomUI_OnLoad" >
+  <ribbon>
+    <tabs>
+      <tab id="Word02AddinVB4" label="CPU Usage">
+        <group id="group1" label="CPU Usage(VB4)">
+          <toggleButton id="paneVisibleToogleButton" label="Show CPU Usage" imageMso="CreateFormBlankForm" size="large" getPressed="OnGetPressedPanelToggle" onAction="OnCheckPanelToggle" />
+          <button id="aboutButton" label="About CPU Usage" imageMso="AdvertisePublishAs" size="large" onAction="OnClickAboutButton" />          
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

@@ -15,7 +15,10 @@ namespace MSFormsApi.Utils
 
         private string    _name;
         private string    _namespace     = "NetOffice.MSFormsApi";
-        private Guid[]    _componentGuid = new Guid[]{new Guid("0D452EE1-E08F-101A-852E-02608C4D0BB4")};
+        //first guid is MSForms, second guid is VBE.Forms
+        private Guid[] _componentGuid =
+                                            new Guid[]{new Guid("0D452EE1-E08F-101A-852E-02608C4D0BB4"),
+                                            new Guid("ac2de821-36a2-11cf-8053-00aa006009fa")};
         private Assembly  _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
         private Type[]	  _exportedTypes;

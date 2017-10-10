@@ -9,7 +9,7 @@ using TutorialsBase;
 
 namespace TutorialsCS4
 {
-    public partial class FormMain : FormBase
+    public partial class FormMain : TutorialForm
     {
         public FormMain()
         {
@@ -33,7 +33,10 @@ namespace TutorialsCS4
             LoadTutorial(new Tutorial11());
             LoadTutorial(new Tutorial12());
             LoadTutorial(new Tutorial13());
-            NavigateToTutorial(0);
+            LoadTutorial(new Tutorial14());
+            LoadTutorial(new Tutorial15());
+            LoadTutorial(new Tutorial16());
+            LoadTutorial(new Tutorial17());
         }
     }
 }

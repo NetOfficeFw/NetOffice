@@ -1,55 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ExampleBase
 {
     /// <summary>
-    /// the host application for the examples
+    /// Represents the host application
     /// </summary>
     public interface IHost
     {
         /// <summary>
-        /// shows a dialog with the given message. provides an "Open Document" button for the second param. this param means a full qualified path to a generated file.
+        /// Shows a dialog with the given message. provides an "Open Document" button for the second argument.
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="fullDocumentPath"></param>
+        /// <param name="message">message as any</param>
+        /// <param name="fullDocumentPath">path to result document</param>
         void ShowFinishDialog(string message, string fullDocumentPath);
 
         /// <summary>
-        /// shows an error dialog
+        /// Shows an error dialog
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="exception"></param>
+        /// <param name="message">message as any</param>
+        /// <param name="exception">exception as any</param>
         void ShowErrorDialog(string message, Exception exception);
 
         /// <summary>
-        /// shows a message
+        /// Shows a message
         /// </summary>
-        /// <param name="message"></param>
+        /// <param name="message">message as any</param>
         void ShowMessage(string message);
 
         /// <summary>
-        /// shows a question
+        /// Shows a question
         /// </summary>
-        /// <param name="message"></param>
-        /// <returns></returns>
+        /// <param name="message">message as any</param>
+        /// <returns>user response</returns>
         DialogResult ShowQuestion(string message);
-        
+
         /// <summary>
-        /// Helper icon for some examples
+        /// A dumy icon that examples can use
         /// </summary>
         Icon DisplayIcon { get; }
 
         /// <summary>
-        /// Current Language. only english or german (1033 or 1031)
-        /// </summary>
-        int LCID { get; }
-
-        /// <summary>
-        /// Basefolder information for  document generating examples 
+        /// Basefolder path to generate examples documents into
         /// </summary>
         string RootDirectory { get; }
     }

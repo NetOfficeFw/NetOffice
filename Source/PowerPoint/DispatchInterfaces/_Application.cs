@@ -501,7 +501,9 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 HWND
+        [KnownIssue]
+        [Obsolete("Int32 HWND is unavailable. Use ApplicationUtils instead.")]
+        public virtual Int32 HWND
 		{
 			get
 			{

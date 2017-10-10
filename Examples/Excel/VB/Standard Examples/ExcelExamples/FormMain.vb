@@ -20,7 +20,7 @@
         LoadExample(New Example07())
         LoadExample(New Example08())
         LoadExample(New Example09())
-
+        LoadExample(New Example10())
     End Sub
 
 End Class

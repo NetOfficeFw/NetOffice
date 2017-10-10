@@ -3,21 +3,22 @@ Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports NetOffice.OfficeApi.Enums
-Imports NetOffice.PowerPointApi.Tools.Utils
+Imports NetOffice.PowerPointApi.Tools.Contribution
 
+''' <summary>
+''' Example 2 - Create some kind of shapes
+''' </summary>
 Public Class Example02
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start powerpoint
         Dim powerApplication As New PowerPoint.Application()
 
-        ' create a utils instance, not need for but helpful to keep the lines of code low
+        ' create a utils instance, no need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(powerApplication)
 
         ' add a new presentation with one new slide
@@ -39,27 +40,27 @@ Public Class Example02
         slide.Shapes.AddShape(MsoAutoShapeType.msoShape24pointStar, 200, 200, 250, 250)
 
         ' save the document 
-        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example02", PowerPoint.Tools.DocumentFormat.Normal)
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example02", DocumentFormat.Normal)
         presentation.SaveAs(documentFile)
 
         ' close power point and dispose reference
         powerApplication.Quit()
         powerApplication.Dispose()
 
-        ' show dialog for the user(you!)
+        ' show end dialog
         _hostApplication.ShowFinishDialog(Nothing, documentFile)
 
     End Sub
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example02", "Beispiel02")
+            Return "Example02"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create some kind of shapes", "Verschiede Shapes erstellen")
+            Return "Create some kind of shapes"
         End Get
     End Property
 
@@ -74,7 +75,5 @@ Public Class Example02
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

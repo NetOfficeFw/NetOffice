@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VisioApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.VisioApi
 	/// </summary>
 	[SupportByVersion("Visio", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IVValidationRules : COMObject, IEnumerable<NetOffice.VisioApi.IVValidationRule>
+	public class IVValidationRules : COMObject, IEnumerableProvider<NetOffice.VisioApi.IVValidationRule>
 	{
 		#pragma warning disable
 
@@ -232,7 +233,21 @@ namespace NetOffice.VisioApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.VisioApi.IVValidationRule> Member
+        #region IEnumerableProvider<NetOffice.VisioApi.IVValidationRule>
+
+        ICOMObject IEnumerableProvider<NetOffice.VisioApi.IVValidationRule>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.VisioApi.IVValidationRule>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVValidationRule>
 
         /// <summary>
         /// SupportByVersion Visio, 14,15,16
@@ -247,7 +262,7 @@ namespace NetOffice.VisioApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Visio, 14,15,16
@@ -255,7 +270,7 @@ namespace NetOffice.VisioApi
         [SupportByVersion("Visio", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

@@ -542,8 +542,16 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             {
                 if (_ownerApplication.EntityIsAvailable("Version"))
                 {
-                    double version = Convert.ToDouble(_ownerApplication.Invoker.PropertyGet(_ownerApplication, "Version"), CultureInfo.InvariantCulture);
-                    return version;
+                    object result = _ownerApplication.Invoker.PropertyGet(_ownerApplication, "Version");
+                    string[] version = Convert.ToString(result).Split(new string[] {"."}, StringSplitOptions.RemoveEmptyEntries);
+                    if (version.Length > 1)
+                    {
+                        return Convert.ToDouble(version[0] + "." + version[1], CultureInfo.InvariantCulture);
+                    }
+                    else
+                    {
+                        return Convert.ToDouble(version[0], CultureInfo.InvariantCulture);
+                    }
                 }
                 else
                 {

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
@@ -12,8 +13,8 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class _ItemsSelected : COMObject, IEnumerable<Int32>
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class _ItemsSelected : COMObject, IEnumerableProvider<Int32>
 	{
 		#pragma warning disable
 
@@ -154,7 +155,21 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable<Int32> Member
+        #region IEnumerableProvider<Int32>
+
+        ICOMObject IEnumerableProvider<Int32>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<Int32>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<Int32>
 
         /// <summary>
         /// SupportByVersion Access, 9,10,11,12,14,15,16
@@ -169,7 +184,7 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Access, 9,10,11,12,14,15,16
@@ -177,7 +192,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetScalarEnumeratorAsMethod(this);
 		}
 
 		#endregion

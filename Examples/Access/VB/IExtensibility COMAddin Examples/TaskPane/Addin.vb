@@ -1,24 +1,23 @@
 ﻿Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("9085C483-DF17-45F6-8F53-F3DC8D88C9D2"), ProgIdAttribute("AccessAddinVB4.TaskPaneAddin"), ComVisible(True)> _
+<Guid("9085C483-DF17-45F6-8F53-F3DC8D88C9D2"), ProgId("AccessAddinVB4.TaskPaneAddin"), ComVisible(True)>
 Public Class Addin
-    Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
+    Implements IDTExtensibility2, Office.Native.ICustomTaskPaneConsumer
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Access\\AddIns\\"
     Private Shared ReadOnly _progId As String = "AccessAddinVB4.TaskPaneAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Task Pane"
 
-    Shared _sampleControl As SampleControl
-    Shared _accessApplication As Access.Application
+    Private Shared _sampleControl As SampleControl
+    Private Shared _accessApplication As Access.Application
 
     Public Shared ReadOnly Property Application() As Access.Application
         Get
@@ -28,7 +27,7 @@ Public Class Addin
 
 #Region "ICustomTaskPaneConsumer Member"
 
-    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements NetOffice.OfficeApi.ICustomTaskPaneConsumer.CTPFactoryAvailable
+    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements NetOffice.OfficeApi.Native.ICustomTaskPaneConsumer.CTPFactoryAvailable
 
         Try
 

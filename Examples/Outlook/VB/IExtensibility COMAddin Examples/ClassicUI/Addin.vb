@@ -2,14 +2,13 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 Imports NetOffice.OutlookApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("224A9335-4C97-4F5C-A15C-1A5B9EB39225"), ProgIdAttribute("OutlookAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("224A9335-4C97-4F5C-A15C-1A5B9EB39225"), ProgId("OutlookAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -25,7 +24,7 @@ Public Class Addin
     Private Shared ReadOnly _menuName As String = "Sample Menu VB4"
     Private Shared ReadOnly _menuButtonName As String = "Sample Button VB4"
 
-    Dim _outlookApplication As Outlook.Application
+    Private _outlookApplication As Outlook.Application
 
 #Region "IDTExtensibility2 Members"
 

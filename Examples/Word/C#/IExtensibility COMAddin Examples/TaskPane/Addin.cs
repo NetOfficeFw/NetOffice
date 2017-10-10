@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.WordApi.Enums;
@@ -13,8 +12,8 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("A8BCC763-BC69-49DA-8DBF-C8DE353B745D"), ProgId("WordAddinCS4.TaskPaneAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
+    [Guid("A8BCC763-BC69-49DA-8DBF-C8DE353B745D"), ProgId("WordAddinCS4.TaskPaneAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
         private static readonly string _prodId                  = "WordAddinCS4.TaskPaneAddin";

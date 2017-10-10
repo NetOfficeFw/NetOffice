@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194143.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class OMathAutoCorrectEntries : COMObject, IEnumerable<NetOffice.WordApi.OMathAutoCorrectEntry>
+	public class OMathAutoCorrectEntries : COMObject, IEnumerableProvider<NetOffice.WordApi.OMathAutoCorrectEntry>
 	{
 		#pragma warning disable
 
@@ -199,7 +200,21 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.WordApi.OMathAutoCorrectEntry> Member
+        #region IEnumerableProvider<NetOffice.WordApi.OMathAutoCorrectEntry>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.OMathAutoCorrectEntry>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.OMathAutoCorrectEntry>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.OMathAutoCorrectEntry>
 
         /// <summary>
         /// SupportByVersion Word, 12,14,15,16
@@ -214,7 +229,7 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Word, 12,14,15,16
@@ -222,7 +237,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

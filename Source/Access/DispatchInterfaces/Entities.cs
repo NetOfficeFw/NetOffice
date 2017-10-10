@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.AccessApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197356.aspx </remarks>
 	[SupportByVersion("Access", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Entities : COMObject, IEnumerable<NetOffice.AccessApi.Entity>
+	public class Entities : COMObject, IEnumerableProvider<NetOffice.AccessApi.Entity>
 	{
 		#pragma warning disable
 
@@ -171,7 +172,21 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.AccessApi.Entity> Member
+        #region IEnumerableProvider<NetOffice.AccessApi.Entity>
+
+        ICOMObject IEnumerableProvider<NetOffice.AccessApi.Entity>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.AccessApi.Entity>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi.Entity>
 
         /// <summary>
         /// SupportByVersion Access, 14,15,16
@@ -186,7 +201,7 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Access, 14,15,16
@@ -194,7 +209,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

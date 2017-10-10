@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
-
 using NetOffice;
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
@@ -53,12 +47,12 @@ namespace WordExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return  "Example07"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Customize UI" : "UI Items erstellen"; }
+            get { return  "Customize UI"; }
         }
 
         public UserControl Panel

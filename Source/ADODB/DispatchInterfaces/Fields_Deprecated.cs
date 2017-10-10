@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ADODBApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ADODBApi
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Fields_Deprecated : Fields20_Deprecated , IEnumerable<NetOffice.ADODBApi.Field_Deprecated>
+	public class Fields_Deprecated : Fields20_Deprecated, IEnumerableProvider<NetOffice.ADODBApi.Field_Deprecated>
 	{
 		#pragma warning disable
 
@@ -241,32 +242,46 @@ namespace NetOffice.ADODBApi
 			 Factory.ExecuteMethod(this, "CancelUpdate");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ADODBApi.Field_Deprecated> Member
-        
+        #region IEnumerableProvider<NetOffice.ADODBApi.Field_Deprecated>
+
+        ICOMObject IEnumerableProvider<NetOffice.ADODBApi.Field_Deprecated>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ADODBApi.Field_Deprecated>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ADODBApi.Field_Deprecated>
+
         /// <summary>
-		/// SupportByVersion ADODB, 2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.5)]
-       public IEnumerator<NetOffice.ADODBApi.Field_Deprecated> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ADODBApi.Field_Deprecated item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion ADODB, 2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.5)]
+        public IEnumerator<NetOffice.ADODBApi.Field_Deprecated> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ADODBApi.Field_Deprecated item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion ADODB, 2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.5)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion ADODB, 2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ADODBApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ADODBApi
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
-	public class Fields20 : Fields15 , IEnumerable<object>
+	public class Fields20 : Fields15, IEnumerableProvider<object>
 	{
 		#pragma warning disable
 
@@ -188,7 +189,21 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerableProvider<object>
+
+        ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion ADODB, 2.5
@@ -203,7 +218,7 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion ADODB, 2.5
@@ -211,7 +226,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, true);
 		}
 
 		#endregion

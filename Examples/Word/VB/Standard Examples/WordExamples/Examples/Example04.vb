@@ -2,14 +2,15 @@
 Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
-Imports NetOffice.WordApi.Tools.Utils
+Imports NetOffice.WordApi.Tools.Contribution
 
+''' <summary>
+''' Example 4 - Using data source
+''' </summary>
 Public Class Example04
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -22,9 +23,9 @@ Public Class Example04
         End If
 
         File.AppendAllText(fileName, String.Format("{0},{1}{2}", "ProjectName", "ProjectLink", Environment.NewLine))
-        File.AppendAllText(fileName, String.Format("{0},{1}{2}", "NetOffice", "http://netoffice.codeplex.com/", Environment.NewLine))
+        File.AppendAllText(fileName, String.Format("{0},{1}{2}", "NetOffice", "https://github.com/NetOfficeFw/NetOffice", Environment.NewLine))
 
-        
+
         ' start word and turn off msg boxes
         Dim wordApplication As New Word.Application
         wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
@@ -61,27 +62,27 @@ Public Class Example04
         wordApplication.ActiveWindow.View.ShowFieldCodes = False
 
         'save document
-        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example04", Word.Tools.DocumentFormat.Normal)
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example04", DocumentFormat.Normal)
         newDocument.SaveAs(documentFile)
 
         ' close word and dispose reference
         wordApplication.Quit()
         wordApplication.Dispose()
 
-        ' show dialog for the user(you!)
+        ' show end dialog
         _hostApplication.ShowFinishDialog(Nothing, documentFile)
 
     End Sub
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example04", "Beispiel04")
+            Return "Example04"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Using data source", "Verwendung von DataSource")
+            Return "Using data source"
         End Get
     End Property
 
@@ -96,7 +97,5 @@ Public Class Example04
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

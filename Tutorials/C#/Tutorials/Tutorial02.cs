@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
@@ -14,8 +8,6 @@ namespace TutorialsCS4
 {
     public class Tutorial02 : ITutorial
     {
-        #region ITutorial
-
         public void Run()
         {
             // this example shows you another dispose method: DisposeChildInstances
@@ -68,15 +60,9 @@ namespace TutorialsCS4
 
         }
 
-        public void ChangeLanguage(int lcid)
-        {
-
-        }
-
         public string Uri
         {
-            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial02_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial02_DE_CS"; }
-
+            get { return Program.DocumentationBase + "Tutorial02_EN_CS.html"; }
         }
 
         public string Caption
@@ -86,7 +72,7 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Using Dispose & DisposeChildInstances" : "Verwenden von Dispose und DisposeChildInstances"; }
+            get { return "Using Dispose & DisposeChildInstances"; }
         }
 
         public UserControl Panel
@@ -94,12 +80,6 @@ namespace TutorialsCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

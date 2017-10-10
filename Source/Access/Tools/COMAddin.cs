@@ -87,11 +87,11 @@ namespace NetOffice.AccessApi.Tools
         /// ITaskPane Instances
         /// </summary>
 		protected List<ITaskPane> TaskPaneInstances { get; set; }
-       
+
         /// <summary>
         /// Ribbon instance to manipulate ui at runtime 
         /// </summary>
-        protected Office.IRibbonUI RibbonUI { get; private set; }
+        public Office.IRibbonUI RibbonUI { get; private set; }
 
         /// <summary>
         /// Cached Error Method Delegate
@@ -102,19 +102,6 @@ namespace NetOffice.AccessApi.Tools
         /// Cached Register Error Method Delegate
         /// </summary>
 		private static MethodInfo RegisterErrorMethod { get; set; }
-
-        #endregion
-       
-        #region Ribbon Support
-
-        /// <summary>
-        /// Pre-defined Ribbon Loader
-        /// </summary>
-        /// <param name="ribbonUI"></param>
-        public virtual void CustomUI_OnLoad(Office.IRibbonUI ribbonUI)
-        {
-            RibbonUI = ribbonUI;
-        }
 
         #endregion
 
@@ -286,7 +273,7 @@ namespace NetOffice.AccessApi.Tools
 
         #region IDTExtensibility2 Members
 
-        void IDTExtensibility2.OnStartupComplete(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
             try
             {
@@ -302,7 +289,7 @@ namespace NetOffice.AccessApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -324,10 +311,22 @@ namespace NetOffice.AccessApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             try
             {
+                try
+                {                  
+                    RaiseOnDisconnection(RemoveMode, ref custom);
+                    Tweaks.DisposeTweaks(Factory, this, Type);
+                    Utils.Dispose();
+
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
+                }
+
                 foreach (ITaskPane item in TaskPaneInstances)
                 {
                     try
@@ -365,14 +364,15 @@ namespace NetOffice.AccessApi.Tools
 
                 try
                 {
-                    Tweaks.DisposeTweaks(Factory, this, Type);
-                    RaiseOnDisconnection(RemoveMode, ref custom);
-                    Utils.Dispose();
-
+                    if (null != RibbonUI)
+                    {
+                        RibbonUI.Dispose();
+                        RibbonUI = null;
+                    }
                 }
                 catch (NetRuntimeSystem.Exception exception)
                 {
-                    Factory.Console.WriteException(exception);
+                    NetOffice.DebugConsole.Default.WriteException(exception);
                 }
 
                 try
@@ -392,7 +392,7 @@ namespace NetOffice.AccessApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
             try
             {
@@ -405,7 +405,7 @@ namespace NetOffice.AccessApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnBeginShutdown(ref Array custom)
+        void NetOffice.Tools.Native.IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
             try
             {
@@ -425,14 +425,14 @@ namespace NetOffice.AccessApi.Tools
         /// <summary>
         /// IRibbonExtensibility implementation
         /// </summary>
-        /// <param name="RibbonID">target ribbon id, only used from Outlook and ignored in this standard implementation. overwrite this method if you need a custom behavior</param>
+        /// <param name="RibbonID">target ribbon id</param>
         /// <returns>XML content or String.Empty</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public virtual string GetCustomUI(string RibbonID)
         {
             try
             {
-                CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type);
+                CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, RibbonID);
                 if (null != ribbon)
                      return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                 else
@@ -444,6 +444,23 @@ namespace NetOffice.AccessApi.Tools
                 OnError(ErrorMethodKind.GetCustomUI, exception);
 				return String.Empty;
             } 
+        }
+
+        /// <summary>
+        /// Pre-defined Ribbon Loader
+        /// </summary>
+        /// <param name="ribbonUI"></param>
+        public virtual void CustomUI_OnLoad(Office.Native.IRibbonUI ribbonUI)
+        {
+            try
+            {
+                RibbonUI = COMObject.Create<OfficeApi.IRibbonUI>(Factory, ribbonUI);
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.GetCustomUI, exception);
+            }
         }
 
         #endregion
@@ -771,6 +788,11 @@ namespace NetOffice.AccessApi.Tools
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
+            if (null == type)
+                throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
         }
 
@@ -781,6 +803,11 @@ namespace NetOffice.AccessApi.Tools
         [ComUnregisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
         {
+            if (null == type)
+                throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             COMAddinUnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
         }
 
@@ -795,6 +822,9 @@ namespace NetOffice.AccessApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             InstallScope currentScope = (InstallScope)scope;
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
 
@@ -812,6 +842,9 @@ namespace NetOffice.AccessApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
+                return;
+
             InstallScope currentScope = (InstallScope)scope;
             OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
 

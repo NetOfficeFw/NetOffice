@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PublisherApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.PublisherApi
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Labels : COMObject , IEnumerable<NetOffice.PublisherApi.Label>
+	public class Labels : COMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.Label>
 	{
 		#pragma warning disable
 
@@ -164,36 +165,50 @@ namespace NetOffice.PublisherApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.PublisherApi.Label> Member
-        
+        #region IEnumerableProvider<NetOffice.PublisherApi.Label>
+
+        ICOMObject IEnumerableProvider<NetOffice.PublisherApi.Label>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.PublisherApi.Label>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.PublisherApi.Label>
+
         /// <summary>
-		/// SupportByVersion Publisher, 14,15,16
-		/// </summary>
-		[SupportByVersion("Publisher", 14,15,16)]
-       public IEnumerator<NetOffice.PublisherApi.Label> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.PublisherApi.Label item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        public IEnumerator<NetOffice.PublisherApi.Label> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.PublisherApi.Label item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Publisher, 14,15,16
-		/// </summary>
-		[SupportByVersion("Publisher", 14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

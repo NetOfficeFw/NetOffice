@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class DiagramNodeChildren : COMObject , IEnumerable<NetOffice.WordApi.DiagramNode>
+	public class DiagramNodeChildren : COMObject, IEnumerableProvider<NetOffice.WordApi.DiagramNode>
 	{
 		#pragma warning disable
 
@@ -247,32 +248,46 @@ namespace NetOffice.WordApi
 			 Factory.ExecuteMethod(this, "SelectAll");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.DiagramNode> Member
-        
+        #region IEnumerableProvider<NetOffice.WordApi.DiagramNode>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.DiagramNode>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.DiagramNode>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.DiagramNode>
+
         /// <summary>
-		/// SupportByVersion Word, 10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.WordApi.DiagramNode> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.DiagramNode item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.DiagramNode> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.DiagramNode item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Word, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

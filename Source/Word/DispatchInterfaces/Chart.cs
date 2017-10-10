@@ -189,7 +189,6 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>

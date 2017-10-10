@@ -9,9 +9,9 @@ Imports System.Runtime.InteropServices
 ' Die Werte der Assemblyattribute überprüfen
 
 <Assembly: AssemblyTitle("NetOffice Excel Examples in Visual Basic")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("http://netoffice.codeplex.com")> 
-<Assembly: AssemblyProduct("NetOffice")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("https://github.com/NetOfficeFw")>
 <Assembly: AssemblyCopyright("Copyright © 2012 Sebastian Lange")> 
 <Assembly: AssemblyTrademark("")> 
 

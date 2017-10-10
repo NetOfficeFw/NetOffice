@@ -1,6 +1,4 @@
-﻿Imports System.Reflection
-
-Imports NetOffice
+﻿Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
@@ -33,13 +31,13 @@ Public Class Example07
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example07", "Beispiel07")
+            Return "Example07"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Customize UI", "UI Items erstellen")
+            Return "Customize UI"
         End Get
     End Property
 
@@ -65,7 +63,7 @@ Public Class Example07
         Dim commandBarBtn As Office.CommandBarButton = Nothing
 
         ' start outlook
-        _outlookApplication = New Outlook.Application()
+        Dim outlookApplication = New Outlook.Application()
 
         Dim outlookNS As Outlook._NameSpace = _outlookApplication.GetNamespace("MAPI")
         Dim inboxFolder As Outlook.MAPIFolder = outlookNS.GetDefaultFolder(OlDefaultFolders.olFolderInbox)

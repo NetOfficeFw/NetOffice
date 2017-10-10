@@ -84,9 +84,14 @@ namespace NetOffice
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public partial class Core
-    {       
+    {
         #region Fields
-       
+        
+        /// <summary>
+        /// the well know IUnknown Interface ID
+        /// </summary>
+        private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
+
         private Dictionary<Type, Type> _duckingCache;
         private static Core _default;
         private bool _initalized;
@@ -759,7 +764,7 @@ namespace NetOffice
             try
             {
                 COMProxyShare instance = RaiseCreateProxyShare(sender, isEnumerator);
-                return null != instance ? instance : new COMProxyShare(comProxy, isEnumerator);
+                return null != instance ? instance : new COMProxyShare(this, comProxy, isEnumerator);
             }
             catch (Exception exception)
             {
@@ -779,7 +784,7 @@ namespace NetOffice
             try
             {
                 COMProxyShare instance = RaiseCreateProxyShare(sender, false);
-                return null != instance ? instance : new COMProxyShare(comProxy);
+                return null != instance ? instance : new COMProxyShare(this, comProxy);
             }
             catch (Exception exception)
             {
@@ -1080,12 +1085,13 @@ namespace NetOffice
                     return null;
 
                 lock (_comObjectLock)
-                {
+                {                  
                     IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxy, false);
                     if (null == factoryInfo)
                     {
                         Type comProxyType2 = null;
-                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, String.Empty, String.Empty, allowDynamicObject);
+                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, 
+                            String.Empty, String.Empty, allowDynamicObject);
                         newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
                         return newInstance2;
                     }
@@ -1143,7 +1149,7 @@ namespace NetOffice
                         return newInstance2;
                     }
 
-                    string className = TypeDescriptor.GetClassName(comProxy);
+                    string className = ComTypes.TypeDescriptor.GetClassName(comProxy);
                     string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
 
                     // create new classType
@@ -1216,7 +1222,7 @@ namespace NetOffice
                                 return unkownInstance;
                             }
                             else
-                                throw new FactoryException("Class not exists: " + fullClassName);
+                                throw new FactoryException("Class not exists: " + (true == String.IsNullOrWhiteSpace(fullClassName) ? ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy) : fullClassName));
                         }
 
                         _wrapperTypeCache.Add(fullClassName, classType);
@@ -1485,6 +1491,66 @@ namespace NetOffice
                     _proxyTypeCache.Add(fullClassName, proxyType);
                 }
                 return proxyType;
+            }
+        }
+        
+        /// <summary>
+        /// Determine 2 proxies represents the same object on COM remote server
+        /// </summary>
+        /// <param name="obj1">object 1 to compare</param>
+        /// <param name="obj2">object 2 to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        public static bool EqualsOnServer(object obj1, object obj2)
+        {
+            return EqualsOnServer(obj1 as ICOMObject, obj2 as ICOMObject);
+        }
+
+        /// <summary>
+        /// Determine 2 proxies represents the same object on COM remote server
+        /// </summary>
+        /// <param name="obj1">object 1 to compare</param>
+        /// <param name="obj2">object 2 to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        public static bool EqualsOnServer(ICOMObject obj1, ICOMObject obj2)
+        {
+            if (obj1.IsCurrentlyDisposing || obj1.IsDisposed)
+                return ReferenceEquals(obj1, obj2);
+
+            if (Object.ReferenceEquals(obj2, null))
+                return false;
+
+            IntPtr outValueA = IntPtr.Zero;
+            IntPtr outValueB = IntPtr.Zero;
+            IntPtr ptrA = IntPtr.Zero;
+            IntPtr ptrB = IntPtr.Zero;
+            try
+            {
+                ptrA = Marshal.GetIUnknownForObject(obj1.UnderlyingObject);
+                int hResultA = Marshal.QueryInterface(ptrA, ref IID_IUnknown, out outValueA);
+
+                ptrB = Marshal.GetIUnknownForObject(obj2.UnderlyingObject);
+                int hResultB = Marshal.QueryInterface(ptrB, ref IID_IUnknown, out outValueB);
+
+                return (hResultA == 0 && hResultB == 0 && ptrA == ptrB);
+            }
+            catch (Exception exception)
+            {
+                obj1.Console.WriteException(exception);
+                throw exception;
+            }
+            finally
+            {
+                if (IntPtr.Zero != ptrA)
+                    Marshal.Release(ptrA);
+
+                if (IntPtr.Zero != outValueA)
+                    Marshal.Release(outValueA);
+
+                if (IntPtr.Zero != ptrB)
+                    Marshal.Release(ptrB);
+
+                if (IntPtr.Zero != outValueB)
+                    Marshal.Release(outValueB);
             }
         }
 

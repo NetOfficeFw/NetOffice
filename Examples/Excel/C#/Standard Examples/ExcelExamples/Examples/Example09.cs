@@ -45,12 +45,12 @@ namespace ExcelExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example09" : "Beispiel09"; }
+            get { return "Example09"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Customize classic UI without ribbons and recieve click events" : "Erweitern der klassischen Oberfläche und beziehen von Click Events"; }
+            get { return "Customize classic UI without ribbons and recieve click events"; }
         }
      
         public UserControl Panel
@@ -83,8 +83,13 @@ namespace ExcelExamplesCS4
             // add a new workbook
             Excel.Workbook workBook = _excelApplication.Workbooks.Add();
 
+            //var test = _excelApplication.CommandBars["Worksheet Menu Bar"].Controls.Add(
+            //        MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+
             // add a commandbar popup
-            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_excelApplication.CommandBars["Worksheet Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)
+                _excelApplication.CommandBars["Worksheet Menu Bar"].Controls.Add(
+                    MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPopup.Caption = "commandBarPopup";
 
             #region few words, how to access the picture

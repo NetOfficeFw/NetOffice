@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class FormMain
-    Inherits TutorialsBase.FormBase
+    Inherits TutorialsBase.TutorialForm
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
     <System.Diagnostics.DebuggerNonUserCode()> _

@@ -190,10 +190,10 @@ namespace NetOffice.Loader
         }
 
         /// <summary>
-        /// Try to validate argument file version match with current NO version. 
+        /// Try to validate argument file version match with current NetOffice version. 
         /// </summary>
         /// <param name="name">given assembly specification</param>
-        /// <returns>true if file exists in current NO version</returns>
+        /// <returns>true if file exists in current NetOffice version</returns>
         internal bool ValidateVersion(AssemblyName name)
         {
             if (name.Version == AssemblyVersion)

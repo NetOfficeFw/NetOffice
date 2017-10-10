@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835133.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class BuildingBlockEntries : COMObject, IEnumerable<NetOffice.WordApi.BuildingBlock>
+	public class BuildingBlockEntries : COMObject, IEnumerableProvider<NetOffice.WordApi.BuildingBlock>
 	{
 		#pragma warning disable
 
@@ -234,7 +235,23 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.WordApi.BuildingBlock> Member
+        #region IEnumerableProvider<NetOffice.WordApi.BuildingBlock>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.BuildingBlock>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return this;
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.BuildingBlock>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.BuildingBlock item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.BuildingBlock>
 
         /// <summary>
         /// SupportByVersion Word, 12,14,15,16
@@ -251,7 +268,7 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Word, 12,14,15,16

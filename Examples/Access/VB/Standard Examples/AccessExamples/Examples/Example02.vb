@@ -1,19 +1,16 @@
-﻿Imports System.Data
-Imports System.Data.OleDb
+﻿Imports System.Data.OleDb
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports NetOffice.AccessApi.Constants
 Imports DAO = NetOffice.DAOApi
 Imports NetOffice.DAOApi.Enums
 Imports NetOffice.DAOApi.Constants
-Imports NetOffice.AccessApi.Tools.Utils
+Imports NetOffice.AccessApi.Tools.Contribution
 
 Public Class Example02
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
-
-#Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
@@ -24,7 +21,7 @@ Public Class Example02
         Dim utils As CommonUtils = New CommonUtils(accessApplication)
 
         ' create database file name 
-        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example02", Access.Tools.DocumentFormat.Normal)
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example02", DocumentFormat.Normal)
 
         ' delete old database if exists
         If (System.IO.File.Exists(documentFile)) Then
@@ -63,13 +60,13 @@ Public Class Example02
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example02", "Beispiel02")
+            Return "Example02"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create new table", "Eine Tabelle erstellen")
+            Return "Create new table"
         End Get
     End Property
 
@@ -84,7 +81,5 @@ Public Class Example02
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

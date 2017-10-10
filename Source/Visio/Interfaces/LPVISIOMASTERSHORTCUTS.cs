@@ -1,10 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VisioApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.VisioApi
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class LPVISIOMASTERSHORTCUTS : COMObject , IEnumerable<NetOffice.VisioApi.IVMasterShortcut>
+	public class LPVISIOMASTERSHORTCUTS : COMObject, IEnumerableProvider<NetOffice.VisioApi.IVMasterShortcut>
 	{
 		#pragma warning disable
 
@@ -304,32 +305,46 @@ namespace NetOffice.VisioApi
 			 Factory.ExecuteMethod(this, "Paste");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VisioApi.IVMasterShortcut> Member
-        
+        #region IEnumerableProvider<NetOffice.VisioApi.IVMasterShortcut>
+
+        ICOMObject IEnumerableProvider<NetOffice.VisioApi.IVMasterShortcut>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.VisioApi.IVMasterShortcut>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVMasterShortcut>
+
         /// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
-       public IEnumerator<NetOffice.VisioApi.IVMasterShortcut> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VisioApi.IVMasterShortcut item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.VisioApi.IVMasterShortcut> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VisioApi.IVMasterShortcut item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

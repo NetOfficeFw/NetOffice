@@ -8,8 +8,6 @@ Public Class Example01
 
     Dim _hostApplication As ExampleBase.IHost
 
-#Region "IExample Member"
-
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' its an example with an own visual control
@@ -19,13 +17,13 @@ Public Class Example01
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example01", "Beispiel01")
+            Return "Example01"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Inbox Folder", "Posteingang")
+            Return "Inbox Folder"
         End Get
     End Property
 
@@ -41,12 +39,10 @@ Public Class Example01
         End Get
     End Property
 
-#End Region
-
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
-        ' start outlook
-        Dim outlookApplication = New Outlook.Application()
+        ' start outlook by trying to access running application first
+        Dim outlookApplication = New Outlook.Application(True)
 
         ' Get inbox 
         Dim outlookNS As Outlook._NameSpace = outlookApplication.GetNamespace("MAPI")
@@ -56,7 +52,7 @@ Public Class Example01
         listViewInboxFolder.Items.Clear()
         labelItemsCount.Text = String.Format("You have {0} e-mails.", inboxFolder.Items.Count)
 
-        For Each item As COMObject In inboxFolder.Items
+        For Each item As ICOMObject In inboxFolder.Items
 
             ' not every item in the inbox folder is a mail item
             If (TypeName(item) = "MailItem") Then
@@ -68,7 +64,9 @@ Public Class Example01
         Next
 
         'close outlook and dispose
-        outlookApplication.Quit()
+        If Not outlookApplication.FromProxyService Then
+            outlookApplication.Quit()
+        End If
         outlookApplication.Dispose()
 
     End Sub

@@ -129,7 +129,6 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>

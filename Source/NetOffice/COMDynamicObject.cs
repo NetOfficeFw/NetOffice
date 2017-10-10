@@ -236,7 +236,8 @@ namespace NetOffice
                 throw new ArgumentNullException("comProxy");
             if (!(comProxy is MarshalByRefObject))
                 throw new ArgumentException(_invalidComProxy);
-            Factory = Core.Default;          
+            Factory = Core.Default;
+            SyncRoot = new object();
             ParentObject = null;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
             UnderlyingType = comProxy.GetType();
@@ -261,6 +262,7 @@ namespace NetOffice
                 Factory = parentObject.Factory;
             else
                 Factory = Core.Default;
+            SyncRoot = new object();
 
             ParentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
@@ -283,6 +285,7 @@ namespace NetOffice
                 throw new ArgumentNullException("comObject");
 
             Factory = comObject.Factory;
+            SyncRoot = new object();
 
             ICOMProxyShareProvider shareProvider = comObject as ICOMProxyShareProvider;
             if (null != shareProvider)
@@ -313,6 +316,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             ParentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
@@ -341,6 +345,7 @@ namespace NetOffice
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
+            SyncRoot = new object();
 
             ParentObject = parentObject;
             _proxyShare = comProxy;
@@ -369,6 +374,8 @@ namespace NetOffice
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
             _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
 
+            SyncRoot = new object();
+
             Factory = null != factory ? factory : Core.Default;        
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
@@ -388,6 +395,7 @@ namespace NetOffice
                 throw new ArgumentNullException("progId");
 
             Factory = Core.Default;
+            SyncRoot = new object();
 
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
@@ -659,7 +667,7 @@ namespace NetOffice
         /// <summary>
         /// Invoke the proxy enumerator
         /// </summary>
-        /// <returns>IEnumerable instance</returns>
+        /// <returns>IEnumerable sequence</returns>
         private System.Collections.IEnumerable InvokeEnumerator()
         {
             CheckEntities();
@@ -667,9 +675,9 @@ namespace NetOffice
             switch (_enumerator)
             {
                 case EnumeratorSupport.PropertyEnumerator:
-                    return new Enumerator(NetOffice.Utils.GetVariantEnumeratorAsProperty(this));
+                    return new Enumerator(NetOffice.Utils.GetVariantEnumeratorAsProperty(this, true));
                 case EnumeratorSupport.MethodEnumerator:
-                    return new Enumerator(NetOffice.Utils.GetVariantEnumeratorAsMethod(this));
+                    return new Enumerator(NetOffice.Utils.GetVariantEnumeratorAsMethod(this, true));
                 default:
                     return null;
             }
@@ -858,6 +866,11 @@ namespace NetOffice
         #endregion
 
         #region ICOMObject
+       
+        /// <summary>
+        /// Monitor Lock
+        /// </summary>
+        public object SyncRoot { get; private set; }
 
         /// <summary>
         /// The associated factory
@@ -904,6 +917,27 @@ namespace NetOffice
                 else
                     return Settings.Default;
             }
+        }
+
+        /// <summary>
+        /// Clone instance as target type
+        /// </summary>
+        /// <typeparam name="T">any other type to convert</typeparam>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public T To<T>() where T : class, ICOMObject
+        {
+            try
+            {
+                ICOMObject clone = Activator.CreateInstance(typeof(T), new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+                ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
+                shareProvider.SetProxyShare(_proxyShare);
+                return clone as T;
+            }
+            catch (Exception exception)
+            {
+                throw new CloneException(exception);
+            }
+
         }
 
         #endregion

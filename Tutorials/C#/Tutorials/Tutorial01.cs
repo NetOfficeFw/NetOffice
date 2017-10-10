@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
@@ -14,11 +8,9 @@ namespace TutorialsCS4
 {
     public class Tutorial01 : ITutorial
     {
-        #region ITutorial
-
         public void Run()
         {
-            //  NetOffice manages COM Proxies for you to avoid any kind of memory leaks
+            //  NetOffice manages COM Proxies to avoid any kind of memory leaks
             //  and make sure your application instance removes from process list if you want.
 
             // start application
@@ -64,14 +56,9 @@ namespace TutorialsCS4
  
         }
 
-        public void ChangeLanguage(int lcid)
-        { 
-
-        }
-
         public string Uri 
         {
-            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial01_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial01_DE_CS"; }
+            get { return Program.DocumentationBase + "Tutorial01_EN_CS.html"; }
         }
 
         public string Caption
@@ -82,7 +69,7 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Understand COM Proxy Management" : "COM Proxy Management verstehen"; }
+            get { return "Understanding COM Proxy Management"; }
         }
 
         public UserControl Panel
@@ -90,12 +77,6 @@ namespace TutorialsCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

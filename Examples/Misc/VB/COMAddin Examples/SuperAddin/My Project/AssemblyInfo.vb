@@ -2,33 +2,33 @@
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
+' Allgemeine Informationen über eine Assembly werden über die folgenden 
+' Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
+' die mit einer Assembly verknüpft sind.
 
-' Review the values of the assembly attributes
+' Die Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("SuperAddinVB")> 
+<Assembly: AssemblyTitle("SuperAddinVB4")>
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("http://netoffice.codeplex.com")> 
-<Assembly: AssemblyProduct("NetOffice")> 
-<Assembly: AssemblyCopyright("Copyright © 2011 Sebastian Lange")> 
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("https://github.com/NetOfficeFw/NetOffice")>
+<Assembly: AssemblyCopyright("Copyright ©  2013 Sebastian Lange")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(True)> 
 
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("9d8cc7b8-1fde-4846-85d0-d2343d6c112d")> 
+'Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
+<Assembly: Guid("0d2b8710-c22a-467f-b8a6-a34f19c272a2")> 
 
-' Version information for an assembly consists of the following four values:
+' Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 '
-'      Major Version
-'      Minor Version 
-'      Build Number
+'      Hauptversion
+'      Nebenversion 
+'      Buildnummer
 '      Revision
 '
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
+' Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
+' übernehmen, indem Sie "*" eingeben:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
 <Assembly: AssemblyVersion("1.0.0.0")> 

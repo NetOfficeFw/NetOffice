@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ADODBApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.ADODBApi
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Parameters : _DynaCollection, IEnumerable<NetOffice.ADODBApi._Parameter>
+	public class Parameters : _DynaCollection, IEnumerableProvider<NetOffice.ADODBApi._Parameter>
 	{
 		#pragma warning disable
 
@@ -125,13 +126,27 @@ namespace NetOffice.ADODBApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
         #endregion
 
-        #region IEnumerable<NetOffice.ADODBApi._Parameter> Member
+        #region IEnumerableProvider<NetOffice.ADODBApi._Parameter>
+
+        ICOMObject IEnumerableProvider<NetOffice.ADODBApi._Parameter>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.ADODBApi._Parameter>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ADODBApi._Parameter>
 
         /// <summary>
         /// SupportByVersion ADODB, 2.1,2.5
@@ -146,7 +161,7 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion ADODB, 2.1,2.5
@@ -154,7 +169,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.1,2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

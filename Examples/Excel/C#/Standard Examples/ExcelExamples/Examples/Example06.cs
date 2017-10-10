@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using ExampleBase;
-using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
@@ -39,12 +38,12 @@ namespace ExcelExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return "Example06"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Dialogs in Excel" : "Dialoge in Excel"; }
+            get { return "Dialogs in Excel"; }
         }
 
         public UserControl Panel

@@ -130,7 +130,6 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>

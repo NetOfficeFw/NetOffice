@@ -5,8 +5,6 @@ Public Class Tutorial01
 
     Dim _hostApplication As IHost
 
-#Region "ITutorial Member"
-
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
         '  NetOffice manages COM Proxies for you to avoid any kind of memory leaks
@@ -50,17 +48,13 @@ Public Class Tutorial01
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Understand COM Proxy Management", "COM Proxy Management verstehen")
+            Return "Understanding COM Proxy Management"
         End Get
     End Property
 
     Public Sub Connect(ByVal hostApplication As TutorialsBase.IHost) Implements TutorialsBase.ITutorial.Connect
 
         _hostApplication = hostApplication
-
-    End Sub
-
-    Public Sub ChangeLanguage(ByVal lcid As Integer) Implements TutorialsBase.ITutorial.ChangeLanguage
 
     End Sub
 
@@ -77,10 +71,8 @@ Public Class Tutorial01
 
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial01_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial01_DE_VB")
+            Return FormMain.DocumentationBase & "Tutorial01_EN_VB.html"
         End Get
     End Property
-
-#End Region
 
 End Class

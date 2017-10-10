@@ -76,6 +76,15 @@ namespace NetOffice
             /// Kind of given message
             /// </summary>
             public MessageKind Kind { get; private set; }
+
+            /// <summary>
+            /// Returns a System.String that represents the instance
+            /// </summary>
+            /// <returns></returns>
+            public override string ToString()
+            {
+                return Message;
+            }
         }
 
         /// <summary>

@@ -40,7 +40,12 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// MS Visio in any version
         /// </summary>
-        Visio = 6
+        Visio = 6,
+
+        /// <summary>
+        /// MS Publisher
+        /// </summary>
+        Publisher = 7,
     }
 
     /// <summary>
@@ -63,17 +68,21 @@ namespace NetOffice.OfficeApi.Tools
             Products = products;
         }
 
-		/// <summary>
+        /// <summary>
         /// Looks for the MultiRegisterAttribute. Throws an exception if not found
         /// </summary>
         /// <param name="type">the type you want looking for the attribute</param>
+        /// <param name="throwException">throw exception if not found</param>
         /// <returns>MultiRegisterAttribute instance</returns>
-		internal static MultiRegisterAttribute GetAttribute(Type type)
+        internal static MultiRegisterAttribute GetAttribute(Type type, bool throwException = true)
 		{
 		    object[] array = type.GetCustomAttributes(typeof(MultiRegisterAttribute), false);
-            if (array.Length == 0)
+            if (array.Length == 0 && throwException)
                 throw new ArgumentException("MultiRegisterAttribute is missing");
-            return array[0] as MultiRegisterAttribute;
+            if (array.Length > 0)
+                return array[0] as MultiRegisterAttribute;
+            else
+                return null;
 		}
 
         /// <summary>
@@ -84,7 +93,7 @@ namespace NetOffice.OfficeApi.Tools
         internal static string RegistryEntry(RegisterIn register)
         {
             if (register == RegisterIn.MSProject)
-                return "MS Project"; // Project use one empty space. Some previous NetOffice(<1.7.3) releases handle this not as well 
+                return "MS Project"; // Project use one empty space. Some previous NetOffice(<1.7.3) releases handle this wrong
             else
                 return register.ToString();
         }

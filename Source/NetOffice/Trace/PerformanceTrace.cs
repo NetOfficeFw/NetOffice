@@ -114,6 +114,7 @@ namespace NetOffice
 
         private object _lock;
         private Dictionary<string, PerformanceTraceSettingCollection> _repository;
+        private bool _enabled;
 
         #endregion
 
@@ -123,6 +124,13 @@ namespace NetOffice
         {
             _lock = new object();
             _repository = new Dictionary<string, PerformanceTraceSettingCollection>();
+        }
+
+        internal PerformanceTrace(Action<string> onPropertyChanged)
+        {
+            _lock = new object();
+            _repository = new Dictionary<string, PerformanceTraceSettingCollection>();
+            OnPropertyChanged = onPropertyChanged;
         }
 
         #endregion
@@ -148,7 +156,21 @@ namespace NetOffice
         /// Enable or disable the performance trace system
         /// </summary>
         [Description("Enable or disable the performance trace system"), DefaultValue(false), Category("PerformanceTrace")]
-        public bool Enabled { get; set; }
+        public bool Enabled
+        {
+            get
+            {
+                return _enabled;
+            }
+            set
+            {
+                if (value != _enabled)
+                { 
+                    _enabled = value;
+                    OnPropertyChanged?.Invoke("PerformanceTrace.Enabled");
+                }
+            }
+        }
 
         /// <summary>
         /// Returns performances settings instance for a NetOffice component
@@ -169,6 +191,7 @@ namespace NetOffice
                     {
                         list = new PerformanceTraceSettingCollection();
                         _repository.Add(componentName, list);
+                        OnPropertyChanged?.Invoke("PerformanceTrace.Item");
                     }
 
                     return list.WildCard;
@@ -198,6 +221,7 @@ namespace NetOffice
                     {
                         list = new PerformanceTraceSettingCollection();
                         _repository.Add(componentName, list);
+                        OnPropertyChanged?.Invoke("PerformanceTrace.Item");
                     }
 
                     return list[entityName];
@@ -230,12 +254,18 @@ namespace NetOffice
                     {
                         list = new PerformanceTraceSettingCollection();
                         _repository.Add(componentName, list);
+                        OnPropertyChanged?.Invoke("PerformanceTrace.Item");
                     }
 
                     return list[entityName, methodName];
                 }
             }
         }
+        
+        /// <summary>
+        /// Occurs when a property value changes
+        /// </summary>
+        private Action<string> OnPropertyChanged { get; set; }
 
         #endregion
 

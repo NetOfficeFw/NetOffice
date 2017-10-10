@@ -45,8 +45,8 @@
             // 
             // panelSelection
             // 
-            this.panelSelection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSelection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSelection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSelection.Controls.Add(this.radioButton8);
             this.panelSelection.Controls.Add(this.radioButton7);
@@ -153,9 +153,9 @@
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescription.Location = new System.Drawing.Point(28, 78);
@@ -164,13 +164,13 @@
             this.textBoxDescription.Size = new System.Drawing.Size(507, 205);
             this.textBoxDescription.TabIndex = 17;
             this.textBoxDescription.Text = "This example contains code to work with dialogs.\r\nStart excel and it shows the di" +
-                "alog and waits for user input.\r\n \r\nExcel has more than 50 different dialogs, thi" +
-                "s is only a sample selection.";
+    "alog and waits for user input.\r\n \r\nExcel has more than 50 different dialogs, thi" +
+    "s is only a sample selection.";
             // 
             // buttonStartExample
             // 
-            this.buttonStartExample.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStartExample.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartExample.Image")));
@@ -187,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.panelSelection);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.buttonStartExample);

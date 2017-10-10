@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
-
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
@@ -15,11 +9,9 @@ namespace TutorialsCS4
 {
     public class Tutorial05 : ITutorial
     { 
-        #region ITutorial Member
-
         public void Run()
         {
-            // this is a simple demonstration how i can convert unkown types at runtime
+            // this is a simple demonstration how to convert unkown types at runtime
 
             // start application
             Excel.Application application = new Excel.Application();
@@ -29,7 +21,7 @@ namespace TutorialsCS4
             foreach (Office.COMAddIn item in application.COMAddIns)
             {
                 // the application property is an unkown COM object
-                // we need a cast at runtime
+                // we need a simple cast at runtime
                 Excel.Application hostApp = item.Application as Excel.Application;
                 
                 // do some sample stuff
@@ -54,15 +46,9 @@ namespace TutorialsCS4
 
         }
 
-        public void ChangeLanguage(int lcid)
-        {
-
-        }
-
         public string Uri
         {
-            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial05_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial05_DE_CS"; }
-
+            get { return Program.DocumentationBase + "Tutorial05_EN_CS.html"; }
         }
 
         public string Caption
@@ -72,7 +58,7 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Understanding unkown Types" : "Richtiges verwenden von unbekannten COM Objekten"; }
+            get { return "Understanding unknown types"; }
         }
 
         public UserControl Panel
@@ -80,12 +66,6 @@ namespace TutorialsCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

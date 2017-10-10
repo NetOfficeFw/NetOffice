@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VBIDEApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.VBIDEApi
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _VBProjects_Old : COMObject , IEnumerable<NetOffice.VBIDEApi.VBProject>
+	public class _VBProjects_Old : COMObject, IEnumerableProvider<NetOffice.VBIDEApi.VBProject>
 	{
 		#pragma warning disable
 
@@ -168,7 +169,21 @@ namespace NetOffice.VBIDEApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.VBIDEApi.VBProject> Member
+        #region IEnumerableProvider<NetOffice.VBIDEApi.VBProject>
+
+        ICOMObject IEnumerableProvider<NetOffice.VBIDEApi.VBProject>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.VBIDEApi.VBProject>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VBIDEApi.VBProject>
 
         /// <summary>
         /// SupportByVersion VBIDE, 12,14,5.3
@@ -183,7 +198,7 @@ namespace NetOffice.VBIDEApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion VBIDE, 12,14,5.3
@@ -191,7 +206,7 @@ namespace NetOffice.VBIDEApi
         [SupportByVersion("VBIDE", 12,14,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

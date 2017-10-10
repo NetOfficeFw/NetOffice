@@ -2,14 +2,13 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("C994BD16-0CD3-4058-8BF4-B91A3D2975F9"), ProgIdAttribute("PPointAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("C994BD16-0CD3-4058-8BF4-B91A3D2975F9"), ProgId("PPointAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -27,11 +26,11 @@ Public Class Addin
     Private Shared ReadOnly _contextName As String = "Sample ContextMenu VB4"
     Private Shared ReadOnly _contextMenuButtonName As String = "Sample ContextButton VB4"
 
-    Dim _powerApplication As PowerPoint.Application
+    Private _powerApplication As PowerPoint.Application
 
 #Region "IDTExtensibility2 Members"
 
-  
+
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
 

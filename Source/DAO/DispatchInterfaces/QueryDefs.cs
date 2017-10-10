@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.DAOApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class QueryDefs : _DynaCollection, IEnumerable<NetOffice.DAOApi.QueryDef>
+	public class QueryDefs : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi.QueryDef>
 	{
 		#pragma warning disable
 
@@ -124,13 +125,27 @@ namespace NetOffice.DAOApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
         #endregion
 
-        #region IEnumerable<NetOffice.DAOApi.QueryDef> Member
+        #region IEnumerableProvider<NetOffice.DAOApi.QueryDef>
+
+        ICOMObject IEnumerableProvider<NetOffice.DAOApi.QueryDef>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.DAOApi.QueryDef>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.DAOApi.QueryDef>
 
         /// <summary>
         /// SupportByVersion DAO, 3.6,12.0
@@ -145,7 +160,7 @@ namespace NetOffice.DAOApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion DAO, 3.6,12.0
@@ -153,7 +168,7 @@ namespace NetOffice.DAOApi
         [SupportByVersion("DAO", 3.6,12.0)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861522.aspx </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class SmartArtNodes : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.SmartArtNode>
+	public class SmartArtNodes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SmartArtNode>
 	{
 		#pragma warning disable
 
@@ -169,7 +170,21 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.SmartArtNode> Member
+        #region IEnumerableProvider<NetOffice.OfficeApi.SmartArtNode>
+
+        ICOMObject IEnumerableProvider<NetOffice.OfficeApi.SmartArtNode>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.OfficeApi.SmartArtNode>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.SmartArtNode>
 
         /// <summary>
         /// SupportByVersion Office, 14,15,16
@@ -184,7 +199,7 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Office, 14,15,16
@@ -192,7 +207,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

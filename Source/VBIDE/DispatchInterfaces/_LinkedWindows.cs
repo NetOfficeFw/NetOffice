@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VBIDEApi
 {
@@ -13,7 +14,7 @@ namespace NetOffice.VBIDEApi
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _LinkedWindows : COMObject, IEnumerable<NetOffice.VBIDEApi.Window>
+	public class _LinkedWindows : COMObject, IEnumerableProvider<NetOffice.VBIDEApi.Window>
 	{
 		#pragma warning disable
 
@@ -189,7 +190,21 @@ namespace NetOffice.VBIDEApi
 
         #endregion
 
-        #region IEnumerable<NetOffice.VBIDEApi.Window> Member
+        #region IEnumerableProvider<NetOffice.VBIDEApi.Window>
+
+        ICOMObject IEnumerableProvider<NetOffice.VBIDEApi.Window>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.VBIDEApi.Window>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VBIDEApi.Window>
 
         /// <summary>
         /// SupportByVersion VBIDE, 12,14,5.3
@@ -204,7 +219,7 @@ namespace NetOffice.VBIDEApi
 
         #endregion
         
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion VBIDE, 12,14,5.3
@@ -212,7 +227,7 @@ namespace NetOffice.VBIDEApi
         [SupportByVersion("VBIDE", 12,14,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
 
 		#endregion

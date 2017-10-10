@@ -4,6 +4,7 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197228.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class KeysBoundTo : COMObject , IEnumerable<NetOffice.WordApi.KeyBinding>
+	public class KeysBoundTo : COMObject, IEnumerableProvider<NetOffice.WordApi.KeyBinding>
 	{
 		#pragma warning disable
 
@@ -266,32 +267,46 @@ namespace NetOffice.WordApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.KeyBinding>(this, "Key", NetOffice.WordApi.KeyBinding.LateBindingApiWrapperType, keyCode);
 		}
 
-		#endregion
-
-       #region IEnumerable<NetOffice.WordApi.KeyBinding> Member
-        
-        /// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.WordApi.KeyBinding> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.KeyBinding item in innerEnumerator)
-               yield return item;
-       }
-
-       #endregion
-          
-		#region IEnumerable Members
+        #endregion
        
-		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        #region IEnumerableProvider<NetOffice.WordApi.KeyBinding>
+
+        ICOMObject IEnumerableProvider<NetOffice.WordApi.KeyBinding>.GetComObjectEnumerator(ICOMObject parent)
+        {
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+        }
+
+        IEnumerable IEnumerableProvider<NetOffice.WordApi.KeyBinding>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        {
+            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
+        }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.KeyBinding>
+
+        /// <summary>
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.KeyBinding> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.KeyBinding item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
 		}
 
 		#endregion

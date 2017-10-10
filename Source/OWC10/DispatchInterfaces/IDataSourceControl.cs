@@ -106,7 +106,6 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		#endregion
-
 	}
 
 	/// <summary>
