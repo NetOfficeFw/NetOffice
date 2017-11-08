@@ -63,9 +63,9 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(1, 44);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -85,9 +85,9 @@
             // 
             // treeViewReport
             // 
-            this.treeViewReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeViewReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.treeViewReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.treeViewReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewReport.HideSelection = false;
@@ -116,12 +116,13 @@
             // 
             // labelExplorerHeader
             // 
-            this.labelExplorerHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelExplorerHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelExplorerHeader.BackColor = System.Drawing.Color.Orange;
             this.labelExplorerHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelExplorerHeader.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelExplorerHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExplorerHeader.ForeColor = System.Drawing.Color.Black;
             this.labelExplorerHeader.Location = new System.Drawing.Point(0, 0);
             this.labelExplorerHeader.Name = "labelExplorerHeader";
             this.labelExplorerHeader.Size = new System.Drawing.Size(265, 24);
@@ -130,8 +131,8 @@
             // 
             // buttonSaveReport
             // 
-            this.buttonSaveReport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSaveReport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveReport.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonSaveReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveReport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,7 +248,8 @@
             "Office 2003 (11)",
             "Office 2007 (12)",
             "Office 2010 (14)",
-            "Office 2013 (15)"});
+            "Office 2013 (15)",
+            "Office 2016 (16)"});
             this.comboBoxFilter.Location = new System.Drawing.Point(403, 2);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(123, 21);
@@ -333,7 +335,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.labelFilterCaption);
             this.Controls.Add(this.labelMethodHint);
             this.Controls.Add(this.checkBoxNativeView);

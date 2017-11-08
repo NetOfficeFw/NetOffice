@@ -10,7 +10,7 @@ Public Class MyTaskPane
 
 	Private ParentAddin As Addin
 
-    Public Sub OnConnection(ByVal application As COMObject, ByVal parentPane As Office._CustomTaskPane, ByVal customArguments() As Object) Implements NetOffice.OfficeApi.Tools.ITaskPane.OnConnection
+    Public Sub OnConnection(ByVal application As ICOMObject, ByVal parentPane As Office._CustomTaskPane, ByVal customArguments() As Object) Implements NetOffice.OfficeApi.Tools.ITaskPane.OnConnection
 
 		If customArguments.Length > 0 Then
 			ParentAddin = customArguments(0)

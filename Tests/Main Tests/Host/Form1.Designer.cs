@@ -51,7 +51,7 @@
             // 
             this.buttonTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTest.Location = new System.Drawing.Point(507, 381);
+            this.buttonTest.Location = new System.Drawing.Point(507, 401);
             this.buttonTest.Name = "buttonTest";
             this.buttonTest.Size = new System.Drawing.Size(145, 25);
             this.buttonTest.TabIndex = 3;
@@ -61,9 +61,9 @@
             // 
             // listViewResults
             // 
-            this.listViewResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderIcon,
@@ -75,7 +75,7 @@
             this.listViewResults.Location = new System.Drawing.Point(30, 31);
             this.listViewResults.MultiSelect = false;
             this.listViewResults.Name = "listViewResults";
-            this.listViewResults.Size = new System.Drawing.Size(622, 327);
+            this.listViewResults.Size = new System.Drawing.Size(622, 347);
             this.listViewResults.SmallImageList = this.imageList1;
             this.listViewResults.StateImageList = this.imageList1;
             this.listViewResults.TabIndex = 6;
@@ -86,12 +86,12 @@
             // columnHeaderIcon
             // 
             this.columnHeaderIcon.Text = "Result";
-            this.columnHeaderIcon.Width = 140;
+            this.columnHeaderIcon.Width = 202;
             // 
             // columnHeaderDetails
             // 
             this.columnHeaderDetails.Text = "Details";
-            this.columnHeaderDetails.Width = 450;
+            this.columnHeaderDetails.Width = 380;
             // 
             // imageList1
             // 
@@ -102,6 +102,7 @@
             // 
             // labelCurrentTest
             // 
+            this.labelCurrentTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelCurrentTest.AutoSize = true;
             this.labelCurrentTest.Location = new System.Drawing.Point(33, 383);
             this.labelCurrentTest.Name = "labelCurrentTest";
@@ -220,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 422);
+            this.ClientSize = new System.Drawing.Size(789, 442);
             this.Controls.Add(this.checkBoxProject);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxAccess);
@@ -233,6 +234,7 @@
             this.Controls.Add(this.labelCurrentTest);
             this.Controls.Add(this.listViewResults);
             this.Controls.Add(this.buttonTest);
+            this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NetOffice Host for test applications";

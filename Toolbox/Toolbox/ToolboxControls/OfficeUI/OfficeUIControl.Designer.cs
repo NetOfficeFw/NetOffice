@@ -35,6 +35,7 @@
             this.toolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.imageListTreeView = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.treeViewOfficeUI = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.checkBoxScanForProperties = new System.Windows.Forms.CheckBox();
             this.propertyGridItems = new System.Windows.Forms.PropertyGrid();
             this.buttonCloseOfficeApp = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.panelInfo = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labelInfo = new System.Windows.Forms.Label();
-            this.treeViewOfficeUI = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.contextMenuTreeView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -58,13 +58,13 @@
             this.toolStripReset,
             this.toolStripDelete});
             this.contextMenuTreeView.Name = "contextMenuStrip1";
-            this.contextMenuTreeView.Size = new System.Drawing.Size(117, 48);
+            this.contextMenuTreeView.Size = new System.Drawing.Size(108, 48);
             // 
             // toolStripReset
             // 
             this.toolStripReset.Image = ((System.Drawing.Image)(resources.GetObject("toolStripReset.Image")));
             this.toolStripReset.Name = "toolStripReset";
-            this.toolStripReset.Size = new System.Drawing.Size(116, 22);
+            this.toolStripReset.Size = new System.Drawing.Size(107, 22);
             this.toolStripReset.Text = "Reset";
             this.toolStripReset.Click += new System.EventHandler(this.toolStripReset_Click);
             // 
@@ -72,7 +72,7 @@
             // 
             this.toolStripDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDelete.Image")));
             this.toolStripDelete.Name = "toolStripDelete";
-            this.toolStripDelete.Size = new System.Drawing.Size(116, 22);
+            this.toolStripDelete.Size = new System.Drawing.Size(107, 22);
             this.toolStripDelete.Text = "Delete";
             this.toolStripDelete.Click += new System.EventHandler(this.toolStripDelete_Click);
             // 
@@ -85,9 +85,9 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Location = new System.Drawing.Point(3, 48);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
@@ -105,6 +105,26 @@
             this.splitContainer1.Size = new System.Drawing.Size(921, 445);
             this.splitContainer1.SplitterDistance = 234;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // treeViewOfficeUI
+            // 
+            this.treeViewOfficeUI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeViewOfficeUI.ContextMenuStrip = this.contextMenuTreeView;
+            this.treeViewOfficeUI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewOfficeUI.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewOfficeUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeViewOfficeUI.HideSelection = false;
+            this.treeViewOfficeUI.ImageIndex = 0;
+            this.treeViewOfficeUI.ImageList = this.imageListTreeView;
+            this.treeViewOfficeUI.Location = new System.Drawing.Point(0, 0);
+            this.treeViewOfficeUI.Margin = new System.Windows.Forms.Padding(0);
+            this.treeViewOfficeUI.Name = "treeViewOfficeUI";
+            this.treeViewOfficeUI.SelectedImageIndex = 0;
+            this.treeViewOfficeUI.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewOfficeUI.SelectedNodes")));
+            this.treeViewOfficeUI.Size = new System.Drawing.Size(232, 443);
+            this.treeViewOfficeUI.TabIndex = 1;
+            this.treeViewOfficeUI.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewOfficeUI_BeforeExpand);
+            this.treeViewOfficeUI.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewOfficeUI_AfterSelect);
             // 
             // checkBoxScanForProperties
             // 
@@ -124,9 +144,9 @@
             // 
             // propertyGridItems
             // 
-            this.propertyGridItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.propertyGridItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.propertyGridItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.propertyGridItems.Location = new System.Drawing.Point(2, 2);
             this.propertyGridItems.Margin = new System.Windows.Forms.Padding(0);
@@ -159,7 +179,7 @@
             this.buttonStartApplication.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonStartApplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStartApplication.ForeColor = System.Drawing.Color.White;
+            this.buttonStartApplication.ForeColor = System.Drawing.Color.Black;
             this.buttonStartApplication.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartApplication.Image")));
             this.buttonStartApplication.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStartApplication.Location = new System.Drawing.Point(12, 1);
@@ -172,11 +192,11 @@
             // 
             // panelInfo
             // 
-            this.panelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInfo.Controls.Add(this.pictureBox5);
             this.panelInfo.Controls.Add(this.labelInfo);
-            this.panelInfo.Location = new System.Drawing.Point(265, 4);
+            this.panelInfo.Location = new System.Drawing.Point(265, 3);
             this.panelInfo.Name = "panelInfo";
             this.panelInfo.Size = new System.Drawing.Size(570, 24);
             this.panelInfo.TabIndex = 75;
@@ -194,7 +214,7 @@
             // labelInfo
             // 
             this.labelInfo.AutoSize = true;
-            this.labelInfo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInfo.ForeColor = System.Drawing.Color.DimGray;
@@ -204,31 +224,11 @@
             this.labelInfo.TabIndex = 72;
             this.labelInfo.Text = "Use the context menu in the left area to remove an element.";
             // 
-            // treeViewOfficeUI
-            // 
-            this.treeViewOfficeUI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeViewOfficeUI.ContextMenuStrip = this.contextMenuTreeView;
-            this.treeViewOfficeUI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewOfficeUI.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
-            this.treeViewOfficeUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeViewOfficeUI.HideSelection = false;
-            this.treeViewOfficeUI.ImageIndex = 0;
-            this.treeViewOfficeUI.ImageList = this.imageListTreeView;
-            this.treeViewOfficeUI.Location = new System.Drawing.Point(0, 0);
-            this.treeViewOfficeUI.Margin = new System.Windows.Forms.Padding(0);
-            this.treeViewOfficeUI.Name = "treeViewOfficeUI";
-            this.treeViewOfficeUI.SelectedImageIndex = 0;
-            this.treeViewOfficeUI.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewOfficeUI.SelectedNodes")));
-            this.treeViewOfficeUI.Size = new System.Drawing.Size(232, 443);
-            this.treeViewOfficeUI.TabIndex = 1;
-            this.treeViewOfficeUI.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewOfficeUI_BeforeExpand);
-            this.treeViewOfficeUI.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewOfficeUI_AfterSelect);
-            // 
             // OfficeUIControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.panelInfo);
             this.Controls.Add(this.buttonStartApplication);
             this.Controls.Add(this.splitContainer1);

@@ -1,13 +1,16 @@
 ﻿Imports System.Runtime.InteropServices
 $usingItems$
 
-<COMAddin("$safeprojectname$", "$description$", $loadbeahviour$), ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$")> _
+<COMAddin("$safeprojectname$", "$description$", $loadbeahviour$), ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$"), Codebase> _
 $attributes$
 Public Class Addin
    Inherits $appName$.Tools.COMAddin
 
 	Public Sub New()
 
+		' Remove this code lines after made changes on
+		' Addin_OnStartupComplete and Addin_OnDisconnection
+		' because the Visual Basic designer want trigger the methods again
 		Dim onStartupCompleteHandler As OnStartupCompleteEventHandler = AddressOf Me.Addin_OnStartupComplete
 		AddHandler Me.OnStartupComplete, onStartupCompleteHandler
 
@@ -15,8 +18,6 @@ Public Class Addin
 		AddHandler Me.OnDisconnection, onDisconnection
 
 	End Sub
-
-$ribbonProperty$
 
 	Private Sub Addin_OnStartupComplete(ByRef custom As System.Array) Handles Me.OnStartupComplete
 
@@ -44,7 +45,7 @@ $classicUICreateRemoveMethod$
     <RegisterErrorHandler()> _
     Public Shared Sub RegisterErrorHandler(ByVal methodKind As RegisterErrorMethodKind, ByVal exception As Exception)
 
-        MessageBox.Show("An error occured in " & methodKind.ToString(), "$safeprojectname$")
+        Office.Tools.Contribution.DialogUtils.ShowRegisterError("$safeprojectname$", methodKind, exception)
 
     End Sub
 

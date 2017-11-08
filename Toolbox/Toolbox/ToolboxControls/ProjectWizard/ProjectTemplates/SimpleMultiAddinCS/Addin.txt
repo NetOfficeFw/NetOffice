@@ -7,7 +7,7 @@ using Extensibility;
 $usingItems$
 namespace $safeprojectname$
 {
-	[ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$"), ComVisible(true)]
+	[ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$"), Codebase]
 	public class Addin : IDTExtensibility2$ribbonDefine$$taskpaneDefine$
 	{
 		#region Fields

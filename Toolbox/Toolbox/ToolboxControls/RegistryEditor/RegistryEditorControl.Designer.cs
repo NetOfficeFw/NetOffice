@@ -46,7 +46,6 @@
             this.toolStripEditEntryName = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentPath = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.imageListValueTypes = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxDeleteQuestion = new System.Windows.Forms.CheckBox();
             this.labelNoAdminHint = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.contextMenuStripKeys.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistry)).BeginInit();
             this.contextMenuStripEntries.SuspendLayout();
@@ -71,8 +71,8 @@
             // 
             // labelTitle
             // 
-            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTitle.BackColor = System.Drawing.Color.Orange;
             this.labelTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -116,48 +116,48 @@
             this.toolStripMenuItem2,
             this.toolStripKeyExport});
             this.contextMenuStripKeys.Name = "contextMenuStripKeys";
-            this.contextMenuStripKeys.Size = new System.Drawing.Size(149, 104);
+            this.contextMenuStripKeys.Size = new System.Drawing.Size(118, 104);
             // 
             // toolStripKeyCreate
             // 
             this.toolStripKeyCreate.Image = ((System.Drawing.Image)(resources.GetObject("toolStripKeyCreate.Image")));
             this.toolStripKeyCreate.Name = "toolStripKeyCreate";
-            this.toolStripKeyCreate.Size = new System.Drawing.Size(148, 22);
-            this.toolStripKeyCreate.Text = "Neu";
+            this.toolStripKeyCreate.Size = new System.Drawing.Size(117, 22);
+            this.toolStripKeyCreate.Text = "New";
             this.toolStripKeyCreate.Click += new System.EventHandler(this.toolStripKeyCreate_Click);
             // 
             // toolStripKeyDelete
             // 
             this.toolStripKeyDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripKeyDelete.Image")));
             this.toolStripKeyDelete.Name = "toolStripKeyDelete";
-            this.toolStripKeyDelete.Size = new System.Drawing.Size(148, 22);
-            this.toolStripKeyDelete.Text = "Löschen";
+            this.toolStripKeyDelete.Size = new System.Drawing.Size(117, 22);
+            this.toolStripKeyDelete.Text = "Delete";
             this.toolStripKeyDelete.Click += new System.EventHandler(this.toolStripKeyDelete_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(114, 6);
             // 
             // toolStripKeyEdit
             // 
             this.toolStripKeyEdit.Enabled = false;
             this.toolStripKeyEdit.Image = ((System.Drawing.Image)(resources.GetObject("toolStripKeyEdit.Image")));
             this.toolStripKeyEdit.Name = "toolStripKeyEdit";
-            this.toolStripKeyEdit.Size = new System.Drawing.Size(148, 22);
-            this.toolStripKeyEdit.Text = "Umbenennen";
+            this.toolStripKeyEdit.Size = new System.Drawing.Size(117, 22);
+            this.toolStripKeyEdit.Text = "Rename";
             this.toolStripKeyEdit.Click += new System.EventHandler(this.toolStripKeyEdit_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(145, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(114, 6);
             // 
             // toolStripKeyExport
             // 
             this.toolStripKeyExport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripKeyExport.Image")));
             this.toolStripKeyExport.Name = "toolStripKeyExport";
-            this.toolStripKeyExport.Size = new System.Drawing.Size(148, 22);
+            this.toolStripKeyExport.Size = new System.Drawing.Size(117, 22);
             this.toolStripKeyExport.Text = "Export";
             this.toolStripKeyExport.Click += new System.EventHandler(this.toolStripKeyExport_Click);
             // 
@@ -259,7 +259,7 @@
             this.toolStripDeleteEntry,
             this.toolStripEditEntryName});
             this.contextMenuStripEntries.Name = "contextMenuStripEntries";
-            this.contextMenuStripEntries.Size = new System.Drawing.Size(149, 98);
+            this.contextMenuStripEntries.Size = new System.Drawing.Size(148, 98);
             this.contextMenuStripEntries.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripEntries_Opening);
             // 
             // toolStripCreateEntry
@@ -270,69 +270,69 @@
             this.toolStripCreateDWORDEntry});
             this.toolStripCreateEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCreateEntry.Image")));
             this.toolStripCreateEntry.Name = "toolStripCreateEntry";
-            this.toolStripCreateEntry.Size = new System.Drawing.Size(148, 22);
-            this.toolStripCreateEntry.Text = "Neuer Wert";
+            this.toolStripCreateEntry.Size = new System.Drawing.Size(147, 22);
+            this.toolStripCreateEntry.Text = "New Value";
             // 
             // toolStripCreateStringEntry
             // 
             this.toolStripCreateStringEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCreateStringEntry.Image")));
             this.toolStripCreateStringEntry.Name = "toolStripCreateStringEntry";
-            this.toolStripCreateStringEntry.Size = new System.Drawing.Size(146, 22);
-            this.toolStripCreateStringEntry.Text = "Zeichenfolge";
+            this.toolStripCreateStringEntry.Size = new System.Drawing.Size(117, 22);
+            this.toolStripCreateStringEntry.Text = "String";
             this.toolStripCreateStringEntry.Click += new System.EventHandler(this.toolStripCreateStringEntry_Click);
             // 
             // toolStripCreateBinaryEntry
             // 
             this.toolStripCreateBinaryEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCreateBinaryEntry.Image")));
             this.toolStripCreateBinaryEntry.Name = "toolStripCreateBinaryEntry";
-            this.toolStripCreateBinaryEntry.Size = new System.Drawing.Size(146, 22);
-            this.toolStripCreateBinaryEntry.Text = "Binärwert";
+            this.toolStripCreateBinaryEntry.Size = new System.Drawing.Size(117, 22);
+            this.toolStripCreateBinaryEntry.Text = "Binary";
             this.toolStripCreateBinaryEntry.Click += new System.EventHandler(this.toolStripCreateBinaryEntry_Click);
             // 
             // toolStripCreateDWORDEntry
             // 
             this.toolStripCreateDWORDEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCreateDWORDEntry.Image")));
             this.toolStripCreateDWORDEntry.Name = "toolStripCreateDWORDEntry";
-            this.toolStripCreateDWORDEntry.Size = new System.Drawing.Size(146, 22);
+            this.toolStripCreateDWORDEntry.Size = new System.Drawing.Size(117, 22);
             this.toolStripCreateDWORDEntry.Text = "DWORD";
             this.toolStripCreateDWORDEntry.Click += new System.EventHandler(this.toolStripCreateDWORDEntry_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(144, 6);
             // 
             // toolStripEditEntryValue
             // 
             this.toolStripEditEntryValue.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditEntryValue.Image")));
             this.toolStripEditEntryValue.Name = "toolStripEditEntryValue";
-            this.toolStripEditEntryValue.Size = new System.Drawing.Size(148, 22);
-            this.toolStripEditEntryValue.Text = "Wert ändern";
+            this.toolStripEditEntryValue.Size = new System.Drawing.Size(147, 22);
+            this.toolStripEditEntryValue.Text = "Change Value";
             this.toolStripEditEntryValue.Click += new System.EventHandler(this.toolStripEditEntryValue_Click);
             // 
             // toolStripDeleteEntry
             // 
             this.toolStripDeleteEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDeleteEntry.Image")));
             this.toolStripDeleteEntry.Name = "toolStripDeleteEntry";
-            this.toolStripDeleteEntry.Size = new System.Drawing.Size(148, 22);
-            this.toolStripDeleteEntry.Text = "Löschen";
+            this.toolStripDeleteEntry.Size = new System.Drawing.Size(147, 22);
+            this.toolStripDeleteEntry.Text = "Delete";
             this.toolStripDeleteEntry.Click += new System.EventHandler(this.toolStripDeleteEntry_Click);
             // 
             // toolStripEditEntryName
             // 
             this.toolStripEditEntryName.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditEntryName.Image")));
             this.toolStripEditEntryName.Name = "toolStripEditEntryName";
-            this.toolStripEditEntryName.Size = new System.Drawing.Size(148, 22);
-            this.toolStripEditEntryName.Text = "Umbenennen";
+            this.toolStripEditEntryName.Size = new System.Drawing.Size(147, 22);
+            this.toolStripEditEntryName.Text = "Rename";
             this.toolStripEditEntryName.Click += new System.EventHandler(this.toolStripEditEntryName_Click);
             // 
             // labelCurrentPath
             // 
-            this.labelCurrentPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCurrentPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCurrentPath.AutoEllipsis = true;
             this.labelCurrentPath.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrentPath.ForeColor = System.Drawing.Color.White;
+            this.labelCurrentPath.ForeColor = System.Drawing.Color.Black;
             this.labelCurrentPath.Location = new System.Drawing.Point(3, 618);
             this.labelCurrentPath.Name = "labelCurrentPath";
             this.labelCurrentPath.Size = new System.Drawing.Size(783, 31);
@@ -340,9 +340,9 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Location = new System.Drawing.Point(3, 22);
             this.splitContainer1.Name = "splitContainer1";
@@ -357,30 +357,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(910, 589);
             this.splitContainer1.SplitterDistance = 301;
             this.splitContainer1.TabIndex = 34;
-            // 
-            // treeViewRegistry
-            // 
-            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
-            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
-            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
-            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeViewRegistry.HideSelection = false;
-            this.treeViewRegistry.ImageIndex = 0;
-            this.treeViewRegistry.ImageList = this.imageListRegistry;
-            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
-            this.treeViewRegistry.Name = "treeViewRegistry";
-            this.treeViewRegistry.SelectedImageIndex = 1;
-            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
-            this.treeViewRegistry.Size = new System.Drawing.Size(299, 587);
-            this.treeViewRegistry.TabIndex = 33;
-            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
-            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
-            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
-            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
-            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
-            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
             // 
             // imageListValueTypes
             // 
@@ -398,7 +374,7 @@
             this.checkBoxDeleteQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxDeleteQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxDeleteQuestion.ForeColor = System.Drawing.Color.Blue;
-            this.checkBoxDeleteQuestion.Location = new System.Drawing.Point(311, 2);
+            this.checkBoxDeleteQuestion.Location = new System.Drawing.Point(303, 2);
             this.checkBoxDeleteQuestion.Name = "checkBoxDeleteQuestion";
             this.checkBoxDeleteQuestion.Size = new System.Drawing.Size(138, 21);
             this.checkBoxDeleteQuestion.TabIndex = 36;
@@ -411,13 +387,13 @@
             this.labelNoAdminHint.BackColor = System.Drawing.Color.LightGray;
             this.labelNoAdminHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelNoAdminHint.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoAdminHint.ForeColor = System.Drawing.Color.White;
+            this.labelNoAdminHint.ForeColor = System.Drawing.Color.Black;
             this.labelNoAdminHint.Location = new System.Drawing.Point(32, 619);
             this.labelNoAdminHint.Name = "labelNoAdminHint";
             this.labelNoAdminHint.Size = new System.Drawing.Size(712, 16);
             this.labelNoAdminHint.TabIndex = 41;
             this.labelNoAdminHint.Text = "Due to missing administrator privileges you cannot add, delete or change values i" +
-                "n the HiveKey LocalMachine.";
+    "n the HiveKey LocalMachine.";
             this.labelNoAdminHint.Visible = false;
             // 
             // contextMenuStripNoAdmin
@@ -425,15 +401,15 @@
             this.contextMenuStripNoAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.contextMenuStripNoAdmin.Name = "contextMenuStripNoAdmin";
-            this.contextMenuStripNoAdmin.Size = new System.Drawing.Size(216, 26);
+            this.contextMenuStripNoAdmin.Size = new System.Drawing.Size(220, 26);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Enabled = false;
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(215, 22);
-            this.toolStripMenuItem1.Text = "Keine Administrator Rechte";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(219, 22);
+            this.toolStripMenuItem1.Text = "No Administrator Privileges";
             // 
             // textBoxSearch
             // 
@@ -495,11 +471,35 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
+            // treeViewRegistry
+            // 
+            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
+            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
+            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeViewRegistry.HideSelection = false;
+            this.treeViewRegistry.ImageIndex = 0;
+            this.treeViewRegistry.ImageList = this.imageListRegistry;
+            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
+            this.treeViewRegistry.Name = "treeViewRegistry";
+            this.treeViewRegistry.SelectedImageIndex = 1;
+            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
+            this.treeViewRegistry.Size = new System.Drawing.Size(299, 587);
+            this.treeViewRegistry.TabIndex = 33;
+            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
+            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
+            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
+            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
+            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
+            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
+            // 
             // RegistryEditorControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.pictureBoxNoResult);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.textBoxSearch);

@@ -40,7 +40,7 @@ Public Class Test07
         Dim startTime As DateTime = DateTime.Now
         Try
             Dim iconBitmap As New Bitmap(System.Reflection.Assembly.GetAssembly(Me.GetType()).GetManifestResourceStream("OutlookTestsVB.Test07.bmp"))
-            application = New NetOffice.OutlookApi.Application()
+            application = New NetOffice.OutlookApi.Application(True)
             NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             Dim commandBar As Office.CommandBar = Nothing
@@ -99,8 +99,13 @@ Public Class Test07
         Finally
 
             If Not IsNothing(application) Then
-                application.Quit()
+
+                If False = application.FromProxyService Then
+                    application.Quit()
+                End If
+
                 application.Dispose()
+
             End If
 
         End Try

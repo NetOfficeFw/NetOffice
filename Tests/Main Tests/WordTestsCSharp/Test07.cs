@@ -36,6 +36,13 @@ namespace WordTestsCSharp
             get { return "C#"; }
         }
 
+
+        private void Factory_CreateCOMDynamic(Core sender, Core.OnCreateCOMDynamicEventArgs args)
+        {
+            var infos = Core.ProxyInformations.Create(args.ComProxy);
+            Console.WriteLine(infos);
+        }
+
         public TestResult DoTest()
         {
             Word.Application application = null;
@@ -44,6 +51,8 @@ namespace WordTestsCSharp
             {
                 Bitmap iconBitmap = new Bitmap(System.Reflection.Assembly.GetAssembly(this.GetType()).GetManifestResourceStream("WordTestsCSharp.Test07.bmp"));
                 application = new Word.Application();
+                application.Factory.CreateCOMDynamic += Factory_CreateCOMDynamic;
+
                 application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
                 application.Documents.Add();
 
@@ -146,7 +155,7 @@ namespace WordTestsCSharp
             throw new IndexOutOfRangeException("Template not found.");
         }
 
-        void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
+        private void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             Ctrl.Dispose();
         }

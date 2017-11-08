@@ -27,8 +27,6 @@ namespace NetOffice.DeveloperToolbox
 
         ImageType Image { get; }
 
-        void Translate();
-
         void Activate();
 
         void Deactivate();

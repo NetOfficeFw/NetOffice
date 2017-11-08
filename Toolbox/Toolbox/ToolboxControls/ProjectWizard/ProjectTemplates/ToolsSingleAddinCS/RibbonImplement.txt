@@ -1,11 +1,6 @@
 ﻿        public void AboutButton_Click(Office.IRibbonControl control)
         {
-            Utils.Dialog.ShowAbout("$safeprojectname$", "http://netoffice.codeplex.com", "<No Licence set>");
+            Utils.Dialog.ShowAbout("$safeprojectname$", "<your url here>", "<No Licence set>");
         }
 
 $tooglecode$
-
-		public void OnLoadRibonUI(Office.IRibbonUI ribbonUI)
-        {
-			RibbonUI = ribbonUI;
-        }

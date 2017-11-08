@@ -37,23 +37,33 @@
             this.checkBoxStartAppWithWindows = new System.Windows.Forms.CheckBox();
             this.checkBoxStartAppMinimized = new System.Windows.Forms.CheckBox();
             this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
-            this.labelLanguage = new System.Windows.Forms.Label();
-            this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelMainRight = new System.Windows.Forms.Panel();
-            this.labelMailMe = new System.Windows.Forms.Label();
-            this.linkLabelMailMe = new System.Windows.Forms.LinkLabel();
-            this.labelQuestion = new System.Windows.Forms.Label();
-            this.linkLabelNetOfficeQuestions = new System.Windows.Forms.LinkLabel();
+            this.linkLabelNetOfficeTwitterCaption = new System.Windows.Forms.Label();
+            this.linkLabelNetOfficeTwitter = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.labelUpdate = new System.Windows.Forms.Label();
             this.pictureBoxIconRight = new System.Windows.Forms.PictureBox();
             this.labelBug = new System.Windows.Forms.Label();
             this.linkLabelNetOfficeIssues = new System.Windows.Forms.LinkLabel();
             this.labelIWant = new System.Windows.Forms.Label();
             this.linkLabelNetOfficeUpdates = new System.Windows.Forms.LinkLabel();
+            this.LinkContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panelOptions = new System.Windows.Forms.Panel();
-            this.buttonLanguageEditor = new System.Windows.Forms.Button();
+            this.ApplicationStateLabel3 = new System.Windows.Forms.Label();
+            this.ApplicationStateLabel2 = new System.Windows.Forms.Label();
+            this.ApplicationStateLabel1 = new System.Windows.Forms.Label();
+            this.ApplicationStateLabel = new System.Windows.Forms.Label();
+            this.ApplicationStatePictureBox = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxHeader = new System.Windows.Forms.PictureBox();
+            this.linksToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.linkLabelRunAsAdmin = new System.Windows.Forms.LinkLabel();
             this.labelBeginBottom = new NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox();
             this.labelBeginTop = new NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
@@ -62,7 +72,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelMainRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconRight)).BeginInit();
+            this.LinkContextMenu.SuspendLayout();
             this.panelOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ApplicationStatePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlForeColorAnimator1)).BeginInit();
             this.SuspendLayout();
@@ -74,12 +87,11 @@
             this.labelVersionHint.BackColor = System.Drawing.Color.Transparent;
             this.labelVersionHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersionHint.ForeColor = System.Drawing.Color.Gray;
-            this.labelVersionHint.Location = new System.Drawing.Point(400, 381);
+            this.labelVersionHint.Location = new System.Drawing.Point(400, 375);
             this.labelVersionHint.Name = "labelVersionHint";
             this.labelVersionHint.Size = new System.Drawing.Size(123, 16);
             this.labelVersionHint.TabIndex = 101;
             this.labelVersionHint.Text = "labelVersionHint";
-            this.labelVersionHint.Visible = false;
             // 
             // panelMainLeft
             // 
@@ -97,24 +109,22 @@
             // 
             this.labelBeginTitle.AutoSize = true;
             this.labelBeginTitle.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBeginTitle.ForeColor = System.Drawing.Color.White;
-            this.labelBeginTitle.Location = new System.Drawing.Point(39, 9);
+            this.labelBeginTitle.ForeColor = System.Drawing.Color.Black;
+            this.labelBeginTitle.Location = new System.Drawing.Point(35, 9);
             this.labelBeginTitle.Name = "labelBeginTitle";
             this.labelBeginTitle.Size = new System.Drawing.Size(82, 21);
             this.labelBeginTitle.TabIndex = 79;
             this.labelBeginTitle.Text = "Welcome";
-            this.labelBeginTitle.Visible = false;
             // 
             // pictureBoxIconLeft
             // 
             this.pictureBoxIconLeft.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxIconLeft.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconLeft.Image")));
-            this.pictureBoxIconLeft.Location = new System.Drawing.Point(17, 12);
+            this.pictureBoxIconLeft.Location = new System.Drawing.Point(13, 12);
             this.pictureBoxIconLeft.Name = "pictureBoxIconLeft";
             this.pictureBoxIconLeft.Size = new System.Drawing.Size(17, 17);
             this.pictureBoxIconLeft.TabIndex = 77;
             this.pictureBoxIconLeft.TabStop = false;
-            this.pictureBoxIconLeft.Visible = false;
             // 
             // checkBoxStartAppWithWindows
             // 
@@ -123,7 +133,7 @@
             this.checkBoxStartAppWithWindows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxStartAppWithWindows.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxStartAppWithWindows.ForeColor = System.Drawing.Color.Blue;
-            this.checkBoxStartAppWithWindows.Location = new System.Drawing.Point(32, 34);
+            this.checkBoxStartAppWithWindows.Location = new System.Drawing.Point(37, 47);
             this.checkBoxStartAppWithWindows.Name = "checkBoxStartAppWithWindows";
             this.checkBoxStartAppWithWindows.Size = new System.Drawing.Size(135, 21);
             this.checkBoxStartAppWithWindows.TabIndex = 94;
@@ -137,7 +147,7 @@
             this.checkBoxStartAppMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxStartAppMinimized.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxStartAppMinimized.ForeColor = System.Drawing.Color.Blue;
-            this.checkBoxStartAppMinimized.Location = new System.Drawing.Point(32, 57);
+            this.checkBoxStartAppMinimized.Location = new System.Drawing.Point(37, 68);
             this.checkBoxStartAppMinimized.Name = "checkBoxStartAppMinimized";
             this.checkBoxStartAppMinimized.Size = new System.Drawing.Size(114, 21);
             this.checkBoxStartAppMinimized.TabIndex = 93;
@@ -153,45 +163,18 @@
             this.checkBoxMinimizeToTray.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxMinimizeToTray.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxMinimizeToTray.ForeColor = System.Drawing.Color.Blue;
-            this.checkBoxMinimizeToTray.Location = new System.Drawing.Point(32, 11);
+            this.checkBoxMinimizeToTray.Location = new System.Drawing.Point(37, 27);
             this.checkBoxMinimizeToTray.Name = "checkBoxMinimizeToTray";
             this.checkBoxMinimizeToTray.Size = new System.Drawing.Size(165, 21);
             this.checkBoxMinimizeToTray.TabIndex = 92;
             this.checkBoxMinimizeToTray.Text = "Send to tray at minimize";
             this.checkBoxMinimizeToTray.UseVisualStyleBackColor = true;
             // 
-            // labelLanguage
-            // 
-            this.labelLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelLanguage.AutoSize = true;
-            this.labelLanguage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLanguage.ForeColor = System.Drawing.Color.Blue;
-            this.labelLanguage.Location = new System.Drawing.Point(643, 14);
-            this.labelLanguage.Name = "labelLanguage";
-            this.labelLanguage.Size = new System.Drawing.Size(65, 17);
-            this.labelLanguage.TabIndex = 97;
-            this.labelLanguage.Text = "Language";
-            // 
-            // comboBoxLanguage
-            // 
-            this.comboBoxLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxLanguage.BackColor = System.Drawing.Color.Orange;
-            this.comboBoxLanguage.DisplayMember = "DisplayName";
-            this.comboBoxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxLanguage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxLanguage.FormattingEnabled = true;
-            this.comboBoxLanguage.Location = new System.Drawing.Point(720, 12);
-            this.comboBoxLanguage.Name = "comboBoxLanguage";
-            this.comboBoxLanguage.Size = new System.Drawing.Size(176, 25);
-            this.comboBoxLanguage.TabIndex = 96;
-            this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage_SelectedIndexChanged);
-            // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(293, 48);
@@ -200,16 +183,17 @@
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 95;
             this.pictureBoxLogo.TabStop = false;
-            this.pictureBoxLogo.Visible = false;
             this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
             // panelMainRight
             // 
             this.panelMainRight.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panelMainRight.Controls.Add(this.labelMailMe);
-            this.panelMainRight.Controls.Add(this.linkLabelMailMe);
-            this.panelMainRight.Controls.Add(this.labelQuestion);
-            this.panelMainRight.Controls.Add(this.linkLabelNetOfficeQuestions);
+            this.panelMainRight.Controls.Add(this.linkLabelNetOfficeTwitterCaption);
+            this.panelMainRight.Controls.Add(this.linkLabelNetOfficeTwitter);
+            this.panelMainRight.Controls.Add(this.label4);
+            this.panelMainRight.Controls.Add(this.label2);
+            this.panelMainRight.Controls.Add(this.label1);
+            this.panelMainRight.Controls.Add(this.linkLabel1);
             this.panelMainRight.Controls.Add(this.labelUpdate);
             this.panelMainRight.Controls.Add(this.pictureBoxIconRight);
             this.panelMainRight.Controls.Add(this.labelBug);
@@ -221,59 +205,79 @@
             this.panelMainRight.Size = new System.Drawing.Size(271, 304);
             this.panelMainRight.TabIndex = 98;
             // 
-            // labelMailMe
+            // linkLabelNetOfficeTwitterCaption
             // 
-            this.labelMailMe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelMailMe.AutoSize = true;
-            this.labelMailMe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMailMe.ForeColor = System.Drawing.Color.Black;
-            this.labelMailMe.Location = new System.Drawing.Point(12, 217);
-            this.labelMailMe.Name = "labelMailMe";
-            this.labelMailMe.Size = new System.Drawing.Size(118, 17);
-            this.labelMailMe.TabIndex = 81;
-            this.labelMailMe.Text = "make a suggestion";
-            this.labelMailMe.Visible = false;
+            this.linkLabelNetOfficeTwitterCaption.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelNetOfficeTwitterCaption.AutoSize = true;
+            this.linkLabelNetOfficeTwitterCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelNetOfficeTwitterCaption.ForeColor = System.Drawing.Color.Black;
+            this.linkLabelNetOfficeTwitterCaption.Location = new System.Drawing.Point(15, 141);
+            this.linkLabelNetOfficeTwitterCaption.Name = "linkLabelNetOfficeTwitterCaption";
+            this.linkLabelNetOfficeTwitterCaption.Size = new System.Drawing.Size(166, 17);
+            this.linkLabelNetOfficeTwitterCaption.TabIndex = 84;
+            this.linkLabelNetOfficeTwitterCaption.Text = "Follow NetOffice on Twitter";
             // 
-            // linkLabelMailMe
+            // linkLabelNetOfficeTwitter
             // 
-            this.linkLabelMailMe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabelMailMe.AutoSize = true;
-            this.linkLabelMailMe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelMailMe.Location = new System.Drawing.Point(13, 235);
-            this.linkLabelMailMe.Name = "linkLabelMailMe";
-            this.linkLabelMailMe.Size = new System.Drawing.Size(194, 17);
-            this.linkLabelMailMe.TabIndex = 80;
-            this.linkLabelMailMe.TabStop = true;
-            this.linkLabelMailMe.Text = "mailto:public.sebastian@web.de";
-            this.linkLabelMailMe.Visible = false;
-            this.linkLabelMailMe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            this.linkLabelNetOfficeTwitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelNetOfficeTwitter.AutoSize = true;
+            this.linkLabelNetOfficeTwitter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelNetOfficeTwitter.Location = new System.Drawing.Point(16, 159);
+            this.linkLabelNetOfficeTwitter.Name = "linkLabelNetOfficeTwitter";
+            this.linkLabelNetOfficeTwitter.Size = new System.Drawing.Size(191, 17);
+            this.linkLabelNetOfficeTwitter.TabIndex = 83;
+            this.linkLabelNetOfficeTwitter.TabStop = true;
+            this.linkLabelNetOfficeTwitter.Tag = "https://twitter.com/#!/net_office";
+            this.linkLabelNetOfficeTwitter.Text = "https://twitter.com/#!/net_office";
+            this.linksToolTip.SetToolTip(this.linkLabelNetOfficeTwitter, "https://twitter.com/#!/net_office");
+            this.linkLabelNetOfficeTwitter.Click += new System.EventHandler(this.LinkLabel_Clicked);
             // 
-            // labelQuestion
+            // label4
             // 
-            this.labelQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelQuestion.AutoSize = true;
-            this.labelQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuestion.ForeColor = System.Drawing.Color.Black;
-            this.labelQuestion.Location = new System.Drawing.Point(13, 158);
-            this.labelQuestion.Name = "labelQuestion";
-            this.labelQuestion.Size = new System.Drawing.Size(92, 17);
-            this.labelQuestion.TabIndex = 79;
-            this.labelQuestion.Text = "ask a question";
-            this.labelQuestion.Visible = false;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(17, 239);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 13);
+            this.label4.TabIndex = 82;
+            this.label4.Text = "Microsoft© Corporation. All rights reserved.";
             // 
-            // linkLabelNetOfficeQuestions
+            // label2
             // 
-            this.linkLabelNetOfficeQuestions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabelNetOfficeQuestions.AutoSize = true;
-            this.linkLabelNetOfficeQuestions.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelNetOfficeQuestions.Location = new System.Drawing.Point(14, 176);
-            this.linkLabelNetOfficeQuestions.Name = "linkLabelNetOfficeQuestions";
-            this.linkLabelNetOfficeQuestions.Size = new System.Drawing.Size(249, 17);
-            this.linkLabelNetOfficeQuestions.TabIndex = 78;
-            this.linkLabelNetOfficeQuestions.TabStop = true;
-            this.linkLabelNetOfficeQuestions.Text = "http://netoffice.codeplex.com/discussions";
-            this.linkLabelNetOfficeQuestions.Visible = false;
-            this.linkLabelNetOfficeQuestions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(16, 224);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 13);
+            this.label2.TabIndex = 80;
+            this.label2.Text = "Documentation is provided from";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(15, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(227, 17);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "Download Office Dev Documentation ";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(16, 204);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(224, 17);
+            this.linkLabel1.TabIndex = 78;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Tag = "https://www.microsoft.com/en-us/download/details.aspx?id=40326";
+            this.linkLabel1.Text = "https://microsoft.com/.../download/...";
+            this.linksToolTip.SetToolTip(this.linkLabel1, "https://www.microsoft.com/en-us/download/details.aspx?id=40326");
+            this.linkLabel1.Click += new System.EventHandler(this.LinkLabel_Clicked);
             // 
             // labelUpdate
             // 
@@ -281,12 +285,11 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Black;
-            this.labelUpdate.Location = new System.Drawing.Point(15, 101);
+            this.labelUpdate.Location = new System.Drawing.Point(15, 95);
             this.labelUpdate.Name = "labelUpdate";
-            this.labelUpdate.Size = new System.Drawing.Size(124, 17);
+            this.labelUpdate.Size = new System.Drawing.Size(123, 17);
             this.labelUpdate.TabIndex = 75;
-            this.labelUpdate.Text = "check for an update";
-            this.labelUpdate.Visible = false;
+            this.labelUpdate.Text = "Visit documentation";
             // 
             // pictureBoxIconRight
             // 
@@ -297,7 +300,6 @@
             this.pictureBoxIconRight.Size = new System.Drawing.Size(17, 17);
             this.pictureBoxIconRight.TabIndex = 77;
             this.pictureBoxIconRight.TabStop = false;
-            this.pictureBoxIconRight.Visible = false;
             // 
             // labelBug
             // 
@@ -307,10 +309,9 @@
             this.labelBug.ForeColor = System.Drawing.Color.Black;
             this.labelBug.Location = new System.Drawing.Point(14, 48);
             this.labelBug.Name = "labelBug";
-            this.labelBug.Size = new System.Drawing.Size(83, 17);
+            this.labelBug.Size = new System.Drawing.Size(234, 17);
             this.labelBug.TabIndex = 74;
-            this.labelBug.Text = "report a bug";
-            this.labelBug.Visible = false;
+            this.labelBug.Text = "Report a bug or ask someone for help";
             // 
             // linkLabelNetOfficeIssues
             // 
@@ -319,70 +320,149 @@
             this.linkLabelNetOfficeIssues.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelNetOfficeIssues.Location = new System.Drawing.Point(15, 66);
             this.linkLabelNetOfficeIssues.Name = "linkLabelNetOfficeIssues";
-            this.linkLabelNetOfficeIssues.Size = new System.Drawing.Size(218, 17);
+            this.linkLabelNetOfficeIssues.Size = new System.Drawing.Size(229, 17);
             this.linkLabelNetOfficeIssues.TabIndex = 10;
             this.linkLabelNetOfficeIssues.TabStop = true;
-            this.linkLabelNetOfficeIssues.Text = "http://netoffice.codeplex.com/issues";
-            this.linkLabelNetOfficeIssues.Visible = false;
-            this.linkLabelNetOfficeIssues.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            this.linkLabelNetOfficeIssues.Tag = "https://github.com/NetOfficeFw/NetOffice/issues";
+            this.linkLabelNetOfficeIssues.Text = "https://github.com/.../NetOffice/issues";
+            this.linksToolTip.SetToolTip(this.linkLabelNetOfficeIssues, "https://github.com/NetOfficeFw/NetOffice/issues");
+            this.linkLabelNetOfficeIssues.Click += new System.EventHandler(this.LinkLabel_Clicked);
             // 
             // labelIWant
             // 
             this.labelIWant.AutoSize = true;
             this.labelIWant.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIWant.ForeColor = System.Drawing.Color.White;
+            this.labelIWant.ForeColor = System.Drawing.Color.Black;
             this.labelIWant.Location = new System.Drawing.Point(39, 9);
             this.labelIWant.Name = "labelIWant";
             this.labelIWant.Size = new System.Drawing.Size(77, 21);
             this.labelIWant.TabIndex = 76;
             this.labelIWant.Text = "I want to";
-            this.labelIWant.Visible = false;
             // 
             // linkLabelNetOfficeUpdates
             // 
             this.linkLabelNetOfficeUpdates.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelNetOfficeUpdates.AutoSize = true;
             this.linkLabelNetOfficeUpdates.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelNetOfficeUpdates.Location = new System.Drawing.Point(16, 119);
+            this.linkLabelNetOfficeUpdates.Location = new System.Drawing.Point(16, 113);
             this.linkLabelNetOfficeUpdates.Name = "linkLabelNetOfficeUpdates";
-            this.linkLabelNetOfficeUpdates.Size = new System.Drawing.Size(231, 17);
+            this.linkLabelNetOfficeUpdates.Size = new System.Drawing.Size(114, 17);
             this.linkLabelNetOfficeUpdates.TabIndex = 12;
             this.linkLabelNetOfficeUpdates.TabStop = true;
-            this.linkLabelNetOfficeUpdates.Text = "http://netoffice.codeplex.com/releases";
-            this.linkLabelNetOfficeUpdates.Visible = false;
-            this.linkLabelNetOfficeUpdates.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            this.linkLabelNetOfficeUpdates.Tag = "https://netoffice.io";
+            this.linkLabelNetOfficeUpdates.Text = "https://netoffice.io";
+            this.linksToolTip.SetToolTip(this.linkLabelNetOfficeUpdates, "https://netoffice.io");
+            this.linkLabelNetOfficeUpdates.Click += new System.EventHandler(this.LinkLabel_Clicked);
+            // 
+            // LinkContextMenu
+            // 
+            this.LinkContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.LinkContextMenu.Name = "LinkContextMenu";
+            this.LinkContextMenu.Size = new System.Drawing.Size(177, 48);
+            this.LinkContextMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.LinkContextMenu_ItemClicked);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.toolStripMenuItem1.Text = "Copy Link Location";
             // 
             // panelOptions
             // 
-            this.panelOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelOptions.Controls.Add(this.buttonLanguageEditor);
+            this.panelOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelOptions.Controls.Add(this.ApplicationStateLabel3);
+            this.panelOptions.Controls.Add(this.ApplicationStateLabel2);
+            this.panelOptions.Controls.Add(this.ApplicationStateLabel1);
+            this.panelOptions.Controls.Add(this.ApplicationStateLabel);
+            this.panelOptions.Controls.Add(this.ApplicationStatePictureBox);
+            this.panelOptions.Controls.Add(this.label3);
+            this.panelOptions.Controls.Add(this.pictureBox1);
             this.panelOptions.Controls.Add(this.checkBoxStartAppWithWindows);
             this.panelOptions.Controls.Add(this.checkBoxStartAppMinimized);
             this.panelOptions.Controls.Add(this.checkBoxMinimizeToTray);
-            this.panelOptions.Controls.Add(this.labelLanguage);
-            this.panelOptions.Controls.Add(this.comboBoxLanguage);
-            this.panelOptions.Location = new System.Drawing.Point(0, 402);
+            this.panelOptions.Location = new System.Drawing.Point(0, 392);
             this.panelOptions.Name = "panelOptions";
             this.panelOptions.Size = new System.Drawing.Size(924, 94);
             this.panelOptions.TabIndex = 102;
             // 
-            // buttonLanguageEditor
+            // ApplicationStateLabel3
             // 
-            this.buttonLanguageEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLanguageEditor.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonLanguageEditor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLanguageEditor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLanguageEditor.ForeColor = System.Drawing.Color.Blue;
-            this.buttonLanguageEditor.Image = ((System.Drawing.Image)(resources.GetObject("buttonLanguageEditor.Image")));
-            this.buttonLanguageEditor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLanguageEditor.Location = new System.Drawing.Point(720, 53);
-            this.buttonLanguageEditor.Name = "buttonLanguageEditor";
-            this.buttonLanguageEditor.Size = new System.Drawing.Size(176, 25);
-            this.buttonLanguageEditor.TabIndex = 98;
-            this.buttonLanguageEditor.Text = "Language Editor";
-            this.buttonLanguageEditor.UseVisualStyleBackColor = true;
-            this.buttonLanguageEditor.Click += new System.EventHandler(this.buttonLanguageEditor_Click);
+            this.ApplicationStateLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApplicationStateLabel3.AutoSize = true;
+            this.ApplicationStateLabel3.ForeColor = System.Drawing.Color.Gray;
+            this.ApplicationStateLabel3.Location = new System.Drawing.Point(654, 59);
+            this.ApplicationStateLabel3.Name = "ApplicationStateLabel3";
+            this.ApplicationStateLabel3.Size = new System.Drawing.Size(234, 13);
+            this.ApplicationStateLabel3.TabIndex = 112;
+            this.ApplicationStateLabel3.Text = "Use right mouse click to copy link into clipboard.";
+            // 
+            // ApplicationStateLabel2
+            // 
+            this.ApplicationStateLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApplicationStateLabel2.AutoSize = true;
+            this.ApplicationStateLabel2.ForeColor = System.Drawing.Color.Gray;
+            this.ApplicationStateLabel2.Location = new System.Drawing.Point(654, 45);
+            this.ApplicationStateLabel2.Name = "ApplicationStateLabel2";
+            this.ApplicationStateLabel2.Size = new System.Drawing.Size(158, 13);
+            this.ApplicationStateLabel2.TabIndex = 111;
+            this.ApplicationStateLabel2.Text = "External Links may do not open.";
+            // 
+            // ApplicationStateLabel1
+            // 
+            this.ApplicationStateLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApplicationStateLabel1.AutoSize = true;
+            this.ApplicationStateLabel1.ForeColor = System.Drawing.Color.Gray;
+            this.ApplicationStateLabel1.Location = new System.Drawing.Point(654, 31);
+            this.ApplicationStateLabel1.Name = "ApplicationStateLabel1";
+            this.ApplicationStateLabel1.Size = new System.Drawing.Size(156, 13);
+            this.ApplicationStateLabel1.TabIndex = 110;
+            this.ApplicationStateLabel1.Text = "Missing Administrator Privileges.";
+            // 
+            // ApplicationStateLabel
+            // 
+            this.ApplicationStateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApplicationStateLabel.AutoSize = true;
+            this.ApplicationStateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplicationStateLabel.ForeColor = System.Drawing.Color.Black;
+            this.ApplicationStateLabel.Location = new System.Drawing.Point(671, 1);
+            this.ApplicationStateLabel.Name = "ApplicationStateLabel";
+            this.ApplicationStateLabel.Size = new System.Drawing.Size(142, 21);
+            this.ApplicationStateLabel.TabIndex = 109;
+            this.ApplicationStateLabel.Text = "Application State";
+            // 
+            // ApplicationStatePictureBox
+            // 
+            this.ApplicationStatePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApplicationStatePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.ApplicationStatePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ApplicationStatePictureBox.Image")));
+            this.ApplicationStatePictureBox.Location = new System.Drawing.Point(649, 3);
+            this.ApplicationStatePictureBox.Name = "ApplicationStatePictureBox";
+            this.ApplicationStatePictureBox.Size = new System.Drawing.Size(17, 17);
+            this.ApplicationStatePictureBox.TabIndex = 108;
+            this.ApplicationStatePictureBox.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(55, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(211, 21);
+            this.label3.TabIndex = 107;
+            this.label3.Text = "Application Quick Options";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(33, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(17, 17);
+            this.pictureBox1.TabIndex = 106;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBoxHeader
             // 
@@ -392,11 +472,22 @@
             this.pictureBoxHeader.Size = new System.Drawing.Size(599, 36);
             this.pictureBoxHeader.TabIndex = 103;
             this.pictureBoxHeader.TabStop = false;
-            this.pictureBoxHeader.Visible = false;
+            // 
+            // linkLabelRunAsAdmin
+            // 
+            this.linkLabelRunAsAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelRunAsAdmin.AutoSize = true;
+            this.linkLabelRunAsAdmin.Location = new System.Drawing.Point(654, 467);
+            this.linkLabelRunAsAdmin.Name = "linkLabelRunAsAdmin";
+            this.linkLabelRunAsAdmin.Size = new System.Drawing.Size(104, 13);
+            this.linkLabelRunAsAdmin.TabIndex = 113;
+            this.linkLabelRunAsAdmin.TabStop = true;
+            this.linkLabelRunAsAdmin.Text = "Run as Administrator";
+            this.linkLabelRunAsAdmin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRunAsAdmin_LinkClicked);
             // 
             // labelBeginBottom
             // 
-            this.labelBeginBottom.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelBeginBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelBeginBottom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.labelBeginBottom.Cursor = System.Windows.Forms.Cursors.Default;
             this.labelBeginBottom.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -408,13 +499,12 @@
             this.labelBeginBottom.Size = new System.Drawing.Size(255, 104);
             this.labelBeginBottom.TabIndex = 105;
             this.labelBeginBottom.Text = "You can find a help button in the upper right corner of every tab. I am looking f" +
-                "orward to your message if you have any questions, suggestions, comments or reque" +
-                "sts regarding the Developer Toolbox.";
-            this.labelBeginBottom.Visible = false;
+    "orward to your message if you have any questions, suggestions, comments or reque" +
+    "sts regarding the Developer Toolbox.";
             // 
             // labelBeginTop
             // 
-            this.labelBeginTop.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelBeginTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelBeginTop.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.labelBeginTop.Cursor = System.Windows.Forms.Cursors.Default;
             this.labelBeginTop.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -425,9 +515,8 @@
             this.labelBeginTop.SelectionAlignment = NetOffice.DeveloperToolbox.Controls.Text.TextAlign.Justify;
             this.labelBeginTop.Size = new System.Drawing.Size(255, 93);
             this.labelBeginTop.TabIndex = 104;
-            this.labelBeginTop.Text = "The NetOffice Developer Toolbox supports .NET Office developers in his daily work" +
-                " with a set of helpful functions.";
-            this.labelBeginTop.Visible = false;
+            this.labelBeginTop.Text = "The NetOffice Developer Toolbox supports .NET Office developers in his/her daily " +
+    "work with a set of helpful functions.";
             // 
             // controlForeColorAnimator1
             // 
@@ -442,7 +531,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
+            this.Controls.Add(this.linkLabelRunAsAdmin);
             this.Controls.Add(this.pictureBoxHeader);
             this.Controls.Add(this.panelOptions);
             this.Controls.Add(this.labelVersionHint);
@@ -460,8 +550,11 @@
             this.panelMainRight.ResumeLayout(false);
             this.panelMainRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconRight)).EndInit();
+            this.LinkContextMenu.ResumeLayout(false);
             this.panelOptions.ResumeLayout(false);
             this.panelOptions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ApplicationStatePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlForeColorAnimator1)).EndInit();
             this.ResumeLayout(false);
@@ -478,14 +571,8 @@
         private System.Windows.Forms.CheckBox checkBoxStartAppWithWindows;
         private System.Windows.Forms.CheckBox checkBoxStartAppMinimized;
         private System.Windows.Forms.CheckBox checkBoxMinimizeToTray;
-        private System.Windows.Forms.Label labelLanguage;
-        private System.Windows.Forms.ComboBox comboBoxLanguage;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panelMainRight;
-        private System.Windows.Forms.Label labelMailMe;
-        private System.Windows.Forms.LinkLabel linkLabelMailMe;
-        private System.Windows.Forms.Label labelQuestion;
-        private System.Windows.Forms.LinkLabel linkLabelNetOfficeQuestions;
         private System.Windows.Forms.Label labelUpdate;
         private System.Windows.Forms.PictureBox pictureBoxIconRight;
         private System.Windows.Forms.Label labelBug;
@@ -497,6 +584,22 @@
         private NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox labelBeginTop;
         private NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox labelBeginBottom;
         private Utils.Animation.ControlForeColorAnimator controlForeColorAnimator1;
-        private System.Windows.Forms.Button buttonLanguageEditor;
+        private System.Windows.Forms.ToolTip linksToolTip;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label linkLabelNetOfficeTwitterCaption;
+        private System.Windows.Forms.LinkLabel linkLabelNetOfficeTwitter;
+        private System.Windows.Forms.Label ApplicationStateLabel;
+        private System.Windows.Forms.PictureBox ApplicationStatePictureBox;
+        private System.Windows.Forms.Label ApplicationStateLabel1;
+        private System.Windows.Forms.Label ApplicationStateLabel2;
+        private System.Windows.Forms.Label ApplicationStateLabel3;
+        private System.Windows.Forms.ContextMenuStrip LinkContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.LinkLabel linkLabelRunAsAdmin;
     }
 }

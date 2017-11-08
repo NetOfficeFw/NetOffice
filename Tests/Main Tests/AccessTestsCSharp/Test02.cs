@@ -44,6 +44,7 @@ namespace AccessTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
+              
                 application = new Access.Application();
 
                 // create database name 
@@ -58,7 +59,7 @@ namespace AccessTestsCSharp
                 DAO.Database newDatabase = application.DBEngine.Workspaces[0].CreateDatabase(documentFile, LanguageConstants.dbLangGeneral);
                 application.DBEngine.Workspaces[0].Close();
 
-                // setup database connection                         'Provider=Microsoft.Jet.OLEDB.4.0;Data Source= < access2007
+                // setup database connection                         'Provider=Microsoft.Jet.OLEDB.4.0;Data Source= < access2007            
                 OleDbConnection oleConnection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;Data Source=" + documentFile);
                 oleConnection.Open();
 

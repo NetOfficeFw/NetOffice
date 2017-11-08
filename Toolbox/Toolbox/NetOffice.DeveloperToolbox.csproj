@@ -16,8 +16,7 @@
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -57,122 +56,93 @@
     <ApplicationIcon>Ressources\NetOffice.Icon.32x32.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccessApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=3bfc48da42c3238a, processorArchitecture=MSIL">
+    <Reference Include="AccessApi">
+      <HintPath>..\..\Assemblies\Any CPU\AccessApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ADODBApi">
+      <HintPath>..\..\Assemblies\Any CPU\ADODBApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DAOApi">
+      <HintPath>..\..\Assemblies\Any CPU\DAOApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ExcelApi">
+      <HintPath>..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\Assemblies\Any CPU\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.9.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\Any CPU\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="MSComctlLibApi">
+      <HintPath>..\..\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MSDATASRCApi">
+      <HintPath>..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MSFormsApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=a65c2341212e2d10, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\AccessApi.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\Assemblies\Any CPU\MSFormsApi.dll</HintPath>
     </Reference>
-    <Reference Include="ADODBApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=a426381b6dbd993f, processorArchitecture=MSIL">
+    <Reference Include="MSHTMLApi">
+      <HintPath>..\..\Assemblies\Any CPU\MSHTMLApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MSProjectApi">
+      <HintPath>..\..\Assemblies\Any CPU\MSProjectApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NetOffice">
+      <HintPath>..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OfficeApi">
+      <HintPath>..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OutlookApi">
+      <HintPath>..\..\Assemblies\Any CPU\OutlookApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OWC10Api">
+      <HintPath>..\..\Assemblies\Any CPU\OWC10Api.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PowerPointApi">
+      <HintPath>..\..\Assemblies\Any CPU\PowerPointApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PublisherApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=2133a4c2cfc56bf6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\ADODBApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DAOApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=19cb4234a61cee95, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\DAOApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ExcelApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=9084b9221296229e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\ExcelApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Mono.Cecil, Version=0.9.4.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="MSComctlLibApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=b97b7d9cfa816715, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\MSComctlLibApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MSDATASRCApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=afe692b65e0db609, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\MSDATASRCApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MSHTMLApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=9fe3ce00842d84e9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\MSHTMLApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MSProjectApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=b3f793e50f46b653, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\MSProjectApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NetOffice, Version=1.6.1.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\NetOffice.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="OfficeApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\OfficeApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="OutlookApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\OutlookApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="OWC10Api, Version=1.7.1.0, Culture=neutral, PublicKeyToken=a2b945645f1c78b9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\OWC10Api.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="PowerPointApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=f3aefb8851e52dd2, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\PowerPointApi.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\Assemblies\Any CPU\PublisherApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="VBIDEApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="VisioApi">
+      <HintPath>..\..\Assemblies\Any CPU\VisioApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\VBIDEApi.dll</HintPath>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="VisioApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=bfcd37a3a83f1609, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="WordApi">
+      <HintPath>..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\VisioApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="WordApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\Libs\WordApi.dll</HintPath>
-      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -222,21 +192,16 @@
     <Compile Include="Controls\Text\Scroller.designer.cs">
       <DependentUpon>Scroller.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Tree\TreeGridCell.cs" />
-    <Compile Include="Controls\Tree\TreeGridEvents.cs" />
-    <Compile Include="Controls\Tree\TreeGridNode.cs" />
-    <Compile Include="Controls\Tree\TreeGridNodeCollection.cs" />
-    <Compile Include="Controls\Tree\TreeGridView.cs" />
+    <Compile Include="Controls\Tree\MultiSelectTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ErrorCategory.cs" />
-    <Compile Include="Forms\SelectLanguageForm.cs">
+    <Compile Include="Forms\UriTargetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SelectLanguageForm.Designer.cs">
-      <DependentUpon>SelectLanguageForm.cs</DependentUpon>
+    <Compile Include="Forms\UriTargetForm.Designer.cs">
+      <DependentUpon>UriTargetForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ILocalizationDesign.cs" />
-    <Compile Include="ILocalizationReplaceProvider.cs" />
-    <Compile Include="LocalizationDefaultChildInfo.cs" />
     <Compile Include="RessourceTableAttribute.cs" />
     <Compile Include="ToolboxControls\About\AboutControl.cs">
       <SubType>UserControl</SubType>
@@ -244,15 +209,6 @@
     <Compile Include="ToolboxControls\About\AboutControl.Designer.cs">
       <DependentUpon>AboutControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ToolboxControls\About\EasterEggControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ToolboxControls\About\EasterEggControl.Designer.cs">
-      <DependentUpon>EasterEggControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ToolboxControls\AddinGuard\NotificationType.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\NotifyKind.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\RegistryChangeInfo.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ToolboxControls\ControlContainer.cs">
       <SubType>UserControl</SubType>
@@ -302,9 +258,6 @@
     </Compile>
     <Compile Include="ToolboxControls\ApplicationObserver\ApplicationObserverControl.Designer.cs">
       <DependentUpon>ApplicationObserverControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Tree\MultiSelectTreeView.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\Layout\AdvTableLayoutControl.cs">
       <SubType>Component</SubType>
@@ -396,19 +349,7 @@
     <Compile Include="ToolboxControls\ProjectWizard\Controls\SummaryControl.Designer.cs">
       <DependentUpon>SummaryControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ToolboxControls\ProjectWizard\LocalizationStringsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ToolboxControls\ProjectWizard\LocalizationStringsControl.Designer.cs">
-      <DependentUpon>LocalizationStringsControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="ToolboxControls\ProjectWizard\LocalizedCaptions.cs" />
-    <Compile Include="ToolboxControls\ProjectWizard\LocalizedCaptionsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ToolboxControls\ProjectWizard\LocalizedCaptionsControl.Designer.cs">
-      <DependentUpon>LocalizedCaptionsControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="ToolboxControls\ProjectWizard\LocalizedContent.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ClassLibraryConverterCS.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ClassLibraryConverterVB.cs" />
@@ -439,20 +380,11 @@
     <EmbeddedResource Include="Controls\Text\Scroller.resx">
       <DependentUpon>Scroller.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SelectLanguageForm.resx">
-      <DependentUpon>SelectLanguageForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ToolboxControls\About\EasterEggControl.resx">
-      <DependentUpon>EasterEggControl.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UriTargetForm.resx">
+      <DependentUpon>UriTargetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\FinishControl.resx">
       <DependentUpon>FinishControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ToolboxControls\ProjectWizard\LocalizationStringsControl.resx">
-      <DependentUpon>LocalizationStringsControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ToolboxControls\ProjectWizard\LocalizedCaptionsControl.resx">
-      <DependentUpon>LocalizedCaptionsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Form1.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Form1_Designer.txt" />
@@ -466,6 +398,23 @@
       <DependentUpon>ProjectWizardControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolboxControls\ProxyView\Entry.cs" />
+    <Compile Include="ToolboxControls\ProxyView\IRefresh.cs" />
+    <Compile Include="ToolboxControls\ProxyView\ProxyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProxyView\ProxyControl.Designer.cs">
+      <DependentUpon>ProxyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProxyView\RotEntryCollection.cs" />
+    <Compile Include="ToolboxControls\ProxyView\Settings.cs" />
+    <Compile Include="ToolboxControls\ProxyView\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProxyView\SettingsForm.designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProxyView\WindowEntryCollection.cs" />
     <Compile Include="ToolboxControls\RegistryEditor\ChangeBinaryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -490,53 +439,7 @@
     <Compile Include="ToolboxControls\RegistryEditor\ChangeStringControl.Designer.cs">
       <DependentUpon>ChangeStringControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Translation\ItemCollection.cs" />
-    <Compile Include="Translation\LanguageApplicationControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Translation\LanguageApplicationControl.Designer.cs">
-      <DependentUpon>LanguageApplicationControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Translation\LanguageComponentsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Translation\LanguageComponentsControl.designer.cs">
-      <DependentUpon>LanguageComponentsControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Translation\LanguageSummaryControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Translation\LanguageSummaryControl.Designer.cs">
-      <DependentUpon>LanguageSummaryControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Translation\LocalizableCompoment.cs" />
-    <Compile Include="Translation\LocalizableCompoments.cs" />
-    <Compile Include="Translation\LocalizableRTFString.cs" />
-    <Compile Include="Translation\LocalizableString.cs" />
-    <Compile Include="Translation\LocalizableWideString.cs" />
-    <Compile Include="Translation\NotifyPropertyChanged.cs" />
-    <Compile Include="Translation\ToolDefaultLanguage.cs" />
-    <Compile Include="Translation\ToolLanguage.cs" />
-    <Compile Include="Translation\ToolLanguageApplication.cs" />
-    <Compile Include="Translation\ToolLanguageControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Translation\ToolLanguageControl.Designer.cs">
-      <DependentUpon>ToolLanguageControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Translation\ToolLanguageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Translation\ToolLanguageForm.Designer.cs">
-      <DependentUpon>ToolLanguageForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Translation\ToolLanguages.cs" />
-    <Compile Include="Translation\TranslationControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Translation\TranslationControl.Designer.cs">
-      <DependentUpon>TranslationControl.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Translator.cs" />
     <Compile Include="Utils\Animation\Colors\AnimatorBase.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -556,7 +459,6 @@
     <Compile Include="Utils\Native\Win32.cs" />
     <Compile Include="Utils\Registry\UtilsRegistryKeyExporter.cs" />
     <Compile Include="Utils\Ressources\RessourceUtils.cs" />
-    <Compile Include="Translation\Translator.cs" />
     <Compile Include="ToolboxControls\Welcome\WelcomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -633,18 +535,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\Info1031.rtf" />
-    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\Info1033.rtf" />
-    <EmbeddedResource Include="ToolboxControls\AddinGuard\Info1031.rtf" />
-    <EmbeddedResource Include="ToolboxControls\AddinGuard\Info1033.rtf" />
-    <EmbeddedResource Include="ToolboxControls\OutlookSecurity\Info1031.rtf" />
     <EmbeddedResource Include="ToolboxControls\OutlookSecurity\Info1033.rtf" />
-    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Info1031.rtf" />
     <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Info1033.rtf" />
-    <EmbeddedResource Include="ToolboxControls\OfficeUI\Info1031.rtf" />
     <EmbeddedResource Include="ToolboxControls\OfficeUI\Info1033.rtf" />
-    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Info1031.rtf" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\Info1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\ProxyView\ProxyControl.resx">
+      <DependentUpon>ProxyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProxyView\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeBinaryControl.resx">
       <DependentUpon>ChangeBinaryControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -660,28 +560,6 @@
     <EmbeddedResource Include="ToolboxControls\Welcome\WelcomeControl.resx">
       <DependentUpon>WelcomeControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Translation\LanguageApplicationControl.resx">
-      <DependentUpon>LanguageApplicationControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Translation\LanguageComponentsControl.resx">
-      <DependentUpon>LanguageComponentsControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Translation\LanguageSummaryControl.resx">
-      <DependentUpon>LanguageSummaryControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Translation\ToolLanguageControl.resx">
-      <DependentUpon>ToolLanguageControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Translation\ToolLanguageForm.af.resx">
-      <DependentUpon>ToolLanguageForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Translation\ToolLanguageForm.resx">
-      <DependentUpon>ToolLanguageForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Translation\TranslationControl.resx">
-      <DependentUpon>TranslationControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="1049.lng" />
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -692,10 +570,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ToolboxControls\AddinGuard\AddinKeyValue.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\DisabledItems.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\DisabledKey.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\DisabledValue.cs" />
     <Compile Include="ToolboxControls\RegistryEditor\ChangeBinaryDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -731,17 +605,6 @@
     <Compile Include="Utils\Registry\UtilsRegistryEntry.cs" />
     <Compile Include="Utils\Registry\UtilsRegistryKey.cs" />
     <Compile Include="Utils\Registry\UtilsRegistryKeys.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\AddinGuardControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ToolboxControls\AddinGuard\AddinGuardControl.Designer.cs">
-      <DependentUpon>AddinGuardControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ToolboxControls\AddinGuard\WatchController.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\AddinsKey.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\AddinItems.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\AddinKey.cs" />
-    <Compile Include="ToolboxControls\AddinGuard\WatchNotify.cs" />
     <Compile Include="ToolboxControls\OfficeCompatibility\AssemblyAnalyzer.cs" />
     <Compile Include="ToolboxControls\OfficeCompatibility\OfficeCompatibilityControl.cs">
       <SubType>UserControl</SubType>
@@ -749,9 +612,9 @@
     <Compile Include="ToolboxControls\OfficeCompatibility\OfficeCompatibilityControl.Designer.cs">
       <DependentUpon>OfficeCompatibilityControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ToolboxControls\RegistryEditor\Info1031.rtf" />
     <EmbeddedResource Include="ToolboxControls\RegistryEditor\Info1033.rtf" />
-    <EmbeddedResource Include="ToolboxControls\About\Wait.zip" />
+    <EmbeddedResource Include="ToolboxControls\ProxyView\Info1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\Info1033.rtf" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ToolboxControls\ApplicationObserver\IconsAndConfig\NotRunning.ico" />
@@ -779,21 +642,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ToolboxControls\AddinGuard\AddinGuardControl.resx">
-      <DependentUpon>AddinGuardControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\OfficeCompatibilityControl.resx">
       <DependentUpon>OfficeCompatibilityControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ToolboxControls\AddinGuard\Messages.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ToolboxControls\AddinGuard\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ToolboxControls\ApplicationObserver\Icon.png" />
@@ -809,15 +663,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ToolboxControls\RegistryEditor\Strings.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ToolboxControls\AddinGuard\Strings.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NetOffice.OutlookSecurity\NetOffice.OutlookSecurity.csproj">
-      <Project>{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}</Project>
-      <Name>NetOffice.OutlookSecurity</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ToolboxControls\OutlookSecurity\Strings.txt" />
@@ -840,14 +685,12 @@
     <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Report.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Translation\Countries.txt" />
-    <EmbeddedResource Include="Translation\LCIDs.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProxyView\ProxyView.png" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\CaptionStrings.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\LocalizationStrings.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\SummaryControl.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\HostControl.txt" />
     <EmbeddedResource Include="Ressources\TranslationControlStrings.txt" />
-    <EmbeddedResource Include="ToolboxControls\About\Gunshot.wav" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\Addin.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\AssemblyInfo.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\Project.txt" />
@@ -1012,7 +855,6 @@
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleCS\AssemblyInfo.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleCS\Project.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleCS\Program.txt" />
-    <EmbeddedResource Include="ToolboxControls\AddinGuard\DefaultConfiguration.txt" />
     <EmbeddedResource Include="ToolboxControls\About\Strings.txt" />
     <EmbeddedResource Include="ToolboxControls\Welcome\Strings.txt" />
     <EmbeddedResource Include="ToolboxControls\Welcome\welcome.png" />

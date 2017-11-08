@@ -109,7 +109,7 @@ Public Class TestAddin
 
     Protected Overrides Function AllowApplyTweak(ByVal name As String, ByVal value As String) As Boolean
 
-        Factory.Console.SendPipeConsoleMessage("WordTestAddinVB", String.Format("AllowApplyTweak {0}:{1}", name, value))
+        'Factory.Console.SendPipeConsoleMessage("WordTestAddinVB", String.Format("AllowApplyTweak {0}:{1}", name, value))
         Return True
 
     End Function

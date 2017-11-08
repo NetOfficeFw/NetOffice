@@ -1,3 +1,0 @@
-﻿<Active>false</Active>
-<SetLoadBehavior>false</SetLoadBehavior>
-<TrayNotify>false</TrayNotify>

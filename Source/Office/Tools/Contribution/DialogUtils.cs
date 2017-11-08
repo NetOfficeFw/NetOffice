@@ -408,7 +408,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         #region Properties
 
         /// <summary>
-        /// Current used language in dialogs. Default is 1033(en-us) If its failed to find a dialog localization set for current language en-us want be used
+        /// Current used language in dialogs. Default is 1033(en-us) If its failed to find a dialog localization set for current language - en-us want be used
         /// </summary>
         public int CurrentLanguage { get; set; }
 

@@ -59,6 +59,7 @@
             this.animatedPanel1.Animation2Image = ((System.Drawing.Image)(resources.GetObject("animatedPanel1.Animation2Image")));
             this.animatedPanel1.Animation2ImageCount = 3;
             this.animatedPanel1.Animation2Opacity = 0.1F;
+            this.animatedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.animatedPanel1.Controls.Add(this.panelHeader);
             this.animatedPanel1.Controls.Add(this.panelButtons);
             this.animatedPanel1.Dock = System.Windows.Forms.DockStyle.Fill;

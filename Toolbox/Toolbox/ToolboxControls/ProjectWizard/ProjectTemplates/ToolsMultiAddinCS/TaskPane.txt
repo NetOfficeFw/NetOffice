@@ -24,7 +24,7 @@ namespace $safeprojectname$
 		
         #region ITaskpane
 
-        public void OnConnection(COMObject application, Office._CustomTaskPane definition, object[] customArguments)
+        public void OnConnection(ICOMObject application, Office._CustomTaskPane parentPane, object[] customArguments)
         {
 			if(customArguments.Length > 0)
 				ParentAddin = customArguments[0] as Addin;

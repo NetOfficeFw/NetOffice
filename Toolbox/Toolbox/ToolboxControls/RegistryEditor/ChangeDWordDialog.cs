@@ -26,7 +26,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             InitializeComponent();
             changeDWORDControl1.SetArguments(name, value);
-            Translation.Translator.AutoTranslateControls(changeDWORDControl1, "Registry Editor - ChangeDWORD", "ToolboxControls.RegistryEditor.ChangeDWordDialogMessageTable.txt", currentLanguageID);
+            //Translation.Translator.AutoTranslateControls(changeDWORDControl1, "Registry Editor - ChangeDWORD", "ToolboxControls.RegistryEditor.ChangeDWordDialogMessageTable.txt", currentLanguageID);
             this.Text = changeDWORDControl1.Text;
             changeDWORDControl1.SetFocus();
         }

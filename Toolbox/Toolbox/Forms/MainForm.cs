@@ -5,7 +5,6 @@ using System.IO;
 using System.Drawing;
 using System.Xml;
 using System.Windows.Forms;
-using NetOffice.DeveloperToolbox.Translation;
 using NetOffice.DeveloperToolbox.ToolboxControls;
 using NetOffice.DeveloperToolbox.Utils.Native;
 
@@ -29,16 +28,6 @@ namespace NetOffice.DeveloperToolbox.Forms
         private List<IToolboxControl> _toolBoxControlsFirstShowPassed;
 
         /// <summary>
-        /// current application lcid
-        /// </summary>
-        private int _currentLanguageID = 1033;
-
-        /// <summary>
-        /// application initialize flag 
-        /// </summary>
-        private bool _isCurrentlyLoading;
-
-        /// <summary>
         /// store last selection to call IToolboxControl.Deactivated() in SelectedIndexChanged
         /// </summary>
         private IToolboxControl _lastSelectedcontrol;
@@ -53,7 +42,7 @@ namespace NetOffice.DeveloperToolbox.Forms
         #region Construction
 
         /// <summary>
-        /// Designtime Ctor
+        /// Stub Ctor
         /// </summary>
         public MainForm(): this(new string[0])
         {
@@ -70,7 +59,6 @@ namespace NetOffice.DeveloperToolbox.Forms
             InitializeComponent();
             Singleton = this;
             CommandLineArgs = args;
-            LoadLanguages();
             LoadRuntimeControls();
             LoadConfiguration();
         }
@@ -93,14 +81,6 @@ namespace NetOffice.DeveloperToolbox.Forms
 
         #region IToolboxHost
 
-        public event EventHandler LanguageEditorVisibleChanged;
-
-        private void RaiseLanguageEditorVisibleChanged()
-        {
-            if (null != LanguageEditorVisibleChanged)
-                LanguageEditorVisibleChanged(this, EventArgs.Empty);
-        }
-
         public event EventHandler Minimized;
 
         private void RaiseMinimized()
@@ -116,58 +96,7 @@ namespace NetOffice.DeveloperToolbox.Forms
                 return System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
             }
         }
-
-        public ToolLanguages Languages { get; private set; }
-
-        public bool SupportsLanguageEditor { get { return true; } }
-
-        public bool LanguageEditorVisible
-        {
-            get 
-            {
-                return !splitContainer1.Panel2Collapsed;
-            }
-            set
-            {
-                bool changesMade = splitContainer1.Panel2Collapsed != !value;
-                splitContainer1.Panel2Collapsed = !value;
-                if (splitContainer1.Panel2Collapsed)
-                {
-                    this.MinimumSize = new Size(924, 668);
-
-                }
-                else
-                {
-                    translationEditor.ShowLanguages();
-                    this.MinimumSize = new Size(1197, 698);
-                    splitContainer1.SplitterDistance = 919;
-                }
-
-               Size = MinimumSize;
-              
-                if (changesMade)
-                    RaiseLanguageEditorVisibleChanged();
-            }
-        }
-
-        public int CurrentLanguageID 
-        {
-            get
-            {
-                return _currentLanguageID;
-            }
-            set
-            {
-                _currentLanguageID = value;
-                if (!_isCurrentlyLoading)
-                { 
-                    foreach (var item in _toolboxControls)
-                        item.SetLanguage(_currentLanguageID);
-                }
-                translationEditor.SetLanguage(value);
-            }
-        }
-
+    
         public IToolboxControl[] ToolboxControls
         {
             get 
@@ -206,17 +135,12 @@ namespace NetOffice.DeveloperToolbox.Forms
 
         #region Methods
 
-        private void LoadLanguages()
-        {
-            Languages = new ToolLanguages();
-            Languages.LoadFromFolder();
-        }
 
         private void LoadRuntimeControls()
         {
             try
             {
-                _isCurrentlyLoading = true;
+                //_isCurrentlyLoading = true;
                 tabControlMain.TabPages.Clear();
                 _toolboxControls = new List<IToolboxControl>();
                 _toolBoxControlsFirstShowPassed = new List<IToolboxControl>();
@@ -224,10 +148,10 @@ namespace NetOffice.DeveloperToolbox.Forms
                 LoadRuntimeControl(typeof(ToolboxControls.OfficeCompatibility.OfficeCompatibilityControl));
                 LoadRuntimeControl(typeof(ToolboxControls.ApplicationObserver.ApplicationObserverControl));
                 LoadRuntimeControl(typeof(ToolboxControls.RegistryEditor.RegistryEditorControl));
-                LoadRuntimeControl(typeof(ToolboxControls.AddinGuard.AddinGuardControl));
                 LoadRuntimeControl(typeof(ToolboxControls.OfficeUI.OfficeUIControl));
                 LoadRuntimeControl(typeof(ToolboxControls.OutlookSecurity.OutlookSecurityControl));
                 LoadRuntimeControl(typeof(ToolboxControls.ProjectWizard.ProjectWizardControl));
+                LoadRuntimeControl(typeof(ToolboxControls.ProxyView.ProxyControl));
                 LoadRuntimeControl(typeof(ToolboxControls.About.AboutControl));
             }
             catch
@@ -236,7 +160,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             finally
             {
-                _isCurrentlyLoading = false;
+                //_isCurrentlyLoading = false;
             }
         }
 
@@ -246,6 +170,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             ControlContainer hostContainer = new ControlContainer(ctrl);
             tabControlMain.TabPages.Add(hostContainer.ControlCaption);
             TabPage page = tabControlMain.TabPages[tabControlMain.TabPages.Count - 1];
+            page.BackColor = Color.FromArgb(0, 201, 227, 243);
             page.Margin = new System.Windows.Forms.Padding(0);
             page.Padding = new System.Windows.Forms.Padding(0);
             page.Controls.Add(hostContainer as Control);
@@ -329,7 +254,7 @@ namespace NetOffice.DeveloperToolbox.Forms
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
-
+           
             if (_wndProcErrorOccured)
                 return;
             
@@ -358,19 +283,6 @@ namespace NetOffice.DeveloperToolbox.Forms
         #endregion
 
         #region UI Trigger
-
-        private void TranslationEditor_LanguageChanged(object sender, int lcid)
-        {
-            try
-            {
-                if (lcid == CurrentLanguageID)
-                    CurrentLanguageID = lcid;
-            }               
-            catch (Exception exception)
-            {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);
-            }
-        }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
@@ -414,10 +326,6 @@ namespace NetOffice.DeveloperToolbox.Forms
                             SwitchTo(_toolboxControls[7].ControlName);
                             handled = true;
                             break;
-                        case Keys.D9:
-                            SwitchTo(_toolboxControls[8].ControlName);
-                            handled = true;
-                            break;
                     }
                 }
 
@@ -437,7 +345,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);
+                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 
@@ -454,7 +362,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);
+                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 
@@ -479,7 +387,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);        
+                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);        
             }
         }
 
@@ -492,7 +400,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);
+                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 
@@ -500,7 +408,6 @@ namespace NetOffice.DeveloperToolbox.Forms
         {
             try
             {
-                Languages.Dispose();
                 SaveConfiguration();
                 foreach (IToolboxControl item in ToolboxControls)
                 {
@@ -510,7 +417,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);
+                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 
@@ -520,27 +427,13 @@ namespace NetOffice.DeveloperToolbox.Forms
             {
                 foreach (IToolboxControl item in ToolboxControls)
                     item.LoadComplete();
-                foreach (var item in _toolboxControls)
-                    item.SetLanguage(_currentLanguageID);
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);
+                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
-
-        private void TranslationEditor_UserClose(object sender, EventArgs e)
-        {
-            try
-            {
-                LanguageEditorVisible = false;
-            }
-            catch (Exception exception)
-            {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);
-            }
-        }
-
+   
         private void MainForm_Shown(object sender, EventArgs e)
         {
             try
@@ -550,28 +443,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, CurrentLanguageID);
-            }
-        }
-
-        private void TranslationEditor_UserTranslationAbout(object sender, EventArgs e)
-        {
-            try
-            {
-                // nearly impossible but dont trust anyone
-                foreach (Control item in splitContainer1.Panel1.Controls)
-                    if (item is Controls.Custom.InviteControl)
-                        return;
-
-                Controls.Custom.InviteControl ctrl = new Controls.Custom.InviteControl();
-                Controls.Add(ctrl);
-                ctrl.Dock = DockStyle.Fill;
-                ctrl.BringToFront();
-
-            }
-            catch (Exception exception)
-            {
-                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
+                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 

@@ -114,7 +114,8 @@ namespace ExcelAddinCSharp
 
         protected override bool AllowApplyTweak(string name, string value)
         {
-            Factory.Console.SendPipeConsoleMessage("ExcelTestAddinCSharp", String.Format("AllowApplyTweak {0}:{1}", name, value));
+            //Factory.Console.TryWritePipe
+            //Factory.Console.SendPipeConsoleMessage("ExcelTestAddinCSharp", String.Format("AllowApplyTweak {0}:{1}", name, value));
             return true;
         }
 

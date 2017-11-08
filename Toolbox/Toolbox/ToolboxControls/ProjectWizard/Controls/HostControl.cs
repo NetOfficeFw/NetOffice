@@ -14,7 +14,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
     /// Supported office applications want selected here
     /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.HostControl.txt")]
-    public partial class HostControl : UserControl, IWizardControl, ILocalizationDesign
+    public partial class HostControl : UserControl, IWizardControl
     {
         #region Fields
 
@@ -87,11 +87,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Welche Office Anwendungen möchten Sie unterstützen?";
-                else
-                    return "Which Office applications you want support?";
+                return "Which Office applications you want support?";
             }
         }
 
@@ -99,10 +95,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Wählen Sie eine oder mehrere Office Anwendungen.";
-                else
-                    return "Select one or more Office application(s).";
+                return "Select one or more Office application(s).";
             }
         }
 
@@ -121,21 +114,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 return _settings;
             }
         }
-
-        public void Translate()
-        {
-            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-            if (null != language)
-            {
-                var component = language.Components["Project Wizard - Host"];
-                Translation.Translator.TranslateControls(this, component.ControlRessources);
-            }
-            else
-            {
-                Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.HostControl.txt", Forms.MainForm.Singleton.CurrentLanguageID);
-            }
-        }
-
 
         public new void KeyDown(KeyEventArgs e)
         {
@@ -209,51 +187,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
 
             return result;
-        }
-
-        #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public IContainer Components
-        {
-            get { return components; }
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
         }
 
         #endregion

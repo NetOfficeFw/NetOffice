@@ -19,13 +19,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
     /// Shows supported office application to create an analyze one of them
     /// </summary>
     [RessourceTable("ToolboxControls.OfficeUI.SelectOfficeAppControlStrings.txt")]
-    public partial class SelectOfficeAppControl : UserControl, ILocalizationDesign
+    public partial class SelectOfficeAppControl : UserControl
     {
         #region Fields
 
         private SelectOfficeEventHandler _eventHandler;
-        private int _currentLanguageID;
-
+    
         #endregion
 
         #region Ctor
@@ -41,14 +40,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
-        /// <param name="currentLanguageID">current language id</param>
         /// <param name="handler">close handler</param>
-        public SelectOfficeAppControl(int currentLanguageID, SelectOfficeEventHandler handler)
+        public SelectOfficeAppControl(SelectOfficeEventHandler handler)
         {
             InitializeComponent();
             _eventHandler = handler;
-            _currentLanguageID = currentLanguageID;
-            Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeUI.SelectOfficeAppControlStrings.txt", _currentLanguageID);
         }
 
         #endregion
@@ -70,48 +66,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
         /// Indicates yes want to proceed or abort
         /// </summary>
         public DialogResult Result { get; set; }
-
-        #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public IContainer Components
-        {
-            get { return components; }
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get { throw new NotImplementedException(); }
-        }
 
         #endregion
 
@@ -150,7 +104,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, _currentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 

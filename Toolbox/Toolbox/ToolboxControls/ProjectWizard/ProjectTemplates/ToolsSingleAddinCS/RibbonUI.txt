@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoadRibonUI">
+<!--PLEASE NOTE: The CustomUI_OnLoad method is a virtual member of the COMAddin base class -->
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="CustomUI_OnLoad">
   <ribbon>
     <tabs>
       <tab id="$safeprojectname$" label="$safeprojectname$">

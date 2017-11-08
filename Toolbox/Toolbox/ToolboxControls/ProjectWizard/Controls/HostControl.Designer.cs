@@ -59,9 +59,9 @@
             this.labelHint.ForeColor = System.Drawing.Color.DimGray;
             this.labelHint.Location = new System.Drawing.Point(211, 38);
             this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(432, 16);
+            this.labelHint.Size = new System.Drawing.Size(472, 16);
             this.labelHint.TabIndex = 119;
-            this.labelHint.Text = "Diese Einstellungen sind auch mit den Tasten 1-7 der Tastatur änderbar";
+            this.labelHint.Text = "Use also number keys(1-7) on your keyboard to select/deselect an application";
             // 
             // checkBoxVisio
             // 
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.checkBoxVisio);

@@ -113,5 +113,5 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
         }
 
         #endregion
-        }
+   }
 }

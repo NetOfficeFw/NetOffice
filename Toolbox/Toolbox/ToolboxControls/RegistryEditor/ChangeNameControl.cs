@@ -13,7 +13,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
     /// Name Value Editor
     /// </summary>
     [RessourceTable("ToolboxControls.RegistryEditor.ChangeNameDialogMessageTable.txt")]
-    public partial class ChangeNameControl : UserControl, ILocalizationDesign
+    public partial class ChangeNameControl : UserControl
     {
         #region Ctor
 
@@ -80,51 +80,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         public void SetFocus()
         {
             textBoxValue.Focus();
-        }
-
-        #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public IContainer Components
-        {
-            get { return components; }
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
         }
 
         #endregion

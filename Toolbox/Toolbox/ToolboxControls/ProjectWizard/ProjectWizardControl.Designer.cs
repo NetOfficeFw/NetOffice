@@ -54,10 +54,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelHint = new System.Windows.Forms.Label();
             this.panelHint = new System.Windows.Forms.Panel();
-            this.buttonCreateProject = new NetOffice.DeveloperToolbox.Controls.Buttons.RoundedButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
+            this.buttonCreateProject = new NetOffice.DeveloperToolbox.Controls.Buttons.RoundedButton();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
             this.controlBackColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.Colors.ControlBackColorAnimator(this.components);
             this.panelLeftHeader.SuspendLayout();
@@ -81,9 +81,9 @@
             // 
             // panelControls
             // 
-            this.panelControls.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControls.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControls.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panelControls.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelControls.Location = new System.Drawing.Point(134, 67);
@@ -93,8 +93,8 @@
             // 
             // panelLeftHeader
             // 
-            this.panelLeftHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelLeftHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelLeftHeader.BackColor = System.Drawing.Color.White;
             this.panelLeftHeader.Controls.Add(this.pictureBoxStep7);
             this.panelLeftHeader.Controls.Add(this.pictureBoxStep6);
@@ -202,8 +202,8 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.labelCaption);
@@ -325,9 +325,9 @@
             // 
             // panelWizardHost
             // 
-            this.panelWizardHost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelWizardHost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelWizardHost.Controls.Add(this.panel2);
             this.panelWizardHost.Controls.Add(this.panelLeftHeader);
             this.panelWizardHost.Controls.Add(this.cancelButton);
@@ -344,9 +344,9 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.panel2.Location = new System.Drawing.Point(133, 61);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(752, 6);
@@ -373,23 +373,6 @@
             this.panelHint.Name = "panelHint";
             this.panelHint.Size = new System.Drawing.Size(747, 373);
             this.panelHint.TabIndex = 93;
-            // 
-            // buttonCreateProject
-            // 
-            this.buttonCreateProject.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonCreateProject.FlatAppearance.BorderSize = 2;
-            this.buttonCreateProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateProject.ForeColor = System.Drawing.Color.DarkBlue;
-            this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
-            this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCreateProject.Location = new System.Drawing.Point(230, 341);
-            this.buttonCreateProject.Name = "buttonCreateProject";
-            this.buttonCreateProject.Size = new System.Drawing.Size(284, 29);
-            this.buttonCreateProject.TabIndex = 95;
-            this.buttonCreateProject.Text = "Create New Project";
-            this.buttonCreateProject.UseVisualStyleBackColor = true;
-            this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
             // 
             // pictureBoxLogo
             // 
@@ -418,6 +401,23 @@
             this.imageListIcons.Images.SetKeyName(0, "question.png");
             this.imageListIcons.Images.SetKeyName(1, "information.png");
             // 
+            // buttonCreateProject
+            // 
+            this.buttonCreateProject.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonCreateProject.FlatAppearance.BorderSize = 2;
+            this.buttonCreateProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateProject.ForeColor = System.Drawing.Color.DarkBlue;
+            this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
+            this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCreateProject.Location = new System.Drawing.Point(230, 341);
+            this.buttonCreateProject.Name = "buttonCreateProject";
+            this.buttonCreateProject.Size = new System.Drawing.Size(284, 29);
+            this.buttonCreateProject.TabIndex = 95;
+            this.buttonCreateProject.Text = "Create New Project";
+            this.buttonCreateProject.UseVisualStyleBackColor = true;
+            this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
+            // 
             // controlForeColorAnimator1
             // 
             this.controlForeColorAnimator1.Control = this.buttonCreateProject;
@@ -437,7 +437,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.panelHint);
             this.Controls.Add(this.panelWizardHost);
             this.Name = "ProjectWizardControl";

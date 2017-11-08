@@ -8,7 +8,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
     /// Control to display errors
     /// </summary>
     [RessourceTable("Ressources.ErrorFormStrings.txt")]
-    public partial class ErrorControl : UserControl, ILocalizationDesign
+    public partial class ErrorControl : UserControl
     {
         #region Fields
 
@@ -53,7 +53,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
         /// <param name="message">user friendly message</param>
         /// <param name="category"error category></param>
         /// <param name="currentLanguageID">user preferred lcid</param>
-        internal void ShowError(Exception exception, string message, ErrorCategory category, int currentLanguageID)
+        internal void ShowError(Exception exception, string message, ErrorCategory category)
         {
             _category = category;
             labelErrorMessage.Text = message;
@@ -61,8 +61,6 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
             if (ErrorCategory.Critical == category)
                 labelExitMessage.Visible = true;
             DisplayException(exception);
-            currentLanguageID = ValidateLanguageID(currentLanguageID);
-            Translation.Translator.TranslateControls(this, "Ressources.ErrorFormStrings.txt", currentLanguageID);
         }
 
         /// <summary>
@@ -71,32 +69,14 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
         /// <param name="exception">exception to display</param>
         /// <param name="category"error category></param>
         /// <param name="currentLanguageID">user preferred lcid</param>
-        internal void ShowError(Exception exception, ErrorCategory category, int currentLanguageID)
+        internal void ShowError(Exception exception, ErrorCategory category)
         {
             _category = category;
             if (ErrorCategory.Critical == category)
                 labelExitMessage.Visible = true;
             DisplayException(exception);
-            currentLanguageID = ValidateLanguageID(currentLanguageID);
-            Translation.Translator.TranslateControls(this, "Ressources.ErrorFormStrings.txt", currentLanguageID);
         }
-
-        private int ValidateLanguageID(int currentLanguageID)
-        {
-            switch (currentLanguageID)
-            {
-                case 1:
-                    currentLanguageID = 1031;
-                    break;
-                default:
-                    currentLanguageID = 1033;
-                    break;
-
-            }
-
-            return currentLanguageID;
-        }
-
+        
         private void DisplayException(Exception exception)
         {
             int i = 1;
@@ -116,56 +96,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
         }
 
         #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-            labelErrorMessage.Visible = true;
-            labelExitMessage.Visible = true;
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public System.ComponentModel.IContainer Components
-        {
-            get
-            {
-                return components;
-            }
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-            
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
-        }
-
-        #endregion
-
+ 
         #region Trigger
 
         private void ErrorControl_Resize(object sender, EventArgs e)

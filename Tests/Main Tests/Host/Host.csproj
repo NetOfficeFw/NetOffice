@@ -42,6 +42,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -141,11 +142,11 @@
       <Name>PowerPointTestsVB</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProjectTestsCSharp\ProjectTestsCSharp.csproj">
-      <Project>{D83EC3BE-1306-408B-8542-762705C976F4}</Project>
+      <Project>{d83ec3be-1306-408b-8542-762705c976f4}</Project>
       <Name>ProjectTestsCSharp</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProjectTestsVB\ProjectTestsVB.vbproj">
-      <Project>{32B19682-EFF8-4F62-B3D2-FA85CFD17C02}</Project>
+      <Project>{32b19682-eff8-4f62-b3d2-fa85cfd17c02}</Project>
       <Name>ProjectTestsVB</Name>
     </ProjectReference>
     <ProjectReference Include="..\Tests.Core\Tests.Core.csproj">

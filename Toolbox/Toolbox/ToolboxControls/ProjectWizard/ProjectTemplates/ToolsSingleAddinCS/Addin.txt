@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
-using System.Windows.Forms;
 $usingItems$
 namespace $safeprojectname$
 {
-	[COMAddin("$safeprojectname$", "$description$", $loadbehavior$), ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$")]
+	[COMAddin("$safeprojectname$", "$description$", $loadbehavior$), ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$"), Codebase]
 $attributes$
 	public class Addin : $appName$.Tools.COMAddin
 	{
@@ -14,8 +14,6 @@ $attributes$
 			this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
 			this.OnDisconnection += new OnDisconnectionEventHandler(Addin_OnDisconnection);
 		}
-
-$ribbonProperty$
 
 		private void Addin_OnStartupComplete(ref Array custom)
 		{
@@ -40,7 +38,7 @@ $classicUICreateRemoveMethod$
 		[RegisterErrorHandler]
 		public static void RegisterErrorHandler(RegisterErrorMethodKind methodKind, System.Exception exception)
 		{
-			MessageBox.Show("An error occurend in " + methodKind.ToString(), "$safeprojectname$");
+			Office.Tools.Contribution.DialogUtils.ShowRegisterError("$safeprojectname$", methodKind, exception);
 		}
     }
 }

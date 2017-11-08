@@ -258,6 +258,23 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             }
         }
 
+        public static string ConvertLoadBehavoir(int i)
+        {
+            switch (i)
+            {
+                case 3:
+                    return "LoadBehavior.LoadAtStartup";
+                case 0:
+                    return "LoadBehavior.DoNotLoad";
+                case 1:
+                    return "LoadBehavior.LoadOnDemand";
+                case 16:
+                    return "LoadBehavior.LoadOnce";
+                default:
+                    return i.ToString();
+            }
+        }
+
         /// <summary>
         /// Create new solution
         /// </summary>
@@ -352,7 +369,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             if (!Directory.Exists(TargetSolutionPath))
                 FileSystem.DirectoryMove(TempSolutionPath, TargetSolutionPath);
             else
-                throw new InvalidOperationException(Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Der angegebene Ordner existiert bereits." : "Directory already exists.");
+                throw new InvalidOperationException("Directory already exists.");
         }
 
         protected internal string GetNetOfficeProjectReferenceItems()
@@ -461,6 +478,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
                 case "Word":
                 case "MSProject":
                 case "PowerPoint":
+                case "Publisher":
                     return true;
                 default:
                     return false;
@@ -475,52 +493,64 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             List<string> apps = CreateValidatedReferenceList(officeApps);
 
             string assembliesFolderPath = Program.DependencySubFolder;
+            if(!Directory.Exists(assembliesFolderPath))
+                assembliesFolderPath = Program.DependencyReleaseSubFolder;
             string assembliesTempTarget = TempNetOfficePath;
+
+            File.Copy(Path.Combine(assembliesFolderPath, "NetOffice.dll"), Path.Combine(assembliesTempTarget, "NetOffice.dll"));
+            foreach (var item in apps)
+                File.Copy(Path.Combine(assembliesFolderPath, item + "Api.dll"), Path.Combine(assembliesTempTarget, item + "Api.dll"));
+
             File.Copy(Path.Combine(assembliesFolderPath, "NetOffice.xml"), Path.Combine(assembliesTempTarget, "NetOffice.xml"));
             foreach (var item in apps)
                 File.Copy(Path.Combine(assembliesFolderPath, item + "Api.xml"), Path.Combine(assembliesTempTarget, item + "Api.xml"));
 
-            if (runtime == NetVersion.Net4 || runtime == NetVersion.Net4Client)
-            {
-                File.Copy(Path.Combine(assembliesFolderPath, "NetOffice.dll"), Path.Combine(assembliesTempTarget, "NetOffice.dll"));
-                foreach (var item in apps)
-                    File.Copy(Path.Combine(assembliesFolderPath, item + "Api.dll"), Path.Combine(assembliesTempTarget, item + "Api.dll"));
-            }
-            else
-            {
-                string targetPackageName = null;
-                switch (runtime)
-                {
-                    case NetVersion.Net2:
-                        targetPackageName = Path.Combine(assembliesFolderPath, "2.0.zip");
-                        break;
-                    case NetVersion.Net3:
-                    case NetVersion.Net35:
-                        targetPackageName = Path.Combine(assembliesFolderPath, "3.0.zip");
-                        break;
-                    case NetVersion.Net45:
-                        targetPackageName = Path.Combine(assembliesFolderPath, "4.5.zip");
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException("runtime");
-                }
+            File.Copy(Path.Combine(assembliesFolderPath, "NetOffice.pdb"), Path.Combine(assembliesTempTarget, "NetOffice.pdb"));
+            foreach (var item in apps)
+                File.Copy(Path.Combine(assembliesFolderPath, item + "Api.pdb"), Path.Combine(assembliesTempTarget, item + "Api.pdb"));
 
-                using (ZipFile zip = new ZipFile(targetPackageName))
-                {
-                    Stream streamFirst = zip.GetInputStream(zip.GetEntry("NetOffice.dll"));
-                    FileStream fileStreamFirst = File.Create(Path.Combine(assembliesTempTarget, "NetOffice.dll"));
-                    streamFirst.CopyTo(fileStreamFirst);
-                    fileStreamFirst.Close();
 
-                    foreach (var item in apps)
-                    {
-                        Stream stream = zip.GetInputStream(zip.GetEntry(item + "Api.dll"));
-                        FileStream fileStream = File.Create(Path.Combine(assembliesTempTarget, item + "Api.dll"));
-                        stream.CopyTo(fileStream);
-                        fileStream.Close();
-                    }
-                }
-            }
+            //if (runtime == NetVersion.Net4 || runtime == NetVersion.Net4Client)
+            //{
+            //    File.Copy(Path.Combine(assembliesFolderPath, "NetOffice.dll"), Path.Combine(assembliesTempTarget, "NetOffice.dll"));
+            //    foreach (var item in apps)
+            //        File.Copy(Path.Combine(assembliesFolderPath, item + "Api.dll"), Path.Combine(assembliesTempTarget, item + "Api.dll"));
+            //}
+            //else
+            //{
+            //    string targetPackageName = null;
+            //    switch (runtime)
+            //    {
+            //        case NetVersion.Net2:
+            //            targetPackageName = Path.Combine(assembliesFolderPath, "2.0.zip");
+            //            break;
+            //        case NetVersion.Net3:
+            //        case NetVersion.Net35:
+            //            targetPackageName = Path.Combine(assembliesFolderPath, "3.0.zip");
+            //            break;
+            //        case NetVersion.Net45:
+            //            targetPackageName = Path.Combine(assembliesFolderPath, "4.5.zip");
+            //            break;
+            //        default:
+            //            throw new ArgumentOutOfRangeException("runtime");
+            //    }
+
+            //    using (ZipFile zip = new ZipFile(targetPackageName))
+            //    {
+            //        Stream streamFirst = zip.GetInputStream(zip.GetEntry("NetOffice.dll"));
+            //        FileStream fileStreamFirst = File.Create(Path.Combine(assembliesTempTarget, "NetOffice.dll"));
+            //        streamFirst.CopyTo(fileStreamFirst);
+            //        fileStreamFirst.Close();
+
+            //        foreach (var item in apps)
+            //        {
+            //            Stream stream = zip.GetInputStream(zip.GetEntry(item + "Api.dll"));
+            //            FileStream fileStream = File.Create(Path.Combine(assembliesTempTarget, item + "Api.dll"));
+            //            stream.CopyTo(fileStream);
+            //            fileStream.Close();
+            //        }
+            //    }
+            //}
         }
 
         private static List<string> CreateValidatedReferenceList(string[] officeApps)
@@ -612,7 +642,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             switch (options.NetRuntime)
             {
                 case NetVersion.Net45:
-                    if (options.IDE != IDE.VS2013)
+                    if (options.IDE != IDE.VS20131517)
                         throw new ArgumentException("Invalid Framework=>IDE settings");
                     break;
             }

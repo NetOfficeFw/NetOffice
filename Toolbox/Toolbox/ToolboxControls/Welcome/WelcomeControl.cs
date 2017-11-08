@@ -36,6 +36,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
         /// </summary>
         private NotifyIcon TrayIcon { get; set; }
 
+        /// <summary>
+        /// Last Right Click Link Label
+        /// </summary>
+        private LinkLabel LastClickedLinkLabel { get; set; }
+
         #endregion
 
         #region IToolboxControl
@@ -92,42 +97,34 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
         public void InitializeControl(IToolboxHost host)
         {            
             Host = host;
-            comboBoxLanguage.DataSource = host.Languages;
-            Host.Minimized += new EventHandler(Host_Minimized);
-            Host.LanguageEditorVisibleChanged += new EventHandler(Host_LanguageEditorVisibleChanged);            
+            Host.Minimized += new EventHandler(Host_Minimized);        
         }
 
         public void Activate(bool firstTime)
         {
             if (firstTime)
-            {
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(pictureBoxLogo, Utils.Animation.Effects.EffectsKind.SlideTopToBottom, true, 400);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelVersionHint, Utils.Animation.Effects.EffectsKind.Collapse, true, 250);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(pictureBoxHeader, Utils.Animation.Effects.EffectsKind.Collapse, false, 250);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelBeginTitle, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 250);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelIWant, Utils.Animation.Effects.EffectsKind.SlideRightToLeft, false, 250);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(pictureBoxIconLeft, Utils.Animation.Effects.EffectsKind.FadeIn, false, 250);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(pictureBoxIconRight , Utils.Animation.Effects.EffectsKind.FadeIn, false, 250);
-                pictureBoxIconLeft.Refresh();
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelBeginTop, Utils.Animation.Effects.EffectsKind.Collapse, false, 250);
-                labelBeginTop.Refresh();
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelBeginBottom, Utils.Animation.Effects.EffectsKind.Collapse, false, 250);
-                labelBeginBottom.Refresh();
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelBug, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 200);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(linkLabelNetOfficeIssues, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 200);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelUpdate, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 200);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(linkLabelNetOfficeUpdates, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 200);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelQuestion, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 200);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(linkLabelNetOfficeQuestions, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 200);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(labelMailMe, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 200);
-                Utils.Animation.Effects.EffectsAnimator.DoEffect(linkLabelMailMe, Utils.Animation.Effects.EffectsKind.SlideLeftToRight, false, 200);
+            {        
                 controlForeColorAnimator1.Start(false);
+                if (Program.IsAdmin)
+                {
+                    ApplicationStatePictureBox.Visible = false;
+                    ApplicationStateLabel.Visible = false;
+                    ApplicationStateLabel1.Visible = false;
+                    ApplicationStateLabel2.Visible = false;
+                    ApplicationStateLabel3.Visible = false;
+                    linkLabelRunAsAdmin.Visible = false;
+                }
             }
         }
 
         public void Deactivated()
         {
 
+        }
+
+        public Stream GetHelpText()
+        {
+            throw new NotSupportedException();
         }
 
         public void LoadComplete()
@@ -149,34 +146,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
                 checkBoxMinimizeToTray.Checked = Convert.ToBoolean(trayNode.InnerText);
             if(null != startupNode)
                 checkBoxStartAppWithWindows.Checked = Convert.ToBoolean(startupNode.InnerText);
-
-            if (null != languageNode)
-            { 
-                int lcid = 1033;
-                if (!int.TryParse((languageNode.InnerText), out lcid))
-                    lcid = 1033;
-                SelectLanguage(lcid);
-            }
-            else
-                SelectLanguage(1033);
-        }
-
-        private void SelectLanguage(int lcid)
-        {
-            Translation.ToolLanguages languages = comboBoxLanguage.DataSource as Translation.ToolLanguages;
-            if (null != languages)
-            {
-                Translation.ToolLanguage language = languages.Where(l => l.LCID == lcid).FirstOrDefault();
-                if (null != language)
-                {
-                    comboBoxLanguage.SelectedItem = language;
-                }
-                else
-                {
-                    language = languages.First(l => l.LCID == 1033);
-                    comboBoxLanguage.SelectedItem = language;
-                }
-            }
         }
 
         public void SaveConfiguration(System.Xml.XmlNode configNode)
@@ -213,8 +182,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             minimizeNode.InnerText = checkBoxStartAppMinimized.Checked.ToString();
             trayNode.InnerText = checkBoxMinimizeToTray.Checked.ToString();
             startupNode.InnerText = checkBoxStartAppWithWindows.Checked.ToString();
-            languageNode.InnerText = (comboBoxLanguage.SelectedItem as Translation.ToolLanguage).LCID.ToString();
-
+  
             SetupAutoRunEntry();
         }
 
@@ -237,66 +205,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
         {
             Host.Minimized -= new EventHandler(Host_Minimized);
             SetupTrayIcon(false);
-        }
-
-        public IContainer Components
-        {
-            get { return components; }
-        }
-
-        #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-            pictureBoxLogo.Visible = true;
-            labelBeginTitle.Visible = true;
-            labelIWant.Visible = true;
-            labelBug.Visible = true;
-            linkLabelNetOfficeIssues.Visible = true;
-            labelUpdate.Visible = true;
-            linkLabelNetOfficeUpdates.Visible = true;
-            labelQuestion.Visible = true;
-            linkLabelNetOfficeQuestions.Visible = true;
-            labelMailMe.Visible = true;
-            linkLabelMailMe.Visible = true;
-            pictureBoxHeader.Visible = true;
-            pictureBoxIconLeft.Visible = true;
-            pictureBoxIconRight.Visible = true;
-            labelBeginTop.Visible = true;
-            labelBeginBottom.Visible = true;
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
         }
 
         #endregion
@@ -364,33 +272,44 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
         }
 
         #endregion
-        
+
         #region Trigger
 
-        private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        private void linkLabelRunAsAdmin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs args)
         {
             try
             {
-                Translation.ToolLanguage selectedLanguage = comboBoxLanguage.SelectedItem as Translation.ToolLanguage;
-                if (null != selectedLanguage && selectedLanguage.LCID != 0)
-                    Host.CurrentLanguageID = selectedLanguage.LCID;
+                Program.PerformSelfElevation(true);
+                Application.Exit();
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
-        private void LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel_Clicked(object sender, EventArgs args)
         {
             try
             {
-                LinkLabel label = sender as LinkLabel;
-                System.Diagnostics.Process.Start(label.Text);
+                MouseEventArgs mouseArgs = args as MouseEventArgs;
+                if (null == mouseArgs)
+                    return;
+
+                if (mouseArgs.Button == MouseButtons.Left)
+                {
+                    LinkLabel label = sender as LinkLabel;
+                    System.Diagnostics.Process.Start(label.Tag as string);
+                }
+                else if (mouseArgs.Button == MouseButtons.Right)
+                {
+                    LastClickedLinkLabel = sender as LinkLabel;
+                    LinkContextMenu.Show(sender as Control, 0, 0);
+                }
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
@@ -402,20 +321,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
-            }
-        }
-
-        private void ComboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                int languageID = comboBoxLanguage.SelectedIndex == 0 ? 1033 : 1031;
-                Host.CurrentLanguageID = languageID;
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 
@@ -428,7 +334,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
@@ -441,13 +347,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
-        }
-
-        private void Host_LanguageEditorVisibleChanged(object sender, EventArgs e)
-        {
-            buttonLanguageEditor.Enabled = !Host.LanguageEditorVisible;
         }
 
         private void pictureBoxLogo_Click(object sender, EventArgs e)
@@ -458,13 +359,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 
-        private void buttonLanguageEditor_Click(object sender, EventArgs e)
+        private void LinkContextMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            Host.LanguageEditorVisible = !Host.LanguageEditorVisible;
+            if (null != LastClickedLinkLabel)
+            {
+                Clipboard.SetText(LastClickedLinkLabel.Tag as string);
+            }
         }
 
         #endregion

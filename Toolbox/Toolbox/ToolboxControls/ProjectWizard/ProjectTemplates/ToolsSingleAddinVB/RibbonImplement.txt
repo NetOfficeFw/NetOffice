@@ -1,13 +1,7 @@
 ﻿	Public Sub AboutButton_Click(ByVal control As Office.IRibbonControl)
 
-		Utils.Dialog.ShowAbout("$safeprojectname$", "http://netoffice.codeplex.com", "<No Licence set>")
+		Utils.Dialog.ShowAbout("$safeprojectname$", "<your url here>", "<No Licence set>")
 
 	End Sub
 
 $tooglecode$
-
-	Public Sub OnLoadRibonUI(ByVal ribbUI As Office.IRibbonUI)
-
-		RibbonUI = ribbUI
-
-	End Sub

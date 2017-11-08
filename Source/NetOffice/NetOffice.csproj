@@ -139,9 +139,11 @@
     <Compile Include="Exceptions\DuckException.cs" />
     <Compile Include="Exceptions\ExceptionMessageBuilder.cs" />
     <Compile Include="Exceptions\FactoryException.cs" />
+    <Compile Include="Exceptions\IDispatchNotImplementedException.cs" />
     <Compile Include="Exceptions\InvokerCOMException.cs" />
     <Compile Include="Exceptions\MethodCOMException.cs" />
     <Compile Include="Exceptions\NetOfficeCOMException.cs" />
+    <Compile Include="Exceptions\NetOfficeIOException.cs" />
     <Compile Include="Exceptions\PropertyGetCOMException.cs" />
     <Compile Include="Exceptions\PropertySetCOMException.cs" />
     <Compile Include="Exceptions\RegisterException.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Interfaces\ICloneable.cs" />
     <Compile Include="Interfaces\ICOMObjectAvaility.cs" />
     <Compile Include="Interfaces\ICOMProxyShareProvider.cs" />
+    <Compile Include="IO\IOPath.cs" />
     <Compile Include="Loader\FactoryList.cs" />
     <Compile Include="Loader\KnownKeyTokens.cs" />
     <Compile Include="Loader\PathBuilder.cs" />
@@ -186,6 +189,8 @@
     <Compile Include="Tools\IDisposableState.cs" />
     <Compile Include="Tools\LockbackAttribute.cs" />
     <Compile Include="Tools\CodebaseAttribute.cs" />
+    <Compile Include="Tools\Native\Bridge\CdeclHandle.cs" />
+    <Compile Include="Tools\Native\Bridge\Interop.cs" />
     <Compile Include="Tools\OfficeRegisterKeyState.cs" />
     <Compile Include="Tools\OfficeUnRegisterKeyState.cs" />
     <Compile Include="Tools\OnErrorHandler.cs" />

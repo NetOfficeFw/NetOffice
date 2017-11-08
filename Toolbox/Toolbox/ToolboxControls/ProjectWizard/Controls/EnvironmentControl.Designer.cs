@@ -38,15 +38,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelEnvironment = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButtonVB = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
-            this.radioButtonCSharp = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelNet45Hint = new System.Windows.Forms.Label();
-            this.radioButtonVS2013 = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
-            this.radioButtonVS2012 = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
-            this.radioButtonVS2010 = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.labelSharpDevelop = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.radioButtonVS2015 = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonVS2010 = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonVB = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonCSharp = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +67,7 @@
             // labelProgrammingLanguage
             // 
             this.labelProgrammingLanguage.AutoSize = true;
-            this.labelProgrammingLanguage.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelProgrammingLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelProgrammingLanguage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProgrammingLanguage.ForeColor = System.Drawing.Color.Black;
             this.labelProgrammingLanguage.Location = new System.Drawing.Point(42, 11);
@@ -80,10 +79,10 @@
             // labelVersion
             // 
             this.labelVersion.AutoSize = true;
-            this.labelVersion.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelVersion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersion.ForeColor = System.Drawing.Color.Blue;
-            this.labelVersion.Location = new System.Drawing.Point(63, 213);
+            this.labelVersion.Location = new System.Drawing.Point(65, 213);
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(52, 17);
             this.labelVersion.TabIndex = 102;
@@ -96,12 +95,13 @@
             this.comboBoxNetRuntime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNetRuntime.FormattingEnabled = true;
             this.comboBoxNetRuntime.Items.AddRange(new object[] {
-            "2.0",
-            "3.0",
-            "3.5",
             "4.0 (Client Profile)",
             "4.0",
-            "4.5"});
+            "4.5",
+            "4.5.1",
+            "4.5.2",
+            "4.6",
+            "4.6.1"});
             this.comboBoxNetRuntime.Location = new System.Drawing.Point(135, 209);
             this.comboBoxNetRuntime.Name = "comboBoxNetRuntime";
             this.comboBoxNetRuntime.Size = new System.Drawing.Size(199, 25);
@@ -121,7 +121,7 @@
             // labelNetRuntime
             // 
             this.labelNetRuntime.AutoSize = true;
-            this.labelNetRuntime.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelNetRuntime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelNetRuntime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNetRuntime.ForeColor = System.Drawing.Color.Black;
             this.labelNetRuntime.Location = new System.Drawing.Point(65, 181);
@@ -143,7 +143,7 @@
             // labelEnvironment
             // 
             this.labelEnvironment.AutoSize = true;
-            this.labelEnvironment.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelEnvironment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelEnvironment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEnvironment.ForeColor = System.Drawing.Color.Black;
             this.labelEnvironment.Location = new System.Drawing.Point(45, 7);
@@ -160,44 +160,13 @@
             this.panel1.Controls.Add(this.radioButtonCSharp);
             this.panel1.Location = new System.Drawing.Point(21, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 71);
+            this.panel1.Size = new System.Drawing.Size(281, 71);
             this.panel1.TabIndex = 108;
-            // 
-            // radioButtonVB
-            // 
-            this.radioButtonVB.AutoSize = true;
-            this.radioButtonVB.Checked = true;
-            this.radioButtonVB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonVB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonVB.ForeColor = System.Drawing.Color.Blue;
-            this.radioButtonVB.Location = new System.Drawing.Point(48, 41);
-            this.radioButtonVB.Name = "radioButtonVB";
-            this.radioButtonVB.Size = new System.Drawing.Size(67, 21);
-            this.radioButtonVB.TabIndex = 97;
-            this.radioButtonVB.TabStop = true;
-            this.radioButtonVB.Text = "VB.NET";
-            this.radioButtonVB.UseVisualStyleBackColor = true;
-            this.radioButtonVB.CheckedChanged += new System.EventHandler(this.radioButtonLanguage_CheckedChanged);
-            // 
-            // radioButtonCSharp
-            // 
-            this.radioButtonCSharp.AutoSize = true;
-            this.radioButtonCSharp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonCSharp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCSharp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonCSharp.Location = new System.Drawing.Point(134, 41);
-            this.radioButtonCSharp.Name = "radioButtonCSharp";
-            this.radioButtonCSharp.Size = new System.Drawing.Size(41, 21);
-            this.radioButtonCSharp.TabIndex = 95;
-            this.radioButtonCSharp.Text = "C#";
-            this.radioButtonCSharp.UseVisualStyleBackColor = true;
-            this.radioButtonCSharp.CheckedChanged += new System.EventHandler(this.radioButtonLanguage_CheckedChanged);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButtonVS2012);
             this.panel2.Controls.Add(this.labelNet45Hint);
-            this.panel2.Controls.Add(this.radioButtonVS2013);
+            this.panel2.Controls.Add(this.radioButtonVS2015);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.labelEnvironment);
             this.panel2.Controls.Add(this.radioButtonVS2010);
@@ -212,62 +181,19 @@
             this.labelNet45Hint.BackColor = System.Drawing.Color.Orange;
             this.labelNet45Hint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNet45Hint.ForeColor = System.Drawing.Color.Black;
-            this.labelNet45Hint.Location = new System.Drawing.Point(455, 7);
+            this.labelNet45Hint.Location = new System.Drawing.Point(323, 7);
             this.labelNet45Hint.Name = "labelNet45Hint";
-            this.labelNet45Hint.Size = new System.Drawing.Size(205, 16);
+            this.labelNet45Hint.Size = new System.Drawing.Size(260, 16);
             this.labelNet45Hint.TabIndex = 109;
-            this.labelNet45Hint.Text = ".NET 4.5 need Visual Studio 2013";
+            this.labelNet45Hint.Text = ".NET 4.5 need Visual Studio 2013 or higher";
             this.labelNet45Hint.Visible = false;
-            // 
-            // radioButtonVS2013
-            // 
-            this.radioButtonVS2013.AutoSize = true;
-            this.radioButtonVS2013.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonVS2013.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonVS2013.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonVS2013.Location = new System.Drawing.Point(460, 33);
-            this.radioButtonVS2013.Name = "radioButtonVS2013";
-            this.radioButtonVS2013.Size = new System.Drawing.Size(189, 21);
-            this.radioButtonVS2013.TabIndex = 108;
-            this.radioButtonVS2013.Text = "Visual Studio 2013 (Express)";
-            this.radioButtonVS2013.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonVS2012
-            // 
-            this.radioButtonVS2012.AutoSize = true;
-            this.radioButtonVS2012.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonVS2012.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonVS2012.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonVS2012.Location = new System.Drawing.Point(249, 33);
-            this.radioButtonVS2012.Name = "radioButtonVS2012";
-            this.radioButtonVS2012.Size = new System.Drawing.Size(189, 21);
-            this.radioButtonVS2012.TabIndex = 106;
-            this.radioButtonVS2012.Text = "Visual Studio 2012 (Express)";
-            this.radioButtonVS2012.UseVisualStyleBackColor = true;
-            this.radioButtonVS2012.CheckedChanged += new System.EventHandler(this.radioButtonIDE_CheckedChanged);
-            // 
-            // radioButtonVS2010
-            // 
-            this.radioButtonVS2010.AutoSize = true;
-            this.radioButtonVS2010.Checked = true;
-            this.radioButtonVS2010.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonVS2010.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonVS2010.ForeColor = System.Drawing.Color.Blue;
-            this.radioButtonVS2010.Location = new System.Drawing.Point(48, 33);
-            this.radioButtonVS2010.Name = "radioButtonVS2010";
-            this.radioButtonVS2010.Size = new System.Drawing.Size(189, 21);
-            this.radioButtonVS2010.TabIndex = 104;
-            this.radioButtonVS2010.TabStop = true;
-            this.radioButtonVS2010.Text = "Visual Studio 2010 (Express)";
-            this.radioButtonVS2010.UseVisualStyleBackColor = true;
-            this.radioButtonVS2010.CheckedChanged += new System.EventHandler(this.radioButtonIDE_CheckedChanged);
             // 
             // labelSharpDevelop
             // 
             this.labelSharpDevelop.AutoSize = true;
             this.labelSharpDevelop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSharpDevelop.ForeColor = System.Drawing.Color.DimGray;
-            this.labelSharpDevelop.Location = new System.Drawing.Point(294, 64);
+            this.labelSharpDevelop.Location = new System.Drawing.Point(365, 64);
             this.labelSharpDevelop.Name = "labelSharpDevelop";
             this.labelSharpDevelop.Size = new System.Drawing.Size(323, 17);
             this.labelSharpDevelop.TabIndex = 110;
@@ -277,18 +203,77 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(272, 64);
+            this.pictureBox4.Location = new System.Drawing.Point(343, 64);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(15, 18);
             this.pictureBox4.TabIndex = 117;
             this.pictureBox4.TabStop = false;
             // 
+            // radioButtonVS2015
+            // 
+            this.radioButtonVS2015.AutoSize = true;
+            this.radioButtonVS2015.Checked = true;
+            this.radioButtonVS2015.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonVS2015.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonVS2015.ForeColor = System.Drawing.Color.Blue;
+            this.radioButtonVS2015.Location = new System.Drawing.Point(48, 33);
+            this.radioButtonVS2015.Name = "radioButtonVS2015";
+            this.radioButtonVS2015.Size = new System.Drawing.Size(258, 21);
+            this.radioButtonVS2015.TabIndex = 108;
+            this.radioButtonVS2015.TabStop = true;
+            this.radioButtonVS2015.Text = "Visual Studio 2013/2015/2017 (Desktop)";
+            this.radioButtonVS2015.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonVS2010
+            // 
+            this.radioButtonVS2010.AutoSize = true;
+            this.radioButtonVS2010.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonVS2010.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonVS2010.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonVS2010.Location = new System.Drawing.Point(321, 33);
+            this.radioButtonVS2010.Name = "radioButtonVS2010";
+            this.radioButtonVS2010.Size = new System.Drawing.Size(189, 21);
+            this.radioButtonVS2010.TabIndex = 104;
+            this.radioButtonVS2010.Text = "Visual Studio 2010 (Express)";
+            this.radioButtonVS2010.UseVisualStyleBackColor = true;
+            this.radioButtonVS2010.CheckedChanged += new System.EventHandler(this.radioButtonIDE_CheckedChanged);
+            // 
+            // radioButtonVB
+            // 
+            this.radioButtonVB.AutoSize = true;
+            this.radioButtonVB.Checked = true;
+            this.radioButtonVB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonVB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonVB.ForeColor = System.Drawing.Color.Blue;
+            this.radioButtonVB.Location = new System.Drawing.Point(48, 41);
+            this.radioButtonVB.Name = "radioButtonVB";
+            this.radioButtonVB.Size = new System.Drawing.Size(92, 21);
+            this.radioButtonVB.TabIndex = 97;
+            this.radioButtonVB.TabStop = true;
+            this.radioButtonVB.Text = "Visual Basic";
+            this.radioButtonVB.UseVisualStyleBackColor = true;
+            this.radioButtonVB.CheckedChanged += new System.EventHandler(this.radioButtonLanguage_CheckedChanged);
+            // 
+            // radioButtonCSharp
+            // 
+            this.radioButtonCSharp.AutoSize = true;
+            this.radioButtonCSharp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonCSharp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCSharp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonCSharp.Location = new System.Drawing.Point(162, 41);
+            this.radioButtonCSharp.Name = "radioButtonCSharp";
+            this.radioButtonCSharp.Size = new System.Drawing.Size(41, 21);
+            this.radioButtonCSharp.TabIndex = 95;
+            this.radioButtonCSharp.Text = "C#";
+            this.radioButtonCSharp.UseVisualStyleBackColor = true;
+            this.radioButtonCSharp.CheckedChanged += new System.EventHandler(this.radioButtonLanguage_CheckedChanged);
+            // 
             // EnvironmentControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.labelSharpDevelop);
             this.Controls.Add(this.panel2);
@@ -324,12 +309,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelNetRuntime;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonVS2012;
         private System.Windows.Forms.Label labelEnvironment;
         private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonVS2010;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonVS2013;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonVS2015;
         private System.Windows.Forms.Label labelNet45Hint;
         private System.Windows.Forms.Label labelSharpDevelop;
         private System.Windows.Forms.PictureBox pictureBox4;

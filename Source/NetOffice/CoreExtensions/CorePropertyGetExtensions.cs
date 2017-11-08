@@ -1510,7 +1510,7 @@ namespace NetOffice
         /// <param name="validatedArgs">validated arguments as any</param>
         internal static ICOMObject ExecuteReferencePropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
         {
-            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);         
             ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, true);
             return newObject;
         }

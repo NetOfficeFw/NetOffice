@@ -52,7 +52,7 @@ Public Class Test09
 
             Next
 
-            If (IsNothing(addIn) Or IsNothing(addIn.Object)) Then
+            If (IsNothing(addIn)) Then
                 Return New TestResult(False, DateTime.Now.Subtract(startTime), "COMAddin NOTestsMain.WordTestAddinVB or addIn.Object not found.", Nothing, "")
             End If
 

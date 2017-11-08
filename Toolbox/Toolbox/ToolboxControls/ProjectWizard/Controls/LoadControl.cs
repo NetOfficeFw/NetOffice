@@ -13,12 +13,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
     /// Loadbehavior in addin projects
     /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.LoadControl.txt")]
-    public partial class LoadControl : UserControl, IWizardControl, ILocalizationDesign
+    public partial class LoadControl : UserControl, IWizardControl
     {
         #region Fields
 
         private XmlDocument _settings;
-        private bool noChangeEventFlag;
 
         #endregion
 
@@ -86,10 +85,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Vom wem soll Ihr Automations Addin geladen werden?";
-                else
-                    return "Choose Load Behavior options.";
+                return "Choose Load Behavior options.";
             }
         }
 
@@ -97,10 +93,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Entscheiden Sie wann und von wem Ihr Addin geladen wird.";
-                else
-                    return "Decide when it has to be loaded";
+                return "Decide when it has to be loaded";
             }
         }
 
@@ -115,25 +108,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         public new void KeyDown(KeyEventArgs e)
         {
 
-        }
-
-        public void Translate()
-        {
-            noChangeEventFlag = true;
-            int selIndex = comboBoxLoadBehavior.SelectedIndex;
-            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-            if (null != language)
-            {
-                var component = language.Components["Project Wizard - Load"];
-                Translation.Translator.TranslateControls(this, component.ControlRessources);
-            }
-            else
-            {
-                Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.LoadControl.txt", Forms.MainForm.Singleton.CurrentLanguageID);
-            }
-            TranslateComboBox();
-            comboBoxLoadBehavior.SelectedIndex = selIndex;
-            noChangeEventFlag = false;
         }
 
         private void TranslateComboBox()
@@ -172,7 +146,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
             if (_settings.FirstChild.ChildNodes[0].InnerText.Equals("TRUE", StringComparison.InvariantCultureIgnoreCase))
             {
-                result[0] += ProjectWizardControl.Singleton.Localized.Registry; ;
+                result[0] += ProjectWizardControl.Singleton.Localized.Registry;
                 result[1] += ProjectWizardControl.Singleton.Localized.RegistryLocalMachine;
             }
             else
@@ -185,51 +159,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             result[1] += Environment.NewLine + TranslateLoadBehavior();
 
             return result;
-        }
-
-        #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-           
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public IContainer Components
-        {
-            get { return components; }
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
         }
 
         #endregion
@@ -309,8 +238,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             try
             {
-                if (noChangeEventFlag)
-                    return;
+                //if (noChangeEventFlag)
+                //    return;
 
                 ChangeSettings();
                 RaiseChangeEvent();

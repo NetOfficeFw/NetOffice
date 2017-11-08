@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Word = NetOffice.WordApi;
 
 namespace WordAddinCSharp
 {
@@ -21,7 +22,7 @@ namespace WordAddinCSharp
             MessageBox.Show("Hello");
         }
 
-        void NetOffice.WordApi.Tools.ITaskPane.OnConnection(NetOffice.WordApi.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
+        void NetOffice.OfficeApi.Tools.ITaskPaneConnection<Word.Application>.OnConnection(Word.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
         {
             TestAddin addin = customArguments[0] as TestAddin;
             addin.TaskPaneOkay = true;

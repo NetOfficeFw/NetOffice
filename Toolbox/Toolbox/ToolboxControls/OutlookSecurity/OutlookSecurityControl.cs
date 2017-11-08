@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Xml;
 using System.Windows.Forms;
+using NetOffice.OutlookApi.Tools.Contribution.Security;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 {
@@ -17,11 +18,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 
         private bool _programaticChange;
         private Exception _exception;
-        private NetOffice.OutlookSecurity.SecurityDialog _dialog;
-        private NetOffice.OutlookSecurity.SecurityDialogCheckBox _targetBox;
-        private NetOffice.OutlookSecurity.SecurityDialogLeftButton _targetButton;
+        private SecurityDialog _dialog;
+        private SecurityDialogCheckBox _targetBox;
+        private SecurityDialogLeftButton _targetButton;
 
         #endregion
+
+        private Automation Suppress { get; set; }
 
         #region Ctor
 
@@ -35,15 +38,25 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
                 InitializeComponent();
                 if (!Program.IsDesign)
                 {
-                    NetOffice.OutlookSecurity.Suppress.OnAction += new NetOffice.OutlookSecurity.Suppress.SecurityDialogAction(Supress_OnAction);
-                    NetOffice.OutlookSecurity.Suppress.OnError += new NetOffice.OutlookSecurity.Suppress.ErrorOccuredEventHandler(Supress_OnError);
+                    Suppress = new Automation();
+                    Suppress.OnAction += Suppress_OnAction;
+                    Suppress.OnError += Suppress_OnError;
                 }
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Last Right Click Link Label
+        /// </summary>
+        private LinkLabel LastClickedLinkLabel { get; set; }
 
         #endregion
 
@@ -147,7 +160,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 
@@ -168,69 +181,21 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
-        public void SetLanguage(int id)
+        public Stream GetHelpText()
         {
-
-        }
-
-        public Stream GetHelpText(int lcid)
-        {
-            Translation.ToolLanguage language = Host.Languages[lcid, false];
-            if (null != language)
-            {
-                string content = language.Components["Outlook Security - Help"].ControlRessources["richTextBoxHelpContent"].Value2;
-                return Ressources.RessourceUtils.CreateStreamFromString(content);
-            }
-            else
-                return Ressources.RessourceUtils.ReadStream("ToolboxControls.OutlookSecurity.Info" + lcid.ToString() + ".rtf");
+                return Ressources.RessourceUtils.ReadStream("ToolboxControls.OutlookSecurity.Info1033.rtf");
         }
 
         public void Release()
         {
-
-        }
-
-        #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public string NameLocalization
-        {
-            get
+            if (null != Suppress)
             {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[] { new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl)) };
+                Suppress.Dispose();
+                Suppress = null;
             }
         }
 
@@ -240,26 +205,44 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 
         private static string BoolToString(bool b)
         {
-            if (b)
-                return "true";
-            else
-                return "false";
+            // not sure bool.ToString() returns something else on chinese/arabic systems
+            return b ? "true" : "false";
         }
 
         #endregion
 
         #region UI Trigger
 
-        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkContextMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs args)
+        {
+            if (null != LastClickedLinkLabel)
+            {
+                Clipboard.SetText(LastClickedLinkLabel.Tag as string);
+            }
+        }
+
+        private void linkLabel_Clicked(object sender, EventArgs args)
         {
             try
             {
-                LinkLabel label = sender as LinkLabel;
-                System.Diagnostics.Process.Start(label.Text);
+                MouseEventArgs mouseArgs = args as MouseEventArgs;
+                if (null == mouseArgs)
+                    return;
+
+                if (mouseArgs.Button == MouseButtons.Left)
+                {
+                    LinkLabel label = sender as LinkLabel;
+                    System.Diagnostics.Process.Start(label.Tag as string);
+                }
+                else if (mouseArgs.Button == MouseButtons.Right)
+                {
+                    LastClickedLinkLabel = sender as LinkLabel;
+                    LinkContextMenu.Show(sender as Control, 0, 0);
+                }
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
@@ -268,12 +251,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             try
             {
                 if (_programaticChange)
-                    return;
-                NetOffice.OutlookSecurity.Suppress.Enabled = checkBoxSupressEnabled.Checked;
+                    return;               
+                Suppress.Enabled = checkBoxSupressEnabled.Checked;
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
@@ -292,19 +275,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             } 
         }
 
-        private void Supress_OnError(Exception exception)
-        {
-            _exception= exception;
-            if (this.InvokeRequired)
-                this.Invoke(new MethodInvoker(Supress_OnError));
-            else
-                Supress_OnError();            
-        }
-
+        
         private void Supress_OnAction()
         {
             try
@@ -313,11 +288,20 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             } 
        }
 
-        private void Supress_OnAction(NetOffice.OutlookSecurity.SecurityDialog dialog, NetOffice.OutlookSecurity.SecurityDialogCheckBox targetBox, NetOffice.OutlookSecurity.SecurityDialogLeftButton targetButton)
+        private void Suppress_OnError(Exception exception)
+        {
+            _exception = exception;
+            if (this.InvokeRequired)
+                this.Invoke(new MethodInvoker(Supress_OnError));
+            else
+                Supress_OnError();
+        }
+
+        private void Suppress_OnAction(SecurityDialog dialog, SecurityDialogCheckBox targetBox, SecurityDialogLeftButton targetButton)
         {
             try
             {

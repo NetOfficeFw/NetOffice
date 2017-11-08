@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NetOffice;
+using NetOffice.Running;
+using NetOffice.CollectionsGeneric;
 
 namespace ProxyView
 {
@@ -19,7 +21,7 @@ namespace ProxyView
 
         public bool IsCurrentlyRefresh { get; private set; }
 
-        private IDisposableEnumeration<ProxyInformation> RotItems { get; set; }
+        private IDisposableSequence<ProxyInformation> RotItems { get; set; }
 
         #endregion
 
@@ -37,7 +39,8 @@ namespace ProxyView
                     RotItems = RunningObjectTable.GetActiveProxyInformations("", "");
                     AddItems();
                     RemoveItems();                   
-                }                
+                }
+                
             }
             catch (Exception)
             {

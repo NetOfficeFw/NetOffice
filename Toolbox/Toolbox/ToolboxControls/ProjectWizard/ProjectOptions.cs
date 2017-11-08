@@ -26,18 +26,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
     public enum IDE
     {
         VS2010 = 0,
-        VS2012 = 1,
-        VS2013 = 2
+        VS20131517 = 2
     }
     
     public enum NetVersion
     { 
-        Net2 = 0,
-        Net3 = 1,
-        Net35 = 2,
-        Net4 = 3,
-        Net4Client = 4,
-        Net45 = 5
+        Net4 = 0,
+        Net4Client = 1,
+        Net45 = 2,
+        Net451 = 3,
+        Net452 = 4,
+        Net46 = 5,
+        Net461 = 6
     }
 
     public class ProjectOptions
@@ -80,17 +80,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
             UseTaskPane = guiControl.TaskPaneEnabled;
             UseToogle = guiControl.ToogleEnabled;
 
-            // unable to use switch with doubles
-            if (NetRuntimeTarget == 2.0)
-                NetRuntime = NetVersion.Net2;
-            else if (NetRuntimeTarget == 3.0)
-                NetRuntime = NetVersion.Net3;
-            else if (NetRuntimeTarget == 3.5)
-                NetRuntime = NetVersion.Net35;
-            else if (NetRuntimeTarget == 4.0)
+            if (NetRuntimeTarget == "4.0")
                 NetRuntime = UseNetRuntimeClient == true ? NetVersion.Net4Client : NetVersion.Net4;
-            else if (NetRuntimeTarget == 4.5)
+            else if (NetRuntimeTarget == "4.5")
                 NetRuntime = NetVersion.Net45;
+            else if (NetRuntimeTarget == "4.5.1")
+                NetRuntime = NetVersion.Net451;
+            else if (NetRuntimeTarget == "4.5.2")
+                NetRuntime = NetVersion.Net452;
+            else if (NetRuntimeTarget == "4.6")
+                NetRuntime = NetVersion.Net46;
+            else if (NetRuntimeTarget == "4.6.1")
+                NetRuntime = NetVersion.Net461;
             else
                 throw new IndexOutOfRangeException("NetRuntimeTarget");
         }
@@ -105,7 +106,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         public ProgrammingLanguage Language { get; private set; }
         public IDE IDE { get; private set; }
         public NetVersion NetRuntime { get; private set; }
-        public double  NetRuntimeTarget { get; private set; }
+        public string  NetRuntimeTarget { get; private set; }
         public bool UseNetRuntimeClient { get; private set; }
         public string[] OfficeApps { get; private set; }
         public string AssemblyName { get; private set; }
@@ -144,14 +145,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
             OfficeApps = list.ToArray();
         }
 
-        private double ToRuntime(string value)
+        private string ToRuntime(string value)
         {
             if (value.IndexOf("Client", StringComparison.InvariantCultureIgnoreCase) > -1)
             {
-                return 4.0;
+                return "4.0";
             }
             else
-                return Convert.ToDouble(value, CultureInfo.InvariantCulture);
+            { 
+                return value;
+            }
         }
 
         private bool ToRuntimeUseClient(string value)
@@ -242,12 +245,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             switch (value)
             {
-                case "2012":
-                    return IDE.VS2012;
-                case "2013":
-                    return IDE.VS2013;
+                case "2010":
                 default:
-                   return IDE.VS2010;
+                   return IDE.VS20131517;
             }
         }
 

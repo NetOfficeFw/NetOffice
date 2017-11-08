@@ -40,7 +40,7 @@ namespace OutlookTestsCSharp
             try
             {
                 // start outlook
-                application = new Outlook.Application();
+                application = new Outlook.Application(true);
                 NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 // Create a new MailItem.
@@ -62,7 +62,8 @@ namespace OutlookTestsCSharp
             {
                 if (null != application)
                 {
-                    application.Quit();
+                    if(!application.FromProxyService)
+                        application.Quit();
                     application.Dispose();
                 }
             }

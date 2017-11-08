@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NetOffice.DeveloperToolbox.Translation;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 {
@@ -41,16 +40,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["EnvironmentCaption"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "EnvironmentCaption");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "EnvironmentCaption");
             }
         }
 
@@ -58,34 +48,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["EnvironmentDescription"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "EnvironmentDescription");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "EnvironmentDescription");
             }
         }
-
 
         public string FinishCaption
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["FinishCaption"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "FinishCaption");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "FinishCaption");
             }
         }
 
@@ -93,34 +64,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["FinishDescription"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "FinishDescription");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "FinishDescription");
             }
         }
-
 
         public string GuiCaption
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["GuiCaption"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "GuiCaption");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "GuiCaption");
             }
         }
 
@@ -128,16 +80,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["GuiDescription"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "GuiDescription");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "GuiDescription");
             }
         }
 
@@ -145,16 +88,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["HostCaption"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "HostCaption");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "HostCaption");
             }
         }
 
@@ -162,34 +96,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["HostDescription"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "HostDescription");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "HostDescription");
             }
         }
-
 
         public string LoadCaption
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["LoadCaption"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "LoadCaption");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "LoadCaption");
             }
         }
 
@@ -197,34 +112,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["LoadDescription"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "LoadDescription");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "LoadDescription");
             }
         }
-
 
         public string NameCaption
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["NameCaption"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "NameCaption");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "NameCaption");
             }
         }
 
@@ -232,16 +128,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["NameDescription"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "NameDescription");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "NameDescription");
             }
         }
 
@@ -250,16 +137,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["ProjectCaption"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "ProjectCaption");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "ProjectCaption");
             }
         }
 
@@ -267,35 +145,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["ProjectDescription"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "ProjectDescription");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "ProjectDescription");
             }
         }
-
-
-
+        
         public string SummaryCaption
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["SummaryCaption"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "SummaryCaption");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt",  "SummaryCaption");
             }
         }
 
@@ -303,16 +161,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get
             {
-                Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-                if (null != language)
-                {
-                    var component = language.Components["Project Wizard - Captions"];
-                    return component.ControlRessources["SummaryDescription"].Value2;
-                }
-                else
-                {
-                    return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", Forms.MainForm.Singleton.CurrentLanguageID, "SummaryDescription");
-                }
+                return Translator.GetRessourceValue("ToolboxControls.ProjectWizard.CaptionStrings.txt", "SummaryDescription");
             }
         }
 

@@ -30,7 +30,7 @@ namespace NetOffice.DeveloperToolbox
     /// <summary>
     /// Represents a toolbox content control
     /// </summary>
-    public interface IToolboxControl : ILocalizationDesign, IDisposable 
+    public interface IToolboxControl : IDisposable 
     {
         /// <summary>
         /// parent host application
@@ -107,18 +107,11 @@ namespace NetOffice.DeveloperToolbox
         void SaveConfiguration(XmlNode configNode);
 
         /// <summary>
-        /// method was called from after start and after selection change from user
-        /// 1031 = english, 1033 = german
-        /// </summary>
-        /// <param name="id">lcid</param>
-        void SetLanguage(int id);
-
-        /// <summary>
         /// returns help richtext if supported, otherwise a NotImplementedException is thrown
         /// </summary>
         /// <param name="lcid">target language id</param>
         /// <returns>help content as rich text(.rtf)</returns>
-        Stream GetHelpText(int lcid);
+        Stream GetHelpText();
 
         /// <summary>
         /// redirected from host application if control is currently visible

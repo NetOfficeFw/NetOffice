@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Register and Unregister"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Rtd Server", "05 Rtd Server\05 Rtd Server.csproj", "{5C6D464E-9BEF-437A-87CA-9F554ACB5589}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 Shim", "06 Shim\06 Shim.csproj", "{7A34B86F-2AD0-467E-9FDD-4374620EE5D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5C6D464E-9BEF-437A-87CA-9F554ACB5589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C6D464E-9BEF-437A-87CA-9F554ACB5589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C6D464E-9BEF-437A-87CA-9F554ACB5589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A34B86F-2AD0-467E-9FDD-4374620EE5D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A34B86F-2AD0-467E-9FDD-4374620EE5D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A34B86F-2AD0-467E-9FDD-4374620EE5D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A34B86F-2AD0-467E-9FDD-4374620EE5D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -40,7 +40,7 @@ namespace OutlookTestsCSharp
             try
             {
                 // start outlook
-                application = new Outlook.Application();
+                application = new Outlook.Application(true);
                 NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 Outlook.TaskItem newTask = application.CreateItem(OlItemType.olTaskItem) as Outlook.TaskItem;
@@ -60,7 +60,8 @@ namespace OutlookTestsCSharp
             {
                 if (null != application)
                 {
-                    application.Quit();
+                    if(!application.FromProxyService)
+                        application.Quit();
                     application.Dispose();
                 }
             }

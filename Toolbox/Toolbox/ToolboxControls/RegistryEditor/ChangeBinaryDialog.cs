@@ -26,7 +26,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             InitializeComponent();
             changeBinaryControl1.SetArguments(name, value);
-            Translation.Translator.AutoTranslateControls(changeBinaryControl1, "Registry Editor - ChangeBinary", "ToolboxControls.RegistryEditor.ChangeBinaryDialogMessageTable.txt", currentLanguageID);
+            //Translation.Translator.AutoTranslateControls(changeBinaryControl1, "Registry Editor - ChangeBinary", "ToolboxControls.RegistryEditor.ChangeBinaryDialogMessageTable.txt", currentLanguageID);
             this.Text = changeBinaryControl1.Text;
         }
         

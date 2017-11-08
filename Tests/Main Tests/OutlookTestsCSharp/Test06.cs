@@ -42,7 +42,7 @@ namespace OutlookTestsCSharp
             try
             {
                 // start outlook
-                application = new Outlook.Application();
+                application = new Outlook.Application(true);
                 NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 Outlook.MailItem mailItem = application.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;
@@ -70,7 +70,8 @@ namespace OutlookTestsCSharp
             {
                 if (null != application)
                 {
-                    application.Quit();
+                    if(!application.FromProxyService)
+                        application.Quit();
                     application.Dispose();
                 }
             }
@@ -78,7 +79,7 @@ namespace OutlookTestsCSharp
 
         #endregion
 
-        void mailItem_CloseEvent(ref bool Cancel)
+        private void mailItem_CloseEvent(ref bool Cancel)
         {
             _closeEventCalled = true;
         }

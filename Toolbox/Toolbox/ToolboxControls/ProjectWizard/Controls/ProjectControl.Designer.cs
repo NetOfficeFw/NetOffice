@@ -47,12 +47,9 @@
             this.labelFolder = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBoxUseTools = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
-            this.linkLabelNSTOInfo = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -110,7 +107,7 @@
             // labelProjectType
             // 
             this.labelProjectType.AutoSize = true;
-            this.labelProjectType.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelProjectType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelProjectType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProjectType.ForeColor = System.Drawing.Color.Black;
             this.labelProjectType.Location = new System.Drawing.Point(67, 33);
@@ -145,7 +142,7 @@
             this.labelNoAdminHint.Size = new System.Drawing.Size(538, 16);
             this.labelNoAdminHint.TabIndex = 112;
             this.labelNoAdminHint.Text = "Developer Toolbox has detected the write permissions are not available for some f" +
-                "olders.";
+    "olders.";
             this.labelNoAdminHint.Visible = false;
             // 
             // buttonChooseFolder
@@ -260,7 +257,7 @@
             // labelFolder
             // 
             this.labelFolder.AutoSize = true;
-            this.labelFolder.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFolder.ForeColor = System.Drawing.Color.Black;
             this.labelFolder.Location = new System.Drawing.Point(39, 21);
@@ -301,36 +298,11 @@
             this.checkBoxUseTools.Text = "Use NetOffice Tools";
             this.checkBoxUseTools.UseVisualStyleBackColor = true;
             // 
-            // linkLabelNSTOInfo
-            // 
-            this.linkLabelNSTOInfo.AutoSize = true;
-            this.linkLabelNSTOInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelNSTOInfo.Location = new System.Drawing.Point(286, 97);
-            this.linkLabelNSTOInfo.Name = "linkLabelNSTOInfo";
-            this.linkLabelNSTOInfo.Size = new System.Drawing.Size(368, 16);
-            this.linkLabelNSTOInfo.TabIndex = 115;
-            this.linkLabelNSTOInfo.TabStop = true;
-            this.linkLabelNSTOInfo.Text = "Nice to know: How to use the NetOffice tools in addin projects";
-            this.linkLabelNSTOInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNSTOInfo_LinkClicked);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(265, 97);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(18, 18);
-            this.pictureBox1.TabIndex = 116;
-            this.pictureBox1.TabStop = false;
-            // 
             // ProjectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabelNSTOInfo);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.checkBoxUseTools);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox5);
@@ -345,7 +317,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,7 +342,5 @@
         private System.Windows.Forms.Label labelFolder;
         private System.Windows.Forms.Panel panel1;
         private NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxUseTools;
-        private System.Windows.Forms.LinkLabel linkLabelNSTOInfo;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

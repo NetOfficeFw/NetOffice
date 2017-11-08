@@ -546,7 +546,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             catch (Exception exception)
             {
                 _timer.Enabled = false;
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, _currentLanguageID);
+                Forms.ErrorForm.ShowError(null, exception,ErrorCategory.NonCritical);
             }
         
         }

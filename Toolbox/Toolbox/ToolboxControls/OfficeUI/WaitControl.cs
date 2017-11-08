@@ -31,7 +31,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             InitializeComponent();
             ResizeControls();
             _currentLanguageID = currentLanguageID;
-            Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeUI.WaitControlTable.txt", _currentLanguageID);
+            //Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeUI.WaitControlTable.txt", _currentLanguageID);
         }
 
         #endregion
@@ -50,7 +50,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             set
             {
                 _currentLanguageID = value;
-                Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeUI.WaitControlTable.txt", _currentLanguageID);
+                //Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeUI.WaitControlTable.txt", _currentLanguageID);
             }
         }
 

@@ -16,7 +16,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
     /// Project type want selected here as first
     /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.ProjectControl.txt")]
-    public partial class ProjectControl : UserControl, IWizardControl, ILocalizationDesign
+    public partial class ProjectControl : UserControl, IWizardControl
     {
         #region Fields
 
@@ -129,10 +129,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Project Typ";
-                else
-                    return "Project Type";
+                return "Project Type";
             }
         }
 
@@ -140,10 +137,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Was für ein Projekt soll erstellt werden?";
-                else
-                    return "Select your project type.";
+                return "Select your project type.";
             }
         }
 
@@ -152,20 +146,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             get
             {
                 return ImageType.Question;
-            }
-        }
-
-        public void Translate()
-        {
-            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-            if (null != language)
-            {
-                var component = language.Components["Project Wizard - Project"];
-                Translation.Translator.TranslateControls(this, component.ControlRessources);
-            }
-            else
-            {
-                Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.ProjectControl.txt", Forms.MainForm.Singleton.CurrentLanguageID);
             }
         }
 
@@ -201,51 +181,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             result[1] += SelectedProjectFolderType();
 
             return result;
-        }
-
-        #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-            labelNoAdminHint.Visible = true;
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public IContainer Components
-        {
-            get { return components; }
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
         }
 
         #endregion
@@ -331,7 +266,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
@@ -349,7 +284,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
@@ -367,32 +302,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
-        }
-        
-        private void linkLabelNSTOInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            try
-            {
-                switch (Forms.MainForm.Singleton.CurrentLanguageID)
-                {
-                    case 1049:
-                        System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_RS");
-                        break;
-                    case 1031:
-                        System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_DE");
-                        break;
-                    default:
-                        System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_EN");
-                        break;
-                }
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, 1033);
-            }
-        }
+        }       
 
         #endregion
     }

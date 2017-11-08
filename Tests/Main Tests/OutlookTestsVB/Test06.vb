@@ -38,7 +38,7 @@ Public Class Test06
         Dim startTime As DateTime = DateTime.Now
         Try
 
-            application = New NetOffice.OutlookApi.Application()
+            application = New NetOffice.OutlookApi.Application(True)
             NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             Dim mailItem As Outlook.MailItem = application.CreateItem(OlItemType.olMailItem)
@@ -70,8 +70,13 @@ Public Class Test06
         Finally
 
             If Not IsNothing(application) Then
-                application.Quit()
+
+                If False = application.FromProxyService Then
+                    application.Quit()
+                End If
+
                 application.Dispose()
+
             End If
 
         End Try

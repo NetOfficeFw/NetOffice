@@ -53,10 +53,10 @@
             this.comboBoxLoadBehavior.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLoadBehavior.FormattingEnabled = true;
             this.comboBoxLoadBehavior.Items.AddRange(new object[] {
-            "3   = Beim Start der Office Anwendung automatisch laden",
-            "2   = Bei Bedarf laden",
-            "1   = Nicht automatisch laden",
-            "16 = Beim ersten Start automatisch laden, danach bei Bedarf laden"});
+            "3   = Load at startup",
+            "2   = Load on demand",
+            "1   = Do not load automatically",
+            "16 = Load first time at startup, then load on demand"});
             this.comboBoxLoadBehavior.Location = new System.Drawing.Point(46, 148);
             this.comboBoxLoadBehavior.Name = "comboBoxLoadBehavior";
             this.comboBoxLoadBehavior.Size = new System.Drawing.Size(477, 25);
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.labelUserCaption);
             this.Controls.Add(this.comboBoxLoadBehavior);
             this.Controls.Add(this.labelLoadCaption);

@@ -35,7 +35,7 @@ Public Class Test04
         Dim application As Outlook.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            application = New NetOffice.OutlookApi.Application()
+            application = New NetOffice.OutlookApi.Application(True)
             NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             If application.Session.EntityIsAvailable("SendAndReceive") Then
@@ -57,8 +57,13 @@ Public Class Test04
         Finally
 
             If Not IsNothing(application) Then
-                application.Quit()
+
+                If False = application.FromProxyService Then
+                    application.Quit()
+                End If
+
                 application.Dispose()
+
             End If
 
         End Try

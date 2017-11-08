@@ -113,6 +113,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         private SupportInfo[] _access;
         private SupportInfo[] _project;
         private SupportInfo[] _visio;
+        private SupportInfo[] _publisher;
 
         #endregion
 
@@ -135,14 +136,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         {
             _report = report;
             _containsNetOfficeReferences = true;
-            _office = new SupportInfo[6];
-            _excel = new SupportInfo[6];
-            _word = new SupportInfo[6];
-            _outlook = new SupportInfo[6];
-            _powerPoint = new SupportInfo[6];
-            _access = new SupportInfo[6];
-            _project = new SupportInfo[6];
-            _visio = new SupportInfo[6];
+            _office = new SupportInfo[7];
+            _excel = new SupportInfo[7];
+            _word = new SupportInfo[7];
+            _outlook = new SupportInfo[7];
+            _powerPoint = new SupportInfo[7];
+            _access = new SupportInfo[7];
+            _project = new SupportInfo[7];
+            _visio = new SupportInfo[7];
+            _publisher = new SupportInfo[7];
 
             RemoveDelegateTypes();
 
@@ -154,6 +156,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             SetupSupportInfo(_access, "Access");
             SetupSupportInfo(_project, "MSProject");
             SetupSupportInfo(_visio, "Visio");
+            SetupSupportInfo(_publisher, "Publisher");
         }
 
         #endregion
@@ -284,6 +287,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             bool has12Support = true;
             bool has14Support = true;
             bool has15Support = true;
+            bool has16Support = true;
 
             foreach (XElement item in _report.Element("Document").Element("Assembly").Element("Classes").Elements("Class"))
             {
@@ -305,6 +309,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     bool find12Support = IncludesVersion(typeNodeItem, "12");
                     bool find14Support = IncludesVersion(typeNodeItem, "14");
                     bool find15Support = IncludesVersion(typeNodeItem, "15");
+                    bool find16Support = IncludesVersion(typeNodeItem, "16");
 
                     if (!find09Support)
                         has09Support = false;
@@ -318,6 +323,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         has14Support = false;
                     if (!find15Support)
                         has15Support = false;
+                    if (!find16Support)
+                        has16Support = false;
                 }
             }
 
@@ -329,6 +336,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                 info[3] = new SupportInfo(BoolToSupportVersion(has12Support), name, 12);
                 info[4] = new SupportInfo(BoolToSupportVersion(has14Support), name, 14);
                 info[5] = new SupportInfo(BoolToSupportVersion(has15Support), name, 15);
+                info[6] = new SupportInfo(BoolToSupportVersion(has16Support), name, 16);
             }
             else
             {
@@ -338,6 +346,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                 info[3] = new SupportInfo(SupportVersion.NotUse, name, 12);
                 info[4] = new SupportInfo(SupportVersion.NotUse, name, 14);
                 info[5] = new SupportInfo(SupportVersion.NotUse, name, 15);
+                info[6] = new SupportInfo(SupportVersion.NotUse, name, 16);
             }
         }
 

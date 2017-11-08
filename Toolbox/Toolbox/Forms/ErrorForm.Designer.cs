@@ -33,7 +33,7 @@
             // 
             // errorControl1
             // 
-            this.errorControl1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.errorControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.errorControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.errorControl1.Location = new System.Drawing.Point(9, 9);
             this.errorControl1.Name = "errorControl1";

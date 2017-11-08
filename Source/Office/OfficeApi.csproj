@@ -77,6 +77,12 @@
     <Compile Include="Tools\Dialogs\ErrorDialog.Designer.cs">
       <DependentUpon>ErrorDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\Dialogs\PropertyGridDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Dialogs\PropertyGridDialog.Designer.cs">
+      <DependentUpon>PropertyGridDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\Dialogs\RichTextDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -674,6 +680,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Dialogs\ErrorDialog.resx">
       <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Dialogs\PropertyGridDialog.resx">
+      <DependentUpon>PropertyGridDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.resx">
       <DependentUpon>RichTextDialog.cs</DependentUpon>

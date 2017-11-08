@@ -1091,12 +1091,12 @@ namespace NetOffice
                     {
                         Type comProxyType2 = null;
                         ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, 
-                            String.Empty, String.Empty, allowDynamicObject);
+                                                                            String.Empty, String.Empty, allowDynamicObject);
                         newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
                         return newInstance2;
                     }
-
-                    string className = TypeDescriptor.GetClassName(comProxy);
+                    
+                    string className = ComTypes.TypeDescriptor.GetClassName(comProxy);
                     string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
 
                     // create new proxyType

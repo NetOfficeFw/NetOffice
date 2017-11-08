@@ -14,7 +14,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
     /// Name and its description for the target assembly
     /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.NameControl.txt")]
-    public partial class NameControl : UserControl, IWizardControl, ILocalizationDesign
+    public partial class NameControl : UserControl, IWizardControl
     {
         #region Fields
 
@@ -88,11 +88,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Tragen Sie Informationen zu Ihrem Assembly ein.";
-                else
-                    return "Informations about your assembly.";
+                return "Informations about your assembly.";
             }
         }
 
@@ -100,10 +96,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Diese Informationen sind für Anwender sichtbar.";
-                else
-                    return "These informations are visible for your customers.";
+                return "These informations are visible for your customers.";
             }
         }
 
@@ -123,34 +116,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
         }
 
-        public void Translate()
-        {
-            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
-            if (null != language)
-            {
-                var component = language.Components["Project Wizard - Name"];
-                Translation.Translator.TranslateControls(this, component.ControlRessources);
-            }
-            else
-            {
-                Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.NameControl.txt", Forms.MainForm.Singleton.CurrentLanguageID);
-            }
-
-            if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                SetGermanDefaultName();
-            else
-                SetEnglishDefaultName();
-        }
-
         public void Activate()
         {
             textBoxClassName.Focus();
             if (_firstActivateFlag == false)
             {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    SetGermanDefaultName();
-                else
-                    SetEnglishDefaultName();
+                SetEnglishDefaultName();
                 _firstActivateFlag = true;
             }
         }
@@ -173,51 +144,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             result[1] += name + Environment.NewLine + description;
 
             return result;
-        }
-
-        #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-            labelHint.Visible = true;
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public IContainer Components
-        {
-            get { return components; }
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
         }
 
         #endregion
@@ -346,13 +272,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 string res = ClassNameInvalid();
                 if (null != res)
                 {
-                    errorProvider1.SetError(textBoxClassName, Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Ungültiges Zeichen: " + res : "Invalid Char: " + res);
+                    errorProvider1.SetError(textBoxClassName, "Invalid Char: " + res);
                     return;
                 }
 
                 if (textBoxClassName.Text.IndexOf(" ") > -1)
                 {
-                    errorProvider1.SetError(textBoxClassName, Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Ungültiges Leerzeichen" : "Invalid empty space");
+                    errorProvider1.SetError(textBoxClassName, "Invalid empty space");
                     return;
                 }
 

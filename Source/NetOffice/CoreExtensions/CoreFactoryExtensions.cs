@@ -78,7 +78,8 @@ namespace NetOffice
                 }
             }
 
-            // failback because some types was multiple defined (not allowed in COM but in fact MS do this)
+            // failback because some types was multiple defined by its class id (not allowed in COM but in fact MS do this)
+            // list of known multiple defined types is available on netoffice.codeplex.com or Attributes\DuplicateAttribute.cs
             foreach (IFactoryInfo item in value.Assemblies)
             {
                 if (item.IsDuck != wantTheDuck)
@@ -103,8 +104,7 @@ namespace NetOffice
             else
                 return null;
         }
-
-
+        
         /// <summary>
         /// Returns parent library id
         /// </summary>
@@ -119,11 +119,9 @@ namespace NetOffice
 
             IDispatch dispatcher = comProxy as IDispatch;
             if (null == dispatcher)
-                return Guid.Empty;
-
-            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo(0, 0);
+                throw new IDispatchNotImplementedException();
+            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
             COMTypes.ITypeLib parentTypeLib = null;
-
             Guid parentGuid = Guid.Empty;
 
             if (!value.HostCache.TryGetValue(typeGuid, out parentGuid))
@@ -162,11 +160,10 @@ namespace NetOffice
 
             IDispatch dispatcher = comProxy as IDispatch;
             if (null == dispatcher)
-                return Guid.Empty;
+                throw new IDispatchNotImplementedException();
 
-            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo(0, 0);
+            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
             COMTypes.ITypeLib parentTypeLib = null;
-
             Guid typeGuid = typeInfo.GetTypeGuid();
             Guid parentGuid = Guid.Empty;
 
@@ -206,9 +203,9 @@ namespace NetOffice
 
             IDispatch dispatcher = comProxy as IDispatch;
             if (null == dispatcher)
-                return Guid.Empty;
+                throw new IDispatchNotImplementedException();
 
-            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo(0, 0);
+            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
             typeGuid = typeInfo.GetTypeGuid();
             Marshal.ReleaseComObject(typeInfo);
 
@@ -223,6 +220,38 @@ namespace NetOffice
         internal static bool IsDuplicateType(this Guid value)
         {
             return _duplicateTypes.Contains(value);
+        }
+
+        /// <summary>
+        /// Performs GetTypeInfo on IDispatch
+        /// Handle the strange cast behavior - see remarks. 
+        /// </summary>
+        /// <remarks>
+        /// Seems to be cast to IDispatch never failed
+        /// even the instance behind comProxy doesnt implement the interface.
+        /// If its failed to cast, an InvalidCastException occurs 
+        /// while first use the interface.
+        /// The method catch arround here and throws IDispatchNotImplementedException 
+        /// to signalize the missing IDispatch suport.    
+        /// </remarks>
+        /// <param name="dispatcher">given IDispatch as any </param>
+        /// <returns>type informations or null if dispatcher argument is null</returns>
+        internal static COMTypes.ITypeInfo GetTypeInfo(this IDispatch dispatcher)
+        {
+            if (null == dispatcher)
+                return null;
+            try
+            {
+                return dispatcher.GetTypeInfo(0, 0);
+            }
+            catch (InvalidCastException exception)
+            {
+                throw new IDispatchNotImplementedException(exception);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

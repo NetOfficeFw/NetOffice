@@ -44,7 +44,7 @@ namespace NetOffice.DeveloperToolbox
                                                                 "MSHTMLApi.dll", "MSProjectApi.dll", "NetOffice.dll",
                                                                 "OfficeApi.dll", "OutlookApi.dll", "OWC10Api.dll",
                                                                 "PowerPointApi.dll", "VBIDEApi.dll", "VisioApi.dll",
-                                                                "WordApi.dll", "MSFormsApi.dll" };
+                                                                "WordApi.dll", "MSFormsApi.dll", "PublisherApi.dll" };
 
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace NetOffice.DeveloperToolbox
 
                 Forms.MainForm mainForm = new Forms.MainForm(args);
                 LoadedTime = DateTime.Now - StartTime;
-                Console.WriteLine("Loaded in {0} seconds", LoadedTime.TotalSeconds);
+                Console.WriteLine("DeveloperToolbox loaded in {0} seconds", LoadedTime.TotalSeconds);
 
                 Application.Run(mainForm);
             }
@@ -93,7 +93,7 @@ namespace NetOffice.DeveloperToolbox
         internal static DateTime StartTime { get; private set; }
 
         /// <summary>
-        /// How long we need to be loaded without show user interface
+        /// How long we need to be loaded without showing user interface
         /// </summary>
         internal static TimeSpan LoadedTime { get; private set; }
 
@@ -107,8 +107,8 @@ namespace NetOffice.DeveloperToolbox
                 string resultPath = String.Empty;
 
                 #if DEBUG
-
-                    resultPath = Path.Combine(GetInternalRelativeDebugPath(), "Libs");
+                             
+                    resultPath = Path.Combine(GetInternalRelativeDebugPath(), "Assemblies\\Any CPU");
                 
                 #else
                                         
@@ -116,9 +116,18 @@ namespace NetOffice.DeveloperToolbox
                 
                 #endif
 
-                if (!Directory.Exists(resultPath))
-                    throw new DirectoryNotFoundException(resultPath);
+                return resultPath;
+            }
+        }
 
+        /// <summary>
+        /// The current used folder for dependent assemblies when application is given in release package
+        /// </summary>
+        public static string DependencyReleaseSubFolder
+        {
+            get
+            {
+                string resultPath = Path.Combine(System.Windows.Forms.Application.StartupPath, @".NET 4\Assemblies\Any CPU");
                 return resultPath;
             }
         }
@@ -130,7 +139,7 @@ namespace NetOffice.DeveloperToolbox
         {
             get 
             {
-                return "1.7.4.0";
+                return "1.7.4.1";
             }
         }
 
@@ -171,14 +180,43 @@ namespace NetOffice.DeveloperToolbox
         internal static bool SelfElevation { get; set; }
 
         /// <summary>
-        /// Find the local root folder in debug mode. The method use the Application.Startup path and returns the folder 3x upward.
+        /// Perform self elevation if necessary and wanted
+        /// </summary>
+        /// <param name="forceElevation">force elevation even Program.SelfElevation is false</param>
+        /// <returns>true if new process is sucsessfuly started, otherwise false</returns>
+        internal static bool PerformSelfElevation(bool forceElevation = false)
+        {
+            if (!IsAdmin && (SelfElevation || forceElevation))
+            {
+                ProcessStartInfo proc = new ProcessStartInfo();
+                proc.UseShellExecute = true;
+                proc.WorkingDirectory = Environment.CurrentDirectory;
+                proc.FileName = Application.ExecutablePath;
+                proc.Verb = "runas";
+
+                try
+                {
+                    ReleaseMutex();
+                    Process.Start(proc);
+                    return true;
+                }
+                catch
+                {
+                    ; // The user refused the failed elevation. Do nothing and return directly ... (original MS guidance)
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Find the local root folder in debug mode. The method use the Application.Startup path and returns the folder 4x upward.
         /// </summary>
         /// <returns>The current related debug root folder</returns>
         private static string GetInternalRelativeDebugPath()
         {
             string result = String.Empty;
             string[] array = Application.StartupPath.Split(new string[] { "\\" }, StringSplitOptions.RemoveEmptyEntries);
-            for (int i = 0; i < array.Length - 3; i++)
+            for (int i = 0; i < array.Length - 4; i++)
                 result += array[i] + "\\";
             return result;
         }
@@ -217,9 +255,8 @@ namespace NetOffice.DeveloperToolbox
         private static void ProceedCommandLineElevationArguments(string[] args)
         {
             if (null == args)
-                return;
-            
-            SelfElevation = (null != args.FirstOrDefault(e => e.Equals("-SelfElevation", StringComparison.InvariantCultureIgnoreCase)));
+                return;           
+            SelfElevation = args.Any(e => e.Equals("-SelfElevation", StringComparison.InvariantCultureIgnoreCase));
         }
 
         /// <summary>
@@ -255,33 +292,6 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Perform self elevation if necessary and wanted
-        /// </summary>
-        /// <returns>true if new process is sucsessfuly started, otherwise false</returns>
-        private static bool PerformSelfElevation()
-        {
-            if (!IsAdmin && SelfElevation)
-            {
-                ProcessStartInfo proc = new ProcessStartInfo();
-                proc.UseShellExecute = true;
-                proc.WorkingDirectory = Environment.CurrentDirectory;
-                proc.FileName = Application.ExecutablePath;
-                proc.Verb = "runas";
-
-                try
-                {
-                    Process.Start(proc);
-                    return true;
-                }
-                catch
-                {
-                    ; // The user refused the failed elevation. Do nothing and return directly ... (original MS comment)
-                }
-            }
-            return false;
-        }
-
-        /// <summary>
         /// Try to load an assembly with given file path
         /// </summary>
         /// <param name="assemblyFullPath">full qualified assembly path</param>
@@ -294,12 +304,14 @@ namespace NetOffice.DeveloperToolbox
             try
             {
                 // we check its from well known dependencies folder and one of the registererd dependencies
+                // because we dont want load any injected code from an attacker scenario
                 // OPEN-TODO-1: Add file version/hash and signed assembly check to improve security
 
                 string assemblyFolderPath = Path.GetDirectoryName(assemblyFullPath);
                 string assemblyFileName = Path.GetFileName(assemblyFullPath);
-
-                if (!DependencySubFolder.Equals(assemblyFolderPath, StringComparison.InvariantCultureIgnoreCase))
+                
+                if (!DependencySubFolder.Equals(assemblyFolderPath, StringComparison.InvariantCultureIgnoreCase) &&
+                    !DependencyReleaseSubFolder.Equals(assemblyFolderPath, StringComparison.InvariantCultureIgnoreCase))
                     throw new System.Security.SecurityException("Invalid assembly directory.");
 
                 if (!_dependencies.Contains(assemblyFileName))
@@ -363,7 +375,13 @@ namespace NetOffice.DeveloperToolbox
                     if (File.Exists(assemblyFullPath))
                         return LoadFile(assemblyFullPath);
                     else
-                        throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
+                    {
+                        assemblyFullPath = Path.Combine(Program.DependencyReleaseSubFolder, assemblyName);
+                        if (File.Exists(assemblyFullPath))
+                            return LoadFile(assemblyFullPath);
+                        else
+                            throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
+                    }                        
                 }
             }
             catch (Exception exception)

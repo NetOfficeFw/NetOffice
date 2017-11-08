@@ -272,10 +272,10 @@
             // 
             // labelOfficeApplication
             // 
-            this.labelOfficeApplication.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelOfficeApplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelOfficeApplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelOfficeApplication.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOfficeApplication.ForeColor = System.Drawing.Color.White;
+            this.labelOfficeApplication.ForeColor = System.Drawing.Color.Black;
             this.labelOfficeApplication.Location = new System.Drawing.Point(51, 30);
             this.labelOfficeApplication.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOfficeApplication.Name = "labelOfficeApplication";
@@ -285,10 +285,10 @@
             // 
             // labelOfficeApplicationInstanceCount
             // 
-            this.labelOfficeApplicationInstanceCount.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelOfficeApplicationInstanceCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelOfficeApplicationInstanceCount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelOfficeApplicationInstanceCount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOfficeApplicationInstanceCount.ForeColor = System.Drawing.Color.White;
+            this.labelOfficeApplicationInstanceCount.ForeColor = System.Drawing.Color.Black;
             this.labelOfficeApplicationInstanceCount.Location = new System.Drawing.Point(153, 30);
             this.labelOfficeApplicationInstanceCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOfficeApplicationInstanceCount.Name = "labelOfficeApplicationInstanceCount";
@@ -298,8 +298,8 @@
             // 
             // labelActiveProcessList
             // 
-            this.labelActiveProcessList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelActiveProcessList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelActiveProcessList.BackColor = System.Drawing.Color.Orange;
             this.labelActiveProcessList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelActiveProcessList.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,9 +342,9 @@
             // 
             // listViewProcess
             // 
-            this.listViewProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewProcess.BackColor = System.Drawing.Color.White;
             this.listViewProcess.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewProcess.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -433,7 +433,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox8);

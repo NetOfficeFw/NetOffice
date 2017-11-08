@@ -6,6 +6,8 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
 using NetOffice;
+using NetOffice.Running;
+using NetOffice.CollectionsGeneric;
 
 namespace ProxyView
 {
@@ -18,8 +20,8 @@ namespace ProxyView
         #endregion
 
         #region Properties
-
-        public IDisposableEnumeration<ProxyInformation> WindowItems { get; private set; }
+        
+        public IDisposableSequence<ProxyInformation> WindowItems { get; private set; }
 
         #endregion
 

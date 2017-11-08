@@ -25,7 +25,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             InitializeComponent();
             changeStringControl1.SetArguments(name, value);
-            Translation.Translator.AutoTranslateControls(changeStringControl1, "Registry Editor - ChangeString", "ToolboxControls.RegistryEditor.ChangeStringDialogMessageTable.txt", currentLanguageID);
+            //Translation.Translator.AutoTranslateControls(changeStringControl1, "Registry Editor - ChangeString", "ToolboxControls.RegistryEditor.ChangeStringDialogMessageTable.txt", currentLanguageID);
             this.Text = changeStringControl1.Text;
         }
 

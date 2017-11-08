@@ -45,7 +45,7 @@ namespace OutlookTestsCSharp
                 Bitmap iconBitmap = new Bitmap(System.Reflection.Assembly.GetAssembly(this.GetType()).GetManifestResourceStream("OutlookTestsCSharp.Test07.bmp"));
 
                 // start outlook
-                application = new Outlook.Application();
+                application = new Outlook.Application(true);
                 NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 Office.CommandBar commandBar;
@@ -108,7 +108,8 @@ namespace OutlookTestsCSharp
             {
                 if (null != application)
                 {
-                    application.Quit();
+                    if(!application.FromProxyService)
+                        application.Quit();
                     application.Dispose();
                 }
             }
@@ -116,7 +117,7 @@ namespace OutlookTestsCSharp
 
         #endregion
 
-        void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
+        private void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             Ctrl.Dispose();
         }

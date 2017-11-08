@@ -13,7 +13,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
     /// Binary Value Editor
     /// </summary>
     [RessourceTable("ToolboxControls.RegistryEditor.ChangeBinaryDialogMessageTable.txt")]
-    public partial class ChangeBinaryControl : UserControl, ILocalizationDesign
+    public partial class ChangeBinaryControl : UserControl
     {
         #region Ctor
 
@@ -106,52 +106,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         }
 
         #endregion
-
-        #region ILocalizationDesign
-
-        public void EnableDesignView(int lcid, string parentComponentName)
-        {
-
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public IContainer Components
-        {
-            get { return components; }
-        }
-
-        public string NameLocalization
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
-        }
-
-        #endregion
-
+        
         #region Trigger
 
         private void buttonOK_Click(object sender, EventArgs e)

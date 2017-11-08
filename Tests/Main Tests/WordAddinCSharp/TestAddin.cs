@@ -108,7 +108,7 @@ namespace WordAddinCSharp
         }
         protected override bool AllowApplyTweak(string name, string value)
         {
-            Factory.Console.SendPipeConsoleMessage("WordTestAddinCSharp", String.Format("AllowApplyTweak {0}:{1}", name, value));
+            //Factory.Console.SendPipeConsoleMessage("WordTestAddinCSharp", String.Format("AllowApplyTweak {0}:{1}", name, value));
             return true;
         }
 

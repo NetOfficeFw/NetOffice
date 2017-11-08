@@ -18,8 +18,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBIDEApi", "VBIDE\VBIDEApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice", "NetOffice\NetOffice.csproj", "{65442327-D01F-4ECB-8C39-6D5C7622A80F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelTest", "ExcelTest\ExcelTest.csproj", "{A3A3E6C1-0DA0-4D1D-9D1F-C9341AF658A7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,10 +40,6 @@ Global
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3A3E6C1-0DA0-4D1D-9D1F-C9341AF658A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3A3E6C1-0DA0-4D1D-9D1F-C9341AF658A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3A3E6C1-0DA0-4D1D-9D1F-C9341AF658A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3A3E6C1-0DA0-4D1D-9D1F-C9341AF658A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

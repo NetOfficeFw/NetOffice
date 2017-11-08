@@ -59,9 +59,9 @@
             // 
             // panelToolboxControl
             // 
-            this.panelToolboxControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelToolboxControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelToolboxControl.Location = new System.Drawing.Point(0, 53);
             this.panelToolboxControl.Margin = new System.Windows.Forms.Padding(0);
             this.panelToolboxControl.Name = "panelToolboxControl";
@@ -82,7 +82,7 @@
             // labelInfoMessage
             // 
             this.labelInfoMessage.AutoSize = true;
-            this.labelInfoMessage.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelInfoMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.labelInfoMessage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelInfoMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInfoMessage.ForeColor = System.Drawing.Color.Gray;
@@ -95,7 +95,7 @@
             // 
             // pictureBoxWarning
             // 
-            this.pictureBoxWarning.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBoxWarning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.pictureBoxWarning.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWarning.Image")));
             this.pictureBoxWarning.Location = new System.Drawing.Point(28, 20);
             this.pictureBoxWarning.Name = "pictureBoxWarning";
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.pictureBoxWarning);
             this.Controls.Add(this.pictureBoxInformation);
             this.Controls.Add(this.labelInfoMessage);

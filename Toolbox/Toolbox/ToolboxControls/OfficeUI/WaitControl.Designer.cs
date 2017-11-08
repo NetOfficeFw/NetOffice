@@ -43,9 +43,9 @@
             this.labelHeader.ForeColor = System.Drawing.Color.DimGray;
             this.labelHeader.Location = new System.Drawing.Point(375, 66);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(174, 21);
+            this.labelHeader.Size = new System.Drawing.Size(179, 21);
             this.labelHeader.TabIndex = 0;
-            this.labelHeader.Text = "Einen Moment bitte...";
+            this.labelHeader.Text = "One Moment Please ...";
             // 
             // pictureBoxLogo
             // 
@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.labelWaitMessage);
             this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.pictureBoxLogo);

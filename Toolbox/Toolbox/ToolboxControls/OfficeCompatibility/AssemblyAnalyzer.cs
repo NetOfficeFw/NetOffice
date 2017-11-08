@@ -15,7 +15,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         #region Fields
 
         private static string _apiName = "NetOffice";
-        private static NetOfficeSupportTable _netOfficeSupportTable = new NetOfficeSupportTable();
+        private static NetOfficeSupportTable _netOfficeSupportTable;
+
+        #endregion
+        
+        #region Ctor
+
+        static AssemblyAnalyzer()
+        {
+            _netOfficeSupportTable = new NetOfficeSupportTable();
+        }
 
         #endregion
 
@@ -746,6 +755,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         case "OfficeApi":
                         case "MSProjectApi":
                         case "VisioApi":
+                        case "PublisherApi":
                             return true;
                     }
                 }

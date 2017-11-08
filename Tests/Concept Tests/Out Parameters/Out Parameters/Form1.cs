@@ -22,7 +22,6 @@ namespace Out_Parameters
             application.DisplayAlerts = NetOffice.WordApi.Enums.WdAlertLevel.wdAlertsNone;
             Word.Document document = application.Documents.Add();
             application.Selection.TypeText("Hello World");
-
             int left=0;
             int top=0;
             int width=0;
@@ -31,6 +30,7 @@ namespace Out_Parameters
             application.ActiveWindow.GetPoint(out left, out top, out width, out height, application.Selection.Range);
 
             MessageBox.Show(string.Format("GetPoint returns Left:{0} Top:{1} Width:{2} Height:{3}", left, top, width, height));
+            document.Saved = true;
 
             try
             {

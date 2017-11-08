@@ -46,9 +46,9 @@
             this.labelDescription.ForeColor = System.Drawing.Color.Black;
             this.labelDescription.Location = new System.Drawing.Point(40, 98);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(86, 17);
+            this.labelDescription.Size = new System.Drawing.Size(74, 17);
             this.labelDescription.TabIndex = 17;
-            this.labelDescription.Text = "Beschreibung";
+            this.labelDescription.Text = "Description";
             // 
             // textBoxDescription
             // 
@@ -91,9 +91,9 @@
             this.labelHint.ForeColor = System.Drawing.Color.Red;
             this.labelHint.Location = new System.Drawing.Point(239, 55);
             this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(432, 16);
+            this.labelHint.Size = new System.Drawing.Size(260, 16);
             this.labelHint.TabIndex = 18;
-            this.labelHint.Text = "Es existiert im angegebenen Pfad bereits ein Ordner mit diesem Namen";
+            this.labelHint.Text = "A folder with the target name already exists";
             this.labelHint.Visible = false;
             // 
             // errorProvider1
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.textBoxDescription);

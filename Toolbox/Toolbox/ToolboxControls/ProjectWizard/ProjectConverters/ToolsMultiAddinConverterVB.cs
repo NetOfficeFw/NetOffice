@@ -10,7 +10,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
 {
     internal class ToolsMultiAddinConverterVB : Converter
     {
-          #region Fields
+        #region Fields
 
         private string _taskPaneFile;
         private string _taskPaneDesignerFile;
@@ -98,7 +98,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             _addinFile = _addinFile.Replace("$appName$", Options.OfficeApps[0]);
             _addinFile = _addinFile.Replace("$safeprojectname$", Options.AssemblyName);
             _addinFile = _addinFile.Replace("$description$", Options.AssemblyDescription);
-            _addinFile = _addinFile.Replace("$loadbeahviour$", Options.LoadBehaviour.ToString());
+            _addinFile = _addinFile.Replace("$loadbeahviour$", ConvertLoadBehavoir(Options.LoadBehaviour));
 
             _addinFile = _addinFile.Replace("$usingItems$", this.GetNetOfficeProjectUsingToolsItems());
             _addinFile = _addinFile.Replace("$randomGuid$", Guid.NewGuid().ToString().ToUpper());
@@ -116,10 +116,10 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             _taskPaneDesignerFile = _taskPaneDesignerFile.Replace("$safeprojectname$", Options.AssemblyName);
             _taskPaneDesignerFile = _taskPaneDesignerFile.Replace("$usingItems$", this.GetNetOfficeProjectUsingToolsItems());
 
-            string getVersion = "\t\tConsole.WriteLine(\"Addin started in {0}\", Application.Version)";
+            string getVersion = "\t\tConsole.WriteLine(\"Addin started in {0}\", Application.InstanceFriendlyName)";
             _addinFile = _addinFile.Replace("$getversion$", getVersion);
 
-            string attribute2String = "\t<MultiRegister(";
+            string attribute2String = "<MultiRegister(";
             foreach (var item in Options.OfficeApps)
                 attribute2String += "RegisterIn." + item + ", ";
             attribute2String = attribute2String.Substring(0, attribute2String.Length - 2);
@@ -133,12 +133,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             }
             else
             {
-                attributeString = "RegistryLocation(RegistrySaveLocation.CurrentUser)";
+                attributeString = "RegistryLocation(RegistrySaveLocation.InstallScopeCurrentUser)";
             }
 
             if (Options.UseRibbonUI)
             {
-                attributeString += ", CustomUI(\"$safeprojectname$.RibbonUI.xml\")".Replace("$safeprojectname$", Options.AssemblyName);
+                attributeString += ", CustomUI(\"RibbonUI.xml\", True)".Replace("$safeprojectname$", Options.AssemblyName);
                 _addinFile = _addinFile.Replace("$ribbonProperty$", "\tFriend Property RibbonUI() As Office.IRibbonUI\r\n"
                                                                     + "\t\tGet\r\n"
                                                                     + "\t\t\tReturn _ribbonUI\r\n"
@@ -220,20 +220,20 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
 
         private void ReadRessourceFiles()
         {
-            _taskPaneFile = ReadProjectTemplateFile("ToolsSingleAddinVB.TaskPane.txt");
-            _taskPaneDesignerFile = ReadProjectTemplateFile("ToolsSingleAddinVB.TaskPane_Designer.txt");
-            _ribbonFile = ReadProjectTemplateFile("ToolsSingleAddinVB.RibbonUI.txt");
-            _appDesignerFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Application_Designer.txt");
-            _myApplicationFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Application_myapp.txt");
-            _ressourceDesgnerFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Resources_Designer.txt");
-            _ressourceResFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Resources_resx.txt");
-            _settingDesignerFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Settings_Designer.txt");
-            _settingsSettingsFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Settings_settings.txt");
-            _solutionFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Solution.txt");
-            _projectFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Project.txt");
-            _projectUserFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Project_User.txt");
-            _addinFile = ReadProjectTemplateFile("ToolsSingleAddinVB.Addin.txt");
-            _assemblyFile = ReadProjectTemplateFile("ToolsSingleAddinVB.AssemblyInfo.txt");
+            _taskPaneFile = ReadProjectTemplateFile("ToolsMultiAddinVB.TaskPane.txt");
+            _taskPaneDesignerFile = ReadProjectTemplateFile("ToolsMultiAddinVB.TaskPane_Designer.txt");
+            _ribbonFile = ReadProjectTemplateFile("ToolsMultiAddinVB.RibbonUI.txt");
+            _appDesignerFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Application_Designer.txt");
+            _myApplicationFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Application_myapp.txt");
+            _ressourceDesgnerFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Resources_Designer.txt");
+            _ressourceResFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Resources_resx.txt");
+            _settingDesignerFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Settings_Designer.txt");
+            _settingsSettingsFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Settings_settings.txt");
+            _solutionFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Solution.txt");
+            _projectFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Project.txt");
+            _projectUserFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Project_User.txt");
+            _addinFile = ReadProjectTemplateFile("ToolsMultiAddinVB.Addin.txt");
+            _assemblyFile = ReadProjectTemplateFile("ToolsMultiAddinVB.AssemblyInfo.txt");
         }
 
         private void WriteResultFilesToTempFolder()

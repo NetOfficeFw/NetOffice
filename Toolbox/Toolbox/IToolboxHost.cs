@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using NetOffice.DeveloperToolbox.Translation;
 
 namespace NetOffice.DeveloperToolbox
 {
@@ -13,29 +12,6 @@ namespace NetOffice.DeveloperToolbox
         /// Application Name
         /// </summary>
         string Caption { get; }
-
-        /// <summary>
-        /// Available Application Languages
-        /// </summary>
-        ToolLanguages Languages { get; }
-
-        /// <summary>
-        /// The host is supporting a language editor
-        /// </summary>
-        bool SupportsLanguageEditor { get; }
-
-        /// <summary>
-        /// Get or set language editor visibilty
-        /// </summary>
-        bool LanguageEditorVisible { get; set; }
-
-        // Occurs when the langage editor visibilty has been changed
-        event EventHandler LanguageEditorVisibleChanged;
-
-        /// <summary>
-        /// Current Language ID
-        /// </summary>
-        int CurrentLanguageID { get; set; }
 
         /// <summary>
         /// Application Icon

@@ -24,15 +24,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         AssemblyDefinition _assAccess;
         AssemblyDefinition _assMSProject;
         AssemblyDefinition _assVisio;
+        AssemblyDefinition _assPublisher;
 
         Assembly _thisAssembly = Assembly.GetExecutingAssembly();
         
         public NetOfficeSupportTable()
         {
-            Project.Application app1 = null;
-            Visio.Application app2 = null;
-            Console.WriteLine(app1);
-            Console.WriteLine(app2);
             AssemblyName[] referencedAssemblies = _thisAssembly.GetReferencedAssemblies();
             foreach (AssemblyName item in referencedAssemblies)
             {
@@ -90,6 +87,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         string assemblyPath = GetPhysicalPath(item);
                         Stream stream = System.IO.File.OpenRead(assemblyPath);
                         _assVisio = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                    else if (item.Name.StartsWith("PublisherApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assPublisher = AssemblyDefinition.ReadAssembly(stream);
                     }
                 }
             }        
@@ -151,6 +154,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             CustomAttribute typeDefAttribute = (from a in fieldDef.CustomAttributes
                                                 where a.AttributeType.FullName.Equals("NetOffice.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                     || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.Attributes.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -215,6 +219,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             CustomAttribute typeDefAttribute = (from a in typeDef.CustomAttributes
                                                 where a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                     || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.Attributes.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -251,6 +256,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     return _assMSProject;
                 case "Visio":
                     return _assVisio;
+                case "Publisher":
+                    return _assPublisher;
                 default:
                     return null;
             }
@@ -296,8 +303,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         public static string GetTypeName(string fullQualifiedName)
         {
-            string[] array = fullQualifiedName.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
-            return array[2].Substring(0, array[2].IndexOf("::", StringComparison.InvariantCultureIgnoreCase));
+            if (fullQualifiedName.Contains(".Native."))
+            {
+                string[] array = fullQualifiedName.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                return array[3].Substring(0, array[3].IndexOf("::", StringComparison.InvariantCultureIgnoreCase));
+            }
+            else
+            {
+                string[] array = fullQualifiedName.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                return array[2].Substring(0, array[2].IndexOf("::", StringComparison.InvariantCultureIgnoreCase));
+            }
         }
 
         /// <summary>
@@ -340,6 +355,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             CustomAttribute typeDefAttribute = (from a in targetProperty.CustomAttributes
                                                 where a.AttributeType.FullName.Equals("NetOffice.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                     || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.Attributes.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -360,6 +376,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             CustomAttribute typeDefAttribute = (from a in targetMethod.CustomAttributes
                                                 where a.AttributeType.FullName.Equals("NetOffice.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                     || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.Attributes.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -386,6 +403,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             CustomAttribute typeDefAttribute = (from a in targetEvent.CustomAttributes
                                                 where a.AttributeType.FullName.Equals("NetOffice.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                     || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.Attributes.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -404,6 +422,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             if (fileName.IndexOf(",") > -1)
                 fileName = assemblyName.Name.Substring(0, assemblyName.Name.IndexOf(","));
             string fullFileName = System.IO.Path.Combine(directoryName, fileName + ".dll");
+
+            if (!File.Exists(fullFileName))
+            {
+                directoryName = Program.DependencyReleaseSubFolder;
+                fileName = assemblyName.Name;
+                if (fileName.IndexOf(",") > -1)
+                    fileName = assemblyName.Name.Substring(0, assemblyName.Name.IndexOf(","));
+                fullFileName = System.IO.Path.Combine(directoryName, fileName + ".dll");
+            }
+            
             return fullFileName;
         }
 

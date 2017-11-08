@@ -30,6 +30,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 
         #endregion
 
+        #region Properties
+
+        /// <summary>
+        /// Last Right Click Link Label
+        /// </summary>
+        private Control LastClickedLinkLabel { get; set; }
+
+        #endregion
+
         #region IToolboxControl
 
         public IToolboxHost Host { get; private set; }
@@ -88,14 +97,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 
         public void Activate(bool firstTime)
         {
-            scroller1.TextToScroll = GetLanguageCredits();
-            scroller1.Start();
             controlForeColorAnimator1.Start(false);
         }
 
         public void Deactivated()
         {
-            scroller1.Stop();
             controlForeColorAnimator1.Stop();
         }
 
@@ -114,12 +120,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             
         }
 
-        public void SetLanguage(int id)
-        {
-            
-        }
-
-        public Stream GetHelpText(int lcid)
+        public Stream GetHelpText()
         { 
             throw new NotImplementedException();
         }
@@ -141,70 +142,82 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 
         #endregion
 
-        #region ILocalizationDesign
+        #region Trigger
 
-        public void EnableDesignView(int lcid, string parentComponentName)
+        private void labelNetOfficeIsFree_Click(object sender, EventArgs args)
         {
-
-        }
-
-        public void Localize(Translation.ItemCollection strings)
-        {
-            Translation.Translator.TranslateControls(this, strings);
-        }
-
-        public void Localize(string name, string text)
-        {
-            Translation.Translator.TranslateControl(this, name, text);
-        }
-
-        public string GetCurrentText(string name)
-        {
-            return Translation.Translator.TryGetControlText(this, name);
-        }
-
-        public string NameLocalization
-        {
-            get
+            try
             {
-                return null;
-            }
-        }
-
-        public IEnumerable<ILocalizationChildInfo> Childs
-        {
-            get
-            {
-                return new ILocalizationChildInfo[0];
-            }
-        }
-
-        #endregion
-
-        #region Methods
-
-        private string GetLanguageCredits()
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (var item in Host.Languages)
-            {
-                if (!String.IsNullOrWhiteSpace(item.Author))
-                {
-                    string lng = String.Format("{0}{1}{2}{3}{4}{4}{4}",
-                        item.DisplayName + Environment.NewLine + Environment.NewLine, 
-                        item.Author + Environment.NewLine, 
-                        String.IsNullOrWhiteSpace(item.AuthorMail) ? "" : "   " + item.AuthorMail + Environment.NewLine,
-                        String.IsNullOrWhiteSpace(item.AuthorSite) ? "" : "   " + item.AuthorSite + Environment.NewLine,
-                        Environment.NewLine);
-                    sb.Append(lng);
+                MouseEventArgs mouseArgs = args as MouseEventArgs;
+                if (null != mouseArgs && mouseArgs.Button == MouseButtons.Left)
+                { 
+                    Control control = sender as Control;
+                    System.Diagnostics.Process.Start(control.Tag as string);
                 }
             }
-            return sb.ToString();
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
-        #endregion
+        private void LinkContextMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (null != LastClickedLinkLabel)
+            {
+                Clipboard.SetText(LastClickedLinkLabel.Tag as string);
+            }
+        }
 
-        #region Trigger
+        private void linkLabelMailContact_Click(object sender, EventArgs args)
+        {
+            try
+            {
+                MouseEventArgs mouseArgs = args as MouseEventArgs;
+                if (null == mouseArgs)
+                    return;
+
+                if (mouseArgs.Button == MouseButtons.Left)
+                {
+                    LinkLabel label = sender as LinkLabel;
+                    System.Diagnostics.Process.Start("mailto:" + label.Text as string);
+                }
+                else if (mouseArgs.Button == MouseButtons.Right)
+                {
+                    LastClickedLinkLabel = sender as Control;
+                    LinkContextMenu.Show(sender as Control, 0, 0);
+                }
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
+        }
+
+        private void linkLabelCompany_Clicked(object sender, EventArgs args)
+        {
+            try
+            {
+                MouseEventArgs mouseArgs = args as MouseEventArgs;
+                if (null == mouseArgs)
+                    return;
+
+                if (mouseArgs.Button == MouseButtons.Left)
+                {
+                    LinkLabel label = sender as LinkLabel;
+                    System.Diagnostics.Process.Start(label.Tag as string);
+                }
+                else if (mouseArgs.Button == MouseButtons.Right)
+                {
+                    LastClickedLinkLabel = sender as Control;
+                    LinkContextMenu.Show(sender as Control, 0, 0);
+                }
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
+        }
 
         private void AboutControl_Resize(object sender, EventArgs e)
         {
@@ -214,55 +227,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
-            }
-        }
-
-        private void linkLabelCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            try
-            {
-                LinkLabel label = sender as LinkLabel;
-                System.Diagnostics.Process.Start(label.Text);
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
-            }
-        }
-
-        private void labelNetOfficeIsFree_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                EasterEggControl ctrl = new EasterEggControl(Host.CurrentLanguageID);
-                ctrl.Dock = DockStyle.Fill;
-                Controls.Add(ctrl);
-                ctrl.BringToFront();
-                ctrl.Done += new EventHandler(EasterEgg_Done);
-                ctrl.Visible = true;
-                ctrl.ShowGernot();
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
-            }
-        }
-
-        private void EasterEgg_Done(object sender, EventArgs e)
-        {
-            try
-            {
-                EasterEggControl ctrl = sender as EasterEggControl;
-                if (null != ctrl && Controls.Contains(ctrl))
-                {
-                    Controls.Remove(ctrl);
-                    ctrl.Dispose();
-                }
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 

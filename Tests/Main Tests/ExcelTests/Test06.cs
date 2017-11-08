@@ -103,13 +103,13 @@ namespace ExcelTestsCSharp
 
         #endregion
 
-        void ExcelApplication_SheetDeactivateEvent(COMObject Sh)
+        void ExcelApplication_SheetDeactivateEvent(ICOMObject Sh)
         {
             _sheetDeactivateEvent = true;
             Sh.Dispose();
         }
 
-        void ExcelApplication_SheetActivateEvent(COMObject Sh)
+        void ExcelApplication_SheetActivateEvent(ICOMObject Sh)
         {
             _sheetActivateEvent = true;
             Sh.Dispose();

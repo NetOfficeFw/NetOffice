@@ -52,9 +52,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Custom
         {
             try
             {
-                if (!Directory.Exists(Translation.ToolLanguages.DirectoryPath))
-                    Directory.CreateDirectory(Translation.ToolLanguages.DirectoryPath);
-                System.Diagnostics.Process.Start(Translation.ToolLanguages.DirectoryPath);
+                
             }
             catch
             {
