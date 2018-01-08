@@ -14,7 +14,7 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Fields : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi.Field>
+	public class Fields : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi._Field>
 	{
 		#pragma warning disable
 
@@ -133,12 +133,12 @@ namespace NetOffice.DAOApi
 
         #region IEnumerableProvider<NetOffice.DAOApi.Field>
 
-        ICOMObject IEnumerableProvider<NetOffice.DAOApi.Field>.GetComObjectEnumerator(ICOMObject parent)
+        ICOMObject IEnumerableProvider<NetOffice.DAOApi._Field>.GetComObjectEnumerator(ICOMObject parent)
         {
             return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
         }
 
-        IEnumerable IEnumerableProvider<NetOffice.DAOApi.Field>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
+        IEnumerable IEnumerableProvider<NetOffice.DAOApi._Field>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
         {
             return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
         }
@@ -151,10 +151,10 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO, 3.6,12.0
         /// </summary>
         [SupportByVersion("DAO", 3.6, 12.0)]
-        public IEnumerator<NetOffice.DAOApi.Field> GetEnumerator()
+        public IEnumerator<NetOffice.DAOApi._Field> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.DAOApi.Field item in innerEnumerator)
+            foreach (NetOffice.DAOApi._Field item in innerEnumerator)
                 yield return item;
         }
 
