@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         #endregion
 
         #region Overrides 
-      
+
         /// <summary>
         /// Called from ctor at last as an inherited class service
         /// </summary>
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Invalidate()
         {
-            if(null == NativeRibbon)
+            if(HasUnderlyingObject)
                 NativeRibbon.Invalidate();
         }
 
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public void InvalidateControl(string controlID)
         {
-            if (null == NativeRibbon)
+            if (HasUnderlyingObject)
                 NativeRibbon.InvalidateControl(controlID);
         }
 
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 14, 15, 16)]
         public void InvalidateControlMso(string controlID)
         {
-            if (null == NativeRibbon)
+            if (HasUnderlyingObject)
                 NativeRibbon.InvalidateControlMso(controlID);
         }
 
@@ -190,7 +190,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 14, 15, 16)]
         public void ActivateTab(string controlID)
         {
-            if (null == NativeRibbon)
+            if (HasUnderlyingObject)
                 NativeRibbon.ActivateTab(controlID);
         }
 
@@ -202,7 +202,7 @@ namespace NetOffice.OfficeApi
 		[SupportByVersion("Office", 14, 15, 16)]
         public void ActivateTabMso(string controlID)
         {
-            if (null == NativeRibbon)
+            if (HasUnderlyingObject)
                 NativeRibbon.ActivateTabMso(controlID);
         }
 
@@ -215,10 +215,10 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 14, 15, 16)]
         public void ActivateTabQ(string controlID, string _namespace)
         {
-            if (null == NativeRibbon)
+            if (HasUnderlyingObject)
                 NativeRibbon.ActivateTabQ(controlID, _namespace);
         }
-
+    
         #endregion
     }
 }
