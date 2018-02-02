@@ -488,7 +488,7 @@ namespace NetOffice.ExcelApi.Tools
                 }
 
                 CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
-                paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
+                paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
                 TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Excel.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);		
             }
             catch (NetRuntimeSystem.Exception exception)
@@ -502,10 +502,10 @@ namespace NetOffice.ExcelApi.Tools
         /// The method is called while the CustomPane attribute is processed
         /// </summary>
         /// <param name="paneInfo">pane definition</param>
-		/// <returns>true if paneInfo is modified, otherwise false to set the default or attribute values</returns>
+		/// <returns>true if pane should be create, otherwise false</returns>
 		protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
 		{
-			return false;
+			return true;
 		}
 		
         /// <summary>

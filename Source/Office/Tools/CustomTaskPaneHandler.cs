@@ -11,7 +11,6 @@ namespace NetOffice.OfficeApi.Tools
     /// TaskPane OnCreate EventHandler
     /// </summary>
     /// <param name="paneInfo">new created pane</param>
-    /// <returns>true if should be created, otherwise false</returns>
     public delegate bool CallOnCreateTaskPaneInfoHandler(TaskPaneInfo paneInfo);
 
     /// <summary>
@@ -24,10 +23,11 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         /// <param name="taskPanes">taskpanes you want to create</param>
         /// <param name="addinType">addin class type informations</param>
+        /// <param name="addin">addin instance</param>
         /// <param name="callOnCreateTaskPaneInfo">callback to manipulate the process dynamicly</param>
         /// <param name="visibleStateChange">visible changed event handler</param>
         /// <param name="dockPositionStateChange">dock state changed event handler</param>
-        public void ProceedCustomPaneAttributes(OfficeApi.Tools.CustomTaskPaneCollection taskPanes, Type addinType,
+        public void ProceedCustomPaneAttributes(OfficeApi.Tools.CustomTaskPaneCollection taskPanes, Type addinType, COMAddinBase addin,
             CallOnCreateTaskPaneInfoHandler callOnCreateTaskPaneInfo,
             CustomTaskPane_VisibleStateChangeEventHandler visibleStateChange, 
             CustomTaskPane_DockPositionStateChangeEventHandler dockPositionStateChange)
@@ -38,24 +38,26 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != itemPane)
                 {
                     TaskPaneInfo item = taskPanes.Add(itemPane.PaneType, itemPane.PaneType.Name);
-                    if (!callOnCreateTaskPaneInfo(item))
+                    item.Title = itemPane.Title;
+                    item.Visible = itemPane.Visible;
+                    item.DockPosition = (OfficeApi.Enums.MsoCTPDockPosition)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPosition), itemPane.DockPosition.ToString());
+                    item.DockPositionRestrict = (OfficeApi.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPositionRestrict), itemPane.DockPositionRestrict.ToString());
+                    item.Width = itemPane.Width;
+                    item.Height = itemPane.Height;
+                    item.Arguments = new object[] { addin, this };
+                    if (callOnCreateTaskPaneInfo(item))
                     {
-                        item.Title = itemPane.Title;
-                        item.Visible = itemPane.Visible;
-                        item.DockPosition = (OfficeApi.Enums.MsoCTPDockPosition)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPosition), itemPane.DockPosition.ToString());
-                        item.DockPositionRestrict = (OfficeApi.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPositionRestrict), itemPane.DockPositionRestrict.ToString());
-                        item.Width = itemPane.Width;
-                        item.Height = itemPane.Height;
-                        item.Arguments = new object[] { this };
+                        item.VisibleStateChange += visibleStateChange;
+                        item.DockPositionStateChange += dockPositionStateChange;
                     }
-
-                    item.VisibleStateChange += visibleStateChange;
-                    item.DockPositionStateChange += dockPositionStateChange;
+                    else
+                    {
+                        taskPanes.Remove(item);
+                    }
                 }
             }
         }
-
-
+        
         /// <summary>
         /// Create taskpanes
         /// </summary>

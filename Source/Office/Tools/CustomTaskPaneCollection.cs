@@ -379,6 +379,19 @@ namespace NetOffice.OfficeApi.Tools
 			return item;
         }
 
+        /// <summary>
+        /// Remove a taskpane from the collection
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        internal bool Remove(TaskPaneInfo item)
+        {
+            if (null != item)
+                return InnerList.Remove(item);
+            else
+                return false;
+        }
+
 		/// <summary>
         /// Collection items count
         /// </summary>
@@ -418,7 +431,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <returns>IEnumerator instance</returns>
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return InnerList.GetEnumerator();
         }
     }
 }

@@ -511,19 +511,23 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != itemPane)
                 {
                     TaskPaneInfo item = TaskPanes.Add(itemPane.PaneType, itemPane.PaneType.Name);
-                    if (!CallOnCreateTaskPaneInfo(item))
-                    {
-                        item.Title = itemPane.Title;
-                        item.Visible = itemPane.Visible;
-                        item.DockPosition = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), itemPane.DockPosition.ToString());
-                        item.DockPositionRestrict = (Office.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(Office.Enums.MsoCTPDockPositionRestrict), itemPane.DockPositionRestrict.ToString());
-                        item.Width = itemPane.Width;
-                        item.Height = itemPane.Height;
-                        item.Arguments = new object[] { this };
-                    }
+                    item.Title = itemPane.Title;
+                    item.Visible = itemPane.Visible;
+                    item.DockPosition = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), itemPane.DockPosition.ToString());
+                    item.DockPositionRestrict = (Office.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(Office.Enums.MsoCTPDockPositionRestrict), itemPane.DockPositionRestrict.ToString());
+                    item.Width = itemPane.Width;
+                    item.Height = itemPane.Height;
+                    item.Arguments = new object[] { this };
 
-                    item.VisibleStateChange += new NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler(AttributePane_VisibleStateChange);
-                    item.DockPositionStateChange += new Office.CustomTaskPane_DockPositionStateChangeEventHandler(AttributePane_DockPositionStateChange);
+                    if (CallOnCreateTaskPaneInfo(item))
+                    {
+                        item.VisibleStateChange += new NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler(AttributePane_VisibleStateChange);
+                        item.DockPositionStateChange += new Office.CustomTaskPane_DockPositionStateChangeEventHandler(AttributePane_DockPositionStateChange);
+                    }
+                    else
+                    {
+                        TaskPanes.Remove(item);
+                    }
                 }
             }
         }
@@ -642,10 +646,10 @@ namespace NetOffice.OfficeApi.Tools
         /// The method is called while the CustomPane attribute is processed
         /// </summary>
         /// <param name="paneInfo">pane definition</param>
-		/// <returns>true if paneInfo is modified, otherwise false to set the default or attribute values</returns>
+		/// <returns>true if pane should be create, otherwise false</returns>
 		protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
 		{
-			return false;
+			return true;
 		}
 		
         /// <summary>
