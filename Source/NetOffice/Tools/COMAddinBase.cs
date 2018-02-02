@@ -31,7 +31,7 @@ namespace NetOffice.Tools
         private static object _lock = new object();
 
         /// <summary>
-        /// Creates an instance of th class
+        /// Creates an instance of the class
         /// </summary>
         public COMAddinBase()
         {

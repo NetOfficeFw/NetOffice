@@ -97,6 +97,11 @@ namespace NetOffice.WordApi.Tools
         public Office.IRibbonUI RibbonUI { get; private set; }
 
         /// <summary>
+        /// Custom addin object if created
+        /// </summary>
+        protected internal object CustomObject { get; private set; }
+
+        /// <summary>
         /// Cached Error Method Delegate
         /// </summary>
         private MethodInfo ErrorMethod { get; set; }
@@ -305,6 +310,7 @@ namespace NetOffice.WordApi.Tools
 
                 this.Application = new Word.Application(Factory, null, application);
                 Utils = OnCreateUtils();
+                TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
@@ -831,6 +837,17 @@ namespace NetOffice.WordApi.Tools
         #region Virtual Methods
 
         /// <summary>
+        /// Returns an instance to publish them as addin custom object.
+        /// External code like vba can access this object if instance is available as COM component.
+        /// This object is available as Appplication.COMAddins(?).Object
+        /// </summary>
+        /// <returns>addin instance object or null(Nothing in Visual Basic)</returns>
+        protected virtual object OnCreateObjectInstance()
+        {
+            return null;
+        }
+
+        /// <summary>
         /// Create the used utils. The method was called in OnConnection
         /// </summary>
         /// <returns>new ToolsUtils instance</returns>
@@ -886,8 +903,9 @@ namespace NetOffice.WordApi.Tools
             if (null != _isLoadedFromSystem)
                 return _isLoadedFromSystem;
 
-            OfficeApi.Tools.Contribution.RegistryLocationResult result = OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(Type,
-                    ApplicationIdentifiers.ApplicationType.Word);
+            OfficeApi.Tools.Contribution.RegistryLocationResult result = 
+                OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(Type, 
+                                            ApplicationIdentifiers.ApplicationType.Word);
             switch (result)
             {
                 case Office.Tools.Contribution.RegistryLocationResult.User:
@@ -896,11 +914,34 @@ namespace NetOffice.WordApi.Tools
                 case Office.Tools.Contribution.RegistryLocationResult.System:
                     _isLoadedFromSystem = true;
                     break;
-                default:
-                    throw new IndexOutOfRangeException();
+                //default:
+                //    throw new IndexOutOfRangeException();
             }
 
             return _isLoadedFromSystem;
+        }
+
+        /// <summary>
+        /// Try to create a custom addin object instance
+        /// </summary>
+        /// <param name="addInInst">given instance from OnConnection event</param>
+        private void TryCreateCustomObject(object addInInst)
+        {
+            try
+            {
+                CustomObject = OnCreateObjectInstance();
+                if (null != CustomObject)
+                {
+                    object[] param = new object[1];
+                    param[0] = CustomObject;
+                    addInInst.GetType().InvokeMember("Object", NetRuntimeSystem.Reflection.BindingFlags.SetProperty, null, addInInst, param);
+                }
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.CreateCustomAddinInstance, exception);
+            }
         }
 
         #endregion

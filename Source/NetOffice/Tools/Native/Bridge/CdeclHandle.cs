@@ -71,6 +71,20 @@ namespace NetOffice.Tools.Native.Bridge
         /// <summary>
         /// Returns a function pointer by name. The method is caching the operation.
         /// </summary>
+        /// <typeparam name="T">target delegate</typeparam>
+        /// <param name="name">name of the method</param>
+        /// <returns>delegate to unmanaged method</returns>
+        /// <exception cref="Win32Exception">Unable to get proc address or function pointer</exception>
+        /// <exception cref="ArgumentNullException">an argument is null or empty</exception>
+        /// <exception cref="ObjectDisposedException">instance is already disposed</exception>
+        public T GetDelegateForFunctionPointer<T>(string name) where T : class // <= no way for a delegate constraint here
+        {
+            return GetDelegateForFunctionPointer(name, typeof(T)) as T;
+        }
+
+        /// <summary>
+        /// Returns a function pointer by name. The method is caching the operation.
+        /// </summary>
         /// <param name="name">name of the method</param>
         /// <param name="type">target delegate type</param>
         /// <returns>delegate to unmanaged method</returns>
@@ -140,6 +154,23 @@ namespace NetOffice.Tools.Native.Bridge
                 throw new Win32Exception(String.Format("Unable to load library <{0}>.", fileName));
             
             return new CdeclHandle(ptr, folder, fileName);
+        }
+
+        /// <summary>
+        /// Loads an unmanaged library from filesystem
+        /// </summary>
+        /// <typeparam name="T">codebase type</typeparam>
+        /// <param name="fileName">name(incl. extension) without path of the library</param>
+        /// <param name="fileVersion">optional file version to check major and minor</param>
+        /// <returns>handle to library</returns>
+        /// <exception cref="FileNotFoundException">File is missing</exception>
+        /// <exception cref="Win32Exception">Unable to load library</exception>
+        /// <exception cref="FileLoadException">A version mismatch occurs</exception>
+        /// <exception cref="ArgumentNullException">a non-optional argument is null or empty</exception>
+        /// <exception cref="NetOfficeIOException">I/O related error</exception>
+        public static CdeclHandle LoadLibrary<T>(string fileName, Version fileVersion = null)
+        {
+            return LoadLibrary(typeof(T), fileName, fileVersion);
         }
 
         /// <summary>
