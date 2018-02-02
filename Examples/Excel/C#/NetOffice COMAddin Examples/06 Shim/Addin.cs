@@ -15,21 +15,38 @@ namespace Excel06AddinCS4
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate void SayHello(string caption);
 
-        [RegisterFunction(RegisterMode.CallAfter)]
+        [RegisterFunction(RegisterMode.Replace)]
         private static void Register(Type type, RegisterCall registerCall, InstallScope scope, OfficeRegisterKeyState keyState)
         {
             try
             {
-                using (CdeclHandle libray = CdeclHandle.LoadLibrary(typeof(Addin), "Excel06AddinCS4.Shim.dll"))
+                using (CdeclHandle libray = CdeclHandle.LoadLibrary<Addin>("Excel06AddinCS4.Shim.dll"))
                 {
-                    SayHello hello = libray.GetDelegateForFunctionPointer("SayHelloToTheWorld", typeof(SayHello)) as SayHello;
-                    hello("Excel06AddinCS4");
+                    SayHello hello = libray.GetDelegateForFunctionPointer<SayHello>("SayHelloToTheWorld");
+                    hello("Register Excel06AddinCS4");
+                }
+            }
+            catch (Exception ex)    
+            {
+                Office.Tools.Contribution.DialogUtils.ShowMessageBox(ex.ToString());
+            }
+        }
+
+        [UnRegisterFunction(RegisterMode.Replace)]
+        private static void UnRegister(Type type, RegisterCall registerCall, InstallScope scope, OfficeRegisterKeyState keyState)
+        {
+            try
+            {
+                using (CdeclHandle libray = CdeclHandle.LoadLibrary<Addin>("Excel06AddinCS4.Shim.dll"))
+                {
+                    SayHello hello = libray.GetDelegateForFunctionPointer<SayHello>("SayHelloToTheWorld");
+                    hello("Unregister Excel06AddinCS4");
                 }
             }
             catch (Exception ex)
             {
                 Office.Tools.Contribution.DialogUtils.ShowMessageBox(ex.ToString());
-            }           
+            }
         }
 
         [RegisterErrorHandler]

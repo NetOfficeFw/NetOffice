@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 Ribbons and Panes", "02 Ribbons And Panes\02 Ribbons and Panes.csproj", "{372327EE-02AD-435D-AB29-5699137F41E6}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Register and Unregister", "04 Register and Unregister\04 Register and Unregister.csproj", "{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Document Inspector", "05 Document Inspector\05 Document Inspector.csproj", "{AB10E0E5-71E7-4775-A7CE-BAC12F63052D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 Custom Addin Object", "06 Custom Addin Object\06 Custom Addin Object.csproj", "{52127B78-7926-4192-9DBD-87B899D0EB28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{AB10E0E5-71E7-4775-A7CE-BAC12F63052D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB10E0E5-71E7-4775-A7CE-BAC12F63052D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB10E0E5-71E7-4775-A7CE-BAC12F63052D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52127B78-7926-4192-9DBD-87B899D0EB28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52127B78-7926-4192-9DBD-87B899D0EB28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52127B78-7926-4192-9DBD-87B899D0EB28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52127B78-7926-4192-9DBD-87B899D0EB28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

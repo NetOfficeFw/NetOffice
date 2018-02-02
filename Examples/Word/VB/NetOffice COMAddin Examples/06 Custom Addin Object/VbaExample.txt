@@ -1,0 +1,25 @@
+﻿'' This is an example how to get the addin object from VBA.
+''
+'' You need to reference Word06AddinVB4 in the VBA project
+'' or you can use also latebinding(timer as Object).
+
+Sub Macro1()
+
+	Dim timer As Word06AddinVB4.ITimeComponent
+	Set timer = GetClock()
+    MsgBox timer.GetTime()
+
+End Sub
+
+Private Function GetClock() As Word06AddinVB4.ITimeComponent
+
+    Dim addin As COMAddIn
+    For Each addin In Application.COMAddIns
+            
+        If addin.ProgID = "Word06AddinVB4.Connect" Then
+            GetWordAddin = addin.Object
+            Return
+        End If
+    Next
+
+End Function
