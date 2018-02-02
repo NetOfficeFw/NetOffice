@@ -26,7 +26,7 @@ namespace Excel02AddinCS4
 
         public void OnConnection(NetOffice.ExcelApi.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
         {
-
+            Addin parentAddin = customArguments[0] as Addin;
         }
 
         public void OnDisconnection()
