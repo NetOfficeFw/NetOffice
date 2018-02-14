@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -639,7 +639,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyCountChanged(int proxyCount)
+        private void Core_ProxyCountChanged(int proxyCount, string name)
         {
             Action method = delegate
             {

@@ -121,7 +121,8 @@ namespace NetOffice
         /// ProxyCountChanged delegate
         /// </summary>
         /// <param name="proxyCount">current count of com proxies</param>
-        public delegate void ProxyCountChangedHandler(int proxyCount);
+        /// <param name="name">name of the object changing the count</param>
+        public delegate void ProxyCountChangedHandler(int proxyCount, string name);
 
         /// <summary>
         /// IsInitializedChanged delegate
@@ -157,7 +158,7 @@ namespace NetOffice
 
         private static Core _default;
         private bool _initalized;
-        private List<ICOMObject> _globalObjectList = new List<ICOMObject>();
+        private HashSet<ICOMObject> _globalObjectList = new HashSet<ICOMObject>();
         private List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
         private Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
         private Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
@@ -389,12 +390,12 @@ namespace NetOffice
         /// Raise the ProxyCountChanged event (and optional, send channel message to console)
         /// </summary>
         /// <param name="proxyCount">current count of open com proxies</param>
-        private void RaiseProxyCountChanged(int proxyCount)
+        private void RaiseProxyCountChanged(int proxyCount, string proxyInstanceName)
         {
             try
             {
                 if (null != ProxyCountChanged)
-                    ProxyCountChanged(proxyCount);
+                    ProxyCountChanged(proxyCount, proxyInstanceName);
             }
             catch (Exception throwedException)
             {
@@ -1137,7 +1138,7 @@ namespace NetOffice
             {
                 // NO is appending new proxies so we free them in reverse order
                 while (_globalObjectList.Count > 0)
-                    _globalObjectList[_globalObjectList.Count - 1].Dispose();
+                    _globalObjectList.ElementAt(_globalObjectList.Count - 1).Dispose();
                 RaiseProxyCleared();
             }
         }
@@ -1162,7 +1163,7 @@ namespace NetOffice
                     RaiseProxyAdded(ownerPath, proxy);
                 }
 
-                RaiseProxyCountChanged(_globalObjectList.Count);
+                RaiseProxyCountChanged(_globalObjectList.Count, $"{proxy.InstanceName}-{proxy.InstanceFriendlyName}-{proxy.InstanceComponentName}-{proxy.UnderlyingComponentName}-{proxy.UnderlyingTypeName}");
             }
             catch (Exception throwedException)
             {
@@ -1198,7 +1199,7 @@ namespace NetOffice
                     RaiseProxyRemoved(ownerPath, proxy);
                 }
 
-                RaiseProxyCountChanged(_globalObjectList.Count);
+                RaiseProxyCountChanged(_globalObjectList.Count, $"{proxy.InstanceName}-{proxy.InstanceFriendlyName}-{proxy.InstanceComponentName}-{proxy.UnderlyingComponentName}-{proxy.UnderlyingTypeName}");
             }
             catch (Exception throwedException)
             {

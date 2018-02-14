@@ -814,7 +814,7 @@ namespace NetOffice
             try
             {
                 if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                    throw new ObjectDisposedException($"COMObject {name}");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
