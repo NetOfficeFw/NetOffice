@@ -223,10 +223,10 @@
             this.radioButtonUserFolder.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonUserFolder.Location = new System.Drawing.Point(40, 50);
             this.radioButtonUserFolder.Name = "radioButtonUserFolder";
-            this.radioButtonUserFolder.Size = new System.Drawing.Size(112, 21);
+            this.radioButtonUserFolder.Size = new System.Drawing.Size(93, 21);
             this.radioButtonUserFolder.TabIndex = 106;
             this.radioButtonUserFolder.TabStop = true;
-            this.radioButtonUserFolder.Text = "Eigene Dateien";
+            this.radioButtonUserFolder.Text = "User Folder";
             this.radioButtonUserFolder.UseVisualStyleBackColor = true;
             this.radioButtonUserFolder.CheckedChanged += new System.EventHandler(this.radioButtonProjectFolder_CheckedChanged);
             // 
@@ -293,7 +293,7 @@
             this.checkBoxUseTools.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxUseTools.Location = new System.Drawing.Point(72, 95);
             this.checkBoxUseTools.Name = "checkBoxUseTools";
-            this.checkBoxUseTools.Size = new System.Drawing.Size(141, 21);
+            this.checkBoxUseTools.Size = new System.Drawing.Size(140, 21);
             this.checkBoxUseTools.TabIndex = 114;
             this.checkBoxUseTools.Text = "Use NetOffice Tools";
             this.checkBoxUseTools.UseVisualStyleBackColor = true;

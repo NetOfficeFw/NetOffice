@@ -139,7 +139,7 @@ namespace NetOffice.DeveloperToolbox
         {
             get 
             {
-                return "1.7.4.1";
+                return "1.7.4.4";
             }
         }
 
