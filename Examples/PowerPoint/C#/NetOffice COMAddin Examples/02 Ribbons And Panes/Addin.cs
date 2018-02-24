@@ -5,7 +5,7 @@ using NetOffice;
 using NetOffice.Tools;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
-using Excel = NetOffice.PowerPointApi;
+using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.PowerPointApi.Tools;
 /*
