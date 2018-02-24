@@ -59,7 +59,6 @@ namespace ClientApplication
             this.Name = "Form1";
             this.Text = "ClientApplication";
             this.ResumeLayout(false);
-
         }
 
         #endregion

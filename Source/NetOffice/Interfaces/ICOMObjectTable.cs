@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NetOffice.Exceptions;
 using System.Runtime.InteropServices;
+using System.ComponentModel;
 
 namespace NetOffice
 {
@@ -14,11 +15,13 @@ namespace NetOffice
         /// <summary>
         /// The parent object where the instance come from or null(Nothing in Visual Basic)
         /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         ICOMObject ParentObject { get; }
 
         /// <summary>
         /// Associated childs from the instance
         /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         IEnumerable<ICOMObject> ChildObjects { get; }
 
         /// <summary>
@@ -26,6 +29,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="childObject">new child instance</param>
         /// <exception cref="COMChildRelationException">Unexpected error</exception>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         void AddChildObject(ICOMObject childObject);
 
         /// <summary>
@@ -34,6 +38,16 @@ namespace NetOffice
         /// <param name="childObject">child instance</param>
         /// <returns>true if childObject has been removed, otherwise false</returns>
         /// <exception cref="COMChildRelationException">Unexpected error</exception>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         bool RemoveChildObject(ICOMObject childObject);
+
+        /// <summary>
+        /// Removes an instance from its current position in com proxy management and make him a root object
+        /// </summary>
+        /// <typeparam name="T">cast instance into result type</typeparam>
+        /// <returns>instance result as a root proxy</returns>
+        /// <exception cref="CreateInstanceException">Unexpected error</exception>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
+        T TakeObject<T>() where T : class, ICOMObject;
     }
 }

@@ -215,6 +215,7 @@ namespace NetOffice
         /// <summary>
         /// Increment the reference counter by 1
         /// </summary>
+        /// <exception cref="ObjectDisposedException">throws when instance is already released</exception>
         public virtual void Acquire()
         {
             if (_released)
@@ -324,8 +325,9 @@ namespace NetOffice
             try
             {
                 // CountChanged?Invoke is unsupported in previous C# versions
-                if (null != CountChanged)
-                    CountChanged(this);
+                var handler = CountChanged;
+                if (null != handler)
+                    handler(this);
             }
             catch
             {

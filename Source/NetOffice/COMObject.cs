@@ -1107,10 +1107,35 @@ namespace NetOffice
             }
         }
 
+        /// <summary>
+        /// Removes an instance from its current position in com proxy management and make him a root object
+        /// </summary>
+        /// <typeparam name="T">cast instance into result type</typeparam>
+        /// <returns>instance result as a root proxy</returns>
+        /// <exception cref="CreateInstanceException">Unexpected error</exception>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
+        public T TakeObject<T>() where T : class, ICOMObject
+        {
+            try
+            {
+                var parentObject = ParentObject;
+                if (null != parentObject)
+                {
+                    parentObject.RemoveChildObject(this);
+                }
+
+                return Activator.CreateInstance(typeof(T), Factory, null, UnderlyingObject) as T;
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
+
         #endregion
 
         #region ICOMObjectTableDisposable
-        
+
         /// <summary>
         /// NetOffice method: dispose all child instances
         /// </summary>
