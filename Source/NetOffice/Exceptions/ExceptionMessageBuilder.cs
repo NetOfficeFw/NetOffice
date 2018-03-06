@@ -1,8 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace NetOffice.Exceptions
 {
@@ -28,7 +25,41 @@ namespace NetOffice.Exceptions
     }
 
     internal static class ExceptionMessageBuilder
-    {
+    {   
+        /// <summary>
+        /// Get exception message based on associated settings
+        /// </summary>
+        /// <param name="throwedException">exception as any</param>
+        /// <param name="instance">caller instance</param>
+        /// <param name="name"></param>
+        /// <param name="type">name of invoke target</param>
+        /// <param name="arguments">arguments as any</param>
+        /// <returns>exception message</returns>
+        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, object[] arguments = null)
+        {
+            if (null == throwedException)
+                throw new ArgumentNullException("throwedException", "<Please report this error.>");
+
+            ICOMObject comObject = instance as ICOMObject;
+            if (null == comObject)
+                return Settings.Default.ExceptionDefaultMessage;
+            Settings settings = comObject.Settings;
+
+            switch (comObject.Settings.ExceptionMessageBehavior)
+            {
+                case ExceptionMessageHandling.Diagnostics:
+                    return GetExceptionDiagnosticsMessage(comObject, name, type, arguments);
+                case ExceptionMessageHandling.Default:
+                    return settings.ExceptionDefaultMessage;
+                case ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException:
+                    return GetExceptionInnerExceptionMessageToTopLevelMessage(throwedException);
+                case ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException:
+                    return GetExceptionAllInnerExceptionMessagesToTopLevelMessage(throwedException);
+                default:
+                    throw new NetOfficeException("<Unexpected exception behavior. Please report this error.>");
+            }
+        }
+
         /// <summary>
         /// Get diagnostic exception message
         /// </summary>
@@ -37,7 +68,7 @@ namespace NetOffice.Exceptions
         /// <param name="type">type of invoke target</param>
         /// <param name="arguments">arguments as any</param>
         /// <returns>diagnostic exception message or error message if an exception occurs</returns>
-        internal static string GetExceptionDiagnosticsMessage(ICOMObject comObject, string name, CallType type, object[] arguments = null)
+        private static string GetExceptionDiagnosticsMessage(ICOMObject comObject, string name, CallType type, object[] arguments = null)
         {
             try
             {
@@ -92,7 +123,7 @@ namespace NetOffice.Exceptions
             }
             catch
             {
-                return "<Failed to create Exception Message. Please report this bug.>";
+                return "<Failed to create exception message. Please report this error.>";
             }
         }
 
@@ -101,7 +132,7 @@ namespace NetOffice.Exceptions
         /// </summary>
         /// <param name="comObject">caller instance</param>
         /// <returns>default exception message</returns>
-        internal static string GetExceptionDefaultMessage(ICOMObject comObject)
+        private static string GetExceptionDefaultMessage(ICOMObject comObject)
         {
             return comObject.Settings.ExceptionDefaultMessage;
         }
@@ -111,12 +142,12 @@ namespace NetOffice.Exceptions
         /// </summary>
         /// <param name="throwedException">exception as any</param>
         /// <returns>most inner exception message</returns>
-        internal static string GetExceptionInnerExceptionMessageToTopLevelMessage(Exception throwedException)
+        private static string GetExceptionInnerExceptionMessageToTopLevelMessage(Exception throwedException)
         {
-            string message = string.Empty;
+            string message = throwedException.Message;
             while (throwedException.InnerException != null)
             {
-                message = throwedException.Message;
+                message = throwedException.InnerException.Message;
                 throwedException = throwedException.InnerException;
             }
             return message;
@@ -127,47 +158,15 @@ namespace NetOffice.Exceptions
         /// </summary>
         /// <param name="throwedException">exception</param>
         /// <returns>exception message summary</returns>
-        internal static string GetExceptionAllInnerExceptionMessagesToTopLevelMessage(Exception throwedException)
+        private static string GetExceptionAllInnerExceptionMessagesToTopLevelMessage(Exception throwedException)
         {
-            string messageSummary = string.Empty;
+            string messageSummary = throwedException.Message + Environment.NewLine;
             while (throwedException.InnerException != null)
             {
-                messageSummary += throwedException.Message + Environment.NewLine;
+                messageSummary += throwedException.InnerException.Message + Environment.NewLine;
                 throwedException = throwedException.InnerException;
             }
             return messageSummary;
-
-        }
-
-        /// <summary>
-        /// Get exception message based on associated settings
-        /// </summary>
-        /// <param name="throwedException">exception as any</param>
-        /// <param name="instance">caller instance</param>
-        /// <param name="name"></param>
-        /// <param name="type">name of invoke target</param>
-        /// <param name="arguments">arguments as any</param>
-        /// <returns>exception message</returns>
-        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, object[] arguments = null)
-        {
-            ICOMObject comObject = instance as ICOMObject;
-            if (null == comObject)
-                return Settings.Default.ExceptionDefaultMessage;
-            Settings settings = comObject.Settings;
-
-            switch (comObject.Settings.ExceptionMessageBehavior)
-            {
-                case ExceptionMessageHandling.Diagnostics:
-                    return GetExceptionDiagnosticsMessage(comObject, name, type, arguments);
-                case ExceptionMessageHandling.Default:
-                    return settings.ExceptionDefaultMessage;
-                case ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException:
-                    return GetExceptionInnerExceptionMessageToTopLevelMessage(throwedException);
-                case ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException:
-                    return GetExceptionAllInnerExceptionMessagesToTopLevelMessage(throwedException);
-                default:
-                    throw new NetOfficeException("Unexpected ExceptionMessageBehavior.");
-            }
         }
 
         /// <summary>
