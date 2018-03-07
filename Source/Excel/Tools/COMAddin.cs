@@ -18,13 +18,13 @@ namespace NetOffice.ExcelApi.Tools
     /// <summary>
     /// NetOffice MS-Excel COM Addin
     /// </summary>
-    [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)] 
+    [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
     {
         #region Fields
 
         /// <summary>
-        /// MS-Excel Registry Path 
+        /// MS-Excel Registry Path
         /// </summary>
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\Addins\\";
 
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi.Tools
 		protected List<ITaskPane> TaskPaneInstances { get; set; }
 
         /// <summary>
-        /// Ribbon instance to manipulate ui at runtime 
+        /// Ribbon instance to manipulate ui at runtime
         /// </summary>
         public Office.IRibbonUI RibbonUI { get; private set; }
 
@@ -158,21 +158,21 @@ namespace NetOffice.ExcelApi.Tools
         #region IDTExtensibility2 Events
 
         /// <summary>
-        /// The OnStartupComplete event occurs when the host application completes its startup routines, in the case where the COM add-in loads at startup. 
-        /// If the add-in is not loaded when the application loads, the OnStartupComplete event does not occur — 
+        /// The OnStartupComplete event occurs when the host application completes its startup routines, in the case where the COM add-in loads at startup.
+        /// If the add-in is not loaded when the application loads, the OnStartupComplete event does not occur —
         /// even when the user loads the add-in in the COM Add-ins dialog box. When this event does occur, it occurs after the OnConnection event.
-        /// You can use the OnStartupComplete  event procedure to run code that interacts with the application and that should not be run until the application has finished loading. 
-        /// For example, if you want to display a form that gives users a choice of documents to create when they start the application, 
+        /// You can use the OnStartupComplete  event procedure to run code that interacts with the application and that should not be run until the application has finished loading.
+        /// For example, if you want to display a form that gives users a choice of documents to create when they start the application,
         /// you can put that code in the OnStartupComplete event procedure.
         /// </summary>
         public event OnStartupCompleteEventHandler OnStartupComplete;
 
         /// <summary>
-        /// The Shutdown event occurs when the COM add-in is unloaded. 
+        /// The Shutdown event occurs when the COM add-in is unloaded.
         /// You can use the OnDisconnection event procedure to run code that restores any changes made to the application by the add-in and to perform general clean-up operations.
         /// An add-in can be unloaded in one of the following ways:
         /// - The user clears the check box next to the add-in in the COM Add-ins dialog box.
-        /// - The host application closes. If the add-in is loaded when the application closes, it is unloaded. 
+        /// - The host application closes. If the add-in is loaded when the application closes, it is unloaded.
         ///   If the add-in's load behavior is set to Startup, it is reloaded when the application starts again.
         /// - The Connect property of the corresponding COMAddIn object is set to False.
         /// </summary>
@@ -188,17 +188,17 @@ namespace NetOffice.ExcelApi.Tools
         public event OnConnectionEventHandler OnConnection;
 
         /// <summary>
-        /// The OnAddInsUpdate event occurs when the set of loaded COM add-ins changes. 
-        /// When an add-in is loaded or unloaded, the OnAddInsUpdate event occurs in any other loaded add-ins. 
-        /// For example, if add-ins A and B both are loaded currently, and then add-in C is loaded, 
-        /// the OnAddInsUpdate event occurs in add-ins A and B. If C is unloaded, the OnAddInsUpdate event occurs again in add-ins A and B. 
+        /// The OnAddInsUpdate event occurs when the set of loaded COM add-ins changes.
+        /// When an add-in is loaded or unloaded, the OnAddInsUpdate event occurs in any other loaded add-ins.
+        /// For example, if add-ins A and B both are loaded currently, and then add-in C is loaded,
+        /// the OnAddInsUpdate event occurs in add-ins A and B. If C is unloaded, the OnAddInsUpdate event occurs again in add-ins A and B.
         /// </summary>
         public event OnAddInsUpdateEventHandler OnAddInsUpdate;
 
         /// <summary>
-        /// The OnBeginShutdown event occurs when the host application begins its shutdown routines, 
-        /// in the case where the application closes while the COM add-in is still loaded. 
-        /// If the add-in is not loaded when the application closes, 
+        /// The OnBeginShutdown event occurs when the host application begins its shutdown routines,
+        /// in the case where the application closes while the COM add-in is still loaded.
+        /// If the add-in is not loaded when the application closes,
         /// the OnBeginShutdown event does not occur. When this event does occur, it occurs before the OnDisconnection event.
         /// You can use the OnBeginShutdown event procedure to run code when the user closes the application. For example, you can run code that saves form data to a file.
         /// </summary>
@@ -277,15 +277,15 @@ namespace NetOffice.ExcelApi.Tools
         #endregion
 
         #region IDTExtensibility2 Members
-         
+
         void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
             try
-            {               
+            {
                 Tweaks.ApplyTweaks(Factory, this, Type, "Excel", IsLoadedFromSystem);
                 LoadingTimeElapsed = (DateTime.Now - _creationTime);
                 Roots = OnCreateRoots();
-                RaiseOnStartupComplete(ref custom);               
+                RaiseOnStartupComplete(ref custom);
             }
             catch (Exception exception)
             {
@@ -293,7 +293,7 @@ namespace NetOffice.ExcelApi.Tools
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
             }
         }
-        
+
         void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
-                
+
                 this.Application = new Excel.Application(Factory, null, application);
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
@@ -356,7 +356,7 @@ namespace NetOffice.ExcelApi.Tools
                         Factory.Console.WriteException(exception);
                     }
                 }
-                
+
                 try
                 {
                     if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi.Tools
                 catch (NetRuntimeSystem.Exception exception)
                 {
                     Factory.Console.WriteException(exception);
-                }	
+                }
             }
             catch (Exception exception)
             {
@@ -437,7 +437,7 @@ namespace NetOffice.ExcelApi.Tools
         {
             try
             {
-                CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, RibbonID);                                
+                CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, RibbonID);
                 if (null != ribbon)
                     return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                 else
@@ -448,7 +448,7 @@ namespace NetOffice.ExcelApi.Tools
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
 				return String.Empty;
-            } 
+            }
         }
 
         /// <summary>
@@ -489,13 +489,13 @@ namespace NetOffice.ExcelApi.Tools
 
                 CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
                 paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
-                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Excel.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);		
+                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Excel.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
-            } 
+            }
         }
 
         /// <summary>
@@ -507,14 +507,14 @@ namespace NetOffice.ExcelApi.Tools
 		{
 			return true;
 		}
-		
+
         /// <summary>
         /// Called after any visibility changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
 		protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
-	
+
 		}
 
 		/// <summary>
@@ -523,7 +523,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <param name="customTaskPaneInst">pane instance</param>
 		protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
-			
+
 		}
 
 		private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
@@ -615,7 +615,7 @@ namespace NetOffice.ExcelApi.Tools
 		}
 
         #endregion
-        
+
         #region EventHandler
 
         private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
@@ -647,7 +647,7 @@ namespace NetOffice.ExcelApi.Tools
         #region Tweaks
 
         /// <summary>
-        /// This is method is called while startup and ask for permissions to apply a tweak. 
+        /// This is method is called while startup and ask for permissions to apply a tweak.
         /// </summary>
         /// <param name="name">name of the tweak</param>
         /// <param name="value">value of the tweak</param>
@@ -825,7 +825,7 @@ namespace NetOffice.ExcelApi.Tools
         #region COM Register Functions
 
         /// <summary>
-        /// Called from RegAsm while register 
+        /// Called from RegAsm while register
         /// </summary>
         /// <param name="type">Type information for the class</param>
         [ComRegisterFunction, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
@@ -845,7 +845,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <param name="type">Type information for the class</param>
         [ComUnregisterFunction, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
-        {          
+        {
             if (null == type)
                 throw new ArgumentNullException("type");
             if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
@@ -895,7 +895,7 @@ namespace NetOffice.ExcelApi.Tools
         }
 
         /// <summary>
-        /// Called from RegAddin while export registry informations 
+        /// Called from RegAddin while export registry informations
         /// </summary>
         /// <param name="type">Type information for the class</param>
         /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>

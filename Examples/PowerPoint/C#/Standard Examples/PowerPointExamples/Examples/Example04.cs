@@ -17,9 +17,9 @@ namespace PowerPointExamplesCS4
     {
         public void RunExample()
         {
-            // start powerpoint 
+            // start powerpoint
             PowerPoint.Application powerApplication = new PowerPoint.Application();
-         
+
             // create a utils instance, no need for but helpful to keep the lines of code low
             CommonUtils utils = new CommonUtils(powerApplication);
 
@@ -39,8 +39,8 @@ namespace PowerPointExamplesCS4
             slide2.SlideShowTransition.EntryEffect = PpEntryEffect.ppEffectCoverLeftDown;
             slide2.SlideShowTransition.Speed = PpTransitionSpeed.ppTransitionSpeedFast;
 
-            // save the document 
-            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", DocumentFormat.Normal); 
+            // save the document
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", DocumentFormat.Normal);
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference

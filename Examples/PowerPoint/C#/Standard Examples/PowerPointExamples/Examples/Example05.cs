@@ -16,7 +16,7 @@ namespace PowerPointExamplesCS4
     {
         public void RunExample()
         {
-            // start powerpoint 
+            // start powerpoint
             PowerPoint.Application powerApplication = new PowerPoint.Application();
 
             // create a utils instance, no need for but helpful to keep the lines of code low
@@ -30,7 +30,7 @@ namespace PowerPointExamplesCS4
             slide.Shapes.AddOLEObject(120, 111, 480, 320, "MSGraph.Chart", "", MsoTriState.msoFalse, "", 0, "", MsoTriState.msoFalse);
 
             // save the document
-            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example05", DocumentFormat.Normal); 
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example05", DocumentFormat.Normal);
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference

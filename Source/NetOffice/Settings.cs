@@ -40,7 +40,7 @@ namespace NetOffice
         private bool _enableOperatorOverlads = true;
         private string _exceptionDefaultMessage = "See inner exception(s) for details.";
         private string _exceptionDiagnosticsMessage = "Failed to proceed {CallType} on {CallInstance}=>{Name}.";
-        private ExceptionMessageHandling _exceptionMessageBehavior = ExceptionMessageHandling.Diagnostics;
+        private ExceptionMessageHandling _exceptionMessageBehavior = ExceptionMessageHandling.DiagnosticsAndInnerMessage;
         private bool _loadAssembliesUnsafe = true;
         private PerformanceTrace _performanceTrace;
         private static Settings _default;
@@ -93,7 +93,7 @@ namespace NetOffice
         /// <summary>
         /// Performance tracer to see how long its need to call and return all or specific actions
         /// </summary>
-        [Category("Settings"), Description("Trace system to measure performance.")]    
+        [Category("Settings"), Description("Trace system to measure performance.")]
         public PerformanceTrace PerformanceTrace
         {
             get
@@ -115,7 +115,7 @@ namespace NetOffice
             set
             {
                 if (value != _enableProxyManagement)
-                { 
+                {
                     _enableProxyManagement = value;
                     OnPropertyChanged("EnableProxyManagement");
                 }
@@ -141,7 +141,7 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Analyze also known reference proxies to see proxy is may inherited type, false by default
         /// </summary>
@@ -216,7 +216,7 @@ namespace NetOffice
             set
             {
                 if (value != _exceptionMessageBehavior)
-                { 
+                {
                     _exceptionMessageBehavior = value;
                     OnPropertyChanged("ExceptionMessageBehavior");
                 }
@@ -480,7 +480,7 @@ namespace NetOffice
 
         /// <summary>
         /// Get or set NetOffice spend custom overloads for the "==" and "!=" operators for semanticly comparsion. true by default
-        /// </summary>      
+        /// </summary>
         [Category("Settings"), Description("Redirect equal operations like '==' or '!=' for proxy wrapping objects to the com server to determine 2 instances are equal."), DefaultValue(true)]
         public bool EnableOperatorOverlads
         {
@@ -531,7 +531,7 @@ namespace NetOffice
         {
             if (null == settings || settings == this)
                 return true;
-           
+
             // todo: handle that better by reflection
 
             if (PerformanceTrace.Enabled != settings.PerformanceTrace.Enabled || EnableProxyManagement != settings.EnableProxyManagement ||

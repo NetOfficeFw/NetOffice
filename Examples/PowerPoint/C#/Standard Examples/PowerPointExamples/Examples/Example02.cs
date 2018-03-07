@@ -16,7 +16,7 @@ namespace PowerPointExamplesCS4
     {
         public void RunExample()
         {
-            // start powerpoint 
+            // start powerpoint
             PowerPoint.Application powerApplication = new PowerPoint.Application();
 
             // create a utils instance, no need for but helpful to keep the lines of code low
@@ -40,8 +40,8 @@ namespace PowerPointExamplesCS4
             // add a star
             slide.Shapes.AddShape(MsoAutoShapeType.msoShape24pointStar, 200, 200, 250, 250);
 
-            // save the document 
-            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", DocumentFormat.Normal); 
+            // save the document
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", DocumentFormat.Normal);
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference

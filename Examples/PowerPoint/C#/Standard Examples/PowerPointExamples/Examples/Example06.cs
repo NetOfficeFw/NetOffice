@@ -90,7 +90,7 @@ namespace PowerPointExamplesCS4
             // we register some events. note: the event trigger was called from power point, means an other Thread
             powerApplication.PresentationCloseEvent += new NetOffice.PowerPointApi.Application_PresentationCloseEventHandler(powerApplication_PresentationCloseEvent);
             powerApplication.AfterNewPresentationEvent += new NetOffice.PowerPointApi.Application_AfterNewPresentationEventHandler(powerApplication_AfterNewPresentationEvent);
-             
+
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
             PowerPoint.Slide slide = presentation.Slides.Add(1, PpSlideLayout.ppLayoutBlank);

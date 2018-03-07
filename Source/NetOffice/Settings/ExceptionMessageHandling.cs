@@ -5,7 +5,7 @@ using System.Text;
 namespace NetOffice
 {
     /// <summary>
-    /// NetOffice wrap all thrown exceptions from Office applications in a COMException. 
+    /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
     /// This enum can be used to set the exception message
     /// </summary>
     public enum ExceptionMessageHandling
@@ -14,7 +14,7 @@ namespace NetOffice
         /// The standard message from NetOffice.Settings.ExceptionMessage
         /// </summary>
         Default = 0,
-        
+
         /// <summary>
         /// The message from the source exception
         /// </summary>
@@ -34,5 +34,10 @@ namespace NetOffice
         /// {Args}          - Given Arguments
         /// </summary>
         Diagnostics = 3,
+
+        /// <summary>
+        /// Diagnostics and most inner exception message
+        /// </summary>
+        DiagnosticsAndInnerMessage = 4
     }
 }

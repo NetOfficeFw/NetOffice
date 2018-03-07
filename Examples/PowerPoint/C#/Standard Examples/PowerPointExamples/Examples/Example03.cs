@@ -12,7 +12,7 @@ using NetOffice.PowerPointApi.Tools.Contribution;
 namespace PowerPointExamplesCS4
 {
     /// <summary>
-    /// Example 3 - Create Macros 
+    /// Example 3 - Create Macros
     /// </summary>
     internal  class Example03 : IExample
     {
@@ -43,8 +43,8 @@ namespace PowerPointExamplesCS4
                 button.ActionSettings[PpMouseActivation.ppMouseClick].AnimateAction = MsoTriState.msoTrue;
                 button.ActionSettings[PpMouseActivation.ppMouseClick].Action = PpActionType.ppActionRunMacro;
                 button.ActionSettings[PpMouseActivation.ppMouseClick].Run = "NetOfficeTestMacro";
-               
-                // save the document 
+
+                // save the document
                 documentFile =  utils.File.Combine(HostApplication.RootDirectory, "Example03", DocumentFormat.Macros);
                 presentation.SaveAs(documentFile);
             }

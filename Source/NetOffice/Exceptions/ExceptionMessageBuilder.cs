@@ -9,7 +9,7 @@ namespace NetOffice.Exceptions
     internal enum CallType
     {
         /// <summary>
-        /// PropertyGet 
+        /// PropertyGet
         /// </summary>
         PropertyGet = 0,
 
@@ -25,7 +25,7 @@ namespace NetOffice.Exceptions
     }
 
     internal static class ExceptionMessageBuilder
-    {   
+    {
         /// <summary>
         /// Get exception message based on associated settings
         /// </summary>
@@ -55,9 +55,23 @@ namespace NetOffice.Exceptions
                     return GetExceptionInnerExceptionMessageToTopLevelMessage(throwedException);
                 case ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException:
                     return GetExceptionAllInnerExceptionMessagesToTopLevelMessage(throwedException);
+                case ExceptionMessageHandling.DiagnosticsAndInnerMessage:
+                    return GetExceptionDiagnosticsInnerMessage(throwedException, comObject, name, type, arguments);
                 default:
                     throw new NetOfficeException("<Unexpected exception behavior. Please report this error.>");
             }
+        }
+
+        private static string GetExceptionDiagnosticsInnerMessage(Exception throwedException, ICOMObject comObject, string name, CallType type, object[] arguments = null)
+        {
+            string diagMessage = GetExceptionDiagnosticsMessage(comObject, name, type, arguments);
+            string message = throwedException.Message;
+            while (throwedException.InnerException != null)
+            {
+                message = throwedException.InnerException.Message;
+                throwedException = throwedException.InnerException;
+            }
+            return diagMessage + "{" + message + "}";
         }
 
         /// <summary>

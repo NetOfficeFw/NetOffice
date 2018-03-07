@@ -12,7 +12,7 @@ namespace PowerPointExamplesCS4
     /// <summary>
     /// Example 1 - Create a presentation
     /// </summary>
-    internal class Example01 : IExample 
+    internal class Example01 : IExample
     {
         public void RunExample()
         {
@@ -25,8 +25,8 @@ namespace PowerPointExamplesCS4
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
             presentation.Slides.Add(1, PpSlideLayout.ppLayoutClipArtAndVerticalText);
-            
-            // save the document 
+
+            // save the document
             string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example01", DocumentFormat.Normal);
             presentation.SaveAs(documentFile);
 

@@ -55,7 +55,7 @@ namespace PowerPointExamplesCS4
         {
             get { return "Customize classic UI without ribbons and recieve click events"; }
         }
-     
+
         public UserControl Panel
         {
             get { return this; }
@@ -81,7 +81,7 @@ namespace PowerPointExamplesCS4
         #region UI Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
-        {        
+        {
             // start powerpoint
             _powerApplication = new PowerPoint.Application();
 
@@ -105,7 +105,7 @@ namespace PowerPointExamplesCS4
              For example, a COMAddin running as InProcServer and can access the Picture Property
             */
             #endregion
-            
+
             #region CommandBarButton
 
             // add a button to the popup
@@ -164,7 +164,7 @@ namespace PowerPointExamplesCS4
             // make visible & set buttons
             _powerApplication.Visible = MsoTriState.msoTrue;
             buttonStartExample.Enabled = false;
-            buttonQuitExample.Enabled = true;             
+            buttonQuitExample.Enabled = true;
         }
 
         private void buttonQuitExample_Click(object sender, EventArgs e)
@@ -173,7 +173,7 @@ namespace PowerPointExamplesCS4
             _powerApplication.Dispose();
 
             buttonStartExample.Enabled = true;
-            buttonQuitExample.Enabled = false; 
+            buttonQuitExample.Enabled = false;
         }
 
         #endregion
