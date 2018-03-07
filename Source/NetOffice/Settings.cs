@@ -39,7 +39,7 @@ namespace NetOffice
         private CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
         private bool _enableOperatorOverlads = true;
         private string _exceptionDefaultMessage = "See inner exception(s) for details.";
-        private string _exceptionDiagnosticsMessage = "Failed to proceed {CallType} on {CallInstance}=>{Name}.";
+        private string _exceptionDiagnosticsMessage = "Failed to proceed {CallInstance}={CallType}=>{Name}.";
         private ExceptionMessageHandling _exceptionMessageBehavior = ExceptionMessageHandling.DiagnosticsAndInnerMessage;
         private bool _loadAssembliesUnsafe = true;
         private PerformanceTrace _performanceTrace;
@@ -226,6 +226,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
         /// This is the default message for the top level exception when ExceptionMessageBehavior is Default.
+        /// Default is 'See inner exception(s) for details.'
         /// </summary>
         [Category("Settings"), Description("Top Level Exception default message text."), DefaultValue("See inner exception(s) for details.")]
         public string ExceptionDefaultMessage
@@ -248,8 +249,9 @@ namespace NetOffice
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
         /// This is the default message for the top level exception when ExceptionMessageBehavior is Diagnostics.
         /// See ExceptionMessageHandling.Diagnostics for further informations.
+        /// Default is 'Failed to proceed {CallInstance}={CallType}=>{Name}.'
         /// </summary>
-        [Category("Settings"), Description("Top Level  exception diagnostics message text."), DefaultValue("Failed to proceed {CallType} on {CallInstance}=>{Name}.")]
+        [Category("Settings"), Description("Top Level exception diagnostics message text."), DefaultValue("Failed to proceed {CallInstance}={CallType}=>{Name}.")]
         public string ExceptionDiagnosticsMessage
         {
             get

@@ -28,15 +28,24 @@ namespace NetOffice
         /// <summary>
         /// The standard message from NetOffice.Settings.ExceptionDiagnosticMessage
         /// NetOffice want replace placeholders(if exists) in that string as follows:
-        /// {CallType}      - Call Type as method or property
-        /// {CallInstance}  - ICOMObject InstanceFriendlyName
-        /// {Name}          - Name of the method or property
-        /// {Args}          - Given Arguments
+        /// {CallType}              - Call Type as method or property
+        /// {CallInstance}          - ICOMObject InstanceFriendlyName
+        /// {Name}                  - Name of the method or property
+        /// {Args}                  - Given Arguments
+        /// {ParenthesizedArgs}     - Given Arguments, parenthesized if one or more argument exists
+        /// {NewLine}               - New line
         /// </summary>
         Diagnostics = 3,
 
         /// <summary>
-        /// Diagnostics and most inner exception message
+        /// The standard message from NetOffice.Settings.ExceptionDiagnosticMessage followed by the most inner exception message
+        /// NetOffice want replace placeholders(if exists) in that string as follows:
+        /// {CallType}              - Call Type as method or property
+        /// {CallInstance}          - ICOMObject InstanceFriendlyName
+        /// {Name}                  - Name of the method or property
+        /// {Args}                  - Given Arguments
+        /// {ParenthesizedArgs}     - Given Arguments, parenthesized if one or more argument exists
+        /// {NewLine}               - New line
         /// </summary>
         DiagnosticsAndInnerMessage = 4
     }
