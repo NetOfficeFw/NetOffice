@@ -138,6 +138,7 @@
     <Compile Include="Interfaces\IWorksheetFunction.Xor.cs" />
     <Compile Include="Interfaces\IWorksheetFunction._WSFunction.cs" />
     <Compile Include="Tools\Attributes\COMRtdServerAttribute.cs" />
+    <Compile Include="Tools\Contribution\FileExtension.cs" />
     <Compile Include="Tools\RealtimeDataServer.cs" />
     <Compile Include="Tools\Contribution\CommonUtils.cs" />
     <Compile Include="Tools\Contribution\DocumentFormat.cs" />

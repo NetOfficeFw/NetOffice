@@ -10,7 +10,7 @@ namespace NetOffice.WordApi.Tools.Contribution
     public enum DocumentFormat
     {
         /// <summary>
-        /// Default Document | doc or docx 
+        /// Default Document | doc or docx
         /// </summary>
         Normal = 0,
 
@@ -27,7 +27,11 @@ namespace NetOffice.WordApi.Tools.Contribution
         /// <summary>
         /// Document Template contains activated macros | dot or dotm
         /// </summary>
-        TemplateMacros = 3
+        TemplateMacros = 3,
 
+        /// <summary>
+        /// Unknown extension
+        /// </summary>
+        Unknown = 666
     }
 }

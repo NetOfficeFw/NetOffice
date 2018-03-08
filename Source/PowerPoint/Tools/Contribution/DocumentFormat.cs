@@ -10,7 +10,7 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
     public enum DocumentFormat
     {
         /// <summary>
-        /// Default Document | ppt or pptx 
+        /// Default Document | ppt or pptx
         /// </summary>
         Normal = 0,
 

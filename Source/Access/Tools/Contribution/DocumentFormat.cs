@@ -20,7 +20,7 @@ namespace NetOffice.AccessApi.Tools.Contribution
         Compiled = 1,
 
         /// <summary>
-        /// Runtime database, not support in 2003 or below  | accdr
+        /// Runtime database, not support in 2003 or below | accdr
         /// </summary>
         Runtime = 2,
 

@@ -45,6 +45,7 @@
     <Compile Include="Tools\Contribution\ApplicationUtils.cs" />
     <Compile Include="Tools\Contribution\CommonUtils.cs" />
     <Compile Include="Tools\Contribution\DocumentFormat.cs" />
+    <Compile Include="Tools\Contribution\FileExtension.cs" />
     <Compile Include="Tools\Contribution\FileUtils.cs" />
     <Compile Include="Tools\DocumentInspectorAttribute.cs" />
     <Compile Include="Tools\DocumentInspectorBase.cs" />

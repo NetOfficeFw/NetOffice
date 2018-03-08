@@ -10,7 +10,7 @@ namespace NetOffice.ExcelApi.Tools.Contribution
     public enum DocumentFormat
     {
         /// <summary>
-        /// Default Workbook | xls or xlsx 
+        /// Default Workbook | xls or xlsx
         /// </summary>
         Normal = 0,
 
@@ -30,7 +30,7 @@ namespace NetOffice.ExcelApi.Tools.Contribution
         TemplateMacros = 3,
 
         /// <summary>
-        /// Binary Workbok, not support in 2003 or below | xlsb
+        /// Binary Workbok, not supported in 2003 or below | xlsb
         /// </summary>
         Binary = 4,
 
