@@ -25,7 +25,7 @@ namespace NetOffice.Running
         #endregion
 
         #region Nested
-         
+
         internal class RunningObjectTableItemCollection : SortableBindingList<ProxyInformation>, IDisposableSequence<ProxyInformation>
         {
             #region IDisposableEnumeration<ProxyInformation>
@@ -114,6 +114,32 @@ namespace NetOffice.Running
         #region Methods
 
         /// <summary>
+        /// Determines one or more items exists in the table
+        /// </summary>
+        /// <returns>true if one or more item exists, otherwise false</returns>
+        public static bool Any()
+        {
+            IRunningObjectTable runningObjectTable = null;
+            try
+            {
+                int totalCount = 0;
+                if (GetRunningObjectTable(0, out runningObjectTable) != 0 || runningObjectTable == null)
+                    return totalCount > 0;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (runningObjectTable != null)
+                    TryMarshalReleaseComObject(runningObjectTable);
+            }
+        }
+
+        /// <summary>
         /// Returns the count of open com proxies
         /// </summary>
         /// <param name="componentName">component name or null as wildcard</param>
@@ -140,7 +166,7 @@ namespace NetOffice.Running
                 // fetch all moniker
                 while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
                 {
-                    // query com proxy info      
+                    // query com proxy info
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
                     if (null == comInstance)
@@ -224,7 +250,7 @@ namespace NetOffice.Running
                 // fetch all moniker
                 while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
                 {
-                    // query com proxy info      
+                    // query com proxy info
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
                     if (null == comInstance)
@@ -278,14 +304,14 @@ namespace NetOffice.Running
         }
 
         /// <summary>
-        /// Returns all running com proxies from the running object table there matched with the input parameters 
+        /// Returns all running com proxies from the running object table there matched with the input parameters
         /// WARNING: the method returns always the first com proxy from the running object table if multiple (match) proxies exists.
         /// </summary>
         /// <param name="componentName">component name, for example Excel, null is a wildcard </param>
         /// <param name="className">class name, for example Application, null is a wildcard </param>
         /// <returns>COM proxy enumerator</returns>
         public static IDisposableSequence GetActiveProxies(string componentName, string className)
-        {          
+        {
             IEnumMoniker monikerList = null;
             IRunningObjectTable runningObjectTable = null;
             List<object> resultList = new List<object>();
@@ -305,7 +331,7 @@ namespace NetOffice.Running
                 // fetch all moniker
                 while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
                 {
-                    // query com proxy info      
+                    // query com proxy info
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
                     if (null == comInstance)
@@ -316,9 +342,9 @@ namespace NetOffice.Running
                     string component = TypeDescriptor.GetComponentName(comInstance, false);
 
                     // match for equal and add to list
-                    bool componentNameEqual = String.IsNullOrWhiteSpace(component) ? true : 
+                    bool componentNameEqual = String.IsNullOrWhiteSpace(component) ? true :
                         (componentName.Equals(component, StringComparison.InvariantCultureIgnoreCase));
-                    bool classNameEqual = String.IsNullOrWhiteSpace(className) ? true : 
+                    bool classNameEqual = String.IsNullOrWhiteSpace(className) ? true :
                         (className.Equals(name, StringComparison.InvariantCultureIgnoreCase));
 
                     if (componentNameEqual && classNameEqual)
@@ -341,6 +367,193 @@ namespace NetOffice.Running
                 }
 
                 return new DisposableObjectList(resultList.ToArray());
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.Default.WriteException(exception);
+                throw;
+            }
+            finally
+            {
+                // release proxies
+                if (runningObjectTable != null)
+                    TryMarshalReleaseComObject(runningObjectTable);
+                if (monikerList != null)
+                    TryMarshalReleaseComObject(monikerList);
+            }
+        }
+
+        /// <summary>
+        /// Determines a proxy with given display name currently exists
+        /// </summary>
+        /// <param name="proxyDisplayName">target display name</param>
+        /// <param name="ignoreCase">ignore case when compare the name</param>
+        /// <returns>true if proxy exists, otherwise false</returns>
+        public static bool GetActiveProxyExists(string proxyDisplayName, bool ignoreCase = true)
+        {
+            IEnumMoniker monikerList = null;
+            IRunningObjectTable runningObjectTable = null;
+            try
+            {
+                // query table and returns null if no objects running
+                if (GetRunningObjectTable(0, out runningObjectTable) != 0 || runningObjectTable == null)
+                    return false;
+
+                // query moniker & reset
+                runningObjectTable.EnumRunning(out monikerList);
+                monikerList.Reset();
+
+                IMoniker[] monikerContainer = new IMoniker[1];
+                IntPtr pointerFetchedMonikers = IntPtr.Zero;
+
+                // fetch all moniker
+                while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
+                {
+                    // query com proxy info
+                    object comInstance = null;
+                    runningObjectTable.GetObject(monikerContainer[0], out comInstance);
+                    if (null == comInstance)
+                        continue;
+
+                    // match for equal and add to list
+                    string name = TypeDescriptor.GetClassName(comInstance);
+                    string component = TypeDescriptor.GetComponentName(comInstance, false);
+
+                    IBindCtx bindInfo = null;
+                    string displayName = String.Empty;
+                    Guid classID = Guid.Empty;
+                    if (CreateBindCtx(0, out bindInfo) == 0)
+                    {
+                        monikerContainer[0].GetDisplayName(bindInfo, null, out displayName);
+                        monikerContainer[0].GetClassID(out classID);
+                        TryMarshalReleaseComObject(bindInfo);
+
+                    }
+
+                    string itemClassName = TypeDescriptor.GetClassName(comInstance);
+                    string itemComponentName = TypeDescriptor.GetComponentName(comInstance);
+
+                    COMTypes.ITypeInfo typeInfo = null;
+                    string itemLibrary = String.Empty;
+                    if (classID != Guid.Empty)
+                    {
+                        typeInfo = TryCreateTypeInfo(comInstance);
+                        itemLibrary = null != typeInfo ? GetParentLibraryGuid(typeInfo).ToString() : String.Empty;
+                    }
+
+                    string itemID = classID != Guid.Empty ? classID.ToString() : String.Empty;
+
+                    if (classID != Guid.Empty && typeInfo != null)
+                        ReleaseTypeInfo(typeInfo);
+
+                    bool match = false;
+                    if (ignoreCase)
+                        match = proxyDisplayName.Equals(displayName, StringComparison.InvariantCultureIgnoreCase);
+                    else
+                        match = proxyDisplayName.Equals(displayName);
+
+                    if (match)
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.Default.WriteException(exception);
+                throw;
+            }
+            finally
+            {
+                // release proxies
+                if (runningObjectTable != null)
+                    TryMarshalReleaseComObject(runningObjectTable);
+                if (monikerList != null)
+                    TryMarshalReleaseComObject(monikerList);
+            }
+        }
+
+        /// <summary>
+        /// Determines a proxy with given display name currently exists
+        /// </summary>
+        /// <param name="proxyDisplayName">target display name</param>
+        /// <param name="ignoreCase">ignore case when compare the name</param>
+        /// <returns>proxy informations or null if proxy not exists</returns>
+        public static ProxyInformation GetActiveProxyInformation(string proxyDisplayName, bool ignoreCase = true)
+        {
+            IEnumMoniker monikerList = null;
+            IRunningObjectTable runningObjectTable = null;
+            try
+            {
+                // query table and returns null if no objects running
+                if (GetRunningObjectTable(0, out runningObjectTable) != 0 || runningObjectTable == null)
+                    return null;
+
+                // query moniker & reset
+                runningObjectTable.EnumRunning(out monikerList);
+                monikerList.Reset();
+
+                IMoniker[] monikerContainer = new IMoniker[1];
+                IntPtr pointerFetchedMonikers = IntPtr.Zero;
+
+                // fetch all moniker
+                while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
+                {
+                    // query com proxy info
+                    object comInstance = null;
+                    runningObjectTable.GetObject(monikerContainer[0], out comInstance);
+                    if (null == comInstance)
+                        continue;
+
+                    // match for equal and add to list
+                    string name = TypeDescriptor.GetClassName(comInstance);
+                    string component = TypeDescriptor.GetComponentName(comInstance, false);
+
+                    IBindCtx bindInfo = null;
+                    string displayName = String.Empty;
+                    Guid classID = Guid.Empty;
+                    if (CreateBindCtx(0, out bindInfo) == 0)
+                    {
+                        monikerContainer[0].GetDisplayName(bindInfo, null, out displayName);
+                        monikerContainer[0].GetClassID(out classID);
+                        TryMarshalReleaseComObject(bindInfo);
+
+                    }
+
+                    string itemClassName = TypeDescriptor.GetClassName(comInstance);
+                    string itemComponentName = TypeDescriptor.GetComponentName(comInstance);
+
+                    COMTypes.ITypeInfo typeInfo = null;
+                    string itemLibrary = String.Empty;
+                    if (classID != Guid.Empty)
+                    {
+                        typeInfo = TryCreateTypeInfo(comInstance);
+                        itemLibrary = null != typeInfo ? GetParentLibraryGuid(typeInfo).ToString() : String.Empty;
+                    }
+
+                    string itemID = classID != Guid.Empty ? classID.ToString() : String.Empty;
+
+                    if (classID != Guid.Empty && typeInfo != null)
+                        ReleaseTypeInfo(typeInfo);
+
+                    bool match = false;
+                    if (ignoreCase)
+                        match = proxyDisplayName.Equals(displayName, StringComparison.InvariantCultureIgnoreCase);
+                    else
+                        match = proxyDisplayName.Equals(displayName);
+
+                    if (match)
+                    {
+                        ProxyInformation entry =
+                                new ProxyInformation(comInstance, displayName, itemID, itemClassName,
+                                itemComponentName, itemLibrary, IntPtr.Zero, ProxyInformation.ProcessElevation.Unknown);
+                        return entry;
+                    }
+                }
+
+                return null;
             }
             catch (Exception exception)
             {
@@ -385,7 +598,7 @@ namespace NetOffice.Running
                 // fetch all moniker
                 while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
                 {
-                    // query com proxy info      
+                    // query com proxy info
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
                     if (null == comInstance)
@@ -428,7 +641,7 @@ namespace NetOffice.Running
                             monikerContainer[0].GetDisplayName(bindInfo, null, out displayName);
                             monikerContainer[0].GetClassID(out classID);
                             TryMarshalReleaseComObject(bindInfo);
-                             
+
                         }
 
                         string itemClassName = TypeDescriptor.GetClassName(comInstance);
@@ -437,14 +650,14 @@ namespace NetOffice.Running
                         COMTypes.ITypeInfo typeInfo = null;
                         string itemLibrary = String.Empty;
                         if (classID != Guid.Empty)
-                        { 
+                        {
                             typeInfo = TryCreateTypeInfo(comInstance);
                             itemLibrary = null != typeInfo ? GetParentLibraryGuid(typeInfo).ToString() : String.Empty;
                         }
 
                         string itemID = classID != Guid.Empty ? classID.ToString() : String.Empty;
 
-                        ProxyInformation entry = 
+                        ProxyInformation entry =
                             new ProxyInformation(comInstance, displayName, itemID, itemClassName,
                             itemComponentName, itemLibrary, IntPtr.Zero, ProxyInformation.ProcessElevation.Unknown);
 
@@ -497,14 +710,14 @@ namespace NetOffice.Running
                 // fetch all moniker
                 while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
                 {
-                    // query com proxy info      
+                    // query com proxy info
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
                     if (null == comInstance)
                         continue;
 
                     string name = TypeDescriptor.GetClassName(comInstance);
-                    string component = TypeDescriptor.GetComponentName(comInstance, false);                    
+                    string component = TypeDescriptor.GetComponentName(comInstance, false);
 
                     IBindCtx bindInfo = null;
                     string displayName = String.Empty;
@@ -598,7 +811,7 @@ namespace NetOffice.Running
             parentGuid = attributes.guid;
             parentTypeLib.ReleaseTLibAttr(attributesPointer);
             Marshal.ReleaseComObject(parentTypeLib);
-             
+
             return parentGuid;
         }
 
