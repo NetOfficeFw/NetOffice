@@ -73,12 +73,12 @@ namespace NetOffice
         /// list of runtime supported entities
         /// </summary>
         private Dictionary<string, string> _listSupportedEntities;
-        
+
         /// <summary>
         /// monitor lock object for the main dispose method
         /// </summary>
         private object _disposeLock = new object();
-       
+
         /// <summary>
         /// monitor lock object for accessing the child list
         /// </summary>
@@ -123,7 +123,7 @@ namespace NetOffice
         /// InstanceType chache field
         /// </summary>
         private Type _instanceType;
-        
+
         #endregion
 
         #region Ctor
@@ -151,7 +151,7 @@ namespace NetOffice
             _parentObject = replacedObject.ParentObject;
             _underlyingType = replacedObject.UnderlyingType;
 
-            // copy childs 
+            // copy childs
             foreach (ICOMObject item in replacedObject.ChildObjects)
                 AddChildObject(item);
 
@@ -221,7 +221,7 @@ namespace NetOffice
         /// <param name="comProxy">the now wrapped comProxy root instance</param>
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, object comProxy)
-        {         
+        {
             if (!(comProxy is MarshalByRefObject))
                 throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
 
@@ -390,7 +390,7 @@ namespace NetOffice
         /// <param name="name">custom instance name</param>
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject parentObject, object comProxy, bool isEnumerator, string name)
-        {        
+        {
             if(false == isEnumerator && (!(comProxy is MarshalByRefObject)))
                 throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
 
@@ -511,12 +511,12 @@ namespace NetOffice
         public COMObject(string progId)
         {
             if (String.IsNullOrEmpty(progId))
-                throw new ArgumentNullException("progId");          
+                throw new ArgumentNullException("progId");
             Factory = Core.Default;
             SyncRoot = new object();
             CreateFromProgId(progId);
             Factory.AddObjectToList(this);
-             
+
             OnCreate();
         }
 
@@ -526,7 +526,7 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject()
         {
-            
+
         }
 
         #endregion
@@ -539,7 +539,7 @@ namespace NetOffice
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
         public static COMObject Empty
         {
-            get 
+            get
             {
                 return null;
             }
@@ -597,7 +597,7 @@ namespace NetOffice
             catch (Exception exception)
             {
                 throw new CreateInstanceException(exception);
-            }   
+            }
         }
 
         /// <summary>
@@ -623,6 +623,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         protected void CreateFromProgId(string progId, bool factoryAddObject = false)
         {
+            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::CreateFromProgId", PerformanceTrace.CallType.Method);
+
             _underlyingType = System.Type.GetTypeFromProgID(progId, false);
             if (null == _underlyingType)
                 throw new COMException("Unable to find registered progId:<" + progId + ">" + Environment.NewLine + _createFromProgIdFailMessageHint);
@@ -631,6 +633,9 @@ namespace NetOffice
             try
             {
                 underlyingObject = Activator.CreateInstance(_underlyingType);
+
+                if (measureStarted)
+                    Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::CreateFromProgId");
             }
             catch (Exception exception)
             {
@@ -643,7 +648,7 @@ namespace NetOffice
             if (factoryAddObject)
                 Factory.AddObjectToList(this);
         }
-        
+
         /// <summary>
         ///  NetOffice method: release com proxy
         /// </summary>
@@ -884,13 +889,13 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectDisposable
-       
+
         /// <summary>
         /// NetOffice event: these event was called from Dispose and you can skip the dipose operation here if you want. the event can be helpful for troubleshooting if you dont know why your objects beeing disposed
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public event OnDisposeEventHandler OnDispose;
-        
+
         /// <summary>
         /// NetOffice property: returns informations the instance is already disposed
         /// </summary>
@@ -935,12 +940,12 @@ namespace NetOffice
             {
                 lock (_disposeLock)
                 {
-                    // skip check 
+                    // skip check
                     bool cancel = RaiseOnDispose();
                     if (cancel)
                         return;
 
-                    // in case object export events and 
+                    // in case object export events and
                     // disposeEventBinding == false we dont remove the object from parents child list
                     bool removeFromParent = true;
 
@@ -975,9 +980,9 @@ namespace NetOffice
                         _parentObject.RemoveChildObject(this);
                         _parentObject = null;
                     }
-                    
+
                     if (true == removeFromParent)
-                    {        
+                    {
                         // call quit automatically if wanted
                         if (_callQuitInDispose && Settings.EnableAutomaticQuit)
                             new Callers.QuitCaller().TryCall(Settings, Invoker, this);
@@ -998,11 +1003,11 @@ namespace NetOffice
             }
             catch (Exception exception)
             {
-                throw new COMDisposeException("An unexpected error occured while disposing <" + 
+                throw new COMDisposeException("An unexpected error occured while disposing <" +
                     InstanceName + ">.", exception);
             }
         }
-        
+
         /// <summary>
         /// Call the OnDispose event as service for client callers.
         /// The method implementation ignore any exception in the event handler.
@@ -1090,7 +1095,7 @@ namespace NetOffice
         /// <exception cref="COMChildRelationException">Unexpected error</exception>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public bool RemoveChildObject(ICOMObject childObject)
-        {      
+        {
             try
             {
                 if (null == childObject)
@@ -1098,7 +1103,7 @@ namespace NetOffice
                 lock (_childListLock)
                 {
                     return _listChildObjects.Remove(childObject);
-                }             
+                }
             }
             catch (Exception exception)
             {
@@ -1157,7 +1162,7 @@ namespace NetOffice
                 lock (_disposeChildLock)
                 {
                     foreach (ICOMObject itemObject in _listChildObjects.ToArray())
-                    {                       
+                    {
                         itemObject.Dispose(disposeEventBinding);
                     }
                     _listChildObjects.Clear();
@@ -1172,7 +1177,7 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectEvents
-       
+
         /// <summary>
         /// NetOffice property: returns instance export events
         /// </summary>
@@ -1332,7 +1337,7 @@ namespace NetOffice
         {
             return base.Equals(obj);
         }
-        
+
         /// <summary>
         /// Gets a Type object that represents the specified type.
         /// </summary>

@@ -19,9 +19,11 @@ namespace NetOffice
         This is designed to use as dynamic in C# or as object in visual basic.
         Allows to use dynamic late-binding with proxy managed service from Netoffice.(best of both worlds)
 
-        NetOffice.Settings.EnableDynamicObjects(currently true by default - Netoffice 1.7.4.1) want enable
+        NetOffice.Settings.EnableDynamicObjects(currently true by default - since Netoffice 1.7.4.1) want enable
         the behavior that Netoffice returns a COMDynamicObject instance if its
         failed to resolve a wrapper class for a com proxy.
+
+        See tutorials for further informations.
     */
 
     /// <summary>
@@ -106,12 +108,12 @@ namespace NetOffice
         #endregion
 
         #region Fields
-       
+
         /// <summary>
         /// The well know IUnknown Interface ID
         /// </summary>
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
-        
+
         /// <summary>
         /// returns parent instance
         /// </summary>
@@ -141,7 +143,7 @@ namespace NetOffice
         /// Runtime self description
         /// </summary>
         protected internal DynamicObjectEntity[] _entities;
-        
+
         /// <summary>
         /// List of runtime supported entities
         /// </summary>
@@ -186,7 +188,7 @@ namespace NetOffice
         /// Indicates the instance offers an enumerator
         /// </summary>
         private EnumeratorSupport _enumerator;
-     
+
         /// <summary>
         /// Indicates the instance offers an default property
         /// </summary>
@@ -292,7 +294,7 @@ namespace NetOffice
                 _proxyShare = shareProvider.GetProxyShare();
             else
                 _proxyShare = Factory.CreateNewProxyShare(this, comObject.UnderlyingObject);
-            
+
             UnderlyingType = comObject.UnderlyingType;
 
             Factory.AddObjectToList(this);
@@ -305,7 +307,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="factory">current factory instance or null for defauslt</param>
         /// <param name="parentObject">the parent instance where you have these instance from</param>
-        /// <param name="comProxy">the now wrapped comProxy instance</param>       
+        /// <param name="comProxy">the now wrapped comProxy instance</param>
         public COMDynamicObject(Core factory, ICOMObject parentObject, object comProxy)
         {
             if (null == comProxy)
@@ -320,7 +322,7 @@ namespace NetOffice
 
             ParentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
-            
+
             UnderlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
@@ -336,12 +338,12 @@ namespace NetOffice
         /// </summary>
         /// <param name="factory">current factory instance or null for defauslt</param>
         /// <param name="parentObject">the parent instance where you have these instance from</param>
-        /// <param name="comProxy">proxy share instead of proxy</param>       
+        /// <param name="comProxy">proxy share instead of proxy</param>
         public COMDynamicObject(Core factory, ICOMObject parentObject, COMProxyShare comProxy)
         {
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
-            
+
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
@@ -359,24 +361,23 @@ namespace NetOffice
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
-        
+
         /// <summary>
         /// Create new instance from given progid
         /// </summary>
         /// <param name="factory">used factory core</param>
-        /// <param name="progId"></param>
+        /// <param name="progId">progid as any</param>
         public COMDynamicObject(Core factory, string progId)
         {
             if (String.IsNullOrEmpty(progId))
                 throw new ArgumentNullException("progId");
 
-            UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
-            object underlyingObject = Activator.CreateInstance(UnderlyingType);
+            object underlyingObject = CreateFromProgId(progId);
             _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
 
             SyncRoot = new object();
 
-            Factory = null != factory ? factory : Core.Default;        
+            Factory = null != factory ? factory : Core.Default;
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
 
@@ -388,7 +389,7 @@ namespace NetOffice
         /// <summary>
         /// Create new instance from given progid
         /// </summary>
-        /// <param name="progId"></param>
+        /// <param name="progId">prog id as any</param>
         public COMDynamicObject(string progId)
         {
             if (String.IsNullOrEmpty(progId))
@@ -397,10 +398,9 @@ namespace NetOffice
             Factory = Core.Default;
             SyncRoot = new object();
 
-            UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
-            object underlyingObject = Activator.CreateInstance(UnderlyingType);
+            object underlyingObject = CreateFromProgId(progId);
             _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
-            
+
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
 
@@ -412,7 +412,7 @@ namespace NetOffice
         #endregion
 
         #region Properties
-       
+
         /// <summary>
         /// Return Value in TryConvert if no conversion is available.
         /// False may cause an exception from the current language service,
@@ -459,7 +459,7 @@ namespace NetOffice
 
             return new COMDynamicObject(comObject.UnderlyingObject);
         }
-       
+
         /// <summary>
         /// Release com proxy
         /// </summary>
@@ -470,7 +470,7 @@ namespace NetOffice
             {
                 _proxyShare.Release();
                 Factory.RemoveObjectFromList(this, ownerPath);
-            }        
+            }
         }
 
         /// <summary>
@@ -507,7 +507,25 @@ namespace NetOffice
                     _entities = GetEntities();
             }
         }
-        
+
+        /// <summary>
+        /// Creates underlying type and underlying object from given prog id
+        /// </summary>
+        /// <param name="progId">progid as any</param>
+        /// <returns>newly created instance</returns>
+        private object CreateFromProgId(string progId)
+        {
+            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::CreateFromProgId", PerformanceTrace.CallType.Method);
+
+            UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
+            object underlyingObject = Activator.CreateInstance(UnderlyingType);
+
+            if (measureStarted)
+                Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::CreateFromProgId");
+
+            return underlyingObject;
+        }
+
         /// <summary>
         /// Recieve self description from UnderlyingObject through IDispatch
         /// </summary>
@@ -625,9 +643,9 @@ namespace NetOffice
                         _defaultItem = DefaultItemSupport.PropertyItem;
                         break;
                 }
-            }          
+            }
         }
-        
+
         /// <summary>
         /// Find item in collection. (Wrapper to bypass missing Linq in former .Net runtimes)
         /// </summary>
@@ -642,7 +660,7 @@ namespace NetOffice
                 if (item.Name == name && item.Kind == kind)
                     return item;
             }
-            return null;        
+            return null;
         }
 
         /// <summary>
@@ -683,7 +701,7 @@ namespace NetOffice
                     return null;
             }
         }
-        
+
         /// <summary>
         /// Invoke a proxy method
         /// </summary>
@@ -716,7 +734,7 @@ namespace NetOffice
         {
             if (IsSelfDynamicMemberName(name))
                 return InstanceType.InvokeMember(name, System.Reflection.BindingFlags.InvokeMethod, null, this, args);
-           
+
             args = Invoker.ValidateParamsArray(args);
             object returnItem = Invoker.MethodReturn(this, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
@@ -867,7 +885,7 @@ namespace NetOffice
         #endregion
 
         #region ICOMObject
-       
+
         /// <summary>
         /// Monitor Lock
         /// </summary>
@@ -989,7 +1007,7 @@ namespace NetOffice
 
         /// <summary>
         /// Name of the hosting NetOffice component
-        /// </summary>      
+        /// </summary>
         public string UnderlyingComponentName
         {
             get
@@ -1013,7 +1031,7 @@ namespace NetOffice
 
         /// <summary>
         /// Friendly Name of the NetOffice Wrapper class
-        /// </summary>       
+        /// </summary>
         public string InstanceFriendlyName
         {
             get
@@ -1050,12 +1068,12 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectDisposable
-        
+
         /// <summary>
         /// These event was called from Dispose and you can skip the dipose operation here if you want. the event can be helpful for troubleshooting if you dont know why your objects beeing disposed
         /// </summary>
         public event OnDisposeEventHandler OnDispose;
-       
+
         /// <summary>
         /// Returns instance is already diposed
         /// </summary>
@@ -1098,12 +1116,12 @@ namespace NetOffice
             {
                 lock (_disposeLock)
                 {
-                    // skip check 
+                    // skip check
                     bool cancel = RaiseOnDispose();
                     if (cancel)
                         return;
 
-                    // in case object export events and 
+                    // in case object export events and
                     // disposeEventBinding == false we dont remove the object from parents child list
                     bool removeFromParent = true;
 
@@ -1138,7 +1156,7 @@ namespace NetOffice
                         ParentObject.RemoveChildObject(this);
                         ParentObject = null;
                     }
-                    
+
                     if (true == removeFromParent)
                     {
                         // call quit automatically if wanted
@@ -1168,7 +1186,7 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectTable
-        
+
         /// <summary>
         /// Returns parent proxy object
         /// </summary>
@@ -1262,7 +1280,7 @@ namespace NetOffice
                 lock (_disposeChildLock)
                 {
                     foreach (ICOMObject itemObject in _listChildObjects.ToArray())
-                    {                      
+                    {
                         itemObject.Dispose(disposeEventBinding);
                     }
                     _listChildObjects.Clear();
@@ -1790,7 +1808,7 @@ namespace NetOffice
             else
                 return false;
         }
-        
+
         /// <summary>
         /// Determines whether two COMObject instances are equal.
         /// </summary>

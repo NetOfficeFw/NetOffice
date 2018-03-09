@@ -31,7 +31,7 @@ namespace TutorialsCS4
             // Enable additional performance trace for WorkSheet Range property in excel. set interval limit to 0ms to see all calls anywhere
             NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet", "Range"].Enabled = true;
             NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet", "Range"].IntervalMS = 0;
- 
+
             // do some stuff
             Excel.Application application = new NetOffice.ExcelApi.Application();
             application.DisplayAlerts = false;
@@ -68,7 +68,7 @@ namespace TutorialsCS4
         {
             get { return "Tutorial10"; }
         }
-        
+
         public string Description
         {
             get { return "Measure Performance"; }

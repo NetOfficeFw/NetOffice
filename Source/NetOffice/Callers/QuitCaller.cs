@@ -15,7 +15,7 @@ namespace NetOffice.Callers
         internal bool TryCall(ICOMObject instance)
         {
             if (null != instance)
-                return TryCall(instance.Settings, instance.Invoker, instance);
+                return TryCall(instance.Invoker.Settings, instance.Invoker, instance);
             else
                 return false;
         }
