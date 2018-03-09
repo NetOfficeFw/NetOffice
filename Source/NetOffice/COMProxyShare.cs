@@ -3,26 +3,26 @@ using System.Runtime.InteropServices;
 
 namespace NetOffice
 {
-    /* 
+    /*
         Purpose:
 
         Managed proxies (System._ComObject) implement its own managed lifetime service and reference counter.
-        Marshal.ReleaseComObject does NOT! decrement the remote IUnkown interface directly - 
-        its decrement its own managed reference counter and 
-        if the managed ref counter is == 0 then the remote IUnkown interface want be decremented.       
+        Marshal.ReleaseComObject does NOT! decrement the remote IUnkown interface directly -
+        its decrement its own managed reference counter and
+        if the managed ref counter is == 0 then the remote IUnkown interface want be decremented.
         (a common missunderstanding)
 
-        If you increment the IUnkown reference counter directly(Marshal.AddRef) means 
-        the RCW(System._ComObject) does not recognize that in its own managed lifetime service. 
-     
-        Unfortunately Microsoft spend no possibilities to influence the managed RCW lifetime service 
+        If you increment the IUnkown reference counter directly(Marshal.AddRef) means
+        the RCW(System._ComObject) does not recognize that in its own managed lifetime service.
+
+        Unfortunately Microsoft spend no possibilities to influence the managed RCW lifetime service
         for System._ComObject except of Marshal.ReleaseComObject/Marshal.FinalReleaseComObject.
-        Thats why we spend this lifetime wrapper arround to have multiple 
+        Thats why we spend this lifetime wrapper arround to have multiple
         Netoffice wrapper instances with same RCW proxy and keep the managed proxy alive as long we need.
     */
 
     /// <summary>
-    /// Provides shared access to managed COM proxies(System._ComObject) by implement a reference counter.  
+    /// Provides shared access to managed COM proxies(System._ComObject) by implement a reference counter.
     /// </summary>
     public class COMProxyShare
     {
@@ -234,19 +234,19 @@ namespace NetOffice
         public virtual bool Release()
         {
             try
-            { 
+            {
                 lock (_thisLock)
                 {
                     _count--;
                     if (0 == _count)
                     {
-                        ReleaseComObject();                    
+                        ReleaseComObject();
                         _released = true;
                         return true;
                     }
                     else
                         return false;
-                }                
+                }
             }
             catch(Exception exception)
             {
@@ -290,7 +290,7 @@ namespace NetOffice
             {
                 DebugConsole.Default.WriteException(exception);
                 throw;
-            }          
+            }
         }
 
         private static void MarshalReleaseComObject(object proxy)
@@ -332,13 +332,13 @@ namespace NetOffice
             catch
             {
                 ;
-            }           
+            }
         }
 
         #endregion
 
         #region Overrides
-       
+
         /// <summary>
         /// Returns a System.String that represents the instance
         /// </summary>

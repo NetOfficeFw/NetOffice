@@ -652,13 +652,16 @@ namespace NetOffice
         /// <summary>
         ///  NetOffice method: release com proxy
         /// </summary>
-        private void ReleaseCOMProxy(IEnumerable<ICOMObject> ownerPath)
+        private void ReleaseCOMProxy(IEnumerable<ICOMObject> ownerPath, bool isRootObject = false)
         {
             // release himself from COM Runtime System
             if (!_proxyShare.Released)
             {
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy", PerformanceTrace.CallType.Method);
                 _proxyShare.Release();
                 Factory.RemoveObjectFromList(this, ownerPath);
+                if (measureStarted)
+                    Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy");
             }
         }
 
@@ -936,6 +939,8 @@ namespace NetOffice
         /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
         public virtual void Dispose(bool disposeEventBinding)
         {
+            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::Dispose", PerformanceTrace.CallType.Method);
+            bool isRootObject = null == ParentObject;
             try
             {
                 lock (_disposeLock)
@@ -988,7 +993,7 @@ namespace NetOffice
                             new Callers.QuitCaller().TryCall(Settings, Invoker, this);
 
                         // release proxy
-                        ReleaseCOMProxy(ownerPath);
+                        ReleaseCOMProxy(ownerPath, isRootObject);
 
                         // clear supportList reference
                         _listSupportedEntities = null;
@@ -1000,6 +1005,9 @@ namespace NetOffice
                         _isCurrentlyDisposing = false;
 
                 }
+
+                if (measureStarted)
+                    Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::Dispose");
             }
             catch (Exception exception)
             {
