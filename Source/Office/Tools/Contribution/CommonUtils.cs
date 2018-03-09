@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         #endregion
-          
+
         #region Properties
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                             _applicationIs2007OrHigher = true;
                         else
                             _applicationIs2007OrHigher = false;
-                    }                    
+                    }
                 }
                 return (bool)_applicationIs2007OrHigher;
             }
@@ -205,14 +205,14 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                         bool result = principal.IsInRole(WindowsBuiltInRole.Administrator);
                         identity.Dispose();
                         _adminPermissions = result;
-                    }   
+                    }
                 }
                 return (bool)_adminPermissions;
             }
         }
 
         /// <summary>
-        /// The host application is currently in automation mode. In this case, avoid any kind of dialogs or something like that 
+        /// The host application is currently in automation mode. In this case, avoid any kind of dialogs or something like that
         /// </summary>
         public bool IsAutomation
         {
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                         _resourceUtils = OnCreateResourceUtils();
                 }
                 return _resourceUtils;
-             }
+            }
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 lock (_lock)
                 {
                     if (null == _trayUtils)
-                        _trayUtils = OnCreateTrayUtils();                    
+                        _trayUtils = OnCreateTrayUtils();
                 }
                 return _trayUtils;
             }
@@ -280,7 +280,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 lock (_lock)
                 {
                     if (null == _imageUtils)
-                        _imageUtils = OnCreateImageUtils();                    
+                        _imageUtils = OnCreateImageUtils();
                 }
                 return _imageUtils;
             }
@@ -296,7 +296,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 lock (_lock)
                 {
                     if (null == _colorUtils)
-                        _colorUtils = OnCreateColorUtils();                    
+                        _colorUtils = OnCreateColorUtils();
                 }
                 return _colorUtils;
             }
@@ -312,7 +312,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 lock (_lock)
                 {
                     if (null == _infos)
-                        _infos = new Infos(this);                    
+                        _infos = new Infos(this);
                 }
                 return _infos;
             }
@@ -452,6 +452,38 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         /// <summary>
+        /// Try to detect current host application version. (All MS-Office products supports the version property except for Access 9 aka Access 2000)
+        /// </summary>
+        /// <returns>version or null if its failed to detect</returns>
+        public static double? TryGetApplicationVersion(ICOMObject applcationInstance)
+        {
+            try
+            {
+                if (applcationInstance.EntityIsAvailable("Version"))
+                {
+                    object result = applcationInstance.Invoker.PropertyGet(applcationInstance, "Version");
+                    string[] version = Convert.ToString(result).Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                    if (version.Length > 1)
+                    {
+                        return Convert.ToDouble(version[0] + "." + version[1], CultureInfo.InvariantCulture);
+                    }
+                    else
+                    {
+                        return Convert.ToDouble(version[0], CultureInfo.InvariantCulture);
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Creates an instance of DialogUtils
         /// </summary>
         /// <returns>instance of DialogUtils</returns>
@@ -484,7 +516,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>instance of ImageUtils</returns>
         protected internal virtual ImageUtils OnCreateImageUtils()
         {
-            return new ImageUtils(this);        
+            return new ImageUtils(this);
         }
 
         /// <summary>
@@ -533,35 +565,12 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         /// <summary>
-        /// Try to detect current host application version. (All MS-Office products supports the version property except for Access9 aka Access 2000)
+        /// Try to detect current host application version. (All MS-Office products supports the version property except for Access 9 aka Access 2000)
         /// </summary>
         /// <returns>version or null if its failed to detect</returns>
         protected internal double? TryGetApplicationVersion()
         {
-            try
-            {
-                if (_ownerApplication.EntityIsAvailable("Version"))
-                {
-                    object result = _ownerApplication.Invoker.PropertyGet(_ownerApplication, "Version");
-                    string[] version = Convert.ToString(result).Split(new string[] {"."}, StringSplitOptions.RemoveEmptyEntries);
-                    if (version.Length > 1)
-                    {
-                        return Convert.ToDouble(version[0] + "." + version[1], CultureInfo.InvariantCulture);
-                    }
-                    else
-                    {
-                        return Convert.ToDouble(version[0], CultureInfo.InvariantCulture);
-                    }
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch
-            {
-                return null; 
-            }
+            return TryGetApplicationVersion(_ownerApplication);
         }
 
         #endregion

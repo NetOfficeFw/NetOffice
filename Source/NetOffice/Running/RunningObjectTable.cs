@@ -389,7 +389,7 @@ namespace NetOffice.Running
         /// <param name="proxyDisplayName">target display name</param>
         /// <param name="ignoreCase">ignore case when compare the name</param>
         /// <returns>true if proxy exists, otherwise false</returns>
-        public static bool GetActiveProxyExists(string proxyDisplayName, bool ignoreCase = true)
+        public static bool ActiveProxyExists(string proxyDisplayName, bool ignoreCase = true)
         {
             IEnumMoniker monikerList = null;
             IRunningObjectTable runningObjectTable = null;

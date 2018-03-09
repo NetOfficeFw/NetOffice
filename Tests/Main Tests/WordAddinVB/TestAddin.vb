@@ -53,7 +53,7 @@ Public Class TestAddin
                 result += "RibbonUI is not loaded"
             End If
             If (False = TweakOkay) Then
-                result += "Tweak is not set " + NetOffice.Settings.Default.ExceptionMessage
+                result += "Tweak is not set " + NetOffice.Settings.Default.ExceptionDefaultMessage
             End If
             If (Not IsNothing(GeneralError)) Then
                 result += "General Error:" + GeneralError
@@ -66,7 +66,7 @@ Public Class TestAddin
 
     Private ReadOnly Property TweakOkay As Boolean
         Get
-            If (Factory.Settings.ExceptionMessage.StartsWith("WordTweakVB")) Then
+            If (Factory.Settings.ExceptionDefaultMessage.StartsWith("WordTweakVB")) Then
                 Return True
             Else
                 Return False
@@ -95,7 +95,7 @@ Public Class TestAddin
 
     Public Function GetLabel(ByVal control As Office.IRibbonControl)
 
-        Return Factory.Settings.ExceptionMessage
+        Return Factory.Settings.ExceptionDefaultMessage
 
     End Function
 

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using PowerPoint = NetOffice.PowerPointApi;
 
 namespace NetOffice.PowerPointApi.Tools.Contribution
 {
@@ -12,7 +13,7 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
     {
         #region Fields
 
-        private CommonUtils _owner;
+        private bool _applicationIs2007OrHigher;
         private static readonly string[] _extensions = new string[] { "pptx", "ppt", "pptm", "potx", "pot", "potm", "ppsx", "pps", "ppsm" };
 
         #endregion
@@ -23,11 +24,39 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
         /// Creates an instance of the class
         /// </summary>
         /// <param name="owner">owner instance</param>
+        /// <exception cref="ArgumentNullException">given owner is null</exception>
         protected internal FileUtils(CommonUtils owner)
         {
             if (null == owner)
                 throw new ArgumentNullException("owner");
-            _owner = owner;
+            _applicationIs2007OrHigher = owner.ApplicationIs2007OrHigher;
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="applicationIs2007OrHigher">corresponding application version is 12 e.g. 2007 or higher</param>
+        public FileUtils(bool applicationIs2007OrHigher)
+        {
+            _applicationIs2007OrHigher = applicationIs2007OrHigher;
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="application"></param>
+        /// <exception cref="ArgumentNullException">given application is null</exception>
+        /// <exception cref="ObjectDisposedException">given application is already disposed</exception>
+        public FileUtils(PowerPoint.Application application)
+        {
+            if (null == application)
+                throw new ArgumentNullException("application");
+            if (application.IsDisposed)
+                throw new ObjectDisposedException("application");
+
+            double? version = NetOffice.OfficeApi.Tools.Contribution.CommonUtils.TryGetApplicationVersion(application);
+            if (null != version && version >= 12.00)
+                _applicationIs2007OrHigher = true;
         }
 
         #endregion
@@ -104,19 +133,19 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
             switch (type)
             {
                 case DocumentFormat.Normal:
-                    return _owner.ApplicationIs2007OrHigher ? "pptx" : "ppt";
+                    return _applicationIs2007OrHigher ? "pptx" : "ppt";
                 case DocumentFormat.Macros:
-                    return _owner.ApplicationIs2007OrHigher ? "pptm" : "ppt";
+                    return _applicationIs2007OrHigher ? "pptm" : "ppt";
                 case DocumentFormat.Template:
-                    return _owner.ApplicationIs2007OrHigher ? "potx" : "pot";
+                    return _applicationIs2007OrHigher ? "potx" : "pot";
                 case DocumentFormat.TemplateMacros:
-                    return _owner.ApplicationIs2007OrHigher ? "potm" : "pot";
+                    return _applicationIs2007OrHigher ? "potm" : "pot";
                 case DocumentFormat.Presentation:
-                    return _owner.ApplicationIs2007OrHigher ? "ppsx" : "pps";
+                    return _applicationIs2007OrHigher ? "ppsx" : "pps";
                 case DocumentFormat.PresentationMacros:
-                    return _owner.ApplicationIs2007OrHigher ? "ppsm" : "pps";
+                    return _applicationIs2007OrHigher ? "ppsm" : "pps";
                 default:
-                    throw new ArgumentOutOfRangeException("type");
+                    throw new ArgumentOutOfRangeException("<Unexpected document format. Please report this error.>", "type");
             }
         }
 

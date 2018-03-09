@@ -14,7 +14,7 @@ namespace ExcelAddinCSharp
     public class TestAddin : COMAddin
     {
         #region Ctor
-        
+
         public TestAddin()
         {
             Factory.Console.Name = "ExcelTestAddinCSharp";
@@ -31,7 +31,7 @@ namespace ExcelAddinCSharp
         #endregion
 
         #region Properties
-        
+
         public bool StatusOkay
         {
             get
@@ -53,7 +53,7 @@ namespace ExcelAddinCSharp
                 if (!RibbonUIOkay)
                     result += "RibbonUI is not loaded";
                 if(!TweakOkay)
-                    result += "Tweak is not set " + Factory.Settings.ExceptionMessage;
+                    result += "Tweak is not set " + Factory.Settings.ExceptionDefaultMessage;
                 if (null != GeneralError)
                     result += "General Error:" + GeneralError;
 
@@ -63,19 +63,19 @@ namespace ExcelAddinCSharp
 
         private string GeneralError { get; set; }
 
-        internal bool RibbonUIOkay 
+        internal bool RibbonUIOkay
         {
             get
             {
                 return null != RibbonUI;
             }
         }
-        
+
         internal bool TweakOkay
         {
             get
             {
-                if (Factory.Settings.ExceptionMessage.StartsWith ("Test09TweakCS"))
+                if (Factory.Settings.ExceptionDefaultMessage.StartsWith ("Test09TweakCS"))
                     return true;
                 else
                     return false;
@@ -89,7 +89,7 @@ namespace ExcelAddinCSharp
         #endregion
 
         #region Trigger
-        
+
         private void TestAddin_OnConnection(object Application, NetOffice.Tools.ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             Factory.Initialize();
@@ -105,7 +105,7 @@ namespace ExcelAddinCSharp
 
         public string GetLabel(Office.IRibbonControl control)
         {
-            return Factory.Settings.ExceptionMessage;
+            return Factory.Settings.ExceptionDefaultMessage;
         }
 
         #endregion

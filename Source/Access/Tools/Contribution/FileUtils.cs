@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using Access = NetOffice.AccessApi;
 
 namespace NetOffice.AccessApi.Tools.Contribution
 {
@@ -12,7 +13,7 @@ namespace NetOffice.AccessApi.Tools.Contribution
     {
         #region Fields
 
-        private CommonUtils _owner;
+        private bool _applicationIs2007OrHigher;
         private static readonly string[] _extensions = new string[] { "mdb", "accdb", "accde", "mde", "accdt", "mdt", "accda", "mda", "mdz", "accdf", "mdw" };
 
         #endregion
@@ -23,11 +24,39 @@ namespace NetOffice.AccessApi.Tools.Contribution
         /// Creates an instance of the class
         /// </summary>
         /// <param name="owner">owner instance</param>
+        /// <exception cref="ArgumentNullException">given owner is null</exception>
         protected internal FileUtils(CommonUtils owner)
         {
             if (null == owner)
                 throw new ArgumentNullException("owner");
-            _owner = owner;
+            _applicationIs2007OrHigher = owner.ApplicationIs2007OrHigher;
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="applicationIs2007OrHigher">corresponding application version is 12 e.g. 2007 or higher</param>
+        public FileUtils(bool applicationIs2007OrHigher)
+        {
+            _applicationIs2007OrHigher = applicationIs2007OrHigher;
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="application"></param>
+        /// <exception cref="ArgumentNullException">given application is null</exception>
+        /// <exception cref="ObjectDisposedException">given application is already disposed</exception>
+        public FileUtils(Access.Application application)
+        {
+            if (null == application)
+                throw new ArgumentNullException("application");
+            if (application.IsDisposed)
+                throw new ObjectDisposedException("application");
+
+            double? version = NetOffice.OfficeApi.Tools.Contribution.CommonUtils.TryGetApplicationVersion(application);
+            if (null != version && version >= 12.00)
+                _applicationIs2007OrHigher = true;
         }
 
         #endregion
@@ -109,15 +138,15 @@ namespace NetOffice.AccessApi.Tools.Contribution
             switch (type)
             {
                 case DocumentFormat.Normal:
-                    return _owner.ApplicationIs2007OrHigher ? "accdb" : "mdb";
+                    return _applicationIs2007OrHigher ? "accdb" : "mdb";
                 case DocumentFormat.Compiled:
-                    return _owner.ApplicationIs2007OrHigher ? "accde" : "mde";
+                    return _applicationIs2007OrHigher ? "accde" : "mde";
                 case DocumentFormat.Runtime:
                     return "accdr";
                 case DocumentFormat.Template:
-                    return _owner.ApplicationIs2007OrHigher ? "accdt" : "mdt";
+                    return _applicationIs2007OrHigher ? "accdt" : "mdt";
                 case DocumentFormat.Addin:
-                    return _owner.ApplicationIs2007OrHigher ? "accda" : "mda";
+                    return _applicationIs2007OrHigher ? "accda" : "mda";
                 case DocumentFormat.Assistant:
                     return "mdz";
                 case DocumentFormat.FieldDescription:
@@ -125,7 +154,7 @@ namespace NetOffice.AccessApi.Tools.Contribution
                 case DocumentFormat.WorkgroupSecurity:
                     return "mdw";
                 default:
-                    throw new ArgumentOutOfRangeException("type");
+                    throw new ArgumentOutOfRangeException("<Unexpected document format. Please report this error.>", "type");
             }
         }
 

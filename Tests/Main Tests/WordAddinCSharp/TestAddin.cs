@@ -48,7 +48,7 @@ namespace WordAddinCSharp
                 if (!RibbonUIOkay)
                     result += "RibbonUI is not loaded";
                 if (!TweakOkay)
-                    result += "Tweak is not set " + Factory.Settings.ExceptionMessage;
+                    result += "Tweak is not set " + Factory.Settings.ExceptionDefaultMessage;
                 if (null != GeneralError)
                     result += "General Error:" + GeneralError;
 
@@ -70,7 +70,7 @@ namespace WordAddinCSharp
         {
             get
             {
-                if (Factory.Settings.ExceptionMessage.StartsWith("WordTweakCS"))
+                if (Factory.Settings.ExceptionDefaultMessage.StartsWith("WordTweakCS"))
                     return true;
                 else
                     return false;
@@ -96,7 +96,7 @@ namespace WordAddinCSharp
 
         public string GetLabel(Office.IRibbonControl control)
         {
-            return Factory.Settings.ExceptionMessage;
+            return Factory.Settings.ExceptionDefaultMessage;
         }
 
         protected override void OnError(ErrorMethodKind methodKind, Exception exception)

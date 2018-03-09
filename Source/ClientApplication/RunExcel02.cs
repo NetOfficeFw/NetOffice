@@ -14,7 +14,7 @@ namespace ClientApplication
                 {
                     application.Visible = true;
                     application.Workbooks.Add();
-                  
+
                     dynamic dynamicBooks = new COMDynamicObject(application.Workbooks.UnderlyingObject);
                     var book = dynamicBooks[1];
 

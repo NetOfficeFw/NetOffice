@@ -34,8 +34,11 @@ namespace NetOffice
         /// Creates an instance of the class
         /// </summary>
         /// <param name="parentFactory">parent factory</param>
+        /// <exception cref="ArgumentNullException">given parent factory is null</exception>
         internal Invoker(Core parentFactory)
         {
+            if (null == parentFactory)
+                throw new ArgumentNullException("parentFactory");
             Parent = parentFactory;
         }
 
@@ -114,6 +117,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void Method(ICOMObject comObject, string name)
         {
             Method(comObject, name, null);
@@ -124,6 +128,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void Method(object comObject, string name)
         {
             Method(comObject, name, null);
@@ -135,6 +140,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void Method(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
@@ -167,6 +173,7 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="value">value to be set</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void Method(ICOMObject comObject, string name, object[] paramsArray, object value)
         {
             try
@@ -203,6 +210,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void MethodWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
@@ -232,6 +240,7 @@ namespace NetOffice
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void Method(object comObject, string name, object[] paramsArray)
         {
             try
@@ -279,6 +288,7 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void Method(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
@@ -310,6 +320,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <returns>any return value</returns>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public object MethodReturn(ICOMObject comObject, string name)
         {
             try
@@ -344,6 +355,7 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public object MethodReturn(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
@@ -378,6 +390,7 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object MethodReturnWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
@@ -411,6 +424,7 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public object MethodReturn(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
@@ -447,6 +461,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void SingleMethod(ICOMObject comObject, string name)
         {
             SingleMethod(comObject, name, null);
@@ -457,6 +472,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void SingleMethod(object comObject, string name)
         {
             SingleMethod(comObject, name, null);
@@ -468,6 +484,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void SingleMethod(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
@@ -499,6 +516,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void SingleMethodWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
@@ -528,6 +546,7 @@ namespace NetOffice
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void SingleMethod(object comObject, string name, object[] paramsArray)
         {
             try
@@ -575,6 +594,7 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public void SingleMethod(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
@@ -606,6 +626,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <returns>any return value</returns>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public object SingleMethodReturn(ICOMObject comObject, string name)
         {
             try
@@ -640,6 +661,7 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public object SingleMethodReturn(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
@@ -674,6 +696,7 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object SingleMethodReturnWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
@@ -707,6 +730,7 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         public object SingleMethodReturn(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
@@ -744,6 +768,7 @@ namespace NetOffice
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of property</param>
         /// <returns>any return value</returns>
+        /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
         public object PropertyGet(object comObject, string name)
         {
             try
@@ -792,6 +817,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
         /// <returns>any return value</returns>
+        /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
         public object PropertyGet(ICOMObject comObject, string name)
         {
             try
@@ -826,6 +852,7 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
+        /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
         public object PropertyGet(object comObject, string name, object[] paramsArray)
         {
             try
@@ -875,6 +902,7 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
+        /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
         public object PropertyGet(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
@@ -909,6 +937,7 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
+        /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object PropertyGetWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
@@ -942,6 +971,7 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
+        /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
         public object PropertyGet(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
@@ -976,6 +1006,7 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="value">value to be set</param>
+        /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
         public void PropertySet(ICOMObject comObject, string name, object[] paramsArray, object value)
         {
             try
@@ -1014,6 +1045,7 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="value">value to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
+        /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
         public void PropertySet(ICOMObject comObject, string name, object[] paramsArray, object value, ParameterModifier[] paramModifiers)
         {
             try
@@ -1050,6 +1082,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
         /// <param name="value">value to be set</param>
+        /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
         public void PropertySet(ICOMObject comObject, string name, object value)
         {
             try
@@ -1082,6 +1115,7 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="value">value to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
+        /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
         public void PropertySet(ICOMObject comObject, string name, object value, ParameterModifier[] paramModifiers)
         {
             try
@@ -1114,6 +1148,7 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="value">value array to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
+        /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
         public void PropertySet(ICOMObject comObject, string name, object[] value, ParameterModifier[] paramModifiers)
         {
             try
@@ -1145,6 +1180,7 @@ namespace NetOffice
         /// <param name="comObject">comobject instance</param>
         /// <param name="name">name of the property</param>
         /// <param name="value">new value of the property</param>
+        /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
         public void PropertySet(ICOMObject comObject, string name, object[] value)
         {
             try
@@ -1235,6 +1271,7 @@ namespace NetOffice
         /// <summary>
         /// Calls dipose in case if param is COMObject, calls Marshal.ReleaseComObject in case of param is a COM proxy
         /// </summary>
+        /// <exception cref="COMException">an unexpected error occurs</exception>
         public static void ReleaseParam(object param)
         {
             try
@@ -1261,6 +1298,7 @@ namespace NetOffice
         /// Calls ReleaseParam for every array item
         /// </summary>
         /// <param name="paramsArray">any value array</param>
+        /// <exception cref="COMException">an unexpected error occurs</exception>
         public static void ReleaseParamsArray(params object[] paramsArray)
         {
             if (null != paramsArray)
@@ -1323,6 +1361,7 @@ namespace NetOffice
         /// Throws an ObjectDisposedException if given ICOMObject instance is already disposed.
         /// </summary>
         /// <param name="comObject">ICOMObject instance as any</param>
+        /// <exception cref="ObjectDisposedException">comObject is already disposed</exception>
         private static void ValidateComObjectIsAlive(ICOMObject comObject)
         {
             if (comObject.IsDisposed || comObject.IsCurrentlyDisposing)

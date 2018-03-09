@@ -88,11 +88,11 @@ namespace TutorialsCS4
     {
         // -- Best Practice sample extension to create extensions for IEnumerable<T> in NetOffice
         //
-        // In order to prevent ambiguous conflicts 
+        // In order to prevent ambiguous conflicts
         // you need to target NetOffice.CollectionsGeneric.IEnumerableProvider<T>
         // All collections in NetOffice implement these interface
         public static IEnumerable<Excel.Range> AllCellsWithValues(this IEnumerableProvider<Excel.Range> source)
-        {           
+        {
             List<Excel.Range> result = new List<NetOffice.ExcelApi.Range>();
             ICOMObject enumerator = source.GetComObjectEnumerator(null);
             try
