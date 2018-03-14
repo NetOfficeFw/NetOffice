@@ -7,6 +7,7 @@ namespace PowerPointCustomDocProperties
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
             try
