@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetOffice.Exceptions;
+using System;
 
 namespace NetOffice.Callers
 {
@@ -35,15 +36,14 @@ namespace NetOffice.Callers
                     return false;
                 if (settings.EnableAutomaticQuit)
                 {
-                    invoker.Method(instance.UnderlyingObject, "Quit");
+                    invoker.MethodBypassDisposeCheck(instance, "Quit", new object[0]);
                     return true;
                 }
                 else
                     return false;
             }
-            catch (Exception exception)
+            catch
             {
-                instance.Console.WriteException(exception);
                 return false;
             }
         }
@@ -73,12 +73,11 @@ namespace NetOffice.Callers
             {
                 if (null == instance || null == instance.UnderlyingObject || null == invoker)
                     return false;
-                invoker.Method(instance.UnderlyingObject, "Quit");
+                invoker.MethodBypassDisposeCheck(instance, "Quit", new object[0]);
                 return true;
             }
-            catch (Exception exception)
+            catch
             {
-                instance.Console.WriteException(exception);
                 return false;
             }
         }

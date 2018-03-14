@@ -88,6 +88,7 @@
     <Compile Include="Attributes\ProxyResultAttribute.cs" />
     <Compile Include="Attributes\SinkArgumentAttribute.cs" />
     <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
+    <Compile Include="COMObjectCreateOptions.cs" />
     <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
     <Compile Include="ComTypes\TypeDescriptor.cs" />
     <Compile Include="Contribution\CollectionsGeneric\DisposableSequence.cs" />

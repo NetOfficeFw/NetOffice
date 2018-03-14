@@ -550,6 +550,34 @@ namespace NetOffice
         #region Methods
 
         /// <summary>
+        /// Creates instance
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        ///  <param name="options">optional create options</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="ArgumentException">given argument is not a proxy</exception>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T Create<T>(COMObjectCreateOptions options = COMObjectCreateOptions.None) where T : class, ICOMObject
+        {
+            try
+            {
+                ICOMObject result = Activator.CreateInstance(typeof(T)) as ICOMObject;
+                if (options == COMObjectCreateOptions.CreateNewCore)
+                {
+                    // hotfix
+                    ((COMObject)result).Factory = new Core();
+                }
+                return (T)result;
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
+
+
+        /// <summary>
         /// Creates instance from proxy
         /// </summary>
         /// <typeparam name="T">result type</typeparam>

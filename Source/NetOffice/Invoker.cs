@@ -135,6 +135,38 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Perform method as latebind call with parameters and bypass the dispose validation
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
+        /// <remarks>special workarround for NetOffice.Callers.QuitCaller related to Settings.EnableAutomaticQuit</remarks>
+        internal void MethodBypassDisposeCheck(ICOMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
+                    throw new EntityNotSupportedException(name);
+
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+
+                if (measureStarted)
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+            }
+            catch (Exception throwedException)
+            {
+                var exception = new MethodCOMException(
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    throwedException);
+                Console.WriteException(exception);
+                throw exception;
+            }
+        }
+
+        /// <summary>
         /// Perform method as latebind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
@@ -159,10 +191,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -197,10 +230,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -227,10 +261,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -274,10 +309,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -307,10 +343,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -341,10 +378,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -376,10 +414,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -409,10 +448,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -445,10 +485,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -503,10 +544,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -533,10 +575,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -580,10 +623,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -613,10 +657,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                DebugConsole.Default.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -647,10 +692,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -682,10 +728,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -715,10 +762,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -751,10 +799,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new MethodCOMException(
+                var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -804,10 +853,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertyGetCOMException(
+                var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -838,10 +888,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertyGetCOMException(
+                var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -888,10 +939,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertyGetCOMException(
+                var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -923,10 +975,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertyGetCOMException(
+                var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -956,10 +1009,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertyGetCOMException(
+                var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -992,10 +1046,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertyGetCOMException(
+                var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -1030,10 +1085,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertySetCOMException(
+                var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, paramsArray, value),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -1069,10 +1125,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertySetCOMException(
+                var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, paramsArray, value),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -1101,10 +1158,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertySetCOMException(
+                var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, new object[] { value }),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -1134,10 +1192,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertySetCOMException(
+                var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, new object[] { value }),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -1167,10 +1226,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertySetCOMException(
+                var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, value),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -1199,10 +1259,11 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                Console.WriteException(throwedException);
-                throw new PropertySetCOMException(
+                var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, value),
                     throwedException);
+                Console.WriteException(exception);
+                throw exception;
             }
         }
 
@@ -1365,7 +1426,7 @@ namespace NetOffice
         private static void ValidateComObjectIsAlive(ICOMObject comObject)
         {
             if (comObject.IsDisposed || comObject.IsCurrentlyDisposing)
-                throw new ObjectDisposedException("comObject");
+                throw new ObjectDisposedException("comObject", "Instance is disposed or currently disposing.");
         }
 
         #endregion
