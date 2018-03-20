@@ -7,7 +7,7 @@ namespace TutorialsCS4
     static class Program
     {
         internal static string DocumentationBase = "https://netoffice.io/documentation/";
-        
+
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>

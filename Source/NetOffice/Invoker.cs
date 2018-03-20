@@ -22,9 +22,14 @@ namespace NetOffice
         private static object _lockInstance = new object();
 
         /// <summary>
-        /// Shared default invoker
+        /// shared default invoker
         /// </summary>
         private static Invoker _default;
+
+        /// <summary>
+        /// parent factory
+        /// </summary>
+        private Core _parent;
 
         #endregion
 
@@ -78,7 +83,17 @@ namespace NetOffice
         /// <summary>
         /// Parent Factory
         /// </summary>
-        internal Core Parent { get; private set; }
+        internal Core Parent
+        {
+            get
+            {
+                return null != _parent ? _parent : Core.Default;
+            }
+            private set
+            {
+                _parent = Parent;
+            }
+        }
 
         /// <summary>
         /// Associated DebugConsole
@@ -151,7 +166,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -161,6 +176,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -184,7 +200,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -194,6 +210,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -223,7 +240,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, newParamsArray, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, newParamsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
@@ -233,6 +250,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -254,7 +272,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -264,6 +282,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -302,7 +321,7 @@ namespace NetOffice
                 if(null != wrapperInstance)
                     measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                type.InvokeMember(name, BindingFlags.InvokeMethod, null, target, paramsArray, Settings.Default.ThreadCulture);
+                type.InvokeMember(name, BindingFlags.InvokeMethod, null, target, paramsArray, null != wrapperInstance ? wrapperInstance.Settings.ThreadCulture : Settings.Default.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
@@ -336,7 +355,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -346,6 +365,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -369,7 +389,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -381,6 +401,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -405,7 +426,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -417,6 +438,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -439,7 +461,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Name, comObject.InstanceType.Name, name);
@@ -451,6 +473,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -476,7 +499,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -488,6 +511,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -537,7 +561,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -547,6 +571,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -568,7 +593,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -578,6 +603,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -616,7 +642,7 @@ namespace NetOffice
                 if (null != wrapperInstance)
                     measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                type.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, target, paramsArray, Settings.Default.ThreadCulture);
+                type.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, target, paramsArray, null != wrapperInstance ? wrapperInstance.Settings.ThreadCulture : Settings.Default.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
@@ -650,7 +676,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -660,6 +686,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -683,7 +710,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -695,6 +722,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -719,7 +747,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -731,6 +759,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -753,7 +782,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -765,6 +794,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -790,7 +820,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -802,6 +832,7 @@ namespace NetOffice
                 var exception = new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -844,7 +875,7 @@ namespace NetOffice
                 if (null != wrapperInstance)
                     measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
-                object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, null, Settings.Default.ThreadCulture);
+                object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, null, null != wrapperInstance ? wrapperInstance.Settings.ThreadCulture : Settings.Default.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
@@ -879,7 +910,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -891,6 +922,7 @@ namespace NetOffice
                 var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -930,7 +962,7 @@ namespace NetOffice
                 if(null != wrapperInstance)
                     measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
-                object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, paramsArray, Settings.Default.ThreadCulture);
+                object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, paramsArray, null != wrapperInstance ? wrapperInstance.Settings.ThreadCulture : Settings.Default.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
@@ -966,7 +998,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -978,6 +1010,7 @@ namespace NetOffice
                 var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -1000,7 +1033,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -1012,6 +1045,7 @@ namespace NetOffice
                 var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -1037,7 +1071,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
-                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
+                object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
@@ -1049,6 +1083,7 @@ namespace NetOffice
                 var exception = new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -1078,7 +1113,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
@@ -1088,6 +1123,7 @@ namespace NetOffice
                 var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, paramsArray, value),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -1118,7 +1154,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, paramModifiers, Settings.Default.ThreadCulture, null);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
@@ -1128,6 +1164,7 @@ namespace NetOffice
                 var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, paramsArray, value),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -1151,7 +1188,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
@@ -1161,6 +1198,7 @@ namespace NetOffice
                 var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, new object[] { value }),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -1185,7 +1223,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, Settings.Default.ThreadCulture, null);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
@@ -1195,6 +1233,7 @@ namespace NetOffice
                 var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, new object[] { value }),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -1219,7 +1258,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, Settings.Default.ThreadCulture, null);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
@@ -1229,6 +1268,7 @@ namespace NetOffice
                 var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, value),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
@@ -1252,7 +1292,7 @@ namespace NetOffice
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, Settings.Default.ThreadCulture);
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, comObject.Settings.ThreadCulture);
 
                 if(measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
@@ -1262,6 +1302,7 @@ namespace NetOffice
                 var exception = new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, value),
                     throwedException);
+                exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }

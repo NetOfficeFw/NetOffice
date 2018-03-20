@@ -14,7 +14,7 @@ namespace TutorialsCS4
             // morevover you can enable the option NetOffice.Settings.EnableSafeMode. 
             // NetOffice checks(cache supported) for any method or property you call and
             // throws a EntitiyNotSupportedException if missing
-            
+
             // create new instance
             Excel.Application application = new Excel.Application();
 
@@ -28,7 +28,7 @@ namespace TutorialsCS4
             string result = "Excel Runtime Check: " + Environment.NewLine;
             result += "Support EnableLivePreview: " + enableLivePreviewSupport.ToString() + Environment.NewLine;
             result += "Support OpenDatabase:      " + openDatabaseSupport.ToString() + Environment.NewLine;
-            
+
             // quit and dispose
             application.Quit();
             application.Dispose();

@@ -43,6 +43,7 @@ namespace NetOffice
         private ExceptionMessageHandling _exceptionMessageBehavior = ExceptionMessageHandling.DiagnosticsAndInnerMessage;
         private bool _loadAssembliesUnsafe = true;
         private PerformanceTrace _performanceTrace;
+        private bool _forceApplicationVersionProviders = true;
         private static Settings _default;
         private static object _defaultLock = new object();
 
@@ -516,6 +517,27 @@ namespace NetOffice
                 {
                     _loadAssembliesUnsafe = value;
                     OnPropertyChanged("LoadAssembliesUnsafe");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Request version from application instances for diagnostic purpose.
+        /// These version information is given in any thrown NetOfficeCOMException(and derived) instances. true by default
+        /// </summary>
+        [Category("Settings"), Description("Request version from application instances for diagnostic purpose."), DefaultValue(true)]
+        public bool ForceApplicationVersionProviders
+        {
+            get
+            {
+                return _forceApplicationVersionProviders;
+            }
+            set
+            {
+                if (value != _forceApplicationVersionProviders)
+                {
+                    _forceApplicationVersionProviders = value;
+                    OnPropertyChanged("ForceApplicationVersionProviders");
                 }
             }
         }

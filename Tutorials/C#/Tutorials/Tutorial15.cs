@@ -7,7 +7,7 @@ using Excel = NetOffice.ExcelApi;
 
 namespace TutorialsCS4
 {
-    public class Tutorial15 : ITutorial 
+    public class Tutorial15 : ITutorial
     {
         public void Run()
         {

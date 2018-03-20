@@ -8,7 +8,7 @@ using Office = NetOffice.OfficeApi;
 namespace TutorialsCS4
 {
     public class Tutorial05 : ITutorial
-    { 
+    {
         public void Run()
         {
             // this is a simple demonstration how to convert unkown types at runtime
@@ -23,12 +23,12 @@ namespace TutorialsCS4
                 // the application property is an unkown COM object
                 // we need a simple cast at runtime
                 Excel.Application hostApp = item.Application as Excel.Application;
-                
+
                 // do some sample stuff
                 string hostAppName = hostApp.Name;
                 bool hostAppVisible = hostApp.Visible;
             }
- 
+
             // quit and dispose excel
             application.Quit();
             application.Dispose();

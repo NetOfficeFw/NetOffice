@@ -6,21 +6,29 @@ using NetOffice.Attributes;
 namespace NetOffice.WordApi
 {
 	/// <summary>
-	/// DispatchInterface _Application 
+	/// DispatchInterface _Application
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _Application : COMObject
-	{
-		#pragma warning disable
+ 	public class _Application : COMObject, IApplicationVersionProvider
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Fields
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        private bool _versionRequested;
+        private object _cachedVersion;
+        private object _chachedVersionLock = new object();
+
+        #endregion
+
+        #region Type Information
+
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
 		public override Type InstanceType
 		{
 			get
@@ -41,9 +49,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
 		#region Ctor
 
 		/// <param name="factory">current used factory core</param>
@@ -58,7 +66,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public _Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +75,7 @@ namespace NetOffice.WordApi
 		public _Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
-		
+
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +93,26 @@ namespace NetOffice.WordApi
 		public _Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application(ICOMObject replacedObject) : base(replacedObject)
 		{
 		}
-		
+
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application() : base()
 		{
 		}
-		
+
 		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application(string progId) : base(progId)
 		{
 		}
-		
+
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>
@@ -6355,8 +6363,79 @@ namespace NetOffice.WordApi
 			 Factory.ExecuteMethod(this, "Dummy4");
 		}
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region IApplicationVersionProvider
+
+        string IApplicationVersionProvider.Name
+        {
+            get
+            {
+                return "Microsoft Word";
+            }
+        }
+
+        string IApplicationVersionProvider.ComponentName
+        {
+            get
+            {
+                return "NetOffice.WordApi";
+            }
+        }
+
+        /// <summary>
+        /// Request version information on demand and cache to call the remote server only 1x times
+        /// </summary>
+        object IApplicationVersionProvider.Version
+        {
+            get
+            {
+                lock (_chachedVersionLock)
+                {
+                    if (null == _cachedVersion)
+                    {
+                        _cachedVersion = TryVersionPropertyGet();
+                    }
+                }
+                return _cachedVersion;
+            }
+        }
+
+        bool IApplicationVersionProvider.VersionRequested
+        {
+            get
+            {
+                return _versionRequested;
+            }
+        }
+
+        void IApplicationVersionProvider.TryRequestVersion()
+        {
+            _cachedVersion = TryVersionPropertyGet();
+        }
+
+        /// <summary>
+        /// Try get version information without fail
+        /// </summary>
+        /// <returns></returns>
+        private object TryVersionPropertyGet()
+        {
+            try
+            {
+                return Invoker.PropertyGet(this, "Version");
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                _versionRequested = true;
+            }
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

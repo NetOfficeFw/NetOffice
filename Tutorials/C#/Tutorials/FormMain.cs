@@ -14,7 +14,7 @@ namespace TutorialsCS4
         public FormMain()
         {
             InitializeComponent();
-            this.Text = "NetOffice Tutorials in C#";
+            Text = "NetOffice Tutorials in C#";
             LoadTutorials();
         }
 

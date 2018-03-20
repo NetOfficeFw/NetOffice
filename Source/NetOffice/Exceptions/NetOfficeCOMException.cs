@@ -15,6 +15,7 @@ namespace NetOffice.Exceptions
         /// </summary>
         public NetOfficeCOMException() : base()
         {
+            ApplicationVersion = String.Empty;
         }
 
         /// <summary>
@@ -23,6 +24,7 @@ namespace NetOffice.Exceptions
         /// <param name="inner">the exception that is the cause of the current exception</param>
         public NetOfficeCOMException(Exception inner) : base(null != inner ? inner.Message : "<Error>", inner)
         {
+            ApplicationVersion = String.Empty;
         }
 
         /// <summary>
@@ -31,6 +33,7 @@ namespace NetOffice.Exceptions
         /// <param name="message">the message that indicates the reason for the exception</param>
         public NetOfficeCOMException(string message) : base(message)
         {
+            ApplicationVersion = String.Empty;
         }
 
         /// <summary>
@@ -40,6 +43,7 @@ namespace NetOffice.Exceptions
         /// <param name="inner">the exception that is the cause of the current exception</param>
         public NetOfficeCOMException(string message, Exception inner) : base(message, inner)
         {
+            ApplicationVersion = String.Empty;
         }
 
         /// <summary>
@@ -49,6 +53,7 @@ namespace NetOffice.Exceptions
         /// <param name="errorCode">The error code (HRESULT) value associated with this exception</param>
         public NetOfficeCOMException(string message, int errorCode) : base(message, errorCode)
         {
+            ApplicationVersion = String.Empty;
         }
 
         /// <summary>
@@ -60,6 +65,12 @@ namespace NetOffice.Exceptions
         [SecuritySafeCritical]
         public NetOfficeCOMException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
+            ApplicationVersion = String.Empty;
         }
+
+        /// <summary>
+        /// Office application version if available
+        /// </summary>
+        public string ApplicationVersion { get; internal set; }
     }
 }

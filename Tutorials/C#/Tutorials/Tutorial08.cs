@@ -42,13 +42,13 @@ namespace TutorialsCS4
             MyWorkbook book = application.Workbooks.Add() as MyWorkbook;
             if (book.Has3Sheets)
                 Console.WriteLine("Book has 3 sheets.");
-            
+
             application.Quit();
             application.Dispose();
 
             HostApplication.ShowFinishDialog();
         }
-        
+
         public void Connect(IHost hostApplication)
         {
             HostApplication = hostApplication;

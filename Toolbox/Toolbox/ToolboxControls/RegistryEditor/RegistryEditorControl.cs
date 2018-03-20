@@ -27,7 +27,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         private UtilsRegistry _currentUser;
         private bool          _userIsAdmin;
         private bool          _supportsInfoMessage;
-            
+
         #endregion
 
         #region Ctor
@@ -58,12 +58,61 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                     }
 
                     _userIsAdmin = Program.IsAdmin;
-                    _supportsInfoMessage = !_userIsAdmin;                 
+                    _supportsInfoMessage = !_userIsAdmin;
+
+                    SearchLabel.MouseEnter += delegate
+                    {
+                        SearchLabel.BackColor = Color.LightGray;
+                    };
+
+                    SearchLabel.MouseLeave += delegate
+                    {
+                        SearchLabel.BackColor = Color.White;
+                    };
                 }
             }
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
+        }
+
+        #endregion
+
+        #region Properties
+
+        private string SelectedPath
+        {
+            get
+            {
+                var selNode = treeViewRegistry.SelectedNode;
+                if (null != selNode)
+                {
+                    if(null == selNode.Parent)
+                        return ((UtilsRegistry)selNode.Tag).Path;
+                    else
+                        return ((UtilsRegistryKey)selNode.Tag).Path;
+                }
+                else
+                    return null;
+            }
+        }
+
+        private RegistryKey SelectedRoot
+        {
+            get
+            {
+                if (null != treeViewRegistry.SelectedNode)
+                {
+                    TreeNode node = treeViewRegistry.SelectedNode;
+                    while (null != node.Parent)
+                    {
+                        node = node.Parent;
+                    }
+                    return ((UtilsRegistry)node.Tag).HiveKey;
+                }
+                else
+                    return null;
             }
         }
 
@@ -88,7 +137,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             {
                 if(!textBoxSearch.Focused)
                     textBoxSearch.Focus();
-                DoSearch(textBoxSearch.Text);
+                DoSearchAsync(textBoxSearch.Text);
             }
         }
 
@@ -169,7 +218,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         public void LoadComplete()
         {
-   
+
         }
 
         public void LoadConfiguration(XmlNode configNode)
@@ -309,18 +358,23 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
         }
 
+        private void ShowRegNode(UtilsRegistryKey key, TreeNode node)
+        {
+            node = node.Nodes.Add(key.Name);
+            node.Tag = true;
+            if (key.Keys.Count > 0)
+                node.Nodes.Add("#stub");
+        }
+
         private void ShowRegNodeChilds(UtilsRegistryKey key, TreeNode node)
         {
             foreach (UtilsRegistryKey subKey in key.Keys)
-                ShowRegNode(subKey,node);
-        }
-
-        private void ShowRegNode(UtilsRegistryKey key, TreeNode node)
-        {           
-            node = node.Nodes.Add(key.Name);
-            node.Tag = true;
-            if(key.Keys.Count > 0)
-                node.Nodes.Add("#stub");
+            {
+                TreeNode childNode = node.Nodes.Add(subKey.Name);
+                childNode.Tag = subKey;
+                if (subKey.Keys.Count > 0)
+                    childNode.Nodes.Add("#stub");
+            }
         }
 
         private void RestoreExpandState(string currentPath)
@@ -395,11 +449,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private string[] GetNodePaths(List<TreeNode> listNodes)
         {
-            
+
             List<string> listNames = new List<string>();
             foreach (TreeNode item in listNodes)
                 listNames.Add(GetFullNodePath(item));
-            
+
             return listNames.ToArray();
         }
 
@@ -464,13 +518,46 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             foreach (DataGridViewRow item in dataGridViewRegistry.Rows)
             {
-                if (item.Cells[1].Value.ToString().Contains(expression) || item.Cells[3].Value.ToString().Contains(expression))
+                if (item.Cells[1].Value.ToString().IndexOf(expression, 0, StringComparison.InvariantCultureIgnoreCase) > -1 ||
+                    item.Cells[3].Value.ToString().IndexOf(expression, 0, StringComparison.InvariantCultureIgnoreCase) > -1)
                 {
                     item.Selected = true;
                 }
                 else
                     item.Selected = false;
             }
+        }
+
+        private void SelectKey(UtilsRegistry targetKey)
+        {
+            if (null == targetKey)
+                throw new ArgumentNullException("targetKey");
+            pictureBoxNoResult.Visible = false;
+
+            TreeNode rootNode = GetRootNode(targetKey.IsLocalMachine, targetKey.IsWow);
+            UtilsRegistry rootRegistry = (UtilsRegistry)rootNode.Tag;
+
+            if (!rootNode.IsExpanded)
+                rootNode.Expand();
+
+            TreeNode currentNode = rootNode;
+
+            string[] array = targetKey.Path.Substring(rootRegistry.PathWithoutName.Length).Split(new string[] { "\\" }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var item in array)
+            {
+                if (!currentNode.IsExpanded)
+                    currentNode.Expand();
+                foreach (TreeNode node in currentNode.Nodes)
+                {
+                    if (node.Text == item)
+                    {
+                        currentNode = node;
+                        continue;
+                    }
+                }
+            }
+
+            treeViewRegistry.SelectedNode = currentNode;
         }
 
         private void SelectKey(UtilsRegistryKey targetKey)
@@ -480,7 +567,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             pictureBoxNoResult.Visible = false;
 
             TreeNode rootNode = GetRootNode(targetKey.Root.IsLocalMachine, targetKey.Root.IsWow);
- 
+
             if (!rootNode.IsExpanded)
                 rootNode.Expand();
 
@@ -517,7 +604,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             if (null != node.FirstNode)
             {
                 if (node.FirstNode.Text.EndsWith("#stub"))
-                { 
+                {
                     node.Expand();
                     node.Collapse();
                 }
@@ -529,7 +616,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 return node.NextNode;
 
             TreeNode currentNode = node;
-            
+
             while (null != currentNode.Parent)
             {
                 if (node.Tag is UtilsRegistry)
@@ -542,293 +629,159 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             return null;
         }
 
-        private void DoSearch(string expression)
-        {
-            UtilsRegistryKey key = null;
-            UtilsRegistryKey result = null;
+        //private UtilsRegistryKey FirstRootAsKey()
+        //{
+        //    var firstRoot = FirstRootKey();
+        //    return new UtilsRegistryKey(null, firstRoot.Path);
+        //}
 
+        //private UtilsRegistry FirstRootKey()
+        //{
+        //    if (treeViewRegistry.Nodes.Count > 0)
+        //        return (UtilsRegistry)treeViewRegistry.Nodes[0].Tag;
+        //    else
+        //        return null;
+        //}
+
+        private string FirstPath()
+        {
+            if (treeViewRegistry.Nodes.Count > 0)
+                return ((UtilsRegistry)treeViewRegistry.Nodes[0].Tag).Path;
+            else
+                return null;
+        }
+
+        private RegistryKey FirstRoot()
+        {
+            if (treeViewRegistry.Nodes.Count > 0)
+                return( (UtilsRegistry)treeViewRegistry.Nodes[0].Tag).HiveKey;
+            else
+                return null;
+        }
+
+        private IEnumerable<UtilsRegistry> AvailableRootKeys()
+        {
+            List<UtilsRegistry> result = new List<UtilsRegistry>();
+
+            foreach (TreeNode item in treeViewRegistry.Nodes)
+                result.Add((UtilsRegistry)item.Tag);
+
+            return result;
+        }
+
+        private bool IsResultSelected(string expression)
+        {
             if (null == treeViewRegistry.SelectedNode)
+                return false;
+
+            foreach (DataGridViewRow row in dataGridViewRegistry.Rows)
             {
-                if (treeViewRegistry.Nodes.Count > 0)
-                    treeViewRegistry.SelectedNode = treeViewRegistry.Nodes[0];
-                else
-                    return;
-            }
-    
-            TreeNode targetNode = GetNextPossibleNode(treeViewRegistry.SelectedNode);
-            string fullNodePath = GetFullNodePath(targetNode);
-            key = new UtilsRegistryKey(GetRegistry(targetNode), fullNodePath);
-            result = SearchHive(expression, key.Root, key);
-            if (null != result)
-            { 
-                SelectKey(result);
-                SelectEntryByExpression(expression);
-            }
-            else
-            {
-                if (key.Root.IsLocalMachine && false == key.Root.IsWow)
+                if (dataGridViewRegistry.SelectedRows.Contains(row))
                 {
-                    // localmachine32
-                    result = SearchHive(expression, _currentUser32, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
+                    string name = row.Cells[1].Value.ToString();
+                    string value = row.Cells[3].Value.ToString();
 
-                    result = SearchHive(expression, _localMachine64, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
+                    bool matchName = name.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase) > -1;
+                    bool matchValue = value.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase) > -1;
 
-                    result = SearchHive(expression, _currentUser64, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
-                    else
-                        ShowNoResult();
-                }
-                else if (key.Root.IsLocalMachine && true == key.Root.IsWow)
-                {
-                    // localmachine64
-                    result = SearchHive(expression, _currentUser64, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
-
-                    result = SearchHive(expression, _localMachine32, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
-
-                    result = SearchHive(expression, _currentUser32, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
-                    else
-                        ShowNoResult();
-                }
-                else if (false == key.Root.IsLocalMachine && false == key.Root.IsWow)
-                { 
-                    // currentuser32
-                    result = SearchHive(expression, _localMachine64, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
-
-                    result = SearchHive(expression, _currentUser64, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        return;
-                    }
-                    result = SearchHive(expression, _localMachine32, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
-                    else
-                        ShowNoResult();
+                    if (matchName || matchValue)
+                        return true;
                 }
                 else
                 {
-                    // currentuser64
-                    result = SearchHive(expression, _localMachine32, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
+                    string name = row.Cells[1].Value.ToString();
+                    string value = row.Cells[3].Value.ToString();
 
-                    result = SearchHive(expression, _currentUser32, null);
-                    if (null != result)
-                    {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
-                    }
+                    bool matchName = name.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase) > -1;
+                    bool matchValue = value.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase) > -1;
 
-                    result = SearchHive(expression, _localMachine64, null);
-                    if (null != result)
+                    if (matchName || matchValue)
+                        return false;
+                }
+            }
+
+            UtilsRegistry registry = treeViewRegistry.SelectedNode.Tag as UtilsRegistry;
+            if (null != registry)
+            {
+                bool nameMatch = registry.Name.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase) > -1;
+                if (nameMatch)
+                    return true;
+            }
+            else
+            {
+                UtilsRegistryKey key = treeViewRegistry.SelectedNode.Tag as UtilsRegistryKey;
+                bool nameMatch = key.Name.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase) > -1;
+                if (nameMatch)
+                    return true;
+            }
+
+            return false;
+        }
+
+        private bool Locked { get; set; }
+        private void LockUI()
+        {
+            treeViewRegistry.Enabled = false;
+            dataGridViewRegistry.Enabled = false;
+            Locked = true;
+        }
+
+        private void UnlockUI()
+        {
+            treeViewRegistry.Enabled = true;
+            dataGridViewRegistry.Enabled = true;
+            Locked = false;
+        }
+
+        private RegistrySearch Search { get; set; }
+
+        private void DoSearchAsyncComplete(IAsyncResult result)
+        {
+            try
+            {
+                Action method = result.AsyncState as Action;
+                method.EndInvoke(result);
+                Action invokeUI = delegate
+                {
+                    pictureBoxSearching.Visible = false;
+                    UnlockUI();
+                    if (null != Search.Result)
                     {
-                        SelectKey(result);
-                        SelectEntryByExpression(expression);
-                        return;
+                        SelectKey(Search.Result);
+                        SelectEntryByExpression(Search.Expression);
                     }
                     else
                         ShowNoResult();
-                }
+                };
+                Invoke(invokeUI);
             }
-        }
-       
-        private UtilsRegistryKey SearchHive(string expression, UtilsRegistry hive, UtilsRegistryKey selectedKeyInHive)
-        {
-            if (null == hive)
-                return null;
-
-            TreeNode testNode = GetRootNode(hive.IsLocalMachine, hive.IsWow);
-            if(null == testNode)
-                return null;
-
-            List<UtilsRegistryKey> rootKeys = new List<UtilsRegistryKey>();
-            foreach (UtilsRegistryKey item in hive.Key.Keys)
-                rootKeys.Add(item);
-
-            if ((null != selectedKeyInHive && hive.Path.Equals(selectedKeyInHive.Path, StringComparison.InvariantCultureIgnoreCase)) || null == selectedKeyInHive)
+            catch
             {
-                // selected key is one the 2 roots or not selected
-                foreach (var item in rootKeys)
-                {
-                    UtilsRegistryKey resultKey = SearchTopKey(expression, item);
-                    if(null != resultKey)
-                        return resultKey;
-                }
-            }
-            else
-            {
-                // selected key is a descendent
-                int topParentIndex = 0;
-                UtilsRegistryKey topParentKey = GetTopParent(selectedKeyInHive, rootKeys, out topParentIndex);
-
-                // same top key
-                UtilsRegistryKey topKeyResult = SearchTopKey(expression, topParentKey, selectedKeyInHive);
-                if (null != topKeyResult)
-                    return topKeyResult;
-
-                // bottom keys
-                bool ignore = true;
-                foreach (var item in hive.Key.Keys)
-                {
-                    if (true == ignore)
-                    {
-                        if (item.Path == topParentKey.Path)
-                            ignore = false;
-                    }
-                    else
-                    {
-                        UtilsRegistryKey bottomKeyResult = SearchTopKey(expression, item);
-                        if (null != bottomKeyResult)
-                            return bottomKeyResult;
-                    }
-                }
-            }
-
-            return null;  
-        }
-
-        private UtilsRegistryKey SearchTopKey(string expression, UtilsRegistryKey topKey)
-        {
-            return SearchKey(expression, topKey);
-        }
-
-        private UtilsRegistryKey SearchTopKey(string expression, UtilsRegistryKey topKey, UtilsRegistryKey selectedSubKey)
-        {
-            if (selectedSubKey.Path == topKey.Path)
-            {
-                return SearchKey(expression, topKey);
-            }
-            else
-            {
-                UtilsRegistryKey parent = CreateParentRegistryKey(selectedSubKey);
-                bool ignore = true;
-                foreach (var item in parent.Keys)
-                {
-                    if (ignore == true)
-                    {
-                        if (item.Path == selectedSubKey.Path)
-                        { 
-                            ignore = false;
-                            UtilsRegistryKey res = SearchKey(expression, item);
-                            if (null != res)
-                                return res;
-                        }
-                    }
-                    else
-                    {
-                        UtilsRegistryKey res = SearchKey(expression, item);
-                        if (null != res)
-                            return res;
-                    }
-                }
-
-                return null;
+                ;
             }
         }
 
-        private UtilsRegistryKey SearchKey(string expression, UtilsRegistryKey key)
+        private void DoSearchAsync(string expression)
         {
-            int position = key.Name.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase);
-            if (position > -1)
-                return key;
+            if (Locked)
+                return;
 
-            foreach (UtilsRegistryEntry item in key.Entries)
+            var rootKeys = AvailableRootKeys();
+            bool isResultSelected = IsResultSelected(expression);
+            RegistryKey startFromRootKey = null != SelectedRoot ? SelectedRoot : FirstRoot();
+            string startFromPath = null != SelectedPath ? SelectedPath : FirstPath();
+            bool isTopLevelPath = AvailableRootKeys().Any(e=>e.Path == startFromPath);
+
+            Search = new RegistrySearch(rootKeys, startFromRootKey, null != SelectedPath ? SelectedPath : FirstPath(), isTopLevelPath, expression, isResultSelected);
+
+            Action method = delegate
             {
-                int pos1 = item.Name.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase);
-                if (pos1 > -1)
-                    return key;
-
-                string valueString = null != item.Value ? item.Value.ToString() : String.Empty;
-                int pos2 = valueString.IndexOf(expression, StringComparison.InvariantCultureIgnoreCase);
-                if (pos2 > -1)
-                    return key;
-            }
-
-            foreach (UtilsRegistryKey item in key.Keys)
-            {
-                UtilsRegistryKey resKey = SearchKey(expression, item);
-                if (null != resKey)
-                    return resKey;
-            }
-
-            return null;
-        }
-
-        private UtilsRegistryKey GetTopParent(UtilsRegistryKey key, List<UtilsRegistryKey> searchList, out int indexPosition)
-        {
-            string search = key.Path;
-
-            int i = 0;
-            foreach (var item in searchList)
-            {
-                string itemFull = item.Path;
-                if (search.StartsWith(itemFull, StringComparison.InvariantCultureIgnoreCase))
-                {
-                    indexPosition = i;
-                    return item;
-                }
-                i++;
-            }
-
-            throw new ArgumentOutOfRangeException("key");
-        }
-
-        private UtilsRegistryKey CreateParentRegistryKey(UtilsRegistryKey key)
-        {
-            int position = key.Path.LastIndexOf("\\");
-            string path = key.Path.Substring(0, position);
-            return new UtilsRegistryKey(key.Root, path);
+                Search.Search();
+            };
+            pictureBoxNoResult.Visible = false;
+            pictureBoxSearching.Visible = true;
+            LockUI();
+            method.BeginInvoke(DoSearchAsyncComplete, method);
         }
 
         #endregion
@@ -886,7 +839,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 else if (null != e.Node.Tag)
                 {
                     e.Node.Nodes.Clear();
-                    string fullPath = GetFullNodePath(e.Node);  
+                    string fullPath = GetFullNodePath(e.Node);
                     UtilsRegistryKey key = new UtilsRegistryKey(GetRegistry(e.Node), fullPath);
                     ShowRegNodeChilds(key, e.Node);
                 }
@@ -1013,7 +966,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                     currentPath = treeViewRegistry.SelectedNode.FullPath;
 
                 dataGridViewRegistry.Rows.Clear();
-                
+
                 ShowKeys();
 
                 if (null != currentPath)
@@ -1032,7 +985,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
-         
+
         private void toolStripKeyDelete_Click(object sender, EventArgs e)
         {
             try
@@ -1041,7 +994,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                     return;
 
                 string[] fullPathSelectedNodes = GetNodePaths(treeViewRegistry.SelectedNodes);
-                
+
                 TreeNode parentNode = null;
                 if( (null != treeViewRegistry.SelectedNode.PrevNode) && (treeViewRegistry.SelectedNodes.Count == 1))
                     parentNode = treeViewRegistry.SelectedNode.PrevNode;
@@ -1067,9 +1020,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                     UtilsRegistryKey key = new UtilsRegistryKey(registryRoot, fullPath);
                     key.Delete();
                 }
-                
+
                 treeViewRegistry.SelectedNode = parentNode;
-                buttonRefresh_Click(this, new EventArgs());      
+                buttonRefresh_Click(this, new EventArgs());
             }
             catch (Exception exception)
             {
@@ -1108,7 +1061,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 string fullPath = GetFullNodePath(treeViewRegistry.SelectedNode);
                 UtilsRegistryKey key = new UtilsRegistryKey(GetRegistry(treeViewRegistry.SelectedNode), fullPath);
                 key.CreateNewSubKey();
-                buttonRefresh_Click(this, new EventArgs());       
+                buttonRefresh_Click(this, new EventArgs());
             }
             catch (Exception exception)
             {
@@ -1161,11 +1114,25 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             {
                 if (e.KeyData != Keys.Return || String.IsNullOrWhiteSpace(textBoxSearch.Text))
                     return;
-                DoSearch(textBoxSearch.Text);               
+                DoSearchAsync(textBoxSearch.Text);
+                //DoSearch(textBoxSearch.Text);
             }
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
+            }
+        }
+
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                pictureBoxNoResult.Visible = false;
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
@@ -1178,6 +1145,30 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
+            }
+        }
+
+        private void RegistryEditorControl_Resize(object sender, EventArgs e)
+        {
+            try
+            {
+                checkBoxDeleteQuestion.Left = splitContainer1.Panel1.Width + 20;
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
+        }
+
+        private void SearchLabel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DoSearchAsync(textBoxSearch.Text);
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 
@@ -1227,7 +1218,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
                 UtilsRegistryEntry entry = dataGridViewRegistry.Rows[dataGridViewRegistry.SelectedCells[0].RowIndex].Tag as UtilsRegistryEntry;
                 entry.Delete();
-          
+
                 dataGridViewRegistry.Rows.Remove(row);
             }
             catch (Exception exception)
@@ -1391,18 +1382,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                     default:
                         break;
                 }
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
-            }
-        }
-
-        private void RegistryEditorControl_Resize(object sender, EventArgs e)
-        {
-            try
-            {
-                checkBoxDeleteQuestion.Left = splitContainer1.Panel1.Width + 20;
             }
             catch (Exception exception)
             {

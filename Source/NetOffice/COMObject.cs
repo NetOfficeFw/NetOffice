@@ -553,7 +553,7 @@ namespace NetOffice
         /// Creates instance
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
-        ///  <param name="options">optional create options</param>
+        /// <param name="options">optional create options</param>
         /// <returns>new instance of T</returns>
         /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
         /// <exception cref="ArgumentException">given argument is not a proxy</exception>
@@ -562,13 +562,15 @@ namespace NetOffice
         {
             try
             {
-                ICOMObject result = Activator.CreateInstance(typeof(T)) as ICOMObject;
-                if (options == COMObjectCreateOptions.CreateNewCore)
+                switch (options)
                 {
-                    // hotfix
-                    ((COMObject)result).Factory = new Core();
+                    case COMObjectCreateOptions.None:
+                        return Activator.CreateInstance(typeof(T)) as T;
+                    case COMObjectCreateOptions.CreateNewCore:
+                        return Activator.CreateInstance(typeof(T), new Core()) as T;
+                    default:
+                        throw new ArgumentOutOfRangeException("options", "<Please report this error.>");
                 }
-                return (T)result;
             }
             catch (Exception exception)
             {
@@ -576,17 +578,17 @@ namespace NetOffice
             }
         }
 
-
         /// <summary>
         /// Creates instance from proxy
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
         /// <param name="comProxy">given proxy as any</param>
+        /// <param name="options">optional create options</param>
         /// <returns>new instance of T</returns>
         /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
         /// <exception cref="ArgumentException">given argument is not a proxy</exception>
         /// <exception cref="CreateInstanceException">unexpected error</exception>
-        public static T Create<T>(object comProxy) where T : class, ICOMObject
+        public static T Create<T>(object comProxy, COMObjectCreateOptions options = COMObjectCreateOptions.None) where T : class, ICOMObject
         {
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
@@ -594,7 +596,15 @@ namespace NetOffice
                 throw new ArgumentException("Given argument is not a proxy.");
             try
             {
-                return Activator.CreateInstance(typeof(T), new object[] { null, comProxy }) as T;
+                switch (options)
+                {
+                    case COMObjectCreateOptions.None:
+                        return Activator.CreateInstance(typeof(T)) as T;
+                    case COMObjectCreateOptions.CreateNewCore:
+                        return Activator.CreateInstance(typeof(T), new Core(), null, comProxy) as T;
+                    default:
+                        throw new ArgumentOutOfRangeException("options", "<Please report this error.>");
+                }
             }
             catch (Exception exception)
             {
@@ -723,10 +733,31 @@ namespace NetOffice
                 else
                     return _factory;
             }
-            set
+            protected set
             {
-                _factory = value;
+                if (value != _factory)
+                {
+                    OnFactoryChange();
+                    _factory = value;
+                    OnFactoryChanged();
+                }
             }
+        }
+
+        /// <summary>
+        /// Called before instance core is changed
+        /// </summary>
+        protected internal virtual void OnFactoryChange()
+        {
+
+        }
+
+        /// <summary>
+        /// Called after instance core has been changed
+        /// </summary>
+        protected internal virtual void OnFactoryChanged()
+        {
+
         }
 
         /// <summary>
@@ -1338,6 +1369,38 @@ namespace NetOffice
             {
                 throw new CloneException(exception);
             }
+        }
+
+        #endregion
+
+        #region Support IApplicationVersionProvider
+
+        /// <summary>
+        /// Register itself as application version provider
+        /// </summary>
+        /// <returns>true if registered, otherwise false</returns>
+        /// <exception cref="InvalidCastException">instance doesnt implement IApplicationVersionProvider</exception>
+        protected internal bool RegisterAsApplicationVersionProvider()
+        {
+            var versionProvider = this as IApplicationVersionProvider;
+            if (null != versionProvider)
+                return Factory.RegisterApplicationVersionProvider(versionProvider);
+            else
+                throw new InvalidCastException("Instance doesnt implement IApplicationVersionProvider interface.");
+        }
+
+        /// <summary>
+        /// Unregister itself as application version provider
+        /// </summary>
+        /// <returns>true if registered, otherwise false</returns>
+        /// <exception cref="InvalidCastException">instance doesnt implement IApplicationVersionProvider</exception>
+        protected internal bool UnregisterAsApplicationVersionProvider()
+        {
+            var versionProvider = this as IApplicationVersionProvider;
+            if (null != versionProvider)
+                return Factory.UnregisterApplicationVersionProvider(versionProvider);
+            else
+                throw new InvalidCastException("Instance doesnt implement IApplicationVersionProvider interface.");
         }
 
         #endregion

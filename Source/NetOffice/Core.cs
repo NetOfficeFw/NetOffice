@@ -102,6 +102,8 @@ namespace NetOffice
         private Assembly _thisAssembly;
         private static Type _thisType;
         private static ICOMObject[] _emptyOwnerPath = new ICOMObject[0];
+        private List<IApplicationVersionProvider> _versionProviders = new List<IApplicationVersionProvider>();
+        private object _versionProvidersLock = new object();
 
         private object _checkInitializeLock = new object();
         private object _thisAssemblyLock = new object();
@@ -1551,6 +1553,78 @@ namespace NetOffice
 
                 if (IntPtr.Zero != outValueB)
                     Marshal.Release(outValueB);
+            }
+        }
+
+        #endregion
+
+        #region Support IApplicationVersionProvider
+
+        /// <summary>
+        /// Returns application name and version
+        /// </summary>
+        /// <param name="componentName">component to look into</param>
+        /// <returns>application version or empty</returns>
+        internal string GetApplicationVersion(string componentName)
+        {
+            if (String.IsNullOrWhiteSpace(componentName))
+                return String.Empty;
+            lock (_versionProvidersLock)
+            {
+                var provider =_versionProviders.FirstOrDefault();
+                if (null != provider)
+                {
+                    if (!provider.VersionRequested)
+                        provider.TryRequestVersion();
+
+                    if (null != provider.Version)
+                        return String.Format("{0} {1}", provider.Name, provider.Version);
+                    else
+                        return String.Empty;
+                }
+                else
+                    return String.Empty;
+            }
+        }
+
+        /// <summary>
+        /// Register an application version provider by its component name.
+        /// The method does nothing if a version provider for a component with given name already exists.
+        /// </summary>
+        /// <param name="versionProvider">version provider as any</param>
+        /// <returns>true if provider registerd, otherwise false</returns>
+        internal bool RegisterApplicationVersionProvider(IApplicationVersionProvider versionProvider)
+        {
+            if (null == versionProvider)
+                throw new ArgumentNullException("versionProvider");
+
+            lock (_versionProvidersLock)
+            {
+                if (!_versionProviders.Any(e => e.ComponentName == versionProvider.ComponentName))
+                {
+                    if (Settings.ForceApplicationVersionProviders && false == versionProvider.VersionRequested)
+                        versionProvider.TryRequestVersion();
+                    _versionProviders.Add(versionProvider);
+                    return true;
+                }
+                else
+                    return false;
+            }
+        }
+
+        /// <summary>
+        /// Removes an application version provider
+        /// </summary>
+        /// <param name="versionProvider">version provider as any</param>
+        /// <returns>true if removed, otherwise false</returns>
+        internal bool UnregisterApplicationVersionProvider(IApplicationVersionProvider versionProvider)
+        {
+            if (null == versionProvider)
+                throw new ArgumentNullException("versionProvider");
+
+            lock (_versionProvidersLock)
+            {
+                return _versionProviders.Remove(versionProvider);
             }
         }
 

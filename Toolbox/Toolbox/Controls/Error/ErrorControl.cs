@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using NetOffice.DeveloperToolbox.Forms;
 
 namespace NetOffice.DeveloperToolbox.Controls.Error
 {
@@ -76,7 +77,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
                 labelExitMessage.Visible = true;
             DisplayException(exception);
         }
-        
+
         private void DisplayException(Exception exception)
         {
             int i = 1;
@@ -96,7 +97,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
         }
 
         #endregion
- 
+
         #region Trigger
 
         private void ErrorControl_Resize(object sender, EventArgs e)
@@ -147,14 +148,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
 
         private void linkLabelDiscussionBoard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try
-            {
-                System.Diagnostics.Process.Start((sender as LinkLabel).Tag as string);
-            }
-            catch
-            {
-                ;
-            }
+            SelectTicketProviderForm.ShowForm(this);
         }
 
         private void listViewTrace_DoubleClick(object sender, EventArgs e)

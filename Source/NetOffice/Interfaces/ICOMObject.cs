@@ -4,7 +4,7 @@ using NetOffice.Exceptions;
 namespace NetOffice
 {
     /// <summary>
-    /// Represents a managed/wrapped COM proxy implementation 
+    /// Represents a managed/wrapped COM proxy implementation
     /// </summary>
     public interface ICOMObject : ICOMObjectProxy, ICOMObjectDisposable, ICOMObjectTable, ICOMObjectTableDisposable, ICOMObjectEvents, ICOMObjectAvaility, ICloneable
     {

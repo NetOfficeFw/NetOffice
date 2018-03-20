@@ -22,12 +22,12 @@ namespace TutorialsCS4
 
             /*
              * we have 5 created proxies now in proxy table as follows
-             * 
+             *
              * Application
              *   + Workbooks
-             *     + Workbook  
-             *        + Worksheets  
-             *            + Worksheet  
+             *     + Workbook
+             *        + Worksheets
+             *            + Worksheet
             */
 
 
@@ -36,15 +36,15 @@ namespace TutorialsCS4
 
             /*
             * we have 3 created proxies now, the childs from book are disposed
-            * 
+            *
             * Application
             *   + Workbooks
-            *     + Workbook  
+            *     + Workbook
             */
 
             application.Quit();
             application.Dispose();
-            
+
             // the Dispose() call for application release the instance and created childs Workbooks and Workbook
 
             HostApplication.ShowFinishDialog();

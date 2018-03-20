@@ -2,6 +2,7 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.Exceptions;
 
 namespace NetOffice.PowerPointApi
 {
@@ -11,16 +12,24 @@ namespace NetOffice.PowerPointApi
     /// </summary>
     [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _Application : COMObject
-	{
-		#pragma warning disable
+ 	public class _Application : COMObject, IApplicationVersionProvider
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Fields
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        private bool _versionRequested;
+        private object _cachedVersion;
+        private object _chachedVersionLock = new object();
+
+        #endregion
+
+        #region Type Information
+
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
 		public override Type InstanceType
 		{
 			get
@@ -44,29 +53,31 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _Application(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _Application(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
 		{
+
 		}
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        public _Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
 
-		}
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-		}
+
+        }
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -76,7 +87,7 @@ namespace NetOffice.PowerPointApi
 		public _Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
 
-		}
+        }
 
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -84,24 +95,29 @@ namespace NetOffice.PowerPointApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-		}
+
+        }
 
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application(ICOMObject replacedObject) : base(replacedObject)
 		{
-		}
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        }
+
+
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application() : base()
 		{
-		}
+
+        }
 
 		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application(string progId) : base(progId)
 		{
-		}
+
+        }
 
 		#endregion
 
@@ -1225,8 +1241,122 @@ namespace NetOffice.PowerPointApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Theme>(this, "OpenThemeFile", NetOffice.PowerPointApi.Theme.LateBindingApiWrapperType, themeFileName);
 		}
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region IApplicationVersionProvider
+
+        string IApplicationVersionProvider.Name
+        {
+            get
+            {
+                return "Microsoft PowerPoint";
+            }
+        }
+
+        string IApplicationVersionProvider.ComponentName
+        {
+            get
+            {
+                return "NetOffice.PowerPointApi";
+            }
+        }
+
+        /// <summary>
+        /// Request version information on demand and cache to call the remote server only 1x times
+        /// </summary>
+        object IApplicationVersionProvider.Version
+        {
+            get
+            {
+                lock (_chachedVersionLock)
+                {
+                    if (null == _cachedVersion)
+                    {
+                        _cachedVersion = TryVersionPropertyGet();
+                    }
+                }
+                return _cachedVersion;
+            }
+        }
+
+        bool IApplicationVersionProvider.VersionRequested
+        {
+            get
+            {
+                return _versionRequested;
+            }
+        }
+
+        void IApplicationVersionProvider.TryRequestVersion()
+        {
+            _cachedVersion = TryVersionPropertyGet();
+        }
+
+        /// <summary>
+        /// Try get version information without fail
+        /// </summary>
+        /// <returns></returns>
+        private object TryVersionPropertyGet()
+        {
+            try
+            {
+                return Invoker.PropertyGet(this, "Version");
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                _versionRequested = true;
+            }
+        }
+
+        #endregion
+
+        #pragma warning restore
+
+        #region Overrides
+
+        /// <summary>
+        /// NetOffice method: dispose instance and all child instances
+        /// </summary>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
+        public override void Dispose()
+        {
+            base.Dispose();
+            UnregisterAsApplicationVersionProvider();
+        }
+
+        /// <summary>
+        /// NetOffice method: dispose instance and all child instances
+        /// </summary>
+        /// <param name="disposeEventBinding"></param>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
+        public override void Dispose(bool disposeEventBinding)
+        {
+            base.Dispose(disposeEventBinding);
+            UnregisterAsApplicationVersionProvider();
+        }
+
+        /// <summary>
+        /// Called before instance core is changed
+        /// </summary>
+        protected override void OnFactoryChange()
+        {
+            base.OnFactoryChange();
+            UnregisterAsApplicationVersionProvider();
+        }
+
+        /// <summary>
+        /// Called after instance core has been changed
+        /// </summary>
+        protected override void OnFactoryChanged()
+        {
+            base.OnFactoryChanged();
+            RegisterAsApplicationVersionProvider();
+        }
+
+        #endregion
+    }
 }

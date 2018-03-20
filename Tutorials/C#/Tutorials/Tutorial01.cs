@@ -18,19 +18,19 @@ namespace TutorialsCS4
             application.DisplayAlerts = false;
 
             Excel.Workbook book = application.Workbooks.Add();
-            /* 
+            /*
             * now we have 2 new COM Proxies created.
-            * 
+            *
             * the first proxy was created while accessing the Workbooks collection from application
             * the second proxy was created by the Add() method from Workbooks and stored now in book
             * with the application object we have 3 created proxies now. the workbooks proxy was created
             * about application and the book proxy was created about the workbooks.
             * NetOffice holds the proxies now in a list as follows:
-            * 
+            *
             * Application
             *   + Workbooks
-            *     + Workbook  
-            * 
+            *     + Workbook
+            *
             * any object in NetOffice implements the IDisposible Interface.
             * use the Dispose() method to release an object. the method release all created child proxies too.
             */
@@ -53,10 +53,10 @@ namespace TutorialsCS4
 
         public void Disconnect()
         {
- 
+
         }
 
-        public string Uri 
+        public string Uri
         {
             get { return Program.DocumentationBase + "Tutorial01_EN_CS.html"; }
         }

@@ -39,7 +39,7 @@ namespace NetOffice.DeveloperToolbox.Forms
 
         #endregion
 
-        #region Construction
+        #region Ctor
 
         /// <summary>
         /// Stub Ctor
@@ -48,7 +48,7 @@ namespace NetOffice.DeveloperToolbox.Forms
         {
             InitializeComponent();
             Singleton = this;
-        } 
+        }
 
         /// <summary>
         /// Runtime Ctor
@@ -59,12 +59,13 @@ namespace NetOffice.DeveloperToolbox.Forms
             InitializeComponent();
             Singleton = this;
             CommandLineArgs = args;
+            SetupTitle();
             LoadRuntimeControls();
             LoadConfiguration();
         }
 
         #endregion
-  
+
         #region Properties
 
         /// <summary>
@@ -91,15 +92,15 @@ namespace NetOffice.DeveloperToolbox.Forms
 
         public string Caption
         {
-            get 
+            get
             {
                 return System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
             }
         }
-    
+
         public IToolboxControl[] ToolboxControls
         {
-            get 
+            get
             {
                 return _toolboxControls.ToArray();
             }
@@ -117,7 +118,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             WindowState = FormWindowState.Minimized;
             ShowInTaskbar = showInTaskbar;
         }
-        
+
         public void SwitchTo(string controlName)
         {
             foreach (TabPage item in tabControlMain.TabPages)
@@ -135,6 +136,10 @@ namespace NetOffice.DeveloperToolbox.Forms
 
         #region Methods
 
+        private void SetupTitle()
+        {
+            Text = Program.IsAdmin ? " NetOffice Toolbox (Administrator)" : " NetOffice Toolbox";
+        }
 
         private void LoadRuntimeControls()
         {
@@ -200,7 +205,7 @@ namespace NetOffice.DeveloperToolbox.Forms
         }
 
         private void LoadConfiguration()
-        {           
+        {
             XmlDocument document = null;
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NODeveloperToolbox.Settings.xml");
             if (File.Exists(filePath))
@@ -209,7 +214,7 @@ namespace NetOffice.DeveloperToolbox.Forms
                 document.Load(filePath);
                 XmlAttribute versionAttribute = document.FirstChild.Attributes["Version"];
                 if (null != versionAttribute && document.FirstChild.LocalName == "NODeveloperToolbox.Settings")
-                { 
+                {
                     string configVersion = versionAttribute.Value;
                     if (!configVersion.Equals(AssemblyInfo.AssemblyVersion, StringComparison.InvariantCultureIgnoreCase))
                         document = CreateDefaultConfiguration();
@@ -248,16 +253,16 @@ namespace NetOffice.DeveloperToolbox.Forms
         #region Overrides
 
         /// <summary>
-        /// We wait for ouer custom message to bring up the window in front 
+        /// We wait for ouer custom message to bring up the window in front
         /// </summary>
         /// <param name="m">window message kind and args </param>
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
-           
+
             if (_wndProcErrorOccured)
                 return;
-            
+
             try
             {
                 if (m.Msg == Win32.WM_SHOWTOOLBOX)
@@ -387,7 +392,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);        
+                ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
 
@@ -433,7 +438,7 @@ namespace NetOffice.DeveloperToolbox.Forms
                 ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
-   
+
         private void MainForm_Shown(object sender, EventArgs e)
         {
             try

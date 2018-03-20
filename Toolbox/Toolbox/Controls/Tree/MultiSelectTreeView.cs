@@ -103,11 +103,8 @@ namespace NetOffice.DeveloperToolbox.Controls.Tree
             {
                 if (node.Bounds.Contains(e.X, e.Y))
                 {
-                    if (base.SelectedNode == node)
-                    {
-                        base.SelectedNode = null;
-                    }
-                    base.SelectedNode = node;
+                    if (base.SelectedNode != node)
+                        base.SelectedNode = node;
                 }
             }
         }

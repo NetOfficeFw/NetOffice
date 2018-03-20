@@ -25,7 +25,6 @@ namespace TutorialsCS4
             // Create an instance of excel utils
             CommonUtils utils = new CommonUtils(application, typeof(Tutorial17).Assembly);
 
-
             // the file part of the utils makes it easier to deal with file extensions depedent on the current version
 
 
@@ -40,23 +39,23 @@ namespace TutorialsCS4
             // dialogs want be suppressed by default if the office application is currently in automation or not visible
             // you can also trigger the DialogShow and DialogShown event to observe dialog popups
             // we disable any suppress behavior here
-            utils.Dialog.SuppressOnAutomation = false; 
+            utils.Dialog.SuppressOnAutomation = false;
             utils.Dialog.SuppressOnHide = false;
 
 
             // show a simple message box. Have a look at the last argument. Its a default result and used if the messagebox is not shown.
             // In this tutorial, excel is in automation and hidden. Remove one or both of the 2 code lines above and the message box is not shown.
             // We got the default result in this case
-            var userResult = 
+            var userResult =
                 utils.Dialog.ShowMessageBox(
-                    "Hello World from NetOffice tutorial", "NO tutorial", 
+                    "Hello World from NetOffice tutorial", "NO tutorial",
                     OfficeContribution.DialogUtils.Buttons.YesNo,
                     OfficeContribution.DialogUtils.Result.No);
-            
+
 
             application.Quit();
             application.Dispose();
-  
+
             HostApplication.ShowFinishDialog();
         }
 

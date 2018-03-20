@@ -17,18 +17,24 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
 
         #endregion
 
-        #region Construction
+        #region Ctor
 
-        public UtilsRegistry(RegistryKey hiveKey, string path)
+        public UtilsRegistry(RegistryKey hiveKey, string fullPath)
         {
             _hiveKey = hiveKey;
-            _path = path;
-            _innerKey = hiveKey.OpenSubKey(path);
+            _path = fullPath;
+            _innerKey = hiveKey.OpenSubKey(fullPath);
+            if (fullPath.Contains("\\"))
+                Name = fullPath.Substring(fullPath.LastIndexOf("\\")+"\\".Length);
+            else
+                Name = String.Empty;
         }
 
         #endregion
-     
+
         #region Properties
+
+        public string Name { get; set; }
 
         public bool Exists
         {
@@ -47,7 +53,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
 
         public bool IsLocalMachine
         {
-            get 
+            get
             {
                 return _hiveKey.Name.Equals("hkey_local_machine", StringComparison.InvariantCultureIgnoreCase);
             }
@@ -76,7 +82,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
                 return _hiveKey;
             }
         }
-         
+
         public UtilsRegistryKey Key
         {
             get
@@ -89,9 +95,19 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
 
         public string Path
         {
-            get 
+            get
             {
                 return _path;
+            }
+        }
+
+        public string PathWithoutName
+        {
+            get
+            {
+                string path = Path;
+                string name = Name;
+                return path.Substring(0, path.Length - name.Length);
             }
         }
 

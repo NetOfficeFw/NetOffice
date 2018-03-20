@@ -95,7 +95,7 @@ namespace PowerPoint03AddinCS4
         }
 
         private void PerformanceTrace_Alert(PerformanceTrace sender, PerformanceTrace.PerformanceAlertEventArgs args)
-        {            
+        {
             Factory.Console.WriteLine("PerformanceTrace Alert: {0}", args);
         }
     }

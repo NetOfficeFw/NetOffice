@@ -6,7 +6,7 @@ using Excel = NetOffice.ExcelApi;
 
 namespace TutorialsCS4
 {
-    public class Tutorial06 : ITutorial 
+    public class Tutorial06 : ITutorial
     {
         public void Run()
         {
@@ -23,7 +23,7 @@ namespace TutorialsCS4
             Excel.Worksheet sheet = (Excel.Worksheet)book.Worksheets[1];
             Excel.Range range = sheet.Cells[1, 1];
             Excel.Style myStyle = book.Styles.Add("myUniqueStyle");
- 
+
             // Range.Style is defined as Variant in Excel and as object in NetOffice
             // You got always an Excel.Style instance if you ask for
             Excel.Style style = (Excel.Style)range.Style;
@@ -31,8 +31,8 @@ namespace TutorialsCS4
             // and here comes the magic. both sets are valid because the variants was very flexible in the setter
             range.Style = "myUniqueStyle";
             range.Style = myStyle;
-              
-            // Name, Bold, Size are string, bool and double but defined as Variant 
+
+            // Name, Bold, Size are string, bool and double but defined as Variant
             style.Font.Name = "Arial";
             style.Font.Bold = true; // you can also set "true" and it works. variants makes it possible
             style.Font.Size = 14;

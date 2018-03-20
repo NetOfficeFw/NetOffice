@@ -9,15 +9,24 @@ namespace NetOffice.ExcelApi
 	/// _Application
 	/// </summary>
 	[SyntaxBypass]
- 	public class _Application_ : COMObject
-	{
+ 	public class _Application_ : COMObject, IApplicationVersionProvider
+    {
+        #region Fields
+
+        private bool _versionRequested;
+        private object _cachedVersion;
+        private object _chachedVersionLock = new object();
+
+        #endregion
+
         #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _Application_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _Application_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
 		{
+            RegisterAsApplicationVersionProvider();
 		}
 
         ///<param name="factory">current used factory core</param>
@@ -25,23 +34,25 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Application_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
-		}
+            RegisterAsApplicationVersionProvider();
+        }
 
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
+        {
+            RegisterAsApplicationVersionProvider();
+        }
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application_(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
+        {
+            RegisterAsApplicationVersionProvider();
+        }
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -50,29 +61,32 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application_(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
+            RegisterAsApplicationVersionProvider();
+        }
 
-		}
-		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application_(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
+        {
+            RegisterAsApplicationVersionProvider();
+        }
 
 		/// <summary>
         /// Hidden stub .ctor
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application_() : base()
-		{
-		}
-		
+        {
+            RegisterAsApplicationVersionProvider();
+        }
+
 		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application_(string progId) : base(progId)
-		{
-		}
-		
+        {
+            RegisterAsApplicationVersionProvider();
+        }
+
 		#endregion
 
 		#region Properties
@@ -281,18 +295,89 @@ namespace NetOffice.ExcelApi
 			return get_RegisteredFunctions(index1);
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-	}
+        #endregion
 
-	/// <summary>
-	/// DispatchInterface _Application 
-	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        #region IApplicationVersionProvider
+
+        string IApplicationVersionProvider.Name
+        {
+            get
+            {
+                return "Microsoft Excel";
+            }
+        }
+
+        string IApplicationVersionProvider.ComponentName
+        {
+            get
+            {
+                return "NetOffice.ExcelApi";
+            }
+        }
+
+        /// <summary>
+        /// Request version information on demand and cache to call the remote server only 1x times
+        /// </summary>
+        object IApplicationVersionProvider.Version
+        {
+            get
+            {
+                lock (_chachedVersionLock)
+                {
+                    if (null == _cachedVersion)
+                    {
+                        _cachedVersion = TryVersionPropertyGet();
+                    }
+                }
+                return _cachedVersion;
+            }
+        }
+
+        bool IApplicationVersionProvider.VersionRequested
+        {
+            get
+            {
+                return _versionRequested;
+            }
+        }
+
+        void IApplicationVersionProvider.TryRequestVersion()
+        {
+            _cachedVersion = TryVersionPropertyGet();
+        }
+
+        /// <summary>
+        /// Try get version information without fail
+        /// </summary>
+        /// <returns></returns>
+        private object TryVersionPropertyGet()
+        {
+            try
+            {
+                return Invoker.PropertyGet(this, "Version");
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                _versionRequested = true;
+            }
+        }
+
+        #endregion
+    }
+
+    /// <summary>
+    /// DispatchInterface _Application
+    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// </summary>
+    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _Application : _Application_
 	{
@@ -302,7 +387,7 @@ namespace NetOffice.ExcelApi
 
         /// <summary>
         /// Instance Type
-        /// </summary> 
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
@@ -324,9 +409,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
 		#region Ctor
 
 		/// <param name="factory">current used factory core</param>
@@ -341,7 +426,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public _Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -350,7 +435,7 @@ namespace NetOffice.ExcelApi
 		public _Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
-		
+
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -368,26 +453,26 @@ namespace NetOffice.ExcelApi
 		public _Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application(ICOMObject replacedObject) : base(replacedObject)
 		{
 		}
-		
+
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application() : base()
 		{
 		}
-		
+
 		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Application(string progId) : base(progId)
 		{
 		}
-		
+
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>
@@ -4352,7 +4437,7 @@ namespace NetOffice.ExcelApi
 		{
 			 Factory.ExecuteMethod(this, "DDEExecute", channel, _string);
 		}
-        
+
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>

@@ -20,7 +20,7 @@ namespace TutorialsCS4
             application.Workbooks.Add();
 
             // GlobalModule contains the well known globals and its located in NetOffice.$XXXApi.GlobalHelperModules
-            // In VB.NET you can do now: ActiveCell.Value = "ActiveCellValue" 
+            // In VB.NET you can do now: ActiveCell.Value = "ActiveCellValue"
             // and this is helpful to bring code from VBA to VB.NET/NetOffice
             GlobalModule.ActiveCell.Value = "ActiveCellValue";
 

@@ -9,13 +9,13 @@ namespace TutorialsCS4
     public partial class Tutorial03 : UserControl, ITutorial
     {
         #region Fields
-        
+
         private Excel.Application _application;
 
         #endregion
 
         #region Ctor
-        
+
         public Tutorial03()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace TutorialsCS4
             //     used from NetOffice.Contribution.Controls.InstanceMonitor
 
             // Note: Sometimes you may wondering why an instance is disposed.
-            // For troubleshooting you can trigger ICOMObject.OnDispose event and see strack trace 
+            // For troubleshooting you can trigger ICOMObject.OnDispose event and see strack trace
         }
 
         public void Connect(IHost hostApplication)

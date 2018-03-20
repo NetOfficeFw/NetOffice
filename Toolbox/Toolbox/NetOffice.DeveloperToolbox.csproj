@@ -196,6 +196,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ErrorCategory.cs" />
+    <Compile Include="Forms\SelectTicketProviderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectTicketProviderForm.Designer.cs">
+      <DependentUpon>SelectTicketProviderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UriTargetForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,6 +386,9 @@
     <EmbeddedResource Include="Controls\Text\Scroller.resx">
       <DependentUpon>Scroller.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectTicketProviderForm.resx">
+      <DependentUpon>SelectTicketProviderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UriTargetForm.resx">
       <DependentUpon>UriTargetForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,6 +448,7 @@
     <Compile Include="ToolboxControls\RegistryEditor\ChangeStringControl.Designer.cs">
       <DependentUpon>ChangeStringControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\RegistrySearch.cs" />
     <Compile Include="Translator.cs" />
     <Compile Include="Utils\Animation\Colors\AnimatorBase.cs">
       <SubType>Component</SubType>

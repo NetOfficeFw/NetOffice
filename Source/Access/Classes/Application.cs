@@ -117,23 +117,22 @@ namespace NetOffice.AccessApi
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
-        /// <summary>
-        /// Creates a new instance of Application 
-        /// </summary>		
-        public Application() : this(false)
+ 	/// <summary>
+        /// Creates a new instance of Application
+        /// </summary>
+        public Application(Core factory) : this(factory, false)
         {
 
         }
 
         /// <summary>
-        /// Creates a new instance of Application 
+        /// Creates a new instance of Application
         /// <param name="enableProxyService">try to get a running application first before create a new application</param>
-        /// </summary>		
-        public Application(bool enableProxyService = false) : base()
+        /// </summary>
+        public Application(Core factory = null, bool enableProxyService = false) : base()
         {
             if (enableProxyService)
             {
-                Factory = Core.Default;
                 object proxy = Running.ProxyService.GetActiveInstance("Access", "Application", false);
                 if (null != proxy)
                 {
@@ -150,12 +149,13 @@ namespace NetOffice.AccessApi
                 CreateFromProgId("Access.Application", true);
             }
 
+            Factory = null != factory ? factory : Core.Default;
             OnCreate();
             _callQuitInDispose = true;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
 
-        /// <summary>
+        	/// <summary>
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
 		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>

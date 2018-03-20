@@ -29,7 +29,7 @@ namespace TutorialsCS4
 
             application.Quit();
             application.Dispose();
-            
+
             // the application object is ouer root object
             // dispose them release himself and any childs of application, in this case workbooks and workbook
             // the excel instance are now removed from process list

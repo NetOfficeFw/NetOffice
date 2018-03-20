@@ -8,6 +8,7 @@ using NetOffice.OfficeApi.Enums;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.Extensions.Invoker;
+using NetOffice.Exceptions;
 
 namespace PowerPointCustomDocProperties
 {
@@ -23,7 +24,9 @@ namespace PowerPointCustomDocProperties
 
                 application.Console.OnException += delegate(DebugConsole sender, Exception error)
                 {
-                    Console.WriteLine("Test{0}, Console_OnException: {1}", testNumber, error.Message);
+                    NetOfficeCOMException expo = error as NetOfficeCOMException;
+                    if(null != expo)
+                        Console.WriteLine("Test{0}, Console_OnException: {1} {2}", testNumber, expo.Message, expo.ApplicationVersion);
                 };
 
                 application.DisplayAlerts = PpAlertLevel.ppAlertsNone;

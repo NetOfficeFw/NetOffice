@@ -120,7 +120,7 @@ namespace NetOffice.VisioApi
 	#endregion
 
 	/// <summary>
-	/// CoClass Application 
+	/// CoClass Application
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769220(v=office.14).aspx </remarks>
@@ -133,12 +133,12 @@ namespace NetOffice.VisioApi
 		#pragma warning disable
 
 		#region Fields
-		
+
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
         private static Type _type;
         private Events.EApplication_SinkHelper _eApplication_SinkHelper;
-	
+
 		#endregion
 
 		#region Type Information
@@ -154,7 +154,7 @@ namespace NetOffice.VisioApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
 		/// <summary>
         /// Type Cache
         /// </summary>
@@ -168,9 +168,9 @@ namespace NetOffice.VisioApi
                 return _type;
             }
         }
-        
+
         #endregion
-        		
+
 		#region Ctor
 
 		/// <param name="factory">current used factory core</param>
@@ -185,14 +185,14 @@ namespace NetOffice.VisioApi
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{			
+		{
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{			
+		{
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
@@ -203,7 +203,7 @@ namespace NetOffice.VisioApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
 
 		///<param name="parentObject">object there has created the proxy</param>
@@ -212,33 +212,71 @@ namespace NetOffice.VisioApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject replacedObject) : base(replacedObject)
 		{
-			
+
 		}
-		
+
 		/// <summary>
-        /// Creates a new instance of Application 
-        /// </summary>		
+        /// Creates a new instance of Application
+        /// </summary>
 		public Application():base("Visio.Application")
-		{			
+		{
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
-		
+
+ 	    /// <summary>
+        /// Creates a new instance of Application
+        /// </summary>
+        public Application(Core factory) : this(factory, false)
+        {
+
+        }
+
+        /// <summary>
+        /// Creates a new instance of Application
+        /// <param name="enableProxyService">try to get a running application first before create a new application</param>
+        /// </summary>
+        public Application(Core factory = null, bool enableProxyService = false) : base()
+        {
+            if (enableProxyService)
+            {
+                object proxy = Running.ProxyService.GetActiveInstance("Visio", "Application", false);
+                if (null != proxy)
+                {
+                    CreateFromProxy(proxy, true);
+                    FromProxyService = true;
+                }
+                else
+                {
+                    CreateFromProgId("Visio.Application", true);
+                }
+            }
+            else
+            {
+                CreateFromProgId("Visio.Application", true);
+            }
+
+            Factory = null != factory ? factory : Core.Default;
+            OnCreate();
+            _callQuitInDispose = true;
+            GlobalHelperModules.GlobalModule.Instance = this;
+        }
+
 		/// <summary>
         /// Creates a new instance of Application
         /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
-		{			
+		{
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
-		
+
         /// <summary>
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
@@ -247,7 +285,7 @@ namespace NetOffice.VisioApi
 		public override void Dispose(bool disposeEventBinding)
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
-				 GlobalHelperModules.GlobalModule.Instance = null;	
+				 GlobalHelperModules.GlobalModule.Instance = null;
 			base.Dispose(disposeEventBinding);
 		}
 
@@ -261,6 +299,16 @@ namespace NetOffice.VisioApi
 				 GlobalHelperModules.GlobalModule.Instance = null;
 			base.Dispose();
 		}
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Instance is created from an already running application
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public bool FromProxyService { get; private set; }
 
         #endregion
 
@@ -2724,9 +2772,9 @@ namespace NetOffice.VisioApi
 		}
 
 		#endregion
-       
+
 	    #region IEventBinding
-        
+
 		/// <summary>
         /// Creates active sink helper
         /// </summary>
@@ -2735,10 +2783,10 @@ namespace NetOffice.VisioApi
         {
 			if(false == Factory.Settings.EnableEvents)
 				return;
-	
+
 			if (null != _connectPoint)
 				return;
-	
+
             if (null == _activeSinkId)
 				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EApplication_SinkHelper.Id);
 
@@ -2747,16 +2795,16 @@ namespace NetOffice.VisioApi
 			{
 				_eApplication_SinkHelper = new Events.EApplication_SinkHelper(this, _connectPoint);
 				return;
-			} 
+			}
         }
 
         /// <summary>
-        /// The instance use currently an event listener 
+        /// The instance use currently an event listener
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -2766,9 +2814,9 @@ namespace NetOffice.VisioApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -2790,16 +2838,16 @@ namespace NetOffice.VisioApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
          }
-        
+
         /// <summary>
         /// Raise an instance event
         /// </summary>

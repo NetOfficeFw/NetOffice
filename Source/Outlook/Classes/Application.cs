@@ -33,7 +33,7 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	/// <summary>
-	/// CoClass Application 
+	/// CoClass Application
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866895.aspx </remarks>
@@ -46,14 +46,14 @@ namespace NetOffice.OutlookApi
 		#pragma warning disable
 
 		#region Fields
-		
+
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
         private static Type _type;
         private Events.ApplicationEvents_SinkHelper _applicationEvents_SinkHelper;
         private Events.ApplicationEvents_10_SinkHelper _applicationEvents_10_SinkHelper;
         private Events.ApplicationEvents_11_SinkHelper _applicationEvents_11_SinkHelper;
-	
+
 		#endregion
 
 		#region Type Information
@@ -83,9 +83,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        		
+
 		#region Construction
 
 		///<param name="factory">current used factory core</param>
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		{
 			_callQuitInDispose = true;
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject replacedObject) : base(replacedObject)
@@ -132,22 +132,29 @@ namespace NetOffice.OutlookApi
 		}
 
         /// <summary>
-        /// Creates a new instance of Application 
+        /// Creates a new instance of Application
         /// </summary>
-        public Application() : this(false)
+        public Application() : this(null, false)
+        {
+
+        }
+
+ 	    /// <summary>
+        /// Creates a new instance of Application
+        /// </summary>
+        public Application(Core factory) : this(factory, false)
         {
 
         }
 
         /// <summary>
-        /// Creates a new instance of Application 
+        /// Creates a new instance of Application
         /// <param name="enableProxyService">try to get a running application first before create a new application</param>
-        /// </summary>		
-        public Application(bool enableProxyService = false) : base()
-		{
+        /// </summary>
+        public Application(Core factory = null, bool enableProxyService = false) : base()
+        {
             if (enableProxyService)
             {
-                Factory = Core.Default;
                 object proxy = Running.ProxyService.GetActiveInstance("Outlook", "Application", false);
                 if (null != proxy)
                 {
@@ -157,17 +164,18 @@ namespace NetOffice.OutlookApi
                 else
                 {
                     CreateFromProgId("Outlook.Application", true);
-                }               
+                }
             }
             else
             {
                 CreateFromProgId("Outlook.Application", true);
             }
 
+            Factory = null != factory ? factory : Core.Default;
             OnCreate();
             _callQuitInDispose = true;
-			GlobalHelperModules.GlobalModule.Instance = this;
-		}
+            GlobalHelperModules.GlobalModule.Instance = this;
+        }
 
 		/// <summary>
         /// Creates a new instance of Application
@@ -178,7 +186,7 @@ namespace NetOffice.OutlookApi
             _callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
-		
+
         /// <summary>
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
@@ -187,7 +195,7 @@ namespace NetOffice.OutlookApi
 		public override void Dispose(bool disposeEventBinding)
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
-				 GlobalHelperModules.GlobalModule.Instance = null;	
+				 GlobalHelperModules.GlobalModule.Instance = null;
 			base.Dispose(disposeEventBinding);
 		}
 
@@ -670,9 +678,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
-       
+
 	    #region IEventBinding
-        
+
 		/// <summary>
         /// Creates active sink helper
         /// </summary>
@@ -681,10 +689,10 @@ namespace NetOffice.OutlookApi
         {
 			if(false == Factory.Settings.EnableEvents)
 				return;
-	
+
 			if (null != _connectPoint)
 				return;
-	
+
             if (null == _activeSinkId)
 				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ApplicationEvents_SinkHelper.Id, Events.ApplicationEvents_10_SinkHelper.Id, Events.ApplicationEvents_11_SinkHelper.Id);
 
@@ -705,16 +713,16 @@ namespace NetOffice.OutlookApi
 			{
 				_applicationEvents_11_SinkHelper = new Events.ApplicationEvents_11_SinkHelper(this, _connectPoint);
 				return;
-			} 
+			}
         }
 
         /// <summary>
-        /// The instance use currently an event listener 
+        /// The instance use currently an event listener
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -724,9 +732,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -748,16 +756,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
          }
-        
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
