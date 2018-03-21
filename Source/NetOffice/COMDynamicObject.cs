@@ -1435,8 +1435,14 @@ namespace NetOffice
             try
             {
                 ICOMObject clone = Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+
                 ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
                 shareProvider.SetProxyShare(_proxyShare);
+
+                IAutomaticQuit quitObject = clone as IAutomaticQuit;
+                if (null != quitObject)
+                    quitObject.Enabled = false;
+
                 return clone;
             }
             catch (Exception exception)

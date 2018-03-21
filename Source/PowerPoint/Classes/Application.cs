@@ -55,7 +55,7 @@ namespace NetOffice.PowerPointApi
     [EntityType(EntityType.IsCoClass), ComProgId("PowerPoint.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
     [EventSink(typeof(Events.EApplication_SinkHelper))]
     [ComEventInterface(typeof(Events.EApplication))]
-    public class Application : _Application, ICloneable<Application>, IEventBinding
+    public class Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit
     {
         #pragma warning disable
 
@@ -105,7 +105,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="proxyShare">proxy share instead if com proxy</param>
         public Application(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
         {
-            _callQuitInDispose = true;
+            _callQuitInDispose = null == parentObject;
         }
 
         ///<param name="factory">current used factory core</param>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            _callQuitInDispose = true;
+            _callQuitInDispose = null == parentObject;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
 
@@ -121,7 +121,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            _callQuitInDispose = true;
+            _callQuitInDispose = null == parentObject;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
 
@@ -132,7 +132,7 @@ namespace NetOffice.PowerPointApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            _callQuitInDispose = true;
+            _callQuitInDispose = null == parentObject;
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -141,14 +141,14 @@ namespace NetOffice.PowerPointApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            _callQuitInDispose = true;
+            _callQuitInDispose = null == parentObject;
         }
 
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Application(ICOMObject replacedObject) : base(replacedObject)
         {
-            _callQuitInDispose = true;
+            _callQuitInDispose = null == ParentObject;
         }
 
         /// <summary>
@@ -201,9 +201,9 @@ namespace NetOffice.PowerPointApi
                 CreateFromProgId("PowerPoint.Application", true);
             }
 
+            _callQuitInDispose = null == ParentObject;
             Factory = null != factory ? factory : Core.Default;
             OnCreate();
-            _callQuitInDispose = true;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
 
@@ -1023,6 +1023,27 @@ namespace NetOffice.PowerPointApi
             remove
             {
                 _AfterShapeSizeChangeEvent -= value;
+            }
+        }
+
+        #endregion
+
+        #region IAutomaticQuit
+
+        /// <summary>
+        /// Determines Quit method want be called while disposing if NetOffice.Settings.EnableAutomaticQuit is true.
+        /// Default is true when instance has no parent object and its not a cloned instance, otherwise false.
+        /// </summary>
+        bool IAutomaticQuit.Enabled
+        {
+
+            get
+            {
+                return _callQuitInDispose;
+            }
+            set
+            {
+                _callQuitInDispose = value;
             }
         }
 

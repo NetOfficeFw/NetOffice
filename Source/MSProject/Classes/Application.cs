@@ -3,6 +3,7 @@ using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
 using NetOffice.CollectionsGeneric;
+
 namespace NetOffice.MSProjectApi
 {
 	#region Delegates
@@ -76,7 +77,7 @@ namespace NetOffice.MSProjectApi
 	[EntityType(EntityType.IsCoClass), ComProgId("MSProject.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
 	[EventSink(typeof(Events._EProjectApp2_SinkHelper))]
     [ComEventInterface(typeof(Events._EProjectApp2))]
-    public class Application : _MSProject, ICloneable<Application>, IEventBinding
+    public class Application : _MSProject, ICloneable<Application>, IEventBinding, IAutomaticQuit
 	{
 		#pragma warning disable
 
@@ -126,14 +127,16 @@ namespace NetOffice.MSProjectApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			GlobalHelperModules.GlobalModule.Instance = this;
+            _callQuitInDispose = null == parentObject;
+            GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			GlobalHelperModules.GlobalModule.Instance = this;
+            _callQuitInDispose = null == parentObject;
+            GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -143,8 +146,8 @@ namespace NetOffice.MSProjectApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
-
-		}
+            _callQuitInDispose = null == parentObject;
+        }
 
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -152,23 +155,15 @@ namespace NetOffice.MSProjectApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-
-		}
+            _callQuitInDispose = null == parentObject;
+        }
 
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject replacedObject) : base(replacedObject)
 		{
-
-		}
-
-		/// <summary>
-        /// Creates a new instance of Application
-        /// </summary>
-		public Application():base("MSProject.Application")
-		{
-			GlobalHelperModules.GlobalModule.Instance = this;
-		}
+            _callQuitInDispose = null == ParentObject;
+        }
 
 		/// <summary>
         /// Creates a new instance of Application
@@ -176,8 +171,8 @@ namespace NetOffice.MSProjectApi
         ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
-
-			GlobalHelperModules.GlobalModule.Instance = this;
+            _callQuitInDispose = true;
+            GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
  	    /// <summary>
@@ -212,9 +207,9 @@ namespace NetOffice.MSProjectApi
                 CreateFromProgId("MSProject.Application", true);
             }
 
+            _callQuitInDispose = null == ParentObject;
             Factory = null != factory ? factory : Core.Default;
             OnCreate();
-            _callQuitInDispose = true;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
 
@@ -1488,14 +1483,35 @@ namespace NetOffice.MSProjectApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-	    #region IEventBinding
+        #region IAutomaticQuit
 
-		/// <summary>
+        /// <summary>
+        /// Determines Quit method want be called while disposing if NetOffice.Settings.EnableAutomaticQuit is true.
+        /// Default is true when instance has no parent object and its not a cloned instance, otherwise false.
+        /// </summary>
+        bool IAutomaticQuit.Enabled
+        {
+
+            get
+            {
+                return _callQuitInDispose;
+            }
+            set
+            {
+                _callQuitInDispose = value;
+            }
+        }
+
+        #endregion
+
+        #region IEventBinding
+
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
 			if(false == Factory.Settings.EnableEvents)

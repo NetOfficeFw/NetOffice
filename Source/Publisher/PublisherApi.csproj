@@ -299,13 +299,13 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Office\OfficeApi.csproj">
-      <Project>{9376FE6C-77BE-407D-8FB3-6B102AE6A131}</Project>
-      <Name>OfficeApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
       <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{79b19a83-a79f-446c-9b7e-9b595e918e40}</Project>
+      <Name>OfficeApi</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

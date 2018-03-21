@@ -128,7 +128,7 @@ namespace NetOffice.VisioApi
 	[EntityType(EntityType.IsCoClass), ComProgId("Visio.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
 	[EventSink(typeof(Events.EApplication_SinkHelper))]
     [ComEventInterface(typeof(Events.EApplication))]
-    public class Application : IVApplication, ICloneable<Application>, IEventBinding
+    public class Application : IVApplication, ICloneable<Application>, IEventBinding, IAutomaticQuit
 	{
 		#pragma warning disable
 
@@ -178,7 +178,7 @@ namespace NetOffice.VisioApi
 		/// <param name="proxyShare">proxy share instead if com proxy</param>
 		public Application(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
 		{
-			_callQuitInDispose = true;
+			_callQuitInDispose = null == parentObject;
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -186,14 +186,16 @@ namespace NetOffice.VisioApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			GlobalHelperModules.GlobalModule.Instance = this;
+            _callQuitInDispose = null == parentObject;
+            GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			GlobalHelperModules.GlobalModule.Instance = this;
+            _callQuitInDispose = null == parentObject;
+            GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -203,8 +205,8 @@ namespace NetOffice.VisioApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
-
-		}
+            _callQuitInDispose = null == parentObject;
+        }
 
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -212,25 +214,27 @@ namespace NetOffice.VisioApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-
-		}
+            _callQuitInDispose = null == parentObject;
+        }
 
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject replacedObject) : base(replacedObject)
 		{
+            _callQuitInDispose = null == ParentObject;
+        }
 
-		}
-
-		/// <summary>
+        /// <summary>
         /// Creates a new instance of Application
         /// </summary>
-		public Application():base("Visio.Application")
-		{
-			GlobalHelperModules.GlobalModule.Instance = this;
-		}
+        ///<param name="progId">registered ProgID</param>
+        public Application(string progId) : base(progId)
+        {
+            _callQuitInDispose = true;
+            GlobalHelperModules.GlobalModule.Instance = this;
+        }
 
- 	    /// <summary>
+        /// <summary>
         /// Creates a new instance of Application
         /// </summary>
         public Application(Core factory) : this(factory, false)
@@ -262,20 +266,11 @@ namespace NetOffice.VisioApi
                 CreateFromProgId("Visio.Application", true);
             }
 
+            _callQuitInDispose = null == ParentObject;
             Factory = null != factory ? factory : Core.Default;
             OnCreate();
-            _callQuitInDispose = true;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
-
-		/// <summary>
-        /// Creates a new instance of Application
-        /// </summary>
-        ///<param name="progId">registered ProgID</param>
-		public Application(string progId):base(progId)
-		{
-			GlobalHelperModules.GlobalModule.Instance = this;
-		}
 
         /// <summary>
 		/// NetOffice method: dispose instance and all child instances
@@ -2771,14 +2766,35 @@ namespace NetOffice.VisioApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-	    #region IEventBinding
+        #region IAutomaticQuit
 
-		/// <summary>
+        /// <summary>
+        /// Determines Quit method want be called while disposing if NetOffice.Settings.EnableAutomaticQuit is true.
+        /// Default is true when instance has no parent object and its not a cloned instance, otherwise false.
+        /// </summary>
+        bool IAutomaticQuit.Enabled
+        {
+
+            get
+            {
+                return _callQuitInDispose;
+            }
+            set
+            {
+                _callQuitInDispose = value;
+            }
+        }
+
+        #endregion
+
+        #region IEventBinding
+
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
 			if(false == Factory.Settings.EnableEvents)

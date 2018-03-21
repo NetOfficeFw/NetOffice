@@ -15,12 +15,12 @@ namespace NetOffice.Running
         #region Embedded Types
 
         /// <summary>
-        /// Internal operatotion mode 
+        /// Internal operatotion mode
         /// </summary>
         public enum FilterMode
         {
             /// <summary>
-            ///  Class name must match totaly 
+            ///  Class name must match totaly
             /// </summary>
             Full = 0,
 
@@ -48,7 +48,7 @@ namespace NetOffice.Running
         private struct RECT
         {
             public int Left;
-            public int Top; 
+            public int Top;
             public int Right;
             public int Bottom;
         }
@@ -276,7 +276,7 @@ namespace NetOffice.Running
             switch (instance.Mode)
             {
                 case FilterMode.Full:
-                {                       
+                {
                     if(false == String.IsNullOrEmpty(_currentInstance.Filter))
                     {
                         if (_currentInstance.Filter.Equals(className, StringComparison.InvariantCultureIgnoreCase))
@@ -285,11 +285,11 @@ namespace NetOffice.Running
                             return false;
                     }
                     else
-                        return true;                    
+                        return true;
                 }
                 case FilterMode.Start:
                 {
-                    string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";                    
+                    string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";
                     string target = className.ToLower();
                     return target.StartsWith(start);
                 }
@@ -303,14 +303,14 @@ namespace NetOffice.Running
                 {
                     string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";
                     string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
-                    string target = className.ToLower();    
+                    string target = className.ToLower();
                     return target.StartsWith(start) && target.EndsWith(end);
                 }
                 default:
                 {
                     throw new IndexOutOfRangeException();
                 }
-            }           
+            }
         }
 
         #endregion

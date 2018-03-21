@@ -12,7 +12,7 @@ namespace NetOffice.Extensions
     /// that implement NetOffice.CollectionsGeneric.IEnumerableProvider`1.
     /// </summary>
     public static class EnumerableExtensions
-    {   
+    {
         /// <summary>
         /// Returns the first element of a sequence
         /// </summary>
@@ -46,7 +46,7 @@ namespace NetOffice.Extensions
                 throw;
             }
         }
-        
+
         /// <summary>
         /// Returns the first element of a sequence
         /// </summary>
@@ -102,7 +102,7 @@ namespace NetOffice.Extensions
         /// <param name="append">append items in sequence to parent instance in com proxy management</param>
         /// <returns>default(TSource) if <paramref name="source" /> is empty; otherwise, the first element in <paramref name="source" /></returns>
         /// <exception cref="ArgumentNullException">source is null(Nothing in Visual Basic)</exception>
-        /// <exception cref="NetOfficeCOMException">error occured while calling remote server</exception>     
+        /// <exception cref="NetOfficeCOMException">error occured while calling remote server</exception>
         public static TSource FirstOrDefault<TSource>(this IEnumerableProvider<TSource> source, bool append = true)
         {
             if (source == null)
@@ -138,7 +138,7 @@ namespace NetOffice.Extensions
         /// <param name="append">append items in sequence to parent instance in com proxy management</param>
         /// <returns>default(TSource) if <paramref name="source" /> is empty; otherwise, the first element in <paramref name="source" /></returns>
         /// <exception cref="ArgumentNullException">source is null(Nothing in Visual Basic)</exception>
-        /// <exception cref="NetOfficeCOMException">error occured while calling remote server</exception> 
+        /// <exception cref="NetOfficeCOMException">error occured while calling remote server</exception>
         public static TSource FirstOrDefault<TSource>(this IEnumerableProvider<TSource> source, Func<TSource, bool> predicate, bool append = true)
         {
             if (source == null)
@@ -264,7 +264,7 @@ namespace NetOffice.Extensions
                 throw;
             }
         }
-       
+
         /// <summary>
         /// Returns the last element of a sequence
         /// </summary>
@@ -580,7 +580,7 @@ namespace NetOffice.Extensions
                 return list;
             }
             catch
-            {               
+            {
                 for (int i = list.Count - 1; i >= 0; i++)
                     TryDispose(list[i]);
                 if (null != enumerator && enumerator != source)

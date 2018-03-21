@@ -69,8 +69,8 @@ namespace NetOffice.ExcelApi
 	[EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
 	[EventSink(typeof(Events.AppEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.AppEvents))]
-    public class Application : _Application, ICloneable<Application>, IEventBinding
-	{
+    public class Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit
+    {
         #pragma warning disable
 
         #region Fields
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="proxyShare">proxy share instead if com proxy</param>
 		public Application(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
 		{
-			_callQuitInDispose = true;
+			_callQuitInDispose = null == parentObject;
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -127,16 +127,16 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			_callQuitInDispose = true;
-			GlobalHelperModules.GlobalModule.Instance = this;
+			_callQuitInDispose = null == parentObject;
+            GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			_callQuitInDispose = true;
-			GlobalHelperModules.GlobalModule.Instance = this;
+			_callQuitInDispose = null == parentObject;
+            GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -146,8 +146,8 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
-			_callQuitInDispose = true;
-		}
+			_callQuitInDispose = null == parentObject;
+        }
 
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -155,15 +155,15 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			_callQuitInDispose = true;
-		}
+			_callQuitInDispose = null == parentObject;
+        }
 
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(ICOMObject replacedObject) : base(replacedObject)
 		{
-			_callQuitInDispose = true;
-		}
+			_callQuitInDispose = null == ParentObject;
+        }
 
 		/// <summary>
         /// Creates a new instance of Application
@@ -207,17 +207,17 @@ namespace NetOffice.ExcelApi
                 CreateFromProgId("Excel.Application", true);
             }
 
+            _callQuitInDispose = null == ParentObject;
             Factory = null != factory ? factory : Core.Default;
             OnCreate();
-            _callQuitInDispose = true;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
 
         /// <summary>
-		/// NetOffice method: dispose instance and all child instances
-		/// </summary>
-		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
-		[Category("NetOffice"), CoreOverridden]
+        /// NetOffice method: dispose instance and all child instances
+        /// </summary>
+        /// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+        [Category("NetOffice"), CoreOverridden]
 		public override void Dispose(bool disposeEventBinding)
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
@@ -1354,14 +1354,35 @@ namespace NetOffice.ExcelApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-	    #region IEventBinding
+        #region IAutomaticQuit
 
-		/// <summary>
+        /// <summary>
+        /// Determines Quit method want be called while disposing if NetOffice.Settings.EnableAutomaticQuit is true.
+        /// Default is true when instance has no parent object and its not a cloned instance, otherwise false.
+        /// </summary>
+        bool IAutomaticQuit.Enabled
+        {
+
+            get
+            {
+                return _callQuitInDispose;
+            }
+            set
+            {
+                _callQuitInDispose = value;
+            }
+        }
+
+        #endregion
+
+        #region IEventBinding
+
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
 			if(false == Factory.Settings.EnableEvents)

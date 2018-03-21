@@ -1049,7 +1049,10 @@ namespace NetOffice
                     {
                         // call quit automatically if wanted
                         if (_callQuitInDispose && Settings.EnableAutomaticQuit)
+                        {
+                            System.Console.WriteLine("Going to call quit {0}", GetHashCode());
                             new Callers.QuitCaller().TryCall(Settings, Invoker, this);
+                        }
 
                         // release proxy
                         ReleaseCOMProxy(ownerPath, isRootObject);
@@ -1361,8 +1364,14 @@ namespace NetOffice
             try
             {
                 ICOMObject clone = Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+
                 ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
                 shareProvider.SetProxyShare(_proxyShare);
+
+                IAutomaticQuit quitObject = clone as IAutomaticQuit;
+                if (null != quitObject)
+                    quitObject.Enabled = false;
+
                 return clone;
             }
             catch (Exception exception)

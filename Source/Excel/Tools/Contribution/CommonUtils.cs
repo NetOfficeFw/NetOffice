@@ -11,7 +11,7 @@ namespace NetOffice.ExcelApi.Tools.Contribution
         #region Fields
 
         private ExcelApi.Application _ownerApplication;
-        private FileUtils _fileUtils; 
+        private FileUtils _fileUtils;
 
         #endregion
 

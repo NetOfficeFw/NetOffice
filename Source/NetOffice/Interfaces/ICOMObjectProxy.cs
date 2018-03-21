@@ -7,7 +7,7 @@ namespace NetOffice
     /// Represents a COM proxy wrapper with type informations and access to the underlying proxy
     /// </summary>
     public interface ICOMObjectProxy
-    {    
+    {
         /// <summary>
         /// Underlying COM proxy
         /// </summary>

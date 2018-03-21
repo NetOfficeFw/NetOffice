@@ -158,6 +158,7 @@
     <Compile Include="Filtering\RetryMessageFilterLogMode.cs" />
     <Compile Include="Filtering\RetryMessageFilterMode.cs" />
     <Compile Include="Interfaces\IApplicationVersionProvider.cs" />
+    <Compile Include="Interfaces\IAutomaticQuit.cs" />
     <Compile Include="Interfaces\ICloneable.cs" />
     <Compile Include="Interfaces\ICOMObjectAvaility.cs" />
     <Compile Include="Interfaces\ICOMProxyShareProvider.cs" />
