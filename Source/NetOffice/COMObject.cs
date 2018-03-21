@@ -821,10 +821,16 @@ namespace NetOffice
                 ICOMObject clone = Activator.CreateInstance(typeof(T), new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
                 if (null == clone)
                     throw new InvalidCastException("Unexpected Instance.");
+
                 ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
                 if (null == shareProvider)
                     throw new InvalidCastException("Newly created instance does not implement the ICOMProxyShareProvider interface.");
                 shareProvider.SetProxyShare(_proxyShare);
+
+                IAutomaticQuit quitObject = clone as IAutomaticQuit;
+                if (null != quitObject)
+                    quitObject.Enabled = false;
+
                 return clone as T;
             }
             catch (Exception exception)
@@ -838,6 +844,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="obj">target instance to compare</param>
         /// <returns>true if equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public bool EqualsOnServer(object obj)
         {
@@ -1483,7 +1490,8 @@ namespace NetOffice
         /// </summary>
         /// <param name="objectA">first instance to compare</param>
         /// <param name="objectB">second instance to compare</param>
-        /// <returns>true if equal, otherwise false</returns>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         public static bool EqualsOnServer(object objectA, object objectB)
         {
             ICOMObject objA = objectA as ICOMObject;
@@ -1502,6 +1510,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="obj">target instance to compare</param>
         /// <returns>true if equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public bool EqualsOnServer(ICOMObject obj)
         {
@@ -1528,7 +1537,7 @@ namespace NetOffice
             catch (Exception exception)
             {
                 Console.WriteException(exception);
-                throw exception;
+                throw new NetOfficeCOMException("Unexpected error during semantically instance comparsion.", exception);
             }
             finally
             {
@@ -1551,7 +1560,8 @@ namespace NetOffice
         /// </summary>
         /// <param name="objectA"></param>
         /// <param name="objectB"></param>
-        /// <returns></returns>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         public static bool operator ==(COMObject objectA, COMObject objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1570,7 +1580,8 @@ namespace NetOffice
         /// </summary>
         /// <param name="objectA"></param>
         /// <param name="objectB"></param>
-        /// <returns></returns>
+        /// <returns>true if arguments equal</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         public static bool operator ==(COMObject objectA, object objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1579,7 +1590,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.EqualsOnServer(objectB as COMObject);
+                return objectA.EqualsOnServer(objectB as ICOMObject);
             else
                 return false;
         }
@@ -1589,7 +1600,8 @@ namespace NetOffice
         /// </summary>
         /// <param name="objectA">first instance</param>
         /// <param name="objectB">second instance</param>
-        /// <returns>true if equal, otherwise false</returns>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         public static bool operator ==(object objectA, COMObject objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1599,7 +1611,7 @@ namespace NetOffice
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
             {
-                COMObject a = (objectA as COMObject);
+                ICOMObject a = (objectA as ICOMObject);
                 if (null != a)
                     return a.EqualsOnServer(objectB);
                 else
@@ -1614,7 +1626,8 @@ namespace NetOffice
         /// </summary>
         /// <param name="objectA">first instance</param>
         /// <param name="objectB">second instance</param>
-        /// <returns>true if equal, otherwise false</returns>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         public static bool operator !=(COMObject objectA, COMObject objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1633,7 +1646,8 @@ namespace NetOffice
         /// </summary>
         /// <param name="objectA">first instance</param>
         /// <param name="objectB">second instance</param>
-        /// <returns>true if equal, otherwise false</returns>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         public static bool operator !=(COMObject objectA, object objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1642,7 +1656,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
-                return !objectA.EqualsOnServer(objectB as COMObject);
+                return !objectA.EqualsOnServer(objectB as ICOMObject);
             else
                 return true;
         }
@@ -1652,7 +1666,8 @@ namespace NetOffice
         /// </summary>
         /// <param name="objectA">first instance</param>
         /// <param name="objectB">second instance</param>
-        /// <returns>true if equal, otherwise false</returns>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         public static bool operator !=(object objectA, COMObject objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1662,9 +1677,9 @@ namespace NetOffice
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
             {
-                COMObject a = objectA as COMObject;
+                ICOMObject a = objectA as ICOMObject;
                 if (null != a)
-                    return !(objectA as COMObject).EqualsOnServer(objectB);
+                    return !a.EqualsOnServer(objectB);
                 else
                     return null == objectB ? false : true;
             }

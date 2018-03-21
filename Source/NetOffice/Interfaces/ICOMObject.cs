@@ -46,6 +46,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="obj">target instance to compare</param>
         /// <returns>true if equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
         bool EqualsOnServer(object obj);
     }
 }
