@@ -962,6 +962,17 @@ namespace NetOffice
 
         }
 
+        /// <summary>
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
+        /// </summary>
+        /// <param name="obj">target instance to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public bool EqualsOnServer(object obj)
+        {
+            return EqualsOnServer(obj as ICOMObject);
+        }
+
         #endregion
 
         #region ICOMObjectProxy
@@ -1699,7 +1710,26 @@ namespace NetOffice
         #region Operator Overloads
 
         /// <summary>
-        /// Determines whether two COMObject instances are equal.
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
+        /// </summary>
+        /// <param name="objectA">first instance to compare</param>
+        /// <param name="objectB">second instance to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        public static bool EqualsOnServer(object objectA, object objectB)
+        {
+            ICOMObject objA = objectA as ICOMObject;
+            ICOMObject objB = objectA as ICOMObject;
+
+            if (null != objA)
+                return objA.EqualsOnServer(objB);
+            else if (null != objB)
+                return false;
+            else
+                return Object.ReferenceEquals(objA, objectB);
+        }
+
+        /// <summary>
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
         /// </summary>
         /// <param name="obj">target instance to compare</param>
         /// <returns>true if equal, otherwise false</returns>

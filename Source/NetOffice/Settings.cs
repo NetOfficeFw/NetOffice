@@ -482,8 +482,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set NetOffice spend custom overloads for the "==" and "!=" operators for semanticly comparsion. true by default
+        /// Get or set NetOffice overrides the "==" and "!=" operator for semanticly comparsion.
+        /// That means determine 2 instances pointing on the same remote server instance or not.
+        /// true by default.
+        /// These property can only set in the shared default core/settings.
         /// </summary>
+        /// <remarks>Use the static methods Object.ReferenceEquals for plain reference compare and COMObject.EqualsOnServerfor for semanticly compare whenever you can to avoid side effects ‎especially in unshimmed addins because you may not the only consumer here.</remarks>
         [Category("Settings"), Description("Redirect equal operations like '==' or '!=' for proxy wrapping objects to the com server to determine 2 instances are equal."), DefaultValue(true)]
         public bool EnableOperatorOverlads
         {

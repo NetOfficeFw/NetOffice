@@ -40,5 +40,12 @@ namespace NetOffice
         /// <returns>cloned instance</returns>
         /// <exception cref="CloneException">An unexpected error occurs.</exception>
         T To<T>() where T : class, ICOMObject;
+
+        /// <summary>
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance
+        /// </summary>
+        /// <param name="obj">target instance to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        bool EqualsOnServer(object obj);
     }
 }

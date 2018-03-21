@@ -555,8 +555,6 @@ namespace NetOffice
         /// <typeparam name="T">result type</typeparam>
         /// <param name="options">optional create options</param>
         /// <returns>new instance of T</returns>
-        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
-        /// <exception cref="ArgumentException">given argument is not a proxy</exception>
         /// <exception cref="CreateInstanceException">unexpected error</exception>
         public static T Create<T>(COMObjectCreateOptions options = COMObjectCreateOptions.None) where T : class, ICOMObject
         {
@@ -585,8 +583,8 @@ namespace NetOffice
         /// <param name="comProxy">given proxy as any</param>
         /// <param name="options">optional create options</param>
         /// <returns>new instance of T</returns>
-        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
-        /// <exception cref="ArgumentException">given argument is not a proxy</exception>
+        /// <exception cref="ArgumentNullException">comProxy is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
         /// <exception cref="CreateInstanceException">unexpected error</exception>
         public static T Create<T>(object comProxy, COMObjectCreateOptions options = COMObjectCreateOptions.None) where T : class, ICOMObject
         {
@@ -620,10 +618,12 @@ namespace NetOffice
         /// <param name="comProxy">given proxy as any</param>
         /// <returns>new instance of T</returns>
         /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
-        /// <exception cref="ArgumentException">given argument is not a proxy</exception>
+        /// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
         /// <exception cref="CreateInstanceException">unexpected error</exception>
         public static T Create<T>(Core factory, object comProxy) where T : class, ICOMObject
         {
+            if (null == factory)
+                throw new ArgumentNullException("factory");
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
             if (!(comProxy is MarshalByRefObject))
@@ -643,9 +643,13 @@ namespace NetOffice
         /// </summary>
         /// <param name="underlyingObject">given proxy as any</param>
         /// <param name="factoryAddObject">add instance to factory</param>
+        /// <exception cref="ArgumentNullException">underlyingObject is null(Nothing in Visual Basic)</exception>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         protected void CreateFromProxy(object underlyingObject, bool factoryAddObject = false)
         {
+            if (null == underlyingObject)
+                throw new ArgumentNullException("underlyingObject");
+
             _underlyingType = underlyingObject.GetType();
             _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
             if (factoryAddObject)
@@ -815,7 +819,11 @@ namespace NetOffice
             try
             {
                 ICOMObject clone = Activator.CreateInstance(typeof(T), new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+                if (null == clone)
+                    throw new InvalidCastException("Unexpected Instance.");
                 ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
+                if (null == shareProvider)
+                    throw new InvalidCastException("Newly created instance does not implement the ICOMProxyShareProvider interface.");
                 shareProvider.SetProxyShare(_proxyShare);
                 return clone as T;
             }
@@ -823,6 +831,17 @@ namespace NetOffice
             {
                 throw new CloneException(exception);
             }
+        }
+
+        /// <summary>
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
+        /// </summary>
+        /// <param name="obj">target instance to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public bool EqualsOnServer(object obj)
+        {
+            return EqualsOnServer(obj as ICOMObject);
         }
 
         #endregion
@@ -1360,9 +1379,11 @@ namespace NetOffice
         {
             try
             {
-                ICOMObject clone = Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+                ICOMObject clone = (ICOMObject)Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, UnderlyingObject });
 
                 ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
+                if (null == shareProvider)
+                    throw new InvalidCastException("Newly created instance does not implement the ICOMProxyShareProvider interface.");
                 shareProvider.SetProxyShare(_proxyShare);
 
                 IAutomaticQuit quitObject = clone as IAutomaticQuit;
@@ -1458,7 +1479,26 @@ namespace NetOffice
         #region Operator Overloads
 
         /// <summary>
-        /// Determines whether two COMObject instances are equal.
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
+        /// </summary>
+        /// <param name="objectA">first instance to compare</param>
+        /// <param name="objectB">second instance to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        public static bool EqualsOnServer(object objectA, object objectB)
+        {
+            ICOMObject objA = objectA as ICOMObject;
+            ICOMObject objB = objectA as ICOMObject;
+
+            if (null != objA)
+                return objA.EqualsOnServer(objB);
+            else if (null != objB)
+                return false;
+            else
+                return Object.ReferenceEquals(objA, objectB);
+        }
+
+        /// <summary>
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
         /// </summary>
         /// <param name="obj">target instance to compare</param>
         /// <returns>true if equal, otherwise false</returns>
@@ -1477,7 +1517,7 @@ namespace NetOffice
             IntPtr ptrB = IntPtr.Zero;
             try
             {
-                ptrA = Marshal.GetIUnknownForObject(this.UnderlyingObject);
+                ptrA = Marshal.GetIUnknownForObject(UnderlyingObject);
                 int hResultA = Marshal.QueryInterface(ptrA, ref IID_IUnknown, out outValueA);
 
                 ptrB = Marshal.GetIUnknownForObject(obj.UnderlyingObject);
@@ -1487,7 +1527,7 @@ namespace NetOffice
             }
             catch (Exception exception)
             {
-                Factory.Console.WriteException(exception);
+                Console.WriteException(exception);
                 throw exception;
             }
             finally
@@ -1505,45 +1545,6 @@ namespace NetOffice
                     Marshal.Release(outValueB);
             }
         }
-
-        ///// <summary>
-        ///// Determines whether two COMObject instances are equal.
-        ///// </summary>
-        ///// <param name="objectA"></param>
-        ///// <param name="objectB"></param>
-        ///// <returns></returns>
-        //public static bool operator ==(COMObject objectA, COMDynamicObject objectB)
-        //{
-        //    if (!Settings.Default.EnableOperatorOverlads)
-        //        return Object.ReferenceEquals(objectA, objectB);
-
-        //    if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-        //        return true;
-        //    else if (!Object.ReferenceEquals(objectA, null))
-        //        return objectA.EqualsOnServer(objectB);
-        //    else
-        //        return false;
-        //}
-
-        ///// <summary>
-        ///// Determines whether two COMObject instances are not equal.
-        ///// </summary>
-        ///// <param name="objectA">first instance</param>
-        ///// <param name="objectB">second instance</param>
-        ///// <returns>true if equal, otherwise false</returns>
-        //public static bool operator !=(COMObject objectA, COMDynamicObject objectB)
-        //{
-        //    if (!Settings.Default.EnableOperatorOverlads)
-        //        return Object.ReferenceEquals(objectA, objectB);
-
-        //    if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-        //        return false;
-        //    else if (!Object.ReferenceEquals(objectA, null))
-        //        return !objectA.EqualsOnServer(objectB);
-        //    else
-        //        return true;
-        //}
-
 
         /// <summary>
         /// Determines whether two COMObject instances are equal.
