@@ -1049,10 +1049,7 @@ namespace NetOffice
                     {
                         // call quit automatically if wanted
                         if (_callQuitInDispose && Settings.EnableAutomaticQuit)
-                        {
-                            System.Console.WriteLine("Going to call quit {0}", GetHashCode());
                             new Callers.QuitCaller().TryCall(Settings, Invoker, this);
-                        }
 
                         // release proxy
                         ReleaseCOMProxy(ownerPath, isRootObject);
