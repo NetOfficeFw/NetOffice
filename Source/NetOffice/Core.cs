@@ -1561,6 +1561,17 @@ namespace NetOffice
         #region Support IApplicationVersionProvider
 
         /// <summary>
+        /// All loaded application version providers
+        /// </summary>
+        internal IEnumerable<IApplicationVersionProvider> ApplicationVersionProviders
+        {
+            get
+            {
+                return _versionProviders.ToArray();
+            }
+        }
+
+        /// <summary>
         /// Returns application name and version
         /// </summary>
         /// <param name="componentName">component to look into</param>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace NetOffice.Exceptions
@@ -33,10 +34,11 @@ namespace NetOffice.Exceptions
         /// <param name="instance">caller instance</param>
         /// <param name="name"></param>
         /// <param name="type">name of invoke target</param>
+        /// <param name="versionProviders">optional version providers for application instances</param>
         /// <param name="arguments">arguments as any</param>
         /// <param name="valuePropertySet">additional value if its an indexed property set</param>
         /// <returns>exception message</returns>
-        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, object[] arguments = null, object valuePropertySet = null)
+        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, IEnumerable<IApplicationVersionProvider> versionProviders, object[] arguments = null, object valuePropertySet = null)
         {
             if (null == throwedException)
                 throw new ArgumentNullException("throwedException", "<Please report this error.>");
@@ -51,7 +53,7 @@ namespace NetOffice.Exceptions
             switch (comObject.Settings.ExceptionMessageBehavior)
             {
                 case ExceptionMessageHandling.Diagnostics:
-                    return GetExceptionDiagnosticsMessage(comObject, name, type, arguments);
+                    return GetExceptionDiagnosticsMessage(comObject, name, type, versionProviders, arguments);
                 case ExceptionMessageHandling.Default:
                     return settings.ExceptionDefaultMessage;
                 case ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException:
@@ -59,7 +61,7 @@ namespace NetOffice.Exceptions
                 case ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException:
                     return GetExceptionAllInnerExceptionMessagesToTopLevelMessage(throwedException);
                 case ExceptionMessageHandling.DiagnosticsAndInnerMessage:
-                    return GetExceptionDiagnosticsInnerMessage(throwedException, comObject, name, type, arguments);
+                    return GetExceptionDiagnosticsInnerMessage(throwedException, comObject, name, type, versionProviders, arguments);
                 default:
                     throw new NetOfficeException("<Unexpected exception behavior. Please report this error.>");
             }
@@ -72,11 +74,12 @@ namespace NetOffice.Exceptions
         /// <param name="comObject">caller instance</param>
         /// <param name="name">name of invoke target</param>
         /// <param name="type">type of invoke target</param>
+        /// <param name="versionProviders">optional version providers for application instances</param>
         /// <param name="arguments">arguments as any</param>
         /// <returns>diagnostic exception message or error message if an exception occurs</returns>
-        private static string GetExceptionDiagnosticsInnerMessage(Exception throwedException, ICOMObject comObject, string name, CallType type, object[] arguments = null)
+        private static string GetExceptionDiagnosticsInnerMessage(Exception throwedException, ICOMObject comObject, string name, CallType type, IEnumerable<IApplicationVersionProvider> versionProviders, object[] arguments = null)
         {
-            string diagMessage = GetExceptionDiagnosticsMessage(comObject, name, type, arguments);
+            string diagMessage = GetExceptionDiagnosticsMessage(comObject, name, type, versionProviders, arguments);
             string message = throwedException.Message;
             while (throwedException.InnerException != null)
             {
@@ -92,9 +95,10 @@ namespace NetOffice.Exceptions
         /// <param name="comObject">caller instance</param>
         /// <param name="name">name of invoke target</param>
         /// <param name="type">type of invoke target</param>
+        /// <param name="versionProviders">optional version providers for application instances</param>
         /// <param name="arguments">arguments as any</param>
         /// <returns>diagnostic exception message or error message if an exception occurs</returns>
-        private static string GetExceptionDiagnosticsMessage(ICOMObject comObject, string name, CallType type, object[] arguments = null)
+        private static string GetExceptionDiagnosticsMessage(ICOMObject comObject, string name, CallType type, IEnumerable<IApplicationVersionProvider> versionProviders, object[] arguments = null)
         {
             try
             {
@@ -103,6 +107,41 @@ namespace NetOffice.Exceptions
                 if (String.IsNullOrWhiteSpace(diagMessage))
                     return diagMessage;
 
+                if (diagMessage.Contains("{ApplicationVersions}") || diagMessage.Contains("{NlApplicationVersions}"))
+                {
+                    if (null != versionProviders)
+                    {
+                        string versionString = String.Empty;
+                        foreach (var item in versionProviders)
+                        {
+                            if (!item.VersionRequested)
+                                item.TryRequestVersion();
+
+                            object version = item.Version;
+                            if (null != version)
+                                versionString += item.Name + " " + version.ToString() + ";";
+                        }
+
+                        if (versionString != String.Empty)
+                        {
+                            if (diagMessage.Contains("{ApplicationVersions}"))
+                                diagMessage = diagMessage.Replace("{ApplicationVersions}", "Application Versions:" + versionString);
+                            else
+                                diagMessage = diagMessage.Replace("{NlApplicationVersions}", Environment.NewLine + "Application Versions:" + versionString);
+                        }
+                        else
+                        {
+                            diagMessage = diagMessage.Replace("{ApplicationVersions}", String.Empty);
+                            diagMessage = diagMessage.Replace("{NlApplicationVersions}", String.Empty);
+                        }
+                    }
+                    else
+                    {
+                        diagMessage = diagMessage.Replace("{ApplicationVersions}", String.Empty);
+                        diagMessage = diagMessage.Replace("{NlApplicationVersions}", String.Empty);
+                    }
+                }
+                diagMessage = diagMessage.Replace("{NewLine}", Environment.NewLine);
                 diagMessage = diagMessage.Replace("{CallType}", type.ToString());
                 diagMessage = diagMessage.Replace("{CallInstance}", comObject.InstanceFriendlyName);
                 diagMessage = diagMessage.Replace("{Name}", name);

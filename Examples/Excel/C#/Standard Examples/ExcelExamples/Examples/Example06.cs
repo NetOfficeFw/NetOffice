@@ -50,7 +50,7 @@ namespace ExcelExamplesCS4
         {
             get { return this; }
         }
-    
+
         #endregion
 
         #region Properties
@@ -65,9 +65,11 @@ namespace ExcelExamplesCS4
         #region UI Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
-        {           
+        {
             // start excel and turn off msg boxes
-            Excel.Application excelApplication = new Excel.Application();
+            Excel.Application excelApplication = Excel.Application.GetActiveInstance(true);
+            excelApplication.Settings.ExceptionDiagnosticsMessage = "Failed to proceed {CallInstance}={CallType}=>{Name}.{NlApplicationVersions}";
+            excelApplication.Settings.ExceptionMessageBehavior = NetOffice.ExceptionMessageHandling.DiagnosticsAndInnerMessage;
             excelApplication.DisplayAlerts = false;
             excelApplication.Visible = true;
 
@@ -132,7 +134,7 @@ namespace ExcelExamplesCS4
             excelApplication.Quit();
             excelApplication.Dispose();
         }
-        
+
         #endregion
 
         #region Helper

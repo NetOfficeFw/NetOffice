@@ -1437,6 +1437,22 @@ namespace NetOffice
                 throw new InvalidCastException("Instance doesnt implement IApplicationVersionProvider interface.");
         }
 
+        /// <summary>
+        /// Try request version if instance implement IApplicationVersionProvider and Settings.ForceApplicationVersionProviders is true and version not requested yet.
+        /// </summary>
+        /// <returns>true if requested, otherwise false</returns>
+        protected internal bool TryRequestVersion()
+        {
+            var versionProvider = this as IApplicationVersionProvider;
+            if (null != versionProvider && Settings.ForceApplicationVersionProviders && false == versionProvider.VersionRequested)
+            {
+                versionProvider.TryRequestVersion();
+                return true;
+            }
+            else
+                return false;
+        }
+
         #endregion
 
         #region Overrides

@@ -6,7 +6,7 @@ using NetOffice.Attributes;
 namespace NetOffice.MSProjectApi
 {
 	/// <summary>
-	/// DispatchInterface _MSProject 
+	/// DispatchInterface _MSProject
 	/// SupportByVersion MSProject, 11,12,14
 	/// </summary>
 	[SupportByVersion("MSProject", 11,12,14)]
@@ -41,9 +41,9 @@ namespace NetOffice.MSProjectApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
 		#region Ctor
 
 		/// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.MSProjectApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public _MSProject(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.MSProjectApi
 		public _MSProject(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
-		
+
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.MSProjectApi
 		public _MSProject(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _MSProject(ICOMObject replacedObject) : base(replacedObject)
 		{
 		}
-		
+
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _MSProject() : base()
 		{
 		}
-		
+
 		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _MSProject(string progId) : base(progId)
 		{
 		}
-		
+
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>

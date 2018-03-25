@@ -7,7 +7,7 @@ using NetOffice.Attributes;
 namespace NetOffice.VisioApi
 {
 	/// <summary>
-	/// DispatchInterface IVApplication 
+	/// DispatchInterface IVApplication
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
@@ -42,9 +42,9 @@ namespace NetOffice.VisioApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
 		#region Ctor
 
 		/// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.VisioApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public IVApplication(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.VisioApi
 		public IVApplication(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
-		
+
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.VisioApi
 		public IVApplication(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IVApplication(ICOMObject replacedObject) : base(replacedObject)
 		{
 		}
-		
+
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IVApplication() : base()
 		{
 		}
-		
+
 		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IVApplication(string progId) : base(progId)
 		{
 		}
-		
+
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>

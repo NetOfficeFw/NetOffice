@@ -4612,10 +4612,15 @@ namespace NetOffice.AccessApi
         {
             try
             {
-                if (EntityIsAvailable("Version"))
-                    return Invoker.PropertyGet(this, "Version");
+                if (null != _proxyShare)
+                {
+                    if (EntityIsAvailable("Version"))
+                        return Invoker.PropertyGet(this, "Version");
+                    else
+                        return 9.0;
+                }
                 else
-                    return 9.0;
+                    return null;
             }
             catch
             {
@@ -4623,7 +4628,8 @@ namespace NetOffice.AccessApi
             }
             finally
             {
-                _versionRequested = true;
+                if (null != _proxyShare)
+                    _versionRequested = true;
             }
         }
 

@@ -676,7 +676,10 @@ namespace NetOffice.OutlookApi
         {
             try
             {
-                return Invoker.PropertyGet(this, "Version");
+                if (null != _proxyShare)
+                    return Invoker.PropertyGet(this, "Version");
+                else
+                    return null;
             }
             catch
             {
@@ -684,7 +687,8 @@ namespace NetOffice.OutlookApi
             }
             finally
             {
-                _versionRequested = true;
+                if (null != _proxyShare)
+                    _versionRequested = true;
             }
         }
 

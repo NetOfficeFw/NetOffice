@@ -174,7 +174,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -208,7 +208,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -248,7 +248,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -280,7 +280,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -329,7 +329,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 Console.WriteException(exception);
                 throw exception;
@@ -363,7 +363,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -399,7 +399,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -436,7 +436,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -471,7 +471,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -509,7 +509,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -569,7 +569,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -601,7 +601,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -650,7 +650,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 Console.WriteException(exception);
                 throw exception;
@@ -684,7 +684,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -720,7 +720,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -757,7 +757,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -792,7 +792,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -830,7 +830,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -885,7 +885,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.ApplicationVersionProviders),
                     throwedException);
                 Console.WriteException(exception);
                 throw exception;
@@ -920,7 +920,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.ApplicationVersionProviders),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -972,7 +972,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.ApplicationVersionProviders),
                     throwedException);
                 Console.WriteException(exception);
                 throw exception;
@@ -1008,7 +1008,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -1043,7 +1043,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -1081,7 +1081,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.ApplicationVersionProviders, paramsArray),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -1121,7 +1121,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, paramsArray, value),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.ApplicationVersionProviders, paramsArray, value),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -1162,7 +1162,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, paramsArray, value),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.ApplicationVersionProviders, paramsArray, value),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -1196,7 +1196,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, new object[] { value }),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.ApplicationVersionProviders, new object[] { value }),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -1231,7 +1231,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, new object[] { value }),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.ApplicationVersionProviders, new object[] { value }),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -1266,7 +1266,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, value),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.ApplicationVersionProviders, value),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
@@ -1300,7 +1300,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, value),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.ApplicationVersionProviders, value),
                     throwedException);
                 exception.ApplicationVersion = Parent.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);

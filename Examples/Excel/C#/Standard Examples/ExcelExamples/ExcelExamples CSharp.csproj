@@ -67,26 +67,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\ExampleBase.dll</HintPath>
     </Reference>
-    <Reference Include="ExcelApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="OfficeApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="VBIDEApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Examples\Example01.cs" />
@@ -153,6 +137,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Overview.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Source\Excel\ExcelApi.csproj">
+      <Project>{43c2ffd2-1680-490a-b0cf-be425d6eec7c}</Project>
+      <Name>ExcelApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Source\NetOffice\NetOffice.csproj">
+      <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Source\Office\OfficeApi.csproj">
+      <Project>{79b19a83-a79f-446c-9b7e-9b595e918e40}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Source\VBIDE\VBIDEApi.csproj">
+      <Project>{acd7db2e-ddb2-4bbb-bdb9-c2fd953585c4}</Project>
+      <Name>VBIDEApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

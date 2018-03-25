@@ -203,6 +203,7 @@ namespace NetOffice.PowerPointApi
 
             _callQuitInDispose = null == ParentObject;
             Factory = null != factory ? factory : Core.Default;
+            TryRequestVersion();
             OnCreate();
             GlobalHelperModules.GlobalModule.Instance = this;
         }

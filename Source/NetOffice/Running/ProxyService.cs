@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using NetOffice.CollectionsGeneric;
 using NetOffice.Contribution.CollectionsGeneric;
+using NetOffice.Exceptions;
 
 namespace NetOffice.Running
 {
@@ -63,14 +64,14 @@ namespace NetOffice.Running
         /// <param name="className">class name, for example Application</param>
         /// <param name="throwExceptionIfNotFound">throw ArgumentOutOfRangeException if no instance match</param>
         /// <returns>target instance or null(Nothing in Visual Basic)</returns>
-        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        /// <exception cref="NetOfficeCOMException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
         public static T GetActiveInstance<T>(string componentName, string className, bool throwExceptionIfNotFound = false) where T : class, ICOMObject
         {
             IDisposableSequence<T> result = GetActiveInstances<T>(componentName, className);
             T item = result.FirstOrDefault();
             result.Dispose(item);
             if (throwExceptionIfNotFound && null == item)
-                throw new ArgumentOutOfRangeException(componentName + ", " + className);
+                throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + ", " + className));
             return item;
         }
 
@@ -83,14 +84,14 @@ namespace NetOffice.Running
         /// <param name="predicate">filter predicate</param>
         /// <param name="throwExceptionIfNotFound">throw ArgumentOutOfRangeException if no instance match</param>
         /// <returns>target instance or null(Nothing in Visual Basic)</returns>
-        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        /// <exception cref="NetOfficeCOMException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
         public static T GetActiveInstance<T>(string componentName, string className, Func<T, bool> predicate, bool throwExceptionIfNotFound = false) where T : class, ICOMObject
         {
             IDisposableSequence<T> result = GetActiveInstances<T>(componentName, className, predicate);
             T item = result.FirstOrDefault();
             result.Dispose(item);
             if (throwExceptionIfNotFound && null == item)
-                throw new ArgumentOutOfRangeException(componentName + ", " + className);
+                throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + ", " + className));
             return item;
         }
 
@@ -122,7 +123,7 @@ namespace NetOffice.Running
         /// <param name="className">class name, for example Application or null as wildcard</param>
         /// <param name="throwExceptionIfNothingFound">throw an exception if no proxy was found</param>
         /// <returns>proxy instance or null(Nothing in Visual Basic)</returns>
-        /// <exception cref="System.Runtime.InteropServices.COMException">no instance found and throwExceptionIfNothingFound is set</exception>
+        /// <exception cref="NetOfficeCOMException">no instance found and throwExceptionIfNothingFound is set</exception>
         public static object GetActiveInstance(string componentName, string className, bool throwExceptionIfNothingFound)
         {
             string compName = ValidateArgumentString(componentName);
@@ -132,7 +133,7 @@ namespace NetOffice.Running
             {
                 object result = GetActiveExcelApplicationProxyFromDesktop();
                 if (null == result && throwExceptionIfNothingFound)
-                    throw new System.Runtime.InteropServices.COMException("Target instance is not running.");
+                    throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + ", " + className));
                 return result;
             }
             else
