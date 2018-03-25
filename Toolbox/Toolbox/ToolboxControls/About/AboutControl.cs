@@ -58,7 +58,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             get { return Ressources.RessourceUtils.ReadImageFromRessource("ToolboxControls.About.info_rhombus.png"); }
         }
 
-        public bool SupportsHelpContent 
+        public bool SupportsHelpContent
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 
         public ToolboxControlMessageKind InfoMessageKind
         {
-            get 
+            get
             {
                 return ToolboxControlMessageKind.Uncategorized;
             }
@@ -84,7 +84,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 
         public string InfoMessage
         {
-            get 
+            get
             {
                 return String.Empty;
             }
@@ -107,32 +107,32 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 
         public void LoadComplete()
         {
-            
+
         }
 
         public void LoadConfiguration(System.Xml.XmlNode configNode)
         {
-            
+
         }
 
         public void SaveConfiguration(System.Xml.XmlNode configNode)
         {
-            
+
         }
 
         public Stream GetHelpText()
-        { 
+        {
             throw new NotImplementedException();
         }
 
         public new void KeyDown(KeyEventArgs e)
         {
-            
+
         }
 
         public void Release()
         {
-            
+
         }
 
         public IContainer Components
@@ -150,7 +150,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             {
                 MouseEventArgs mouseArgs = args as MouseEventArgs;
                 if (null != mouseArgs && mouseArgs.Button == MouseButtons.Left)
-                { 
+                {
                     Control control = sender as Control;
                     System.Diagnostics.Process.Start(control.Tag as string);
                 }

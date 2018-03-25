@@ -250,13 +250,36 @@ namespace NetOffice.WordApi
         }
 
         /// <summary>
+        /// Returns all running Word.Application instances from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <returns>Word.Application sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances(Func<Application, bool> predicate)
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate);
+        }
+
+        /// <summary>
         /// Returns a running Word.Application instance from the environment/system
         /// </summary>
         /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
-        /// <returns>Word.Application instance or null</returns>
+        /// <returns>Word.Application instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
         public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
         {
             return Running.ProxyService.GetActiveInstance<Application>("Word", "Application", throwExceptionIfNotFound);
+        }
+
+        /// <summary>
+        /// Returns first running Word.Application instance from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>Word.Application instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        public static Application GetActiveInstance(Func<Application, bool> predicate, bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("Word", "Application", predicate, throwExceptionIfNotFound);
         }
 
         #endregion

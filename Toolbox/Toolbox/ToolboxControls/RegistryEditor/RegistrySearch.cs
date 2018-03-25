@@ -9,44 +9,36 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
     public class RegistrySearch
     {
-        public RegistrySearch(IEnumerable<UtilsRegistry> rootKeys, RegistryKey startFromHive, string startFromPath, bool startFromPathIsTopLevel, string expression, bool startFromNextPossiblePath)
+        public RegistrySearch(IEnumerable<UtilsRegistry> rootKeys, UtilsRegistryKey startFromKey, string expression)
         {
             if (null == rootKeys)
                 throw new ArgumentNullException("rootKeys");
-            if (null == startFromPath)
-                throw new ArgumentNullException("startFromPath");
+            if (null == startFromKey)
+                throw new ArgumentNullException("startFromKey");
             if (String.IsNullOrWhiteSpace(expression))
                 throw new ArgumentNullException("expression");
-            RootKeys = rootKeys;
-            string path = startFromPath.Substring(0, startFromPath.LastIndexOf("\\"));
-            string name = startFromPath.Substring(startFromPath.LastIndexOf("\\")+ "\\".Length);
-            StartFrom = new UtilsRegistry(startFromHive, startFromPath);
-            StartFromParent = new UtilsRegistry(startFromHive, path);
-            StartFromName = name;
             Expression = expression;
-            StartFromNextPossiblePath = startFromNextPossiblePath;
-            StartFromPathIsTopLevel = startFromPathIsTopLevel;
+            RootKeys = rootKeys;
+            StartFromKey = startFromKey;
+            StartFromHive = startFromKey.Root;
+            StartFromKeyIsMatchExpression = ValidateStartFormKeyIsMatchingExpression(startFromKey);
         }
 
         public IEnumerable<UtilsRegistry> RootKeys { get; private set; }
 
-        public UtilsRegistry StartFrom { get; private set; }
+        public UtilsRegistry StartFromHive { get; private set; }
 
-        public UtilsRegistry StartFromParent { get; private set; }
-
-        public string StartFromName { get; private set; }
+        public UtilsRegistryKey StartFromKey { get; private set; }
 
         public string Expression { get; private set; }
 
-        public bool StartFromNextPossiblePath { get; private set; }
-
-        public bool StartFromPathIsTopLevel { get; private set; }
+        public bool StartFromKeyIsMatchExpression { get; private set; }
 
         public bool CurrentlySearching { get; private set; }
 
         public bool SearchPassed { get; private set; }
 
-        public UtilsRegistry Result { get; private set; }
+        public UtilsRegistryKey Result { get; private set; }
 
         public IEnumerable<UtilsRegistryEntry> ResultEntries { get; private set; }
 
@@ -59,40 +51,48 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 CurrentlySearching = true;
 
                 List<UtilsRegistryEntry> resultEntries = new List<UtilsRegistryEntry>();
-                UtilsRegistryKey[] keys = null;
-                int keysStartIndex = 0;
+                UtilsRegistryKey startKey = null;
 
-                if (StartFromPathIsTopLevel)
-                {
-                    keys = StartFrom.Key.Keys.ToArray();
-                    keysStartIndex = 0;
-                }
+                if (StartFromKeyIsMatchExpression)
+                    startKey = StartFromKey.Next();
                 else
+                    startKey = startKey = StartFromKey;
+
+                string padding = "";
+                bool found = false;
+
+                while (null != startKey)
                 {
-                    keys = StartFromParent.Key.Keys.ToArray();
-                    keysStartIndex = GetStartFromEntriesStartIndex(keys);
+                    var entry = startKey;
+                    found = SearchInternal(entry, ref resultEntries, padding);
+                    if (found)
+                        break;
+
+                    startKey = startKey.Next();
                 }
 
-                bool found = false;
-                for (int i = keysStartIndex; i < keys.Length; i++)
+                if (!found)
                 {
-                    var entry = keys[i];
-                    found = SearchInternal(entry, ref resultEntries);
-                    if (!found)
+                    padding = String.Empty;
+                    var rootKeys = GetRootKeysBelowStartKey();
+                    foreach (var rootKey in rootKeys)
                     {
-                        var rootKeys = GetRootKeysBelowStartKey();
-                        foreach (var item in rootKeys)
+                        startKey = rootKey.Key;
+                        while (null != startKey)
                         {
-                            found = SearchInternal(item.Key, ref resultEntries);
+                            var entry = startKey;
+                            found = SearchInternal(entry, ref resultEntries, padding);
                             if (found)
                                 break;
+
+                            startKey = startKey.Next();
                         }
                     }
-                    else
-                        break;
                 }
-                if(found)
+
+                if (found)
                     ResultEntries = resultEntries;
+
                 return found;
             }
             catch
@@ -106,11 +106,32 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
         }
 
-        private bool SearchInternal(UtilsRegistryKey key, ref List<UtilsRegistryEntry> resultEntries)
+        private bool ValidateStartFormKeyIsMatchingExpression(UtilsRegistryKey key)
         {
             bool found = key.Name.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1;
             if (found)
-                Result = new UtilsRegistry(key.Root.HiveKey, key.Path);
+                return true;
+
+            var entries = key.Entries;
+            foreach (UtilsRegistryEntry item in entries)
+            {
+                string valueString = null != item.Value ? item.Value.ToString() : String.Empty;
+                if ((item.Name.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1) ||
+                    (valueString.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool SearchInternal(UtilsRegistryKey key, ref List<UtilsRegistryEntry> resultEntries, string padding)
+        {
+            //Console.WriteLine("{0}{1}", padding, key.Name);
+
+            bool found = key.Name.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1;
+            if (found)
+                Result = key;
             var entries = key.Entries;
 
             foreach (UtilsRegistryEntry item in entries)
@@ -119,21 +140,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 if ((item.Name.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1) ||
                     (valueString.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1))
                 {
+                    Result = key;
                     resultEntries.Add(item);
-                    Result = new UtilsRegistry(key.Root.HiveKey, key.Path);
                     found = true;
                 }
             }
-
-            if (!found)
-            {
-                foreach (var item in key.Keys)
-                {
-                    if (SearchInternal(item, ref resultEntries))
-                        return true;
-                }
-            }
-
             return found;
         }
 
@@ -146,24 +157,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 if (sameRootPassed)
                     result.Add(item);
                 else
-                    sameRootPassed = StartFromParent.HiveKey == item.HiveKey;
+                    sameRootPassed = StartFromHive.Name == item.Name;
             }
             return result;
-        }
-
-        private int GetStartFromEntriesStartIndex(UtilsRegistryKey[] keys)
-        {
-            int i = 0;
-            foreach (var key in keys)
-            {
-                if (key.Name == StartFromName)
-                    break;
-                i++;
-            }
-
-            if (StartFromNextPossiblePath)
-                i++;
-            return i;
         }
     }
 }

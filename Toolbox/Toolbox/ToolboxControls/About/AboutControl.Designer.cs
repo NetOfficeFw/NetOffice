@@ -211,12 +211,12 @@
             this.linkLabelMailContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelMailContact.Location = new System.Drawing.Point(317, 75);
             this.linkLabelMailContact.Name = "linkLabelMailContact";
-            this.linkLabelMailContact.Size = new System.Drawing.Size(164, 16);
+            this.linkLabelMailContact.Size = new System.Drawing.Size(169, 16);
             this.linkLabelMailContact.TabIndex = 97;
             this.linkLabelMailContact.TabStop = true;
-            this.linkLabelMailContact.Tag = "public.sebastian@web.de";
-            this.linkLabelMailContact.Text = "public.sebastian@web.de";
-            this.linksToolTip.SetToolTip(this.linkLabelMailContact, "mailto:public.sebastian@web.de");
+            this.linkLabelMailContact.Tag = "private.sebastian@web.de";
+            this.linkLabelMailContact.Text = "private.sebastian@web.de";
+            this.linksToolTip.SetToolTip(this.linkLabelMailContact, "mailto:private.sebastian@web.de");
             this.linkLabelMailContact.Click += new System.EventHandler(this.linkLabelMailContact_Click);
             // 
             // label1
@@ -262,7 +262,7 @@
             this.labelCopyrightText.ForeColor = System.Drawing.Color.Black;
             this.labelCopyrightText.Location = new System.Drawing.Point(146, 29);
             this.labelCopyrightText.Name = "labelCopyrightText";
-            this.labelCopyrightText.Size = new System.Drawing.Size(117, 17);
+            this.labelCopyrightText.Size = new System.Drawing.Size(116, 17);
             this.labelCopyrightText.TabIndex = 91;
             this.labelCopyrightText.Text = "labelCopyrightText";
             // 
@@ -273,7 +273,7 @@
             this.labelVersionText.ForeColor = System.Drawing.Color.Black;
             this.labelVersionText.Location = new System.Drawing.Point(29, 30);
             this.labelVersionText.Name = "labelVersionText";
-            this.labelVersionText.Size = new System.Drawing.Size(104, 17);
+            this.labelVersionText.Size = new System.Drawing.Size(102, 17);
             this.labelVersionText.TabIndex = 90;
             this.labelVersionText.Text = "labelVersionText";
             // 
@@ -354,7 +354,7 @@
             this.labelWarranty1.ForeColor = System.Drawing.Color.Black;
             this.labelWarranty1.Location = new System.Drawing.Point(29, 30);
             this.labelWarranty1.Name = "labelWarranty1";
-            this.labelWarranty1.Size = new System.Drawing.Size(596, 17);
+            this.labelWarranty1.Size = new System.Drawing.Size(595, 17);
             this.labelWarranty1.TabIndex = 81;
             this.labelWarranty1.Text = "NetOffice.DeveloperToolbox does not try to establish a connection to the internet" +
     " or a local network.";

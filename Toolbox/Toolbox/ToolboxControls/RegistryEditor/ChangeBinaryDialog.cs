@@ -29,7 +29,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             //Translation.Translator.AutoTranslateControls(changeBinaryControl1, "Registry Editor - ChangeBinary", "ToolboxControls.RegistryEditor.ChangeBinaryDialogMessageTable.txt", currentLanguageID);
             this.Text = changeBinaryControl1.Text;
         }
-        
+
         #endregion
 
         #region Properties
@@ -39,7 +39,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         /// </summary>
         public Byte[] Bytes
         {
-            get 
+            get
             {
                 return changeBinaryControl1.Bytes;
             }
@@ -67,7 +67,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
-            }   
+            }
         }
 
         private void changeBinaryControl1_Close(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
-        
+
         #endregion
     }
 }

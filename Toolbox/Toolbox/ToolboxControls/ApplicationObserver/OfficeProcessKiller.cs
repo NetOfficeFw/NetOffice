@@ -10,7 +10,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
     /// <summary>
     /// process watcher for ms-office products
     /// </summary>
-    internal class OfficeApplicationObserver : IDisposable 
+    internal class OfficeApplicationObserver : IDisposable
     {
         #region Fields
 
@@ -20,7 +20,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         private Icon        _runIcon;
         private Icon        _stopIcon;
         private Timer       _timer;
-        private Keys        _key = Keys.A; 
+        private Keys        _key = Keys.A;
         private Hotkey      _hotKey;
         private bool        _hotKeyEnabled;
         private Process[]   _allProcs = new Process[0];
@@ -48,7 +48,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             _stopIcon = new Icon(this.GetType().Assembly.GetManifestResourceStream(assemblyName + ".ToolboxControls.ApplicationObserver.IconsAndConfig.NotRunning.ico"));
             _notify = new NotifyIcon();
 
-            AttachedControl = listViewApps;          
+            AttachedControl = listViewApps;
             _timer = new Timer();
             _timer.Interval = 100;
             _timer.Tick += new EventHandler(Timer_Tick);
@@ -78,7 +78,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         /// </summary>
         public int CurrentLanguageID
         {
-            get 
+            get
             {
                 return _currentLanguageID;
             }
@@ -92,7 +92,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         /// Question for the user before kill someone
         /// </summary>
         public string KillQuestion
-        { 
+        {
             get
             {
                 return _killQuestion;
@@ -143,16 +143,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         /// </summary>
         public Keys HotKey
         {
-            get 
+            get
             {
-                return _key; 
+                return _key;
             }
             set
             {
                 if (true == HotKeyEnabled)
                 {
                     if (_hotKey != null)
-                    { 
+                    {
                         Hotkey.UnRegister(_hotKey);
                         _hotKey.Dispose();
                     }
@@ -166,13 +166,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         /// <summary>
         /// Hotkey definition is enabled
         /// </summary>
-        public bool HotKeyEnabled 
+        public bool HotKeyEnabled
         {
             get
             {
                 return _hotKeyEnabled;
             }
-            set 
+            set
             {
                 if (true == value)
                 {
@@ -189,7 +189,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                     Hotkey.UnRegister(_hotKey);
                 }
                 _hotKeyEnabled = value;
-            } 
+            }
         }
 
         /// <summary>
@@ -197,14 +197,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         /// </summary>
         public int WatchIntervallMs
         {
-            get 
+            get
             {
-                return _timer.Interval; 
+                return _timer.Interval;
             }
-            set 
+            set
             {
-                _timer.Interval = value; 
-            }            
+                _timer.Interval = value;
+            }
         }
 
         /// <summary>
@@ -212,7 +212,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         /// </summary>
         public bool WatchEnabled
         {
-            get 
+            get
             {
                 return _timer.Enabled;
             }
@@ -268,13 +268,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
             if(Excel)
                 KillProcesses(_excelProcs);
-    
+
             if(Word)
                 KillProcesses(_wordProcs);
-            
+
             if(Outlook)
                 KillProcesses(_outlookProcs);
-            
+
             if(PowerPoint)
                 KillProcesses(_powerProcs);
 
@@ -343,14 +343,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             }
             catch
             {
-                ; 
+                ;
             }
         }
 
         private void ShowOfficeProcesses()
         {
             if (null != AttachedControl)
-            { 
+            {
                 Process[] procs = Process.GetProcessesByName("Excel");
                 AttachedControl.Items[0].SubItems[1].Text = procs.Length.ToString();
 
@@ -359,7 +359,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
                 procs = Process.GetProcessesByName("Outlook");
                 AttachedControl.Items[2].SubItems[1].Text = procs.Length.ToString();
-               
+
                 procs = Process.GetProcessesByName("POWERPNT");
                 AttachedControl.Items[3].SubItems[1].Text = procs.Length.ToString();
 
@@ -373,7 +373,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                 AttachedControl.Items[6].SubItems[1].Text = procs.Length.ToString();
             }
         }
-        
+
         private int ProcessCount()
         {
             int result = 0;
@@ -498,10 +498,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                     }
                 }
             }
-
-                
         }
-        
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             try
@@ -548,9 +546,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                 _timer.Enabled = false;
                 Forms.ErrorForm.ShowError(null, exception,ErrorCategory.NonCritical);
             }
-        
         }
-        
+
         #endregion
 
         #region IDisposable

@@ -17,9 +17,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistryEditorControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.contextMenuStripKeys = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -46,7 +46,6 @@
             this.toolStripEditEntryName = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentPath = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.imageListValueTypes = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxDeleteQuestion = new System.Windows.Forms.CheckBox();
             this.labelNoAdminHint = new System.Windows.Forms.Label();
@@ -58,9 +57,10 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchBoxPanel = new System.Windows.Forms.Panel();
+            this.SearchLabel = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBoxSearching = new System.Windows.Forms.PictureBox();
-            this.SearchLabel = new System.Windows.Forms.Label();
+            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.contextMenuStripKeys.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistry)).BeginInit();
             this.contextMenuStripEntries.SuspendLayout();
@@ -180,14 +180,14 @@
             this.dataGridViewRegistry.AllowUserToResizeRows = false;
             this.dataGridViewRegistry.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRegistry.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRegistry.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRegistry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRegistry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TypeIcon,
@@ -195,26 +195,26 @@
             this.regType,
             this.regValue});
             this.dataGridViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRegistry.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRegistry.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRegistry.GridColor = System.Drawing.Color.White;
             this.dataGridViewRegistry.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewRegistry.Name = "dataGridViewRegistry";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRegistry.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRegistry.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewRegistry.RowHeadersVisible = false;
             this.dataGridViewRegistry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewRegistry.ShowCellErrors = false;
@@ -363,30 +363,6 @@
             this.splitContainer1.SplitterDistance = 301;
             this.splitContainer1.TabIndex = 34;
             // 
-            // treeViewRegistry
-            // 
-            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
-            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
-            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
-            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeViewRegistry.HideSelection = false;
-            this.treeViewRegistry.ImageIndex = 0;
-            this.treeViewRegistry.ImageList = this.imageListRegistry;
-            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
-            this.treeViewRegistry.Name = "treeViewRegistry";
-            this.treeViewRegistry.SelectedImageIndex = 1;
-            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
-            this.treeViewRegistry.Size = new System.Drawing.Size(299, 582);
-            this.treeViewRegistry.TabIndex = 33;
-            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
-            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
-            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
-            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
-            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
-            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
-            // 
             // imageListValueTypes
             // 
             this.imageListValueTypes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListValueTypes.ImageStream")));
@@ -500,6 +476,16 @@
             this.SearchBoxPanel.Size = new System.Drawing.Size(190, 18);
             this.SearchBoxPanel.TabIndex = 83;
             // 
+            // SearchLabel
+            // 
+            this.SearchLabel.Image = ((System.Drawing.Image)(resources.GetObject("SearchLabel.Image")));
+            this.SearchLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.SearchLabel.Location = new System.Drawing.Point(166, -1);
+            this.SearchLabel.Name = "SearchLabel";
+            this.SearchLabel.Size = new System.Drawing.Size(24, 19);
+            this.SearchLabel.TabIndex = 32;
+            this.SearchLabel.Click += new System.EventHandler(this.SearchLabel_Click);
+            // 
             // textBoxSearch
             // 
             this.textBoxSearch.BackColor = System.Drawing.Color.White;
@@ -527,15 +513,29 @@
             this.pictureBoxSearching.TabStop = false;
             this.pictureBoxSearching.Visible = false;
             // 
-            // SearchLabel
+            // treeViewRegistry
             // 
-            this.SearchLabel.Image = ((System.Drawing.Image)(resources.GetObject("SearchLabel.Image")));
-            this.SearchLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.SearchLabel.Location = new System.Drawing.Point(166, -1);
-            this.SearchLabel.Name = "SearchLabel";
-            this.SearchLabel.Size = new System.Drawing.Size(24, 19);
-            this.SearchLabel.TabIndex = 32;
-            this.SearchLabel.Click += new System.EventHandler(this.SearchLabel_Click);
+            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
+            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
+            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeViewRegistry.HideSelection = false;
+            this.treeViewRegistry.ImageIndex = 0;
+            this.treeViewRegistry.ImageList = this.imageListRegistry;
+            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
+            this.treeViewRegistry.Name = "treeViewRegistry";
+            this.treeViewRegistry.SelectedImageIndex = 1;
+            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
+            this.treeViewRegistry.Size = new System.Drawing.Size(299, 582);
+            this.treeViewRegistry.TabIndex = 33;
+            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
+            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
+            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
+            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
+            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
+            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
             // 
             // RegistryEditorControl
             // 

@@ -152,12 +152,6 @@
     <Compile Include="Controls\Check\GlowCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\Custom\InviteControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Custom\InviteControl.Designer.cs">
-      <DependentUpon>InviteControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\Error\ErrorControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -374,9 +368,6 @@
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ConsoleConverterCS.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ConsoleConverterVB.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\Converter.cs" />
-    <EmbeddedResource Include="Controls\Custom\InviteControl.resx">
-      <DependentUpon>InviteControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Error\ErrorControl.resx">
       <DependentUpon>ErrorControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +440,8 @@
       <DependentUpon>ChangeStringControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ToolboxControls\RegistryEditor\RegistrySearch.cs" />
+    <Compile Include="ToolboxControls\RegistryEditor\UtilsRegistryKeyExtensions.cs" />
+    <Compile Include="ToolboxControls\RegistryEditor\TreeViewExtensions.cs" />
     <Compile Include="Translator.cs" />
     <Compile Include="Utils\Animation\Colors\AnimatorBase.cs">
       <SubType>Component</SubType>

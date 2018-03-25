@@ -20,7 +20,7 @@ namespace NetOffice.CollectionsGeneric
         /// Items count of the enumeration
         /// </summary>
         int Count { get; }
-        
+
         /// <summary>
         /// Dispose the instance
         /// </summary>
@@ -31,7 +31,7 @@ namespace NetOffice.CollectionsGeneric
     /// <summary>
     /// Represents an IEnumerable:T with the service of disposing all items
     /// </summary>
-    public interface IDisposableSequence<T>: IDisposable, IEnumerable<T> where T : IDisposable 
+    public interface IDisposableSequence<T>: IDisposable, IEnumerable<T> where T : IDisposable
     {
         /// <summary>
         /// Returns an index based item

@@ -40,7 +40,6 @@ namespace NetOffice.DeveloperToolbox.Controls.Text
 
 			// Enables double buffering (to remove flickering) and enables user paint.
 			SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint, true);
-			
 		}
 
 		/// <summary>
@@ -48,11 +47,11 @@ namespace NetOffice.DeveloperToolbox.Controls.Text
 		/// </summary>
 		public string TextToScroll
 		{
-			get 
+			get
 			{
 				return string.Join("\n", m_text);
 			}
-			set 
+			set
 			{
 				string buffer = value;
 
@@ -111,7 +110,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Text
 					throw new InvalidEnumArgumentException("The value must be more than zero. and less than 100.");
 			}
 		}
-		
+
 		/// <summary>
 		/// Paint handler.
 		/// </summary>
@@ -124,16 +123,16 @@ namespace NetOffice.DeveloperToolbox.Controls.Text
 
 			// Prepares background.
 			e.Graphics.FillRectangle(new SolidBrush(this.BackColor), this.ClientRectangle);
-			
+
 			// Creates GraphicsPath for text.
 			GraphicsPath path = new GraphicsPath();
-			
+
 			// Visible lines counter;
 			int visibleLines = 0;
 
 			for (int i = m_text.Length - 1; i >= 0; i--)
 			{
-				
+
 				Point pt = new Point((int)((this.ClientSize.Width - e.Graphics.MeasureString(m_text[i], m_font).Width) / 2),
 					(int)(m_scrollingOffset + this.ClientSize.Height - (m_text.Length - i) * m_font.Size));
 
@@ -142,10 +141,10 @@ namespace NetOffice.DeveloperToolbox.Controls.Text
 				{
 					path.AddString(m_text[i], m_font.FontFamily, (int)m_font.Style, m_font.Size,
 						pt, StringFormat.GenericTypographic);
-					
+
 					visibleLines++;
 				}
-				
+
 			}
 
 			// For repeat scrolling.
@@ -153,15 +152,13 @@ namespace NetOffice.DeveloperToolbox.Controls.Text
 			{
 				m_scrollingOffset = (int)this.Font.SizeInPoints * m_text.Length;
 			}
-			
 
-			
 			int topSizeWidth = (int)(this.Width * m_topPartSizePercent / 100.0f);
 
 			// Wraps Graphics path from rectangle to trapeze.
 			path.Warp(
-				new PointF[4] 
-				{ 
+				new PointF[4]
+				{
 					new PointF((this.Width - topSizeWidth) / 2, 0),
 					new PointF(this.Width - (this.Width - topSizeWidth) / 2, 0),
 					new PointF(0, this.Height),

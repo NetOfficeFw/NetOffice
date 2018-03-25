@@ -27,7 +27,15 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
             if (fullPath.Contains("\\"))
                 Name = fullPath.Substring(fullPath.LastIndexOf("\\")+"\\".Length);
             else
-                Name = String.Empty;
+                Name = fullPath;
+        }
+
+        public UtilsRegistry(RegistryKey hiveKey, string fullPath, string customName)
+        {
+            _hiveKey = hiveKey;
+            _path = fullPath;
+            _innerKey = hiveKey.OpenSubKey(fullPath);
+            Name = customName;
         }
 
         #endregion

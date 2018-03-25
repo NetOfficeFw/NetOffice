@@ -226,13 +226,36 @@ namespace NetOffice.OutlookApi
         }
 
         /// <summary>
+        /// Returns all running Outlook.Application instances from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <returns>Outlook.Application sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances(Func<Application, bool> predicate)
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("Outlook", "Application", predicate);
+        }
+
+        /// <summary>
         /// Returns a running Outlook.Application instance from the environment/system
         /// </summary>
         /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
-        /// <returns>Outlook.Application instance or null</returns>
+        /// <returns>Outlook.Application instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
         public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
         {
             return Running.ProxyService.GetActiveInstance<Application>("Outlook", "Application", throwExceptionIfNotFound);
+        }
+
+        /// <summary>
+        /// Returns first running Outlook.Application instance from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>Outlook.Application instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        public static Application GetActiveInstance(Func<Application, bool> predicate, bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("Outlook", "Application", predicate, throwExceptionIfNotFound);
         }
 
         #endregion

@@ -202,13 +202,35 @@ namespace NetOffice.AccessApi
         }
 
         /// <summary>
+        /// Returns all running Access.Application instances from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <returns>Access.Application sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances(Func<Application, bool> predicate)
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("Access", "Application", predicate);
+        }
+
+        /// <summary>
         /// Returns a running Access.Application instance from the environment/system
         /// </summary>
         /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
-        /// <returns>Access.Application instance or null</returns>
+        /// <returns>Access.Application instance or null(Nothing in Visual Basic)</returns>
         public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
         {
             return Running.ProxyService.GetActiveInstance<Application>("Access", "Application", throwExceptionIfNotFound);
+        }
+
+        /// <summary>
+        /// Returns first running Access.Application instance from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>Access.Application instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        public static Application GetActiveInstance(Func<Application, bool> predicate, bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("Access", "Application", predicate, throwExceptionIfNotFound);
         }
 
         #endregion

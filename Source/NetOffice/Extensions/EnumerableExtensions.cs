@@ -84,7 +84,7 @@ namespace NetOffice.Extensions
                 }
                 if (null != enumerator && enumerator != source)
                     enumerator.Dispose();
-                throw new InvalidOperationException("No element satisfies the condition in predicate.-or-The source sequence is empty.");
+                throw new InvalidOperationException("No element satisfies the condition in predicate or the source sequence is empty.");
             }
             catch
             {

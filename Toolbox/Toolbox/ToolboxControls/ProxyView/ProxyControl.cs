@@ -84,7 +84,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
             }
             catch (Exception)
             {
-                throw;
+                ;
             }
         }
 
@@ -175,12 +175,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
 
         public void LoadConfiguration(System.Xml.XmlNode configNode)
         {
-           
+
         }
 
         public void SaveConfiguration(System.Xml.XmlNode configNode)
         {
-         
+
         }
 
         public new void KeyDown(KeyEventArgs e)

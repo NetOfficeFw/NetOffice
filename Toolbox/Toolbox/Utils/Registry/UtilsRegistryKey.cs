@@ -17,6 +17,11 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
 
         #region Ctor
 
+        protected UtilsRegistryKey()
+        {
+
+        }
+
         internal UtilsRegistryKey(UtilsRegistry root, string fullPath)
         {
             _root = root;
@@ -36,7 +41,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
 
         #region Properties
 
-        public string Path
+        public virtual string Path
         {
             get
             {
@@ -44,7 +49,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
             }
         }
 
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -74,7 +79,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
             }
         }
 
-        public UtilsRegistryKeys Keys
+        public virtual UtilsRegistryKeys Keys
         {
             get
             {
@@ -82,7 +87,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
             }
         }
 
-        public UtilsRegistryEntries Entries
+        public virtual UtilsRegistryEntries Entries
         {
             get
             {
@@ -90,23 +95,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
             }
         }
 
-        internal RegistryKey InnerKey
-        {
-            get
-            {
-                return _innerKey;
-            }
-        }
-
-        internal UtilsRegistry Root
-        {
-            get
-            {
-                return _root;
-            }
-        }
-
-        private UtilsRegistryKey Parent
+        public virtual UtilsRegistryKey Parent
         {
             get
             {
@@ -130,6 +119,22 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
                     key.Close();
                     return parentKey;
                 }
+            }
+        }
+
+        internal RegistryKey InnerKey
+        {
+            get
+            {
+                return _innerKey;
+            }
+        }
+
+        internal UtilsRegistry Root
+        {
+            get
+            {
+                return _root;
             }
         }
 
@@ -181,6 +186,8 @@ namespace NetOffice.DeveloperToolbox.Utils.Registry
 
         public void Delete()
         {
+            if (Path == Root.Path)
+                throw new NotSupportedException("Delete a root key is not supported because this may cause issues in some applications.");
             _root.HiveKey.DeleteSubKeyTree(Path);
         }
 

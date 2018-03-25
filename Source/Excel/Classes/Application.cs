@@ -260,13 +260,36 @@ namespace NetOffice.ExcelApi
         }
 
         /// <summary>
+        /// Returns all running Excel.Application instances from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <returns>Excel.Application sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances(Func<Application, bool> predicate)
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate);
+        }
+
+        /// <summary>
         /// Returns a running Excel.Application instance from the environment/system
         /// </summary>
         /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
-        /// <returns>Excel.Application instance or null</returns>
+        /// <returns>Excel.Application instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
         public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
         {
             return Running.ProxyService.GetActiveInstance<Application>("Excel", "Application", throwExceptionIfNotFound);
+        }
+
+        /// <summary>
+        /// Returns first running Excel.Application instance from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>Excel.Application instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        public static Application GetActiveInstance(Func<Application, bool> predicate, bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("Excel", "Application", predicate, throwExceptionIfNotFound);
         }
 
         #endregion

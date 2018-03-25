@@ -106,7 +106,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         }
 
         #endregion
-        
+
         #region Trigger
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
-            }           
+            }
         }
 
         private void buttonAbort_Click(object sender, EventArgs e)

@@ -235,13 +235,35 @@ namespace NetOffice.PublisherApi
         }
 
         /// <summary>
+        /// Returns all running Publisher.Application instances from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <returns>Publisher.Application sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances(Func<Application, bool> predicate)
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("Publisher", "Application", predicate);
+        }
+
+        /// <summary>
         /// Returns a running Publisher.Application instance from the environment/system
         /// </summary>
         /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
-        /// <returns>Publisher.Application instance or null</returns>
+        /// <returns>Publisher.Application instance or null(Nothing in Visual Basic)</returns>
         public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
         {
             return Running.ProxyService.GetActiveInstance<Application>("Publisher", "Application", throwExceptionIfNotFound);
+        }
+
+        /// <summary>
+        /// Returns first running Publisher.Application instance from the environment/system that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>Publisher.Application instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        public static Application GetActiveInstance(Func<Application, bool> predicate, bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("Publisher", "Application", predicate, throwExceptionIfNotFound);
         }
 
         #endregion
