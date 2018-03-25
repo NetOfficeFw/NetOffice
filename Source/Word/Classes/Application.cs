@@ -256,7 +256,32 @@ namespace NetOffice.WordApi
         /// <returns>Word.Application sequence</returns>
         public static IDisposableSequence<Application> GetActiveInstances(Func<Application, bool> predicate)
         {
-            return Running.ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate);
+            return Running.ProxyService.GetActiveInstances<Application>("Word", "Application", predicate);
+        }
+
+        /// <summary>
+        /// Returns the count of running Word.Application instances that passed a predicate filter
+        /// </summary>
+        /// <returns>count of running application</returns>
+        public static int GetActiveInstancesCount()
+        {
+            var sequence = Running.ProxyService.GetActiveInstances<Application>("Word", "Application");
+            int result = sequence.Count;
+            sequence.Dispose();
+            return result;
+        }
+
+        /// <summary>
+        /// Returns the count of running Word.Application instances that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <returns>count of running application</returns>
+        public static int GetActiveInstancesCount(Func<Application, bool> predicate)
+        {
+            var sequence = Running.ProxyService.GetActiveInstances<Application>("Word", "Application", predicate);
+            int result = sequence.Count;
+            sequence.Dispose();
+            return result;
         }
 
         /// <summary>

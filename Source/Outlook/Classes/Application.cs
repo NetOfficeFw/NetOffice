@@ -236,6 +236,31 @@ namespace NetOffice.OutlookApi
         }
 
         /// <summary>
+        /// Returns the count of running Outlook.Application instances that passed a predicate filter
+        /// </summary>
+        /// <returns>count of running application</returns>
+        public static int GetActiveInstancesCount()
+        {
+            var sequence = Running.ProxyService.GetActiveInstances<Application>("Outlook", "Application");
+            int result = sequence.Count;
+            sequence.Dispose();
+            return result;
+        }
+
+        /// <summary>
+        /// Returns the count of running Outlook.Application instances that passed a predicate filter
+        /// </summary>
+        /// <param name="predicate">filter predicate</param>
+        /// <returns>count of running application</returns>
+        public static int GetActiveInstancesCount(Func<Application, bool> predicate)
+        {
+            var sequence = Running.ProxyService.GetActiveInstances<Application>("Outlook", "Application", predicate);
+            int result = sequence.Count;
+            sequence.Dispose();
+            return result;
+        }
+
+        /// <summary>
         /// Returns a running Outlook.Application instance from the environment/system
         /// </summary>
         /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
