@@ -71,7 +71,7 @@ namespace NetOffice.Running
             T item = result.FirstOrDefault();
             result.Dispose(item);
             if (throwExceptionIfNotFound && null == item)
-                throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + ", " + className));
+                throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + " " + className));
             return item;
         }
 
@@ -91,7 +91,7 @@ namespace NetOffice.Running
             T item = result.FirstOrDefault();
             result.Dispose(item);
             if (throwExceptionIfNotFound && null == item)
-                throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + ", " + className));
+                throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + " " + className));
             return item;
         }
 
@@ -133,7 +133,7 @@ namespace NetOffice.Running
             {
                 object result = GetActiveExcelApplicationProxyFromDesktop();
                 if (null == result && throwExceptionIfNothingFound)
-                    throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + ", " + className));
+                    throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", componentName + " " + className));
                 return result;
             }
             else

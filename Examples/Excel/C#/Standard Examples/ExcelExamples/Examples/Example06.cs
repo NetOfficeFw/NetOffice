@@ -67,11 +67,12 @@ namespace ExcelExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start excel and turn off msg boxes
-            Excel.Application excelApplication = Excel.Application.GetActiveInstance(true);
-            excelApplication.Settings.ExceptionDiagnosticsMessage = "Failed to proceed {CallInstance}={CallType}=>{Name}.{NlApplicationVersions}";
-            excelApplication.Settings.ExceptionMessageBehavior = NetOffice.ExceptionMessageHandling.DiagnosticsAndInnerMessage;
+            Excel.Application excelApplication = new Excel.Application ();
             excelApplication.DisplayAlerts = false;
             excelApplication.Visible = true;
+
+            excelApplication.Settings.ExceptionMessageBehavior = NetOffice.ExceptionMessageHandling.DiagnosticsAndInnerMessage;
+            excelApplication.Settings.ExceptionDiagnosticsMessage = "Failed to proceed {CallInstance}={CallType}=>{Name}.{NlApplicationVersions}{NewLine}";
 
             // add a new workbook
             Excel.Workbook workBook = excelApplication.Workbooks.Add();

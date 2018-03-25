@@ -203,7 +203,6 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show()
 		{
-            //    return (bool)Factory.Invoker.MethodReturn2(this, "Show", new object[0]);
             return Factory.ExecuteBoolMethodGet(this, "Show");
 		}
 
