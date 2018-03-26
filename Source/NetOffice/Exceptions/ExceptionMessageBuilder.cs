@@ -141,7 +141,7 @@ namespace NetOffice.Exceptions
                         diagMessage = diagMessage.Replace("{NlApplicationVersions}", String.Empty);
                     }
                 }
-                diagMessage = diagMessage.Replace("{NewLine}", Environment.NewLine);
+
                 diagMessage = diagMessage.Replace("{CallType}", type.ToString());
                 diagMessage = diagMessage.Replace("{CallInstance}", comObject.InstanceFriendlyName);
                 diagMessage = diagMessage.Replace("{Name}", name);

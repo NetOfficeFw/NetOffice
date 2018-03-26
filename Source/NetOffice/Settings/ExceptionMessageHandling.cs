@@ -34,6 +34,8 @@ namespace NetOffice
         /// {Args}                  - Given Arguments
         /// {ParenthesizedArgs}     - Given Arguments, parenthesized if one or more argument exists
         /// {NewLine}               - New line
+        /// {ApplicationVersion}    - Loaded Office Applications in its version
+        /// {NlApplicationVersion}  - New line and loaded Office Applications in its version. New line only when one or more application is available
         /// </summary>
         Diagnostics = 3,
 
@@ -46,6 +48,8 @@ namespace NetOffice
         /// {Args}                  - Given Arguments
         /// {ParenthesizedArgs}     - Given Arguments, parenthesized if one or more argument exists
         /// {NewLine}               - New line
+        /// {ApplicationVersion}    - Loaded Office Applications in its version
+        /// {NlApplicationVersion}  - New line and loaded Office Applications in its version. New line only when one or more application is available
         /// </summary>
         DiagnosticsAndInnerMessage = 4
     }
