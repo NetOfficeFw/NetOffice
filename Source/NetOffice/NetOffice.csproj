@@ -151,6 +151,7 @@
     <Compile Include="Exceptions\UnregisterException.cs" />
     <Compile Include="Extensions\CallExtensions.cs" />
     <Compile Include="Extensions\ConversionExtensions.cs" />
+    <Compile Include="Extensions\DomainExtensions.cs" />
     <Compile Include="Extensions\InvokerExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Filtering\IMessageFilter.cs" />

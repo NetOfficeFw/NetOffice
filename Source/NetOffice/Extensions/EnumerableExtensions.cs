@@ -11,6 +11,9 @@ namespace NetOffice.Extensions
     /// Provides a set of static (Shared in Visual Basic) methods for querying objects
     /// that implement NetOffice.CollectionsGeneric.IEnumerableProvider`1.
     /// </summary>
+    /// <remarks>Most of these methods imitate the well known Linq2Object extensions
+    /// but they doesnt works in this way i.e. there is no custom linq provider under the hood.
+    /// The design goal here is remove/dispose unused proxies immediately.</remarks>
     public static class EnumerableExtensions
     {
         /// <summary>
