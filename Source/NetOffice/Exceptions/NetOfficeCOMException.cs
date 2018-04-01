@@ -11,6 +11,11 @@ namespace NetOffice.Exceptions
     public class NetOfficeCOMException : COMException
     {
         /// <summary>
+        /// NetOffice Version
+        /// </summary>
+        private static Version _netOfficeVersion;
+
+        /// <summary>
         /// Creates an instance of the class
         /// </summary>
         public NetOfficeCOMException() : base()
@@ -72,5 +77,18 @@ namespace NetOffice.Exceptions
         /// Office application version if available
         /// </summary>
         public string ApplicationVersion { get; internal set; }
+
+        /// <summary>
+        /// NetOffice Version
+        /// </summary>
+        public Version NetOfficeVersion
+        {
+            get
+            {
+                if (null == _netOfficeVersion)
+                    _netOfficeVersion = typeof(NetOfficeException).Assembly.GetName().Version;
+                return _netOfficeVersion;
+            }
+        }
     }
 }

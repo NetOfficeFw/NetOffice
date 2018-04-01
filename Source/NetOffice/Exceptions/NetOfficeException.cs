@@ -8,6 +8,11 @@ namespace NetOffice
     public class NetOfficeException : Exception
     {
         /// <summary>
+        /// NetOffice Version
+        /// </summary>
+        private static Version _netOfficeVersion;
+
+        /// <summary>
         /// Creates an instance of the class
         /// </summary>
         /// <param name="message">given exception info</param>
@@ -55,5 +60,18 @@ namespace NetOffice
         /// Friendly name from current app domain
         /// </summary>
         public string AppDomainFriendlyName { get; private set; }
+
+        /// <summary>
+        /// NetOffice Version
+        /// </summary>
+        public Version NetOfficeVersion
+        {
+            get
+            {
+                if (null == _netOfficeVersion)
+                    _netOfficeVersion = typeof(NetOfficeException).Assembly.GetName().Version;
+                return _netOfficeVersion;
+            }
+        }
     }
 }
