@@ -1,5 +1,5 @@
-﻿using NetOffice.Exceptions;
-using System;
+﻿using System;
+using NetOffice.Exceptions;
 
 namespace NetOffice.Extensions.Invoker
 {
@@ -9,7 +9,7 @@ namespace NetOffice.Extensions.Invoker
     public static class InvokerExtensions
     {
         /// <summary>
-        /// Invoke Property if instance implement ICOMObject
+        /// Invoke Property if instance that implement ICOMObject
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
         /// <param name="value">instance which is ICOMObject</param>
@@ -31,7 +31,7 @@ namespace NetOffice.Extensions.Invoker
         }
 
         /// <summary>
-        /// Invoke method if instance implement ICOMObject
+        /// Invoke method if instance that implement ICOMObject
         /// </summary>
         /// <param name="value">instance which is ICOMObject</param>
         /// <param name="methodName">name of method</param>
@@ -52,7 +52,7 @@ namespace NetOffice.Extensions.Invoker
         }
 
         /// <summary>
-        /// Invoke method if instance implement ICOMObject
+        /// Invoke method if instance that implement ICOMObject
         /// </summary>
         /// <param name="value">instance which is ICOMObject</param>
         /// <param name="methodName">name of method</param>

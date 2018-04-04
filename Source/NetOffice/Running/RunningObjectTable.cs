@@ -107,7 +107,7 @@ namespace NetOffice.Running
         /// <summary>
         /// some office applications in specific version use the "Microsoft" prefix in the COM server name
         /// </summary>
-        private static readonly string _ballmersPlace = "Microsoft "; // variable name is now depricated of course (but no warning from fxcop...)
+        private static readonly string _ballmersPlace = "Microsoft "; // field name is depricated of course (but no compiler warning...and Nadella sucks!!!)
 
         #endregion
 

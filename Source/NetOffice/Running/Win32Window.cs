@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace NetOffice.Running
 {
     /// <summary>
-    /// IWin32Window Implementation
+    /// IWin32Window Default Implementation
     /// </summary>
     public class Win32Window : System.Windows.Forms.IWin32Window
     {
