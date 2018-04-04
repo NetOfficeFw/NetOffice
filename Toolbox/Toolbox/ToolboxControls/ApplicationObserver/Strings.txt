@@ -26,5 +26,5 @@ labelShowTray = Show information as tray icon
 labelOneOrMoreIsRunning = One or more of the chosen applications are active
 labelNoOfficeAppRunning = None of the chosen applications are active
 labelActiveProcessList = Active Processes
-labelKillQuestion = Kill selected Instances?
+labelKillQuestion = End selected instances?
 [End]

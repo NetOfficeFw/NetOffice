@@ -10,18 +10,18 @@ namespace NetOffice.Running
     /// Encapsulate Excel Main Window Operations
     /// </summary>
     internal static class ExcelApplicationWindow
-    { 
+    {
         #region Imports
-        
+
         [DllImport("oleacc.dll")]
-        private static extern int AccessibleObjectFromWindow(IntPtr hwnd, uint id, ref Guid iid, [In, Out, MarshalAs(UnmanagedType.IUnknown)] ref object ppvObject); 
+        private static extern int AccessibleObjectFromWindow(IntPtr hwnd, uint id, ref Guid iid, [In, Out, MarshalAs(UnmanagedType.IUnknown)] ref object ppvObject);
 
         [DllImport("user32.dll", SetLastError = true)]
         private static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
 
         private static uint _objectID = 0xFFFFFFF0;
         private static Guid _dispatchID = new Guid("00020400-0000-0000-C000-000000000046");
-      
+
         #endregion
 
         #region Methods
@@ -33,7 +33,7 @@ namespace NetOffice.Running
         /// <returns>com proxy or null</returns>
         internal static object GetApplicationProxyFromHandle(IntPtr hwnd)
         {
-            if (null == hwnd)
+            if (IntPtr.Zero == hwnd)
                 throw new ArgumentNullException("hwnd");
 
             try

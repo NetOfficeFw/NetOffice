@@ -423,7 +423,7 @@
             this.labelSearch.BackColor = System.Drawing.Color.Orange;
             this.labelSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.ForeColor = System.Drawing.Color.Blue;
-            this.labelSearch.Location = new System.Drawing.Point(647, 6);
+            this.labelSearch.Location = new System.Drawing.Point(581, 6);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(47, 17);
             this.labelSearch.TabIndex = 43;
@@ -435,7 +435,7 @@
             this.pictureBoxNoResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxNoResult.BackColor = System.Drawing.Color.Orange;
             this.pictureBoxNoResult.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNoResult.Image")));
-            this.pictureBoxNoResult.Location = new System.Drawing.Point(691, 7);
+            this.pictureBoxNoResult.Location = new System.Drawing.Point(625, 7);
             this.pictureBoxNoResult.Name = "pictureBoxNoResult";
             this.pictureBoxNoResult.Size = new System.Drawing.Size(16, 16);
             this.pictureBoxNoResult.TabIndex = 82;
@@ -470,17 +470,17 @@
             this.SearchBoxPanel.Controls.Add(this.SearchLabel);
             this.SearchBoxPanel.Controls.Add(this.textBoxSearch);
             this.SearchBoxPanel.ForeColor = System.Drawing.Color.Black;
-            this.SearchBoxPanel.Location = new System.Drawing.Point(709, 6);
+            this.SearchBoxPanel.Location = new System.Drawing.Point(669, 6);
             this.SearchBoxPanel.Margin = new System.Windows.Forms.Padding(0);
             this.SearchBoxPanel.Name = "SearchBoxPanel";
-            this.SearchBoxPanel.Size = new System.Drawing.Size(190, 18);
+            this.SearchBoxPanel.Size = new System.Drawing.Size(230, 18);
             this.SearchBoxPanel.TabIndex = 83;
             // 
             // SearchLabel
             // 
             this.SearchLabel.Image = ((System.Drawing.Image)(resources.GetObject("SearchLabel.Image")));
             this.SearchLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.SearchLabel.Location = new System.Drawing.Point(166, -1);
+            this.SearchLabel.Location = new System.Drawing.Point(206, -1);
             this.SearchLabel.Name = "SearchLabel";
             this.SearchLabel.Size = new System.Drawing.Size(24, 19);
             this.SearchLabel.TabIndex = 32;
@@ -495,7 +495,7 @@
             this.textBoxSearch.Location = new System.Drawing.Point(5, 0);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(166, 18);
+            this.textBoxSearch.Size = new System.Drawing.Size(199, 18);
             this.textBoxSearch.TabIndex = 42;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             this.textBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
@@ -506,7 +506,7 @@
             this.pictureBoxSearching.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxSearching.BackColor = System.Drawing.Color.Orange;
             this.pictureBoxSearching.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSearching.Image")));
-            this.pictureBoxSearching.Location = new System.Drawing.Point(691, 7);
+            this.pictureBoxSearching.Location = new System.Drawing.Point(625, 7);
             this.pictureBoxSearching.Name = "pictureBoxSearching";
             this.pictureBoxSearching.Size = new System.Drawing.Size(16, 16);
             this.pictureBoxSearching.TabIndex = 84;

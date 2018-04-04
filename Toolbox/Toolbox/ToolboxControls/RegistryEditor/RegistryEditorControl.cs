@@ -136,6 +136,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private string PathFromConfig { get; set; }
 
+        private RegistrySearch Search { get; set; }
+
         #endregion
 
         #region IToolboxControl
@@ -621,6 +623,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private void LockUI()
         {
+            SearchLabel.Enabled = false;
             treeViewRegistry.Enabled = false;
             dataGridViewRegistry.Enabled = false;
             Locked = true;
@@ -628,12 +631,40 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private void UnlockUI()
         {
+            SearchLabel.Enabled = true;
             treeViewRegistry.Enabled = true;
             dataGridViewRegistry.Enabled = true;
             Locked = false;
         }
 
-        private RegistrySearch Search { get; set; }
+        private void DoSearchAsync(string expression)
+        {
+            if (Locked)
+                return;
+
+            var rootKeys = AvailableRootKeys();
+            if (null == treeViewRegistry.SelectedNode)
+                treeViewRegistry.SelectedNode = treeViewRegistry.Nodes[0];
+
+            UtilsRegistryKey startFromKey = null;
+
+            var selected = treeViewRegistry.SelectedNode.Tag;
+            if (selected is UtilsRegistryKey)
+                startFromKey = selected as UtilsRegistryKey;
+            else
+                startFromKey = (selected as UtilsRegistry).Key;
+
+            Search = new RegistrySearch(rootKeys, startFromKey, expression);
+
+            Action method = delegate
+            {
+                Search.Search();
+            };
+            pictureBoxNoResult.Visible = false;
+            pictureBoxSearching.Visible = true;
+            LockUI();
+            method.BeginInvoke(DoSearchAsyncComplete, method);
+        }
 
         private void DoSearchAsyncComplete(IAsyncResult result)
         {
@@ -698,73 +729,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             if (null != node)
                 treeViewRegistry.SelectedNode = node;
-        }
-
-        //public void SelectSearchResultKey(RegistryKey hive, string path)
-        //{
-        //    if (treeViewRegistry.Nodes.Count == 0)
-        //        return;
-        //    if (null == treeViewRegistry.SelectedNode)
-        //        treeViewRegistry.SelectedNode = treeViewRegistry.Nodes[0];
-
-        //    if (SelectedRoot != hive)
-        //    {
-        //        foreach (TreeNode item in treeViewRegistry.Nodes)
-        //        {
-        //            if (item.Registry().HiveKey == hive)
-        //            {
-        //                treeViewRegistry.SelectedNode = item;
-        //                break;
-        //            }
-        //        }
-        //    }
-
-        //    string rootPath = SelectedRootPath;
-        //    path = path.Substring(rootPath.Length);
-        //    if (path.StartsWith("\\"))
-        //        path = path.Substring("\\".Length);
-        //    TreeNode node = treeViewRegistry.SelectedNode.Root();
-        //    node.Expand();
-        //    string[] array = path.Split(new string[] { "\\" }, StringSplitOptions.None);
-        //    foreach (var item in array)
-        //    {
-        //        node = SearchChildTree(node, item);
-        //        if (null != node)
-        //            node.Expand();
-        //        else
-        //            break;
-        //    }
-        //    if (null != node)
-        //        treeViewRegistry.SelectedNode = node;
-        //}
-
-        private void DoSearchAsync(string expression)
-        {
-            if (Locked)
-                return;
-
-            var rootKeys = AvailableRootKeys();
-            if (null == treeViewRegistry.SelectedNode)
-                treeViewRegistry.SelectedNode = treeViewRegistry.Nodes[0];
-
-            UtilsRegistryKey startFromKey = null;
-
-            var selected = treeViewRegistry.SelectedNode.Tag;
-            if (selected is UtilsRegistryKey)
-                startFromKey = selected as UtilsRegistryKey;
-            else
-                startFromKey = (selected as UtilsRegistry).Key;
-
-            Search = new RegistrySearch(rootKeys, startFromKey, expression);
-
-            Action method = delegate
-            {
-                Search.Search();
-            };
-            pictureBoxNoResult.Visible = false;
-            pictureBoxSearching.Visible = true;
-            LockUI();
-            method.BeginInvoke(DoSearchAsyncComplete, method);
         }
 
         #endregion

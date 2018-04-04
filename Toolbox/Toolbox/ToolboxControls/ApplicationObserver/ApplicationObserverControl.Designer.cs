@@ -17,25 +17,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationObserverControl));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Excel",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Winword",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Outlook",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "PowerPnt",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "MsAccess",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "WinProj",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "Visio",
             ""}, -1);
             this.labelNoOfficeAppRunning = new System.Windows.Forms.Label();
@@ -56,7 +56,6 @@
             this.labelOfficeApplicationInstanceCount = new System.Windows.Forms.Label();
             this.labelActiveProcessList = new System.Windows.Forms.Label();
             this.checkBoxShowQuestion = new System.Windows.Forms.CheckBox();
-            this.labelKillQuestion = new System.Windows.Forms.Label();
             this.listViewProcess = new System.Windows.Forms.ListView();
             this.colImage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -124,17 +123,18 @@
             // 
             // buttonKillApps
             // 
+            this.buttonKillApps.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonKillApps.Enabled = false;
             this.buttonKillApps.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonKillApps.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKillApps.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKillApps.ForeColor = System.Drawing.Color.White;
+            this.buttonKillApps.ForeColor = System.Drawing.Color.Black;
             this.buttonKillApps.Image = ((System.Drawing.Image)(resources.GetObject("buttonKillApps.Image")));
             this.buttonKillApps.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonKillApps.Location = new System.Drawing.Point(49, 188);
+            this.buttonKillApps.Location = new System.Drawing.Point(49, 271);
             this.buttonKillApps.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKillApps.Name = "buttonKillApps";
-            this.buttonKillApps.Size = new System.Drawing.Size(433, 34);
+            this.buttonKillApps.Size = new System.Drawing.Size(431, 34);
             this.buttonKillApps.TabIndex = 21;
             this.buttonKillApps.Text = "Close";
             this.buttonKillApps.UseVisualStyleBackColor = true;
@@ -142,23 +142,26 @@
             // 
             // checkBoxAppKill
             // 
+            this.checkBoxAppKill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxAppKill.AutoSize = true;
             this.checkBoxAppKill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxAppKill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxAppKill.ForeColor = System.Drawing.Color.Blue;
-            this.checkBoxAppKill.Location = new System.Drawing.Point(52, 339);
+            this.checkBoxAppKill.Location = new System.Drawing.Point(50, 419);
             this.checkBoxAppKill.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxAppKill.Name = "checkBoxAppKill";
-            this.checkBoxAppKill.Size = new System.Drawing.Size(58, 21);
+            this.checkBoxAppKill.Size = new System.Drawing.Size(107, 21);
             this.checkBoxAppKill.TabIndex = 20;
-            this.checkBoxAppKill.Text = "Active";
+            this.checkBoxAppKill.Text = "Enable Hotkey";
             this.checkBoxAppKill.UseVisualStyleBackColor = true;
             this.checkBoxAppKill.CheckedChanged += new System.EventHandler(this.checkBoxAppKill_CheckedChanged);
             // 
             // listViewApps
             // 
-            this.listViewApps.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.listViewApps.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewApps.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listViewApps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
+            this.listViewApps.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewApps.CheckBoxes = true;
             this.listViewApps.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnName,
@@ -166,25 +169,25 @@
             this.listViewApps.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewApps.ForeColor = System.Drawing.Color.Blue;
             this.listViewApps.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            listViewItem1.StateImageIndex = 0;
-            listViewItem2.StateImageIndex = 0;
-            listViewItem3.StateImageIndex = 0;
-            listViewItem4.StateImageIndex = 0;
-            listViewItem5.StateImageIndex = 0;
-            listViewItem6.StateImageIndex = 0;
-            listViewItem7.StateImageIndex = 0;
+            listViewItem8.StateImageIndex = 0;
+            listViewItem9.StateImageIndex = 0;
+            listViewItem10.StateImageIndex = 0;
+            listViewItem11.StateImageIndex = 0;
+            listViewItem12.StateImageIndex = 0;
+            listViewItem13.StateImageIndex = 0;
+            listViewItem14.StateImageIndex = 0;
             this.listViewApps.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7});
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14});
             this.listViewApps.Location = new System.Drawing.Point(49, 52);
             this.listViewApps.Margin = new System.Windows.Forms.Padding(4);
             this.listViewApps.Name = "listViewApps";
-            this.listViewApps.Size = new System.Drawing.Size(432, 128);
+            this.listViewApps.Size = new System.Drawing.Size(432, 202);
             this.listViewApps.TabIndex = 19;
             this.listViewApps.UseCompatibleStateImageBehavior = false;
             this.listViewApps.View = System.Windows.Forms.View.Details;
@@ -232,11 +235,12 @@
             // 
             // labelInsertHotkey
             // 
+            this.labelInsertHotkey.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelInsertHotkey.BackColor = System.Drawing.Color.Orange;
             this.labelInsertHotkey.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelInsertHotkey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInsertHotkey.ForeColor = System.Drawing.Color.Black;
-            this.labelInsertHotkey.Location = new System.Drawing.Point(49, 258);
+            this.labelInsertHotkey.Location = new System.Drawing.Point(47, 338);
             this.labelInsertHotkey.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelInsertHotkey.Name = "labelInsertHotkey";
             this.labelInsertHotkey.Size = new System.Drawing.Size(433, 36);
@@ -245,11 +249,12 @@
             // 
             // textBoxHotKey
             // 
+            this.textBoxHotKey.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxHotKey.BackColor = System.Drawing.Color.LightSteelBlue;
             this.textBoxHotKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxHotKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHotKey.ForeColor = System.Drawing.Color.Black;
-            this.textBoxHotKey.Location = new System.Drawing.Point(49, 304);
+            this.textBoxHotKey.Location = new System.Drawing.Point(47, 384);
             this.textBoxHotKey.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxHotKey.Name = "textBoxHotKey";
             this.textBoxHotKey.ReadOnly = true;
@@ -268,7 +273,7 @@
             this.labelMain.Name = "labelMain";
             this.labelMain.Size = new System.Drawing.Size(433, 20);
             this.labelMain.TabIndex = 14;
-            this.labelMain.Text = "Choose your Office application(s) you want to observe";
+            this.labelMain.Text = "Choose the Office application(s) you want to observe";
             // 
             // labelOfficeApplication
             // 
@@ -313,11 +318,12 @@
             // 
             // checkBoxShowQuestion
             // 
+            this.checkBoxShowQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxShowQuestion.AutoSize = true;
             this.checkBoxShowQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxShowQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxShowQuestion.ForeColor = System.Drawing.Color.Blue;
-            this.checkBoxShowQuestion.Location = new System.Drawing.Point(52, 368);
+            this.checkBoxShowQuestion.Location = new System.Drawing.Point(50, 448);
             this.checkBoxShowQuestion.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShowQuestion.Name = "checkBoxShowQuestion";
             this.checkBoxShowQuestion.Size = new System.Drawing.Size(124, 21);
@@ -325,20 +331,6 @@
             this.checkBoxShowQuestion.Text = "Ask before killing";
             this.checkBoxShowQuestion.UseVisualStyleBackColor = true;
             this.checkBoxShowQuestion.CheckedChanged += new System.EventHandler(this.checkBoxShowQuestion_CheckedChanged);
-            // 
-            // labelKillQuestion
-            // 
-            this.labelKillQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelKillQuestion.BackColor = System.Drawing.SystemColors.Control;
-            this.labelKillQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelKillQuestion.Location = new System.Drawing.Point(572, 616);
-            this.labelKillQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelKillQuestion.Name = "labelKillQuestion";
-            this.labelKillQuestion.Size = new System.Drawing.Size(235, 15);
-            this.labelKillQuestion.TabIndex = 32;
-            this.labelKillQuestion.Text = "Kill selected Instances?";
-            this.labelKillQuestion.Visible = false;
-            this.labelKillQuestion.TextChanged += new System.EventHandler(this.labelKillQuestion_TextChanged);
             // 
             // listViewProcess
             // 
@@ -408,9 +400,10 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 259);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 339);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(21, 20);
@@ -438,7 +431,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.listViewProcess);
-            this.Controls.Add(this.labelKillQuestion);
             this.Controls.Add(this.checkBoxShowQuestion);
             this.Controls.Add(this.labelActiveProcessList);
             this.Controls.Add(this.labelOfficeApplicationInstanceCount);
@@ -502,7 +494,6 @@
         private System.Windows.Forms.Label labelOfficeApplicationInstanceCount;
         private System.Windows.Forms.Label labelActiveProcessList;
         private System.Windows.Forms.CheckBox checkBoxShowQuestion;
-        private System.Windows.Forms.Label labelKillQuestion;
         private System.Windows.Forms.ListView listViewProcess;
         private System.Windows.Forms.ColumnHeader colID;
         private System.Windows.Forms.ColumnHeader colName;

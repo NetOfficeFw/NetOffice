@@ -74,7 +74,7 @@
             this.EntriesGrid.AllowUserToOrderColumns = true;
             this.EntriesGrid.AllowUserToResizeRows = false;
             this.EntriesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EntriesGrid.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.EntriesGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.EntriesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EntriesGrid.ContextMenuStrip = this.GridContextMenu;
             this.EntriesGrid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -115,7 +115,7 @@
             // RefreshToolStripMenuItem
             // 
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 

@@ -415,6 +415,12 @@
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ToolboxControls\ProxyView\WindowEntryCollection.cs" />
+    <Compile Include="ToolboxControls\RegistryEditor\CancelSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\CancelSearchControl.Designer.cs">
+      <DependentUpon>CancelSearchControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToolboxControls\RegistryEditor\ChangeBinaryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -547,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToolboxControls\ProxyView\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\CancelSearchControl.resx">
+      <DependentUpon>CancelSearchControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeBinaryControl.resx">
       <DependentUpon>ChangeBinaryControl.cs</DependentUpon>

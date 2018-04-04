@@ -17,7 +17,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         #region Fields
 
         private OfficeApplicationObserver _applicationObserver;
-     
+
         #endregion
 
         #region Construction
@@ -46,7 +46,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         }
 
         #endregion
-        
+
         #region IToolboxControl
 
         public IToolboxHost Host { get; private set; }
@@ -57,12 +57,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         }
 
         public new void KeyDown(KeyEventArgs e)
-        { 
+        {
         }
 
         public string ControlName
         {
-            get 
+            get
             {
                 return "ApplicationObserver.ApplicationObserverControl";
             }
@@ -130,14 +130,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
         public void LoadComplete()
         {
-           
+
         }
 
         public void LoadConfiguration(XmlNode configNode)
         {
             if (configNode.ChildNodes.Count == 0)
                 configNode.InnerXml = Ressources.RessourceUtils.ReadString("ToolboxControls.ApplicationObserver.IconsAndConfig.DefaultConfiguration.txt");
-           
+
             string val = "";
 
             val = configNode.SelectSingleNode("Excel").Attributes[0].Value;
@@ -198,7 +198,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         {
                 return Ressources.RessourceUtils.ReadStream("ToolboxControls.ApplicationObserver.Info1033.rtf");
         }
-        
+
         public void Release()
         {
             if ((null != _applicationObserver) && (!Program.IsDesign))
@@ -258,7 +258,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                 int i = 0;
                 foreach (ListViewItem item in listViewProcess.Items)
                 {
-                    Color color = i % 2 != 0 ? Color.White : Color.LightGray;
+                    Color color = i % 2 != 0 ? Color.White : Color.WhiteSmoke;
                     item.BackColor = color;
                     foreach (ListViewItem.ListViewSubItem subItem in item.SubItems)
                         subItem.BackColor = color;
@@ -299,10 +299,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         {
             try
             {
-                string appName = e.Item.Text;
+                bool killPossible = false;
+                foreach (ListViewItem item in listViewApps.Items)
+                {
+                    if (item.SubItems[1].Text != "0" && item.Checked)
+                    {
+                        killPossible = true;
+                        break;
+                    }
+                }
+                buttonKillApps.Enabled = killPossible;
 
-                if (((e.Item.SubItems[1].Text != "0") && (!buttonKillApps.Enabled)))
-                    buttonKillApps.Enabled = true;
+                string appName = e.Item.Text;
 
                 switch (appName)
                 {
@@ -398,19 +406,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         {
             try
             {
-                _applicationObserver.KillProcesses();
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
-            }
-        }
+                if(_applicationObserver.ShowQuestionBeforeKill &&
+                    DialogResult.No == MessageBox.Show("End selected instances?", "NetOffice Developer Toolbox", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    return;
 
-        private void labelKillQuestion_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                _applicationObserver.KillQuestion = labelKillQuestion.Text;
+                _applicationObserver.KillProcesses();
             }
             catch (Exception exception)
             {

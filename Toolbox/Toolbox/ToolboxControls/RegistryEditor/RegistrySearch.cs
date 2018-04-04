@@ -42,8 +42,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         public IEnumerable<UtilsRegistryEntry> ResultEntries { get; private set; }
 
+        public bool CancelRequested { get; private set; }
+
+        public void RequestCancel()
+        {
+            CancelRequested = true;
+        }
+
         public bool Search()
         {
+            CancelRequested = false;
             try
             {
                 Result = null;
@@ -63,6 +71,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
                 while (null != startKey)
                 {
+                    if (CancelRequested)
+                        return false;
+
                     var entry = startKey;
                     found = SearchInternal(entry, ref resultEntries, padding);
                     if (found)
@@ -77,9 +88,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                     var rootKeys = GetRootKeysBelowStartKey();
                     foreach (var rootKey in rootKeys)
                     {
+                        if (CancelRequested)
+                            return false;
+
                         startKey = rootKey.Key;
                         while (null != startKey)
                         {
+                            if (CancelRequested)
+                                return false;
+
                             var entry = startKey;
                             found = SearchInternal(entry, ref resultEntries, padding);
                             if (found)
@@ -127,6 +144,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private bool SearchInternal(UtilsRegistryKey key, ref List<UtilsRegistryEntry> resultEntries, string padding)
         {
+            if (CancelRequested)
+                return false;
+
             //Console.WriteLine("{0}{1}", padding, key.Name);
 
             bool found = key.Name.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1;
@@ -136,6 +156,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
             foreach (UtilsRegistryEntry item in entries)
             {
+                if (CancelRequested)
+                    return false;
+
                 string valueString = null != item.Value ? item.Value.ToString() : String.Empty;
                 if ((item.Name.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1) ||
                     (valueString.IndexOf(Expression, StringComparison.InvariantCultureIgnoreCase) > -1))

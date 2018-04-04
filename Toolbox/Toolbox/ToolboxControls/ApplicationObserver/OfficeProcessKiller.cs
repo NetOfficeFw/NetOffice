@@ -14,7 +14,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
     {
         #region Fields
 
-        private string      _killQuestion = "Ausgewählte Instanzen löschen?";
         private bool        _showQuesionBeforeKill;
         private NotifyIcon  _notify;
         private Icon        _runIcon;
@@ -31,7 +30,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         private Process[]   _accessProcs;
         private Process[]   _projectProcs;
         private Process[]   _visioProcs;
-        private int         _currentLanguageID = 1031;
+        private int         _currentLanguageID = 1033;
 
         #endregion
 
@@ -85,21 +84,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             set
             {
                 _currentLanguageID = value;
-            }
-        }
-
-        /// <summary>
-        /// Question for the user before kill someone
-        /// </summary>
-        public string KillQuestion
-        {
-            get
-            {
-                return _killQuestion;
-            }
-            set
-            {
-                _killQuestion = value;
             }
         }
 
@@ -263,9 +247,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         /// </summary>
         public void KillProcesses()
         {
-            if(DialogResult.Yes != MessageBox.Show(_killQuestion, "NetOffice Developer Toolbox", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-                return ;
-
             if(Excel)
                 KillProcesses(_excelProcs);
 
@@ -505,6 +486,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             try
             {
                 Process[] allProcs = Process.GetProcesses();
+                List<Process> list = new List<Process>();
+                foreach (var item in allProcs)
+                {
+                    if (IsOfficeProcess(item))
+                        list.Add(item);
+                }
+                allProcs = list.ToArray();
                 CheckChangedProcs(allProcs);
                 _allProcs = allProcs;
 

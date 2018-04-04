@@ -8,7 +8,7 @@ IApplicationVersionProvider wird wirksam noch bevor man das einstellen kann
 Versuchen die merkwürdige Stackoverflow exception zu replizieren, evtl. wenn try get version erst am ende das erste mal aufgerufen wird
 
 Methoden/Properties Source Doku mit exception tag ausstatten
-
+Toolbox Registry Editor => Backup für Machine Keys anbieten auch wenn keine Admin Rechte vorliegen
 Toolbox Wizard Addin.Connect
 Toolbox ROT View prüfen
 Toolbox Reg Search Disabled Items
