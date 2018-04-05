@@ -11,9 +11,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
     public partial class CancelSearchControl : UserControl
     {
-        public CancelSearchControl()
+        public CancelSearchControl(Action cancelRequest)
         {
+            if (null == cancelRequest)
+                throw new ArgumentNullException("cancelRequest");
             InitializeComponent();
+            CancelLinkLabel.LinkClicked += delegate
+            {
+                cancelRequest();
+            };
         }
     }
 }

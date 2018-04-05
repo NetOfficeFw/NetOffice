@@ -17,6 +17,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
     [RessourceTable("ToolboxControls.RegistryEditor.Strings.txt")]
     public partial class RegistryEditorControl : UserControl, IToolboxControl
     {
+        #region Fields
+
+        private CancelSearchControl _cancelControl;
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -620,12 +626,17 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
             return false;
         }
-
+        
         private void LockUI()
         {
             SearchLabel.Enabled = false;
             treeViewRegistry.Enabled = false;
             dataGridViewRegistry.Enabled = false;
+            _cancelControl = new CancelSearchControl(Search.RequestCancel);
+            _cancelControl.Location = new Point(SearchBoxPanel.Left, SearchBoxPanel.Top + SearchBoxPanel.Height+2);
+            Controls.Add(_cancelControl);            
+            _cancelControl.Visible = true;
+            _cancelControl.BringToFront();
             Locked = true;
         }
 
@@ -634,6 +645,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             SearchLabel.Enabled = true;
             treeViewRegistry.Enabled = true;
             dataGridViewRegistry.Enabled = true;
+            if (null != _cancelControl)
+            {
+                Controls.Remove(_cancelControl);
+                _cancelControl.Dispose();
+                _cancelControl = null;
+            }
             Locked = false;
         }
 
@@ -676,7 +693,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                 {
                     pictureBoxSearching.Visible = false;
                     UnlockUI();
-                    if (null != Search.Result)
+                    if (null != Search && null != Search.Result && false == Search.CancelRequested)
                     {
                         SelectSearchResultKey(Search.Result);
                         SelectEntryByExpression(Search.Expression);

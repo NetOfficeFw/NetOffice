@@ -35,7 +35,7 @@
             // 
             this.CancelLinkLabel.AutoSize = true;
             this.CancelLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelLinkLabel.Location = new System.Drawing.Point(65, 7);
+            this.CancelLinkLabel.Location = new System.Drawing.Point(65, 3);
             this.CancelLinkLabel.Name = "CancelLinkLabel";
             this.CancelLinkLabel.Size = new System.Drawing.Size(96, 16);
             this.CancelLinkLabel.TabIndex = 0;
@@ -44,12 +44,12 @@
             // 
             // CancelSearchControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.DarkOrange;
             this.Controls.Add(this.CancelLinkLabel);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CancelSearchControl";
-            this.Size = new System.Drawing.Size(230, 30);
+            this.Size = new System.Drawing.Size(231, 26);
             this.ResumeLayout(false);
             this.PerformLayout();
 
