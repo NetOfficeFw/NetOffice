@@ -39,6 +39,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
 
         #region Methods
 
+        private void DataSourceRefreshComplete(IRefresh sender)
+        {
+
+        }
+
         private void LoadSettings()
         {
             int interval = Settings.RefreshInterval;
@@ -52,7 +57,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
         private void RefreshDataSource()
         {
             if (null != CurrentDataSource)
-                CurrentDataSource.Refresh();
+                CurrentDataSource.RefreshAsync(DataSourceRefreshComplete, this);
         }
 
         private void SetDataSource()
@@ -175,12 +180,29 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
 
         public void LoadConfiguration(System.Xml.XmlNode configNode)
         {
+            bool value = false;
+            System.Xml.XmlNode node = configNode["ShowSelectedDetails"];
+            if (null != node && bool.TryParse(node.InnerText, out value))
+            {
+                Settings.ShowDetails = value;
+            }
 
+            node = configNode["ShowAllAccessible"];
+            if (null != node && bool.TryParse(node.InnerText, out value))
+            {
+                Settings.ShowAllAccessible = value;
+            }
         }
 
         public void SaveConfiguration(System.Xml.XmlNode configNode)
         {
+            System.Xml.XmlNode node = configNode.OwnerDocument.CreateElement("ShowSelectedDetails");
+            configNode.AppendChild(node);
+            node.InnerText = Settings.ShowDetails.ToString();
 
+            node = configNode.OwnerDocument.CreateElement("ShowAllAccessible");
+            configNode.AppendChild(node);
+            node.InnerText = Settings.ShowAllAccessible.ToString();
         }
 
         public new void KeyDown(KeyEventArgs e)

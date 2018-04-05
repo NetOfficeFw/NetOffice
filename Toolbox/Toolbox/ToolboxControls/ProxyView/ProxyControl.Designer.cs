@@ -109,13 +109,13 @@
             this.applicationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RefreshToolStripMenuItem});
             this.applicationToolStripMenuItem.Name = "applicationToolStripMenuItem";
-            this.applicationToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.applicationToolStripMenuItem.Text = "Application";
+            this.applicationToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.applicationToolStripMenuItem.Text = "Table";
             // 
             // RefreshToolStripMenuItem
             // 
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 

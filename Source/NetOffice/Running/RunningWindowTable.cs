@@ -14,9 +14,9 @@ namespace NetOffice.Running
     /// Try to find COM proxies from Desktop Subystem
     /// </summary>
     public static partial class RunningWindowTable
-    {         
+    {
         #region Fields
- 
+
         private static int _mainWindowTimeoutMilliseconds = 5000;
         private static int _childWindowTimeoutMilliseconds = 5000;
         private static Dictionary<string, AccessibleWindowTarget> Targets { get; set; }
@@ -73,7 +73,7 @@ namespace NetOffice.Running
                 _childWindowTimeoutMilliseconds = value;
             }
         }
-          
+
         #endregion
 
         #region Methods
@@ -127,7 +127,7 @@ namespace NetOffice.Running
         }
 
         /// <summary>
-        ///  Returns all accessible com proxies and additional informations through the IAccessible interface 
+        ///  Returns all accessible com proxies and additional informations through the IAccessible interface
         /// </summary>
         /// <param name="type">target proxy type</param>
         /// <returns>proxy information enumerator</returns>
@@ -146,7 +146,7 @@ namespace NetOffice.Running
         {
             return GetAccessibleProxiesFromPath(targets, Int16.MaxValue);
         }
-         
+
         /// <summary>
         /// Performs a lookup for window/child windows there implement the IAccessible interface to get a COM proxy
         /// </summary>
@@ -162,7 +162,7 @@ namespace NetOffice.Running
             else
                 return GetKnownAccessibleProxiesFromPath(targets, maximumResultCount);
         }
-         
+
         /// <summary>
         ///  Returns the count of accessible com proxies
         /// </summary>
@@ -218,7 +218,7 @@ namespace NetOffice.Running
         }
 
         private static int GetTargetsCount(IEnumerable<AccessibleWindowTarget> targets)
-        {   
+        {
             if (null == targets)
                 return 0;
 
@@ -228,7 +228,7 @@ namespace NetOffice.Running
                 return targetsImplementation.Count;
             }
             else
-            { 
+            {
                 int result = 0;
                 foreach (AccessibleWindowTarget item in targets)
                     result++;
@@ -240,11 +240,13 @@ namespace NetOffice.Running
         {
             ChildWindowEnumerator childEnumerator =
                         new ChildWindowEnumerator(handle);
-            IntPtr[] childWindows = childEnumerator.EnumerateWindows(10000);
+            IntPtr[] childWindows = childEnumerator.EnumerateWindows(4000);
             if (null != childWindows)
             {
                 foreach (IntPtr item in childWindows)
+                {
                     DoAccTest(list, mainHandle, item, maximumResultCount);
+                }
             }
         }
 
@@ -333,7 +335,7 @@ namespace NetOffice.Running
                         {
                             object targetProxy = null;
                             if (!String.IsNullOrEmpty(target.AccPropertyName))
-                            { 
+                            {
                                 targetProxy = TryInvokeProperty(accObject, target.AccPropertyName);
                                 Marshal.ReleaseComObject(accObject);
                             }
@@ -354,7 +356,7 @@ namespace NetOffice.Running
                                 IntPtr procID = Win32.GetWindowThreadProcessId(childHandle);
                                 ProxyInformation.ProcessElevation procElevation =
                                    ProcessElevation.ConvertToProcessElevation(ProcessElevation.IsProcessElevated(procID));
-                                
+
                                 ProxyInformation info = new ProxyInformation(targetProxy,
                                     itemCaption, id, itemClassName, itemComponentName, library, procID, procElevation);
 

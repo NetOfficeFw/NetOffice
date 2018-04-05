@@ -9,6 +9,7 @@ using NetOffice;
 using NetOffice.Running;
 using NetOffice.CollectionsGeneric;
 using NetOffice.Contribution.CollectionsGeneric;
+using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
 {
@@ -30,7 +31,45 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
 
         public bool IsCurrentlyRefresh { get; private set; }
 
-        public void Refresh()
+        private Action<IRefresh> Complete { get; set; }
+
+        private Control SyncRoot { get; set; }
+
+        public void RefreshAsync(Action<IRefresh> complete, Control syncRoot)
+        {
+            if (null == complete)
+                throw new ArgumentNullException("complete");
+            if (IsCurrentlyRefresh)
+                return;
+
+            Complete = complete;
+            SyncRoot = syncRoot;
+            Action method = Refresh;
+            method.BeginInvoke(RefreshCompleted, method);
+        }
+
+        private void RefreshCompletedUIThread()
+        {
+            AddItems();
+            RemoveItems();
+        }
+
+        private void RefreshCompleted(IAsyncResult result)
+        {
+            Action method = result.AsyncState as Action;
+            try
+            {
+                method.EndInvoke(result);
+                SyncRoot.Invoke(new Action(RefreshCompletedUIThread));
+                Complete(this);
+            }
+            catch
+            {
+                ;
+            }
+        }
+
+        private void Refresh()
         {
             lock (_lock)
             {
@@ -43,8 +82,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
                         WindowItems = RunningWindowTable.GetAccessibleProxyInformations(RunningWindowTable.ProxyType.All);
                     else
                         WindowItems = RunningWindowTable.GetAccessibleProxyInformations(RunningWindowTable.ProxyType.AllSupportedOfficeApplications);
-                    AddItems();
-                    RemoveItems();
                 }
                 catch (Exception)
                 {
@@ -55,7 +92,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProxyView
                     IsCurrentlyRefresh = false;
                 }
             }
-
         }
 
         #endregion
