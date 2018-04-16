@@ -6,7 +6,7 @@ using System.Text;
 namespace NetOffice
 {
     /*
-    Why so many overloads instead of "params object[]" or optional arguments ? 
+    Why so many overloads instead of "params object[]" or optional arguments ?
 
     Because for "params" the Compiler generates an argument array for the client caller in MSIL client assembly
     and it looks like thats bigger than push each argument on stack until it is less than 8 arguments.
@@ -14,7 +14,7 @@ namespace NetOffice
     In order to shrink the size of API assemblies as best as possible - we give 4 fixed argument overloads too.
     (API assemblies in 1.7.4.1 call fixed arguments overloads whenever its possible)
     */
-    
+
     /// <summary>
     /// Provides top-off Core/Invoker get property services to shrink caller code in Api assemblies and give more refactoring possibilies
     /// </summary>
@@ -27,7 +27,7 @@ namespace NetOffice
         #endregion
 
         #region ExecuteObjectPropertyGet
-        
+
         /// <summary>
         /// Execute a property get with object return value
         /// </summary>
@@ -502,7 +502,7 @@ namespace NetOffice
         public static UIntPtr ExecuteUIntPtrPropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            return ExecuteUIntPtrPropertyGetInternal(value, caller, name, args);     
+            return ExecuteUIntPtrPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1425,7 +1425,7 @@ namespace NetOffice
         /// <param name="value">core invoker</param>
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
-        public static ICOMObject ExecuteReferencePropertyGet(this Core value, ICOMObject caller, string name) 
+        public static ICOMObject ExecuteReferencePropertyGet(this Core value, ICOMObject caller, string name)
         {
             return ExecuteReferencePropertyGetInternal(value, caller, name, _emptyParams);
         }
@@ -1510,7 +1510,7 @@ namespace NetOffice
         /// <param name="validatedArgs">validated arguments as any</param>
         internal static ICOMObject ExecuteReferencePropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
         {
-            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);         
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, true);
             return newObject;
         }

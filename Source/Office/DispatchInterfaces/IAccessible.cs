@@ -296,7 +296,7 @@ namespace NetOffice.OfficeApi
 	}
 
     /// <summary>
-    /// DispatchInterface IAccessible 
+    /// DispatchInterface IAccessible
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: https://msdn.microsoft.com/en-us/library/microsoft.office.core.iaccessible.aspx </remarks>
@@ -334,7 +334,7 @@ namespace NetOffice.OfficeApi
         }
         
         #endregion
-        
+
 		#region Ctor
 
 		/// <param name="factory">current used factory core</param>
@@ -395,7 +395,7 @@ namespace NetOffice.OfficeApi
 		}
 		
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>
@@ -553,7 +553,7 @@ namespace NetOffice.OfficeApi
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_accHelpTopic(out string pszHelpFile, object varChild)
-		{		
+		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			pszHelpFile = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(pszHelpFile, varChild);
@@ -582,7 +582,7 @@ namespace NetOffice.OfficeApi
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_accHelpTopic(out string pszHelpFile)
-		{		
+		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			pszHelpFile = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(pszHelpFile);

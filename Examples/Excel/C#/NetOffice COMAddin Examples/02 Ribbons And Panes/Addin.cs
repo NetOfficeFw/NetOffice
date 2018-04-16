@@ -16,9 +16,9 @@ namespace Excel02AddinCS4
     [COMAddin("Excel02 Sample Addin CS4", "Ribbons & Panes Addin Example", LoadBehavior.LoadAtStartup)]
     [ProgId("Excel02AddinCS4.Connect"), Guid("BA38FD48-47BD-43de-8177-0D067A01B566"), Codebase, Timestamp]
     [CustomUI("RibbonUI.xml", true)]
-    [CustomPane(typeof(SamplePane), "Excel CPU Usage", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]   
+    [CustomPane(typeof(SamplePane), "Excel CPU Usage", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
     public class Addin : COMAddin
-    { 
+    {
         // Taskpane visibility has been changed. We upate the checkbutton in the ribbon ui for show/hide taskpane
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
         {

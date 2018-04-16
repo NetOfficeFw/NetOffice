@@ -30,7 +30,7 @@ namespace TutorialsCS4
             //
             // Use special ctor to try access a running application first
             // and if its failed create a new application
-            application = new Excel.Application(true);
+            application = new Excel.Application(new Core(), true);
             // quit only if its a new application
             if (!application.FromProxyService)
                 application.Quit();

@@ -1551,7 +1551,7 @@ namespace NetOffice
             // Good to know:
             // Confusing stuff about dynamic and implicit/explicit conversions
             // https://stackoverflow.com/questions/3492955/dynamicobject-tryconvert-not-called-when-casting-to-interface-type
-            // Not sure what is John Skeet means here to handle that better with IDynamicMetaObjectProvider - i tried his idea and fail
+            // Not sure what John Skeet means here to handle that better with IDynamicMetaObjectProvider - i tried his idea and fail
 
             CheckEntities();
 

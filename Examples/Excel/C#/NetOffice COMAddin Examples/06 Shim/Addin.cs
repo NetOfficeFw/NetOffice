@@ -26,7 +26,7 @@ namespace Excel06AddinCS4
                     hello("Register Excel06AddinCS4");
                 }
             }
-            catch (Exception ex)    
+            catch (Exception ex)
             {
                 Office.Tools.Contribution.DialogUtils.ShowMessageBox(ex.ToString());
             }

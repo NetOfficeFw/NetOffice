@@ -10,7 +10,7 @@ namespace Excel02AddinCS4
         #region Ctor
 
         public SamplePane()
-        {           
+        {
             InitializeComponent();
         }
 
@@ -57,7 +57,7 @@ namespace Excel02AddinCS4
 
         public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
         {
-            
+
         }
 
         #endregion
@@ -77,7 +77,7 @@ namespace Excel02AddinCS4
             if (null != Counter)
             {
                 float value = Counter.NextValue();
-              
+
                 int barValue = Convert.ToInt32(value);
                 if (barValue < 0)
                     barValue = 0;

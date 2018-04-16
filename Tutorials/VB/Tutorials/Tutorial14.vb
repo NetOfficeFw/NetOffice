@@ -31,7 +31,7 @@ Public Class Tutorial14
         '
         ' Use special ctor to try access a running application first
         ' and if its failed create a new application
-        application = New Excel.Application(True)
+        application = New Excel.Application(New Core(), True)
         ' quit only if its a new application
         If Not application.FromProxyService Then
             application.Quit()

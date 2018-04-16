@@ -16,9 +16,9 @@ namespace PowerPoint02AddinCS4
     [COMAddin("PowerPoint02 Sample Addin CS4", "Ribbons & Panes Addin Example", LoadBehavior.LoadAtStartup)]
     [ProgId("PowerPoint02AddinCS4.Connect"), Guid("A8589603-587D-4887-9DE6-19F03C53304A"), Codebase, Timestamp]
     [CustomUI("RibbonUI.xml", true)]
-    [CustomPane(typeof(SamplePane), "PowerPoint CPU Usage", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]   
+    [CustomPane(typeof(SamplePane), "PowerPoint CPU Usage", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
     public class Addin : COMAddin
-    { 
+    {
         // Taskpane visibility has been changed. We upate the checkbutton in the ribbon ui for show/hide taskpane
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
         {

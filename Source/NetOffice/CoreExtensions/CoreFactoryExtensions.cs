@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 using NetOffice.ComTypes;
 using NetOffice.Exceptions;
-    
+
 namespace NetOffice
 {
     internal static class CoreFactoryExtensions
@@ -33,7 +33,7 @@ namespace NetOffice
                 new Guid("000C0370-0000-0000-C000-000000000046"),
                 new Guid("000C0398-0000-0000-C000-000000000046")
             };
-        
+
         /// <summary>
         /// Get wrapper class factory info
         /// </summary>
@@ -44,7 +44,7 @@ namespace NetOffice
         /// <param name="wantTheDuck">want duck implementation</param>
         /// <param name="throwException">throw exception if no info found or return null</param>
         /// <returns>factory info from corresponding assembly</returns>
-        internal static IFactoryInfo GetFactoryInfo(this Core value, 
+        internal static IFactoryInfo GetFactoryInfo(this Core value,
             Dictionary<Guid, Guid> hostCache, ICOMObject caller,
             object comProxy, bool wantTheDuck, bool throwException)
         {
@@ -56,9 +56,9 @@ namespace NetOffice
             Guid hostGuid = GetParentLibraryGuid(value, comProxy, typeid);
 
             if (null != caller && typeid.IsDuplicateType())
-            {             
+            {
                 foreach (IFactoryInfo item in value.Assemblies)
-                {                   
+                {
                     if (item.IsDuck != wantTheDuck || item.AssemblyName != caller.InstanceComponentName)
                         continue;
                     foreach (var guid in item.ComponentGuid)
@@ -104,7 +104,7 @@ namespace NetOffice
             else
                 return null;
         }
-        
+
         /// <summary>
         /// Returns parent library id
         /// </summary>
@@ -224,15 +224,15 @@ namespace NetOffice
 
         /// <summary>
         /// Performs GetTypeInfo on IDispatch
-        /// Handle the strange cast behavior - see remarks. 
+        /// Handle the strange cast behavior - see remarks.
         /// </summary>
         /// <remarks>
         /// Seems to be cast to IDispatch never failed
         /// even the instance behind comProxy doesnt implement the interface.
-        /// If its failed to cast, an InvalidCastException occurs 
+        /// If its failed to cast, an InvalidCastException occurs
         /// while first use the interface.
-        /// The method catch arround here and throws IDispatchNotImplementedException 
-        /// to signalize the missing IDispatch suport.    
+        /// The method catch arround here and throws IDispatchNotImplementedException
+        /// to signalize the missing IDispatch suport.
         /// </remarks>
         /// <param name="dispatcher">given IDispatch as any </param>
         /// <returns>type informations or null if dispatcher argument is null</returns>
