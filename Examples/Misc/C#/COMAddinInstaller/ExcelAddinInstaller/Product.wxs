@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*"
+           Name="NetOffice Excel Add-in"
+           Language="1033"
+           Version="1.0.0.0"
+           Manufacturer="NetOffice"
+           UpgradeCode="8e11d4dd-8b07-4acd-9fe2-29862e6f5ad9">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate CabinetTemplate="ExcelAddin{0}.cab" CompressionLevel="high" EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="Excel Add-in" Level="1">
+      <ComponentGroupRef Id="ProductFilesComponents" />
+      <ComponentGroupRef Id="ProductRegistryComponents" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="NetOfficeFolder" Name="NetOffice">
+          <Directory Id="INSTALLFOLDER" Name="Excel Add-in" />
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductFilesComponents" Directory="INSTALLFOLDER">
+      <!-- Install ExcelAddinSample.dll file -->
+      <Component Id="ExcelAddinSampleComponent"> 
+        <File Id="ExcelAddinSampleFile" Name="$(var.ExcelAddinSample.TargetFileName)" Source="$(var.ExcelAddinSample.TargetPath)" />
+      </Component>
+
+      <!-- NetOffice libraries for Excel -->
+      <Component Id="NetOfficeExcelApiComponent">
+        <File Id="NetOfficeExcelApiFile" Source="$(var.ExcelAddinSample.TargetDir)\ExcelApi.dll" />
+      </Component>
+      <Component Id="NetOfficeNetOfficeComponent">
+        <File Id="NetOfficeNetOfficeFile" Source="$(var.ExcelAddinSample.TargetDir)\NetOffice.dll" />
+      </Component>
+      <Component Id="NetOfficeOfficeApiComponent">
+        <File Id="NetOfficeOfficeApiFile" Source="$(var.ExcelAddinSample.TargetDir)\OfficeApi.dll" />
+      </Component>
+      <Component Id="NetOfficeVBIDEApiComponent">
+        <File Id="NetOfficeVBIDEApiFile" Source="$(var.ExcelAddinSample.TargetDir)\VBIDEApi.dll" />
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="ProductRegistryComponents" Directory="INSTALLFOLDER">
+      <Component Id="ExcelAddin_ComClass_Component">
+        <Class Id="{121A6EA7-AD5F-471B-A750-F4D6280472C0}"
+               Context="InprocServer32"
+               Description="NetOffice Excel Add-in"
+               ThreadingModel="both"
+               ForeignServer="mscoree.dll">
+          <ProgId Id="NetOffice.ExcelAddinInstaller" Description="NetOffice Excel Add-in" />
+        </Class>
+
+        <RegistryKey Root="HKCR" Key="CLSID\{121A6EA7-AD5F-471B-A750-F4D6280472C0}">
+          <RegistryValue Key="Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+
+          <RegistryValue Key="InprocServer32\1.0.0.0" Name="Class" Value="ExcelAddinSample.ExcelAddin" Type="string" Action="write" />
+          <RegistryValue Key="InprocServer32\1.0.0.0" Name="Assembly" Value="$(var.ExcelAddinSample.TargetName), Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+          <RegistryValue Key="InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+          <RegistryValue Key="InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#ExcelAddinSampleFile]" Type="string" Action="write" />
+
+          <RegistryValue Key="InprocServer32" Name="Class" Value="ExcelAddinSample.ExcelAddin" Type="string" Action="write" />
+          <RegistryValue Key="InprocServer32" Name="Assembly" Value="$(var.ExcelAddinSample.TargetName), Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+          <RegistryValue Key="InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+          <RegistryValue Key="InprocServer32" Name="CodeBase" Value="file:///[#ExcelAddinSampleFile]" Type="string" Action="write" />
+        </RegistryKey>
+      </Component>
+
+      <Component Id="ExcelAddin_ExcelRegistration_Component">
+        <RegistryKey Root="HKLM" Key="Software\Microsoft\Office\Excel\Addins\NetOffice.ExcelAddinInstaller">
+          <RegistryValue Name="FriendlyName" Value="NetOffice Excel Add-in" Type="string" Action="write" KeyPath="yes" />
+          <RegistryValue Name="Description" Value="NetOffice Excel Add-in sample installer." Type="string" Action="write" />
+          <RegistryValue Name="LoadBehavior" Value="3" Type="integer" Action="write" />
+        </RegistryKey>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
