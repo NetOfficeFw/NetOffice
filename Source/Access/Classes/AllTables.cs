@@ -60,7 +60,7 @@ namespace NetOffice.AccessApi
         }
         
         #endregion
-        		
+
 		#region Construction
 
 		///<param name="factory">current used factory core</param>
@@ -129,9 +129,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		#endregion
-       
 
 		#pragma warning restore
 	}
 }
-

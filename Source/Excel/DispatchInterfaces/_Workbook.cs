@@ -26,7 +26,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public _Workbook_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -35,7 +35,7 @@ namespace NetOffice.ExcelApi
 		public _Workbook_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -53,7 +53,7 @@ namespace NetOffice.ExcelApi
 		{
 
 		}
-		
+
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Workbook_(ICOMObject replacedObject) : base(replacedObject)
@@ -67,13 +67,13 @@ namespace NetOffice.ExcelApi
 		public _Workbook_() : base()
 		{
 		}
-		
+
 		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Workbook_(string progId) : base(progId)
 		{
 		}
-		
+
 		#endregion
 
 		#region Properties
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi
 	}
 
 	/// <summary>
-	/// DispatchInterface _Workbook 
+	/// DispatchInterface _Workbook
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
@@ -160,9 +160,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
 		#region Ctor
 
 		/// <param name="factory">current used factory core</param>
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public _Workbook(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi
 		public _Workbook(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
-		
+
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -204,26 +204,26 @@ namespace NetOffice.ExcelApi
 		public _Workbook(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Workbook(ICOMObject replacedObject) : base(replacedObject)
 		{
 		}
-		
+
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Workbook() : base()
 		{
 		}
-		
+
 		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Workbook(string progId) : base(progId)
 		{
 		}
-		
+
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>
@@ -1363,7 +1363,7 @@ namespace NetOffice.ExcelApi
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProject>(this, "VBProject", NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType);
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProject>(this, "VBProject");
 			}
 		}
 
@@ -4830,7 +4830,7 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImport(string url, out NetOffice.ExcelApi.XmlMap importMap, object overwrite, object destination)
 		{
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);            
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);
             object[] paramsArray = Invoker.ValidateParamsArray(url, new object(), overwrite, destination);
             object returnItem = Invoker.MethodReturn(this, "XmlImport", paramsArray, modifiers);
             if (paramsArray[1] is MarshalByRefObject)
@@ -4895,7 +4895,7 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, out NetOffice.ExcelApi.XmlMap importMap, object overwrite, object destination)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);			
+			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(data, new object(), overwrite, destination);
 			object returnItem = Invoker.MethodReturn(this, "XmlImportXml", paramsArray, modifiers);
             if (paramsArray[1] is MarshalByRefObject)
@@ -4938,7 +4938,7 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, out NetOffice.ExcelApi.XmlMap importMap, object overwrite)
 		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);			 
+			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
 			object[] paramsArray = Invoker.ValidateParamsArray(data, new object(), overwrite);
 			object returnItem = Invoker.MethodReturn(this, "XmlImportXml", paramsArray, modifiers);
             if (paramsArray[1] is MarshalByRefObject)

@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	/// <summary>
-	/// CoClass CustomXMLSchemaCollection 
+	/// CoClass CustomXMLSchemaCollection
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860324.aspx </remarks>
@@ -24,7 +24,7 @@ namespace NetOffice.OfficeApi
 		#pragma warning disable
 
 		#region Fields
-		
+
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
         private static Type _type;
@@ -58,9 +58,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        		
+
 		#region Construction
 
 		///<param name="factory">current used factory core</param>
@@ -68,14 +68,14 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public CustomXMLSchemaCollection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public CustomXMLSchemaCollection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			
+
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CustomXMLSchemaCollection(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
 
 		///<param name="parentObject">object there has created the proxy</param>
@@ -94,31 +94,31 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CustomXMLSchemaCollection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CustomXMLSchemaCollection(ICOMObject replacedObject) : base(replacedObject)
 		{
-			
+
 		}
-		
+
 		/// <summary>
-        /// Creates a new instance of CustomXMLSchemaCollection 
-        /// </summary>		
+        /// Creates a new instance of CustomXMLSchemaCollection
+        /// </summary>
 		public CustomXMLSchemaCollection():base("Office.CustomXMLSchemaCollection")
 		{
-			
+
 		}
-		
+
 		/// <summary>
         /// Creates a new instance of CustomXMLSchemaCollection
         /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CustomXMLSchemaCollection(string progId):base(progId)
 		{
-			
+
 		}
 
 		#endregion
@@ -129,9 +129,7 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		#endregion
-       
 
 		#pragma warning restore
 	}
 }
-

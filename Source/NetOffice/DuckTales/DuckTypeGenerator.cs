@@ -40,7 +40,7 @@ namespace NetOffice.Duck
                 args.ReferencedAssemblies.Add("mscorlib.dll");
                 args.ReferencedAssemblies.Add("NetOffice.dll");
                 args.ReferencedAssemblies.Add("IExcelApi.dll");
-                
+
                 args.ReferencedAssemblies.Add(ProxyInterface.AssemblyName);
 
                 string[] modules = GenerateClassModule();
@@ -106,8 +106,7 @@ namespace NetOffice.Duck
                     {
 
                     }
-                    
-                 
+
                     MethodInfo[] methods = ProxyInterface.Methods;
                     using (DuckTypeMethodsGenerator methodsGenerator = new DuckTypeMethodsGenerator(classBuilder, methods))
                     {
@@ -128,7 +127,7 @@ namespace NetOffice.Duck
                     }
                 }
             }
-          
+
             return new string[] { classBuilder.ToString(), issueBuilder.ToString() };
         }
     }

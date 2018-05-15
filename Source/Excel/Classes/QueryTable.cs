@@ -15,7 +15,7 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	/// <summary>
-	/// CoClass QueryTable 
+	/// CoClass QueryTable
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198271.aspx </remarks>
@@ -28,12 +28,12 @@ namespace NetOffice.ExcelApi
 		#pragma warning disable
 
 		#region Fields
-		
+
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
         private static Type _type;
         private Events.RefreshEvents_SinkHelper _refreshEvents_SinkHelper;
-	
+
 		#endregion
 
 		#region Type Information
@@ -49,7 +49,7 @@ namespace NetOffice.ExcelApi
                 return LateBindingApiWrapperType;
             }
         }
-       
+
 		/// <summary>
         /// Type Cache
         /// </summary>
@@ -63,9 +63,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        		
+
 		#region Construction
 
 		///<param name="factory">current used factory core</param>
@@ -73,14 +73,14 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public QueryTable(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public QueryTable(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			
+
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public QueryTable(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
 
 		///<param name="parentObject">object there has created the proxy</param>
@@ -99,31 +99,31 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public QueryTable(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public QueryTable(ICOMObject replacedObject) : base(replacedObject)
 		{
-			
+
 		}
-		
+
 		/// <summary>
-        /// Creates a new instance of QueryTable 
-        /// </summary>		
+        /// Creates a new instance of QueryTable
+        /// </summary>
 		public QueryTable():base("Excel.QueryTable")
 		{
-			
+
 		}
-		
+
 		/// <summary>
         /// Creates a new instance of QueryTable
         /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public QueryTable(string progId):base(progId)
 		{
-			
+
 		}
 
 		#endregion
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823150.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event QueryTable_BeforeRefreshEventHandler BeforeRefreshEvent
+		public virtual event QueryTable_BeforeRefreshEventHandler BeforeRefreshEvent
 		{
 			add
 			{
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835922.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event QueryTable_AfterRefreshEventHandler AfterRefreshEvent
+        public virtual event QueryTable_AfterRefreshEventHandler AfterRefreshEvent
 		{
 			add
 			{
@@ -180,22 +180,22 @@ namespace NetOffice.ExcelApi
 		}
 
 		#endregion
-       
-	    #region IEventBinding
-        
+
+        #region IEventBinding
+
 		/// <summary>
         /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
+		public virtual void CreateEventBridge()
         {
 			if(false == Factory.Settings.EnableEvents)
 				return;
-	
-			if (null != _connectPoint)
+
+            if (null != _connectPoint)
 				return;
-	
-            if (null == _activeSinkId)
+
+	        if (null == _activeSinkId)
 				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.RefreshEvents_SinkHelper.Id);
 
 
@@ -203,16 +203,16 @@ namespace NetOffice.ExcelApi
 			{
 				_refreshEvents_SinkHelper = new Events.RefreshEvents_SinkHelper(this, _connectPoint);
 				return;
-			} 
+			}
         }
 
         /// <summary>
-        /// The instance use currently an event listener 
+        /// The instance use currently an event listener
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
+        public virtual bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -222,9 +222,9 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public virtual bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi
         /// <param name="eventName">name of the event</param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
+        public virtual bool HasEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
@@ -242,20 +242,20 @@ namespace NetOffice.ExcelApi
         /// Target methods from its actual event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
+        public virtual Delegate[] GetEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
+        public virtual int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
          }
-        
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+        public virtual int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
 		}
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
+        public virtual void DisposeEventBridge()
         {
 			if( null != _refreshEvents_SinkHelper)
 			{
@@ -281,10 +281,9 @@ namespace NetOffice.ExcelApi
 
 			_connectPoint = null;
 		}
-        
+
         #endregion
 
 		#pragma warning restore
 	}
 }
-

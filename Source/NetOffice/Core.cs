@@ -751,202 +751,165 @@ namespace NetOffice
 
         #endregion
 
+        #region Duck (Experimental)
+
+        ///// <summary>
+        ///// Creates a new duck typing instance by given generic type argument
+        ///// </summary>
+        ///// <typeparam name="T">interface result type</typeparam>
+        ///// <returns>new instance</returns>
+        ///// <exception cref="ArgumentException">throws when ComProgIdAttribute is missing</exception>
+        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
+        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        ///// <exception cref="COMException">throws when its failed to recieve progID Type</exception>
+        //public T CreateDuckObject<T>() where T : ICOMObject
+        //{
+        //    object[] attributes = typeof(T).GetCustomAttributes(typeof(NetOffice.Attributes.ComProgIdAttribute), false);
+        //    if (attributes.Length > 0)
+        //    {
+        //        NetOffice.Attributes.ComProgIdAttribute attribute = attributes[0] as NetOffice.Attributes.ComProgIdAttribute;
+        //        return CreateDuckObject<T>(attribute.Value);
+        //    }
+        //    else
+        //        throw new ArgumentException("ComProgIdAttribute is missing.");
+        //}
+
+        ///// <summary>
+        ///// Creates a new duck typing instance by given generic type argument
+        ///// </summary>
+        ///// <typeparam name="T">interface result type</typeparam>
+        ///// <param name="progId">progId to create</param>
+        ///// <returns>new instance</returns>
+        ///// <exception cref="ArgumentNullException">throws when progId is null or empty</exception>
+        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
+        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        ///// <exception cref="COMException">throws when its failed to recieve progID Type</exception>
+        //public T CreateDuckObject<T>(string progId) where T : ICOMObject
+        //{
+        //    if (String.IsNullOrWhiteSpace(progId))
+        //        throw new ArgumentNullException("progId");
+        //    Type type = System.Type.GetTypeFromProgID(progId, false);
+        //    if (null == type)
+        //        throw new COMException("Unable to recieve progId Type:<" + progId + ">");
+
+        //    object interopProxy = null;
+
+        //    try
+        //    {
+        //        interopProxy = Activator.CreateInstance(type);
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        throw new CreateInstanceException(exception);
+        //    }
+
+        //    return CreateDuckObjectFromComProxy<T>(interopProxy);
+        //}
+
+        ///// <summary>
+        ///// Creates a new duck typing instance by given generic type argument
+        ///// </summary>
+        ///// <typeparam name="T">interface result type</typeparam>
+        ///// <param name="caller"></param>
+        ///// <param name="comProxy">new created proxy</param>
+        ///// <returns>new instance</returns>
+        ///// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
+        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
+        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        //public T CreateDuckObjectFromComProxy<T>(ICOMObject caller, object comProxy) where T : ICOMObject
+        //{
+        //    return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
+        //}
+
+        ///// <summary>
+        ///// Creates a new duck typing instance by given generic type argument
+        ///// </summary>
+        ///// <typeparam name="T">interface result type</typeparam>
+        ///// <param name="comProxy">new created proxy</param>
+        ///// <returns>new instance</returns>
+        ///// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
+        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
+        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        //public T CreateDuckObjectFromComProxy<T>(object comProxy) where T : ICOMObject
+        //{
+        //    return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
+        //}
+
+        ///// <summary>
+        ///// Creates a new duck typing instance
+        ///// </summary>
+        ///// <param name="caller">parent there have created comProxy</param>
+        ///// <param name="comProxy">new created proxy</param>
+        ///// <returns>new instance</returns>
+        ///// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
+        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
+        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        ///// <exception cref="FactoryException">throws when its failed to recieve factory info</exception>
+        //public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy)
+        //{
+        //    if (null == comProxy)
+        //        throw new ArgumentNullException("comProxy");
+
+        //    CheckInitialize();
+
+        //    IFactoryInfo factoryInfo = GetDuckFactoryInfo(caller, comProxy, true);
+        //    string className = TypeDescriptor.GetClassName(comProxy);
+        //    string fullClassName = factoryInfo.AssemblyNamespace + ".I" + className;
+
+        //    Type wrapperInterfaceType = factoryInfo.Assembly.GetType(fullClassName, true, true);
+        //    return CreateDuckObjectFromComProxy(caller, comProxy, wrapperInterfaceType);
+        //}
+
+        ///// <summary>
+        ///// Creates a new duck typing instance which implement the given interfaces.
+        ///// </summary>
+        ///// <param name="caller">parent there have created comProxy</param>
+        ///// <param name="comProxy">new created proxy</param>
+        ///// <param name="wrapperInterfaceType">interface which is implemented by the returning instance. the interface must inherit from ICOMObject</param>
+        ///// <returns>new instance</returns>
+        ///// <exception cref="ArgumentNullException">throws when comProxy, wrapperInterfaceType is null</exception>
+        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
+        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        //public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy, Type wrapperInterfaceType)
+        //{
+        //    if (null == comProxy)
+        //        throw new ArgumentNullException("comProxy");
+        //    if (null == wrapperInterfaceType)
+        //        throw new ArgumentNullException("wrapperInterfaceType");
+
+        //    Type instanceType = null;
+        //    lock (_comObjectLock)
+        //    {
+        //        if (!DuckingCache.TryGetValue(wrapperInterfaceType, out instanceType))
+        //        {
+        //            try
+        //            {
+        //                DuckInterface proxyInterface = new DuckInterface(wrapperInterfaceType);
+        //                DuckTypeGenerator implementationTypeGenerator = new DuckTypeGenerator(proxyInterface);
+        //                instanceType = implementationTypeGenerator.GenerateType();
+        //                DuckingCache.Add(wrapperInterfaceType, instanceType);
+        //            }
+        //            catch (Exception exception)
+        //            {
+        //                throw new DuckException(exception);
+        //            }
+        //        }
+        //    }
+
+        //    try
+        //    {
+        //        ICOMObject newInstance = Activator.CreateInstance(instanceType, new object[] { this, caller, comProxy }) as ICOMObject;
+        //        return newInstance;
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        throw new CreateInstanceException(exception);
+        //    }
+        //}
+
+        #endregion
+
         #region Create COMObject Methods
-
-        /// <summary>
-        /// Creates a new COMProxyShare instance
-        /// </summary>
-        /// <param name="sender">requested instance</param>
-        /// <param name="comProxy">inner proxy rcw</param>
-        ///  <param name="isEnumerator">indicates rcw is an enumerator</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="CreateCOMProxyShareException">throws when its failed to create instance</exception>
-        public COMProxyShare CreateNewProxyShare(ICOMObject sender, object comProxy, bool isEnumerator)
-        {
-            try
-            {
-                COMProxyShare instance = RaiseCreateProxyShare(sender, isEnumerator);
-                return null != instance ? instance : new COMProxyShare(this, comProxy, isEnumerator);
-            }
-            catch (Exception exception)
-            {
-                throw new CreateCOMProxyShareException(exception);
-            }
-        }
-
-        /// <summary>
-        /// Creates a new COMProxyShare instance
-        /// </summary>
-        /// <param name="sender">requested instance</param>
-        /// <param name="comProxy">inner proxy rcw</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="CreateCOMProxyShareException">throws when its failed to create instance</exception>
-        public COMProxyShare CreateNewProxyShare(ICOMObject sender, object comProxy)
-        {
-            try
-            {
-                COMProxyShare instance = RaiseCreateProxyShare(sender, false);
-                return null != instance ? instance : new COMProxyShare(this, comProxy);
-            }
-            catch (Exception exception)
-            {
-                throw new CreateCOMProxyShareException(exception);
-            }
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance by given generic type argument
-        /// </summary>
-        /// <typeparam name="T">interface result type</typeparam>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentException">throws when ComProgIdAttribute is missing</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        /// <exception cref="COMException">throws when its failed to recieve progID Type</exception>
-        public T CreateDuckObject<T>() where T : ICOMObject
-        {
-            object[] attributes = typeof(T).GetCustomAttributes(typeof(NetOffice.Attributes.ComProgIdAttribute), false);
-            if (attributes.Length > 0)
-            {
-                NetOffice.Attributes.ComProgIdAttribute attribute = attributes[0] as NetOffice.Attributes.ComProgIdAttribute;
-                return CreateDuckObject<T>(attribute.Value);
-            }
-            else
-                throw new ArgumentException("ComProgIdAttribute is missing.");
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance by given generic type argument
-        /// </summary>
-        /// <typeparam name="T">interface result type</typeparam>
-        /// <param name="progId">progId to create</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when progId is null or empty</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        /// <exception cref="COMException">throws when its failed to recieve progID Type</exception>
-        public T CreateDuckObject<T>(string progId) where T : ICOMObject
-        {
-            if (String.IsNullOrWhiteSpace(progId))
-                throw new ArgumentNullException("progId");
-            Type type = System.Type.GetTypeFromProgID(progId, false);
-            if (null == type)
-                throw new COMException("Unable to recieve progId Type:<" + progId + ">");
-
-            object interopProxy = null;
-
-            try
-            {
-                interopProxy = Activator.CreateInstance(type);
-            }
-            catch (Exception exception)
-            {
-                throw new CreateInstanceException(exception);
-            }
-
-            return CreateDuckObjectFromComProxy<T>(interopProxy);
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance by given generic type argument
-        /// </summary>
-        /// <typeparam name="T">interface result type</typeparam>
-        /// <param name="caller"></param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public T CreateDuckObjectFromComProxy<T>(ICOMObject caller, object comProxy) where T : ICOMObject
-        {
-            return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance by given generic type argument
-        /// </summary>
-        /// <typeparam name="T">interface result type</typeparam>
-        /// <param name="comProxy">new created proxy</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public T CreateDuckObjectFromComProxy<T>(object comProxy) where T : ICOMObject
-        {
-            return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        /// <exception cref="FactoryException">throws when its failed to recieve factory info</exception>
-        public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy)
-        {
-            if (null == comProxy)
-                throw new ArgumentNullException("comProxy");
-
-            CheckInitialize();
-
-            IFactoryInfo factoryInfo = GetDuckFactoryInfo(caller, comProxy, true);
-            string className = TypeDescriptor.GetClassName(comProxy);
-            string fullClassName = factoryInfo.AssemblyNamespace + ".I" + className;
-
-            Type wrapperInterfaceType = factoryInfo.Assembly.GetType(fullClassName, true, true);
-            return CreateDuckObjectFromComProxy(caller, comProxy, wrapperInterfaceType);
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance which implement the given interfaces.
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="wrapperInterfaceType">interface which is implemented by the returning instance. the interface must inherit from ICOMObject</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when comProxy, wrapperInterfaceType is null</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy, Type wrapperInterfaceType)
-        {
-            if (null == comProxy)
-                throw new ArgumentNullException("comProxy");
-            if (null == wrapperInterfaceType)
-                throw new ArgumentNullException("wrapperInterfaceType");
-
-            Type instanceType = null;
-            lock (_comObjectLock)
-            {
-                if (!DuckingCache.TryGetValue(wrapperInterfaceType, out instanceType))
-                {
-                    try
-                    {
-                        DuckInterface proxyInterface = new DuckInterface(wrapperInterfaceType);
-                        DuckTypeGenerator implementationTypeGenerator = new DuckTypeGenerator(proxyInterface);
-                        instanceType = implementationTypeGenerator.GenerateType();
-                        DuckingCache.Add(wrapperInterfaceType, instanceType);
-                    }
-                    catch (Exception exception)
-                    {
-                        throw new DuckException(exception);
-                    }
-                }
-            }
-
-            try
-            {
-                ICOMObject newInstance = Activator.CreateInstance(instanceType, new object[] { this, caller, comProxy }) as ICOMObject;
-                return newInstance;
-            }
-            catch (Exception exception)
-            {
-                throw new CreateInstanceException(exception);
-            }
-        }
 
         /// <summary>
         /// Creates a new ICOMObject based on wrapperClassType
@@ -1057,6 +1020,7 @@ namespace NetOffice
                 throw;
             }
         }
+
 
         /// <summary>
         /// Creates a new ICOMObject based on classType of comProxy. The method use Settings.EnableDynamicEventArguments to reflect dynamics
@@ -1289,6 +1253,7 @@ namespace NetOffice
             }
         }
 
+
         /// <summary>
         /// Try to replace new created instance on CreateInstance event
         /// </summary>
@@ -1314,6 +1279,48 @@ namespace NetOffice
             }
 
             return instance;
+        }
+
+
+        /// <summary>
+        /// Creates a new COMProxyShare instance
+        /// </summary>
+        /// <param name="sender">requested instance</param>
+        /// <param name="comProxy">inner proxy rcw</param>
+        ///  <param name="isEnumerator">indicates rcw is an enumerator</param>
+        /// <returns>new instance</returns>
+        /// <exception cref="CreateCOMProxyShareException">throws when its failed to create instance</exception>
+        public COMProxyShare CreateNewProxyShare(ICOMObject sender, object comProxy, bool isEnumerator)
+        {
+            try
+            {
+                COMProxyShare instance = RaiseCreateProxyShare(sender, isEnumerator);
+                return null != instance ? instance : new COMProxyShare(this, comProxy, isEnumerator);
+            }
+            catch (Exception exception)
+            {
+                throw new CreateCOMProxyShareException(exception);
+            }
+        }
+
+        /// <summary>
+        /// Creates a new COMProxyShare instance
+        /// </summary>
+        /// <param name="sender">requested instance</param>
+        /// <param name="comProxy">inner proxy rcw</param>
+        /// <returns>new instance</returns>
+        /// <exception cref="CreateCOMProxyShareException">throws when its failed to create instance</exception>
+        public COMProxyShare CreateNewProxyShare(ICOMObject sender, object comProxy)
+        {
+            try
+            {
+                COMProxyShare instance = RaiseCreateProxyShare(sender, false);
+                return null != instance ? instance : new COMProxyShare(this, comProxy);
+            }
+            catch (Exception exception)
+            {
+                throw new CreateCOMProxyShareException(exception);
+            }
         }
 
         #endregion

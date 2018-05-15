@@ -2806,7 +2806,7 @@ namespace NetOffice.ExcelApi
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType);
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE");
 			}
 		}
 

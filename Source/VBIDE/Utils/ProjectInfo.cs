@@ -20,7 +20,7 @@ namespace VBIDEApi.Utils
         private NetOfficeAssemblyAttribute _assemblyAttribute;
         private Type[]	  _exportedTypes;
 		private string[]  _dependents;
-		
+
         #endregion
 
         #region Ctor

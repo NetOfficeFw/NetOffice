@@ -13,25 +13,25 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	/// <summary>
-	/// CoClass _ControlInReportEvents 
+	/// CoClass _ControlInReportEvents
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.__ControlInReportEvents_SinkHelper), typeof(Events._DispControlInReportEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.__ControlInReportEvents), typeof(Events._DispControlInReportEvents))]
-    public class _ControlInReportEvents : _Control, IEventBinding
+    public class _ControlInReportEvents : _Control
 	{
 		#pragma warning disable
 
 		#region Fields
-		
+
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
         private static Type _type;
         private Events.__ControlInReportEvents_SinkHelper ___ControlInReportEvents_SinkHelper;
         private Events._DispControlInReportEvents_SinkHelper __DispControlInReportEvents_SinkHelper;
-	
+
 		#endregion
 
 		#region Type Information
@@ -47,7 +47,7 @@ namespace NetOffice.AccessApi
                 return LateBindingApiWrapperType;
             }
         }
-		
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -61,9 +61,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        		
+
 		#region Construction
 
 		///<param name="factory">current used factory core</param>
@@ -71,14 +71,14 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public _ControlInReportEvents(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public _ControlInReportEvents(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			
+
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -88,7 +88,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _ControlInReportEvents(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
 
 		///<param name="parentObject">object there has created the proxy</param>
@@ -97,31 +97,31 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _ControlInReportEvents(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _ControlInReportEvents(ICOMObject replacedObject) : base(replacedObject)
 		{
-			
+
 		}
-		
+
 		/// <summary>
-        /// Creates a new instance of _ControlInReportEvents 
-        /// </summary>		
+        /// Creates a new instance of _ControlInReportEvents
+        /// </summary>
 		public _ControlInReportEvents():base("Access._ControlInReportEvents")
 		{
-			
+
 		}
-		
+
 		/// <summary>
         /// Creates a new instance of _ControlInReportEvents
         /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public _ControlInReportEvents(string progId):base(progId)
 		{
-			
+
 		}
 
 		#endregion
@@ -132,122 +132,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		#endregion
-       
-	    #region IEventBinding
-        
-		/// <summary>
-        /// Creates active sink helper
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
-        {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
-            if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.__ControlInReportEvents_SinkHelper.Id, Events._DispControlInReportEvents_SinkHelper.Id);
-
-
-			if(Events.__ControlInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				___ControlInReportEvents_SinkHelper = new Events.__ControlInReportEvents_SinkHelper(this, _connectPoint);
-				return;
-			}
-
-			if(Events._DispControlInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				__DispControlInReportEvents_SinkHelper = new Events._DispControlInReportEvents_SinkHelper(this, _connectPoint);
-				return;
-			} 
-        }
-
-        /// <summary>
-        /// The instance use currently an event listener 
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
-        {
-            get 
-            {
-                return (null != _connectPoint);
-            }
-        }
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <returns>true if one or more event is active, otherwise false</returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
-        }
-
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <param name="eventName">name of the event</param>
-        /// <returns></returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-
-        /// <summary>
-        /// Target methods from its actual event recipients
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-       
-        /// <summary>
-        /// Returns the current count of event recipients
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
-        /// <summary>
-        /// Raise an instance event
-        /// </summary>
-        /// <param name="eventName">name of the event without 'Event' at the end</param>
-        /// <param name="paramsArray">custom arguments for the event</param>
-        /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
-            return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
-        /// <summary>
-        /// Stop listening events for the instance
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
-        {
-			if( null != ___ControlInReportEvents_SinkHelper)
-			{
-				___ControlInReportEvents_SinkHelper.Dispose();
-				___ControlInReportEvents_SinkHelper = null;
-			}
-			if( null != __DispControlInReportEvents_SinkHelper)
-			{
-				__DispControlInReportEvents_SinkHelper.Dispose();
-				__DispControlInReportEvents_SinkHelper = null;
-			}
-
-			_connectPoint = null;
-		}
-        
-        #endregion
 
 		#pragma warning restore
 	}
 }
-

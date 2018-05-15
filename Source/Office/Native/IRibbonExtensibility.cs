@@ -32,6 +32,3 @@ namespace NetOffice.OfficeApi.Native
 	}
     #pragma warning restore
 }
-
-
-

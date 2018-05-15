@@ -1726,8 +1726,10 @@ namespace NetOffice
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="knownType">type of T - given to increase performance</param>
-        public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType) where T : class, ICOMObject
+        public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType = null) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, _emptyParams);
         }
 
@@ -1741,6 +1743,8 @@ namespace NetOffice
         /// <param name="argument">argument as any</param>
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             object[] args = Invoker.ValidateParamsArray(argument);
             return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
@@ -1756,6 +1760,8 @@ namespace NetOffice
         /// <param name="argument2">argument as any</param>
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
             return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
@@ -1772,6 +1778,8 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
             return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
@@ -1789,6 +1797,8 @@ namespace NetOffice
         /// <param name="argument4">argument as any</param>
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
             return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
@@ -1803,6 +1813,8 @@ namespace NetOffice
         /// <param name="paramsArray">arguments as any</param>
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object[] paramsArray) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
@@ -1817,6 +1829,8 @@ namespace NetOffice
         /// <param name="validatedArgs">validated arguments as any</param>
         internal static T ExecuteKnownReferencePropertyGetInternal<T>(this Core value, ICOMObject caller, string name, Type knownType, object[] validatedArgs) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return value.CreateKnownObjectFromComProxy(caller, returnItem, knownType) as T;
         }

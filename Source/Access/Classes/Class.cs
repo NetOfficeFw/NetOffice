@@ -15,7 +15,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	/// <summary>
-	/// CoClass Class 
+	/// CoClass Class
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -27,12 +27,12 @@ namespace NetOffice.AccessApi
 		#pragma warning disable
 
 		#region Fields
-		
+
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
         private static Type _type;
         private Events._DummyEvents_SinkHelper __DummyEvents_SinkHelper;
-	
+
 		#endregion
 
 		#region Type Information
@@ -48,7 +48,7 @@ namespace NetOffice.AccessApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -62,9 +62,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        		
+
 		#region Construction
 
 		///<param name="factory">current used factory core</param>
@@ -72,14 +72,14 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Class(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
-			
+
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Class(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			
+
 		}
 
 		///<param name="factory">current used factory core</param>
@@ -89,7 +89,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Class(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
 
 		///<param name="parentObject">object there has created the proxy</param>
@@ -98,31 +98,31 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Class(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			
+
 		}
-		
+
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Class(ICOMObject replacedObject) : base(replacedObject)
 		{
-			
+
 		}
-		
+
 		/// <summary>
-        /// Creates a new instance of Class 
-        /// </summary>		
+        /// Creates a new instance of Class
+        /// </summary>
 		public Class():base("Access.Class")
 		{
-			
+
 		}
-		
+
 		/// <summary>
         /// Creates a new instance of Class
         /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Class(string progId):base(progId)
 		{
-			
+
 		}
 
 		#endregion
@@ -177,9 +177,9 @@ namespace NetOffice.AccessApi
 		}
 
 		#endregion
-       
+
 	    #region IEventBinding
-        
+
 		/// <summary>
         /// Creates active sink helper
         /// </summary>
@@ -188,10 +188,10 @@ namespace NetOffice.AccessApi
         {
 			if(false == Factory.Settings.EnableEvents)
 				return;
-	
+
 			if (null != _connectPoint)
 				return;
-	
+
             if (null == _activeSinkId)
 				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._DummyEvents_SinkHelper.Id);
 
@@ -200,28 +200,29 @@ namespace NetOffice.AccessApi
 			{
 				__DummyEvents_SinkHelper = new Events._DummyEvents_SinkHelper(this, _connectPoint);
 				return;
-			} 
+			}
         }
 
         /// <summary>
-        /// The instance use currently an event listener 
+        /// The instance use currently an event listener
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
         }
+
         /// <summary>
         /// Instance has one or more event recipients
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -243,16 +244,16 @@ namespace NetOffice.AccessApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
          }
-        
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -264,6 +265,7 @@ namespace NetOffice.AccessApi
 		{
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
 		}
+
         /// <summary>
         /// Stop listening events for the instance
         /// </summary>
@@ -278,10 +280,9 @@ namespace NetOffice.AccessApi
 
 			_connectPoint = null;
 		}
-        
+
         #endregion
 
 		#pragma warning restore
 	}
 }
-

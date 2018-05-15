@@ -12,7 +12,7 @@ namespace NetOffice
         and it looks like thats bigger than push each argument on stack until it is less than 8 arguments.
 
         In order to shrink the size of API assemblies as best as possible - we give 8 fixed argument overloads too.
-        (API assemblies in 1.7.4.1 call fixed arguments overloads whenever its possible)
+        (API assemblies in 1.7.4.1 and above call fixed arguments overloads whenever its possible)
     */
 
     /// <summary>
@@ -1974,8 +1974,10 @@ namespace NetOffice
         /// <param name="caller">calling instance</param>
         /// <param name="name">method name</param>
         /// <param name="knownType">type of T to increase performance</param>
-        public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType) where T : class, ICOMObject
+        public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType = null) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, _emptyParams);
         }
 
@@ -2003,6 +2005,8 @@ namespace NetOffice
         /// <param name="argument2">argument as any</param>
         public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, new object[] { argument1, argument2 });
         }
 
@@ -2018,6 +2022,8 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, new object[] { argument1, argument2, argument3 });
         }
 
@@ -2034,6 +2040,8 @@ namespace NetOffice
         /// <param name="argument4">argument as any</param>
         public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, new object[] { argument1, argument2, argument3, argument4 });
         }
 
@@ -2052,6 +2060,8 @@ namespace NetOffice
         public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4,
             object argument5) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, new object[] { argument1, argument2, argument3, argument4,
                 argument5 });
         }
@@ -2072,6 +2082,8 @@ namespace NetOffice
         public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4,
             object argument5, object argument6) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, new object[] { argument1, argument2, argument3, argument4,
                 argument5, argument6 });
         }
@@ -2093,6 +2105,8 @@ namespace NetOffice
         public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4,
             object argument5, object argument6, object argument7) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, new object[] { argument1, argument2, argument3, argument4,
                 argument5, argument6, argument7 });
         }
@@ -2115,6 +2129,8 @@ namespace NetOffice
         public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4,
             object argument5, object argument6, object argument7, object argument8) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, new object[] { argument1, argument2, argument3, argument4,
                 argument5, argument6, argument7, argument8 });
         }
@@ -2129,6 +2145,8 @@ namespace NetOffice
         /// <param name="paramsArray">arguments as any</param>
         public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object[] paramsArray) where T : class, ICOMObject
         {
+            if (null == knownType)
+                knownType = typeof(T);
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             object returnItem = value.Invoker.MethodReturn(caller, name, args);
             return value.CreateKnownObjectFromComProxy(caller, returnItem, knownType) as T;

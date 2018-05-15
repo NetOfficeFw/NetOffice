@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	/// <summary>
-	/// CoClass AllQueries 
+	/// CoClass AllQueries
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198048.aspx </remarks>
@@ -60,7 +60,7 @@ namespace NetOffice.AccessApi
         }
         
         #endregion
-        		
+
 		#region Construction
 
 		///<param name="factory">current used factory core</param>
@@ -129,9 +129,7 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		#endregion
-       
 
 		#pragma warning restore
 	}
 }
-

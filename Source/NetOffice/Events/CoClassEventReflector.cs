@@ -15,7 +15,7 @@ namespace NetOffice.Events
         /// Instance has one or more event recipients
         /// </summary>
         /// <param name="instance">target instance</param>
-        /// <param name="type">target instance type</param> 
+        /// <param name="type">target instance type</param>
         /// <returns>true if one or more event is active, otherwise false</returns>
         /// <exception cref="ArgumentNullException">throws when instance or type is null</exception>
         public static bool HasEventRecipients(ICOMObject instance, Type type)
@@ -44,7 +44,7 @@ namespace NetOffice.Events
         /// Instance has one or more event recipients
         /// </summary>
         /// <param name="instance">target instance</param>
-        /// <param name="type">target instance type</param> 
+        /// <param name="type">target instance type</param>
         /// <param name="eventName">name of the event</param>
         /// <returns>true if event is active, otherwise false</returns>
         /// <exception cref="ArgumentNullException">throws when instance or type is null</exception>
