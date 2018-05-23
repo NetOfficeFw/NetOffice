@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Tools
         public OfficeApi.ICTPFactory CreateCustomPanes<T,N>(Core factory, object ctpFactoryInst, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
             List<T> taskPaneInstances,  NetOffice.Tools.OnErrorHandler onError, COMObject application) where T: class where N:COMObject
         {
-            OfficeApi.ICTPFactory TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(factory, null, ctpFactoryInst);
+            OfficeApi.ICTPFactory TaskPaneFactory = factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.ICTPFactory>(null, ctpFactoryInst, typeof(NetOffice.OfficeApi.ICTPFactory));
             try
             {
                 foreach (TaskPaneInfo item in taskPanes)

@@ -534,7 +534,7 @@ namespace NetOffice.OfficeApi.Tools
 
         private void CreateCustomPanes(object CTPFactoryInst)
         {
-            TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
+            TaskPaneFactory = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.ICTPFactory>(null, CTPFactoryInst, typeof(NetOffice.OfficeApi.ICTPFactory));
             foreach (TaskPaneInfo item in TaskPanes)
             {
                 string title = item.Title;

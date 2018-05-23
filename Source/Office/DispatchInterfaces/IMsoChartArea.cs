@@ -5,397 +5,164 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface IMsoChartArea 
-	/// SupportByVersion Office, 12,14,15,16
-	/// </summary>
-	[SupportByVersion("Office", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class IMsoChartArea : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface IMsoChartArea 
+    /// SupportByVersion Office, 12,14,15,16
+    /// </summary>
+    [SupportByVersion("Office", 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public interface IMsoChartArea : ICOMObject
+    {
+        #region Properties
 
-		#region Type Information
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        string Name { get; }
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
+        object Parent { get; }
 
-        private static Type _type;
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        NetOffice.OfficeApi.IMsoBorder Border { get; }
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IMsoChartArea);
-                return _type;
-            }
-        }
-        
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        NetOffice.OfficeApi.ChartFont Font { get; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        bool Shadow { get; set; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        Double Height { get; set; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        NetOffice.OfficeApi.IMsoInterior Interior { get; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        NetOffice.OfficeApi.ChartFillFormat Fill { get; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        Double Left { get; set; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        Double Top { get; set; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        Double Width { get; set; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        object AutoScaleFont { get; set; }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        NetOffice.OfficeApi.IMsoChartFormat Format { get; }
+
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Office", 14, 15, 16)]
+        bool RoundedCorners { get; set; }
+
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        [SupportByVersion("Office", 14, 15, 16), ProxyResult]
+        object Application { get; }
+
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 14, 15, 16)]
+        Int32 Creator { get; }
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IMsoChartArea(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Methods
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IMsoChartArea(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        object Select();
 
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IMsoChartArea(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IMsoChartArea(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        object Clear();
 
-		}
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        object ClearContents();
 
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IMsoChartArea(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IMsoChartArea(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IMsoChartArea() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IMsoChartArea(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        object Copy();
 
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        object ClearFormats();
 
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.IMsoBorder Border
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoBorder>(this, "Border", NetOffice.OfficeApi.IMsoBorder.LateBindingApiWrapperType);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.ChartFont Font
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartFont>(this, "Font", NetOffice.OfficeApi.ChartFont.LateBindingApiWrapperType);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public bool Shadow
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Shadow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Shadow", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public Double Height
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Height");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.IMsoInterior Interior
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoInterior>(this, "Interior", NetOffice.OfficeApi.IMsoInterior.LateBindingApiWrapperType);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.ChartFillFormat Fill
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartFillFormat>(this, "Fill", NetOffice.OfficeApi.ChartFillFormat.LateBindingApiWrapperType);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public Double Left
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public Double Top
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public Double Width
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public object AutoScaleFont
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "AutoScaleFont");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "AutoScaleFont", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.IMsoChartFormat Format
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", NetOffice.OfficeApi.IMsoChartFormat.LateBindingApiWrapperType);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Office", 14,15,16)]
-		public bool RoundedCorners
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "RoundedCorners");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RoundedCorners", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("Office", 14,15,16), ProxyResult]
-		public object Application
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Application");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
-
-		#endregion
-
-		#region Methods
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public object Select()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Select");
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public object Clear()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Clear");
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public object ClearContents()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "ClearContents");
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public object Copy()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Copy");
-		}
-
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public object ClearFormats()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
-		}
-
-		#endregion
-
-		#pragma warning restore
-	}
+        #endregion
+    }
 }

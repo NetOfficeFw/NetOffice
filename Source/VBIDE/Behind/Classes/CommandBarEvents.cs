@@ -10,9 +10,8 @@ namespace NetOffice.VBIDEApi.Behind
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
-    [EntityType(EntityType.IsCoClass)]
-    [EventSink(typeof(EventInterfaces._dispCommandBarControlEvents_SinkHelper))]
-    [ComEventInterface(typeof(EventInterfaces._dispCommandBarControlEvents))]
+    [EntityType(EntityType.IsCoClass)]    
+    [ComEventInterface(typeof(NetOffice.VBIDEApi.EventInterfaces._dispCommandBarControlEvents))]
     internal class CommandBarEvents : NetOffice.VBIDEApi.Behind._CommandBarControlEvents, NetOffice.VBIDEApi.CommandBarEvents
     {
         #pragma warning disable

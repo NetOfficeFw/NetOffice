@@ -2,11 +2,11 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Netoffice")]
-[assembly: AssemblyDescription("Netoffice Core Api")]
+[assembly: AssemblyTitle("NetOffice")]
+[assembly: AssemblyDescription("NetOffice Core Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
-[assembly: AssemblyProduct("Netoffice")]
+[assembly: AssemblyProduct("NetOffice")]
 [assembly: AssemblyCopyright("Copyright 2012 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

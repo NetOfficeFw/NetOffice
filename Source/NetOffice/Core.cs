@@ -100,7 +100,7 @@ namespace NetOffice
         private Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
         private KnownKeyTokens _knownNetOfficeKeyTokens;
         private Assembly _thisAssembly;
-        private static Type _thisType;
+        private Type _thisType;
         private static ICOMObject[] _emptyOwnerPath = new ICOMObject[0];
         private List<IApplicationVersionProvider> _versionProviders = new List<IApplicationVersionProvider>();
         private object _versionProvidersLock = new object();
@@ -110,6 +110,9 @@ namespace NetOffice
         private object _factoryListLock = new object();
         private object _comObjectLock = new object();
         private static object _defaultLock = new object();
+
+        private object _pointListLock = new object();
+        private List<SinkHelper> _pointList = new List<SinkHelper>();
 
         #endregion
 
@@ -437,6 +440,19 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Returns the count of open sink helpers
+        /// </summary>
+        /// <returns>count of open sink helpers</returns>
+        [Category("Core"), Description("Number of currently open event sinks")]
+        public int OpenSinkHelpers
+        {
+            get
+            {
+                return PointList.Count;
+            }
+        }
+
+        /// <summary>
         /// Contains a list of all known netoffice assembly key tokens
         /// </summary>
         [Browsable(false)]
@@ -482,9 +498,20 @@ namespace NetOffice
         internal Dictionary<string, Dictionary<string, string>> EntitiesListCache { get; private set; }
 
         /// <summary>
-        /// Cache as Type ID => ParentLibrary ID
+        /// Cache as Type ID (COM) => ParentLibrary(COM Component) ID 
         /// </summary>
         internal Dictionary<Guid, Guid> HostCache { get; private set; }
+
+        /// <summary>
+        /// All open event bridges
+        /// </summary>
+        internal List<SinkHelper> PointList
+        {
+            get
+            {
+                return _pointList;
+            }
+        }
 
         /// <summary>
         /// Duck Type Cache
@@ -613,6 +640,44 @@ namespace NetOffice
                 EntitiesListCache.Clear();
                 Assemblies.Clear();
                 DependentAssemblies.Clear();
+            }
+        }
+
+        /// <summary>
+        /// Dispose all active event bridges
+        /// </summary>
+        public void DisposeAllEventBridges()
+        {
+            lock (_pointListLock)
+            {
+                foreach (SinkHelper point in PointList)
+                    point.RemoveEventBinding(false);
+                PointList.Clear();
+            }
+        }
+
+        /// <summary>
+        /// Add sink helper to the factory sinkhelper table
+        /// </summary>
+        /// <param name="point">sink helper as any</param>
+        internal void AddEventBridge(SinkHelper point)
+        {
+            lock (_pointListLock)
+            {
+                PointList.Add(point);
+            }
+        }
+
+        /// <summary>
+        /// Removes sink helper from factory sinkhelper table
+        /// </summary>
+        /// <param name="point">sink helper as any</param>
+        /// <returns>true if removed, otherwise false</returns>
+        internal bool RemoveEventBridge(SinkHelper point)
+        {
+            lock (_pointListLock)
+            {
+                return PointList.Remove(point);
             }
         }
 

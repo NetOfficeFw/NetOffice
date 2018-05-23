@@ -21,7 +21,6 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838421.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events.OLEObjectEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.OLEObjectEvents))]
     public class OLEObject : _OLEObject, IEventBinding
 	{

@@ -76,31 +76,32 @@ namespace NetOffice.Duck
         {
             get
             {
-                if (null == _isValidEventClass)
-                {
-                    object[] attributes = InterfaceType.GetCustomAttributes(typeof(EntityTypeAttribute), false);
-                    bool isCoClass = attributes.Length == 1 && (attributes[0] as EntityTypeAttribute).Type == EntityType.IsCoClass;
-                    attributes = InterfaceType.GetCustomAttributes(typeof(EventSinkAttribute), false);
-                    bool isSinkSupported = false;
-                    if (attributes.Length == 1 && (attributes[0] as EventSinkAttribute).Sinks != null)
-                    {
-                        isSinkSupported = true;
-                        Type[] sinks = (attributes[0] as EventSinkAttribute).Sinks;
-                        foreach (var item in sinks)
-                        {
-                            if (!item.IsSubclassOf(typeof(SinkHelper)))
-                            {
-                                isSinkSupported = false;
-                                break;
-                            }
-                        }
-                    }
+                return false;
+            //    if (null == _isValidEventClass)
+            //    {
+            //        object[] attributes = InterfaceType.GetCustomAttributes(typeof(EntityTypeAttribute), false);
+            //        bool isCoClass = attributes.Length == 1 && (attributes[0] as EntityTypeAttribute).Type == EntityType.IsCoClass;
+            //        attributes = InterfaceType.GetCustomAttributes(typeof(EventSinkAttribute), false);
+            //        bool isSinkSupported = false;
+            //        if (attributes.Length == 1 && (attributes[0] as EventSinkAttribute).Sinks != null)
+            //        {
+            //            isSinkSupported = true;
+            //            Type[] sinks = (attributes[0] as EventSinkAttribute).Sinks;
+            //            foreach (var item in sinks)
+            //            {
+            //                if (!item.IsSubclassOf(typeof(SinkHelper)))
+            //                {
+            //                    isSinkSupported = false;
+            //                    break;
+            //                }
+            //            }
+            //        }
 
-                    bool implementsEventBinding = InterfaceType.GetInterfaces().Any(e => e.FullName == "NetOffice.IEventBinding");
-                    _isValidEventClass = isCoClass && isSinkSupported && implementsEventBinding;
-                }
+            //        bool implementsEventBinding = InterfaceType.GetInterfaces().Any(e => e.FullName == "NetOffice.IEventBinding");
+            //        _isValidEventClass = isCoClass && isSinkSupported && implementsEventBinding;
+            //    }
 
-                return _isValidEventClass.Value;
+            //    return _isValidEventClass.Value;
             }
         }
 
@@ -108,29 +109,29 @@ namespace NetOffice.Duck
         {
             get
             {
-                if (null == _sinks)
-                {
-                    object[] attributes = InterfaceType.GetCustomAttributes(typeof(EventSinkAttribute), false);
-                    if (attributes.Length == 1)
-                    {
-                        Dictionary<string, Type> result = new Dictionary<string, Type>();
-                        EventSinkAttribute sink = (EventSinkAttribute)attributes[0];
-                        Type[] sinks = sink.Sinks;
-                        foreach (Type item in sinks)
-                        {
-                            FieldInfo staticIdField = item.GetField("Id", BindingFlags.Static | BindingFlags.Public);
-                            if (null != staticIdField)
-                            {
-                                string id = staticIdField.GetValue(null) as string;
-                                if (null != id)
-                                    result.Add(id, item);
-                            }
-                        }
-                        _sinks = result.ToArray();
-                    }
-                    else
-                        _sinks = new KeyValuePair<string, Type>[0];
-                }
+                //if (null == _sinks)
+                //{
+                //    object[] attributes = InterfaceType.GetCustomAttributes(typeof(EventSinkAttribute), false);
+                //    if (attributes.Length == 1)
+                //    {
+                //        Dictionary<string, Type> result = new Dictionary<string, Type>();
+                //        EventSinkAttribute sink = (EventSinkAttribute)attributes[0];
+                //        Type[] sinks = sink.Sinks;
+                //        foreach (Type item in sinks)
+                //        {
+                //            FieldInfo staticIdField = item.GetField("Id", BindingFlags.Static | BindingFlags.Public);
+                //            if (null != staticIdField)
+                //            {
+                //                string id = staticIdField.GetValue(null) as string;
+                //                if (null != id)
+                //                    result.Add(id, item);
+                //            }
+                //        }
+                //        _sinks = result.ToArray();
+                //    }
+                //    else
+                //        _sinks = new KeyValuePair<string, Type>[0];
+                //}
                 return _sinks;
             }
         }

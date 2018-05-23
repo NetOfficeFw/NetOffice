@@ -106,7 +106,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Returns parent library id
+        /// Returns parent library(COM component) id
         /// </summary>
         /// <param name="value">core to use</param>
         /// <param name="comProxy">new created proxy</param>

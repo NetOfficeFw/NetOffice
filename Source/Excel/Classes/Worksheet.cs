@@ -37,7 +37,6 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194464.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events.DocEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.DocEvents))]
     public class Worksheet : _Worksheet, IEventBinding
 	{

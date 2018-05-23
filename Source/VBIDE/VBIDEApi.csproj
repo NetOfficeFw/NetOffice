@@ -88,6 +88,9 @@
     <Compile Include="Behind\DispatchInterfaces\_VBProject_Old.cs" />
     <Compile Include="Behind\DispatchInterfaces\_Windows.cs" />
     <Compile Include="Behind\DispatchInterfaces\_Windows_old.cs" />
+    <Compile Include="Behind\Events\_dispCommandBarControlEvents_SinkHelper.cs" />
+    <Compile Include="Behind\Events\_dispReferencesEvents.cs" />
+    <Compile Include="Behind\Events\_dispReferences_Events.cs" />
     <Compile Include="Behind\Interfaces\_CommandBarControlEvents.cs" />
     <Compile Include="Behind\Interfaces\_ReferencesEvents.cs" />
     <Compile Include="Behind\Interfaces\_VBComponentsEvents.cs" />

@@ -271,7 +271,7 @@ namespace NetOffice.VBIDEApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = COMObject.Create<VBE>(Factory, application);
+                this.Application = Factory.CreateKnownObjectFromComProxy<VBE>(null, application, typeof(VBE));
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }

@@ -17,8 +17,6 @@ namespace NetOffice.VBIDEApi.Behind
 
         #region Fields
 
-        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-        private string _activeSinkId;
         private static Type _type;
 
         #endregion

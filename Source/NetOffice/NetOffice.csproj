@@ -79,6 +79,7 @@
     <Compile Include="Attributes\CoreOverriddenAttribute.cs" />
     <Compile Include="Attributes\CustomIndexerAttribute.cs" />
     <Compile Include="Attributes\DuplicateAttribute.cs" />
+    <Compile Include="Attributes\EventTargetAttribute.cs" />
     <Compile Include="Attributes\InternalEntityAttribute.cs" />
     <Compile Include="Attributes\KnownIssueAttribute.cs" />
     <Compile Include="Attributes\ModuleBaseTypeAttribute.cs" />
@@ -212,11 +213,6 @@
     <Compile Include="Trace\DebugConsoleMode.cs" />
     <Compile Include="CollectionsGeneric\IDisposableSequence.cs" />
     <Compile Include="Trace\PerformanceTrace.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Tools\AttributeReflector.cs" />
     <Compile Include="Tools\COMAddinAttribute.cs" />
     <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
@@ -283,10 +279,6 @@
       <DependentUpon>InstanceMonitor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KeyTokens.txt" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="NetOffice_v4.0.snk" />

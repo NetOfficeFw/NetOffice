@@ -14,7 +14,6 @@ namespace NetOffice
     {
         #region Fields
 
-        private static List<SinkHelper> _pointList = new List<SinkHelper>();
         private ICOMObject _eventClass;
         private IEventBinding _eventBinding;
         private IConnectionPoint _connectionPoint;
@@ -28,6 +27,8 @@ namespace NetOffice
         /// Creates an instance of the class
         /// </summary>
         /// <param name="eventClass">target CoClass instance</param>
+        /// <exception cref="ArgumentNullException">Occurs when eventClass argument is null</exception>
+        /// <exception cref="InvalidCastException">Occurs when eventClass argument doesnt implement the <see cref="IEventBinding"/> interface</exception>
         public SinkHelper(ICOMObject eventClass)
         {
             if (null == eventClass)
@@ -78,7 +79,187 @@ namespace NetOffice
 
         #endregion
 
+        #region Methods
+
+        /// <summary>
+        /// Create event binding
+        /// </summary>
+        /// <param name="connectPoint">target connection point</param>
+        /// <exception cref="NetOfficeCOMException">Unexpected error</exception>
+        public void SetupEventBinding(IConnectionPoint connectPoint)
+        {
+            try
+            {
+                if (true == Settings.Default.EnableEvents)
+                {
+                    _connectionPoint = connectPoint;
+                    _connectionPoint.Advise(this, out _connectionCookie);
+                    Factory.AddEventBridge(this);
+                }
+            }
+            catch (Exception throwedException)
+            {
+                _eventClass.Console.WriteException(throwedException);
+                throw new NetOfficeCOMException("An error occured while setup event binding.", throwedException);
+            }
+        }
+
+        /// <summary>
+        /// Release event binding
+        /// </summary>
+        /// <exception cref="NetOfficeCOMException">Unexpected error</exception>
+        public void RemoveEventBinding()
+        {
+            RemoveEventBinding(true);
+        }
+
+        /// <summary>
+        /// Validate to proceed event
+        /// </summary>
+        /// <param name="eventName">name of the event</param>
+        /// <returns>true if event is ready, otherwise false</returns>
+        public bool Validate(string eventName)
+        {
+            if ((true == _eventClass.IsCurrentlyDisposing)
+                || (false == _eventBinding.HasEventRecipients(eventName)))
+                return false;
+            else
+                return true;
+        }
+
+        /// <summary>
+        /// Release event binding
+        /// </summary>
+        /// <exception cref="NetOfficeCOMException">Unexpected error</exception>
+        internal void RemoveEventBinding(bool removeFromList)
+        {
+            if (_connectionCookie != 0)
+            {
+                try
+                {
+                    _connectionPoint.Unadvise(_connectionCookie);
+                    Marshal.ReleaseComObject(_connectionPoint);
+                }
+                catch (System.Runtime.InteropServices.COMException throwedException)
+                {
+                    _eventClass.Console.WriteException(throwedException);
+                    ; // RPC server is disconnected or dead
+                }
+                catch (Exception throwedException)
+                {
+                    _eventClass.Console.WriteException(throwedException);
+                    throw new NetOfficeCOMException("An error occured while release event binding.", throwedException);
+                }
+
+                _connectionPoint = null;
+                _connectionCookie = 0;
+
+                if (removeFromList)
+                    Factory.RemoveEventBridge(this);
+            }
+        }
+
+        #endregion
+
         #region Static Methods
+
+        /// <summary>
+        /// Get supported connection point from comProxy
+        /// </summary>
+        /// <param name="comInstance"></param>
+        /// <param name="point"></param>
+        /// <param name="sinkIds"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">Occurs when comInstance argument is null</exception>
+        /// <exception cref="COMException">Occurs when underlying proxy doesnt support the target event interface</exception>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static string GetConnectionPoint(ICOMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
+        {
+            if (null == comInstance)
+                throw new ArgumentNullException("comInstance");
+
+            if (null == sinkIds)
+                return null;
+
+            IConnectionPointContainer connectionPointContainer = comInstance.UnderlyingObject as IConnectionPointContainer;
+            if (null == connectionPointContainer)
+            {
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine("Unable to cast IConnectionPointContainer.");
+                return null;
+            }
+
+            if (comInstance.Settings.EnableEventDebugOutput)
+                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint");
+
+            string id = FindConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
+
+            if (comInstance.Settings.EnableEventDebugOutput)
+                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
+
+            if (null == id)
+            {
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint");
+                id = EnumConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
+            }
+
+            if (null != id)
+                return id;
+            else
+                throw new COMException("Specified instance doesnt implement the target event interface.");
+        }
+
+        /// <summary>
+        /// Get supported connection point from comProxy in reverse order to GetConnectionPoint
+        /// </summary>
+        /// <param name="comInstance"></param>
+        /// <param name="point"></param>
+        /// <param name="sinkIds"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">Occurs when comInstance argument is null</exception>
+        /// <exception cref="COMException">Occurs when underlying proxy doesnt support the target event interface</exception>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static string GetConnectionPoint2(ICOMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
+        {
+            if (null == comInstance)
+                throw new ArgumentNullException("comInstance");
+
+            if (null == sinkIds)
+                return null;
+
+            IConnectionPointContainer connectionPointContainer = comInstance.UnderlyingObject as IConnectionPointContainer;
+            if (null == connectionPointContainer)
+            {
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine("Unable to cast IConnectionPointContainer.");
+                return null;
+            }
+
+            if (comInstance.Settings.EnableEventDebugOutput)
+                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint");
+
+            string id = EnumConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
+
+            if (comInstance.Settings.EnableEventDebugOutput)
+                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
+
+            if (null == id)
+            {
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint");
+                id = FindConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
+            }
+
+            if (null != id)
+                return id;
+            else
+                throw new COMException("Specified instance doesnt implement the target event interface.");
+        }
 
         /// <summary>
         /// Try to find connection point by FindConnectionPoint
@@ -151,175 +332,7 @@ namespace NetOffice
                     Marshal.ReleaseComObject(enumPoints);
             }
         }
-
-        /// <summary>
-        /// Get supported connection point from comProxy
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static string GetConnectionPoint(ICOMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
-        {
-            if (null == sinkIds)
-                return null;
-
-            IConnectionPointContainer connectionPointContainer = comInstance.UnderlyingObject as IConnectionPointContainer;
-            if (null == connectionPointContainer)
-            {
-                if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine("Unable to cast IConnectionPointContainer.");
-                return null;
-            }
-
-            if (comInstance.Settings.EnableEventDebugOutput)
-                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint");
-
-            string id = FindConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
-
-            if (comInstance.Settings.EnableEventDebugOutput)
-                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
-
-            if (null == id)
-            {
-                if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint");
-                id = EnumConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
-                if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
-            }
-
-            if (null != id)
-                return id;
-            else
-                throw new COMException("Specified instance doesnt implement the target event interface.");
-        }
-
-        /// <summary>
-        /// Get supported connection point from comProxy in reverse order to GetConnectionPoint
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static string GetConnectionPoint2(ICOMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
-        {
-            if (null == sinkIds)
-                return null;
-
-            IConnectionPointContainer connectionPointContainer = comInstance.UnderlyingObject as IConnectionPointContainer;
-            if (null == connectionPointContainer)
-            {
-                if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine("Unable to cast IConnectionPointContainer.");
-                return null;
-            }
-
-            if (comInstance.Settings.EnableEventDebugOutput)
-                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint");
-
-            string id = EnumConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
-
-            if (comInstance.Settings.EnableEventDebugOutput)
-                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
-
-            if (null == id)
-            {
-                if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint");
-                id = FindConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
-                if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
-            }
-
-            if (null != id)
-                return id;
-            else
-                throw new COMException("Specified instance doesnt implement the target event interface.");
-        }
-
-        /// <summary>
-        /// Dispose all active event bridges
-        /// </summary>
-        public static void DisposeAll()
-        {
-            foreach (SinkHelper point in _pointList)
-                point.RemoveEventBinding(false);
-            _pointList.Clear();
-        }
-
-        #endregion
-
-        #region Methods
-        
-        /// <summary>
-        /// Create event binding
-        /// </summary>
-        /// <param name="connectPoint">target connection point</param>
-        public void SetupEventBinding(IConnectionPoint connectPoint)
-        {
-            try
-            {
-                if (true == Settings.Default.EnableEvents)
-                {
-                    _connectionPoint = connectPoint;
-                    _connectionPoint.Advise(this, out _connectionCookie);
-                    _pointList.Add(this);
-                }
-            }
-            catch (Exception throwedException)
-            {
-                _eventClass.Console.WriteException(throwedException);
-                throw new NetOfficeCOMException("An error occured while setup event binding.", throwedException);
-            }
-        }
-
-        /// <summary>
-        /// Release event binding
-        /// </summary>
-        public void RemoveEventBinding()
-        {
-            RemoveEventBinding(true);
-        }
-
-        /// <summary>
-        /// Release event binding
-        /// </summary>
-        private void RemoveEventBinding(bool removeFromList)
-        {
-            if (_connectionCookie != 0)
-            {
-                try
-                {
-                    _connectionPoint.Unadvise(_connectionCookie);
-                    Marshal.ReleaseComObject(_connectionPoint);
-                }
-                catch (System.Runtime.InteropServices.COMException throwedException)
-                {
-                    _eventClass.Console.WriteException(throwedException);
-                    ; // RPC server is disconnected or dead
-                }
-                catch (Exception throwedException)
-                {
-                    _eventClass.Console.WriteException(throwedException);
-                    throw new NetOfficeCOMException("An error occured while release event binding.", throwedException);
-                }
-
-                _connectionPoint = null;
-                _connectionCookie = 0;
-
-                if (removeFromList)
-                    _pointList.Remove(this);
-            }
-        }
-
-        /// <summary>
-        /// Validate to proceed event
-        /// </summary>
-        /// <param name="eventName">name of the event</param>
-        /// <returns>true if event is ready, otherwise false</returns>
-        public bool Validate(string eventName)
-        {
-            if ((true == _eventClass.IsCurrentlyDisposing) || (false == _eventBinding.HasEventRecipients(eventName)))
-                return false;
-            else
-                return true;
-        }
-
+      
         /// <summary>
         /// Perform cast to System.String and suspress any exception(s)
         /// </summary>
@@ -350,7 +363,7 @@ namespace NetOffice
             }
             catch
             {
-                return false;
+                return default(bool);
             }
         }
 
@@ -367,7 +380,7 @@ namespace NetOffice
             }
             catch
             {
-                return 0;
+                return default(Int16);
             }
         }
 
@@ -384,7 +397,7 @@ namespace NetOffice
             }
             catch
             {
-                return 0;
+                return default(Int32);
             }
         }
 
@@ -401,7 +414,7 @@ namespace NetOffice
             }
             catch
             {
-                return 0;
+                return default(double);
             }
         }
 
@@ -418,7 +431,7 @@ namespace NetOffice
             }
             catch
             {
-                return 0;
+                return default(Single);
             }
         }
 
@@ -428,7 +441,7 @@ namespace NetOffice
         /// <typeparam name="T">type of System.Enum</typeparam>
         /// <param name="value">value to cast</param>
         /// <returns>ast value or default(T) if exception occurs</returns>
-        protected static T ToEnum<T>(object value) where T:struct
+        protected static T ToEnum<T>(object value) where T : struct
         {
             try
             {
@@ -442,10 +455,10 @@ namespace NetOffice
 
         #endregion
 
-        #region IDisposable Members
+        #region IDisposable
 
         /// <summary>
-        /// Remove event binding
+        /// Removes event binding
         /// </summary>
         public virtual void Dispose()
         {
