@@ -304,8 +304,8 @@ namespace NetOffice.ExcelApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
-
-                this.Application = new Excel.Application(Factory, null, application);
+                
+                this.Application = Factory.CreateKnownObjectFromComProxy<Excel.Application>(null, application, typeof(Excel.Application));
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);

@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
-    internal class _CommandBarComboBox : NetOffice.OfficeApi.Behind.CommandBarControl, NetOffice.OfficeApi._CommandBarComboBox
+    public class _CommandBarComboBox : NetOffice.OfficeApi.Behind.CommandBarControl, NetOffice.OfficeApi._CommandBarComboBox
     {
         #pragma warning disable
 

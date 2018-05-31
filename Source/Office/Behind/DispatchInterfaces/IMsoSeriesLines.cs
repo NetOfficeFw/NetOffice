@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoSeriesLines : COMObject, NetOffice.OfficeApi.IMsoSeriesLines
+    public class IMsoSeriesLines : COMObject, NetOffice.OfficeApi.IMsoSeriesLines
     {
         #pragma warning disable
 

@@ -2,7 +2,6 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
-using NetOffice.OfficeApi.EventInterfaces;
 
 namespace NetOffice.OfficeApi.Behind
 {
@@ -13,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865221.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventInterfaces._CommandBarButtonEvents))]
+    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts._CommandBarButtonEvents))]
     internal class CommandBarButton : NetOffice.OfficeApi.Behind._CommandBarButton, NetOffice.OfficeApi.CommandBarButton
     {
         #pragma warning disable
@@ -23,7 +22,7 @@ namespace NetOffice.OfficeApi.Behind
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
-        private NetOffice.OfficeApi.Behind.EventInterfaces._CommandBarButtonEvents_SinkHelper __CommandBarButtonEvents_SinkHelper;
+        private NetOffice.OfficeApi.Behind.EventContracts._CommandBarButtonEvents_SinkHelper __CommandBarButtonEvents_SinkHelper;
 
         #endregion
 
@@ -164,12 +163,12 @@ namespace NetOffice.OfficeApi.Behind
                 return;
 
             if (null == _activeSinkId)
-                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NetOffice.OfficeApi.Behind.EventInterfaces._CommandBarButtonEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NetOffice.OfficeApi.Behind.EventContracts._CommandBarButtonEvents_SinkHelper.Id);
 
 
-            if (NetOffice.OfficeApi.Behind.EventInterfaces._CommandBarButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (NetOffice.OfficeApi.Behind.EventContracts._CommandBarButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
-                __CommandBarButtonEvents_SinkHelper = new NetOffice.OfficeApi.Behind.EventInterfaces._CommandBarButtonEvents_SinkHelper(this, _connectPoint);
+                __CommandBarButtonEvents_SinkHelper = new NetOffice.OfficeApi.Behind.EventContracts._CommandBarButtonEvents_SinkHelper(this, _connectPoint);
                 return;
             }
         }

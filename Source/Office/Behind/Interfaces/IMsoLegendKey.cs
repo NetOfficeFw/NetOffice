@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
-    internal class IMsoLegendKey : COMObject, NetOffice.OfficeApi.IMsoLegendKey
+    public class IMsoLegendKey : COMObject, NetOffice.OfficeApi.IMsoLegendKey
     {
         #pragma warning disable
 

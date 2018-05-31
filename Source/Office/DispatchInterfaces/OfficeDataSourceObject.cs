@@ -5,6 +5,7 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
+    /// <summary>
     /// DispatchInterface OfficeDataSourceObject 
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>

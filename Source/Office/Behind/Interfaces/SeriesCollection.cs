@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
-    internal class SeriesCollection : COMObject, NetOffice.OfficeApi.SeriesCollection
+    public class SeriesCollection : COMObject, NetOffice.OfficeApi.SeriesCollection
     {
         #pragma warning disable
 

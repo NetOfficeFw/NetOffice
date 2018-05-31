@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     /// TextRange2
     /// </summary>
     [SyntaxBypass]
-    internal class TextRange2_ : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.TextRange2_
+    public class TextRange2_ : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.TextRange2_
     {
         #region Ctor
 
@@ -460,7 +460,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863528.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-    internal class TextRange2 : NetOffice.OfficeApi.Behind.TextRange2_, NetOffice.OfficeApi.TextRange2
+    public class TextRange2 : NetOffice.OfficeApi.Behind.TextRange2_, NetOffice.OfficeApi.TextRange2
     {
         #pragma warning disable
 

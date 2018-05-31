@@ -14,7 +14,6 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 	public static class GlobalModule
 	{
 		#region Fields
-
 		private static ICOMObject _instance;
 
         #endregion
@@ -69,7 +68,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(_instance, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(_instance, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -95,7 +94,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(_instance, "Parent", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(_instance, "Parent", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -108,7 +107,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "ActiveCell", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "ActiveCell", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -121,7 +120,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Chart>(_instance, "ActiveChart", NetOffice.ExcelApi.Chart.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Chart>(_instance, "ActiveChart", typeof(NetOffice.ExcelApi.Chart));
 			}
 		}
 
@@ -135,7 +134,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DialogSheet>(_instance, "ActiveDialog", NetOffice.ExcelApi.DialogSheet.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DialogSheet>(_instance, "ActiveDialog", typeof(NetOffice.ExcelApi.DialogSheet));
 			}
 		}
 
@@ -149,7 +148,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.MenuBar>(_instance, "ActiveMenuBar", NetOffice.ExcelApi.MenuBar.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.MenuBar>(_instance, "ActiveMenuBar", typeof(NetOffice.ExcelApi.MenuBar));
 			}
 		}
 
@@ -193,7 +192,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Window>(_instance, "ActiveWindow", NetOffice.ExcelApi.Window.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Window>(_instance, "ActiveWindow", typeof(NetOffice.ExcelApi.Window));
 			}
 		}
 
@@ -206,7 +205,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbook>(_instance, "ActiveWorkbook", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbook>(_instance, "ActiveWorkbook", typeof(NetOffice.ExcelApi.Workbook));
 			}
 		}
 
@@ -220,7 +219,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.AddIns>(_instance, "AddIns", NetOffice.ExcelApi.AddIns.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.AddIns>(_instance, "AddIns", typeof(NetOffice.ExcelApi.AddIns));
 			}
 		}
 
@@ -233,7 +232,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", typeof(NetOffice.OfficeApi.Assistant));
 			}
 		}
 
@@ -246,7 +245,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Cells", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Cells", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -259,7 +258,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Charts", NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Charts", typeof(NetOffice.ExcelApi.Sheets));
 			}
 		}
 
@@ -273,7 +272,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Columns", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Columns", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -286,7 +285,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", typeof(NetOffice.OfficeApi.CommandBars));
 			}
 		}
 
@@ -313,7 +312,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "DialogSheets", NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "DialogSheets", typeof(NetOffice.ExcelApi.Sheets));
 			}
 		}
 
@@ -327,7 +326,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.MenuBars>(_instance, "MenuBars", NetOffice.ExcelApi.MenuBars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.MenuBars>(_instance, "MenuBars", typeof(NetOffice.ExcelApi.MenuBars));
 			}
 		}
 
@@ -341,7 +340,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Modules>(_instance, "Modules", NetOffice.ExcelApi.Modules.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Modules>(_instance, "Modules", typeof(NetOffice.ExcelApi.Modules));
 			}
 		}
 
@@ -354,7 +353,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Names>(_instance, "Names", NetOffice.ExcelApi.Names.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Names>(_instance, "Names", typeof(NetOffice.ExcelApi.Names));
 			}
 		}
 
@@ -368,7 +367,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Range get_Range(object cell1, object cell2)
 		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Range", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, cell1, cell2);
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Range", typeof(NetOffice.ExcelApi.Range), cell1, cell2);
 		}
 
 		/// <summary>
@@ -392,7 +391,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Range get_Range(object cell1)
 		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Range", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, cell1);
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Range", typeof(NetOffice.ExcelApi.Range), cell1);
 		}
 
 		/// <summary>
@@ -416,7 +415,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Rows", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(_instance, "Rows", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -443,7 +442,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Sheets", NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Sheets", typeof(NetOffice.ExcelApi.Sheets));
 			}
 		}
 
@@ -456,7 +455,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Menu get_ShortcutMenus(Int32 index)
 		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Menu>(_instance, "ShortcutMenus", NetOffice.ExcelApi.Menu.LateBindingApiWrapperType, index);
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Menu>(_instance, "ShortcutMenus", typeof(NetOffice.ExcelApi.Menu), index);
 		}
 
 		/// <summary>
@@ -479,7 +478,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbook>(_instance, "ThisWorkbook", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbook>(_instance, "ThisWorkbook", typeof(NetOffice.ExcelApi.Workbook));
 			}
 		}
 
@@ -493,7 +492,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Toolbars>(_instance, "Toolbars", NetOffice.ExcelApi.Toolbars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Toolbars>(_instance, "Toolbars", typeof(NetOffice.ExcelApi.Toolbars));
 			}
 		}
 
@@ -506,7 +505,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Windows>(_instance, "Windows", NetOffice.ExcelApi.Windows.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Windows>(_instance, "Windows", typeof(NetOffice.ExcelApi.Windows));
 			}
 		}
 
@@ -519,7 +518,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbooks>(_instance, "Workbooks", NetOffice.ExcelApi.Workbooks.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbooks>(_instance, "Workbooks", typeof(NetOffice.ExcelApi.Workbooks));
 			}
 		}
 
@@ -532,7 +531,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorksheetFunction>(_instance, "WorksheetFunction", NetOffice.ExcelApi.WorksheetFunction.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorksheetFunction>(_instance, "WorksheetFunction", typeof(NetOffice.ExcelApi.WorksheetFunction));
 			}
 		}
 
@@ -545,7 +544,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Worksheets", NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Worksheets", typeof(NetOffice.ExcelApi.Sheets));
 			}
 		}
 
@@ -558,7 +557,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Excel4IntlMacroSheets", NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Excel4IntlMacroSheets", typeof(NetOffice.ExcelApi.Sheets));
 			}
 		}
 
@@ -571,7 +570,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Excel4MacroSheets", NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sheets>(_instance, "Excel4MacroSheets", typeof(NetOffice.ExcelApi.Sheets));
 			}
 		}
 
@@ -710,7 +709,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
 		}
 
 		/// <summary>
@@ -722,7 +721,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), arg1, arg2);
 		}
 
 		/// <summary>
@@ -735,7 +734,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3);
         }
 
         /// <summary>
@@ -749,7 +748,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4);
         }
 
         /// <summary>
@@ -764,7 +763,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4, arg5);
         }
 
 		/// <summary>
@@ -780,7 +779,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4, arg5, arg6);
         }
 
 		/// <summary>
@@ -797,7 +796,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
 
 		/// <summary>
@@ -815,7 +814,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
 
 		/// <summary>
@@ -834,7 +833,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
         }
 
 		/// <summary>
@@ -854,7 +853,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
 		}
 
 		/// <summary>
@@ -875,7 +874,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
         }
 
 		/// <summary>
@@ -897,7 +896,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
         }
 
 		/// <summary>
@@ -920,7 +919,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
         }
 
 		/// <summary>
@@ -944,7 +943,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
         }
 
 		/// <summary>
@@ -969,7 +968,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
         }
 
 		/// <summary>
@@ -995,7 +994,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
         }
 
 		/// <summary>
@@ -1022,7 +1021,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
         }
 
 		/// <summary>
@@ -1050,7 +1049,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
         }
 
 		/// <summary>
@@ -1079,7 +1078,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
         }
 
 		/// <summary>
@@ -1109,7 +1108,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
         }
 
 		/// <summary>
@@ -1140,7 +1139,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
         }
 
 		/// <summary>
@@ -1172,7 +1171,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
         }
 
 		/// <summary>
@@ -1205,7 +1204,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
         }
 
 		/// <summary>
@@ -1239,7 +1238,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
         }
 
 		/// <summary>
@@ -1274,7 +1273,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
         }
 
 		/// <summary>
@@ -1310,7 +1309,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
         }
 
 		/// <summary>
@@ -1347,7 +1346,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
         }
 
 		/// <summary>
@@ -1385,7 +1384,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
         }
 
 		/// <summary>
@@ -1424,7 +1423,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
         }
 
 		/// <summary>
@@ -3147,7 +3146,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
 		}
 
 		/// <summary>
@@ -3159,7 +3158,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), arg1, arg2);
 		}
 
 		/// <summary>
@@ -3172,7 +3171,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3);
         }
 
         /// <summary>
@@ -3186,7 +3185,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4);
 		}
 
 		/// <summary>
@@ -3201,7 +3200,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4, arg5);
         }
 
 		/// <summary>
@@ -3217,7 +3216,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4, arg5, arg6);
         }
 
 		/// <summary>
@@ -3234,7 +3233,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
 
 		/// <summary>
@@ -3252,7 +3251,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
 
 		/// <summary>
@@ -3271,7 +3270,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
 		}
 
 		/// <summary>
@@ -3291,7 +3290,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
         }
 
 		/// <summary>
@@ -3312,7 +3311,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
         }
 
 		/// <summary>
@@ -3334,7 +3333,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
         }
 
 		/// <summary>
@@ -3357,7 +3356,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
         }
 
 		/// <summary>
@@ -3381,7 +3380,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
         }
 
 		/// <summary>
@@ -3406,7 +3405,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
         }
 
 		/// <summary>
@@ -3432,7 +3431,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16});
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16});
         }
 
 		/// <summary>
@@ -3459,7 +3458,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
         }
 
 		/// <summary>
@@ -3487,7 +3486,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
         }
 
 		/// <summary>
@@ -3516,7 +3515,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
         }
 
 		/// <summary>
@@ -3546,7 +3545,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
         }
 
 		/// <summary>
@@ -3577,7 +3576,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
         }
 
 		/// <summary>
@@ -3609,7 +3608,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
         }
 
 		/// <summary>
@@ -3642,7 +3641,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
         }
 
 		/// <summary>
@@ -3676,7 +3675,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
         }
 
 		/// <summary>
@@ -3711,7 +3710,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
         }
 
 		/// <summary>
@@ -3747,7 +3746,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
         }
 
         /// <summary>
@@ -3784,7 +3783,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
         }
 
         /// <summary>
@@ -3822,7 +3821,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
         }
 
 		/// <summary>
@@ -3861,9 +3860,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", typeof(NetOffice.ExcelApi.Range), new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
         }
 
 		#endregion
 	}
 }
+

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
 using NetOffice.Attributes;
 
-namespace NetOffice.VBIDEApi.EventInterfaces
+namespace NetOffice.VBIDEApi.EventContracts
 {
     /// <summary>
     /// 

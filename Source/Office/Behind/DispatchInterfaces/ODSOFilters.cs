@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865224.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-    internal class ODSOFilters : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ODSOFilters
+    public class ODSOFilters : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ODSOFilters
     {
         #pragma warning disable
 

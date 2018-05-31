@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class MsoDebugOptions_UTRunResult : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.MsoDebugOptions_UTRunResult
+    public class MsoDebugOptions_UTRunResult : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.MsoDebugOptions_UTRunResult
     {
         #pragma warning disable
 

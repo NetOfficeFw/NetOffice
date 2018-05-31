@@ -14,100 +14,8 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
-	public class ITrendlines : COMObject, IEnumerableProvider<NetOffice.ExcelApi.Trendline>
+	public interface ITrendlines : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Trendline>
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ITrendlines);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ITrendlines(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ITrendlines(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITrendlines(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITrendlines(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITrendlines(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITrendlines(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITrendlines() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITrendlines(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -115,26 +23,14 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlCreator Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -142,26 +38,14 @@ namespace NetOffice.ExcelApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+		Int32 Count { get; }
 
 		#endregion
 
@@ -180,20 +64,14 @@ namespace NetOffice.ExcelApi
 		/// <param name="displayRSquared">optional object displayRSquared</param>
 		/// <param name="name">optional object name</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
-		}
+		NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType);
-		}
+		NetOffice.ExcelApi.Trendline Add();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -201,10 +79,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">optional NetOffice.ExcelApi.Enums.XlTrendlineType Type = -4132</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, type);
-		}
+		NetOffice.ExcelApi.Trendline Add(object type);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -213,10 +88,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order">optional object order</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type, object order)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, type, order);
-		}
+		NetOffice.ExcelApi.Trendline Add(object type, object order);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -226,10 +98,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="period">optional object period</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, type, order, period);
-		}
+		NetOffice.ExcelApi.Trendline Add(object type, object order, object period);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -240,10 +109,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="forward">optional object forward</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, type, order, period, forward);
-		}
+		NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -255,10 +121,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="backward">optional object backward</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward });
-		}
+		NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -271,10 +134,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="intercept">optional object intercept</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept });
-		}
+		NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -288,10 +148,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="displayEquation">optional object displayEquation</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation });
-		}
+		NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -306,10 +163,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="displayRSquared">optional object displayRSquared</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
-		}
+		NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared);
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
@@ -317,58 +171,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="index">optional object index</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.Trendline this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "_Default", NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType, index);
-			}
-		}
-
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.ExcelApi.Trendline>
-
-        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.Trendline>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.Trendline>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.ExcelApi.Trendline>
-
-        /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Trendline> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.ExcelApi.Trendline item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
-		}
+		NetOffice.ExcelApi.Trendline this[object index] { get; }
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

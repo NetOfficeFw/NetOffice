@@ -11,7 +11,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
-    internal class ChartPoint : COMObject, NetOffice.OfficeApi.ChartPoint
+    public class ChartPoint : COMObject, NetOffice.OfficeApi.ChartPoint
     {
         #pragma warning disable
 

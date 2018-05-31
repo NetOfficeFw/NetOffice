@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi.Behind
     /// IMsoDataLabel
     /// </summary>
     [SyntaxBypass]
-    internal class IMsoDataLabel_ : COMObject, NetOffice.OfficeApi.IMsoDataLabel_
+    public class IMsoDataLabel_ : COMObject, NetOffice.OfficeApi.IMsoDataLabel_
     {
         #region Ctor
 
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
-    internal class IMsoDataLabel : IMsoDataLabel_, NetOffice.OfficeApi.IMsoDataLabel
+    public class IMsoDataLabel : IMsoDataLabel_, NetOffice.OfficeApi.IMsoDataLabel
     {
         #pragma warning disable
 

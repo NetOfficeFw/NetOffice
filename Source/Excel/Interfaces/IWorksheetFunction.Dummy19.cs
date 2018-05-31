@@ -8,7 +8,7 @@ namespace NetOffice.ExcelApi
     /// <summary>
     /// Partial IWorksheetFunction Dummy19
     /// </summary>
-    partial class IWorksheetFunction : COMObject
+    partial interface IWorksheetFunction
     {
         #region Methods
 
@@ -47,10 +47,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg30">optional object arg30</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -59,10 +56,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", arg1);
-        }
+        object Dummy19(object arg1);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -72,10 +66,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", arg1, arg2);
-        }
+        object Dummy19(object arg1, object arg2);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -86,10 +77,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", arg1, arg2, arg3);
-        }
+        object Dummy19(object arg1, object arg2, object arg3);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -101,10 +89,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", arg1, arg2, arg3, arg4);
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -117,10 +102,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -134,10 +116,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -152,10 +131,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -171,10 +147,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -191,10 +164,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -212,10 +182,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -234,10 +201,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -257,10 +221,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -281,10 +242,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -306,10 +264,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -332,10 +287,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -359,10 +311,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -387,10 +336,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -416,10 +362,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -446,10 +389,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -477,10 +417,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -509,10 +446,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -542,10 +476,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -576,10 +507,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -611,10 +539,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -647,10 +572,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -684,10 +606,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -722,10 +641,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -761,10 +677,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28);
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
@@ -801,10 +714,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
-        {
-            return Factory.ExecuteVariantMethodGet(this, "Dummy19", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
-        }
+        object Dummy19(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29);
 
         #endregion
     }

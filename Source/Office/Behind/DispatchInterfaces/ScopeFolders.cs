@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860833.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class ScopeFolders : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ScopeFolders
+    public class ScopeFolders : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ScopeFolders
     {
         #pragma warning disable
 

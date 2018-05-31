@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoTickLabels : COMObject, NetOffice.OfficeApi.IMsoTickLabels
+    public class IMsoTickLabels : COMObject, NetOffice.OfficeApi.IMsoTickLabels
     {
         #pragma warning disable
 

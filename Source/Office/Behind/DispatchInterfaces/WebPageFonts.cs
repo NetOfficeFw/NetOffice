@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864178.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class WebPageFonts : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.WebPageFonts
+    public class WebPageFonts : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.WebPageFonts
     {
         #pragma warning disable
 

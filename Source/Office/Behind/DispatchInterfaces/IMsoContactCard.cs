@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861128.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoContactCard : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.IMsoContactCard
+    public class IMsoContactCard : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.IMsoContactCard
     {
         #pragma warning disable
 

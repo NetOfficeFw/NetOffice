@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863065.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class Font2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.Font2
+    public class Font2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.Font2
     {
         #pragma warning disable
 

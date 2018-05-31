@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="onError">Error callback if somthings fails</param>
         /// <param name="application">host application in base definition</param>
         public OfficeApi.ICTPFactory CreateCustomPanes<T,N>(Core factory, object ctpFactoryInst, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
-            List<T> taskPaneInstances,  NetOffice.Tools.OnErrorHandler onError, COMObject application) where T: class where N:COMObject
+            List<T> taskPaneInstances, NetOffice.Tools.OnErrorHandler onError, ICOMObject application) where T: class where N:ICOMObject
         {
             OfficeApi.ICTPFactory TaskPaneFactory = factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.ICTPFactory>(null, ctpFactoryInst, typeof(NetOffice.OfficeApi.ICTPFactory));
             try
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Tools
                         {
                             OfficeApi.Tools.ITaskPaneConnection<N> foo = pane as OfficeApi.Tools.ITaskPaneConnection<N>;
                             if(null != foo)
-                                foo.OnConnection(application as N, taskPane, argumentArray);
+                                foo.OnConnection((N)application, taskPane, argumentArray);
                         }
                         catch (Exception exception)
                         {

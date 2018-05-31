@@ -11,100 +11,8 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class GroupObject : COMObject
+	public interface GroupObject : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(GroupObject);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public GroupObject(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public GroupObject(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public GroupObject(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public GroupObject(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public GroupObject(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public GroupObject(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public GroupObject() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public GroupObject(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,26 +20,14 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlCreator Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -139,124 +35,56 @@ namespace NetOffice.ExcelApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Range BottomRightCell
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "BottomRightCell", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Range BottomRightCell { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Double Height
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Height");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
-			}
-		}
+		Double Height { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Index
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
-			}
-		}
+		Int32 Index { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Double Left
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
+		Double Left { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Locked
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Locked");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Locked", value);
-			}
-		}
+		bool Locked { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+		string Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -264,384 +92,168 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnAction
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnAction");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnAction", value);
-			}
-		}
+		string OnAction { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Placement
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Placement");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Placement", value);
-			}
-		}
+		object Placement { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool PrintObject
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "PrintObject");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PrintObject", value);
-			}
-		}
+		bool PrintObject { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Double Top
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
+		Double Top { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Range TopLeftCell
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "TopLeftCell", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Range TopLeftCell { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Visible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
-			}
-		}
+		bool Visible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Double Width
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Double Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ZOrder
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ZOrder");
-			}
-		}
+		Int32 ZOrder { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ShapeRange ShapeRange
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ShapeRange>(this, "ShapeRange", NetOffice.ExcelApi.ShapeRange.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.ShapeRange ShapeRange { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool AddIndent
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AddIndent");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AddIndent", value);
-			}
-		}
+		bool AddIndent { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object ArrowHeadLength
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "ArrowHeadLength");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "ArrowHeadLength", value);
-			}
-		}
+		object ArrowHeadLength { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object ArrowHeadStyle
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "ArrowHeadStyle");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "ArrowHeadStyle", value);
-			}
-		}
+		object ArrowHeadStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object ArrowHeadWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "ArrowHeadWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "ArrowHeadWidth", value);
-			}
-		}
+		object ArrowHeadWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool AutoSize
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoSize");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AutoSize", value);
-			}
-		}
+		bool AutoSize { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Border Border
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Border>(this, "Border", NetOffice.ExcelApi.Border.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Border Border { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 _Default
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "_Default");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "_Default", value);
-			}
-		}
+		Int32 _Default { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Font Font
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", NetOffice.ExcelApi.Font.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Font Font { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object HorizontalAlignment
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "HorizontalAlignment");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "HorizontalAlignment", value);
-			}
-		}
+		object HorizontalAlignment { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Interior Interior
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Interior>(this, "Interior", NetOffice.ExcelApi.Interior.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Interior Interior { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Orientation
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Orientation");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Orientation", value);
-			}
-		}
+		object Orientation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool RoundedCorners
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "RoundedCorners");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RoundedCorners", value);
-			}
-		}
+		bool RoundedCorners { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Shadow
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Shadow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Shadow", value);
-			}
-		}
+		bool Shadow { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object VerticalAlignment
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "VerticalAlignment");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "VerticalAlignment", value);
-			}
-		}
+		object VerticalAlignment { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ReadingOrder
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ReadingOrder");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ReadingOrder", value);
-			}
-		}
+		Int32 ReadingOrder { get; set; }
 
 		#endregion
 
@@ -651,19 +263,13 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object BringToFront()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "BringToFront");
-		}
+		object BringToFront();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Copy()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Copy");
-		}
+		object Copy();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -671,20 +277,14 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 2</param>
 		/// <param name="format">optional NetOffice.ExcelApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CopyPicture(object appearance, object format)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "CopyPicture", appearance, format);
-		}
+		object CopyPicture(object appearance, object format);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CopyPicture()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "CopyPicture");
-		}
+		object CopyPicture();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -692,126 +292,87 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CopyPicture(object appearance)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "CopyPicture", appearance);
-		}
+		object CopyPicture(object appearance);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Cut()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Cut");
-		}
+		object Cut();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Delete()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Delete");
-		}
+		object Delete();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Duplicate()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Duplicate");
-		}
+		object Duplicate();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="replace">optional object replace</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Select(object replace)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Select", replace);
-		}
+		object Select(object replace);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Select()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Select");
-		}
+		object Select();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object SendToBack()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "SendToBack");
-		}
+		object SendToBack();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy27()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy27");
-		}
+		void _Dummy27();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy28()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy28");
-		}
+		void _Dummy28();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy30()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy30");
-		}
+		void _Dummy30();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy36()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy36");
-		}
+		void _Dummy36();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy37()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy37");
-		}
+		void _Dummy37();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy38()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy38");
-		}
+		void _Dummy38();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -821,20 +382,14 @@ namespace NetOffice.ExcelApi
 		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
 		/// <param name="spellLang">optional object spellLang</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object spellLang)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "CheckSpelling", customDictionary, ignoreUppercase, alwaysSuggest, spellLang);
-		}
+		object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object spellLang);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CheckSpelling()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "CheckSpelling");
-		}
+		object CheckSpelling();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -842,10 +397,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="customDictionary">optional object customDictionary</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CheckSpelling(object customDictionary)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "CheckSpelling", customDictionary);
-		}
+		object CheckSpelling(object customDictionary);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -854,10 +406,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CheckSpelling(object customDictionary, object ignoreUppercase)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "CheckSpelling", customDictionary, ignoreUppercase);
-		}
+		object CheckSpelling(object customDictionary, object ignoreUppercase);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -867,312 +416,217 @@ namespace NetOffice.ExcelApi
 		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "CheckSpelling", customDictionary, ignoreUppercase, alwaysSuggest);
-		}
+		object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy41()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy41");
-		}
+		void _Dummy41();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy42()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy42");
-		}
+		void _Dummy42();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy43()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy43");
-		}
+		void _Dummy43();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy44()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy44");
-		}
+		void _Dummy44();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy45()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy45");
-		}
+		void _Dummy45();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy47()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy47");
-		}
+		void _Dummy47();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy48()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy48");
-		}
+		void _Dummy48();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy50()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy50");
-		}
+		void _Dummy50();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy52()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy52");
-		}
+		void _Dummy52();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy53()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy53");
-		}
+		void _Dummy53();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy54()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy54");
-		}
+		void _Dummy54();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy55()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy55");
-		}
+		void _Dummy55();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy56()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy56");
-		}
+		void _Dummy56();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy57()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy57");
-		}
+		void _Dummy57();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy58()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy58");
-		}
+		void _Dummy58();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy59()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy59");
-		}
+		void _Dummy59();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy60()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy60");
-		}
+		void _Dummy60();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy61()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy61");
-		}
+		void _Dummy61();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy62()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy62");
-		}
+		void _Dummy62();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy63()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy63");
-		}
+		void _Dummy63();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy65()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy65");
-		}
+		void _Dummy65();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy66()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy66");
-		}
+		void _Dummy66();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy67()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy67");
-		}
+		void _Dummy67();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy68()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy68");
-		}
+		void _Dummy68();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy70()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy70");
-		}
+		void _Dummy70();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy72()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy72");
-		}
+		void _Dummy72();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy73()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy73");
-		}
+		void _Dummy73();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Ungroup()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Ungroup");
-		}
+		object Ungroup();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy75()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy75");
-		}
+		void _Dummy75();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy77()
-		{
-			 Factory.ExecuteMethod(this, "_Dummy77");
-		}
+		void _Dummy77();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

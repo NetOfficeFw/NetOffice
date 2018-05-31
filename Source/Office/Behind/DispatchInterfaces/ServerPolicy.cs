@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864653.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class ServerPolicy : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ServerPolicy
+    public class ServerPolicy : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ServerPolicy
     {
         #pragma warning disable
 

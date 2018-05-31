@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class Script : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.Script
+    public class Script : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.Script
     {
         #pragma warning disable
 

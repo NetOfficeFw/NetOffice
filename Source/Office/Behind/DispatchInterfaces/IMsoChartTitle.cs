@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi.Behind
     /// IMsoChartTitle
     /// </summary>
     [SyntaxBypass]
-    internal class IMsoChartTitle_ : COMObject, NetOffice.OfficeApi.IMsoChartTitle_
+    public class IMsoChartTitle_ : COMObject, NetOffice.OfficeApi.IMsoChartTitle_
     {
         #region Ctor
 
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
-    internal class IMsoChartTitle : NetOffice.OfficeApi.Behind.IMsoChartTitle_, NetOffice.OfficeApi.IMsoChartTitle
+    public class IMsoChartTitle : NetOffice.OfficeApi.Behind.IMsoChartTitle_, NetOffice.OfficeApi.IMsoChartTitle
     {
         #pragma warning disable
 

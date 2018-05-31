@@ -15,115 +15,17 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841074.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class Workbooks : COMObject, IEnumerableProvider<NetOffice.ExcelApi.Workbook>
-    {
-        #pragma warning disable
+	public interface Workbooks : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Workbook>
+	{
+		#region Properties
 
-        #region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Workbooks);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Workbooks(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Workbooks(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(string progId) : base(progId)
-		{
-		}
-
-        #endregion
-        
-        #region Properties
-
-        /// <summary>
-        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-        /// Get
-        /// </summary>
-        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195019.aspx </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		/// <summary>
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+		/// Get
+		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195019.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+		NetOffice.ExcelApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -131,13 +33,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195436.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlCreator Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -146,13 +42,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837124.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -160,13 +50,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822893.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+		Int32 Count { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -175,13 +59,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.Workbook this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbook>(this, "_Default", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, index);
-			}
-		}
+		NetOffice.ExcelApi.Workbook this[object index] { get; }
 
 		#endregion
 
@@ -193,10 +71,7 @@ namespace NetOffice.ExcelApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840478.aspx </remarks>
 		/// <param name="template">optional object template</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Add(object template)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Add", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, template);
-		}
+		NetOffice.ExcelApi.Workbook Add(object template);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -204,20 +79,14 @@ namespace NetOffice.ExcelApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840478.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Add()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Add", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
-		}
+		NetOffice.ExcelApi.Workbook Add();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839657.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Close()
-		{
-			 Factory.ExecuteMethod(this, "Close");
-		}
+		void Close();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -237,10 +106,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="converter">optional object converter</param>
 		/// <param name="addToMru">optional object addToMru</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -262,10 +128,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="local">optional object local</param>
 		/// <param name="corruptLoad">optional object corruptLoad</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local, object corruptLoad)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru, local, corruptLoad });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local, object corruptLoad);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -274,10 +137,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="filename">string filename</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename);
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -287,10 +147,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="updateLinks">optional object updateLinks</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, updateLinks);
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -301,10 +158,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="readOnly">optional object readOnly</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, updateLinks, readOnly);
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -316,10 +170,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="format">optional object format</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, updateLinks, readOnly, format);
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -332,10 +183,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="password">optional object password</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -349,10 +197,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="writeResPassword">optional object writeResPassword</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -367,10 +212,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ignoreReadOnlyRecommended">optional object ignoreReadOnlyRecommended</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -386,10 +228,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="origin">optional object origin</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -406,10 +245,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="delimiter">optional object delimiter</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -427,10 +263,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="editable">optional object editable</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -449,10 +282,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="notify">optional object notify</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -472,10 +302,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="converter">optional object converter</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -497,10 +324,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="local">optional object local</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru, local });
-		}
+		NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -521,10 +345,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object textVisualLayout</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -547,10 +368,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="thousandsSeparator">optional object thousandsSeparator</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -559,10 +377,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", filename);
-		}
+		void _OpenText(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -572,10 +387,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", filename, origin);
-		}
+		void _OpenText(string filename, object origin);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -586,10 +398,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", filename, origin, startRow);
-		}
+		void _OpenText(string filename, object origin, object startRow);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -601,10 +410,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", filename, origin, startRow, dataType);
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -617,10 +423,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -634,10 +437,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -652,10 +452,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -671,10 +468,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -691,10 +485,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -712,10 +503,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -734,10 +522,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -757,10 +542,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -781,10 +563,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -807,10 +586,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
-		{
-			 Factory.ExecuteMethod(this, "_OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator });
-		}
+		void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -833,10 +609,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="decimalSeparator">optional object decimalSeparator</param>
 		/// <param name="thousandsSeparator">optional object thousandsSeparator</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -861,10 +634,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="trailingMinusNumbers">optional object trailingMinusNumbers</param>
 		/// <param name="local">optional object local</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers, object local)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator, trailingMinusNumbers, local });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers, object local);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -873,10 +643,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="filename">string filename</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", filename);
-		}
+		void OpenText(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -886,10 +653,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="origin">optional object origin</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", filename, origin);
-		}
+		void OpenText(string filename, object origin);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -900,10 +664,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="startRow">optional object startRow</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", filename, origin, startRow);
-		}
+		void OpenText(string filename, object origin, object startRow);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -915,10 +676,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataType">optional object dataType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", filename, origin, startRow, dataType);
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -931,10 +689,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textQualifier">optional NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier = 1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -948,10 +703,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="consecutiveDelimiter">optional object consecutiveDelimiter</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -966,10 +718,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="tab">optional object tab</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -985,10 +734,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="semicolon">optional object semicolon</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1005,10 +751,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="comma">optional object comma</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1026,10 +769,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="space">optional object space</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1048,10 +788,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="other">optional object other</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1071,10 +808,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="otherChar">optional object otherChar</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1095,10 +829,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="fieldInfo">optional object fieldInfo</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1120,10 +851,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object textVisualLayout</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1146,10 +874,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="decimalSeparator">optional object decimalSeparator</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1174,10 +899,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="trailingMinusNumbers">optional object trailingMinusNumbers</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
-		{
-			 Factory.ExecuteMethod(this, "OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator, trailingMinusNumbers });
-		}
+		void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1197,10 +919,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="addToMru">optional object addToMru</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1209,10 +928,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename);
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1222,10 +938,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, updateLinks);
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1236,10 +949,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, updateLinks, readOnly);
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1251,10 +961,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, updateLinks, readOnly, format);
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1267,10 +974,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1284,10 +988,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1302,10 +1003,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1321,10 +1019,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1341,10 +1036,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1362,10 +1054,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1384,10 +1073,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1407,10 +1093,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_Open", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter });
-		}
+		NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1431,10 +1114,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object textVisualLayout</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1443,10 +1123,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", filename);
-		}
+		void __OpenText(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1456,10 +1133,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", filename, origin);
-		}
+		void __OpenText(string filename, object origin);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1470,10 +1144,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", filename, origin, startRow);
-		}
+		void __OpenText(string filename, object origin, object startRow);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1485,10 +1156,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", filename, origin, startRow, dataType);
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1501,10 +1169,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1518,10 +1183,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1536,10 +1198,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1555,10 +1214,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1575,10 +1231,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1596,10 +1249,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1618,10 +1268,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1641,10 +1288,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1665,10 +1309,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
-		{
-			 Factory.ExecuteMethod(this, "__OpenText", new object[]{ filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo });
-		}
+		void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1680,10 +1321,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="backgroundQuery">optional object backgroundQuery</param>
 		/// <param name="importDataAs">optional object importDataAs</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery, object importDataAs)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "OpenDatabase", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, new object[]{ filename, commandText, commandType, backgroundQuery, importDataAs });
-		}
+		NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery, object importDataAs);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1692,10 +1330,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="filename">string filename</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "OpenDatabase", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename);
-		}
+		NetOffice.ExcelApi.Workbook OpenDatabase(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1705,10 +1340,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="commandText">optional object commandText</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "OpenDatabase", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, commandText);
-		}
+		NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1719,10 +1351,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="commandType">optional object commandType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "OpenDatabase", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, commandText, commandType);
-		}
+		NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1734,10 +1363,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="backgroundQuery">optional object backgroundQuery</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "OpenDatabase", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, commandText, commandType, backgroundQuery);
-		}
+		NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1745,10 +1371,7 @@ namespace NetOffice.ExcelApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194062.aspx </remarks>
 		/// <param name="filename">string filename</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void CheckOut(string filename)
-		{
-			 Factory.ExecuteMethod(this, "CheckOut", filename);
-		}
+		void CheckOut(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1756,10 +1379,7 @@ namespace NetOffice.ExcelApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193284.aspx </remarks>
 		/// <param name="filename">string filename</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool CanCheckOut(string filename)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "CanCheckOut", filename);
-		}
+		bool CanCheckOut(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1768,10 +1388,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="filename">string filename</param>
 		/// <param name="stylesheets">optional object stylesheets</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "OpenXML", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, stylesheets);
-		}
+		NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets);
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
@@ -1781,10 +1398,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="stylesheets">optional object stylesheets</param>
 		/// <param name="loadOption">optional object loadOption</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets, object loadOption)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "OpenXML", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, stylesheets, loadOption);
-		}
+		NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets, object loadOption);
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
@@ -1793,10 +1407,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="filename">string filename</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook OpenXML(string filename)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "OpenXML", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename);
-		}
+		NetOffice.ExcelApi.Workbook OpenXML(string filename);
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
@@ -1805,10 +1416,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="stylesheets">optional object stylesheets</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _OpenXML(string filename, object stylesheets)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_OpenXML", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename, stylesheets);
-		}
+		NetOffice.ExcelApi.Workbook _OpenXML(string filename, object stylesheets);
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
@@ -1817,55 +1425,8 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Workbook _OpenXML(string filename)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "_OpenXML", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, filename);
-		}
+		NetOffice.ExcelApi.Workbook _OpenXML(string filename);
 
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.ExcelApi.Workbook>
-
-        ICOMObject IEnumerableProvider<Workbook>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<Workbook>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.ExcelApi.Workbook>
-
-        /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Workbook> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.ExcelApi.Workbook item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
-		}
-
-        #endregion
-
-        #pragma warning restore
-    }
+		#endregion
+	}
 }

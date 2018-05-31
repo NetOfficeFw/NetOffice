@@ -8,7 +8,7 @@ namespace NetOffice.ExcelApi
     /// <summary>
     /// Partial IWorksheetFunction SumIfs
     /// </summary>
-    partial class IWorksheetFunction : COMObject
+    partial interface IWorksheetFunction
     {
         #region Methods
 
@@ -45,10 +45,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg28">optional object arg28</param>
         /// <param name="arg29">optional object arg29</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -58,10 +55,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg3">object arg3</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", arg1, arg2, arg3);
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -72,10 +66,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg4">optional object arg4</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", arg1, arg2, arg3, arg4);
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -87,10 +78,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg5">optional object arg5</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -103,10 +91,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg6">optional object arg6</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -120,10 +105,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg7">optional object arg7</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -138,10 +120,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg8">optional object arg8</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -157,10 +136,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg9">optional object arg9</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -177,10 +153,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg10">optional object arg10</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -198,10 +171,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg11">optional object arg11</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -220,10 +190,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg12">optional object arg12</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -243,10 +210,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg13">optional object arg13</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -267,10 +231,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg14">optional object arg14</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -292,10 +253,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg15">optional object arg15</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -318,10 +276,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg16">optional object arg16</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -345,10 +300,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg17">optional object arg17</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -373,10 +325,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg18">optional object arg18</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -402,10 +351,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg19">optional object arg19</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -432,10 +378,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg20">optional object arg20</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -463,10 +406,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg21">optional object arg21</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -495,10 +435,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg22">optional object arg22</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -528,10 +465,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg23">optional object arg23</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -562,10 +496,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg24">optional object arg24</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -597,10 +528,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg25">optional object arg25</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -633,10 +561,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg26">optional object arg26</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -670,10 +595,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg27">optional object arg27</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27);
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
@@ -708,10 +630,7 @@ namespace NetOffice.ExcelApi
         /// <param name="arg28">optional object arg28</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
-        {
-            return Factory.ExecuteDoubleMethodGet(this, "SumIfs", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
-        }
+        Double SumIfs(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28);
 
         #endregion
     }

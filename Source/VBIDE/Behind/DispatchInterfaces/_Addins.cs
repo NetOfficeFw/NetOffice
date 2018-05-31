@@ -14,7 +14,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-    internal class _AddIns : COMObject, NetOffice.VBIDEApi._AddIns
+    public class _AddIns : COMObject, NetOffice.VBIDEApi._AddIns
     {
         #pragma warning disable
 

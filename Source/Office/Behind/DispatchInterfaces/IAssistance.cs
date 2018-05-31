@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864589.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IAssistance : COMObject, NetOffice.OfficeApi.IAssistance
+    public class IAssistance : COMObject, NetOffice.OfficeApi.IAssistance
     {
         #pragma warning disable
 

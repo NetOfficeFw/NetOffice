@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.VBIDEApi.EventInterfaces._dispReferencesEvents))]
+    [ComEventInterface(typeof(NetOffice.VBIDEApi.EventContracts._dispReferencesEvents))]
     internal class ReferencesEvents : NetOffice.VBIDEApi.Behind._ReferencesEvents, NetOffice.VBIDEApi.ReferencesEvents
     {
         #pragma warning disable
@@ -21,7 +21,7 @@ namespace NetOffice.VBIDEApi.Behind
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
-        private EventInterfaces._dispReferencesEvents_SinkHelper __dispReferencesEvents_SinkHelper;
+        private EventContracts._dispReferencesEvents_SinkHelper __dispReferencesEvents_SinkHelper;
 
         #endregion
 
@@ -183,12 +183,12 @@ namespace NetOffice.VBIDEApi.Behind
                 return;
 
             if (null == _activeSinkId)
-                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EventInterfaces._dispReferencesEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EventContracts._dispReferencesEvents_SinkHelper.Id);
 
 
-            if (EventInterfaces._dispReferencesEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (EventContracts._dispReferencesEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
-                __dispReferencesEvents_SinkHelper = new EventInterfaces._dispReferencesEvents_SinkHelper(this, _connectPoint);
+                __dispReferencesEvents_SinkHelper = new EventContracts._dispReferencesEvents_SinkHelper(this, _connectPoint);
                 return;
             }
         }

@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862795.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class SearchScope : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.SearchScope
+    public class SearchScope : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.SearchScope
     {
         #pragma warning disable
 

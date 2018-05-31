@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
-    internal class LegendEntries : COMObject, NetOffice.OfficeApi.LegendEntries
+    public class LegendEntries : COMObject, NetOffice.OfficeApi.LegendEntries
     {
         #pragma warning disable
 

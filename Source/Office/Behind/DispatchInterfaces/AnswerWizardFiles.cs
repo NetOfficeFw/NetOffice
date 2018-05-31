@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class AnswerWizardFiles : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.AnswerWizardFiles
+    public class AnswerWizardFiles : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.AnswerWizardFiles
     {
         #pragma warning disable
 

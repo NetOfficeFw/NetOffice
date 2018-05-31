@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-    internal class ChartGroups : COMObject, NetOffice.OfficeApi.ChartGroups
+    public class ChartGroups : COMObject, NetOffice.OfficeApi.ChartGroups
     {
         #pragma warning disable
 

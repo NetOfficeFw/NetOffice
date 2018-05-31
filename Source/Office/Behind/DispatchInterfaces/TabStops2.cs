@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860606.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-    internal class TabStops2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.TabStops2
+    public class TabStops2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.TabStops2
     {
         #pragma warning disable
 

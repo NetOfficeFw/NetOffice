@@ -19,7 +19,7 @@ namespace NetOffice.VBIDEApi
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(EventInterfaces._dispCommandBarControlEvents))]
+    [ComEventInterface(typeof(EventContracts._dispCommandBarControlEvents))]
     public interface CommandBarEvents : _CommandBarControlEvents, IEventBinding
     {
         #region Events

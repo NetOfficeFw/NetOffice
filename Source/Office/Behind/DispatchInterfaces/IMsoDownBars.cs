@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoDownBars : COMObject, NetOffice.OfficeApi.IMsoDownBars
+    public class IMsoDownBars : COMObject, NetOffice.OfficeApi.IMsoDownBars
     {
         #pragma warning disable
 

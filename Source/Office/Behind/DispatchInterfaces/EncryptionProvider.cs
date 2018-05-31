@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863389.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class EncryptionProvider : COMObject, NetOffice.OfficeApi.EncryptionProvider
+    public class EncryptionProvider : COMObject, NetOffice.OfficeApi.EncryptionProvider
     {
         #pragma warning disable
 

@@ -4,13 +4,12 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
 using NetOffice.Attributes;
-using NetOffice.OfficeApi.EventInterfaces;
 
-namespace NetOffice.OfficeApi.Behind.EventInterfaces
+namespace NetOffice.OfficeApi.Behind.EventContracts
 {
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-    public class IMsoEnvelopeVBEvents_SinkHelper : SinkHelper, NetOffice.OfficeApi.EventInterfaces.IMsoEnvelopeVBEvents
+    public class IMsoEnvelopeVBEvents_SinkHelper : SinkHelper, NetOffice.OfficeApi.EventContracts.IMsoEnvelopeVBEvents
     {
         #region Static
 

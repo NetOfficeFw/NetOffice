@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861756.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class PickerResult : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.PickerResult
+    public class PickerResult : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.PickerResult
     {
         #pragma warning disable
 

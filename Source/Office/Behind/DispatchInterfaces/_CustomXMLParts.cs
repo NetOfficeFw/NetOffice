@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class _CustomXMLParts : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi._CustomXMLParts
+    public class _CustomXMLParts : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi._CustomXMLParts
     {
         #pragma warning disable
 

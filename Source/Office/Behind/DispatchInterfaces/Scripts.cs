@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-    internal class Scripts : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.Scripts
+    public class Scripts : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.Scripts
     {
         #pragma warning disable
 

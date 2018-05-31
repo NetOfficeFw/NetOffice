@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865226.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class SignatureSetup : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.SignatureSetup
+    public class SignatureSetup : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.SignatureSetup
     {
         #pragma warning disable
 

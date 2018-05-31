@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.DiagramNode")]
-    internal class DiagramNode : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.DiagramNode
+    public class DiagramNode : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.DiagramNode
     {
         #pragma warning disable
 

@@ -11,100 +11,8 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface)]
- 	public class ITableStyle : COMObject
+	public interface ITableStyle : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ITableStyle);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ITableStyle(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ITableStyle(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITableStyle(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITableStyle(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITableStyle(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITableStyle(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITableStyle() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITableStyle(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,26 +20,14 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlCreator Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
@@ -139,146 +35,70 @@ namespace NetOffice.ExcelApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string _Default
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_Default");
-			}
-		}
+		string _Default { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string NameLocal
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "NameLocal");
-			}
-		}
+		string NameLocal { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool BuiltIn
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "BuiltIn");
-			}
-		}
+		bool BuiltIn { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.TableStyleElements TableStyleElements
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.TableStyleElements>(this, "TableStyleElements", NetOffice.ExcelApi.TableStyleElements.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.TableStyleElements TableStyleElements { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool ShowAsAvailableTableStyle
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsAvailableTableStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsAvailableTableStyle", value);
-			}
-		}
+		bool ShowAsAvailableTableStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool ShowAsAvailablePivotTableStyle
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsAvailablePivotTableStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsAvailablePivotTableStyle", value);
-			}
-		}
+		bool ShowAsAvailablePivotTableStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool ShowAsAvailableSlicerStyle
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsAvailableSlicerStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsAvailableSlicerStyle", value);
-			}
-		}
+		bool ShowAsAvailableSlicerStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool ShowAsAvailableTimelineStyle
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsAvailableTimelineStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsAvailableTimelineStyle", value);
-			}
-		}
+		bool ShowAsAvailableTimelineStyle { get; set; }
 
 		#endregion
 
@@ -288,33 +108,22 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Delete()
-		{
-			return Factory.ExecuteInt32MethodGet(this, "Delete");
-		}
+		Int32 Delete();
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// </summary>
 		/// <param name="newTableStyleName">optional object newTableStyleName</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.TableStyle Duplicate(object newTableStyleName)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.TableStyle>(this, "Duplicate", NetOffice.ExcelApi.TableStyle.LateBindingApiWrapperType, newTableStyleName);
-		}
+		NetOffice.ExcelApi.TableStyle Duplicate(object newTableStyleName);
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.TableStyle Duplicate()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.TableStyle>(this, "Duplicate", NetOffice.ExcelApi.TableStyle.LateBindingApiWrapperType);
-		}
+		NetOffice.ExcelApi.TableStyle Duplicate();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

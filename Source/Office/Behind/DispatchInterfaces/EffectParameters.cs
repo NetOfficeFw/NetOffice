@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863304.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class EffectParameters : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.EffectParameters
+    public class EffectParameters : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.EffectParameters
     {
         #pragma warning disable
 

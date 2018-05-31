@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class MsoDebugOptions_UTs : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.MsoDebugOptions_UTs
+    public class MsoDebugOptions_UTs : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.MsoDebugOptions_UTs
     {
         #pragma warning disable
 

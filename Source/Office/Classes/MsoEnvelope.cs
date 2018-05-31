@@ -21,7 +21,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862112.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventInterfaces.IMsoEnvelopeVBEvents))]
+    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts.IMsoEnvelopeVBEvents))]
     public interface MsoEnvelope : IMsoEnvelopeVB, IEventBinding
     {
         #region Events

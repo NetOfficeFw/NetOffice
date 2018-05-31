@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.ShapeNode")]
-    internal class ShapeNode : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ShapeNode
+    public class ShapeNode : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ShapeNode
     {
         #pragma warning disable
 

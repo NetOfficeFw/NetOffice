@@ -22,7 +22,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863162.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventInterfaces._CustomXMLPartsEvents))]
+    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts._CustomXMLPartsEvents))]
     public interface CustomXMLParts : _CustomXMLParts, IEventBinding
     {
         #region Events

@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoDisplayUnitLabel : NetOffice.OfficeApi.Behind.IMsoChartTitle, NetOffice.OfficeApi.IMsoDisplayUnitLabel
+    public class IMsoDisplayUnitLabel : NetOffice.OfficeApi.Behind.IMsoChartTitle, NetOffice.OfficeApi.IMsoDisplayUnitLabel
     {
         #pragma warning disable
 

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
 using NetOffice.Attributes;
 
-namespace NetOffice.OfficeApi.Behind.EventInterfaces
+namespace NetOffice.OfficeApi.Behind.EventContracts
 {
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-    public class _CommandBarButtonEvents_SinkHelper : SinkHelper, NetOffice.OfficeApi.EventInterfaces._CommandBarButtonEvents
+    public class _CommandBarButtonEvents_SinkHelper : SinkHelper, NetOffice.OfficeApi.EventContracts._CommandBarButtonEvents
     {
         #region Static
 

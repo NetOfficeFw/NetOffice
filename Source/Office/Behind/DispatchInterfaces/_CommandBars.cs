@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class _CommandBars : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi._CommandBars
+    public class _CommandBars : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi._CommandBars
     {
         #pragma warning disable
 

@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862446.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class FileDialog : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FileDialog
+    public class FileDialog : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FileDialog
     {
         #pragma warning disable
 

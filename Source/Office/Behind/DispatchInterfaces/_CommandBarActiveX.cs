@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class _CommandBarActiveX : NetOffice.OfficeApi.Behind.CommandBarControl, NetOffice.OfficeApi._CommandBarActiveX
+    public class _CommandBarActiveX : NetOffice.OfficeApi.Behind.CommandBarControl, NetOffice.OfficeApi._CommandBarActiveX
     {
         #pragma warning disable
 

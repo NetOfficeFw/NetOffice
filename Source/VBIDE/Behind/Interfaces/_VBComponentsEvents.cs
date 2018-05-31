@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsInterface)]
-    internal class _VBComponentsEvents : COMObject, NetOffice.VBIDEApi._VBComponentsEvents
+    public class _VBComponentsEvents : COMObject, NetOffice.VBIDEApi._VBComponentsEvents
     {
         #pragma warning disable
 

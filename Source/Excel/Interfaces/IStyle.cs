@@ -11,100 +11,8 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface)]
- 	public class IStyle : COMObject
+	public interface IStyle : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IStyle);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IStyle(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IStyle(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IStyle(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IStyle(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IStyle(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IStyle(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IStyle() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IStyle(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,26 +20,14 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlCreator Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -139,440 +35,196 @@ namespace NetOffice.ExcelApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool AddIndent
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AddIndent");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AddIndent", value);
-			}
-		}
+		bool AddIndent { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool BuiltIn
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "BuiltIn");
-			}
-		}
+		bool BuiltIn { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Borders Borders
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Borders>(this, "Borders", NetOffice.ExcelApi.Borders.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Borders Borders { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Font Font
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", NetOffice.ExcelApi.Font.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Font Font { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool FormulaHidden
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "FormulaHidden");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FormulaHidden", value);
-			}
-		}
+		bool FormulaHidden { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlHAlign HorizontalAlignment
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlHAlign>(this, "HorizontalAlignment");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "HorizontalAlignment", value);
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlHAlign HorizontalAlignment { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool IncludeAlignment
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IncludeAlignment");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IncludeAlignment", value);
-			}
-		}
+		bool IncludeAlignment { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool IncludeBorder
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IncludeBorder");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IncludeBorder", value);
-			}
-		}
+		bool IncludeBorder { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool IncludeFont
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IncludeFont");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IncludeFont", value);
-			}
-		}
+		bool IncludeFont { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool IncludeNumber
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IncludeNumber");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IncludeNumber", value);
-			}
-		}
+		bool IncludeNumber { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool IncludePatterns
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IncludePatterns");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IncludePatterns", value);
-			}
-		}
+		bool IncludePatterns { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool IncludeProtection
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IncludeProtection");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IncludeProtection", value);
-			}
-		}
+		bool IncludeProtection { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 IndentLevel
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "IndentLevel");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IndentLevel", value);
-			}
-		}
+		Int32 IndentLevel { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Interior Interior
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Interior>(this, "Interior", NetOffice.ExcelApi.Interior.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Interior Interior { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Locked
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Locked");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Locked", value);
-			}
-		}
+		bool Locked { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object MergeCells
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "MergeCells");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "MergeCells", value);
-			}
-		}
+		object MergeCells { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string NameLocal
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "NameLocal");
-			}
-		}
+		string NameLocal { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string NumberFormat
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "NumberFormat");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "NumberFormat", value);
-			}
-		}
+		string NumberFormat { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string NumberFormatLocal
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "NumberFormatLocal");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "NumberFormatLocal", value);
-			}
-		}
+		string NumberFormatLocal { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlOrientation Orientation
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlOrientation>(this, "Orientation");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Orientation", value);
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlOrientation Orientation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool ShrinkToFit
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShrinkToFit");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShrinkToFit", value);
-			}
-		}
+		bool ShrinkToFit { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Value");
-			}
-		}
+		string Value { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlVAlign VerticalAlignment
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlVAlign>(this, "VerticalAlignment");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "VerticalAlignment", value);
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlVAlign VerticalAlignment { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool WrapText
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "WrapText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "WrapText", value);
-			}
-		}
+		bool WrapText { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string _Default
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_Default");
-			}
-		}
+		string _Default { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ReadingOrder
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ReadingOrder");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ReadingOrder", value);
-			}
-		}
+		Int32 ReadingOrder { get; set; }
 
 		#endregion
 
@@ -582,13 +234,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Delete()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Delete");
-		}
+		object Delete();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

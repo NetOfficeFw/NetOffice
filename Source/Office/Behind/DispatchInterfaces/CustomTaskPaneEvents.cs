@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class CustomTaskPaneEvents : COMObject, NetOffice.OfficeApi.CustomTaskPaneEvents
+    public class CustomTaskPaneEvents : COMObject, NetOffice.OfficeApi.CustomTaskPaneEvents
     {
         #pragma warning disable
 

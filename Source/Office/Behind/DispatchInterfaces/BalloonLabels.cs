@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class BalloonLabels : NetOffice.OfficeApi.Behind. _IMsoDispObj, NetOffice.OfficeApi.BalloonLabels
+    public class BalloonLabels : NetOffice.OfficeApi.Behind. _IMsoDispObj, NetOffice.OfficeApi.BalloonLabels
     {
         #pragma warning disable
 

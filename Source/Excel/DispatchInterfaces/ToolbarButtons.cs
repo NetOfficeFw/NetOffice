@@ -14,100 +14,8 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class ToolbarButtons : COMObject, IEnumerableProvider<NetOffice.ExcelApi.ToolbarButton>
+	public interface ToolbarButtons : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ToolbarButton>
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ToolbarButtons);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ToolbarButtons(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ToolbarButtons(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ToolbarButtons(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ToolbarButtons(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ToolbarButtons(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ToolbarButtons(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ToolbarButtons() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ToolbarButtons(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -115,26 +23,14 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ExcelApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
+		NetOffice.ExcelApi.Enums.XlCreator Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -142,26 +38,14 @@ namespace NetOffice.ExcelApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+		Int32 Count { get; }
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -170,13 +54,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.ToolbarButton this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ToolbarButton>(this, "_Default", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, index);
-			}
-		}
+		NetOffice.ExcelApi.ToolbarButton this[Int32 index] { get; }
 
 		#endregion
 
@@ -194,20 +72,14 @@ namespace NetOffice.ExcelApi
 		/// <param name="helpFile">optional object helpFile</param>
 		/// <param name="helpContextID">optional object helpContextID</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile, object helpContextID)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, new object[]{ button, before, onAction, pushed, enabled, statusBar, helpFile, helpContextID });
-		}
+		NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile, object helpContextID);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType);
-		}
+		NetOffice.ExcelApi.ToolbarButton Add();
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -215,10 +87,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="button">optional object button</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, button);
-		}
+		NetOffice.ExcelApi.ToolbarButton Add(object button);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -227,10 +96,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="before">optional object before</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, button, before);
-		}
+		NetOffice.ExcelApi.ToolbarButton Add(object button, object before);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -240,10 +106,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="onAction">optional object onAction</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, button, before, onAction);
-		}
+		NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -254,10 +117,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="pushed">optional object pushed</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, button, before, onAction, pushed);
-		}
+		NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -269,10 +129,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="enabled">optional object enabled</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, new object[]{ button, before, onAction, pushed, enabled });
-		}
+		NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -285,10 +142,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="statusBar">optional object statusBar</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, new object[]{ button, before, onAction, pushed, enabled, statusBar });
-		}
+		NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar);
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -302,55 +156,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="helpFile">optional object helpFile</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType, new object[]{ button, before, onAction, pushed, enabled, statusBar, helpFile });
-		}
-
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.ExcelApi.ToolbarButton>
-
-        ICOMObject IEnumerableProvider<NetOffice.ExcelApi.ToolbarButton>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<NetOffice.ExcelApi.ToolbarButton>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.ExcelApi.ToolbarButton>
-
-        /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ToolbarButton> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.ExcelApi.ToolbarButton item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
-		}
+		NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class ILicValidator : COMObject, NetOffice.OfficeApi.ILicValidator
+    public class ILicValidator : COMObject, NetOffice.OfficeApi.ILicValidator
     {
         #pragma warning disable
 

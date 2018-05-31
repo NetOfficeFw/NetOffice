@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]    
-    [ComEventInterface(typeof(NetOffice.VBIDEApi.EventInterfaces._dispCommandBarControlEvents))]
+    [ComEventInterface(typeof(NetOffice.VBIDEApi.EventContracts._dispCommandBarControlEvents))]
     internal class CommandBarEvents : NetOffice.VBIDEApi.Behind._CommandBarControlEvents, NetOffice.VBIDEApi.CommandBarEvents
     {
         #pragma warning disable
@@ -21,7 +21,7 @@ namespace NetOffice.VBIDEApi.Behind
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
-        private EventInterfaces._dispCommandBarControlEvents_SinkHelper __dispCommandBarControlEvents_SinkHelper;
+        private EventContracts._dispCommandBarControlEvents_SinkHelper __dispCommandBarControlEvents_SinkHelper;
 
         #endregion
 
@@ -161,12 +161,12 @@ namespace NetOffice.VBIDEApi.Behind
                 return;
 
             if (null == _activeSinkId)
-                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EventInterfaces._dispCommandBarControlEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EventContracts._dispCommandBarControlEvents_SinkHelper.Id);
 
 
-            if (EventInterfaces._dispCommandBarControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (EventContracts._dispCommandBarControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
-                __dispCommandBarControlEvents_SinkHelper = new EventInterfaces._dispCommandBarControlEvents_SinkHelper(this, _connectPoint);
+                __dispCommandBarControlEvents_SinkHelper = new EventContracts._dispCommandBarControlEvents_SinkHelper(this, _connectPoint);
                 return;
             }
         }

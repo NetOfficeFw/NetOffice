@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behinds
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.ThreeDFormat")]
-    internal class ThreeDFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ThreeDFormat
+    public class ThreeDFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ThreeDFormat
     {
         #pragma warning disable
 

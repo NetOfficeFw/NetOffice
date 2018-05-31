@@ -5,319 +5,127 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi
 {
-	/// <summary>
-	/// Interface IAddIn 
-	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface)]
- 	public class IAddIn : COMObject
-	{
-		#pragma warning disable
-
-		#region Type Information
+    /// <summary>
+    /// Interface IAddIn 
+    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// </summary>
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsInterface)]
+    public interface IAddIn : ICOMObject
+    {
+        #region Properties
 
         /// <summary>
-        /// Instance Type
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        NetOffice.ExcelApi.Application Application { get; }
 
-        private static Type _type;
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        NetOffice.ExcelApi.Enums.XlCreator Creator { get; }
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IAddIn);
-                return _type;
-            }
-        }
-        
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
+        object Parent { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        string Author { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        string Comments { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        string FullName { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        bool Installed { get; set; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        string Keywords { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        string Name { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        string Path { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        string Subject { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        string Title { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        string progID { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        string CLSID { get; }
+
+        /// <summary>
+        /// SupportByVersion Excel 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 14, 15, 16)]
+        bool IsOpen { get; }
+
         #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IAddIn(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IAddIn(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IAddIn(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IAddIn(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IAddIn(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IAddIn(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IAddIn() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IAddIn(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Author
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Author");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Comments
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Comments");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string FullName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FullName");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Installed
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Installed");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Installed", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Keywords
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Keywords");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Path
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Path");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Subject
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Subject");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Title
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Title");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string progID
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "progID");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string CLSID
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "CLSID");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 14,15,16)]
-		public bool IsOpen
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsOpen");
-			}
-		}
-
-		#endregion
-
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
-	}
+    }
 }

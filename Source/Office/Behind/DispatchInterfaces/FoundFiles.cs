@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class FoundFiles : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FoundFiles
+    public class FoundFiles : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FoundFiles
     {
         #pragma warning disable
 

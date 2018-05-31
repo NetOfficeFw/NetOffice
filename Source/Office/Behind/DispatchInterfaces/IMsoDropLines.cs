@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoDropLines : COMObject, NetOffice.OfficeApi.IMsoDropLines
+    public class IMsoDropLines : COMObject, NetOffice.OfficeApi.IMsoDropLines
     {
         #pragma warning disable
 

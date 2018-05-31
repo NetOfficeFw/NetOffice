@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoDiagram : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.IMsoDiagram
+    public class IMsoDiagram : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.IMsoDiagram
     {
         #pragma warning disable
 

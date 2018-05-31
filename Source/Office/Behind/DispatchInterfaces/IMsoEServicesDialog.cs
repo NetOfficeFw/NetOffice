@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoEServicesDialog : COMObject, NetOffice.OfficeApi.IMsoEServicesDialog
+    public class IMsoEServicesDialog : COMObject, NetOffice.OfficeApi.IMsoEServicesDialog
     {
         #pragma warning disable
 

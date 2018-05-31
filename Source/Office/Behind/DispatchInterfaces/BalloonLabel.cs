@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class BalloonLabel : NetOffice.OfficeApi.Behind._IMsoDispObj
+    public class BalloonLabel : NetOffice.OfficeApi.Behind._IMsoDispObj
     {
         #pragma warning disable
 

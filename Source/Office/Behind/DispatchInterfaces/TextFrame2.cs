@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.TextFrame2")]
-    internal class TextFrame2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.TextFrame2
+    public class TextFrame2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.TextFrame2
     {
         #pragma warning disable
 

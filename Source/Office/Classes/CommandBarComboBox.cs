@@ -20,7 +20,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865547.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventInterfaces._CommandBarComboBoxEvents))]
+    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts._CommandBarComboBoxEvents))]
     public interface CommandBarComboBox : _CommandBarComboBox, IEventBinding
     {
         #region Events

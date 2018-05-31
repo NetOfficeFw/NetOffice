@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863642.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class CommandBarPopup : NetOffice.OfficeApi.Behind.CommandBarControl, NetOffice.OfficeApi.CommandBarPopup
+    public class CommandBarPopup : NetOffice.OfficeApi.Behind.CommandBarControl, NetOffice.OfficeApi.CommandBarPopup
     {
         #pragma warning disable
 

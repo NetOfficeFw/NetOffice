@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class ILicWizExternal : COMObject, NetOffice.OfficeApi.ILicWizExternal
+    public class ILicWizExternal : COMObject, NetOffice.OfficeApi.ILicWizExternal
     {
         #pragma warning disable
 

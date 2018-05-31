@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863345.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class WorkflowTask : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.WorkflowTask
+    public class WorkflowTask : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.WorkflowTask
     {
         #pragma warning disable
 

@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862807.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
-    internal class IConverterApplicationPreferences : COMObject, NetOffice.OfficeApi.IConverterApplicationPreferences
+    public class IConverterApplicationPreferences : COMObject, NetOffice.OfficeApi.IConverterApplicationPreferences
     {
         #pragma warning disable
 

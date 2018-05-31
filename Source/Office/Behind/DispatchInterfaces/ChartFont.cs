@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class ChartFont : COMObject, NetOffice.OfficeApi.ChartFont
+    public class ChartFont : COMObject, NetOffice.OfficeApi.ChartFont
     {
         #pragma warning disable
 

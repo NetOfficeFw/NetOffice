@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865318.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class PickerField : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.PickerField
+    public class PickerField : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.PickerField
     {
         #pragma warning disable
 

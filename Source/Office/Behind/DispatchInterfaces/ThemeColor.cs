@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861152.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class ThemeColor : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ThemeColor
+    public class ThemeColor : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ThemeColor
     {
         #pragma warning disable
 

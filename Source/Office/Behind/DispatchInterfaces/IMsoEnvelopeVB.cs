@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
-    internal class IMsoEnvelopeVB : COMObject, NetOffice.OfficeApi.IMsoEnvelopeVB
+    public class IMsoEnvelopeVB : COMObject, NetOffice.OfficeApi.IMsoEnvelopeVB
     {
         #pragma warning disable
 

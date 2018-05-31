@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
-    internal class _VBProject_Old :  NetOffice.VBIDEApi.Behind._ProjectTemplate, NetOffice.VBIDEApi._VBProject_Old
+    public class _VBProject_Old :  NetOffice.VBIDEApi.Behind._ProjectTemplate, NetOffice.VBIDEApi._VBProject_Old
     {
         #pragma warning disable
 

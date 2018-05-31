@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-    internal class CanvasShapes : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.CanvasShapes
+    public class CanvasShapes : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.CanvasShapes
     {
         #pragma warning disable
 

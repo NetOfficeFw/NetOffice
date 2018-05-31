@@ -5,7 +5,7 @@ using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
 using NetOffice.Attributes;
 
-namespace NetOffice.OfficeApi.EventInterfaces
+namespace NetOffice.OfficeApi.EventContracts
 {	
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]

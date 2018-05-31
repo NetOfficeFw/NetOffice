@@ -11,7 +11,7 @@ namespace NetOffice.OfficeApi.Behind
     /// IAccessible
     /// </summary>
     [SyntaxBypass]
-    internal class IAccessible_ : COMObject, NetOffice.OfficeApi.IAccessible_
+    public class IAccessible_ : COMObject, NetOffice.OfficeApi.IAccessible_
     {
         #region Ctor
 
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: https://msdn.microsoft.com/en-us/library/microsoft.office.core.iaccessible.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
-    internal class IAccessible : NetOffice.OfficeApi.Behind.IAccessible_, NetOffice.OfficeApi.IAccessible
+    public class IAccessible : NetOffice.OfficeApi.Behind.IAccessible_, NetOffice.OfficeApi.IAccessible
     {
         #pragma warning disable
 

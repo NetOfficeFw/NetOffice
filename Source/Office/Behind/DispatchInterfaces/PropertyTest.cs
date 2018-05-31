@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class PropertyTest : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.PropertyTest
+    public class PropertyTest : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.PropertyTest
     {
         #pragma warning disable
 

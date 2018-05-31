@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: https://msdn.microsoft.com/en-us/library/microsoft.office.core._imsooleaccdispobj.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
-    internal class _IMsoOleAccDispObj : NetOffice.OfficeApi.Behind.IAccessible, NetOffice.OfficeApi.IAccessible
+    public class _IMsoOleAccDispObj : NetOffice.OfficeApi.Behind.IAccessible, NetOffice.OfficeApi.IAccessible
     {
         #pragma warning disable
 

@@ -285,7 +285,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <returns>ICOMObject proxy wrapper instance</returns>
         protected internal IRTDUpdateEvent ReflectCallbackObject(Native.IRTDUpdateEvent callbackObject)
         {
-            return new IRTDUpdateEvent(Factory, null, callbackObject, IRTDUpdateEvent.LateBindingApiWrapperType);
+            return Factory.CreateKnownObjectFromComProxy<IRTDUpdateEvent>(null, callbackObject, typeof(IRTDUpdateEvent));             
         }
 
         /// <summary>

@@ -14,7 +14,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-    internal class _LinkedWindows : COMObject, NetOffice.VBIDEApi._LinkedWindows
+    public class _LinkedWindows : COMObject, NetOffice.VBIDEApi._LinkedWindows
     {
         #pragma warning disable
 

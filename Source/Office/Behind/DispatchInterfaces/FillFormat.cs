@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.FillFormat")]
-    internal class FillFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FillFormat
+    public class FillFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FillFormat
     {
         #pragma warning disable
 

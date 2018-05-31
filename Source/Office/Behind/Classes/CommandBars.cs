@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860339.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventInterfaces._CommandBarsEvents))]
+    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts._CommandBarsEvents))]
     internal class CommandBars : NetOffice.OfficeApi.Behind._CommandBars, NetOffice.OfficeApi.CommandBars
     {
         #pragma warning disable
@@ -23,7 +23,7 @@ namespace NetOffice.OfficeApi.Behind
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
-        private NetOffice.OfficeApi.Behind.EventInterfaces._CommandBarsEvents_SinkHelper __CommandBarsEvents_SinkHelper;
+        private NetOffice.OfficeApi.Behind.EventContracts._CommandBarsEvents_SinkHelper __CommandBarsEvents_SinkHelper;
 
         #endregion
 
@@ -163,12 +163,12 @@ namespace NetOffice.OfficeApi.Behind
                 return;
 
             if (null == _activeSinkId)
-                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NetOffice.OfficeApi.Behind.EventInterfaces._CommandBarsEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NetOffice.OfficeApi.Behind.EventContracts._CommandBarsEvents_SinkHelper.Id);
 
 
-            if (NetOffice.OfficeApi.Behind.EventInterfaces._CommandBarsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (NetOffice.OfficeApi.Behind.EventContracts._CommandBarsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
-                __CommandBarsEvents_SinkHelper = new NetOffice.OfficeApi.Behind.EventInterfaces._CommandBarsEvents_SinkHelper(this, _connectPoint);
+                __CommandBarsEvents_SinkHelper = new NetOffice.OfficeApi.Behind.EventContracts._CommandBarsEvents_SinkHelper(this, _connectPoint);
                 return;
             }
         }

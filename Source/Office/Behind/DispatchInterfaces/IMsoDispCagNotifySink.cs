@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class IMsoDispCagNotifySink : COMObject, NetOffice.OfficeApi.IMsoDispCagNotifySink
+    public class IMsoDispCagNotifySink : COMObject, NetOffice.OfficeApi.IMsoDispCagNotifySink
     {
         #pragma warning disable
 

@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     [Duplicate("NetOffice.ExcelApi.DiagramNodeChildren")]
-    internal class DiagramNodeChildren : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.DiagramNodeChildren
+    public class DiagramNodeChildren : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.DiagramNodeChildren
     {
         #pragma warning disable
 

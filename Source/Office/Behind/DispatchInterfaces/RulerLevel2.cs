@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865342.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class RulerLevel2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.RulerLevel2
+    public class RulerLevel2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.RulerLevel2
     {
         #pragma warning disable
 

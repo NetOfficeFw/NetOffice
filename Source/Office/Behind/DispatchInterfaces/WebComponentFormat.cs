@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class WebComponentFormat : COMObject, NetOffice.OfficeApi.WebComponentFormat
+    public class WebComponentFormat : COMObject, NetOffice.OfficeApi.WebComponentFormat
     {
         #pragma warning disable
 

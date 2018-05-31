@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863821.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
-    internal class CommandBarControl : NetOffice.OfficeApi.Behind._IMsoOleAccDispObj, NetOffice.OfficeApi.CommandBarControl
+    public class CommandBarControl : NetOffice.OfficeApi.Behind._IMsoOleAccDispObj, NetOffice.OfficeApi.CommandBarControl
     {
         #pragma warning disable
 

@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863497.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventInterfaces._CustomXMLPartEvents))]
+    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts._CustomXMLPartEvents))]
     internal class CustomXMLPart : NetOffice.OfficeApi.Behind._CustomXMLPart, NetOffice.OfficeApi.CustomXMLPart
     {
         #pragma warning disable
@@ -23,7 +23,7 @@ namespace NetOffice.OfficeApi.Behind
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
-        private NetOffice.OfficeApi.Behind.EventInterfaces._CustomXMLPartEvents_SinkHelper __CustomXMLPartEvents_SinkHelper;
+        private NetOffice.OfficeApi.Behind.EventContracts._CustomXMLPartEvents_SinkHelper __CustomXMLPartEvents_SinkHelper;
 
         #endregion
 
@@ -210,12 +210,12 @@ namespace NetOffice.OfficeApi.Behind
                 return;
 
             if (null == _activeSinkId)
-                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NetOffice.OfficeApi.Behind.EventInterfaces._CustomXMLPartEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NetOffice.OfficeApi.Behind.EventContracts._CustomXMLPartEvents_SinkHelper.Id);
 
 
-            if (NetOffice.OfficeApi.Behind.EventInterfaces._CustomXMLPartEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (NetOffice.OfficeApi.Behind.EventContracts._CustomXMLPartEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
-                __CustomXMLPartEvents_SinkHelper = new NetOffice.OfficeApi.Behind.EventInterfaces._CustomXMLPartEvents_SinkHelper(this, _connectPoint);
+                __CustomXMLPartEvents_SinkHelper = new NetOffice.OfficeApi.Behind.EventContracts._CustomXMLPartEvents_SinkHelper(this, _connectPoint);
                 return;
             }
         }

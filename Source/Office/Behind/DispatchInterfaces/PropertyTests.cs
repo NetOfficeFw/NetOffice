@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi.Behind
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-    internal class PropertyTests : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.PropertyTests
+    public class PropertyTests : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.PropertyTests
     {
         #pragma warning disable
 

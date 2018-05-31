@@ -4,16 +4,15 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using NetOffice.Exceptions;
 using NetOffice.Attributes;
-using NetOffice.VBIDEApi.EventInterfaces;
 
-namespace NetOffice.VBIDEApi.Behind.EventInterfaces
+namespace NetOffice.VBIDEApi.Behind.EventContracts
 {
     /// <summary>
-    /// Default implementation of <see cref="_dispReferencesEvents"/>
+    /// Default implementation of <see cref="NetOffice.VBIDEApi.EventContracts._dispReferencesEvents"/>
     /// </summary>
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-    public class _dispReferencesEvents_SinkHelper : SinkHelper, _dispReferencesEvents
+    public class _dispReferencesEvents_SinkHelper : SinkHelper, NetOffice.VBIDEApi.EventContracts._dispReferencesEvents
     {
         #region Static
 

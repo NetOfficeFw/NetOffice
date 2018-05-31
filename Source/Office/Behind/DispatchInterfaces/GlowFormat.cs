@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864010.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
-    internal class GlowFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.GlowFormat
+    public class GlowFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.GlowFormat
     {
         #pragma warning disable
 
