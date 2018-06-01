@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object Recipients { get; set; }
+        new object Recipients { get; set; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16

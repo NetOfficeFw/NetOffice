@@ -3,22 +3,35 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
+using NetOffice.Exceptions;
 using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi.Behind.EventContracts
 {
+    /// <summary>
+    /// Default implementation of <see cref="NetOffice.OfficeApi.EventContracts._CustomXMLPartEvents"/>
+    /// </summary>
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
     public class _CustomXMLPartEvents_SinkHelper : SinkHelper, NetOffice.OfficeApi.EventContracts._CustomXMLPartEvents
     {
         #region Static
 
+        /// <summary>
+        /// Interface Id from _CustomXMLPartEvents
+        /// </summary>
         public static readonly string Id = "000CDB07-0000-0000-C000-000000000046";
 
         #endregion
 
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="eventClass"></param>
+        /// <param name="connectPoint"></param>
+        /// <exception cref="NetOfficeCOMException">Unexpected error</exception>
         public _CustomXMLPartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
@@ -28,6 +41,11 @@ namespace NetOffice.OfficeApi.Behind.EventContracts
 
         #region _CustomXMLPartEvents
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="newNode"></param>
+        /// <param name="inUndoRedo"></param>
         public void NodeAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
         {
             if (!Validate("NodeAfterInsert"))
@@ -44,6 +62,13 @@ namespace NetOffice.OfficeApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("NodeAfterInsert", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oldNode"></param>
+        /// <param name="oldParentNode"></param>
+        /// <param name="oldNextSibling"></param>
+        /// <param name="inUndoRedo"></param>
         public void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo)
         {
             if (!Validate("NodeAfterDelete"))
@@ -64,6 +89,12 @@ namespace NetOffice.OfficeApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("NodeAfterDelete", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oldNode"></param>
+        /// <param name="newNode"></param>
+        /// <param name="inUndoRedo"></param>
         public void NodeAfterReplace([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
         {
             if (!Validate("NodeAfterReplace"))

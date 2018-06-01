@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object List { get; set; }
+        new object List { get; set; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -312,7 +312,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object Selected { get; set; }
+        new object Selected { get; set; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        NetOffice.ExcelApi.Characters Characters { get; }
+        new NetOffice.ExcelApi.Characters Characters { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16

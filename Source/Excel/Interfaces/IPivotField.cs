@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object ChildItems { get; }
+        new object ChildItems { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -211,7 +211,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object HiddenItems { get; }
+        new object HiddenItems { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object ParentItems { get; }
+        new object ParentItems { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -282,7 +282,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object Subtotals { get; set; }
+        new object Subtotals { get; set; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -317,7 +317,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object VisibleItems { get; }
+        new object VisibleItems { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16

@@ -5,7 +5,7 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi
 {
-    // <summary>
+    /// <summary>
     /// Interface IMailer 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>

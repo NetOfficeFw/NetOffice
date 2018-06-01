@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object Values { get; }
+        new object Values { get; }
 
         #endregion
 

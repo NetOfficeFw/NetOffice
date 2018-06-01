@@ -261,7 +261,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        object ChartGroups { get; }
+        new object ChartGroups { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
@@ -327,14 +327,14 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        object HasAxis { get; set; }
+        new object HasAxis { get; set; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        NetOffice.OfficeApi.IMsoWalls Walls { get; }
+        new NetOffice.OfficeApi.IMsoWalls Walls { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16

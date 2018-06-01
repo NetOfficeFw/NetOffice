@@ -226,7 +226,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        string accName { get; set; }
+        new string accName { get; set; }
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        string accValue { get; set; }
+        new string accValue { get; set; }
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        string accDescription { get; }
+        new string accDescription { get; }
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        object accRole { get; }
+        new object accRole { get; }
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -258,7 +258,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        object accState { get; }
+        new object accState { get; }
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        string accHelp { get; }
+        new string accHelp { get; }
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -310,7 +310,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        string accKeyboardShortcut { get; }
+        new string accKeyboardShortcut { get; }
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -334,7 +334,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        string accDefaultAction { get; }
+        new string accDefaultAction { get; }
 
         #endregion
 

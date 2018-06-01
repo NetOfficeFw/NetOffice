@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        NetOffice.OfficeApi.IMsoCharacters Characters { get; }
+        new NetOffice.OfficeApi.IMsoCharacters Characters { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16

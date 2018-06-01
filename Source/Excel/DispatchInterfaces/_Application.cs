@@ -577,7 +577,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193687.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object Caller { get; }
+        new object Caller { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -617,7 +617,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836533.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object ClipboardFormats { get; }
+        new object ClipboardFormats { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -832,7 +832,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834406.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object FileConverters { get; }
+        new object FileConverters { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -894,7 +894,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840213.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object International { get; }
+        new object International { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1027,7 +1027,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841101.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        string Name { get; }
+        new string Name { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1147,7 +1147,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836223.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object PreviousSelections { get; }
+        new object PreviousSelections { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1187,7 +1187,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839011.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object RegisteredFunctions { get; }
+        new object RegisteredFunctions { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -1371,7 +1371,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193301.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        string Version { get; }
+        new string Version { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -2334,7 +2334,8 @@ namespace NetOffice.ExcelApi
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-        /// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835030.aspx
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835030.aspx </remarks>
         /// <param name="arg1">NetOffice.ExcelApi.Range arg1</param>
         /// <param name="arg2">NetOffice.ExcelApi.Range arg2</param>
         /// <param name="arg3">optional object arg3</param>

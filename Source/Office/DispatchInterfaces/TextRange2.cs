@@ -342,7 +342,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860549.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        NetOffice.OfficeApi.TextRange2 Paragraphs { get; }
+        new NetOffice.OfficeApi.TextRange2 Paragraphs { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
@@ -350,7 +350,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860794.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        NetOffice.OfficeApi.TextRange2 Sentences { get; }
+        new NetOffice.OfficeApi.TextRange2 Sentences { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
@@ -358,7 +358,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864053.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        NetOffice.OfficeApi.TextRange2 Words { get; }
+        new NetOffice.OfficeApi.TextRange2 Words { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
@@ -366,7 +366,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863305.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        NetOffice.OfficeApi.TextRange2 Characters { get; }
+        new NetOffice.OfficeApi.TextRange2 Characters { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
@@ -374,7 +374,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862044.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        NetOffice.OfficeApi.TextRange2 Lines { get; }
+        new NetOffice.OfficeApi.TextRange2 Lines { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
@@ -382,7 +382,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861768.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        NetOffice.OfficeApi.TextRange2 Runs { get; }
+        new NetOffice.OfficeApi.TextRange2 Runs { get; }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
@@ -462,7 +462,8 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860854.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        NetOffice.OfficeApi.TextRange2 MathZones { get; }
+        new NetOffice.OfficeApi.TextRange2 MathZones { get; }
+
 
         #endregion
 

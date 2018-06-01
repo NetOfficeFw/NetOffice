@@ -52,6 +52,12 @@ namespace NetOffice.ExcelApi
         #endregion
     }
 
+    /// <summary>
+    /// Interface IArc 
+    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// </summary>
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsInterface)]
     public interface IArc : IArc_
     {
         #region Properties
@@ -224,7 +230,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        NetOffice.ExcelApi.Characters Characters { get; }
+        new NetOffice.ExcelApi.Characters Characters { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16

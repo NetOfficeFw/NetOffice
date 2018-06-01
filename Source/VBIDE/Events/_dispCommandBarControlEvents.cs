@@ -8,7 +8,7 @@ using NetOffice.Attributes;
 namespace NetOffice.VBIDEApi.EventContracts
 {
     /// <summary>
-    /// 
+    /// _dispCommandBarControlEvents
     /// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
@@ -16,7 +16,7 @@ namespace NetOffice.VBIDEApi.EventContracts
 	public interface _dispCommandBarControlEvents
 	{
         /// <summary>
-        /// 
+        /// Click
         /// </summary>
         /// <param name="commandBarControl"></param>
         /// <param name="handled"></param>

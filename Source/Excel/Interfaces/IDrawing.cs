@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        NetOffice.ExcelApi.Characters Characters { get; }
+        new NetOffice.ExcelApi.Characters Characters { get; }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -351,7 +351,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        object Vertices { get; }
+        new object Vertices { get; }
 
         #endregion
 

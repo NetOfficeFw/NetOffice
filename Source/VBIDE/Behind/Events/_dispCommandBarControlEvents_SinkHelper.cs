@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
+using NetOffice;
 using NetOffice.Exceptions;
 using NetOffice.Attributes;
 

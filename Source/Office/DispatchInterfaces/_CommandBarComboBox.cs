@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        void accSelect(Int32 flagsSelect, object varChild);
+        new void accSelect(Int32 flagsSelect, object varChild);
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        void accSelect(Int32 flagsSelect);
+        new void accSelect(Int32 flagsSelect);
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight, object varChild);
+        new void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight, object varChild);
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight);
+        new void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight);
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi
         /// <param name="varStart">optional object varStart</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        object accNavigate(Int32 navDir, object varStart);
+        new object accNavigate(Int32 navDir, object varStart);
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        object accNavigate(Int32 navDir);
+        new object accNavigate(Int32 navDir);
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi
         /// <param name="yTop">Int32 yTop</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        object accHitTest(Int32 xLeft, Int32 yTop);
+        new object accHitTest(Int32 xLeft, Int32 yTop);
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -188,7 +188,7 @@ namespace NetOffice.OfficeApi
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        void accDoDefaultAction(object varChild);
+        new void accDoDefaultAction(object varChild);
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        void accDoDefaultAction();
+        new void accDoDefaultAction();
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16

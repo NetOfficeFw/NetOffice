@@ -8,7 +8,7 @@ using NetOffice.Attributes;
 namespace NetOffice.VBIDEApi.EventContracts
 {
     /// <summary>
-    /// 
+    /// _dispReferences_Events
     /// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
@@ -16,7 +16,7 @@ namespace NetOffice.VBIDEApi.EventContracts
 	public interface _dispReferences_Events
 	{
         /// <summary>
-        /// 
+        /// ItemAdded
         /// </summary>
         /// <param name="reference"></param>
 		[SupportByVersion("VBIDE", 12,14,5.3)]
@@ -25,7 +25,7 @@ namespace NetOffice.VBIDEApi.EventContracts
 		void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
         /// <summary>
-        /// 
+        /// ItemRemoved
         /// </summary>
         /// <param name="reference"></param>
 		[SupportByVersion("VBIDE", 12,14,5.3)]

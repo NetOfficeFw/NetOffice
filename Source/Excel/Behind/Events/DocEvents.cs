@@ -3,22 +3,35 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
+using NetOffice.Exceptions;
 using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi.Behind.EventContracts
 {
+    /// <summary>
+    /// Default implementation of <see cref="NetOffice.ExcelApi.EventContracts.DocEvents"/>
+    /// </summary>
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
     public class DocEvents_SinkHelper : SinkHelper, NetOffice.ExcelApi.EventContracts.DocEvents
     {
         #region Static
 
+        /// <summary>
+        /// Interface Id from DocEvents
+        /// </summary>
         public static readonly string Id = "00024411-0000-0000-C000-000000000046";
 
         #endregion
 
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="eventClass"></param>
+        /// <param name="connectPoint"></param>
+        /// <exception cref="NetOfficeCOMException">Unexpected error</exception>
         public DocEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
@@ -28,6 +41,10 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
 
         #region DocEvents
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
         public void SelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("SelectionChange"))
@@ -42,6 +59,11 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="cancel"></param>
         public void BeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
         {
             if (!Validate("BeforeDoubleClick"))
@@ -59,6 +81,11 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             cancel = ToBoolean(paramsArray[1]);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="cancel"></param>
         public void BeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
         {
             if (!Validate("BeforeRightClick"))
@@ -76,6 +103,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             cancel = ToBoolean(paramsArray[1]);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Activate()
         {
             if (!Validate("Activate"))
@@ -87,6 +117,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Deactivate()
         {
             if (!Validate("Deactivate"))
@@ -98,6 +131,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Calculate()
         {
             if (!Validate("Calculate"))
@@ -109,6 +145,10 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("Calculate", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
         public void Change([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("Change"))
@@ -123,6 +163,10 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("Change", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
         public void FollowHyperlink([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("FollowHyperlink"))
@@ -137,6 +181,10 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("FollowHyperlink", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
         public void PivotTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("PivotTableUpdate"))
@@ -151,6 +199,11 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("PivotTableUpdate", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="targetPivotTable"></param>
+        /// <param name="targetRange"></param>
         public void PivotTableAfterValueChange([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In, MarshalAs(UnmanagedType.IDispatch)] object targetRange)
         {
             if (!Validate("PivotTableAfterValueChange"))
@@ -167,6 +220,13 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("PivotTableAfterValueChange", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="targetPivotTable"></param>
+        /// <param name="valueChangeStart"></param>
+        /// <param name="valueChangeEnd"></param>
+        /// <param name="cancel"></param>
         public void PivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
         {
             if (!Validate("PivotTableBeforeAllocateChanges"))
@@ -188,6 +248,13 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             cancel = ToBoolean(paramsArray[3]);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="targetPivotTable"></param>
+        /// <param name="valueChangeStart"></param>
+        /// <param name="valueChangeEnd"></param>
+        /// <param name="cancel"></param>
         public void PivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
         {
             if (!Validate("PivotTableBeforeCommitChanges"))
@@ -209,6 +276,12 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             cancel = ToBoolean(paramsArray[3]);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="targetPivotTable"></param>
+        /// <param name="valueChangeStart"></param>
+        /// <param name="valueChangeEnd"></param>
         public void PivotTableBeforeDiscardChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd)
         {
             if (!Validate("PivotTableBeforeDiscardChanges"))
@@ -227,6 +300,10 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("PivotTableBeforeDiscardChanges", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
         public void PivotTableChangeSync([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("PivotTableChangeSync"))
@@ -241,6 +318,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("PivotTableChangeSync", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void LensGalleryRenderComplete()
         {
             if (!Validate("LensGalleryRenderComplete"))
@@ -252,6 +332,10 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("LensGalleryRenderComplete", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="target"></param>
         public void TableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("TableUpdate"))
@@ -266,6 +350,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("TableUpdate", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void BeforeDelete()
         {
             if (!Validate("BeforeDelete"))

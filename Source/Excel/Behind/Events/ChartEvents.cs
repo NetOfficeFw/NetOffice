@@ -3,22 +3,35 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
+using NetOffice.Exceptions;
 using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi.Behind.EventContracts
 {
+    /// <summary>
+    /// Default implementation of <see cref="NetOffice.ExcelApi.EventContracts.ChartEvents"/>
+    /// </summary>
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
     public class ChartEvents_SinkHelper : SinkHelper, NetOffice.ExcelApi.EventContracts.ChartEvents
     {
         #region Static
 
+        /// <summary>
+        /// Interface Id from ChartEvents
+        /// </summary>
         public static readonly string Id = "0002440F-0000-0000-C000-000000000046";
 
         #endregion
 
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="eventClass"></param>
+        /// <param name="connectPoint"></param>
+        /// <exception cref="NetOfficeCOMException">Unexpected error</exception>
         public ChartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
@@ -28,6 +41,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
 
         #region ChartEvents
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Activate()
         {
             if (!Validate("Activate"))
@@ -39,6 +55,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Deactivate()
         {
             if (!Validate("Deactivate"))
@@ -50,6 +69,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Resize()
         {
             if (!Validate("Resize"))
@@ -61,6 +83,13 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("Resize", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="button"></param>
+        /// <param name="shift"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
         {
             if (!Validate("MouseDown"))
@@ -81,6 +110,13 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="button"></param>
+        /// <param name="shift"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
         {
             if (!Validate("MouseUp"))
@@ -101,6 +137,13 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="button"></param>
+        /// <param name="shift"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
         {
             if (!Validate("MouseMove"))
@@ -121,6 +164,10 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cancel"></param>
         public void BeforeRightClick([In] [Out] ref object cancel)
         {
             if (!Validate("BeforeRightClick"))
@@ -136,6 +183,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             cancel = ToBoolean(paramsArray[0]);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void DragPlot()
         {
             if (!Validate("DragPlot"))
@@ -147,6 +197,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("DragPlot", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void DragOver()
         {
             if (!Validate("DragOver"))
@@ -158,6 +211,13 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("DragOver", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="elementID"></param>
+        /// <param name="arg1"></param>
+        /// <param name="arg2"></param>
+        /// <param name="cancel"></param>
         public void BeforeDoubleClick([In] object elementID, [In] object arg1, [In] object arg2, [In] [Out] ref object cancel)
         {
             if (!Validate("BeforeDoubleClick"))
@@ -179,6 +239,12 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             cancel = ToBoolean(paramsArray[3]);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="elementID"></param>
+        /// <param name="arg1"></param>
+        /// <param name="arg2"></param>
         public void Select([In] object elementID, [In] object arg1, [In] object arg2)
         {
             if (!Validate("Select"))
@@ -197,6 +263,11 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("Select", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="seriesIndex"></param>
+        /// <param name="pointIndex"></param>
         public void SeriesChange([In] object seriesIndex, [In] object pointIndex)
         {
             if (!Validate("SeriesChange"))
@@ -213,6 +284,9 @@ namespace NetOffice.ExcelApi.Behind.EventContracts
             EventBinding.RaiseCustomEvent("SeriesChange", ref paramsArray);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Calculate()
         {
             if (!Validate("Calculate"))
