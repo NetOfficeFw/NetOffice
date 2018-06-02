@@ -21,7 +21,7 @@ namespace NetOffice.ExcelApi
 	public delegate void Chart_SelectEventHandler(Int32 elementID, Int32 arg1, Int32 arg2);
 	public delegate void Chart_SeriesChangeEventHandler(Int32 seriesIndex, Int32 pointIndex);
 	public delegate void Chart_CalculateEventHandler();
-#pragma warning restore
+    #pragma warning restore
 
     #endregion
 

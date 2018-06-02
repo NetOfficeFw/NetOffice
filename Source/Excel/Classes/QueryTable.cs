@@ -27,11 +27,6 @@ namespace NetOffice.ExcelApi
         #region Events
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
-        /// </summary>
-        event QueryTable_BeforeRefreshEventHandler _BeforeRefreshEvent;
-
-        /// <summary>
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823150.aspx </remarks>

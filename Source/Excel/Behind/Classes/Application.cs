@@ -15,7 +15,7 @@ namespace NetOffice.ExcelApi.Behind
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
     [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]
-    internal class Application : NetOffice.ExcelApi.Behind._Application, ICloneable<Application>, IEventBinding, IAutomaticQuit
+    public class Application : NetOffice.ExcelApi.Behind._Application, NetOffice.ExcelApi.Application
     {
         #pragma warning disable
 
@@ -131,6 +131,7 @@ namespace NetOffice.ExcelApi.Behind
 
         /// <summary>
         /// Creates a new instance of Application
+        /// <param name="factory">factory core instead of default core</param>
         /// <param name="enableProxyService">try to get a running application first before create a new application</param>
         /// </summary>
         public Application(Core factory = null, bool enableProxyService = false) : base()
@@ -1483,9 +1484,9 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
         /// <exception cref="NetOffice.Exceptions.CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new virtual Application Clone()
+        public new virtual ExcelApi.Application Clone()
         {
-            return base.Clone() as Application;
+            return base.Clone() as ExcelApi.Application;
         }
 
         #endregion

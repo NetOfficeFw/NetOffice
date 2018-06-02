@@ -16,10 +16,10 @@ namespace ClientApplication
                 Settings.Default.PerformanceTrace["ExcelApi"].Enabled = true;
                 Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 0;
 
-                app = new Excel.Application();
+                app = new Excel.ApplicationClass();
                 app.Visible = true;
                 Contribution.CommonUtils utils = new Contribution.CommonUtils(app, typeof(Form1).Assembly);
-                app.DisplayAlerts = false;
+                app.DisplayAlerts = false;  
                 Excel.Workbook book = app.Workbooks.Add();
                 Excel.Worksheet sheet = book.Sheets[1] as Excel.Worksheet;
                 sheet.Cells[1, 1].Value = "This is a sample value";

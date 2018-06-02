@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi.Behind
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.OLEObjectEvents))]
-    internal class OLEObject : NetOffice.ExcelApi.Behind._OLEObject, IEventBinding
+    internal class OLEObject : NetOffice.ExcelApi.Behind._OLEObject, NetOffice.ExcelApi.OLEObject
     {
         #pragma warning disable
 

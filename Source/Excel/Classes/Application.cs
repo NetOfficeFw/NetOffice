@@ -6,6 +6,20 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
+    /// <summary>
+    /// CoClass Application
+    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
+    [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]
+    [InteropCompatibilityClass]
+    public class ApplicationClass : NetOffice.ExcelApi.Behind.Application
+    {
+
+    }
+
 	#region Delegates
 
 	#pragma warning disable
@@ -56,7 +70,7 @@ namespace NetOffice.ExcelApi
 	public delegate void Application_SheetTableUpdateEventHandler(ICOMObject sh, NetOffice.ExcelApi.TableObject target);
 	public delegate void Application_WorkbookModelChangeEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.ModelChanges changes);
 	public delegate void Application_SheetBeforeDeleteEventHandler(ICOMObject sh);
-#pragma warning restore
+    #pragma warning restore
 
     #endregion
 
