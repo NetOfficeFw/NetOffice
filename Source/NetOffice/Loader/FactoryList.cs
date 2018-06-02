@@ -17,6 +17,9 @@ namespace NetOffice.Loader
         /// <returns>true if exists, otherwise false</returns>
         public bool Contains(string name)
         {
+            if (String.IsNullOrWhiteSpace(name))
+                return false;
+
             if (name.EndsWith(".dll", StringComparison.InvariantCultureIgnoreCase))
                 name = name.Substring(0, name.Length - 4);
 
@@ -26,6 +29,16 @@ namespace NetOffice.Loader
                     return true;
             }
 
+            return false;
+        }
+
+        public Type GetImplementationType(Type contractType)
+        {
+            return null;
+        }
+
+        public bool GetContractAndImplementationType(string name, ref Type contract, ref Type implementation, bool throwException = false)
+        {
             return false;
         }
     }

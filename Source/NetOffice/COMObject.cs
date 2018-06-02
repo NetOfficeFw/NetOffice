@@ -14,7 +14,7 @@ namespace NetOffice
     /// </summary>
     [DebuggerDisplay("{InstanceFriendlyName}")]
     [TypeConverter(typeof(Converter.COMObjectExpandableObjectConverter))]
-    public class COMObject : ICOMObject, ICOMProxyShareProvider
+    public class COMObject : ICOMObject, ICOMObjectInitialize, ICOMProxyShareProvider
     {
         #region Fields
 
@@ -124,6 +124,11 @@ namespace NetOffice
         /// </summary>
         private Type _instanceType;
 
+        /// <summary>
+        /// Initialized flag
+        /// </summary>
+        private bool _isInitialized;
+
         #endregion
 
         #region Ctor
@@ -137,38 +142,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject replacedObject)
         {
-            if (null == factory)
-                factory = Core.Default;
-            Factory = factory;
-            SyncRoot = new object();
-
-            // copy proxy
-            ICOMProxyShareProvider shareProvider = replacedObject as ICOMProxyShareProvider;
-            if (null != shareProvider)
-                _proxyShare = shareProvider.GetProxyShare();
-            else
-                _proxyShare = Factory.CreateNewProxyShare(this, replacedObject.UnderlyingObject);
-            _parentObject = replacedObject.ParentObject;
-            _underlyingType = replacedObject.UnderlyingType;
-
-            // copy childs
-            foreach (ICOMObject item in replacedObject.ChildObjects)
-                AddChildObject(item);
-
-            // remove old object from parent chain
-            if (!Object.ReferenceEquals(replacedObject.ParentObject, null))
-            {
-                ICOMObject parentObject = replacedObject.ParentObject;
-                parentObject.RemoveChildObject(replacedObject);
-
-                // add himself as child to parent object
-                parentObject.AddChildObject(this);
-            }
-
-            Factory.RemoveObjectFromList(replacedObject, null);
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(factory, replacedObject);            
         }
 
         /// <summary>
@@ -179,39 +154,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(ICOMObject replacedObject)
         {
-            if (null != replacedObject)
-                Factory = replacedObject.Factory;
-            else
-                Factory = Core.Default;
-            SyncRoot = new object();
-
-            // copy proxy
-            ICOMProxyShareProvider shareProvider = replacedObject as ICOMProxyShareProvider;
-            if (null != shareProvider)
-                _proxyShare = shareProvider.GetProxyShare();
-            else
-                _proxyShare = Factory.CreateNewProxyShare(this, replacedObject.UnderlyingObject);
-            _parentObject = replacedObject.ParentObject;
-            _underlyingType = replacedObject.UnderlyingType;
-
-            // copy childs
-            foreach (COMObject item in replacedObject.ChildObjects)
-                AddChildObject(item);
-
-            // remove old object from parent chain
-            if (!Object.ReferenceEquals(replacedObject.ParentObject, null))
-            {
-                ICOMObject parentObject = replacedObject.ParentObject;
-                parentObject.RemoveChildObject(replacedObject);
-
-                // add himself as child to parent object
-                parentObject.AddChildObject(this);
-            }
-
-            Factory.RemoveObjectFromList(replacedObject, null);
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(replacedObject);
         }
 
         /// <summary>
@@ -222,20 +166,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, object comProxy)
         {
-            if (!(comProxy is MarshalByRefObject))
-                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
-
-            if (null == factory)
-                factory = Core.Default;
-            Factory = factory;
-            SyncRoot = new object();
-
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
-            _underlyingType = comProxy.GetType();
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(factory, comProxy);
         }
 
         /// <summary>
@@ -246,25 +178,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(ICOMObject parentObject, object comProxy)
         {
-            if (!(comProxy is MarshalByRefObject))
-                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
-
-            if (null != parentObject)
-                Factory = parentObject.Factory;
-            else
-                Factory = Core.Default;
-            SyncRoot = new object();
-
-            _parentObject = parentObject;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
-            _underlyingType = comProxy.GetType();
-
-            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
-                _parentObject.AddChildObject(this);
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(parentObject, comProxy);
         }
 
         /// <summary>
@@ -274,19 +189,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(object comProxy)
         {
-            if (!(comProxy is MarshalByRefObject))
-                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
-
-            Factory = Core.Default;
-            SyncRoot = new object();
-
-            _parentObject = null;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
-            _underlyingType = comProxy.GetType();
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(comProxy);
         }
 
         /// <summary>
@@ -298,26 +202,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject parentObject, COMProxyShare proxyShare)
         {
-            if (null == proxyShare)
-                throw new ArgumentNullException("proxyShare");
-
-            if (null == factory)
-                factory = Core.Default;
-            Factory = factory;
-            SyncRoot = new object();
-
-            _parentObject = parentObject;
-            _proxyShare = proxyShare;
-            _underlyingType = _proxyShare.Proxy.GetType();
-
-            _proxyShare.Acquire();
-
-            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
-                _parentObject.AddChildObject(this);
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(factory, parentObject, proxyShare);
         }
 
         /// <summary>
@@ -329,24 +215,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject parentObject, object comProxy)
         {
-            if (!(comProxy is MarshalByRefObject))
-                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
-
-            if (null == factory)
-                factory = Core.Default;
-            Factory = factory;
-            SyncRoot = new object();
-
-            _parentObject = parentObject;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
-            _underlyingType = comProxy.GetType();
-
-            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
-                _parentObject.AddChildObject(this);
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(factory, parentObject, comProxy);
         }
 
         /// <summary>
@@ -359,25 +229,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject parentObject, object comProxy, bool isEnumerator)
         {
-            if(false == isEnumerator && (!(comProxy is MarshalByRefObject)))
-                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
-
-            if (null == factory)
-                factory = Core.Default;
-            Factory = factory;
-            SyncRoot = new object();
-
-            _parentObject = parentObject;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy, isEnumerator);
-            _isEnumerator = isEnumerator;
-            _underlyingType = comProxy.GetType();
-
-            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
-                _parentObject.AddChildObject(this);
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(factory, parentObject, comProxy, isEnumerator);
         }
 
         /// <summary>
@@ -391,26 +244,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject parentObject, object comProxy, bool isEnumerator, string name)
         {
-            if(false == isEnumerator && (!(comProxy is MarshalByRefObject)))
-                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
-
-            if (null == factory)
-                factory = Core.Default;
-            Factory = factory;
-            SyncRoot = new object();
-
-            _parentObject = parentObject;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy, isEnumerator);
-            _isEnumerator = isEnumerator;
-            _underlyingType = comProxy.GetType();
-            _instanceName = name;
-
-            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
-                _parentObject.AddChildObject(this);
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(factory, parentObject, comProxy, isEnumerator, name);
         }
 
         /// <summary>
@@ -423,28 +258,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject parentObject, object comProxy, Type comProxyType)
         {
-            if (!(comProxy is MarshalByRefObject))
-                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
-
-            if (null == factory)
-                factory = Core.Default;
-            Factory = factory;
-            SyncRoot = new object();
-
-            _parentObject = parentObject;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
-
-            if (null != comProxyType)
-                _underlyingType = comProxyType;
-            else
-                _underlyingType = comProxy.GetType();
-
-            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
-                _parentObject.AddChildObject(this);
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(factory, parentObject, comProxy, comProxyType);    
         }
 
         /// <summary>
@@ -456,29 +271,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(ICOMObject parentObject, object comProxy, Type comProxyType)
         {
-            if (!(comProxy is MarshalByRefObject))
-                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
-
-            if (null != parentObject)
-                Factory = parentObject.Factory;
-            else
-                Factory = Core.Default;
-            SyncRoot = new object();
-
-            _parentObject = parentObject;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
-
-            if (null != comProxyType)
-                _underlyingType = comProxyType;
-            else
-                _underlyingType = comProxy.GetType();
-
-            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
-                _parentObject.AddChildObject(this);
-
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(parentObject, comProxy, comProxyType);
         }
 
         /// <summary>
@@ -489,18 +283,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, string progId)
         {
-            if (String.IsNullOrEmpty(progId))
-                throw new ArgumentNullException("progId");
-
-            if (null == factory)
-                factory = Core.Default;
-            Factory = factory;
-            SyncRoot = new object();
-
-            CreateFromProgId(progId);
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(factory, progId);
         }
 
         /// <summary>
@@ -510,14 +294,8 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(string progId)
         {
-            if (String.IsNullOrEmpty(progId))
-                throw new ArgumentNullException("progId");
-            Factory = Core.Default;
-            SyncRoot = new object();
-            CreateFromProgId(progId);
-            Factory.AddObjectToList(this);
-
-            OnCreate();
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(progId);
         }
 
         /// <summary>
@@ -1374,6 +1152,335 @@ namespace NetOffice
         }
 
         #endregion
+
+        #region ICOMObjectInitialize
+
+        bool ICOMObjectInitialize.IsInitialized
+        {
+            get
+            {
+                return _isInitialized;
+            }
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(Core factory, ICOMObject replacedObject)
+        {
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+            SyncRoot = new object();
+
+            // copy proxy
+            ICOMProxyShareProvider shareProvider = replacedObject as ICOMProxyShareProvider;
+            if (null != shareProvider)
+                _proxyShare = shareProvider.GetProxyShare();
+            else
+                _proxyShare = Factory.CreateNewProxyShare(this, replacedObject.UnderlyingObject);
+            _parentObject = replacedObject.ParentObject;
+            _underlyingType = replacedObject.UnderlyingType;
+
+            // copy childs
+            foreach (ICOMObject item in replacedObject.ChildObjects)
+                AddChildObject(item);
+
+            // remove old object from parent chain
+            if (!Object.ReferenceEquals(replacedObject.ParentObject, null))
+            {
+                ICOMObject parentObject = replacedObject.ParentObject;
+                parentObject.RemoveChildObject(replacedObject);
+
+                // add himself as child to parent object
+                parentObject.AddChildObject(this);
+            }
+
+            Factory.RemoveObjectFromList(replacedObject, null);
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(ICOMObject replacedObject)
+        {
+            if (null != replacedObject)
+                Factory = replacedObject.Factory;
+            else
+                Factory = Core.Default;
+            SyncRoot = new object();
+
+            // copy proxy
+            ICOMProxyShareProvider shareProvider = replacedObject as ICOMProxyShareProvider;
+            if (null != shareProvider)
+                _proxyShare = shareProvider.GetProxyShare();
+            else
+                _proxyShare = Factory.CreateNewProxyShare(this, replacedObject.UnderlyingObject);
+            _parentObject = replacedObject.ParentObject;
+            _underlyingType = replacedObject.UnderlyingType;
+
+            // copy childs
+            foreach (COMObject item in replacedObject.ChildObjects)
+                AddChildObject(item);
+
+            // remove old object from parent chain
+            if (!Object.ReferenceEquals(replacedObject.ParentObject, null))
+            {
+                ICOMObject parentObject = replacedObject.ParentObject;
+                parentObject.RemoveChildObject(replacedObject);
+
+                // add himself as child to parent object
+                parentObject.AddChildObject(this);
+            }
+
+            Factory.RemoveObjectFromList(replacedObject, null);
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(Core factory, object comProxy)
+        {
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
+
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+            SyncRoot = new object();
+
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+            _underlyingType = comProxy.GetType();
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(ICOMObject parentObject, object comProxy)
+        {
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
+
+            if (null != parentObject)
+                Factory = parentObject.Factory;
+            else
+                Factory = Core.Default;
+            SyncRoot = new object();
+
+            _parentObject = parentObject;
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+            _underlyingType = comProxy.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(object comProxy)
+        {
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
+
+            Factory = Core.Default;
+            SyncRoot = new object();
+
+            _parentObject = null;
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+            _underlyingType = comProxy.GetType();
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(Core factory, ICOMObject parentObject, COMProxyShare proxyShare)
+        {
+            if (null == proxyShare)
+                throw new ArgumentNullException("proxyShare");
+
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+            SyncRoot = new object();
+
+            _parentObject = parentObject;
+            _proxyShare = proxyShare;
+            _underlyingType = _proxyShare.Proxy.GetType();
+
+            _proxyShare.Acquire();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(Core factory, ICOMObject parentObject, object comProxy)
+        {
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
+
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+            SyncRoot = new object();
+
+            _parentObject = parentObject;
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+            _underlyingType = comProxy.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(Core factory, ICOMObject parentObject, object comProxy, bool isEnumerator)
+        {
+            if (false == isEnumerator && (!(comProxy is MarshalByRefObject)))
+                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
+
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+            SyncRoot = new object();
+
+            _parentObject = parentObject;
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy, isEnumerator);
+            _isEnumerator = isEnumerator;
+            _underlyingType = comProxy.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(Core factory, ICOMObject parentObject, object comProxy, bool isEnumerator, string name)
+        {
+            if (false == isEnumerator && (!(comProxy is MarshalByRefObject)))
+                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
+
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+            SyncRoot = new object();
+
+            _parentObject = parentObject;
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy, isEnumerator);
+            _isEnumerator = isEnumerator;
+            _underlyingType = comProxy.GetType();
+            _instanceName = name;
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(Core factory, ICOMObject parentObject, object comProxy, Type comProxyType)
+        {
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
+
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+            SyncRoot = new object();
+
+            _parentObject = parentObject;
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+
+            if (null != comProxyType)
+                _underlyingType = comProxyType;
+            else
+                _underlyingType = comProxy.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(ICOMObject parentObject, object comProxy, Type comProxyType)
+        {
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
+
+            if (null != parentObject)
+                Factory = parentObject.Factory;
+            else
+                Factory = Core.Default;
+            SyncRoot = new object();
+
+            _parentObject = parentObject;
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+
+            if (null != comProxyType)
+                _underlyingType = comProxyType;
+            else
+                _underlyingType = comProxy.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(Core factory, string progId)
+        {
+            if (String.IsNullOrEmpty(progId))
+                throw new ArgumentNullException("progId");
+
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+            SyncRoot = new object();
+
+            CreateFromProgId(progId);
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        void ICOMObjectInitialize.InitializeCOMObject(string progId)
+        {
+            if (String.IsNullOrEmpty(progId))
+                throw new ArgumentNullException("progId");
+            Factory = Core.Default;
+            SyncRoot = new object();
+            CreateFromProgId(progId);
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+            _isInitialized = true;
+        }
+
+        #endregion      
 
         #region ICloneable
 

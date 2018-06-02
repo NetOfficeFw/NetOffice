@@ -76,6 +76,7 @@
     <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
     <Compile Include="Attributes\ComRegisterCallAttribute.cs" />
     <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
+    <Compile Include="Attributes\ContractTargetAttribute.cs" />
     <Compile Include="Attributes\CoreOverriddenAttribute.cs" />
     <Compile Include="Attributes\CustomIndexerAttribute.cs" />
     <Compile Include="Attributes\DuplicateAttribute.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Attributes\ProxyResultAttribute.cs" />
     <Compile Include="Attributes\SinkArgumentAttribute.cs" />
     <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
+    <Compile Include="Loader\ComActivator.cs" />
     <Compile Include="COMObjectCreateOptions.cs" />
     <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
     <Compile Include="ComTypes\TypeDescriptor.cs" />
@@ -163,6 +165,7 @@
     <Compile Include="Interfaces\IAutomaticQuit.cs" />
     <Compile Include="Interfaces\ICloneable.cs" />
     <Compile Include="Interfaces\ICOMObjectAvaility.cs" />
+    <Compile Include="Interfaces\ICOMObjectInitialize.cs" />
     <Compile Include="Interfaces\ICOMProxyShareProvider.cs" />
     <Compile Include="IO\IOPath.cs" />
     <Compile Include="Loader\FactoryList.cs" />
