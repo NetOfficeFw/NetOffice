@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NetOffice.Attributes;
 
 namespace NetOffice.Loader
 {
@@ -34,7 +35,14 @@ namespace NetOffice.Loader
 
         public Type GetImplementationType(Type contractType)
         {
-            return null;
+            string rootSpace = contractType.Namespace;
+            var item = this.FirstOrDefault(e => e.AssemblyNamespace == rootSpace);
+            string target = rootSpace + ".Behind." + contractType.Name;
+            Type result = item.Assembly.GetType(target, true);
+            var attribute = result.GetCustomAttribute<HasInteropCompatibilityClass>();
+            if (null != attribute)
+                result = attribute.Value;
+            return result;
         }
 
         public bool GetContractAndImplementationType(string name, ref Type contract, ref Type implementation, bool throwException = false)

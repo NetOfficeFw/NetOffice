@@ -58,62 +58,12 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region Construction
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public Chart(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Chart(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Chart(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Chart(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Chart(ICOMObject replacedObject) : base(replacedObject)
-        {
-
-        }
+        #region Ctor
 
         /// <summary>
-        /// Creates a new instance of Chart
+        /// Stub Ctor, not intended to use
         /// </summary>
-        public Chart() : base("Excel.Chart")
-        {
-
-        }
-
-        /// <summary>
-        /// Creates a new instance of Chart
-        /// </summary>
-        ///<param name="progId">registered ProgID</param>
-        public Chart(string progId) : base(progId)
+        public Chart() : base()
         {
 
         }

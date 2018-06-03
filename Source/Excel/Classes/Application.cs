@@ -8,16 +8,21 @@ namespace NetOffice.ExcelApi
 {
     /// <summary>
     /// CoClass Application
+    /// This class is an alias/typedef for NetOffice.ExcelApi.Behind.Application
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
-    [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]
     [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.ExcelApi.Behind.Application
     {
+        /// <summary>
+        /// Creates a new instance of the class
+        /// </summary>
+        public ApplicationClass()
+        {
 
+        }
     }
 
 	#region Delegates
@@ -81,7 +86,7 @@ namespace NetOffice.ExcelApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
-    [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]
+    [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]    
     public interface Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit
     {
         #region Events

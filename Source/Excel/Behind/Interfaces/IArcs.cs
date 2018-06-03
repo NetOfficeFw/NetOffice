@@ -16,63 +16,10 @@ namespace NetOffice.ExcelApi.Behind
     {
         #region Ctor
 
-        /// <param name="factory">current used factory core</param>
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="proxyShare">proxy share instead if com proxy</param>
-        public IArcs_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public IArcs_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-        }
-
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs_(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs_(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs_(ICOMObject replacedObject) : base(replacedObject)
-        {
-        }
-
         /// <summary>
-        /// Hidden stub .ctor
+        /// Stub Ctor, not indented to use
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IArcs_() : base()
-        {
-        }
-
-        /// <param name="progId">registered progID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs_(string progId) : base(progId)
         {
         }
 
@@ -177,60 +124,10 @@ namespace NetOffice.ExcelApi.Behind
 
         #region Ctor
 
-        /// <param name="factory">current used factory core</param>
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="proxyShare">proxy share instead if com proxy</param>
-        public IArcs(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public IArcs(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-        }
-
-        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs(ICOMObject replacedObject) : base(replacedObject)
-        {
-        }
-
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        /// <summary>
+        /// Stub Ctor, not indented to use
+        /// </summary>
         public IArcs() : base()
-        {
-        }
-
-        /// <param name="progId">registered progID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IArcs(string progId) : base(progId)
         {
         }
 

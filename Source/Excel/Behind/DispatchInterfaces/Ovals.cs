@@ -10,69 +10,17 @@ using NetOffice.ExcelApi;
 namespace NetOffice.ExcelApi.Behind
 {
     /// <summary>
-    /// Ovals    /// </summary>
+    /// Ovals    
+    /// </summary>
     [SyntaxBypass]
     public class Ovals_ : COMObject, NetOffice.ExcelApi.Ovals_
     {
         #region Ctor
 
-        /// <param name="factory">current used factory core</param>
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="proxyShare">proxy share instead if com proxy</param>
-        public Ovals_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public Ovals_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-        }
-
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals_(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals_(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals_(ICOMObject replacedObject) : base(replacedObject)
-        {
-        }
-
         /// <summary>
-        /// Hidden stub .ctor
+        /// Stub Ctor, not indented to use
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Ovals_() : base()
-        {
-        }
-
-        /// <param name="progId">registered progID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals_(string progId) : base(progId)
         {
         }
 
@@ -176,60 +124,10 @@ namespace NetOffice.ExcelApi.Behind
 
         #region Ctor
 
-        /// <param name="factory">current used factory core</param>
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="proxyShare">proxy share instead if com proxy</param>
-        public Ovals(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public Ovals(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-        }
-
-        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals(ICOMObject replacedObject) : base(replacedObject)
-        {
-        }
-
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        /// <summary>
+        /// Stub Ctor, not indented to use
+        /// </summary>
         public Ovals() : base()
-        {
-        }
-
-        /// <param name="progId">registered progID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Ovals(string progId) : base(progId)
         {
         }
 

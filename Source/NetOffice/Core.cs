@@ -64,6 +64,13 @@ namespace NetOffice
     {
         internal TypeInformation(Type contract, Type implementation, Type proxy)
         {
+            if (null == contract)
+                throw new ArgumentNullException("contract");
+            if (null == implementation)
+                throw new ArgumentNullException("implementation");
+            if (null == proxy)
+                throw new ArgumentNullException("proxy");
+
             Contract = contract;
             Implementation = implementation;
             Proxy = proxy;

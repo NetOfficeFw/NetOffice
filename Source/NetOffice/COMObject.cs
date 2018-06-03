@@ -486,7 +486,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Called from ctor at last as an inherited class service
+        /// Called from ctor or ICOMObjectInitialize at last as an inherited class service
         /// </summary>
         protected internal virtual void OnCreate()
         {

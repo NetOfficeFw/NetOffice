@@ -58,62 +58,12 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region Construction
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public Worksheet(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Worksheet(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Worksheet(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Worksheet(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Worksheet(ICOMObject replacedObject) : base(replacedObject)
-        {
-
-        }
+        #region Ctor
 
         /// <summary>
-        /// Creates a new instance of Worksheet
+        /// Stub Ctor, not intended to use
         /// </summary>
-        public Worksheet() : base("Excel.Worksheet")
-        {
-
-        }
-
-        /// <summary>
-        /// Creates a new instance of Worksheet
-        /// </summary>
-        ///<param name="progId">registered ProgID</param>
-        public Worksheet(string progId) : base(progId)
+        public Worksheet() : base()
         {
 
         }

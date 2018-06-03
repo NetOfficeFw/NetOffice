@@ -12,7 +12,7 @@ namespace NetOffice.ExcelApi.Behind
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
-    internal partial class IWorksheetFunction : COMObject, NetOffice.ExcelApi.IWorksheetFunction
+    public partial class IWorksheetFunction : COMObject, NetOffice.ExcelApi.IWorksheetFunction
     {
         #pragma warning disable
 
@@ -45,54 +45,12 @@ namespace NetOffice.ExcelApi.Behind
         #endregion
 
         #region Ctor
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public IWorksheetFunction(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IWorksheetFunction(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IWorksheetFunction(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IWorksheetFunction(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-        }
-
-        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IWorksheetFunction(ICOMObject replacedObject) : base(replacedObject)
-        {
-        }
-
+        
+        /// <summary>
+        /// Stub Ctor, not intended to use
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IWorksheetFunction() : base()
-        {
-        }
-
-        /// <param name="progId">registered progID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IWorksheetFunction(string progId) : base(progId)
         {
         }
 

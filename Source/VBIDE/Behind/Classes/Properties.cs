@@ -51,62 +51,12 @@ namespace NetOffice.VBIDEApi.Behind
 
         #endregion
 
-        #region Construction
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public Properties(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Properties(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Properties(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Properties(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Properties(ICOMObject replacedObject) : base(replacedObject)
-        {
-
-        }
+        #region Ctor
 
         /// <summary>
-        /// Creates a new instance of Properties
+        /// Stub Ctor, not intended to use
         /// </summary>
-        public Properties() : base("VBIDE.Properties")
-        {
-
-        }
-
-        /// <summary>
-        /// Creates a new instance of Properties
-        /// </summary>
-        ///<param name="progId">registered ProgID</param>
-        public Properties(string progId) : base(progId)
+        public Properties() : base()
         {
 
         }

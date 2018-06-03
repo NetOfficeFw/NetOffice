@@ -14,63 +14,10 @@ namespace NetOffice.ExcelApi.Behind
     {
         #region Ctor
 
-        /// <param name="factory">current used factory core</param>
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="proxyShare">proxy share instead if com proxy</param>
-        public PivotItem_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public PivotItem_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-        }
-
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem_(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem_(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem_(ICOMObject replacedObject) : base(replacedObject)
-        {
-        }
-
         /// <summary>
-        /// Hidden stub .ctor
+        /// Stub Ctor, not indented to use
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PivotItem_() : base()
-        {
-        }
-
-        /// <param name="progId">registered progID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem_(string progId) : base(progId)
         {
         }
 
@@ -152,60 +99,10 @@ namespace NetOffice.ExcelApi.Behind
 
         #region Ctor
 
-        /// <param name="factory">current used factory core</param>
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="proxyShare">proxy share instead if com proxy</param>
-        public PivotItem(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public PivotItem(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-        }
-
-        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem(ICOMObject replacedObject) : base(replacedObject)
-        {
-        }
-
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        /// <summary>
+        /// Stub Ctor, not indented to use
+        /// </summary>
         public PivotItem() : base()
-        {
-        }
-
-        /// <param name="progId">registered progID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public PivotItem(string progId) : base(progId)
         {
         }
 

@@ -81,6 +81,7 @@
     <Compile Include="Attributes\CustomIndexerAttribute.cs" />
     <Compile Include="Attributes\DuplicateAttribute.cs" />
     <Compile Include="Attributes\EventTargetAttribute.cs" />
+    <Compile Include="Attributes\HasInteropCompatibilityClass.cs" />
     <Compile Include="Attributes\InternalEntityAttribute.cs" />
     <Compile Include="Attributes\InteropCompatibilityClassAttribute.cs" />
     <Compile Include="Attributes\KnownIssueAttribute.cs" />

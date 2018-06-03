@@ -12,79 +12,26 @@ namespace NetOffice.ExcelApi.Behind
     [SyntaxBypass]
  	public class IPivotLayout_ : COMObject, NetOffice.ExcelApi.IPivotLayout_
     {
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IPivotLayout_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IPivotLayout_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPivotLayout_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPivotLayout_(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPivotLayout_(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPivotLayout_(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-
-		/// <summary>
-        /// Hidden stub .ctor
+        /// <summary>
+        /// Stub Ctor, not indented to use
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPivotLayout_() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPivotLayout_(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
+        public IPivotLayout_() : base()
+        {
+        }
 
-		#region Properties
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <param name="index">optional object index</param>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        #region Properties
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <param name="index">optional object index</param>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ColumnFields(object index)
 		{
@@ -301,60 +248,10 @@ namespace NetOffice.ExcelApi.Behind
 
         #region Ctor
 
-        /// <param name="factory">current used factory core</param>
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="proxyShare">proxy share instead if com proxy</param>
-        public IPivotLayout(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        public IPivotLayout(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IPivotLayout(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-        {
-        }
-
-        ///<param name="factory">current used factory core</param>
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IPivotLayout(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-        {
-
-        }
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IPivotLayout(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-        {
-        }
-
-        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IPivotLayout(ICOMObject replacedObject) : base(replacedObject)
-        {
-        }
-
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        /// <summary>
+        /// Stub Ctor, not indented to use
+        /// </summary>
         public IPivotLayout() : base()
-        {
-        }
-
-        /// <param name="progId">registered progID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public IPivotLayout(string progId) : base(progId)
         {
         }
 
