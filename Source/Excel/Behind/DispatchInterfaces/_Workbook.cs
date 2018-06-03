@@ -69,7 +69,6 @@ namespace NetOffice.ExcelApi.Behind
         #region Methods
 
         #endregion
-
     }
 
     /// <summary>
@@ -122,8 +121,6 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         #endregion
-
-        #region Properties
 
         #region Properties
 
@@ -5378,4 +5375,3 @@ namespace NetOffice.ExcelApi.Behind
         #pragma warning restore
     }
 }
-
