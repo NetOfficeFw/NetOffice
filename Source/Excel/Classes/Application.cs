@@ -17,9 +17,30 @@ namespace NetOffice.ExcelApi
     public class ApplicationClass : NetOffice.ExcelApi.Behind.Application
     {
         /// <summary>
-        /// Creates a new instance of the class
+        /// Creates a new instance of Microsoft Excel
         /// </summary>
         public ApplicationClass()
+        {
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject("Excel.Application");
+        }
+
+        /// <summary>
+        /// Creates a new instance of Microsoft Excel
+        /// </summary>
+        /// <param name="progId">given progid for specific version</param>
+        public ApplicationClass(string progId)
+        {
+            ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+            init.InitializeCOMObject(progId);
+        }
+
+        /// <summary>
+        /// Creates a new instance of Microsoft Excel
+        /// <param name="factory">factory core instead of default core</param>
+        /// <param name="tryProxyServiceFirst">try to get a running application first before create a new application</param>
+        /// </summary>
+        public ApplicationClass(Core factory = null, bool tryProxyServiceFirst = false) : base(factory, tryProxyServiceFirst)
         {
 
         }

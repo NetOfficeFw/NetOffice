@@ -1460,13 +1460,13 @@ namespace NetOffice
         #region Methods
 
         /// <summary>
-        /// Throws an ObjectDisposedException if given ICOMObject instance is already disposed.
+        /// Throws an ObjectDisposedException if given ICOMObject instance is already disposed or UnderlyingObject is missing.
         /// </summary>
         /// <param name="comObject">ICOMObject instance as any</param>
         /// <exception cref="ObjectDisposedException">comObject is already disposed</exception>
         private static void ValidateComObjectIsAlive(ICOMObject comObject)
         {
-            if (comObject.IsDisposed || comObject.IsCurrentlyDisposing)
+            if (comObject.IsDisposed || comObject.IsCurrentlyDisposing || null == comObject.UnderlyingObject)
                 throw new ObjectDisposedException("comObject", "Instance is disposed or currently disposing.");
         }
 

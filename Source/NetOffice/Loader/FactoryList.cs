@@ -35,19 +35,32 @@ namespace NetOffice.Loader
 
         public Type GetImplementationType(Type contractType)
         {
-            string rootSpace = contractType.Namespace;
-            var item = this.FirstOrDefault(e => e.AssemblyNamespace == rootSpace);
-            string target = rootSpace + ".Behind." + contractType.Name;
-            Type result = item.Assembly.GetType(target, true);
-            var attribute = result.GetCustomAttribute<HasInteropCompatibilityClass>();
+            string contractTypeNamespace = contractType.Namespace;
+            var item = this.FirstOrDefault(e => e.AssemblyNamespace == contractTypeNamespace);
+            string target = contractTypeNamespace + ".Behind." + contractType.Name;
+            Type implementationResult = item.Assembly.GetType(target, true);
+            var attribute = implementationResult.GetCustomAttribute<HasInteropCompatibilityClass>();
             if (null != attribute)
-                result = attribute.Value;
-            return result;
+                implementationResult = attribute.Value;
+            return implementationResult;
         }
 
-        public bool GetContractAndImplementationType(string name, ref Type contract, ref Type implementation, bool throwException = false)
+        public void GetContractAndImplementationType(string contractTypeNamespace, string contractTypeName, ref Type contract, ref Type implementation)
         {
-            return false;
+
+            var item = this.FirstOrDefault(e => e.AssemblyNamespace == contractTypeNamespace);
+            string contractTarget = contractTypeNamespace + "." + contractTypeName;
+            string implementationTarget = contractTypeNamespace + ".Behind." + contractTypeName;
+
+            Type contractResult = item.Assembly.GetType(contractTarget, true);
+            Type implementationResult = item.Assembly.GetType(contractTarget, true);
+
+            var attribute = implementationResult.GetCustomAttribute<HasInteropCompatibilityClass>();
+            if (null != attribute)
+                implementationResult = attribute.Value;
+
+            contract = contractResult;
+            implementation = implementationResult;
         }
     }
 }

@@ -70,13 +70,13 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// Creates a new instance of Application
+        /// Creates a new instance of the class
         /// <param name="factory">factory core instead of default core</param>
-        /// <param name="enableProxyService">try to get a running application first before create a new application</param>
+        /// <param name="tryProxyServiceFirst">try to get a running application first before create a new application</param>
         /// </summary>
-        public Application(Core factory = null, bool enableProxyService = false) : base()
+        public Application(Core factory = null, bool tryProxyServiceFirst = false) : base()
         {
-            if (enableProxyService)
+            if (tryProxyServiceFirst)
             {
                 object proxy = Running.ProxyService.GetActiveInstance("Excel", "Application", false);
                 if (null != proxy)
@@ -94,11 +94,10 @@ namespace NetOffice.ExcelApi.Behind
                 CreateFromProgId("Excel.Application", true);
             }
 
-            _callQuitInDispose = null == ParentObject;
             Factory = null != factory ? factory : Core.Default;
             TryRequestVersion();
             OnCreate();
-            GlobalHelperModules.GlobalModule.Instance = this;
+            _isInitialized = true;
         }
 
         #endregion

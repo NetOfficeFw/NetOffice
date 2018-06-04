@@ -1090,6 +1090,7 @@ namespace NetOffice
                     IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxy, false);
                     if (null == factoryInfo)
                     {
+                        // was ist das denn hier ???????
                         Type comProxyType2 = null;
                         ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2,
                                                                             String.Empty, String.Empty, allowDynamicObject);
@@ -1105,7 +1106,7 @@ namespace NetOffice
                     {
                         Type contractType = null;
                         Type implementationType = null;
-                        Assemblies.GetContractAndImplementationType(wrapperContractName, ref contractType, ref implementationType, true);
+                        Assemblies.GetContractAndImplementationType(factoryInfo.AssemblyNamespace, proxyClassName, ref contractType, ref implementationType);
                         Type comProxyType = comProxy.GetType();
                         typeInfo = new TypeInformation(contractType, implementationType, comProxyType);
                         _proxyTypeCache.Add(typeInfo);

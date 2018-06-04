@@ -127,7 +127,7 @@ namespace NetOffice
         /// <summary>
         /// Initialized flag
         /// </summary>
-        private bool _isInitialized;
+        protected bool _isInitialized;
 
         #endregion
 
@@ -641,7 +641,7 @@ namespace NetOffice
         {
             get
             {
-                return _proxyShare.Proxy;
+                return null != _proxyShare ? _proxyShare.Proxy : null;
             }
         }
 
