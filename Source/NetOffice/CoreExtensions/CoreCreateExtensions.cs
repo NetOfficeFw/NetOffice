@@ -24,9 +24,17 @@ namespace NetOffice
             return newInstance;
         }
 
-        internal static ICOMObject TryCreatebjectByResolveEvent(Core value, ICOMObject caller, string contractName, object comProxy)
+        internal static ICOMObject TryCreateObjectByResolveEvent(Core value, ICOMObject caller, string contractName, object comProxy)
         {
             ICOMObject result = value.InternalObjectResolver.RaiseResolve(caller, contractName, comProxy);
+            if (null != result)
+            {
+                ICOMObjectInitialize init = result as ICOMObjectInitialize;
+                if (null != init && false == init.IsInitialized)
+                {
+                    init.InitializeCOMObject(caller, comProxy);
+                }
+            }
             return result;
         }
     }

@@ -7,6 +7,9 @@ namespace ClientApplication
 {
     internal class RunExcel01
     {
+        /// <summary>
+        /// 
+        /// </summary>
         internal void Run()
         {
             Excel.Application app = null;
@@ -17,6 +20,7 @@ namespace ClientApplication
                 Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 0;
 
                 app = new Excel.ApplicationClass();
+                //app = COMObject.Create<Excel.Application>();
                 app.Visible = true;
                 Contribution.CommonUtils utils = new Contribution.CommonUtils(app, typeof(Form1).Assembly);
                 app.DisplayAlerts = false;  

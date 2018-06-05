@@ -726,7 +726,7 @@ namespace NetOffice
                     IFactoryInfo factoryInfo = CoreFactoryExtensions.GetFactoryInfo(this, caller, comProxy, false);
                     if (null == factoryInfo)
                     {
-                        result = CoreCreateExtensions.TryCreatebjectByResolveEvent(this, caller, String.Empty, comProxy);
+                        result = CoreCreateExtensions.TryCreateObjectByResolveEvent(this, caller, String.Empty, comProxy);
                         if (null == result)
                         {
                             if (allowDynamicObject && Settings.EnableDynamicObjects)
@@ -761,6 +761,8 @@ namespace NetOffice
         {
             ICOMObject result = null;
             string proxyClassName = ComTypes.TypeDescriptor.GetClassName(comProxy);
+            // important to use the namespace from the factory here
+            // because it is a possible duplicate type and GetFactoryInfo can handle that
             string wrapperContractNamespace = factoryInfo.AssemblyNamespace;
             string wrapperContractName = proxyClassName;
 
@@ -878,7 +880,7 @@ namespace NetOffice
                     TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformation(this, comProxy, contractWrapperType);
                     if (null == typeInfo)
                     {
-                        result = CoreCreateExtensions.TryCreatebjectByResolveEvent(this, caller, contractWrapperType.FullName, contractWrapperType);
+                        result = CoreCreateExtensions.TryCreateObjectByResolveEvent(this, caller, contractWrapperType.FullName, contractWrapperType);
                         if (null == result)
                             throw new FactoryException(String.Format("Unable to find implementation: {0}.", contractWrapperType.FullName));
                     }
