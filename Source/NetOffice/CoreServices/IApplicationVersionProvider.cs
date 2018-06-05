@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace NetOffice
+namespace NetOffice.CoreServices
 {
     /// <summary>
     /// Represents an application version

@@ -94,7 +94,7 @@ namespace NetOffice
                 {
                     _connectionPoint = connectPoint;
                     _connectionPoint.Advise(this, out _connectionCookie);
-                    Factory.AddEventBridge(this);
+                    Factory.InternalObjectEvents.AddEventBridge(this);
                 }
             }
             catch (Exception throwedException)
@@ -155,7 +155,7 @@ namespace NetOffice
                 _connectionCookie = 0;
 
                 if (removeFromList)
-                    Factory.RemoveEventBridge(this);
+                    Factory.InternalObjectEvents.RemoveEventBridge(this);
             }
         }
 

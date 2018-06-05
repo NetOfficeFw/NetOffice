@@ -38,6 +38,21 @@ namespace NetOffice
         /// Get wrapper class factory info
         /// </summary>
         /// <param name="value">core to use</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="wantTheDuck">want duck implementation</param>
+        /// <param name="throwException">throw exception if no info found or return null</param>
+        /// <returns>factory info from corresponding assembly</returns>
+        internal static IFactoryInfo GetFactoryInfo(this Core value,
+            ICOMObject caller, object comProxy, bool wantTheDuck, bool throwException)
+        {
+            return GetFactoryInfo(value, value.HostCache, caller, comProxy, wantTheDuck, throwException);
+        }
+
+        /// <summary>
+        /// Get wrapper class factory info
+        /// </summary>
+        /// <param name="value">core to use</param>
         /// <param name="hostCache">core host cache</param>
         /// <param name="caller">calling instance</param>
         /// <param name="comProxy">new created proxy</param>

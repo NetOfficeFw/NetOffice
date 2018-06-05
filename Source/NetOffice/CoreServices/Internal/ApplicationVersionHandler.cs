@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.CoreSupport
+namespace NetOffice.CoreServices.Internal
 {
     /// <summary>
     /// Stores all registered version providers

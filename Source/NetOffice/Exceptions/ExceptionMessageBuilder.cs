@@ -38,7 +38,7 @@ namespace NetOffice.Exceptions
         /// <param name="arguments">arguments as any</param>
         /// <param name="valuePropertySet">additional value if its an indexed property set</param>
         /// <returns>exception message</returns>
-        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, CoreSupport.ApplicationVersionHandler versionHandler, object[] arguments = null, object valuePropertySet = null)
+        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, CoreServices.Internal.ApplicationVersionHandler versionHandler, object[] arguments = null, object valuePropertySet = null)
         {
             if (null == throwedException)
                 throw new ArgumentNullException("throwedException", "<Please report this error.>");
@@ -77,7 +77,7 @@ namespace NetOffice.Exceptions
         /// <param name="versionHandler">optional version providers for application instances</param>
         /// <param name="arguments">arguments as any</param>
         /// <returns>diagnostic exception message or error message if an exception occurs</returns>
-        private static string GetExceptionDiagnosticsInnerMessage(Exception throwedException, ICOMObject comObject, string name, CallType type, CoreSupport.ApplicationVersionHandler versionHandler, object[] arguments = null)
+        private static string GetExceptionDiagnosticsInnerMessage(Exception throwedException, ICOMObject comObject, string name, CallType type, CoreServices.Internal.ApplicationVersionHandler versionHandler, object[] arguments = null)
         {
             string diagMessage = GetExceptionDiagnosticsMessage(comObject, name, type, versionHandler, arguments);
             string message = throwedException.Message;
@@ -98,7 +98,7 @@ namespace NetOffice.Exceptions
         /// <param name="versionHandler">optional version providers for application instances</param>
         /// <param name="arguments">arguments as any</param>
         /// <returns>diagnostic exception message or error message if an exception occurs</returns>
-        private static string GetExceptionDiagnosticsMessage(ICOMObject comObject, string name, CallType type, CoreSupport.ApplicationVersionHandler versionHandler, object[] arguments = null)
+        private static string GetExceptionDiagnosticsMessage(ICOMObject comObject, string name, CallType type, CoreServices.Internal.ApplicationVersionHandler versionHandler, object[] arguments = null)
         {
             try
             {

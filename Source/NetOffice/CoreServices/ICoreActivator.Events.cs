@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.COMObjectActivator
+namespace NetOffice.CoreServices
 {
     #region Create Instance
 
@@ -40,7 +40,7 @@ namespace NetOffice.COMObjectActivator
     /// </summary>
     /// <param name="sender">Core sender instance</param>
     /// <param name="args">args as provided</param>
-    public delegate void OnCreateInstanceEventHandler(ICOMObjectActivator sender, OnCreateInstanceEventArgs args);
+    public delegate void OnCreateInstanceEventHandler(ICoreActivator sender, OnCreateInstanceEventArgs args);
 
     #endregion
 
@@ -83,7 +83,7 @@ namespace NetOffice.COMObjectActivator
     /// </summary>
     /// <param name="sender">Core sender instance</param>
     /// <param name="args">args as provided</param>
-    public delegate void OnCreateCOMDynamicEventHandler(ICOMObjectActivator sender, OnCreateCOMDynamicEventArgs args);
+    public delegate void OnCreateCOMDynamicEventHandler(ICoreActivator sender, OnCreateCOMDynamicEventArgs args);
 
     #endregion
 
@@ -126,7 +126,7 @@ namespace NetOffice.COMObjectActivator
     /// </summary>
     /// <param name="sender">Core sender instance</param>
     /// <param name="args">args as provided</param>
-    public delegate void OnCreateProxyShareEventHandler(ICOMObjectActivator sender, OnCreateProxyShareEventArgs args);
+    public delegate void OnCreateProxyShareEventHandler(ICoreActivator sender, OnCreateProxyShareEventArgs args);
 
     #endregion
 }

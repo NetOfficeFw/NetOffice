@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.CoreSupport
+namespace NetOffice.CoreServices
 {
     /// <summary>
     /// Provides remote comparsion 2 proxies points to the same instance on the server

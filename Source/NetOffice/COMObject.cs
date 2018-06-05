@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using NetOffice.Resolver;
 using NetOffice.Availity;
 using NetOffice.Exceptions;
+using NetOffice.CoreServices;
 
 namespace NetOffice
 {
@@ -429,9 +430,9 @@ namespace NetOffice
                 throw new ArgumentNullException("underlyingObject");
 
             _underlyingType = underlyingObject.GetType();
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, underlyingObject);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, underlyingObject);
             if (factoryAddObject)
-                Factory.ObjectList.AddObjectToList(this);
+                Factory.InternalObjectRegister.AddObjectToList(this);
         }
 
         /// <summary>
@@ -464,9 +465,9 @@ namespace NetOffice
                     , exception);
             }
 
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, underlyingObject);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, underlyingObject);
             if (factoryAddObject)
-                Factory.ObjectList.AddObjectToList(this);
+                Factory.InternalObjectRegister.AddObjectToList(this);
         }
 
         /// <summary>
@@ -479,7 +480,7 @@ namespace NetOffice
             {
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy", PerformanceTrace.CallType.Method);
                 _proxyShare.Release();
-                Factory.ObjectList.RemoveObjectFromList(this, ownerPath);
+                Factory.InternalObjectRegister.RemoveObjectFromList(this, ownerPath);
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy");
             }
@@ -837,9 +838,9 @@ namespace NetOffice
                     DisposeChildInstances(disposeEventBinding);
 
                     IEnumerable<ICOMObject> ownerPath = null;
-                    if (Factory.ObjectList.HasRemovedRecipients)
+                    if (Factory.InternalObjectRegister.HasRemovedRecipients)
                     {
-                        ownerPath = NetOffice.CoreSupport.ObjectList.GetOwnerPath(this);
+                        ownerPath = NetOffice.CoreServices.Internal.CoreManagement.GetOwnerPath(this);
                     }
 
                     // remove himself from parent childlist
@@ -1175,7 +1176,7 @@ namespace NetOffice
             if (null != shareProvider)
                 _proxyShare = shareProvider.GetProxyShare();
             else
-                _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, replacedObject.UnderlyingObject);
+                _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, replacedObject.UnderlyingObject);
             _parentObject = replacedObject.ParentObject;
             _underlyingType = replacedObject.UnderlyingType;
 
@@ -1193,8 +1194,8 @@ namespace NetOffice
                 parentObject.AddChildObject(this);
             }
 
-            Factory.ObjectList.RemoveObjectFromList(replacedObject, null);
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.RemoveObjectFromList(replacedObject, null);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1213,7 +1214,7 @@ namespace NetOffice
             if (null != shareProvider)
                 _proxyShare = shareProvider.GetProxyShare();
             else
-                _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, replacedObject.UnderlyingObject);
+                _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, replacedObject.UnderlyingObject);
             _parentObject = replacedObject.ParentObject;
             _underlyingType = replacedObject.UnderlyingType;
 
@@ -1231,8 +1232,8 @@ namespace NetOffice
                 parentObject.AddChildObject(this);
             }
 
-            Factory.ObjectList.RemoveObjectFromList(replacedObject, null);
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.RemoveObjectFromList(replacedObject, null);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1248,10 +1249,10 @@ namespace NetOffice
             Factory = factory;
             SyncRoot = new object();
 
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, comProxy);
             _underlyingType = comProxy.GetType();
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1269,13 +1270,13 @@ namespace NetOffice
             SyncRoot = new object();
 
             _parentObject = parentObject;
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, comProxy);
             _underlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1290,10 +1291,10 @@ namespace NetOffice
             SyncRoot = new object();
 
             _parentObject = null;
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, comProxy);
             _underlyingType = comProxy.GetType();
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1318,7 +1319,7 @@ namespace NetOffice
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1335,13 +1336,13 @@ namespace NetOffice
             SyncRoot = new object();
 
             _parentObject = parentObject;
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, comProxy);
             _underlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1358,14 +1359,14 @@ namespace NetOffice
             SyncRoot = new object();
 
             _parentObject = parentObject;
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy, isEnumerator);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, comProxy, isEnumerator);
             _isEnumerator = isEnumerator;
             _underlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1382,7 +1383,7 @@ namespace NetOffice
             SyncRoot = new object();
 
             _parentObject = parentObject;
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy, isEnumerator);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, comProxy, isEnumerator);
             _isEnumerator = isEnumerator;
             _underlyingType = comProxy.GetType();
             _instanceName = name;
@@ -1390,7 +1391,7 @@ namespace NetOffice
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1407,7 +1408,7 @@ namespace NetOffice
             SyncRoot = new object();
 
             _parentObject = parentObject;
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, comProxy);
 
             if (null != comProxyType)
                 _underlyingType = comProxyType;
@@ -1417,7 +1418,7 @@ namespace NetOffice
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
         }
@@ -1434,7 +1435,7 @@ namespace NetOffice
             SyncRoot = new object();
 
             _parentObject = parentObject;
-            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.InternalObjectActivator.CreateNewProxyShare(this, comProxy);
 
             if (null != comProxyType)
                 _underlyingType = comProxyType;
@@ -1444,7 +1445,7 @@ namespace NetOffice
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1461,7 +1462,7 @@ namespace NetOffice
             SyncRoot = new object();
 
             CreateFromProgId(progId);
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;
@@ -1474,7 +1475,7 @@ namespace NetOffice
             Factory = Core.Default;
             SyncRoot = new object();
             CreateFromProgId(progId);
-            Factory.ObjectList.AddObjectToList(this);
+            Factory.InternalObjectRegister.AddObjectToList(this);
 
             OnCreate();
             _isInitialized = true;

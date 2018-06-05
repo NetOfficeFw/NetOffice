@@ -94,20 +94,23 @@
     <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
     <Compile Include="Contribution\ProxyInformation.cs" />
     <Compile Include="CoreExtensions\CoreTypeExtensions.cs" />
-    <Compile Include="CoreSupport\ApplicationVersionHandler.cs" />
-    <Compile Include="CoreSupport\GlobalObjectList.cs" />
-    <Compile Include="CoreSupport\ObjectActivator.cs" />
-    <Compile Include="CoreSupport\ObjectResolver.cs" />
-    <Compile Include="CoreSupport\RemoteComparsion.cs" />
-    <Compile Include="CoreSupport\TypeDictionary.cs" />
-    <Compile Include="CoreSupport\TypeInformation.cs" />
+    <Compile Include="CoreServices\IApplicationVersionProvider.cs" />
+    <Compile Include="CoreServices\ICoreActivator.cs" />
+    <Compile Include="CoreServices\ICoreEvents.cs" />
+    <Compile Include="CoreServices\ICoreManagement.cs" />
+    <Compile Include="CoreServices\ICoreResolver.cs" />
+    <Compile Include="CoreServices\Internal\ApplicationVersionHandler.cs" />
+    <Compile Include="CoreServices\ICoreActivator.Events.cs" />
+    <Compile Include="CoreServices\ICoreManagement.Events.cs" />
+    <Compile Include="CoreServices\ICoreResolver.Events.cs" />
+    <Compile Include="CoreServices\Internal\CoreEvents.cs" />
+    <Compile Include="CoreServices\Internal\CoreActivator.cs" />
+    <Compile Include="CoreServices\Internal\CoreManagement.cs" />
+    <Compile Include="CoreServices\Internal\CoreResolver.cs" />
+    <Compile Include="CoreServices\RemoteComparsion.cs" />
+    <Compile Include="CoreServices\Internal\TypeDictionary.cs" />
+    <Compile Include="CoreServices\Internal\TypeInformation.cs" />
     <Compile Include="Exceptions\ActivationException.cs" />
-    <Compile Include="Interfaces\COMObjectActivator.cs" />
-    <Compile Include="Interfaces\COMObjectResolver.cs" />
-    <Compile Include="Interfaces\ICOMObjectActivator.cs" />
-    <Compile Include="Interfaces\ICOMObjectManagement.cs" />
-    <Compile Include="Interfaces\COMObjectManagement.cs" />
-    <Compile Include="Interfaces\ICOMObjectResolver.cs" />
     <Compile Include="Loader\ComActivator.cs" />
     <Compile Include="COMObjectCreateOptions.cs" />
     <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
@@ -126,13 +129,6 @@
     <Compile Include="CoreExtensions\CorePropertySetExtensions.cs" />
     <Compile Include="Diagnostics\DiagnosticItem.cs" />
     <Compile Include="Diagnostics\Internal\InternalDebugDiagnostics.cs" />
-    <Compile Include="DuckTales\DuckTypeClassGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeEnumeratorGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeEventsGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeIndexerGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeIssueClassGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeMethodsGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypePropertiesGenerator.cs" />
     <Compile Include="Attributes\EnumeratorAttribute.cs" />
     <Compile Include="Attributes\EventSinkAttribute.cs" />
     <Compile Include="Attributes\IndexPropertyAttribute.cs" />
@@ -142,14 +138,10 @@
     <Compile Include="Dynamics\COMDynamicMetaObject.cs" />
     <Compile Include="Converter\COMObjectExpandableObjectConverter.cs" />
     <Compile Include="COMProxyShare.cs" />
-    <Compile Include="DuckTales\DuckInterface.cs" />
-    <Compile Include="DuckTales\DuckTypeGenerator.cs" />
     <Compile Include="Attributes\InternalNameAttribute.cs" />
     <Compile Include="Attributes\ComProgIdAttribute.cs" />
     <Compile Include="Attributes\RedirectAttribute.cs" />
-    <Compile Include="DuckTales\Resources.cs" />
     <Compile Include="Attributes\SyntaxBypassAttribute.cs" />
-    <Compile Include="DuckTales\VisibleAttribute.cs" />
     <Compile Include="Events\CoClassEventReflector.cs" />
     <Compile Include="Exceptions\AvailityException.cs" />
     <Compile Include="Exceptions\CloneException.cs" />
@@ -178,7 +170,6 @@
     <Compile Include="Filtering\InterfaceInfo.cs" />
     <Compile Include="Filtering\RetryMessageFilterLogMode.cs" />
     <Compile Include="Filtering\RetryMessageFilterMode.cs" />
-    <Compile Include="Interfaces\IApplicationVersionProvider.cs" />
     <Compile Include="Interfaces\IAutomaticQuit.cs" />
     <Compile Include="Interfaces\ICloneable.cs" />
     <Compile Include="Interfaces\ICOMObjectAvaility.cs" />
@@ -302,9 +293,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="NetOffice_v4.0.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="DuckTales\EventBinding.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

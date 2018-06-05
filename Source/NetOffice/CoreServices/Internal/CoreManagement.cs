@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NetOffice.COMObjectManagement;
 
-namespace NetOffice.CoreSupport
+namespace NetOffice.CoreServices.Internal
 {
     /// <summary>
     /// Collect all currently open instances from a core
     /// </summary>
-    internal class ObjectList : List<ICOMObject>, ICOMObjectManagement
+    internal class CoreManagement : List<ICOMObject>, ICoreManagement
     {
         #region Fields
 
@@ -25,7 +24,7 @@ namespace NetOffice.CoreSupport
         /// </summary>
         /// <param name="parent">affected netoffice core</param>
         /// <exception cref="ArgumentNullException">argument is null</exception>
-        internal ObjectList(Core parent)
+        internal CoreManagement(Core parent)
         {
             if (null == parent)
                 throw new ArgumentNullException("parent");

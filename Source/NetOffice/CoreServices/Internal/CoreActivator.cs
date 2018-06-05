@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NetOffice;
-using NetOffice.COMObjectActivator;
 using NetOffice.Exceptions;
 
-namespace NetOffice.CoreSupport
+namespace NetOffice.CoreServices.Internal
 {
-    internal class ObjectActivator : ICOMObjectActivator
+    internal class CoreActivator : ICoreActivator
     {
         #region Ctor
 
@@ -17,7 +16,7 @@ namespace NetOffice.CoreSupport
         /// </summary>
         /// <param name="parent">affected netoffice core</param>
         /// <exception cref="ArgumentNullException"></exception>
-        internal ObjectActivator(Core parent)
+        internal CoreActivator(Core parent)
         {
             if (null == parent)
                 throw new ArgumentNullException("parent");
@@ -117,7 +116,7 @@ namespace NetOffice.CoreSupport
                 if (null != replaceInstance)
                 {
                     caller.RemoveChildObject(instance);
-                    Parent.ObjectList.RemoveObjectFromList(instance, null);
+                    Parent.InternalObjectRegister.RemoveObjectFromList(instance, null);
                     result = replaceInstance;
                 }
             }

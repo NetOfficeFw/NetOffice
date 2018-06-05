@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.CoreSupport
+namespace NetOffice.CoreServices.Internal
 {
     internal class TypeDictionary : List<TypeInformation>
     {

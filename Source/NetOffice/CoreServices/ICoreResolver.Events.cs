@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.COMObjectResolver
+namespace NetOffice.CoreServices
 {
     #region Resolve
 
@@ -51,7 +51,7 @@ namespace NetOffice.COMObjectResolver
     /// </summary>
     /// <param name="sender">Core sender instance</param>
     /// <param name="args">args as provided</param>
-    public delegate void ResolveEventHandler(ICOMObjectResolver sender, ResolveEventArgs args);
+    public delegate void ResolveEventHandler(ICoreResolver sender, ResolveEventArgs args);
 
     #endregion
 }

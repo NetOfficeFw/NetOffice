@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using NetOffice;
 using NetOffice.Attributes;
+using NetOffice.CoreServices;
 using NetOffice.Tools;
 using NetOffice.Contribution.CollectionsGeneric;
 
@@ -497,7 +498,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             }       
         }
 
-        private void Core_ProxyAdded(ICOMObjectManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
+        private void Core_ProxyAdded(ICoreManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             Action method = delegate
             {
@@ -525,7 +526,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyRemoved(ICOMObjectManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
+        private void Core_ProxyRemoved(ICoreManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             Action method = delegate
             {
@@ -562,7 +563,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyCleared(ICOMObjectManagement sender)
+        private void Core_ProxyCleared(ICoreManagement sender)
         {
             Action method = delegate
             {
@@ -644,7 +645,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyCountChanged(ICOMObjectManagement sender, int proxyCount)
+        private void Core_ProxyCountChanged(ICoreManagement sender, int proxyCount)
         {
             Action method = delegate
             {

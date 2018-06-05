@@ -1,6 +1,7 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
+using NetOffice.CoreServices;
 using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi

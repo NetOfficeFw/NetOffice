@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NetOffice.COMObjectResolver;
 
-namespace NetOffice.CoreSupport
+namespace NetOffice.CoreServices.Internal
 {
-    internal class ObjectResolver : ICOMObjectResolver
+    internal class CoreResolver : ICoreResolver
     {
         #region Ctor
 
@@ -15,7 +14,7 @@ namespace NetOffice.CoreSupport
         /// </summary>
         /// <param name="parent">affected netoffice core</param>
         /// <exception cref="ArgumentNullException">argument is null</exception>
-        internal ObjectResolver(Core parent)
+        internal CoreResolver(Core parent)
         {
             if (null == parent)
                 throw new ArgumentNullException("parent");
@@ -31,7 +30,7 @@ namespace NetOffice.CoreSupport
         /// This event allows to find and set the corresponding wrapper at hand.
         /// Otherwise NetOffice want create a dynamic instance if possible.
         /// </summary>
-        public event COMObjectResolver.ResolveEventHandler Resolve;
+        public event ResolveEventHandler Resolve;
     
         /// <summary>
         /// Affected NetOffice Core
@@ -53,7 +52,7 @@ namespace NetOffice.CoreSupport
         {
             if (null != Resolve)
             {
-                COMObjectResolver.ResolveEventArgs args = new COMObjectResolver.ResolveEventArgs(caller, fullClassName, comProxy);
+                ResolveEventArgs args = new ResolveEventArgs(caller, fullClassName, comProxy);
                 Resolve(this, args);
                 return args.Result;
             }

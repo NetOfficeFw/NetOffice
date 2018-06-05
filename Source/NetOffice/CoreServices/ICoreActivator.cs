@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice
+namespace NetOffice.CoreServices
 {
     /// <summary>
     /// Provides ICOMObject Activation Services
     /// </summary>
-    public interface ICOMObjectActivator
+    public interface ICoreActivator
     {
         /// <summary>
         /// Occours when a new COMObject instance has been created
         /// </summary>
-        event COMObjectActivator.OnCreateInstanceEventHandler CreateInstance;
+        event OnCreateInstanceEventHandler CreateInstance;
 
         /// <summary>
         /// Occurs when a new COMDynamicObject instance should be created
         /// </summary>
-        event COMObjectActivator.OnCreateCOMDynamicEventHandler CreateDynamicInstance;
+        event OnCreateCOMDynamicEventHandler CreateDynamicInstance;
 
         /// <summary>
         /// Occurs when a new COMProxyShare instance should be created
         /// </summary>
-        event COMObjectActivator.OnCreateProxyShareEventHandler CreateProxyShare;
+        event OnCreateProxyShareEventHandler CreateProxyShare;
 
         /// <summary>
         /// Affected NetOffice Core

@@ -3,33 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice
-{   
+namespace NetOffice.CoreServices
+{
     /// <summary>
     /// Provides access to instance management 
     /// </summary>
-    public interface ICOMObjectManagement
+    public interface ICoreManagement
     {
         /// <summary>
         /// Notify info the count of proxies there open are changed
         /// in case of notify comes from event trigger created proxy the call comes from other thread
         /// </summary>
-        event NetOffice.COMObjectManagement.CountChangedHandler CountChanged;
+        event CountChangedHandler CountChanged;
 
         /// <summary>
         /// Occurs when a proxy has been added
         /// </summary>
-        event NetOffice.COMObjectManagement.AddedHandler Added;
+        event AddedHandler Added;
 
         /// <summary>
         ///  Occurs when a proxy has been removed
         /// </summary>
-        event NetOffice.COMObjectManagement.RemovedHandler Removed;
+        event RemovedHandler Removed;
 
         /// <summary>
         /// Occurs when all proxies has been removed
         /// </summary>
-        event NetOffice.COMObjectManagement.ClearHandler Cleared;
+        event ClearHandler Cleared;
 
         /// <summary>
         /// Affected NetOffice Core
