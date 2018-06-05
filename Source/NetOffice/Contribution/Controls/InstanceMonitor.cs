@@ -238,7 +238,7 @@ namespace NetOffice.Contribution.Controls
                 Core factory = Factory;
                 if (null != factory)
                 {
-                    IEnumerable<ICOMObject> comObjects = factory.GetRootInstances();
+                    IEnumerable<ICOMObject> comObjects = factory.ObjectList.GetRootInstances();
 
                     foreach (ICOMObject comObject in comObjects)
                     {
@@ -266,9 +266,9 @@ namespace NetOffice.Contribution.Controls
             Core factory = Factory;
             if (null != factory)
             {
-                factory.ProxyAdded -= Core_ProxyAdded;
-                factory.ProxyRemoved -= Core_ProxyRemoved;
-                factory.ProxyCleared -= Core_ProxyCleared;
+                factory.ObjectRegister.Added -= Core_ProxyAdded;
+                factory.ObjectRegister.Removed -= Core_ProxyRemoved;
+                factory.ObjectRegister.Cleared -= Core_ProxyCleared;
             }
         }
 
@@ -277,9 +277,9 @@ namespace NetOffice.Contribution.Controls
             Core factory = Factory;
             if (null != factory)
             {
-                factory.ProxyAdded += Core_ProxyAdded;
-                factory.ProxyRemoved += Core_ProxyRemoved;
-                factory.ProxyCleared += Core_ProxyCleared;
+                factory.ObjectList.Added += Core_ProxyAdded;
+                factory.ObjectList.Removed += Core_ProxyRemoved;
+                factory.ObjectList.Cleared += Core_ProxyCleared;
             }
         }
 
@@ -345,7 +345,7 @@ namespace NetOffice.Contribution.Controls
 
         #region Trigger
        
-        private void Core_ProxyAdded(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
+        private void Core_ProxyAdded(ICOMObjectManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             Action method = delegate
             {
@@ -385,7 +385,7 @@ namespace NetOffice.Contribution.Controls
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyRemoved(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
+        private void Core_ProxyRemoved(ICOMObjectManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             Action method = delegate
             {
@@ -442,7 +442,7 @@ namespace NetOffice.Contribution.Controls
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyCleared(Core sender)
+        private void Core_ProxyCleared(ICOMObjectManagement sender)
         {
             Action method = delegate
             {

@@ -167,10 +167,10 @@ namespace NetOffice.ExcelApi.Tools
         object Native.IRtdServer.ConnectData(int topicID, ref object strings, ref bool getNewValues)
         {
             try
-            {
+            {              
                 lock (_thisLock)
                 {
-                    object result = ConnectData(topicID, Factory.WrapObject(strings, true), getNewValues);
+                    object result = ConnectData(topicID, NetOffice.CoreExtensions.CoreTypeExtensions.WrapObject(Factory, strings, true), getNewValues);
                     return Invoker.ValidateParam(result);
                 }
             }
@@ -296,7 +296,7 @@ namespace NetOffice.ExcelApi.Tools
         {
             try
             {
-                IEnumerable<ICOMObject> roots = Factory.GetRootInstances();
+                IEnumerable<ICOMObject> roots = Factory.ObjectRegister.GetRootInstances();
                 foreach (ICOMObject root in roots)
                     root.Dispose();
             }

@@ -241,9 +241,9 @@ namespace NetOffice
             Factory = Core.Default;
             SyncRoot = new object();
             ParentObject = null;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
             UnderlyingType = comProxy.GetType();
-            Factory.AddObjectToList(this);
+            Factory.ObjectList.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
@@ -267,12 +267,12 @@ namespace NetOffice
             SyncRoot = new object();
 
             ParentObject = parentObject;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
             UnderlyingType = comProxy.GetType();
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 ParentObject.AddChildObject(this);
 
-            Factory.AddObjectToList(this);
+            Factory.ObjectList.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
@@ -293,11 +293,11 @@ namespace NetOffice
             if (null != shareProvider)
                 _proxyShare = shareProvider.GetProxyShare();
             else
-                _proxyShare = Factory.CreateNewProxyShare(this, comObject.UnderlyingObject);
+                _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comObject.UnderlyingObject);
 
             UnderlyingType = comObject.UnderlyingType;
 
-            Factory.AddObjectToList(this);
+            Factory.ObjectList.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
@@ -321,14 +321,14 @@ namespace NetOffice
             SyncRoot = new object();
 
             ParentObject = parentObject;
-            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, comProxy);
 
             UnderlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 ParentObject.AddChildObject(this);
 
-            Factory.AddObjectToList(this);
+            Factory.ObjectList.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
@@ -357,7 +357,7 @@ namespace NetOffice
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 ParentObject.AddChildObject(this);
 
-            Factory.AddObjectToList(this);
+            Factory.ObjectList.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
@@ -373,12 +373,12 @@ namespace NetOffice
                 throw new ArgumentNullException("progId");
 
             object underlyingObject = CreateFromProgId(progId);
-            _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
+            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, underlyingObject);
 
             SyncRoot = new object();
 
             Factory = null != factory ? factory : Core.Default;
-            Factory.AddObjectToList(this);
+            Factory.ObjectList.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
 
             _progId = progId;
@@ -399,9 +399,9 @@ namespace NetOffice
             SyncRoot = new object();
 
             object underlyingObject = CreateFromProgId(progId);
-            _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
+            _proxyShare = Factory.GlobalObjectActivator.CreateNewProxyShare(this, underlyingObject);
 
-            Factory.AddObjectToList(this);
+            Factory.ObjectList.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
 
             _progId = progId;
@@ -470,7 +470,7 @@ namespace NetOffice
             {
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy", PerformanceTrace.CallType.Method);
                 _proxyShare.Release();
-                Factory.RemoveObjectFromList(this, ownerPath);
+                Factory.ObjectList.RemoveObjectFromList(this, ownerPath);
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy");
             }
@@ -1169,9 +1169,9 @@ namespace NetOffice
                     DisposeChildInstances(disposeEventBinding);
 
                     IEnumerable<ICOMObject> ownerPath = null;
-                    if (Factory.HasProxyRemovedRecipients)
+                    if (Factory.ObjectList.HasRemovedRecipients)
                     {
-                        ownerPath = Core.GetOwnerPath(this);
+                        ownerPath = NetOffice.CoreSupport.ObjectList.GetOwnerPath(this);
                     }
 
                     // remove himself from parent childlist

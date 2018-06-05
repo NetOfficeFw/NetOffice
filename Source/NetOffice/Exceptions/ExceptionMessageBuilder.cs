@@ -34,11 +34,11 @@ namespace NetOffice.Exceptions
         /// <param name="instance">caller instance</param>
         /// <param name="name"></param>
         /// <param name="type">name of invoke target</param>
-        /// <param name="versionProviders">optional version providers for application instances</param>
+        /// <param name="versionHandler">optional version providers for application instances</param>
         /// <param name="arguments">arguments as any</param>
         /// <param name="valuePropertySet">additional value if its an indexed property set</param>
         /// <returns>exception message</returns>
-        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, IEnumerable<IApplicationVersionProvider> versionProviders, object[] arguments = null, object valuePropertySet = null)
+        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, CoreSupport.ApplicationVersionHandler versionHandler, object[] arguments = null, object valuePropertySet = null)
         {
             if (null == throwedException)
                 throw new ArgumentNullException("throwedException", "<Please report this error.>");
@@ -53,7 +53,7 @@ namespace NetOffice.Exceptions
             switch (comObject.Settings.ExceptionMessageBehavior)
             {
                 case ExceptionMessageHandling.Diagnostics:
-                    return GetExceptionDiagnosticsMessage(comObject, name, type, versionProviders, arguments);
+                    return GetExceptionDiagnosticsMessage(comObject, name, type, versionHandler, arguments);
                 case ExceptionMessageHandling.Default:
                     return settings.ExceptionDefaultMessage;
                 case ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException:
@@ -61,7 +61,7 @@ namespace NetOffice.Exceptions
                 case ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException:
                     return GetExceptionAllInnerExceptionMessagesToTopLevelMessage(throwedException);
                 case ExceptionMessageHandling.DiagnosticsAndInnerMessage:
-                    return GetExceptionDiagnosticsInnerMessage(throwedException, comObject, name, type, versionProviders, arguments);
+                    return GetExceptionDiagnosticsInnerMessage(throwedException, comObject, name, type, versionHandler, arguments);
                 default:
                     throw new NetOfficeException("<Unexpected exception behavior. Please report this error.>");
             }
@@ -74,12 +74,12 @@ namespace NetOffice.Exceptions
         /// <param name="comObject">caller instance</param>
         /// <param name="name">name of invoke target</param>
         /// <param name="type">type of invoke target</param>
-        /// <param name="versionProviders">optional version providers for application instances</param>
+        /// <param name="versionHandler">optional version providers for application instances</param>
         /// <param name="arguments">arguments as any</param>
         /// <returns>diagnostic exception message or error message if an exception occurs</returns>
-        private static string GetExceptionDiagnosticsInnerMessage(Exception throwedException, ICOMObject comObject, string name, CallType type, IEnumerable<IApplicationVersionProvider> versionProviders, object[] arguments = null)
+        private static string GetExceptionDiagnosticsInnerMessage(Exception throwedException, ICOMObject comObject, string name, CallType type, CoreSupport.ApplicationVersionHandler versionHandler, object[] arguments = null)
         {
-            string diagMessage = GetExceptionDiagnosticsMessage(comObject, name, type, versionProviders, arguments);
+            string diagMessage = GetExceptionDiagnosticsMessage(comObject, name, type, versionHandler, arguments);
             string message = throwedException.Message;
             while (throwedException.InnerException != null)
             {
@@ -95,10 +95,10 @@ namespace NetOffice.Exceptions
         /// <param name="comObject">caller instance</param>
         /// <param name="name">name of invoke target</param>
         /// <param name="type">type of invoke target</param>
-        /// <param name="versionProviders">optional version providers for application instances</param>
+        /// <param name="versionHandler">optional version providers for application instances</param>
         /// <param name="arguments">arguments as any</param>
         /// <returns>diagnostic exception message or error message if an exception occurs</returns>
-        private static string GetExceptionDiagnosticsMessage(ICOMObject comObject, string name, CallType type, IEnumerable<IApplicationVersionProvider> versionProviders, object[] arguments = null)
+        private static string GetExceptionDiagnosticsMessage(ICOMObject comObject, string name, CallType type, CoreSupport.ApplicationVersionHandler versionHandler, object[] arguments = null)
         {
             try
             {
@@ -109,10 +109,10 @@ namespace NetOffice.Exceptions
 
                 if (diagMessage.Contains("{ApplicationVersions}") || diagMessage.Contains("{NlApplicationVersions}"))
                 {
-                    if (null != versionProviders)
+                    if (null != versionHandler)
                     {
                         string versionString = String.Empty;
-                        foreach (var item in versionProviders)
+                        foreach (var item in versionHandler.ThreadSafeEnumerable())
                         {
                             if (!item.VersionRequested)
                                 item.TryRequestVersion();

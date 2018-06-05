@@ -92,6 +92,22 @@
     <Compile Include="Attributes\ProxyResultAttribute.cs" />
     <Compile Include="Attributes\SinkArgumentAttribute.cs" />
     <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
+    <Compile Include="Contribution\ProxyInformation.cs" />
+    <Compile Include="CoreExtensions\CoreTypeExtensions.cs" />
+    <Compile Include="CoreSupport\ApplicationVersionHandler.cs" />
+    <Compile Include="CoreSupport\GlobalObjectList.cs" />
+    <Compile Include="CoreSupport\ObjectActivator.cs" />
+    <Compile Include="CoreSupport\ObjectResolver.cs" />
+    <Compile Include="CoreSupport\RemoteComparsion.cs" />
+    <Compile Include="CoreSupport\TypeDictionary.cs" />
+    <Compile Include="CoreSupport\TypeInformation.cs" />
+    <Compile Include="Exceptions\ActivationException.cs" />
+    <Compile Include="Interfaces\COMObjectActivator.cs" />
+    <Compile Include="Interfaces\COMObjectResolver.cs" />
+    <Compile Include="Interfaces\ICOMObjectActivator.cs" />
+    <Compile Include="Interfaces\ICOMObjectManagement.cs" />
+    <Compile Include="Interfaces\COMObjectManagement.cs" />
+    <Compile Include="Interfaces\ICOMObjectResolver.cs" />
     <Compile Include="Loader\ComActivator.cs" />
     <Compile Include="COMObjectCreateOptions.cs" />
     <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
@@ -104,7 +120,6 @@
       <DependentUpon>InstanceMonitor.cs</DependentUpon>
     </Compile>
     <Compile Include="Converter\ExpandableSettingsConverter.cs" />
-    <Compile Include="CoreExtensions\Core.Nested.cs" />
     <Compile Include="CoreExtensions\CoreFactoryExtensions.cs" />
     <Compile Include="CoreExtensions\CoreMethodExtensions.cs" />
     <Compile Include="CoreExtensions\CorePropertyGetExtensions.cs" />

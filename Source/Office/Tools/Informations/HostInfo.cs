@@ -75,7 +75,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
             list.Add(new KeyValuePair<string, string>(HeaderCaption, HeaderCaptionLine));
             list.Add(new KeyValuePair<string, string>("Product Name", _owner.OwnerApplication.InstanceFriendlyName));
             list.Add(new KeyValuePair<string, string>("Product Version", appVersion.ToString()));
-            list.Add(new KeyValuePair<string, string>("Proxy Count", _owner.OwnerApplication.Factory.ProxyCount.ToString()));
+            list.Add(new KeyValuePair<string, string>("Proxy Count", _owner.OwnerApplication.Factory.ObjectRegister.Count.ToString()));
             list.Add(new KeyValuePair<string, string>("Is Initialized", _owner.OwnerApplication.Factory.IsInitialized.ToString()));
             list.Add(new KeyValuePair<string, string>("Initialized Time MS", _owner.OwnerApplication.Factory.InitializedTime.TotalMilliseconds.ToString()));
             if(null != _owner.Owner)

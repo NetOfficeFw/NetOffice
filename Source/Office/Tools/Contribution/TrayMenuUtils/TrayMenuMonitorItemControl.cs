@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             switch (Mode)
             {
                 case TrayMenuMonitorItem.ShowMode.Core:
-                    Addin.Factory.ProxyCountChanged += Core_ProxyCountChanged;
+                    Addin.Factory.ObjectRegister.CountChanged += Core_ProxyCountChanged;
                     Addin.Factory.IsInitializedChanged += Core_IsInitializedChanged;
                     break;
                 case TrayMenuMonitorItem.ShowMode.Settings:
@@ -217,9 +217,9 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 case TrayMenuMonitorItem.ShowMode.Diagnostics:
                     break;
                 case TrayMenuMonitorItem.ShowMode.Proxies:
-                    Addin.Factory.ProxyAdded += Core_ProxyAdded;
-                    Addin.Factory.ProxyRemoved += Core_ProxyRemoved;
-                    Addin.Factory.ProxyCleared += Core_ProxyCleared;
+                    Addin.Factory.ObjectRegister.Added += Core_ProxyAdded;
+                    Addin.Factory.ObjectRegister.Removed += Core_ProxyRemoved;
+                    Addin.Factory.ObjectRegister.Cleared += Core_ProxyCleared;
                     break;
                 case TrayMenuMonitorItem.ShowMode.Options:
                     break;
@@ -233,7 +233,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             switch (mode)
             {
                 case TrayMenuMonitorItem.ShowMode.Core:
-                    Addin.Factory.ProxyCountChanged -= Core_ProxyCountChanged;
+                    Addin.Factory.ObjectRegister.CountChanged -= Core_ProxyCountChanged;
                     Addin.Factory.IsInitializedChanged -= Core_IsInitializedChanged;
                     break;
                 case TrayMenuMonitorItem.ShowMode.Settings:
@@ -246,9 +246,9 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 case TrayMenuMonitorItem.ShowMode.Diagnostics:
                     break;
                 case TrayMenuMonitorItem.ShowMode.Proxies:
-                    Addin.Factory.ProxyAdded -= Core_ProxyAdded;
-                    Addin.Factory.ProxyRemoved -= Core_ProxyRemoved;
-                    Addin.Factory.ProxyCleared -= Core_ProxyCleared;
+                    Addin.Factory.ObjectRegister.Added -= Core_ProxyAdded;
+                    Addin.Factory.ObjectRegister.Removed -= Core_ProxyRemoved;
+                    Addin.Factory.ObjectRegister.Cleared -= Core_ProxyCleared;
                     break;
                 case TrayMenuMonitorItem.ShowMode.Options:
                     break;
@@ -497,7 +497,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             }       
         }
 
-        private void Core_ProxyAdded(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
+        private void Core_ProxyAdded(ICOMObjectManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             Action method = delegate
             {
@@ -525,7 +525,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyRemoved(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
+        private void Core_ProxyRemoved(ICOMObjectManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             Action method = delegate
             {
@@ -562,7 +562,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyCleared(Core sender)
+        private void Core_ProxyCleared(ICOMObjectManagement sender)
         {
             Action method = delegate
             {
@@ -644,7 +644,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyCountChanged(int proxyCount)
+        private void Core_ProxyCountChanged(ICOMObjectManagement sender, int proxyCount)
         {
             Action method = delegate
             {

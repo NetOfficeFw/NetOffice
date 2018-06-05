@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using NetOffice.Loader;
+using NetOffice.CoreSupport;
 using NetOffice.Duck;
 using NetOffice.Exceptions;
 #if DEBUG
@@ -13,77 +14,6 @@ using NetOffice.Diagnostics.Internal;
 
 namespace NetOffice
 {
-    internal class TypeDictionary : List<TypeInformation>
-    {
-        public bool TryGetTypeInfo(string fullContractName, ref TypeInformation typeInfo)
-        {
-            foreach (var item in this)
-            {
-                if (fullContractName == item.Contract.FullName)
-                {
-                    typeInfo = item;
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public bool TryGetTypeInfo(Type contract, ref TypeInformation typeInfo)
-        {
-            foreach (var item in this)
-            {
-                if (contract == item.Contract)
-                {
-                    typeInfo = item;
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public bool TryGetProxyType(Type contract, ref Type proxy)
-        {
-            foreach (var item in this)
-            {
-                if (contract == item.Contract)
-                {
-                    proxy = item.Proxy;
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public void Add(Type contract, Type implementation, Type proxy)
-        {
-            Add(new TypeInformation(contract, implementation, proxy));
-        }
-    }
-
-    internal class TypeInformation
-    {
-        internal TypeInformation(Type contract, Type implementation, Type proxy)
-        {
-            if (null == contract)
-                throw new ArgumentNullException("contract");
-            if (null == implementation)
-                throw new ArgumentNullException("implementation");
-            if (null == proxy)
-                throw new ArgumentNullException("proxy");
-
-            Contract = contract;
-            Implementation = implementation;
-            Proxy = proxy;
-        }
-
-        public Type Contract { get; private set; }
-
-        public Type Implementation { get; private set; }
-
-        public Type Proxy { get; private set; }
-    }
-
-
     #region IDispatch - imagine a world without...
 
     /// <summary>
@@ -156,6 +86,12 @@ namespace NetOffice
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public partial class Core
     {
+        /// <summary>
+        /// IsInitializedChanged delegate
+        /// </summary>
+        /// <param name="isInitialized"></param>
+        public delegate void IsInitializedChangedHandler(bool isInitialized);
+
         #region Fields
 
         /// <summary>
@@ -164,9 +100,8 @@ namespace NetOffice
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
 
         /// <summary>
-        /// full netoffice wrapper class type name, native comProxy type
+        /// 
         /// </summary>
-        //private Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
         private TypeDictionary _proxyTypeCache = new TypeDictionary();
 
         /// <summary>
@@ -182,9 +117,7 @@ namespace NetOffice
         private KnownKeyTokens _knownNetOfficeKeyTokens;
         private Assembly _thisAssembly;
         private Type _thisType;
-        private static ICOMObject[] _emptyOwnerPath = new ICOMObject[0];
-        private List<IApplicationVersionProvider> _versionProviders = new List<IApplicationVersionProvider>();
-        private object _versionProvidersLock = new object();
+        private static ICOMObject[] _emptyObjectSequence = new ICOMObject[0];
 
         private object _checkInitializeLock = new object();
         private object _thisAssemblyLock = new object();
@@ -212,6 +145,10 @@ namespace NetOffice
             Invoker = new Invoker(this);
             EntitiesListCache = new Dictionary<string, Dictionary<string, string>>();
             HostCache = new Dictionary<Guid, Guid>();
+            VersionProviders = new ApplicationVersionHandler(this);
+            ObjectList = new ObjectList(this);
+            GlobalObjectActivator = new ObjectActivator(this);
+            GlobalObjectResolver = new ObjectResolver(this);
         }
 
         /// <summary>
@@ -238,101 +175,15 @@ namespace NetOffice
                 Console = new DebugConsole();
                 Invoker = new Invoker(this);
             }
+            VersionProviders = new ApplicationVersionHandler(this);
+            ObjectList = new ObjectList(this);
+            GlobalObjectActivator = new ObjectActivator(this);
+            GlobalObjectResolver = new ObjectResolver(this);
         }
 
         #endregion
 
         #region Events
-
-        /// <summary>
-        /// Occurs when its failed to resolve a wrapper type for a given com proxy
-        /// </summary>
-        public event ResolveEventHandler Resolve;
-
-        /// <summary>
-        /// Raise Resolve event
-        /// </summary>
-        /// <param name="caller">calling instance</param>
-        /// <param name="fullClassName">target NetOffice class</param>
-        /// <param name="comProxy">native proxy type</param>
-        /// <returns>type to use or null</returns>
-        private Type RaiseResolve(ICOMObject caller, string fullClassName, Type comProxy)
-        {
-            if (null != Resolve)
-            {
-                ResolveEventArgs args = new ResolveEventArgs(caller, fullClassName, comProxy);
-                Resolve(this, args);
-                return args.Result;
-            }
-            else
-                return null;
-        }
-
-        /// <summary>
-        /// Occurs when a new COMDynamicObject instance should be created
-        /// </summary>
-        public event OnCreateCOMDynamicEventHandler CreateCOMDynamic;
-
-        /// <summary>
-        /// Raise the CreateCOMDynamic event
-        /// </summary>
-        /// <param name="instance">requested instance</param>
-        /// <param name="comProxy">target proxy</param>
-        /// <returns>COMDynamicObject instance or null</returns>
-        private COMDynamicObject RaiseCreateCOMDynamic(ICOMObject instance, object comProxy)
-        {
-            if (null != CreateCOMDynamic)
-            {
-                OnCreateCOMDynamicEventArgs args = new OnCreateCOMDynamicEventArgs(instance, comProxy);
-                CreateCOMDynamic(this, args);
-                return args.Result;
-            }
-            else
-                return null;
-        }
-
-        /// <summary>
-        /// Occurs when a new COMProxyShare instance should be created
-        /// </summary>
-        public event OnCreateProxyShareEventHandler CreateProxyShare;
-
-        /// <summary>
-        /// Raise the CreateProxyShare event
-        /// </summary>
-        /// <param name="instance">requested instance</param>
-        /// <param name="isEnumerator">indicates rcw is an enumerator</param>
-        /// <returns>CreateProxyShare instance or null</returns>
-        private COMProxyShare RaiseCreateProxyShare(ICOMObject instance, bool isEnumerator)
-        {
-            if (null != CreateProxyShare)
-            {
-                OnCreateProxyShareEventArgs args = new OnCreateProxyShareEventArgs(instance, isEnumerator);
-                CreateProxyShare(this, args);
-                return args.Result;
-            }
-            else
-                return null;
-        }
-
-        /// <summary>
-        /// Occours when a new COMObject instance has been created
-        /// </summary>
-        public event OnCreateInstanceEventHandler CreateInstance;
-
-        /// <summary>
-        /// Raise CreateInstance event
-        /// </summary>
-        /// <param name="instance">origin instance</param>
-        /// <param name="replace">type to replace the instance</param>
-        private void RaiseCreateInstance(ICOMObject instance, ref Type replace)
-        {
-            if (null != CreateInstance)
-            {
-                OnCreateInstanceEventArgs args = new OnCreateInstanceEventArgs(instance);
-                CreateInstance(this, args);
-                replace = args.Replace;
-            }
-        }
 
         /// <summary>
         /// Occurs when the initialize state has been changed
@@ -346,84 +197,6 @@ namespace NetOffice
         {
             if (null != IsInitializedChanged)
                 IsInitializedChanged(_initalized);
-        }
-
-        /// <summary>
-        /// Notify info the count of proxies there open are changed
-        /// in case of notify comes from event trigger created proxy the call comes from other thread
-        /// </summary>
-        public event ProxyCountChangedHandler ProxyCountChanged;
-
-        /// <summary>
-        /// Raise the ProxyCountChanged event (and optional, send channel message to console)
-        /// </summary>
-        /// <param name="proxyCount">current count of open com proxies</param>
-        private void RaiseProxyCountChanged(int proxyCount)
-        {
-            try
-            {
-                if (null != ProxyCountChanged)
-                    ProxyCountChanged(proxyCount);
-            }
-            catch (Exception throwedException)
-            {
-                DebugConsole.Default.WriteException(throwedException);
-            }
-        }
-
-        /// <summary>
-        /// Occurs when a proxy has been added
-        /// </summary>
-        public event ProxyAddedHandler ProxyAdded;
-
-        /// <summary>
-        /// ProxyAdded event has currently recipients
-        /// </summary>
-        internal bool HasProxyAddedRecipients
-        {
-            get
-            {
-                return (null != ProxyAdded);
-            }
-        }
-
-        private void RaiseProxyAdded(IEnumerable<ICOMObject> ownerPath, ICOMObject item)
-        {
-            if (null != ProxyAdded)
-                ProxyAdded(this, ownerPath, item);
-        }
-
-        /// <summary>
-        ///  Occurs when a proxy has been removed
-        /// </summary>
-        public event ProxyRemovedHandler ProxyRemoved;
-
-        /// <summary>
-        /// ProxyRemoved event has currently recipients
-        /// </summary>
-        internal bool HasProxyRemovedRecipients
-        {
-            get
-            {
-                return (null != ProxyRemoved);
-            }
-        }
-
-        private void RaiseProxyRemoved(IEnumerable<ICOMObject> ownerPath, ICOMObject item)
-        {
-            if (null != ProxyRemoved)
-                ProxyRemoved(this, ownerPath, item);
-        }
-
-        /// <summary>
-        /// Occurs when all proxies has been removed
-        /// </summary>
-        public event ProxyClearHandler ProxyCleared;
-
-        private void RaiseProxyCleared()
-        {
-            if (null != ProxyCleared)
-                ProxyCleared(this);
         }
 
         #endregion
@@ -489,18 +262,6 @@ namespace NetOffice
         public FactoryList Assemblies { get; private set; }
 
         /// <summary>
-        /// Returns current count of open proxies
-        /// </summary>
-        [Category("Core"), Description("Current count of open proxies")]
-        public int ProxyCount
-        {
-            get
-            {
-                return _globalObjectList.Count;
-            }
-        }
-
-        /// <summary>
         /// Time that the initialize process has been used to pass
         /// </summary>
         [Category("Core"), Description("Time that the initialize process has been used to pass")]
@@ -553,6 +314,17 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Provides access to NetOffice instance management
+        /// </summary>
+        public ICOMObjectManagement ObjectRegister
+        {
+            get
+            {
+                return ObjectList as ICOMObjectManagement;
+            }
+        }
+
+        /// <summary>
         /// Current NetOffice Core Assembly
         /// </summary>
         internal Assembly ThisAssembly
@@ -595,6 +367,33 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Registered Version Providers
+        /// </summary>
+        internal ApplicationVersionHandler VersionProviders { get; private set; }
+
+        internal ObjectList ObjectList { get; private set; }
+
+        internal ObjectActivator GlobalObjectActivator { get; private set; }
+
+        public ICOMObjectActivator ObjectActivator
+        {
+            get
+            {
+                return GlobalObjectActivator;
+            }
+        }
+
+        internal ObjectResolver GlobalObjectResolver { get; private set; }
+
+        public ICOMObjectResolver ObjectResolver
+        {
+            get
+            {
+                return GlobalObjectResolver;
+            }
+        }
+
+        /// <summary>
         /// Duck Type Cache
         /// T1 is interface
         /// T2 is its implementation
@@ -616,10 +415,10 @@ namespace NetOffice
         /// Dependent assemblies analyzed by LoadAPIFactories
         /// </summary>
         private List<DependentAssembly> DependentAssemblies { get; set; }
-
+    
         #endregion
 
-        #region Factory Methods
+        #region Factory Initialize
 
         /// <summary>
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
@@ -723,6 +522,353 @@ namespace NetOffice
                 DependentAssemblies.Clear();
             }
         }
+
+        #endregion
+        
+        #region Create COMObject Methods
+
+        /// <summary>
+        /// Creates a new ICOMObject based on classType of comProxy. The method use Settings.EnableDynamicEventArguments to reflect dynamics
+        /// </summary>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        public ICOMObject CreateEventArgumentObjectFromComProxy(ICOMObject caller, object comProxy)
+        {
+            return CreateObjectFromComProxy(caller, comProxy, caller.Settings.EnableDynamicEventArguments);
+        }
+
+        /// <summary>
+        /// Creates a new ICOMObject based on classType of comProxy
+        /// </summary>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, bool allowDynamicObject)
+        {
+            CheckInitialize();
+            try
+            {
+                if (null == comProxy)
+                    return null;
+
+                lock (_comObjectLock)
+                {
+                    IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxy, false);
+                    if (null == factoryInfo)
+                    {
+                        // was ist das denn hier ???????
+                        Type comProxyType2 = null;
+                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2,
+                                                                            String.Empty, String.Empty, allowDynamicObject);
+                        newInstance2 = GlobalObjectActivator.TryReplaceInstance(caller, newInstance2, comProxyType2);
+                        return newInstance2;
+                    }
+                    
+                    string proxyClassName = ComTypes.TypeDescriptor.GetClassName(comProxy);
+                    string wrapperContractName = factoryInfo.AssemblyNamespace + "." + proxyClassName;
+
+                    TypeInformation typeInfo = null;
+                    if (false == _proxyTypeCache.TryGetTypeInfo(wrapperContractName, ref typeInfo))
+                    {
+                        Type contractType = null;
+                        Type implementationType = null;
+                        Assemblies.GetContractAndImplementationType(factoryInfo.AssemblyNamespace, proxyClassName, ref contractType, ref implementationType);
+                        Type comProxyType = comProxy.GetType();
+                        typeInfo = new TypeInformation(contractType, implementationType, comProxyType);
+                        _proxyTypeCache.Add(typeInfo);
+                    }
+
+                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, typeInfo.Proxy, proxyClassName, wrapperContractName, allowDynamicObject);
+                    newInstance = GlobalObjectActivator.TryReplaceInstance(caller, newInstance, typeInfo.Proxy); // wird bedingt aber schon in CreateObjectFromComProxy gemacht
+
+                    return newInstance;
+                }
+            }
+            catch (Exception throwedException)
+            {
+                Console.WriteException(throwedException);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new ICOMObject based on classType of comProxy
+        /// </summary>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="comProxyType">Type of comProxy</param>
+        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, Type comProxyType, bool allowDynamicObject)
+        {
+            CheckInitialize();
+            try
+            {
+                if (null == comProxy)
+                    return null;
+
+                lock (_comObjectLock)
+                {
+                    IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxy);
+                    if (null == factoryInfo)
+                    {
+                        Type comProxyType2 = null;
+                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, String.Empty, String.Empty, allowDynamicObject);
+                        newInstance2 = GlobalObjectActivator.TryReplaceInstance(caller, newInstance2, comProxyType2);
+
+                        return newInstance2;
+                    }
+
+                    string className = ComTypes.TypeDescriptor.GetClassName(comProxy);
+                    string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
+
+                    // create new classType
+                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName, allowDynamicObject);
+                    newInstance = GlobalObjectActivator.TryReplaceInstance(caller, newInstance, comProxyType);
+
+                    return newInstance;
+                }
+            }
+            catch (Exception throwedException)
+            {
+                Console.WriteException(throwedException);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new ICOMObject from factoryInfo
+        /// </summary>
+        /// <param name="factoryInfo">Factory Info from Wrapper Assemblies</param>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="comProxyType">Type of comProxy</param>
+        /// <param name="className">name of COMServer proxy class</param>
+        /// <param name="fullClassName">full namespace and name of COMServer proxy class</param>
+        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        /// <exception cref="FactoryException">throws when its failed find corresponding wrapper class type</exception>
+        private ICOMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, ICOMObject caller, object comProxy,
+            Type comProxyType, string className, string fullClassName, bool allowDynamicObject)
+        {
+            //CheckInitialize();
+            try
+            {
+                lock (_comObjectLock)
+                {
+                    Type classType = null;
+                    if (true == _wrapperTypeCache.TryGetValue(fullClassName, out classType))
+                    {
+                        // cached classType
+                        ICOMObject newInstance = null;
+                        try
+                        {
+                            newInstance = Activator.CreateInstance(classType, new object[] { caller, comProxy }) as ICOMObject;
+                            newInstance = GlobalObjectActivator.TryReplaceInstance(caller, newInstance, comProxyType);
+                        }
+                        catch (Exception exception)
+                        {
+                            throw new CreateInstanceException(exception);
+                        }
+
+                        return newInstance as ICOMObject;
+                    }
+                    else
+                    {
+                        // create new classType
+                        classType = null != factoryInfo ? factoryInfo.Assembly.GetType(fullClassName, false, true) : null;
+                        if (null == classType)
+                            classType = GlobalObjectResolver.RaiseResolve(caller, fullClassName, comProxyType);
+
+                        if (null == classType)
+                        {
+                            if (allowDynamicObject && Settings.EnableDynamicObjects)
+                            {
+                                ICOMObject unkownInstance = GlobalObjectActivator.RaiseCreateCOMDynamic(caller, comProxy);
+                                if (null == unkownInstance)
+                                    unkownInstance = new COMDynamicObject(caller, comProxy);
+                                unkownInstance = GlobalObjectActivator.TryReplaceInstance(caller, unkownInstance, comProxyType);
+                                return unkownInstance;
+                            }
+                            else
+                                throw new FactoryException("Class not exists: " + (true == String.IsNullOrWhiteSpace(fullClassName) ? ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy) : fullClassName));
+                        }
+
+                        _wrapperTypeCache.Add(fullClassName, classType);
+
+                        ICOMObject newInstance = null;
+                        try
+                        {
+                            newInstance = Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType }) as ICOMObject;
+                            newInstance = GlobalObjectActivator.TryReplaceInstance(caller, newInstance, comProxyType);
+                        }
+                        catch (Exception exception)
+                        {
+                            throw new CreateInstanceException(exception);
+                        }
+                        return newInstance;
+                    }
+                }
+            }
+            catch (Exception throwedException)
+            {
+                Console.WriteException(throwedException);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new ICOMObject array
+        /// </summary>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxyArray">new created proxy array</param>
+        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding Wrapper class Instance array or plain COMObject array</returns>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        /// <exception cref="FactoryException">throws when its failed find factory info</exception>
+        public ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, bool allowDynamicObject)
+        {
+            CheckInitialize();
+            try
+            {
+                if (null == comProxyArray)
+                    return null;
+
+                lock (_comObjectLock)
+                {
+                    Type comVariantType = null;
+                    ICOMObject[] newVariantArray = new ICOMObject[comProxyArray.Length];
+                    for (int i = 0; i < comProxyArray.Length; i++)
+                    {
+                        comVariantType = comProxyArray[i].GetType();
+                        IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxyArray[i]);
+                        string className = TypeDescriptor.GetClassName(comProxyArray[i]);
+                        string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
+                        newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName, allowDynamicObject);
+                    }
+                    return newVariantArray;
+                }
+            }
+            catch (Exception throwedException)
+            {
+                Console.WriteException(throwedException);
+                throw;
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// Creates a new ICOMObject based on wrapperClassType
+        /// </summary>
+        /// <typeparam name="T">result contract type</typeparam>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="contractWrapperType">type info from contract wrapper</param>
+        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        public T CreateKnownObjectFromComProxy<T>(ICOMObject caller, object comProxy, Type contractWrapperType) where T:class, ICOMObject
+        {
+            return (T)CreateKnownObjectFromComProxy(caller, comProxy, contractWrapperType);
+        }
+
+        /// <summary>
+        /// Creates a new ICOMObject based on wrapperClassType
+        /// </summary>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="contractWrapperType">type info from contract wrapper</param>
+        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        public ICOMObject CreateKnownObjectFromComProxy(ICOMObject caller, object comProxy, Type contractWrapperType)
+        {
+            if (!caller.Settings.EnableKnownReferenceInspection)
+            {
+                CheckInitialize();
+                try
+                {
+                    if (null == comProxy)
+                        return null;
+
+                    lock (_comObjectLock)
+                    {    
+                        TypeInformation typeInfo = null;
+                        if (false == _proxyTypeCache.TryGetTypeInfo(contractWrapperType, ref typeInfo))
+                        {
+                            Type comProxyType = comProxy.GetType();
+                            Type implementationType = Assemblies.GetImplementationType(contractWrapperType);
+                            typeInfo = new TypeInformation(contractWrapperType, implementationType, comProxyType);
+                            _proxyTypeCache.Add(typeInfo);
+                        }                       
+
+                        ICOMObject newInstance = null;
+                        try
+                        {
+                            newInstance = ComActivator.CreateInitializeInstance(typeInfo.Implementation, caller, comProxy, typeInfo.Proxy);   
+                            newInstance = GlobalObjectActivator.TryReplaceInstance(caller, newInstance, typeInfo.Proxy);
+                        }
+                        catch (Exception exception)
+                        {
+                            throw new CreateInstanceException(exception);
+                        }
+
+                        return newInstance;
+                    }
+                }
+                catch (Exception throwedException)
+                {
+                    Console.WriteException(throwedException);
+                    throw;
+                }
+            }
+            else
+            {
+                return CreateObjectFromComProxy(caller, comProxy, false);
+            }          
+        }
+
+        /// <summary>
+        /// Creates a new ICOMObject array based on wrapperClassType
+        /// </summary>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxyArray">new created proxies</param>
+        /// <param name="wrapperClassType">type info from wrapper class</param>
+        /// <returns>corresponding wrapper class instances or plain COMObject</returns>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        public ICOMObject[] CreateKnownObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, Type wrapperClassType)
+        {
+            CheckInitialize();
+            try
+            {
+                if (null == comProxyArray)
+                    return _emptyObjectSequence;
+
+                Type comVariantType = null;
+                ICOMObject[] newVariantArray = new ICOMObject[comProxyArray.Length];
+                for (int i = 0; i < comProxyArray.Length; i++)
+                {
+                    ICOMObject newInstance = CreateKnownObjectFromComProxy(caller, comProxyArray[i], comVariantType);
+                    newVariantArray[i] = newInstance;
+                }
+                return newVariantArray;
+            }
+            catch (Exception throwedException)
+            {
+                Console.WriteException(throwedException);
+                throw;
+            }
+        }
+
+
+
+        #endregion
 
         /// <summary>
         /// Dispose all active event bridges
@@ -894,908 +1040,5 @@ namespace NetOffice
             else
                 return new string[0];
         }
-
-        #endregion
-
-        #region Duck (Experimental)
-
-        ///// <summary>
-        ///// Creates a new duck typing instance by given generic type argument
-        ///// </summary>
-        ///// <typeparam name="T">interface result type</typeparam>
-        ///// <returns>new instance</returns>
-        ///// <exception cref="ArgumentException">throws when ComProgIdAttribute is missing</exception>
-        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        ///// <exception cref="COMException">throws when its failed to recieve progID Type</exception>
-        //public T CreateDuckObject<T>() where T : ICOMObject
-        //{
-        //    object[] attributes = typeof(T).GetCustomAttributes(typeof(NetOffice.Attributes.ComProgIdAttribute), false);
-        //    if (attributes.Length > 0)
-        //    {
-        //        NetOffice.Attributes.ComProgIdAttribute attribute = attributes[0] as NetOffice.Attributes.ComProgIdAttribute;
-        //        return CreateDuckObject<T>(attribute.Value);
-        //    }
-        //    else
-        //        throw new ArgumentException("ComProgIdAttribute is missing.");
-        //}
-
-        ///// <summary>
-        ///// Creates a new duck typing instance by given generic type argument
-        ///// </summary>
-        ///// <typeparam name="T">interface result type</typeparam>
-        ///// <param name="progId">progId to create</param>
-        ///// <returns>new instance</returns>
-        ///// <exception cref="ArgumentNullException">throws when progId is null or empty</exception>
-        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        ///// <exception cref="COMException">throws when its failed to recieve progID Type</exception>
-        //public T CreateDuckObject<T>(string progId) where T : ICOMObject
-        //{
-        //    if (String.IsNullOrWhiteSpace(progId))
-        //        throw new ArgumentNullException("progId");
-        //    Type type = System.Type.GetTypeFromProgID(progId, false);
-        //    if (null == type)
-        //        throw new COMException("Unable to recieve progId Type:<" + progId + ">");
-
-        //    object interopProxy = null;
-
-        //    try
-        //    {
-        //        interopProxy = Activator.CreateInstance(type);
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        throw new CreateInstanceException(exception);
-        //    }
-
-        //    return CreateDuckObjectFromComProxy<T>(interopProxy);
-        //}
-
-        ///// <summary>
-        ///// Creates a new duck typing instance by given generic type argument
-        ///// </summary>
-        ///// <typeparam name="T">interface result type</typeparam>
-        ///// <param name="caller"></param>
-        ///// <param name="comProxy">new created proxy</param>
-        ///// <returns>new instance</returns>
-        ///// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        //public T CreateDuckObjectFromComProxy<T>(ICOMObject caller, object comProxy) where T : ICOMObject
-        //{
-        //    return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
-        //}
-
-        ///// <summary>
-        ///// Creates a new duck typing instance by given generic type argument
-        ///// </summary>
-        ///// <typeparam name="T">interface result type</typeparam>
-        ///// <param name="comProxy">new created proxy</param>
-        ///// <returns>new instance</returns>
-        ///// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        //public T CreateDuckObjectFromComProxy<T>(object comProxy) where T : ICOMObject
-        //{
-        //    return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
-        //}
-
-        ///// <summary>
-        ///// Creates a new duck typing instance
-        ///// </summary>
-        ///// <param name="caller">parent there have created comProxy</param>
-        ///// <param name="comProxy">new created proxy</param>
-        ///// <returns>new instance</returns>
-        ///// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        ///// <exception cref="FactoryException">throws when its failed to recieve factory info</exception>
-        //public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy)
-        //{
-        //    if (null == comProxy)
-        //        throw new ArgumentNullException("comProxy");
-
-        //    CheckInitialize();
-
-        //    IFactoryInfo factoryInfo = GetDuckFactoryInfo(caller, comProxy, true);
-        //    string className = TypeDescriptor.GetClassName(comProxy);
-        //    string fullClassName = factoryInfo.AssemblyNamespace + ".I" + className;
-
-        //    Type wrapperInterfaceType = factoryInfo.Assembly.GetType(fullClassName, true, true);
-        //    return CreateDuckObjectFromComProxy(caller, comProxy, wrapperInterfaceType);
-        //}
-
-        ///// <summary>
-        ///// Creates a new duck typing instance which implement the given interfaces.
-        ///// </summary>
-        ///// <param name="caller">parent there have created comProxy</param>
-        ///// <param name="comProxy">new created proxy</param>
-        ///// <param name="wrapperInterfaceType">interface which is implemented by the returning instance. the interface must inherit from ICOMObject</param>
-        ///// <returns>new instance</returns>
-        ///// <exception cref="ArgumentNullException">throws when comProxy, wrapperInterfaceType is null</exception>
-        ///// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        ///// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        //public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy, Type wrapperInterfaceType)
-        //{
-        //    if (null == comProxy)
-        //        throw new ArgumentNullException("comProxy");
-        //    if (null == wrapperInterfaceType)
-        //        throw new ArgumentNullException("wrapperInterfaceType");
-
-        //    Type instanceType = null;
-        //    lock (_comObjectLock)
-        //    {
-        //        if (!DuckingCache.TryGetValue(wrapperInterfaceType, out instanceType))
-        //        {
-        //            try
-        //            {
-        //                DuckInterface proxyInterface = new DuckInterface(wrapperInterfaceType);
-        //                DuckTypeGenerator implementationTypeGenerator = new DuckTypeGenerator(proxyInterface);
-        //                instanceType = implementationTypeGenerator.GenerateType();
-        //                DuckingCache.Add(wrapperInterfaceType, instanceType);
-        //            }
-        //            catch (Exception exception)
-        //            {
-        //                throw new DuckException(exception);
-        //            }
-        //        }
-        //    }
-
-        //    try
-        //    {
-        //        ICOMObject newInstance = Activator.CreateInstance(instanceType, new object[] { this, caller, comProxy }) as ICOMObject;
-        //        return newInstance;
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        throw new CreateInstanceException(exception);
-        //    }
-        //}
-
-        #endregion
-
-        #region Create COMObject Methods
-
-        /// <summary>
-        /// Creates a new ICOMObject based on classType of comProxy. The method use Settings.EnableDynamicEventArguments to reflect dynamics
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateEventArgumentObjectFromComProxy(ICOMObject caller, object comProxy)
-        {
-            return CreateObjectFromComProxy(caller, comProxy, caller.Settings.EnableDynamicEventArguments);
-        }
-
-        /// <summary>
-        /// Creates a new ICOMObject based on classType of comProxy
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, bool allowDynamicObject)
-        {
-            CheckInitialize();
-            try
-            {
-                if (null == comProxy)
-                    return null;
-
-                lock (_comObjectLock)
-                {
-                    IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxy, false);
-                    if (null == factoryInfo)
-                    {
-                        // was ist das denn hier ???????
-                        Type comProxyType2 = null;
-                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2,
-                                                                            String.Empty, String.Empty, allowDynamicObject);
-                        newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
-                        return newInstance2;
-                    }
-
-                    string proxyClassName = ComTypes.TypeDescriptor.GetClassName(comProxy);
-                    string wrapperContractName = factoryInfo.AssemblyNamespace + "." + proxyClassName;
-
-                    TypeInformation typeInfo = null;
-                    if (false == _proxyTypeCache.TryGetTypeInfo(wrapperContractName, ref typeInfo))
-                    {
-                        Type contractType = null;
-                        Type implementationType = null;
-                        Assemblies.GetContractAndImplementationType(factoryInfo.AssemblyNamespace, proxyClassName, ref contractType, ref implementationType);
-                        Type comProxyType = comProxy.GetType();
-                        typeInfo = new TypeInformation(contractType, implementationType, comProxyType);
-                        _proxyTypeCache.Add(typeInfo);
-                    }
-
-                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, typeInfo.Proxy, proxyClassName, wrapperContractName, allowDynamicObject);
-                    newInstance = TryReplaceInstance(caller, newInstance, typeInfo.Proxy); // wird bedingt aber schon in CreateObjectFromComProxy gemacht
-
-                    return newInstance;
-                }
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Creates a new ICOMObject based on classType of comProxy
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="comProxyType">Type of comProxy</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, Type comProxyType, bool allowDynamicObject)
-        {
-            CheckInitialize();
-            try
-            {
-                if (null == comProxy)
-                    return null;
-
-                lock (_comObjectLock)
-                {
-                    IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxy);
-                    if (null == factoryInfo)
-                    {
-                        Type comProxyType2 = null;
-                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, String.Empty, String.Empty, allowDynamicObject);
-                        newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
-
-                        return newInstance2;
-                    }
-
-                    string className = ComTypes.TypeDescriptor.GetClassName(comProxy);
-                    string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
-
-                    // create new classType
-                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName, allowDynamicObject);
-                    newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
-
-                    return newInstance;
-                }
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Creates a new ICOMObject from factoryInfo
-        /// </summary>
-        /// <param name="factoryInfo">Factory Info from Wrapper Assemblies</param>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="comProxyType">Type of comProxy</param>
-        /// <param name="className">name of COMServer proxy class</param>
-        /// <param name="fullClassName">full namespace and name of COMServer proxy class</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        /// <exception cref="FactoryException">throws when its failed find corresponding wrapper class type</exception>
-        private ICOMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, ICOMObject caller, object comProxy,
-            Type comProxyType, string className, string fullClassName, bool allowDynamicObject)
-        {
-            //CheckInitialize();
-            try
-            {
-                lock (_comObjectLock)
-                {
-                    Type classType = null;
-                    if (true == _wrapperTypeCache.TryGetValue(fullClassName, out classType))
-                    {
-                        // cached classType
-                        ICOMObject newInstance = null;
-                        try
-                        {
-                            newInstance = Activator.CreateInstance(classType, new object[] { caller, comProxy }) as ICOMObject;
-                            newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
-                        }
-                        catch (Exception exception)
-                        {
-                            throw new CreateInstanceException(exception);
-                        }
-
-                        return newInstance as ICOMObject;
-                    }
-                    else
-                    {
-                        // create new classType
-                        classType = null != factoryInfo ? factoryInfo.Assembly.GetType(fullClassName, false, true) : null;
-                        if (null == classType)
-                            classType = RaiseResolve(caller, fullClassName, comProxyType);
-
-                        if (null == classType)
-                        {
-                            if (allowDynamicObject && Settings.EnableDynamicObjects)
-                            {
-                                ICOMObject unkownInstance = RaiseCreateCOMDynamic(caller, comProxy);
-                                if (null == unkownInstance)
-                                    unkownInstance = new COMDynamicObject(caller, comProxy);
-                                unkownInstance = TryReplaceInstance(caller, unkownInstance, comProxyType);
-                                return unkownInstance;
-                            }
-                            else
-                                throw new FactoryException("Class not exists: " + (true == String.IsNullOrWhiteSpace(fullClassName) ? ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy) : fullClassName));
-                        }
-
-                        _wrapperTypeCache.Add(fullClassName, classType);
-
-                        ICOMObject newInstance = null;
-                        try
-                        {
-                            newInstance = Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType }) as ICOMObject;
-                            newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
-                        }
-                        catch (Exception exception)
-                        {
-                            throw new CreateInstanceException(exception);
-                        }
-                        return newInstance;
-                    }
-                }
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Creates a new ICOMObject array
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxyArray">new created proxy array</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>corresponding Wrapper class Instance array or plain COMObject array</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        /// <exception cref="FactoryException">throws when its failed find factory info</exception>
-        public ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, bool allowDynamicObject)
-        {
-            CheckInitialize();
-            try
-            {
-                if (null == comProxyArray)
-                    return null;
-
-                lock (_comObjectLock)
-                {
-                    Type comVariantType = null;
-                    ICOMObject[] newVariantArray = new ICOMObject[comProxyArray.Length];
-                    for (int i = 0; i < comProxyArray.Length; i++)
-                    {
-                        comVariantType = comProxyArray[i].GetType();
-                        IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxyArray[i]);
-                        string className = TypeDescriptor.GetClassName(comProxyArray[i]);
-                        string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
-                        newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName, allowDynamicObject);
-                    }
-                    return newVariantArray;
-                }
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-                throw;
-            }
-        }
-
-
-
-
-        /// <summary>
-        /// Creates a new ICOMObject based on wrapperClassType
-        /// </summary>
-        /// <typeparam name="T">result contract type</typeparam>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="contractWrapperType">type info from contract wrapper</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public T CreateKnownObjectFromComProxy<T>(ICOMObject caller, object comProxy, Type contractWrapperType) where T:class,ICOMObject
-        {
-            return (T)CreateKnownObjectFromComProxy(caller, comProxy, contractWrapperType);
-        }
-
-        /// <summary>
-        /// Creates a new ICOMObject based on wrapperClassType
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="contractWrapperType">type info from contract wrapper</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateKnownObjectFromComProxy(ICOMObject caller, object comProxy, Type contractWrapperType)
-        {
-            if (!caller.Settings.EnableKnownReferenceInspection)
-            {
-                CheckInitialize();
-                try
-                {
-                    if (null == comProxy)
-                        return null;
-
-                    lock (_comObjectLock)
-                    {    
-                        TypeInformation typeInfo = null;
-                        if (false == _proxyTypeCache.TryGetTypeInfo(contractWrapperType, ref typeInfo))
-                        {
-                            Type comProxyType = comProxy.GetType();
-                            Type implementationType = Assemblies.GetImplementationType(contractWrapperType);
-                            typeInfo = new TypeInformation(contractWrapperType, implementationType, comProxyType);
-                            _proxyTypeCache.Add(typeInfo);
-                        }                       
-
-                        ICOMObject newInstance = null;
-                        try
-                        {
-                            newInstance = ComActivator.CreateInitializeInstance(typeInfo.Implementation, caller, comProxy, typeInfo.Proxy);   
-                            newInstance = TryReplaceInstance(caller, newInstance, typeInfo.Proxy);
-                        }
-                        catch (Exception exception)
-                        {
-                            throw new CreateInstanceException(exception);
-                        }
-
-                        return newInstance;
-                    }
-                }
-                catch (Exception throwedException)
-                {
-                    Console.WriteException(throwedException);
-                    throw;
-                }
-            }
-            else
-            {
-                return CreateObjectFromComProxy(caller, comProxy, false);
-            }          
-        }
-
-        /// <summary>
-        /// Creates a new ICOMObject array based on wrapperClassType
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxyArray">new created proxies</param>
-        /// <param name="wrapperClassType">type info from wrapper class</param>
-        /// <returns>corresponding wrapper class instances or plain COMObject</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject[] CreateKnownObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, Type wrapperClassType)
-        {
-            CheckInitialize();
-            try
-            {
-                if (null == comProxyArray)
-                    return _emptyOwnerPath;
-
-                Type comVariantType = null;
-                ICOMObject[] newVariantArray = new ICOMObject[comProxyArray.Length];
-                for (int i = 0; i < comProxyArray.Length; i++)
-                {
-                    ICOMObject newInstance = CreateKnownObjectFromComProxy(caller, comProxyArray[i], comVariantType);
-                    newVariantArray[i] = newInstance;
-                }
-                return newVariantArray;
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-                throw;
-            }
-        }
-
-
-
-
-
-
-
-        /// <summary>
-        /// Try to replace new created instance on CreateInstance event
-        /// </summary>
-        /// <param name="caller">parent instance</param>
-        /// <param name="instance">origin instance</param>
-        /// <param name="comProxyType">type of native com proxy</param>
-        /// <returns>replace instance or origin instance</returns>
-        private ICOMObject TryReplaceInstance(ICOMObject caller, ICOMObject instance, Type comProxyType)
-        {
-            Type typeToReplace = null;
-            RaiseCreateInstance(instance, ref typeToReplace);
-            instance.DisposeChildInstances();
-
-            if (null != typeToReplace)
-            {
-                ICOMObject replaceInstance = Activator.CreateInstance(typeToReplace, new object[] { caller, instance.UnderlyingObject, comProxyType }) as ICOMObject;
-                if (null != replaceInstance)
-                {
-                    caller.RemoveChildObject(instance);
-                    RemoveObjectFromList(instance, null);
-                    return replaceInstance;
-                }
-            }
-
-            return instance;
-        }
-
-
-        /// <summary>
-        /// Creates a new COMProxyShare instance
-        /// </summary>
-        /// <param name="sender">requested instance</param>
-        /// <param name="comProxy">inner proxy rcw</param>
-        ///  <param name="isEnumerator">indicates rcw is an enumerator</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="CreateCOMProxyShareException">throws when its failed to create instance</exception>
-        public COMProxyShare CreateNewProxyShare(ICOMObject sender, object comProxy, bool isEnumerator)
-        {
-            try
-            {
-                COMProxyShare instance = RaiseCreateProxyShare(sender, isEnumerator);
-                return null != instance ? instance : new COMProxyShare(this, comProxy, isEnumerator);
-            }
-            catch (Exception exception)
-            {
-                throw new CreateCOMProxyShareException(exception);
-            }
-        }
-
-        /// <summary>
-        /// Creates a new COMProxyShare instance
-        /// </summary>
-        /// <param name="sender">requested instance</param>
-        /// <param name="comProxy">inner proxy rcw</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="CreateCOMProxyShareException">throws when its failed to create instance</exception>
-        public COMProxyShare CreateNewProxyShare(ICOMObject sender, object comProxy)
-        {
-            try
-            {
-                COMProxyShare instance = RaiseCreateProxyShare(sender, false);
-                return null != instance ? instance : new COMProxyShare(this, comProxy);
-            }
-            catch (Exception exception)
-            {
-                throw new CreateCOMProxyShareException(exception);
-            }
-        }
-
-        #endregion
-
-        #region Object List Methods
-
-        /// <summary>
-        /// Dispose all open objects
-        /// </summary>
-        public void DisposeAllCOMProxies()
-        {
-            lock (_globalObjectList)
-            {
-                // NO is appending new proxies so we free them in reverse order
-                while (_globalObjectList.Count > 0)
-                    _globalObjectList[_globalObjectList.Count - 1].Dispose();
-                RaiseProxyCleared();
-            }
-        }
-
-        /// <summary>
-        /// Add object to global list
-        /// </summary>
-        /// <param name="proxy">com wrapper instance</param>
-        internal void AddObjectToList(ICOMObject proxy)
-        {
-            try
-            {
-                lock (_globalObjectList)
-                {
-                    _globalObjectList.Add(proxy);
-
-                    if (HasProxyAddedRecipients)
-                    {
-                        IEnumerable<ICOMObject> ownerPath = GetOwnerPath(proxy);
-                        RaiseProxyAdded(ownerPath, proxy);
-                    }
-                }
-                RaiseProxyCountChanged(_globalObjectList.Count);
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-            }
-        }
-
-        /// <summary>
-        /// Remove object from global list
-        /// </summary>
-        /// <param name="proxy">com wrapper instance</param>
-        /// <param name="ownerPath">optional owner path</param>
-        internal void RemoveObjectFromList(ICOMObject proxy, IEnumerable<ICOMObject> ownerPath)
-        {
-            try
-            {
-                bool removed = false;
-                lock (_globalObjectList)
-                {
-                    removed = _globalObjectList.Remove(proxy);
-
-                    if (HasProxyRemovedRecipients)
-                    {
-                        RaiseProxyRemoved(ownerPath, proxy);
-                    }
-                }
-                if (removed)
-                    RaiseProxyCountChanged(_globalObjectList.Count);
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-            }
-        }
-
-        /// <summary>
-        /// Returns an array with full parent(s) path
-        /// </summary>
-        /// <param name="comObject">target com object</param>
-        /// <returns>top down path sequence</returns>
-        internal static IEnumerable<ICOMObject> GetOwnerPath(ICOMObject comObject)
-        {
-            if (null == comObject.ParentObject)
-                return _emptyOwnerPath;
-
-            ICOMObject parent = comObject.ParentObject;
-            int parentCount = 0;
-            while (null != parent)
-            {
-                parentCount++;
-                parent = parent.ParentObject;
-            }
-
-            ICOMObject[] result = new ICOMObject[parentCount];
-            parent = comObject.ParentObject;
-            while (null != parent)
-            {
-                result[parentCount - 1] = parent;
-                parentCount--;
-                parent = parent.ParentObject;
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Returns all root instances in COM proxy management
-        /// </summary>
-        /// <returns>Enumerable sequence of root instances</returns>
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public IEnumerable<ICOMObject> GetRootInstances()
-        {
-            List<ICOMObject> result = new List<ICOMObject>();
-
-            try
-            {
-                lock (_globalObjectList)
-                {
-                    foreach (ICOMObject item in _globalObjectList)
-                    {
-                        if (null == item.ParentObject)
-                            result.Add(item);
-                    }
-                }
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-            }
-
-            return result;
-        }
-
-        #endregion
-
-        #region Type Methods
-
-        /// <summary>
-        /// Analyze an object and create wrapper arround if necessary
-        /// </summary>
-        /// <param name="value">value as any</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>value or wrapped value</returns>
-        public object WrapObject(object value, bool allowDynamicObject)
-        {
-            if ((null != value) && (value is MarshalByRefObject))
-            {
-                ICOMObject newObject = CreateObjectFromComProxy(null, value, allowDynamicObject);
-                return newObject;
-            }
-            else
-            {
-                return value;
-            }
-        }
-
-        ///// <summary>
-        ///// Returns the Type for comProxy or null if param not set
-        ///// </summary>
-        ///// <param name="comProxy">new created proxy</param>
-        ///// <returns>type info or null if unkown</returns>
-        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        //public Type GetContractType(object comProxy)
-        //{
-        //    CheckInitialize();
-
-        //    if (null != comProxy)
-        //    {
-        //        IFactoryInfo factoryInfo = GetInstanceFactoryInfo(null, comProxy);
-        //        string className = TypeDescriptor.GetClassName(comProxy);
-        //        string fullClassName = String.Format("{0}.{1}", factoryInfo.AssemblyNamespace, className);
-        //        TypeInformation type = null;
-        //        if (!_proxyTypeCache.TryGetTypeInfo(fullClassName, out proxyType))
-        //        {
-        //            proxyType = comProxy.GetType();
-        //            _proxyTypeCache.Add(fullClassName, proxyType);
-        //        }
-        //        return proxyType;
-        //    }
-        //    else
-        //    {
-        //        return null;
-        //    }
-        //}
-
-        /// <summary>
-        /// Determine 2 proxies represents the same object on COM remote server
-        /// </summary>
-        /// <param name="obj1">object 1 to compare</param>
-        /// <param name="obj2">object 2 to compare</param>
-        /// <returns>true if equal, otherwise false</returns>
-        public static bool EqualsOnServer(object obj1, object obj2)
-        {
-            return EqualsOnServer(obj1 as ICOMObject, obj2 as ICOMObject);
-        }
-
-        /// <summary>
-        /// Determine 2 proxies represents the same object on COM remote server
-        /// </summary>
-        /// <param name="obj1">object 1 to compare</param>
-        /// <param name="obj2">object 2 to compare</param>
-        /// <returns>true if equal, otherwise false</returns>
-        public static bool EqualsOnServer(ICOMObject obj1, ICOMObject obj2)
-        {
-            if (obj1.IsCurrentlyDisposing || obj1.IsDisposed)
-                return ReferenceEquals(obj1, obj2);
-
-            if (Object.ReferenceEquals(obj2, null))
-                return false;
-
-            IntPtr outValueA = IntPtr.Zero;
-            IntPtr outValueB = IntPtr.Zero;
-            IntPtr ptrA = IntPtr.Zero;
-            IntPtr ptrB = IntPtr.Zero;
-            try
-            {
-                ptrA = Marshal.GetIUnknownForObject(obj1.UnderlyingObject);
-                int hResultA = Marshal.QueryInterface(ptrA, ref IID_IUnknown, out outValueA);
-
-                ptrB = Marshal.GetIUnknownForObject(obj2.UnderlyingObject);
-                int hResultB = Marshal.QueryInterface(ptrB, ref IID_IUnknown, out outValueB);
-
-                return (hResultA == 0 && hResultB == 0 && ptrA == ptrB);
-            }
-            catch (Exception exception)
-            {
-                obj1.Console.WriteException(exception);
-                throw exception;
-            }
-            finally
-            {
-                if (IntPtr.Zero != ptrA)
-                    Marshal.Release(ptrA);
-
-                if (IntPtr.Zero != outValueA)
-                    Marshal.Release(outValueA);
-
-                if (IntPtr.Zero != ptrB)
-                    Marshal.Release(ptrB);
-
-                if (IntPtr.Zero != outValueB)
-                    Marshal.Release(outValueB);
-            }
-        }
-
-        #endregion
-
-        #region Support IApplicationVersionProvider
-
-        /// <summary>
-        /// All loaded application version providers
-        /// </summary>
-        internal IEnumerable<IApplicationVersionProvider> ApplicationVersionProviders
-        {
-            get
-            {
-                return _versionProviders.ToArray();
-            }
-        }
-
-        /// <summary>
-        /// Returns application name and version
-        /// </summary>
-        /// <param name="componentName">component to look into</param>
-        /// <returns>application version or empty</returns>
-        internal string GetApplicationVersion(string componentName)
-        {
-            if (String.IsNullOrWhiteSpace(componentName))
-                return String.Empty;
-            lock (_versionProvidersLock)
-            {
-                var provider =_versionProviders.FirstOrDefault();
-                if (null != provider)
-                {
-                    if (!provider.VersionRequested)
-                        provider.TryRequestVersion();
-
-                    if (null != provider.Version)
-                        return String.Format("{0} {1}", provider.Name, provider.Version);
-                    else
-                        return String.Empty;
-                }
-                else
-                    return String.Empty;
-            }
-        }
-
-        /// <summary>
-        /// Register an application version provider by its component name.
-        /// The method does nothing if a version provider for a component with given name already exists.
-        /// </summary>
-        /// <param name="versionProvider">version provider as any</param>
-        /// <returns>true if provider registerd, otherwise false</returns>
-        internal bool RegisterApplicationVersionProvider(IApplicationVersionProvider versionProvider)
-        {
-            if (null == versionProvider)
-                throw new ArgumentNullException("versionProvider");
-
-            lock (_versionProvidersLock)
-            {
-                if (!_versionProviders.Any(e => e.ComponentName == versionProvider.ComponentName))
-                {
-                    if (Settings.ForceApplicationVersionProviders && false == versionProvider.VersionRequested)
-                        versionProvider.TryRequestVersion();
-                    _versionProviders.Add(versionProvider);
-                    return true;
-                }
-                else
-                    return false;
-            }
-        }
-
-        /// <summary>
-        /// Removes an application version provider
-        /// </summary>
-        /// <param name="versionProvider">version provider as any</param>
-        /// <returns>true if removed, otherwise false</returns>
-        internal bool UnregisterApplicationVersionProvider(IApplicationVersionProvider versionProvider)
-        {
-            if (null == versionProvider)
-                throw new ArgumentNullException("versionProvider");
-
-            lock (_versionProvidersLock)
-            {
-                return _versionProviders.Remove(versionProvider);
-            }
-        }
-
-        #endregion
     }
 }

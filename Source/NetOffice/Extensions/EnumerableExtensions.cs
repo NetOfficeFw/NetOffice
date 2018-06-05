@@ -529,7 +529,7 @@ namespace NetOffice.Extensions
                 enumerator = source.GetComObjectEnumerator(null);
                 foreach (TSource current in source.FetchVariantComObjectEnumerator(true == append ? source as ICOMObject : null, enumerator))
                 {
-                    bool match = Core.EqualsOnServer(current, value);
+                    bool match = NetOffice.CoreSupport.RemoteComparsion.EqualsOnServer(current, value);
                     TryDispose(current);
                     if (match)
                         return true;
