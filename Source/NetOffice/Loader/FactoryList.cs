@@ -38,10 +38,11 @@ namespace NetOffice.Loader
         /// Returns implementation from contract
         /// </summary>
         /// <param name="contractType">target contract</param>
+        /// <param name="throwException">throw exception if failed to resolve</param>
         /// <returns>implementation type</returns>
         /// <exception cref ="ArgumentNullException">argument is null</exception>
         /// <exception cref ="FactoryException">unexpected type load error</exception>
-        public Type GetImplementationType(Type contractType)
+        public Type GetImplementationType(Type contractType, bool throwException = true)
         {
             if (null == contractType)
                 throw new ArgumentNullException("contractType");
@@ -51,10 +52,13 @@ namespace NetOffice.Loader
                 string contractTypeNamespace = contractType.Namespace;
                 var item = this.FirstOrDefault(e => e.AssemblyNamespace == contractTypeNamespace);
                 string target = contractTypeNamespace + ".Behind." + contractType.Name;
-                Type implementationResult = item.Assembly.GetType(target, true);
-                var attribute = implementationResult.GetCustomAttribute<HasInteropCompatibilityClass>();
-                if (null != attribute)
-                    implementationResult = attribute.Value;
+                Type implementationResult = item.Assembly.GetType(target, throwException);
+                if (null != implementationResult)
+                { 
+                    var attribute = implementationResult.GetCustomAttribute<HasInteropCompatibilityClass>();
+                    if (null != attribute)
+                        implementationResult = attribute.Value;
+                }
                 return implementationResult;
             }
             catch (TypeLoadException exception)
@@ -74,30 +78,40 @@ namespace NetOffice.Loader
         /// <param name="contractTypeName">contract non-fullqualified name</param>
         /// <param name="contract">contract result</param>
         /// <param name="implementation">implementation result</param>
+        /// <param name="throwException">throw exception if failed to resolve</param>
         /// <exception cref ="ArgumentNullException">argument is null or empty whitespace</exception>
         /// <exception cref ="FactoryException">unexpected type load error</exception>
-        public void GetContractAndImplementationType(string contractTypeNamespace, string contractTypeName, ref Type contract, ref Type implementation)
+        /// <returns>true if contract and implementation is resolved, otherwise false</returns>
+        public bool GetContractAndImplementationType(string contractTypeNamespace, string contractTypeName, ref Type contract, ref Type implementation, bool throwException = true)
         {
             if (String.IsNullOrWhiteSpace(contractTypeNamespace))
                 throw new ArgumentNullException("contractTypeNamespace");
             if (String.IsNullOrWhiteSpace(contractTypeName))
                 throw new ArgumentNullException("contractTypeName");
 
+            bool result = false;
             try
             {
                 var item = this.FirstOrDefault(e => e.AssemblyNamespace == contractTypeNamespace);
                 string contractTarget = contractTypeNamespace + "." + contractTypeName;
                 string implementationTarget = contractTypeNamespace + ".Behind." + contractTypeName;
 
-                Type contractResult = item.Assembly.GetType(contractTarget, true);
-                Type implementationResult = item.Assembly.GetType(contractTarget, true);
+                Type contractResult = item.Assembly.GetType(contractTarget, false);
+                Type implementationResult = item.Assembly.GetType(contractTarget, false);
+                result = null != contractResult && null != implementationResult;
+                if (false == result && true == throwException)
+                    throw new TypeLoadException(String.Format("Failed to resolve type ContractOk:{0}, ImplementationOk:{1}.", null != contractResult, null != implementationResult));
+                if (result)
+                { 
+                    var attribute = implementationResult.GetCustomAttribute<HasInteropCompatibilityClass>();
+                    if (null != attribute)
+                        implementationResult = attribute.Value;
 
-                var attribute = implementationResult.GetCustomAttribute<HasInteropCompatibilityClass>();
-                if (null != attribute)
-                    implementationResult = attribute.Value;
+                    contract = contractResult;
+                    implementation = implementationResult;
+                }
 
-                contract = contractResult;
-                implementation = implementationResult;
+                return result;
             }
             catch (TypeLoadException exception)
             {

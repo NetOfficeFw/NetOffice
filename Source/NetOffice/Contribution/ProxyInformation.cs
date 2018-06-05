@@ -25,7 +25,7 @@ namespace NetOffice.Contribution
         }
 
         /// <summary>
-        /// Class Name
+        /// Proxy Interface/Class Name
         /// </summary>
         public string Name { get; private set; }
 
@@ -35,7 +35,7 @@ namespace NetOffice.Contribution
         public string FullComponentName { get; private set; }
 
         /// <summary>
-        /// Type/Class ID
+        /// Interface/Class ID
         /// </summary>
         public Guid TypeID { get; private set; }
 
@@ -44,8 +44,11 @@ namespace NetOffice.Contribution
         /// </summary>
         /// <param name="comProxy">target proxy</param>
         /// <returns>ProxyInformations instance</returns>
+        /// <exception cref ="ArgumentNullException">argument is null</exception>
         public static ProxyInformation Create(object comProxy)
         {
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
             string className = TypeDescriptor.GetClassName(comProxy);
             string componentName = TypeDescriptor.GetComponentName(comProxy);
             Guid typeID = comProxy.TypeGuid();

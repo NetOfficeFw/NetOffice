@@ -45,21 +45,21 @@ namespace NetOffice.CoreServices.Internal
         /// Raise Resolve event
         /// </summary>
         /// <param name="caller">calling instance</param>
-        /// <param name="fullClassName">target NetOffice class</param>
-        /// <param name="comProxy">native proxy type</param>
+        /// <param name="fullContractName">target NetOffice class</param>
+        /// <param name="comProxy">native proxy</param>
         /// <returns>type to use or null</returns>
-        internal Type RaiseResolve(ICOMObject caller, string fullClassName, Type comProxy)
+        internal ICOMObject RaiseResolve(ICOMObject caller, string fullContractName, object comProxy)
         {
-            if (null != Resolve)
+            var handler = Resolve;
+            if (null != handler)
             {
-                ResolveEventArgs args = new ResolveEventArgs(caller, fullClassName, comProxy);
-                Resolve(this, args);
+                ResolveEventArgs args = new ResolveEventArgs(caller, fullContractName, comProxy);
+                handler(this, args);
                 return args.Result;
             }
             else
                 return null;
         }
-
 
         #endregion
     }

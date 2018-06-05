@@ -93,6 +93,7 @@
     <Compile Include="Attributes\SinkArgumentAttribute.cs" />
     <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
     <Compile Include="Contribution\ProxyInformation.cs" />
+    <Compile Include="CoreExtensions\CoreCreateExtensions.cs" />
     <Compile Include="CoreExtensions\CoreTypeExtensions.cs" />
     <Compile Include="CoreServices\IApplicationVersionProvider.cs" />
     <Compile Include="CoreServices\ICoreActivator.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="CoreServices\Internal\TypeDictionary.cs" />
     <Compile Include="CoreServices\Internal\TypeInformation.cs" />
     <Compile Include="Exceptions\ActivationException.cs" />
+    <Compile Include="Exceptions\NetOfficeInitializeException.cs" />
     <Compile Include="Loader\ComActivator.cs" />
     <Compile Include="COMObjectCreateOptions.cs" />
     <Compile Include="ComTypes\ITypeInfoExtensions.cs" />

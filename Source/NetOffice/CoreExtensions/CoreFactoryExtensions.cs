@@ -40,13 +40,12 @@ namespace NetOffice
         /// <param name="value">core to use</param>
         /// <param name="caller">calling instance</param>
         /// <param name="comProxy">new created proxy</param>
-        /// <param name="wantTheDuck">want duck implementation</param>
         /// <param name="throwException">throw exception if no info found or return null</param>
         /// <returns>factory info from corresponding assembly</returns>
         internal static IFactoryInfo GetFactoryInfo(this Core value,
-            ICOMObject caller, object comProxy, bool wantTheDuck, bool throwException)
+            ICOMObject caller, object comProxy, bool throwException)
         {
-            return GetFactoryInfo(value, value.HostCache, caller, comProxy, wantTheDuck, throwException);
+            return GetFactoryInfo(value, value.HostCache, caller, comProxy, throwException);
         }
 
         /// <summary>
@@ -56,12 +55,11 @@ namespace NetOffice
         /// <param name="hostCache">core host cache</param>
         /// <param name="caller">calling instance</param>
         /// <param name="comProxy">new created proxy</param>
-        /// <param name="wantTheDuck">want duck implementation</param>
         /// <param name="throwException">throw exception if no info found or return null</param>
         /// <returns>factory info from corresponding assembly</returns>
         internal static IFactoryInfo GetFactoryInfo(this Core value,
             Dictionary<Guid, Guid> hostCache, ICOMObject caller,
-            object comProxy, bool wantTheDuck, bool throwException)
+            object comProxy,  bool throwException)
         {
             if (value.Assemblies.Count == 0)
                 return null;
@@ -72,9 +70,11 @@ namespace NetOffice
 
             if (null != caller && typeid.IsDuplicateType())
             {
+                // special case: if its a known duplicated type
+                // we prefer to use the type from the caller component
                 foreach (IFactoryInfo item in value.Assemblies)
                 {
-                    if (item.IsDuck != wantTheDuck || item.AssemblyName != caller.InstanceComponentName)
+                    if (item.AssemblyName != caller.InstanceComponentName)
                         continue;
                     foreach (var guid in item.ComponentGuid)
                         if (true == guid.Equals(hostGuid))
@@ -85,8 +85,6 @@ namespace NetOffice
             {
                 foreach (IFactoryInfo item in value.Assemblies)
                 {
-                    if (item.IsDuck != wantTheDuck)
-                        continue;
                     foreach (var guid in item.ComponentGuid)
                         if (true == guid.Equals(hostGuid))
                             return item;
@@ -97,8 +95,6 @@ namespace NetOffice
             // list of known multiple defined types is available on netoffice.codeplex.com or Attributes\DuplicateAttribute.cs
             foreach (IFactoryInfo item in value.Assemblies)
             {
-                if (item.IsDuck != wantTheDuck)
-                    continue;
                 bool hasComponentID = null != item.ComponentGuid ? item.ComponentGuid.Contains(hostGuid) : false;
                 if (item.Contains(className) && hasComponentID)
                 {

@@ -101,9 +101,8 @@ namespace NetOffice.CoreServices.Internal
         /// </summary>
         /// <param name="caller">parent instance</param>
         /// <param name="instance">origin instance</param>
-        /// <param name="comProxyType">type of native com proxy</param>
         /// <returns>replace instance or origin instance</returns>
-        internal ICOMObject TryReplaceInstance(ICOMObject caller, ICOMObject instance, Type comProxyType)
+        internal ICOMObject TryReplaceInstance(ICOMObject caller, ICOMObject instance)
         {
             ICOMObject result = instance;
             Type typeToReplace = null;
@@ -112,7 +111,7 @@ namespace NetOffice.CoreServices.Internal
 
             if (null != typeToReplace)
             {
-                ICOMObject replaceInstance = ComActivator.CreateInitializeInstance(typeToReplace, caller, instance.UnderlyingObject, comProxyType) as ICOMObject;
+                ICOMObject replaceInstance = ComActivator.CreateInitializeInstance(typeToReplace, caller, instance.UnderlyingObject, instance.UnderlyingType) as ICOMObject;
                 if (null != replaceInstance)
                 {
                     caller.RemoveChildObject(instance);

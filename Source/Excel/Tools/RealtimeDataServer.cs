@@ -102,7 +102,6 @@ namespace NetOffice.ExcelApi.Tools
                 CallbackObject = callbackObject;
                 return 1;
             }
-
             else
                 return -1;
         }
@@ -170,7 +169,7 @@ namespace NetOffice.ExcelApi.Tools
             {              
                 lock (_thisLock)
                 {
-                    object result = ConnectData(topicID, NetOffice.CoreExtensions.CoreTypeExtensions.WrapObject(Factory, strings, true), getNewValues);
+                    object result = ConnectData(topicID, CoreTypeExtensions.WrapObject(Factory, strings, true), getNewValues);
                     return Invoker.ValidateParam(result);
                 }
             }
