@@ -45,7 +45,7 @@ namespace NetOffice
         internal static IFactoryInfo GetFactoryInfo(this Core value,
             ICOMObject caller, object comProxy, bool throwException)
         {
-            return GetFactoryInfo(value, value.HostCache, caller, comProxy, throwException);
+            return GetFactoryInfo(value, value.TypeComponentIdCache, caller, comProxy, throwException);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace NetOffice
             COMTypes.ITypeLib parentTypeLib = null;
             Guid parentGuid = Guid.Empty;
 
-            if (!value.HostCache.TryGetValue(typeGuid, out parentGuid))
+            if (!value.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
             {
                 int i = 0;
                 typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
@@ -150,7 +150,7 @@ namespace NetOffice
                 parentTypeLib.ReleaseTLibAttr(attributesPointer);
                 Marshal.ReleaseComObject(parentTypeLib);
 
-                value.HostCache.Add(typeGuid, parentGuid);
+                value.TypeComponentIdCache.Add(typeGuid, parentGuid);
             }
 
             Marshal.ReleaseComObject(typeInfo);
@@ -178,7 +178,7 @@ namespace NetOffice
             Guid typeGuid = typeInfo.GetTypeGuid();
             Guid parentGuid = Guid.Empty;
 
-            if (!value.HostCache.TryGetValue(typeGuid, out parentGuid))
+            if (!value.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
             {
                 int i = 0;
                 typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
@@ -193,7 +193,7 @@ namespace NetOffice
                 parentTypeLib.ReleaseTLibAttr(attributesPointer);
                 Marshal.ReleaseComObject(parentTypeLib);
 
-                value.HostCache.Add(typeGuid, parentGuid);
+                value.TypeComponentIdCache.Add(typeGuid, parentGuid);
             }
 
             Marshal.ReleaseComObject(typeInfo);
