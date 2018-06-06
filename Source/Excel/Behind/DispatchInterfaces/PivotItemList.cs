@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836467.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195351.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837575.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840797.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="field">object field</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.PivotItem this[object field]
+		public virtual NetOffice.ExcelApi.PivotItem this[object field]
 		{
 			get
 			{
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.PivotItem> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.PivotItem> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.PivotItem item in innerEnumerator)

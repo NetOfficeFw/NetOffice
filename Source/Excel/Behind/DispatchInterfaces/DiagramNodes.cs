@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.DiagramNode this[object index]
+		public virtual NetOffice.ExcelApi.DiagramNode this[object index]
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void SelectAll()
+		public virtual void SelectAll()
 		{
 			 Factory.ExecuteMethod(this, "SelectAll");
 		}
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.DiagramNode> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.DiagramNode> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.DiagramNode item in innerEnumerator)

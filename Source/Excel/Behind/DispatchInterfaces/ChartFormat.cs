@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822922.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194425.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840661.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194939.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.FillFormat Fill
+		public virtual NetOffice.ExcelApi.FillFormat Fill
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841271.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.GlowFormat Glow
+		public virtual NetOffice.OfficeApi.GlowFormat Glow
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823206.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.LineFormat Line
+		public virtual NetOffice.ExcelApi.LineFormat Line
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834929.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PictureFormat PictureFormat
+		public virtual NetOffice.ExcelApi.PictureFormat PictureFormat
 		{
 			get
 			{
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839632.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ShadowFormat Shadow
+		public virtual NetOffice.ExcelApi.ShadowFormat Shadow
 		{
 			get
 			{
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839827.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
+		public virtual NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
 		{
 			get
 			{
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195168.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.TextFrame2 TextFrame2
+		public virtual NetOffice.ExcelApi.TextFrame2 TextFrame2
 		{
 			get
 			{
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840255.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ThreeDFormat ThreeD
+		public virtual NetOffice.ExcelApi.ThreeDFormat ThreeD
 		{
 			get
 			{
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229113.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Adjustments Adjustments
+		public virtual NetOffice.ExcelApi.Adjustments Adjustments
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231950.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
+		public virtual NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
 		{
 			get
 			{

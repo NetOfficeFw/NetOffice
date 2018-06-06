@@ -71,7 +71,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838029.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840402.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public Single this[Int32 index]
+		public virtual Single this[Int32 index]
 		{
 			get
 			{
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [CustomEnumerator]
-        public IEnumerator<Single> GetEnumerator()
+        public virtual IEnumerator<Single> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (Single item in innerEnumerator)

@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Author
+        public virtual string Author
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Shape Shape
+        public virtual NetOffice.ExcelApi.Shape Shape
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Visible
+        public virtual bool Visible
         {
             get
             {
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="start">optional object start</param>
         /// <param name="overwrite">optional object overwrite</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text(object text, object start, object overwrite)
+        public virtual string Text(object text, object start, object overwrite)
         {
             return Factory.ExecuteStringMethodGet(this, "Text", text, start, overwrite);
         }
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text()
+        public virtual string Text()
         {
             return Factory.ExecuteStringMethodGet(this, "Text");
         }
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="text">optional object text</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text(object text)
+        public virtual string Text(object text)
         {
             return Factory.ExecuteStringMethodGet(this, "Text", text);
         }
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="start">optional object start</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text(object text, object start)
+        public virtual string Text(object text, object start)
         {
             return Factory.ExecuteStringMethodGet(this, "Text", text, start);
         }
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }
@@ -203,7 +203,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Comment Next()
+        public virtual NetOffice.ExcelApi.Comment Next()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Comment>(this, "Next", typeof(NetOffice.ExcelApi.Comment));
         }
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Comment Previous()
+        public virtual NetOffice.ExcelApi.Comment Previous()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Comment>(this, "Previous", typeof(NetOffice.ExcelApi.Comment));
         }

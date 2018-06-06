@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="blogPictureProvider">string blogPictureProvider</param>
         /// <param name="friendlyName">string friendlyName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void BlogPictureProviderProperties(out string blogPictureProvider, out string friendlyName)
+        public virtual void BlogPictureProviderProperties(out string blogPictureProvider, out string friendlyName)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             blogPictureProvider = string.Empty;
@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="parentWindow">Int32 parentWindow</param>
         /// <param name="document">object document</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void CreatePictureAccount(string account, string blogProvider, Int32 parentWindow, object document)
+        public virtual void CreatePictureAccount(string account, string blogProvider, Int32 parentWindow, object document)
         {
             Factory.ExecuteMethod(this, "CreatePictureAccount", account, blogProvider, parentWindow, document);
         }
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="pictureURI">string pictureURI</param>
         /// <param name="imageType">Int32 imageType</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void PublishPicture(string account, Int32 parentWindow, object document, object image, out string pictureURI, Int32 imageType)
+        public virtual void PublishPicture(string account, Int32 parentWindow, object document, object image, out string pictureURI, Int32 imageType)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, true, false);
             pictureURI = string.Empty;

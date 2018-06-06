@@ -32,7 +32,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_ChildItems(object index)
+        public virtual object get_ChildItems(object index)
         {
             return Factory.ExecuteVariantPropertyGet(this, "ChildItems", index);
         }
@@ -43,7 +43,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_ChildItems")]
-        public object ChildItems(object index)
+        public virtual object ChildItems(object index)
         {
             return get_ChildItems(index);
         }
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotField Parent
+        public virtual NetOffice.ExcelApi.PivotField Parent
         {
             get
             {
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ChildItems
+        public virtual object ChildItems
         {
             get
             {
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range DataRange
+        public virtual NetOffice.ExcelApi.Range DataRange
         {
             get
             {
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string _Default
+        public virtual string _Default
         {
             get
             {
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range LabelRange
+        public virtual NetOffice.ExcelApi.Range LabelRange
         {
             get
             {
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotItem ParentItem
+        public virtual NetOffice.ExcelApi.PivotItem ParentItem
         {
             get
             {
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool ParentShowDetail
+        public virtual bool ParentShowDetail
         {
             get
             {
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Position
+        public virtual Int32 Position
         {
             get
             {
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool ShowDetail
+        public virtual bool ShowDetail
         {
             get
             {
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SourceName
+        public virtual object SourceName
         {
             get
             {
@@ -297,7 +297,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Value
+        public virtual string Value
         {
             get
             {
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Visible
+        public virtual bool Visible
         {
             get
             {
@@ -331,7 +331,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool IsCalculated
+        public virtual bool IsCalculated
         {
             get
             {
@@ -344,7 +344,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 RecordCount
+        public virtual Int32 RecordCount
         {
             get
             {
@@ -357,7 +357,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Formula
+        public virtual string Formula
         {
             get
             {
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Caption
+        public virtual string Caption
         {
             get
             {
@@ -391,7 +391,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool DrilledDown
+        public virtual bool DrilledDown
         {
             get
             {
@@ -408,7 +408,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public string StandardFormula
+        public virtual string StandardFormula
         {
             get
             {
@@ -425,7 +425,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public string SourceNameStandard
+        public virtual string SourceNameStandard
         {
             get
             {
@@ -441,7 +441,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }
@@ -451,7 +451,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="field">string field</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 DrillTo(string field)
+        public virtual Int32 DrillTo(string field)
         {
             return Factory.ExecuteInt32MethodGet(this, "DrillTo", field);
         }

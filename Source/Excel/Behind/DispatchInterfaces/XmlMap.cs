@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837973.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837435.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -95,7 +95,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838579.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string _Default
+		public virtual string _Default
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821797.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198192.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool IsExportable
+		public virtual bool IsExportable
 		{
 			get
 			{
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193545.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool ShowImportExportValidationErrors
+		public virtual bool ShowImportExportValidationErrors
 		{
 			get
 			{
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836522.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool SaveDataSourceDefinition
+		public virtual bool SaveDataSourceDefinition
 		{
 			get
 			{
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839452.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool AdjustColumnWidth
+		public virtual bool AdjustColumnWidth
 		{
 			get
 			{
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834417.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool PreserveColumnFilter
+		public virtual bool PreserveColumnFilter
 		{
 			get
 			{
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195992.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool PreserveNumberFormatting
+		public virtual bool PreserveNumberFormatting
 		{
 			get
 			{
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837963.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool AppendOnImport
+		public virtual bool AppendOnImport
 		{
 			get
 			{
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193360.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string RootElementName
+		public virtual string RootElementName
 		{
 			get
 			{
@@ -276,7 +276,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841104.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.XmlNamespace RootElementNamespace
+		public virtual NetOffice.ExcelApi.XmlNamespace RootElementNamespace
 		{
 			get
 			{
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835875.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.XmlSchemas Schemas
+		public virtual NetOffice.ExcelApi.XmlSchemas Schemas
 		{
 			get
 			{
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194288.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.XmlDataBinding DataBinding
+		public virtual NetOffice.ExcelApi.XmlDataBinding DataBinding
 		{
 			get
 			{
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194285.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
+		public virtual NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
 		{
 			get
 			{
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835524.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="url">string url</param>
 		/// <param name="overwrite">optional object overwrite</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url, object overwrite)
+		public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url, object overwrite)
 		{
 			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "Import", url, overwrite);
 		}
@@ -359,7 +359,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="url">string url</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url)
+		public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url)
 		{
 			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "Import", url);
 		}
@@ -371,7 +371,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="xmlData">string xmlData</param>
 		/// <param name="overwrite">optional object overwrite</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData, object overwrite)
+		public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData, object overwrite)
 		{
 			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "ImportXml", xmlData, overwrite);
 		}
@@ -383,7 +383,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="xmlData">string xmlData</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData)
+		public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData)
 		{
 			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "ImportXml", xmlData);
 		}
@@ -395,7 +395,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="url">string url</param>
 		/// <param name="overwrite">optional object overwrite</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url, object overwrite)
+		public virtual NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url, object overwrite)
 		{
 			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "Export", url, overwrite);
 		}
@@ -407,7 +407,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="url">string url</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url)
+		public virtual NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url)
 		{
 			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "Export", url);
 		}
@@ -418,7 +418,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841274.aspx </remarks>
 		/// <param name="data">string data</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlXmlExportResult ExportXml(out string data)
+		public virtual NetOffice.ExcelApi.Enums.XlXmlExportResult ExportXml(out string data)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			data = string.Empty;

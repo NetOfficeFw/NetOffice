@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840722.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836499.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836160.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835592.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Color
+		public virtual object Color
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838401.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 ThemeColor
+		public virtual Int32 ThemeColor
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821918.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object TintAndShade
+		public virtual object TintAndShade
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834319.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Double Position
+		public virtual Double Position
 		{
 			get
 			{
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196957.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}

@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Delete()
+		public virtual object Delete()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Delete");
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="filename">string filename</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Import(string filename)
+		public virtual object Import(string filename)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Import", filename);
 		}
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Play()
+		public virtual object Play()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Play");
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Record()
+		public virtual object Record()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Record");
 		}

@@ -32,7 +32,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_Recipients(object index)
+        public virtual object get_Recipients(object index)
         {
             return Factory.ExecuteVariantPropertyGet(this, "Recipients", index);
         }
@@ -45,7 +45,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="value">optional object value</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_Recipients(object index, object value)
+        public virtual void set_Recipients(object index, object value)
         {
             Factory.ExecutePropertySet(this, "Recipients", index, value);
         }
@@ -56,7 +56,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Recipients")]
-        public object Recipients(object index)
+        public virtual object Recipients(object index)
         {
             return get_Recipients(index);
         }
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlRoutingSlipDelivery Delivery
+        public virtual NetOffice.ExcelApi.Enums.XlRoutingSlipDelivery Delivery
         {
             get
             {
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Message
+        public virtual object Message
         {
             get
             {
@@ -199,7 +199,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Recipients
+        public virtual object Recipients
         {
             get
             {
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool ReturnWhenDone
+        public virtual bool ReturnWhenDone
         {
             get
             {
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlRoutingSlipStatus Status
+        public virtual NetOffice.ExcelApi.Enums.XlRoutingSlipStatus Status
         {
             get
             {
@@ -246,7 +246,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Subject
+        public virtual object Subject
         {
             get
             {
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TrackStatus
+        public virtual bool TrackStatus
         {
             get
             {
@@ -283,7 +283,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Reset()
+        public virtual object Reset()
         {
             return Factory.ExecuteVariantMethodGet(this, "Reset");
         }

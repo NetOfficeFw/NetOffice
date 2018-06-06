@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836175.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839016.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193759.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="x3">optional object x3</param>
 		/// <param name="y3">optional object y3</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
+		public virtual void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
 		{
 			 Factory.ExecuteMethod(this, "AddNodes", new object[]{ segmentType, editingType, x1, y1, x2, y2, x3, y3 });
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="y1">Single y1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
+		public virtual void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
 		{
 			 Factory.ExecuteMethod(this, "AddNodes", segmentType, editingType, x1, y1);
 		}
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="x2">optional object x2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2)
+		public virtual void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2)
 		{
 			 Factory.ExecuteMethod(this, "AddNodes", new object[]{ segmentType, editingType, x1, y1, x2 });
 		}
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="y2">optional object y2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2)
+		public virtual void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2)
 		{
 			 Factory.ExecuteMethod(this, "AddNodes", new object[]{ segmentType, editingType, x1, y1, x2, y2 });
 		}
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="x3">optional object x3</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3)
+		public virtual void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3)
 		{
 			 Factory.ExecuteMethod(this, "AddNodes", new object[]{ segmentType, editingType, x1, y1, x2, y2, x3 });
 		}
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195010.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape ConvertToShape()
+		public virtual NetOffice.ExcelApi.Shape ConvertToShape()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "ConvertToShape", typeof(NetOffice.ExcelApi.Shape));
 		}

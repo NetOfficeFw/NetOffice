@@ -33,7 +33,7 @@ namespace NetOffice.ExcelApi.Behind
         /// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194768.aspx
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_PrintQuality(object index)
+        public virtual object get_PrintQuality(object index)
         {
             return Factory.ExecuteVariantPropertyGet(this, "PrintQuality", index);
         }
@@ -46,7 +46,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="value">optional object value</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_PrintQuality(object index, object value)
+        public virtual void set_PrintQuality(object index, object value)
         {
             Factory.ExecutePropertySet(this, "PrintQuality", index, value);
         }
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194768.aspx </remarks>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_PrintQuality")]
-        public object PrintQuality(object index)
+        public virtual object PrintQuality(object index)
         {
             return get_PrintQuality(index);
         }
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836795.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835290.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836825.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834921.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool BlackAndWhite
+        public virtual bool BlackAndWhite
         {
             get
             {
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198024.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double BottomMargin
+        public virtual Double BottomMargin
         {
             get
             {
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839224.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string CenterFooter
+        public virtual string CenterFooter
         {
             get
             {
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835588.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string CenterHeader
+        public virtual string CenterHeader
         {
             get
             {
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822498.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool CenterHorizontally
+        public virtual bool CenterHorizontally
         {
             get
             {
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841275.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool CenterVertically
+        public virtual bool CenterVertically
         {
             get
             {
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlObjectSize ChartSize
+        public virtual NetOffice.ExcelApi.Enums.XlObjectSize ChartSize
         {
             get
             {
@@ -297,7 +297,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194155.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Draft
+        public virtual bool Draft
         {
             get
             {
@@ -315,7 +315,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821636.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 FirstPageNumber
+        public virtual Int32 FirstPageNumber
         {
             get
             {
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194582.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FitToPagesTall
+        public virtual object FitToPagesTall
         {
             get
             {
@@ -351,7 +351,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194365.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FitToPagesWide
+        public virtual object FitToPagesWide
         {
             get
             {
@@ -369,7 +369,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838218.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double FooterMargin
+        public virtual Double FooterMargin
         {
             get
             {
@@ -387,7 +387,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838659.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double HeaderMargin
+        public virtual Double HeaderMargin
         {
             get
             {
@@ -405,7 +405,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822322.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string LeftFooter
+        public virtual string LeftFooter
         {
             get
             {
@@ -423,7 +423,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836805.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string LeftHeader
+        public virtual string LeftHeader
         {
             get
             {
@@ -441,7 +441,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821496.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double LeftMargin
+        public virtual Double LeftMargin
         {
             get
             {
@@ -459,7 +459,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839060.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlOrder Order
+        public virtual NetOffice.ExcelApi.Enums.XlOrder Order
         {
             get
             {
@@ -477,7 +477,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836834.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlPageOrientation Orientation
+        public virtual NetOffice.ExcelApi.Enums.XlPageOrientation Orientation
         {
             get
             {
@@ -495,7 +495,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834612.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlPaperSize PaperSize
+        public virtual NetOffice.ExcelApi.Enums.XlPaperSize PaperSize
         {
             get
             {
@@ -513,7 +513,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839804.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string PrintArea
+        public virtual string PrintArea
         {
             get
             {
@@ -531,7 +531,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836524.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool PrintGridlines
+        public virtual bool PrintGridlines
         {
             get
             {
@@ -549,7 +549,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192995.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool PrintHeadings
+        public virtual bool PrintHeadings
         {
             get
             {
@@ -567,7 +567,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822102.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool PrintNotes
+        public virtual bool PrintNotes
         {
             get
             {
@@ -585,7 +585,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194768.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintQuality
+        public virtual object PrintQuality
         {
             get
             {
@@ -603,7 +603,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835214.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string PrintTitleColumns
+        public virtual string PrintTitleColumns
         {
             get
             {
@@ -621,7 +621,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839961.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string PrintTitleRows
+        public virtual string PrintTitleRows
         {
             get
             {
@@ -639,7 +639,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840096.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string RightFooter
+        public virtual string RightFooter
         {
             get
             {
@@ -657,7 +657,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836463.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string RightHeader
+        public virtual string RightHeader
         {
             get
             {
@@ -675,7 +675,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836771.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double RightMargin
+        public virtual Double RightMargin
         {
             get
             {
@@ -693,7 +693,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194770.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double TopMargin
+        public virtual Double TopMargin
         {
             get
             {
@@ -711,7 +711,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197028.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Zoom
+        public virtual object Zoom
         {
             get
             {
@@ -729,7 +729,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194941.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlPrintLocation PrintComments
+        public virtual NetOffice.ExcelApi.Enums.XlPrintLocation PrintComments
         {
             get
             {
@@ -747,7 +747,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197865.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlPrintErrors PrintErrors
+        public virtual NetOffice.ExcelApi.Enums.XlPrintErrors PrintErrors
         {
             get
             {
@@ -765,7 +765,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838811.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Graphic CenterHeaderPicture
+        public virtual NetOffice.ExcelApi.Graphic CenterHeaderPicture
         {
             get
             {
@@ -779,7 +779,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822635.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Graphic CenterFooterPicture
+        public virtual NetOffice.ExcelApi.Graphic CenterFooterPicture
         {
             get
             {
@@ -793,7 +793,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194861.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Graphic LeftHeaderPicture
+        public virtual NetOffice.ExcelApi.Graphic LeftHeaderPicture
         {
             get
             {
@@ -807,7 +807,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195659.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Graphic LeftFooterPicture
+        public virtual NetOffice.ExcelApi.Graphic LeftFooterPicture
         {
             get
             {
@@ -821,7 +821,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196670.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Graphic RightHeaderPicture
+        public virtual NetOffice.ExcelApi.Graphic RightHeaderPicture
         {
             get
             {
@@ -835,7 +835,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840868.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Graphic RightFooterPicture
+        public virtual NetOffice.ExcelApi.Graphic RightFooterPicture
         {
             get
             {
@@ -849,7 +849,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839665.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool OddAndEvenPagesHeaderFooter
+        public virtual bool OddAndEvenPagesHeaderFooter
         {
             get
             {
@@ -867,7 +867,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838040.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool DifferentFirstPageHeaderFooter
+        public virtual bool DifferentFirstPageHeaderFooter
         {
             get
             {
@@ -885,7 +885,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838420.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool ScaleWithDocHeaderFooter
+        public virtual bool ScaleWithDocHeaderFooter
         {
             get
             {
@@ -903,7 +903,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838197.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool AlignMarginsHeaderFooter
+        public virtual bool AlignMarginsHeaderFooter
         {
             get
             {
@@ -921,7 +921,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840030.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Pages Pages
+        public virtual NetOffice.ExcelApi.Pages Pages
         {
             get
             {
@@ -935,7 +935,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839989.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Page EvenPage
+        public virtual NetOffice.ExcelApi.Page EvenPage
         {
             get
             {
@@ -949,7 +949,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835921.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Page FirstPage
+        public virtual NetOffice.ExcelApi.Page FirstPage
         {
             get
             {

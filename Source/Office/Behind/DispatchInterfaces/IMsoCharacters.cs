@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Caption
+        public virtual string Caption
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ChartFont Font
+        public virtual NetOffice.OfficeApi.ChartFont Font
         {
             get
             {
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Text
+        public virtual string Text
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string PhoneticCharacters
+        public virtual string PhoneticCharacters
         {
             get
             {
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstr">string bstr</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Insert(string bstr)
+        public virtual object Insert(string bstr)
         {
             return Factory.ExecuteVariantMethodGet(this, "Insert", bstr);
         }

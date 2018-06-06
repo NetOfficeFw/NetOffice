@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="ctrl">NetOffice.OfficeApi.CommandBarComboBox ctrl</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Change(NetOffice.OfficeApi.CommandBarComboBox ctrl)
+        public virtual void Change(NetOffice.OfficeApi.CommandBarComboBox ctrl)
         {
             Factory.ExecuteMethod(this, "Change", ctrl);
         }

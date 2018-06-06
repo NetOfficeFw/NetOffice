@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortOn SortOn
+		public virtual NetOffice.ExcelApi.Enums.XlSortOn SortOn
 		{
 			get
 			{
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object SortOnValue
+		public virtual object SortOnValue
 		{
 			get
 			{
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Range Key
+		public virtual NetOffice.ExcelApi.Range Key
 		{
 			get
 			{
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortOrder Order
+		public virtual NetOffice.ExcelApi.Enums.XlSortOrder Order
 		{
 			get
 			{
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object CustomOrder
+		public virtual object CustomOrder
 		{
 			get
 			{
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortDataOption DataOption
+		public virtual NetOffice.ExcelApi.Enums.XlSortDataOption DataOption
 		{
 			get
 			{
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Priority
+		public virtual Int32 Priority
 		{
 			get
 			{
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="key">NetOffice.ExcelApi.Range key</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 ModifyKey(NetOffice.ExcelApi.Range key)
+		public virtual Int32 ModifyKey(NetOffice.ExcelApi.Range key)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ModifyKey", key);
 		}
@@ -238,7 +238,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="icon">NetOffice.ExcelApi.Icon icon</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 SetIcon(NetOffice.ExcelApi.Icon icon)
+		public virtual Int32 SetIcon(NetOffice.ExcelApi.Icon icon)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "SetIcon", icon);
 		}

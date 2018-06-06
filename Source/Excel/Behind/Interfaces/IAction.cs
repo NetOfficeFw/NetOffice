@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public string Caption
+        public virtual string Caption
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlActionType Type
+        public virtual NetOffice.ExcelApi.Enums.XlActionType Type
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public string Coordinate
+        public virtual string Coordinate
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public string Content
+        public virtual string Content
         {
             get
             {
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 Execute()
+        public virtual Int32 Execute()
         {
             return Factory.ExecuteInt32MethodGet(this, "Execute");
         }

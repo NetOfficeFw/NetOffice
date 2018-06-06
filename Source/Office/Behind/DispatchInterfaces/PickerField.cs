@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863098.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860586.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPickerField Type
+        public virtual NetOffice.OfficeApi.Enums.MsoPickerField Type
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865223.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public bool IsHidden
+        public virtual bool IsHidden
         {
             get
             {

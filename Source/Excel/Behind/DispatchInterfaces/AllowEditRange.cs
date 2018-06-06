@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822507.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string Title
+		public virtual string Title
 		{
 			get
 			{
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193250.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Range Range
+		public virtual NetOffice.ExcelApi.Range Range
 		{
 			get
 			{
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822889.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.UserAccessList Users
+		public virtual NetOffice.ExcelApi.UserAccessList Users
 		{
 			get
 			{
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194796.aspx </remarks>
 		/// <param name="password">string password</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void ChangePassword(string password)
+		public virtual void ChangePassword(string password)
 		{
 			 Factory.ExecuteMethod(this, "ChangePassword", password);
 		}
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196876.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196950.aspx </remarks>
 		/// <param name="password">optional object password</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Unprotect(object password)
+		public virtual void Unprotect(object password)
 		{
 			 Factory.ExecuteMethod(this, "Unprotect", password);
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196950.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Unprotect()
+		public virtual void Unprotect()
 		{
 			 Factory.ExecuteMethod(this, "Unprotect");
 		}

@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863755.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865287.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Extensions
+        public virtual string Extensions
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863772.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Description
+        public virtual string Description
         {
             get
             {

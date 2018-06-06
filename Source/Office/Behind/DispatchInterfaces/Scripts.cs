@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.Script this[object index]
+        public virtual NetOffice.OfficeApi.Script this[object index]
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="extended">optional string Extended = </param>
         /// <param name="scriptText">optional string ScriptText = </param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended, object scriptText)
+        public virtual NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended, object scriptText)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), new object[] { anchor, location, language, id, extended, scriptText });
         }
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Script Add()
+        public virtual NetOffice.OfficeApi.Script Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script));
         }
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Script Add(object anchor)
+        public virtual NetOffice.OfficeApi.Script Add(object anchor)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor);
         }
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Script Add(object anchor, object location)
+        public virtual NetOffice.OfficeApi.Script Add(object anchor, object location)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location);
         }
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="language">optional NetOffice.OfficeApi.Enums.MsoScriptLanguage Language = 2</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Script Add(object anchor, object location, object language)
+        public virtual NetOffice.OfficeApi.Script Add(object anchor, object location, object language)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location, language);
         }
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="id">optional string Id = </param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id)
+        public virtual NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location, language, id);
         }
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="extended">optional string Extended = </param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended)
+        public virtual NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), new object[] { anchor, location, language, id, extended });
         }
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -228,7 +228,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.Script> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.Script> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.Script item in innerEnumerator)

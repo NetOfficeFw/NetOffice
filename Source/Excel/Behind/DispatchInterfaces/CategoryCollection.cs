@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231651.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231814.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231380.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230317.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -131,7 +131,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 15, 16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.ChartCategory this[object index]
+		public virtual NetOffice.ExcelApi.ChartCategory this[object index]
 		{
 			get
 			{
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
         [CustomEnumerator]
-        public IEnumerator<NetOffice.ExcelApi.ChartCategory> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ChartCategory> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ChartCategory item in innerEnumerator)

@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelTables ModelTables
+        public virtual NetOffice.ExcelApi.ModelTables ModelTables
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelRelationships ModelRelationships
+        public virtual NetOffice.ExcelApi.ModelRelationships ModelRelationships
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.WorkbookConnection DataModelConnection
+        public virtual NetOffice.ExcelApi.WorkbookConnection DataModelConnection
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 15,16
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public Int32 Refresh()
+        public virtual Int32 Refresh()
         {
             return Factory.ExecuteInt32MethodGet(this, "Refresh");
         }
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="connectionToDataSource">NetOffice.ExcelApi.WorkbookConnection connectionToDataSource</param>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.WorkbookConnection AddConnection(NetOffice.ExcelApi.WorkbookConnection connectionToDataSource)
+        public virtual NetOffice.ExcelApi.WorkbookConnection AddConnection(NetOffice.ExcelApi.WorkbookConnection connectionToDataSource)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddConnection", typeof(NetOffice.ExcelApi.WorkbookConnection), connectionToDataSource);
         }
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="modelTable">object modelTable</param>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.WorkbookConnection CreateModelWorkbookConnection(object modelTable)
+        public virtual NetOffice.ExcelApi.WorkbookConnection CreateModelWorkbookConnection(object modelTable)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "CreateModelWorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection), modelTable);
         }
@@ -187,7 +187,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 15,16
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public Int32 Initialize()
+        public virtual Int32 Initialize()
         {
             return Factory.ExecuteInt32MethodGet(this, "Initialize");
         }

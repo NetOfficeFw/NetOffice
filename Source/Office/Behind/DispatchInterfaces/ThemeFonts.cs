@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864949.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861843.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">NetOffice.OfficeApi.Enums.MsoFontLanguageIndex index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.ThemeFont this[NetOffice.OfficeApi.Enums.MsoFontLanguageIndex index]
+        public virtual NetOffice.OfficeApi.ThemeFont this[NetOffice.OfficeApi.Enums.MsoFontLanguageIndex index]
         {
             get
             {
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.ThemeFont> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.ThemeFont> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.ThemeFont item in innerEnumerator)

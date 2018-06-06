@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 DictLang
+		public virtual Int32 DictLang
 		{
 			get
 			{
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string UserDict
+		public virtual string UserDict
 		{
 			get
 			{
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool IgnoreCaps
+		public virtual bool IgnoreCaps
 		{
 			get
 			{
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool SuggestMainOnly
+		public virtual bool SuggestMainOnly
 		{
 			get
 			{
@@ -132,7 +132,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool IgnoreMixedDigits
+		public virtual bool IgnoreMixedDigits
 		{
 			get
 			{
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool IgnoreFileNames
+		public virtual bool IgnoreFileNames
 		{
 			get
 			{
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool GermanPostReform
+		public virtual bool GermanPostReform
 		{
 			get
 			{
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool KoreanCombineAux
+		public virtual bool KoreanCombineAux
 		{
 			get
 			{
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool KoreanUseAutoChangeList
+		public virtual bool KoreanUseAutoChangeList
 		{
 			get
 			{
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool KoreanProcessCompound
+		public virtual bool KoreanProcessCompound
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlHebrewModes HebrewModes
+		public virtual NetOffice.ExcelApi.Enums.XlHebrewModes HebrewModes
 		{
 			get
 			{
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlArabicModes ArabicModes
+		public virtual NetOffice.ExcelApi.Enums.XlArabicModes ArabicModes
 		{
 			get
 			{
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool ArabicStrictAlefHamza
+		public virtual bool ArabicStrictAlefHamza
 		{
 			get
 			{
@@ -285,7 +285,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool ArabicStrictFinalYaa
+		public virtual bool ArabicStrictFinalYaa
 		{
 			get
 			{
@@ -302,7 +302,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool ArabicStrictTaaMarboota
+		public virtual bool ArabicStrictTaaMarboota
 		{
 			get
 			{
@@ -319,7 +319,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool RussianStrictE
+		public virtual bool RussianStrictE
 		{
 			get
 			{
@@ -336,7 +336,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSpanishModes SpanishModes
+		public virtual NetOffice.ExcelApi.Enums.XlSpanishModes SpanishModes
 		{
 			get
 			{
@@ -353,7 +353,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlPortugueseReform PortugalReform
+		public virtual NetOffice.ExcelApi.Enums.XlPortugueseReform PortugalReform
 		{
 			get
 			{
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlPortugueseReform BrazilReform
+		public virtual NetOffice.ExcelApi.Enums.XlPortugueseReform BrazilReform
 		{
 			get
 			{

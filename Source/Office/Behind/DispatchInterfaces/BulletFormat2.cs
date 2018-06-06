@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861186.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860608.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Character
+        public virtual Int32 Character
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860536.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Font2 Font
+        public virtual NetOffice.OfficeApi.Font2 Font
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864635.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Number
+        public virtual Int32 Number
         {
             get
             {
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863117.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single RelativeSize
+        public virtual Single RelativeSize
         {
             get
             {
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860774.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 StartValue
+        public virtual Int32 StartValue
         {
             get
             {
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860844.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoNumberedBulletStyle Style
+        public virtual NetOffice.OfficeApi.Enums.MsoNumberedBulletStyle Style
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863284.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBulletType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoBulletType Type
         {
             get
             {
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864181.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState UseTextColor
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState UseTextColor
         {
             get
             {
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861075.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState UseTextFont
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState UseTextFont
         {
             get
             {
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861165.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Visible
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
             {
@@ -257,7 +257,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860556.aspx </remarks>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Picture(string fileName)
+        public virtual void Picture(string fileName)
         {
             Factory.ExecuteMethod(this, "Picture", fileName);
         }

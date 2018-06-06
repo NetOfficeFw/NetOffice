@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single MarginBottom
+        public virtual Single MarginBottom
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single MarginLeft
+        public virtual Single MarginLeft
         {
             get
             {
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single MarginRight
+        public virtual Single MarginRight
         {
             get
             {
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single MarginTop
+        public virtual Single MarginTop
         {
             get
             {
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation
+        public virtual NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation
         {
             get
             {

@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.SharedWorkspaceFolder this[Int32 index]
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFolder this[Int32 index]
         {
             get
             {
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865340.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860587.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864641.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool ItemCountExceeded
+        public virtual bool ItemCountExceeded
         {
             get
             {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="folderName">string folderName</param>
         /// <param name="parentFolder">optional object parentFolder</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName, object parentFolder)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName, object parentFolder)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFolder), folderName, parentFolder);
         }
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="folderName">string folderName</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFolder), folderName);
         }
@@ -170,7 +170,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.SharedWorkspaceFolder> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.SharedWorkspaceFolder> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.SharedWorkspaceFolder item in innerEnumerator)

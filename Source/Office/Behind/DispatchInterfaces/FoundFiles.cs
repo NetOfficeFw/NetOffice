@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public string this[Int32 index]
+        public virtual string this[Int32 index]
         {
             get
             {
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<string> GetEnumerator()
+        public virtual IEnumerator<string> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (string item in innerEnumerator)

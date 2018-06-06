@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862208.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864015.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.CustomXMLSchema this[object index]
+        public virtual NetOffice.OfficeApi.CustomXMLSchema this[object index]
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_NamespaceURI(Int32 index)
+        public virtual string get_NamespaceURI(Int32 index)
         {
             return Factory.ExecuteStringPropertyGet(this, "NamespaceURI", index);
         }
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860878.aspx </remarks>
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 12, 14, 15, 16), Redirect("get_NamespaceURI")]
-        public string NamespaceURI(Int32 index)
+        public virtual string NamespaceURI(Int32 index)
         {
             return get_NamespaceURI(index);
         }
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="fileName">optional string FileName = </param>
         /// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName, object installForAllUsers)
+        public virtual NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName, object installForAllUsers)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias, fileName, installForAllUsers);
         }
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864881.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLSchema Add()
+        public virtual NetOffice.OfficeApi.CustomXMLSchema Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema));
         }
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="namespaceURI">optional string NamespaceURI = </param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI)
+        public virtual NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI);
         }
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="alias">optional string Alias = </param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias)
+        public virtual NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias);
         }
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="fileName">optional string FileName = </param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName)
+        public virtual NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias, fileName);
         }
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864690.aspx </remarks>
         /// <param name="schemaCollection">NetOffice.OfficeApi.CustomXMLSchemaCollection schemaCollection</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void AddCollection(NetOffice.OfficeApi.CustomXMLSchemaCollection schemaCollection)
+        public virtual void AddCollection(NetOffice.OfficeApi.CustomXMLSchemaCollection schemaCollection)
         {
             Factory.ExecuteMethod(this, "AddCollection", schemaCollection);
         }
@@ -214,7 +214,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864142.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool Validate()
+        public virtual bool Validate()
         {
             return Factory.ExecuteBoolMethodGet(this, "Validate");
         }
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.CustomXMLSchema> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.CustomXMLSchema> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.CustomXMLSchema item in innerEnumerator)

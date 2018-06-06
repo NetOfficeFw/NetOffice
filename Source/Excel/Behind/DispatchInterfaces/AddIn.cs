@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839400.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839472.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836823.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Author
+		public virtual string Author
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Comments
+		public virtual string Comments
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839586.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string FullName
+		public virtual string FullName
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841133.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Installed
+		public virtual bool Installed
 		{
 			get
 			{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Keywords
+		public virtual string Keywords
 		{
 			get
 			{
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834302.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195526.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Path
+		public virtual string Path
 		{
 			get
 			{
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Subject
+		public virtual string Subject
 		{
 			get
 			{
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Title
+		public virtual string Title
 		{
 			get
 			{
@@ -238,7 +238,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837131.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string progID
+		public virtual string progID
 		{
 			get
 			{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196853.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string CLSID
+		public virtual string CLSID
 		{
 			get
 			{
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197200.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool IsOpen
+		public virtual bool IsOpen
 		{
 			get
 			{

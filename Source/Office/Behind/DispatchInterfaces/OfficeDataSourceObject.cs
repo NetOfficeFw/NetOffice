@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861793.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string ConnectString
+        public virtual string ConnectString
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861897.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Table
+        public virtual string Table
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860869.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string DataSource
+        public virtual string DataSource
         {
             get
             {
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860229.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Columns
+        public virtual object Columns
         {
             get
             {
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861767.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 RowCount
+        public virtual Int32 RowCount
         {
             get
             {
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860598.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Filters
+        public virtual object Filters
         {
             get
             {
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow</param>
         /// <param name="rowNbr">optional Int32 RowNbr = 1</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, object rowNbr)
+        public virtual Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, object rowNbr)
         {
             return Factory.ExecuteInt32MethodGet(this, "Move", msoMoveRow, rowNbr);
         }
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow)
+        public virtual Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow)
         {
             return Factory.ExecuteInt32MethodGet(this, "Move", msoMoveRow);
         }
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
         /// <param name="fNeverPrompt">optional Int32 fNeverPrompt = 1</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive, object fNeverPrompt)
+        public virtual void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive, object fNeverPrompt)
         {
             Factory.ExecuteMethod(this, "Open", new object[] { bstrSrc, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt });
         }
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Open()
+        public virtual void Open()
         {
             Factory.ExecuteMethod(this, "Open");
         }
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrSrc">optional string bstrSrc = </param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Open(object bstrSrc)
+        public virtual void Open(object bstrSrc)
         {
             Factory.ExecuteMethod(this, "Open", bstrSrc);
         }
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrConnect">optional string bstrConnect = </param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Open(object bstrSrc, object bstrConnect)
+        public virtual void Open(object bstrSrc, object bstrConnect)
         {
             Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect);
         }
@@ -246,7 +246,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrTable">optional string bstrTable = </param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Open(object bstrSrc, object bstrConnect, object bstrTable)
+        public virtual void Open(object bstrSrc, object bstrConnect, object bstrTable)
         {
             Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable);
         }
@@ -261,7 +261,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive)
+        public virtual void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive)
         {
             Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable, fOpenExclusive);
         }
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="sortField3">optional string SortField3 = </param>
         /// <param name="sortAscending3">optional bool SortAscending3 = true</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3, object sortAscending3)
+        public virtual void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3, object sortAscending3)
         {
             Factory.ExecuteMethod(this, "SetSortOrder", new object[] { sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3 });
         }
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="sortField1">string sortField1</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetSortOrder(string sortField1)
+        public virtual void SetSortOrder(string sortField1)
         {
             Factory.ExecuteMethod(this, "SetSortOrder", sortField1);
         }
@@ -302,7 +302,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="sortAscending1">optional bool SortAscending1 = true</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetSortOrder(string sortField1, object sortAscending1)
+        public virtual void SetSortOrder(string sortField1, object sortAscending1)
         {
             Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1);
         }
@@ -316,7 +316,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="sortField2">optional string SortField2 = </param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetSortOrder(string sortField1, object sortAscending1, object sortField2)
+        public virtual void SetSortOrder(string sortField1, object sortAscending1, object sortField2)
         {
             Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2);
         }
@@ -331,7 +331,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="sortAscending2">optional bool SortAscending2 = true</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2)
+        public virtual void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2)
         {
             Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2, sortAscending2);
         }
@@ -347,7 +347,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="sortField3">optional string SortField3 = </param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3)
+        public virtual void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3)
         {
             Factory.ExecuteMethod(this, "SetSortOrder", new object[] { sortField1, sortAscending1, sortField2, sortAscending2, sortField3 });
         }
@@ -357,7 +357,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863341.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void ApplyFilter()
+        public virtual void ApplyFilter()
         {
             Factory.ExecuteMethod(this, "ApplyFilter");
         }

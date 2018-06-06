@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193784.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839009.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837789.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197912.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.SparklineGroup this[object index]
+		public virtual NetOffice.ExcelApi.SparklineGroup this[object index]
 		{
 			get
 			{
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlSparkType type</param>
 		/// <param name="sourceData">string sourceData</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SparklineGroup Add(NetOffice.ExcelApi.Enums.XlSparkType type, string sourceData)
+		public virtual NetOffice.ExcelApi.SparklineGroup Add(NetOffice.ExcelApi.Enums.XlSparkType type, string sourceData)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SparklineGroup>(this, "Add", typeof(NetOffice.ExcelApi.SparklineGroup), type, sourceData);
 		}
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837606.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void Clear()
+		public virtual void Clear()
 		{
 			 Factory.ExecuteMethod(this, "Clear");
 		}
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835254.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void ClearGroups()
+		public virtual void ClearGroups()
 		{
 			 Factory.ExecuteMethod(this, "ClearGroups");
 		}
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837423.aspx </remarks>
 		/// <param name="location">NetOffice.ExcelApi.Range location</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void Group(NetOffice.ExcelApi.Range location)
+		public virtual void Group(NetOffice.ExcelApi.Range location)
 		{
 			 Factory.ExecuteMethod(this, "Group", location);
 		}
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838848.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void Ungroup()
+		public virtual void Ungroup()
 		{
 			 Factory.ExecuteMethod(this, "Ungroup");
 		}
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 14,15,16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.SparklineGroup> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.SparklineGroup> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.SparklineGroup item in innerEnumerator)

@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821650.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840541.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837433.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197848.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public object this[object index]
+		public virtual object this[object index]
 		{
 			get
 			{
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840300.aspx </remarks>
 		/// <param name="obj">object obj</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Add(object obj)
+		public virtual object Add(object obj)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Add", obj);
 		}
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840332.aspx </remarks>
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Delete(object index)
+		public virtual void Delete(object index)
 		{
 			 Factory.ExecuteMethod(this, "Delete", index);
 		}
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835847.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void DeleteAll()
+		public virtual void DeleteAll()
 		{
 			 Factory.ExecuteMethod(this, "DeleteAll");
 		}
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public IEnumerator<object> GetEnumerator()
+        public virtual IEnumerator<object> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (object item in innerEnumerator)

@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865319.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863815.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varIndex">object varIndex</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public object this[object varIndex]
+        public virtual object this[object varIndex]
         {
             get
             {
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [CustomEnumerator]
-        public IEnumerator<object> GetEnumerator()
+        public virtual IEnumerator<object> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (object item in innerEnumerator)

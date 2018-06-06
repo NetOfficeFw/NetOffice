@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862847.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862834.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoParagraphAlignment Alignment
+        public virtual NetOffice.OfficeApi.Enums.MsoParagraphAlignment Alignment
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861479.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBaselineAlignment BaselineAlignment
+        public virtual NetOffice.OfficeApi.Enums.MsoBaselineAlignment BaselineAlignment
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863871.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.BulletFormat2 Bullet
+        public virtual NetOffice.OfficeApi.BulletFormat2 Bullet
         {
             get
             {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864592.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState FarEastLineBreakLevel
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState FarEastLineBreakLevel
         {
             get
             {
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861781.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single FirstLineIndent
+        public virtual Single FirstLineIndent
         {
             get
             {
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863364.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState HangingPunctuation
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState HangingPunctuation
         {
             get
             {
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863818.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 IndentLevel
+        public virtual Int32 IndentLevel
         {
             get
             {
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864662.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single LeftIndent
+        public virtual Single LeftIndent
         {
             get
             {
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865358.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState LineRuleAfter
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState LineRuleAfter
         {
             get
             {
@@ -239,7 +239,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863089.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState LineRuleBefore
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState LineRuleBefore
         {
             get
             {
@@ -257,7 +257,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861150.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState LineRuleWithin
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState LineRuleWithin
         {
             get
             {
@@ -275,7 +275,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862758.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single RightIndent
+        public virtual Single RightIndent
         {
             get
             {
@@ -293,7 +293,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865306.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single SpaceAfter
+        public virtual Single SpaceAfter
         {
             get
             {
@@ -311,7 +311,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861066.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single SpaceBefore
+        public virtual Single SpaceBefore
         {
             get
             {
@@ -329,7 +329,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865291.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single SpaceWithin
+        public virtual Single SpaceWithin
         {
             get
             {
@@ -347,7 +347,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862162.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.TabStops2 TabStops
+        public virtual NetOffice.OfficeApi.TabStops2 TabStops
         {
             get
             {
@@ -361,7 +361,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864981.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTextDirection TextDirection
+        public virtual NetOffice.OfficeApi.Enums.MsoTextDirection TextDirection
         {
             get
             {
@@ -379,7 +379,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862056.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState WordWrap
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState WordWrap
         {
             get
             {

@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840670.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837418.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198368.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841183.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SparkVerticalAxis Vertical
+		public virtual NetOffice.ExcelApi.SparkVerticalAxis Vertical
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823093.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SparkHorizontalAxis Horizontal
+		public virtual NetOffice.ExcelApi.SparkHorizontalAxis Horizontal
 		{
 			get
 			{

@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.Style this[object index]
+		public virtual NetOffice.ExcelApi.Style this[object index]
 		{
 			get
 			{
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="name">string name</param>
 		/// <param name="basedOn">optional object basedOn</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Style Add(string name, object basedOn)
+		public virtual NetOffice.ExcelApi.Style Add(string name, object basedOn)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Style>(this, "Add", typeof(NetOffice.ExcelApi.Style), name, basedOn);
 		}
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="name">string name</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Style Add(string name)
+		public virtual NetOffice.ExcelApi.Style Add(string name)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Style>(this, "Add", typeof(NetOffice.ExcelApi.Style), name);
 		}
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="workbook">object workbook</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Merge(object workbook)
+		public virtual object Merge(object workbook)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Merge", workbook);
 		}
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Style> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.Style> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.Style item in innerEnumerator)

@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864165.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860295.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.FileDialogFilters Filters
+        public virtual NetOffice.OfficeApi.FileDialogFilters Filters
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860516.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 FilterIndex
+        public virtual Int32 FilterIndex
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863472.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Title
+        public virtual string Title
         {
             get
             {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863394.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string ButtonName
+        public virtual string ButtonName
         {
             get
             {
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863824.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool AllowMultiSelect
+        public virtual bool AllowMultiSelect
         {
             get
             {
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860561.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoFileDialogView InitialView
+        public virtual NetOffice.OfficeApi.Enums.MsoFileDialogView InitialView
         {
             get
             {
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863092.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string InitialFileName
+        public virtual string InitialFileName
         {
             get
             {
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863790.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.FileDialogSelectedItems SelectedItems
+        public virtual NetOffice.OfficeApi.FileDialogSelectedItems SelectedItems
         {
             get
             {
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864572.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoFileDialogType DialogType
+        public virtual NetOffice.OfficeApi.Enums.MsoFileDialogType DialogType
         {
             get
             {
@@ -231,7 +231,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864996.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Item
+        public virtual string Item
         {
             get
             {
@@ -248,7 +248,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865217.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Show()
+        public virtual Int32 Show()
         {
             return Factory.ExecuteInt32MethodGet(this, "Show");
         }
@@ -258,7 +258,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862099.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Execute()
+        public virtual void Execute()
         {
             Factory.ExecuteMethod(this, "Execute");
         }

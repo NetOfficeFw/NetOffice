@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861826.aspx </remarks>
         /// <param name="uPercentComplete">UIntPtr uPercentComplete</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrReportProgress(UIntPtr uPercentComplete)
+        public virtual Int32 HrReportProgress(UIntPtr uPercentComplete)
         {
             return Factory.ExecuteInt32MethodGet(this, "HrReportProgress", uPercentComplete);
         }
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="uType">UIntPtr uType</param>
         /// <param name="pidResult">Int32 pidResult</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, out Int32 pidResult)
+        public virtual Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, out Int32 pidResult)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true);
             pidResult = 0;
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="pbstrInput">string pbstrInput</param>
         /// <param name="fPassword">Int32 fPassword</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrInputBox(string bstrText, string bstrCaption, out string pbstrInput, Int32 fPassword)
+        public virtual Int32 HrInputBox(string bstrText, string bstrCaption, out string pbstrInput, Int32 fPassword)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true, false);
             pbstrInput = string.Empty;

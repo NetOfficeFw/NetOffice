@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196328.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839201.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821627.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197304.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool BackgroundChecking
+		public virtual bool BackgroundChecking
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197740.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlColorIndex IndicatorColorIndex
+		public virtual NetOffice.ExcelApi.Enums.XlColorIndex IndicatorColorIndex
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841054.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool EvaluateToError
+		public virtual bool EvaluateToError
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840516.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool TextDate
+		public virtual bool TextDate
 		{
 			get
 			{
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198182.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool NumberAsText
+		public virtual bool NumberAsText
 		{
 			get
 			{
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835006.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool InconsistentFormula
+		public virtual bool InconsistentFormula
 		{
 			get
 			{
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837361.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool OmittedCells
+		public virtual bool OmittedCells
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193607.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool UnlockedFormulaCells
+		public virtual bool UnlockedFormulaCells
 		{
 			get
 			{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196993.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool EmptyCellReferences
+		public virtual bool EmptyCellReferences
 		{
 			get
 			{
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836531.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool ListDataValidation
+		public virtual bool ListDataValidation
 		{
 			get
 			{
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839047.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool InconsistentTableFormula
+		public virtual bool InconsistentTableFormula
 		{
 			get
 			{

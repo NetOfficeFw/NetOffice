@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195090.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Index
+		public virtual Int32 Index
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821221.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
+		public virtual NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834943.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Value
+		public virtual object Value
 		{
 			get
 			{
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839365.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.FormatColor FormatColor
+		public virtual NetOffice.ExcelApi.FormatColor FormatColor
 		{
 			get
 			{

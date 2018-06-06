@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool BackgroundChecking
+        public virtual bool BackgroundChecking
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlColorIndex IndicatorColorIndex
+        public virtual NetOffice.ExcelApi.Enums.XlColorIndex IndicatorColorIndex
         {
             get
             {
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool EvaluateToError
+        public virtual bool EvaluateToError
         {
             get
             {
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool TextDate
+        public virtual bool TextDate
         {
             get
             {
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool NumberAsText
+        public virtual bool NumberAsText
         {
             get
             {
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool InconsistentFormula
+        public virtual bool InconsistentFormula
         {
             get
             {
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool OmittedCells
+        public virtual bool OmittedCells
         {
             get
             {
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool UnlockedFormulaCells
+        public virtual bool UnlockedFormulaCells
         {
             get
             {
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool EmptyCellReferences
+        public virtual bool EmptyCellReferences
         {
             get
             {
@@ -256,7 +256,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool ListDataValidation
+        public virtual bool ListDataValidation
         {
             get
             {
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool InconsistentTableFormula
+        public virtual bool InconsistentTableFormula
         {
             get
             {

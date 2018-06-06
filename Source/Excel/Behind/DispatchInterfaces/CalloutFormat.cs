@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195635.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836826.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Accent
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState Accent
 		{
 			get
 			{
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835848.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoCalloutAngleType Angle
+		public virtual NetOffice.OfficeApi.Enums.MsoCalloutAngleType Angle
 		{
 			get
 			{
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834894.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState AutoAttach
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState AutoAttach
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837627.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState AutoLength
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState AutoLength
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822601.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Border
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState Border
 		{
 			get
 			{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841213.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single Drop
+		public virtual Single Drop
 		{
 			get
 			{
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837639.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoCalloutDropType DropType
+		public virtual NetOffice.OfficeApi.Enums.MsoCalloutDropType DropType
 		{
 			get
 			{
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822770.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single Gap
+		public virtual Single Gap
 		{
 			get
 			{
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840108.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single Length
+		public virtual Single Length
 		{
 			get
 			{
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840872.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoCalloutType Type
+		public virtual NetOffice.OfficeApi.Enums.MsoCalloutType Type
 		{
 			get
 			{
@@ -249,7 +249,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840383.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AutomaticLength()
+		public virtual void AutomaticLength()
 		{
 			 Factory.ExecuteMethod(this, "AutomaticLength");
 		}
@@ -260,7 +260,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839463.aspx </remarks>
 		/// <param name="drop">Single drop</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void CustomDrop(Single drop)
+		public virtual void CustomDrop(Single drop)
 		{
 			 Factory.ExecuteMethod(this, "CustomDrop", drop);
 		}
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835580.aspx </remarks>
 		/// <param name="length">Single length</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void CustomLength(Single length)
+		public virtual void CustomLength(Single length)
 		{
 			 Factory.ExecuteMethod(this, "CustomLength", length);
 		}
@@ -282,7 +282,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197794.aspx </remarks>
 		/// <param name="dropType">NetOffice.OfficeApi.Enums.MsoCalloutDropType dropType</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void PresetDrop(NetOffice.OfficeApi.Enums.MsoCalloutDropType dropType)
+		public virtual void PresetDrop(NetOffice.OfficeApi.Enums.MsoCalloutDropType dropType)
 		{
 			 Factory.ExecuteMethod(this, "PresetDrop", dropType);
 		}

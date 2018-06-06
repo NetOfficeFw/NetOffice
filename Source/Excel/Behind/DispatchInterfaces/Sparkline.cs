@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838655.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834961.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195955.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822865.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Range Location
+		public virtual NetOffice.ExcelApi.Range Location
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837841.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string SourceData
+		public virtual string SourceData
 		{
 			get
 			{
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196726.aspx </remarks>
 		/// <param name="range">NetOffice.ExcelApi.Range range</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void ModifyLocation(NetOffice.ExcelApi.Range range)
+		public virtual void ModifyLocation(NetOffice.ExcelApi.Range range)
 		{
 			 Factory.ExecuteMethod(this, "ModifyLocation", range);
 		}
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839062.aspx </remarks>
 		/// <param name="formula">string formula</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void ModifySourceData(string formula)
+		public virtual void ModifySourceData(string formula)
 		{
 			 Factory.ExecuteMethod(this, "ModifySourceData", formula);
 		}

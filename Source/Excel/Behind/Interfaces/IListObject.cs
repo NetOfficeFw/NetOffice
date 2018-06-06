@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public string _Default
+        public virtual string _Default
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool Active
+        public virtual bool Active
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range DataBodyRange
+        public virtual NetOffice.ExcelApi.Range DataBodyRange
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool DisplayRightToLeft
+        public virtual bool DisplayRightToLeft
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range HeaderRowRange
+        public virtual NetOffice.ExcelApi.Range HeaderRowRange
         {
             get
             {
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range InsertRowRange
+        public virtual NetOffice.ExcelApi.Range InsertRowRange
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListColumns ListColumns
+        public virtual NetOffice.ExcelApi.ListColumns ListColumns
         {
             get
             {
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListRows ListRows
+        public virtual NetOffice.ExcelApi.ListRows ListRows
         {
             get
             {
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.QueryTable QueryTable
+        public virtual NetOffice.ExcelApi.QueryTable QueryTable
         {
             get
             {
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Range
+        public virtual NetOffice.ExcelApi.Range Range
         {
             get
             {
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool ShowAutoFilter
+        public virtual bool ShowAutoFilter
         {
             get
             {
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool ShowTotals
+        public virtual bool ShowTotals
         {
             get
             {
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType
+        public virtual NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType
         {
             get
             {
@@ -297,7 +297,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range TotalsRowRange
+        public virtual NetOffice.ExcelApi.Range TotalsRowRange
         {
             get
             {
@@ -310,7 +310,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public string SharePointURL
+        public virtual string SharePointURL
         {
             get
             {
@@ -323,7 +323,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.XmlMap XmlMap
+        public virtual NetOffice.ExcelApi.XmlMap XmlMap
         {
             get
             {
@@ -336,7 +336,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public string DisplayName
+        public virtual string DisplayName
         {
             get
             {
@@ -353,7 +353,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool ShowHeaders
+        public virtual bool ShowHeaders
         {
             get
             {
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.AutoFilter AutoFilter
+        public virtual NetOffice.ExcelApi.AutoFilter AutoFilter
         {
             get
             {
@@ -383,7 +383,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object TableStyle
+        public virtual object TableStyle
         {
             get
             {
@@ -400,7 +400,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool ShowTableStyleFirstColumn
+        public virtual bool ShowTableStyleFirstColumn
         {
             get
             {
@@ -417,7 +417,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool ShowTableStyleLastColumn
+        public virtual bool ShowTableStyleLastColumn
         {
             get
             {
@@ -434,7 +434,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool ShowTableStyleRowStripes
+        public virtual bool ShowTableStyleRowStripes
         {
             get
             {
@@ -451,7 +451,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool ShowTableStyleColumnStripes
+        public virtual bool ShowTableStyleColumnStripes
         {
             get
             {
@@ -468,7 +468,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Sort Sort
+        public virtual NetOffice.ExcelApi.Sort Sort
         {
             get
             {
@@ -481,7 +481,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public string Comment
+        public virtual string Comment
         {
             get
             {
@@ -498,7 +498,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public string AlternativeText
+        public virtual string AlternativeText
         {
             get
             {
@@ -515,7 +515,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public string Summary
+        public virtual string Summary
         {
             get
             {
@@ -532,7 +532,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.TableObject TableObject
+        public virtual NetOffice.ExcelApi.TableObject TableObject
         {
             get
             {
@@ -545,7 +545,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.Slicers Slicers
+        public virtual NetOffice.ExcelApi.Slicers Slicers
         {
             get
             {
@@ -558,7 +558,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public bool ShowAutoFilterDropDown
+        public virtual bool ShowAutoFilterDropDown
         {
             get
             {
@@ -578,7 +578,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }
@@ -589,7 +589,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="target">object target</param>
         /// <param name="linkSource">bool linkSource</param>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public string Publish(object target, bool linkSource)
+        public virtual string Publish(object target, bool linkSource)
         {
             return Factory.ExecuteStringMethodGet(this, "Publish", target, linkSource);
         }
@@ -598,7 +598,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 Refresh()
+        public virtual Int32 Refresh()
         {
             return Factory.ExecuteInt32MethodGet(this, "Refresh");
         }
@@ -607,7 +607,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 Unlink()
+        public virtual Int32 Unlink()
         {
             return Factory.ExecuteInt32MethodGet(this, "Unlink");
         }
@@ -616,7 +616,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 Unlist()
+        public virtual Int32 Unlist()
         {
             return Factory.ExecuteInt32MethodGet(this, "Unlist");
         }
@@ -626,7 +626,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="iConflictType">optional NetOffice.ExcelApi.Enums.XlListConflict iConflictType = 0</param>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 UpdateChanges(object iConflictType)
+        public virtual Int32 UpdateChanges(object iConflictType)
         {
             return Factory.ExecuteInt32MethodGet(this, "UpdateChanges", iConflictType);
         }
@@ -636,7 +636,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 UpdateChanges()
+        public virtual Int32 UpdateChanges()
         {
             return Factory.ExecuteInt32MethodGet(this, "UpdateChanges");
         }
@@ -646,7 +646,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="range">NetOffice.ExcelApi.Range range</param>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 Resize(NetOffice.ExcelApi.Range range)
+        public virtual Int32 Resize(NetOffice.ExcelApi.Range range)
         {
             return Factory.ExecuteInt32MethodGet(this, "Resize", range);
         }
@@ -655,7 +655,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportToVisio()
+        public virtual Int32 ExportToVisio()
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportToVisio");
         }

@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.SmartTag this[object index]
+		public virtual NetOffice.ExcelApi.SmartTag this[object index]
 		{
 			get
 			{
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="smartTagType">string smartTagType</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.SmartTag Add(string smartTagType)
+		public virtual NetOffice.ExcelApi.SmartTag Add(string smartTagType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SmartTag>(this, "Add", typeof(NetOffice.ExcelApi.SmartTag), smartTagType);
 		}
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.SmartTag> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.SmartTag> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.SmartTag item in innerEnumerator)

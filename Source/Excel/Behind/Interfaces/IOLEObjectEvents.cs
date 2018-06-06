@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 GotFocus()
+		public virtual Int32 GotFocus()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "GotFocus");
 		}
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 LostFocus()
+		public virtual Int32 LostFocus()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "LostFocus");
 		}

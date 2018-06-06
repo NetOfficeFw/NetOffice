@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Activate()
+        public virtual Int32 Activate()
         {
             return Factory.ExecuteInt32MethodGet(this, "Activate");
         }
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Deactivate()
+        public virtual Int32 Deactivate()
         {
             return Factory.ExecuteInt32MethodGet(this, "Deactivate");
         }
@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Resize()
+        public virtual Int32 Resize()
         {
             return Factory.ExecuteInt32MethodGet(this, "Resize");
         }
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="x">Int32 x</param>
         /// <param name="y">Int32 y</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 MouseDown(Int32 button, Int32 shift, Int32 x, Int32 y)
+        public virtual Int32 MouseDown(Int32 button, Int32 shift, Int32 x, Int32 y)
         {
             return Factory.ExecuteInt32MethodGet(this, "MouseDown", button, shift, x, y);
         }
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="x">Int32 x</param>
         /// <param name="y">Int32 y</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 MouseUp(Int32 button, Int32 shift, Int32 x, Int32 y)
+        public virtual Int32 MouseUp(Int32 button, Int32 shift, Int32 x, Int32 y)
         {
             return Factory.ExecuteInt32MethodGet(this, "MouseUp", button, shift, x, y);
         }
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="x">Int32 x</param>
         /// <param name="y">Int32 y</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 MouseMove(Int32 button, Int32 shift, Int32 x, Int32 y)
+        public virtual Int32 MouseMove(Int32 button, Int32 shift, Int32 x, Int32 y)
         {
             return Factory.ExecuteInt32MethodGet(this, "MouseMove", button, shift, x, y);
         }
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="cancel">bool cancel</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 BeforeRightClick(bool cancel)
+        public virtual Int32 BeforeRightClick(bool cancel)
         {
             return Factory.ExecuteInt32MethodGet(this, "BeforeRightClick", cancel);
         }
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 DragPlot()
+        public virtual Int32 DragPlot()
         {
             return Factory.ExecuteInt32MethodGet(this, "DragPlot");
         }
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 DragOver()
+        public virtual Int32 DragOver()
         {
             return Factory.ExecuteInt32MethodGet(this, "DragOver");
         }
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg2">Int32 arg2</param>
         /// <param name="cancel">bool cancel</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 BeforeDoubleClick(Int32 elementID, Int32 arg1, Int32 arg2, bool cancel)
+        public virtual Int32 BeforeDoubleClick(Int32 elementID, Int32 arg1, Int32 arg2, bool cancel)
         {
             return Factory.ExecuteInt32MethodGet(this, "BeforeDoubleClick", elementID, arg1, arg2, cancel);
         }
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg1">Int32 arg1</param>
         /// <param name="arg2">Int32 arg2</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Select(Int32 elementID, Int32 arg1, Int32 arg2)
+        public virtual Int32 Select(Int32 elementID, Int32 arg1, Int32 arg2)
         {
             return Factory.ExecuteInt32MethodGet(this, "Select", elementID, arg1, arg2);
         }
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="seriesIndex">Int32 seriesIndex</param>
         /// <param name="pointIndex">Int32 pointIndex</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 SeriesChange(Int32 seriesIndex, Int32 pointIndex)
+        public virtual Int32 SeriesChange(Int32 seriesIndex, Int32 pointIndex)
         {
             return Factory.ExecuteInt32MethodGet(this, "SeriesChange", seriesIndex, pointIndex);
         }
@@ -197,7 +197,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Calculate()
+        public virtual Int32 Calculate()
         {
             return Factory.ExecuteInt32MethodGet(this, "Calculate");
         }

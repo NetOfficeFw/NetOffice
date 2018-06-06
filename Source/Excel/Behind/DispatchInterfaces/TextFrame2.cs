@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837835.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196549.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single MarginBottom
+		public virtual Single MarginBottom
 		{
 			get
 			{
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194372.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single MarginLeft
+		public virtual Single MarginLeft
 		{
 			get
 			{
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839217.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single MarginRight
+		public virtual Single MarginRight
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196506.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single MarginTop
+		public virtual Single MarginTop
 		{
 			get
 			{
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823049.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation
+		public virtual NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation
 		{
 			get
 			{
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194998.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoHorizontalAnchor HorizontalAnchor
+		public virtual NetOffice.OfficeApi.Enums.MsoHorizontalAnchor HorizontalAnchor
 		{
 			get
 			{
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821633.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoVerticalAnchor VerticalAnchor
+		public virtual NetOffice.OfficeApi.Enums.MsoVerticalAnchor VerticalAnchor
 		{
 			get
 			{
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194411.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPathFormat PathFormat
+		public virtual NetOffice.OfficeApi.Enums.MsoPathFormat PathFormat
 		{
 			get
 			{
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195004.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoWarpFormat WarpFormat
+		public virtual NetOffice.OfficeApi.Enums.MsoWarpFormat WarpFormat
 		{
 			get
 			{
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822124.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetTextEffect WordArtformat
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetTextEffect WordArtformat
 		{
 			get
 			{
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840619.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState WordWrap
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState WordWrap
 		{
 			get
 			{
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835575.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoAutoSize AutoSize
+		public virtual NetOffice.OfficeApi.Enums.MsoAutoSize AutoSize
 		{
 			get
 			{
@@ -298,7 +298,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837830.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ThreeDFormat ThreeD
+		public virtual NetOffice.ExcelApi.ThreeDFormat ThreeD
 		{
 			get
 			{
@@ -312,7 +312,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838370.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState HasText
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState HasText
 		{
 			get
 			{
@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196881.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.TextRange2 TextRange
+		public virtual NetOffice.OfficeApi.TextRange2 TextRange
 		{
 			get
 			{
@@ -340,7 +340,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198210.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.TextColumn2 Column
+		public virtual NetOffice.OfficeApi.TextColumn2 Column
 		{
 			get
 			{
@@ -354,7 +354,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838834.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Ruler2 Ruler
+		public virtual NetOffice.OfficeApi.Ruler2 Ruler
 		{
 			get
 			{
@@ -368,7 +368,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840575.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState NoTextRotation
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState NoTextRotation
 		{
 			get
 			{
@@ -389,7 +389,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840426.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void DeleteText()
+		public virtual void DeleteText()
 		{
 			 Factory.ExecuteMethod(this, "DeleteText");
 		}

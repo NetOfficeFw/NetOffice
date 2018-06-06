@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822314.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836846.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195329.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193270.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.ColorStop this[object index]
+		public virtual NetOffice.ExcelApi.ColorStop this[object index]
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194074.aspx </remarks>
 		/// <param name="position">Double position</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ColorStop Add(Double position)
+		public virtual NetOffice.ExcelApi.ColorStop Add(Double position)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ColorStop>(this, "Add", typeof(NetOffice.ExcelApi.ColorStop), position);
 		}
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196145.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Clear()
+		public virtual void Clear()
 		{
 			 Factory.ExecuteMethod(this, "Clear");
 		}
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ColorStop> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ColorStop> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ColorStop item in innerEnumerator)

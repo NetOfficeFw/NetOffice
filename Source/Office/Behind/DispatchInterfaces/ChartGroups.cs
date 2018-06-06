@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.IMsoChartGroup this[object index]
+        public virtual NetOffice.OfficeApi.IMsoChartGroup this[object index]
         {
             get
             {
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.IMsoChartGroup> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.IMsoChartGroup> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.IMsoChartGroup item in innerEnumerator)

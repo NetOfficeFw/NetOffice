@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861780.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860605.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.COMAddIn this[object index]
+        public virtual NetOffice.OfficeApi.COMAddIn this[object index]
         {
             get
             {
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861527.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Update()
+        public virtual void Update()
         {
             Factory.ExecuteMethod(this, "Update");
         }
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varfModal">bool varfModal</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void SetAppModal(bool varfModal)
+        public virtual void SetAppModal(bool varfModal)
         {
             Factory.ExecuteMethod(this, "SetAppModal", varfModal);
         }
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.COMAddIn> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.COMAddIn> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.COMAddIn item in innerEnumerator)

@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197307.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837143.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838637.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838461.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.QueryTable this[object index]
+		public virtual NetOffice.ExcelApi.QueryTable this[object index]
 		{
 			get
 			{
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="destination">NetOffice.ExcelApi.Range destination</param>
 		/// <param name="sql">optional object sql</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.QueryTable Add(object connection, NetOffice.ExcelApi.Range destination, object sql)
+		public virtual NetOffice.ExcelApi.QueryTable Add(object connection, NetOffice.ExcelApi.Range destination, object sql)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.QueryTable>(this, "Add", typeof(NetOffice.ExcelApi.QueryTable), connection, destination, sql);
 		}
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="destination">NetOffice.ExcelApi.Range destination</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.QueryTable Add(object connection, NetOffice.ExcelApi.Range destination)
+		public virtual NetOffice.ExcelApi.QueryTable Add(object connection, NetOffice.ExcelApi.Range destination)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.QueryTable>(this, "Add", typeof(NetOffice.ExcelApi.QueryTable), connection, destination);
 		}
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.QueryTable> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.QueryTable> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.QueryTable item in innerEnumerator)

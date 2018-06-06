@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864629.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string URL
+        public virtual string URL
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864979.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string CreatedBy
+        public virtual string CreatedBy
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864174.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public object CreatedDate
+        public virtual object CreatedDate
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864890.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string ModifiedBy
+        public virtual string ModifiedBy
         {
             get
             {
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864556.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public object ModifiedDate
+        public virtual object ModifiedDate
         {
             get
             {
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862508.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863519.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }

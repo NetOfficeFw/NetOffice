@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864691.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862828.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtNodes AllNodes
+        public virtual NetOffice.OfficeApi.SmartArtNodes AllNodes
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860244.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtNodes Nodes
+        public virtual NetOffice.OfficeApi.SmartArtNodes Nodes
         {
             get
             {
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861866.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtLayout Layout
+        public virtual NetOffice.OfficeApi.SmartArtLayout Layout
         {
             get
             {
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862785.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtQuickStyle QuickStyle
+        public virtual NetOffice.OfficeApi.SmartArtQuickStyle QuickStyle
         {
             get
             {
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862120.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtColor Color
+        public virtual NetOffice.OfficeApi.SmartArtColor Color
         {
             get
             {
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865245.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Reverse
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Reverse
         {
             get
             {
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864968.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Reset()
+        public virtual void Reset()
         {
             Factory.ExecuteMethod(this, "Reset");
         }

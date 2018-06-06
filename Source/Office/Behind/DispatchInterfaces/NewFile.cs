@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayName">optional object displayName</param>
         /// <param name="action">optional object action</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool Add(string fileName, object section, object displayName, object action)
+        public virtual bool Add(string fileName, object section, object displayName, object action)
         {
             return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName, action);
         }
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool Add(string fileName)
+        public virtual bool Add(string fileName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Add", fileName);
         }
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="section">optional object section</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool Add(string fileName, object section)
+        public virtual bool Add(string fileName, object section)
         {
             return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section);
         }
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayName">optional object displayName</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool Add(string fileName, object section, object displayName)
+        public virtual bool Add(string fileName, object section, object displayName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName);
         }
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayName">optional object displayName</param>
         /// <param name="action">optional object action</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool Remove(string fileName, object section, object displayName, object action)
+        public virtual bool Remove(string fileName, object section, object displayName, object action)
         {
             return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName, action);
         }
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool Remove(string fileName)
+        public virtual bool Remove(string fileName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Remove", fileName);
         }
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="section">optional object section</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool Remove(string fileName, object section)
+        public virtual bool Remove(string fileName, object section)
         {
             return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section);
         }
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayName">optional object displayName</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool Remove(string fileName, object section, object displayName)
+        public virtual bool Remove(string fileName, object section, object displayName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName);
         }

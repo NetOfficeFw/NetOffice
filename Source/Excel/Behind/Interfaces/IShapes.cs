@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.ExcelApi.ShapeRange get_Range(object index)
+		public virtual NetOffice.ExcelApi.ShapeRange get_Range(object index)
 		{
 			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ShapeRange>(this, "Range", typeof(NetOffice.ExcelApi.ShapeRange), index);
 		}
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), Redirect("get_Range")]
-		public NetOffice.ExcelApi.ShapeRange Range(object index)
+		public virtual NetOffice.ExcelApi.ShapeRange Range(object index)
 		{
 			return get_Range(index);
 		}
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.Shape this[object index]
+		public virtual NetOffice.ExcelApi.Shape this[object index]
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
+		public virtual NetOffice.ExcelApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCallout", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
 		}
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="endX">Single endX</param>
 		/// <param name="endY">Single endY</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
+		public virtual NetOffice.ExcelApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddConnector", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, beginX, beginY, endX, endY });
 		}
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddCurve(object safeArrayOfPoints)
+		public virtual NetOffice.ExcelApi.Shape AddCurve(object safeArrayOfPoints)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCurve", typeof(NetOffice.ExcelApi.Shape), safeArrayOfPoints);
 		}
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
+		public virtual NetOffice.ExcelApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddLabel", typeof(NetOffice.ExcelApi.Shape), new object[]{ orientation, left, top, width, height });
 		}
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="endX">Single endX</param>
 		/// <param name="endY">Single endY</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
+		public virtual NetOffice.ExcelApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddLine", typeof(NetOffice.ExcelApi.Shape), beginX, beginY, endX, endY);
 		}
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddPicture(string filename, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width, Single height)
+		public virtual NetOffice.ExcelApi.Shape AddPicture(string filename, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width, Single height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddPicture", typeof(NetOffice.ExcelApi.Shape), new object[]{ filename, linkToFile, saveWithDocument, left, top, width, height });
 		}
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddPolyline(object safeArrayOfPoints)
+		public virtual NetOffice.ExcelApi.Shape AddPolyline(object safeArrayOfPoints)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddPolyline", typeof(NetOffice.ExcelApi.Shape), safeArrayOfPoints);
 		}
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
+		public virtual NetOffice.ExcelApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddShape", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
 		}
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="left">Single left</param>
 		/// <param name="top">Single top</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
+		public virtual NetOffice.ExcelApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddTextEffect", typeof(NetOffice.ExcelApi.Shape), new object[]{ presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
 		}
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
+		public virtual NetOffice.ExcelApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddTextbox", typeof(NetOffice.ExcelApi.Shape), new object[]{ orientation, left, top, width, height });
 		}
@@ -296,7 +296,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="x1">Single x1</param>
 		/// <param name="y1">Single y1</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
+		public virtual NetOffice.ExcelApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FreeformBuilder>(this, "BuildFreeform", typeof(NetOffice.ExcelApi.FreeformBuilder), editingType, x1, y1);
 		}
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 SelectAll()
+		public virtual Int32 SelectAll()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "SelectAll");
 		}
@@ -319,7 +319,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">Int32 width</param>
 		/// <param name="height">Int32 height</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddFormControl(NetOffice.ExcelApi.Enums.XlFormControl type, Int32 left, Int32 top, Int32 width, Int32 height)
+		public virtual NetOffice.ExcelApi.Shape AddFormControl(NetOffice.ExcelApi.Enums.XlFormControl type, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddFormControl", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
 		}
@@ -339,7 +339,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height });
 		}
@@ -349,7 +349,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject()
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape));
 		}
@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="classType">optional object classType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType);
 		}
@@ -372,7 +372,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="filename">optional object filename</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename);
 		}
@@ -385,7 +385,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="link">optional object link</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename, link);
 		}
@@ -399,7 +399,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="displayAsIcon">optional object displayAsIcon</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename, link, displayAsIcon);
 		}
@@ -414,7 +414,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="iconFileName">optional object iconFileName</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName });
 		}
@@ -430,7 +430,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="iconIndex">optional object iconIndex</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex });
 		}
@@ -447,7 +447,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="iconLabel">optional object iconLabel</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel });
 		}
@@ -465,7 +465,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left });
 		}
@@ -484,7 +484,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top });
 		}
@@ -504,7 +504,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width)
+		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width });
 		}
@@ -518,7 +518,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height)
+		public virtual NetOffice.ExcelApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddDiagram", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
 		}
@@ -532,7 +532,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="height">Single height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddCanvas(Single left, Single top, Single width, Single height)
+		public virtual NetOffice.ExcelApi.Shape AddCanvas(Single left, Single top, Single width, Single height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCanvas", typeof(NetOffice.ExcelApi.Shape), left, top, width, height);
 		}
@@ -546,7 +546,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width, object height)
+		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width, object height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ xlChartType, left, top, width, height });
 		}
@@ -556,7 +556,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddChart()
+		public virtual NetOffice.ExcelApi.Shape AddChart()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape));
 		}
@@ -567,7 +567,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="xlChartType">optional object xlChartType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddChart(object xlChartType)
+		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType);
 		}
@@ -579,7 +579,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left)
+		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left);
 		}
@@ -592,7 +592,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top)
+		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left, top);
 		}
@@ -606,7 +606,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width)
+		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left, top, width);
 		}
@@ -620,7 +620,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
+		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), new object[]{ layout, left, top, width, height });
 		}
@@ -631,7 +631,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
+		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout);
 		}
@@ -643,7 +643,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left)
+		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left);
 		}
@@ -656,7 +656,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top)
+		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left, top);
 		}
@@ -670,7 +670,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width)
+		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left, top, width);
 		}
@@ -686,7 +686,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="height">optional object height</param>
 		/// <param name="newLayout">optional object newLayout</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width, object height, object newLayout)
+		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width, object height, object newLayout)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width, height, newLayout });
 		}
@@ -696,7 +696,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape AddChart2()
+		public virtual NetOffice.ExcelApi.Shape AddChart2()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape));
 		}
@@ -707,7 +707,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="style">optional object style</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape AddChart2(object style)
+		public virtual NetOffice.ExcelApi.Shape AddChart2(object style)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style);
 		}
@@ -719,7 +719,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="xlChartType">optional object xlChartType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType)
+		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType);
 		}
@@ -732,7 +732,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left)
+		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType, left);
 		}
@@ -746,7 +746,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top)
+		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType, left, top);
 		}
@@ -761,7 +761,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width)
+		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width });
 		}
@@ -777,7 +777,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="height">optional object height</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width, object height)
+		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width, object height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width, height });
 		}
@@ -804,7 +804,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Shape> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.Shape> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.Shape item in innerEnumerator)

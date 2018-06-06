@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string HelpFile
+        public virtual string HelpFile
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 HelpContextID
+        public virtual Int32 HelpContextID
         {
             get
             {
@@ -97,7 +97,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Description
+        public virtual string Description
         {
             get
             {
@@ -114,7 +114,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Enums.vbext_VBAMode Mode
+        public virtual NetOffice.VBIDEApi.Enums.vbext_VBAMode Mode
         {
             get
             {
@@ -127,7 +127,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.References References
+        public virtual NetOffice.VBIDEApi.References References
         {
             get
             {
@@ -140,7 +140,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -157,7 +157,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -170,7 +170,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBProjects Collection
+        public virtual NetOffice.VBIDEApi.VBProjects Collection
         {
             get
             {
@@ -183,7 +183,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Enums.vbext_ProjectProtection Protection
+        public virtual NetOffice.VBIDEApi.Enums.vbext_ProjectProtection Protection
         {
             get
             {
@@ -196,7 +196,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool Saved
+        public virtual bool Saved
         {
             get
             {
@@ -209,7 +209,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBComponents VBComponents
+        public virtual NetOffice.VBIDEApi.VBComponents VBComponents
         {
             get
             {

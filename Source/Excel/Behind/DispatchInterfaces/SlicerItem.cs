@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821515.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822100.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834936.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerCache Parent
+		public virtual NetOffice.ExcelApi.SlicerCache Parent
 		{
 			get
 			{
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195511.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Caption
+		public virtual string Caption
 		{
 			get
 			{
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838638.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197231.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public object SourceName
+		public virtual object SourceName
 		{
 			get
 			{
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841176.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string SourceNameStandard
+		public virtual string SourceNameStandard
 		{
 			get
 			{
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837400.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Value
+		public virtual string Value
 		{
 			get
 			{
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822747.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool Selected
+		public virtual bool Selected
 		{
 			get
 			{
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194434.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool HasData
+		public virtual bool HasData
 		{
 			get
 			{

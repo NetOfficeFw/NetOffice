@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Range Rng
+		public virtual NetOffice.ExcelApi.Range Rng
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlYesNoGuess Header
+		public virtual NetOffice.ExcelApi.Enums.XlYesNoGuess Header
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool MatchCase
+		public virtual bool MatchCase
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortOrientation Orientation
+		public virtual NetOffice.ExcelApi.Enums.XlSortOrientation Orientation
 		{
 			get
 			{
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortMethod SortMethod
+		public virtual NetOffice.ExcelApi.Enums.XlSortMethod SortMethod
 		{
 			get
 			{
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.SortFields SortFields
+		public virtual NetOffice.ExcelApi.SortFields SortFields
 		{
 			get
 			{
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="rng">NetOffice.ExcelApi.Range rng</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 SetRange(NetOffice.ExcelApi.Range rng)
+		public virtual Int32 SetRange(NetOffice.ExcelApi.Range rng)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "SetRange", rng);
 		}
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Apply()
+		public virtual Int32 Apply()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Apply");
 		}

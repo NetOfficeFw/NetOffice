@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840565.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821607.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194782.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821800.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Index
+		public virtual Int32 Index
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197618.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ScrollColumn
+		public virtual Int32 ScrollColumn
 		{
 			get
 			{
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840503.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ScrollRow
+		public virtual Int32 ScrollRow
 		{
 			get
 			{
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193038.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Range VisibleRange
+		public virtual NetOffice.ExcelApi.Range VisibleRange
 		{
 			get
 			{
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835581.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Activate()
+		public virtual bool Activate()
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Activate");
 		}
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="toRight">optional object toRight</param>
 		/// <param name="toLeft">optional object toLeft</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object LargeScroll(object down, object up, object toRight, object toLeft)
+		public virtual object LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up, toRight, toLeft);
 		}
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840364.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object LargeScroll()
+		public virtual object LargeScroll()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "LargeScroll");
 		}
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="down">optional object down</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object LargeScroll(object down)
+		public virtual object LargeScroll(object down)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down);
 		}
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="up">optional object up</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object LargeScroll(object down, object up)
+		public virtual object LargeScroll(object down, object up)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up);
 		}
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="toRight">optional object toRight</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object LargeScroll(object down, object up, object toRight)
+		public virtual object LargeScroll(object down, object up, object toRight)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up, toRight);
 		}
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="toRight">optional object toRight</param>
 		/// <param name="toLeft">optional object toLeft</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object SmallScroll(object down, object up, object toRight, object toLeft)
+		public virtual object SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up, toRight, toLeft);
 		}
@@ -264,7 +264,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839481.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object SmallScroll()
+		public virtual object SmallScroll()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "SmallScroll");
 		}
@@ -276,7 +276,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="down">optional object down</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object SmallScroll(object down)
+		public virtual object SmallScroll(object down)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down);
 		}
@@ -289,7 +289,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="up">optional object up</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object SmallScroll(object down, object up)
+		public virtual object SmallScroll(object down, object up)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up);
 		}
@@ -303,7 +303,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="toRight">optional object toRight</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object SmallScroll(object down, object up, object toRight)
+		public virtual object SmallScroll(object down, object up, object toRight)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up, toRight);
 		}
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="height">Int32 height</param>
 		/// <param name="start">optional object start</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
+		public virtual void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
 		{
 			 Factory.ExecuteMethod(this, "ScrollIntoView", new object[]{ left, top, width, height, start });
 		}
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="height">Int32 height</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height)
+		public virtual void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			 Factory.ExecuteMethod(this, "ScrollIntoView", left, top, width, height);
 		}
@@ -344,7 +344,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196622.aspx </remarks>
 		/// <param name="points">Int32 points</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 PointsToScreenPixelsX(Int32 points)
+		public virtual Int32 PointsToScreenPixelsX(Int32 points)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "PointsToScreenPixelsX", points);
 		}
@@ -355,7 +355,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841137.aspx </remarks>
 		/// <param name="points">Int32 points</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 PointsToScreenPixelsY(Int32 points)
+		public virtual Int32 PointsToScreenPixelsY(Int32 points)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "PointsToScreenPixelsY", points);
 		}

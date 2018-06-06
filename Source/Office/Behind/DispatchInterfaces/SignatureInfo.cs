@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860243.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ReadOnly
+        public virtual bool ReadOnly
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865010.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SignatureProvider
+        public virtual string SignatureProvider
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860281.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SignatureText
+        public virtual string SignatureText
         {
             get
             {
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861498.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), NativeResult]
-        public stdole.Picture SignatureImage
+        public virtual stdole.Picture SignatureImage
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860921.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SignatureComment
+        public virtual string SignatureComment
         {
             get
             {
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860572.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.ContentVerificationResults ContentVerificationResults
+        public virtual NetOffice.OfficeApi.Enums.ContentVerificationResults ContentVerificationResults
         {
             get
             {
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864945.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.CertificateVerificationResults CertificateVerificationResults
+        public virtual NetOffice.OfficeApi.Enums.CertificateVerificationResults CertificateVerificationResults
         {
             get
             {
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862453.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool IsValid
+        public virtual bool IsValid
         {
             get
             {
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860786.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool IsCertificateExpired
+        public virtual bool IsCertificateExpired
         {
             get
             {
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865218.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool IsCertificateRevoked
+        public virtual bool IsCertificateRevoked
         {
             get
             {
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864566.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool IsCertificateUntrusted
+        public virtual bool IsCertificateUntrusted
         {
             get
             {
@@ -239,7 +239,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862539.aspx </remarks>
         /// <param name="sigdet">NetOffice.OfficeApi.Enums.SignatureDetail sigdet</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object GetSignatureDetail(NetOffice.OfficeApi.Enums.SignatureDetail sigdet)
+        public virtual object GetSignatureDetail(NetOffice.OfficeApi.Enums.SignatureDetail sigdet)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetSignatureDetail", sigdet);
         }
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865451.aspx </remarks>
         /// <param name="certdet">NetOffice.OfficeApi.Enums.CertificateDetail certdet</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object GetCertificateDetail(NetOffice.OfficeApi.Enums.CertificateDetail certdet)
+        public virtual object GetCertificateDetail(NetOffice.OfficeApi.Enums.CertificateDetail certdet)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetCertificateDetail", certdet);
         }
@@ -261,7 +261,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863087.aspx </remarks>
         /// <param name="parentWindow">object parentWindow</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void ShowSignatureCertificate(object parentWindow)
+        public virtual void ShowSignatureCertificate(object parentWindow)
         {
             Factory.ExecuteMethod(this, "ShowSignatureCertificate", parentWindow);
         }
@@ -272,7 +272,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863741.aspx </remarks>
         /// <param name="parentWindow">object parentWindow</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void SelectSignatureCertificate(object parentWindow)
+        public virtual void SelectSignatureCertificate(object parentWindow)
         {
             Factory.ExecuteMethod(this, "SelectSignatureCertificate", parentWindow);
         }
@@ -283,7 +283,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863290.aspx </remarks>
         /// <param name="bstrThumbprint">string bstrThumbprint</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void SelectCertificateDetailByThumbprint(string bstrThumbprint)
+        public virtual void SelectCertificateDetailByThumbprint(string bstrThumbprint)
         {
             Factory.ExecuteMethod(this, "SelectCertificateDetailByThumbprint", bstrThumbprint);
         }

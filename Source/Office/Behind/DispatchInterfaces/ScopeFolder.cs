@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864935.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862491.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Path
+        public virtual string Path
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865008.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ScopeFolders ScopeFolders
+        public virtual NetOffice.OfficeApi.ScopeFolders ScopeFolders
         {
             get
             {
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865227.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AddToSearchFolders()
+        public virtual void AddToSearchFolders()
         {
             Factory.ExecuteMethod(this, "AddToSearchFolders");
         }

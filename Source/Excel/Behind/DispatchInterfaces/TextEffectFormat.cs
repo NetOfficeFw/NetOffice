@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839762.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193564.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTextEffectAlignment Alignment
+		public virtual NetOffice.OfficeApi.Enums.MsoTextEffectAlignment Alignment
 		{
 			get
 			{
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194553.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState FontBold
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState FontBold
 		{
 			get
 			{
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821309.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState FontItalic
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState FontItalic
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839578.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string FontName
+		public virtual string FontName
 		{
 			get
 			{
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838231.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single FontSize
+		public virtual Single FontSize
 		{
 			get
 			{
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193944.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState KernedPairs
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState KernedPairs
 		{
 			get
 			{
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195353.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState NormalizedHeight
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState NormalizedHeight
 		{
 			get
 			{
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839678.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetTextEffectShape PresetShape
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetTextEffectShape PresetShape
 		{
 			get
 			{
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194224.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect
 		{
 			get
 			{
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822812.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState RotatedChars
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState RotatedChars
 		{
 			get
 			{
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840847.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Text
+		public virtual string Text
 		{
 			get
 			{
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838180.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single Tracking
+		public virtual Single Tracking
 		{
 			get
 			{
@@ -301,7 +301,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836736.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void ToggleVerticalText()
+		public virtual void ToggleVerticalText()
 		{
 			 Factory.ExecuteMethod(this, "ToggleVerticalText");
 		}

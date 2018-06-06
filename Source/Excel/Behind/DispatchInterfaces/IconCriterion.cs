@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835010.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Index
+		public virtual Int32 Index
 		{
 			get
 			{
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838415.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
+		public virtual NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
 		{
 			get
 			{
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821367.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Value
+		public virtual object Value
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835585.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Operator
+		public virtual Int32 Operator
 		{
 			get
 			{
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838436.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlIcon Icon
+		public virtual NetOffice.ExcelApi.Enums.XlIcon Icon
 		{
 			get
 			{

@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.Enums.MsoFileType this[Int32 index]
+        public virtual NetOffice.OfficeApi.Enums.MsoFileType this[Int32 index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864990.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861726.aspx </remarks>
         /// <param name="fileType">NetOffice.OfficeApi.Enums.MsoFileType fileType</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Add(NetOffice.OfficeApi.Enums.MsoFileType fileType)
+        public virtual void Add(NetOffice.OfficeApi.Enums.MsoFileType fileType)
         {
             Factory.ExecuteMethod(this, "Add", fileType);
         }
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860597.aspx </remarks>
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Remove(Int32 index)
+        public virtual void Remove(Int32 index)
         {
             Factory.ExecuteMethod(this, "Remove", index);
         }
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.Enums.MsoFileType> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.Enums.MsoFileType> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.Enums.MsoFileType item in innerEnumerator)

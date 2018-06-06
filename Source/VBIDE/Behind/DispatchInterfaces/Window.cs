@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Windows Collection
+        public virtual NetOffice.VBIDEApi.Windows Collection
         {
             get
             {
@@ -89,7 +89,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Caption
+        public virtual string Caption
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool Visible
+        public virtual bool Visible
         {
             get
             {
@@ -119,7 +119,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Left
+        public virtual Int32 Left
         {
             get
             {
@@ -136,7 +136,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Top
+        public virtual Int32 Top
         {
             get
             {
@@ -153,7 +153,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Width
+        public virtual Int32 Width
         {
             get
             {
@@ -170,7 +170,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Height
+        public virtual Int32 Height
         {
             get
             {
@@ -187,7 +187,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Enums.vbext_WindowState WindowState
+        public virtual NetOffice.VBIDEApi.Enums.vbext_WindowState WindowState
         {
             get
             {
@@ -204,7 +204,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Enums.vbext_WindowType Type
+        public virtual NetOffice.VBIDEApi.Enums.vbext_WindowType Type
         {
             get
             {
@@ -217,7 +217,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.LinkedWindows LinkedWindows
+        public virtual NetOffice.VBIDEApi.LinkedWindows LinkedWindows
         {
             get
             {
@@ -230,7 +230,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Window LinkedWindowFrame
+        public virtual NetOffice.VBIDEApi.Window LinkedWindowFrame
         {
             get
             {
@@ -244,7 +244,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 HWnd
+        public virtual Int32 HWnd
         {
             get
             {
@@ -260,7 +260,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Close()
+        public virtual void Close()
         {
             Factory.ExecuteMethod(this, "Close");
         }
@@ -269,7 +269,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void SetFocus()
+        public virtual void SetFocus()
         {
             Factory.ExecuteMethod(this, "SetFocus");
         }
@@ -280,7 +280,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="eKind">NetOffice.VBIDEApi.Enums.vbext_WindowType eKind</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void SetKind(NetOffice.VBIDEApi.Enums.vbext_WindowType eKind)
+        public virtual void SetKind(NetOffice.VBIDEApi.Enums.vbext_WindowType eKind)
         {
             Factory.ExecuteMethod(this, "SetKind", eKind);
         }
@@ -290,7 +290,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Detach()
+        public virtual void Detach()
         {
             Factory.ExecuteMethod(this, "Detach");
         }
@@ -301,7 +301,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="lWindowHandle">Int32 lWindowHandle</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Attach(Int32 lWindowHandle)
+        public virtual void Attach(Int32 lWindowHandle)
         {
             Factory.ExecuteMethod(this, "Attach", lWindowHandle);
         }

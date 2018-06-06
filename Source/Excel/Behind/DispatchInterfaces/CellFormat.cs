@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198158.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836509.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194095.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835317.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Borders Borders
+		public virtual NetOffice.ExcelApi.Borders Borders
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195695.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Font Font
+		public virtual NetOffice.ExcelApi.Font Font
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837616.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Interior Interior
+		public virtual NetOffice.ExcelApi.Interior Interior
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820892.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object NumberFormat
+		public virtual object NumberFormat
 		{
 			get
 			{
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837569.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object NumberFormatLocal
+		public virtual object NumberFormatLocal
 		{
 			get
 			{
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834695.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object AddIndent
+		public virtual object AddIndent
 		{
 			get
 			{
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837837.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object IndentLevel
+		public virtual object IndentLevel
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196701.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object HorizontalAlignment
+		public virtual object HorizontalAlignment
 		{
 			get
 			{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839023.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object VerticalAlignment
+		public virtual object VerticalAlignment
 		{
 			get
 			{
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841224.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object Orientation
+		public virtual object Orientation
 		{
 			get
 			{
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836440.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object ShrinkToFit
+		public virtual object ShrinkToFit
 		{
 			get
 			{
@@ -306,7 +306,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836142.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object WrapText
+		public virtual object WrapText
 		{
 			get
 			{
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822593.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object Locked
+		public virtual object Locked
 		{
 			get
 			{
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821509.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object FormulaHidden
+		public virtual object FormulaHidden
 		{
 			get
 			{
@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194362.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public object MergeCells
+		public virtual object MergeCells
 		{
 			get
 			{
@@ -381,7 +381,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196018.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Clear()
+		public virtual void Clear()
 		{
 			 Factory.ExecuteMethod(this, "Clear");
 		}

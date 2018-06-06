@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.ExcelApi.ColorScaleCriterion this[object index]
+        public virtual NetOffice.ExcelApi.ColorScaleCriterion this[object index]
         {
             get
             {
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ColorScaleCriterion> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ColorScaleCriterion> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ColorScaleCriterion item in innerEnumerator)

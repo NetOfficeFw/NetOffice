@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195038.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840787.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single Brightness
+		public virtual Single Brightness
 		{
 			get
 			{
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822545.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType
+		public virtual NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType
 		{
 			get
 			{
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836497.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single Contrast
+		public virtual Single Contrast
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838027.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single CropBottom
+		public virtual Single CropBottom
 		{
 			get
 			{
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840304.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single CropLeft
+		public virtual Single CropLeft
 		{
 			get
 			{
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836787.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single CropRight
+		public virtual Single CropRight
 		{
 			get
 			{
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837812.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single CropTop
+		public virtual Single CropTop
 		{
 			get
 			{
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838789.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 TransparencyColor
+		public virtual Int32 TransparencyColor
 		{
 			get
 			{
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836760.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground
 		{
 			get
 			{
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195104.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.OfficeApi.Crop Crop
+		public virtual NetOffice.OfficeApi.Crop Crop
 		{
 			get
 			{
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197185.aspx </remarks>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void IncrementBrightness(Single increment)
+		public virtual void IncrementBrightness(Single increment)
 		{
 			 Factory.ExecuteMethod(this, "IncrementBrightness", increment);
 		}
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822515.aspx </remarks>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void IncrementContrast(Single increment)
+		public virtual void IncrementContrast(Single increment)
 		{
 			 Factory.ExecuteMethod(this, "IncrementContrast", increment);
 		}

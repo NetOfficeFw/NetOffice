@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.GradientStop this[Int32 index]
+        public virtual NetOffice.OfficeApi.GradientStop this[Int32 index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864855.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861233.aspx </remarks>
         /// <param name="index">optional Int32 Index = -1</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Delete(object index)
+        public virtual void Delete(object index)
         {
             Factory.ExecuteMethod(this, "Delete", index);
         }
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861233.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="transparency">optional Single Transparency = 0</param>
         /// <param name="index">optional Int32 Index = -1</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Insert(Int32 rGB, Single position, object transparency, object index)
+        public virtual void Insert(Int32 rGB, Single position, object transparency, object index)
         {
             Factory.ExecuteMethod(this, "Insert", rGB, position, transparency, index);
         }
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="position">Single position</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Insert(Int32 rGB, Single position)
+        public virtual void Insert(Int32 rGB, Single position)
         {
             Factory.ExecuteMethod(this, "Insert", rGB, position);
         }
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="transparency">optional Single Transparency = 0</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Insert(Int32 rGB, Single position, object transparency)
+        public virtual void Insert(Int32 rGB, Single position, object transparency)
         {
             Factory.ExecuteMethod(this, "Insert", rGB, position, transparency);
         }
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">optional Int32 Index = -1</param>
         /// <param name="brightness">optional Single Brightness = 0</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Insert2(Int32 rGB, Single position, object transparency, object index, object brightness)
+        public virtual void Insert2(Int32 rGB, Single position, object transparency, object index, object brightness)
         {
             Factory.ExecuteMethod(this, "Insert2", new object[] { rGB, position, transparency, index, brightness });
         }
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="position">Single position</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Insert2(Int32 rGB, Single position)
+        public virtual void Insert2(Int32 rGB, Single position)
         {
             Factory.ExecuteMethod(this, "Insert2", rGB, position);
         }
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="transparency">optional Single Transparency = 0</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Insert2(Int32 rGB, Single position, object transparency)
+        public virtual void Insert2(Int32 rGB, Single position, object transparency)
         {
             Factory.ExecuteMethod(this, "Insert2", rGB, position, transparency);
         }
@@ -211,7 +211,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">optional Int32 Index = -1</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Insert2(Int32 rGB, Single position, object transparency, object index)
+        public virtual void Insert2(Int32 rGB, Single position, object transparency, object index)
         {
             Factory.ExecuteMethod(this, "Insert2", rGB, position, transparency, index);
         }
@@ -238,7 +238,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.GradientStop> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.GradientStop> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.GradientStop item in innerEnumerator)

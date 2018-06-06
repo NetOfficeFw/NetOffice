@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool Saved
+        public virtual bool Saved
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3), ProxyResult]
-        public object Designer
+        public virtual object Designer
         {
             get
             {
@@ -107,7 +107,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.CodeModule CodeModule
+        public virtual NetOffice.VBIDEApi.CodeModule CodeModule
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Enums.vbext_ComponentType Type
+        public virtual NetOffice.VBIDEApi.Enums.vbext_ComponentType Type
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -146,7 +146,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBComponents Collection
+        public virtual NetOffice.VBIDEApi.VBComponents Collection
         {
             get
             {
@@ -159,7 +159,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool HasOpenDesigner
+        public virtual bool HasOpenDesigner
         {
             get
             {
@@ -172,7 +172,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Properties Properties
+        public virtual NetOffice.VBIDEApi.Properties Properties
         {
             get
             {
@@ -189,7 +189,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Export(string fileName)
+        public virtual void Export(string fileName)
         {
             Factory.ExecuteMethod(this, "Export", fileName);
         }
@@ -198,7 +198,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Window DesignerWindow()
+        public virtual NetOffice.VBIDEApi.Window DesignerWindow()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "DesignerWindow", typeof(NetOffice.VBIDEApi.Window));
         }
@@ -207,7 +207,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Activate()
+        public virtual void Activate()
         {
             Factory.ExecuteMethod(this, "Activate");
         }

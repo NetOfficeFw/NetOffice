@@ -66,7 +66,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.Window Parent
+        public virtual NetOffice.VBIDEApi.Window Parent
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -111,7 +111,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.VBIDEApi.Window this[object index]
+        public virtual NetOffice.VBIDEApi.Window this[object index]
         {
             get
             {
@@ -124,7 +124,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="window">NetOffice.VBIDEApi.Window window</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Remove(NetOffice.VBIDEApi.Window window)
+        public virtual void Remove(NetOffice.VBIDEApi.Window window)
         {
             Factory.ExecuteMethod(this, "Remove", window);
         }
@@ -134,7 +134,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="window">NetOffice.VBIDEApi.Window window</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Add(NetOffice.VBIDEApi.Window window)
+        public virtual void Add(NetOffice.VBIDEApi.Window window)
         {
             Factory.ExecuteMethod(this, "Add", window);
         }
@@ -161,7 +161,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE, 12,14,5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public IEnumerator<NetOffice.VBIDEApi.Window> GetEnumerator()
+        public virtual IEnumerator<NetOffice.VBIDEApi.Window> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.VBIDEApi.Window item in innerEnumerator)

@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoBorder Border
+        public virtual NetOffice.OfficeApi.IMsoBorder Border
         {
             get
             {
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoInterior Interior
+        public virtual NetOffice.OfficeApi.IMsoInterior Interior
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ChartFillFormat Fill
+        public virtual NetOffice.OfficeApi.ChartFillFormat Fill
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoChartFormat Format
+        public virtual NetOffice.OfficeApi.IMsoChartFormat Format
         {
             get
             {
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -157,7 +157,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Select()
+        public virtual object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
         }
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }

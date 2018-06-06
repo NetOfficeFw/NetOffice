@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195721.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197887.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835565.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839662.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool BackgroundQuery
+		public virtual bool BackgroundQuery
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841071.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object CommandText
+		public virtual object CommandText
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821297.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCmdType CommandType
+		public virtual NetOffice.ExcelApi.Enums.XlCmdType CommandType
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196100.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Connection
+		public virtual object Connection
 		{
 			get
 			{
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834630.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool EnableRefresh
+		public virtual bool EnableRefresh
 		{
 			get
 			{
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837641.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public DateTime RefreshDate
+		public virtual DateTime RefreshDate
 		{
 			get
 			{
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820965.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool Refreshing
+		public virtual bool Refreshing
 		{
 			get
 			{
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837619.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool RefreshOnFileOpen
+		public virtual bool RefreshOnFileOpen
 		{
 			get
 			{
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193797.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 RefreshPeriod
+		public virtual Int32 RefreshPeriod
 		{
 			get
 			{
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196060.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
+		public virtual NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
 		{
 			get
 			{
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837562.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool SavePassword
+		public virtual bool SavePassword
 		{
 			get
 			{
@@ -298,7 +298,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193802.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string SourceConnectionFile
+		public virtual string SourceConnectionFile
 		{
 			get
 			{
@@ -316,7 +316,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837141.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object SourceData
+		public virtual object SourceData
 		{
 			get
 			{
@@ -334,7 +334,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840864.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string SourceDataFile
+		public virtual string SourceDataFile
 		{
 			get
 			{
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822129.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCredentialsMethod ServerCredentialsMethod
+		public virtual NetOffice.ExcelApi.Enums.XlCredentialsMethod ServerCredentialsMethod
 		{
 			get
 			{
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820970.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string ServerSSOApplicationID
+		public virtual string ServerSSOApplicationID
 		{
 			get
 			{
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197501.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool AlwaysUseConnectionFile
+		public virtual bool AlwaysUseConnectionFile
 		{
 			get
 			{
@@ -409,7 +409,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835838.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void CancelRefresh()
+		public virtual void CancelRefresh()
 		{
 			 Factory.ExecuteMethod(this, "CancelRefresh");
 		}
@@ -419,7 +419,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195412.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Refresh()
+		public virtual void Refresh()
 		{
 			 Factory.ExecuteMethod(this, "Refresh");
 		}
@@ -432,7 +432,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="description">optional object description</param>
 		/// <param name="keywords">optional object keywords</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void SaveAsODC(string oDCFileName, object description, object keywords)
+		public virtual void SaveAsODC(string oDCFileName, object description, object keywords)
 		{
 			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
 		}
@@ -444,7 +444,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="oDCFileName">string oDCFileName</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void SaveAsODC(string oDCFileName)
+		public virtual void SaveAsODC(string oDCFileName)
 		{
 			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName);
 		}
@@ -457,7 +457,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="description">optional object description</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void SaveAsODC(string oDCFileName, object description)
+		public virtual void SaveAsODC(string oDCFileName, object description)
 		{
 			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
 		}

@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState BeginConnected
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState BeginConnected
         {
             get
             {
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape BeginConnectedShape
+        public virtual NetOffice.OfficeApi.Shape BeginConnectedShape
         {
             get
             {
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 BeginConnectionSite
+        public virtual Int32 BeginConnectionSite
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState EndConnected
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState EndConnected
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape EndConnectedShape
+        public virtual NetOffice.OfficeApi.Shape EndConnectedShape
         {
             get
             {
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 EndConnectionSite
+        public virtual Int32 EndConnectionSite
         {
             get
             {
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoConnectorType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoConnectorType Type
         {
             get
             {
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="connectedShape">NetOffice.OfficeApi.Shape connectedShape</param>
         /// <param name="connectionSite">Int32 connectionSite</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void BeginConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
+        public virtual void BeginConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
         {
             Factory.ExecuteMethod(this, "BeginConnect", connectedShape, connectionSite);
         }
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void BeginDisconnect()
+        public virtual void BeginDisconnect()
         {
             Factory.ExecuteMethod(this, "BeginDisconnect");
         }
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="connectedShape">NetOffice.OfficeApi.Shape connectedShape</param>
         /// <param name="connectionSite">Int32 connectionSite</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void EndConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
+        public virtual void EndConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
         {
             Factory.ExecuteMethod(this, "EndConnect", connectedShape, connectionSite);
         }
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void EndDisconnect()
+        public virtual void EndDisconnect()
         {
             Factory.ExecuteMethod(this, "EndDisconnect");
         }

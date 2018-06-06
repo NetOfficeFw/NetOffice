@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862757.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860548.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Description
+        public virtual string Description
         {
             get
             {
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863644.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
         /// <param name="results">string results</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Inspect(out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string results)
+        public virtual void Inspect(out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string results)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             status = 0;
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
         /// <param name="results">string results</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Fix(out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string results)
+        public virtual void Fix(out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string results)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             status = 0;

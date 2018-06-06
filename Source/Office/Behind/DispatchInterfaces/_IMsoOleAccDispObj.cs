@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {

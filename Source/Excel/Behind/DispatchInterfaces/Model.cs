@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227997.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228082.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj232180.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230776.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.ModelTables ModelTables
+		public virtual NetOffice.ExcelApi.ModelTables ModelTables
 		{
 			get
 			{
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231287.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.ModelRelationships ModelRelationships
+		public virtual NetOffice.ExcelApi.ModelRelationships ModelRelationships
 		{
 			get
 			{
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227372.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.WorkbookConnection DataModelConnection
+		public virtual NetOffice.ExcelApi.WorkbookConnection DataModelConnection
 		{
 			get
 			{
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228369.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227520.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public void Refresh()
+		public virtual void Refresh()
 		{
 			 Factory.ExecuteMethod(this, "Refresh");
 		}
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229365.aspx </remarks>
 		/// <param name="connectionToDataSource">NetOffice.ExcelApi.WorkbookConnection connectionToDataSource</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.WorkbookConnection AddConnection(NetOffice.ExcelApi.WorkbookConnection connectionToDataSource)
+		public virtual NetOffice.ExcelApi.WorkbookConnection AddConnection(NetOffice.ExcelApi.WorkbookConnection connectionToDataSource)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddConnection", typeof(NetOffice.ExcelApi.WorkbookConnection), connectionToDataSource);
 		}
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231610.aspx </remarks>
 		/// <param name="modelTable">object modelTable</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.WorkbookConnection CreateModelWorkbookConnection(object modelTable)
+		public virtual NetOffice.ExcelApi.WorkbookConnection CreateModelWorkbookConnection(object modelTable)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "CreateModelWorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection), modelTable);
 		}
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj232200.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public void Initialize()
+		public virtual void Initialize()
 		{
 			 Factory.ExecuteMethod(this, "Initialize");
 		}

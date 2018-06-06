@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="id">NetOffice.OfficeApi.Enums.MsoAppLanguageID id</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 get_LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
+        public virtual Int32 get_LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
         {
             return Factory.ExecuteInt32PropertyGet(this, "LanguageID", id);
         }
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863438.aspx </remarks>
         /// <param name="id">NetOffice.OfficeApi.Enums.MsoAppLanguageID id</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_LanguageID")]
-        public Int32 LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
+        public virtual Int32 LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
         {
             return get_LanguageID(id);
         }
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="lid">NetOffice.OfficeApi.Enums.MsoLanguageID lid</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool get_LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
+        public virtual bool get_LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
         {
             return Factory.ExecuteBoolPropertyGet(this, "LanguagePreferredForEditing", lid);
         }
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861143.aspx </remarks>
         /// <param name="lid">NetOffice.OfficeApi.Enums.MsoLanguageID lid</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_LanguagePreferredForEditing")]
-        public bool LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
+        public virtual bool LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
         {
             return get_LanguagePreferredForEditing(lid);
         }
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862054.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {

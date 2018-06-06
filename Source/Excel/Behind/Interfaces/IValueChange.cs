@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Order
+		public virtual Int32 Order
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool VisibleInPivotTable
+		public virtual bool VisibleInPivotTable
 		{
 			get
 			{
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.PivotCell PivotCell
+		public virtual NetOffice.ExcelApi.PivotCell PivotCell
 		{
 			get
 			{
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Tuple
+		public virtual string Tuple
 		{
 			get
 			{
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Value
+		public virtual Double Value
 		{
 			get
 			{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlAllocationValue AllocationValue
+		public virtual NetOffice.ExcelApi.Enums.XlAllocationValue AllocationValue
 		{
 			get
 			{
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlAllocationMethod AllocationMethod
+		public virtual NetOffice.ExcelApi.Enums.XlAllocationMethod AllocationMethod
 		{
 			get
 			{
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string AllocationWeightExpression
+		public virtual string AllocationWeightExpression
 		{
 			get
 			{
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}

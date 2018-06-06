@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839795.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196308.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837978.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835909.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool BackgroundQuery
+		public virtual bool BackgroundQuery
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821494.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Connection
+		public virtual object Connection
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821120.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool EnableRefresh
+		public virtual bool EnableRefresh
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837568.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Index
+		public virtual Int32 Index
 		{
 			get
 			{
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841046.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 MemoryUsed
+		public virtual Int32 MemoryUsed
 		{
 			get
 			{
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197885.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool OptimizeCache
+		public virtual bool OptimizeCache
 		{
 			get
 			{
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821590.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 RecordCount
+		public virtual Int32 RecordCount
 		{
 			get
 			{
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193617.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public DateTime RefreshDate
+		public virtual DateTime RefreshDate
 		{
 			get
 			{
@@ -236,7 +236,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837387.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string RefreshName
+		public virtual string RefreshName
 		{
 			get
 			{
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837836.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool RefreshOnFileOpen
+		public virtual bool RefreshOnFileOpen
 		{
 			get
 			{
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Sql
+		public virtual object Sql
 		{
 			get
 			{
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822632.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool SavePassword
+		public virtual bool SavePassword
 		{
 			get
 			{
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821224.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object SourceData
+		public virtual object SourceData
 		{
 			get
 			{
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193310.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CommandText
+		public virtual object CommandText
 		{
 			get
 			{
@@ -340,7 +340,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838414.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCmdType CommandType
+		public virtual NetOffice.ExcelApi.Enums.XlCmdType CommandType
 		{
 			get
 			{
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821668.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.xlQueryType QueryType
+		public virtual NetOffice.ExcelApi.Enums.xlQueryType QueryType
 		{
 			get
 			{
@@ -372,7 +372,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194956.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool MaintainConnection
+		public virtual bool MaintainConnection
 		{
 			get
 			{
@@ -390,7 +390,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821860.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 RefreshPeriod
+		public virtual Int32 RefreshPeriod
 		{
 			get
 			{
@@ -409,7 +409,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195360.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Recordset
+		public virtual object Recordset
 		{
 			get
 			{
@@ -427,7 +427,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196869.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object LocalConnection
+		public virtual object LocalConnection
 		{
 			get
 			{
@@ -445,7 +445,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839231.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool UseLocalConnection
+		public virtual bool UseLocalConnection
 		{
 			get
 			{
@@ -464,7 +464,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197241.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object ADOConnection
+		public virtual object ADOConnection
 		{
 			get
 			{
@@ -478,7 +478,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821311.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool IsConnected
+		public virtual bool IsConnected
 		{
 			get
 			{
@@ -492,7 +492,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839480.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool OLAP
+		public virtual bool OLAP
 		{
 			get
 			{
@@ -506,7 +506,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194557.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType
+		public virtual NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType
 		{
 			get
 			{
@@ -520,7 +520,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841261.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlPivotTableMissingItems MissingItemsLimit
+		public virtual NetOffice.ExcelApi.Enums.XlPivotTableMissingItems MissingItemsLimit
 		{
 			get
 			{
@@ -538,7 +538,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835261.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string SourceConnectionFile
+		public virtual string SourceConnectionFile
 		{
 			get
 			{
@@ -556,7 +556,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194706.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string SourceDataFile
+		public virtual string SourceDataFile
 		{
 			get
 			{
@@ -570,7 +570,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196426.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
+		public virtual NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
 		{
 			get
 			{
@@ -588,7 +588,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839063.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
+		public virtual NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
 		{
 			get
 			{
@@ -602,7 +602,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196434.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlPivotTableVersionList Version
+		public virtual NetOffice.ExcelApi.Enums.XlPivotTableVersionList Version
 		{
 			get
 			{
@@ -616,7 +616,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835901.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool UpgradeOnRefresh
+		public virtual bool UpgradeOnRefresh
 		{
 			get
 			{
@@ -637,7 +637,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195521.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Refresh()
+		public virtual void Refresh()
 		{
 			 Factory.ExecuteMethod(this, "Refresh");
 		}
@@ -647,7 +647,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834989.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void ResetTimer()
+		public virtual void ResetTimer()
 		{
 			 Factory.ExecuteMethod(this, "ResetTimer");
 		}
@@ -660,7 +660,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="tableName">optional object tableName</param>
 		/// <param name="readData">optional object readData</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData)
+		public virtual NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName, readData);
 		}
@@ -674,7 +674,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="readData">optional object readData</param>
 		/// <param name="defaultVersion">optional object defaultVersion</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData, object defaultVersion)
+		public virtual NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData, object defaultVersion)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName, readData, defaultVersion);
 		}
@@ -686,7 +686,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="tableDestination">object tableDestination</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination)
+		public virtual NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination);
 		}
@@ -699,7 +699,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="tableName">optional object tableName</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName)
+		public virtual NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName);
 		}
@@ -709,7 +709,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839361.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void MakeConnection()
+		public virtual void MakeConnection()
 		{
 			 Factory.ExecuteMethod(this, "MakeConnection");
 		}
@@ -722,7 +722,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="description">optional object description</param>
 		/// <param name="keywords">optional object keywords</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void SaveAsODC(string oDCFileName, object description, object keywords)
+		public virtual void SaveAsODC(string oDCFileName, object description, object keywords)
 		{
 			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
 		}
@@ -734,7 +734,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="oDCFileName">string oDCFileName</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void SaveAsODC(string oDCFileName)
+		public virtual void SaveAsODC(string oDCFileName)
 		{
 			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName);
 		}
@@ -747,7 +747,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="description">optional object description</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void SaveAsODC(string oDCFileName, object description)
+		public virtual void SaveAsODC(string oDCFileName, object description)
 		{
 			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
 		}
@@ -763,7 +763,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top, object width, object height)
+		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top, object width, object height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ chartDestination, xlChartType, left, top, width, height });
 		}
@@ -775,7 +775,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="chartDestination">object chartDestination</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination)
+		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination);
 		}
@@ -788,7 +788,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="xlChartType">optional object xlChartType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType)
+		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType);
 		}
@@ -802,7 +802,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left)
+		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType, left);
 		}
@@ -817,7 +817,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top)
+		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType, left, top);
 		}
@@ -833,7 +833,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top, object width)
+		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top, object width)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ chartDestination, xlChartType, left, top, width });
 		}

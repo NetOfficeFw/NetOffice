@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Instance is created from an already running application
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public bool FromProxyService { get; private set; }
+        public virtual bool FromProxyService { get; private set; }
 
         #endregion
 
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837373.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_NewWorkbookEventHandler NewWorkbookEvent
+        public virtual event Application_NewWorkbookEventHandler NewWorkbookEvent
         {
             add
             {
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839035.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetSelectionChangeEventHandler SheetSelectionChangeEvent
+        public virtual event Application_SheetSelectionChangeEventHandler SheetSelectionChangeEvent
         {
             add
             {
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836225.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetBeforeDoubleClickEventHandler SheetBeforeDoubleClickEvent
+        public virtual event Application_SheetBeforeDoubleClickEventHandler SheetBeforeDoubleClickEvent
         {
             add
             {
@@ -264,7 +264,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840532.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetBeforeRightClickEventHandler SheetBeforeRightClickEvent
+        public virtual event Application_SheetBeforeRightClickEventHandler SheetBeforeRightClickEvent
         {
             add
             {
@@ -287,7 +287,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193288.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetActivateEventHandler SheetActivateEvent
+        public virtual event Application_SheetActivateEventHandler SheetActivateEvent
         {
             add
             {
@@ -310,7 +310,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823120.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetDeactivateEventHandler SheetDeactivateEvent
+        public virtual event Application_SheetDeactivateEventHandler SheetDeactivateEvent
         {
             add
             {
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835607.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetCalculateEventHandler SheetCalculateEvent
+        public virtual event Application_SheetCalculateEventHandler SheetCalculateEvent
         {
             add
             {
@@ -356,7 +356,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193591.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetChangeEventHandler SheetChangeEvent
+        public virtual event Application_SheetChangeEventHandler SheetChangeEvent
         {
             add
             {
@@ -379,7 +379,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196583.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookOpenEventHandler WorkbookOpenEvent
+        public virtual event Application_WorkbookOpenEventHandler WorkbookOpenEvent
         {
             add
             {
@@ -402,7 +402,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837347.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookActivateEventHandler WorkbookActivateEvent
+        public virtual event Application_WorkbookActivateEventHandler WorkbookActivateEvent
         {
             add
             {
@@ -425,7 +425,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193560.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookDeactivateEventHandler WorkbookDeactivateEvent
+        public virtual event Application_WorkbookDeactivateEventHandler WorkbookDeactivateEvent
         {
             add
             {
@@ -448,7 +448,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836770.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookBeforeCloseEventHandler WorkbookBeforeCloseEvent
+        public virtual event Application_WorkbookBeforeCloseEventHandler WorkbookBeforeCloseEvent
         {
             add
             {
@@ -471,7 +471,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840422.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookBeforeSaveEventHandler WorkbookBeforeSaveEvent
+        public virtual event Application_WorkbookBeforeSaveEventHandler WorkbookBeforeSaveEvent
         {
             add
             {
@@ -494,7 +494,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195507.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookBeforePrintEventHandler WorkbookBeforePrintEvent
+        public virtual event Application_WorkbookBeforePrintEventHandler WorkbookBeforePrintEvent
         {
             add
             {
@@ -517,7 +517,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198367.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookNewSheetEventHandler WorkbookNewSheetEvent
+        public virtual event Application_WorkbookNewSheetEventHandler WorkbookNewSheetEvent
         {
             add
             {
@@ -540,7 +540,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836206.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookAddinInstallEventHandler WorkbookAddinInstallEvent
+        public virtual event Application_WorkbookAddinInstallEventHandler WorkbookAddinInstallEvent
         {
             add
             {
@@ -563,7 +563,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835570.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookAddinUninstallEventHandler WorkbookAddinUninstallEvent
+        public virtual event Application_WorkbookAddinUninstallEventHandler WorkbookAddinUninstallEvent
         {
             add
             {
@@ -586,7 +586,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836166.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WindowResizeEventHandler WindowResizeEvent
+        public virtual event Application_WindowResizeEventHandler WindowResizeEvent
         {
             add
             {
@@ -609,7 +609,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821328.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WindowActivateEventHandler WindowActivateEvent
+        public virtual event Application_WindowActivateEventHandler WindowActivateEvent
         {
             add
             {
@@ -632,7 +632,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822473.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
+        public virtual event Application_WindowDeactivateEventHandler WindowDeactivateEvent
         {
             add
             {
@@ -655,7 +655,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821956.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent
+        public virtual event Application_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent
         {
             add
             {
@@ -678,7 +678,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840950.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public event Application_SheetPivotTableUpdateEventHandler SheetPivotTableUpdateEvent
+        public virtual event Application_SheetPivotTableUpdateEventHandler SheetPivotTableUpdateEvent
         {
             add
             {
@@ -701,7 +701,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198029.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookPivotTableCloseConnectionEventHandler WorkbookPivotTableCloseConnectionEvent
+        public virtual event Application_WorkbookPivotTableCloseConnectionEventHandler WorkbookPivotTableCloseConnectionEvent
         {
             add
             {
@@ -724,7 +724,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821547.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public event Application_WorkbookPivotTableOpenConnectionEventHandler WorkbookPivotTableOpenConnectionEvent
+        public virtual event Application_WorkbookPivotTableOpenConnectionEventHandler WorkbookPivotTableOpenConnectionEvent
         {
             add
             {
@@ -747,7 +747,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839042.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public event Application_WorkbookSyncEventHandler WorkbookSyncEvent
+        public virtual event Application_WorkbookSyncEventHandler WorkbookSyncEvent
         {
             add
             {
@@ -770,7 +770,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196324.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public event Application_WorkbookBeforeXmlImportEventHandler WorkbookBeforeXmlImportEvent
+        public virtual event Application_WorkbookBeforeXmlImportEventHandler WorkbookBeforeXmlImportEvent
         {
             add
             {
@@ -793,7 +793,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837416.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public event Application_WorkbookAfterXmlImportEventHandler WorkbookAfterXmlImportEvent
+        public virtual event Application_WorkbookAfterXmlImportEventHandler WorkbookAfterXmlImportEvent
         {
             add
             {
@@ -816,7 +816,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195824.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public event Application_WorkbookBeforeXmlExportEventHandler WorkbookBeforeXmlExportEvent
+        public virtual event Application_WorkbookBeforeXmlExportEventHandler WorkbookBeforeXmlExportEvent
         {
             add
             {
@@ -839,7 +839,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836803.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public event Application_WorkbookAfterXmlExportEventHandler WorkbookAfterXmlExportEvent
+        public virtual event Application_WorkbookAfterXmlExportEventHandler WorkbookAfterXmlExportEvent
         {
             add
             {
@@ -862,7 +862,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839165.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public event Application_WorkbookRowsetCompleteEventHandler WorkbookRowsetCompleteEvent
+        public virtual event Application_WorkbookRowsetCompleteEventHandler WorkbookRowsetCompleteEvent
         {
             add
             {
@@ -885,7 +885,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840621.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public event Application_AfterCalculateEventHandler AfterCalculateEvent
+        public virtual event Application_AfterCalculateEventHandler AfterCalculateEvent
         {
             add
             {
@@ -908,7 +908,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193316.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_SheetPivotTableAfterValueChangeEventHandler SheetPivotTableAfterValueChangeEvent
+        public virtual event Application_SheetPivotTableAfterValueChangeEventHandler SheetPivotTableAfterValueChangeEvent
         {
             add
             {
@@ -931,7 +931,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838226.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_SheetPivotTableBeforeAllocateChangesEventHandler SheetPivotTableBeforeAllocateChangesEvent
+        public virtual event Application_SheetPivotTableBeforeAllocateChangesEventHandler SheetPivotTableBeforeAllocateChangesEvent
         {
             add
             {
@@ -954,7 +954,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838379.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_SheetPivotTableBeforeCommitChangesEventHandler SheetPivotTableBeforeCommitChangesEvent
+        public virtual event Application_SheetPivotTableBeforeCommitChangesEventHandler SheetPivotTableBeforeCommitChangesEvent
         {
             add
             {
@@ -977,7 +977,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835217.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_SheetPivotTableBeforeDiscardChangesEventHandler SheetPivotTableBeforeDiscardChangesEvent
+        public virtual event Application_SheetPivotTableBeforeDiscardChangesEventHandler SheetPivotTableBeforeDiscardChangesEvent
         {
             add
             {
@@ -1000,7 +1000,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194431.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
+        public virtual event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
         {
             add
             {
@@ -1023,7 +1023,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838239.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
+        public virtual event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
         {
             add
             {
@@ -1046,7 +1046,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821579.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
+        public virtual event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
         {
             add
             {
@@ -1069,7 +1069,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836848.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_ProtectedViewWindowResizeEventHandler ProtectedViewWindowResizeEvent
+        public virtual event Application_ProtectedViewWindowResizeEventHandler ProtectedViewWindowResizeEvent
         {
             add
             {
@@ -1092,7 +1092,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195451.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
+        public virtual event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
         {
             add
             {
@@ -1115,7 +1115,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196820.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
+        public virtual event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
         {
             add
             {
@@ -1138,7 +1138,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198184.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_WorkbookAfterSaveEventHandler WorkbookAfterSaveEvent
+        public virtual event Application_WorkbookAfterSaveEventHandler WorkbookAfterSaveEvent
         {
             add
             {
@@ -1161,7 +1161,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834985.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public event Application_WorkbookNewChartEventHandler WorkbookNewChartEvent
+        public virtual event Application_WorkbookNewChartEventHandler WorkbookNewChartEvent
         {
             add
             {
@@ -1184,7 +1184,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227506.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
-        public event Application_SheetLensGalleryRenderCompleteEventHandler SheetLensGalleryRenderCompleteEvent
+        public virtual event Application_SheetLensGalleryRenderCompleteEventHandler SheetLensGalleryRenderCompleteEvent
         {
             add
             {
@@ -1207,7 +1207,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229805.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
-        public event Application_SheetTableUpdateEventHandler SheetTableUpdateEvent
+        public virtual event Application_SheetTableUpdateEventHandler SheetTableUpdateEvent
         {
             add
             {
@@ -1230,7 +1230,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229611.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
-        public event Application_WorkbookModelChangeEventHandler WorkbookModelChangeEvent
+        public virtual event Application_WorkbookModelChangeEventHandler WorkbookModelChangeEvent
         {
             add
             {
@@ -1253,7 +1253,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/dn448391.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
-        public event Application_SheetBeforeDeleteEventHandler SheetBeforeDeleteEvent
+        public virtual event Application_SheetBeforeDeleteEventHandler SheetBeforeDeleteEvent
         {
             add
             {
@@ -1295,7 +1295,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void CreateEventBridge()
+        public virtual void CreateEventBridge()
         {
             if (false == Factory.Settings.EnableEvents)
                 return;
@@ -1317,7 +1317,7 @@ namespace NetOffice.ExcelApi.Behind
         /// The instance use currently an event listener
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
+        public virtual bool EventBridgeInitialized
         {
             get
             {
@@ -1330,7 +1330,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()
+        public virtual bool HasEventRecipients()
         {
             return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
@@ -1341,7 +1341,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="eventName">name of the event</param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
+        public virtual bool HasEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
@@ -1350,7 +1350,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Target methods from its actual event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
+        public virtual Delegate[] GetEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
@@ -1359,7 +1359,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Returns the current count of event recipients
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
+        public virtual int GetCountOfEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
@@ -1371,7 +1371,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+        public virtual int RaiseCustomEvent(string eventName, ref object[] paramsArray)
         {
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
         }
@@ -1380,7 +1380,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
+        public virtual void DisposeEventBridge()
         {
             if (null != _appEvents_SinkHelper)
             {

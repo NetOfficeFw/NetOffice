@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822525.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839643.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840047.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839033.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Priority
+		public virtual Int32 Priority
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839646.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool StopIfTrue
+		public virtual bool StopIfTrue
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822468.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Range AppliesTo
+		public virtual NetOffice.ExcelApi.Range AppliesTo
 		{
 			get
 			{
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197309.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlDupeUnique DupeUnique
+		public virtual NetOffice.ExcelApi.Enums.XlDupeUnique DupeUnique
 		{
 			get
 			{
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196127.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Interior Interior
+		public virtual NetOffice.ExcelApi.Interior Interior
 		{
 			get
 			{
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836847.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Borders Borders
+		public virtual NetOffice.ExcelApi.Borders Borders
 		{
 			get
 			{
@@ -204,7 +204,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841225.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Font Font
+		public virtual NetOffice.ExcelApi.Font Font
 		{
 			get
 			{
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197288.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Type
+		public virtual Int32 Type
 		{
 			get
 			{
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196399.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object NumberFormat
+		public virtual object NumberFormat
 		{
 			get
 			{
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840680.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool PTCondition
+		public virtual bool PTCondition
 		{
 			get
 			{
@@ -264,7 +264,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837101.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlPivotConditionScope ScopeType
+		public virtual NetOffice.ExcelApi.Enums.XlPivotConditionScope ScopeType
 		{
 			get
 			{
@@ -285,7 +285,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821977.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void SetFirstPriority()
+		public virtual void SetFirstPriority()
 		{
 			 Factory.ExecuteMethod(this, "SetFirstPriority");
 		}
@@ -295,7 +295,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836833.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void SetLastPriority()
+		public virtual void SetLastPriority()
 		{
 			 Factory.ExecuteMethod(this, "SetLastPriority");
 		}
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193669.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -316,7 +316,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839218.aspx </remarks>
 		/// <param name="range">NetOffice.ExcelApi.Range range</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
+		public virtual void ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
 		{
 			 Factory.ExecuteMethod(this, "ModifyAppliesToRange", range);
 		}

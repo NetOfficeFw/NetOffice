@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860260.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Number
+        public virtual Int32 Number
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863277.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single Spacing
+        public virtual Single Spacing
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864646.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTextDirection TextDirection
+        public virtual NetOffice.OfficeApi.Enums.MsoTextDirection TextDirection
         {
             get
             {

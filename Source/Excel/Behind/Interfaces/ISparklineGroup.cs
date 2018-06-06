@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.Sparkline this[object index]
+		public virtual NetOffice.ExcelApi.Sparkline this[object index]
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Range Location
+		public virtual NetOffice.ExcelApi.Range Location
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string SourceData
+		public virtual string SourceData
 		{
 			get
 			{
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string DateRange
+		public virtual string DateRange
 		{
 			get
 			{
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSparkType Type
+		public virtual NetOffice.ExcelApi.Enums.XlSparkType Type
 		{
 			get
 			{
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.FormatColor SeriesColor
+		public virtual NetOffice.ExcelApi.FormatColor SeriesColor
 		{
 			get
 			{
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SparkPoints Points
+		public virtual NetOffice.ExcelApi.SparkPoints Points
 		{
 			get
 			{
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SparkAxes Axes
+		public virtual NetOffice.ExcelApi.SparkAxes Axes
 		{
 			get
 			{
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
+		public virtual NetOffice.ExcelApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
 		{
 			get
 			{
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool DisplayHidden
+		public virtual bool DisplayHidden
 		{
 			get
 			{
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public object LineWeight
+		public virtual object LineWeight
 		{
 			get
 			{
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSparklineRowCol PlotBy
+		public virtual NetOffice.ExcelApi.Enums.XlSparklineRowCol PlotBy
 		{
 			get
 			{
@@ -312,7 +312,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="location">NetOffice.ExcelApi.Range location</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 ModifyLocation(NetOffice.ExcelApi.Range location)
+		public virtual Int32 ModifyLocation(NetOffice.ExcelApi.Range location)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ModifyLocation", location);
 		}
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="sourceData">string sourceData</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 ModifySourceData(string sourceData)
+		public virtual Int32 ModifySourceData(string sourceData)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ModifySourceData", sourceData);
 		}
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="location">NetOffice.ExcelApi.Range location</param>
 		/// <param name="sourceData">string sourceData</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Modify(NetOffice.ExcelApi.Range location, string sourceData)
+		public virtual Int32 Modify(NetOffice.ExcelApi.Range location, string sourceData)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Modify", location, sourceData);
 		}
@@ -343,7 +343,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="dateRange">string dateRange</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 ModifyDateRange(string dateRange)
+		public virtual Int32 ModifyDateRange(string dateRange)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ModifyDateRange", dateRange);
 		}
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
@@ -379,7 +379,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 14,15,16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Sparkline> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.Sparkline> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.Sparkline item in innerEnumerator)

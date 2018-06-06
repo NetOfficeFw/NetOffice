@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoHTMLProjectState State
+        public virtual NetOffice.OfficeApi.Enums.MsoHTMLProjectState State
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.HTMLProjectItems HTMLProjectItems
+        public virtual NetOffice.OfficeApi.HTMLProjectItems HTMLProjectItems
         {
             get
             {
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="refresh">optional bool Refresh = true</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void RefreshProject(object refresh)
+        public virtual void RefreshProject(object refresh)
         {
             Factory.ExecuteMethod(this, "RefreshProject", refresh);
         }
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void RefreshProject()
+        public virtual void RefreshProject()
         {
             Factory.ExecuteMethod(this, "RefreshProject");
         }
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="refresh">optional bool Refresh = true</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void RefreshDocument(object refresh)
+        public virtual void RefreshDocument(object refresh)
         {
             Factory.ExecuteMethod(this, "RefreshDocument", refresh);
         }
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void RefreshDocument()
+        public virtual void RefreshDocument()
         {
             Factory.ExecuteMethod(this, "RefreshDocument");
         }
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="openKind">optional NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen OpenKind = 0</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Open(object openKind)
+        public virtual void Open(object openKind)
         {
             Factory.ExecuteMethod(this, "Open", openKind);
         }
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Open()
+        public virtual void Open()
         {
             Factory.ExecuteMethod(this, "Open");
         }

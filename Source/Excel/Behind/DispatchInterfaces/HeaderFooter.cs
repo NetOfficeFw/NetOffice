@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197191.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string Text
+		public virtual string Text
 		{
 			get
 			{
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820839.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Graphic Picture
+		public virtual NetOffice.ExcelApi.Graphic Picture
 		{
 			get
 			{

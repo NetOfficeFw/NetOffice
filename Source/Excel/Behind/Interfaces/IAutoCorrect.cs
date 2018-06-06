@@ -32,7 +32,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_ReplacementList(object index)
+        public virtual object get_ReplacementList(object index)
         {
             return Factory.ExecuteVariantPropertyGet(this, "ReplacementList", index);
         }
@@ -45,7 +45,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="value">optional object value</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_ReplacementList(object index, object value)
+        public virtual void set_ReplacementList(object index, object value)
         {
             Factory.ExecutePropertySet(this, "ReplacementList", index, value);
         }
@@ -56,7 +56,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_ReplacementList")]
-        public object ReplacementList(object index)
+        public virtual object ReplacementList(object index)
         {
             return get_ReplacementList(index);
         }
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool CapitalizeNamesOfDays
+        public virtual bool CapitalizeNamesOfDays
         {
             get
             {
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ReplacementList
+        public virtual object ReplacementList
         {
             get
             {
@@ -199,7 +199,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool ReplaceText
+        public virtual bool ReplaceText
         {
             get
             {
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TwoInitialCapitals
+        public virtual bool TwoInitialCapitals
         {
             get
             {
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool CorrectSentenceCap
+        public virtual bool CorrectSentenceCap
         {
             get
             {
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool CorrectCapsLock
+        public virtual bool CorrectCapsLock
         {
             get
             {
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool DisplayAutoCorrectOptions
+        public virtual bool DisplayAutoCorrectOptions
         {
             get
             {
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool AutoExpandListRange
+        public virtual bool AutoExpandListRange
         {
             get
             {
@@ -301,7 +301,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool AutoFillFormulasInLists
+        public virtual bool AutoFillFormulasInLists
         {
             get
             {
@@ -323,7 +323,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="what">string what</param>
         /// <param name="replacement">string replacement</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AddReplacement(string what, string replacement)
+        public virtual object AddReplacement(string what, string replacement)
         {
             return Factory.ExecuteVariantMethodGet(this, "AddReplacement", what, replacement);
         }
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="what">string what</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DeleteReplacement(string what)
+        public virtual object DeleteReplacement(string what)
         {
             return Factory.ExecuteVariantMethodGet(this, "DeleteReplacement", what);
         }

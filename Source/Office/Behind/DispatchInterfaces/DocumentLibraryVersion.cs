@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861205.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public object Modified
+        public virtual object Modified
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861164.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public Int32 Index
+        public virtual Int32 Index
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860896.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860286.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string ModifiedBy
+        public virtual string ModifiedBy
         {
             get
             {
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864654.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string Comments
+        public virtual string Comments
         {
             get
             {
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861372.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863692.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public object Open()
+        public virtual object Open()
         {
             return Factory.ExecuteVariantMethodGet(this, "Open");
         }
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860729.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public object Restore()
+        public virtual object Restore()
         {
             return Factory.ExecuteVariantMethodGet(this, "Restore");
         }

@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj232129.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230560.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230727.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227813.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotCell PivotCell
+		public virtual NetOffice.ExcelApi.PivotCell PivotCell
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229026.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public object Value
+		public virtual object Value
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231830.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Actions ServerActions
+		public virtual NetOffice.ExcelApi.Actions ServerActions
 		{
 			get
 			{
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227787.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public void ShowDetail()
+		public virtual void ShowDetail()
 		{
 			 Factory.ExecuteMethod(this, "ShowDetail");
 		}

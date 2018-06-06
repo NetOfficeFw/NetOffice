@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public string SourceName
+        public virtual string SourceName
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelTableColumns ModelTableColumns
+        public virtual NetOffice.ExcelApi.ModelTableColumns ModelTableColumns
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.WorkbookConnection SourceWorkbookConnection
+        public virtual NetOffice.ExcelApi.WorkbookConnection SourceWorkbookConnection
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public DateTime LastRefresh
+        public virtual DateTime LastRefresh
         {
             get
             {
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public Int32 RecordCount
+        public virtual Int32 RecordCount
         {
             get
             {
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 15,16
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public Int32 Refresh()
+        public virtual Int32 Refresh()
         {
             return Factory.ExecuteInt32MethodGet(this, "Refresh");
         }

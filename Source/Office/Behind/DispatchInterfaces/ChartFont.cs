@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Background
+        public virtual object Background
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Bold
+        public virtual object Bold
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Color
+        public virtual object Color
         {
             get
             {
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ColorIndex
+        public virtual object ColorIndex
         {
             get
             {
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object FontStyle
+        public virtual object FontStyle
         {
             get
             {
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Italic
+        public virtual object Italic
         {
             get
             {
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Name
+        public virtual object Name
         {
             get
             {
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object OutlineFont
+        public virtual object OutlineFont
         {
             get
             {
@@ -200,7 +200,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Shadow
+        public virtual object Shadow
         {
             get
             {
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Size
+        public virtual object Size
         {
             get
             {
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object StrikeThrough
+        public virtual object StrikeThrough
         {
             get
             {
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Subscript
+        public virtual object Subscript
         {
             get
             {
@@ -268,7 +268,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Superscript
+        public virtual object Superscript
         {
             get
             {
@@ -285,7 +285,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Underline
+        public virtual object Underline
         {
             get
             {
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -316,7 +316,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -330,7 +330,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {

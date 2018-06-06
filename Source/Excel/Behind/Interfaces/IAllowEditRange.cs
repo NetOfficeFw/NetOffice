@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public string Title
+        public virtual string Title
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Range
+        public virtual NetOffice.ExcelApi.Range Range
         {
             get
             {
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.UserAccessList Users
+        public virtual NetOffice.ExcelApi.UserAccessList Users
         {
             get
             {
@@ -114,7 +114,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="password">string password</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 ChangePassword(string password)
+        public virtual Int32 ChangePassword(string password)
         {
             return Factory.ExecuteInt32MethodGet(this, "ChangePassword", password);
         }
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="password">optional object password</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Unprotect(object password)
+        public virtual Int32 Unprotect(object password)
         {
             return Factory.ExecuteInt32MethodGet(this, "Unprotect", password);
         }
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Unprotect()
+        public virtual Int32 Unprotect()
         {
             return Factory.ExecuteInt32MethodGet(this, "Unprotect");
         }

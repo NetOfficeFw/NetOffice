@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864954.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863842.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single Position
+        public virtual Single Position
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863120.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTabStopType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoTabStopType Type
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860567.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Clear()
+        public virtual void Clear()
         {
             Factory.ExecuteMethod(this, "Clear");
         }

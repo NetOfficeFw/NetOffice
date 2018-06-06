@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTextEffectAlignment Alignment
+        public virtual NetOffice.OfficeApi.Enums.MsoTextEffectAlignment Alignment
         {
             get
             {
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState FontBold
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState FontBold
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState FontItalic
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState FontItalic
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string FontName
+        public virtual string FontName
         {
             get
             {
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single FontSize
+        public virtual Single FontSize
         {
             get
             {
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState KernedPairs
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState KernedPairs
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState NormalizedHeight
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState NormalizedHeight
         {
             get
             {
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetTextEffectShape PresetShape
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetTextEffectShape PresetShape
         {
             get
             {
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect
         {
             get
             {
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState RotatedChars
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState RotatedChars
         {
             get
             {
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text
+        public virtual string Text
         {
             get
             {
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Tracking
+        public virtual Single Tracking
         {
             get
             {
@@ -286,7 +286,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void ToggleVerticalText()
+        public virtual void ToggleVerticalText()
         {
             Factory.ExecuteMethod(this, "ToggleVerticalText");
         }

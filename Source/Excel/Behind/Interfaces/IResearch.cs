@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="useSelection">optional object useSelection</param>
 		/// <param name="launchQuery">optional object launchQuery</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
+		public virtual object Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Query", new object[]{ serviceID, queryString, queryLanguage, useSelection, launchQuery });
 		}
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="serviceID">string serviceID</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Query(string serviceID)
+		public virtual object Query(string serviceID)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Query", serviceID);
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="queryString">optional object queryString</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Query(string serviceID, object queryString)
+		public virtual object Query(string serviceID, object queryString)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString);
 		}
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="queryLanguage">optional object queryLanguage</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Query(string serviceID, object queryString, object queryLanguage)
+		public virtual object Query(string serviceID, object queryString, object queryLanguage)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString, queryLanguage);
 		}
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="useSelection">optional object useSelection</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Query(string serviceID, object queryString, object queryLanguage, object useSelection)
+		public virtual object Query(string serviceID, object queryString, object queryLanguage, object useSelection)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString, queryLanguage, useSelection);
 		}
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="serviceID">string serviceID</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool IsResearchService(string serviceID)
+		public virtual bool IsResearchService(string serviceID)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "IsResearchService", serviceID);
 		}
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="languageFrom">Int32 languageFrom</param>
 		/// <param name="languageTo">Int32 languageTo</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object SetLanguagePair(Int32 languageFrom, Int32 languageTo)
+		public virtual object SetLanguagePair(Int32 languageFrom, Int32 languageTo)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "SetLanguagePair", languageFrom, languageTo);
 		}

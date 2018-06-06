@@ -64,7 +64,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBComponent Parent
+        public virtual NetOffice.VBIDEApi.VBComponent Parent
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -110,7 +110,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="count">Int32 count</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_Lines(Int32 startLine, Int32 count)
+        public virtual string get_Lines(Int32 startLine, Int32 count)
         {
             return Factory.ExecuteStringPropertyGet(this, "Lines", startLine, count);
         }
@@ -122,7 +122,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="startLine">Int32 startLine</param>
         /// <param name="count">Int32 count</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_Lines")]
-        public string Lines(Int32 startLine, Int32 count)
+        public virtual string Lines(Int32 startLine, Int32 count)
         {
             return get_Lines(startLine, count);
         }
@@ -132,7 +132,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 CountOfLines
+        public virtual Int32 CountOfLines
         {
             get
             {
@@ -148,7 +148,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 get_ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
+        public virtual Int32 get_ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
             return Factory.ExecuteInt32PropertyGet(this, "ProcStartLine", procName, procKind);
         }
@@ -160,7 +160,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="procName">string procName</param>
         /// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_ProcStartLine")]
-        public Int32 ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
+        public virtual Int32 ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
             return get_ProcStartLine(procName, procKind);
         }
@@ -173,7 +173,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 get_ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
+        public virtual Int32 get_ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
             return Factory.ExecuteInt32PropertyGet(this, "ProcCountLines", procName, procKind);
         }
@@ -185,7 +185,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="procName">string procName</param>
         /// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_ProcCountLines")]
-        public Int32 ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
+        public virtual Int32 ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
             return get_ProcCountLines(procName, procKind);
         }
@@ -198,7 +198,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 get_ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
+        public virtual Int32 get_ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
             return Factory.ExecuteInt32PropertyGet(this, "ProcBodyLine", procName, procKind);
         }
@@ -210,7 +210,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="procName">string procName</param>
         /// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_ProcBodyLine")]
-        public Int32 ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
+        public virtual Int32 ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
             return get_ProcBodyLine(procName, procKind);
         }
@@ -223,7 +223,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_ProcOfLine(Int32 line, out NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
+        public virtual string get_ProcOfLine(Int32 line, out NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
             procKind = 0;
@@ -240,7 +240,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="line">Int32 line</param>
         /// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_ProcOfLine")]
-        public string ProcOfLine(Int32 line, out NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
+        public virtual string ProcOfLine(Int32 line, out NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
             return get_ProcOfLine(line, out procKind);
         }
@@ -250,7 +250,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 CountOfDeclarationLines
+        public virtual Int32 CountOfDeclarationLines
         {
             get
             {
@@ -263,7 +263,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.CodePane CodePane
+        public virtual NetOffice.VBIDEApi.CodePane CodePane
         {
             get
             {
@@ -280,7 +280,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="_string">string string</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void AddFromString(string _string)
+        public virtual void AddFromString(string _string)
         {
             Factory.ExecuteMethod(this, "AddFromString", _string);
         }
@@ -290,7 +290,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void AddFromFile(string fileName)
+        public virtual void AddFromFile(string fileName)
         {
             Factory.ExecuteMethod(this, "AddFromFile", fileName);
         }
@@ -301,7 +301,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="line">Int32 line</param>
         /// <param name="_string">string string</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void InsertLines(Int32 line, string _string)
+        public virtual void InsertLines(Int32 line, string _string)
         {
             Factory.ExecuteMethod(this, "InsertLines", line, _string);
         }
@@ -312,7 +312,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="startLine">Int32 startLine</param>
         /// <param name="count">optional Int32 Count = 1</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void DeleteLines(Int32 startLine, object count)
+        public virtual void DeleteLines(Int32 startLine, object count)
         {
             Factory.ExecuteMethod(this, "DeleteLines", startLine, count);
         }
@@ -323,7 +323,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="startLine">Int32 startLine</param>
         [CustomMethod]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void DeleteLines(Int32 startLine)
+        public virtual void DeleteLines(Int32 startLine)
         {
             Factory.ExecuteMethod(this, "DeleteLines", startLine);
         }
@@ -334,7 +334,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="line">Int32 line</param>
         /// <param name="_string">string string</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void ReplaceLine(Int32 line, string _string)
+        public virtual void ReplaceLine(Int32 line, string _string)
         {
             Factory.ExecuteMethod(this, "ReplaceLine", line, _string);
         }
@@ -345,7 +345,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="eventName">string eventName</param>
         /// <param name="objectName">string objectName</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 CreateEventProc(string eventName, string objectName)
+        public virtual Int32 CreateEventProc(string eventName, string objectName)
         {
             return Factory.ExecuteInt32MethodGet(this, "CreateEventProc", eventName, objectName);
         }
@@ -362,7 +362,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="matchCase">optional bool MatchCase = false</param>
         /// <param name="patternSearch">optional bool PatternSearch = false</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase, object patternSearch)
+        public virtual bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase, object patternSearch)
         {
             return Factory.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch });
         }
@@ -377,7 +377,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="endColumn">Int32 endColumn</param>
         [CustomMethod]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
+        public virtual bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
         {
             return Factory.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn });
         }
@@ -393,7 +393,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="wholeWord">optional bool WholeWord = false</param>
         [CustomMethod]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord)
+        public virtual bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord)
         {
             return Factory.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord });
         }
@@ -410,7 +410,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="matchCase">optional bool MatchCase = false</param>
         [CustomMethod]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase)
+        public virtual bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase)
         {
             return Factory.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase });
         }

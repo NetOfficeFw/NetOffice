@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.PolicyItem this[object index]
+        public virtual NetOffice.OfficeApi.PolicyItem this[object index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863832.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Id
+        public virtual string Id
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863467.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864618.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Description
+        public virtual string Description
         {
             get
             {
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862734.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Statement
+        public virtual string Statement
         {
             get
             {
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863781.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863445.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool BlockPreview
+        public virtual bool BlockPreview
         {
             get
             {
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864621.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [CustomEnumerator]
-        public IEnumerator<NetOffice.OfficeApi.PolicyItem> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.PolicyItem> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.PolicyItem item in innerEnumerator)

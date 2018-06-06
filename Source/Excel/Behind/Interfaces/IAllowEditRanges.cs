@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.ExcelApi.AllowEditRange this[object index]
+        public virtual NetOffice.ExcelApi.AllowEditRange this[object index]
         {
             get
             {
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="range">NetOffice.ExcelApi.Range range</param>
         /// <param name="password">optional object password</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range, object password)
+        public virtual NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range, object password)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AllowEditRange>(this, "Add", typeof(NetOffice.ExcelApi.AllowEditRange), title, range, password);
         }
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="range">NetOffice.ExcelApi.Range range</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range)
+        public virtual NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AllowEditRange>(this, "Add", typeof(NetOffice.ExcelApi.AllowEditRange), title, range);
         }
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.AllowEditRange> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.AllowEditRange> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.AllowEditRange item in innerEnumerator)

@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="ctrl">NetOffice.OfficeApi.CommandBarButton ctrl</param>
         /// <param name="cancelDefault">bool cancelDefault</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Click(NetOffice.OfficeApi.CommandBarButton ctrl, bool cancelDefault)
+        public virtual void Click(NetOffice.OfficeApi.CommandBarButton ctrl, bool cancelDefault)
         {
             Factory.ExecuteMethod(this, "Click", ctrl, cancelDefault);
         }

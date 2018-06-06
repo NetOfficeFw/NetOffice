@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197154.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840374.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839797.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194167.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.SlicerCache this[object index]
+		public virtual NetOffice.ExcelApi.SlicerCache this[object index]
 		{
 			get
 			{
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sourceField">object sourceField</param>
 		/// <param name="name">optional object name</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name)
+		public virtual NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name);
 		}
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="name">optional object name</param>
 		/// <param name="slicerCacheType">optional object slicerCacheType</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name, object slicerCacheType)
+		public virtual NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name, object slicerCacheType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name, slicerCacheType);
 		}
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sourceField">object sourceField</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField)
+		public virtual NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField);
 		}
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="name">optional object name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.SlicerCache _Add(object source, object sourceField, object name)
+		public virtual NetOffice.ExcelApi.SlicerCache _Add(object source, object sourceField, object name)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "_Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name);
 		}
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.SlicerCache _Add(object source, object sourceField)
+		public virtual NetOffice.ExcelApi.SlicerCache _Add(object source, object sourceField)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "_Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField);
 		}
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 14,15,16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.SlicerCache> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.SlicerCache> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.SlicerCache item in innerEnumerator)

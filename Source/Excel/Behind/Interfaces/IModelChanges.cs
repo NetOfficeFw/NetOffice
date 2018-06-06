@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelTableNames TablesAdded
+        public virtual NetOffice.ExcelApi.ModelTableNames TablesAdded
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelTableNames TablesDeleted
+        public virtual NetOffice.ExcelApi.ModelTableNames TablesDeleted
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelTableNames TablesModified
+        public virtual NetOffice.ExcelApi.ModelTableNames TablesModified
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelTableNameChanges TableNamesChanged
+        public virtual NetOffice.ExcelApi.ModelTableNameChanges TableNamesChanged
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public bool RelationshipChange
+        public virtual bool RelationshipChange
         {
             get
             {
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelColumnNames ColumnsAdded
+        public virtual NetOffice.ExcelApi.ModelColumnNames ColumnsAdded
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelColumnNames ColumnsDeleted
+        public virtual NetOffice.ExcelApi.ModelColumnNames ColumnsDeleted
         {
             get
             {
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelColumnChanges ColumnsChanged
+        public virtual NetOffice.ExcelApi.ModelColumnChanges ColumnsChanged
         {
             get
             {
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.ModelMeasureNames MeasuresAdded
+        public virtual NetOffice.ExcelApi.ModelMeasureNames MeasuresAdded
         {
             get
             {
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public bool UnknownChange
+        public virtual bool UnknownChange
         {
             get
             {
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlModelChangeSource Source
+        public virtual NetOffice.ExcelApi.Enums.XlModelChangeSource Source
         {
             get
             {

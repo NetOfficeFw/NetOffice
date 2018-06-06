@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 AlertStyle
+		public virtual Int32 AlertStyle
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool IgnoreBlank
+		public virtual bool IgnoreBlank
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 IMEMode
+		public virtual Int32 IMEMode
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool InCellDropdown
+		public virtual bool InCellDropdown
 		{
 			get
 			{
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string ErrorMessage
+		public virtual string ErrorMessage
 		{
 			get
 			{
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string ErrorTitle
+		public virtual string ErrorTitle
 		{
 			get
 			{
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string InputMessage
+		public virtual string InputMessage
 		{
 			get
 			{
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string InputTitle
+		public virtual string InputTitle
 		{
 			get
 			{
@@ -235,7 +235,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Formula1
+		public virtual string Formula1
 		{
 			get
 			{
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Formula2
+		public virtual string Formula2
 		{
 			get
 			{
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Operator
+		public virtual Int32 Operator
 		{
 			get
 			{
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool ShowError
+		public virtual bool ShowError
 		{
 			get
 			{
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool ShowInput
+		public virtual bool ShowInput
 		{
 			get
 			{
@@ -308,7 +308,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Type
+		public virtual Int32 Type
 		{
 			get
 			{
@@ -321,7 +321,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Value
+		public virtual bool Value
 		{
 			get
 			{
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="formula1">optional object formula1</param>
 		/// <param name="formula2">optional object formula2</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1, object formula2)
+		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1, object formula2)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Add", new object[]{ type, alertStyle, _operator, formula1, formula2 });
 		}
@@ -353,7 +353,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlDVType type</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type)
+		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Add", type);
 		}
@@ -365,7 +365,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="alertStyle">optional object alertStyle</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle)
+		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Add", type, alertStyle);
 		}
@@ -378,7 +378,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="_operator">optional object operator</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator)
+		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Add", type, alertStyle, _operator);
 		}
@@ -392,7 +392,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="formula1">optional object formula1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1)
+		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Add", type, alertStyle, _operator, formula1);
 		}
@@ -401,7 +401,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
@@ -415,7 +415,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="formula1">optional object formula1</param>
 		/// <param name="formula2">optional object formula2</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Modify(object type, object alertStyle, object _operator, object formula1, object formula2)
+		public virtual Int32 Modify(object type, object alertStyle, object _operator, object formula1, object formula2)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Modify", new object[]{ type, alertStyle, _operator, formula1, formula2 });
 		}
@@ -425,7 +425,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Modify()
+		public virtual Int32 Modify()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Modify");
 		}
@@ -436,7 +436,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="type">optional object type</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Modify(object type)
+		public virtual Int32 Modify(object type)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Modify", type);
 		}
@@ -448,7 +448,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="alertStyle">optional object alertStyle</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Modify(object type, object alertStyle)
+		public virtual Int32 Modify(object type, object alertStyle)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Modify", type, alertStyle);
 		}
@@ -461,7 +461,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="_operator">optional object operator</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Modify(object type, object alertStyle, object _operator)
+		public virtual Int32 Modify(object type, object alertStyle, object _operator)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Modify", type, alertStyle, _operator);
 		}
@@ -475,7 +475,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="formula1">optional object formula1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Modify(object type, object alertStyle, object _operator, object formula1)
+		public virtual Int32 Modify(object type, object alertStyle, object _operator, object formula1)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Modify", type, alertStyle, _operator, formula1);
 		}

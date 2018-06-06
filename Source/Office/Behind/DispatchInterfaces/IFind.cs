@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string SearchPath
+        public virtual string SearchPath
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool SubDir
+        public virtual bool SubDir
         {
             get
             {
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Title
+        public virtual string Title
         {
             get
             {
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Author
+        public virtual string Author
         {
             get
             {
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Keywords
+        public virtual string Keywords
         {
             get
             {
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Subject
+        public virtual string Subject
         {
             get
             {
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoFileFindOptions Options
+        public virtual NetOffice.OfficeApi.Enums.MsoFileFindOptions Options
         {
             get
             {
@@ -200,7 +200,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool MatchCase
+        public virtual bool MatchCase
         {
             get
             {
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text
+        public virtual string Text
         {
             get
             {
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool PatternMatch
+        public virtual bool PatternMatch
         {
             get
             {
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object DateSavedFrom
+        public virtual object DateSavedFrom
         {
             get
             {
@@ -268,7 +268,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object DateSavedTo
+        public virtual object DateSavedTo
         {
             get
             {
@@ -285,7 +285,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string SavedBy
+        public virtual string SavedBy
         {
             get
             {
@@ -302,7 +302,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object DateCreatedFrom
+        public virtual object DateCreatedFrom
         {
             get
             {
@@ -319,7 +319,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object DateCreatedTo
+        public virtual object DateCreatedTo
         {
             get
             {
@@ -336,7 +336,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoFileFindView View
+        public virtual NetOffice.OfficeApi.Enums.MsoFileFindView View
         {
             get
             {
@@ -353,7 +353,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoFileFindSortBy SortBy
+        public virtual NetOffice.OfficeApi.Enums.MsoFileFindSortBy SortBy
         {
             get
             {
@@ -370,7 +370,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoFileFindListBy ListBy
+        public virtual NetOffice.OfficeApi.Enums.MsoFileFindListBy ListBy
         {
             get
             {
@@ -387,7 +387,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 SelectedFile
+        public virtual Int32 SelectedFile
         {
             get
             {
@@ -404,7 +404,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IFoundFiles Results
+        public virtual NetOffice.OfficeApi.IFoundFiles Results
         {
             get
             {
@@ -417,7 +417,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 FileType
+        public virtual Int32 FileType
         {
             get
             {
@@ -437,7 +437,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Show()
+        public virtual Int32 Show()
         {
             return Factory.ExecuteInt32MethodGet(this, "Show");
         }
@@ -446,7 +446,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Execute()
+        public virtual void Execute()
         {
             Factory.ExecuteMethod(this, "Execute");
         }
@@ -456,7 +456,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrQueryName">string bstrQueryName</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Load(string bstrQueryName)
+        public virtual void Load(string bstrQueryName)
         {
             Factory.ExecuteMethod(this, "Load", bstrQueryName);
         }
@@ -466,7 +466,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrQueryName">string bstrQueryName</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Save(string bstrQueryName)
+        public virtual void Save(string bstrQueryName)
         {
             Factory.ExecuteMethod(this, "Save", bstrQueryName);
         }
@@ -476,7 +476,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrQueryName">string bstrQueryName</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Delete(string bstrQueryName)
+        public virtual void Delete(string bstrQueryName)
         {
             Factory.ExecuteMethod(this, "Delete", bstrQueryName);
         }

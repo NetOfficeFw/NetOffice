@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231223.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230558.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228263.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227439.aspx </remarks>
 		/// <param name="xlQuickAnalysisMode">optional NetOffice.ExcelApi.Enums.XlQuickAnalysisMode XlQuickAnalysisMode = 0</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public void Show(object xlQuickAnalysisMode)
+		public virtual void Show(object xlQuickAnalysisMode)
 		{
 			 Factory.ExecuteMethod(this, "Show", xlQuickAnalysisMode);
 		}
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227439.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public void Show()
+		public virtual void Show()
 		{
 			 Factory.ExecuteMethod(this, "Show");
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231815.aspx </remarks>
 		/// <param name="xlQuickAnalysisMode">optional NetOffice.ExcelApi.Enums.XlQuickAnalysisMode XlQuickAnalysisMode = 0</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public void Hide(object xlQuickAnalysisMode)
+		public virtual void Hide(object xlQuickAnalysisMode)
 		{
 			 Factory.ExecuteMethod(this, "Hide", xlQuickAnalysisMode);
 		}
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231815.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public void Hide()
+		public virtual void Hide()
 		{
 			 Factory.ExecuteMethod(this, "Hide");
 		}

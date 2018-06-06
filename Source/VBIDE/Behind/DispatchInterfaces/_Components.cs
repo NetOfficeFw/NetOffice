@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [BaseResult]
-        public NetOffice.VBIDEApi.Application Application
+        public virtual NetOffice.VBIDEApi.Application Application
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBProject Parent
+        public virtual NetOffice.VBIDEApi.VBProject Parent
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -124,7 +124,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.VBIDEApi.Component this[object index]
+        public virtual NetOffice.VBIDEApi.Component this[object index]
         {
             get
             {
@@ -137,7 +137,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="component">NetOffice.VBIDEApi.Component component</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Remove(NetOffice.VBIDEApi.Component component)
+        public virtual void Remove(NetOffice.VBIDEApi.Component component)
         {
             Factory.ExecuteMethod(this, "Remove", component);
         }
@@ -147,7 +147,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="componentType">NetOffice.VBIDEApi.Enums.vbext_ComponentType componentType</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Component Add(NetOffice.VBIDEApi.Enums.vbext_ComponentType componentType)
+        public virtual NetOffice.VBIDEApi.Component Add(NetOffice.VBIDEApi.Enums.vbext_ComponentType componentType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Add", typeof(NetOffice.VBIDEApi.Component), componentType);
         }
@@ -157,7 +157,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Component Import(string fileName)
+        public virtual NetOffice.VBIDEApi.Component Import(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Import", typeof(NetOffice.VBIDEApi.Component), fileName);
         }
@@ -184,7 +184,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE, 12,14,5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public IEnumerator<NetOffice.VBIDEApi.Component> GetEnumerator()
+        public virtual IEnumerator<NetOffice.VBIDEApi.Component> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.VBIDEApi.Component item in innerEnumerator)

@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860342.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862823.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.CustomXMLPrefixMapping this[object index]
+        public virtual NetOffice.OfficeApi.CustomXMLPrefixMapping this[object index]
         {
             get
             {
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="prefix">string prefix</param>
         /// <param name="namespaceURI">string namespaceURI</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void AddNamespace(string prefix, string namespaceURI)
+        public virtual void AddNamespace(string prefix, string namespaceURI)
         {
             Factory.ExecuteMethod(this, "AddNamespace", prefix, namespaceURI);
         }
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861130.aspx </remarks>
         /// <param name="prefix">string prefix</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string LookupNamespace(string prefix)
+        public virtual string LookupNamespace(string prefix)
         {
             return Factory.ExecuteStringMethodGet(this, "LookupNamespace", prefix);
         }
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861490.aspx </remarks>
         /// <param name="namespaceURI">string namespaceURI</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string LookupPrefix(string namespaceURI)
+        public virtual string LookupPrefix(string namespaceURI)
         {
             return Factory.ExecuteStringMethodGet(this, "LookupPrefix", namespaceURI);
         }
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.CustomXMLPrefixMapping> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.CustomXMLPrefixMapping> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.CustomXMLPrefixMapping item in innerEnumerator)

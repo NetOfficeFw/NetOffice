@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836799.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193937.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.ShapeNode this[object index]
+		public virtual NetOffice.ExcelApi.ShapeNode this[object index]
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836473.aspx </remarks>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Delete(Int32 index)
+		public virtual void Delete(Int32 index)
 		{
 			 Factory.ExecuteMethod(this, "Delete", index);
 		}
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="x3">optional Single X3 = 0</param>
 		/// <param name="y3">optional Single Y3 = 0</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
+		public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
 		{
 			 Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1, x2, y2, x3, y3 });
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="y1">Single y1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
+		public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
 		{
 			 Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1 });
 		}
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="x2">optional Single X2 = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2)
+		public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2)
 		{
 			 Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1, x2 });
 		}
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="y2">optional Single Y2 = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2)
+		public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2)
 		{
 			 Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1, x2, y2 });
 		}
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="x3">optional Single X3 = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3)
+		public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3)
 		{
 			 Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1, x2, y2, x3 });
 		}
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">Int32 index</param>
 		/// <param name="editingType">NetOffice.OfficeApi.Enums.MsoEditingType editingType</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void SetEditingType(Int32 index, NetOffice.OfficeApi.Enums.MsoEditingType editingType)
+		public virtual void SetEditingType(Int32 index, NetOffice.OfficeApi.Enums.MsoEditingType editingType)
 		{
 			 Factory.ExecuteMethod(this, "SetEditingType", index, editingType);
 		}
@@ -230,7 +230,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="x1">Single x1</param>
 		/// <param name="y1">Single y1</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void SetPosition(Int32 index, Single x1, Single y1)
+		public virtual void SetPosition(Int32 index, Single x1, Single y1)
 		{
 			 Factory.ExecuteMethod(this, "SetPosition", index, x1, y1);
 		}
@@ -242,7 +242,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">Int32 index</param>
 		/// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType segmentType</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void SetSegmentType(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType)
+		public virtual void SetSegmentType(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType)
 		{
 			 Factory.ExecuteMethod(this, "SetSegmentType", index, segmentType);
 		}
@@ -269,7 +269,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ShapeNode> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ShapeNode> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ShapeNode item in innerEnumerator)

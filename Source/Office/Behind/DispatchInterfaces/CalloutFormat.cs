@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Accent
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Accent
         {
             get
             {
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoCalloutAngleType Angle
+        public virtual NetOffice.OfficeApi.Enums.MsoCalloutAngleType Angle
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState AutoAttach
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState AutoAttach
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState AutoLength
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState AutoLength
         {
             get
             {
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Border
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Border
         {
             get
             {
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Drop
+        public virtual Single Drop
         {
             get
             {
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoCalloutDropType DropType
+        public virtual NetOffice.OfficeApi.Enums.MsoCalloutDropType DropType
         {
             get
             {
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Gap
+        public virtual Single Gap
         {
             get
             {
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Length
+        public virtual Single Length
         {
             get
             {
@@ -216,7 +216,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoCalloutType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoCalloutType Type
         {
             get
             {
@@ -236,7 +236,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void AutomaticLength()
+        public virtual void AutomaticLength()
         {
             Factory.ExecuteMethod(this, "AutomaticLength");
         }
@@ -246,7 +246,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="drop">Single drop</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void CustomDrop(Single drop)
+        public virtual void CustomDrop(Single drop)
         {
             Factory.ExecuteMethod(this, "CustomDrop", drop);
         }
@@ -256,7 +256,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="length">Single length</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void CustomLength(Single length)
+        public virtual void CustomLength(Single length)
         {
             Factory.ExecuteMethod(this, "CustomLength", length);
         }
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dropType">NetOffice.OfficeApi.Enums.MsoCalloutDropType dropType</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void PresetDrop(NetOffice.OfficeApi.Enums.MsoCalloutDropType dropType)
+        public virtual void PresetDrop(NetOffice.OfficeApi.Enums.MsoCalloutDropType dropType)
         {
             Factory.ExecuteMethod(this, "PresetDrop", dropType);
         }

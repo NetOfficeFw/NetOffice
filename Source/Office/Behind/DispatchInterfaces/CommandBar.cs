@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865497.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool BuiltIn
+        public virtual bool BuiltIn
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865230.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Context
+        public virtual string Context
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861889.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControls Controls
+        public virtual NetOffice.OfficeApi.CommandBarControls Controls
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861500.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Enabled
+        public virtual bool Enabled
         {
             get
             {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863298.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Height
+        public virtual Int32 Height
         {
             get
             {
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863643.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Index
+        public virtual Int32 Index
         {
             get
             {
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 InstanceId
+        public virtual Int32 InstanceId
         {
             get
             {
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860792.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Left
+        public virtual Int32 Left
         {
             get
             {
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861533.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861194.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string NameLocal
+        public virtual string NameLocal
         {
             get
             {
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862362.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -246,7 +246,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863844.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBarPosition Position
+        public virtual NetOffice.OfficeApi.Enums.MsoBarPosition Position
         {
             get
             {
@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862402.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 RowIndex
+        public virtual Int32 RowIndex
         {
             get
             {
@@ -282,7 +282,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861854.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBarProtection Protection
+        public virtual NetOffice.OfficeApi.Enums.MsoBarProtection Protection
         {
             get
             {
@@ -300,7 +300,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860591.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Top
+        public virtual Int32 Top
         {
             get
             {
@@ -318,7 +318,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864969.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBarType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoBarType Type
         {
             get
             {
@@ -332,7 +332,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864581.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Visible
+        public virtual bool Visible
         {
             get
             {
@@ -350,7 +350,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863766.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Width
+        public virtual Int32 Width
         {
             get
             {
@@ -368,7 +368,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860615.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool AdaptiveMenu
+        public virtual bool AdaptiveMenu
         {
             get
             {
@@ -386,7 +386,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 Id
+        public virtual Int32 Id
         {
             get
             {
@@ -400,7 +400,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object InstanceIdPtr
+        public virtual object InstanceIdPtr
         {
             get
             {
@@ -419,7 +419,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accSelect(Int32 flagsSelect, object varChild)
+        public virtual void accSelect(Int32 flagsSelect, object varChild)
         {
             Factory.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
         }
@@ -431,7 +431,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accSelect(Int32 flagsSelect)
+        public virtual void accSelect(Int32 flagsSelect)
         {
             Factory.ExecuteMethod(this, "accSelect", flagsSelect);
         }
@@ -446,7 +446,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight, object varChild)
+        public virtual void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight, object varChild)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true, false);
             pxLeft = 0;
@@ -471,7 +471,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight)
+        public virtual void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true);
             pxLeft = 0;
@@ -493,7 +493,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varStart">optional object varStart</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object accNavigate(Int32 navDir, object varStart)
+        public virtual object accNavigate(Int32 navDir, object varStart)
         {
             return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
         }
@@ -505,7 +505,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object accNavigate(Int32 navDir)
+        public virtual object accNavigate(Int32 navDir)
         {
             return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir);
         }
@@ -517,7 +517,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="yTop">Int32 yTop</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object accHitTest(Int32 xLeft, Int32 yTop)
+        public virtual object accHitTest(Int32 xLeft, Int32 yTop)
         {
             return Factory.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
         }
@@ -528,7 +528,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accDoDefaultAction(object varChild)
+        public virtual void accDoDefaultAction(object varChild)
         {
             Factory.ExecuteMethod(this, "accDoDefaultAction", varChild);
         }
@@ -539,7 +539,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accDoDefaultAction()
+        public virtual void accDoDefaultAction()
         {
             Factory.ExecuteMethod(this, "accDoDefaultAction");
         }
@@ -549,7 +549,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862231.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -565,7 +565,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="recursive">optional object recursive</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
-        public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible, object recursive)
+        public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible, object recursive)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", new object[] { type, id, tag, visible, recursive });
         }
@@ -577,7 +577,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl FindControl()
+        public virtual NetOffice.OfficeApi.CommandBarControl FindControl()
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl");
         }
@@ -590,7 +590,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl FindControl(object type)
+        public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type);
         }
@@ -604,7 +604,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id)
+        public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id);
         }
@@ -619,7 +619,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag)
+        public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag);
         }
@@ -635,7 +635,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible)
+        public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag, visible);
         }
@@ -645,7 +645,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863143.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Reset()
+        public virtual void Reset()
         {
             Factory.ExecuteMethod(this, "Reset");
         }
@@ -657,7 +657,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="x">optional object x</param>
         /// <param name="y">optional object y</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void ShowPopup(object x, object y)
+        public virtual void ShowPopup(object x, object y)
         {
             Factory.ExecuteMethod(this, "ShowPopup", x, y);
         }
@@ -668,7 +668,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865188.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void ShowPopup()
+        public virtual void ShowPopup()
         {
             Factory.ExecuteMethod(this, "ShowPopup");
         }
@@ -680,7 +680,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="x">optional object x</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void ShowPopup(object x)
+        public virtual void ShowPopup(object x)
         {
             Factory.ExecuteMethod(this, "ShowPopup", x);
         }

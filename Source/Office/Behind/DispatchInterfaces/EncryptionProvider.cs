@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864896.aspx </remarks>
         /// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
+        public virtual object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetProviderDetail", encprovdet);
         }
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864027.aspx </remarks>
         /// <param name="parentWindow">object parentWindow</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 NewSession(object parentWindow)
+        public virtual Int32 NewSession(object parentWindow)
         {
             return Factory.ExecuteInt32MethodGet(this, "NewSession", parentWindow);
         }
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="encryptionData">object encryptionData</param>
         /// <param name="permissionsMask">UIntPtr permissionsMask</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Authenticate(object parentWindow, object encryptionData, out UIntPtr permissionsMask)
+        public virtual Int32 Authenticate(object parentWindow, object encryptionData, out UIntPtr permissionsMask)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true);
             permissionsMask = UIntPtr.Zero;
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864902.aspx </remarks>
         /// <param name="sessionHandle">Int32 sessionHandle</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 CloneSession(Int32 sessionHandle)
+        public virtual Int32 CloneSession(Int32 sessionHandle)
         {
             return Factory.ExecuteInt32MethodGet(this, "CloneSession", sessionHandle);
         }
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864652.aspx </remarks>
         /// <param name="sessionHandle">Int32 sessionHandle</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void EndSession(Int32 sessionHandle)
+        public virtual void EndSession(Int32 sessionHandle)
         {
             Factory.ExecuteMethod(this, "EndSession", sessionHandle);
         }
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="sessionHandle">Int32 sessionHandle</param>
         /// <param name="encryptionData">object encryptionData</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Save(Int32 sessionHandle, object encryptionData)
+        public virtual Int32 Save(Int32 sessionHandle, object encryptionData)
         {
             return Factory.ExecuteInt32MethodGet(this, "Save", sessionHandle, encryptionData);
         }
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="unencryptedStream">object unencryptedStream</param>
         /// <param name="encryptedStream">object encryptedStream</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void EncryptStream(Int32 sessionHandle, string streamName, object unencryptedStream, object encryptedStream)
+        public virtual void EncryptStream(Int32 sessionHandle, string streamName, object unencryptedStream, object encryptedStream)
         {
             Factory.ExecuteMethod(this, "EncryptStream", sessionHandle, streamName, unencryptedStream, encryptedStream);
         }
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="encryptedStream">object encryptedStream</param>
         /// <param name="unencryptedStream">object unencryptedStream</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void DecryptStream(Int32 sessionHandle, string streamName, object encryptedStream, object unencryptedStream)
+        public virtual void DecryptStream(Int32 sessionHandle, string streamName, object encryptedStream, object unencryptedStream)
         {
             Factory.ExecuteMethod(this, "DecryptStream", sessionHandle, streamName, encryptedStream, unencryptedStream);
         }
@@ -176,7 +176,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="readOnly">bool readOnly</param>
         /// <param name="remove">bool remove</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, out bool remove)
+        public virtual void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, out bool remove)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true);
             remove = false;

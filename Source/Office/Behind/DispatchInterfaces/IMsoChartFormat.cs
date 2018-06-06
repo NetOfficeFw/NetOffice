@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.FillFormat Fill
+        public virtual NetOffice.OfficeApi.FillFormat Fill
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.GlowFormat Glow
+        public virtual NetOffice.OfficeApi.GlowFormat Glow
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.LineFormat Line
+        public virtual NetOffice.OfficeApi.LineFormat Line
         {
             get
             {
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.PictureFormat PictureFormat
+        public virtual NetOffice.OfficeApi.PictureFormat PictureFormat
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ShadowFormat Shadow
+        public virtual NetOffice.OfficeApi.ShadowFormat Shadow
         {
             get
             {
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
+        public virtual NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
         {
             get
             {
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.TextFrame2 TextFrame2
+        public virtual NetOffice.OfficeApi.TextFrame2 TextFrame2
         {
             get
             {
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ThreeDFormat ThreeD
+        public virtual NetOffice.OfficeApi.ThreeDFormat ThreeD
         {
             get
             {
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 15, 16)]
-        public NetOffice.OfficeApi.Adjustments Adjustments
+        public virtual NetOffice.OfficeApi.Adjustments Adjustments
         {
             get
             {
@@ -222,7 +222,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
+        public virtual NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
         {
             get
             {

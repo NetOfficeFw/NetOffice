@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197499.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.HeaderFooter LeftHeader
+		public virtual NetOffice.ExcelApi.HeaderFooter LeftHeader
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840416.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.HeaderFooter CenterHeader
+		public virtual NetOffice.ExcelApi.HeaderFooter CenterHeader
 		{
 			get
 			{
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837579.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.HeaderFooter RightHeader
+		public virtual NetOffice.ExcelApi.HeaderFooter RightHeader
 		{
 			get
 			{
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840581.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.HeaderFooter LeftFooter
+		public virtual NetOffice.ExcelApi.HeaderFooter LeftFooter
 		{
 			get
 			{
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838255.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.HeaderFooter CenterFooter
+		public virtual NetOffice.ExcelApi.HeaderFooter CenterFooter
 		{
 			get
 			{
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197542.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.HeaderFooter RightFooter
+		public virtual NetOffice.ExcelApi.HeaderFooter RightFooter
 		{
 			get
 			{

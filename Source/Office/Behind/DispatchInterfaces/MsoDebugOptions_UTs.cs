@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.MsoDebugOptions_UT this[Int32 index]
+        public virtual NetOffice.OfficeApi.MsoDebugOptions_UT this[Int32 index]
         {
             get
             {
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrCollectionName">string bstrCollectionName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.MsoDebugOptions_UTs GetUnitTestsInCollection(string bstrCollectionName)
+        public virtual NetOffice.OfficeApi.MsoDebugOptions_UTs GetUnitTestsInCollection(string bstrCollectionName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTs>(this, "GetUnitTestsInCollection", typeof(NetOffice.OfficeApi.MsoDebugOptions_UTs), bstrCollectionName);
         }
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrCollectionName">string bstrCollectionName</param>
         /// <param name="bstrUnitTestName">string bstrUnitTestName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.MsoDebugOptions_UT GetUnitTest(string bstrCollectionName, string bstrUnitTestName)
+        public virtual NetOffice.OfficeApi.MsoDebugOptions_UT GetUnitTest(string bstrCollectionName, string bstrUnitTestName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UT>(this, "GetUnitTest", typeof(NetOffice.OfficeApi.MsoDebugOptions_UT), bstrCollectionName, bstrUnitTestName);
         }
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrCollectionName">string bstrCollectionName</param>
         /// <param name="bstrUnitTestNameFilter">string bstrUnitTestNameFilter</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(string bstrCollectionName, string bstrUnitTestNameFilter)
+        public virtual NetOffice.OfficeApi.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(string bstrCollectionName, string bstrUnitTestNameFilter)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTs>(this, "GetMatchingUnitTestsInCollection", typeof(NetOffice.OfficeApi.MsoDebugOptions_UTs), bstrCollectionName, bstrUnitTestNameFilter);
         }
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.MsoDebugOptions_UT> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.MsoDebugOptions_UT> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.MsoDebugOptions_UT item in innerEnumerator)

@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Depth
+        public virtual Single Depth
         {
             get
             {
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ColorFormat ExtrusionColor
+        public virtual NetOffice.OfficeApi.ColorFormat ExtrusionColor
         {
             get
             {
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
+        public virtual NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
         {
             get
             {
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Perspective
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Perspective
         {
             get
             {
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
         {
             get
             {
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
         {
             get
             {
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
         {
             get
             {
@@ -190,7 +190,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
         {
             get
             {
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
         {
             get
             {
@@ -220,7 +220,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single RotationX
+        public virtual Single RotationX
         {
             get
             {
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single RotationY
+        public virtual Single RotationY
         {
             get
             {
@@ -254,7 +254,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Visible
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
             {
@@ -271,7 +271,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoLightRigType PresetLighting
+        public virtual NetOffice.OfficeApi.Enums.MsoLightRigType PresetLighting
         {
             get
             {
@@ -288,7 +288,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single Z
+        public virtual Single Z
         {
             get
             {
@@ -305,7 +305,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType
+        public virtual NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType
         {
             get
             {
@@ -322,7 +322,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single BevelTopInset
+        public virtual Single BevelTopInset
         {
             get
             {
@@ -339,7 +339,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single BevelTopDepth
+        public virtual Single BevelTopDepth
         {
             get
             {
@@ -356,7 +356,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType
+        public virtual NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType
         {
             get
             {
@@ -373,7 +373,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single BevelBottomInset
+        public virtual Single BevelBottomInset
         {
             get
             {
@@ -390,7 +390,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single BevelBottomDepth
+        public virtual Single BevelBottomDepth
         {
             get
             {
@@ -407,7 +407,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera
         {
             get
             {
@@ -420,7 +420,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single RotationZ
+        public virtual Single RotationZ
         {
             get
             {
@@ -437,7 +437,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single ContourWidth
+        public virtual Single ContourWidth
         {
             get
             {
@@ -454,7 +454,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ColorFormat ContourColor
+        public virtual NetOffice.OfficeApi.ColorFormat ContourColor
         {
             get
             {
@@ -467,7 +467,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single FieldOfView
+        public virtual Single FieldOfView
         {
             get
             {
@@ -484,7 +484,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState ProjectText
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState ProjectText
         {
             get
             {
@@ -501,7 +501,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single LightAngle
+        public virtual Single LightAngle
         {
             get
             {
@@ -522,7 +522,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void IncrementRotationX(Single increment)
+        public virtual void IncrementRotationX(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementRotationX", increment);
         }
@@ -532,7 +532,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void IncrementRotationY(Single increment)
+        public virtual void IncrementRotationY(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementRotationY", increment);
         }
@@ -541,7 +541,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void ResetRotation()
+        public virtual void ResetRotation()
         {
             Factory.ExecuteMethod(this, "ResetRotation");
         }
@@ -551,7 +551,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <param name="presetThreeDFormat">NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
+        public virtual void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
         {
             Factory.ExecuteMethod(this, "SetThreeDFormat", presetThreeDFormat);
         }
@@ -561,7 +561,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <param name="presetExtrusionDirection">NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
+        public virtual void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
         {
             Factory.ExecuteMethod(this, "SetExtrusionDirection", presetExtrusionDirection);
         }
@@ -571,7 +571,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <param name="presetCamera">NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void SetPresetCamera(NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera)
+        public virtual void SetPresetCamera(NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera)
         {
             Factory.ExecuteMethod(this, "SetPresetCamera", presetCamera);
         }
@@ -581,7 +581,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void IncrementRotationZ(Single increment)
+        public virtual void IncrementRotationZ(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementRotationZ", increment);
         }
@@ -591,7 +591,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void IncrementRotationHorizontal(Single increment)
+        public virtual void IncrementRotationHorizontal(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementRotationHorizontal", increment);
         }
@@ -601,7 +601,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void IncrementRotationVertical(Single increment)
+        public virtual void IncrementRotationVertical(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementRotationVertical", increment);
         }

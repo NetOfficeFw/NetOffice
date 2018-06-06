@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862450.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single PictureOffsetX
+        public virtual Single PictureOffsetX
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864637.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single PictureOffsetY
+        public virtual Single PictureOffsetY
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860544.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single PictureWidth
+        public virtual Single PictureWidth
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860512.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single PictureHeight
+        public virtual Single PictureHeight
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861232.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single ShapeLeft
+        public virtual Single ShapeLeft
         {
             get
             {
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861517.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single ShapeTop
+        public virtual Single ShapeTop
         {
             get
             {
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861716.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single ShapeWidth
+        public virtual Single ShapeWidth
         {
             get
             {
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864643.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single ShapeHeight
+        public virtual Single ShapeHeight
         {
             get
             {

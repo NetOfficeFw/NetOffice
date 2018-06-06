@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Color
+        public virtual object Color
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ColorIndex
+        public virtual object ColorIndex
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object InvertIfNegative
+        public virtual object InvertIfNegative
         {
             get
             {
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Pattern
+        public virtual object Pattern
         {
             get
             {
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object PatternColor
+        public virtual object PatternColor
         {
             get
             {
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object PatternColorIndex
+        public virtual object PatternColorIndex
         {
             get
             {
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {

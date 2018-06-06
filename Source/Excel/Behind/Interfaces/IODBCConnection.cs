@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool BackgroundQuery
+		public virtual bool BackgroundQuery
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object CommandText
+		public virtual object CommandText
 		{
 			get
 			{
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCmdType CommandType
+		public virtual NetOffice.ExcelApi.Enums.XlCmdType CommandType
 		{
 			get
 			{
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Connection
+		public virtual object Connection
 		{
 			get
 			{
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool EnableRefresh
+		public virtual bool EnableRefresh
 		{
 			get
 			{
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public DateTime RefreshDate
+		public virtual DateTime RefreshDate
 		{
 			get
 			{
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool Refreshing
+		public virtual bool Refreshing
 		{
 			get
 			{
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool RefreshOnFileOpen
+		public virtual bool RefreshOnFileOpen
 		{
 			get
 			{
@@ -231,7 +231,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 RefreshPeriod
+		public virtual Int32 RefreshPeriod
 		{
 			get
 			{
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
+		public virtual NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
 		{
 			get
 			{
@@ -265,7 +265,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool SavePassword
+		public virtual bool SavePassword
 		{
 			get
 			{
@@ -282,7 +282,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string SourceConnectionFile
+		public virtual string SourceConnectionFile
 		{
 			get
 			{
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object SourceData
+		public virtual object SourceData
 		{
 			get
 			{
@@ -316,7 +316,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string SourceDataFile
+		public virtual string SourceDataFile
 		{
 			get
 			{
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCredentialsMethod ServerCredentialsMethod
+		public virtual NetOffice.ExcelApi.Enums.XlCredentialsMethod ServerCredentialsMethod
 		{
 			get
 			{
@@ -350,7 +350,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string ServerSSOApplicationID
+		public virtual string ServerSSOApplicationID
 		{
 			get
 			{
@@ -367,7 +367,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool AlwaysUseConnectionFile
+		public virtual bool AlwaysUseConnectionFile
 		{
 			get
 			{
@@ -387,7 +387,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 CancelRefresh()
+		public virtual Int32 CancelRefresh()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "CancelRefresh");
 		}
@@ -396,7 +396,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Refresh()
+		public virtual Int32 Refresh()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Refresh");
 		}
@@ -408,7 +408,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="description">optional object description</param>
 		/// <param name="keywords">optional object keywords</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 SaveAsODC(string oDCFileName, object description, object keywords)
+		public virtual Int32 SaveAsODC(string oDCFileName, object description, object keywords)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName, description, keywords);
 		}
@@ -419,7 +419,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="oDCFileName">string oDCFileName</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 SaveAsODC(string oDCFileName)
+		public virtual Int32 SaveAsODC(string oDCFileName)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName);
 		}
@@ -431,7 +431,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="description">optional object description</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 SaveAsODC(string oDCFileName, object description)
+		public virtual Int32 SaveAsODC(string oDCFileName, object description)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName, description);
 		}

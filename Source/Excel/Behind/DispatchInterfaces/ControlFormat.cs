@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821856.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839454.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835623.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840188.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 DropDownLines
+		public virtual Int32 DropDownLines
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841257.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Enabled
+		public virtual bool Enabled
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195958.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 LargeChange
+		public virtual Int32 LargeChange
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196712.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string LinkedCell
+		public virtual string LinkedCell
 		{
 			get
 			{
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837072.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ListCount
+		public virtual Int32 ListCount
 		{
 			get
 			{
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193918.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string ListFillRange
+		public virtual string ListFillRange
 		{
 			get
 			{
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196383.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ListIndex
+		public virtual Int32 ListIndex
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196905.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool LockedText
+		public virtual bool LockedText
 		{
 			get
 			{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196524.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Max
+		public virtual Int32 Max
 		{
 			get
 			{
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840301.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Min
+		public virtual Int32 Min
 		{
 			get
 			{
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821534.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 MultiSelect
+		public virtual Int32 MultiSelect
 		{
 			get
 			{
@@ -306,7 +306,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835904.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool PrintObject
+		public virtual bool PrintObject
 		{
 			get
 			{
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821313.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 SmallChange
+		public virtual Int32 SmallChange
 		{
 			get
 			{
@@ -341,7 +341,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 _Default
+		public virtual Int32 _Default
 		{
 			get
 			{
@@ -359,7 +359,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841066.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Value
+		public virtual Int32 Value
 		{
 			get
 			{
@@ -382,7 +382,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="text">string text</param>
 		/// <param name="index">optional object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AddItem(string text, object index)
+		public virtual void AddItem(string text, object index)
 		{
 			 Factory.ExecuteMethod(this, "AddItem", text, index);
 		}
@@ -394,7 +394,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="text">string text</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AddItem(string text)
+		public virtual void AddItem(string text)
 		{
 			 Factory.ExecuteMethod(this, "AddItem", text);
 		}
@@ -404,7 +404,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839986.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void RemoveAllItems()
+		public virtual void RemoveAllItems()
 		{
 			 Factory.ExecuteMethod(this, "RemoveAllItems");
 		}
@@ -416,7 +416,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">Int32 index</param>
 		/// <param name="count">optional object count</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void RemoveItem(Int32 index, object count)
+		public virtual void RemoveItem(Int32 index, object count)
 		{
 			 Factory.ExecuteMethod(this, "RemoveItem", index, count);
 		}
@@ -428,7 +428,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">Int32 index</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void RemoveItem(Int32 index)
+		public virtual void RemoveItem(Int32 index)
 		{
 			 Factory.ExecuteMethod(this, "RemoveItem", index);
 		}
@@ -439,7 +439,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835840.aspx </remarks>
 		/// <param name="index">optional object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object List(object index)
+		public virtual object List(object index)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "List", index);
 		}
@@ -450,7 +450,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835840.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object List()
+		public virtual object List()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "List");
 		}

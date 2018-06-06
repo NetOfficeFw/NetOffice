@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.MetaProperty this[object index]
+        public virtual NetOffice.OfficeApi.MetaProperty this[object index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864657.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string ValidationError
+        public virtual string ValidationError
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864625.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864562.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SchemaXml
+        public virtual string SchemaXml
         {
             get
             {
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860861.aspx </remarks>
         /// <param name="internalName">string internalName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.MetaProperty GetItemByInternalName(string internalName)
+        public virtual NetOffice.OfficeApi.MetaProperty GetItemByInternalName(string internalName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MetaProperty>(this, "GetItemByInternalName", typeof(NetOffice.OfficeApi.MetaProperty), internalName);
         }
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862127.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Validate()
+        public virtual string Validate()
         {
             return Factory.ExecuteStringMethodGet(this, "Validate");
         }
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.MetaProperty> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.MetaProperty> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.MetaProperty item in innerEnumerator)

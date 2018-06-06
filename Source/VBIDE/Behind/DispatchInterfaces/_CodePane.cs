@@ -64,7 +64,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.CodePanes Collection
+        public virtual NetOffice.VBIDEApi.CodePanes Collection
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Window Window
+        public virtual NetOffice.VBIDEApi.Window Window
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 TopLine
+        public virtual Int32 TopLine
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 CountOfVisibleLines
+        public virtual Int32 CountOfVisibleLines
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.CodeModule CodeModule
+        public virtual NetOffice.VBIDEApi.CodeModule CodeModule
         {
             get
             {
@@ -146,7 +146,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Enums.vbext_CodePaneview CodePaneView
+        public virtual NetOffice.VBIDEApi.Enums.vbext_CodePaneview CodePaneView
         {
             get
             {
@@ -166,7 +166,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="endLine">Int32 endLine</param>
         /// <param name="endColumn">Int32 endColumn</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void GetSelection(out Int32 startLine, out Int32 startColumn, out Int32 endLine, out Int32 endColumn)
+        public virtual void GetSelection(out Int32 startLine, out Int32 startColumn, out Int32 endLine, out Int32 endColumn)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true);
             startLine = 0;
@@ -189,7 +189,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="endLine">Int32 endLine</param>
         /// <param name="endColumn">Int32 endColumn</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void SetSelection(Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
+        public virtual void SetSelection(Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
         {
             Factory.ExecuteMethod(this, "SetSelection", startLine, startColumn, endLine, endColumn);
         }
@@ -198,7 +198,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Show()
+        public virtual void Show()
         {
             Factory.ExecuteMethod(this, "Show");
         }

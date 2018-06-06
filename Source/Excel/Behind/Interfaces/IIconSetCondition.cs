@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 Priority
+        public virtual Int32 Priority
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool StopIfTrue
+        public virtual bool StopIfTrue
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range AppliesTo
+        public virtual NetOffice.ExcelApi.Range AppliesTo
         {
             get
             {
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 Type
+        public virtual Int32 Type
         {
             get
             {
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool PTCondition
+        public virtual bool PTCondition
         {
             get
             {
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlPivotConditionScope ScopeType
+        public virtual NetOffice.ExcelApi.Enums.XlPivotConditionScope ScopeType
         {
             get
             {
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool ReverseOrder
+        public virtual bool ReverseOrder
         {
             get
             {
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool PercentileValues
+        public virtual bool PercentileValues
         {
             get
             {
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool ShowIconOnly
+        public virtual bool ShowIconOnly
         {
             get
             {
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public string Formula
+        public virtual string Formula
         {
             get
             {
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object IconSet
+        public virtual object IconSet
         {
             get
             {
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.IconCriteria IconCriteria
+        public virtual NetOffice.ExcelApi.IconCriteria IconCriteria
         {
             get
             {
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="range">NetOffice.ExcelApi.Range range</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
+        public virtual Int32 ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
         {
             return Factory.ExecuteInt32MethodGet(this, "ModifyAppliesToRange", range);
         }
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 SetFirstPriority()
+        public virtual Int32 SetFirstPriority()
         {
             return Factory.ExecuteInt32MethodGet(this, "SetFirstPriority");
         }
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 SetLastPriority()
+        public virtual Int32 SetLastPriority()
         {
             return Factory.ExecuteInt32MethodGet(this, "SetLastPriority");
         }
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }

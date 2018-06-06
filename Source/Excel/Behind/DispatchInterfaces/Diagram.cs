@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNodes Nodes
+		public virtual NetOffice.ExcelApi.DiagramNodes Nodes
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoDiagramType Type
+		public virtual NetOffice.OfficeApi.Enums.MsoDiagramType Type
 		{
 			get
 			{
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState AutoLayout
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState AutoLayout
 		{
 			get
 			{
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Reverse
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState Reverse
 		{
 			get
 			{
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState AutoFormat
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState AutoFormat
 		{
 			get
 			{
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoDiagramType type</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Convert(NetOffice.OfficeApi.Enums.MsoDiagramType type)
+		public virtual void Convert(NetOffice.OfficeApi.Enums.MsoDiagramType type)
 		{
 			 Factory.ExecuteMethod(this, "Convert", type);
 		}
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void FitText()
+		public virtual void FitText()
 		{
 			 Factory.ExecuteMethod(this, "FitText");
 		}

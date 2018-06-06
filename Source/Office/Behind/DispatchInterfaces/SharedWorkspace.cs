@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861084.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863506.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceMembers Members
+        public virtual NetOffice.OfficeApi.SharedWorkspaceMembers Members
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863392.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceTasks Tasks
+        public virtual NetOffice.OfficeApi.SharedWorkspaceTasks Tasks
         {
             get
             {
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865183.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceFiles Files
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFiles Files
         {
             get
             {
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863702.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceFolders Folders
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFolders Folders
         {
             get
             {
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862483.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceLinks Links
+        public virtual NetOffice.OfficeApi.SharedWorkspaceLinks Links
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861765.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865214.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string URL
+        public virtual string URL
         {
             get
             {
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860257.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool Connected
+        public virtual bool Connected
         {
             get
             {
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861389.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public object LastRefreshed
+        public virtual object LastRefreshed
         {
             get
             {
@@ -211,7 +211,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860917.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string SourceURL
+        public virtual string SourceURL
         {
             get
             {
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862068.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Refresh()
+        public virtual void Refresh()
         {
             Factory.ExecuteMethod(this, "Refresh");
         }
@@ -244,7 +244,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="uRL">optional object uRL</param>
         /// <param name="name">optional object name</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void CreateNew(object uRL, object name)
+        public virtual void CreateNew(object uRL, object name)
         {
             Factory.ExecuteMethod(this, "CreateNew", uRL, name);
         }
@@ -255,7 +255,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862182.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void CreateNew()
+        public virtual void CreateNew()
         {
             Factory.ExecuteMethod(this, "CreateNew");
         }
@@ -267,7 +267,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="uRL">optional object uRL</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void CreateNew(object uRL)
+        public virtual void CreateNew(object uRL)
         {
             Factory.ExecuteMethod(this, "CreateNew", uRL);
         }
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862550.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -287,7 +287,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861519.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void RemoveDocument()
+        public virtual void RemoveDocument()
         {
             Factory.ExecuteMethod(this, "RemoveDocument");
         }
@@ -297,7 +297,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863540.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Disconnect()
+        public virtual void Disconnect()
         {
             Factory.ExecuteMethod(this, "Disconnect");
         }

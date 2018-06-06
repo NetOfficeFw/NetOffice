@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835302.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839030.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840919.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194087.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortOn SortOn
+		public virtual NetOffice.ExcelApi.Enums.XlSortOn SortOn
 		{
 			get
 			{
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840676.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object SortOnValue
+		public virtual object SortOnValue
 		{
 			get
 			{
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836469.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Range Key
+		public virtual NetOffice.ExcelApi.Range Key
 		{
 			get
 			{
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197470.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortOrder Order
+		public virtual NetOffice.ExcelApi.Enums.XlSortOrder Order
 		{
 			get
 			{
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193002.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object CustomOrder
+		public virtual object CustomOrder
 		{
 			get
 			{
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821244.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortDataOption DataOption
+		public virtual NetOffice.ExcelApi.Enums.XlSortDataOption DataOption
 		{
 			get
 			{
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838405.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Priority
+		public virtual Int32 Priority
 		{
 			get
 			{
@@ -230,7 +230,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839931.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197214.aspx </remarks>
 		/// <param name="key">NetOffice.ExcelApi.Range key</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void ModifyKey(NetOffice.ExcelApi.Range key)
+		public virtual void ModifyKey(NetOffice.ExcelApi.Range key)
 		{
 			 Factory.ExecuteMethod(this, "ModifyKey", key);
 		}
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834979.aspx </remarks>
 		/// <param name="icon">NetOffice.ExcelApi.Icon icon</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void SetIcon(NetOffice.ExcelApi.Icon icon)
+		public virtual void SetIcon(NetOffice.ExcelApi.Icon icon)
 		{
 			 Factory.ExecuteMethod(this, "SetIcon", icon);
 		}

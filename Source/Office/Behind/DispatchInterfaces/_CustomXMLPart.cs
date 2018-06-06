@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860227.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862841.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLNode DocumentElement
+        public virtual NetOffice.OfficeApi.CustomXMLNode DocumentElement
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862405.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Id
+        public virtual string Id
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860609.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string NamespaceURI
+        public virtual string NamespaceURI
         {
             get
             {
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862230.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection
+        public virtual NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection
         {
             get
             {
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861512.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLPrefixMappings NamespaceManager
+        public virtual NetOffice.OfficeApi.CustomXMLPrefixMappings NamespaceManager
         {
             get
             {
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860262.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string XML
+        public virtual string XML
         {
             get
             {
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860307.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLValidationErrors Errors
+        public virtual NetOffice.OfficeApi.CustomXMLValidationErrors Errors
         {
             get
             {
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865215.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool BuiltIn
+        public virtual bool BuiltIn
         {
             get
             {
@@ -205,7 +205,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
         /// <param name="nodeValue">optional string NodeValue = </param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType, object nodeValue)
+        public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType, object nodeValue)
         {
             Factory.ExecuteMethod(this, "AddNode", new object[] { parent, name, namespaceURI, nextSibling, nodeType, nodeValue });
         }
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="parent">NetOffice.OfficeApi.CustomXMLNode parent</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent)
+        public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent)
         {
             Factory.ExecuteMethod(this, "AddNode", parent);
         }
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="name">optional string Name = </param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name)
+        public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name)
         {
             Factory.ExecuteMethod(this, "AddNode", parent, name);
         }
@@ -244,7 +244,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="namespaceURI">optional string NamespaceURI = </param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI)
+        public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI)
         {
             Factory.ExecuteMethod(this, "AddNode", parent, name, namespaceURI);
         }
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling)
+        public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling)
         {
             Factory.ExecuteMethod(this, "AddNode", parent, name, namespaceURI, nextSibling);
         }
@@ -275,7 +275,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType)
+        public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType)
         {
             Factory.ExecuteMethod(this, "AddNode", new object[] { parent, name, namespaceURI, nextSibling, nodeType });
         }
@@ -285,7 +285,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861077.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -296,7 +296,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865466.aspx </remarks>
         /// <param name="filePath">string filePath</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool Load(string filePath)
+        public virtual bool Load(string filePath)
         {
             return Factory.ExecuteBoolMethodGet(this, "Load", filePath);
         }
@@ -307,7 +307,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865293.aspx </remarks>
         /// <param name="xML">string xML</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool LoadXML(string xML)
+        public virtual bool LoadXML(string xML)
         {
             return Factory.ExecuteBoolMethodGet(this, "LoadXML", xML);
         }
@@ -318,7 +318,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864156.aspx </remarks>
         /// <param name="xPath">string xPath</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
+        public virtual NetOffice.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "SelectNodes", typeof(NetOffice.OfficeApi.CustomXMLNodes), xPath);
         }
@@ -329,7 +329,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860915.aspx </remarks>
         /// <param name="xPath">string xPath</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
+        public virtual NetOffice.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNode>(this, "SelectSingleNode", typeof(NetOffice.OfficeApi.CustomXMLNode), xPath);
         }

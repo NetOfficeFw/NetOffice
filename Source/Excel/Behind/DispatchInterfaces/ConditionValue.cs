@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193283.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823079.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839639.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194996.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
+		public virtual NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196574.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public object Value
+		public virtual object Value
 		{
 			get
 			{
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="newtype">NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype</param>
 		/// <param name="newvalue">optional object newvalue</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Modify(NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype, object newvalue)
+		public virtual void Modify(NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype, object newvalue)
 		{
 			 Factory.ExecuteMethod(this, "Modify", newtype, newvalue);
 		}
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="newtype">NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Modify(NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype)
+		public virtual void Modify(NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype)
 		{
 			 Factory.ExecuteMethod(this, "Modify", newtype);
 		}

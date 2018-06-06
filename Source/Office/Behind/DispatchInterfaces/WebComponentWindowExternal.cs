@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 InterfaceVersion
+        public virtual Int32 InterfaceVersion
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string ApplicationName
+        public virtual string ApplicationName
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 ApplicationVersion
+        public virtual Int32 ApplicationVersion
         {
             get
             {
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.WebComponent WebComponent
+        public virtual NetOffice.OfficeApi.WebComponent WebComponent
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void CloseWindow()
+        public virtual void CloseWindow()
         {
             Factory.ExecuteMethod(this, "CloseWindow");
         }

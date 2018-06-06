@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public object Connection
+		public virtual object Connection
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileHeaderRow
+		public virtual bool TextFileHeaderRow
 		{
 			get
 			{
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public object TextFileColumnDataTypes
+		public virtual object TextFileColumnDataTypes
 		{
 			get
 			{
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileCommaDelimiter
+		public virtual bool TextFileCommaDelimiter
 		{
 			get
 			{
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileConsecutiveDelimiter
+		public virtual bool TextFileConsecutiveDelimiter
 		{
 			get
 			{
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public string TextFileDecimalSeparator
+		public virtual string TextFileDecimalSeparator
 		{
 			get
 			{
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public object TextFileFixedColumnWidths
+		public virtual object TextFileFixedColumnWidths
 		{
 			get
 			{
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public string TextFileOtherDelimiter
+		public virtual string TextFileOtherDelimiter
 		{
 			get
 			{
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlTextParsingType TextFileParseType
+		public virtual NetOffice.ExcelApi.Enums.XlTextParsingType TextFileParseType
 		{
 			get
 			{
@@ -256,7 +256,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlPlatform TextFilePlatform
+		public virtual NetOffice.ExcelApi.Enums.XlPlatform TextFilePlatform
 		{
 			get
 			{
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFilePromptOnRefresh
+		public virtual bool TextFilePromptOnRefresh
 		{
 			get
 			{
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileSemicolonDelimiter
+		public virtual bool TextFileSemicolonDelimiter
 		{
 			get
 			{
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileSpaceDelimiter
+		public virtual bool TextFileSpaceDelimiter
 		{
 			get
 			{
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 TextFileStartRow
+		public virtual Int32 TextFileStartRow
 		{
 			get
 			{
@@ -341,7 +341,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileTabDelimiter
+		public virtual bool TextFileTabDelimiter
 		{
 			get
 			{
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlTextQualifier TextFileTextQualifier
+		public virtual NetOffice.ExcelApi.Enums.XlTextQualifier TextFileTextQualifier
 		{
 			get
 			{
@@ -375,7 +375,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public string TextFileThousandsSeparator
+		public virtual string TextFileThousandsSeparator
 		{
 			get
 			{
@@ -392,7 +392,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileTrailingMinusNumbers
+		public virtual bool TextFileTrailingMinusNumbers
 		{
 			get
 			{
@@ -409,7 +409,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlTextVisualLayoutType TextFileVisualLayout
+		public virtual NetOffice.ExcelApi.Enums.XlTextVisualLayoutType TextFileVisualLayout
 		{
 			get
 			{

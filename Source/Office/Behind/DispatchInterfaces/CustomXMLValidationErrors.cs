@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862460.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861469.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.CustomXMLValidationError this[Int32 index]
+        public virtual NetOffice.OfficeApi.CustomXMLValidationError this[Int32 index]
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="errorText">optional string ErrorText = </param>
         /// <param name="clearedOnUpdate">optional bool ClearedOnUpdate = true</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText, object clearedOnUpdate)
+        public virtual void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText, object clearedOnUpdate)
         {
             Factory.ExecuteMethod(this, "Add", node, errorName, errorText, clearedOnUpdate);
         }
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="errorName">string errorName</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName)
+        public virtual void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName)
         {
             Factory.ExecuteMethod(this, "Add", node, errorName);
         }
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="errorText">optional string ErrorText = </param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText)
+        public virtual void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText)
         {
             Factory.ExecuteMethod(this, "Add", node, errorName, errorText);
         }
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.CustomXMLValidationError> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.CustomXMLValidationError> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.CustomXMLValidationError item in innerEnumerator)

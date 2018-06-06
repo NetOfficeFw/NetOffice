@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.IMsoTrendline this[object index]
+        public virtual NetOffice.OfficeApi.IMsoTrendline this[object index]
         {
             get
             {
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayRSquared">optional object displayRSquared</param>
         /// <param name="name">optional object name</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
         }
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add()
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline));
         }
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type);
         }
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="order">optional object order</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order);
         }
@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="period">optional object period</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order, period);
         }
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="forward">optional object forward</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order, period, forward);
         }
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="backward">optional object backward</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward });
         }
@@ -239,7 +239,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="intercept">optional object intercept</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept });
         }
@@ -256,7 +256,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayEquation">optional object displayEquation</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation });
         }
@@ -274,7 +274,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayRSquared">optional object displayRSquared</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
+        public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
         }
@@ -301,7 +301,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.IMsoTrendline> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.IMsoTrendline> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.IMsoTrendline item in innerEnumerator)

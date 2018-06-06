@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860835.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861525.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public object this[Int32 index]
+        public virtual object this[Int32 index]
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
         /// <param name="deferUpdate">optional bool DeferUpdate = false</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo, object deferUpdate)
+        public virtual void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo, object deferUpdate)
         {
             Factory.ExecuteMethod(this, "Add", new object[] { column, comparison, conjunction, bstrCompareTo, deferUpdate });
         }
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction)
+        public virtual void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction)
         {
             Factory.ExecuteMethod(this, "Add", column, comparison, conjunction);
         }
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo)
+        public virtual void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo)
         {
             Factory.ExecuteMethod(this, "Add", column, comparison, conjunction, bstrCompareTo);
         }
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         /// <param name="deferUpdate">optional bool DeferUpdate = false</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Delete(Int32 index, object deferUpdate)
+        public virtual void Delete(Int32 index, object deferUpdate)
         {
             Factory.ExecuteMethod(this, "Delete", index, deferUpdate);
         }
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Delete(Int32 index)
+        public virtual void Delete(Int32 index)
         {
             Factory.ExecuteMethod(this, "Delete", index);
         }
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [CustomEnumerator]
-        public IEnumerator<object> GetEnumerator()
+        public virtual IEnumerator<object> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (object item in innerEnumerator)

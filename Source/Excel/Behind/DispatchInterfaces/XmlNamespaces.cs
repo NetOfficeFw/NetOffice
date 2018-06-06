@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839010.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196970.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821502.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.XmlNamespace this[object index]
+		public virtual NetOffice.ExcelApi.XmlNamespace this[object index]
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839767.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822325.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string Value
+		public virtual string Value
 		{
 			get
 			{
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="path">string path</param>
 		/// <param name="installForAllUsers">optional object installForAllUsers</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void InstallManifest(string path, object installForAllUsers)
+		public virtual void InstallManifest(string path, object installForAllUsers)
 		{
 			 Factory.ExecuteMethod(this, "InstallManifest", path, installForAllUsers);
 		}
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="path">string path</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void InstallManifest(string path)
+		public virtual void InstallManifest(string path)
 		{
 			 Factory.ExecuteMethod(this, "InstallManifest", path);
 		}
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.XmlNamespace> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.XmlNamespace> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.XmlNamespace item in innerEnumerator)

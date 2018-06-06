@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864930.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861492.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860912.aspx </remarks>
         /// <param name="index">NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ThemeColor Colors(NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex index)
+        public virtual NetOffice.OfficeApi.ThemeColor Colors(NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ThemeColor>(this, "Colors", typeof(NetOffice.OfficeApi.ThemeColor), index);
         }
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862095.aspx </remarks>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Load(string fileName)
+        public virtual void Load(string fileName)
         {
             Factory.ExecuteMethod(this, "Load", fileName);
         }
@@ -124,7 +124,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861898.aspx </remarks>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Save(string fileName)
+        public virtual void Save(string fileName)
         {
             Factory.ExecuteMethod(this, "Save", fileName);
         }
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862172.aspx </remarks>
         /// <param name="name">string name</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 GetCustomColor(string name)
+        public virtual Int32 GetCustomColor(string name)
         {
             return Factory.ExecuteInt32MethodGet(this, "GetCustomColor", name);
         }
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<object> GetEnumerator()
+        public virtual IEnumerator<object> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (object item in innerEnumerator)

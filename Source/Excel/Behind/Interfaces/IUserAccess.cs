@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool AllowEdit
+		public virtual bool AllowEdit
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}

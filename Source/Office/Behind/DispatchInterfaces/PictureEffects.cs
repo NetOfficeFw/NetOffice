@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.PictureEffect this[Int32 index]
+        public virtual NetOffice.OfficeApi.PictureEffect this[Int32 index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861170.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="effectType">NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType</param>
         /// <param name="position">optional Int32 Position = -1</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType, object position)
+        public virtual NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType, object position)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PictureEffect>(this, "Insert", typeof(NetOffice.OfficeApi.PictureEffect), effectType, position);
         }
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="effectType">NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType)
+        public virtual NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PictureEffect>(this, "Insert", typeof(NetOffice.OfficeApi.PictureEffect), effectType);
         }
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862552.aspx </remarks>
         /// <param name="index">optional Int32 Index = -1</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Delete(object index)
+        public virtual void Delete(object index)
         {
             Factory.ExecuteMethod(this, "Delete", index);
         }
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862552.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 14,15,16
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.PictureEffect> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.PictureEffect> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.PictureEffect item in innerEnumerator)

@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Top
+        public virtual Int32 Top
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Left
+        public virtual Int32 Left
         {
             get
             {
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Balloon NewBalloon
+        public virtual NetOffice.OfficeApi.Balloon NewBalloon
         {
             get
             {
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBalloonErrorType BalloonError
+        public virtual NetOffice.OfficeApi.Enums.MsoBalloonErrorType BalloonError
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Visible
+        public virtual bool Visible
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoAnimationType Animation
+        public virtual NetOffice.OfficeApi.Enums.MsoAnimationType Animation
         {
             get
             {
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Reduced
+        public virtual bool Reduced
         {
             get
             {
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool AssistWithHelp
+        public virtual bool AssistWithHelp
         {
             get
             {
@@ -206,7 +206,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool AssistWithWizards
+        public virtual bool AssistWithWizards
         {
             get
             {
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool AssistWithAlerts
+        public virtual bool AssistWithAlerts
         {
             get
             {
@@ -240,7 +240,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool MoveWhenInTheWay
+        public virtual bool MoveWhenInTheWay
         {
             get
             {
@@ -257,7 +257,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Sounds
+        public virtual bool Sounds
         {
             get
             {
@@ -274,7 +274,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool FeatureTips
+        public virtual bool FeatureTips
         {
             get
             {
@@ -291,7 +291,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool MouseTips
+        public virtual bool MouseTips
         {
             get
             {
@@ -308,7 +308,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool KeyboardShortcutTips
+        public virtual bool KeyboardShortcutTips
         {
             get
             {
@@ -325,7 +325,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool HighPriorityTips
+        public virtual bool HighPriorityTips
         {
             get
             {
@@ -342,7 +342,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TipOfDay
+        public virtual bool TipOfDay
         {
             get
             {
@@ -359,7 +359,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool GuessHelp
+        public virtual bool GuessHelp
         {
             get
             {
@@ -376,7 +376,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool SearchWhenProgramming
+        public virtual bool SearchWhenProgramming
         {
             get
             {
@@ -393,7 +393,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Item
+        public virtual string Item
         {
             get
             {
@@ -406,7 +406,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string FileName
+        public virtual string FileName
         {
             get
             {
@@ -423,7 +423,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -436,7 +436,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool On
+        public virtual bool On
         {
             get
             {
@@ -458,7 +458,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="xLeft">Int32 xLeft</param>
         /// <param name="yTop">Int32 yTop</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Move(Int32 xLeft, Int32 yTop)
+        public virtual void Move(Int32 xLeft, Int32 yTop)
         {
             Factory.ExecuteMethod(this, "Move", xLeft, yTop);
         }
@@ -467,7 +467,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Help()
+        public virtual void Help()
         {
             Factory.ExecuteMethod(this, "Help");
         }
@@ -485,7 +485,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bottom">optional object bottom</param>
         /// <param name="right">optional object right</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom, object right)
+        public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom, object right)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left, bottom, right });
         }
@@ -498,7 +498,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="privateX">Int32 privateX</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 StartWizard(bool on, string callback, Int32 privateX)
+        public virtual Int32 StartWizard(bool on, string callback, Int32 privateX)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartWizard", on, callback, privateX);
         }
@@ -512,7 +512,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="animation">optional object animation</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation)
+        public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartWizard", on, callback, privateX, animation);
         }
@@ -527,7 +527,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="customTeaser">optional object customTeaser</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser)
+        public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser });
         }
@@ -543,7 +543,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="top">optional object top</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top)
+        public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top });
         }
@@ -560,7 +560,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="left">optional object left</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left)
+        public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left });
         }
@@ -578,7 +578,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bottom">optional object bottom</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom)
+        public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left, bottom });
         }
@@ -590,7 +590,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varfSuccess">bool varfSuccess</param>
         /// <param name="animation">optional object animation</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void EndWizard(Int32 wizardID, bool varfSuccess, object animation)
+        public virtual void EndWizard(Int32 wizardID, bool varfSuccess, object animation)
         {
             Factory.ExecuteMethod(this, "EndWizard", wizardID, varfSuccess, animation);
         }
@@ -602,7 +602,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varfSuccess">bool varfSuccess</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void EndWizard(Int32 wizardID, bool varfSuccess)
+        public virtual void EndWizard(Int32 wizardID, bool varfSuccess)
         {
             Factory.ExecuteMethod(this, "EndWizard", wizardID, varfSuccess);
         }
@@ -614,7 +614,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
         /// <param name="animation">optional object animation</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act, object animation)
+        public virtual void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act, object animation)
         {
             Factory.ExecuteMethod(this, "ActivateWizard", wizardID, act, animation);
         }
@@ -626,7 +626,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act)
+        public virtual void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act)
         {
             Factory.ExecuteMethod(this, "ActivateWizard", wizardID, act);
         }
@@ -635,7 +635,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void ResetTips()
+        public virtual void ResetTips()
         {
             Factory.ExecuteMethod(this, "ResetTips");
         }
@@ -651,7 +651,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="alq">NetOffice.OfficeApi.Enums.MsoAlertCancelType alq</param>
         /// <param name="varfSysAlert">bool varfSysAlert</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 DoAlert(string bstrAlertTitle, string bstrAlertText, NetOffice.OfficeApi.Enums.MsoAlertButtonType alb, NetOffice.OfficeApi.Enums.MsoAlertIconType alc, NetOffice.OfficeApi.Enums.MsoAlertDefaultType ald, NetOffice.OfficeApi.Enums.MsoAlertCancelType alq, bool varfSysAlert)
+        public virtual Int32 DoAlert(string bstrAlertTitle, string bstrAlertText, NetOffice.OfficeApi.Enums.MsoAlertButtonType alb, NetOffice.OfficeApi.Enums.MsoAlertIconType alc, NetOffice.OfficeApi.Enums.MsoAlertDefaultType ald, NetOffice.OfficeApi.Enums.MsoAlertCancelType alq, bool varfSysAlert)
         {
             return Factory.ExecuteInt32MethodGet(this, "DoAlert", new object[] { bstrAlertTitle, bstrAlertText, alb, alc, ald, alq, varfSysAlert });
         }

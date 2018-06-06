@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Signer
+        public virtual string Signer
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string Issuer
+        public virtual string Issuer
         {
             get
             {
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public object ExpireDate
+        public virtual object ExpireDate
         {
             get
             {
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool IsValid
+        public virtual bool IsValid
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool AttachCertificate
+        public virtual bool AttachCertificate
         {
             get
             {
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860302.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool IsCertificateExpired
+        public virtual bool IsCertificateExpired
         {
             get
             {
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool IsCertificateRevoked
+        public virtual bool IsCertificateRevoked
         {
             get
             {
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public object SignDate
+        public virtual object SignDate
         {
             get
             {
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864952.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool IsSigned
+        public virtual bool IsSigned
         {
             get
             {
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864576.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SignatureInfo Details
+        public virtual NetOffice.OfficeApi.SignatureInfo Details
         {
             get
             {
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862368.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool CanSetup
+        public virtual bool CanSetup
         {
             get
             {
@@ -231,7 +231,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863325.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SignatureSetup Setup
+        public virtual NetOffice.OfficeApi.SignatureSetup Setup
         {
             get
             {
@@ -245,7 +245,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862851.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool IsSignatureLine
+        public virtual bool IsSignatureLine
         {
             get
             {
@@ -260,7 +260,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863032.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object SignatureLineShape
+        public virtual object SignatureLineShape
         {
             get
             {
@@ -274,7 +274,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863133.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 SortHint
+        public virtual Int32 SortHint
         {
             get
             {
@@ -291,7 +291,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864585.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -305,7 +305,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varDelSuggSignerLine2">optional object varDelSuggSignerLine2</param>
         /// <param name="varDelSuggSignerEmail">optional object varDelSuggSignerEmail</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Sign(object varSigImg, object varDelSuggSigner, object varDelSuggSignerLine2, object varDelSuggSignerEmail)
+        public virtual void Sign(object varSigImg, object varDelSuggSigner, object varDelSuggSignerLine2, object varDelSuggSignerEmail)
         {
             Factory.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner, varDelSuggSignerLine2, varDelSuggSignerEmail);
         }
@@ -316,7 +316,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861168.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Sign()
+        public virtual void Sign()
         {
             Factory.ExecuteMethod(this, "Sign");
         }
@@ -328,7 +328,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varSigImg">optional object varSigImg</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Sign(object varSigImg)
+        public virtual void Sign(object varSigImg)
         {
             Factory.ExecuteMethod(this, "Sign", varSigImg);
         }
@@ -341,7 +341,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varDelSuggSigner">optional object varDelSuggSigner</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Sign(object varSigImg, object varDelSuggSigner)
+        public virtual void Sign(object varSigImg, object varDelSuggSigner)
         {
             Factory.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner);
         }
@@ -355,7 +355,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varDelSuggSignerLine2">optional object varDelSuggSignerLine2</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Sign(object varSigImg, object varDelSuggSigner, object varDelSuggSignerLine2)
+        public virtual void Sign(object varSigImg, object varDelSuggSigner, object varDelSuggSignerLine2)
         {
             Factory.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner, varDelSuggSignerLine2);
         }
@@ -365,7 +365,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860855.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void ShowDetails()
+        public virtual void ShowDetails()
         {
             Factory.ExecuteMethod(this, "ShowDetails");
         }

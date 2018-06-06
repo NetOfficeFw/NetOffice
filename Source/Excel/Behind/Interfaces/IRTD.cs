@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 ThrottleInterval
+		public virtual Int32 ThrottleInterval
 		{
 			get
 			{
@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 RefreshData()
+		public virtual Int32 RefreshData()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "RefreshData");
 		}
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 RestartServers()
+		public virtual Int32 RestartServers()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "RestartServers");
 		}

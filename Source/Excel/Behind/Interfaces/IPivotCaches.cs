@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.PivotCache this[object index]
+		public virtual NetOffice.ExcelApi.PivotCache this[object index]
 		{
 			get
 			{
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType</param>
 		/// <param name="sourceData">optional object sourceData</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotCache Add(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData)
+		public virtual NetOffice.ExcelApi.PivotCache Add(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Add", typeof(NetOffice.ExcelApi.PivotCache), sourceType, sourceData);
 		}
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotCache Add(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType)
+		public virtual NetOffice.ExcelApi.PivotCache Add(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Add", typeof(NetOffice.ExcelApi.PivotCache), sourceType);
 		}
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sourceData">optional object sourceData</param>
 		/// <param name="version">optional object version</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData, object version)
+		public virtual NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData, object version)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Create", typeof(NetOffice.ExcelApi.PivotCache), sourceType, sourceData, version);
 		}
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType)
+		public virtual NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Create", typeof(NetOffice.ExcelApi.PivotCache), sourceType);
 		}
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sourceData">optional object sourceData</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData)
+		public virtual NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Create", typeof(NetOffice.ExcelApi.PivotCache), sourceType, sourceData);
 		}
@@ -211,7 +211,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.PivotCache> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.PivotCache> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.PivotCache item in innerEnumerator)

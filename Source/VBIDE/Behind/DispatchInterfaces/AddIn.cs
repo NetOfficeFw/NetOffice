@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Description
+        public virtual string Description
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Addins Collection
+        public virtual NetOffice.VBIDEApi.Addins Collection
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string ProgId
+        public virtual string ProgId
         {
             get
             {
@@ -119,7 +119,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Guid
+        public virtual string Guid
         {
             get
             {
@@ -132,7 +132,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool Connect
+        public virtual bool Connect
         {
             get
             {
@@ -150,7 +150,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3), ProxyResult]
-        public object Object
+        public virtual object Object
         {
             get
             {

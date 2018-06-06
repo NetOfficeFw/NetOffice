@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape Background
+        public virtual NetOffice.OfficeApi.Shape Background
         {
             get
             {
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.Shape this[object index]
+        public virtual NetOffice.OfficeApi.Shape this[object index]
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="width">Single width</param>
         /// <param name="height">Single height</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
+        public virtual NetOffice.OfficeApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCallout", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
         }
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="endX">Single endX</param>
         /// <param name="endY">Single endY</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
+        public virtual NetOffice.OfficeApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddConnector", typeof(NetOffice.OfficeApi.Shape), new object[] { type, beginX, beginY, endX, endY });
         }
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddCurve(object safeArrayOfPoints)
+        public virtual NetOffice.OfficeApi.Shape AddCurve(object safeArrayOfPoints)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCurve", typeof(NetOffice.OfficeApi.Shape), safeArrayOfPoints);
         }
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="width">Single width</param>
         /// <param name="height">Single height</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
+        public virtual NetOffice.OfficeApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddLabel", typeof(NetOffice.OfficeApi.Shape), new object[] { orientation, left, top, width, height });
         }
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="endX">Single endX</param>
         /// <param name="endY">Single endY</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
+        public virtual NetOffice.OfficeApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddLine", typeof(NetOffice.OfficeApi.Shape), beginX, beginY, endX, endY);
         }
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="width">optional Single Width = -1</param>
         /// <param name="height">optional Single Height = -1</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height)
+        public virtual NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top, width, height });
         }
@@ -211,7 +211,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="top">Single top</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top)
+        public virtual NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top });
         }
@@ -227,7 +227,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="width">optional Single Width = -1</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width)
+        public virtual NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top, width });
         }
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddPolyline(object safeArrayOfPoints)
+        public virtual NetOffice.OfficeApi.Shape AddPolyline(object safeArrayOfPoints)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPolyline", typeof(NetOffice.OfficeApi.Shape), safeArrayOfPoints);
         }
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="width">Single width</param>
         /// <param name="height">Single height</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
+        public virtual NetOffice.OfficeApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddShape", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
         }
@@ -268,7 +268,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="left">Single left</param>
         /// <param name="top">Single top</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
+        public virtual NetOffice.OfficeApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTextEffect", typeof(NetOffice.OfficeApi.Shape), new object[] { presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
         }
@@ -282,7 +282,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="width">Single width</param>
         /// <param name="height">Single height</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
+        public virtual NetOffice.OfficeApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTextbox", typeof(NetOffice.OfficeApi.Shape), new object[] { orientation, left, top, width, height });
         }
@@ -294,7 +294,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="x1">Single x1</param>
         /// <param name="y1">Single y1</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
+        public virtual NetOffice.OfficeApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FreeformBuilder>(this, "BuildFreeform", typeof(NetOffice.OfficeApi.FreeformBuilder), editingType, x1, y1);
         }
@@ -304,7 +304,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ShapeRange Range(object index)
+        public virtual NetOffice.OfficeApi.ShapeRange Range(object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ShapeRange>(this, "Range", typeof(NetOffice.OfficeApi.ShapeRange), index);
         }
@@ -313,7 +313,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SelectAll()
+        public virtual void SelectAll()
         {
             Factory.ExecuteMethod(this, "SelectAll");
         }
@@ -340,7 +340,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.Shape> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.Shape> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.Shape item in innerEnumerator)

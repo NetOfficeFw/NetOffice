@@ -102,11 +102,6 @@ namespace NetOffice
         /// the well known IUnknown Interface ID
         /// </summary>
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
-      
-        /// <summary>
-        /// full comProxy type name, netoffice wrapper type
-        /// </summary>
-        private Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
 
         private static Core _default;
         private bool _initalized;
@@ -137,7 +132,7 @@ namespace NetOffice
             Console = new DebugConsole();
             Invoker = new Invoker(this);
             EntitiesListCache = new Dictionary<string, Dictionary<string, string>>();
-            HostCache = new Dictionary<Guid, Guid>();
+            TypeComponentIdCache = new Dictionary<Guid, Guid>();
             VersionProviders = new ApplicationVersionHandler(this);
             InternalObjectRegister = new CoreManagement(this);
             InternalObjectActivator = new CoreActivator(this);
@@ -156,7 +151,7 @@ namespace NetOffice
             DependentAssemblies = new List<DependentAssembly>();
             CoreDomain = new CurrentAppDomain(this);
             EntitiesListCache = new Dictionary<string, Dictionary<string, string>>();
-            HostCache = new Dictionary<Guid, Guid>();
+            TypeComponentIdCache = new Dictionary<Guid, Guid>();
             IsDefault = isDefault;
             if (IsDefault)
             {
@@ -392,7 +387,7 @@ namespace NetOffice
         /// <summary>
         /// Cache as Type ID (COM) => ParentLibrary(COM Component) ID 
         /// </summary>
-        internal Dictionary<Guid, Guid> HostCache { get; private set; }
+        internal Dictionary<Guid, Guid> TypeComponentIdCache { get; private set; }
 
         /// <summary>
         /// Registered Version Providers
@@ -512,8 +507,7 @@ namespace NetOffice
             {
                 lock (_assembliesLock)
                 {
-                    _wrapperTypeCache.Clear();
-                    HostCache.Clear();
+                    TypeComponentIdCache.Clear();
                     TypeCache.Clear();
                     EntitiesListCache.Clear();
                     Assemblies.Clear();

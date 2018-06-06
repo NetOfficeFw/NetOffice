@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlPivotCellType PivotCellType
+		public virtual NetOffice.ExcelApi.Enums.XlPivotCellType PivotCellType
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotTable PivotTable
+		public virtual NetOffice.ExcelApi.PivotTable PivotTable
 		{
 			get
 			{
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotField DataField
+		public virtual NetOffice.ExcelApi.PivotField DataField
 		{
 			get
 			{
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotField PivotField
+		public virtual NetOffice.ExcelApi.PivotField PivotField
 		{
 			get
 			{
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotItem PivotItem
+		public virtual NetOffice.ExcelApi.PivotItem PivotItem
 		{
 			get
 			{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotItemList RowItems
+		public virtual NetOffice.ExcelApi.PivotItemList RowItems
 		{
 			get
 			{
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.PivotItemList ColumnItems
+		public virtual NetOffice.ExcelApi.PivotItemList ColumnItems
 		{
 			get
 			{
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Range Range
+		public virtual NetOffice.ExcelApi.Range Range
 		{
 			get
 			{
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string Dummy18
+		public virtual string Dummy18
 		{
 			get
 			{
@@ -221,7 +221,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlConsolidationFunction CustomSubtotalFunction
+		public virtual NetOffice.ExcelApi.Enums.XlConsolidationFunction CustomSubtotalFunction
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotLine PivotRowLine
+		public virtual NetOffice.ExcelApi.PivotLine PivotRowLine
 		{
 			get
 			{
@@ -247,7 +247,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotLine PivotColumnLine
+		public virtual NetOffice.ExcelApi.PivotLine PivotColumnLine
 		{
 			get
 			{
@@ -260,7 +260,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public object DataSourceValue
+		public virtual object DataSourceValue
 		{
 			get
 			{
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCellChangedState CellChanged
+		public virtual NetOffice.ExcelApi.Enums.XlCellChangedState CellChanged
 		{
 			get
 			{
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string MDX
+		public virtual string MDX
 		{
 			get
 			{
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Actions ServerActions
+		public virtual NetOffice.ExcelApi.Actions ServerActions
 		{
 			get
 			{
@@ -315,7 +315,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 AllocateChange()
+		public virtual Int32 AllocateChange()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "AllocateChange");
 		}
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 DiscardChange()
+		public virtual Int32 DiscardChange()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "DiscardChange");
 		}

@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Borders Borders
+        public virtual NetOffice.ExcelApi.Borders Borders
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Font Font
+        public virtual NetOffice.ExcelApi.Font Font
         {
             get
             {
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Interior Interior
+        public virtual NetOffice.ExcelApi.Interior Interior
         {
             get
             {
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object NumberFormat
+        public virtual object NumberFormat
         {
             get
             {
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object NumberFormatLocal
+        public virtual object NumberFormatLocal
         {
             get
             {
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object AddIndent
+        public virtual object AddIndent
         {
             get
             {
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object IndentLevel
+        public virtual object IndentLevel
         {
             get
             {
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object HorizontalAlignment
+        public virtual object HorizontalAlignment
         {
             get
             {
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object VerticalAlignment
+        public virtual object VerticalAlignment
         {
             get
             {
@@ -256,7 +256,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object Orientation
+        public virtual object Orientation
         {
             get
             {
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object ShrinkToFit
+        public virtual object ShrinkToFit
         {
             get
             {
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object WrapText
+        public virtual object WrapText
         {
             get
             {
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object Locked
+        public virtual object Locked
         {
             get
             {
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object FormulaHidden
+        public virtual object FormulaHidden
         {
             get
             {
@@ -341,7 +341,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object MergeCells
+        public virtual object MergeCells
         {
             get
             {
@@ -361,7 +361,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Clear()
+        public virtual Int32 Clear()
         {
             return Factory.ExecuteInt32MethodGet(this, "Clear");
         }

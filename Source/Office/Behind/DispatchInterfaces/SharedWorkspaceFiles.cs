@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.SharedWorkspaceFile this[Int32 index]
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFile this[Int32 index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864632.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864665.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864597.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool ItemCountExceeded
+        public virtual bool ItemCountExceeded
         {
             get
             {
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="overwriteIfFileAlreadyExists">optional object overwriteIfFileAlreadyExists</param>
         /// <param name="keepInSync">optional object keepInSync</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists, object keepInSync)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists, object keepInSync)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFile>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFile), fileName, parentFolder, overwriteIfFileAlreadyExists, keepInSync);
         }
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFile>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFile), fileName);
         }
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="parentFolder">optional object parentFolder</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFile>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFile), fileName, parentFolder);
         }
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="overwriteIfFileAlreadyExists">optional object overwriteIfFileAlreadyExists</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFile>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFile), fileName, parentFolder, overwriteIfFileAlreadyExists);
         }
@@ -200,7 +200,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.SharedWorkspaceFile> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.SharedWorkspaceFile> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.SharedWorkspaceFile item in innerEnumerator)

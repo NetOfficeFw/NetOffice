@@ -33,7 +33,7 @@ namespace NetOffice.ExcelApi.Behind
         /// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836519.aspx
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_Values(object index)
+        public virtual object get_Values(object index)
         {
             return Factory.ExecuteVariantPropertyGet(this, "Values", index);
         }
@@ -45,7 +45,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836519.aspx </remarks>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Values")]
-        public object Values(object index)
+        public virtual object Values(object index)
         {
             return get_Values(index);
         }
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838392.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194364.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197225.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195337.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range ChangingCells
+        public virtual NetOffice.ExcelApi.Range ChangingCells
         {
             get
             {
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193904.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Comment
+        public virtual string Comment
         {
             get
             {
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837354.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Hidden
+        public virtual bool Hidden
         {
             get
             {
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823143.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Index
+        public virtual Int32 Index
         {
             get
             {
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835225.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Locked
+        public virtual bool Locked
         {
             get
             {
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194257.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836519.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Values
+        public virtual object Values
         {
             get
             {
@@ -278,7 +278,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="changingCells">object changingCells</param>
         /// <param name="values">optional object values</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ChangeScenario(object changingCells, object values)
+        public virtual object ChangeScenario(object changingCells, object values)
         {
             return Factory.ExecuteVariantMethodGet(this, "ChangeScenario", changingCells, values);
         }
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="changingCells">object changingCells</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ChangeScenario(object changingCells)
+        public virtual object ChangeScenario(object changingCells)
         {
             return Factory.ExecuteVariantMethodGet(this, "ChangeScenario", changingCells);
         }
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841250.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }
@@ -310,7 +310,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198296.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Show()
+        public virtual object Show()
         {
             return Factory.ExecuteVariantMethodGet(this, "Show");
         }

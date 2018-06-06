@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196081.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840808.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195468.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195061.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.ProtectedViewWindow this[object index]
+		public virtual NetOffice.ExcelApi.ProtectedViewWindow this[object index]
 		{
 			get
 			{
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="addToMru">optional object addToMru</param>
 		/// <param name="repairMode">optional object repairMode</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru, object repairMode)
+		public virtual NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru, object repairMode)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password, addToMru, repairMode);
 		}
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="filename">string filename</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename)
+		public virtual NetOffice.ExcelApi.ProtectedViewWindow Open(string filename)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename);
 		}
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="password">optional object password</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password)
+		public virtual NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password);
 		}
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="addToMru">optional object addToMru</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru)
+		public virtual NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password, addToMru);
 		}
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 14,15,16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ProtectedViewWindow> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ProtectedViewWindow> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ProtectedViewWindow item in innerEnumerator)

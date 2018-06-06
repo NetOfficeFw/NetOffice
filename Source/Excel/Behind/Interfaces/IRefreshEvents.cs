@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="cancel">bool cancel</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 BeforeRefresh(bool cancel)
+		public virtual Int32 BeforeRefresh(bool cancel)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "BeforeRefresh", cancel);
 		}
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="success">bool success</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 AfterRefresh(bool success)
+		public virtual Int32 AfterRefresh(bool success)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "AfterRefresh", success);
 		}

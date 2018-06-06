@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.SharedWorkspaceTask this[Int32 index]
+        public virtual NetOffice.OfficeApi.SharedWorkspaceTask this[Int32 index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862401.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862065.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861502.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool ItemCountExceeded
+        public virtual bool ItemCountExceeded
         {
             get
             {
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="description">optional object description</param>
         /// <param name="dueDate">optional object dueDate</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description, object dueDate)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description, object dueDate)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), new object[] { title, status, priority, assignee, description, dueDate });
         }
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="title">string title</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title);
         }
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="status">optional object status</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status);
         }
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="priority">optional object priority</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status, priority);
         }
@@ -190,7 +190,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="assignee">optional object assignee</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status, priority, assignee);
         }
@@ -206,7 +206,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="description">optional object description</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), new object[] { title, status, priority, assignee, description });
         }
@@ -233,7 +233,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.SharedWorkspaceTask> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.SharedWorkspaceTask> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.SharedWorkspaceTask item in innerEnumerator)

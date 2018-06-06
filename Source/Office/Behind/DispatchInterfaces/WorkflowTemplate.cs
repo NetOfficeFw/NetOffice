@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861378.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Id
+        public virtual string Id
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861417.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863121.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Description
+        public virtual string Description
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861722.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string DocumentLibraryName
+        public virtual string DocumentLibraryName
         {
             get
             {
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860562.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string DocumentLibraryURL
+        public virtual string DocumentLibraryURL
         {
             get
             {
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863678.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Show()
+        public virtual Int32 Show()
         {
             return Factory.ExecuteInt32MethodGet(this, "Show");
         }

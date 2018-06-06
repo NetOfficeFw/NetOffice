@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.PickerResult this[Int32 index]
+        public virtual NetOffice.OfficeApi.PickerResult this[Int32 index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865190.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="itemData">optional object itemData</param>
         /// <param name="subItems">optional object subItems</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData, object subItems)
+        public virtual NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData, object subItems)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), new object[] { id, displayName, type, sIPId, itemData, subItems });
         }
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="type">string type</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type)
+        public virtual NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), id, displayName, type);
         }
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="sIPId">optional string SIPId = </param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId)
+        public virtual NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), id, displayName, type, sIPId);
         }
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="itemData">optional object itemData</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData)
+        public virtual NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), new object[] { id, displayName, type, sIPId, itemData });
         }
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 14,15,16
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.PickerResult> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.PickerResult> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.PickerResult item in innerEnumerator)

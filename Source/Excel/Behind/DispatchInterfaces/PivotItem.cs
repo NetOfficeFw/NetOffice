@@ -33,7 +33,7 @@ namespace NetOffice.ExcelApi.Behind
         /// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821258.aspx
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_ChildItems(object index)
+        public virtual object get_ChildItems(object index)
         {
             return Factory.ExecuteVariantPropertyGet(this, "ChildItems", index);
         }
@@ -45,7 +45,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821258.aspx </remarks>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_ChildItems")]
-        public object ChildItems(object index)
+        public virtual object ChildItems(object index)
         {
             return get_ChildItems(index);
         }
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194181.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193354.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834703.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotField Parent
+        public virtual NetOffice.ExcelApi.PivotField Parent
         {
             get
             {
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821258.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ChildItems
+        public virtual object ChildItems
         {
             get
             {
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822336.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range DataRange
+        public virtual NetOffice.ExcelApi.Range DataRange
         {
             get
             {
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string _Default
+        public virtual string _Default
         {
             get
             {
@@ -203,7 +203,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840194.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range LabelRange
+        public virtual NetOffice.ExcelApi.Range LabelRange
         {
             get
             {
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838045.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -235,7 +235,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834629.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotItem ParentItem
+        public virtual NetOffice.ExcelApi.PivotItem ParentItem
         {
             get
             {
@@ -249,7 +249,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823193.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool ParentShowDetail
+        public virtual bool ParentShowDetail
         {
             get
             {
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193327.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Position
+        public virtual Int32 Position
         {
             get
             {
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839658.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool ShowDetail
+        public virtual bool ShowDetail
         {
             get
             {
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835925.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SourceName
+        public virtual object SourceName
         {
             get
             {
@@ -313,7 +313,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193667.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Value
+        public virtual string Value
         {
             get
             {
@@ -331,7 +331,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838387.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Visible
+        public virtual bool Visible
         {
             get
             {
@@ -349,7 +349,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839628.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool IsCalculated
+        public virtual bool IsCalculated
         {
             get
             {
@@ -363,7 +363,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195796.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 RecordCount
+        public virtual Int32 RecordCount
         {
             get
             {
@@ -377,7 +377,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838816.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Formula
+        public virtual string Formula
         {
             get
             {
@@ -395,7 +395,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821282.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Caption
+        public virtual string Caption
         {
             get
             {
@@ -413,7 +413,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835229.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool DrilledDown
+        public virtual bool DrilledDown
         {
             get
             {
@@ -431,7 +431,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196359.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public string StandardFormula
+        public virtual string StandardFormula
         {
             get
             {
@@ -449,7 +449,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841132.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public string SourceNameStandard
+        public virtual string SourceNameStandard
         {
             get
             {
@@ -466,7 +466,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838664.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -477,7 +477,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821836.aspx </remarks>
         /// <param name="field">string field</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public void DrillTo(string field)
+        public virtual void DrillTo(string field)
         {
             Factory.ExecuteMethod(this, "DrillTo", field);
         }

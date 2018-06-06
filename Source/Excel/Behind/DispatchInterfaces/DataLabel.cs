@@ -34,7 +34,7 @@ namespace NetOffice.ExcelApi.Behind
         /// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192947.aspx
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
+        public virtual NetOffice.ExcelApi.Characters get_Characters(object start, object length)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters), start, length);
         }
@@ -47,7 +47,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="start">optional object start</param>
         /// <param name="length">optional object length</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Characters")]
-        public NetOffice.ExcelApi.Characters Characters(object start, object length)
+        public virtual NetOffice.ExcelApi.Characters Characters(object start, object length)
         {
             return get_Characters(start, length);
         }
@@ -60,7 +60,7 @@ namespace NetOffice.ExcelApi.Behind
         /// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192947.aspx
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Characters get_Characters(object start)
+        public virtual NetOffice.ExcelApi.Characters get_Characters(object start)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters), start);
         }
@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192947.aspx </remarks>
         /// <param name="start">optional object start</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Characters")]
-        public NetOffice.ExcelApi.Characters Characters(object start)
+        public virtual NetOffice.ExcelApi.Characters Characters(object start)
         {
             return get_Characters(start);
         }
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838020.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836169.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822579.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194363.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -199,7 +199,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Border Border
+        public virtual NetOffice.ExcelApi.Border Border
         {
             get
             {
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Interior Interior
+        public virtual NetOffice.ExcelApi.Interior Interior
         {
             get
             {
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ChartFillFormat Fill
+        public virtual NetOffice.ExcelApi.ChartFillFormat Fill
         {
             get
             {
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839622.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Caption
+        public virtual string Caption
         {
             get
             {
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192947.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Characters Characters
+        public virtual NetOffice.ExcelApi.Characters Characters
         {
             get
             {
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Font Font
+        public virtual NetOffice.ExcelApi.Font Font
         {
             get
             {
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197138.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object HorizontalAlignment
+        public virtual object HorizontalAlignment
         {
             get
             {
@@ -302,7 +302,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821807.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double Left
+        public virtual Double Left
         {
             get
             {
@@ -320,7 +320,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822933.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Orientation
+        public virtual object Orientation
         {
             get
             {
@@ -338,7 +338,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197847.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Shadow
+        public virtual bool Shadow
         {
             get
             {
@@ -356,7 +356,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192994.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text
+        public virtual string Text
         {
             get
             {
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838971.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double Top
+        public virtual Double Top
         {
             get
             {
@@ -392,7 +392,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838375.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object VerticalAlignment
+        public virtual object VerticalAlignment
         {
             get
             {
@@ -410,7 +410,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195654.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 ReadingOrder
+        public virtual Int32 ReadingOrder
         {
             get
             {
@@ -427,7 +427,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoScaleFont
+        public virtual object AutoScaleFont
         {
             get
             {
@@ -445,7 +445,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837409.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool AutoText
+        public virtual bool AutoText
         {
             get
             {
@@ -463,7 +463,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194735.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string NumberFormat
+        public virtual string NumberFormat
         {
             get
             {
@@ -481,7 +481,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834891.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool NumberFormatLinked
+        public virtual bool NumberFormatLinked
         {
             get
             {
@@ -499,7 +499,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837057.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object NumberFormatLocal
+        public virtual object NumberFormatLocal
         {
             get
             {
@@ -517,7 +517,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193366.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool ShowLegendKey
+        public virtual bool ShowLegendKey
         {
             get
             {
@@ -534,7 +534,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Type
+        public virtual object Type
         {
             get
             {
@@ -552,7 +552,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836845.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlDataLabelPosition Position
+        public virtual NetOffice.ExcelApi.Enums.XlDataLabelPosition Position
         {
             get
             {
@@ -570,7 +570,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836218.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool ShowSeriesName
+        public virtual bool ShowSeriesName
         {
             get
             {
@@ -588,7 +588,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837590.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool ShowCategoryName
+        public virtual bool ShowCategoryName
         {
             get
             {
@@ -606,7 +606,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834972.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool ShowValue
+        public virtual bool ShowValue
         {
             get
             {
@@ -624,7 +624,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836791.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool ShowPercentage
+        public virtual bool ShowPercentage
         {
             get
             {
@@ -642,7 +642,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840169.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool ShowBubbleSize
+        public virtual bool ShowBubbleSize
         {
             get
             {
@@ -660,7 +660,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838223.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object Separator
+        public virtual object Separator
         {
             get
             {
@@ -678,7 +678,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835513.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ChartFormat Format
+        public virtual NetOffice.ExcelApi.ChartFormat Format
         {
             get
             {
@@ -692,7 +692,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193681.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public Double Height
+        public virtual Double Height
         {
             get
             {
@@ -710,7 +710,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835285.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public Double Width
+        public virtual Double Width
         {
             get
             {
@@ -728,7 +728,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822168.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public string Formula
+        public virtual string Formula
         {
             get
             {
@@ -746,7 +746,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840501.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public string FormulaR1C1
+        public virtual string FormulaR1C1
         {
             get
             {
@@ -764,7 +764,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820989.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public string FormulaLocal
+        public virtual string FormulaLocal
         {
             get
             {
@@ -782,7 +782,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840846.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public string FormulaR1C1Local
+        public virtual string FormulaR1C1Local
         {
             get
             {
@@ -800,7 +800,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Double _Height
+        public virtual Double _Height
         {
             get
             {
@@ -814,7 +814,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Double _Width
+        public virtual Double _Width
         {
             get
             {
@@ -828,7 +828,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231137.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
-        public bool ShowRange
+        public virtual bool ShowRange
         {
             get
             {
@@ -849,7 +849,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193805.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Select()
+        public virtual object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
         }
@@ -859,7 +859,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840648.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }

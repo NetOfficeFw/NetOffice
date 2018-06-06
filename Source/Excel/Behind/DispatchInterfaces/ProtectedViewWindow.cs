@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string _Default
+		public virtual string _Default
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841246.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Caption
+		public virtual string Caption
 		{
 			get
 			{
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194002.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool EnableResize
+		public virtual bool EnableResize
 		{
 			get
 			{
@@ -114,7 +114,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196282.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Height
+		public virtual Double Height
 		{
 			get
 			{
@@ -132,7 +132,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196899.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Left
+		public virtual Double Left
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835560.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Top
+		public virtual Double Top
 		{
 			get
 			{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837823.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Width
+		public virtual Double Width
 		{
 			get
 			{
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838633.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool Visible
+		public virtual bool Visible
 		{
 			get
 			{
@@ -204,7 +204,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840283.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string SourceName
+		public virtual string SourceName
 		{
 			get
 			{
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837810.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string SourcePath
+		public virtual string SourcePath
 		{
 			get
 			{
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837081.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlProtectedViewWindowState WindowState
+		public virtual NetOffice.ExcelApi.Enums.XlProtectedViewWindowState WindowState
 		{
 			get
 			{
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196579.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Workbook Workbook
+		public virtual NetOffice.ExcelApi.Workbook Workbook
 		{
 			get
 			{
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194857.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void Activate()
+		public virtual void Activate()
 		{
 			 Factory.ExecuteMethod(this, "Activate");
 		}
@@ -277,7 +277,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197025.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool Close()
+		public virtual bool Close()
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Close");
 		}
@@ -289,7 +289,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="writeResPassword">optional object writeResPassword</param>
 		/// <param name="updateLinks">optional object updateLinks</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Workbook Edit(object writeResPassword, object updateLinks)
+		public virtual NetOffice.ExcelApi.Workbook Edit(object writeResPassword, object updateLinks)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook), writeResPassword, updateLinks);
 		}
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838457.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Workbook Edit()
+		public virtual NetOffice.ExcelApi.Workbook Edit()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook));
 		}
@@ -312,7 +312,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="writeResPassword">optional object writeResPassword</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Workbook Edit(object writeResPassword)
+		public virtual NetOffice.ExcelApi.Workbook Edit(object writeResPassword)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook), writeResPassword);
 		}

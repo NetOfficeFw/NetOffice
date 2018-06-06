@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862102.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string UserId
+        public virtual string UserId
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862094.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public Int32 Permission
+        public virtual Int32 Permission
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862529.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public object ExpirationDate
+        public virtual object ExpirationDate
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861797.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864865.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Remove()
+        public virtual void Remove()
         {
             Factory.ExecuteMethod(this, "Remove");
         }

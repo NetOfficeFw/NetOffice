@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool RowNumbers
+		public virtual bool RowNumbers
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool FetchedRowOverflow
+		public virtual bool FetchedRowOverflow
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCellInsertionMode RefreshStyle
+		public virtual NetOffice.ExcelApi.Enums.XlCellInsertionMode RefreshStyle
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool EnableRefresh
+		public virtual bool EnableRefresh
 		{
 			get
 			{
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Range Destination
+		public virtual NetOffice.ExcelApi.Range Destination
 		{
 			get
 			{
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Range ResultRange
+		public virtual NetOffice.ExcelApi.Range ResultRange
 		{
 			get
 			{
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool EnableEditing
+		public virtual bool EnableEditing
 		{
 			get
 			{
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool PreserveColumnInfo
+		public virtual bool PreserveColumnInfo
 		{
 			get
 			{
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool PreserveFormatting
+		public virtual bool PreserveFormatting
 		{
 			get
 			{
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool AdjustColumnWidth
+		public virtual bool AdjustColumnWidth
 		{
 			get
 			{
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.ListObject ListObject
+		public virtual NetOffice.ExcelApi.ListObject ListObject
 		{
 			get
 			{
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
+		public virtual NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
 		{
 			get
 			{
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 15,16
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 15,16
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool Refresh()
+		public virtual bool Refresh()
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Refresh");
 		}

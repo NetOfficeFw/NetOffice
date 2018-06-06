@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864976.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.DocumentProperty this[object index]
+        public virtual NetOffice.OfficeApi.DocumentProperty this[object index]
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863076.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864029.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861448.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="value">optional object value</param>
         /// <param name="linkSource">optional object linkSource</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
+        public virtual NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), new object[] { name, linkToContent, type, value, linkSource });
         }
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="linkToContent">bool linkToContent</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent)
+        public virtual NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent);
         }
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="type">optional object type</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type)
+        public virtual NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent, type);
         }
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="value">optional object value</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value)
+        public virtual NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent, type, value);
         }
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.DocumentProperty> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.DocumentProperty> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.DocumentProperty item in innerEnumerator)

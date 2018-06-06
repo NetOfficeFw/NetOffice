@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860803.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ReadOnly
+        public virtual bool ReadOnly
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863130.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Id
+        public virtual string Id
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863744.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SignatureProvider
+        public virtual string SignatureProvider
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860539.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SuggestedSigner
+        public virtual string SuggestedSigner
         {
             get
             {
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862848.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SuggestedSignerLine2
+        public virtual string SuggestedSignerLine2
         {
             get
             {
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861399.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SuggestedSignerEmail
+        public virtual string SuggestedSignerEmail
         {
             get
             {
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861142.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string SigningInstructions
+        public virtual string SigningInstructions
         {
             get
             {
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860571.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool AllowComments
+        public virtual bool AllowComments
         {
             get
             {
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861064.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ShowSignDate
+        public virtual bool ShowSignDate
         {
             get
             {
@@ -216,7 +216,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864950.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string AdditionalXml
+        public virtual string AdditionalXml
         {
             get
             {

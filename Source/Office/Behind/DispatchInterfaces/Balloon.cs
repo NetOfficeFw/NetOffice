@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Checkboxes
+        public virtual object Checkboxes
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Labels
+        public virtual object Labels
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBalloonType BalloonType
+        public virtual NetOffice.OfficeApi.Enums.MsoBalloonType BalloonType
         {
             get
             {
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoIconType Icon
+        public virtual NetOffice.OfficeApi.Enums.MsoIconType Icon
         {
             get
             {
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Heading
+        public virtual string Heading
         {
             get
             {
@@ -157,7 +157,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text
+        public virtual string Text
         {
             get
             {
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoModeType Mode
+        public virtual NetOffice.OfficeApi.Enums.MsoModeType Mode
         {
             get
             {
@@ -191,7 +191,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoAnimationType Animation
+        public virtual NetOffice.OfficeApi.Enums.MsoAnimationType Animation
         {
             get
             {
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoButtonSetType Button
+        public virtual NetOffice.OfficeApi.Enums.MsoButtonSetType Button
         {
             get
             {
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Callback
+        public virtual string Callback
         {
             get
             {
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Private
+        public virtual Int32 Private
         {
             get
             {
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -279,7 +279,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="right">Int32 right</param>
         /// <param name="bottom">Int32 bottom</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void SetAvoidRectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
+        public virtual void SetAvoidRectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
         {
             Factory.ExecuteMethod(this, "SetAvoidRectangle", left, top, right, bottom);
         }
@@ -288,7 +288,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoBalloonButtonType Show()
+        public virtual NetOffice.OfficeApi.Enums.MsoBalloonButtonType Show()
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.OfficeApi.Enums.MsoBalloonButtonType>(this, "Show");
         }
@@ -297,7 +297,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Close()
+        public virtual void Close()
         {
             Factory.ExecuteMethod(this, "Close");
         }

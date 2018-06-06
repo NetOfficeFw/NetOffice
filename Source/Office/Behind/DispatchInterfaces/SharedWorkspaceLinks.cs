@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.SharedWorkspaceLink this[Int32 index]
+        public virtual NetOffice.OfficeApi.SharedWorkspaceLink this[Int32 index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864175.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861528.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861770.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool ItemCountExceeded
+        public virtual bool ItemCountExceeded
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="description">optional object description</param>
         /// <param name="notes">optional object notes</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description, object notes)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description, object notes)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL, description, notes);
         }
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="uRL">string uRL</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL);
         }
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="description">optional object description</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL, description);
         }
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.SharedWorkspaceLink> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.SharedWorkspaceLink> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.SharedWorkspaceLink item in innerEnumerator)

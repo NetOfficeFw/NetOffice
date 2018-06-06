@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.ExcelApi.Hyperlink this[object index]
+        public virtual NetOffice.ExcelApi.Hyperlink this[object index]
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="screenTip">optional object screenTip</param>
         /// <param name="textToDisplay">optional object textToDisplay</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Add(object anchor, string address, object subAddress, object screenTip, object textToDisplay)
+        public virtual object Add(object anchor, string address, object subAddress, object screenTip, object textToDisplay)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { anchor, address, subAddress, screenTip, textToDisplay });
         }
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="address">string address</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Add(object anchor, string address)
+        public virtual object Add(object anchor, string address)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", anchor, address);
         }
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="subAddress">optional object subAddress</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Add(object anchor, string address, object subAddress)
+        public virtual object Add(object anchor, string address, object subAddress)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", anchor, address, subAddress);
         }
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="screenTip">optional object screenTip</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Add(object anchor, string address, object subAddress, object screenTip)
+        public virtual object Add(object anchor, string address, object subAddress, object screenTip)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", anchor, address, subAddress, screenTip);
         }
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Hyperlink> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.Hyperlink> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.Hyperlink item in innerEnumerator)

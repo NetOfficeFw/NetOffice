@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool BuiltIn
+		public virtual bool BuiltIn
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool BuiltInFace
+		public virtual bool BuiltInFace
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Enabled
+		public virtual bool Enabled
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 HelpContextID
+		public virtual Int32 HelpContextID
 		{
 			get
 			{
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string HelpFile
+		public virtual string HelpFile
 		{
 			get
 			{
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ID
+		public virtual Int32 ID
 		{
 			get
 			{
@@ -197,7 +197,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool IsGap
+		public virtual bool IsGap
 		{
 			get
 			{
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string OnAction
+		public virtual string OnAction
 		{
 			get
 			{
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Pushed
+		public virtual bool Pushed
 		{
 			get
 			{
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string StatusBar
+		public virtual string StatusBar
 		{
 			get
 			{
@@ -278,7 +278,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Width
+		public virtual Int32 Width
 		{
 			get
 			{
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="toolbar">NetOffice.ExcelApi.Toolbar toolbar</param>
 		/// <param name="before">Int32 before</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Copy(NetOffice.ExcelApi.Toolbar toolbar, Int32 before)
+		public virtual Int32 Copy(NetOffice.ExcelApi.Toolbar toolbar, Int32 before)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Copy", toolbar, before);
 		}
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 CopyFace()
+		public virtual Int32 CopyFace()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "CopyFace");
 		}
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
@@ -327,7 +327,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Edit()
+		public virtual Int32 Edit()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Edit");
 		}
@@ -338,7 +338,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="toolbar">NetOffice.ExcelApi.Toolbar toolbar</param>
 		/// <param name="before">Int32 before</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Move(NetOffice.ExcelApi.Toolbar toolbar, Int32 before)
+		public virtual Int32 Move(NetOffice.ExcelApi.Toolbar toolbar, Int32 before)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Move", toolbar, before);
 		}
@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 PasteFace()
+		public virtual Int32 PasteFace()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "PasteFace");
 		}
@@ -356,7 +356,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Reset()
+		public virtual Int32 Reset()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Reset");
 		}

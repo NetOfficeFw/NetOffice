@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861491.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoReflectionType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoReflectionType Type
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861198.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single Transparency
+        public virtual Single Transparency
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862407.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single Size
+        public virtual Single Size
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864080.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single Offset
+        public virtual Single Offset
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865483.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single Blur
+        public virtual Single Blur
         {
             get
             {

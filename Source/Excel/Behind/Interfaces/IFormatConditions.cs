@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.ExcelApi.FormatCondition this[object index]
+        public virtual NetOffice.ExcelApi.FormatCondition this[object index]
         {
             get
             {
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="formula1">optional object formula1</param>
         /// <param name="formula2">optional object formula2</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2)
+        public virtual NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator, formula1, formula2);
         }
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dateOperator">optional object dateOperator</param>
         /// <param name="scopeType">optional object scopeType</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator, object scopeType)
+        public virtual object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator, object scopeType)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator, dateOperator, scopeType });
         }
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType type</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type)
+        public virtual NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type);
         }
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="_operator">optional object operator</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator)
+        public virtual NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator);
         }
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="formula1">optional object formula1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1)
+        public virtual NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator, formula1);
         }
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="_string">optional object string</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string)
+        public virtual object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string });
         }
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="textOperator">optional object textOperator</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator)
+        public virtual object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator });
         }
@@ -242,7 +242,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dateOperator">optional object dateOperator</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator)
+        public virtual object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator, dateOperator });
         }
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="colorScaleType">Int32 colorScaleType</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object AddColorScale(Int32 colorScaleType)
+        public virtual object AddColorScale(Int32 colorScaleType)
         {
             return Factory.ExecuteVariantMethodGet(this, "AddColorScale", colorScaleType);
         }
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object AddDatabar()
+        public virtual object AddDatabar()
         {
             return Factory.ExecuteVariantMethodGet(this, "AddDatabar");
         }
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object AddIconSetCondition()
+        public virtual object AddIconSetCondition()
         {
             return Factory.ExecuteVariantMethodGet(this, "AddIconSetCondition");
         }
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object AddTop10()
+        public virtual object AddTop10()
         {
             return Factory.ExecuteVariantMethodGet(this, "AddTop10");
         }
@@ -297,7 +297,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object AddAboveAverage()
+        public virtual object AddAboveAverage()
         {
             return Factory.ExecuteVariantMethodGet(this, "AddAboveAverage");
         }
@@ -306,7 +306,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object AddUniqueValues()
+        public virtual object AddUniqueValues()
         {
             return Factory.ExecuteVariantMethodGet(this, "AddUniqueValues");
         }
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.FormatCondition> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.FormatCondition> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.FormatCondition item in innerEnumerator)

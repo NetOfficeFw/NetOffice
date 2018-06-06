@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 FeatureReports
+        public virtual Int32 FeatureReports
         {
             get
             {
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool OutputToDebugger
+        public virtual bool OutputToDebugger
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool OutputToFile
+        public virtual bool OutputToFile
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public bool OutputToMessageBox
+        public virtual bool OutputToMessageBox
         {
             get
             {
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object UnitTestManager
+        public virtual object UnitTestManager
         {
             get
             {
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrTagToIgnore">string bstrTagToIgnore</param>
         [SupportByVersion("Office", 15, 16)]
-        public void AddIgnoredAssertTag(string bstrTagToIgnore)
+        public virtual void AddIgnoredAssertTag(string bstrTagToIgnore)
         {
             Factory.ExecuteMethod(this, "AddIgnoredAssertTag", bstrTagToIgnore);
         }
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrTagToIgnore">string bstrTagToIgnore</param>
         [SupportByVersion("Office", 15, 16)]
-        public void RemoveIgnoredAssertTag(string bstrTagToIgnore)
+        public virtual void RemoveIgnoredAssertTag(string bstrTagToIgnore)
         {
             Factory.ExecuteMethod(this, "RemoveIgnoredAssertTag", bstrTagToIgnore);
         }

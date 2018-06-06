@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840735.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834941.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822847.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839175.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840754.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Caption
+		public virtual string Caption
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193502.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Top
+		public virtual Double Top
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840417.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Left
+		public virtual Double Left
 		{
 			get
 			{
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195300.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool DisableMoveResizeUI
+		public virtual bool DisableMoveResizeUI
 		{
 			get
 			{
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823094.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Width
+		public virtual Double Width
 		{
 			get
 			{
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192965.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Height
+		public virtual Double Height
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835929.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double RowHeight
+		public virtual Double RowHeight
 		{
 			get
 			{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841273.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double ColumnWidth
+		public virtual Double ColumnWidth
 		{
 			get
 			{
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836802.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 NumberOfColumns
+		public virtual Int32 NumberOfColumns
 		{
 			get
 			{
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840424.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool DisplayHeader
+		public virtual bool DisplayHeader
 		{
 			get
 			{
@@ -306,7 +306,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198116.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool Locked
+		public virtual bool Locked
 		{
 			get
 			{
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838973.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerCache SlicerCache
+		public virtual NetOffice.ExcelApi.SlicerCache SlicerCache
 		{
 			get
 			{
@@ -338,7 +338,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823175.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerCacheLevel SlicerCacheLevel
+		public virtual NetOffice.ExcelApi.SlicerCacheLevel SlicerCacheLevel
 		{
 			get
 			{
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821661.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Shape Shape
+		public virtual NetOffice.ExcelApi.Shape Shape
 		{
 			get
 			{
@@ -366,7 +366,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840028.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public object Style
+		public virtual object Style
 		{
 			get
 			{
@@ -384,7 +384,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840599.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerItem ActiveItem
+		public virtual NetOffice.ExcelApi.SlicerItem ActiveItem
 		{
 			get
 			{
@@ -398,7 +398,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229609.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.TimelineViewState TimelineViewState
+		public virtual NetOffice.ExcelApi.TimelineViewState TimelineViewState
 		{
 			get
 			{
@@ -412,7 +412,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231695.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlSlicerCacheType SlicerCacheType
+		public virtual NetOffice.ExcelApi.Enums.XlSlicerCacheType SlicerCacheType
 		{
 			get
 			{
@@ -429,7 +429,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837364.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -439,7 +439,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837584.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void Cut()
+		public virtual void Cut()
 		{
 			 Factory.ExecuteMethod(this, "Cut");
 		}
@@ -449,7 +449,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195379.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public void Copy()
+		public virtual void Copy()
 		{
 			 Factory.ExecuteMethod(this, "Copy");
 		}

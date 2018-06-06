@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.References Collection
+        public virtual NetOffice.VBIDEApi.References Collection
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -89,7 +89,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Guid
+        public virtual string Guid
         {
             get
             {
@@ -115,7 +115,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Major
+        public virtual Int32 Major
         {
             get
             {
@@ -128,7 +128,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Minor
+        public virtual Int32 Minor
         {
             get
             {
@@ -141,7 +141,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string FullPath
+        public virtual string FullPath
         {
             get
             {
@@ -154,7 +154,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool BuiltIn
+        public virtual bool BuiltIn
         {
             get
             {
@@ -167,7 +167,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool IsBroken
+        public virtual bool IsBroken
         {
             get
             {
@@ -180,7 +180,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Enums.vbext_RefKind Type
+        public virtual NetOffice.VBIDEApi.Enums.vbext_RefKind Type
         {
             get
             {
@@ -193,7 +193,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Description
+        public virtual string Description
         {
             get
             {

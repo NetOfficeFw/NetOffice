@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838201.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838240.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840716.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839380.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Enabled
+		public virtual bool Enabled
 		{
 			get
 			{
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194746.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Double Height
+		public virtual Double Height
 		{
 			get
 			{
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823152.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Double Left
+		public virtual Double Left
 		{
 			get
 			{
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836125.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Locked
+		public virtual bool Locked
 		{
 			get
 			{
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnAction
+		public virtual string OnAction
 		{
 			get
 			{
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836465.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Placement
+		public virtual object Placement
 		{
 			get
 			{
@@ -219,7 +219,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821542.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool PrintObject
+		public virtual bool PrintObject
 		{
 			get
 			{
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193259.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Double Top
+		public virtual Double Top
 		{
 			get
 			{
@@ -255,7 +255,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839876.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Visible
+		public virtual bool Visible
 		{
 			get
 			{
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820978.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Double Width
+		public virtual Double Width
 		{
 			get
 			{
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197512.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 ZOrder
+		public virtual Int32 ZOrder
 		{
 			get
 			{
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193292.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ShapeRange ShapeRange
+		public virtual NetOffice.ExcelApi.ShapeRange ShapeRange
 		{
 			get
 			{
@@ -319,7 +319,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822557.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Border Border
+		public virtual NetOffice.ExcelApi.Border Border
 		{
 			get
 			{
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838819.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Interior Interior
+		public virtual NetOffice.ExcelApi.Interior Interior
 		{
 			get
 			{
@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822580.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Shadow
+		public virtual bool Shadow
 		{
 			get
 			{
@@ -365,7 +365,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193608.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool AutoLoad
+		public virtual bool AutoLoad
 		{
 			get
 			{
@@ -383,7 +383,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835625.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string SourceName
+		public virtual string SourceName
 		{
 			get
 			{
@@ -401,7 +401,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839943.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -418,7 +418,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy3()
+		public virtual void _Dummy3()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy3");
 		}
@@ -428,7 +428,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193306.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object BringToFront()
+		public virtual object BringToFront()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "BringToFront");
 		}
@@ -438,7 +438,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840362.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Copy()
+		public virtual object Copy()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Copy");
 		}
@@ -450,7 +450,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 2</param>
 		/// <param name="format">optional NetOffice.ExcelApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CopyPicture(object appearance, object format)
+		public virtual object CopyPicture(object appearance, object format)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "CopyPicture", appearance, format);
 		}
@@ -461,7 +461,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822574.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CopyPicture()
+		public virtual object CopyPicture()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "CopyPicture");
 		}
@@ -473,7 +473,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object CopyPicture(object appearance)
+		public virtual object CopyPicture(object appearance)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "CopyPicture", appearance);
 		}
@@ -483,7 +483,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837550.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Cut()
+		public virtual object Cut()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Cut");
 		}
@@ -493,7 +493,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838825.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Delete()
+		public virtual object Delete()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Delete");
 		}
@@ -503,7 +503,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838628.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Duplicate()
+		public virtual object Duplicate()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Duplicate");
 		}
@@ -513,7 +513,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy12()
+		public virtual void _Dummy12()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy12");
 		}
@@ -523,7 +523,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy15()
+		public virtual void _Dummy15()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy15");
 		}
@@ -534,7 +534,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838456.aspx </remarks>
 		/// <param name="replace">optional object replace</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Select(object replace)
+		public virtual object Select(object replace)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Select", replace);
 		}
@@ -545,7 +545,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838456.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Select()
+		public virtual object Select()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Select");
 		}
@@ -555,7 +555,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837971.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object SendToBack()
+		public virtual object SendToBack()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "SendToBack");
 		}
@@ -565,7 +565,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy22()
+		public virtual void _Dummy22()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy22");
 		}
@@ -575,7 +575,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy30()
+		public virtual void _Dummy30()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy30");
 		}
@@ -585,7 +585,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy32()
+		public virtual void _Dummy32()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy32");
 		}
@@ -595,7 +595,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy33()
+		public virtual void _Dummy33()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy33");
 		}
@@ -605,7 +605,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy34()
+		public virtual void _Dummy34()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy34");
 		}
@@ -615,7 +615,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy36()
+		public virtual void _Dummy36()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy36");
 		}
@@ -625,7 +625,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy37()
+		public virtual void _Dummy37()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy37");
 		}
@@ -635,7 +635,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy38()
+		public virtual void _Dummy38()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy38");
 		}
@@ -645,7 +645,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy39()
+		public virtual void _Dummy39()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy39");
 		}
@@ -655,7 +655,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy40()
+		public virtual void _Dummy40()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy40");
 		}
@@ -665,7 +665,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void _Dummy41()
+		public virtual void _Dummy41()
 		{
 			 Factory.ExecuteMethod(this, "_Dummy41");
 		}
@@ -686,7 +686,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height });
 		}
@@ -697,7 +697,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195728.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add()
+		public virtual NetOffice.ExcelApi.OLEObject Add()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject));
 		}
@@ -709,7 +709,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="classType">optional object classType</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), classType);
 		}
@@ -722,7 +722,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="filename">optional object filename</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), classType, filename);
 		}
@@ -736,7 +736,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="link">optional object link</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), classType, filename, link);
 		}
@@ -751,7 +751,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="displayAsIcon">optional object displayAsIcon</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), classType, filename, link, displayAsIcon);
 		}
@@ -767,7 +767,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="iconFileName">optional object iconFileName</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), new object[]{ classType, filename, link, displayAsIcon, iconFileName });
 		}
@@ -784,7 +784,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="iconIndex">optional object iconIndex</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex });
 		}
@@ -802,7 +802,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="iconLabel">optional object iconLabel</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel });
 		}
@@ -821,7 +821,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left });
 		}
@@ -841,7 +841,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top });
 		}
@@ -862,7 +862,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width)
+		public virtual NetOffice.ExcelApi.OLEObject Add(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.OLEObject>(this, "Add", typeof(NetOffice.ExcelApi.OLEObject), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width });
 		}
@@ -872,7 +872,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.GroupObject Group()
+		public virtual NetOffice.ExcelApi.GroupObject Group()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.GroupObject>(this, "Group", typeof(NetOffice.ExcelApi.GroupObject));
 		}
@@ -883,7 +883,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public object this[object index]
+		public virtual object this[object index]
 		{
 			get
 			{
@@ -913,7 +913,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<object> GetEnumerator()
+        public virtual IEnumerator<object> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (object item in innerEnumerator)

@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoBorder Border
+        public virtual NetOffice.OfficeApi.IMsoBorder Border
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoDataLabel DataLabel
+        public virtual NetOffice.OfficeApi.IMsoDataLabel DataLabel
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Explosion
+        public virtual Int32 Explosion
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool HasDataLabel
+        public virtual bool HasDataLabel
         {
             get
             {
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoInterior Interior
+        public virtual NetOffice.OfficeApi.IMsoInterior Interior
         {
             get
             {
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool InvertIfNegative
+        public virtual bool InvertIfNegative
         {
             get
             {
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 MarkerBackgroundColor
+        public virtual Int32 MarkerBackgroundColor
         {
             get
             {
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlColorIndex MarkerBackgroundColorIndex
+        public virtual NetOffice.OfficeApi.Enums.XlColorIndex MarkerBackgroundColorIndex
         {
             get
             {
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 MarkerForegroundColor
+        public virtual Int32 MarkerForegroundColor
         {
             get
             {
@@ -218,7 +218,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlColorIndex MarkerForegroundColorIndex
+        public virtual NetOffice.OfficeApi.Enums.XlColorIndex MarkerForegroundColorIndex
         {
             get
             {
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 MarkerSize
+        public virtual Int32 MarkerSize
         {
             get
             {
@@ -252,7 +252,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlMarkerStyle MarkerStyle
+        public virtual NetOffice.OfficeApi.Enums.XlMarkerStyle MarkerStyle
         {
             get
             {
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlChartPictureType PictureType
+        public virtual NetOffice.OfficeApi.Enums.XlChartPictureType PictureType
         {
             get
             {
@@ -286,7 +286,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double PictureUnit
+        public virtual Double PictureUnit
         {
             get
             {
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ApplyPictToSides
+        public virtual bool ApplyPictToSides
         {
             get
             {
@@ -320,7 +320,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ApplyPictToFront
+        public virtual bool ApplyPictToFront
         {
             get
             {
@@ -337,7 +337,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ApplyPictToEnd
+        public virtual bool ApplyPictToEnd
         {
             get
             {
@@ -354,7 +354,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool Shadow
+        public virtual bool Shadow
         {
             get
             {
@@ -371,7 +371,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool SecondaryPlot
+        public virtual bool SecondaryPlot
         {
             get
             {
@@ -388,7 +388,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ChartFillFormat Fill
+        public virtual NetOffice.OfficeApi.ChartFillFormat Fill
         {
             get
             {
@@ -401,7 +401,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool Has3DEffect
+        public virtual bool Has3DEffect
         {
             get
             {
@@ -418,7 +418,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoChartFormat Format
+        public virtual NetOffice.OfficeApi.IMsoChartFormat Format
         {
             get
             {
@@ -432,7 +432,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -445,7 +445,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -458,7 +458,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Double PictureUnit2
+        public virtual Double PictureUnit2
         {
             get
             {
@@ -475,7 +475,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -488,7 +488,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Double Height
+        public virtual Double Height
         {
             get
             {
@@ -501,7 +501,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Double Width
+        public virtual Double Width
         {
             get
             {
@@ -514,7 +514,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Double Left
+        public virtual Double Left
         {
             get
             {
@@ -527,7 +527,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Double Top
+        public virtual Double Top
         {
             get
             {
@@ -548,7 +548,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="hasLeaderLines">optional object hasLeaderLines</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object _ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
+        public virtual object _ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, iMsoLegendKey, autoText, hasLeaderLines);
         }
@@ -559,7 +559,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object _ApplyDataLabels()
+        public virtual object _ApplyDataLabels()
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels");
         }
@@ -571,7 +571,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object _ApplyDataLabels(object type)
+        public virtual object _ApplyDataLabels(object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type);
         }
@@ -584,7 +584,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object _ApplyDataLabels(object type, object iMsoLegendKey)
+        public virtual object _ApplyDataLabels(object type, object iMsoLegendKey)
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, iMsoLegendKey);
         }
@@ -598,7 +598,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object _ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
+        public virtual object _ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, iMsoLegendKey, autoText);
         }
@@ -607,7 +607,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ClearFormats()
+        public virtual object ClearFormats()
         {
             return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
         }
@@ -616,7 +616,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Copy()
+        public virtual object Copy()
         {
             return Factory.ExecuteVariantMethodGet(this, "Copy");
         }
@@ -625,7 +625,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }
@@ -634,7 +634,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Paste()
+        public virtual object Paste()
         {
             return Factory.ExecuteVariantMethodGet(this, "Paste");
         }
@@ -643,7 +643,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Select()
+        public virtual object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
         }
@@ -662,7 +662,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="showBubbleSize">optional object showBubbleSize</param>
         /// <param name="separator">optional object separator</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator });
         }
@@ -672,7 +672,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels()
+        public virtual object ApplyDataLabels()
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels");
         }
@@ -683,7 +683,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type)
+        public virtual object ApplyDataLabels(object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type);
         }
@@ -695,7 +695,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, iMsoLegendKey);
         }
@@ -708,7 +708,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="autoText">optional object autoText</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, iMsoLegendKey, autoText);
         }
@@ -722,7 +722,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="hasLeaderLines">optional object hasLeaderLines</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, iMsoLegendKey, autoText, hasLeaderLines);
         }
@@ -737,7 +737,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="showSeriesName">optional object showSeriesName</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName });
         }
@@ -753,7 +753,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="showCategoryName">optional object showCategoryName</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName });
         }
@@ -770,7 +770,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="showValue">optional object showValue</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue });
         }
@@ -788,7 +788,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="showPercentage">optional object showPercentage</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage });
         }
@@ -807,7 +807,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="showBubbleSize">optional object showBubbleSize</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
+        public virtual object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize });
         }
@@ -818,7 +818,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="loc">NetOffice.OfficeApi.Enums.XlPieSliceLocation loc</param>
         /// <param name="index">optional NetOffice.OfficeApi.Enums.XlPieSliceIndex Index = 2</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Double PieSliceLocation(NetOffice.OfficeApi.Enums.XlPieSliceLocation loc, object index)
+        public virtual Double PieSliceLocation(NetOffice.OfficeApi.Enums.XlPieSliceLocation loc, object index)
         {
             return Factory.ExecuteDoubleMethodGet(this, "PieSliceLocation", loc, index);
         }
@@ -829,7 +829,7 @@ namespace NetOffice.OfficeApi.Behind.Interfaces
         /// <param name="loc">NetOffice.OfficeApi.Enums.XlPieSliceLocation loc</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public Double PieSliceLocation(NetOffice.OfficeApi.Enums.XlPieSliceLocation loc)
+        public virtual Double PieSliceLocation(NetOffice.OfficeApi.Enums.XlPieSliceLocation loc)
         {
             return Factory.ExecuteDoubleMethodGet(this, "PieSliceLocation", loc);
         }

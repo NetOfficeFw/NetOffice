@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Version
+        public virtual string Version
         {
             get
             {

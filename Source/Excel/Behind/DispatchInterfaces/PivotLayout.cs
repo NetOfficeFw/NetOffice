@@ -33,7 +33,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_ColumnFields(object index)
+        public virtual object get_ColumnFields(object index)
         {
             return Factory.ExecuteReferencePropertyGet(this, "ColumnFields", index);
         }
@@ -45,7 +45,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult, Redirect("get_ColumnFields")]
-        public object ColumnFields(object index)
+        public virtual object ColumnFields(object index)
         {
             return get_ColumnFields(index);
         }
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_DataFields(object index)
+        public virtual object get_DataFields(object index)
         {
             return Factory.ExecuteReferencePropertyGet(this, "DataFields", index);
         }
@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult, Redirect("get_DataFields")]
-        public object DataFields(object index)
+        public virtual object DataFields(object index)
         {
             return get_DataFields(index);
         }
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_PageFields(object index)
+        public virtual object get_PageFields(object index)
         {
             return Factory.ExecuteReferencePropertyGet(this, "PageFields", index);
         }
@@ -95,7 +95,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult, Redirect("get_PageFields")]
-        public object PageFields(object index)
+        public virtual object PageFields(object index)
         {
             return get_PageFields(index);
         }
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_RowFields(object index)
+        public virtual object get_RowFields(object index)
         {
             return Factory.ExecuteReferencePropertyGet(this, "RowFields", index);
         }
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult, Redirect("get_RowFields")]
-        public object RowFields(object index)
+        public virtual object RowFields(object index)
         {
             return get_RowFields(index);
         }
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_HiddenFields(object index)
+        public virtual object get_HiddenFields(object index)
         {
             return Factory.ExecuteReferencePropertyGet(this, "HiddenFields", index);
         }
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult, Redirect("get_HiddenFields")]
-        public object HiddenFields(object index)
+        public virtual object HiddenFields(object index)
         {
             return get_HiddenFields(index);
         }
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_VisibleFields(object index)
+        public virtual object get_VisibleFields(object index)
         {
             return Factory.ExecuteReferencePropertyGet(this, "VisibleFields", index);
         }
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult, Redirect("get_VisibleFields")]
-        public object VisibleFields(object index)
+        public virtual object VisibleFields(object index)
         {
             return get_VisibleFields(index);
         }
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_PivotFields(object index)
+        public virtual object get_PivotFields(object index)
         {
             return Factory.ExecuteReferencePropertyGet(this, "PivotFields", index);
         }
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult, Redirect("get_PivotFields")]
-        public object PivotFields(object index)
+        public virtual object PivotFields(object index)
         {
             return get_PivotFields(index);
         }
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840381.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193677.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -295,7 +295,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834978.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object ColumnFields
+        public virtual object ColumnFields
         {
             get
             {
@@ -323,7 +323,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object DataFields
+        public virtual object DataFields
         {
             get
             {
@@ -337,7 +337,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object PageFields
+        public virtual object PageFields
         {
             get
             {
@@ -351,7 +351,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object RowFields
+        public virtual object RowFields
         {
             get
             {
@@ -365,7 +365,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object HiddenFields
+        public virtual object HiddenFields
         {
             get
             {
@@ -379,7 +379,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object VisibleFields
+        public virtual object VisibleFields
         {
             get
             {
@@ -393,7 +393,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object PivotFields
+        public virtual object PivotFields
         {
             get
             {
@@ -406,7 +406,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.CubeFields CubeFields
+        public virtual NetOffice.ExcelApi.CubeFields CubeFields
         {
             get
             {
@@ -419,7 +419,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotCache PivotCache
+        public virtual NetOffice.ExcelApi.PivotCache PivotCache
         {
             get
             {
@@ -433,7 +433,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838070.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotTable PivotTable
+        public virtual NetOffice.ExcelApi.PivotTable PivotTable
         {
             get
             {
@@ -446,7 +446,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string InnerDetail
+        public virtual string InnerDetail
         {
             get
             {
@@ -470,7 +470,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="pageFields">optional object pageFields</param>
         /// <param name="appendField">optional object appendField</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public void AddFields(object rowFields, object columnFields, object pageFields, object appendField)
+        public virtual void AddFields(object rowFields, object columnFields, object pageFields, object appendField)
         {
             Factory.ExecuteMethod(this, "AddFields", rowFields, columnFields, pageFields, appendField);
         }
@@ -480,7 +480,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public void AddFields()
+        public virtual void AddFields()
         {
             Factory.ExecuteMethod(this, "AddFields");
         }
@@ -491,7 +491,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowFields">optional object rowFields</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public void AddFields(object rowFields)
+        public virtual void AddFields(object rowFields)
         {
             Factory.ExecuteMethod(this, "AddFields", rowFields);
         }
@@ -503,7 +503,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columnFields">optional object columnFields</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public void AddFields(object rowFields, object columnFields)
+        public virtual void AddFields(object rowFields, object columnFields)
         {
             Factory.ExecuteMethod(this, "AddFields", rowFields, columnFields);
         }
@@ -516,7 +516,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="pageFields">optional object pageFields</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public void AddFields(object rowFields, object columnFields, object pageFields)
+        public virtual void AddFields(object rowFields, object columnFields, object pageFields)
         {
             Factory.ExecuteMethod(this, "AddFields", rowFields, columnFields, pageFields);
         }

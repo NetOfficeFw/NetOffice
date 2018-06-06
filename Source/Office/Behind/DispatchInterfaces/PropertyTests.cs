@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.PropertyTest this[Int32 index]
+        public virtual NetOffice.OfficeApi.PropertyTest this[Int32 index]
         {
             get
             {
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="secondValue">optional object secondValue</param>
         /// <param name="connector">optional NetOffice.OfficeApi.Enums.MsoConnector Connector = 1</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, object connector)
+        public virtual void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, object connector)
         {
             Factory.ExecuteMethod(this, "Add", new object[] { name, condition, value, secondValue, connector });
         }
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition condition</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition)
+        public virtual void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition)
         {
             Factory.ExecuteMethod(this, "Add", name, condition);
         }
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="value">optional object value</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value)
+        public virtual void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value)
         {
             Factory.ExecuteMethod(this, "Add", name, condition, value);
         }
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="secondValue">optional object secondValue</param>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue)
+        public virtual void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue)
         {
             Factory.ExecuteMethod(this, "Add", name, condition, value, secondValue);
         }
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Remove(Int32 index)
+        public virtual void Remove(Int32 index)
         {
             Factory.ExecuteMethod(this, "Remove", index);
         }
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.PropertyTest> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.PropertyTest> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.PropertyTest item in innerEnumerator)

@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860772.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863314.aspx </remarks>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Load(string fileName)
+        public virtual void Load(string fileName)
         {
             Factory.ExecuteMethod(this, "Load", fileName);
         }

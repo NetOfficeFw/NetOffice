@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.Window this[object index]
+		public virtual NetOffice.ExcelApi.Window this[object index]
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool SyncScrollingSideBySide
+		public virtual bool SyncScrollingSideBySide
 		{
 			get
 			{
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="syncHorizontal">optional object syncHorizontal</param>
 		/// <param name="syncVertical">optional object syncVertical</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal, object syncVertical)
+		public virtual object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal, object syncVertical)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook, syncHorizontal, syncVertical);
 		}
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Arrange()
+		public virtual object Arrange()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Arrange");
 		}
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arrangeStyle">optional NetOffice.ExcelApi.Enums.XlArrangeStyle ArrangeStyle = 1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Arrange(object arrangeStyle)
+		public virtual object Arrange(object arrangeStyle)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle);
 		}
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="activeWorkbook">optional object activeWorkbook</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Arrange(object arrangeStyle, object activeWorkbook)
+		public virtual object Arrange(object arrangeStyle, object activeWorkbook)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook);
 		}
@@ -203,7 +203,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="syncHorizontal">optional object syncHorizontal</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal)
+		public virtual object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook, syncHorizontal);
 		}
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="windowName">object windowName</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool CompareSideBySideWith(object windowName)
+		public virtual bool CompareSideBySideWith(object windowName)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "CompareSideBySideWith", windowName);
 		}
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool BreakSideBySide()
+		public virtual bool BreakSideBySide()
 		{
 			return Factory.ExecuteBoolMethodGet(this, "BreakSideBySide");
 		}
@@ -231,7 +231,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public Int32 ResetPositionsSideBySide()
+		public virtual Int32 ResetPositionsSideBySide()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ResetPositionsSideBySide");
 		}
@@ -258,7 +258,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Window> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.Window> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.Window item in innerEnumerator)

@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool FieldNames
+        public virtual bool FieldNames
         {
             get
             {
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool RowNumbers
+        public virtual bool RowNumbers
         {
             get
             {
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool FillAdjacentFormulas
+        public virtual bool FillAdjacentFormulas
         {
             get
             {
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasAutoFormat
+        public virtual bool HasAutoFormat
         {
             get
             {
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool RefreshOnFileOpen
+        public virtual bool RefreshOnFileOpen
         {
             get
             {
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Refreshing
+        public virtual bool Refreshing
         {
             get
             {
@@ -219,7 +219,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool FetchedRowOverflow
+        public virtual bool FetchedRowOverflow
         {
             get
             {
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool BackgroundQuery
+        public virtual bool BackgroundQuery
         {
             get
             {
@@ -249,7 +249,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCellInsertionMode RefreshStyle
+        public virtual NetOffice.ExcelApi.Enums.XlCellInsertionMode RefreshStyle
         {
             get
             {
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool EnableRefresh
+        public virtual bool EnableRefresh
         {
             get
             {
@@ -283,7 +283,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool SavePassword
+        public virtual bool SavePassword
         {
             get
             {
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Destination
+        public virtual NetOffice.ExcelApi.Range Destination
         {
             get
             {
@@ -313,7 +313,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Connection
+        public virtual object Connection
         {
             get
             {
@@ -331,7 +331,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object Sql
+        public virtual object Sql
         {
             get
             {
@@ -348,7 +348,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string PostText
+        public virtual string PostText
         {
             get
             {
@@ -365,7 +365,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range ResultRange
+        public virtual NetOffice.ExcelApi.Range ResultRange
         {
             get
             {
@@ -378,7 +378,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Parameters Parameters
+        public virtual NetOffice.ExcelApi.Parameters Parameters
         {
             get
             {
@@ -392,7 +392,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Recordset
+        public virtual object Recordset
         {
             get
             {
@@ -409,7 +409,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool SaveData
+        public virtual bool SaveData
         {
             get
             {
@@ -427,7 +427,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool TablesOnlyFromHTML
+        public virtual bool TablesOnlyFromHTML
         {
             get
             {
@@ -444,7 +444,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool EnableEditing
+        public virtual bool EnableEditing
         {
             get
             {
@@ -461,7 +461,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlPlatform TextFilePlatform
+        public virtual NetOffice.ExcelApi.Enums.XlPlatform TextFilePlatform
         {
             get
             {
@@ -478,7 +478,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 TextFileStartRow
+        public virtual Int32 TextFileStartRow
         {
             get
             {
@@ -495,7 +495,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTextParsingType TextFileParseType
+        public virtual NetOffice.ExcelApi.Enums.XlTextParsingType TextFileParseType
         {
             get
             {
@@ -512,7 +512,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTextQualifier TextFileTextQualifier
+        public virtual NetOffice.ExcelApi.Enums.XlTextQualifier TextFileTextQualifier
         {
             get
             {
@@ -529,7 +529,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TextFileConsecutiveDelimiter
+        public virtual bool TextFileConsecutiveDelimiter
         {
             get
             {
@@ -546,7 +546,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TextFileTabDelimiter
+        public virtual bool TextFileTabDelimiter
         {
             get
             {
@@ -563,7 +563,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TextFileSemicolonDelimiter
+        public virtual bool TextFileSemicolonDelimiter
         {
             get
             {
@@ -580,7 +580,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TextFileCommaDelimiter
+        public virtual bool TextFileCommaDelimiter
         {
             get
             {
@@ -597,7 +597,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TextFileSpaceDelimiter
+        public virtual bool TextFileSpaceDelimiter
         {
             get
             {
@@ -614,7 +614,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string TextFileOtherDelimiter
+        public virtual string TextFileOtherDelimiter
         {
             get
             {
@@ -631,7 +631,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextFileColumnDataTypes
+        public virtual object TextFileColumnDataTypes
         {
             get
             {
@@ -648,7 +648,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextFileFixedColumnWidths
+        public virtual object TextFileFixedColumnWidths
         {
             get
             {
@@ -665,7 +665,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool PreserveColumnInfo
+        public virtual bool PreserveColumnInfo
         {
             get
             {
@@ -682,7 +682,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool PreserveFormatting
+        public virtual bool PreserveFormatting
         {
             get
             {
@@ -699,7 +699,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool AdjustColumnWidth
+        public virtual bool AdjustColumnWidth
         {
             get
             {
@@ -716,7 +716,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CommandText
+        public virtual object CommandText
         {
             get
             {
@@ -733,7 +733,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCmdType CommandType
+        public virtual NetOffice.ExcelApi.Enums.XlCmdType CommandType
         {
             get
             {
@@ -750,7 +750,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool TextFilePromptOnRefresh
+        public virtual bool TextFilePromptOnRefresh
         {
             get
             {
@@ -767,7 +767,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.xlQueryType QueryType
+        public virtual NetOffice.ExcelApi.Enums.xlQueryType QueryType
         {
             get
             {
@@ -780,7 +780,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool MaintainConnection
+        public virtual bool MaintainConnection
         {
             get
             {
@@ -797,7 +797,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string TextFileDecimalSeparator
+        public virtual string TextFileDecimalSeparator
         {
             get
             {
@@ -814,7 +814,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string TextFileThousandsSeparator
+        public virtual string TextFileThousandsSeparator
         {
             get
             {
@@ -831,7 +831,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 RefreshPeriod
+        public virtual Int32 RefreshPeriod
         {
             get
             {
@@ -848,7 +848,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.xlWebSelectionType WebSelectionType
+        public virtual NetOffice.ExcelApi.Enums.xlWebSelectionType WebSelectionType
         {
             get
             {
@@ -865,7 +865,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.xlWebFormatting WebFormatting
+        public virtual NetOffice.ExcelApi.Enums.xlWebFormatting WebFormatting
         {
             get
             {
@@ -882,7 +882,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string WebTables
+        public virtual string WebTables
         {
             get
             {
@@ -899,7 +899,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool WebPreFormattedTextToColumns
+        public virtual bool WebPreFormattedTextToColumns
         {
             get
             {
@@ -916,7 +916,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool WebSingleBlockTextImport
+        public virtual bool WebSingleBlockTextImport
         {
             get
             {
@@ -933,7 +933,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool WebDisableDateRecognition
+        public virtual bool WebDisableDateRecognition
         {
             get
             {
@@ -950,7 +950,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool WebConsecutiveDelimitersAsOne
+        public virtual bool WebConsecutiveDelimitersAsOne
         {
             get
             {
@@ -967,7 +967,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool WebDisableRedirections
+        public virtual bool WebDisableRedirections
         {
             get
             {
@@ -984,7 +984,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object EditWebPage
+        public virtual object EditWebPage
         {
             get
             {
@@ -1001,7 +1001,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public string SourceConnectionFile
+        public virtual string SourceConnectionFile
         {
             get
             {
@@ -1018,7 +1018,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public string SourceDataFile
+        public virtual string SourceDataFile
         {
             get
             {
@@ -1035,7 +1035,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
+        public virtual NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
         {
             get
             {
@@ -1052,7 +1052,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool TextFileTrailingMinusNumbers
+        public virtual bool TextFileTrailingMinusNumbers
         {
             get
             {
@@ -1069,7 +1069,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListObject ListObject
+        public virtual NetOffice.ExcelApi.ListObject ListObject
         {
             get
             {
@@ -1082,7 +1082,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTextVisualLayoutType TextFileVisualLayout
+        public virtual NetOffice.ExcelApi.Enums.XlTextVisualLayoutType TextFileVisualLayout
         {
             get
             {
@@ -1099,7 +1099,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
+        public virtual NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
         {
             get
             {
@@ -1112,7 +1112,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Sort Sort
+        public virtual NetOffice.ExcelApi.Sort Sort
         {
             get
             {
@@ -1128,7 +1128,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 CancelRefresh()
+        public virtual Int32 CancelRefresh()
         {
             return Factory.ExecuteInt32MethodGet(this, "CancelRefresh");
         }
@@ -1137,7 +1137,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }
@@ -1147,7 +1147,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="backgroundQuery">optional object backgroundQuery</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Refresh(object backgroundQuery)
+        public virtual bool Refresh(object backgroundQuery)
         {
             return Factory.ExecuteBoolMethodGet(this, "Refresh", backgroundQuery);
         }
@@ -1157,7 +1157,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Refresh()
+        public virtual bool Refresh()
         {
             return Factory.ExecuteBoolMethodGet(this, "Refresh");
         }
@@ -1166,7 +1166,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 ResetTimer()
+        public virtual Int32 ResetTimer()
         {
             return Factory.ExecuteInt32MethodGet(this, "ResetTimer");
         }
@@ -1178,7 +1178,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="description">optional object description</param>
         /// <param name="keywords">optional object keywords</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 SaveAsODC(string oDCFileName, object description, object keywords)
+        public virtual Int32 SaveAsODC(string oDCFileName, object description, object keywords)
         {
             return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName, description, keywords);
         }
@@ -1189,7 +1189,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="oDCFileName">string oDCFileName</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 SaveAsODC(string oDCFileName)
+        public virtual Int32 SaveAsODC(string oDCFileName)
         {
             return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName);
         }
@@ -1201,7 +1201,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="description">optional object description</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 SaveAsODC(string oDCFileName, object description)
+        public virtual Int32 SaveAsODC(string oDCFileName, object description)
         {
             return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName, description);
         }

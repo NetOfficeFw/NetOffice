@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197314.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195628.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837382.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840367.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834481.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string Formula
+		public virtual string Formula
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822867.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string SourceName
+		public virtual string SourceName
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197565.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 SolveOrder
+		public virtual Int32 SolveOrder
 		{
 			get
 			{
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836535.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool IsValid
+		public virtual bool IsValid
 		{
 			get
 			{
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string _Default
+		public virtual string _Default
 		{
 			get
 			{
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823104.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCalculatedMemberType Type
+		public virtual NetOffice.ExcelApi.Enums.XlCalculatedMemberType Type
 		{
 			get
 			{
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838011.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool Dynamic
+		public virtual bool Dynamic
 		{
 			get
 			{
@@ -219,7 +219,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837040.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string DisplayFolder
+		public virtual string DisplayFolder
 		{
 			get
 			{
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196627.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool HierarchizeDistinct
+		public virtual bool HierarchizeDistinct
 		{
 			get
 			{
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837990.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool FlattenHierarchies
+		public virtual bool FlattenHierarchies
 		{
 			get
 			{
@@ -269,7 +269,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228547.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public string MeasureGroup
+		public virtual string MeasureGroup
 		{
 			get
 			{
@@ -283,7 +283,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227533.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public string ParentHierarchy
+		public virtual string ParentHierarchy
 		{
 			get
 			{
@@ -297,7 +297,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229988.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public string ParentMember
+		public virtual string ParentMember
 		{
 			get
 			{
@@ -311,7 +311,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228161.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCalcMemNumberFormatType NumberFormat
+		public virtual NetOffice.ExcelApi.Enums.XlCalcMemNumberFormatType NumberFormat
 		{
 			get
 			{
@@ -328,7 +328,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194128.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}

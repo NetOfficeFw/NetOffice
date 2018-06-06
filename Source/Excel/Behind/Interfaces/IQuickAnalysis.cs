@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="xlQuickAnalysisMode">optional NetOffice.ExcelApi.Enums.XlQuickAnalysisMode XlQuickAnalysisMode = 0</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 Show(object xlQuickAnalysisMode)
+		public virtual Int32 Show(object xlQuickAnalysisMode)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Show", xlQuickAnalysisMode);
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 Show()
+		public virtual Int32 Show()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Show");
 		}
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="xlQuickAnalysisMode">optional NetOffice.ExcelApi.Enums.XlQuickAnalysisMode XlQuickAnalysisMode = 0</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 Hide(object xlQuickAnalysisMode)
+		public virtual Int32 Hide(object xlQuickAnalysisMode)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Hide", xlQuickAnalysisMode);
 		}
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 Hide()
+		public virtual Int32 Hide()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Hide");
 		}

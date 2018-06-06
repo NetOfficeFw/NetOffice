@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public object Value
+        public virtual object Value
         {
             get
             {
@@ -85,7 +85,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index4">optional object index4</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_IndexedValue(object index1, object index2, object index3, object index4)
+        public virtual object get_IndexedValue(object index1, object index2, object index3, object index4)
         {
             return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2, index3, index4);
         }
@@ -100,7 +100,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index4">optional object index4</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_IndexedValue(object index1, object index2, object index3, object index4, object value)
+        public virtual void set_IndexedValue(object index1, object index2, object index3, object index4, object value)
         {
             Factory.ExecutePropertySet(this, "IndexedValue", new object[] { index1, index2, index3, index4, value });
         }
@@ -114,7 +114,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index3">optional object index3</param>
         /// <param name="index4">optional object index4</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_IndexedValue")]
-        public object IndexedValue(object index1, object index2, object index3, object index4)
+        public virtual object IndexedValue(object index1, object index2, object index3, object index4)
         {
             return get_IndexedValue(index1, index2, index3, index4);
         }
@@ -126,7 +126,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index1">object index1</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_IndexedValue(object index1)
+        public virtual object get_IndexedValue(object index1)
         {
             return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1);
         }
@@ -138,7 +138,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index1">object index1</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_IndexedValue(object index1, object value)
+        public virtual void set_IndexedValue(object index1, object value)
         {
             Factory.ExecutePropertySet(this, "IndexedValue", index1, value);
         }
@@ -149,7 +149,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="index1">object index1</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_IndexedValue")]
-        public object IndexedValue(object index1)
+        public virtual object IndexedValue(object index1)
         {
             return get_IndexedValue(index1);
         }
@@ -162,7 +162,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index2">optional object index2</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_IndexedValue(object index1, object index2)
+        public virtual object get_IndexedValue(object index1, object index2)
         {
             return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2);
         }
@@ -175,7 +175,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index2">optional object index2</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_IndexedValue(object index1, object index2, object value)
+        public virtual void set_IndexedValue(object index1, object index2, object value)
         {
             Factory.ExecutePropertySet(this, "IndexedValue", index1, index2, value);
         }
@@ -187,7 +187,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index1">object index1</param>
         /// <param name="index2">optional object index2</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_IndexedValue")]
-        public object IndexedValue(object index1, object index2)
+        public virtual object IndexedValue(object index1, object index2)
         {
             return get_IndexedValue(index1, index2);
         }
@@ -201,7 +201,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index3">optional object index3</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_IndexedValue(object index1, object index2, object index3)
+        public virtual object get_IndexedValue(object index1, object index2, object index3)
         {
             return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2, index3);
         }
@@ -215,7 +215,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index3">optional object index3</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_IndexedValue(object index1, object index2, object index3, object value)
+        public virtual void set_IndexedValue(object index1, object index2, object index3, object value)
         {
             Factory.ExecutePropertySet(this, "IndexedValue", index1, index2, index3, value);
         }
@@ -228,7 +228,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index2">optional object index2</param>
         /// <param name="index3">optional object index3</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_IndexedValue")]
-        public object IndexedValue(object index1, object index2, object index3)
+        public virtual object IndexedValue(object index1, object index2, object index3)
         {
             return get_IndexedValue(index1, index2, index3);
         }
@@ -238,7 +238,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int16 NumIndices
+        public virtual Int16 NumIndices
         {
             get
             {
@@ -253,7 +253,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [BaseResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.Application Application
+        public virtual NetOffice.VBIDEApi.Application Application
         {
             get
             {
@@ -267,7 +267,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.Properties Parent
+        public virtual NetOffice.VBIDEApi.Properties Parent
         {
             get
             {
@@ -280,7 +280,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -293,7 +293,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -306,7 +306,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Properties Collection
+        public virtual NetOffice.VBIDEApi.Properties Collection
         {
             get
             {
@@ -320,7 +320,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3), ProxyResult]
-        public object Object
+        public virtual object Object
         {
             get
             {

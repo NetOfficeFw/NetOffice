@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Context
+        public virtual Int32 Context
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Validator
+        public virtual object Validator
         {
             get
             {
@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object LicAgent
+        public virtual object LicAgent
         {
             get
             {
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string CountryInfo
+        public virtual string CountryInfo
         {
             get
             {
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 WizardVisible
+        public virtual Int32 WizardVisible
         {
             get
             {
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string WizardTitle
+        public virtual string WizardTitle
         {
             get
             {
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 AnimationEnabled
+        public virtual Int32 AnimationEnabled
         {
             get
             {
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 CurrentHelpId
+        public virtual Int32 CurrentHelpId
         {
             get
             {
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string OfficeOnTheWebUrl
+        public virtual string OfficeOnTheWebUrl
         {
             get
             {
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="punkHtmlDoc">object punkHtmlDoc</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void PrintHtmlDocument(object punkHtmlDoc)
+        public virtual void PrintHtmlDocument(object punkHtmlDoc)
         {
             Factory.ExecuteMethod(this, "PrintHtmlDocument", punkHtmlDoc);
         }
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void InvokeDateTimeApplet()
+        public virtual void InvokeDateTimeApplet()
         {
             Factory.ExecuteMethod(this, "InvokeDateTimeApplet");
         }
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="date">DateTime date</param>
         /// <param name="pFormat">optional string pFormat = </param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string FormatDate(DateTime date, object pFormat)
+        public virtual string FormatDate(DateTime date, object pFormat)
         {
             return Factory.ExecuteStringMethodGet(this, "FormatDate", date, pFormat);
         }
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="date">DateTime date</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string FormatDate(DateTime date)
+        public virtual string FormatDate(DateTime date)
         {
             return Factory.ExecuteStringMethodGet(this, "FormatDate", date);
         }
@@ -240,7 +240,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="pvarId">optional object pvarId</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void ShowHelp(object pvarId)
+        public virtual void ShowHelp(object pvarId)
         {
             Factory.ExecuteMethod(this, "ShowHelp", pvarId);
         }
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void ShowHelp()
+        public virtual void ShowHelp()
         {
             Factory.ExecuteMethod(this, "ShowHelp");
         }
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Terminate()
+        public virtual void Terminate()
         {
             Factory.ExecuteMethod(this, "Terminate");
         }
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bPC">Int32 bPC</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void DisableVORWReminder(Int32 bPC)
+        public virtual void DisableVORWReminder(Int32 bPC)
         {
             Factory.ExecuteMethod(this, "DisableVORWReminder", bPC);
         }
@@ -279,7 +279,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrReceipt">string bstrReceipt</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string SaveReceipt(string bstrReceipt)
+        public virtual string SaveReceipt(string bstrReceipt)
         {
             return Factory.ExecuteStringMethodGet(this, "SaveReceipt", bstrReceipt);
         }
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrUrl">string bstrUrl</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void OpenInDefaultBrowser(string bstrUrl)
+        public virtual void OpenInDefaultBrowser(string bstrUrl)
         {
             Factory.ExecuteMethod(this, "OpenInDefaultBrowser", bstrUrl);
         }
@@ -301,7 +301,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrButtons">string bstrButtons</param>
         /// <param name="bstrIcon">string bstrIcon</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 MsoAlert(string bstrText, string bstrButtons, string bstrIcon)
+        public virtual Int32 MsoAlert(string bstrText, string bstrButtons, string bstrIcon)
         {
             return Factory.ExecuteInt32MethodGet(this, "MsoAlert", bstrText, bstrButtons, bstrIcon);
         }
@@ -312,7 +312,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="bstrKey">string bstrKey</param>
         /// <param name="fMORW">Int32 fMORW</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 DepositPidKey(string bstrKey, Int32 fMORW)
+        public virtual Int32 DepositPidKey(string bstrKey, Int32 fMORW)
         {
             return Factory.ExecuteInt32MethodGet(this, "DepositPidKey", bstrKey, fMORW);
         }
@@ -322,7 +322,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrMessage">string bstrMessage</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void WriteLog(string bstrMessage)
+        public virtual void WriteLog(string bstrMessage)
         {
             Factory.ExecuteMethod(this, "WriteLog", bstrMessage);
         }
@@ -332,7 +332,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrProductCode">string bstrProductCode</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void ResignDpc(string bstrProductCode)
+        public virtual void ResignDpc(string bstrProductCode)
         {
             Factory.ExecuteMethod(this, "ResignDpc", bstrProductCode);
         }
@@ -341,7 +341,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void ResetPID()
+        public virtual void ResetPID()
         {
             Factory.ExecuteMethod(this, "ResetPID");
         }
@@ -352,7 +352,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="dx">Int32 dx</param>
         /// <param name="dy">Int32 dy</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetDialogSize(Int32 dx, Int32 dy)
+        public virtual void SetDialogSize(Int32 dx, Int32 dy)
         {
             Factory.ExecuteMethod(this, "SetDialogSize", dx, dy);
         }
@@ -362,7 +362,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="lMode">Int32 lMode</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 VerifyClock(Int32 lMode)
+        public virtual Int32 VerifyClock(Int32 lMode)
         {
             return Factory.ExecuteInt32MethodGet(this, "VerifyClock", lMode);
         }
@@ -372,7 +372,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="pdispSelect">object pdispSelect</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SortSelectOptions(object pdispSelect)
+        public virtual void SortSelectOptions(object pdispSelect)
         {
             Factory.ExecuteMethod(this, "SortSelectOptions", pdispSelect);
         }
@@ -381,7 +381,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void InternetDisconnect()
+        public virtual void InternetDisconnect()
         {
             Factory.ExecuteMethod(this, "InternetDisconnect");
         }
@@ -390,7 +390,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetConnectedState()
+        public virtual Int32 GetConnectedState()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetConnectedState");
         }

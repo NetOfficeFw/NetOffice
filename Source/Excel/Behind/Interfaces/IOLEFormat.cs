@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Object
+		public virtual object Object
 		{
 			get
 			{
@@ -117,7 +117,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string ProgId
+		public virtual string ProgId
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Activate()
+		public virtual Int32 Activate()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Activate");
 		}
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="verb">optional object verb</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Verb(object verb)
+		public virtual Int32 Verb(object verb)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Verb", verb);
 		}
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Verb()
+		public virtual Int32 Verb()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Verb");
 		}

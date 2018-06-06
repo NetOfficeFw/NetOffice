@@ -37,7 +37,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="length">optional object length</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.OfficeApi.IMsoCharacters get_Characters(object start, object length)
+        public virtual NetOffice.OfficeApi.IMsoCharacters get_Characters(object start, object length)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoCharacters>(this, "Characters", typeof(NetOffice.OfficeApi.IMsoCharacters), start, length);
         }
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="start">optional object start</param>
         /// <param name="length">optional object length</param>
         [SupportByVersion("Office", 12, 14, 15, 16), Redirect("get_Characters")]
-        public NetOffice.OfficeApi.IMsoCharacters Characters(object start, object length)
+        public virtual NetOffice.OfficeApi.IMsoCharacters Characters(object start, object length)
         {
             return get_Characters(start, length);
         }
@@ -61,7 +61,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="start">optional object start</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.OfficeApi.IMsoCharacters get_Characters(object start)
+        public virtual NetOffice.OfficeApi.IMsoCharacters get_Characters(object start)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoCharacters>(this, "Characters", typeof(NetOffice.OfficeApi.IMsoCharacters), start);
         }
@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="start">optional object start</param>
         [SupportByVersion("Office", 12, 14, 15, 16), Redirect("get_Characters")]
-        public NetOffice.OfficeApi.IMsoCharacters Characters(object start)
+        public virtual NetOffice.OfficeApi.IMsoCharacters Characters(object start)
         {
             return get_Characters(start);
         }
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoBorder Border
+        public virtual NetOffice.OfficeApi.IMsoBorder Border
         {
             get
             {
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoInterior Interior
+        public virtual NetOffice.OfficeApi.IMsoInterior Interior
         {
             get
             {
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ChartFillFormat Fill
+        public virtual NetOffice.OfficeApi.ChartFillFormat Fill
         {
             get
             {
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoCharacters Characters
+        public virtual NetOffice.OfficeApi.IMsoCharacters Characters
         {
             get
             {
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ChartFont Font
+        public virtual NetOffice.OfficeApi.ChartFont Font
         {
             get
             {
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object HorizontalAlignment
+        public virtual object HorizontalAlignment
         {
             get
             {
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Orientation
+        public virtual object Orientation
         {
             get
             {
@@ -268,7 +268,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool Shadow
+        public virtual bool Shadow
         {
             get
             {
@@ -285,7 +285,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object VerticalAlignment
+        public virtual object VerticalAlignment
         {
             get
             {
@@ -302,7 +302,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 ReadingOrder
+        public virtual Int32 ReadingOrder
         {
             get
             {
@@ -319,7 +319,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object AutoScaleFont
+        public virtual object AutoScaleFont
         {
             get
             {
@@ -336,7 +336,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool AutoText
+        public virtual bool AutoText
         {
             get
             {
@@ -353,7 +353,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string NumberFormat
+        public virtual string NumberFormat
         {
             get
             {
@@ -370,7 +370,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool NumberFormatLinked
+        public virtual bool NumberFormatLinked
         {
             get
             {
@@ -387,7 +387,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object NumberFormatLocal
+        public virtual object NumberFormatLocal
         {
             get
             {
@@ -404,7 +404,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ShowLegendKey
+        public virtual bool ShowLegendKey
         {
             get
             {
@@ -421,7 +421,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Type
+        public virtual object Type
         {
             get
             {
@@ -438,7 +438,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlDataLabelPosition Position
+        public virtual NetOffice.OfficeApi.Enums.XlDataLabelPosition Position
         {
             get
             {
@@ -455,7 +455,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ShowSeriesName
+        public virtual bool ShowSeriesName
         {
             get
             {
@@ -472,7 +472,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ShowCategoryName
+        public virtual bool ShowCategoryName
         {
             get
             {
@@ -489,7 +489,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ShowValue
+        public virtual bool ShowValue
         {
             get
             {
@@ -506,7 +506,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ShowPercentage
+        public virtual bool ShowPercentage
         {
             get
             {
@@ -523,7 +523,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ShowBubbleSize
+        public virtual bool ShowBubbleSize
         {
             get
             {
@@ -540,7 +540,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Separator
+        public virtual object Separator
         {
             get
             {
@@ -557,7 +557,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -570,7 +570,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoChartFormat Format
+        public virtual NetOffice.OfficeApi.IMsoChartFormat Format
         {
             get
             {
@@ -584,7 +584,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -597,7 +597,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -612,7 +612,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.IMsoDataLabel this[object index]
+        public virtual NetOffice.OfficeApi.IMsoDataLabel this[object index]
         {
             get
             {
@@ -625,7 +625,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 15, 16)]
-        public bool ShowRange
+        public virtual bool ShowRange
         {
             get
             {
@@ -645,7 +645,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Select()
+        public virtual object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
         }
@@ -654,7 +654,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }
@@ -664,7 +664,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 15, 16)]
-        public Int32 Propagate(object index)
+        public virtual Int32 Propagate(object index)
         {
             return Factory.ExecuteInt32MethodGet(this, "Propagate", index);
         }
@@ -691,7 +691,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.IMsoDataLabel> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.IMsoDataLabel> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.IMsoDataLabel item in innerEnumerator)

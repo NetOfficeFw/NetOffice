@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool AxisBetweenCategories
+        public virtual bool AxisBetweenCategories
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup
+        public virtual NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoAxisTitle AxisTitle
+        public virtual NetOffice.OfficeApi.IMsoAxisTitle AxisTitle
         {
             get
             {
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object CategoryNames
+        public virtual object CategoryNames
         {
             get
             {
@@ -124,7 +124,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlAxisCrosses Crosses
+        public virtual NetOffice.OfficeApi.Enums.XlAxisCrosses Crosses
         {
             get
             {
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double CrossesAt
+        public virtual Double CrossesAt
         {
             get
             {
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool HasMajorGridlines
+        public virtual bool HasMajorGridlines
         {
             get
             {
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool HasMinorGridlines
+        public virtual bool HasMinorGridlines
         {
             get
             {
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool HasTitle
+        public virtual bool HasTitle
         {
             get
             {
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.GridLines MajorGridlines
+        public virtual NetOffice.OfficeApi.GridLines MajorGridlines
         {
             get
             {
@@ -222,7 +222,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlTickMark MajorTickMark
+        public virtual NetOffice.OfficeApi.Enums.XlTickMark MajorTickMark
         {
             get
             {
@@ -239,7 +239,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double MajorUnit
+        public virtual Double MajorUnit
         {
             get
             {
@@ -256,7 +256,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double LogBase
+        public virtual Double LogBase
         {
             get
             {
@@ -273,7 +273,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool TickLabelSpacingIsAuto
+        public virtual bool TickLabelSpacingIsAuto
         {
             get
             {
@@ -290,7 +290,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool MajorUnitIsAuto
+        public virtual bool MajorUnitIsAuto
         {
             get
             {
@@ -307,7 +307,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double MaximumScale
+        public virtual Double MaximumScale
         {
             get
             {
@@ -324,7 +324,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool MaximumScaleIsAuto
+        public virtual bool MaximumScaleIsAuto
         {
             get
             {
@@ -341,7 +341,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double MinimumScale
+        public virtual Double MinimumScale
         {
             get
             {
@@ -358,7 +358,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool MinimumScaleIsAuto
+        public virtual bool MinimumScaleIsAuto
         {
             get
             {
@@ -375,7 +375,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.GridLines MinorGridlines
+        public virtual NetOffice.OfficeApi.GridLines MinorGridlines
         {
             get
             {
@@ -388,7 +388,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlTickMark MinorTickMark
+        public virtual NetOffice.OfficeApi.Enums.XlTickMark MinorTickMark
         {
             get
             {
@@ -405,7 +405,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double MinorUnit
+        public virtual Double MinorUnit
         {
             get
             {
@@ -422,7 +422,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool MinorUnitIsAuto
+        public virtual bool MinorUnitIsAuto
         {
             get
             {
@@ -439,7 +439,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ReversePlotOrder
+        public virtual bool ReversePlotOrder
         {
             get
             {
@@ -456,7 +456,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlScaleType ScaleType
+        public virtual NetOffice.OfficeApi.Enums.XlScaleType ScaleType
         {
             get
             {
@@ -473,7 +473,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlTickLabelPosition TickLabelPosition
+        public virtual NetOffice.OfficeApi.Enums.XlTickLabelPosition TickLabelPosition
         {
             get
             {
@@ -490,7 +490,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoTickLabels TickLabels
+        public virtual NetOffice.OfficeApi.IMsoTickLabels TickLabels
         {
             get
             {
@@ -503,7 +503,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 TickLabelSpacing
+        public virtual Int32 TickLabelSpacing
         {
             get
             {
@@ -520,7 +520,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 TickMarkSpacing
+        public virtual Int32 TickMarkSpacing
         {
             get
             {
@@ -537,7 +537,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlAxisType Type
+        public virtual NetOffice.OfficeApi.Enums.XlAxisType Type
         {
             get
             {
@@ -554,7 +554,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlTimeUnit BaseUnit
+        public virtual NetOffice.OfficeApi.Enums.XlTimeUnit BaseUnit
         {
             get
             {
@@ -571,7 +571,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool BaseUnitIsAuto
+        public virtual bool BaseUnitIsAuto
         {
             get
             {
@@ -588,7 +588,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlTimeUnit MajorUnitScale
+        public virtual NetOffice.OfficeApi.Enums.XlTimeUnit MajorUnitScale
         {
             get
             {
@@ -605,7 +605,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlTimeUnit MinorUnitScale
+        public virtual NetOffice.OfficeApi.Enums.XlTimeUnit MinorUnitScale
         {
             get
             {
@@ -622,7 +622,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlCategoryType CategoryType
+        public virtual NetOffice.OfficeApi.Enums.XlCategoryType CategoryType
         {
             get
             {
@@ -639,7 +639,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double Left
+        public virtual Double Left
         {
             get
             {
@@ -652,7 +652,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double Top
+        public virtual Double Top
         {
             get
             {
@@ -665,7 +665,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double Width
+        public virtual Double Width
         {
             get
             {
@@ -678,7 +678,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double Height
+        public virtual Double Height
         {
             get
             {
@@ -691,7 +691,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.XlDisplayUnit DisplayUnit
+        public virtual NetOffice.OfficeApi.Enums.XlDisplayUnit DisplayUnit
         {
             get
             {
@@ -708,7 +708,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Double DisplayUnitCustom
+        public virtual Double DisplayUnitCustom
         {
             get
             {
@@ -725,7 +725,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool HasDisplayUnitLabel
+        public virtual bool HasDisplayUnitLabel
         {
             get
             {
@@ -742,7 +742,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoDisplayUnitLabel DisplayUnitLabel
+        public virtual NetOffice.OfficeApi.IMsoDisplayUnitLabel DisplayUnitLabel
         {
             get
             {
@@ -755,7 +755,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoBorder Border
+        public virtual NetOffice.OfficeApi.IMsoBorder Border
         {
             get
             {
@@ -768,7 +768,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -781,7 +781,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.IMsoChartFormat Format
+        public virtual NetOffice.OfficeApi.IMsoChartFormat Format
         {
             get
             {
@@ -795,7 +795,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -808,7 +808,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -822,7 +822,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -838,7 +838,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }
@@ -847,7 +847,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public object Select()
+        public virtual object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
         }

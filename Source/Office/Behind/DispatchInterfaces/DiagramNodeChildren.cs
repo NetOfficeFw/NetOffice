@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DiagramNode FirstChild
+        public virtual NetOffice.OfficeApi.DiagramNode FirstChild
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DiagramNode LastChild
+        public virtual NetOffice.OfficeApi.DiagramNode LastChild
         {
             get
             {
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.DiagramNode this[object index]
+        public virtual NetOffice.OfficeApi.DiagramNode this[object index]
         {
             get
             {
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">optional object Index = -1</param>
         /// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DiagramNode AddNode(object index, object nodeType)
+        public virtual NetOffice.OfficeApi.DiagramNode AddNode(object index, object nodeType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode), index, nodeType);
         }
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DiagramNode AddNode()
+        public virtual NetOffice.OfficeApi.DiagramNode AddNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode));
         }
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">optional object Index = -1</param>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DiagramNode AddNode(object index)
+        public virtual NetOffice.OfficeApi.DiagramNode AddNode(object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode), index);
         }
@@ -170,7 +170,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SelectAll()
+        public virtual void SelectAll()
         {
             Factory.ExecuteMethod(this, "SelectAll");
         }
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.DiagramNode> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.DiagramNode> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.DiagramNode item in innerEnumerator)

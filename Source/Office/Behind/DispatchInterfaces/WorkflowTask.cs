@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863854.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Id
+        public virtual string Id
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860221.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string ListID
+        public virtual string ListID
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861217.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string WorkflowID
+        public virtual string WorkflowID
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865575.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865524.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Description
+        public virtual string Description
         {
             get
             {
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864072.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string AssignedTo
+        public virtual string AssignedTo
         {
             get
             {
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861453.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string CreatedBy
+        public virtual string CreatedBy
         {
             get
             {
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862844.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public DateTime DueDate
+        public virtual DateTime DueDate
         {
             get
             {
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861139.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public DateTime CreatedDate
+        public virtual DateTime CreatedDate
         {
             get
             {
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863536.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Show()
+        public virtual Int32 Show()
         {
             return Factory.ExecuteInt32MethodGet(this, "Show");
         }

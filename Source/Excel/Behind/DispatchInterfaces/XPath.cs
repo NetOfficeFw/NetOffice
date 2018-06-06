@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840823.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834983.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822616.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string _Default
+		public virtual string _Default
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822150.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string Value
+		public virtual string Value
 		{
 			get
 			{
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197699.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.XmlMap Map
+		public virtual NetOffice.ExcelApi.XmlMap Map
 		{
 			get
 			{
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836528.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool Repeating
+		public virtual bool Repeating
 		{
 			get
 			{
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="selectionNamespace">optional object selectionNamespace</param>
 		/// <param name="repeating">optional object repeating</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace, object repeating)
+		public virtual void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace, object repeating)
 		{
 			 Factory.ExecuteMethod(this, "SetValue", map, xPath, selectionNamespace, repeating);
 		}
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="xPath">string xPath</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath)
+		public virtual void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath)
 		{
 			 Factory.ExecuteMethod(this, "SetValue", map, xPath);
 		}
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="selectionNamespace">optional object selectionNamespace</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace)
+		public virtual void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace)
 		{
 			 Factory.ExecuteMethod(this, "SetValue", map, xPath, selectionNamespace);
 		}
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835615.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void Clear()
+		public virtual void Clear()
 		{
 			 Factory.ExecuteMethod(this, "Clear");
 		}

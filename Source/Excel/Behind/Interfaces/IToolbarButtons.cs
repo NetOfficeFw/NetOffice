@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.ToolbarButton this[Int32 index]
+		public virtual NetOffice.ExcelApi.ToolbarButton this[Int32 index]
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="helpFile">optional object helpFile</param>
 		/// <param name="helpContextID">optional object helpContextID</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile, object helpContextID)
+		public virtual NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile, object helpContextID)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton), new object[]{ button, before, onAction, pushed, enabled, statusBar, helpFile, helpContextID });
 		}
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add()
+		public virtual NetOffice.ExcelApi.ToolbarButton Add()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton));
 		}
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="button">optional object button</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button)
+		public virtual NetOffice.ExcelApi.ToolbarButton Add(object button)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton), button);
 		}
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="before">optional object before</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before)
+		public virtual NetOffice.ExcelApi.ToolbarButton Add(object button, object before)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton), button, before);
 		}
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="onAction">optional object onAction</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction)
+		public virtual NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton), button, before, onAction);
 		}
@@ -204,7 +204,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="pushed">optional object pushed</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed)
+		public virtual NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton), button, before, onAction, pushed);
 		}
@@ -219,7 +219,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="enabled">optional object enabled</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled)
+		public virtual NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton), new object[]{ button, before, onAction, pushed, enabled });
 		}
@@ -235,7 +235,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="statusBar">optional object statusBar</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar)
+		public virtual NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton), new object[]{ button, before, onAction, pushed, enabled, statusBar });
 		}
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="helpFile">optional object helpFile</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile)
+		public virtual NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ToolbarButton>(this, "Add", typeof(NetOffice.ExcelApi.ToolbarButton), new object[]{ button, before, onAction, pushed, enabled, statusBar, helpFile });
 		}
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ToolbarButton> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ToolbarButton> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ToolbarButton item in innerEnumerator)

@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193790.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196238.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838989.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198230.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="categoryLabels">optional object categoryLabels</param>
 		/// <param name="replace">optional object replace</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
+		public virtual NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Series>(this, "Add", typeof(NetOffice.ExcelApi.Series), new object[]{ source, rowcol, seriesLabels, categoryLabels, replace });
 		}
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="source">object source</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Series Add(object source)
+		public virtual NetOffice.ExcelApi.Series Add(object source)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Series>(this, "Add", typeof(NetOffice.ExcelApi.Series), source);
 		}
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Series Add(object source, object rowcol)
+		public virtual NetOffice.ExcelApi.Series Add(object source, object rowcol)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Series>(this, "Add", typeof(NetOffice.ExcelApi.Series), source, rowcol);
 		}
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="seriesLabels">optional object seriesLabels</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels)
+		public virtual NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Series>(this, "Add", typeof(NetOffice.ExcelApi.Series), source, rowcol, seriesLabels);
 		}
@@ -187,7 +187,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="categoryLabels">optional object categoryLabels</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels)
+		public virtual NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Series>(this, "Add", typeof(NetOffice.ExcelApi.Series), source, rowcol, seriesLabels, categoryLabels);
 		}
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="rowcol">optional object rowcol</param>
 		/// <param name="categoryLabels">optional object categoryLabels</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Extend(object source, object rowcol, object categoryLabels)
+		public virtual object Extend(object source, object rowcol, object categoryLabels)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Extend", source, rowcol, categoryLabels);
 		}
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="source">object source</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Extend(object source)
+		public virtual object Extend(object source)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Extend", source);
 		}
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="rowcol">optional object rowcol</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Extend(object source, object rowcol)
+		public virtual object Extend(object source, object rowcol)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Extend", source, rowcol);
 		}
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="replace">optional object replace</param>
 		/// <param name="newSeries">optional object newSeries</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace, object newSeries)
+		public virtual object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace, object newSeries)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Paste", new object[]{ rowcol, seriesLabels, categoryLabels, replace, newSeries });
 		}
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197570.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Paste()
+		public virtual object Paste()
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Paste");
 		}
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Paste(object rowcol)
+		public virtual object Paste(object rowcol)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Paste", rowcol);
 		}
@@ -276,7 +276,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="seriesLabels">optional object seriesLabels</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Paste(object rowcol, object seriesLabels)
+		public virtual object Paste(object rowcol, object seriesLabels)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels);
 		}
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="categoryLabels">optional object categoryLabels</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Paste(object rowcol, object seriesLabels, object categoryLabels)
+		public virtual object Paste(object rowcol, object seriesLabels, object categoryLabels)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels, categoryLabels);
 		}
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="replace">optional object replace</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace)
+		public virtual object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			return Factory.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels, categoryLabels, replace);
 		}
@@ -315,7 +315,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194841.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Series NewSeries()
+		public virtual NetOffice.ExcelApi.Series NewSeries()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Series>(this, "NewSeries", typeof(NetOffice.ExcelApi.Series));
 		}
@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.Series this[object index]
+		public virtual NetOffice.ExcelApi.Series this[object index]
 		{
 			get
 			{
@@ -356,7 +356,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Series> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.Series> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.Series item in innerEnumerator)

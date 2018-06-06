@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860828.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865197.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ThemeFonts MinorFont
+        public virtual NetOffice.OfficeApi.ThemeFonts MinorFont
         {
             get
             {
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865219.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ThemeFonts MajorFont
+        public virtual NetOffice.OfficeApi.ThemeFonts MajorFont
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863667.aspx </remarks>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Load(string fileName)
+        public virtual void Load(string fileName)
         {
             Factory.ExecuteMethod(this, "Load", fileName);
         }
@@ -124,7 +124,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861510.aspx </remarks>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Save(string fileName)
+        public virtual void Save(string fileName)
         {
             Factory.ExecuteMethod(this, "Save", fileName);
         }

@@ -39,7 +39,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="relativeTo">optional object relativeTo</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+        public virtual string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
         {
             return Factory.ExecuteStringPropertyGet(this, "Address", new object[] { rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo });
         }
@@ -54,7 +54,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="external">optional object external</param>
         /// <param name="relativeTo">optional object relativeTo</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Address")]
-        public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+        public virtual string Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
         {
             return get_Address(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
         }
@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowAbsolute">optional object rowAbsolute</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_Address(object rowAbsolute)
+        public virtual string get_Address(object rowAbsolute)
         {
             return Factory.ExecuteStringPropertyGet(this, "Address", rowAbsolute);
         }
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="rowAbsolute">optional object rowAbsolute</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Address")]
-        public string Address(object rowAbsolute)
+        public virtual string Address(object rowAbsolute)
         {
             return get_Address(rowAbsolute);
         }
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columnAbsolute">optional object columnAbsolute</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_Address(object rowAbsolute, object columnAbsolute)
+        public virtual string get_Address(object rowAbsolute, object columnAbsolute)
         {
             return Factory.ExecuteStringPropertyGet(this, "Address", rowAbsolute, columnAbsolute);
         }
@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowAbsolute">optional object rowAbsolute</param>
         /// <param name="columnAbsolute">optional object columnAbsolute</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Address")]
-        public string Address(object rowAbsolute, object columnAbsolute)
+        public virtual string Address(object rowAbsolute, object columnAbsolute)
         {
             return get_Address(rowAbsolute, columnAbsolute);
         }
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle)
+        public virtual string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle)
         {
             return Factory.ExecuteStringPropertyGet(this, "Address", rowAbsolute, columnAbsolute, referenceStyle);
         }
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columnAbsolute">optional object columnAbsolute</param>
         /// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Address")]
-        public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle)
+        public virtual string Address(object rowAbsolute, object columnAbsolute, object referenceStyle)
         {
             return get_Address(rowAbsolute, columnAbsolute, referenceStyle);
         }
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="external">optional object external</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+        public virtual string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
         {
             return Factory.ExecuteStringPropertyGet(this, "Address", rowAbsolute, columnAbsolute, referenceStyle, external);
         }
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle</param>
         /// <param name="external">optional object external</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Address")]
-        public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+        public virtual string Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
         {
             return get_Address(rowAbsolute, columnAbsolute, referenceStyle, external);
         }
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="relativeTo">optional object relativeTo</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+        public virtual string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
         {
             return Factory.ExecuteStringPropertyGet(this, "AddressLocal", new object[] { rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo });
         }
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="external">optional object external</param>
         /// <param name="relativeTo">optional object relativeTo</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_AddressLocal")]
-        public string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+        public virtual string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
         {
             return get_AddressLocal(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
         }
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowAbsolute">optional object rowAbsolute</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_AddressLocal(object rowAbsolute)
+        public virtual string get_AddressLocal(object rowAbsolute)
         {
             return Factory.ExecuteStringPropertyGet(this, "AddressLocal", rowAbsolute);
         }
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="rowAbsolute">optional object rowAbsolute</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_AddressLocal")]
-        public string AddressLocal(object rowAbsolute)
+        public virtual string AddressLocal(object rowAbsolute)
         {
             return get_AddressLocal(rowAbsolute);
         }
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columnAbsolute">optional object columnAbsolute</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_AddressLocal(object rowAbsolute, object columnAbsolute)
+        public virtual string get_AddressLocal(object rowAbsolute, object columnAbsolute)
         {
             return Factory.ExecuteStringPropertyGet(this, "AddressLocal", rowAbsolute, columnAbsolute);
         }
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowAbsolute">optional object rowAbsolute</param>
         /// <param name="columnAbsolute">optional object columnAbsolute</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_AddressLocal")]
-        public string AddressLocal(object rowAbsolute, object columnAbsolute)
+        public virtual string AddressLocal(object rowAbsolute, object columnAbsolute)
         {
             return get_AddressLocal(rowAbsolute, columnAbsolute);
         }
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle)
+        public virtual string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle)
         {
             return Factory.ExecuteStringPropertyGet(this, "AddressLocal", rowAbsolute, columnAbsolute, referenceStyle);
         }
@@ -264,7 +264,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columnAbsolute">optional object columnAbsolute</param>
         /// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_AddressLocal")]
-        public string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle)
+        public virtual string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle)
         {
             return get_AddressLocal(rowAbsolute, columnAbsolute, referenceStyle);
         }
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="external">optional object external</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+        public virtual string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
         {
             return Factory.ExecuteStringPropertyGet(this, "AddressLocal", rowAbsolute, columnAbsolute, referenceStyle, external);
         }
@@ -293,7 +293,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle</param>
         /// <param name="external">optional object external</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_AddressLocal")]
-        public string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+        public virtual string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
         {
             return get_AddressLocal(rowAbsolute, columnAbsolute, referenceStyle, external);
         }
@@ -306,7 +306,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="length">optional object length</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
+        public virtual NetOffice.ExcelApi.Characters get_Characters(object start, object length)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters), start, length);
         }
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="start">optional object start</param>
         /// <param name="length">optional object length</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Characters")]
-        public NetOffice.ExcelApi.Characters Characters(object start, object length)
+        public virtual NetOffice.ExcelApi.Characters Characters(object start, object length)
         {
             return get_Characters(start, length);
         }
@@ -330,7 +330,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="start">optional object start</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Characters get_Characters(object start)
+        public virtual NetOffice.ExcelApi.Characters get_Characters(object start)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters), start);
         }
@@ -341,7 +341,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="start">optional object start</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Characters")]
-        public NetOffice.ExcelApi.Characters Characters(object start)
+        public virtual NetOffice.ExcelApi.Characters Characters(object start)
         {
             return get_Characters(start);
         }
@@ -354,7 +354,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columnOffset">optional object columnOffset</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range get_Offset(object rowOffset, object columnOffset)
+        public virtual NetOffice.ExcelApi.Range get_Offset(object rowOffset, object columnOffset)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Offset", typeof(NetOffice.ExcelApi.Range), rowOffset, columnOffset);
         }
@@ -366,7 +366,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowOffset">optional object rowOffset</param>
         /// <param name="columnOffset">optional object columnOffset</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Offset")]
-        public NetOffice.ExcelApi.Range Offset(object rowOffset, object columnOffset)
+        public virtual NetOffice.ExcelApi.Range Offset(object rowOffset, object columnOffset)
         {
             return get_Offset(rowOffset, columnOffset);
         }
@@ -378,7 +378,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowOffset">optional object rowOffset</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range get_Offset(object rowOffset)
+        public virtual NetOffice.ExcelApi.Range get_Offset(object rowOffset)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Offset", typeof(NetOffice.ExcelApi.Range), rowOffset);
         }
@@ -389,7 +389,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="rowOffset">optional object rowOffset</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Offset")]
-        public NetOffice.ExcelApi.Range Offset(object rowOffset)
+        public virtual NetOffice.ExcelApi.Range Offset(object rowOffset)
         {
             return get_Offset(rowOffset);
         }
@@ -402,7 +402,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columnSize">optional object columnSize</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range get_Resize(object rowSize, object columnSize)
+        public virtual NetOffice.ExcelApi.Range get_Resize(object rowSize, object columnSize)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Resize", typeof(NetOffice.ExcelApi.Range), rowSize, columnSize);
         }
@@ -414,7 +414,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowSize">optional object rowSize</param>
         /// <param name="columnSize">optional object columnSize</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Resize")]
-        public NetOffice.ExcelApi.Range Resize(object rowSize, object columnSize)
+        public virtual NetOffice.ExcelApi.Range Resize(object rowSize, object columnSize)
         {
             return get_Resize(rowSize, columnSize);
         }
@@ -426,7 +426,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowSize">optional object rowSize</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range get_Resize(object rowSize)
+        public virtual NetOffice.ExcelApi.Range get_Resize(object rowSize)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Resize", typeof(NetOffice.ExcelApi.Range), rowSize);
         }
@@ -437,7 +437,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="rowSize">optional object rowSize</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Resize")]
-        public NetOffice.ExcelApi.Range Resize(object rowSize)
+        public virtual NetOffice.ExcelApi.Range Resize(object rowSize)
         {
             return get_Resize(rowSize);
         }
@@ -449,7 +449,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rangeValueDataType">optional object rangeValueDataType</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_Value(object rangeValueDataType)
+        public virtual object get_Value(object rangeValueDataType)
         {
             return Factory.ExecuteVariantPropertyGet(this, "Value", rangeValueDataType);
         }
@@ -462,7 +462,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="value">optional object value</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_Value(object rangeValueDataType, object value)
+        public virtual void set_Value(object rangeValueDataType, object value)
         {
             Factory.ExecutePropertySet(this, "Value", rangeValueDataType, value);
         }
@@ -473,7 +473,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="rangeValueDataType">optional object rangeValueDataType</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16), Redirect("get_Value")]
-        public object Value(object rangeValueDataType)
+        public virtual object Value(object rangeValueDataType)
         {
             return get_Value(rangeValueDataType);
         }
@@ -542,7 +542,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -555,7 +555,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -569,7 +569,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -582,7 +582,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AddIndent
+        public virtual object AddIndent
         {
             get
             {
@@ -599,7 +599,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string Address
+        public virtual string Address
         {
             get
             {
@@ -612,7 +612,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string AddressLocal
+        public virtual string AddressLocal
         {
             get
             {
@@ -625,7 +625,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Areas Areas
+        public virtual NetOffice.ExcelApi.Areas Areas
         {
             get
             {
@@ -638,7 +638,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Borders Borders
+        public virtual NetOffice.ExcelApi.Borders Borders
         {
             get
             {
@@ -651,7 +651,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Cells
+        public virtual NetOffice.ExcelApi.Range Cells
         {
             get
             {
@@ -664,7 +664,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Characters Characters
+        public virtual NetOffice.ExcelApi.Characters Characters
         {
             get
             {
@@ -677,7 +677,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Column
+        public virtual Int32 Column
         {
             get
             {
@@ -691,7 +691,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range Columns
+        public virtual NetOffice.ExcelApi.Range Columns
         {
             get
             {
@@ -704,7 +704,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ColumnWidth
+        public virtual object ColumnWidth
         {
             get
             {
@@ -721,7 +721,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -734,7 +734,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range CurrentArray
+        public virtual NetOffice.ExcelApi.Range CurrentArray
         {
             get
             {
@@ -747,7 +747,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range CurrentRegion
+        public virtual NetOffice.ExcelApi.Range CurrentRegion
         {
             get
             {
@@ -763,7 +763,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="rowIndex">object rowIndex</param>
 		[SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty, CustomIndexer]
-        public object this[object rowIndex]
+        public virtual object this[object rowIndex]
         {
             get
             {
@@ -783,7 +783,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columnIndex">optional object columnIndex</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public object this[object rowIndex, object columnIndex]
+        public virtual object this[object rowIndex, object columnIndex]
         {
             get
             {
@@ -800,7 +800,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Dependents
+        public virtual NetOffice.ExcelApi.Range Dependents
         {
             get
             {
@@ -813,7 +813,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range DirectDependents
+        public virtual NetOffice.ExcelApi.Range DirectDependents
         {
             get
             {
@@ -826,7 +826,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range DirectPrecedents
+        public virtual NetOffice.ExcelApi.Range DirectPrecedents
         {
             get
             {
@@ -841,7 +841,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="direction">NetOffice.ExcelApi.Enums.XlDirection direction</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range get_End(NetOffice.ExcelApi.Enums.XlDirection direction)
+        public virtual NetOffice.ExcelApi.Range get_End(NetOffice.ExcelApi.Enums.XlDirection direction)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "End", typeof(NetOffice.ExcelApi.Range), direction);
         }
@@ -852,7 +852,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="direction">NetOffice.ExcelApi.Enums.XlDirection direction</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_End")]
-        public NetOffice.ExcelApi.Range End(NetOffice.ExcelApi.Enums.XlDirection direction)
+        public virtual NetOffice.ExcelApi.Range End(NetOffice.ExcelApi.Enums.XlDirection direction)
         {
             return get_End(direction);
         }
@@ -863,7 +863,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range EntireColumn
+        public virtual NetOffice.ExcelApi.Range EntireColumn
         {
             get
             {
@@ -877,7 +877,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range EntireRow
+        public virtual NetOffice.ExcelApi.Range EntireRow
         {
             get
             {
@@ -890,7 +890,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Font Font
+        public virtual NetOffice.ExcelApi.Font Font
         {
             get
             {
@@ -903,7 +903,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Formula
+        public virtual object Formula
         {
             get
             {
@@ -920,7 +920,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FormulaArray
+        public virtual object FormulaArray
         {
             get
             {
@@ -937,7 +937,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlFormulaLabel FormulaLabel
+        public virtual NetOffice.ExcelApi.Enums.XlFormulaLabel FormulaLabel
         {
             get
             {
@@ -954,7 +954,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FormulaHidden
+        public virtual object FormulaHidden
         {
             get
             {
@@ -971,7 +971,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FormulaLocal
+        public virtual object FormulaLocal
         {
             get
             {
@@ -988,7 +988,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FormulaR1C1
+        public virtual object FormulaR1C1
         {
             get
             {
@@ -1005,7 +1005,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FormulaR1C1Local
+        public virtual object FormulaR1C1Local
         {
             get
             {
@@ -1022,7 +1022,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object HasArray
+        public virtual object HasArray
         {
             get
             {
@@ -1035,7 +1035,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object HasFormula
+        public virtual object HasFormula
         {
             get
             {
@@ -1048,7 +1048,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Height
+        public virtual object Height
         {
             get
             {
@@ -1061,7 +1061,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Hidden
+        public virtual object Hidden
         {
             get
             {
@@ -1078,7 +1078,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object HorizontalAlignment
+        public virtual object HorizontalAlignment
         {
             get
             {
@@ -1095,7 +1095,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object IndentLevel
+        public virtual object IndentLevel
         {
             get
             {
@@ -1112,7 +1112,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Interior Interior
+        public virtual NetOffice.ExcelApi.Interior Interior
         {
             get
             {
@@ -1125,7 +1125,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Left
+        public virtual object Left
         {
             get
             {
@@ -1138,7 +1138,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 ListHeaderRows
+        public virtual Int32 ListHeaderRows
         {
             get
             {
@@ -1151,7 +1151,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlLocationInTable LocationInTable
+        public virtual NetOffice.ExcelApi.Enums.XlLocationInTable LocationInTable
         {
             get
             {
@@ -1164,7 +1164,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Locked
+        public virtual object Locked
         {
             get
             {
@@ -1181,7 +1181,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range MergeArea
+        public virtual NetOffice.ExcelApi.Range MergeArea
         {
             get
             {
@@ -1194,7 +1194,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object MergeCells
+        public virtual object MergeCells
         {
             get
             {
@@ -1211,7 +1211,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Name
+        public virtual object Name
         {
             get
             {
@@ -1228,7 +1228,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Next
+        public virtual NetOffice.ExcelApi.Range Next
         {
             get
             {
@@ -1241,7 +1241,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object NumberFormat
+        public virtual object NumberFormat
         {
             get
             {
@@ -1258,7 +1258,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object NumberFormatLocal
+        public virtual object NumberFormatLocal
         {
             get
             {
@@ -1275,7 +1275,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Offset
+        public virtual NetOffice.ExcelApi.Range Offset
         {
             get
             {
@@ -1288,7 +1288,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Orientation
+        public virtual object Orientation
         {
             get
             {
@@ -1305,7 +1305,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object OutlineLevel
+        public virtual object OutlineLevel
         {
             get
             {
@@ -1322,7 +1322,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 PageBreak
+        public virtual Int32 PageBreak
         {
             get
             {
@@ -1339,7 +1339,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotField PivotField
+        public virtual NetOffice.ExcelApi.PivotField PivotField
         {
             get
             {
@@ -1352,7 +1352,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotItem PivotItem
+        public virtual NetOffice.ExcelApi.PivotItem PivotItem
         {
             get
             {
@@ -1365,7 +1365,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotTable PivotTable
+        public virtual NetOffice.ExcelApi.PivotTable PivotTable
         {
             get
             {
@@ -1378,7 +1378,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Precedents
+        public virtual NetOffice.ExcelApi.Range Precedents
         {
             get
             {
@@ -1391,7 +1391,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrefixCharacter
+        public virtual object PrefixCharacter
         {
             get
             {
@@ -1404,7 +1404,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Previous
+        public virtual NetOffice.ExcelApi.Range Previous
         {
             get
             {
@@ -1417,7 +1417,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.QueryTable QueryTable
+        public virtual NetOffice.ExcelApi.QueryTable QueryTable
         {
             get
             {
@@ -1433,7 +1433,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="cell2">optional object cell2</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range get_Range(object cell1, object cell2)
+        public virtual NetOffice.ExcelApi.Range get_Range(object cell1, object cell2)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", typeof(NetOffice.ExcelApi.Range), cell1, cell2);
         }
@@ -1445,7 +1445,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="cell1">object cell1</param>
         /// <param name="cell2">optional object cell2</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Range")]
-        public NetOffice.ExcelApi.Range Range(object cell1, object cell2)
+        public virtual NetOffice.ExcelApi.Range Range(object cell1, object cell2)
         {
             return get_Range(cell1, cell2);
         }
@@ -1457,7 +1457,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="cell1">object cell1</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range get_Range(object cell1)
+        public virtual NetOffice.ExcelApi.Range get_Range(object cell1)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", typeof(NetOffice.ExcelApi.Range), cell1);
         }
@@ -1468,7 +1468,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="cell1">object cell1</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Range")]
-        public NetOffice.ExcelApi.Range Range(object cell1)
+        public virtual NetOffice.ExcelApi.Range Range(object cell1)
         {
             return get_Range(cell1);
         }
@@ -1478,7 +1478,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Resize
+        public virtual NetOffice.ExcelApi.Range Resize
         {
             get
             {
@@ -1491,7 +1491,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Row
+        public virtual Int32 Row
         {
             get
             {
@@ -1504,7 +1504,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object RowHeight
+        public virtual object RowHeight
         {
             get
             {
@@ -1522,7 +1522,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.ExcelApi.Range Rows
+        public virtual NetOffice.ExcelApi.Range Rows
         {
             get
             {
@@ -1535,7 +1535,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ShowDetail
+        public virtual object ShowDetail
         {
             get
             {
@@ -1552,7 +1552,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ShrinkToFit
+        public virtual object ShrinkToFit
         {
             get
             {
@@ -1569,7 +1569,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.SoundNote SoundNote
+        public virtual NetOffice.ExcelApi.SoundNote SoundNote
         {
             get
             {
@@ -1582,7 +1582,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Style
+        public virtual object Style
         {
             get
             {
@@ -1599,7 +1599,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Summary
+        public virtual object Summary
         {
             get
             {
@@ -1612,7 +1612,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Text
+        public virtual object Text
         {
             get
             {
@@ -1625,7 +1625,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Top
+        public virtual object Top
         {
             get
             {
@@ -1638,7 +1638,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object UseStandardHeight
+        public virtual object UseStandardHeight
         {
             get
             {
@@ -1655,7 +1655,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object UseStandardWidth
+        public virtual object UseStandardWidth
         {
             get
             {
@@ -1672,7 +1672,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Validation Validation
+        public virtual NetOffice.ExcelApi.Validation Validation
         {
             get
             {
@@ -1685,7 +1685,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Value
+        public virtual object Value
         {
             get
             {
@@ -1702,7 +1702,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Value2
+        public virtual object Value2
         {
             get
             {
@@ -1719,7 +1719,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object VerticalAlignment
+        public virtual object VerticalAlignment
         {
             get
             {
@@ -1736,7 +1736,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Width
+        public virtual object Width
         {
             get
             {
@@ -1749,7 +1749,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Worksheet Worksheet
+        public virtual NetOffice.ExcelApi.Worksheet Worksheet
         {
             get
             {
@@ -1762,7 +1762,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object WrapText
+        public virtual object WrapText
         {
             get
             {
@@ -1779,7 +1779,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Comment Comment
+        public virtual NetOffice.ExcelApi.Comment Comment
         {
             get
             {
@@ -1792,7 +1792,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Phonetic Phonetic
+        public virtual NetOffice.ExcelApi.Phonetic Phonetic
         {
             get
             {
@@ -1805,7 +1805,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.FormatConditions FormatConditions
+        public virtual NetOffice.ExcelApi.FormatConditions FormatConditions
         {
             get
             {
@@ -1818,7 +1818,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 ReadingOrder
+        public virtual Int32 ReadingOrder
         {
             get
             {
@@ -1835,7 +1835,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Hyperlinks Hyperlinks
+        public virtual NetOffice.ExcelApi.Hyperlinks Hyperlinks
         {
             get
             {
@@ -1848,7 +1848,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Phonetics Phonetics
+        public virtual NetOffice.ExcelApi.Phonetics Phonetics
         {
             get
             {
@@ -1861,7 +1861,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string ID
+        public virtual string ID
         {
             get
             {
@@ -1878,7 +1878,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.PivotCell PivotCell
+        public virtual NetOffice.ExcelApi.PivotCell PivotCell
         {
             get
             {
@@ -1891,7 +1891,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Errors Errors
+        public virtual NetOffice.ExcelApi.Errors Errors
         {
             get
             {
@@ -1904,7 +1904,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.SmartTags SmartTags
+        public virtual NetOffice.ExcelApi.SmartTags SmartTags
         {
             get
             {
@@ -1917,7 +1917,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool AllowEdit
+        public virtual bool AllowEdit
         {
             get
             {
@@ -1930,7 +1930,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListObject ListObject
+        public virtual NetOffice.ExcelApi.ListObject ListObject
         {
             get
             {
@@ -1943,7 +1943,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.XPath XPath
+        public virtual NetOffice.ExcelApi.XPath XPath
         {
             get
             {
@@ -1956,7 +1956,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Actions ServerActions
+        public virtual NetOffice.ExcelApi.Actions ServerActions
         {
             get
             {
@@ -1969,7 +1969,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public string MDX
+        public virtual string MDX
         {
             get
             {
@@ -1982,7 +1982,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object CountLarge
+        public virtual object CountLarge
         {
             get
             {
@@ -1995,7 +1995,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public NetOffice.ExcelApi.SparklineGroups SparklineGroups
+        public virtual NetOffice.ExcelApi.SparklineGroups SparklineGroups
         {
             get
             {
@@ -2008,7 +2008,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public NetOffice.ExcelApi.DisplayFormat DisplayFormat
+        public virtual NetOffice.ExcelApi.DisplayFormat DisplayFormat
         {
             get
             {
@@ -2024,7 +2024,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Activate()
+        public virtual object Activate()
         {
             return Factory.ExecuteVariantMethodGet(this, "Activate");
         }
@@ -2037,7 +2037,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="copyToRange">optional object copyToRange</param>
         /// <param name="unique">optional object unique</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange, object copyToRange, object unique)
+        public virtual object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange, object copyToRange, object unique)
         {
             return Factory.ExecuteVariantMethodGet(this, "AdvancedFilter", action, criteriaRange, copyToRange, unique);
         }
@@ -2048,7 +2048,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="action">NetOffice.ExcelApi.Enums.XlFilterAction action</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action)
+        public virtual object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action)
         {
             return Factory.ExecuteVariantMethodGet(this, "AdvancedFilter", action);
         }
@@ -2060,7 +2060,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="criteriaRange">optional object criteriaRange</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange)
+        public virtual object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange)
         {
             return Factory.ExecuteVariantMethodGet(this, "AdvancedFilter", action, criteriaRange);
         }
@@ -2073,7 +2073,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="copyToRange">optional object copyToRange</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange, object copyToRange)
+        public virtual object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange, object copyToRange)
         {
             return Factory.ExecuteVariantMethodGet(this, "AdvancedFilter", action, criteriaRange, copyToRange);
         }
@@ -2089,7 +2089,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="order">optional NetOffice.ExcelApi.Enums.XlApplyNamesOrder Order = 1</param>
         /// <param name="appendLast">optional object appendLast</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, object order, object appendLast)
+        public virtual object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, object order, object appendLast)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyNames", new object[] { names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order, appendLast });
         }
@@ -2099,7 +2099,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyNames()
+        public virtual object ApplyNames()
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyNames");
         }
@@ -2110,7 +2110,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="names">optional object names</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyNames(object names)
+        public virtual object ApplyNames(object names)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyNames", names);
         }
@@ -2122,7 +2122,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="ignoreRelativeAbsolute">optional object ignoreRelativeAbsolute</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyNames(object names, object ignoreRelativeAbsolute)
+        public virtual object ApplyNames(object names, object ignoreRelativeAbsolute)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyNames", names, ignoreRelativeAbsolute);
         }
@@ -2135,7 +2135,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="useRowColumnNames">optional object useRowColumnNames</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames)
+        public virtual object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyNames", names, ignoreRelativeAbsolute, useRowColumnNames);
         }
@@ -2149,7 +2149,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="omitColumn">optional object omitColumn</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn)
+        public virtual object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyNames", names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn);
         }
@@ -2164,7 +2164,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="omitRow">optional object omitRow</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow)
+        public virtual object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyNames", new object[] { names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow });
         }
@@ -2180,7 +2180,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="order">optional NetOffice.ExcelApi.Enums.XlApplyNamesOrder Order = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, object order)
+        public virtual object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, object order)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyNames", new object[] { names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order });
         }
@@ -2189,7 +2189,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ApplyOutlineStyles()
+        public virtual object ApplyOutlineStyles()
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyOutlineStyles");
         }
@@ -2199,7 +2199,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="_string">string string</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string AutoComplete(string _string)
+        public virtual string AutoComplete(string _string)
         {
             return Factory.ExecuteStringMethodGet(this, "AutoComplete", _string);
         }
@@ -2210,7 +2210,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="destination">NetOffice.ExcelApi.Range destination</param>
         /// <param name="type">optional NetOffice.ExcelApi.Enums.XlAutoFillType Type = 0</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFill(NetOffice.ExcelApi.Range destination, object type)
+        public virtual object AutoFill(NetOffice.ExcelApi.Range destination, object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFill", destination, type);
         }
@@ -2221,7 +2221,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="destination">NetOffice.ExcelApi.Range destination</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFill(NetOffice.ExcelApi.Range destination)
+        public virtual object AutoFill(NetOffice.ExcelApi.Range destination)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFill", destination);
         }
@@ -2235,7 +2235,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="criteria2">optional object criteria2</param>
         /// <param name="visibleDropDown">optional object visibleDropDown</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFilter(object field, object criteria1, object _operator, object criteria2, object visibleDropDown)
+        public virtual object AutoFilter(object field, object criteria1, object _operator, object criteria2, object visibleDropDown)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFilter", new object[] { field, criteria1, _operator, criteria2, visibleDropDown });
         }
@@ -2245,7 +2245,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFilter()
+        public virtual object AutoFilter()
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFilter");
         }
@@ -2256,7 +2256,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="field">optional object field</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFilter(object field)
+        public virtual object AutoFilter(object field)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFilter", field);
         }
@@ -2268,7 +2268,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="criteria1">optional object criteria1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFilter(object field, object criteria1)
+        public virtual object AutoFilter(object field, object criteria1)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFilter", field, criteria1);
         }
@@ -2281,7 +2281,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="_operator">optional NetOffice.ExcelApi.Enums.XlAutoFilterOperator Operator = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFilter(object field, object criteria1, object _operator)
+        public virtual object AutoFilter(object field, object criteria1, object _operator)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFilter", field, criteria1, _operator);
         }
@@ -2295,7 +2295,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="criteria2">optional object criteria2</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFilter(object field, object criteria1, object _operator, object criteria2)
+        public virtual object AutoFilter(object field, object criteria1, object _operator, object criteria2)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFilter", field, criteria1, _operator, criteria2);
         }
@@ -2304,7 +2304,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFit()
+        public virtual object AutoFit()
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFit");
         }
@@ -2320,7 +2320,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="pattern">optional object pattern</param>
         /// <param name="width">optional object width</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFormat(object format, object number, object font, object alignment, object border, object pattern, object width)
+        public virtual object AutoFormat(object format, object number, object font, object alignment, object border, object pattern, object width)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFormat", new object[] { format, number, font, alignment, border, pattern, width });
         }
@@ -2330,7 +2330,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFormat()
+        public virtual object AutoFormat()
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFormat");
         }
@@ -2341,7 +2341,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="format">optional NetOffice.ExcelApi.Enums.XlRangeAutoFormat Format = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFormat(object format)
+        public virtual object AutoFormat(object format)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFormat", format);
         }
@@ -2353,7 +2353,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="number">optional object number</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFormat(object format, object number)
+        public virtual object AutoFormat(object format, object number)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFormat", format, number);
         }
@@ -2366,7 +2366,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="font">optional object font</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFormat(object format, object number, object font)
+        public virtual object AutoFormat(object format, object number, object font)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFormat", format, number, font);
         }
@@ -2380,7 +2380,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="alignment">optional object alignment</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFormat(object format, object number, object font, object alignment)
+        public virtual object AutoFormat(object format, object number, object font, object alignment)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFormat", format, number, font, alignment);
         }
@@ -2395,7 +2395,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="border">optional object border</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFormat(object format, object number, object font, object alignment, object border)
+        public virtual object AutoFormat(object format, object number, object font, object alignment, object border)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFormat", new object[] { format, number, font, alignment, border });
         }
@@ -2411,7 +2411,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="pattern">optional object pattern</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoFormat(object format, object number, object font, object alignment, object border, object pattern)
+        public virtual object AutoFormat(object format, object number, object font, object alignment, object border, object pattern)
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoFormat", new object[] { format, number, font, alignment, border, pattern });
         }
@@ -2420,7 +2420,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object AutoOutline()
+        public virtual object AutoOutline()
         {
             return Factory.ExecuteVariantMethodGet(this, "AutoOutline");
         }
@@ -2433,7 +2433,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="colorIndex">optional NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex = -4105</param>
         /// <param name="color">optional object color</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object BorderAround(object lineStyle, object weight, object colorIndex, object color)
+        public virtual object BorderAround(object lineStyle, object weight, object colorIndex, object color)
         {
             return Factory.ExecuteVariantMethodGet(this, "BorderAround", lineStyle, weight, colorIndex, color);
         }
@@ -2447,7 +2447,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="color">optional object color</param>
         /// <param name="themeColor">optional object themeColor</param>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object BorderAround(object lineStyle, object weight, object colorIndex, object color, object themeColor)
+        public virtual object BorderAround(object lineStyle, object weight, object colorIndex, object color, object themeColor)
         {
             return Factory.ExecuteVariantMethodGet(this, "BorderAround", new object[] { lineStyle, weight, colorIndex, color, themeColor });
         }
@@ -2457,7 +2457,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object BorderAround()
+        public virtual object BorderAround()
         {
             return Factory.ExecuteVariantMethodGet(this, "BorderAround");
         }
@@ -2468,7 +2468,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="lineStyle">optional object lineStyle</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object BorderAround(object lineStyle)
+        public virtual object BorderAround(object lineStyle)
         {
             return Factory.ExecuteVariantMethodGet(this, "BorderAround", lineStyle);
         }
@@ -2480,7 +2480,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="weight">optional NetOffice.ExcelApi.Enums.XlBorderWeight Weight = 2</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object BorderAround(object lineStyle, object weight)
+        public virtual object BorderAround(object lineStyle, object weight)
         {
             return Factory.ExecuteVariantMethodGet(this, "BorderAround", lineStyle, weight);
         }
@@ -2493,7 +2493,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="colorIndex">optional NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex = -4105</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object BorderAround(object lineStyle, object weight, object colorIndex)
+        public virtual object BorderAround(object lineStyle, object weight, object colorIndex)
         {
             return Factory.ExecuteVariantMethodGet(this, "BorderAround", lineStyle, weight, colorIndex);
         }
@@ -2502,7 +2502,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Calculate()
+        public virtual object Calculate()
         {
             return Factory.ExecuteVariantMethodGet(this, "Calculate");
         }
@@ -2515,7 +2515,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="alwaysSuggest">optional object alwaysSuggest</param>
         /// <param name="spellLang">optional object spellLang</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object spellLang)
+        public virtual object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object spellLang)
         {
             return Factory.ExecuteVariantMethodGet(this, "CheckSpelling", customDictionary, ignoreUppercase, alwaysSuggest, spellLang);
         }
@@ -2525,7 +2525,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CheckSpelling()
+        public virtual object CheckSpelling()
         {
             return Factory.ExecuteVariantMethodGet(this, "CheckSpelling");
         }
@@ -2536,7 +2536,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="customDictionary">optional object customDictionary</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CheckSpelling(object customDictionary)
+        public virtual object CheckSpelling(object customDictionary)
         {
             return Factory.ExecuteVariantMethodGet(this, "CheckSpelling", customDictionary);
         }
@@ -2548,7 +2548,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="ignoreUppercase">optional object ignoreUppercase</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CheckSpelling(object customDictionary, object ignoreUppercase)
+        public virtual object CheckSpelling(object customDictionary, object ignoreUppercase)
         {
             return Factory.ExecuteVariantMethodGet(this, "CheckSpelling", customDictionary, ignoreUppercase);
         }
@@ -2561,7 +2561,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="alwaysSuggest">optional object alwaysSuggest</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest)
+        public virtual object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest)
         {
             return Factory.ExecuteVariantMethodGet(this, "CheckSpelling", customDictionary, ignoreUppercase, alwaysSuggest);
         }
@@ -2570,7 +2570,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Clear()
+        public virtual object Clear()
         {
             return Factory.ExecuteVariantMethodGet(this, "Clear");
         }
@@ -2579,7 +2579,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ClearContents()
+        public virtual object ClearContents()
         {
             return Factory.ExecuteVariantMethodGet(this, "ClearContents");
         }
@@ -2588,7 +2588,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ClearFormats()
+        public virtual object ClearFormats()
         {
             return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
         }
@@ -2597,7 +2597,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ClearNotes()
+        public virtual object ClearNotes()
         {
             return Factory.ExecuteVariantMethodGet(this, "ClearNotes");
         }
@@ -2606,7 +2606,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ClearOutline()
+        public virtual object ClearOutline()
         {
             return Factory.ExecuteVariantMethodGet(this, "ClearOutline");
         }
@@ -2616,7 +2616,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="comparison">object comparison</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range ColumnDifferences(object comparison)
+        public virtual NetOffice.ExcelApi.Range ColumnDifferences(object comparison)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "ColumnDifferences", typeof(NetOffice.ExcelApi.Range), comparison);
         }
@@ -2630,7 +2630,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="leftColumn">optional object leftColumn</param>
         /// <param name="createLinks">optional object createLinks</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Consolidate(object sources, object function, object topRow, object leftColumn, object createLinks)
+        public virtual object Consolidate(object sources, object function, object topRow, object leftColumn, object createLinks)
         {
             return Factory.ExecuteVariantMethodGet(this, "Consolidate", new object[] { sources, function, topRow, leftColumn, createLinks });
         }
@@ -2640,7 +2640,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Consolidate()
+        public virtual object Consolidate()
         {
             return Factory.ExecuteVariantMethodGet(this, "Consolidate");
         }
@@ -2651,7 +2651,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="sources">optional object sources</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Consolidate(object sources)
+        public virtual object Consolidate(object sources)
         {
             return Factory.ExecuteVariantMethodGet(this, "Consolidate", sources);
         }
@@ -2663,7 +2663,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="function">optional object function</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Consolidate(object sources, object function)
+        public virtual object Consolidate(object sources, object function)
         {
             return Factory.ExecuteVariantMethodGet(this, "Consolidate", sources, function);
         }
@@ -2676,7 +2676,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="topRow">optional object topRow</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Consolidate(object sources, object function, object topRow)
+        public virtual object Consolidate(object sources, object function, object topRow)
         {
             return Factory.ExecuteVariantMethodGet(this, "Consolidate", sources, function, topRow);
         }
@@ -2690,7 +2690,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="leftColumn">optional object leftColumn</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Consolidate(object sources, object function, object topRow, object leftColumn)
+        public virtual object Consolidate(object sources, object function, object topRow, object leftColumn)
         {
             return Factory.ExecuteVariantMethodGet(this, "Consolidate", sources, function, topRow, leftColumn);
         }
@@ -2700,7 +2700,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="destination">optional object destination</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Copy(object destination)
+        public virtual object Copy(object destination)
         {
             return Factory.ExecuteVariantMethodGet(this, "Copy", destination);
         }
@@ -2710,7 +2710,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Copy()
+        public virtual object Copy()
         {
             return Factory.ExecuteVariantMethodGet(this, "Copy");
         }
@@ -2722,7 +2722,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="maxRows">optional object maxRows</param>
         /// <param name="maxColumns">optional object maxColumns</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 CopyFromRecordset(object data, object maxRows, object maxColumns)
+        public virtual Int32 CopyFromRecordset(object data, object maxRows, object maxColumns)
         {
             return Factory.ExecuteInt32MethodGet(this, "CopyFromRecordset", data, maxRows, maxColumns);
         }
@@ -2733,7 +2733,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="data">object data</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 CopyFromRecordset(object data)
+        public virtual Int32 CopyFromRecordset(object data)
         {
             return Factory.ExecuteInt32MethodGet(this, "CopyFromRecordset", data);
         }
@@ -2745,7 +2745,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="maxRows">optional object maxRows</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 CopyFromRecordset(object data, object maxRows)
+        public virtual Int32 CopyFromRecordset(object data, object maxRows)
         {
             return Factory.ExecuteInt32MethodGet(this, "CopyFromRecordset", data, maxRows);
         }
@@ -2756,7 +2756,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
         /// <param name="format">optional NetOffice.ExcelApi.Enums.XlCopyPictureFormat Format = -4147</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CopyPicture(object appearance, object format)
+        public virtual object CopyPicture(object appearance, object format)
         {
             return Factory.ExecuteVariantMethodGet(this, "CopyPicture", appearance, format);
         }
@@ -2766,7 +2766,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CopyPicture()
+        public virtual object CopyPicture()
         {
             return Factory.ExecuteVariantMethodGet(this, "CopyPicture");
         }
@@ -2777,7 +2777,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CopyPicture(object appearance)
+        public virtual object CopyPicture(object appearance)
         {
             return Factory.ExecuteVariantMethodGet(this, "CopyPicture", appearance);
         }
@@ -2790,7 +2790,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="bottom">optional object bottom</param>
         /// <param name="right">optional object right</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreateNames(object top, object left, object bottom, object right)
+        public virtual object CreateNames(object top, object left, object bottom, object right)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreateNames", top, left, bottom, right);
         }
@@ -2800,7 +2800,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreateNames()
+        public virtual object CreateNames()
         {
             return Factory.ExecuteVariantMethodGet(this, "CreateNames");
         }
@@ -2811,7 +2811,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="top">optional object top</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreateNames(object top)
+        public virtual object CreateNames(object top)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreateNames", top);
         }
@@ -2823,7 +2823,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="left">optional object left</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreateNames(object top, object left)
+        public virtual object CreateNames(object top, object left)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreateNames", top, left);
         }
@@ -2836,7 +2836,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="bottom">optional object bottom</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreateNames(object top, object left, object bottom)
+        public virtual object CreateNames(object top, object left, object bottom)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreateNames", top, left, bottom);
         }
@@ -2851,7 +2851,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="containsRTF">optional object containsRTF</param>
         /// <param name="containsVALU">optional object containsVALU</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF, object containsRTF, object containsVALU)
+        public virtual object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF, object containsRTF, object containsVALU)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreatePublisher", new object[] { edition, appearance, containsPICT, containsBIFF, containsRTF, containsVALU });
         }
@@ -2861,7 +2861,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreatePublisher()
+        public virtual object CreatePublisher()
         {
             return Factory.ExecuteVariantMethodGet(this, "CreatePublisher");
         }
@@ -2872,7 +2872,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="edition">optional object edition</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreatePublisher(object edition)
+        public virtual object CreatePublisher(object edition)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreatePublisher", edition);
         }
@@ -2884,7 +2884,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreatePublisher(object edition, object appearance)
+        public virtual object CreatePublisher(object edition, object appearance)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreatePublisher", edition, appearance);
         }
@@ -2897,7 +2897,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="containsPICT">optional object containsPICT</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreatePublisher(object edition, object appearance, object containsPICT)
+        public virtual object CreatePublisher(object edition, object appearance, object containsPICT)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreatePublisher", edition, appearance, containsPICT);
         }
@@ -2911,7 +2911,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="containsBIFF">optional object containsBIFF</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF)
+        public virtual object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreatePublisher", edition, appearance, containsPICT, containsBIFF);
         }
@@ -2926,7 +2926,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="containsRTF">optional object containsRTF</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF, object containsRTF)
+        public virtual object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF, object containsRTF)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreatePublisher", new object[] { edition, appearance, containsPICT, containsBIFF, containsRTF });
         }
@@ -2936,7 +2936,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="destination">optional object destination</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Cut(object destination)
+        public virtual object Cut(object destination)
         {
             return Factory.ExecuteVariantMethodGet(this, "Cut", destination);
         }
@@ -2946,7 +2946,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Cut()
+        public virtual object Cut()
         {
             return Factory.ExecuteVariantMethodGet(this, "Cut");
         }
@@ -2961,7 +2961,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="stop">optional object stop</param>
         /// <param name="trend">optional object trend</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DataSeries(object rowcol, object type, object date, object step, object stop, object trend)
+        public virtual object DataSeries(object rowcol, object type, object date, object step, object stop, object trend)
         {
             return Factory.ExecuteVariantMethodGet(this, "DataSeries", new object[] { rowcol, type, date, step, stop, trend });
         }
@@ -2971,7 +2971,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DataSeries()
+        public virtual object DataSeries()
         {
             return Factory.ExecuteVariantMethodGet(this, "DataSeries");
         }
@@ -2982,7 +2982,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowcol">optional object rowcol</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DataSeries(object rowcol)
+        public virtual object DataSeries(object rowcol)
         {
             return Factory.ExecuteVariantMethodGet(this, "DataSeries", rowcol);
         }
@@ -2994,7 +2994,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="type">optional NetOffice.ExcelApi.Enums.XlDataSeriesType Type = -4132</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DataSeries(object rowcol, object type)
+        public virtual object DataSeries(object rowcol, object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "DataSeries", rowcol, type);
         }
@@ -3007,7 +3007,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="date">optional NetOffice.ExcelApi.Enums.XlDataSeriesDate Date = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DataSeries(object rowcol, object type, object date)
+        public virtual object DataSeries(object rowcol, object type, object date)
         {
             return Factory.ExecuteVariantMethodGet(this, "DataSeries", rowcol, type, date);
         }
@@ -3021,7 +3021,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="step">optional object step</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DataSeries(object rowcol, object type, object date, object step)
+        public virtual object DataSeries(object rowcol, object type, object date, object step)
         {
             return Factory.ExecuteVariantMethodGet(this, "DataSeries", rowcol, type, date, step);
         }
@@ -3036,7 +3036,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="stop">optional object stop</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DataSeries(object rowcol, object type, object date, object step, object stop)
+        public virtual object DataSeries(object rowcol, object type, object date, object step, object stop)
         {
             return Factory.ExecuteVariantMethodGet(this, "DataSeries", new object[] { rowcol, type, date, step, stop });
         }
@@ -3046,7 +3046,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="shift">optional object shift</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Delete(object shift)
+        public virtual object Delete(object shift)
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete", shift);
         }
@@ -3056,7 +3056,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }
@@ -3065,7 +3065,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object DialogBox()
+        public virtual object DialogBox()
         {
             return Factory.ExecuteVariantMethodGet(this, "DialogBox");
         }
@@ -3081,7 +3081,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="chartSize">optional NetOffice.ExcelApi.Enums.XlPictureAppearance ChartSize = 1</param>
         /// <param name="format">optional object format</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance, object chartSize, object format)
+        public virtual object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance, object chartSize, object format)
         {
             return Factory.ExecuteVariantMethodGet(this, "EditionOptions", new object[] { type, option, name, reference, appearance, chartSize, format });
         }
@@ -3093,7 +3093,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="option">NetOffice.ExcelApi.Enums.XlEditionOptionsOption option</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option)
+        public virtual object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option)
         {
             return Factory.ExecuteVariantMethodGet(this, "EditionOptions", type, option);
         }
@@ -3106,7 +3106,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="name">optional object name</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name)
+        public virtual object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name)
         {
             return Factory.ExecuteVariantMethodGet(this, "EditionOptions", type, option, name);
         }
@@ -3120,7 +3120,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="reference">optional object reference</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference)
+        public virtual object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference)
         {
             return Factory.ExecuteVariantMethodGet(this, "EditionOptions", type, option, name, reference);
         }
@@ -3135,7 +3135,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance)
+        public virtual object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance)
         {
             return Factory.ExecuteVariantMethodGet(this, "EditionOptions", new object[] { type, option, name, reference, appearance });
         }
@@ -3151,7 +3151,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="chartSize">optional NetOffice.ExcelApi.Enums.XlPictureAppearance ChartSize = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance, object chartSize)
+        public virtual object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance, object chartSize)
         {
             return Factory.ExecuteVariantMethodGet(this, "EditionOptions", new object[] { type, option, name, reference, appearance, chartSize });
         }
@@ -3160,7 +3160,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FillDown()
+        public virtual object FillDown()
         {
             return Factory.ExecuteVariantMethodGet(this, "FillDown");
         }
@@ -3169,7 +3169,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FillLeft()
+        public virtual object FillLeft()
         {
             return Factory.ExecuteVariantMethodGet(this, "FillLeft");
         }
@@ -3178,7 +3178,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FillRight()
+        public virtual object FillRight()
         {
             return Factory.ExecuteVariantMethodGet(this, "FillRight");
         }
@@ -3187,7 +3187,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FillUp()
+        public virtual object FillUp()
         {
             return Factory.ExecuteVariantMethodGet(this, "FillUp");
         }
@@ -3204,7 +3204,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="matchCase">optional object matchCase</param>
         /// <param name="matchByte">optional object matchByte</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte)
+        public virtual NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte });
         }
@@ -3222,7 +3222,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="matchByte">optional object matchByte</param>
         /// <param name="searchFormat">optional object searchFormat</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte, object searchFormat)
+        public virtual NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte, object searchFormat)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte, searchFormat });
         }
@@ -3233,7 +3233,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="what">object what</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what)
+        public virtual NetOffice.ExcelApi.Range Find(object what)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), what);
         }
@@ -3245,7 +3245,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="after">optional object after</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what, object after)
+        public virtual NetOffice.ExcelApi.Range Find(object what, object after)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), what, after);
         }
@@ -3258,7 +3258,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="lookIn">optional object lookIn</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn)
+        public virtual NetOffice.ExcelApi.Range Find(object what, object after, object lookIn)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), what, after, lookIn);
         }
@@ -3272,7 +3272,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="lookAt">optional object lookAt</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt)
+        public virtual NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), what, after, lookIn, lookAt);
         }
@@ -3287,7 +3287,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="searchOrder">optional object searchOrder</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder)
+        public virtual NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), new object[] { what, after, lookIn, lookAt, searchOrder });
         }
@@ -3303,7 +3303,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="searchDirection">optional NetOffice.ExcelApi.Enums.XlSearchDirection SearchDirection = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection)
+        public virtual NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection });
         }
@@ -3320,7 +3320,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="matchCase">optional object matchCase</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase)
+        public virtual NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "Find", typeof(NetOffice.ExcelApi.Range), new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase });
         }
@@ -3330,7 +3330,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="after">optional object after</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range FindNext(object after)
+        public virtual NetOffice.ExcelApi.Range FindNext(object after)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "FindNext", typeof(NetOffice.ExcelApi.Range), after);
         }
@@ -3340,7 +3340,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range FindNext()
+        public virtual NetOffice.ExcelApi.Range FindNext()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "FindNext", typeof(NetOffice.ExcelApi.Range));
         }
@@ -3350,7 +3350,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="after">optional object after</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range FindPrevious(object after)
+        public virtual NetOffice.ExcelApi.Range FindPrevious(object after)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "FindPrevious", typeof(NetOffice.ExcelApi.Range), after);
         }
@@ -3360,7 +3360,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range FindPrevious()
+        public virtual NetOffice.ExcelApi.Range FindPrevious()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "FindPrevious", typeof(NetOffice.ExcelApi.Range));
         }
@@ -3369,7 +3369,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object FunctionWizard()
+        public virtual object FunctionWizard()
         {
             return Factory.ExecuteVariantMethodGet(this, "FunctionWizard");
         }
@@ -3380,7 +3380,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="goal">object goal</param>
         /// <param name="changingCell">NetOffice.ExcelApi.Range changingCell</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool GoalSeek(object goal, NetOffice.ExcelApi.Range changingCell)
+        public virtual bool GoalSeek(object goal, NetOffice.ExcelApi.Range changingCell)
         {
             return Factory.ExecuteBoolMethodGet(this, "GoalSeek", goal, changingCell);
         }
@@ -3393,7 +3393,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="by">optional object by</param>
         /// <param name="periods">optional object periods</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Group(object start, object end, object by, object periods)
+        public virtual object Group(object start, object end, object by, object periods)
         {
             return Factory.ExecuteVariantMethodGet(this, "Group", start, end, by, periods);
         }
@@ -3403,7 +3403,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Group()
+        public virtual object Group()
         {
             return Factory.ExecuteVariantMethodGet(this, "Group");
         }
@@ -3414,7 +3414,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="start">optional object start</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Group(object start)
+        public virtual object Group(object start)
         {
             return Factory.ExecuteVariantMethodGet(this, "Group", start);
         }
@@ -3426,7 +3426,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="end">optional object end</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Group(object start, object end)
+        public virtual object Group(object start, object end)
         {
             return Factory.ExecuteVariantMethodGet(this, "Group", start, end);
         }
@@ -3439,7 +3439,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="by">optional object by</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Group(object start, object end, object by)
+        public virtual object Group(object start, object end, object by)
         {
             return Factory.ExecuteVariantMethodGet(this, "Group", start, end, by);
         }
@@ -3449,7 +3449,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="insertAmount">Int32 insertAmount</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 InsertIndent(Int32 insertAmount)
+        public virtual Int32 InsertIndent(Int32 insertAmount)
         {
             return Factory.ExecuteInt32MethodGet(this, "InsertIndent", insertAmount);
         }
@@ -3459,7 +3459,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="shift">optional object shift</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Insert(object shift)
+        public virtual object Insert(object shift)
         {
             return Factory.ExecuteVariantMethodGet(this, "Insert", shift);
         }
@@ -3470,7 +3470,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="shift">optional object shift</param>
         /// <param name="copyOrigin">optional object copyOrigin</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object Insert(object shift, object copyOrigin)
+        public virtual object Insert(object shift, object copyOrigin)
         {
             return Factory.ExecuteVariantMethodGet(this, "Insert", shift, copyOrigin);
         }
@@ -3480,7 +3480,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Insert()
+        public virtual object Insert()
         {
             return Factory.ExecuteVariantMethodGet(this, "Insert");
         }
@@ -3489,7 +3489,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Justify()
+        public virtual object Justify()
         {
             return Factory.ExecuteVariantMethodGet(this, "Justify");
         }
@@ -3498,7 +3498,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ListNames()
+        public virtual object ListNames()
         {
             return Factory.ExecuteVariantMethodGet(this, "ListNames");
         }
@@ -3508,7 +3508,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="across">optional object across</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Merge(object across)
+        public virtual Int32 Merge(object across)
         {
             return Factory.ExecuteInt32MethodGet(this, "Merge", across);
         }
@@ -3518,7 +3518,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Merge()
+        public virtual Int32 Merge()
         {
             return Factory.ExecuteInt32MethodGet(this, "Merge");
         }
@@ -3527,7 +3527,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 UnMerge()
+        public virtual Int32 UnMerge()
         {
             return Factory.ExecuteInt32MethodGet(this, "UnMerge");
         }
@@ -3539,7 +3539,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arrowNumber">optional object arrowNumber</param>
         /// <param name="linkNumber">optional object linkNumber</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object NavigateArrow(object towardPrecedent, object arrowNumber, object linkNumber)
+        public virtual object NavigateArrow(object towardPrecedent, object arrowNumber, object linkNumber)
         {
             return Factory.ExecuteVariantMethodGet(this, "NavigateArrow", towardPrecedent, arrowNumber, linkNumber);
         }
@@ -3549,7 +3549,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object NavigateArrow()
+        public virtual object NavigateArrow()
         {
             return Factory.ExecuteVariantMethodGet(this, "NavigateArrow");
         }
@@ -3560,7 +3560,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="towardPrecedent">optional object towardPrecedent</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object NavigateArrow(object towardPrecedent)
+        public virtual object NavigateArrow(object towardPrecedent)
         {
             return Factory.ExecuteVariantMethodGet(this, "NavigateArrow", towardPrecedent);
         }
@@ -3572,7 +3572,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arrowNumber">optional object arrowNumber</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object NavigateArrow(object towardPrecedent, object arrowNumber)
+        public virtual object NavigateArrow(object towardPrecedent, object arrowNumber)
         {
             return Factory.ExecuteVariantMethodGet(this, "NavigateArrow", towardPrecedent, arrowNumber);
         }
@@ -3584,7 +3584,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="start">optional object start</param>
         /// <param name="length">optional object length</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string NoteText(object text, object start, object length)
+        public virtual string NoteText(object text, object start, object length)
         {
             return Factory.ExecuteStringMethodGet(this, "NoteText", text, start, length);
         }
@@ -3594,7 +3594,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string NoteText()
+        public virtual string NoteText()
         {
             return Factory.ExecuteStringMethodGet(this, "NoteText");
         }
@@ -3605,7 +3605,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="text">optional object text</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string NoteText(object text)
+        public virtual string NoteText(object text)
         {
             return Factory.ExecuteStringMethodGet(this, "NoteText", text);
         }
@@ -3617,7 +3617,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="start">optional object start</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public string NoteText(object text, object start)
+        public virtual string NoteText(object text, object start)
         {
             return Factory.ExecuteStringMethodGet(this, "NoteText", text, start);
         }
@@ -3628,7 +3628,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="parseLine">optional object parseLine</param>
         /// <param name="destination">optional object destination</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Parse(object parseLine, object destination)
+        public virtual object Parse(object parseLine, object destination)
         {
             return Factory.ExecuteVariantMethodGet(this, "Parse", parseLine, destination);
         }
@@ -3638,7 +3638,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Parse()
+        public virtual object Parse()
         {
             return Factory.ExecuteVariantMethodGet(this, "Parse");
         }
@@ -3649,7 +3649,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="parseLine">optional object parseLine</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Parse(object parseLine)
+        public virtual object Parse(object parseLine)
         {
             return Factory.ExecuteVariantMethodGet(this, "Parse", parseLine);
         }
@@ -3662,7 +3662,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="skipBlanks">optional object skipBlanks</param>
         /// <param name="transpose">optional object transpose</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PasteSpecial(object paste, object operation, object skipBlanks, object transpose)
+        public virtual object PasteSpecial(object paste, object operation, object skipBlanks, object transpose)
         {
             return Factory.ExecuteVariantMethodGet(this, "PasteSpecial", paste, operation, skipBlanks, transpose);
         }
@@ -3672,7 +3672,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PasteSpecial()
+        public virtual object PasteSpecial()
         {
             return Factory.ExecuteVariantMethodGet(this, "PasteSpecial");
         }
@@ -3683,7 +3683,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="paste">optional NetOffice.ExcelApi.Enums.XlPasteType Paste = -4104</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PasteSpecial(object paste)
+        public virtual object PasteSpecial(object paste)
         {
             return Factory.ExecuteVariantMethodGet(this, "PasteSpecial", paste);
         }
@@ -3695,7 +3695,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="operation">optional NetOffice.ExcelApi.Enums.XlPasteSpecialOperation Operation = -4142</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PasteSpecial(object paste, object operation)
+        public virtual object PasteSpecial(object paste, object operation)
         {
             return Factory.ExecuteVariantMethodGet(this, "PasteSpecial", paste, operation);
         }
@@ -3708,7 +3708,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="skipBlanks">optional object skipBlanks</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PasteSpecial(object paste, object operation, object skipBlanks)
+        public virtual object PasteSpecial(object paste, object operation, object skipBlanks)
         {
             return Factory.ExecuteVariantMethodGet(this, "PasteSpecial", paste, operation, skipBlanks);
         }
@@ -3725,7 +3725,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="collate">optional object collate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
+        public virtual object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate });
         }
@@ -3743,7 +3743,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="prToFileName">optional object prToFileName</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
+        public virtual object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate, prToFileName });
         }
@@ -3754,7 +3754,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object _PrintOut()
+        public virtual object _PrintOut()
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut");
         }
@@ -3766,7 +3766,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object _PrintOut(object from)
+        public virtual object _PrintOut(object from)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut", from);
         }
@@ -3779,7 +3779,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object _PrintOut(object from, object to)
+        public virtual object _PrintOut(object from, object to)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut", from, to);
         }
@@ -3793,7 +3793,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object _PrintOut(object from, object to, object copies)
+        public virtual object _PrintOut(object from, object to, object copies)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut", from, to, copies);
         }
@@ -3808,7 +3808,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object _PrintOut(object from, object to, object copies, object preview)
+        public virtual object _PrintOut(object from, object to, object copies, object preview)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut", from, to, copies, preview);
         }
@@ -3824,7 +3824,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object _PrintOut(object from, object to, object copies, object preview, object activePrinter)
+        public virtual object _PrintOut(object from, object to, object copies, object preview, object activePrinter)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut", new object[] { from, to, copies, preview, activePrinter });
         }
@@ -3841,7 +3841,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+        public virtual object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile });
         }
@@ -3851,7 +3851,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="enableChanges">optional object enableChanges</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintPreview(object enableChanges)
+        public virtual object PrintPreview(object enableChanges)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintPreview", enableChanges);
         }
@@ -3861,7 +3861,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintPreview()
+        public virtual object PrintPreview()
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintPreview");
         }
@@ -3870,7 +3870,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object RemoveSubtotal()
+        public virtual object RemoveSubtotal()
         {
             return Factory.ExecuteVariantMethodGet(this, "RemoveSubtotal");
         }
@@ -3885,7 +3885,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="matchCase">optional object matchCase</param>
         /// <param name="matchByte">optional object matchByte</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte)
+        public virtual bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte)
         {
             return Factory.ExecuteBoolMethodGet(this, "Replace", new object[] { what, replacement, lookAt, searchOrder, matchCase, matchByte });
         }
@@ -3902,7 +3902,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="searchFormat">optional object searchFormat</param>
         /// <param name="replaceFormat">optional object replaceFormat</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte, object searchFormat, object replaceFormat)
+        public virtual bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte, object searchFormat, object replaceFormat)
         {
             return Factory.ExecuteBoolMethodGet(this, "Replace", new object[] { what, replacement, lookAt, searchOrder, matchCase, matchByte, searchFormat, replaceFormat });
         }
@@ -3914,7 +3914,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="replacement">object replacement</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Replace(object what, object replacement)
+        public virtual bool Replace(object what, object replacement)
         {
             return Factory.ExecuteBoolMethodGet(this, "Replace", what, replacement);
         }
@@ -3927,7 +3927,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="lookAt">optional object lookAt</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Replace(object what, object replacement, object lookAt)
+        public virtual bool Replace(object what, object replacement, object lookAt)
         {
             return Factory.ExecuteBoolMethodGet(this, "Replace", what, replacement, lookAt);
         }
@@ -3941,7 +3941,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="searchOrder">optional object searchOrder</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Replace(object what, object replacement, object lookAt, object searchOrder)
+        public virtual bool Replace(object what, object replacement, object lookAt, object searchOrder)
         {
             return Factory.ExecuteBoolMethodGet(this, "Replace", what, replacement, lookAt, searchOrder);
         }
@@ -3956,7 +3956,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="matchCase">optional object matchCase</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase)
+        public virtual bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase)
         {
             return Factory.ExecuteBoolMethodGet(this, "Replace", new object[] { what, replacement, lookAt, searchOrder, matchCase });
         }
@@ -3973,7 +3973,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="searchFormat">optional object searchFormat</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte, object searchFormat)
+        public virtual bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte, object searchFormat)
         {
             return Factory.ExecuteBoolMethodGet(this, "Replace", new object[] { what, replacement, lookAt, searchOrder, matchCase, matchByte, searchFormat });
         }
@@ -3983,7 +3983,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="comparison">object comparison</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range RowDifferences(object comparison)
+        public virtual NetOffice.ExcelApi.Range RowDifferences(object comparison)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "RowDifferences", typeof(NetOffice.ExcelApi.Range), comparison);
         }
@@ -4022,7 +4022,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg29">optional object arg29</param>
         /// <param name="arg30">optional object arg30</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
         }
@@ -4032,7 +4032,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run()
+        public virtual object Run()
         {
             return Factory.ExecuteVariantMethodGet(this, "Run");
         }
@@ -4043,7 +4043,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg1">optional object arg1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1)
+        public virtual object Run(object arg1)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", arg1);
         }
@@ -4055,7 +4055,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg2">optional object arg2</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2)
+        public virtual object Run(object arg1, object arg2)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", arg1, arg2);
         }
@@ -4068,7 +4068,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg3">optional object arg3</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3)
+        public virtual object Run(object arg1, object arg2, object arg3)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", arg1, arg2, arg3);
         }
@@ -4082,7 +4082,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg4">optional object arg4</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", arg1, arg2, arg3, arg4);
         }
@@ -4097,7 +4097,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg5">optional object arg5</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5 });
         }
@@ -4113,7 +4113,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg6">optional object arg6</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6 });
         }
@@ -4130,7 +4130,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg7">optional object arg7</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7 });
         }
@@ -4148,7 +4148,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg8">optional object arg8</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 });
         }
@@ -4167,7 +4167,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg9">optional object arg9</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
         }
@@ -4187,7 +4187,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg10">optional object arg10</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
         }
@@ -4208,7 +4208,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg11">optional object arg11</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
         }
@@ -4230,7 +4230,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg12">optional object arg12</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
         }
@@ -4253,7 +4253,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg13">optional object arg13</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
         }
@@ -4277,7 +4277,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg14">optional object arg14</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
         }
@@ -4302,7 +4302,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg15">optional object arg15</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
         }
@@ -4328,7 +4328,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg16">optional object arg16</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
         }
@@ -4355,7 +4355,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg17">optional object arg17</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
         }
@@ -4383,7 +4383,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg18">optional object arg18</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
         }
@@ -4412,7 +4412,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg19">optional object arg19</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
         }
@@ -4442,7 +4442,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg20">optional object arg20</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
         }
@@ -4473,7 +4473,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg21">optional object arg21</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
         }
@@ -4505,7 +4505,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg22">optional object arg22</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
         }
@@ -4538,7 +4538,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg23">optional object arg23</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
         }
@@ -4572,7 +4572,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg24">optional object arg24</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
         }
@@ -4607,7 +4607,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg25">optional object arg25</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
         }
@@ -4643,7 +4643,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg26">optional object arg26</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
         }
@@ -4680,7 +4680,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg27">optional object arg27</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
         }
@@ -4718,7 +4718,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg28">optional object arg28</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
         }
@@ -4757,7 +4757,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="arg29">optional object arg29</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
+        public virtual object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
         }
@@ -4766,7 +4766,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Select()
+        public virtual object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
         }
@@ -4775,7 +4775,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Show()
+        public virtual object Show()
         {
             return Factory.ExecuteVariantMethodGet(this, "Show");
         }
@@ -4785,7 +4785,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="remove">optional object remove</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ShowDependents(object remove)
+        public virtual object ShowDependents(object remove)
         {
             return Factory.ExecuteVariantMethodGet(this, "ShowDependents", remove);
         }
@@ -4795,7 +4795,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ShowDependents()
+        public virtual object ShowDependents()
         {
             return Factory.ExecuteVariantMethodGet(this, "ShowDependents");
         }
@@ -4804,7 +4804,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ShowErrors()
+        public virtual object ShowErrors()
         {
             return Factory.ExecuteVariantMethodGet(this, "ShowErrors");
         }
@@ -4814,7 +4814,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="remove">optional object remove</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ShowPrecedents(object remove)
+        public virtual object ShowPrecedents(object remove)
         {
             return Factory.ExecuteVariantMethodGet(this, "ShowPrecedents", remove);
         }
@@ -4824,7 +4824,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object ShowPrecedents()
+        public virtual object ShowPrecedents()
         {
             return Factory.ExecuteVariantMethodGet(this, "ShowPrecedents");
         }
@@ -4845,7 +4845,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="orientation">optional NetOffice.ExcelApi.Enums.XlSortOrientation Orientation = 2</param>
         /// <param name="sortMethod">optional NetOffice.ExcelApi.Enums.XlSortMethod SortMethod = 1</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod });
         }
@@ -4869,7 +4869,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dataOption2">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2 = 0</param>
         /// <param name="dataOption3">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption3 = 0</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1, object dataOption2, object dataOption3)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1, object dataOption2, object dataOption3)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod, dataOption1, dataOption2, dataOption3 });
         }
@@ -4879,7 +4879,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort()
+        public virtual object Sort()
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort");
         }
@@ -4890,7 +4890,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="key1">optional object key1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1)
+        public virtual object Sort(object key1)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", key1);
         }
@@ -4902,7 +4902,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="order1">optional NetOffice.ExcelApi.Enums.XlSortOrder Order1 = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1)
+        public virtual object Sort(object key1, object order1)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", key1, order1);
         }
@@ -4915,7 +4915,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="key2">optional object key2</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2)
+        public virtual object Sort(object key1, object order1, object key2)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", key1, order1, key2);
         }
@@ -4929,7 +4929,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="type">optional object type</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type)
+        public virtual object Sort(object key1, object order1, object key2, object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", key1, order1, key2, type);
         }
@@ -4944,7 +4944,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="order2">optional NetOffice.ExcelApi.Enums.XlSortOrder Order2 = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2 });
         }
@@ -4960,7 +4960,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="key3">optional object key3</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3 });
         }
@@ -4977,7 +4977,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="order3">optional NetOffice.ExcelApi.Enums.XlSortOrder Order3 = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3 });
         }
@@ -4995,7 +4995,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="header">optional NetOffice.ExcelApi.Enums.XlYesNoGuess Header = 2</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3, header });
         }
@@ -5014,7 +5014,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="orderCustom">optional object orderCustom</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3, header, orderCustom });
         }
@@ -5034,7 +5034,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="matchCase">optional object matchCase</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase });
         }
@@ -5055,7 +5055,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="orientation">optional NetOffice.ExcelApi.Enums.XlSortOrientation Orientation = 2</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation });
         }
@@ -5078,7 +5078,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dataOption1">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption1 = 0</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod, dataOption1 });
         }
@@ -5102,7 +5102,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dataOption2">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2 = 0</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1, object dataOption2)
+        public virtual object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1, object dataOption2)
         {
             return Factory.ExecuteVariantMethodGet(this, "Sort", new object[] { key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod, dataOption1, dataOption2 });
         }
@@ -5123,7 +5123,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="matchCase">optional object matchCase</param>
         /// <param name="orientation">optional NetOffice.ExcelApi.Enums.XlSortOrientation Orientation = 2</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation });
         }
@@ -5147,7 +5147,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dataOption2">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2 = 0</param>
         /// <param name="dataOption3">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption3 = 0</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1, object dataOption2, object dataOption3)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1, object dataOption2, object dataOption3)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation, dataOption1, dataOption2, dataOption3 });
         }
@@ -5157,7 +5157,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial()
+        public virtual object SortSpecial()
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial");
         }
@@ -5168,7 +5168,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="sortMethod">optional NetOffice.ExcelApi.Enums.XlSortMethod SortMethod = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod)
+        public virtual object SortSpecial(object sortMethod)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", sortMethod);
         }
@@ -5180,7 +5180,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="key1">optional object key1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1)
+        public virtual object SortSpecial(object sortMethod, object key1)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", sortMethod, key1);
         }
@@ -5193,7 +5193,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="order1">optional NetOffice.ExcelApi.Enums.XlSortOrder Order1 = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", sortMethod, key1, order1);
         }
@@ -5207,7 +5207,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="type">optional object type</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", sortMethod, key1, order1, type);
         }
@@ -5222,7 +5222,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="key2">optional object key2</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2 });
         }
@@ -5238,7 +5238,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="order2">optional NetOffice.ExcelApi.Enums.XlSortOrder Order2 = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2 });
         }
@@ -5255,7 +5255,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="key3">optional object key3</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3 });
         }
@@ -5273,7 +5273,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="order3">optional NetOffice.ExcelApi.Enums.XlSortOrder Order3 = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3, order3 });
         }
@@ -5292,7 +5292,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="header">optional NetOffice.ExcelApi.Enums.XlYesNoGuess Header = 2</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3, order3, header });
         }
@@ -5312,7 +5312,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="orderCustom">optional object orderCustom</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom });
         }
@@ -5333,7 +5333,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="matchCase">optional object matchCase</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase });
         }
@@ -5356,7 +5356,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dataOption1">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption1 = 0</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation, dataOption1 });
         }
@@ -5380,7 +5380,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dataOption2">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2 = 0</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1, object dataOption2)
+        public virtual object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1, object dataOption2)
         {
             return Factory.ExecuteVariantMethodGet(this, "SortSpecial", new object[] { sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation, dataOption1, dataOption2 });
         }
@@ -5391,7 +5391,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="type">NetOffice.ExcelApi.Enums.XlCellType type</param>
         /// <param name="value">optional object value</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range SpecialCells(NetOffice.ExcelApi.Enums.XlCellType type, object value)
+        public virtual NetOffice.ExcelApi.Range SpecialCells(NetOffice.ExcelApi.Enums.XlCellType type, object value)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "SpecialCells", typeof(NetOffice.ExcelApi.Range), type, value);
         }
@@ -5402,7 +5402,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="type">NetOffice.ExcelApi.Enums.XlCellType type</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range SpecialCells(NetOffice.ExcelApi.Enums.XlCellType type)
+        public virtual NetOffice.ExcelApi.Range SpecialCells(NetOffice.ExcelApi.Enums.XlCellType type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "SpecialCells", typeof(NetOffice.ExcelApi.Range), type);
         }
@@ -5413,7 +5413,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="edition">string edition</param>
         /// <param name="format">optional NetOffice.ExcelApi.Enums.XlSubscribeToFormat Format = -4158</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SubscribeTo(string edition, object format)
+        public virtual object SubscribeTo(string edition, object format)
         {
             return Factory.ExecuteVariantMethodGet(this, "SubscribeTo", edition, format);
         }
@@ -5424,7 +5424,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="edition">string edition</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object SubscribeTo(string edition)
+        public virtual object SubscribeTo(string edition)
         {
             return Factory.ExecuteVariantMethodGet(this, "SubscribeTo", edition);
         }
@@ -5439,7 +5439,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="pageBreaks">optional object pageBreaks</param>
         /// <param name="summaryBelowData">optional NetOffice.ExcelApi.Enums.XlSummaryRow SummaryBelowData = 1</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace, object pageBreaks, object summaryBelowData)
+        public virtual object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace, object pageBreaks, object summaryBelowData)
         {
             return Factory.ExecuteVariantMethodGet(this, "Subtotal", new object[] { groupBy, function, totalList, replace, pageBreaks, summaryBelowData });
         }
@@ -5452,7 +5452,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="totalList">object totalList</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList)
+        public virtual object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList)
         {
             return Factory.ExecuteVariantMethodGet(this, "Subtotal", groupBy, function, totalList);
         }
@@ -5466,7 +5466,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="replace">optional object replace</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace)
+        public virtual object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace)
         {
             return Factory.ExecuteVariantMethodGet(this, "Subtotal", groupBy, function, totalList, replace);
         }
@@ -5481,7 +5481,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="pageBreaks">optional object pageBreaks</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace, object pageBreaks)
+        public virtual object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace, object pageBreaks)
         {
             return Factory.ExecuteVariantMethodGet(this, "Subtotal", new object[] { groupBy, function, totalList, replace, pageBreaks });
         }
@@ -5492,7 +5492,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowInput">optional object rowInput</param>
         /// <param name="columnInput">optional object columnInput</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Table(object rowInput, object columnInput)
+        public virtual object Table(object rowInput, object columnInput)
         {
             return Factory.ExecuteVariantMethodGet(this, "Table", rowInput, columnInput);
         }
@@ -5502,7 +5502,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Table()
+        public virtual object Table()
         {
             return Factory.ExecuteVariantMethodGet(this, "Table");
         }
@@ -5513,7 +5513,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="rowInput">optional object rowInput</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Table(object rowInput)
+        public virtual object Table(object rowInput)
         {
             return Factory.ExecuteVariantMethodGet(this, "Table", rowInput);
         }
@@ -5535,7 +5535,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="decimalSeparator">optional object decimalSeparator</param>
         /// <param name="thousandsSeparator">optional object thousandsSeparator</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator });
         }
@@ -5558,7 +5558,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="thousandsSeparator">optional object thousandsSeparator</param>
         /// <param name="trailingMinusNumbers">optional object trailingMinusNumbers</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator, trailingMinusNumbers });
         }
@@ -5568,7 +5568,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns()
+        public virtual object TextToColumns()
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns");
         }
@@ -5579,7 +5579,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="destination">optional object destination</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination)
+        public virtual object TextToColumns(object destination)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", destination);
         }
@@ -5591,7 +5591,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="dataType">optional NetOffice.ExcelApi.Enums.XlTextParsingType DataType = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType)
+        public virtual object TextToColumns(object destination, object dataType)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", destination, dataType);
         }
@@ -5604,7 +5604,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="textQualifier">optional NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier = 1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", destination, dataType, textQualifier);
         }
@@ -5618,7 +5618,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="consecutiveDelimiter">optional object consecutiveDelimiter</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", destination, dataType, textQualifier, consecutiveDelimiter);
         }
@@ -5633,7 +5633,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="tab">optional object tab</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab });
         }
@@ -5649,7 +5649,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="semicolon">optional object semicolon</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon });
         }
@@ -5666,7 +5666,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="comma">optional object comma</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma });
         }
@@ -5684,7 +5684,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="space">optional object space</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space });
         }
@@ -5703,7 +5703,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="other">optional object other</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other });
         }
@@ -5723,7 +5723,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="otherChar">optional object otherChar</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar });
         }
@@ -5744,7 +5744,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="fieldInfo">optional object fieldInfo</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo });
         }
@@ -5766,7 +5766,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="decimalSeparator">optional object decimalSeparator</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator)
+        public virtual object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator)
         {
             return Factory.ExecuteVariantMethodGet(this, "TextToColumns", new object[] { destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator });
         }
@@ -5775,7 +5775,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Ungroup()
+        public virtual object Ungroup()
         {
             return Factory.ExecuteVariantMethodGet(this, "Ungroup");
         }
@@ -5785,7 +5785,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="text">optional object text</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Comment AddComment(object text)
+        public virtual NetOffice.ExcelApi.Comment AddComment(object text)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Comment>(this, "AddComment", typeof(NetOffice.ExcelApi.Comment), text);
         }
@@ -5795,7 +5795,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Comment AddComment()
+        public virtual NetOffice.ExcelApi.Comment AddComment()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Comment>(this, "AddComment", typeof(NetOffice.ExcelApi.Comment));
         }
@@ -5804,7 +5804,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 ClearComments()
+        public virtual Int32 ClearComments()
         {
             return Factory.ExecuteInt32MethodGet(this, "ClearComments");
         }
@@ -5813,7 +5813,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 SetPhonetic()
+        public virtual Int32 SetPhonetic()
         {
             return Factory.ExecuteInt32MethodGet(this, "SetPhonetic");
         }
@@ -5830,7 +5830,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="collate">optional object collate</param>
         /// <param name="prToFileName">optional object prToFileName</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
+        public virtual object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate, prToFileName });
         }
@@ -5840,7 +5840,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut()
+        public virtual object PrintOut()
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut");
         }
@@ -5851,7 +5851,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="from">optional object from</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut(object from)
+        public virtual object PrintOut(object from)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut", from);
         }
@@ -5863,7 +5863,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="to">optional object to</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut(object from, object to)
+        public virtual object PrintOut(object from, object to)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut", from, to);
         }
@@ -5876,7 +5876,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="copies">optional object copies</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut(object from, object to, object copies)
+        public virtual object PrintOut(object from, object to, object copies)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut", from, to, copies);
         }
@@ -5890,7 +5890,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="preview">optional object preview</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut(object from, object to, object copies, object preview)
+        public virtual object PrintOut(object from, object to, object copies, object preview)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut", from, to, copies, preview);
         }
@@ -5905,7 +5905,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="activePrinter">optional object activePrinter</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut(object from, object to, object copies, object preview, object activePrinter)
+        public virtual object PrintOut(object from, object to, object copies, object preview, object activePrinter)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter });
         }
@@ -5921,7 +5921,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="printToFile">optional object printToFile</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+        public virtual object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile });
         }
@@ -5938,7 +5938,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="collate">optional object collate</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
+        public virtual object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
         {
             return Factory.ExecuteVariantMethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate });
         }
@@ -5952,7 +5952,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="transpose">optional object transpose</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object _PasteSpecial(object paste, object operation, object skipBlanks, object transpose)
+        public virtual object _PasteSpecial(object paste, object operation, object skipBlanks, object transpose)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PasteSpecial", paste, operation, skipBlanks, transpose);
         }
@@ -5963,7 +5963,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object _PasteSpecial()
+        public virtual object _PasteSpecial()
         {
             return Factory.ExecuteVariantMethodGet(this, "_PasteSpecial");
         }
@@ -5975,7 +5975,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object _PasteSpecial(object paste)
+        public virtual object _PasteSpecial(object paste)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PasteSpecial", paste);
         }
@@ -5988,7 +5988,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object _PasteSpecial(object paste, object operation)
+        public virtual object _PasteSpecial(object paste, object operation)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PasteSpecial", paste, operation);
         }
@@ -6002,7 +6002,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public object _PasteSpecial(object paste, object operation, object skipBlanks)
+        public virtual object _PasteSpecial(object paste, object operation, object skipBlanks)
         {
             return Factory.ExecuteVariantMethodGet(this, "_PasteSpecial", paste, operation, skipBlanks);
         }
@@ -6011,7 +6011,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Dirty()
+        public virtual Int32 Dirty()
         {
             return Factory.ExecuteInt32MethodGet(this, "Dirty");
         }
@@ -6022,7 +6022,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="speakDirection">optional object speakDirection</param>
         /// <param name="speakFormulas">optional object speakFormulas</param>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Speak(object speakDirection, object speakFormulas)
+        public virtual Int32 Speak(object speakDirection, object speakFormulas)
         {
             return Factory.ExecuteInt32MethodGet(this, "Speak", speakDirection, speakFormulas);
         }
@@ -6032,7 +6032,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Speak()
+        public virtual Int32 Speak()
         {
             return Factory.ExecuteInt32MethodGet(this, "Speak");
         }
@@ -6043,7 +6043,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="speakDirection">optional object speakDirection</param>
         [CustomMethod]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public Int32 Speak(object speakDirection)
+        public virtual Int32 Speak(object speakDirection)
         {
             return Factory.ExecuteInt32MethodGet(this, "Speak", speakDirection);
         }
@@ -6060,7 +6060,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="collate">optional object collate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
+        public virtual object __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
         {
             return Factory.ExecuteVariantMethodGet(this, "__PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate });
         }
@@ -6071,7 +6071,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object __PrintOut()
+        public virtual object __PrintOut()
         {
             return Factory.ExecuteVariantMethodGet(this, "__PrintOut");
         }
@@ -6083,7 +6083,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object __PrintOut(object from)
+        public virtual object __PrintOut(object from)
         {
             return Factory.ExecuteVariantMethodGet(this, "__PrintOut", from);
         }
@@ -6096,7 +6096,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object __PrintOut(object from, object to)
+        public virtual object __PrintOut(object from, object to)
         {
             return Factory.ExecuteVariantMethodGet(this, "__PrintOut", from, to);
         }
@@ -6110,7 +6110,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object __PrintOut(object from, object to, object copies)
+        public virtual object __PrintOut(object from, object to, object copies)
         {
             return Factory.ExecuteVariantMethodGet(this, "__PrintOut", from, to, copies);
         }
@@ -6125,7 +6125,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object __PrintOut(object from, object to, object copies, object preview)
+        public virtual object __PrintOut(object from, object to, object copies, object preview)
         {
             return Factory.ExecuteVariantMethodGet(this, "__PrintOut", from, to, copies, preview);
         }
@@ -6141,7 +6141,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object __PrintOut(object from, object to, object copies, object preview, object activePrinter)
+        public virtual object __PrintOut(object from, object to, object copies, object preview, object activePrinter)
         {
             return Factory.ExecuteVariantMethodGet(this, "__PrintOut", new object[] { from, to, copies, preview, activePrinter });
         }
@@ -6158,7 +6158,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+        public virtual object __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
         {
             return Factory.ExecuteVariantMethodGet(this, "__PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile });
         }
@@ -6169,7 +6169,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columns">optional object columns</param>
         /// <param name="header">optional NetOffice.ExcelApi.Enums.XlYesNoGuess Header = 2</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 RemoveDuplicates(object columns, object header)
+        public virtual Int32 RemoveDuplicates(object columns, object header)
         {
             return Factory.ExecuteInt32MethodGet(this, "RemoveDuplicates", columns, header);
         }
@@ -6179,7 +6179,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 RemoveDuplicates()
+        public virtual Int32 RemoveDuplicates()
         {
             return Factory.ExecuteInt32MethodGet(this, "RemoveDuplicates");
         }
@@ -6190,7 +6190,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="columns">optional object columns</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 RemoveDuplicates(object columns)
+        public virtual Int32 RemoveDuplicates(object columns)
         {
             return Factory.ExecuteInt32MethodGet(this, "RemoveDuplicates", columns);
         }
@@ -6208,7 +6208,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="openAfterPublish">optional object openAfterPublish</param>
         /// <param name="fixedFormatExtClassPtr">optional object fixedFormatExtClassPtr</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to, object openAfterPublish, object fixedFormatExtClassPtr)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to, object openAfterPublish, object fixedFormatExtClassPtr)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", new object[] { type, filename, quality, includeDocProperties, ignorePrintAreas, from, to, openAfterPublish, fixedFormatExtClassPtr });
         }
@@ -6219,7 +6219,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="type">NetOffice.ExcelApi.Enums.XlFixedFormatType type</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", type);
         }
@@ -6231,7 +6231,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="filename">optional object filename</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", type, filename);
         }
@@ -6244,7 +6244,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="quality">optional object quality</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", type, filename, quality);
         }
@@ -6258,7 +6258,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="includeDocProperties">optional object includeDocProperties</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", type, filename, quality, includeDocProperties);
         }
@@ -6273,7 +6273,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="ignorePrintAreas">optional object ignorePrintAreas</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", new object[] { type, filename, quality, includeDocProperties, ignorePrintAreas });
         }
@@ -6289,7 +6289,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="from">optional object from</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", new object[] { type, filename, quality, includeDocProperties, ignorePrintAreas, from });
         }
@@ -6306,7 +6306,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="to">optional object to</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", new object[] { type, filename, quality, includeDocProperties, ignorePrintAreas, from, to });
         }
@@ -6324,7 +6324,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="openAfterPublish">optional object openAfterPublish</param>
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to, object openAfterPublish)
+        public virtual Int32 ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to, object openAfterPublish)
         {
             return Factory.ExecuteInt32MethodGet(this, "ExportAsFixedFormat", new object[] { type, filename, quality, includeDocProperties, ignorePrintAreas, from, to, openAfterPublish });
         }
@@ -6333,7 +6333,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public object CalculateRowMajorOrder()
+        public virtual object CalculateRowMajorOrder()
         {
             return Factory.ExecuteVariantMethodGet(this, "CalculateRowMajorOrder");
         }
@@ -6347,7 +6347,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="color">optional object color</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object _BorderAround(object lineStyle, object weight, object colorIndex, object color)
+        public virtual object _BorderAround(object lineStyle, object weight, object colorIndex, object color)
         {
             return Factory.ExecuteVariantMethodGet(this, "_BorderAround", lineStyle, weight, colorIndex, color);
         }
@@ -6358,7 +6358,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object _BorderAround()
+        public virtual object _BorderAround()
         {
             return Factory.ExecuteVariantMethodGet(this, "_BorderAround");
         }
@@ -6370,7 +6370,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object _BorderAround(object lineStyle)
+        public virtual object _BorderAround(object lineStyle)
         {
             return Factory.ExecuteVariantMethodGet(this, "_BorderAround", lineStyle);
         }
@@ -6383,7 +6383,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object _BorderAround(object lineStyle, object weight)
+        public virtual object _BorderAround(object lineStyle, object weight)
         {
             return Factory.ExecuteVariantMethodGet(this, "_BorderAround", lineStyle, weight);
         }
@@ -6397,7 +6397,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public object _BorderAround(object lineStyle, object weight, object colorIndex)
+        public virtual object _BorderAround(object lineStyle, object weight, object colorIndex)
         {
             return Factory.ExecuteVariantMethodGet(this, "_BorderAround", lineStyle, weight, colorIndex);
         }
@@ -6406,7 +6406,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public Int32 ClearHyperlinks()
+        public virtual Int32 ClearHyperlinks()
         {
             return Factory.ExecuteInt32MethodGet(this, "ClearHyperlinks");
         }
@@ -6415,7 +6415,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public Int32 AllocateChanges()
+        public virtual Int32 AllocateChanges()
         {
             return Factory.ExecuteInt32MethodGet(this, "AllocateChanges");
         }
@@ -6424,7 +6424,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public Int32 DiscardChanges()
+        public virtual Int32 DiscardChanges()
         {
             return Factory.ExecuteInt32MethodGet(this, "DiscardChanges");
         }
@@ -6433,7 +6433,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 15,16
         /// </summary>
         [SupportByVersion("Excel", 15, 16)]
-        public Int32 FlashFill()
+        public virtual Int32 FlashFill()
         {
             return Factory.ExecuteInt32MethodGet(this, "FlashFill");
         }
@@ -6460,7 +6460,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<object> GetEnumerator()
+        public virtual IEnumerator<object> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (object item in innerEnumerator)

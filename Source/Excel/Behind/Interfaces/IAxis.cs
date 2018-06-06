@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool AxisBetweenCategories
+        public virtual bool AxisBetweenCategories
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlAxisGroup AxisGroup
+        public virtual NetOffice.ExcelApi.Enums.XlAxisGroup AxisGroup
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.AxisTitle AxisTitle
+        public virtual NetOffice.ExcelApi.AxisTitle AxisTitle
         {
             get
             {
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Border Border
+        public virtual NetOffice.ExcelApi.Border Border
         {
             get
             {
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object CategoryNames
+        public virtual object CategoryNames
         {
             get
             {
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlAxisCrosses Crosses
+        public virtual NetOffice.ExcelApi.Enums.XlAxisCrosses Crosses
         {
             get
             {
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double CrossesAt
+        public virtual Double CrossesAt
         {
             get
             {
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool HasMajorGridlines
+        public virtual bool HasMajorGridlines
         {
             get
             {
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool HasMinorGridlines
+        public virtual bool HasMinorGridlines
         {
             get
             {
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool HasTitle
+        public virtual bool HasTitle
         {
             get
             {
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Gridlines MajorGridlines
+        public virtual NetOffice.ExcelApi.Gridlines MajorGridlines
         {
             get
             {
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTickMark MajorTickMark
+        public virtual NetOffice.ExcelApi.Enums.XlTickMark MajorTickMark
         {
             get
             {
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double MajorUnit
+        public virtual Double MajorUnit
         {
             get
             {
@@ -308,7 +308,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool MajorUnitIsAuto
+        public virtual bool MajorUnitIsAuto
         {
             get
             {
@@ -325,7 +325,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double MaximumScale
+        public virtual Double MaximumScale
         {
             get
             {
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool MaximumScaleIsAuto
+        public virtual bool MaximumScaleIsAuto
         {
             get
             {
@@ -359,7 +359,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double MinimumScale
+        public virtual Double MinimumScale
         {
             get
             {
@@ -376,7 +376,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool MinimumScaleIsAuto
+        public virtual bool MinimumScaleIsAuto
         {
             get
             {
@@ -393,7 +393,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Gridlines MinorGridlines
+        public virtual NetOffice.ExcelApi.Gridlines MinorGridlines
         {
             get
             {
@@ -406,7 +406,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTickMark MinorTickMark
+        public virtual NetOffice.ExcelApi.Enums.XlTickMark MinorTickMark
         {
             get
             {
@@ -423,7 +423,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double MinorUnit
+        public virtual Double MinorUnit
         {
             get
             {
@@ -440,7 +440,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool MinorUnitIsAuto
+        public virtual bool MinorUnitIsAuto
         {
             get
             {
@@ -457,7 +457,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool ReversePlotOrder
+        public virtual bool ReversePlotOrder
         {
             get
             {
@@ -474,7 +474,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlScaleType ScaleType
+        public virtual NetOffice.ExcelApi.Enums.XlScaleType ScaleType
         {
             get
             {
@@ -491,7 +491,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTickLabelPosition TickLabelPosition
+        public virtual NetOffice.ExcelApi.Enums.XlTickLabelPosition TickLabelPosition
         {
             get
             {
@@ -508,7 +508,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.TickLabels TickLabels
+        public virtual NetOffice.ExcelApi.TickLabels TickLabels
         {
             get
             {
@@ -521,7 +521,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 TickLabelSpacing
+        public virtual Int32 TickLabelSpacing
         {
             get
             {
@@ -538,7 +538,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 TickMarkSpacing
+        public virtual Int32 TickMarkSpacing
         {
             get
             {
@@ -555,7 +555,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlAxisType Type
+        public virtual NetOffice.ExcelApi.Enums.XlAxisType Type
         {
             get
             {
@@ -572,7 +572,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTimeUnit BaseUnit
+        public virtual NetOffice.ExcelApi.Enums.XlTimeUnit BaseUnit
         {
             get
             {
@@ -589,7 +589,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool BaseUnitIsAuto
+        public virtual bool BaseUnitIsAuto
         {
             get
             {
@@ -606,7 +606,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTimeUnit MajorUnitScale
+        public virtual NetOffice.ExcelApi.Enums.XlTimeUnit MajorUnitScale
         {
             get
             {
@@ -623,7 +623,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlTimeUnit MinorUnitScale
+        public virtual NetOffice.ExcelApi.Enums.XlTimeUnit MinorUnitScale
         {
             get
             {
@@ -640,7 +640,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCategoryType CategoryType
+        public virtual NetOffice.ExcelApi.Enums.XlCategoryType CategoryType
         {
             get
             {
@@ -657,7 +657,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double Left
+        public virtual Double Left
         {
             get
             {
@@ -670,7 +670,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double Top
+        public virtual Double Top
         {
             get
             {
@@ -683,7 +683,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double Width
+        public virtual Double Width
         {
             get
             {
@@ -696,7 +696,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double Height
+        public virtual Double Height
         {
             get
             {
@@ -709,7 +709,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlDisplayUnit DisplayUnit
+        public virtual NetOffice.ExcelApi.Enums.XlDisplayUnit DisplayUnit
         {
             get
             {
@@ -726,7 +726,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Double DisplayUnitCustom
+        public virtual Double DisplayUnitCustom
         {
             get
             {
@@ -743,7 +743,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public bool HasDisplayUnitLabel
+        public virtual bool HasDisplayUnitLabel
         {
             get
             {
@@ -760,7 +760,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.DisplayUnitLabel DisplayUnitLabel
+        public virtual NetOffice.ExcelApi.DisplayUnitLabel DisplayUnitLabel
         {
             get
             {
@@ -773,7 +773,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public Double LogBase
+        public virtual Double LogBase
         {
             get
             {
@@ -790,7 +790,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public bool TickLabelSpacingIsAuto
+        public virtual bool TickLabelSpacingIsAuto
         {
             get
             {
@@ -807,7 +807,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ChartFormat Format
+        public virtual NetOffice.ExcelApi.ChartFormat Format
         {
             get
             {
@@ -823,7 +823,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Delete()
+        public virtual object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
         }
@@ -832,7 +832,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public object Select()
+        public virtual object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
         }

@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Excel", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.ExcelApi.AddIn this[object index]
+        public virtual NetOffice.ExcelApi.AddIn this[object index]
         {
             get
             {
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="filename">string filename</param>
         /// <param name="copyFile">optional object copyFile</param>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public NetOffice.ExcelApi.AddIn Add(string filename, object copyFile)
+        public virtual NetOffice.ExcelApi.AddIn Add(string filename, object copyFile)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AddIn>(this, "Add", typeof(NetOffice.ExcelApi.AddIn), filename, copyFile);
         }
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="filename">string filename</param>
         [CustomMethod]
         [SupportByVersion("Excel", 14, 15, 16)]
-        public NetOffice.ExcelApi.AddIn Add(string filename)
+        public virtual NetOffice.ExcelApi.AddIn Add(string filename)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AddIn>(this, "Add", typeof(NetOffice.ExcelApi.AddIn), filename);
         }
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 14,15,16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.AddIn> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.AddIn> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.AddIn item in innerEnumerator)

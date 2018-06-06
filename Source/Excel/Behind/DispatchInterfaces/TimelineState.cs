@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229451.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231163.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228351.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228725.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public object StartDate
+		public virtual object StartDate
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227941.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public object EndDate
+		public virtual object EndDate
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230654.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlPivotFilterType FilterType
+		public virtual NetOffice.ExcelApi.Enums.XlPivotFilterType FilterType
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229897.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public object FilterValue1
+		public virtual object FilterValue1
 		{
 			get
 			{
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231506.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public object FilterValue2
+		public virtual object FilterValue2
 		{
 			get
 			{
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231219.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool SingleRangeFilterState
+		public virtual bool SingleRangeFilterState
 		{
 			get
 			{
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlTimeMoving MovingPeriod
+		public virtual NetOffice.ExcelApi.Enums.XlTimeMoving MovingPeriod
 		{
 			get
 			{
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="startDate">object startDate</param>
 		/// <param name="endDate">object endDate</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlFilterStatus SetFilterDateRange(object startDate, object endDate)
+		public virtual NetOffice.ExcelApi.Enums.XlFilterStatus SetFilterDateRange(object startDate, object endDate)
 		{
 			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlFilterStatus>(this, "SetFilterDateRange", startDate, endDate);
 		}

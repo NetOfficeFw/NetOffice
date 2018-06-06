@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863654.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 RGB
+        public virtual Int32 RGB
         {
             get
             {
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860274.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860576.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex ThemeColorSchemeIndex
+        public virtual NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex ThemeColorSchemeIndex
         {
             get
             {

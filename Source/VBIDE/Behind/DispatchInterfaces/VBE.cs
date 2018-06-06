@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBProjects VBProjects
+        public virtual NetOffice.VBIDEApi.VBProjects VBProjects
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.OfficeApi.CommandBars CommandBars
+        public virtual NetOffice.OfficeApi.CommandBars CommandBars
         {
             get
             {
@@ -89,7 +89,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.CodePanes CodePanes
+        public virtual NetOffice.VBIDEApi.CodePanes CodePanes
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Windows Windows
+        public virtual NetOffice.VBIDEApi.Windows Windows
         {
             get
             {
@@ -115,7 +115,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Events Events
+        public virtual NetOffice.VBIDEApi.Events Events
         {
             get
             {
@@ -128,7 +128,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBProject ActiveVBProject
+        public virtual NetOffice.VBIDEApi.VBProject ActiveVBProject
         {
             get
             {
@@ -145,7 +145,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBComponent SelectedVBComponent
+        public virtual NetOffice.VBIDEApi.VBComponent SelectedVBComponent
         {
             get
             {
@@ -158,7 +158,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Window MainWindow
+        public virtual NetOffice.VBIDEApi.Window MainWindow
         {
             get
             {
@@ -171,7 +171,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Window ActiveWindow
+        public virtual NetOffice.VBIDEApi.Window ActiveWindow
         {
             get
             {
@@ -184,7 +184,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.CodePane ActiveCodePane
+        public virtual NetOffice.VBIDEApi.CodePane ActiveCodePane
         {
             get
             {
@@ -201,7 +201,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Addins Addins
+        public virtual NetOffice.VBIDEApi.Addins Addins
         {
             get
             {

@@ -65,7 +65,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.ReferencesEvents get_ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
+        public virtual NetOffice.VBIDEApi.ReferencesEvents get_ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.ReferencesEvents>(this, "ReferencesEvents", null, vBProject);
         }
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_ReferencesEvents")]
-        public NetOffice.VBIDEApi.ReferencesEvents ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
+        public virtual NetOffice.VBIDEApi.ReferencesEvents ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
         {
             return get_ReferencesEvents(vBProject);
         }
@@ -88,7 +88,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="commandBarControl">object commandBarControl</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
+        public virtual NetOffice.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
         {
             return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CommandBarEvents>(this, "CommandBarEvents", typeof(NetOffice.VBIDEApi.CommandBarEvents), commandBarControl);
         }
@@ -99,7 +99,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="commandBarControl">object commandBarControl</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3), Redirect("get_CommandBarEvents")]
-        public NetOffice.VBIDEApi.CommandBarEvents CommandBarEvents(object commandBarControl)
+        public virtual NetOffice.VBIDEApi.CommandBarEvents CommandBarEvents(object commandBarControl)
         {
             return get_CommandBarEvents(commandBarControl);
         }

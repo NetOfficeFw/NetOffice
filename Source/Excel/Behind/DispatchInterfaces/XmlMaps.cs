@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198292.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840745.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194419.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.XmlMap this[object index]
+		public virtual NetOffice.ExcelApi.XmlMap this[object index]
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195182.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="schema">string schema</param>
 		/// <param name="rootElementName">optional object rootElementName</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.XmlMap Add(string schema, object rootElementName)
+		public virtual NetOffice.ExcelApi.XmlMap Add(string schema, object rootElementName)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.XmlMap>(this, "Add", typeof(NetOffice.ExcelApi.XmlMap), schema, rootElementName);
 		}
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="schema">string schema</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.XmlMap Add(string schema)
+		public virtual NetOffice.ExcelApi.XmlMap Add(string schema)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.XmlMap>(this, "Add", typeof(NetOffice.ExcelApi.XmlMap), schema);
 		}
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.XmlMap> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.XmlMap> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.XmlMap item in innerEnumerator)

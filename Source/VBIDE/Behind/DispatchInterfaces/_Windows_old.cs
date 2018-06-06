@@ -66,7 +66,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [BaseResult]
-        public NetOffice.VBIDEApi.Application Parent
+        public virtual NetOffice.VBIDEApi.Application Parent
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -111,7 +111,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.VBIDEApi.Window this[object index]
+        public virtual NetOffice.VBIDEApi.Window this[object index]
         {
             get
             {
@@ -141,7 +141,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE, 12,14,5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public IEnumerator<NetOffice.VBIDEApi.Window> GetEnumerator()
+        public virtual IEnumerator<NetOffice.VBIDEApi.Window> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.VBIDEApi.Window item in innerEnumerator)

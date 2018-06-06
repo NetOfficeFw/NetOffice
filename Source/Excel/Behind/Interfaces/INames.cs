@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="refersToR1C1">optional object refersToR1C1</param>
         /// <param name="refersToR1C1Local">optional object refersToR1C1Local</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1, object refersToR1C1Local)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1, object refersToR1C1Local)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local });
         }
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add()
+        public virtual NetOffice.ExcelApi.Name Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name));
         }
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="name">optional object name</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name)
+        public virtual NetOffice.ExcelApi.Name Add(object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), name);
         }
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="refersTo">optional object refersTo</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), name, refersTo);
         }
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="visible">optional object visible</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), name, refersTo, visible);
         }
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="macroType">optional object macroType</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), name, refersTo, visible, macroType);
         }
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="shortcutKey">optional object shortcutKey</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), new object[] { name, refersTo, visible, macroType, shortcutKey });
         }
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="category">optional object category</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), new object[] { name, refersTo, visible, macroType, shortcutKey, category });
         }
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="nameLocal">optional object nameLocal</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal });
         }
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="refersToLocal">optional object refersToLocal</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal });
         }
@@ -278,7 +278,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="categoryLocal">optional object categoryLocal</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal });
         }
@@ -298,7 +298,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="refersToR1C1">optional object refersToR1C1</param>
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1)
+        public virtual NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", typeof(NetOffice.ExcelApi.Name), new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1 });
         }
@@ -310,7 +310,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty, CustomIndexer]
-        public NetOffice.ExcelApi.Name this[object index]
+        public virtual NetOffice.ExcelApi.Name this[object index]
         {
             get
             {
@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="indexLocal">optional object indexLocal</param>
 		[SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty, CustomIndexer]
-        public NetOffice.ExcelApi.Name this[object index, object indexLocal]
+        public virtual NetOffice.ExcelApi.Name this[object index, object indexLocal]
         {
             get
             {
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="refersTo">optional object refersTo</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.ExcelApi.Name this[object index, object indexLocal, object refersTo]
+        public virtual NetOffice.ExcelApi.Name this[object index, object indexLocal, object refersTo]
         {
             get
             {
@@ -372,7 +372,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Name> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.Name> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.Name item in innerEnumerator)

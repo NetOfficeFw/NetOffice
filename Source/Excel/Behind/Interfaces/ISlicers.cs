@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.Slicer this[object index]
+		public virtual NetOffice.ExcelApi.Slicer this[object index]
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width, object height)
+		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width, object height)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left, width, height });
 		}
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="slicerDestination">object slicerDestination</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination)
+		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination);
 		}
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="level">optional object level</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level)
+		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level);
 		}
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="name">optional object name</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name)
+		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level, name);
 		}
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="caption">optional object caption</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption)
+		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level, name, caption);
 		}
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top)
+		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top });
 		}
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left)
+		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left });
 		}
@@ -242,7 +242,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width)
+		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left, width });
 		}
@@ -269,7 +269,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 14,15,16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.Slicer> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.Slicer> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.Slicer item in innerEnumerator)

@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840699.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838631.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195978.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193296.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="viewName">object viewName</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.CustomView this[object viewName]
+		public virtual NetOffice.ExcelApi.CustomView this[object viewName]
 		{
 			get
 			{
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="printSettings">optional object printSettings</param>
 		/// <param name="rowColSettings">optional object rowColSettings</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings, object rowColSettings)
+		public virtual NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings, object rowColSettings)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName, printSettings, rowColSettings);
 		}
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="viewName">string viewName</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.CustomView Add(string viewName)
+		public virtual NetOffice.ExcelApi.CustomView Add(string viewName)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName);
 		}
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="printSettings">optional object printSettings</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings)
+		public virtual NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName, printSettings);
 		}
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.CustomView> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.CustomView> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.CustomView item in innerEnumerator)

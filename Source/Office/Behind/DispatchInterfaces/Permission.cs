@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.UserPermission this[object index]
+        public virtual NetOffice.OfficeApi.UserPermission this[object index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865565.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862116.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool EnableTrustedBrowser
+        public virtual bool EnableTrustedBrowser
         {
             get
             {
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861383.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865228.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool Enabled
+        public virtual bool Enabled
         {
             get
             {
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862755.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string RequestPermissionURL
+        public virtual string RequestPermissionURL
         {
             get
             {
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860910.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string PolicyName
+        public virtual string PolicyName
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860601.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string PolicyDescription
+        public virtual string PolicyDescription
         {
             get
             {
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864131.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool StoreLicenses
+        public virtual bool StoreLicenses
         {
             get
             {
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864905.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string DocumentAuthor
+        public virtual string DocumentAuthor
         {
             get
             {
@@ -231,7 +231,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863690.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool PermissionFromPolicy
+        public virtual bool PermissionFromPolicy
         {
             get
             {
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="permission">optional object permission</param>
         /// <param name="expirationDate">optional object expirationDate</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
+        public virtual NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId, permission, expirationDate);
         }
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="userId">string userId</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.UserPermission Add(string userId)
+        public virtual NetOffice.OfficeApi.UserPermission Add(string userId)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId);
         }
@@ -276,7 +276,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="permission">optional object permission</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.UserPermission Add(string userId, object permission)
+        public virtual NetOffice.OfficeApi.UserPermission Add(string userId, object permission)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId, permission);
         }
@@ -287,7 +287,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864678.aspx </remarks>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void ApplyPolicy(string fileName)
+        public virtual void ApplyPolicy(string fileName)
         {
             Factory.ExecuteMethod(this, "ApplyPolicy", fileName);
         }
@@ -297,7 +297,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861135.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void RemoveAll()
+        public virtual void RemoveAll()
         {
             Factory.ExecuteMethod(this, "RemoveAll");
         }
@@ -324,7 +324,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.UserPermission> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.UserPermission> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.UserPermission item in innerEnumerator)

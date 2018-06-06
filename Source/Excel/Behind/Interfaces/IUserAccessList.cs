@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.UserAccess this[object index]
+		public virtual NetOffice.ExcelApi.UserAccess this[object index]
 		{
 			get
 			{
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="name">string name</param>
 		/// <param name="allowEdit">bool allowEdit</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.UserAccess Add(string name, bool allowEdit)
+		public virtual NetOffice.ExcelApi.UserAccess Add(string name, bool allowEdit)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.UserAccess>(this, "Add", typeof(NetOffice.ExcelApi.UserAccess), name, allowEdit);
 		}
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 DeleteAll()
+		public virtual Int32 DeleteAll()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "DeleteAll");
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.UserAccess> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.UserAccess> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.UserAccess item in innerEnumerator)

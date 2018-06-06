@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void ItemAdded(NetOffice.VBIDEApi.VBProject vBProject)
+        public virtual void ItemAdded(NetOffice.VBIDEApi.VBProject vBProject)
         {
             Factory.ExecuteMethod(this, "ItemAdded", vBProject);
         }
@@ -77,7 +77,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void ItemRemoved(NetOffice.VBIDEApi.VBProject vBProject)
+        public virtual void ItemRemoved(NetOffice.VBIDEApi.VBProject vBProject)
         {
             Factory.ExecuteMethod(this, "ItemRemoved", vBProject);
         }
@@ -88,7 +88,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
         /// <param name="oldName">string oldName</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void ItemRenamed(NetOffice.VBIDEApi.VBProject vBProject, string oldName)
+        public virtual void ItemRenamed(NetOffice.VBIDEApi.VBProject vBProject, string oldName)
         {
             Factory.ExecuteMethod(this, "ItemRenamed", vBProject, oldName);
         }
@@ -98,7 +98,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void ItemActivated(NetOffice.VBIDEApi.VBProject vBProject)
+        public virtual void ItemActivated(NetOffice.VBIDEApi.VBProject vBProject)
         {
             Factory.ExecuteMethod(this, "ItemActivated", vBProject);
         }

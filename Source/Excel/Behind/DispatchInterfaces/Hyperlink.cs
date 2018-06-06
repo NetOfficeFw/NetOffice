@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194271.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841142.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837961.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195757.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193899.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Range Range
+		public virtual NetOffice.ExcelApi.Range Range
 		{
 			get
 			{
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838859.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape Shape
+		public virtual NetOffice.ExcelApi.Shape Shape
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840389.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string SubAddress
+		public virtual string SubAddress
 		{
 			get
 			{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839422.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string Address
+		public virtual string Address
 		{
 			get
 			{
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840419.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Type
+		public virtual Int32 Type
 		{
 			get
 			{
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197206.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string EmailSubject
+		public virtual string EmailSubject
 		{
 			get
 			{
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197693.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string ScreenTip
+		public virtual string ScreenTip
 		{
 			get
 			{
@@ -236,7 +236,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838234.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public string TextToDisplay
+		public virtual string TextToDisplay
 		{
 			get
 			{
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837755.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void AddToFavorites()
+		public virtual void AddToFavorites()
 		{
 			 Factory.ExecuteMethod(this, "AddToFavorites");
 		}
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197458.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -282,7 +282,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="method">optional object method</param>
 		/// <param name="headerInfo">optional object headerInfo</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
+		public virtual void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
 			 Factory.ExecuteMethod(this, "Follow", new object[]{ newWindow, addHistory, extraInfo, method, headerInfo });
 		}
@@ -293,7 +293,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839219.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Follow()
+		public virtual void Follow()
 		{
 			 Factory.ExecuteMethod(this, "Follow");
 		}
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="newWindow">optional object newWindow</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Follow(object newWindow)
+		public virtual void Follow(object newWindow)
 		{
 			 Factory.ExecuteMethod(this, "Follow", newWindow);
 		}
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="addHistory">optional object addHistory</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Follow(object newWindow, object addHistory)
+		public virtual void Follow(object newWindow, object addHistory)
 		{
 			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory);
 		}
@@ -332,7 +332,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="extraInfo">optional object extraInfo</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Follow(object newWindow, object addHistory, object extraInfo)
+		public virtual void Follow(object newWindow, object addHistory, object extraInfo)
 		{
 			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo);
 		}
@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="method">optional object method</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void Follow(object newWindow, object addHistory, object extraInfo, object method)
+		public virtual void Follow(object newWindow, object addHistory, object extraInfo, object method)
 		{
 			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo, method);
 		}
@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="editNow">bool editNow</param>
 		/// <param name="overwrite">bool overwrite</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void CreateNewDocument(string filename, bool editNow, bool overwrite)
+		public virtual void CreateNewDocument(string filename, bool editNow, bool overwrite)
 		{
 			 Factory.ExecuteMethod(this, "CreateNewDocument", filename, editNow, overwrite);
 		}

@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835598.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSpeakDirection Direction
+		public virtual NetOffice.ExcelApi.Enums.XlSpeakDirection Direction
 		{
 			get
 			{
@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837122.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool SpeakCellOnEnter
+		public virtual bool SpeakCellOnEnter
 		{
 			get
 			{
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="speakXML">optional object speakXML</param>
 		/// <param name="purge">optional object purge</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Speak(string text, object speakAsync, object speakXML, object purge)
+		public virtual void Speak(string text, object speakAsync, object speakXML, object purge)
 		{
 			 Factory.ExecuteMethod(this, "Speak", text, speakAsync, speakXML, purge);
 		}
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="text">string text</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Speak(string text)
+		public virtual void Speak(string text)
 		{
 			 Factory.ExecuteMethod(this, "Speak", text);
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="speakAsync">optional object speakAsync</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Speak(string text, object speakAsync)
+		public virtual void Speak(string text, object speakAsync)
 		{
 			 Factory.ExecuteMethod(this, "Speak", text, speakAsync);
 		}
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="speakXML">optional object speakXML</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Speak(string text, object speakAsync, object speakXML)
+		public virtual void Speak(string text, object speakAsync, object speakXML)
 		{
 			 Factory.ExecuteMethod(this, "Speak", text, speakAsync, speakXML);
 		}

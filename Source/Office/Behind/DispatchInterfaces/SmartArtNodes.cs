@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865334.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863078.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.SmartArtNode this[object index]
+        public virtual NetOffice.OfficeApi.SmartArtNode this[object index]
         {
             get
             {
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861747.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtNode Add()
+        public virtual NetOffice.OfficeApi.SmartArtNode Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "Add", typeof(NetOffice.OfficeApi.SmartArtNode));
         }
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behinds
         /// SupportByVersion Office, 14,15,16
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.SmartArtNode> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.SmartArtNode> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.SmartArtNode item in innerEnumerator)

@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862205.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="iSig">Int32 iSig</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.Signature this[Int32 iSig]
+        public virtual NetOffice.OfficeApi.Signature this[Int32 iSig]
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862853.aspx </remarks>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865204.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool CanAddSignatureLine
+        public virtual bool CanAddSignatureLine
         {
             get
             {
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860322.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoSignatureSubset Subset
+        public virtual NetOffice.OfficeApi.Enums.MsoSignatureSubset Subset
         {
             get
             {
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860584.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ShowSignaturesPane
+        public virtual bool ShowSignaturesPane
         {
             get
             {
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Signature Add()
+        public virtual NetOffice.OfficeApi.Signature Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "Add", typeof(NetOffice.OfficeApi.Signature));
         }
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Commit()
+        public virtual void Commit()
         {
             Factory.ExecuteMethod(this, "Commit");
         }
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865505.aspx </remarks>
         /// <param name="varSigProv">optional object varSigProv</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Signature AddNonVisibleSignature(object varSigProv)
+        public virtual NetOffice.OfficeApi.Signature AddNonVisibleSignature(object varSigProv)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddNonVisibleSignature", typeof(NetOffice.OfficeApi.Signature), varSigProv);
         }
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865505.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Signature AddNonVisibleSignature()
+        public virtual NetOffice.OfficeApi.Signature AddNonVisibleSignature()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddNonVisibleSignature", typeof(NetOffice.OfficeApi.Signature));
         }
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865238.aspx </remarks>
         /// <param name="varSigProv">optional object varSigProv</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Signature AddSignatureLine(object varSigProv)
+        public virtual NetOffice.OfficeApi.Signature AddSignatureLine(object varSigProv)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddSignatureLine", typeof(NetOffice.OfficeApi.Signature), varSigProv);
         }
@@ -218,7 +218,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865238.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Signature AddSignatureLine()
+        public virtual NetOffice.OfficeApi.Signature AddSignatureLine()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddSignatureLine", typeof(NetOffice.OfficeApi.Signature));
         }
@@ -245,7 +245,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.Signature> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.Signature> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.Signature item in innerEnumerator)

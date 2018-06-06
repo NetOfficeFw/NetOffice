@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.PivotFilter this[object index]
+		public virtual NetOffice.ExcelApi.PivotFilter this[object index]
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="description">optional object description</param>
 		/// <param name="memberPropertyField">optional object memberPropertyField</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField });
 		}
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="wholeDayFilter">optional object wholeDayFilter</param>
 		/// <param name="movingPeriod">optional object movingPeriod</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField, object wholeDayFilter, object movingPeriod)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField, object wholeDayFilter, object movingPeriod)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField, wholeDayFilter, movingPeriod });
 		}
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType type</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type);
 		}
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="dataField">optional object dataField</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField);
 		}
@@ -199,7 +199,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="value1">optional object value1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1);
 		}
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="value2">optional object value2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1, value2);
 		}
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="order">optional object order</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order });
 		}
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="name">optional object name</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name });
 		}
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="description">optional object description</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description });
 		}
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="wholeDayFilter">optional object wholeDayFilter</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField, object wholeDayFilter)
+		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField, object wholeDayFilter)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField, wholeDayFilter });
 		}
@@ -298,7 +298,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="memberPropertyField">optional object memberPropertyField</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField)
+		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField });
 		}
@@ -310,7 +310,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type)
+		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type);
 		}
@@ -323,7 +323,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField)
+		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField);
 		}
@@ -337,7 +337,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1)
+		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1);
 		}
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2)
+		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1, value2);
 		}
@@ -368,7 +368,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order)
+		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order });
 		}
@@ -385,7 +385,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name)
+		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name });
 		}
@@ -403,7 +403,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description)
+		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description });
 		}
@@ -430,7 +430,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.PivotFilter> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.PivotFilter> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.PivotFilter item in innerEnumerator)

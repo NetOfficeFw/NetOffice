@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861153.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single Radius
+        public virtual Single Radius
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863453.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ColorFormat Color
+        public virtual NetOffice.OfficeApi.ColorFormat Color
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862431.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single Transparency
+        public virtual Single Transparency
         {
             get
             {

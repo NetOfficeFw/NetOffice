@@ -63,7 +63,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Enums.vbext_ProjectType Type
+        public virtual NetOffice.VBIDEApi.Enums.vbext_ProjectType Type
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string FileName
+        public virtual string FileName
         {
             get
             {
@@ -89,7 +89,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string BuildFileName
+        public virtual string BuildFileName
         {
             get
             {
@@ -110,7 +110,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void SaveAs(string fileName)
+        public virtual void SaveAs(string fileName)
         {
             Factory.ExecuteMethod(this, "SaveAs", fileName);
         }
@@ -119,7 +119,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void MakeCompiledFile()
+        public virtual void MakeCompiledFile()
         {
             Factory.ExecuteMethod(this, "MakeCompiledFile");
         }

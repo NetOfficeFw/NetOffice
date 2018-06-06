@@ -65,7 +65,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [BaseResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.Application Application
+        public virtual NetOffice.VBIDEApi.Application Application
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.Components Parent
+        public virtual NetOffice.VBIDEApi.Components Parent
         {
             get
             {
@@ -92,7 +92,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public bool IsDirty
+        public virtual bool IsDirty
         {
             get
             {
@@ -109,7 +109,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public string Name
+        public virtual string Name
         {
             get
             {

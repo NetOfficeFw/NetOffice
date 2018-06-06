@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841082.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194016.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835001.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836786.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.CubeField this[object index]
+		public virtual NetOffice.ExcelApi.CubeField this[object index]
 		{
 			get
 			{
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="name">string name</param>
 		/// <param name="caption">string caption</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.CubeField AddSet(string name, string caption)
+		public virtual NetOffice.ExcelApi.CubeField AddSet(string name, string caption)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "AddSet", typeof(NetOffice.ExcelApi.CubeField), name, caption);
 		}
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="function">NetOffice.ExcelApi.Enums.XlConsolidationFunction function</param>
 		/// <param name="caption">optional object caption</param>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.CubeField GetMeasure(object attributeHierarchy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object caption)
+		public virtual NetOffice.ExcelApi.CubeField GetMeasure(object attributeHierarchy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object caption)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "GetMeasure", typeof(NetOffice.ExcelApi.CubeField), attributeHierarchy, function, caption);
 		}
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="function">NetOffice.ExcelApi.Enums.XlConsolidationFunction function</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.CubeField GetMeasure(object attributeHierarchy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function)
+		public virtual NetOffice.ExcelApi.CubeField GetMeasure(object attributeHierarchy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "GetMeasure", typeof(NetOffice.ExcelApi.CubeField), attributeHierarchy, function);
 		}
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.CubeField> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.CubeField> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.CubeField item in innerEnumerator)

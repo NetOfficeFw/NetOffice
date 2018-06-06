@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ChartColorFormat BackColor
+        public virtual NetOffice.OfficeApi.ChartColorFormat BackColor
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ChartColorFormat ForeColor
+        public virtual NetOffice.OfficeApi.ChartColorFormat ForeColor
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 GradientColorType
+        public virtual Int32 GradientColorType
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single GradientDegree
+        public virtual Single GradientDegree
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 GradientStyle
+        public virtual Int32 GradientStyle
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 GradientVariant
+        public virtual Int32 GradientVariant
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Pattern
+        public virtual Int32 Pattern
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 PresetGradientType
+        public virtual Int32 PresetGradientType
         {
             get
             {
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 PresetTexture
+        public virtual Int32 PresetTexture
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string TextureName
+        public virtual string TextureName
         {
             get
             {
@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 TextureType
+        public virtual Int32 TextureType
         {
             get
             {
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Type
+        public virtual Int32 Type
         {
             get
             {
@@ -220,7 +220,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Visible
+        public virtual Int32 Visible
         {
             get
             {
@@ -238,7 +238,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Creator
+        public virtual Int32 Creator
         {
             get
             {
@@ -265,7 +265,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -284,7 +284,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="variant">Int32 variant</param>
         /// <param name="degree">Single degree</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void OneColorGradient(Int32 style, Int32 variant, Single degree)
+        public virtual void OneColorGradient(Int32 style, Int32 variant, Single degree)
         {
             Factory.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
         }
@@ -295,7 +295,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="style">Int32 style</param>
         /// <param name="variant">Int32 variant</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void TwoColorGradient(Int32 style, Int32 variant)
+        public virtual void TwoColorGradient(Int32 style, Int32 variant)
         {
             Factory.ExecuteMethod(this, "TwoColorGradient", style, variant);
         }
@@ -305,7 +305,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="presetTexture">Int32 presetTexture</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void PresetTextured(Int32 presetTexture)
+        public virtual void PresetTextured(Int32 presetTexture)
         {
             Factory.ExecuteMethod(this, "PresetTextured", presetTexture);
         }
@@ -314,7 +314,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Solid()
+        public virtual void Solid()
         {
             Factory.ExecuteMethod(this, "Solid");
         }
@@ -324,7 +324,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="pattern">Int32 pattern</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Patterned(Int32 pattern)
+        public virtual void Patterned(Int32 pattern)
         {
             Factory.ExecuteMethod(this, "Patterned", pattern);
         }
@@ -337,7 +337,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="pictureStackUnit">object pictureStackUnit</param>
         /// <param name="picturePlacement">object picturePlacement</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
+        public virtual void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
         {
             Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
         }
@@ -347,7 +347,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="textureFile">string textureFile</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void UserTextured(string textureFile)
+        public virtual void UserTextured(string textureFile)
         {
             Factory.ExecuteMethod(this, "UserTextured", textureFile);
         }
@@ -359,7 +359,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="variant">Int32 variant</param>
         /// <param name="presetGradientType">Int32 presetGradientType</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void PresetGradient(Int32 style, Int32 variant, Int32 presetGradientType)
+        public virtual void PresetGradient(Int32 style, Int32 variant, Int32 presetGradientType)
         {
             Factory.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
         }

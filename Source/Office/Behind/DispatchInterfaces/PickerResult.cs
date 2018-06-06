@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863784.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string Id
+        public virtual string Id
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861059.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string DisplayName
+        public virtual string DisplayName
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865231.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string Type
+        public virtual string Type
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863831.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string SIPId
+        public virtual string SIPId
         {
             get
             {
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865213.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public object ItemData
+        public virtual object ItemData
         {
             get
             {
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863538.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public object SubItems
+        public virtual object SubItems
         {
             get
             {
@@ -170,7 +170,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862053.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public object DuplicateResults
+        public virtual object DuplicateResults
         {
             get
             {
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864553.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerFields Fields
+        public virtual NetOffice.OfficeApi.PickerFields Fields
         {
             get
             {

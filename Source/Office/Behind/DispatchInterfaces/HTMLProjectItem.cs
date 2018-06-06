@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public bool IsOpen
+        public virtual bool IsOpen
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string Text
+        public virtual string Text
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void LoadFromFile(string fileName)
+        public virtual void LoadFromFile(string fileName)
         {
             Factory.ExecuteMethod(this, "LoadFromFile", fileName);
         }
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="openKind">optional NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen OpenKind = 0</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Open(object openKind)
+        public virtual void Open(object openKind)
         {
             Factory.ExecuteMethod(this, "Open", openKind);
         }
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Open()
+        public virtual void Open()
         {
             Factory.ExecuteMethod(this, "Open");
         }
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void SaveCopyAs(string fileName)
+        public virtual void SaveCopyAs(string fileName)
         {
             Factory.ExecuteMethod(this, "SaveCopyAs", fileName);
         }

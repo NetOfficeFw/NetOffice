@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865564.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoSyncStatusType Status
+        public virtual NetOffice.OfficeApi.Enums.MsoSyncStatusType Status
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865364.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string WorkspaceLastChangedBy
+        public virtual string WorkspaceLastChangedBy
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864917.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public object LastSyncTime
+        public virtual object LastSyncTime
         {
             get
             {
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862150.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoSyncErrorType ErrorType
+        public virtual NetOffice.OfficeApi.Enums.MsoSyncErrorType ErrorType
         {
             get
             {
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860559.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863651.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void GetUpdate()
+        public virtual void GetUpdate()
         {
             Factory.ExecuteMethod(this, "GetUpdate");
         }
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860754.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void PutUpdate()
+        public virtual void PutUpdate()
         {
             Factory.ExecuteMethod(this, "PutUpdate");
         }
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860783.aspx </remarks>
         /// <param name="syncVersionType">NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void OpenVersion(NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
+        public virtual void OpenVersion(NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
         {
             Factory.ExecuteMethod(this, "OpenVersion", syncVersionType);
         }
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864675.aspx </remarks>
         /// <param name="syncConflictResolution">NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void ResolveConflict(NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
+        public virtual void ResolveConflict(NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
         {
             Factory.ExecuteMethod(this, "ResolveConflict", syncConflictResolution);
         }
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861422.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Unsuspend()
+        public virtual void Unsuspend()
         {
             Factory.ExecuteMethod(this, "Unsuspend");
         }

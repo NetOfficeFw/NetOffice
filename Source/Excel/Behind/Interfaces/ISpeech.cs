@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSpeakDirection Direction
+		public virtual NetOffice.ExcelApi.Enums.XlSpeakDirection Direction
 		{
 			get
 			{
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public bool SpeakCellOnEnter
+		public virtual bool SpeakCellOnEnter
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="speakXML">optional object speakXML</param>
 		/// <param name="purge">optional object purge</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Speak(string text, object speakAsync, object speakXML, object purge)
+		public virtual Int32 Speak(string text, object speakAsync, object speakXML, object purge)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync, speakXML, purge);
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="text">string text</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Speak(string text)
+		public virtual Int32 Speak(string text)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Speak", text);
 		}
@@ -128,7 +128,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="speakAsync">optional object speakAsync</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Speak(string text, object speakAsync)
+		public virtual Int32 Speak(string text, object speakAsync)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync);
 		}
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="speakXML">optional object speakXML</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public Int32 Speak(string text, object speakAsync, object speakXML)
+		public virtual Int32 Speak(string text, object speakAsync, object speakXML)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync, speakXML);
 		}

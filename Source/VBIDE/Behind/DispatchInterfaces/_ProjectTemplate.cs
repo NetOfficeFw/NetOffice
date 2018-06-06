@@ -65,7 +65,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [BaseResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.Application Application
+        public virtual NetOffice.VBIDEApi.Application Application
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [BaseResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.VBIDEApi.Application Parent
+        public virtual NetOffice.VBIDEApi.Application Parent
         {
             get
             {

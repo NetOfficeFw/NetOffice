@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="categorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport</param>
         /// <param name="padding">bool padding</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void BlogProviderProperties(out string blogProvider, out string friendlyName, out NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, out bool padding)
+        public virtual void BlogProviderProperties(out string blogProvider, out string friendlyName, out NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, out bool padding)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true);
             blogProvider = string.Empty;
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="newAccount">bool newAccount</param>
         /// <param name="showPictureUI">bool showPictureUI</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void SetupBlogAccount(string account, Int32 parentWindow, object document, bool newAccount, out bool showPictureUI)
+        public virtual void SetupBlogAccount(string account, Int32 parentWindow, object document, bool newAccount, out bool showPictureUI)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, true);
             showPictureUI = false;
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="blogIDs">String[] blogIDs</param>
         /// <param name="blogURLs">String[] blogURLs</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void GetUserBlogs(string account, Int32 parentWindow, object document, out String[] blogNames, out String[] blogIDs, out String[] blogURLs)
+        public virtual void GetUserBlogs(string account, Int32 parentWindow, object document, out String[] blogNames, out String[] blogIDs, out String[] blogURLs)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true, true, true);
             blogNames = null;
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="postDates">String[] postDates</param>
         /// <param name="postIDs">String[] postIDs</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void GetRecentPosts(string account, Int32 parentWindow, object document, out String[] postTitles, out String[] postDates, out String[] postIDs)
+        public virtual void GetRecentPosts(string account, Int32 parentWindow, object document, out String[] postTitles, out String[] postDates, out String[] postIDs)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true, true, true);
             postTitles = null;
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="datePosted">string datePosted</param>
         /// <param name="categories">String[] categories</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Open(string account, string postID, Int32 parentWindow, out string xHTML, out string title, out string datePosted, out String[] categories)
+        public virtual void Open(string account, string postID, Int32 parentWindow, out string xHTML, out string title, out string datePosted, out String[] categories)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true, true, true, true);
             xHTML = string.Empty;
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="postID">string postID</param>
         /// <param name="publishMessage">string publishMessage</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void PublishPost(string account, Int32 parentWindow, object document, string xHTML, string title, string dateTime, String[] categories, bool draft, out string postID, out string publishMessage)
+        public virtual void PublishPost(string account, Int32 parentWindow, object document, string xHTML, string title, string dateTime, String[] categories, bool draft, out string postID, out string publishMessage)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, false, false, false, false, true, true);
             postID = string.Empty;
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="draft">bool draft</param>
         /// <param name="publishMessage">string publishMessage</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void RepublishPost(string account, Int32 parentWindow, object document, string postID, string xHTML, string title, string dateTime, String[] categories, bool draft, out string publishMessage)
+        public virtual void RepublishPost(string account, Int32 parentWindow, object document, string postID, string xHTML, string title, string dateTime, String[] categories, bool draft, out string publishMessage)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, false, false, false, false, false, true);
             publishMessage = string.Empty;
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="document">object document</param>
         /// <param name="categories">String[] categories</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void GetCategories(string account, Int32 parentWindow, object document, out String[] categories)
+        public virtual void GetCategories(string account, Int32 parentWindow, object document, out String[] categories)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true);
             categories = null;

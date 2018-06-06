@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.PickerProperty this[Int32 index]
+        public virtual NetOffice.OfficeApi.PickerProperty this[Int32 index]
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861123.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="value">string value</param>
         /// <param name="type">NetOffice.OfficeApi.Enums.MsoPickerField type</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerProperty Add(string id, string value, NetOffice.OfficeApi.Enums.MsoPickerField type)
+        public virtual NetOffice.OfficeApi.PickerProperty Add(string id, string value, NetOffice.OfficeApi.Enums.MsoPickerField type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerProperty>(this, "Add", typeof(NetOffice.OfficeApi.PickerProperty), id, value, type);
         }
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863845.aspx </remarks>
         /// <param name="id">string id</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Remove(string id)
+        public virtual void Remove(string id)
         {
             Factory.ExecuteMethod(this, "Remove", id);
         }
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 14,15,16
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.PickerProperty> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.PickerProperty> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.PickerProperty item in innerEnumerator)

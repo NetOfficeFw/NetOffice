@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="name">string name</param>
         /// <param name="desc">string desc</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 GetInfo(out string name, out string desc)
+        public virtual Int32 GetInfo(out string name, out string desc)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             name = string.Empty;
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="result">string result</param>
         /// <param name="action">string action</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Inspect(object doc, out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string result, out string action)
+        public virtual Int32 Inspect(object doc, out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string result, out string action)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, true, true);
             status = 0;
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
         /// <param name="result">string result</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Fix(object doc, Int32 hwnd, out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string result)
+        public virtual Int32 Fix(object doc, Int32 hwnd, out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string result)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true, true);
             status = 0;

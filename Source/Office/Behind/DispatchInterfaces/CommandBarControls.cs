@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860596.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.CommandBarControl this[object index]
+        public virtual NetOffice.OfficeApi.CommandBarControl this[object index]
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860798.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBar Parent
+        public virtual NetOffice.OfficeApi.CommandBar Parent
         {
             get
             {
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="temporary">optional object temporary</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
-        public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before, object temporary)
+        public virtual NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before, object temporary)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", new object[] { type, id, parameter, before, temporary });
         }
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl Add()
+        public virtual NetOffice.OfficeApi.CommandBarControl Add()
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add");
         }
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl Add(object type)
+        public virtual NetOffice.OfficeApi.CommandBarControl Add(object type)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", type);
         }
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl Add(object type, object id)
+        public virtual NetOffice.OfficeApi.CommandBarControl Add(object type, object id)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", type, id);
         }
@@ -176,7 +176,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter)
+        public virtual NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", type, id, parameter);
         }
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi.Behind
         [CustomMethod]
         [BaseResult]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before)
+        public virtual NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", type, id, parameter, before);
         }
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.CommandBarControl> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.CommandBarControl> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.CommandBarControl item in innerEnumerator)

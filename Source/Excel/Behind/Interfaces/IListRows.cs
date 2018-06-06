@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.ExcelApi.ListRow this[object index]
+        public virtual NetOffice.ExcelApi.ListRow this[object index]
         {
             get
             {
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <param name="position">optional object position</param>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListRow Add(object position)
+        public virtual NetOffice.ExcelApi.ListRow Add(object position)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListRow>(this, "Add", typeof(NetOffice.ExcelApi.ListRow), position);
         }
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="position">optional object position</param>
         /// <param name="alwaysInsert">optional object alwaysInsert</param>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListRow Add(object position, object alwaysInsert)
+        public virtual NetOffice.ExcelApi.ListRow Add(object position, object alwaysInsert)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListRow>(this, "Add", typeof(NetOffice.ExcelApi.ListRow), position, alwaysInsert);
         }
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListRow Add()
+        public virtual NetOffice.ExcelApi.ListRow Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListRow>(this, "Add", typeof(NetOffice.ExcelApi.ListRow));
         }
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="position">optional object position</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListRow _Add(object position)
+        public virtual NetOffice.ExcelApi.ListRow _Add(object position)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListRow>(this, "_Add", typeof(NetOffice.ExcelApi.ListRow), position);
         }
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.ListRow _Add()
+        public virtual NetOffice.ExcelApi.ListRow _Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListRow>(this, "_Add", typeof(NetOffice.ExcelApi.ListRow));
         }
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ListRow> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ListRow> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ListRow item in innerEnumerator)

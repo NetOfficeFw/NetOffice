@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlListDataType _Default
+        public virtual NetOffice.ExcelApi.Enums.XlListDataType _Default
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public object Choices
+        public virtual object Choices
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 DecimalPlaces
+        public virtual Int32 DecimalPlaces
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public object DefaultValue
+        public virtual object DefaultValue
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool IsPercent
+        public virtual bool IsPercent
         {
             get
             {
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 lcid
+        public virtual Int32 lcid
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public Int32 MaxCharacters
+        public virtual Int32 MaxCharacters
         {
             get
             {
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public object MaxNumber
+        public virtual object MaxNumber
         {
             get
             {
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public object MinNumber
+        public virtual object MinNumber
         {
             get
             {
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool Required
+        public virtual bool Required
         {
             get
             {
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlListDataType Type
+        public virtual NetOffice.ExcelApi.Enums.XlListDataType Type
         {
             get
             {
@@ -246,7 +246,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool ReadOnly
+        public virtual bool ReadOnly
         {
             get
             {
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public bool AllowFillIn
+        public virtual bool AllowFillIn
         {
             get
             {

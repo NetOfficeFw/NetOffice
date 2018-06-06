@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841262.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840392.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195481.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.ValueChange this[object index]
+		public virtual NetOffice.ExcelApi.ValueChange this[object index]
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193833.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="allocationMethod">optional object allocationMethod</param>
 		/// <param name="allocationWeightExpression">optional object allocationWeightExpression</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod, object allocationWeightExpression)
+		public virtual NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod, object allocationWeightExpression)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), new object[]{ tuple, value, allocationValue, allocationMethod, allocationWeightExpression });
 		}
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="value">Double value</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value)
+		public virtual NetOffice.ExcelApi.ValueChange Add(string tuple, Double value)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value);
 		}
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="allocationValue">optional object allocationValue</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue)
+		public virtual NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value, allocationValue);
 		}
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="allocationMethod">optional object allocationMethod</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod)
+		public virtual NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value, allocationValue, allocationMethod);
 		}
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 14,15,16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ValueChange> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ValueChange> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ValueChange item in innerEnumerator)

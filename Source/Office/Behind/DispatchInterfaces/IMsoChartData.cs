@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Workbook
+        public virtual object Workbook
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool IsLinked
+        public virtual bool IsLinked
         {
             get
             {
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Activate()
+        public virtual void Activate()
         {
             Factory.ExecuteMethod(this, "Activate");
         }
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void BreakLink()
+        public virtual void BreakLink()
         {
             Factory.ExecuteMethod(this, "BreakLink");
         }
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 15,16
         /// </summary>
         [SupportByVersion("Office", 15, 16)]
-        public void ActivateChartDataWindow()
+        public virtual void ActivateChartDataWindow()
         {
             Factory.ExecuteMethod(this, "ActivateChartDataWindow");
         }

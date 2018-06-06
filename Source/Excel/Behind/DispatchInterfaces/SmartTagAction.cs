@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public string _Default
+		public virtual string _Default
 		{
 			get
 			{
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSmartTagControlType Type
+		public virtual NetOffice.ExcelApi.Enums.XlSmartTagControlType Type
 		{
 			get
 			{
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool PresentInPane
+		public virtual bool PresentInPane
 		{
 			get
 			{
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool ExpandHelp
+		public virtual bool ExpandHelp
 		{
 			get
 			{
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public bool CheckboxState
+		public virtual bool CheckboxState
 		{
 			get
 			{
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string TextboxText
+		public virtual string TextboxText
 		{
 			get
 			{
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public Int32 ListSelection
+		public virtual Int32 ListSelection
 		{
 			get
 			{
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public Int32 RadioGroupSelection
+		public virtual Int32 RadioGroupSelection
 		{
 			get
 			{
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
-		public object ActiveXControl
+		public virtual object ActiveXControl
 		{
 			get
 			{
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Execute()
+		public virtual void Execute()
 		{
 			 Factory.ExecuteMethod(this, "Execute");
 		}

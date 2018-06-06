@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863308.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860568.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType OrgChartLayout
+        public virtual NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType OrgChartLayout
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864604.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.ShapeRange Shapes
+        public virtual NetOffice.OfficeApi.ShapeRange Shapes
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861779.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.TextFrame2 TextFrame2
+        public virtual NetOffice.OfficeApi.TextFrame2 TextFrame2
         {
             get
             {
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862082.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 Level
+        public virtual Int32 Level
         {
             get
             {
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860275.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Hidden
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Hidden
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865275.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtNodes Nodes
+        public virtual NetOffice.OfficeApi.SmartArtNodes Nodes
         {
             get
             {
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862047.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtNode ParentNode
+        public virtual NetOffice.OfficeApi.SmartArtNode ParentNode
         {
             get
             {
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861873.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type
         {
             get
             {
@@ -202,7 +202,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="position">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition Position = 1</param>
         /// <param name="type">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type = 1</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtNode AddNode(object position, object type)
+        public virtual NetOffice.OfficeApi.SmartArtNode AddNode(object position, object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode), position, type);
         }
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865366.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtNode AddNode()
+        public virtual NetOffice.OfficeApi.SmartArtNode AddNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode));
         }
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="position">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition Position = 1</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.SmartArtNode AddNode(object position)
+        public virtual NetOffice.OfficeApi.SmartArtNode AddNode(object position)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode), position);
         }
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863109.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }
@@ -245,7 +245,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862804.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Promote()
+        public virtual void Promote()
         {
             Factory.ExecuteMethod(this, "Promote");
         }
@@ -255,7 +255,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860258.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Demote()
+        public virtual void Demote()
         {
             Factory.ExecuteMethod(this, "Demote");
         }
@@ -265,7 +265,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864694.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Larger()
+        public virtual void Larger()
         {
             Factory.ExecuteMethod(this, "Larger");
         }
@@ -275,7 +275,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863061.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Smaller()
+        public virtual void Smaller()
         {
             Factory.ExecuteMethod(this, "Smaller");
         }
@@ -285,7 +285,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863035.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void ReorderUp()
+        public virtual void ReorderUp()
         {
             Factory.ExecuteMethod(this, "ReorderUp");
         }
@@ -295,7 +295,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860343.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void ReorderDown()
+        public virtual void ReorderDown()
         {
             Factory.ExecuteMethod(this, "ReorderDown");
         }

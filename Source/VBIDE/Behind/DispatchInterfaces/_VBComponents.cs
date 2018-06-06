@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="progId">string progId</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBComponent AddCustom(string progId)
+        public virtual NetOffice.VBIDEApi.VBComponent AddCustom(string progId)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddCustom", typeof(NetOffice.VBIDEApi.VBComponent), progId);
         }
@@ -78,7 +78,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index">optional Int32 index = 0</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBComponent AddMTDesigner(object index)
+        public virtual NetOffice.VBIDEApi.VBComponent AddMTDesigner(object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddMTDesigner", typeof(NetOffice.VBIDEApi.VBComponent), index);
         }
@@ -89,7 +89,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBComponent AddMTDesigner()
+        public virtual NetOffice.VBIDEApi.VBComponent AddMTDesigner()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddMTDesigner", typeof(NetOffice.VBIDEApi.VBComponent));
         }

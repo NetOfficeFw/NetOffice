@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Worksheet Parent
+        public virtual NetOffice.ExcelApi.Worksheet Parent
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlPageBreak Type
+        public virtual NetOffice.ExcelApi.Enums.XlPageBreak Type
         {
             get
             {
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlPageBreakExtent Extent
+        public virtual NetOffice.ExcelApi.Enums.XlPageBreakExtent Extent
         {
             get
             {
@@ -132,7 +132,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Range Location
+        public virtual NetOffice.ExcelApi.Range Location
         {
             get
             {
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 Delete()
+        public virtual Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
         }
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="direction">NetOffice.ExcelApi.Enums.XlDirection direction</param>
         /// <param name="regionIndex">Int32 regionIndex</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 DragOff(NetOffice.ExcelApi.Enums.XlDirection direction, Int32 regionIndex)
+        public virtual Int32 DragOff(NetOffice.ExcelApi.Enums.XlDirection direction, Int32 regionIndex)
         {
             return Factory.ExecuteInt32MethodGet(this, "DragOff", direction, regionIndex);
         }

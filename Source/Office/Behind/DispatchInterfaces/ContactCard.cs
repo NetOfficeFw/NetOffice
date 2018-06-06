@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863157.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Close()
+        public virtual void Close()
         {
             Factory.ExecuteMethod(this, "Close");
         }
@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="horizontalPosition">Int32 horizontalPosition</param>
         /// <param name="showWithDelay">optional bool ShowWithDelay = false</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, object showWithDelay)
+        public virtual void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, object showWithDelay)
         {
             Factory.ExecuteMethod(this, "Show", new object[] { cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay });
         }
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="horizontalPosition">Int32 horizontalPosition</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition)
+        public virtual void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition)
         {
             Factory.ExecuteMethod(this, "Show", new object[] { cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition });
         }

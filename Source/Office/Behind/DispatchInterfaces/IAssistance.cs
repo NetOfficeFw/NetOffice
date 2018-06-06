@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="helpId">optional string HelpId = </param>
         /// <param name="scope">optional string Scope = </param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void ShowHelp(object helpId, object scope)
+        public virtual void ShowHelp(object helpId, object scope)
         {
             Factory.ExecuteMethod(this, "ShowHelp", helpId, scope);
         }
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void ShowHelp()
+        public virtual void ShowHelp()
         {
             Factory.ExecuteMethod(this, "ShowHelp");
         }
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="helpId">optional string HelpId = </param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void ShowHelp(object helpId)
+        public virtual void ShowHelp(object helpId)
         {
             Factory.ExecuteMethod(this, "ShowHelp", helpId);
         }
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="query">string query</param>
         /// <param name="scope">optional string Scope = </param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void SearchHelp(string query, object scope)
+        public virtual void SearchHelp(string query, object scope)
         {
             Factory.ExecuteMethod(this, "SearchHelp", query, scope);
         }
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="query">string query</param>
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void SearchHelp(string query)
+        public virtual void SearchHelp(string query)
         {
             Factory.ExecuteMethod(this, "SearchHelp", query);
         }
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861230.aspx </remarks>
         /// <param name="helpId">string helpId</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void SetDefaultContext(string helpId)
+        public virtual void SetDefaultContext(string helpId)
         {
             Factory.ExecuteMethod(this, "SetDefaultContext", helpId);
         }
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865260.aspx </remarks>
         /// <param name="helpId">string helpId</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void ClearDefaultContext(string helpId)
+        public virtual void ClearDefaultContext(string helpId)
         {
             Factory.ExecuteMethod(this, "ClearDefaultContext", helpId);
         }

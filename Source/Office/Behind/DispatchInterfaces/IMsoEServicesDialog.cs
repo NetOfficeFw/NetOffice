@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string ApplicationName
+        public virtual string ApplicationName
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Application
+        public virtual object Application
         {
             get
             {
@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object WebComponent
+        public virtual object WebComponent
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object ClipArt
+        public virtual object ClipArt
         {
             get
             {
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="applyWebComponentChanges">optional bool ApplyWebComponentChanges = false</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Close(object applyWebComponentChanges)
+        public virtual void Close(object applyWebComponentChanges)
         {
             Factory.ExecuteMethod(this, "Close", applyWebComponentChanges);
         }
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Close()
+        public virtual void Close()
         {
             Factory.ExecuteMethod(this, "Close");
         }
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="domain">string domain</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AddTrustedDomain(string domain)
+        public virtual void AddTrustedDomain(string domain)
         {
             Factory.ExecuteMethod(this, "AddTrustedDomain", domain);
         }

@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ColorFormat ForeColor
+        public virtual NetOffice.OfficeApi.ColorFormat ForeColor
         {
             get
             {
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Obscured
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Obscured
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single OffsetX
+        public virtual Single OffsetX
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single OffsetY
+        public virtual Single OffsetY
         {
             get
             {
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Transparency
+        public virtual Single Transparency
         {
             get
             {
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoShadowType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoShadowType Type
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Visible
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
             {
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoShadowStyle Style
+        public virtual NetOffice.OfficeApi.Enums.MsoShadowStyle Style
         {
             get
             {
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single Blur
+        public virtual Single Blur
         {
             get
             {
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single Size
+        public virtual Single Size
         {
             get
             {
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState RotateWithShape
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState RotateWithShape
         {
             get
             {
@@ -270,7 +270,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void IncrementOffsetX(Single increment)
+        public virtual void IncrementOffsetX(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementOffsetX", increment);
         }
@@ -280,7 +280,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void IncrementOffsetY(Single increment)
+        public virtual void IncrementOffsetY(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementOffsetY", increment);
         }

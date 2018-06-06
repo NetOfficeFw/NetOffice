@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNodeChildren Children
+		public virtual NetOffice.ExcelApi.DiagramNodeChildren Children
 		{
 			get
 			{
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape Shape
+		public virtual NetOffice.ExcelApi.Shape Shape
 		{
 			get
 			{
@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNode Root
+		public virtual NetOffice.ExcelApi.DiagramNode Root
 		{
 			get
 			{
@@ -117,7 +117,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.IMsoDiagram Diagram
+		public virtual NetOffice.OfficeApi.IMsoDiagram Diagram
 		{
 			get
 			{
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
+		public virtual NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
 		{
 			get
 			{
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Shape TextShape
+		public virtual NetOffice.ExcelApi.Shape TextShape
 		{
 			get
 			{
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType = 1</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNode AddNode(object pos, object nodeType)
+		public virtual NetOffice.ExcelApi.DiagramNode AddNode(object pos, object nodeType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode), pos, nodeType);
 		}
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNode AddNode()
+		public virtual NetOffice.ExcelApi.DiagramNode AddNode()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode));
 		}
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNode AddNode(object pos)
+		public virtual NetOffice.ExcelApi.DiagramNode AddNode(object pos)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode), pos);
 		}
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		/// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void MoveNode(NetOffice.ExcelApi.DiagramNode pTargetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public virtual void MoveNode(NetOffice.ExcelApi.DiagramNode pTargetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			 Factory.ExecuteMethod(this, "MoveNode", pTargetNode, pos);
 		}
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void ReplaceNode(NetOffice.ExcelApi.DiagramNode pTargetNode)
+		public virtual void ReplaceNode(NetOffice.ExcelApi.DiagramNode pTargetNode)
 		{
 			 Factory.ExecuteMethod(this, "ReplaceNode", pTargetNode);
 		}
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		/// <param name="swapChildren">optional bool swapChildren = true</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode, object swapChildren)
+		public virtual void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode, object swapChildren)
 		{
 			 Factory.ExecuteMethod(this, "SwapNode", pTargetNode, swapChildren);
 		}
@@ -238,7 +238,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode)
+		public virtual void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode)
 		{
 			 Factory.ExecuteMethod(this, "SwapNode", pTargetNode);
 		}
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode, object pos)
+		public virtual NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode, object pos)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "CloneNode", typeof(NetOffice.ExcelApi.DiagramNode), copyChildren, pTargetNode, pos);
 		}
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode)
+		public virtual NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "CloneNode", typeof(NetOffice.ExcelApi.DiagramNode), copyChildren, pTargetNode);
 		}
@@ -272,7 +272,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="pReceivingNode">NetOffice.ExcelApi.DiagramNode pReceivingNode</param>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public void TransferChildren(NetOffice.ExcelApi.DiagramNode pReceivingNode)
+		public virtual void TransferChildren(NetOffice.ExcelApi.DiagramNode pReceivingNode)
 		{
 			 Factory.ExecuteMethod(this, "TransferChildren", pReceivingNode);
 		}
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNode NextNode()
+		public virtual NetOffice.ExcelApi.DiagramNode NextNode()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "NextNode", typeof(NetOffice.ExcelApi.DiagramNode));
 		}
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.DiagramNode PrevNode()
+		public virtual NetOffice.ExcelApi.DiagramNode PrevNode()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "PrevNode", typeof(NetOffice.ExcelApi.DiagramNode));
 		}

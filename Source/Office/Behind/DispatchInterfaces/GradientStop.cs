@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860253.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ColorFormat Color
+        public virtual NetOffice.OfficeApi.ColorFormat Color
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864966.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single Position
+        public virtual Single Position
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864671.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single Transparency
+        public virtual Single Transparency
         {
             get
             {

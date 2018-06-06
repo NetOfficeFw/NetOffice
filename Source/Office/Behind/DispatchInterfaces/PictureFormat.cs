@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Brightness
+        public virtual Single Brightness
         {
             get
             {
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType
+        public virtual NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Contrast
+        public virtual Single Contrast
         {
             get
             {
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single CropBottom
+        public virtual Single CropBottom
         {
             get
             {
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single CropLeft
+        public virtual Single CropLeft
         {
             get
             {
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single CropRight
+        public virtual Single CropRight
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single CropTop
+        public virtual Single CropTop
         {
             get
             {
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 TransparencyColor
+        public virtual Int32 TransparencyColor
         {
             get
             {
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground
         {
             get
             {
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.Crop Crop
+        public virtual NetOffice.OfficeApi.Crop Crop
         {
             get
             {
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void IncrementBrightness(Single increment)
+        public virtual void IncrementBrightness(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementBrightness", increment);
         }
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="increment">Single increment</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void IncrementContrast(Single increment)
+        public virtual void IncrementContrast(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementContrast", increment);
         }

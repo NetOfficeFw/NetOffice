@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Range Location
+		public virtual NetOffice.ExcelApi.Range Location
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string SourceData
+		public virtual string SourceData
 		{
 			get
 			{
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="range">NetOffice.ExcelApi.Range range</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 ModifyLocation(NetOffice.ExcelApi.Range range)
+		public virtual Int32 ModifyLocation(NetOffice.ExcelApi.Range range)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ModifyLocation", range);
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <param name="formula">string formula</param>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 ModifySourceData(string formula)
+		public virtual Int32 ModifySourceData(string formula)
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ModifySourceData", formula);
 		}

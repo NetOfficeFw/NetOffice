@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862371.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string DataHandlerId
+        public virtual string DataHandlerId
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862526.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string Title
+        public virtual string Title
         {
             get
             {
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860248.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerProperties Properties
+        public virtual NetOffice.OfficeApi.PickerProperties Properties
         {
             get
             {
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861181.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResults CreatePickerResults()
+        public virtual NetOffice.OfficeApi.PickerResults CreatePickerResults()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "CreatePickerResults", typeof(NetOffice.OfficeApi.PickerResults));
         }
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="isMultiSelect">optional bool IsMultiSelect = true</param>
         /// <param name="existingResults">optional NetOffice.OfficeApi.PickerResults ExistingResults = 0</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResults Show(object isMultiSelect, object existingResults)
+        public virtual NetOffice.OfficeApi.PickerResults Show(object isMultiSelect, object existingResults)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults), isMultiSelect, existingResults);
         }
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861095.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResults Show()
+        public virtual NetOffice.OfficeApi.PickerResults Show()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults));
         }
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="isMultiSelect">optional bool IsMultiSelect = true</param>
         [CustomMethod]
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResults Show(object isMultiSelect)
+        public virtual NetOffice.OfficeApi.PickerResults Show(object isMultiSelect)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults), isMultiSelect);
         }
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="tokenText">string tokenText</param>
         /// <param name="duplicateDlgMode">Int32 duplicateDlgMode</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PickerResults Resolve(string tokenText, Int32 duplicateDlgMode)
+        public virtual NetOffice.OfficeApi.PickerResults Resolve(string tokenText, Int32 duplicateDlgMode)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Resolve", typeof(NetOffice.OfficeApi.PickerResults), tokenText, duplicateDlgMode);
         }

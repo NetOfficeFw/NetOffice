@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196391.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839743.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194078.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg29">optional object arg29</param>
 		/// <param name="arg30">optional object arg30</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
 		}
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show()
+		public virtual bool Show()
 		{
             return Factory.ExecuteBoolMethodGet(this, "Show");
 		}
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg1">optional object arg1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1)
+		public virtual bool Show(object arg1)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", arg1);
 		}
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg2">optional object arg2</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2)
+		public virtual bool Show(object arg1, object arg2)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", arg1, arg2);
 		}
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg3">optional object arg3</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3)
+		public virtual bool Show(object arg1, object arg2, object arg3)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", arg1, arg2, arg3);
 		}
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg4">optional object arg4</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", arg1, arg2, arg3, arg4);
 		}
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg5">optional object arg5</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5 });
 		}
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg6">optional object arg6</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6 });
 		}
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg7">optional object arg7</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7 });
 		}
@@ -276,7 +276,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg8">optional object arg8</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 });
 		}
@@ -296,7 +296,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg9">optional object arg9</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
 		}
@@ -317,7 +317,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg10">optional object arg10</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
 		}
@@ -339,7 +339,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg11">optional object arg11</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
 		}
@@ -362,7 +362,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg12">optional object arg12</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
 		}
@@ -386,7 +386,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg13">optional object arg13</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
 		}
@@ -411,7 +411,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg14">optional object arg14</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
 		}
@@ -437,7 +437,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg15">optional object arg15</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
 		}
@@ -464,7 +464,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg16">optional object arg16</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
 		}
@@ -492,7 +492,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg17">optional object arg17</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
 		}
@@ -521,7 +521,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg18">optional object arg18</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
 		}
@@ -551,7 +551,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg19">optional object arg19</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
 		}
@@ -582,7 +582,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg20">optional object arg20</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
 		}
@@ -614,7 +614,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg21">optional object arg21</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
 		}
@@ -647,7 +647,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg22">optional object arg22</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
 		}
@@ -681,7 +681,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg23">optional object arg23</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
 		}
@@ -716,7 +716,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg24">optional object arg24</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
 		}
@@ -752,7 +752,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg25">optional object arg25</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
 		}
@@ -789,7 +789,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg26">optional object arg26</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
 		}
@@ -827,7 +827,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg27">optional object arg27</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
 		}
@@ -866,7 +866,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg28">optional object arg28</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
 		}
@@ -906,7 +906,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="arg29">optional object arg29</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
+		public virtual bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
 		}

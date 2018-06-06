@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231033.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229623.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230690.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj232073.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public object Connection
+		public virtual object Connection
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231385.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileHeaderRow
+		public virtual bool TextFileHeaderRow
 		{
 			get
 			{
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj232041.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public object TextFileColumnDataTypes
+		public virtual object TextFileColumnDataTypes
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229203.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileCommaDelimiter
+		public virtual bool TextFileCommaDelimiter
 		{
 			get
 			{
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231987.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileConsecutiveDelimiter
+		public virtual bool TextFileConsecutiveDelimiter
 		{
 			get
 			{
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231768.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public string TextFileDecimalSeparator
+		public virtual string TextFileDecimalSeparator
 		{
 			get
 			{
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228271.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public object TextFileFixedColumnWidths
+		public virtual object TextFileFixedColumnWidths
 		{
 			get
 			{
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227943.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public string TextFileOtherDelimiter
+		public virtual string TextFileOtherDelimiter
 		{
 			get
 			{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227899.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlTextParsingType TextFileParseType
+		public virtual NetOffice.ExcelApi.Enums.XlTextParsingType TextFileParseType
 		{
 			get
 			{
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228433.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlPlatform TextFilePlatform
+		public virtual NetOffice.ExcelApi.Enums.XlPlatform TextFilePlatform
 		{
 			get
 			{
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227545.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFilePromptOnRefresh
+		public virtual bool TextFilePromptOnRefresh
 		{
 			get
 			{
@@ -306,7 +306,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227524.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileSemicolonDelimiter
+		public virtual bool TextFileSemicolonDelimiter
 		{
 			get
 			{
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230951.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileSpaceDelimiter
+		public virtual bool TextFileSpaceDelimiter
 		{
 			get
 			{
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231782.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 TextFileStartRow
+		public virtual Int32 TextFileStartRow
 		{
 			get
 			{
@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227355.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileTabDelimiter
+		public virtual bool TextFileTabDelimiter
 		{
 			get
 			{
@@ -378,7 +378,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228275.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlTextQualifier TextFileTextQualifier
+		public virtual NetOffice.ExcelApi.Enums.XlTextQualifier TextFileTextQualifier
 		{
 			get
 			{
@@ -396,7 +396,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227507.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public string TextFileThousandsSeparator
+		public virtual string TextFileThousandsSeparator
 		{
 			get
 			{
@@ -414,7 +414,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230624.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool TextFileTrailingMinusNumbers
+		public virtual bool TextFileTrailingMinusNumbers
 		{
 			get
 			{
@@ -432,7 +432,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231092.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlTextVisualLayoutType TextFileVisualLayout
+		public virtual NetOffice.ExcelApi.Enums.XlTextVisualLayoutType TextFileVisualLayout
 		{
 			get
 			{

@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.DiagramNodes Nodes
+        public virtual NetOffice.OfficeApi.DiagramNodes Nodes
         {
             get
             {
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoDiagramType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoDiagramType Type
         {
             get
             {
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState AutoLayout
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState AutoLayout
         {
             get
             {
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Reverse
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Reverse
         {
             get
             {
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState AutoFormat
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState AutoFormat
         {
             get
             {
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="type">NetOffice.OfficeApi.Enums.MsoDiagramType type</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void Convert(NetOffice.OfficeApi.Enums.MsoDiagramType type)
+        public virtual void Convert(NetOffice.OfficeApi.Enums.MsoDiagramType type)
         {
             Factory.ExecuteMethod(this, "Convert", type);
         }
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void FitText()
+        public virtual void FitText()
         {
             Factory.ExecuteMethod(this, "FitText");
         }

@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ColorFormat BackColor
+        public virtual NetOffice.OfficeApi.ColorFormat BackColor
         {
             get
             {
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.ColorFormat ForeColor
+        public virtual NetOffice.OfficeApi.ColorFormat ForeColor
         {
             get
             {
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoGradientColorType GradientColorType
+        public virtual NetOffice.OfficeApi.Enums.MsoGradientColorType GradientColorType
         {
             get
             {
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single GradientDegree
+        public virtual Single GradientDegree
         {
             get
             {
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoGradientStyle GradientStyle
+        public virtual NetOffice.OfficeApi.Enums.MsoGradientStyle GradientStyle
         {
             get
             {
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 GradientVariant
+        public virtual Int32 GradientVariant
         {
             get
             {
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPatternType Pattern
+        public virtual NetOffice.OfficeApi.Enums.MsoPatternType Pattern
         {
             get
             {
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
         {
             get
             {
@@ -191,7 +191,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture
+        public virtual NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture
         {
             get
             {
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public string TextureName
+        public virtual string TextureName
         {
             get
             {
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTextureType TextureType
+        public virtual NetOffice.OfficeApi.Enums.MsoTextureType TextureType
         {
             get
             {
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public Single Transparency
+        public virtual Single Transparency
         {
             get
             {
@@ -247,7 +247,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoFillType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoFillType Type
         {
             get
             {
@@ -260,7 +260,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState Visible
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
             {
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.GradientStops GradientStops
+        public virtual NetOffice.OfficeApi.GradientStops GradientStops
         {
             get
             {
@@ -290,7 +290,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single TextureOffsetX
+        public virtual Single TextureOffsetX
         {
             get
             {
@@ -307,7 +307,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single TextureOffsetY
+        public virtual Single TextureOffsetY
         {
             get
             {
@@ -324,7 +324,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTextureAlignment TextureAlignment
+        public virtual NetOffice.OfficeApi.Enums.MsoTextureAlignment TextureAlignment
         {
             get
             {
@@ -341,7 +341,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single TextureHorizontalScale
+        public virtual Single TextureHorizontalScale
         {
             get
             {
@@ -358,7 +358,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single TextureVerticalScale
+        public virtual Single TextureVerticalScale
         {
             get
             {
@@ -375,7 +375,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState TextureTile
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState TextureTile
         {
             get
             {
@@ -392,7 +392,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState RotateWithObject
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState RotateWithObject
         {
             get
             {
@@ -409,7 +409,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public NetOffice.OfficeApi.PictureEffects PictureEffects
+        public virtual NetOffice.OfficeApi.PictureEffects PictureEffects
         {
             get
             {
@@ -422,7 +422,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Single GradientAngle
+        public virtual Single GradientAngle
         {
             get
             {
@@ -442,7 +442,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Background()
+        public virtual void Background()
         {
             Factory.ExecuteMethod(this, "Background");
         }
@@ -454,7 +454,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="variant">Int32 variant</param>
         /// <param name="degree">Single degree</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void OneColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
+        public virtual void OneColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
         {
             Factory.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
         }
@@ -464,7 +464,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="pattern">NetOffice.OfficeApi.Enums.MsoPatternType pattern</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Patterned(NetOffice.OfficeApi.Enums.MsoPatternType pattern)
+        public virtual void Patterned(NetOffice.OfficeApi.Enums.MsoPatternType pattern)
         {
             Factory.ExecuteMethod(this, "Patterned", pattern);
         }
@@ -476,7 +476,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="variant">Int32 variant</param>
         /// <param name="presetGradientType">NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void PresetGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
+        public virtual void PresetGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
         {
             Factory.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
         }
@@ -486,7 +486,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="presetTexture">NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void PresetTextured(NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture)
+        public virtual void PresetTextured(NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture)
         {
             Factory.ExecuteMethod(this, "PresetTextured", presetTexture);
         }
@@ -495,7 +495,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void Solid()
+        public virtual void Solid()
         {
             Factory.ExecuteMethod(this, "Solid");
         }
@@ -506,7 +506,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle style</param>
         /// <param name="variant">Int32 variant</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void TwoColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
+        public virtual void TwoColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
         {
             Factory.ExecuteMethod(this, "TwoColorGradient", style, variant);
         }
@@ -516,7 +516,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="pictureFile">string pictureFile</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void UserPicture(string pictureFile)
+        public virtual void UserPicture(string pictureFile)
         {
             Factory.ExecuteMethod(this, "UserPicture", pictureFile);
         }
@@ -526,7 +526,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="textureFile">string textureFile</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void UserTextured(string textureFile)
+        public virtual void UserTextured(string textureFile)
         {
             Factory.ExecuteMethod(this, "UserTextured", textureFile);
         }

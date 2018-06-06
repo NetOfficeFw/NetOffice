@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865321.aspx </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860290.aspx </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.OfficeApi.FileDialogFilter this[Int32 index]
+		public virtual NetOffice.OfficeApi.FileDialogFilter this[Int32 index]
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862434.aspx </remarks>
 		/// <param name="filter">optional object filter</param>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public void Delete(object filter)
+		public virtual void Delete(object filter)
 		{
 			 Factory.ExecuteMethod(this, "Delete", filter);
 		}
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862434.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860610.aspx </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public void Clear()
+		public virtual void Clear()
 		{
 			 Factory.ExecuteMethod(this, "Clear");
 		}
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
 		/// <param name="extensions">string extensions</param>
 		/// <param name="position">optional object position</param>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions, object position)
+		public virtual NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions, object position)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FileDialogFilter>(this, "Add", typeof(NetOffice.OfficeApi.FileDialogFilter), description, extensions, position);
 		}
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
 		/// <param name="extensions">string extensions</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions)
+		public virtual NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FileDialogFilter>(this, "Add", typeof(NetOffice.OfficeApi.FileDialogFilter), description, extensions);
 		}
@@ -190,7 +190,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 10,11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.FileDialogFilter> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.FileDialogFilter> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.FileDialogFilter item in innerEnumerator)

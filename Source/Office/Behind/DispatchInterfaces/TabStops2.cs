@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865323.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862735.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862551.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public Single DefaultSpacing
+        public virtual Single DefaultSpacing
         {
             get
             {
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.TabStop2 this[object index]
+        public virtual NetOffice.OfficeApi.TabStop2 this[object index]
         {
             get
             {
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="type">NetOffice.OfficeApi.Enums.MsoTabStopType type</param>
         /// <param name="position">Single position</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.TabStop2 Add(NetOffice.OfficeApi.Enums.MsoTabStopType type, Single position)
+        public virtual NetOffice.OfficeApi.TabStop2 Add(NetOffice.OfficeApi.Enums.MsoTabStopType type, Single position)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TabStop2>(this, "Add", typeof(NetOffice.OfficeApi.TabStop2), type, position);
         }
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.TabStop2> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.TabStop2> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.TabStop2 item in innerEnumerator)

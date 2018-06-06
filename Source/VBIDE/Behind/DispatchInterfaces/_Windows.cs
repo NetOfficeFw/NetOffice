@@ -71,7 +71,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="guidPosition">string guidPosition</param>
         /// <param name="docObj">object docObj</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Window CreateToolWindow(NetOffice.VBIDEApi.AddIn addInInst, string progId, string caption, string guidPosition, object docObj)
+        public virtual NetOffice.VBIDEApi.Window CreateToolWindow(NetOffice.VBIDEApi.AddIn addInInst, string progId, string caption, string guidPosition, object docObj)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "CreateToolWindow", typeof(NetOffice.VBIDEApi.Window), new object[] { addInInst, progId, caption, guidPosition, docObj });
         }

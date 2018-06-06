@@ -66,7 +66,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBProject Parent
+        public virtual NetOffice.VBIDEApi.VBProject Parent
         {
             get
             {
@@ -79,7 +79,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.VBE VBE
+        public virtual NetOffice.VBIDEApi.VBE VBE
         {
             get
             {
@@ -92,7 +92,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -110,7 +110,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="index">object index</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.VBIDEApi.Reference this[object index]
+        public virtual NetOffice.VBIDEApi.Reference this[object index]
         {
             get
             {
@@ -125,7 +125,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// <param name="major">Int32 major</param>
         /// <param name="minor">Int32 minor</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Reference AddFromGuid(string guid, Int32 major, Int32 minor)
+        public virtual NetOffice.VBIDEApi.Reference AddFromGuid(string guid, Int32 major, Int32 minor)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Reference>(this, "AddFromGuid", typeof(NetOffice.VBIDEApi.Reference), guid, major, minor);
         }
@@ -135,7 +135,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public NetOffice.VBIDEApi.Reference AddFromFile(string fileName)
+        public virtual NetOffice.VBIDEApi.Reference AddFromFile(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Reference>(this, "AddFromFile", typeof(NetOffice.VBIDEApi.Reference), fileName);
         }
@@ -145,7 +145,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// </summary>
         /// <param name="reference">NetOffice.VBIDEApi.Reference reference</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public void Remove(NetOffice.VBIDEApi.Reference reference)
+        public virtual void Remove(NetOffice.VBIDEApi.Reference reference)
         {
             Factory.ExecuteMethod(this, "Remove", reference);
         }
@@ -172,7 +172,7 @@ namespace NetOffice.VBIDEApi.Behind
         /// SupportByVersion VBIDE, 12,14,5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
-        public IEnumerator<NetOffice.VBIDEApi.Reference> GetEnumerator()
+        public virtual IEnumerator<NetOffice.VBIDEApi.Reference> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.VBIDEApi.Reference item in innerEnumerator)

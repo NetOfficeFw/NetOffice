@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863141.aspx </remarks>
         /// <param name="pfMacroEnabled">Int32 pfMacroEnabled</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrGetMacroEnabled(out Int32 pfMacroEnabled)
+        public virtual Int32 HrGetMacroEnabled(out Int32 pfMacroEnabled)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pfMacroEnabled = 0;
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865570.aspx </remarks>
         /// <param name="pFormat">Int32 pFormat</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrCheckFormat(out Int32 pFormat)
+        public virtual Int32 HrCheckFormat(out Int32 pFormat)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pFormat = 0;
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860851.aspx </remarks>
         /// <param name="pfLossySave">Int32 pfLossySave</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrGetLossySave(out Int32 pfLossySave)
+        public virtual Int32 HrGetLossySave(out Int32 pfLossySave)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pfLossySave = 0;

@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862852.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861425.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
-        public object Value
+        public virtual object Value
         {
             get
             {

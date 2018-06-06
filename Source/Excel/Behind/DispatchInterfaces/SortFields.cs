@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198049.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841278.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822134.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196296.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.SortField this[object index]
+		public virtual NetOffice.ExcelApi.SortField this[object index]
 		{
 			get
 			{
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="customOrder">optional object customOrder</param>
 		/// <param name="dataOption">optional object dataOption</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order, object customOrder, object dataOption)
+		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order, object customOrder, object dataOption)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), new object[]{ key, sortOn, order, customOrder, dataOption });
 		}
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="key">NetOffice.ExcelApi.Range key</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key)
+		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key);
 		}
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sortOn">optional object sortOn</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn)
+		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn);
 		}
@@ -187,7 +187,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="order">optional object order</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order)
+		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn, order);
 		}
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="customOrder">optional object customOrder</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order, object customOrder)
+		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order, object customOrder)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn, order, customOrder);
 		}
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839980.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Clear()
+		public virtual void Clear()
 		{
 			 Factory.ExecuteMethod(this, "Clear");
 		}
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.SortField> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.SortField> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.SortField item in innerEnumerator)

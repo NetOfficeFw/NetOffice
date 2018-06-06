@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Caption
+		public virtual string Caption
 		{
 			get
 			{
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Top
+		public virtual Double Top
 		{
 			get
 			{
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Left
+		public virtual Double Left
 		{
 			get
 			{
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool DisableMoveResizeUI
+		public virtual bool DisableMoveResizeUI
 		{
 			get
 			{
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Width
+		public virtual Double Width
 		{
 			get
 			{
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double Height
+		public virtual Double Height
 		{
 			get
 			{
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double RowHeight
+		public virtual Double RowHeight
 		{
 			get
 			{
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Double ColumnWidth
+		public virtual Double ColumnWidth
 		{
 			get
 			{
@@ -256,7 +256,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 NumberOfColumns
+		public virtual Int32 NumberOfColumns
 		{
 			get
 			{
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool DisplayHeader
+		public virtual bool DisplayHeader
 		{
 			get
 			{
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool Locked
+		public virtual bool Locked
 		{
 			get
 			{
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerCache SlicerCache
+		public virtual NetOffice.ExcelApi.SlicerCache SlicerCache
 		{
 			get
 			{
@@ -320,7 +320,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerCacheLevel SlicerCacheLevel
+		public virtual NetOffice.ExcelApi.SlicerCacheLevel SlicerCacheLevel
 		{
 			get
 			{
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Shape Shape
+		public virtual NetOffice.ExcelApi.Shape Shape
 		{
 			get
 			{
@@ -346,7 +346,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public object Style
+		public virtual object Style
 		{
 			get
 			{
@@ -363,7 +363,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerItem ActiveItem
+		public virtual NetOffice.ExcelApi.SlicerItem ActiveItem
 		{
 			get
 			{
@@ -376,7 +376,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.TimelineViewState TimelineViewState
+		public virtual NetOffice.ExcelApi.TimelineViewState TimelineViewState
 		{
 			get
 			{
@@ -389,7 +389,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlSlicerCacheType SlicerCacheType
+		public virtual NetOffice.ExcelApi.Enums.XlSlicerCacheType SlicerCacheType
 		{
 			get
 			{
@@ -405,7 +405,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
@@ -414,7 +414,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Cut()
+		public virtual Int32 Cut()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Cut");
 		}
@@ -423,7 +423,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Copy()
+		public virtual Int32 Copy()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Copy");
 		}

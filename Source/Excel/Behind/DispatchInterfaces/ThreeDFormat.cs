@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196683.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194958.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single Depth
+		public virtual Single Depth
 		{
 			get
 			{
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839765.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.ExcelApi.ColorFormat ExtrusionColor
+		public virtual NetOffice.ExcelApi.ColorFormat ExtrusionColor
 		{
 			get
 			{
@@ -114,7 +114,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839061.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
+		public virtual NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
 		{
 			get
 			{
@@ -132,7 +132,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837061.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Perspective
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState Perspective
 		{
 			get
 			{
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821812.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
 		{
 			get
 			{
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821262.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
 		{
 			get
 			{
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840321.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
 		{
 			get
 			{
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841150.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
 		{
 			get
 			{
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822170.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
 		{
 			get
 			{
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840434.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single RotationX
+		public virtual Single RotationX
 		{
 			get
 			{
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822874.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public Single RotationY
+		public virtual Single RotationY
 		{
 			get
 			{
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821252.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Visible
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
 			{
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822331.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoLightRigType PresetLighting
+		public virtual NetOffice.OfficeApi.Enums.MsoLightRigType PresetLighting
 		{
 			get
 			{
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834697.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single Z
+		public virtual Single Z
 		{
 			get
 			{
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194951.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType
+		public virtual NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType
 		{
 			get
 			{
@@ -340,7 +340,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838646.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single BevelTopInset
+		public virtual Single BevelTopInset
 		{
 			get
 			{
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197277.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single BevelTopDepth
+		public virtual Single BevelTopDepth
 		{
 			get
 			{
@@ -376,7 +376,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821639.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType
+		public virtual NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType
 		{
 			get
 			{
@@ -394,7 +394,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196509.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single BevelBottomInset
+		public virtual Single BevelBottomInset
 		{
 			get
 			{
@@ -412,7 +412,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835271.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single BevelBottomDepth
+		public virtual Single BevelBottomDepth
 		{
 			get
 			{
@@ -430,7 +430,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193860.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera
+		public virtual NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera
 		{
 			get
 			{
@@ -444,7 +444,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198152.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single RotationZ
+		public virtual Single RotationZ
 		{
 			get
 			{
@@ -462,7 +462,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194602.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single ContourWidth
+		public virtual Single ContourWidth
 		{
 			get
 			{
@@ -480,7 +480,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836496.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ColorFormat ContourColor
+		public virtual NetOffice.ExcelApi.ColorFormat ContourColor
 		{
 			get
 			{
@@ -494,7 +494,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822572.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single FieldOfView
+		public virtual Single FieldOfView
 		{
 			get
 			{
@@ -512,7 +512,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838170.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState ProjectText
+		public virtual NetOffice.OfficeApi.Enums.MsoTriState ProjectText
 		{
 			get
 			{
@@ -530,7 +530,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193315.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public Single LightAngle
+		public virtual Single LightAngle
 		{
 			get
 			{
@@ -552,7 +552,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821206.aspx </remarks>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void IncrementRotationX(Single increment)
+		public virtual void IncrementRotationX(Single increment)
 		{
 			 Factory.ExecuteMethod(this, "IncrementRotationX", increment);
 		}
@@ -563,7 +563,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820944.aspx </remarks>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void IncrementRotationY(Single increment)
+		public virtual void IncrementRotationY(Single increment)
 		{
 			 Factory.ExecuteMethod(this, "IncrementRotationY", increment);
 		}
@@ -573,7 +573,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820893.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void ResetRotation()
+		public virtual void ResetRotation()
 		{
 			 Factory.ExecuteMethod(this, "ResetRotation");
 		}
@@ -584,7 +584,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821911.aspx </remarks>
 		/// <param name="presetThreeDFormat">NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
+		public virtual void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
 		{
 			 Factory.ExecuteMethod(this, "SetThreeDFormat", presetThreeDFormat);
 		}
@@ -595,7 +595,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196541.aspx </remarks>
 		/// <param name="presetExtrusionDirection">NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection</param>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
+		public virtual void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
 		{
 			 Factory.ExecuteMethod(this, "SetExtrusionDirection", presetExtrusionDirection);
 		}
@@ -606,7 +606,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820808.aspx </remarks>
 		/// <param name="presetCamera">NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void SetPresetCamera(NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera)
+		public virtual void SetPresetCamera(NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera)
 		{
 			 Factory.ExecuteMethod(this, "SetPresetCamera", presetCamera);
 		}
@@ -617,7 +617,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196293.aspx </remarks>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void IncrementRotationZ(Single increment)
+		public virtual void IncrementRotationZ(Single increment)
 		{
 			 Factory.ExecuteMethod(this, "IncrementRotationZ", increment);
 		}
@@ -628,7 +628,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196024.aspx </remarks>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void IncrementRotationHorizontal(Single increment)
+		public virtual void IncrementRotationHorizontal(Single increment)
 		{
 			 Factory.ExecuteMethod(this, "IncrementRotationHorizontal", increment);
 		}
@@ -639,7 +639,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193527.aspx </remarks>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void IncrementRotationVertical(Single increment)
+		public virtual void IncrementRotationVertical(Single increment)
 		{
 			 Factory.ExecuteMethod(this, "IncrementRotationVertical", increment);
 		}

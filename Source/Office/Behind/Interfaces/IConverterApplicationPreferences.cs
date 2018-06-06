@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864148.aspx </remarks>
         /// <param name="plcid">Int32 plcid</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrGetLcid(out Int32 plcid)
+        public virtual Int32 HrGetLcid(out Int32 plcid)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             plcid = 0;
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860588.aspx </remarks>
         /// <param name="phwnd">Int32 phwnd</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrGetHwnd(out Int32 phwnd)
+        public virtual Int32 HrGetHwnd(out Int32 phwnd)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             phwnd = 0;
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864579.aspx </remarks>
         /// <param name="pbstrApplication">string pbstrApplication</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrGetApplication(out string pbstrApplication)
+        public virtual Int32 HrGetApplication(out string pbstrApplication)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pbstrApplication = string.Empty;
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862557.aspx </remarks>
         /// <param name="pFormat">Int32 pFormat</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public Int32 HrCheckFormat(out Int32 pFormat)
+        public virtual Int32 HrCheckFormat(out Int32 pFormat)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pFormat = 0;

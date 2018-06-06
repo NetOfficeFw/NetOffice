@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-        public NetOffice.OfficeApi.SharedWorkspaceMember this[Int32 index]
+        public virtual NetOffice.OfficeApi.SharedWorkspaceMember this[Int32 index]
         {
             get
             {
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861505.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public Int32 Count
+        public virtual Int32 Count
         {
             get
             {
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863728.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863376.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public bool ItemCountExceeded
+        public virtual bool ItemCountExceeded
         {
             get
             {
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayName">string displayName</param>
         /// <param name="role">optional object role</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceMember>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceMember), email, domainName, displayName, role);
         }
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="displayName">string displayName</param>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName)
+        public virtual NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceMember>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceMember), email, domainName, displayName);
         }
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.OfficeApi.SharedWorkspaceMember> GetEnumerator()
+        public virtual IEnumerator<NetOffice.OfficeApi.SharedWorkspaceMember> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.OfficeApi.SharedWorkspaceMember item in innerEnumerator)

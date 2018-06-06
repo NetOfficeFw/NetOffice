@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="dwMode">Int32 dwMode</param>
         /// <param name="bstrLicSource">string bstrLicSource</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 Initialize(Int32 dwBPC, Int32 dwMode, string bstrLicSource)
+        public virtual Int32 Initialize(Int32 dwBPC, Int32 dwMode, string bstrLicSource)
         {
             return Factory.ExecuteInt32MethodGet(this, "Initialize", dwBPC, dwMode, bstrLicSource);
         }
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetFirstName()
+        public virtual string GetFirstName()
         {
             return Factory.ExecuteStringMethodGet(this, "GetFirstName");
         }
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetFirstName(string bstrNewVal)
+        public virtual void SetFirstName(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetFirstName", bstrNewVal);
         }
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetLastName()
+        public virtual string GetLastName()
         {
             return Factory.ExecuteStringMethodGet(this, "GetLastName");
         }
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetLastName(string bstrNewVal)
+        public virtual void SetLastName(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetLastName", bstrNewVal);
         }
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetOrgName()
+        public virtual string GetOrgName()
         {
             return Factory.ExecuteStringMethodGet(this, "GetOrgName");
         }
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetOrgName(string bstrNewVal)
+        public virtual void SetOrgName(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetOrgName", bstrNewVal);
         }
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetEmail()
+        public virtual string GetEmail()
         {
             return Factory.ExecuteStringMethodGet(this, "GetEmail");
         }
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetEmail(string bstrNewVal)
+        public virtual void SetEmail(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetEmail", bstrNewVal);
         }
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetPhone()
+        public virtual string GetPhone()
         {
             return Factory.ExecuteStringMethodGet(this, "GetPhone");
         }
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetPhone(string bstrNewVal)
+        public virtual void SetPhone(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetPhone", bstrNewVal);
         }
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetAddress1()
+        public virtual string GetAddress1()
         {
             return Factory.ExecuteStringMethodGet(this, "GetAddress1");
         }
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetAddress1(string bstrNewVal)
+        public virtual void SetAddress1(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetAddress1", bstrNewVal);
         }
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetCity()
+        public virtual string GetCity()
         {
             return Factory.ExecuteStringMethodGet(this, "GetCity");
         }
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetCity(string bstrNewVal)
+        public virtual void SetCity(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetCity", bstrNewVal);
         }
@@ -212,7 +212,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetState()
+        public virtual string GetState()
         {
             return Factory.ExecuteStringMethodGet(this, "GetState");
         }
@@ -222,7 +222,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetState(string bstrNewVal)
+        public virtual void SetState(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetState", bstrNewVal);
         }
@@ -231,7 +231,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetCountryCode()
+        public virtual string GetCountryCode()
         {
             return Factory.ExecuteStringMethodGet(this, "GetCountryCode");
         }
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetCountryCode(string bstrNewVal)
+        public virtual void SetCountryCode(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetCountryCode", bstrNewVal);
         }
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetCountryDesc()
+        public virtual string GetCountryDesc()
         {
             return Factory.ExecuteStringMethodGet(this, "GetCountryDesc");
         }
@@ -260,7 +260,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetCountryDesc(string bstrNewVal)
+        public virtual void SetCountryDesc(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetCountryDesc", bstrNewVal);
         }
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetZip()
+        public virtual string GetZip()
         {
             return Factory.ExecuteStringMethodGet(this, "GetZip");
         }
@@ -279,7 +279,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetZip(string bstrNewVal)
+        public virtual void SetZip(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetZip", bstrNewVal);
         }
@@ -288,7 +288,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetIsoLanguage()
+        public virtual Int32 GetIsoLanguage()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetIsoLanguage");
         }
@@ -298,7 +298,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dwNewVal">Int32 dwNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetIsoLanguage(Int32 dwNewVal)
+        public virtual void SetIsoLanguage(Int32 dwNewVal)
         {
             Factory.ExecuteMethod(this, "SetIsoLanguage", dwNewVal);
         }
@@ -307,7 +307,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetMSUpdate()
+        public virtual string GetMSUpdate()
         {
             return Factory.ExecuteStringMethodGet(this, "GetMSUpdate");
         }
@@ -317,7 +317,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetMSUpdate(string bstrNewVal)
+        public virtual void SetMSUpdate(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetMSUpdate", bstrNewVal);
         }
@@ -326,7 +326,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetMSOffer()
+        public virtual string GetMSOffer()
         {
             return Factory.ExecuteStringMethodGet(this, "GetMSOffer");
         }
@@ -336,7 +336,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetMSOffer(string bstrNewVal)
+        public virtual void SetMSOffer(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetMSOffer", bstrNewVal);
         }
@@ -345,7 +345,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetOtherOffer()
+        public virtual string GetOtherOffer()
         {
             return Factory.ExecuteStringMethodGet(this, "GetOtherOffer");
         }
@@ -355,7 +355,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetOtherOffer(string bstrNewVal)
+        public virtual void SetOtherOffer(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetOtherOffer", bstrNewVal);
         }
@@ -364,7 +364,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetAddress2()
+        public virtual string GetAddress2()
         {
             return Factory.ExecuteStringMethodGet(this, "GetAddress2");
         }
@@ -374,7 +374,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetAddress2(string bstrNewVal)
+        public virtual void SetAddress2(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetAddress2", bstrNewVal);
         }
@@ -383,7 +383,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 CheckSystemClock()
+        public virtual Int32 CheckSystemClock()
         {
             return Factory.ExecuteInt32MethodGet(this, "CheckSystemClock");
         }
@@ -392,7 +392,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public DateTime GetExistingExpiryDate()
+        public virtual DateTime GetExistingExpiryDate()
         {
             return Factory.ExecuteDateTimeMethodGet(this, "GetExistingExpiryDate");
         }
@@ -401,7 +401,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public DateTime GetNewExpiryDate()
+        public virtual DateTime GetNewExpiryDate()
         {
             return Factory.ExecuteDateTimeMethodGet(this, "GetNewExpiryDate");
         }
@@ -410,7 +410,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingFirstName()
+        public virtual string GetBillingFirstName()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingFirstName");
         }
@@ -420,7 +420,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingFirstName(string bstrNewVal)
+        public virtual void SetBillingFirstName(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingFirstName", bstrNewVal);
         }
@@ -429,7 +429,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingLastName()
+        public virtual string GetBillingLastName()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingLastName");
         }
@@ -439,7 +439,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingLastName(string bstrNewVal)
+        public virtual void SetBillingLastName(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingLastName", bstrNewVal);
         }
@@ -448,7 +448,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingPhone()
+        public virtual string GetBillingPhone()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingPhone");
         }
@@ -458,7 +458,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingPhone(string bstrNewVal)
+        public virtual void SetBillingPhone(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingPhone", bstrNewVal);
         }
@@ -467,7 +467,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingAddress1()
+        public virtual string GetBillingAddress1()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingAddress1");
         }
@@ -477,7 +477,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingAddress1(string bstrNewVal)
+        public virtual void SetBillingAddress1(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingAddress1", bstrNewVal);
         }
@@ -486,7 +486,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingAddress2()
+        public virtual string GetBillingAddress2()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingAddress2");
         }
@@ -496,7 +496,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingAddress2(string bstrNewVal)
+        public virtual void SetBillingAddress2(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingAddress2", bstrNewVal);
         }
@@ -505,7 +505,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingCity()
+        public virtual string GetBillingCity()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingCity");
         }
@@ -515,7 +515,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingCity(string bstrNewVal)
+        public virtual void SetBillingCity(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingCity", bstrNewVal);
         }
@@ -524,7 +524,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingState()
+        public virtual string GetBillingState()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingState");
         }
@@ -534,7 +534,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingState(string bstrNewVal)
+        public virtual void SetBillingState(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingState", bstrNewVal);
         }
@@ -543,7 +543,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingCountryCode()
+        public virtual string GetBillingCountryCode()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingCountryCode");
         }
@@ -553,7 +553,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingCountryCode(string bstrNewVal)
+        public virtual void SetBillingCountryCode(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingCountryCode", bstrNewVal);
         }
@@ -562,7 +562,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBillingZip()
+        public virtual string GetBillingZip()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBillingZip");
         }
@@ -572,7 +572,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrNewVal">string bstrNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetBillingZip(string bstrNewVal)
+        public virtual void SetBillingZip(string bstrNewVal)
         {
             Factory.ExecuteMethod(this, "SetBillingZip", bstrNewVal);
         }
@@ -582,7 +582,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bSave">Int32 bSave</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 SaveBillingInfo(Int32 bSave)
+        public virtual Int32 SaveBillingInfo(Int32 bSave)
         {
             return Factory.ExecuteInt32MethodGet(this, "SaveBillingInfo", bSave);
         }
@@ -592,7 +592,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrCountryCode">string bstrCountryCode</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 IsCCRenewalCountry(string bstrCountryCode)
+        public virtual Int32 IsCCRenewalCountry(string bstrCountryCode)
         {
             return Factory.ExecuteInt32MethodGet(this, "IsCCRenewalCountry", bstrCountryCode);
         }
@@ -602,7 +602,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrCountryCode">string bstrCountryCode</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetVATLabel(string bstrCountryCode)
+        public virtual string GetVATLabel(string bstrCountryCode)
         {
             return Factory.ExecuteStringMethodGet(this, "GetVATLabel", bstrCountryCode);
         }
@@ -611,7 +611,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public DateTime GetCCRenewalExpiryDate()
+        public virtual DateTime GetCCRenewalExpiryDate()
         {
             return Factory.ExecuteDateTimeMethodGet(this, "GetCCRenewalExpiryDate");
         }
@@ -621,7 +621,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrVATNumber">string bstrVATNumber</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetVATNumber(string bstrVATNumber)
+        public virtual void SetVATNumber(string bstrVATNumber)
         {
             Factory.ExecuteMethod(this, "SetVATNumber", bstrVATNumber);
         }
@@ -631,7 +631,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrCCCode">string bstrCCCode</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetCreditCardType(string bstrCCCode)
+        public virtual void SetCreditCardType(string bstrCCCode)
         {
             Factory.ExecuteMethod(this, "SetCreditCardType", bstrCCCode);
         }
@@ -641,7 +641,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrCCNumber">string bstrCCNumber</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetCreditCardNumber(string bstrCCNumber)
+        public virtual void SetCreditCardNumber(string bstrCCNumber)
         {
             Factory.ExecuteMethod(this, "SetCreditCardNumber", bstrCCNumber);
         }
@@ -651,7 +651,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dwCCYear">Int32 dwCCYear</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetCreditCardExpiryYear(Int32 dwCCYear)
+        public virtual void SetCreditCardExpiryYear(Int32 dwCCYear)
         {
             Factory.ExecuteMethod(this, "SetCreditCardExpiryYear", dwCCYear);
         }
@@ -661,7 +661,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dwCCMonth">Int32 dwCCMonth</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetCreditCardExpiryMonth(Int32 dwCCMonth)
+        public virtual void SetCreditCardExpiryMonth(Int32 dwCCMonth)
         {
             Factory.ExecuteMethod(this, "SetCreditCardExpiryMonth", dwCCMonth);
         }
@@ -670,7 +670,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetCreditCardCount()
+        public virtual Int32 GetCreditCardCount()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetCreditCardCount");
         }
@@ -680,7 +680,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dwIndex">Int32 dwIndex</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetCreditCardCode(Int32 dwIndex)
+        public virtual string GetCreditCardCode(Int32 dwIndex)
         {
             return Factory.ExecuteStringMethodGet(this, "GetCreditCardCode", dwIndex);
         }
@@ -690,7 +690,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dwIndex">Int32 dwIndex</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetCreditCardName(Int32 dwIndex)
+        public virtual string GetCreditCardName(Int32 dwIndex)
         {
             return Factory.ExecuteStringMethodGet(this, "GetCreditCardName", dwIndex);
         }
@@ -699,7 +699,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetVATNumber()
+        public virtual string GetVATNumber()
         {
             return Factory.ExecuteStringMethodGet(this, "GetVATNumber");
         }
@@ -708,7 +708,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetCreditCardType()
+        public virtual string GetCreditCardType()
         {
             return Factory.ExecuteStringMethodGet(this, "GetCreditCardType");
         }
@@ -717,7 +717,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetCreditCardNumber()
+        public virtual string GetCreditCardNumber()
         {
             return Factory.ExecuteStringMethodGet(this, "GetCreditCardNumber");
         }
@@ -726,7 +726,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetCreditCardExpiryYear()
+        public virtual Int32 GetCreditCardExpiryYear()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetCreditCardExpiryYear");
         }
@@ -735,7 +735,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetCreditCardExpiryMonth()
+        public virtual Int32 GetCreditCardExpiryMonth()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetCreditCardExpiryMonth");
         }
@@ -744,7 +744,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetDisconnectOption()
+        public virtual Int32 GetDisconnectOption()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetDisconnectOption");
         }
@@ -754,7 +754,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bNewVal">Int32 bNewVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetDisconnectOption(Int32 bNewVal)
+        public virtual void SetDisconnectOption(Int32 bNewVal)
         {
             Factory.ExecuteMethod(this, "SetDisconnectOption", bNewVal);
         }
@@ -764,7 +764,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bReviseCustInfo">Int32 bReviseCustInfo</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AsyncProcessHandshakeRequest(Int32 bReviseCustInfo)
+        public virtual void AsyncProcessHandshakeRequest(Int32 bReviseCustInfo)
         {
             Factory.ExecuteMethod(this, "AsyncProcessHandshakeRequest", bReviseCustInfo);
         }
@@ -773,7 +773,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AsyncProcessNewLicenseRequest()
+        public virtual void AsyncProcessNewLicenseRequest()
         {
             Factory.ExecuteMethod(this, "AsyncProcessNewLicenseRequest");
         }
@@ -782,7 +782,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AsyncProcessReissueLicenseRequest()
+        public virtual void AsyncProcessReissueLicenseRequest()
         {
             Factory.ExecuteMethod(this, "AsyncProcessReissueLicenseRequest");
         }
@@ -791,7 +791,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AsyncProcessRetailRenewalLicenseRequest()
+        public virtual void AsyncProcessRetailRenewalLicenseRequest()
         {
             Factory.ExecuteMethod(this, "AsyncProcessRetailRenewalLicenseRequest");
         }
@@ -800,7 +800,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AsyncProcessReviseCustInfoRequest()
+        public virtual void AsyncProcessReviseCustInfoRequest()
         {
             Factory.ExecuteMethod(this, "AsyncProcessReviseCustInfoRequest");
         }
@@ -809,7 +809,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AsyncProcessCCRenewalPriceRequest()
+        public virtual void AsyncProcessCCRenewalPriceRequest()
         {
             Factory.ExecuteMethod(this, "AsyncProcessCCRenewalPriceRequest");
         }
@@ -818,7 +818,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AsyncProcessCCRenewalLicenseRequest()
+        public virtual void AsyncProcessCCRenewalLicenseRequest()
         {
             Factory.ExecuteMethod(this, "AsyncProcessCCRenewalLicenseRequest");
         }
@@ -827,7 +827,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetAsyncProcessReturnCode()
+        public virtual Int32 GetAsyncProcessReturnCode()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetAsyncProcessReturnCode");
         }
@@ -836,7 +836,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 IsUpgradeAvailable()
+        public virtual Int32 IsUpgradeAvailable()
         {
             return Factory.ExecuteInt32MethodGet(this, "IsUpgradeAvailable");
         }
@@ -846,7 +846,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bWantUpgrade">Int32 bWantUpgrade</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void WantUpgrade(Int32 bWantUpgrade)
+        public virtual void WantUpgrade(Int32 bWantUpgrade)
         {
             Factory.ExecuteMethod(this, "WantUpgrade", bWantUpgrade);
         }
@@ -855,7 +855,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void AsyncProcessDroppedLicenseRequest()
+        public virtual void AsyncProcessDroppedLicenseRequest()
         {
             Factory.ExecuteMethod(this, "AsyncProcessDroppedLicenseRequest");
         }
@@ -864,7 +864,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GenerateInstallationId()
+        public virtual string GenerateInstallationId()
         {
             return Factory.ExecuteStringMethodGet(this, "GenerateInstallationId");
         }
@@ -874,7 +874,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrVal">string bstrVal</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 DepositConfirmationId(string bstrVal)
+        public virtual Int32 DepositConfirmationId(string bstrVal)
         {
             return Factory.ExecuteInt32MethodGet(this, "DepositConfirmationId", bstrVal);
         }
@@ -884,7 +884,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bstrCIDIID">string bstrCIDIID</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 VerifyCheckDigits(string bstrCIDIID)
+        public virtual Int32 VerifyCheckDigits(string bstrCIDIID)
         {
             return Factory.ExecuteInt32MethodGet(this, "VerifyCheckDigits", bstrCIDIID);
         }
@@ -893,7 +893,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public DateTime GetCurrentExpiryDate()
+        public virtual DateTime GetCurrentExpiryDate()
         {
             return Factory.ExecuteDateTimeMethodGet(this, "GetCurrentExpiryDate");
         }
@@ -903,7 +903,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="bIsLicenseRequest">Int32 bIsLicenseRequest</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void CancelAsyncProcessRequest(Int32 bIsLicenseRequest)
+        public virtual void CancelAsyncProcessRequest(Int32 bIsLicenseRequest)
         {
             Factory.ExecuteMethod(this, "CancelAsyncProcessRequest", bIsLicenseRequest);
         }
@@ -913,7 +913,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dwCurrencyIndex">Int32 dwCurrencyIndex</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetCurrencyDescription(Int32 dwCurrencyIndex)
+        public virtual string GetCurrencyDescription(Int32 dwCurrencyIndex)
         {
             return Factory.ExecuteStringMethodGet(this, "GetCurrencyDescription", dwCurrencyIndex);
         }
@@ -922,7 +922,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetPriceItemCount()
+        public virtual Int32 GetPriceItemCount()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetPriceItemCount");
         }
@@ -932,7 +932,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dwIndex">Int32 dwIndex</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetPriceItemLabel(Int32 dwIndex)
+        public virtual string GetPriceItemLabel(Int32 dwIndex)
         {
             return Factory.ExecuteStringMethodGet(this, "GetPriceItemLabel", dwIndex);
         }
@@ -943,7 +943,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="dwCurrencyIndex">Int32 dwCurrencyIndex</param>
         /// <param name="dwIndex">Int32 dwIndex</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetPriceItemValue(Int32 dwCurrencyIndex, Int32 dwIndex)
+        public virtual string GetPriceItemValue(Int32 dwCurrencyIndex, Int32 dwIndex)
         {
             return Factory.ExecuteStringMethodGet(this, "GetPriceItemValue", dwCurrencyIndex, dwIndex);
         }
@@ -952,7 +952,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetInvoiceText()
+        public virtual string GetInvoiceText()
         {
             return Factory.ExecuteStringMethodGet(this, "GetInvoiceText");
         }
@@ -961,7 +961,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetBackendErrorMsg()
+        public virtual string GetBackendErrorMsg()
         {
             return Factory.ExecuteStringMethodGet(this, "GetBackendErrorMsg");
         }
@@ -970,7 +970,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 GetCurrencyOption()
+        public virtual Int32 GetCurrencyOption()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetCurrencyOption");
         }
@@ -980,7 +980,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="dwCurrencyOption">Int32 dwCurrencyOption</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public void SetCurrencyOption(Int32 dwCurrencyOption)
+        public virtual void SetCurrencyOption(Int32 dwCurrencyOption)
         {
             Factory.ExecuteMethod(this, "SetCurrencyOption", dwCurrencyOption);
         }
@@ -989,7 +989,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public string GetEndOfLifeHtmlText()
+        public virtual string GetEndOfLifeHtmlText()
         {
             return Factory.ExecuteStringMethodGet(this, "GetEndOfLifeHtmlText");
         }
@@ -998,7 +998,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-        public Int32 DisplaySSLCert()
+        public virtual Int32 DisplaySSLCert()
         {
             return Factory.ExecuteInt32MethodGet(this, "DisplaySSLCert");
         }

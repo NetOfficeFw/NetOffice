@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.MsoDebugOptions_UTs UnitTests
+        public virtual NetOffice.OfficeApi.MsoDebugOptions_UTs UnitTests
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool ReportErrors
+        public virtual bool ReportErrors
         {
             get
             {
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void NotifyStartOfTestSuiteRun()
+        public virtual void NotifyStartOfTestSuiteRun()
         {
             Factory.ExecuteMethod(this, "NotifyStartOfTestSuiteRun");
         }
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void NotifyEndOfTestSuiteRun()
+        public virtual void NotifyEndOfTestSuiteRun()
         {
             Factory.ExecuteMethod(this, "NotifyEndOfTestSuiteRun");
         }

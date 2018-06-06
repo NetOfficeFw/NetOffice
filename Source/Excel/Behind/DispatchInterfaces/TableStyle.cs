@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821286.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823073.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820983.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string _Default
+		public virtual string _Default
 		{
 			get
 			{
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198227.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839881.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public string NameLocal
+		public virtual string NameLocal
 		{
 			get
 			{
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840826.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool BuiltIn
+		public virtual bool BuiltIn
 		{
 			get
 			{
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192949.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.TableStyleElements TableStyleElements
+		public virtual NetOffice.ExcelApi.TableStyleElements TableStyleElements
 		{
 			get
 			{
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839252.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool ShowAsAvailableTableStyle
+		public virtual bool ShowAsAvailableTableStyle
 		{
 			get
 			{
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839032.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool ShowAsAvailablePivotTableStyle
+		public virtual bool ShowAsAvailablePivotTableStyle
 		{
 			get
 			{
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839730.aspx </remarks>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool ShowAsAvailableSlicerStyle
+		public virtual bool ShowAsAvailableSlicerStyle
 		{
 			get
 			{
@@ -231,7 +231,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231088.aspx </remarks>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool ShowAsAvailableTimelineStyle
+		public virtual bool ShowAsAvailableTimelineStyle
 		{
 			get
 			{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821506.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Delete()
+		public virtual void Delete()
 		{
 			 Factory.ExecuteMethod(this, "Delete");
 		}
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821658.aspx </remarks>
 		/// <param name="newTableStyleName">optional object newTableStyleName</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.TableStyle Duplicate(object newTableStyleName)
+		public virtual NetOffice.ExcelApi.TableStyle Duplicate(object newTableStyleName)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.TableStyle>(this, "Duplicate", typeof(NetOffice.ExcelApi.TableStyle), newTableStyleName);
 		}
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821658.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.TableStyle Duplicate()
+		public virtual NetOffice.ExcelApi.TableStyle Duplicate()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.TableStyle>(this, "Duplicate", typeof(NetOffice.ExcelApi.TableStyle));
 		}

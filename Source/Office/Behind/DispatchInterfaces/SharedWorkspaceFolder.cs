@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860581.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string FolderName
+        public virtual string FolderName
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864092.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860569.aspx </remarks>
         /// <param name="deleteEventIfFolderContainsFiles">optional object deleteEventIfFolderContainsFiles</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Delete(object deleteEventIfFolderContainsFiles)
+        public virtual void Delete(object deleteEventIfFolderContainsFiles)
         {
             Factory.ExecuteMethod(this, "Delete", deleteEventIfFolderContainsFiles);
         }
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860569.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void Delete()
+        public virtual void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
         }

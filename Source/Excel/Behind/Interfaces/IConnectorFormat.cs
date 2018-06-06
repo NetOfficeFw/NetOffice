@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Application Application
+        public virtual NetOffice.ExcelApi.Application Application
         {
             get
             {
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
             {
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Unknown COM Proxy
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
-        public object Parent
+        public virtual object Parent
         {
             get
             {
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState BeginConnected
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState BeginConnected
         {
             get
             {
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Shape BeginConnectedShape
+        public virtual NetOffice.ExcelApi.Shape BeginConnectedShape
         {
             get
             {
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 BeginConnectionSite
+        public virtual Int32 BeginConnectionSite
         {
             get
             {
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoTriState EndConnected
+        public virtual NetOffice.OfficeApi.Enums.MsoTriState EndConnected
         {
             get
             {
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.ExcelApi.Shape EndConnectedShape
+        public virtual NetOffice.ExcelApi.Shape EndConnectedShape
         {
             get
             {
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 EndConnectionSite
+        public virtual Int32 EndConnectionSite
         {
             get
             {
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.Enums.MsoConnectorType Type
+        public virtual NetOffice.OfficeApi.Enums.MsoConnectorType Type
         {
             get
             {
@@ -203,7 +203,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="connectedShape">NetOffice.ExcelApi.Shape connectedShape</param>
         /// <param name="connectionSite">Int32 connectionSite</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 BeginConnect(NetOffice.ExcelApi.Shape connectedShape, Int32 connectionSite)
+        public virtual Int32 BeginConnect(NetOffice.ExcelApi.Shape connectedShape, Int32 connectionSite)
         {
             return Factory.ExecuteInt32MethodGet(this, "BeginConnect", connectedShape, connectionSite);
         }
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 BeginDisconnect()
+        public virtual Int32 BeginDisconnect()
         {
             return Factory.ExecuteInt32MethodGet(this, "BeginDisconnect");
         }
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <param name="connectedShape">NetOffice.ExcelApi.Shape connectedShape</param>
         /// <param name="connectionSite">Int32 connectionSite</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 EndConnect(NetOffice.ExcelApi.Shape connectedShape, Int32 connectionSite)
+        public virtual Int32 EndConnect(NetOffice.ExcelApi.Shape connectedShape, Int32 connectionSite)
         {
             return Factory.ExecuteInt32MethodGet(this, "EndConnect", connectedShape, connectionSite);
         }
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 EndDisconnect()
+        public virtual Int32 EndDisconnect()
         {
             return Factory.ExecuteInt32MethodGet(this, "EndDisconnect");
         }

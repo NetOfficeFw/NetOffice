@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834429.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822511.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197718.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="index">object index</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.ExcelApi.ListObject this[object index]
+		public virtual NetOffice.ExcelApi.ListObject this[object index]
 		{
 			get
 			{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837797.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public Int32 Count
+		public virtual Int32 Count
 		{
 			get
 			{
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
 		/// <param name="destination">optional object destination</param>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
+		public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), new object[]{ sourceType, source, linkSource, xlListObjectHasHeaders, destination });
 		}
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="destination">optional object destination</param>
 		/// <param name="tableStyleName">optional object tableStyleName</param>
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination, object tableStyleName)
+		public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination, object tableStyleName)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), new object[]{ sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName });
 		}
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823155.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject Add()
+		public virtual NetOffice.ExcelApi.ListObject Add()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject));
 		}
@@ -187,7 +187,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="sourceType">optional NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType = 1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject Add(object sourceType)
+		public virtual NetOffice.ExcelApi.ListObject Add(object sourceType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType);
 		}
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="source">optional object source</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source)
+		public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source);
 		}
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="linkSource">optional object linkSource</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource)
+		public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource);
 		}
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
+		public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource, xlListObjectHasHeaders);
 		}
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// <param name="destination">optional object destination</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
+		public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), new object[]{ sourceType, source, linkSource, xlListObjectHasHeaders, destination });
 		}
@@ -255,7 +255,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject _Add()
+		public virtual NetOffice.ExcelApi.ListObject _Add()
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject));
 		}
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject _Add(object sourceType)
+		public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType);
 		}
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source)
+		public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType, object source)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source);
 		}
@@ -294,7 +294,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource)
+		public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource);
 		}
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
+		public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource, xlListObjectHasHeaders);
 		}
@@ -336,7 +336,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.ExcelApi.ListObject> GetEnumerator()
+        public virtual IEnumerator<NetOffice.ExcelApi.ListObject> GetEnumerator()
         {
             NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
             foreach (NetOffice.ExcelApi.ListObject item in innerEnumerator)

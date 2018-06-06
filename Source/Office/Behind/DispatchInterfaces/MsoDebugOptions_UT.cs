@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string Name
+        public virtual string Name
         {
             get
             {
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi.Behind
         /// Get
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public string CollectionName
+        public virtual string CollectionName
         {
             get
             {
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public NetOffice.OfficeApi.MsoDebugOptions_UTRunResult Run()
+        public virtual NetOffice.OfficeApi.MsoDebugOptions_UTRunResult Run()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTRunResult>(this, "Run", typeof(NetOffice.OfficeApi.MsoDebugOptions_UTRunResult));
         }

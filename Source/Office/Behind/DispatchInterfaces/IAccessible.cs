@@ -34,7 +34,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_accName(object varChild)
+        public virtual string get_accName(object varChild)
         {
             return Factory.ExecuteStringPropertyGet(this, "accName", varChild);
         }
@@ -47,7 +47,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="value">optional string value</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_accName(object varChild, string value)
+        public virtual void set_accName(object varChild, string value)
         {
             Factory.ExecutePropertySet(this, "accName", varChild, value);
         }
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accName")]
-        public string accName(object varChild)
+        public virtual string accName(object varChild)
         {
             return get_accName(varChild);
         }
@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_accValue(object varChild)
+        public virtual string get_accValue(object varChild)
         {
             return Factory.ExecuteStringPropertyGet(this, "accValue", varChild);
         }
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="value">optional string value</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_accValue(object varChild, string value)
+        public virtual void set_accValue(object varChild, string value)
         {
             Factory.ExecutePropertySet(this, "accValue", varChild, value);
         }
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accValue")]
-        public string accValue(object varChild)
+        public virtual string accValue(object varChild)
         {
             return get_accValue(varChild);
         }
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_accDescription(object varChild)
+        public virtual string get_accDescription(object varChild)
         {
             return Factory.ExecuteStringPropertyGet(this, "accDescription", varChild);
         }
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accDescription")]
-        public string accDescription(object varChild)
+        public virtual string accDescription(object varChild)
         {
             return get_accDescription(varChild);
         }
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_accRole(object varChild)
+        public virtual object get_accRole(object varChild)
         {
             return Factory.ExecuteVariantPropertyGet(this, "accRole", varChild);
         }
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accRole")]
-        public object accRole(object varChild)
+        public virtual object accRole(object varChild)
         {
             return get_accRole(varChild);
         }
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_accState(object varChild)
+        public virtual object get_accState(object varChild)
         {
             return Factory.ExecuteVariantPropertyGet(this, "accState", varChild);
         }
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accState")]
-        public object accState(object varChild)
+        public virtual object accState(object varChild)
         {
             return get_accState(varChild);
         }
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_accHelp(object varChild)
+        public virtual string get_accHelp(object varChild)
         {
             return Factory.ExecuteStringPropertyGet(this, "accHelp", varChild);
         }
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accHelp")]
-        public string accHelp(object varChild)
+        public virtual string accHelp(object varChild)
         {
             return get_accHelp(varChild);
         }
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_accKeyboardShortcut(object varChild)
+        public virtual string get_accKeyboardShortcut(object varChild)
         {
             return Factory.ExecuteStringPropertyGet(this, "accKeyboardShortcut", varChild);
         }
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accKeyboardShortcut")]
-        public string accKeyboardShortcut(object varChild)
+        public virtual string accKeyboardShortcut(object varChild)
         {
             return get_accKeyboardShortcut(varChild);
         }
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string get_accDefaultAction(object varChild)
+        public virtual string get_accDefaultAction(object varChild)
         {
             return Factory.ExecuteStringPropertyGet(this, "accDefaultAction", varChild);
         }
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accDefaultAction")]
-        public string accDefaultAction(object varChild)
+        public virtual string accDefaultAction(object varChild)
         {
             return get_accDefaultAction(varChild);
         }
@@ -305,7 +305,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object accParent
+        public virtual object accParent
         {
             get
             {
@@ -319,7 +319,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 accChildCount
+        public virtual Int32 accChildCount
         {
             get
             {
@@ -335,7 +335,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_accChild(object varChild)
+        public virtual object get_accChild(object varChild)
         {
             return Factory.ExecuteReferencePropertyGet(this, "accChild", varChild);
         }
@@ -347,7 +347,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="varChild">object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult, Redirect("get_accChild")]
-        public object accChild(object varChild)
+        public virtual object accChild(object varChild)
         {
             return get_accChild(varChild);
         }
@@ -358,7 +358,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string accName
+        public virtual string accName
         {
             get
             {
@@ -376,7 +376,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string accValue
+        public virtual string accValue
         {
             get
             {
@@ -394,7 +394,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string accDescription
+        public virtual string accDescription
         {
             get
             {
@@ -408,7 +408,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object accRole
+        public virtual object accRole
         {
             get
             {
@@ -422,7 +422,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object accState
+        public virtual object accState
         {
             get
             {
@@ -436,7 +436,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string accHelp
+        public virtual string accHelp
         {
             get
             {
@@ -452,7 +452,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 get_accHelpTopic(out string pszHelpFile, object varChild)
+        public virtual Int32 get_accHelpTopic(out string pszHelpFile, object varChild)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, false);
             pszHelpFile = string.Empty;
@@ -469,7 +469,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="pszHelpFile">string pszHelpFile</param>
         /// <param name="varChild">optional object varChild</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accHelpTopic")]
-        public Int32 accHelpTopic(out string pszHelpFile, object varChild)
+        public virtual Int32 accHelpTopic(out string pszHelpFile, object varChild)
         {
             return get_accHelpTopic(out pszHelpFile, varChild);
         }
@@ -481,7 +481,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="pszHelpFile">string pszHelpFile</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 get_accHelpTopic(out string pszHelpFile)
+        public virtual Int32 get_accHelpTopic(out string pszHelpFile)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pszHelpFile = string.Empty;
@@ -497,7 +497,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="pszHelpFile">string pszHelpFile</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_accHelpTopic")]
-        public Int32 accHelpTopic(out string pszHelpFile)
+        public virtual Int32 accHelpTopic(out string pszHelpFile)
         {
             return get_accHelpTopic(out pszHelpFile);
         }
@@ -508,7 +508,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string accKeyboardShortcut
+        public virtual string accKeyboardShortcut
         {
             get
             {
@@ -522,7 +522,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object accFocus
+        public virtual object accFocus
         {
             get
             {
@@ -536,7 +536,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object accSelection
+        public virtual object accSelection
         {
             get
             {
@@ -550,7 +550,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string accDefaultAction
+        public virtual string accDefaultAction
         {
             get
             {
@@ -569,7 +569,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accSelect(Int32 flagsSelect, object varChild)
+        public virtual void accSelect(Int32 flagsSelect, object varChild)
         {
             Factory.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
         }
@@ -581,7 +581,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accSelect(Int32 flagsSelect)
+        public virtual void accSelect(Int32 flagsSelect)
         {
             Factory.ExecuteMethod(this, "accSelect", flagsSelect);
         }
@@ -596,7 +596,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight, object varChild)
+        public virtual void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight, object varChild)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true, false);
             pxLeft = 0;
@@ -621,7 +621,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight)
+        public virtual void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true);
             pxLeft = 0;
@@ -643,7 +643,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varStart">optional object varStart</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object accNavigate(Int32 navDir, object varStart)
+        public virtual object accNavigate(Int32 navDir, object varStart)
         {
             return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
         }
@@ -655,7 +655,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object accNavigate(Int32 navDir)
+        public virtual object accNavigate(Int32 navDir)
         {
             return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir);
         }
@@ -667,7 +667,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="yTop">Int32 yTop</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public object accHitTest(Int32 xLeft, Int32 yTop)
+        public virtual object accHitTest(Int32 xLeft, Int32 yTop)
         {
             return Factory.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
         }
@@ -678,7 +678,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accDoDefaultAction(object varChild)
+        public virtual void accDoDefaultAction(object varChild)
         {
             Factory.ExecuteMethod(this, "accDoDefaultAction", varChild);
         }
@@ -689,7 +689,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void accDoDefaultAction()
+        public virtual void accDoDefaultAction()
         {
             Factory.ExecuteMethod(this, "accDoDefaultAction");
         }

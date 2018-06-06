@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="pClipMoniker">object pClipMoniker</param>
         /// <param name="pItemMoniker">object pItemMoniker</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void InsertClip(object pClipMoniker, object pItemMoniker)
+        public virtual void InsertClip(object pClipMoniker, object pItemMoniker)
         {
             Factory.ExecuteMethod(this, "InsertClip", pClipMoniker, pItemMoniker);
         }
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Behind
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-        public void WindowIsClosing()
+        public virtual void WindowIsClosing()
         {
             Factory.ExecuteMethod(this, "WindowIsClosing");
         }

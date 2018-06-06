@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <remarks>Setting the HeartbeatInterval property to -1 will result in the Heartbeat method not being called. Note The heartbeat interval cannot be set below 15,000 milliseconds due to the standard 15-second time out</remarks>
 		[SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public Int32 HeartbeatInterval
+        public virtual Int32 HeartbeatInterval
         {
             get
             {
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public void UpdateNotify()
+        public virtual void UpdateNotify()
         {
             Factory.ExecuteMethod(this, "UpdateNotify");
         }
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        public void Disconnect()
+        public virtual void Disconnect()
         {
             Factory.ExecuteMethod(this, "Disconnect");
         }

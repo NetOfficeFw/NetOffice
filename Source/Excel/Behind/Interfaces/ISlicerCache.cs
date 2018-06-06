@@ -63,7 +63,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Application Application
+		public virtual NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
+		public virtual NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16), ProxyResult]
-		public object Parent
+		public virtual object Parent
 		{
 			get
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Index
+		public virtual Int32 Index
 		{
 			get
 			{
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool OLAP
+		public virtual bool OLAP
 		{
 			get
 			{
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType
+		public virtual NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType
 		{
 			get
 			{
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
+		public virtual NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
 		{
 			get
 			{
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Slicers Slicers
+		public virtual NetOffice.ExcelApi.Slicers Slicers
 		{
 			get
 			{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerPivotTables PivotTables
+		public virtual NetOffice.ExcelApi.SlicerPivotTables PivotTables
 		{
 			get
 			{
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerCacheLevels SlicerCacheLevels
+		public virtual NetOffice.ExcelApi.SlicerCacheLevels SlicerCacheLevels
 		{
 			get
 			{
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string Name
+		public virtual string Name
 		{
 			get
 			{
@@ -211,7 +211,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerItems VisibleSlicerItems
+		public virtual NetOffice.ExcelApi.SlicerItems VisibleSlicerItems
 		{
 			get
 			{
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public object VisibleSlicerItemsList
+		public virtual object VisibleSlicerItemsList
 		{
 			get
 			{
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.SlicerItems SlicerItems
+		public virtual NetOffice.ExcelApi.SlicerItems SlicerItems
 		{
 			get
 			{
@@ -254,7 +254,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSlicerCrossFilterType CrossFilterType
+		public virtual NetOffice.ExcelApi.Enums.XlSlicerCrossFilterType CrossFilterType
 		{
 			get
 			{
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSlicerSort SortItems
+		public virtual NetOffice.ExcelApi.Enums.XlSlicerSort SortItems
 		{
 			get
 			{
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public string SourceName
+		public virtual string SourceName
 		{
 			get
 			{
@@ -301,7 +301,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool SortUsingCustomLists
+		public virtual bool SortUsingCustomLists
 		{
 			get
 			{
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public bool ShowAllItems
+		public virtual bool ShowAllItems
 		{
 			get
 			{
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.TimelineState TimelineState
+		public virtual NetOffice.ExcelApi.TimelineState TimelineState
 		{
 			get
 			{
@@ -348,7 +348,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.Enums.XlSlicerCacheType SlicerCacheType
+		public virtual NetOffice.ExcelApi.Enums.XlSlicerCacheType SlicerCacheType
 		{
 			get
 			{
@@ -361,7 +361,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool FilterCleared
+		public virtual bool FilterCleared
 		{
 			get
 			{
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool List
+		public virtual bool List
 		{
 			get
 			{
@@ -387,7 +387,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public bool RequireManualUpdate
+		public virtual bool RequireManualUpdate
 		{
 			get
 			{
@@ -404,7 +404,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// Get
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public NetOffice.ExcelApi.ListObject ListObject
+		public virtual NetOffice.ExcelApi.ListObject ListObject
 		{
 			get
 			{
@@ -420,7 +420,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 ClearManualFilter()
+		public virtual Int32 ClearManualFilter()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ClearManualFilter");
 		}
@@ -429,7 +429,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Excel", 14,15,16)]
-		public Int32 Delete()
+		public virtual Int32 Delete()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
@@ -438,7 +438,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 15,16
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 ClearAllFilters()
+		public virtual Int32 ClearAllFilters()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ClearAllFilters");
 		}
@@ -447,7 +447,7 @@ namespace NetOffice.ExcelApi.Behind
 		/// SupportByVersion Excel 15,16
 		/// </summary>
 		[SupportByVersion("Excel", 15, 16)]
-		public Int32 ClearDateFilter()
+		public virtual Int32 ClearDateFilter()
 		{
 			return Factory.ExecuteInt32MethodGet(this, "ClearDateFilter");
 		}

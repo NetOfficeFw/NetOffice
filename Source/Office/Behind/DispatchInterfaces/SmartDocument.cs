@@ -66,7 +66,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864983.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string SolutionID
+        public virtual string SolutionID
         {
             get
             {
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865469.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public string SolutionURL
+        public virtual string SolutionURL
         {
             get
             {
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865250.aspx </remarks>
         /// <param name="considerAllSchemas">optional bool ConsiderAllSchemas = false</param>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void PickSolution(object considerAllSchemas)
+        public virtual void PickSolution(object considerAllSchemas)
         {
             Factory.ExecuteMethod(this, "PickSolution", considerAllSchemas);
         }
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865250.aspx </remarks>
         [CustomMethod]
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void PickSolution()
+        public virtual void PickSolution()
         {
             Factory.ExecuteMethod(this, "PickSolution");
         }
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864173.aspx </remarks>
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
-        public void RefreshPane()
+        public virtual void RefreshPane()
         {
             Factory.ExecuteMethod(this, "RefreshPane");
         }
