@@ -97,7 +97,7 @@ namespace NetOffice.Loader
                 string implementationTarget = contractTypeNamespace + ".Behind." + contractTypeName;
 
                 Type contractResult = item.Assembly.GetType(contractTarget, false);
-                Type implementationResult = item.Assembly.GetType(contractTarget, false);
+                Type implementationResult = item.Assembly.GetType(implementationTarget, false);
                 result = null != contractResult && null != implementationResult;
                 if (false == result && true == throwException)
                     throw new TypeLoadException(String.Format("Failed to resolve type ContractOk:{0}, ImplementationOk:{1}.", null != contractResult, null != implementationResult));
