@@ -26,7 +26,11 @@ namespace NetOffice.ExcelApi
         }
 
         /// <summary>
-        /// Creates a new instance of Microsoft Excel
+        /// Creates a new instance of Microsoft Excel based on given id.
+        /// This can be used to target a specific version of Microsoft Excel.
+        /// Example usage:
+        /// "Microsoft.Excel.12" to target Excel 2007
+        /// "Microsoft.Excel.14" to target Excel 2010
         /// </summary>
         /// <param name="progId">given progid for specific version</param>
         public ApplicationClass(string progId)
@@ -36,7 +40,7 @@ namespace NetOffice.ExcelApi
         }
 
         /// <summary>
-        /// Creates a new instance of Microsoft Excel
+        /// Try get accessing a running application or create a new instance of Microsoft Excel
         /// <param name="factory">factory core instead of default core</param>
         /// <param name="tryProxyServiceFirst">try to get a running application first before create a new application</param>
         /// </summary>

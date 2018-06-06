@@ -7,9 +7,6 @@ namespace ClientApplication
 {
     internal class RunExcel01
     {
-        /// <summary>
-        /// 
-        /// </summary>
         internal void Run()
         {
             Excel.Application app = null;
