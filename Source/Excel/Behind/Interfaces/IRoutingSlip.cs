@@ -34,7 +34,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_Recipients(object index)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "Recipients", index);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Recipients", index);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_Recipients(object index, object value)
         {
-            Factory.ExecutePropertySet(this, "Recipients", index, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "Recipients", index, value);
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -169,11 +169,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlRoutingSlipDelivery>(this, "Delivery");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlRoutingSlipDelivery>(this, "Delivery");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Delivery", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Delivery", value);
             }
         }
 
@@ -186,11 +186,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Message");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Message");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Message", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Message", value);
             }
         }
 
@@ -203,11 +203,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Recipients");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Recipients");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Recipients", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Recipients", value);
             }
         }
 
@@ -220,11 +220,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ReturnWhenDone");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ReturnWhenDone");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ReturnWhenDone", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ReturnWhenDone", value);
             }
         }
 
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlRoutingSlipStatus>(this, "Status");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlRoutingSlipStatus>(this, "Status");
             }
         }
 
@@ -250,11 +250,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Subject");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Subject");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Subject", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Subject", value);
             }
         }
 
@@ -267,11 +267,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "TrackStatus");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TrackStatus");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "TrackStatus", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TrackStatus", value);
             }
         }
 
@@ -285,7 +285,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Reset()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Reset");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Reset");
         }
 
         #endregion

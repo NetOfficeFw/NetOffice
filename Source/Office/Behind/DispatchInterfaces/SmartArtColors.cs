@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtColor>(this, "Item", typeof(NetOffice.OfficeApi.SmartArtColor), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtColor>(this, "Item", typeof(NetOffice.OfficeApi.SmartArtColor), index);
             }
         }
 

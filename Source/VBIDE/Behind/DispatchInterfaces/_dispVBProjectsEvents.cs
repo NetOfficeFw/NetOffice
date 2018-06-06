@@ -69,7 +69,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemAdded(NetOffice.VBIDEApi.VBProject vBProject)
         {
-            Factory.ExecuteMethod(this, "ItemAdded", vBProject);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemAdded", vBProject);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemRemoved(NetOffice.VBIDEApi.VBProject vBProject)
         {
-            Factory.ExecuteMethod(this, "ItemRemoved", vBProject);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemRemoved", vBProject);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemRenamed(NetOffice.VBIDEApi.VBProject vBProject, string oldName)
         {
-            Factory.ExecuteMethod(this, "ItemRenamed", vBProject, oldName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemRenamed", vBProject, oldName);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemActivated(NetOffice.VBIDEApi.VBProject vBProject)
         {
-            Factory.ExecuteMethod(this, "ItemActivated", vBProject);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemActivated", vBProject);
         }
 
         #endregion

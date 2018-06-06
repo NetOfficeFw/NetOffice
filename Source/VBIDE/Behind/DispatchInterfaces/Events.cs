@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.VBIDEApi.ReferencesEvents get_ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.ReferencesEvents>(this, "ReferencesEvents", null, vBProject);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.ReferencesEvents>(this, "ReferencesEvents", null, vBProject);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CommandBarEvents>(this, "CommandBarEvents", typeof(NetOffice.VBIDEApi.CommandBarEvents), commandBarControl);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CommandBarEvents>(this, "CommandBarEvents", typeof(NetOffice.VBIDEApi.CommandBarEvents), commandBarControl);
         }
 
         /// <summary>

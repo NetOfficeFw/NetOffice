@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "DivID");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DivID");
 			}
 		}
 
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Sheet");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Sheet");
 			}
 		}
 
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSourceType>(this, "SourceType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSourceType>(this, "SourceType");
 			}
 		}
 
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Source");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Source");
 			}
 		}
 
@@ -168,11 +168,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlHtmlType>(this, "HtmlType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlHtmlType>(this, "HtmlType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "HtmlType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "HtmlType", value);
 			}
 		}
 
@@ -186,11 +186,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Title");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Title");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Title", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Title", value);
 			}
 		}
 
@@ -204,11 +204,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Filename");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Filename");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Filename", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Filename", value);
 			}
 		}
 
@@ -222,11 +222,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoRepublish");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AutoRepublish");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AutoRepublish", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AutoRepublish", value);
 			}
 		}
 
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Publish(object create)
 		{
-			 Factory.ExecuteMethod(this, "Publish", create);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Publish", create);
 		}
 
 		/// <summary>
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Publish()
 		{
-			 Factory.ExecuteMethod(this, "Publish");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Publish");
 		}
 
 		#endregion

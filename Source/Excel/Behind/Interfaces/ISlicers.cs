@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Slicer>(this, "_Default", typeof(NetOffice.ExcelApi.Slicer), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Slicer>(this, "_Default", typeof(NetOffice.ExcelApi.Slicer), index);
 			}
 		}
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width, object height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left, width, height });
 		}
 
 		/// <summary>
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination);
 		}
 
 		/// <summary>
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level);
 		}
 
 		/// <summary>
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level, name);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level, name);
 		}
 
 		/// <summary>
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level, name, caption);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), slicerDestination, level, name, caption);
 		}
 
 		/// <summary>
@@ -211,7 +211,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top });
 		}
 
 		/// <summary>
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left });
 		}
 
 		/// <summary>
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left, width });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Slicer>(this, "Add", typeof(NetOffice.ExcelApi.Slicer), new object[]{ slicerDestination, level, name, caption, top, left, width });
 		}
 
         #endregion

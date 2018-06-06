@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 SelectionChange(NetOffice.ExcelApi.Range target)
         {
-            return Factory.ExecuteInt32MethodGet(this, "SelectionChange", target);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "SelectionChange", target);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 BeforeDoubleClick(NetOffice.ExcelApi.Range target, bool cancel)
         {
-            return Factory.ExecuteInt32MethodGet(this, "BeforeDoubleClick", target, cancel);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "BeforeDoubleClick", target, cancel);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 BeforeRightClick(NetOffice.ExcelApi.Range target, bool cancel)
         {
-            return Factory.ExecuteInt32MethodGet(this, "BeforeRightClick", target, cancel);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "BeforeRightClick", target, cancel);
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Activate()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Activate");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Activate");
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Deactivate()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Deactivate");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Deactivate");
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Calculate()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Calculate");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Calculate");
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Change(NetOffice.ExcelApi.Range target)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Change", target);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Change", target);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 FollowHyperlink(NetOffice.ExcelApi.Hyperlink target)
         {
-            return Factory.ExecuteInt32MethodGet(this, "FollowHyperlink", target);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "FollowHyperlink", target);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 PivotTableUpdate(NetOffice.ExcelApi.PivotTable target)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PivotTableUpdate", target);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "PivotTableUpdate", target);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 14, 15, 16)]
         public virtual Int32 PivotTableAfterValueChange(NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PivotTableAfterValueChange", targetPivotTable, targetRange);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "PivotTableAfterValueChange", targetPivotTable, targetRange);
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 14, 15, 16)]
         public virtual Int32 PivotTableBeforeAllocateChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PivotTableBeforeAllocateChanges", targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "PivotTableBeforeAllocateChanges", targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 14, 15, 16)]
         public virtual Int32 PivotTableBeforeCommitChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PivotTableBeforeCommitChanges", targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "PivotTableBeforeCommitChanges", targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
         }
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 14, 15, 16)]
         public virtual Int32 PivotTableBeforeDiscardChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PivotTableBeforeDiscardChanges", targetPivotTable, valueChangeStart, valueChangeEnd);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "PivotTableBeforeDiscardChanges", targetPivotTable, valueChangeStart, valueChangeEnd);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 14, 15, 16)]
         public virtual Int32 PivotTableChangeSync(NetOffice.ExcelApi.PivotTable target)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PivotTableChangeSync", target);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "PivotTableChangeSync", target);
         }
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 15, 16)]
         public virtual Int32 LensGalleryRenderComplete()
         {
-            return Factory.ExecuteInt32MethodGet(this, "LensGalleryRenderComplete");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "LensGalleryRenderComplete");
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 15, 16)]
         public virtual Int32 TableUpdate(NetOffice.ExcelApi.TableObject target)
         {
-            return Factory.ExecuteInt32MethodGet(this, "TableUpdate", target);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "TableUpdate", target);
         }
 
         /// <summary>
@@ -236,7 +236,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 15, 16)]
         public virtual Int32 BeforeDelete()
         {
-            return Factory.ExecuteInt32MethodGet(this, "BeforeDelete");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "BeforeDelete");
         }
 
         #endregion

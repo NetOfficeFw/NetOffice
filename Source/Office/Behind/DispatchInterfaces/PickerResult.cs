@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Id");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Id");
             }
         }
 
@@ -84,11 +84,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "DisplayName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DisplayName");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "DisplayName", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayName", value);
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Type");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Type", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Type", value);
             }
         }
 
@@ -120,11 +120,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SIPId");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SIPId");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SIPId", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SIPId", value);
             }
         }
 
@@ -138,11 +138,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ItemData");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ItemData");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "ItemData", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ItemData", value);
             }
         }
 
@@ -156,11 +156,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "SubItems");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "SubItems");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "SubItems", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "SubItems", value);
             }
         }
 
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "DuplicateResults");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "DuplicateResults");
             }
         }
 
@@ -188,11 +188,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerFields>(this, "Fields", typeof(NetOffice.OfficeApi.PickerFields));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerFields>(this, "Fields", typeof(NetOffice.OfficeApi.PickerFields));
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "Fields", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Fields", value);
             }
         }
 

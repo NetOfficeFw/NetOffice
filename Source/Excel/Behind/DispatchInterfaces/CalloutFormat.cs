@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -86,11 +86,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Accent");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Accent");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Accent", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Accent", value);
 			}
 		}
 
@@ -104,11 +104,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCalloutAngleType>(this, "Angle");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCalloutAngleType>(this, "Angle");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Angle", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Angle", value);
 			}
 		}
 
@@ -122,11 +122,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AutoAttach");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AutoAttach");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "AutoAttach", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "AutoAttach", value);
 			}
 		}
 
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AutoLength");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AutoLength");
 			}
 		}
 
@@ -154,11 +154,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Border");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Border");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Border", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Border", value);
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Drop");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Drop");
 			}
 		}
 
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCalloutDropType>(this, "DropType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCalloutDropType>(this, "DropType");
 			}
 		}
 
@@ -200,11 +200,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Gap");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Gap");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Gap", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Gap", value);
 			}
 		}
 
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Length");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Length");
 			}
 		}
 
@@ -232,11 +232,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCalloutType>(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCalloutType>(this, "Type");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Type", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
 			}
 		}
 
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void AutomaticLength()
 		{
-			 Factory.ExecuteMethod(this, "AutomaticLength");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "AutomaticLength");
 		}
 
 		/// <summary>
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void CustomDrop(Single drop)
 		{
-			 Factory.ExecuteMethod(this, "CustomDrop", drop);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "CustomDrop", drop);
 		}
 
 		/// <summary>
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void CustomLength(Single length)
 		{
-			 Factory.ExecuteMethod(this, "CustomLength", length);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "CustomLength", length);
 		}
 
 		/// <summary>
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void PresetDrop(NetOffice.OfficeApi.Enums.MsoCalloutDropType dropType)
 		{
-			 Factory.ExecuteMethod(this, "PresetDrop", dropType);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "PresetDrop", dropType);
 		}
 
 		#endregion

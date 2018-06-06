@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSoftEdgeType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSoftEdgeType>(this, "Type");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Type", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Radius");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Radius");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Radius", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Radius", value);
             }
         }
 

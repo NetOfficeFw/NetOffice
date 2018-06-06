@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ApplicationName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ApplicationName");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "WebComponent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "WebComponent");
             }
         }
 
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "ClipArt");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "ClipArt");
             }
         }
 
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Close(object applyWebComponentChanges)
         {
-            Factory.ExecuteMethod(this, "Close", applyWebComponentChanges);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Close", applyWebComponentChanges);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Close()
         {
-            Factory.ExecuteMethod(this, "Close");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Close");
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void AddTrustedDomain(string domain)
         {
-            Factory.ExecuteMethod(this, "AddTrustedDomain", domain);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddTrustedDomain", domain);
         }
 
         #endregion

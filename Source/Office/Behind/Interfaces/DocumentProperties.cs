@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.DocumentProperty>(this, "Item", typeof(NetOffice.OfficeApi.DocumentProperty), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.DocumentProperty>(this, "Item", typeof(NetOffice.OfficeApi.DocumentProperty), index);
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), new object[] { name, linkToContent, type, value, linkSource });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), new object[] { name, linkToContent, type, value, linkSource });
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent);
         }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent, type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent, type);
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent, type, value);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DocumentProperty>(this, "Add", typeof(NetOffice.OfficeApi.DocumentProperty), name, linkToContent, type, value);
         }
 
         #endregion

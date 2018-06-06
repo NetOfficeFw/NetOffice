@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.References>(this, "Collection", typeof(NetOffice.VBIDEApi.References));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.References>(this, "Collection", typeof(NetOffice.VBIDEApi.References));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -106,7 +106,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Guid");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Guid");
             }
         }
 
@@ -119,7 +119,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Major");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Major");
             }
         }
 
@@ -132,7 +132,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Minor");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Minor");
             }
         }
 
@@ -145,7 +145,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "FullPath");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FullPath");
             }
         }
 
@@ -158,7 +158,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "BuiltIn");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "BuiltIn");
             }
         }
 
@@ -171,7 +171,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsBroken");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsBroken");
             }
         }
 
@@ -184,7 +184,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_RefKind>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_RefKind>(this, "Type");
             }
         }
 
@@ -197,7 +197,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Description");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Description");
             }
         }
 

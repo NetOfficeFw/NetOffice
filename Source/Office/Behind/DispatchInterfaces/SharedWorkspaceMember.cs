@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "DomainName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DomainName");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Email");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Email");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Id");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Id");
             }
         }
 
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

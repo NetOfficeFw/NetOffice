@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Item", typeof(NetOffice.OfficeApi.SharedWorkspaceFolder), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Item", typeof(NetOffice.OfficeApi.SharedWorkspaceFolder), index);
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
             }
         }
 
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName, object parentFolder)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFolder), folderName, parentFolder);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFolder), folderName, parentFolder);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFolder), folderName);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceFolder), folderName);
         }
 
         #endregion

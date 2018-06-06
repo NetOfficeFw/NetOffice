@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDataBarNegativeColorType>(this, "ColorType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDataBarNegativeColorType>(this, "ColorType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "ColorType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ColorType", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDataBarNegativeColorType>(this, "BorderColorType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDataBarNegativeColorType>(this, "BorderColorType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "BorderColorType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "BorderColorType", value);
 			}
 		}
 
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Color");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Color");
 			}
 		}
 
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "BorderColor");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "BorderColor");
 			}
 		}
 

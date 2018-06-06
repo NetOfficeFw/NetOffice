@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ScopeFolder>(this, "Item", typeof(NetOffice.OfficeApi.ScopeFolder), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ScopeFolder>(this, "Item", typeof(NetOffice.OfficeApi.ScopeFolder), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Add(NetOffice.OfficeApi.ScopeFolder scopeFolder)
         {
-            Factory.ExecuteMethod(this, "Add", scopeFolder);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", scopeFolder);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Remove(Int32 index)
         {
-            Factory.ExecuteMethod(this, "Remove", index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Remove", index);
         }
 
         #endregion

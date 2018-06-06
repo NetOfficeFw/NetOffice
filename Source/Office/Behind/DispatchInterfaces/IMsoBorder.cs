@@ -68,11 +68,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Color");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Color");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Color", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Color", value);
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ColorIndex");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ColorIndex");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "ColorIndex", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ColorIndex", value);
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "LineStyle");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "LineStyle");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "LineStyle", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "LineStyle", value);
             }
         }
 
@@ -119,11 +119,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Weight");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Weight");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Weight", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Weight", value);
             }
         }
 
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 

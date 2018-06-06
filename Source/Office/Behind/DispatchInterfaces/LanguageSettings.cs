@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual Int32 get_LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
         {
-            return Factory.ExecuteInt32PropertyGet(this, "LanguageID", id);
+            return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "LanguageID", id);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual bool get_LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
         {
-            return Factory.ExecuteBoolPropertyGet(this, "LanguagePreferredForEditing", lid);
+            return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "LanguagePreferredForEditing", lid);
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 

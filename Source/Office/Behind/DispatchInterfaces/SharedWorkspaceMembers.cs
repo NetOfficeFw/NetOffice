@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceMember>(this, "Item", typeof(NetOffice.OfficeApi.SharedWorkspaceMember), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceMember>(this, "Item", typeof(NetOffice.OfficeApi.SharedWorkspaceMember), index);
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
             }
         }
 
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceMember>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceMember), email, domainName, displayName, role);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceMember>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceMember), email, domainName, displayName, role);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceMember>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceMember), email, domainName, displayName);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceMember>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceMember), email, domainName, displayName);
         }
 
         #endregion

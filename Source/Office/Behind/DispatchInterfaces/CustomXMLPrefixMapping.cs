@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Prefix");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Prefix");
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "NamespaceURI");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "NamespaceURI");
             }
         }
 

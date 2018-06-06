@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "Parent", typeof(NetOffice.ExcelApi.PivotField));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "Parent", typeof(NetOffice.ExcelApi.PivotField));
 			}
 		}
 
@@ -114,7 +114,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Add(string name)
 		{
-			 Factory.ExecuteMethod(this, "Add", name);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Add", name);
 		}
 
 		/// <summary>
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantMethodGet(this, "Item", index);
+				return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Item", index);
 			}
 		}
 

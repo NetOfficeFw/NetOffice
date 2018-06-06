@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -95,11 +95,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsFiltered");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsFiltered");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "IsFiltered", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "IsFiltered", value);
             }
         }
 

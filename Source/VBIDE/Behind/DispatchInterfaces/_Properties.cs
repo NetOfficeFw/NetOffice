@@ -72,7 +72,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
             }
         }
 
@@ -86,7 +86,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -130,7 +130,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Property>(this, "Item", typeof(NetOffice.VBIDEApi.Property), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Property>(this, "Item", typeof(NetOffice.VBIDEApi.Property), index);
             }
         }
 

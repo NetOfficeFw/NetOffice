@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CubeField>(this, "_Default", typeof(NetOffice.ExcelApi.CubeField), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CubeField>(this, "_Default", typeof(NetOffice.ExcelApi.CubeField), index);
 			}
 		}
 
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.CubeField AddSet(string name, string caption)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "AddSet", typeof(NetOffice.ExcelApi.CubeField), name, caption);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "AddSet", typeof(NetOffice.ExcelApi.CubeField), name, caption);
 		}
 
 		/// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CubeField GetMeasure(object attributeHierarchy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object caption)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "GetMeasure", typeof(NetOffice.ExcelApi.CubeField), attributeHierarchy, function, caption);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "GetMeasure", typeof(NetOffice.ExcelApi.CubeField), attributeHierarchy, function, caption);
 		}
 
 		/// <summary>
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CubeField GetMeasure(object attributeHierarchy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "GetMeasure", typeof(NetOffice.ExcelApi.CubeField), attributeHierarchy, function);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CubeField>(this, "GetMeasure", typeof(NetOffice.ExcelApi.CubeField), attributeHierarchy, function);
 		}
 
         #endregion

@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "CollectionName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "CollectionName");
             }
         }
 
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.MsoDebugOptions_UTRunResult Run()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTRunResult>(this, "Run", typeof(NetOffice.OfficeApi.MsoDebugOptions_UTRunResult));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTRunResult>(this, "Run", typeof(NetOffice.OfficeApi.MsoDebugOptions_UTRunResult));
         }
 
         #endregion

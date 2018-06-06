@@ -5,7 +5,7 @@ using System.Text;
 using NetOffice.CoreServices.Internal;
 using NetOffice.Exceptions;
 
-namespace NetOffice
+namespace NetOffice.CoreServices
 {
     internal static class CoreCreateExtensions
     {

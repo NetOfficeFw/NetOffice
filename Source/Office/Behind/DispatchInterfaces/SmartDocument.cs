@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SolutionID");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SolutionID");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SolutionID", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SolutionID", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SolutionURL");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SolutionURL");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SolutionURL", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SolutionURL", value);
             }
         }
 
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void PickSolution(object considerAllSchemas)
         {
-            Factory.ExecuteMethod(this, "PickSolution", considerAllSchemas);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PickSolution", considerAllSchemas);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void PickSolution()
         {
-            Factory.ExecuteMethod(this, "PickSolution");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PickSolution");
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void RefreshPane()
         {
-            Factory.ExecuteMethod(this, "RefreshPane");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RefreshPane");
         }
 
         #endregion

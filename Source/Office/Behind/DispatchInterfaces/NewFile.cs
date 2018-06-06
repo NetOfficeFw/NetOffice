@@ -75,7 +75,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual bool Add(string fileName, object section, object displayName, object action)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName, action);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName, action);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual bool Add(string fileName)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Add", fileName);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Add", fileName);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual bool Add(string fileName, object section)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Add", fileName, section);
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual bool Add(string fileName, object section, object displayName)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual bool Remove(string fileName, object section, object displayName, object action)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName, action);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName, action);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual bool Remove(string fileName)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Remove", fileName);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Remove", fileName);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual bool Remove(string fileName, object section)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Remove", fileName, section);
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual bool Remove(string fileName, object section, object displayName)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName);
         }
 
         #endregion

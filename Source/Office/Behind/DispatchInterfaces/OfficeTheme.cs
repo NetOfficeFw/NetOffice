@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ThemeColorScheme>(this, "ThemeColorScheme", typeof(NetOffice.OfficeApi.ThemeColorScheme));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ThemeColorScheme>(this, "ThemeColorScheme", typeof(NetOffice.OfficeApi.ThemeColorScheme));
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ThemeFontScheme>(this, "ThemeFontScheme", typeof(NetOffice.OfficeApi.ThemeFontScheme));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ThemeFontScheme>(this, "ThemeFontScheme", typeof(NetOffice.OfficeApi.ThemeFontScheme));
             }
         }
 
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ThemeEffectScheme>(this, "ThemeEffectScheme", typeof(NetOffice.OfficeApi.ThemeEffectScheme));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ThemeEffectScheme>(this, "ThemeEffectScheme", typeof(NetOffice.OfficeApi.ThemeEffectScheme));
             }
         }
 

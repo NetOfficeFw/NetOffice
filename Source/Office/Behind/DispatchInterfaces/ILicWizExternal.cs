@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Context");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Context");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Validator");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Validator");
             }
         }
 
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "LicAgent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "LicAgent");
             }
         }
 
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "CountryInfo");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "CountryInfo");
             }
         }
 
@@ -122,11 +122,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "WizardVisible");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "WizardVisible");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "WizardVisible", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WizardVisible", value);
             }
         }
 
@@ -139,11 +139,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "WizardTitle");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "WizardTitle");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "WizardTitle", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WizardTitle", value);
             }
         }
 
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "AnimationEnabled");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "AnimationEnabled");
             }
         }
 
@@ -169,11 +169,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "CurrentHelpId");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "CurrentHelpId");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CurrentHelpId", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CurrentHelpId", value);
             }
         }
 
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "OfficeOnTheWebUrl");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "OfficeOnTheWebUrl");
             }
         }
 
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void PrintHtmlDocument(object punkHtmlDoc)
         {
-            Factory.ExecuteMethod(this, "PrintHtmlDocument", punkHtmlDoc);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PrintHtmlDocument", punkHtmlDoc);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void InvokeDateTimeApplet()
         {
-            Factory.ExecuteMethod(this, "InvokeDateTimeApplet");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InvokeDateTimeApplet");
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual string FormatDate(DateTime date, object pFormat)
         {
-            return Factory.ExecuteStringMethodGet(this, "FormatDate", date, pFormat);
+            return InvokerService.InvokeInternal.ExecuteStringMethodGet(this, "FormatDate", date, pFormat);
         }
 
         /// <summary>
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual string FormatDate(DateTime date)
         {
-            return Factory.ExecuteStringMethodGet(this, "FormatDate", date);
+            return InvokerService.InvokeInternal.ExecuteStringMethodGet(this, "FormatDate", date);
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void ShowHelp(object pvarId)
         {
-            Factory.ExecuteMethod(this, "ShowHelp", pvarId);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowHelp", pvarId);
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void ShowHelp()
         {
-            Factory.ExecuteMethod(this, "ShowHelp");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowHelp");
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Terminate()
         {
-            Factory.ExecuteMethod(this, "Terminate");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Terminate");
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void DisableVORWReminder(Int32 bPC)
         {
-            Factory.ExecuteMethod(this, "DisableVORWReminder", bPC);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "DisableVORWReminder", bPC);
         }
 
         /// <summary>
@@ -281,7 +281,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual string SaveReceipt(string bstrReceipt)
         {
-            return Factory.ExecuteStringMethodGet(this, "SaveReceipt", bstrReceipt);
+            return InvokerService.InvokeInternal.ExecuteStringMethodGet(this, "SaveReceipt", bstrReceipt);
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void OpenInDefaultBrowser(string bstrUrl)
         {
-            Factory.ExecuteMethod(this, "OpenInDefaultBrowser", bstrUrl);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "OpenInDefaultBrowser", bstrUrl);
         }
 
         /// <summary>
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 MsoAlert(string bstrText, string bstrButtons, string bstrIcon)
         {
-            return Factory.ExecuteInt32MethodGet(this, "MsoAlert", bstrText, bstrButtons, bstrIcon);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "MsoAlert", bstrText, bstrButtons, bstrIcon);
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 DepositPidKey(string bstrKey, Int32 fMORW)
         {
-            return Factory.ExecuteInt32MethodGet(this, "DepositPidKey", bstrKey, fMORW);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "DepositPidKey", bstrKey, fMORW);
         }
 
         /// <summary>
@@ -324,7 +324,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void WriteLog(string bstrMessage)
         {
-            Factory.ExecuteMethod(this, "WriteLog", bstrMessage);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "WriteLog", bstrMessage);
         }
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void ResignDpc(string bstrProductCode)
         {
-            Factory.ExecuteMethod(this, "ResignDpc", bstrProductCode);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ResignDpc", bstrProductCode);
         }
 
         /// <summary>
@@ -343,7 +343,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void ResetPID()
         {
-            Factory.ExecuteMethod(this, "ResetPID");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ResetPID");
         }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SetDialogSize(Int32 dx, Int32 dy)
         {
-            Factory.ExecuteMethod(this, "SetDialogSize", dx, dy);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetDialogSize", dx, dy);
         }
 
         /// <summary>
@@ -364,7 +364,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 VerifyClock(Int32 lMode)
         {
-            return Factory.ExecuteInt32MethodGet(this, "VerifyClock", lMode);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "VerifyClock", lMode);
         }
 
         /// <summary>
@@ -374,7 +374,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SortSelectOptions(object pdispSelect)
         {
-            Factory.ExecuteMethod(this, "SortSelectOptions", pdispSelect);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SortSelectOptions", pdispSelect);
         }
 
         /// <summary>
@@ -383,7 +383,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void InternetDisconnect()
         {
-            Factory.ExecuteMethod(this, "InternetDisconnect");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InternetDisconnect");
         }
 
         /// <summary>
@@ -392,7 +392,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 GetConnectedState()
         {
-            return Factory.ExecuteInt32MethodGet(this, "GetConnectedState");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "GetConnectedState");
         }
 
         #endregion

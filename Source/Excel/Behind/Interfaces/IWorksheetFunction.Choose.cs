@@ -49,7 +49,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", arg1, arg2);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", arg1, arg2);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", arg1, arg2, arg3);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", arg1, arg2, arg3);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", arg1, arg2, arg3, arg4);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", arg1, arg2, arg3, arg4);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5 });
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6 });
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7 });
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 });
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
         }
 
         /// <summary>
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
         }
 
         /// <summary>
@@ -236,7 +236,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
         }
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
         }
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
         }
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
         }
 
         /// <summary>
@@ -361,7 +361,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
         }
 
         /// <summary>
@@ -389,7 +389,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
         }
 
         /// <summary>
@@ -418,7 +418,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
         }
 
         /// <summary>
@@ -448,7 +448,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
         }
 
         /// <summary>
@@ -479,7 +479,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
         }
 
         /// <summary>
@@ -511,7 +511,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
         }
 
         /// <summary>
@@ -544,7 +544,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
         }
 
         /// <summary>
@@ -578,7 +578,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
         }
 
         /// <summary>
@@ -613,7 +613,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
         }
 
         /// <summary>
@@ -649,7 +649,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
         }
 
         /// <summary>
@@ -686,7 +686,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
         }
 
         /// <summary>
@@ -724,7 +724,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
         }
 
         /// <summary>
@@ -763,7 +763,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Choose(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Choose", new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
         }
 
         #endregion

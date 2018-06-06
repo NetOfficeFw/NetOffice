@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ShowSignatureSetup(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup)
         {
-            Factory.ExecuteMethod(this, "ShowSignatureSetup", parentWindow, psigsetup);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowSignatureSetup", parentWindow, psigsetup);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ShowSigningCeremony(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
         {
-            Factory.ExecuteMethod(this, "ShowSigningCeremony", parentWindow, psigsetup, psiginfo);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowSigningCeremony", parentWindow, psigsetup, psiginfo);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void SignXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
         {
-            Factory.ExecuteMethod(this, "SignXmlDsig", queryContinue, psigsetup, psiginfo, xmlDsigStream);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SignXmlDsig", queryContinue, psigsetup, psiginfo, xmlDsigStream);
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void NotifySignatureAdded(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
         {
-            Factory.ExecuteMethod(this, "NotifySignatureAdded", parentWindow, psigsetup, psiginfo);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "NotifySignatureAdded", parentWindow, psigsetup, psiginfo);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void VerifyXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
         {
-            Factory.ExecuteMethod(this, "VerifyXmlDsig", new object[] { queryContinue, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "VerifyXmlDsig", new object[] { queryContinue, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres });
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ShowSignatureDetails(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
         {
-            Factory.ExecuteMethod(this, "ShowSignatureDetails", new object[] { parentWindow, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowSignatureDetails", new object[] { parentWindow, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres });
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object GetProviderDetail(NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet)
         {
-            return Factory.ExecuteVariantMethodGet(this, "GetProviderDetail", sigprovdet);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "GetProviderDetail", sigprovdet);
         }
 
         /// <summary>

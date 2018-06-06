@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "On");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "On");
 			}
 		}
 
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Criteria1");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Criteria1");
 			}
 		}
 
@@ -140,11 +140,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAutoFilterOperator>(this, "Operator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAutoFilterOperator>(this, "Operator");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Operator", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Operator", value);
 			}
 		}
 
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Criteria2");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Criteria2");
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAutoFilterOperator>(this, "_Operator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAutoFilterOperator>(this, "_Operator");
 			}
 		}
 
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 

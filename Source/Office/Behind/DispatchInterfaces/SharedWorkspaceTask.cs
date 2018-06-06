@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Title");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Title");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Title", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Title", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "AssignedTo");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "AssignedTo");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AssignedTo", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AssignedTo", value);
             }
         }
 
@@ -106,11 +106,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus>(this, "Status");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus>(this, "Status");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Status", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Status", value);
             }
         }
 
@@ -124,11 +124,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority>(this, "Priority");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority>(this, "Priority");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Priority", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Priority", value);
             }
         }
 
@@ -142,11 +142,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Description");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Description");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Description", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Description", value);
             }
         }
 
@@ -160,11 +160,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "DueDate");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "DueDate");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "DueDate", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "DueDate", value);
             }
         }
 
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "CreatedBy");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "CreatedBy");
             }
         }
 
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "CreatedDate");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "CreatedDate");
             }
         }
 
@@ -206,7 +206,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ModifiedBy");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ModifiedBy");
             }
         }
 
@@ -220,7 +220,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ModifiedDate");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ModifiedDate");
             }
         }
 
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Save()
         {
-            Factory.ExecuteMethod(this, "Save");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Save");
         }
 
         /// <summary>
@@ -260,7 +260,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

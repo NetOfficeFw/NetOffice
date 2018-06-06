@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ShapeNode>(this, "Item", typeof(NetOffice.OfficeApi.ShapeNode), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ShapeNode>(this, "Item", typeof(NetOffice.OfficeApi.ShapeNode), index);
             }
         }
 
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Delete(Int32 index)
         {
-            Factory.ExecuteMethod(this, "Delete", index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete", index);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
         {
-            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2, x3, y3 });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2, x3, y3 });
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
         {
-            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1 });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1 });
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2)
         {
-            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2 });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2 });
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2)
         {
-            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2 });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2 });
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3)
         {
-            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2, x3 });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2, x3 });
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void SetEditingType(Int32 index, NetOffice.OfficeApi.Enums.MsoEditingType editingType)
         {
-            Factory.ExecuteMethod(this, "SetEditingType", index, editingType);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetEditingType", index, editingType);
         }
 
         /// <summary>
@@ -222,7 +222,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void SetPosition(Int32 index, Single x1, Single y1)
         {
-            Factory.ExecuteMethod(this, "SetPosition", index, x1, y1);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetPosition", index, x1, y1);
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void SetSegmentType(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType)
         {
-            Factory.ExecuteMethod(this, "SetSegmentType", index, segmentType);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetSegmentType", index, segmentType);
         }
 
         #endregion

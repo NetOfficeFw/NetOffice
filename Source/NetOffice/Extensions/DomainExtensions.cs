@@ -1,6 +1,7 @@
 ﻿using System;
 using NetOffice;
 using NetOffice.Exceptions;
+using NetOffice.CoreServices;
 
 namespace NetOffice.Extensions
 {

@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -86,11 +86,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextEffectAlignment>(this, "Alignment");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextEffectAlignment>(this, "Alignment");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Alignment", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Alignment", value);
 			}
 		}
 
@@ -104,11 +104,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "FontBold");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "FontBold");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "FontBold", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "FontBold", value);
 			}
 		}
 
@@ -122,11 +122,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "FontItalic");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "FontItalic");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "FontItalic", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "FontItalic", value);
 			}
 		}
 
@@ -140,11 +140,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "FontName");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FontName");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "FontName", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FontName", value);
 			}
 		}
 
@@ -158,11 +158,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "FontSize");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "FontSize");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "FontSize", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FontSize", value);
 			}
 		}
 
@@ -176,11 +176,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "KernedPairs");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "KernedPairs");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "KernedPairs", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "KernedPairs", value);
 			}
 		}
 
@@ -194,11 +194,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "NormalizedHeight");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "NormalizedHeight");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "NormalizedHeight", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "NormalizedHeight", value);
 			}
 		}
 
@@ -212,11 +212,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetTextEffectShape>(this, "PresetShape");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetTextEffectShape>(this, "PresetShape");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "PresetShape", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "PresetShape", value);
 			}
 		}
 
@@ -230,11 +230,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetTextEffect>(this, "PresetTextEffect");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetTextEffect>(this, "PresetTextEffect");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "PresetTextEffect", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "PresetTextEffect", value);
 			}
 		}
 
@@ -248,11 +248,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "RotatedChars");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "RotatedChars");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "RotatedChars", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "RotatedChars", value);
 			}
 		}
 
@@ -266,11 +266,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Text");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Text");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Text", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Text", value);
 			}
 		}
 
@@ -284,11 +284,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Tracking");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Tracking");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Tracking", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Tracking", value);
 			}
 		}
 
@@ -303,7 +303,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void ToggleVerticalText()
 		{
-			 Factory.ExecuteMethod(this, "ToggleVerticalText");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ToggleVerticalText");
 		}
 
 		#endregion

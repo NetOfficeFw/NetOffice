@@ -93,8 +93,12 @@
     <Compile Include="Attributes\SinkArgumentAttribute.cs" />
     <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
     <Compile Include="Contribution\ProxyInformation.cs" />
-    <Compile Include="CoreExtensions\CoreCreateExtensions.cs" />
-    <Compile Include="CoreExtensions\CoreTypeExtensions.cs" />
+    <Compile Include="CoreServices\CoreCreateExtensions.cs" />
+    <Compile Include="CoreServices\CoreFactoryExtensions.cs" />
+    <Compile Include="CoreServices\CoreMethodExtensions.cs" />
+    <Compile Include="CoreServices\CorePropertyGetExtensions.cs" />
+    <Compile Include="CoreServices\CorePropertySetExtensions.cs" />
+    <Compile Include="CoreServices\CoreTypeExtensions.cs" />
     <Compile Include="CoreServices\IApplicationVersionProvider.cs" />
     <Compile Include="CoreServices\ICoreActivator.cs" />
     <Compile Include="CoreServices\ICoreEvents.cs" />
@@ -113,6 +117,10 @@
     <Compile Include="CoreServices\Internal\TypeInformation.cs" />
     <Compile Include="Exceptions\ActivationException.cs" />
     <Compile Include="Exceptions\NetOfficeInitializeException.cs" />
+    <Compile Include="InvokerService\ExecuteMode.cs" />
+    <Compile Include="InvokerService\Method.cs" />
+    <Compile Include="InvokerService\PropertyGet.cs" />
+    <Compile Include="InvokerService\PropertySet.cs" />
     <Compile Include="Loader\ComActivator.cs" />
     <Compile Include="COMObjectCreateOptions.cs" />
     <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
@@ -125,10 +133,6 @@
       <DependentUpon>InstanceMonitor.cs</DependentUpon>
     </Compile>
     <Compile Include="Converter\ExpandableSettingsConverter.cs" />
-    <Compile Include="CoreExtensions\CoreFactoryExtensions.cs" />
-    <Compile Include="CoreExtensions\CoreMethodExtensions.cs" />
-    <Compile Include="CoreExtensions\CorePropertyGetExtensions.cs" />
-    <Compile Include="CoreExtensions\CorePropertySetExtensions.cs" />
     <Compile Include="Diagnostics\DiagnosticItem.cs" />
     <Compile Include="Diagnostics\Internal\InternalDebugDiagnostics.cs" />
     <Compile Include="Attributes\EnumeratorAttribute.cs" />

@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PropertyTest>(this, "Item", typeof(NetOffice.OfficeApi.PropertyTest), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PropertyTest>(this, "Item", typeof(NetOffice.OfficeApi.PropertyTest), index);
             }
         }
 
@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, object connector)
         {
-            Factory.ExecuteMethod(this, "Add", new object[] { name, condition, value, secondValue, connector });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", new object[] { name, condition, value, secondValue, connector });
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition)
         {
-            Factory.ExecuteMethod(this, "Add", name, condition);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", name, condition);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value)
         {
-            Factory.ExecuteMethod(this, "Add", name, condition, value);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", name, condition, value);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue)
         {
-            Factory.ExecuteMethod(this, "Add", name, condition, value, secondValue);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", name, condition, value, secondValue);
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Remove(Int32 index)
         {
-            Factory.ExecuteMethod(this, "Remove", index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Remove", index);
         }
 
         #endregion

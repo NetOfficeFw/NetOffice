@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Path");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Path");
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ScopeFolders>(this, "ScopeFolders", typeof(NetOffice.OfficeApi.ScopeFolders));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ScopeFolders>(this, "ScopeFolders", typeof(NetOffice.OfficeApi.ScopeFolders));
             }
         }
 
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void AddToSearchFolders()
         {
-            Factory.ExecuteMethod(this, "AddToSearchFolders");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddToSearchFolders");
         }
 
         #endregion

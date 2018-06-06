@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -95,7 +95,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public virtual NetOffice.ExcelApi.ShapeRange get_Range(object index)
 		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ShapeRange>(this, "Range", typeof(NetOffice.ExcelApi.ShapeRange), index);
+			return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ShapeRange>(this, "Range", typeof(NetOffice.ExcelApi.ShapeRange), index);
 		}
 
 		/// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "_Default", typeof(NetOffice.ExcelApi.Shape), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "_Default", typeof(NetOffice.ExcelApi.Shape), index);
 			}
 		}
 
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCallout", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCallout", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
 		}
 
 		/// <summary>
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddConnector", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, beginX, beginY, endX, endY });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddConnector", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, beginX, beginY, endX, endY });
 		}
 
 		/// <summary>
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddCurve(object safeArrayOfPoints)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCurve", typeof(NetOffice.ExcelApi.Shape), safeArrayOfPoints);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCurve", typeof(NetOffice.ExcelApi.Shape), safeArrayOfPoints);
 		}
 
 		/// <summary>
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddLabel", typeof(NetOffice.ExcelApi.Shape), new object[]{ orientation, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddLabel", typeof(NetOffice.ExcelApi.Shape), new object[]{ orientation, left, top, width, height });
 		}
 
 		/// <summary>
@@ -215,7 +215,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddLine", typeof(NetOffice.ExcelApi.Shape), beginX, beginY, endX, endY);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddLine", typeof(NetOffice.ExcelApi.Shape), beginX, beginY, endX, endY);
 		}
 
 		/// <summary>
@@ -231,7 +231,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddPicture(string filename, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width, Single height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddPicture", typeof(NetOffice.ExcelApi.Shape), new object[]{ filename, linkToFile, saveWithDocument, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddPicture", typeof(NetOffice.ExcelApi.Shape), new object[]{ filename, linkToFile, saveWithDocument, left, top, width, height });
 		}
 
 		/// <summary>
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddPolyline(object safeArrayOfPoints)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddPolyline", typeof(NetOffice.ExcelApi.Shape), safeArrayOfPoints);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddPolyline", typeof(NetOffice.ExcelApi.Shape), safeArrayOfPoints);
 		}
 
 		/// <summary>
@@ -255,7 +255,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddShape", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddShape", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
 		}
 
 		/// <summary>
@@ -272,7 +272,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddTextEffect", typeof(NetOffice.ExcelApi.Shape), new object[]{ presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddTextEffect", typeof(NetOffice.ExcelApi.Shape), new object[]{ presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
 		}
 
 		/// <summary>
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddTextbox", typeof(NetOffice.ExcelApi.Shape), new object[]{ orientation, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddTextbox", typeof(NetOffice.ExcelApi.Shape), new object[]{ orientation, left, top, width, height });
 		}
 
 		/// <summary>
@@ -298,7 +298,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FreeformBuilder>(this, "BuildFreeform", typeof(NetOffice.ExcelApi.FreeformBuilder), editingType, x1, y1);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FreeformBuilder>(this, "BuildFreeform", typeof(NetOffice.ExcelApi.FreeformBuilder), editingType, x1, y1);
 		}
 
 		/// <summary>
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 SelectAll()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "SelectAll");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "SelectAll");
 		}
 
 		/// <summary>
@@ -321,7 +321,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddFormControl(NetOffice.ExcelApi.Enums.XlFormControl type, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddFormControl", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddFormControl", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
 		}
 
 		/// <summary>
@@ -341,7 +341,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height });
 		}
 
 		/// <summary>
@@ -351,7 +351,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape));
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape));
 		}
 
 		/// <summary>
@@ -362,7 +362,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType);
 		}
 
 		/// <summary>
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename);
 		}
 
 		/// <summary>
@@ -387,7 +387,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename, link);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename, link);
 		}
 
 		/// <summary>
@@ -401,7 +401,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename, link, displayAsIcon);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), classType, filename, link, displayAsIcon);
 		}
 
 		/// <summary>
@@ -416,7 +416,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName });
 		}
 
 		/// <summary>
@@ -432,7 +432,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex });
 		}
 
 		/// <summary>
@@ -449,7 +449,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel });
 		}
 
 		/// <summary>
@@ -467,7 +467,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left });
 		}
 
 		/// <summary>
@@ -486,7 +486,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top });
 		}
 
 		/// <summary>
@@ -506,7 +506,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddOLEObject", typeof(NetOffice.ExcelApi.Shape), new object[]{ classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width });
 		}
 
 		/// <summary>
@@ -520,7 +520,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddDiagram", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddDiagram", typeof(NetOffice.ExcelApi.Shape), new object[]{ type, left, top, width, height });
 		}
 
 		/// <summary>
@@ -534,7 +534,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddCanvas(Single left, Single top, Single width, Single height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCanvas", typeof(NetOffice.ExcelApi.Shape), left, top, width, height);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddCanvas", typeof(NetOffice.ExcelApi.Shape), left, top, width, height);
 		}
 
 		/// <summary>
@@ -548,7 +548,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width, object height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ xlChartType, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ xlChartType, left, top, width, height });
 		}
 
 		/// <summary>
@@ -558,7 +558,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape));
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape));
 		}
 
 		/// <summary>
@@ -569,7 +569,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType);
 		}
 
 		/// <summary>
@@ -581,7 +581,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left);
 		}
 
 		/// <summary>
@@ -594,7 +594,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left, top);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left, top);
 		}
 
 		/// <summary>
@@ -608,7 +608,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left, top, width);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart", typeof(NetOffice.ExcelApi.Shape), xlChartType, left, top, width);
 		}
 
 		/// <summary>
@@ -622,7 +622,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), new object[]{ layout, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), new object[]{ layout, left, top, width, height });
 		}
 
 		/// <summary>
@@ -633,7 +633,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout);
 		}
 
 		/// <summary>
@@ -645,7 +645,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left);
 		}
 
 		/// <summary>
@@ -658,7 +658,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left, top);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left, top);
 		}
 
 		/// <summary>
@@ -672,7 +672,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left, top, width);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddSmartArt", typeof(NetOffice.ExcelApi.Shape), layout, left, top, width);
 		}
 
 		/// <summary>
@@ -688,7 +688,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width, object height, object newLayout)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width, height, newLayout });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width, height, newLayout });
 		}
 
 		/// <summary>
@@ -698,7 +698,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart2()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape));
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape));
 		}
 
 		/// <summary>
@@ -709,7 +709,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart2(object style)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style);
 		}
 
 		/// <summary>
@@ -721,7 +721,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType);
 		}
 
 		/// <summary>
@@ -734,7 +734,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType, left);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType, left);
 		}
 
 		/// <summary>
@@ -748,7 +748,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType, left, top);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), style, xlChartType, left, top);
 		}
 
 		/// <summary>
@@ -763,7 +763,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width });
 		}
 
 		/// <summary>
@@ -779,7 +779,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape AddChart2(object style, object xlChartType, object left, object top, object width, object height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "AddChart2", typeof(NetOffice.ExcelApi.Shape), new object[]{ style, xlChartType, left, top, width, height });
 		}
 
         #endregion

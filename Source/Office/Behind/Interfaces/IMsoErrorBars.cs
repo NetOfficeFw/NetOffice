@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoBorder>(this, "Border", typeof(NetOffice.OfficeApi.IMsoBorder));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoBorder>(this, "Border", typeof(NetOffice.OfficeApi.IMsoBorder));
             }
         }
 
@@ -108,11 +108,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlEndStyleCap>(this, "EndStyle");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlEndStyleCap>(this, "EndStyle");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "EndStyle", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "EndStyle", value);
             }
         }
 
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", typeof(NetOffice.OfficeApi.IMsoChartFormat));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", typeof(NetOffice.OfficeApi.IMsoChartFormat));
             }
         }
 
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Select()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Select");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Select");
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Delete()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object ClearFormats()
         {
-            return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "ClearFormats");
         }
 
         #endregion

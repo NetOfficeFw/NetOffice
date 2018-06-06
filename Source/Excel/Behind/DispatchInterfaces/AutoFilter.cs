@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Filters>(this, "Filters", typeof(NetOffice.ExcelApi.Filters));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Filters>(this, "Filters", typeof(NetOffice.ExcelApi.Filters));
 			}
 		}
 
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "FilterMode");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "FilterMode");
 			}
 		}
 
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sort>(this, "Sort", typeof(NetOffice.ExcelApi.Sort));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sort>(this, "Sort", typeof(NetOffice.ExcelApi.Sort));
 			}
 		}
 
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void ApplyFilter()
 		{
-			 Factory.ExecuteMethod(this, "ApplyFilter");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ApplyFilter");
 		}
 
 		/// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void ShowAllData()
 		{
-			 Factory.ExecuteMethod(this, "ShowAllData");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ShowAllData");
 		}
 
 		#endregion

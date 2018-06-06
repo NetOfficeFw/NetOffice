@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "BeginConnected");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "BeginConnected");
             }
         }
 
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "BeginConnectedShape", typeof(NetOffice.OfficeApi.Shape));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "BeginConnectedShape", typeof(NetOffice.OfficeApi.Shape));
             }
         }
 
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "BeginConnectionSite");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "BeginConnectionSite");
             }
         }
 
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "EndConnected");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "EndConnected");
             }
         }
 
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "EndConnectedShape", typeof(NetOffice.OfficeApi.Shape));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "EndConnectedShape", typeof(NetOffice.OfficeApi.Shape));
             }
         }
 
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "EndConnectionSite");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "EndConnectionSite");
             }
         }
 
@@ -160,11 +160,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoConnectorType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoConnectorType>(this, "Type");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Type", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
             }
         }
 
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void BeginConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
         {
-            Factory.ExecuteMethod(this, "BeginConnect", connectedShape, connectionSite);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "BeginConnect", connectedShape, connectionSite);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void BeginDisconnect()
         {
-            Factory.ExecuteMethod(this, "BeginDisconnect");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "BeginDisconnect");
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void EndConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
         {
-            Factory.ExecuteMethod(this, "EndConnect", connectedShape, connectionSite);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "EndConnect", connectedShape, connectionSite);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void EndDisconnect()
         {
-            Factory.ExecuteMethod(this, "EndDisconnect");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "EndDisconnect");
         }
 
         #endregion

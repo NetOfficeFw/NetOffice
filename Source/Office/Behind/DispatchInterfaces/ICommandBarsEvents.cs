@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void OnUpdate()
         {
-            Factory.ExecuteMethod(this, "OnUpdate");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "OnUpdate");
         }
 
         #endregion

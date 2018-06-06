@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Id");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Id");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ListID");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ListID");
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "WorkflowID");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "WorkflowID");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Description");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Description");
             }
         }
 
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "AssignedTo");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "AssignedTo");
             }
         }
 
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "CreatedBy");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "CreatedBy");
             }
         }
 
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteDateTimePropertyGet(this, "DueDate");
+                return InvokerService.InvokeInternal.ExecuteDateTimePropertyGet(this, "DueDate");
             }
         }
 
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteDateTimePropertyGet(this, "CreatedDate");
+                return InvokerService.InvokeInternal.ExecuteDateTimePropertyGet(this, "CreatedDate");
             }
         }
 
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual Int32 Show()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Show");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Show");
         }
 
         #endregion

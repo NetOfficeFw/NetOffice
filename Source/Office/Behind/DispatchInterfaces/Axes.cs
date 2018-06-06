@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoAxis>(this, "_Default", typeof(NetOffice.OfficeApi.IMsoAxis), type);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoAxis>(this, "_Default", typeof(NetOffice.OfficeApi.IMsoAxis), type);
             }
         }
 
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoAxis>(this, "_Default", typeof(NetOffice.OfficeApi.IMsoAxis), type, axisGroup);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoAxis>(this, "_Default", typeof(NetOffice.OfficeApi.IMsoAxis), type, axisGroup);
             }
         }
 
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 

@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual Int32 HrUninitConverter(NetOffice.OfficeApi.IConverterUICallback pcuic)
         {
-            return Factory.ExecuteInt32MethodGet(this, "HrUninitConverter", pcuic);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "HrUninitConverter", pcuic);
         }
 
         /// <summary>

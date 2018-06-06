@@ -34,7 +34,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_List(object index)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "List", index);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "List", index);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_List(object index, object value)
         {
-            Factory.ExecutePropertySet(this, "List", index, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "List", index, value);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_Selected(object index)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "Selected", index);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Selected", index);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_Selected(object index, object value)
         {
-            Factory.ExecutePropertySet(this, "Selected", index, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "Selected", index, value);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "BottomRightCell", typeof(NetOffice.ExcelApi.Range));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "BottomRightCell", typeof(NetOffice.ExcelApi.Range));
             }
         }
 
@@ -218,11 +218,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Enabled");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Enabled");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Enabled", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Enabled", value);
             }
         }
 
@@ -235,11 +235,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Height");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Height");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Height", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Height", value);
             }
         }
 
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Index");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
             }
         }
 
@@ -265,11 +265,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Left");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Left");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Left", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Left", value);
             }
         }
 
@@ -282,11 +282,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Locked");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Locked");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Locked", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Locked", value);
             }
         }
 
@@ -299,11 +299,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 
@@ -317,11 +317,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "OnAction");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "OnAction");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "OnAction", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OnAction", value);
             }
         }
 
@@ -334,11 +334,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Placement");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Placement");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Placement", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Placement", value);
             }
         }
 
@@ -351,11 +351,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "PrintObject");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PrintObject");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "PrintObject", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PrintObject", value);
             }
         }
 
@@ -368,11 +368,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Top");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Top");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Top", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Top", value);
             }
         }
 
@@ -385,7 +385,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "TopLeftCell", typeof(NetOffice.ExcelApi.Range));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "TopLeftCell", typeof(NetOffice.ExcelApi.Range));
             }
         }
 
@@ -398,11 +398,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Visible");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Visible");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Visible", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Visible", value);
             }
         }
 
@@ -415,11 +415,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Width");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Width");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Width", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Width", value);
             }
         }
 
@@ -432,7 +432,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "ZOrder");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ZOrder");
             }
         }
 
@@ -445,7 +445,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ShapeRange>(this, "ShapeRange", typeof(NetOffice.ExcelApi.ShapeRange));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ShapeRange>(this, "ShapeRange", typeof(NetOffice.ExcelApi.ShapeRange));
             }
         }
 
@@ -458,11 +458,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Display3DShading");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Display3DShading");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Display3DShading", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Display3DShading", value);
             }
         }
 
@@ -475,11 +475,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "_Default");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "_Default");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "_Default", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "_Default", value);
             }
         }
 
@@ -492,11 +492,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "LinkedCell");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "LinkedCell");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "LinkedCell", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "LinkedCell", value);
             }
         }
 
@@ -509,7 +509,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "LinkedObject");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "LinkedObject");
             }
         }
 
@@ -522,11 +522,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "List");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "List");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "List", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "List", value);
             }
         }
 
@@ -539,7 +539,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "ListCount");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ListCount");
             }
         }
 
@@ -552,11 +552,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ListFillRange");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ListFillRange");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ListFillRange", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ListFillRange", value);
             }
         }
 
@@ -569,11 +569,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "ListIndex");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ListIndex");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ListIndex", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ListIndex", value);
             }
         }
 
@@ -586,11 +586,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "MultiSelect");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "MultiSelect");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MultiSelect", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MultiSelect", value);
             }
         }
 
@@ -603,11 +603,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Selected");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Selected");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Selected", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Selected", value);
             }
         }
 
@@ -620,11 +620,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Value");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Value");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Value", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Value", value);
             }
         }
 
@@ -638,7 +638,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object BringToFront()
         {
-            return Factory.ExecuteVariantMethodGet(this, "BringToFront");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "BringToFront");
         }
 
         /// <summary>
@@ -647,7 +647,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Copy()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Copy");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Copy");
         }
 
         /// <summary>
@@ -658,7 +658,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object CopyPicture(object appearance, object format)
         {
-            return Factory.ExecuteVariantMethodGet(this, "CopyPicture", appearance, format);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "CopyPicture", appearance, format);
         }
 
         /// <summary>
@@ -668,7 +668,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object CopyPicture()
         {
-            return Factory.ExecuteVariantMethodGet(this, "CopyPicture");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "CopyPicture");
         }
 
         /// <summary>
@@ -679,7 +679,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object CopyPicture(object appearance)
         {
-            return Factory.ExecuteVariantMethodGet(this, "CopyPicture", appearance);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "CopyPicture", appearance);
         }
 
         /// <summary>
@@ -688,7 +688,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Cut()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Cut");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Cut");
         }
 
         /// <summary>
@@ -697,7 +697,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Delete()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -706,7 +706,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Duplicate()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Duplicate");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Duplicate");
         }
 
         /// <summary>
@@ -716,7 +716,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Select(object replace)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Select", replace);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Select", replace);
         }
 
         /// <summary>
@@ -726,7 +726,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Select()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Select");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Select");
         }
 
         /// <summary>
@@ -735,7 +735,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object SendToBack()
         {
-            return Factory.ExecuteVariantMethodGet(this, "SendToBack");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "SendToBack");
         }
 
         /// <summary>
@@ -746,7 +746,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object AddItem(object text, object index)
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddItem", text, index);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddItem", text, index);
         }
 
         /// <summary>
@@ -757,7 +757,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object AddItem(object text)
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddItem", text);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddItem", text);
         }
 
         /// <summary>
@@ -766,7 +766,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object RemoveAllItems()
         {
-            return Factory.ExecuteVariantMethodGet(this, "RemoveAllItems");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RemoveAllItems");
         }
 
         /// <summary>
@@ -777,7 +777,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object RemoveItem(Int32 index, object count)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RemoveItem", index, count);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RemoveItem", index, count);
         }
 
         /// <summary>
@@ -788,7 +788,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object RemoveItem(Int32 index)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RemoveItem", index);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RemoveItem", index);
         }
 
         #endregion

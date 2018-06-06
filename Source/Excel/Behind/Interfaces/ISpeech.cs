@@ -68,11 +68,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSpeakDirection>(this, "Direction");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSpeakDirection>(this, "Direction");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Direction", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Direction", value);
 			}
 		}
 
@@ -85,11 +85,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SpeakCellOnEnter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SpeakCellOnEnter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SpeakCellOnEnter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SpeakCellOnEnter", value);
 			}
 		}
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual Int32 Speak(string text, object speakAsync, object speakXML, object purge)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync, speakXML, purge);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Speak", text, speakAsync, speakXML, purge);
 		}
 
 		/// <summary>
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual Int32 Speak(string text)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Speak", text);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Speak", text);
 		}
 
 		/// <summary>
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual Int32 Speak(string text, object speakAsync)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Speak", text, speakAsync);
 		}
 
 		/// <summary>
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual Int32 Speak(string text, object speakAsync, object speakXML)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync, speakXML);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Speak", text, speakAsync, speakXML);
 		}
 
 		#endregion

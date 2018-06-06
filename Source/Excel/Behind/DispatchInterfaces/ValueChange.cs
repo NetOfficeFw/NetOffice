@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Order");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Order");
 			}
 		}
 
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "VisibleInPivotTable");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "VisibleInPivotTable");
 			}
 		}
 
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotCell>(this, "PivotCell", typeof(NetOffice.ExcelApi.PivotCell));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotCell>(this, "PivotCell", typeof(NetOffice.ExcelApi.PivotCell));
 			}
 		}
 
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Tuple");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Tuple");
 			}
 		}
 
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Value");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Value");
 			}
 		}
 
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAllocationValue>(this, "AllocationValue");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAllocationValue>(this, "AllocationValue");
 			}
 		}
 
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAllocationMethod>(this, "AllocationMethod");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAllocationMethod>(this, "AllocationMethod");
 			}
 		}
 
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "AllocationWeightExpression");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "AllocationWeightExpression");
 			}
 		}
 
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		#endregion

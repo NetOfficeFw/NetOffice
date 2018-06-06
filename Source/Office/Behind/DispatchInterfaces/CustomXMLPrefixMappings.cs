@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPrefixMapping>(this, "Item", typeof(NetOffice.OfficeApi.CustomXMLPrefixMapping), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPrefixMapping>(this, "Item", typeof(NetOffice.OfficeApi.CustomXMLPrefixMapping), index);
             }
         }
 
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddNamespace(string prefix, string namespaceURI)
         {
-            Factory.ExecuteMethod(this, "AddNamespace", prefix, namespaceURI);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddNamespace", prefix, namespaceURI);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual string LookupNamespace(string prefix)
         {
-            return Factory.ExecuteStringMethodGet(this, "LookupNamespace", prefix);
+            return InvokerService.InvokeInternal.ExecuteStringMethodGet(this, "LookupNamespace", prefix);
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual string LookupPrefix(string namespaceURI)
         {
-            return Factory.ExecuteStringMethodGet(this, "LookupPrefix", namespaceURI);
+            return InvokerService.InvokeInternal.ExecuteStringMethodGet(this, "LookupPrefix", namespaceURI);
         }
 
         #endregion

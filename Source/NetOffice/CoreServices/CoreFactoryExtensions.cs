@@ -8,7 +8,7 @@ using COMTypes = System.Runtime.InteropServices.ComTypes;
 using NetOffice.ComTypes;
 using NetOffice.Exceptions;
 
-namespace NetOffice
+namespace NetOffice.CoreServices
 {
     internal static class CoreFactoryExtensions
     {

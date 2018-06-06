@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ConnectString");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ConnectString");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ConnectString", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ConnectString", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Table");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Table");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Table", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Table", value);
             }
         }
 
@@ -106,11 +106,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "DataSource");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DataSource");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "DataSource", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DataSource", value);
             }
         }
 
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Columns");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Columns");
             }
         }
 
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "RowCount");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RowCount");
             }
         }
 
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Filters");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Filters");
             }
         }
 
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, object rowNbr)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Move", msoMoveRow, rowNbr);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Move", msoMoveRow, rowNbr);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Move", msoMoveRow);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Move", msoMoveRow);
         }
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive, object fNeverPrompt)
         {
-            Factory.ExecuteMethod(this, "Open", new object[] { bstrSrc, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open", new object[] { bstrSrc, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt });
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Open()
         {
-            Factory.ExecuteMethod(this, "Open");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open");
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Open(object bstrSrc)
         {
-            Factory.ExecuteMethod(this, "Open", bstrSrc);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open", bstrSrc);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Open(object bstrSrc, object bstrConnect)
         {
-            Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open", bstrSrc, bstrConnect);
         }
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Open(object bstrSrc, object bstrConnect, object bstrTable)
         {
-            Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable);
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive)
         {
-            Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable, fOpenExclusive);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable, fOpenExclusive);
         }
 
         /// <summary>
@@ -279,7 +279,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3, object sortAscending3)
         {
-            Factory.ExecuteMethod(this, "SetSortOrder", new object[] { sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3 });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetSortOrder", new object[] { sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3 });
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SetSortOrder(string sortField1)
         {
-            Factory.ExecuteMethod(this, "SetSortOrder", sortField1);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetSortOrder", sortField1);
         }
 
         /// <summary>
@@ -304,7 +304,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SetSortOrder(string sortField1, object sortAscending1)
         {
-            Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1);
         }
 
         /// <summary>
@@ -318,7 +318,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SetSortOrder(string sortField1, object sortAscending1, object sortField2)
         {
-            Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2);
         }
 
         /// <summary>
@@ -333,7 +333,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2)
         {
-            Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2, sortAscending2);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2, sortAscending2);
         }
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3)
         {
-            Factory.ExecuteMethod(this, "SetSortOrder", new object[] { sortField1, sortAscending1, sortField2, sortAscending2, sortField3 });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetSortOrder", new object[] { sortField1, sortAscending1, sortField2, sortAscending2, sortField3 });
         }
 
         /// <summary>
@@ -359,7 +359,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void ApplyFilter()
         {
-            Factory.ExecuteMethod(this, "ApplyFilter");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ApplyFilter");
         }
 
         #endregion

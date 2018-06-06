@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "AlertStyle");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "AlertStyle");
 			}
 		}
 
@@ -120,11 +120,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "IgnoreBlank");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IgnoreBlank");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "IgnoreBlank", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "IgnoreBlank", value);
 			}
 		}
 
@@ -137,11 +137,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "IMEMode");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "IMEMode");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "IMEMode", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "IMEMode", value);
 			}
 		}
 
@@ -154,11 +154,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "InCellDropdown");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "InCellDropdown");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "InCellDropdown", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InCellDropdown", value);
 			}
 		}
 
@@ -171,11 +171,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "ErrorMessage");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ErrorMessage");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ErrorMessage", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ErrorMessage", value);
 			}
 		}
 
@@ -188,11 +188,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "ErrorTitle");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ErrorTitle");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ErrorTitle", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ErrorTitle", value);
 			}
 		}
 
@@ -205,11 +205,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "InputMessage");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "InputMessage");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "InputMessage", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InputMessage", value);
 			}
 		}
 
@@ -222,11 +222,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "InputTitle");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "InputTitle");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "InputTitle", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InputTitle", value);
 			}
 		}
 
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Formula1");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Formula1");
 			}
 		}
 
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Formula2");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Formula2");
 			}
 		}
 
@@ -265,7 +265,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Operator");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Operator");
 			}
 		}
 
@@ -278,11 +278,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowError");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowError");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowError", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowError", value);
 			}
 		}
 
@@ -295,11 +295,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowInput");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowInput");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowInput", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowInput", value);
 			}
 		}
 
@@ -312,7 +312,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Type");
 			}
 		}
 
@@ -325,7 +325,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Value");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Value");
 			}
 		}
 
@@ -344,7 +344,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1, object formula2)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Add", new object[]{ type, alertStyle, _operator, formula1, formula2 });
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Add", new object[]{ type, alertStyle, _operator, formula1, formula2 });
 		}
 
 		/// <summary>
@@ -355,7 +355,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Add", type);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Add", type);
 		}
 
 		/// <summary>
@@ -367,7 +367,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Add", type, alertStyle);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Add", type, alertStyle);
 		}
 
 		/// <summary>
@@ -380,7 +380,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Add", type, alertStyle, _operator);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Add", type, alertStyle, _operator);
 		}
 
 		/// <summary>
@@ -394,7 +394,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Add(NetOffice.ExcelApi.Enums.XlDVType type, object alertStyle, object _operator, object formula1)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Add", type, alertStyle, _operator, formula1);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Add", type, alertStyle, _operator, formula1);
 		}
 
 		/// <summary>
@@ -403,7 +403,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Delete()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Delete");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
 		}
 
 		/// <summary>
@@ -417,7 +417,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Modify(object type, object alertStyle, object _operator, object formula1, object formula2)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Modify", new object[]{ type, alertStyle, _operator, formula1, formula2 });
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Modify", new object[]{ type, alertStyle, _operator, formula1, formula2 });
 		}
 
 		/// <summary>
@@ -427,7 +427,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Modify()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Modify");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Modify");
 		}
 
 		/// <summary>
@@ -438,7 +438,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Modify(object type)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Modify", type);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Modify", type);
 		}
 
 		/// <summary>
@@ -450,7 +450,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Modify(object type, object alertStyle)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Modify", type, alertStyle);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Modify", type, alertStyle);
 		}
 
 		/// <summary>
@@ -463,7 +463,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Modify(object type, object alertStyle, object _operator)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Modify", type, alertStyle, _operator);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Modify", type, alertStyle, _operator);
 		}
 
 		/// <summary>
@@ -477,7 +477,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 Modify(object type, object alertStyle, object _operator, object formula1)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Modify", type, alertStyle, _operator, formula1);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Modify", type, alertStyle, _operator, formula1);
 		}
 
 		#endregion

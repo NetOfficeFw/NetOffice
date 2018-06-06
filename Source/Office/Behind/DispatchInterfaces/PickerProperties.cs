@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerProperty>(this, "Item", typeof(NetOffice.OfficeApi.PickerProperty), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerProperty>(this, "Item", typeof(NetOffice.OfficeApi.PickerProperty), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerProperty Add(string id, string value, NetOffice.OfficeApi.Enums.MsoPickerField type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerProperty>(this, "Add", typeof(NetOffice.OfficeApi.PickerProperty), id, value, type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerProperty>(this, "Add", typeof(NetOffice.OfficeApi.PickerProperty), id, value, type);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Remove(string id)
         {
-            Factory.ExecuteMethod(this, "Remove", id);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Remove", id);
         }
 
         #endregion

@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Index");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -99,11 +99,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Column");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Column");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Column", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Column", value);
             }
         }
 
@@ -117,11 +117,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFilterComparison>(this, "Comparison");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFilterComparison>(this, "Comparison");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Comparison", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Comparison", value);
             }
         }
 
@@ -135,11 +135,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "CompareTo");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "CompareTo");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CompareTo", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CompareTo", value);
             }
         }
 
@@ -153,11 +153,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFilterConjunction>(this, "Conjunction");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFilterConjunction>(this, "Conjunction");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Conjunction", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Conjunction", value);
             }
         }
 

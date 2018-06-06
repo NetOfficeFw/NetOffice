@@ -69,7 +69,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemAdded(NetOffice.VBIDEApi.VBComponent vBComponent)
         {
-            Factory.ExecuteMethod(this, "ItemAdded", vBComponent);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemAdded", vBComponent);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemRemoved(NetOffice.VBIDEApi.VBComponent vBComponent)
         {
-            Factory.ExecuteMethod(this, "ItemRemoved", vBComponent);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemRemoved", vBComponent);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemRenamed(NetOffice.VBIDEApi.VBComponent vBComponent, string oldName)
         {
-            Factory.ExecuteMethod(this, "ItemRenamed", vBComponent, oldName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemRenamed", vBComponent, oldName);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemSelected(NetOffice.VBIDEApi.VBComponent vBComponent)
         {
-            Factory.ExecuteMethod(this, "ItemSelected", vBComponent);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemSelected", vBComponent);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemActivated(NetOffice.VBIDEApi.VBComponent vBComponent)
         {
-            Factory.ExecuteMethod(this, "ItemActivated", vBComponent);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemActivated", vBComponent);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ItemReloaded(NetOffice.VBIDEApi.VBComponent vBComponent)
         {
-            Factory.ExecuteMethod(this, "ItemReloaded", vBComponent);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ItemReloaded", vBComponent);
         }
 
         #endregion

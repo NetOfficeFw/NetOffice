@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Close()
         {
-            Factory.ExecuteMethod(this, "Close");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Close");
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, object showWithDelay)
         {
-            Factory.ExecuteMethod(this, "Show", new object[] { cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Show", new object[] { cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay });
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition)
         {
-            Factory.ExecuteMethod(this, "Show", new object[] { cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Show", new object[] { cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition });
         }
 
         #endregion

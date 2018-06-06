@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Order");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Order");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Order", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Order", value);
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotFilterType>(this, "FilterType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotFilterType>(this, "FilterType");
 			}
 		}
 
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Description");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Description");
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Active");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Active");
 			}
 		}
 
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "PivotField", typeof(NetOffice.ExcelApi.PivotField));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "PivotField", typeof(NetOffice.ExcelApi.PivotField));
 			}
 		}
 
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "DataField", typeof(NetOffice.ExcelApi.PivotField));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "DataField", typeof(NetOffice.ExcelApi.PivotField));
 			}
 		}
 
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CubeField>(this, "DataCubeField", typeof(NetOffice.ExcelApi.CubeField));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CubeField>(this, "DataCubeField", typeof(NetOffice.ExcelApi.CubeField));
 			}
 		}
 
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Value1");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Value1");
 			}
 		}
 
@@ -242,7 +242,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Value2");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Value2");
 			}
 		}
 
@@ -256,7 +256,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "MemberPropertyField", typeof(NetOffice.ExcelApi.PivotField));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "MemberPropertyField", typeof(NetOffice.ExcelApi.PivotField));
 			}
 		}
 
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsMemberPropertyFilter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsMemberPropertyFilter");
 			}
 		}
 
@@ -284,11 +284,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "WholeDayFilter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "WholeDayFilter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "WholeDayFilter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WholeDayFilter", value);
 			}
 		}
 
@@ -301,11 +301,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTimeMoving>(this, "MovingPeriod");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTimeMoving>(this, "MovingPeriod");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "MovingPeriod", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "MovingPeriod", value);
 			}
 		}
 
@@ -320,7 +320,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		#endregion

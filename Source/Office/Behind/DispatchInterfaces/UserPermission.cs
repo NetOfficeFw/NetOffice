@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "UserId");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "UserId");
             }
         }
 
@@ -84,11 +84,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Permission");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Permission");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Permission", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Permission", value);
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ExpirationDate");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ExpirationDate");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "ExpirationDate", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ExpirationDate", value);
             }
         }
 
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Remove()
         {
-            Factory.ExecuteMethod(this, "Remove");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Remove");
         }
 
         #endregion

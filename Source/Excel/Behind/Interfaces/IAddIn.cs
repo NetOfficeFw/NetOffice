@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Author");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Author");
             }
         }
 
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Comments");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Comments");
             }
         }
 
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "FullName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FullName");
             }
         }
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Installed");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Installed");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Installed", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Installed", value);
             }
         }
 
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Keywords");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Keywords");
             }
         }
 
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Path");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Path");
             }
         }
 
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Subject");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Subject");
             }
         }
 
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Title");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Title");
             }
         }
 
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "progID");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "progID");
             }
         }
 
@@ -246,7 +246,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "CLSID");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "CLSID");
             }
         }
 
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsOpen");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsOpen");
             }
         }
 

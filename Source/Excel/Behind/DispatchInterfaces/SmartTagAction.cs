@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "_Default");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "_Default");
 			}
 		}
 
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSmartTagControlType>(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSmartTagControlType>(this, "Type");
 			}
 		}
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "PresentInPane");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PresentInPane");
 			}
 		}
 
@@ -159,11 +159,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ExpandHelp");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ExpandHelp");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ExpandHelp", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ExpandHelp", value);
 			}
 		}
 
@@ -176,11 +176,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "CheckboxState");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "CheckboxState");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "CheckboxState", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CheckboxState", value);
 			}
 		}
 
@@ -193,11 +193,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "TextboxText");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextboxText");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextboxText", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextboxText", value);
 			}
 		}
 
@@ -210,11 +210,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "ListSelection");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ListSelection");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ListSelection", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ListSelection", value);
 			}
 		}
 
@@ -227,11 +227,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "RadioGroupSelection");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RadioGroupSelection");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RadioGroupSelection", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RadioGroupSelection", value);
 			}
 		}
 
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "ActiveXControl");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "ActiveXControl");
 			}
 		}
 
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void Execute()
 		{
-			 Factory.ExecuteMethod(this, "Execute");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Execute");
 		}
 
 		#endregion

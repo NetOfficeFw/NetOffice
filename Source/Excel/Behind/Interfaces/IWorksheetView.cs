@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Sheet");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Sheet");
 			}
 		}
 
@@ -121,11 +121,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayGridlines");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayGridlines");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DisplayGridlines", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayGridlines", value);
 			}
 		}
 
@@ -138,11 +138,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayFormulas");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayFormulas");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DisplayFormulas", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayFormulas", value);
 			}
 		}
 
@@ -155,11 +155,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayHeadings");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayHeadings");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DisplayHeadings", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayHeadings", value);
 			}
 		}
 
@@ -172,11 +172,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayOutline");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayOutline");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DisplayOutline", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayOutline", value);
 			}
 		}
 
@@ -189,11 +189,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayZeros");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayZeros");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DisplayZeros", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayZeros", value);
 			}
 		}
 

@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Character");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Character");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Character", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Character", value);
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Font2>(this, "Font", typeof(NetOffice.OfficeApi.Font2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Font2>(this, "Font", typeof(NetOffice.OfficeApi.Font2));
             }
         }
 
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Number");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Number");
             }
         }
 
@@ -131,11 +131,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "RelativeSize");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "RelativeSize");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "RelativeSize", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RelativeSize", value);
             }
         }
 
@@ -149,11 +149,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "StartValue");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "StartValue");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "StartValue", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "StartValue", value);
             }
         }
 
@@ -167,11 +167,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoNumberedBulletStyle>(this, "Style");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoNumberedBulletStyle>(this, "Style");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Style", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Style", value);
             }
         }
 
@@ -185,11 +185,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBulletType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBulletType>(this, "Type");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Type", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
             }
         }
 
@@ -203,11 +203,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "UseTextColor");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "UseTextColor");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "UseTextColor", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "UseTextColor", value);
             }
         }
 
@@ -221,11 +221,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "UseTextFont");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "UseTextFont");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "UseTextFont", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "UseTextFont", value);
             }
         }
 
@@ -239,11 +239,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Visible", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Visible", value);
             }
         }
 
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Picture(string fileName)
         {
-            Factory.ExecuteMethod(this, "Picture", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Picture", fileName);
         }
 
         #endregion

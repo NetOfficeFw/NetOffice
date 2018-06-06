@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.WorkflowTemplate>(this, "Item", typeof(NetOffice.OfficeApi.WorkflowTemplate), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.WorkflowTemplate>(this, "Item", typeof(NetOffice.OfficeApi.WorkflowTemplate), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 

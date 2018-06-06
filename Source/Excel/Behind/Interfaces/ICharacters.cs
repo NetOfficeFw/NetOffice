@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Caption");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Caption");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Caption", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Caption", value);
             }
         }
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", typeof(NetOffice.ExcelApi.Font));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", typeof(NetOffice.ExcelApi.Font));
             }
         }
 
@@ -150,11 +150,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Text");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Text");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Text", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Text", value);
             }
         }
 
@@ -167,11 +167,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "PhoneticCharacters");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "PhoneticCharacters");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "PhoneticCharacters", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PhoneticCharacters", value);
             }
         }
 
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Delete()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object Insert(string _string)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Insert", _string);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Insert", _string);
         }
 
         #endregion

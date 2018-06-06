@@ -35,7 +35,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public virtual object get_ColumnFields(object index)
 		{
-			return Factory.ExecuteReferencePropertyGet(this, "ColumnFields", index);
+			return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "ColumnFields", index);
 		}
 
 		/// <summary>
@@ -60,7 +60,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public virtual object get_DataFields(object index)
 		{
-			return Factory.ExecuteReferencePropertyGet(this, "DataFields", index);
+			return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "DataFields", index);
 		}
 
 		/// <summary>
@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public virtual object get_PageFields(object index)
 		{
-			return Factory.ExecuteReferencePropertyGet(this, "PageFields", index);
+			return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "PageFields", index);
 		}
 
 		/// <summary>
@@ -110,7 +110,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public virtual object get_RowFields(object index)
 		{
-			return Factory.ExecuteReferencePropertyGet(this, "RowFields", index);
+			return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "RowFields", index);
 		}
 
 		/// <summary>
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public virtual object get_HiddenFields(object index)
 		{
-			return Factory.ExecuteReferencePropertyGet(this, "HiddenFields", index);
+			return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "HiddenFields", index);
 		}
 
 		/// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public virtual object get_VisibleFields(object index)
 		{
-			return Factory.ExecuteReferencePropertyGet(this, "VisibleFields", index);
+			return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "VisibleFields", index);
 		}
 
 		/// <summary>
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public virtual object get_PivotFields(object index)
 		{
-			return Factory.ExecuteReferencePropertyGet(this, "PivotFields", index);
+			return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "PivotFields", index);
 		}
 
 		/// <summary>
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -295,7 +295,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "ColumnFields");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "ColumnFields");
             }
         }
 
@@ -323,7 +323,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "DataFields");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "DataFields");
             }
         }
 
@@ -337,7 +337,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "PageFields");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "PageFields");
             }
         }
 
@@ -351,7 +351,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "RowFields");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "RowFields");
             }
         }
 
@@ -365,7 +365,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "HiddenFields");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "HiddenFields");
             }
         }
 
@@ -379,7 +379,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "VisibleFields");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "VisibleFields");
             }
         }
 
@@ -393,7 +393,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "PivotFields");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "PivotFields");
             }
         }
 
@@ -406,7 +406,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CubeFields>(this, "CubeFields", typeof(NetOffice.ExcelApi.CubeFields));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CubeFields>(this, "CubeFields", typeof(NetOffice.ExcelApi.CubeFields));
             }
         }
 
@@ -419,7 +419,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotCache>(this, "PivotCache", typeof(NetOffice.ExcelApi.PivotCache));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotCache>(this, "PivotCache", typeof(NetOffice.ExcelApi.PivotCache));
             }
         }
 
@@ -432,7 +432,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotTable>(this, "PivotTable", typeof(NetOffice.ExcelApi.PivotTable));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotTable>(this, "PivotTable", typeof(NetOffice.ExcelApi.PivotTable));
             }
         }
 
@@ -445,11 +445,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "InnerDetail");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "InnerDetail");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "InnerDetail", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InnerDetail", value);
             }
         }
 
@@ -467,7 +467,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 AddFields(object rowFields, object columnFields, object pageFields, object appendField)
         {
-            return Factory.ExecuteInt32MethodGet(this, "AddFields", rowFields, columnFields, pageFields, appendField);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "AddFields", rowFields, columnFields, pageFields, appendField);
         }
 
         /// <summary>
@@ -477,7 +477,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 AddFields()
         {
-            return Factory.ExecuteInt32MethodGet(this, "AddFields");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "AddFields");
         }
 
         /// <summary>
@@ -488,7 +488,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 AddFields(object rowFields)
         {
-            return Factory.ExecuteInt32MethodGet(this, "AddFields", rowFields);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "AddFields", rowFields);
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 AddFields(object rowFields, object columnFields)
         {
-            return Factory.ExecuteInt32MethodGet(this, "AddFields", rowFields, columnFields);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "AddFields", rowFields, columnFields);
         }
 
         /// <summary>
@@ -513,7 +513,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 AddFields(object rowFields, object columnFields, object pageFields)
         {
-            return Factory.ExecuteInt32MethodGet(this, "AddFields", rowFields, columnFields, pageFields);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "AddFields", rowFields, columnFields, pageFields);
         }
 
         #endregion

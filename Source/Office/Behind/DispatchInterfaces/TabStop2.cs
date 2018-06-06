@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Position");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Position");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Position", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Position", value);
             }
         }
 
@@ -103,11 +103,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTabStopType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTabStopType>(this, "Type");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Type", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
             }
         }
 
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Clear()
         {
-            Factory.ExecuteMethod(this, "Clear");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Clear");
         }
 
         #endregion

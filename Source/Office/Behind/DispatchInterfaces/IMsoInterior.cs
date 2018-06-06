@@ -68,11 +68,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Color");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Color");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Color", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Color", value);
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ColorIndex");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ColorIndex");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "ColorIndex", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ColorIndex", value);
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "InvertIfNegative");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "InvertIfNegative");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "InvertIfNegative", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "InvertIfNegative", value);
             }
         }
 
@@ -119,11 +119,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Pattern");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Pattern");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Pattern", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Pattern", value);
             }
         }
 
@@ -136,11 +136,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "PatternColor");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "PatternColor");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "PatternColor", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "PatternColor", value);
             }
         }
 
@@ -153,11 +153,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "PatternColorIndex");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "PatternColorIndex");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "PatternColorIndex", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "PatternColorIndex", value);
             }
         }
 
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 

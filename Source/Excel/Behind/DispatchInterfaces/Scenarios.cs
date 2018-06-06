@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values, object comment, object locked, object hidden)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), new object[]{ name, changingCells, values, comment, locked, hidden });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), new object[]{ name, changingCells, values, comment, locked, hidden });
 		}
 
 		/// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Scenario Add(string name, object changingCells)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), name, changingCells);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), name, changingCells);
 		}
 
 		/// <summary>
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), name, changingCells, values);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), name, changingCells, values);
 		}
 
 		/// <summary>
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values, object comment)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), name, changingCells, values, comment);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), name, changingCells, values, comment);
 		}
 
 		/// <summary>
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values, object comment, object locked)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), new object[]{ name, changingCells, values, comment, locked });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", typeof(NetOffice.ExcelApi.Scenario), new object[]{ name, changingCells, values, comment, locked });
 		}
 
 		/// <summary>
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object CreateSummary(object reportType, object resultCells)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "CreateSummary", reportType, resultCells);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "CreateSummary", reportType, resultCells);
 		}
 
 		/// <summary>
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object CreateSummary()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "CreateSummary");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "CreateSummary");
 		}
 
 		/// <summary>
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object CreateSummary(object reportType)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "CreateSummary", reportType);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "CreateSummary", reportType);
 		}
 
 		/// <summary>
@@ -242,7 +242,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Item", typeof(NetOffice.ExcelApi.Scenario), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Item", typeof(NetOffice.ExcelApi.Scenario), index);
 			}
 		}
 
@@ -254,7 +254,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Merge(object source)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Merge", source);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Merge", source);
 		}
 
         #endregion

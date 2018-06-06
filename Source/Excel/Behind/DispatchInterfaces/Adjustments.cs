@@ -75,7 +75,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -104,11 +104,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Item", index);
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Item", index);
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Item", value, index);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Item", value, index);
 			}
 		}
 

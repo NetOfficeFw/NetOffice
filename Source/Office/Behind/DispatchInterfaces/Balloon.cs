@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Checkboxes");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Checkboxes");
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Labels");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Labels");
             }
         }
 
@@ -110,11 +110,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBalloonType>(this, "BalloonType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBalloonType>(this, "BalloonType");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "BalloonType", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "BalloonType", value);
             }
         }
 
@@ -127,11 +127,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoIconType>(this, "Icon");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoIconType>(this, "Icon");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Icon", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Icon", value);
             }
         }
 
@@ -144,11 +144,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Heading");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Heading");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Heading", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Heading", value);
             }
         }
 
@@ -161,11 +161,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Text");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Text");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Text", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Text", value);
             }
         }
 
@@ -178,11 +178,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoModeType>(this, "Mode");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoModeType>(this, "Mode");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Mode", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Mode", value);
             }
         }
 
@@ -195,11 +195,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoAnimationType>(this, "Animation");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoAnimationType>(this, "Animation");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Animation", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Animation", value);
             }
         }
 
@@ -212,11 +212,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoButtonSetType>(this, "Button");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoButtonSetType>(this, "Button");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Button", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Button", value);
             }
         }
 
@@ -229,11 +229,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Callback");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Callback");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Callback", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Callback", value);
             }
         }
 
@@ -246,11 +246,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Private");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Private");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Private", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Private", value);
             }
         }
 
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -281,7 +281,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void SetAvoidRectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
         {
-            Factory.ExecuteMethod(this, "SetAvoidRectangle", left, top, right, bottom);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetAvoidRectangle", left, top, right, bottom);
         }
 
         /// <summary>
@@ -290,7 +290,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Enums.MsoBalloonButtonType Show()
         {
-            return Factory.ExecuteEnumMethodGet<NetOffice.OfficeApi.Enums.MsoBalloonButtonType>(this, "Show");
+            return InvokerService.InvokeInternal.ExecuteEnumMethodGet<NetOffice.OfficeApi.Enums.MsoBalloonButtonType>(this, "Show");
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Close()
         {
-            Factory.ExecuteMethod(this, "Close");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Close");
         }
 
         #endregion

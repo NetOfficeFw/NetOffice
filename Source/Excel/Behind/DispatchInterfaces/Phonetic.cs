@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Visible");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Visible", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "CharacterType");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "CharacterType");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "CharacterType", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CharacterType", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Alignment");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Alignment");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Alignment", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Alignment", value);
 			}
 		}
 
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", typeof(NetOffice.ExcelApi.Font));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", typeof(NetOffice.ExcelApi.Font));
 			}
 		}
 
@@ -180,11 +180,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Text");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Text");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Text", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Text", value);
 			}
 		}
 

@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.DiagramNodeChildren>(this, "Children", typeof(NetOffice.OfficeApi.DiagramNodeChildren));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.DiagramNodeChildren>(this, "Children", typeof(NetOffice.OfficeApi.DiagramNodeChildren));
             }
         }
 
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "Shape", typeof(NetOffice.OfficeApi.Shape));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "Shape", typeof(NetOffice.OfficeApi.Shape));
             }
         }
 
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.DiagramNode>(this, "Root", typeof(NetOffice.OfficeApi.DiagramNode));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.DiagramNode>(this, "Root", typeof(NetOffice.OfficeApi.DiagramNode));
             }
         }
 
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoDiagram>(this, "Diagram", typeof(NetOffice.OfficeApi.IMsoDiagram));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoDiagram>(this, "Diagram", typeof(NetOffice.OfficeApi.IMsoDiagram));
             }
         }
 
@@ -135,11 +135,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType>(this, "Layout");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType>(this, "Layout");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Layout", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Layout", value);
             }
         }
 
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "TextShape", typeof(NetOffice.OfficeApi.Shape));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "TextShape", typeof(NetOffice.OfficeApi.Shape));
             }
         }
 
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DiagramNode AddNode(object pos, object nodeType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode), pos, nodeType);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode), pos, nodeType);
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DiagramNode AddNode()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode));
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DiagramNode AddNode(object pos)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode), pos);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", typeof(NetOffice.OfficeApi.DiagramNode), pos);
         }
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void MoveNode(NetOffice.OfficeApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
         {
-            Factory.ExecuteMethod(this, "MoveNode", targetNode, pos);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "MoveNode", targetNode, pos);
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void ReplaceNode(NetOffice.OfficeApi.DiagramNode targetNode)
         {
-            Factory.ExecuteMethod(this, "ReplaceNode", targetNode);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReplaceNode", targetNode);
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SwapNode(NetOffice.OfficeApi.DiagramNode targetNode, object swapChildren)
         {
-            Factory.ExecuteMethod(this, "SwapNode", targetNode, swapChildren);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SwapNode", targetNode, swapChildren);
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void SwapNode(NetOffice.OfficeApi.DiagramNode targetNode)
         {
-            Factory.ExecuteMethod(this, "SwapNode", targetNode);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SwapNode", targetNode);
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DiagramNode CloneNode(bool copyChildren, NetOffice.OfficeApi.DiagramNode targetNode, object pos)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "CloneNode", typeof(NetOffice.OfficeApi.DiagramNode), copyChildren, targetNode, pos);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "CloneNode", typeof(NetOffice.OfficeApi.DiagramNode), copyChildren, targetNode, pos);
         }
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DiagramNode CloneNode(bool copyChildren, NetOffice.OfficeApi.DiagramNode targetNode)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "CloneNode", typeof(NetOffice.OfficeApi.DiagramNode), copyChildren, targetNode);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "CloneNode", typeof(NetOffice.OfficeApi.DiagramNode), copyChildren, targetNode);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void TransferChildren(NetOffice.OfficeApi.DiagramNode receivingNode)
         {
-            Factory.ExecuteMethod(this, "TransferChildren", receivingNode);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "TransferChildren", receivingNode);
         }
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DiagramNode NextNode()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "NextNode", typeof(NetOffice.OfficeApi.DiagramNode));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "NextNode", typeof(NetOffice.OfficeApi.DiagramNode));
         }
 
         /// <summary>
@@ -293,7 +293,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.DiagramNode PrevNode()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "PrevNode", typeof(NetOffice.OfficeApi.DiagramNode));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "PrevNode", typeof(NetOffice.OfficeApi.DiagramNode));
         }
 
         #endregion

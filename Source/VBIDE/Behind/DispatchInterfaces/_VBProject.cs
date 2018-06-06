@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_ProjectType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_ProjectType>(this, "Type");
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "FileName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FileName");
             }
         }
 
@@ -93,11 +93,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "BuildFileName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "BuildFileName");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "BuildFileName", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "BuildFileName", value);
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void SaveAs(string fileName)
         {
-            Factory.ExecuteMethod(this, "SaveAs", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SaveAs", fileName);
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void MakeCompiledFile()
         {
-            Factory.ExecuteMethod(this, "MakeCompiledFile");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "MakeCompiledFile");
         }
 
         #endregion

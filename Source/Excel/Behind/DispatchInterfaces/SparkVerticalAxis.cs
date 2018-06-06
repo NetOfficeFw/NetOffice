@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSparkScale>(this, "MinScaleType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSparkScale>(this, "MinScaleType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "MinScaleType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "MinScaleType", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "CustomMinScaleValue");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "CustomMinScaleValue");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "CustomMinScaleValue", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "CustomMinScaleValue", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSparkScale>(this, "MaxScaleType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSparkScale>(this, "MaxScaleType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "MaxScaleType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "MaxScaleType", value);
 			}
 		}
 
@@ -166,11 +166,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "CustomMaxScaleValue");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "CustomMaxScaleValue");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "CustomMaxScaleValue", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "CustomMaxScaleValue", value);
 			}
 		}
 

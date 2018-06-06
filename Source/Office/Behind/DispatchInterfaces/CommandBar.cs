@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "BuiltIn");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "BuiltIn");
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Context");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Context");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Context", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Context", value);
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBarControls>(this, "Controls", typeof(NetOffice.OfficeApi.CommandBarControls));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBarControls>(this, "Controls", typeof(NetOffice.OfficeApi.CommandBarControls));
             }
         }
 
@@ -117,11 +117,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Enabled");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Enabled");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Enabled", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Enabled", value);
             }
         }
 
@@ -135,11 +135,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Height");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Height");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Height", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Height", value);
             }
         }
 
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Index");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
             }
         }
 
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "InstanceId");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "InstanceId");
             }
         }
 
@@ -181,11 +181,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Left");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Left");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Left", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Left", value);
             }
         }
 
@@ -199,11 +199,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 
@@ -217,11 +217,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "NameLocal");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "NameLocal");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "NameLocal", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "NameLocal", value);
             }
         }
 
@@ -236,7 +236,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -250,11 +250,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBarPosition>(this, "Position");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBarPosition>(this, "Position");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Position", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Position", value);
             }
         }
 
@@ -268,11 +268,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "RowIndex");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RowIndex");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "RowIndex", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RowIndex", value);
             }
         }
 
@@ -286,11 +286,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBarProtection>(this, "Protection");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBarProtection>(this, "Protection");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Protection", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Protection", value);
             }
         }
 
@@ -304,11 +304,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Top");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Top");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Top", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Top", value);
             }
         }
 
@@ -322,7 +322,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBarType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBarType>(this, "Type");
             }
         }
 
@@ -336,11 +336,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Visible");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Visible");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Visible", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Visible", value);
             }
         }
 
@@ -354,11 +354,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Width");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Width");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Width", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Width", value);
             }
         }
 
@@ -372,11 +372,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AdaptiveMenu");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AdaptiveMenu");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AdaptiveMenu", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AdaptiveMenu", value);
             }
         }
 
@@ -390,7 +390,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Id");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Id");
             }
         }
 
@@ -404,7 +404,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "InstanceIdPtr");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "InstanceIdPtr");
             }
         }
 
@@ -421,7 +421,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accSelect(Int32 flagsSelect, object varChild)
         {
-            Factory.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
         }
 
         /// <summary>
@@ -433,7 +433,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accSelect(Int32 flagsSelect)
         {
-            Factory.ExecuteMethod(this, "accSelect", flagsSelect);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accSelect", flagsSelect);
         }
 
         /// <summary>
@@ -495,7 +495,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accNavigate(Int32 navDir, object varStart)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
         }
 
         /// <summary>
@@ -507,7 +507,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accNavigate(Int32 navDir)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accNavigate", navDir);
         }
 
         /// <summary>
@@ -519,7 +519,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accHitTest(Int32 xLeft, Int32 yTop)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
         }
 
         /// <summary>
@@ -530,7 +530,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accDoDefaultAction(object varChild)
         {
-            Factory.ExecuteMethod(this, "accDoDefaultAction", varChild);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accDoDefaultAction", varChild);
         }
 
         /// <summary>
@@ -541,7 +541,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accDoDefaultAction()
         {
-            Factory.ExecuteMethod(this, "accDoDefaultAction");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accDoDefaultAction");
         }
 
         /// <summary>
@@ -551,7 +551,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -567,7 +567,7 @@ namespace NetOffice.OfficeApi.Behind
         [BaseResult]
         public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible, object recursive)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", new object[] { type, id, tag, visible, recursive });
+            return InvokerService.InvokeInternal.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", new object[] { type, id, tag, visible, recursive });
         }
 
         /// <summary>
@@ -579,7 +579,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CommandBarControl FindControl()
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl");
+            return InvokerService.InvokeInternal.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl");
         }
 
         /// <summary>
@@ -592,7 +592,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type);
+            return InvokerService.InvokeInternal.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type);
         }
 
         /// <summary>
@@ -606,7 +606,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id);
+            return InvokerService.InvokeInternal.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id);
         }
 
         /// <summary>
@@ -621,7 +621,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag);
+            return InvokerService.InvokeInternal.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag);
         }
 
         /// <summary>
@@ -637,7 +637,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag, visible);
+            return InvokerService.InvokeInternal.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag, visible);
         }
 
         /// <summary>
@@ -647,7 +647,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Reset()
         {
-            Factory.ExecuteMethod(this, "Reset");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Reset");
         }
 
         /// <summary>
@@ -659,7 +659,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void ShowPopup(object x, object y)
         {
-            Factory.ExecuteMethod(this, "ShowPopup", x, y);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowPopup", x, y);
         }
 
         /// <summary>
@@ -670,7 +670,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void ShowPopup()
         {
-            Factory.ExecuteMethod(this, "ShowPopup");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowPopup");
         }
 
         /// <summary>
@@ -682,7 +682,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void ShowPopup(object x)
         {
-            Factory.ExecuteMethod(this, "ShowPopup", x);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowPopup", x);
         }
 
         #endregion

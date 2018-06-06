@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Number");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Number");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Number", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Number", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Spacing");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Spacing");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Spacing", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Spacing", value);
             }
         }
 
@@ -106,11 +106,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextDirection>(this, "TextDirection");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextDirection>(this, "TextDirection");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "TextDirection", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextDirection", value);
             }
         }
 

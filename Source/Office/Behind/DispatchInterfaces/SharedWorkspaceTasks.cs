@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Item", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Item", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
             }
         }
 
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description, object dueDate)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), new object[] { title, status, priority, assignee, description, dueDate });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), new object[] { title, status, priority, assignee, description, dueDate });
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status, priority);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status, priority);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status, priority, assignee);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), title, status, priority, assignee);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), new object[] { title, status, priority, assignee, description });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceTask), new object[] { title, status, priority, assignee, description });
         }
 
         #endregion

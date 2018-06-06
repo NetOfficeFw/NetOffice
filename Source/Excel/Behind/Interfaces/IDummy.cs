@@ -68,11 +68,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ShowSignaturesPane");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowSignaturesPane");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShowSignaturesPane", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowSignaturesPane", value);
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 _ActiveSheetOrChart()
         {
-            return Factory.ExecuteInt32MethodGet(this, "_ActiveSheetOrChart");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "_ActiveSheetOrChart");
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 RGB()
         {
-            return Factory.ExecuteInt32MethodGet(this, "RGB");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "RGB");
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 ChDir()
         {
-            return Factory.ExecuteInt32MethodGet(this, "ChDir");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ChDir");
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 DoScript()
         {
-            return Factory.ExecuteInt32MethodGet(this, "DoScript");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "DoScript");
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 DirectObject()
         {
-            return Factory.ExecuteInt32MethodGet(this, "DirectObject");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "DirectObject");
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 RefreshDocument()
         {
-            return Factory.ExecuteInt32MethodGet(this, "RefreshDocument");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "RefreshDocument");
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Signature AddSignatureLine(object sigProv)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddSignatureLine", typeof(NetOffice.OfficeApi.Signature), sigProv);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddSignatureLine", typeof(NetOffice.OfficeApi.Signature), sigProv);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Signature AddNonVisibleSignature(object sigProv)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddNonVisibleSignature", typeof(NetOffice.OfficeApi.Signature), sigProv);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddNonVisibleSignature", typeof(NetOffice.OfficeApi.Signature), sigProv);
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 ThemeFontScheme()
         {
-            return Factory.ExecuteInt32MethodGet(this, "ThemeFontScheme");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ThemeFontScheme");
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 ThemeColorScheme()
         {
-            return Factory.ExecuteInt32MethodGet(this, "ThemeColorScheme");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ThemeColorScheme");
         }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 ThemeEffectScheme()
         {
-            return Factory.ExecuteInt32MethodGet(this, "ThemeEffectScheme");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ThemeEffectScheme");
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 Load()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Load");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Load");
         }
 
         #endregion

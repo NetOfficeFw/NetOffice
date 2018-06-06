@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FileDialogFilter>(this, "Item", typeof(NetOffice.OfficeApi.FileDialogFilter), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FileDialogFilter>(this, "Item", typeof(NetOffice.OfficeApi.FileDialogFilter), index);
 			}
 		}
 
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Behind
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public virtual void Delete(object filter)
 		{
-			 Factory.ExecuteMethod(this, "Delete", filter);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete", filter);
 		}
 
 		/// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public virtual void Clear()
 		{
-			 Factory.ExecuteMethod(this, "Clear");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Clear");
 		}
 
 		/// <summary>
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public virtual NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions, object position)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FileDialogFilter>(this, "Add", typeof(NetOffice.OfficeApi.FileDialogFilter), description, extensions, position);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FileDialogFilter>(this, "Add", typeof(NetOffice.OfficeApi.FileDialogFilter), description, extensions, position);
 		}
 
 		/// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public virtual NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FileDialogFilter>(this, "Add", typeof(NetOffice.OfficeApi.FileDialogFilter), description, extensions);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FileDialogFilter>(this, "Add", typeof(NetOffice.OfficeApi.FileDialogFilter), description, extensions);
 		}
 
         #endregion

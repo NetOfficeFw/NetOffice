@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlListDataType>(this, "_Default");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlListDataType>(this, "_Default");
 			}
 		}
 
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Choices");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Choices");
 			}
 		}
 
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "DecimalPlaces");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "DecimalPlaces");
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "DefaultValue");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "DefaultValue");
 			}
 		}
 
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsPercent");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsPercent");
 			}
 		}
 
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "lcid");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "lcid");
 			}
 		}
 
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "MaxCharacters");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "MaxCharacters");
 			}
 		}
 
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "MaxNumber");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "MaxNumber");
 			}
 		}
 
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "MinNumber");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "MinNumber");
 			}
 		}
 
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Required");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Required");
 			}
 		}
 
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlListDataType>(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlListDataType>(this, "Type");
 			}
 		}
 
@@ -265,7 +265,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ReadOnly");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ReadOnly");
 			}
 		}
 
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowFillIn");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowFillIn");
 			}
 		}
 

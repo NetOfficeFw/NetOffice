@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -95,7 +95,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "_Default");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "_Default");
 			}
 		}
 
@@ -121,11 +121,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsExportable");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsExportable");
 			}
 		}
 
@@ -151,11 +151,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowImportExportValidationErrors");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowImportExportValidationErrors");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowImportExportValidationErrors", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowImportExportValidationErrors", value);
 			}
 		}
 
@@ -168,11 +168,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SaveDataSourceDefinition");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SaveDataSourceDefinition");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SaveDataSourceDefinition", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SaveDataSourceDefinition", value);
 			}
 		}
 
@@ -185,11 +185,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AdjustColumnWidth");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AdjustColumnWidth");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AdjustColumnWidth", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AdjustColumnWidth", value);
 			}
 		}
 
@@ -202,11 +202,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "PreserveColumnFilter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PreserveColumnFilter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PreserveColumnFilter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PreserveColumnFilter", value);
 			}
 		}
 
@@ -219,11 +219,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "PreserveNumberFormatting");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PreserveNumberFormatting");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PreserveNumberFormatting", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PreserveNumberFormatting", value);
 			}
 		}
 
@@ -236,11 +236,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AppendOnImport");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AppendOnImport");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AppendOnImport", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AppendOnImport", value);
 			}
 		}
 
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "RootElementName");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "RootElementName");
 			}
 		}
 
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XmlNamespace>(this, "RootElementNamespace", typeof(NetOffice.ExcelApi.XmlNamespace));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XmlNamespace>(this, "RootElementNamespace", typeof(NetOffice.ExcelApi.XmlNamespace));
 			}
 		}
 
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XmlSchemas>(this, "Schemas", typeof(NetOffice.ExcelApi.XmlSchemas));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XmlSchemas>(this, "Schemas", typeof(NetOffice.ExcelApi.XmlSchemas));
 			}
 		}
 
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XmlDataBinding>(this, "DataBinding", typeof(NetOffice.ExcelApi.XmlDataBinding));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XmlDataBinding>(this, "DataBinding", typeof(NetOffice.ExcelApi.XmlDataBinding));
 			}
 		}
 
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
 			}
 		}
 
@@ -319,7 +319,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual Int32 Delete()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Delete");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
 		}
 
 		/// <summary>
@@ -330,7 +330,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url, object overwrite)
 		{
-			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "Import", url, overwrite);
+			return InvokerService.InvokeInternal.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "Import", url, overwrite);
 		}
 
 		/// <summary>
@@ -341,7 +341,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url)
 		{
-			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "Import", url);
+			return InvokerService.InvokeInternal.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "Import", url);
 		}
 
 		/// <summary>
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData, object overwrite)
 		{
-			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "ImportXml", xmlData, overwrite);
+			return InvokerService.InvokeInternal.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "ImportXml", xmlData, overwrite);
 		}
 
 		/// <summary>
@@ -363,7 +363,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData)
 		{
-			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "ImportXml", xmlData);
+			return InvokerService.InvokeInternal.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "ImportXml", xmlData);
 		}
 
 		/// <summary>
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url, object overwrite)
 		{
-			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "Export", url, overwrite);
+			return InvokerService.InvokeInternal.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "Export", url, overwrite);
 		}
 
 		/// <summary>
@@ -385,7 +385,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url)
 		{
-			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "Export", url);
+			return InvokerService.InvokeInternal.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "Export", url);
 		}
 
 		/// <summary>

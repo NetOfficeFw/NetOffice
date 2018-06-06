@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions_UTs>(this, "UnitTests", typeof(NetOffice.OfficeApi.MsoDebugOptions_UTs));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions_UTs>(this, "UnitTests", typeof(NetOffice.OfficeApi.MsoDebugOptions_UTs));
             }
         }
 
@@ -81,11 +81,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ReportErrors");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ReportErrors");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ReportErrors", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ReportErrors", value);
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void NotifyStartOfTestSuiteRun()
         {
-            Factory.ExecuteMethod(this, "NotifyStartOfTestSuiteRun");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "NotifyStartOfTestSuiteRun");
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void NotifyEndOfTestSuiteRun()
         {
-            Factory.ExecuteMethod(this, "NotifyEndOfTestSuiteRun");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "NotifyEndOfTestSuiteRun");
         }
 
         #endregion

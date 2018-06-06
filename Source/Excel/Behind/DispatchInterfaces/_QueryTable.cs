@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "FieldNames");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "FieldNames");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "FieldNames", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FieldNames", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RowNumbers");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RowNumbers");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RowNumbers", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RowNumbers", value);
 			}
 		}
 
@@ -166,11 +166,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "FillAdjacentFormulas");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "FillAdjacentFormulas");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "FillAdjacentFormulas", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FillAdjacentFormulas", value);
 			}
 		}
 
@@ -184,11 +184,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "HasAutoFormat");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "HasAutoFormat");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "HasAutoFormat", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "HasAutoFormat", value);
 			}
 		}
 
@@ -202,11 +202,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RefreshOnFileOpen");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RefreshOnFileOpen");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RefreshOnFileOpen", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RefreshOnFileOpen", value);
 			}
 		}
 
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Refreshing");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Refreshing");
 			}
 		}
 
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "FetchedRowOverflow");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "FetchedRowOverflow");
 			}
 		}
 
@@ -248,11 +248,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "BackgroundQuery");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "BackgroundQuery");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "BackgroundQuery", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "BackgroundQuery", value);
 			}
 		}
 
@@ -266,11 +266,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCellInsertionMode>(this, "RefreshStyle");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCellInsertionMode>(this, "RefreshStyle");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "RefreshStyle", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "RefreshStyle", value);
 			}
 		}
 
@@ -284,11 +284,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableRefresh");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EnableRefresh");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "EnableRefresh", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EnableRefresh", value);
 			}
 		}
 
@@ -302,11 +302,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SavePassword");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SavePassword");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SavePassword", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SavePassword", value);
 			}
 		}
 
@@ -320,7 +320,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Destination", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Destination", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -334,11 +334,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Connection");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Connection");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Connection", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Connection", value);
 			}
 		}
 
@@ -352,11 +352,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Sql");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Sql");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Sql", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Sql", value);
 			}
 		}
 
@@ -370,11 +370,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "PostText");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "PostText");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PostText", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PostText", value);
 			}
 		}
 
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "ResultRange", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "ResultRange", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -402,7 +402,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Parameters>(this, "Parameters", typeof(NetOffice.ExcelApi.Parameters));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Parameters>(this, "Parameters", typeof(NetOffice.ExcelApi.Parameters));
 			}
 		}
 
@@ -417,11 +417,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Recordset");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Recordset");
 			}
 			set
 			{
-				Factory.ExecuteReferencePropertySet(this, "Recordset", value);
+				InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Recordset", value);
 			}
 		}
 
@@ -435,11 +435,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SaveData");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SaveData");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SaveData", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SaveData", value);
 			}
 		}
 
@@ -453,11 +453,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TablesOnlyFromHTML");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TablesOnlyFromHTML");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TablesOnlyFromHTML", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TablesOnlyFromHTML", value);
 			}
 		}
 
@@ -471,11 +471,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableEditing");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EnableEditing");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "EnableEditing", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EnableEditing", value);
 			}
 		}
 
@@ -489,11 +489,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPlatform>(this, "TextFilePlatform");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPlatform>(this, "TextFilePlatform");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TextFilePlatform", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextFilePlatform", value);
 			}
 		}
 
@@ -507,11 +507,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "TextFileStartRow");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "TextFileStartRow");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileStartRow", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileStartRow", value);
 			}
 		}
 
@@ -525,11 +525,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextParsingType>(this, "TextFileParseType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextParsingType>(this, "TextFileParseType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TextFileParseType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextFileParseType", value);
 			}
 		}
 
@@ -543,11 +543,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextQualifier>(this, "TextFileTextQualifier");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextQualifier>(this, "TextFileTextQualifier");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TextFileTextQualifier", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextFileTextQualifier", value);
 			}
 		}
 
@@ -561,11 +561,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileConsecutiveDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileConsecutiveDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileConsecutiveDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileConsecutiveDelimiter", value);
 			}
 		}
 
@@ -579,11 +579,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileTabDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileTabDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileTabDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileTabDelimiter", value);
 			}
 		}
 
@@ -597,11 +597,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileSemicolonDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileSemicolonDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileSemicolonDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileSemicolonDelimiter", value);
 			}
 		}
 
@@ -615,11 +615,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileCommaDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileCommaDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileCommaDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileCommaDelimiter", value);
 			}
 		}
 
@@ -633,11 +633,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileSpaceDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileSpaceDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileSpaceDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileSpaceDelimiter", value);
 			}
 		}
 
@@ -651,11 +651,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "TextFileOtherDelimiter");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextFileOtherDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileOtherDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileOtherDelimiter", value);
 			}
 		}
 
@@ -669,11 +669,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "TextFileColumnDataTypes");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "TextFileColumnDataTypes");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "TextFileColumnDataTypes", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "TextFileColumnDataTypes", value);
 			}
 		}
 
@@ -687,11 +687,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "TextFileFixedColumnWidths");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "TextFileFixedColumnWidths");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "TextFileFixedColumnWidths", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "TextFileFixedColumnWidths", value);
 			}
 		}
 
@@ -705,11 +705,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "PreserveColumnInfo");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PreserveColumnInfo");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PreserveColumnInfo", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PreserveColumnInfo", value);
 			}
 		}
 
@@ -723,11 +723,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "PreserveFormatting");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PreserveFormatting");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PreserveFormatting", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PreserveFormatting", value);
 			}
 		}
 
@@ -741,11 +741,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AdjustColumnWidth");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AdjustColumnWidth");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AdjustColumnWidth", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AdjustColumnWidth", value);
 			}
 		}
 
@@ -759,11 +759,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "CommandText");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "CommandText");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "CommandText", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "CommandText", value);
 			}
 		}
 
@@ -777,11 +777,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCmdType>(this, "CommandType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCmdType>(this, "CommandType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "CommandType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "CommandType", value);
 			}
 		}
 
@@ -795,11 +795,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFilePromptOnRefresh");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFilePromptOnRefresh");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFilePromptOnRefresh", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFilePromptOnRefresh", value);
 			}
 		}
 
@@ -813,7 +813,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xlQueryType>(this, "QueryType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xlQueryType>(this, "QueryType");
 			}
 		}
 
@@ -827,11 +827,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "MaintainConnection");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "MaintainConnection");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MaintainConnection", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MaintainConnection", value);
 			}
 		}
 
@@ -845,11 +845,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "TextFileDecimalSeparator");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextFileDecimalSeparator");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileDecimalSeparator", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileDecimalSeparator", value);
 			}
 		}
 
@@ -863,11 +863,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "TextFileThousandsSeparator");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextFileThousandsSeparator");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileThousandsSeparator", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileThousandsSeparator", value);
 			}
 		}
 
@@ -881,11 +881,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "RefreshPeriod");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RefreshPeriod");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RefreshPeriod", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RefreshPeriod", value);
 			}
 		}
 
@@ -899,11 +899,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xlWebSelectionType>(this, "WebSelectionType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xlWebSelectionType>(this, "WebSelectionType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "WebSelectionType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "WebSelectionType", value);
 			}
 		}
 
@@ -917,11 +917,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xlWebFormatting>(this, "WebFormatting");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xlWebFormatting>(this, "WebFormatting");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "WebFormatting", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "WebFormatting", value);
 			}
 		}
 
@@ -935,11 +935,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "WebTables");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "WebTables");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "WebTables", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WebTables", value);
 			}
 		}
 
@@ -953,11 +953,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "WebPreFormattedTextToColumns");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "WebPreFormattedTextToColumns");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "WebPreFormattedTextToColumns", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WebPreFormattedTextToColumns", value);
 			}
 		}
 
@@ -971,11 +971,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "WebSingleBlockTextImport");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "WebSingleBlockTextImport");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "WebSingleBlockTextImport", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WebSingleBlockTextImport", value);
 			}
 		}
 
@@ -989,11 +989,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "WebDisableDateRecognition");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "WebDisableDateRecognition");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "WebDisableDateRecognition", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WebDisableDateRecognition", value);
 			}
 		}
 
@@ -1007,11 +1007,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "WebConsecutiveDelimitersAsOne");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "WebConsecutiveDelimitersAsOne");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "WebConsecutiveDelimitersAsOne", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WebConsecutiveDelimitersAsOne", value);
 			}
 		}
 
@@ -1025,11 +1025,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "WebDisableRedirections");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "WebDisableRedirections");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "WebDisableRedirections", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "WebDisableRedirections", value);
 			}
 		}
 
@@ -1043,11 +1043,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "EditWebPage");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "EditWebPage");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "EditWebPage", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "EditWebPage", value);
 			}
 		}
 
@@ -1061,11 +1061,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceConnectionFile");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceConnectionFile");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SourceConnectionFile", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SourceConnectionFile", value);
 			}
 		}
 
@@ -1079,11 +1079,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceDataFile");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceDataFile");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SourceDataFile", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SourceDataFile", value);
 			}
 		}
 
@@ -1097,11 +1097,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlRobustConnect>(this, "RobustConnect");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlRobustConnect>(this, "RobustConnect");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "RobustConnect", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "RobustConnect", value);
 			}
 		}
 
@@ -1115,11 +1115,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileTrailingMinusNumbers");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileTrailingMinusNumbers");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileTrailingMinusNumbers", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileTrailingMinusNumbers", value);
 			}
 		}
 
@@ -1133,7 +1133,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListObject>(this, "ListObject", typeof(NetOffice.ExcelApi.ListObject));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListObject>(this, "ListObject", typeof(NetOffice.ExcelApi.ListObject));
 			}
 		}
 
@@ -1147,11 +1147,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextVisualLayoutType>(this, "TextFileVisualLayout");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextVisualLayoutType>(this, "TextFileVisualLayout");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TextFileVisualLayout", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextFileVisualLayout", value);
 			}
 		}
 
@@ -1165,7 +1165,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
 			}
 		}
 
@@ -1179,7 +1179,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sort>(this, "Sort", typeof(NetOffice.ExcelApi.Sort));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sort>(this, "Sort", typeof(NetOffice.ExcelApi.Sort));
 			}
 		}
 
@@ -1194,7 +1194,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void CancelRefresh()
 		{
-			 Factory.ExecuteMethod(this, "CancelRefresh");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "CancelRefresh");
 		}
 
 		/// <summary>
@@ -1204,7 +1204,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -1215,7 +1215,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual bool Refresh(object backgroundQuery)
 		{
-			return Factory.ExecuteBoolMethodGet(this, "Refresh", backgroundQuery);
+			return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Refresh", backgroundQuery);
 		}
 
 		/// <summary>
@@ -1226,7 +1226,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual bool Refresh()
 		{
-			return Factory.ExecuteBoolMethodGet(this, "Refresh");
+			return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Refresh");
 		}
 
 		/// <summary>
@@ -1236,7 +1236,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void ResetTimer()
 		{
-			 Factory.ExecuteMethod(this, "ResetTimer");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ResetTimer");
 		}
 
 		/// <summary>
@@ -1249,7 +1249,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void SaveAsODC(string oDCFileName, object description, object keywords)
 		{
-			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
 		}
 
 		/// <summary>
@@ -1261,7 +1261,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void SaveAsODC(string oDCFileName)
 		{
-			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SaveAsODC", oDCFileName);
 		}
 
 		/// <summary>
@@ -1274,7 +1274,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void SaveAsODC(string oDCFileName, object description)
 		{
-			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
 		}
 
 		#endregion

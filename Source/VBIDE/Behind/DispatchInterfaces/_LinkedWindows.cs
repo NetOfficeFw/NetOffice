@@ -70,7 +70,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "Parent", typeof(NetOffice.VBIDEApi.Window));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "Parent", typeof(NetOffice.VBIDEApi.Window));
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -115,7 +115,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "Item", typeof(NetOffice.VBIDEApi.Window), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "Item", typeof(NetOffice.VBIDEApi.Window), index);
             }
         }
 
@@ -126,7 +126,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Remove(NetOffice.VBIDEApi.Window window)
         {
-            Factory.ExecuteMethod(this, "Remove", window);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Remove", window);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Add(NetOffice.VBIDEApi.Window window)
         {
-            Factory.ExecuteMethod(this, "Add", window);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", window);
         }
 
         #endregion

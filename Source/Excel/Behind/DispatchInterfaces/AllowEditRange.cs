@@ -69,11 +69,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Title");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Title");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Title", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Title", value);
 			}
 		}
 
@@ -87,11 +87,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", typeof(NetOffice.ExcelApi.Range));
 			}
 			set
 			{
-				Factory.ExecuteReferencePropertySet(this, "Range", value);
+				InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Range", value);
 			}
 		}
 
@@ -105,7 +105,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.UserAccessList>(this, "Users", typeof(NetOffice.ExcelApi.UserAccessList));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.UserAccessList>(this, "Users", typeof(NetOffice.ExcelApi.UserAccessList));
 			}
 		}
 
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void ChangePassword(string password)
 		{
-			 Factory.ExecuteMethod(this, "ChangePassword", password);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ChangePassword", password);
 		}
 
 		/// <summary>
@@ -131,7 +131,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void Unprotect(object password)
 		{
-			 Factory.ExecuteMethod(this, "Unprotect", password);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Unprotect", password);
 		}
 
 		/// <summary>
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void Unprotect()
 		{
-			 Factory.ExecuteMethod(this, "Unprotect");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Unprotect");
 		}
 
 		#endregion

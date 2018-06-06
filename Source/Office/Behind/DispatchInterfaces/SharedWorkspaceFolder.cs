@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "FolderName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FolderName");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Delete(object deleteEventIfFolderContainsFiles)
         {
-            Factory.ExecuteMethod(this, "Delete", deleteEventIfFolderContainsFiles);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete", deleteEventIfFolderContainsFiles);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

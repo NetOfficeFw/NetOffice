@@ -2,6 +2,7 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CoreServices;
 
 namespace NetOffice.ExcelApi.GlobalHelperModules
 {
@@ -13,8 +14,9 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(ExcelApi.Application))]
 	public static class GlobalModule
 	{
-		#region Fields
-		private static ICOMObject _instance;
+        #region Fields
+
+        private static ICOMObject _instance;
 
         #endregion
 

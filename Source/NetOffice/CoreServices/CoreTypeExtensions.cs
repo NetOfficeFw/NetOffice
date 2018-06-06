@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NetOffice.CoreServices.Internal;
 
-namespace NetOffice
+namespace NetOffice.CoreServices
 {
     /// <summary>
     /// Provides type convert extension

@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Change(NetOffice.OfficeApi.CommandBarComboBox ctrl)
         {
-            Factory.ExecuteMethod(this, "Change", ctrl);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Change", ctrl);
         }
 
         #endregion

@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Priority");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Priority");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Priority", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Priority", value);
             }
         }
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "StopIfTrue");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "StopIfTrue");
             }
         }
 
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "AppliesTo", typeof(NetOffice.ExcelApi.Range));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "AppliesTo", typeof(NetOffice.ExcelApi.Range));
             }
         }
 
@@ -150,11 +150,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Formula");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Formula");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Formula", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Formula", value);
             }
         }
 
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Type");
             }
         }
 
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "PTCondition");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PTCondition");
             }
         }
 
@@ -193,11 +193,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotConditionScope>(this, "ScopeType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotConditionScope>(this, "ScopeType");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "ScopeType", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ScopeType", value);
             }
         }
 
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorScaleCriteria>(this, "ColorScaleCriteria", typeof(NetOffice.ExcelApi.ColorScaleCriteria));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorScaleCriteria>(this, "ColorScaleCriteria", typeof(NetOffice.ExcelApi.ColorScaleCriteria));
             }
         }
 
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 SetFirstPriority()
         {
-            return Factory.ExecuteInt32MethodGet(this, "SetFirstPriority");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "SetFirstPriority");
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 SetLastPriority()
         {
-            return Factory.ExecuteInt32MethodGet(this, "SetLastPriority");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "SetLastPriority");
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 Delete()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
         {
-            return Factory.ExecuteInt32MethodGet(this, "ModifyAppliesToRange", range);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ModifyAppliesToRange", range);
         }
 
         #endregion

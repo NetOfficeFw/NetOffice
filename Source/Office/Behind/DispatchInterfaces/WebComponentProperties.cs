@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Shape");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Shape");
             }
         }
 
@@ -82,11 +82,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 
@@ -99,11 +99,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "URL");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "URL");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "URL", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "URL", value);
             }
         }
 
@@ -116,11 +116,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "HTML");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "HTML");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "HTML", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "HTML", value);
             }
         }
 
@@ -133,11 +133,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "PreviewGraphic");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "PreviewGraphic");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "PreviewGraphic", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PreviewGraphic", value);
             }
         }
 
@@ -150,11 +150,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "PreviewHTML");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "PreviewHTML");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "PreviewHTML", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PreviewHTML", value);
             }
         }
 
@@ -167,11 +167,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Width");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Width");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Width", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Width", value);
             }
         }
 
@@ -184,11 +184,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Height");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Height");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Height", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Height", value);
             }
         }
 
@@ -201,11 +201,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Tag");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Tag");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Tag", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Tag", value);
             }
         }
 

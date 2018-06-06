@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCondition>(this, "Condition");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCondition>(this, "Condition");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Value");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Value");
             }
         }
 
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "SecondValue");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "SecondValue");
             }
         }
 
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoConnector>(this, "Connector");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoConnector>(this, "Connector");
             }
         }
 

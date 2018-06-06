@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "StartDate");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "StartDate");
 			}
 		}
 
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "EndDate");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "EndDate");
 			}
 		}
 
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotFilterType>(this, "FilterType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotFilterType>(this, "FilterType");
 			}
 		}
 
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "FilterValue1");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "FilterValue1");
 			}
 		}
 
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "FilterValue2");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "FilterValue2");
 			}
 		}
 
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SingleRangeFilterState");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SingleRangeFilterState");
 			}
 		}
 
@@ -195,11 +195,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTimeMoving>(this, "MovingPeriod");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTimeMoving>(this, "MovingPeriod");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "MovingPeriod", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "MovingPeriod", value);
 			}
 		}
 
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Enums.XlFilterStatus SetFilterDateRange(object startDate, object endDate)
 		{
-			return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlFilterStatus>(this, "SetFilterDateRange", startDate, endDate);
+			return InvokerService.InvokeInternal.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlFilterStatus>(this, "SetFilterDateRange", startDate, endDate);
 		}
 
 		#endregion

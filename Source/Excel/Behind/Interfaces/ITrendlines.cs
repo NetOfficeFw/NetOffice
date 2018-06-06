@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -132,7 +132,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
 		}
 
 		/// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline));
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline));
 		}
 
 		/// <summary>
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), type);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), type);
 		}
 
 		/// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type, object order)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), type, order);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), type, order);
 		}
 
 		/// <summary>
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type, object order, object period)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), type, order, period);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), type, order, period);
 		}
 
 		/// <summary>
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), type, order, period, forward);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), type, order, period, forward);
 		}
 
 		/// <summary>
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward });
 		}
 
 		/// <summary>
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward, intercept });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward, intercept });
 		}
 
 		/// <summary>
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward, intercept, displayEquation });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward, intercept, displayEquation });
 		}
 
 		/// <summary>
@@ -258,7 +258,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "Add", typeof(NetOffice.ExcelApi.Trendline), new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
 		}
 
 		/// <summary>
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "_Default", typeof(NetOffice.ExcelApi.Trendline), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Trendline>(this, "_Default", typeof(NetOffice.ExcelApi.Trendline), index);
 			}
 		}
 

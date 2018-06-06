@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         [BaseResult]
         public virtual NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle, object cTPParentWindow)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", cTPAxID, cTPTitle, cTPParentWindow);
+            return InvokerService.InvokeInternal.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", cTPAxID, cTPTitle, cTPParentWindow);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", cTPAxID, cTPTitle);
+            return InvokerService.InvokeInternal.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", cTPAxID, cTPTitle);
         }
 
         #endregion

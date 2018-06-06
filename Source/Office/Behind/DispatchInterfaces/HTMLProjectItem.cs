@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsOpen");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsOpen");
             }
         }
 
@@ -94,11 +94,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Text");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Text");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Text", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Text", value);
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void LoadFromFile(string fileName)
         {
-            Factory.ExecuteMethod(this, "LoadFromFile", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "LoadFromFile", fileName);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Open(object openKind)
         {
-            Factory.ExecuteMethod(this, "Open", openKind);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open", openKind);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Open()
         {
-            Factory.ExecuteMethod(this, "Open");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open");
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void SaveCopyAs(string fileName)
         {
-            Factory.ExecuteMethod(this, "SaveCopyAs", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SaveCopyAs", fileName);
         }
 
         #endregion

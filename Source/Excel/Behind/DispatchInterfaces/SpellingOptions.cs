@@ -70,11 +70,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "DictLang");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "DictLang");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DictLang", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DictLang", value);
 			}
 		}
 
@@ -88,11 +88,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "UserDict");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "UserDict");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "UserDict", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "UserDict", value);
 			}
 		}
 
@@ -106,11 +106,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "IgnoreCaps");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IgnoreCaps");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "IgnoreCaps", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "IgnoreCaps", value);
 			}
 		}
 
@@ -124,11 +124,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SuggestMainOnly");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SuggestMainOnly");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SuggestMainOnly", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SuggestMainOnly", value);
 			}
 		}
 
@@ -142,11 +142,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "IgnoreMixedDigits");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IgnoreMixedDigits");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "IgnoreMixedDigits", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "IgnoreMixedDigits", value);
 			}
 		}
 
@@ -160,11 +160,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "IgnoreFileNames");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IgnoreFileNames");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "IgnoreFileNames", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "IgnoreFileNames", value);
 			}
 		}
 
@@ -178,11 +178,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "GermanPostReform");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "GermanPostReform");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "GermanPostReform", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "GermanPostReform", value);
 			}
 		}
 
@@ -196,11 +196,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "KoreanCombineAux");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "KoreanCombineAux");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "KoreanCombineAux", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "KoreanCombineAux", value);
 			}
 		}
 
@@ -214,11 +214,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "KoreanUseAutoChangeList");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "KoreanUseAutoChangeList");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "KoreanUseAutoChangeList", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "KoreanUseAutoChangeList", value);
 			}
 		}
 
@@ -232,11 +232,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "KoreanProcessCompound");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "KoreanProcessCompound");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "KoreanProcessCompound", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "KoreanProcessCompound", value);
 			}
 		}
 
@@ -250,11 +250,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlHebrewModes>(this, "HebrewModes");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlHebrewModes>(this, "HebrewModes");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "HebrewModes", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "HebrewModes", value);
 			}
 		}
 
@@ -268,11 +268,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlArabicModes>(this, "ArabicModes");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlArabicModes>(this, "ArabicModes");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "ArabicModes", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ArabicModes", value);
 			}
 		}
 
@@ -286,11 +286,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ArabicStrictAlefHamza");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ArabicStrictAlefHamza");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ArabicStrictAlefHamza", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ArabicStrictAlefHamza", value);
 			}
 		}
 
@@ -304,11 +304,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ArabicStrictFinalYaa");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ArabicStrictFinalYaa");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ArabicStrictFinalYaa", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ArabicStrictFinalYaa", value);
 			}
 		}
 
@@ -322,11 +322,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ArabicStrictTaaMarboota");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ArabicStrictTaaMarboota");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ArabicStrictTaaMarboota", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ArabicStrictTaaMarboota", value);
 			}
 		}
 
@@ -340,11 +340,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RussianStrictE");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RussianStrictE");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RussianStrictE", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RussianStrictE", value);
 			}
 		}
 
@@ -358,11 +358,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSpanishModes>(this, "SpanishModes");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSpanishModes>(this, "SpanishModes");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "SpanishModes", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "SpanishModes", value);
 			}
 		}
 
@@ -376,11 +376,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPortugueseReform>(this, "PortugalReform");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPortugueseReform>(this, "PortugalReform");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "PortugalReform", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "PortugalReform", value);
 			}
 		}
 
@@ -394,11 +394,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPortugueseReform>(this, "BrazilReform");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPortugueseReform>(this, "BrazilReform");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "BrazilReform", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "BrazilReform", value);
 			}
 		}
 

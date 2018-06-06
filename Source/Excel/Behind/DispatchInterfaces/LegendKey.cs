@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Border>(this, "Border", typeof(NetOffice.ExcelApi.Border));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Border>(this, "Border", typeof(NetOffice.ExcelApi.Border));
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Interior>(this, "Interior", typeof(NetOffice.ExcelApi.Interior));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Interior>(this, "Interior", typeof(NetOffice.ExcelApi.Interior));
 			}
 		}
 
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ChartFillFormat>(this, "Fill", typeof(NetOffice.ExcelApi.ChartFillFormat));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ChartFillFormat>(this, "Fill", typeof(NetOffice.ExcelApi.ChartFillFormat));
 			}
 		}
 
@@ -151,11 +151,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "InvertIfNegative");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "InvertIfNegative");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "InvertIfNegative", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InvertIfNegative", value);
 			}
 		}
 
@@ -169,11 +169,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "MarkerBackgroundColor");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "MarkerBackgroundColor");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MarkerBackgroundColor", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarkerBackgroundColor", value);
 			}
 		}
 
@@ -187,11 +187,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlColorIndex>(this, "MarkerBackgroundColorIndex");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlColorIndex>(this, "MarkerBackgroundColorIndex");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "MarkerBackgroundColorIndex", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "MarkerBackgroundColorIndex", value);
 			}
 		}
 
@@ -205,11 +205,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "MarkerForegroundColor");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "MarkerForegroundColor");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MarkerForegroundColor", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarkerForegroundColor", value);
 			}
 		}
 
@@ -223,11 +223,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlColorIndex>(this, "MarkerForegroundColorIndex");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlColorIndex>(this, "MarkerForegroundColorIndex");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "MarkerForegroundColorIndex", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "MarkerForegroundColorIndex", value);
 			}
 		}
 
@@ -241,11 +241,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "MarkerSize");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "MarkerSize");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MarkerSize", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarkerSize", value);
 			}
 		}
 
@@ -259,11 +259,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlMarkerStyle>(this, "MarkerStyle");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlMarkerStyle>(this, "MarkerStyle");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "MarkerStyle", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "MarkerStyle", value);
 			}
 		}
 
@@ -277,11 +277,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "PictureType");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "PictureType");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PictureType", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PictureType", value);
 			}
 		}
 
@@ -294,11 +294,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "PictureUnit");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "PictureUnit");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PictureUnit", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PictureUnit", value);
 			}
 		}
 
@@ -312,11 +312,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Smooth");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Smooth");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Smooth", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Smooth", value);
 			}
 		}
 
@@ -330,7 +330,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Left");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Left");
 			}
 		}
 
@@ -344,7 +344,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Top");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Top");
 			}
 		}
 
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Width");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Width");
 			}
 		}
 
@@ -372,7 +372,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Height");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Height");
 			}
 		}
 
@@ -386,11 +386,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Shadow");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Shadow");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Shadow", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Shadow", value);
 			}
 		}
 
@@ -404,11 +404,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "PictureUnit2");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "PictureUnit2");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PictureUnit2", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PictureUnit2", value);
 			}
 		}
 
@@ -422,7 +422,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ChartFormat>(this, "Format", typeof(NetOffice.ExcelApi.ChartFormat));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ChartFormat>(this, "Format", typeof(NetOffice.ExcelApi.ChartFormat));
 			}
 		}
 
@@ -437,7 +437,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object ClearFormats()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "ClearFormats");
 		}
 
 		/// <summary>
@@ -447,7 +447,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Delete()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Delete");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Delete");
 		}
 
 		/// <summary>
@@ -456,7 +456,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Select()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Select");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Select");
 		}
 
 		#endregion

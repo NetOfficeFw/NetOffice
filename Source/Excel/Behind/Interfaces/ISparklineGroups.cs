@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SparklineGroup>(this, "_Default", typeof(NetOffice.ExcelApi.SparklineGroup), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SparklineGroup>(this, "_Default", typeof(NetOffice.ExcelApi.SparklineGroup), index);
 			}
 		}
 
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.SparklineGroup Add(NetOffice.ExcelApi.Enums.XlSparkType type, string sourceData)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SparklineGroup>(this, "Add", typeof(NetOffice.ExcelApi.SparklineGroup), type, sourceData);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SparklineGroup>(this, "Add", typeof(NetOffice.ExcelApi.SparklineGroup), type, sourceData);
 		}
 
 		/// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 Clear()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Clear");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Clear");
 		}
 
 		/// <summary>
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 ClearGroups()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ClearGroups");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ClearGroups");
 		}
 
 		/// <summary>
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 Group(NetOffice.ExcelApi.Range location)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Group", location);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Group", location);
 		}
 
 		/// <summary>
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 Ungroup()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Ungroup");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Ungroup");
 		}
 
         #endregion

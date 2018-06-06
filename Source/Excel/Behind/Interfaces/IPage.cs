@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "LeftHeader", typeof(NetOffice.ExcelApi.HeaderFooter));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "LeftHeader", typeof(NetOffice.ExcelApi.HeaderFooter));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "CenterHeader", typeof(NetOffice.ExcelApi.HeaderFooter));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "CenterHeader", typeof(NetOffice.ExcelApi.HeaderFooter));
 			}
 		}
 
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "RightHeader", typeof(NetOffice.ExcelApi.HeaderFooter));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "RightHeader", typeof(NetOffice.ExcelApi.HeaderFooter));
 			}
 		}
 
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "LeftFooter", typeof(NetOffice.ExcelApi.HeaderFooter));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "LeftFooter", typeof(NetOffice.ExcelApi.HeaderFooter));
 			}
 		}
 
@@ -119,7 +119,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "CenterFooter", typeof(NetOffice.ExcelApi.HeaderFooter));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "CenterFooter", typeof(NetOffice.ExcelApi.HeaderFooter));
 			}
 		}
 
@@ -132,7 +132,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "RightFooter", typeof(NetOffice.ExcelApi.HeaderFooter));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.HeaderFooter>(this, "RightFooter", typeof(NetOffice.ExcelApi.HeaderFooter));
 			}
 		}
 

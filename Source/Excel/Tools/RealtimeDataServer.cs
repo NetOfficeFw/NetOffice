@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using NetOffice.Attributes;
 using NetOffice.Tools;
+using NetOffice.CoreServices;
 using NetOffice.Exceptions;
 using NetOffice.ExcelApi.Tools.Attributes;
 using NetOffice.ExcelApi.Tools.Exceptions;

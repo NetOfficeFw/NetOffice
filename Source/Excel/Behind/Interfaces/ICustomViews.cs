@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -110,7 +110,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CustomView>(this, "_Default", typeof(NetOffice.ExcelApi.CustomView), viewName);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CustomView>(this, "_Default", typeof(NetOffice.ExcelApi.CustomView), viewName);
             }
         }
 
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings, object rowColSettings)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName, printSettings, rowColSettings);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName, printSettings, rowColSettings);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.CustomView Add(string viewName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName, printSettings);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CustomView>(this, "Add", typeof(NetOffice.ExcelApi.CustomView), viewName, printSettings);
         }
 
         #endregion

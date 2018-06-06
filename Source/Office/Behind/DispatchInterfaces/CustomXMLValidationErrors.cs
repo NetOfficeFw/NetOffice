@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLValidationError>(this, "Item", typeof(NetOffice.OfficeApi.CustomXMLValidationError), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLValidationError>(this, "Item", typeof(NetOffice.OfficeApi.CustomXMLValidationError), index);
             }
         }
 
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText, object clearedOnUpdate)
         {
-            Factory.ExecuteMethod(this, "Add", node, errorName, errorText, clearedOnUpdate);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", node, errorName, errorText, clearedOnUpdate);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName)
         {
-            Factory.ExecuteMethod(this, "Add", node, errorName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", node, errorName);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText)
         {
-            Factory.ExecuteMethod(this, "Add", node, errorName, errorText);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", node, errorName, errorText);
         }
 
         #endregion

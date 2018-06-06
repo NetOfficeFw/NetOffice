@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Workbook");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Workbook");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsLinked");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsLinked");
             }
         }
 
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Activate()
         {
-            Factory.ExecuteMethod(this, "Activate");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Activate");
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void BreakLink()
         {
-            Factory.ExecuteMethod(this, "BreakLink");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "BreakLink");
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual void ActivateChartDataWindow()
         {
-            Factory.ExecuteMethod(this, "ActivateChartDataWindow");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ActivateChartDataWindow");
         }
 
         #endregion

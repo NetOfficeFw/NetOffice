@@ -68,11 +68,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "SearchSubFolders");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SearchSubFolders");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SearchSubFolders", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SearchSubFolders", value);
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "MatchTextExactly");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "MatchTextExactly");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MatchTextExactly", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MatchTextExactly", value);
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "MatchAllWordForms");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "MatchAllWordForms");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MatchAllWordForms", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MatchAllWordForms", value);
             }
         }
 
@@ -119,11 +119,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "FileName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FileName");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FileName", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FileName", value);
             }
         }
 
@@ -136,11 +136,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFileType>(this, "FileType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFileType>(this, "FileType");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "FileType", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "FileType", value);
             }
         }
 
@@ -153,11 +153,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLastModified>(this, "LastModified");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLastModified>(this, "LastModified");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "LastModified", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "LastModified", value);
             }
         }
 
@@ -170,11 +170,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "TextOrProperty");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextOrProperty");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "TextOrProperty", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextOrProperty", value);
             }
         }
 
@@ -187,11 +187,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "LookIn");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "LookIn");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "LookIn", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "LookIn", value);
             }
         }
 
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FoundFiles>(this, "FoundFiles", typeof(NetOffice.OfficeApi.FoundFiles));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FoundFiles>(this, "FoundFiles", typeof(NetOffice.OfficeApi.FoundFiles));
             }
         }
 
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PropertyTests>(this, "PropertyTests", typeof(NetOffice.OfficeApi.PropertyTests));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PropertyTests>(this, "PropertyTests", typeof(NetOffice.OfficeApi.PropertyTests));
             }
         }
 
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SearchScopes>(this, "SearchScopes", typeof(NetOffice.OfficeApi.SearchScopes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SearchScopes>(this, "SearchScopes", typeof(NetOffice.OfficeApi.SearchScopes));
             }
         }
 
@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SearchFolders>(this, "SearchFolders", typeof(NetOffice.OfficeApi.SearchFolders));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SearchFolders>(this, "SearchFolders", typeof(NetOffice.OfficeApi.SearchFolders));
             }
         }
 
@@ -256,7 +256,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileTypes>(this, "FileTypes", typeof(NetOffice.OfficeApi.FileTypes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileTypes>(this, "FileTypes", typeof(NetOffice.OfficeApi.FileTypes));
             }
         }
 
@@ -273,7 +273,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Execute(object sortBy, object sortOrder, object alwaysAccurate)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Execute", sortBy, sortOrder, alwaysAccurate);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Execute", sortBy, sortOrder, alwaysAccurate);
         }
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Execute()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Execute");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Execute");
         }
 
         /// <summary>
@@ -294,7 +294,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Execute(object sortBy)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Execute", sortBy);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Execute", sortBy);
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Execute(object sortBy, object sortOrder)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Execute", sortBy, sortOrder);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Execute", sortBy, sortOrder);
         }
 
         /// <summary>
@@ -315,7 +315,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void NewSearch()
         {
-            Factory.ExecuteMethod(this, "NewSearch");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "NewSearch");
         }
 
         /// <summary>
@@ -324,7 +324,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void RefreshScopes()
         {
-            Factory.ExecuteMethod(this, "RefreshScopes");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RefreshScopes");
         }
 
         #endregion

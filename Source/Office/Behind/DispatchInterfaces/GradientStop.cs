@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ColorFormat>(this, "Color", typeof(NetOffice.OfficeApi.ColorFormat));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ColorFormat>(this, "Color", typeof(NetOffice.OfficeApi.ColorFormat));
             }
         }
 
@@ -84,11 +84,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Position");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Position");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Position", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Position", value);
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Transparency");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Transparency");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Transparency", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Transparency", value);
             }
         }
 

@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,11 +82,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Top");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Top");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Top", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Top", value);
             }
         }
 
@@ -99,11 +99,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Left");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Left");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Left", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Left", value);
             }
         }
 
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Balloon>(this, "NewBalloon", typeof(NetOffice.OfficeApi.Balloon));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Balloon>(this, "NewBalloon", typeof(NetOffice.OfficeApi.Balloon));
             }
         }
 
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBalloonErrorType>(this, "BalloonError");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBalloonErrorType>(this, "BalloonError");
             }
         }
 
@@ -142,11 +142,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Visible");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Visible");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Visible", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Visible", value);
             }
         }
 
@@ -159,11 +159,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoAnimationType>(this, "Animation");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoAnimationType>(this, "Animation");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Animation", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Animation", value);
             }
         }
 
@@ -176,11 +176,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Reduced");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Reduced");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Reduced", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Reduced", value);
             }
         }
 
@@ -193,11 +193,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AssistWithHelp");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AssistWithHelp");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AssistWithHelp", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AssistWithHelp", value);
             }
         }
 
@@ -210,11 +210,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AssistWithWizards");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AssistWithWizards");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AssistWithWizards", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AssistWithWizards", value);
             }
         }
 
@@ -227,11 +227,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AssistWithAlerts");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AssistWithAlerts");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AssistWithAlerts", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AssistWithAlerts", value);
             }
         }
 
@@ -244,11 +244,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "MoveWhenInTheWay");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "MoveWhenInTheWay");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MoveWhenInTheWay", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MoveWhenInTheWay", value);
             }
         }
 
@@ -261,11 +261,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Sounds");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Sounds");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Sounds", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Sounds", value);
             }
         }
 
@@ -278,11 +278,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "FeatureTips");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "FeatureTips");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FeatureTips", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FeatureTips", value);
             }
         }
 
@@ -295,11 +295,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "MouseTips");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "MouseTips");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MouseTips", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MouseTips", value);
             }
         }
 
@@ -312,11 +312,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "KeyboardShortcutTips");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "KeyboardShortcutTips");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "KeyboardShortcutTips", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "KeyboardShortcutTips", value);
             }
         }
 
@@ -329,11 +329,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "HighPriorityTips");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "HighPriorityTips");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "HighPriorityTips", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "HighPriorityTips", value);
             }
         }
 
@@ -346,11 +346,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "TipOfDay");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TipOfDay");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "TipOfDay", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TipOfDay", value);
             }
         }
 
@@ -363,11 +363,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "GuessHelp");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "GuessHelp");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "GuessHelp", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "GuessHelp", value);
             }
         }
 
@@ -380,11 +380,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "SearchWhenProgramming");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SearchWhenProgramming");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SearchWhenProgramming", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SearchWhenProgramming", value);
             }
         }
 
@@ -397,7 +397,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Item");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Item");
             }
         }
 
@@ -410,11 +410,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "FileName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FileName");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FileName", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FileName", value);
             }
         }
 
@@ -427,7 +427,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -440,11 +440,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "On");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "On");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "On", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "On", value);
             }
         }
 
@@ -460,7 +460,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Move(Int32 xLeft, Int32 yTop)
         {
-            Factory.ExecuteMethod(this, "Move", xLeft, yTop);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Move", xLeft, yTop);
         }
 
         /// <summary>
@@ -469,7 +469,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Help()
         {
-            Factory.ExecuteMethod(this, "Help");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Help");
         }
 
         /// <summary>
@@ -487,7 +487,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom, object right)
         {
-            return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left, bottom, right });
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left, bottom, right });
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 StartWizard(bool on, string callback, Int32 privateX)
         {
-            return Factory.ExecuteInt32MethodGet(this, "StartWizard", on, callback, privateX);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "StartWizard", on, callback, privateX);
         }
 
         /// <summary>
@@ -514,7 +514,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation)
         {
-            return Factory.ExecuteInt32MethodGet(this, "StartWizard", on, callback, privateX, animation);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "StartWizard", on, callback, privateX, animation);
         }
 
         /// <summary>
@@ -529,7 +529,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser)
         {
-            return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser });
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser });
         }
 
         /// <summary>
@@ -545,7 +545,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top)
         {
-            return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top });
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top });
         }
 
         /// <summary>
@@ -562,7 +562,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left)
         {
-            return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left });
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left });
         }
 
         /// <summary>
@@ -580,7 +580,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom)
         {
-            return Factory.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left, bottom });
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "StartWizard", new object[] { on, callback, privateX, animation, customTeaser, top, left, bottom });
         }
 
         /// <summary>
@@ -592,7 +592,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void EndWizard(Int32 wizardID, bool varfSuccess, object animation)
         {
-            Factory.ExecuteMethod(this, "EndWizard", wizardID, varfSuccess, animation);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "EndWizard", wizardID, varfSuccess, animation);
         }
 
         /// <summary>
@@ -604,7 +604,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void EndWizard(Int32 wizardID, bool varfSuccess)
         {
-            Factory.ExecuteMethod(this, "EndWizard", wizardID, varfSuccess);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "EndWizard", wizardID, varfSuccess);
         }
 
         /// <summary>
@@ -616,7 +616,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act, object animation)
         {
-            Factory.ExecuteMethod(this, "ActivateWizard", wizardID, act, animation);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ActivateWizard", wizardID, act, animation);
         }
 
         /// <summary>
@@ -628,7 +628,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act)
         {
-            Factory.ExecuteMethod(this, "ActivateWizard", wizardID, act);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ActivateWizard", wizardID, act);
         }
 
         /// <summary>
@@ -637,7 +637,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void ResetTips()
         {
-            Factory.ExecuteMethod(this, "ResetTips");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ResetTips");
         }
 
         /// <summary>
@@ -653,7 +653,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 DoAlert(string bstrAlertTitle, string bstrAlertText, NetOffice.OfficeApi.Enums.MsoAlertButtonType alb, NetOffice.OfficeApi.Enums.MsoAlertIconType alc, NetOffice.OfficeApi.Enums.MsoAlertDefaultType ald, NetOffice.OfficeApi.Enums.MsoAlertCancelType alq, bool varfSysAlert)
         {
-            return Factory.ExecuteInt32MethodGet(this, "DoAlert", new object[] { bstrAlertTitle, bstrAlertText, alb, alc, ald, alq, varfSysAlert });
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "DoAlert", new object[] { bstrAlertTitle, bstrAlertText, alb, alc, ald, alq, varfSysAlert });
         }
 
         #endregion

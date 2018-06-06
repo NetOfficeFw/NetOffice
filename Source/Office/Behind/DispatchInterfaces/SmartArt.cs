@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtNodes>(this, "AllNodes", typeof(NetOffice.OfficeApi.SmartArtNodes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtNodes>(this, "AllNodes", typeof(NetOffice.OfficeApi.SmartArtNodes));
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtNodes>(this, "Nodes", typeof(NetOffice.OfficeApi.SmartArtNodes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtNodes>(this, "Nodes", typeof(NetOffice.OfficeApi.SmartArtNodes));
             }
         }
 
@@ -113,11 +113,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtLayout>(this, "Layout", typeof(NetOffice.OfficeApi.SmartArtLayout));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtLayout>(this, "Layout", typeof(NetOffice.OfficeApi.SmartArtLayout));
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "Layout", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Layout", value);
             }
         }
 
@@ -131,11 +131,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtQuickStyle>(this, "QuickStyle", typeof(NetOffice.OfficeApi.SmartArtQuickStyle));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtQuickStyle>(this, "QuickStyle", typeof(NetOffice.OfficeApi.SmartArtQuickStyle));
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "QuickStyle", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "QuickStyle", value);
             }
         }
 
@@ -149,11 +149,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtColor>(this, "Color", typeof(NetOffice.OfficeApi.SmartArtColor));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtColor>(this, "Color", typeof(NetOffice.OfficeApi.SmartArtColor));
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "Color", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Color", value);
             }
         }
 
@@ -167,11 +167,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Reverse");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Reverse");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Reverse", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Reverse", value);
             }
         }
 
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Reset()
         {
-            Factory.ExecuteMethod(this, "Reset");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Reset");
         }
 
         #endregion

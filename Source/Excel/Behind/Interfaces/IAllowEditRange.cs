@@ -67,11 +67,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Title");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Title");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Title", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Title", value);
             }
         }
 
@@ -84,11 +84,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", typeof(NetOffice.ExcelApi.Range));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", typeof(NetOffice.ExcelApi.Range));
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "Range", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Range", value);
             }
         }
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.UserAccessList>(this, "Users", typeof(NetOffice.ExcelApi.UserAccessList));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.UserAccessList>(this, "Users", typeof(NetOffice.ExcelApi.UserAccessList));
             }
         }
 
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 ChangePassword(string password)
         {
-            return Factory.ExecuteInt32MethodGet(this, "ChangePassword", password);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ChangePassword", password);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Delete()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Unprotect(object password)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Unprotect", password);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Unprotect", password);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Unprotect()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Unprotect");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Unprotect");
         }
 
         #endregion

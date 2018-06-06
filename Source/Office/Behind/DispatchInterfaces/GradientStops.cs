@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.GradientStop>(this, "Item", typeof(NetOffice.OfficeApi.GradientStop), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.GradientStop>(this, "Item", typeof(NetOffice.OfficeApi.GradientStop), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Delete(object index)
         {
-            Factory.ExecuteMethod(this, "Delete", index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete", index);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Insert(Int32 rGB, Single position, object transparency, object index)
         {
-            Factory.ExecuteMethod(this, "Insert", rGB, position, transparency, index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert", rGB, position, transparency, index);
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Insert(Int32 rGB, Single position)
         {
-            Factory.ExecuteMethod(this, "Insert", rGB, position);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert", rGB, position);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Insert(Int32 rGB, Single position, object transparency)
         {
-            Factory.ExecuteMethod(this, "Insert", rGB, position, transparency);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert", rGB, position, transparency);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Insert2(Int32 rGB, Single position, object transparency, object index, object brightness)
         {
-            Factory.ExecuteMethod(this, "Insert2", new object[] { rGB, position, transparency, index, brightness });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert2", new object[] { rGB, position, transparency, index, brightness });
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Insert2(Int32 rGB, Single position)
         {
-            Factory.ExecuteMethod(this, "Insert2", rGB, position);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert2", rGB, position);
         }
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Insert2(Int32 rGB, Single position, object transparency)
         {
-            Factory.ExecuteMethod(this, "Insert2", rGB, position, transparency);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert2", rGB, position, transparency);
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Insert2(Int32 rGB, Single position, object transparency, object index)
         {
-            Factory.ExecuteMethod(this, "Insert2", rGB, position, transparency, index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Insert2", rGB, position, transparency, index);
         }
 
         #endregion

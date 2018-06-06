@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "Background", typeof(NetOffice.OfficeApi.Shape));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "Background", typeof(NetOffice.OfficeApi.Shape));
             }
         }
 
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "Default", typeof(NetOffice.OfficeApi.Shape));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "Default", typeof(NetOffice.OfficeApi.Shape));
             }
         }
 
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "Item", typeof(NetOffice.OfficeApi.Shape), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "Item", typeof(NetOffice.OfficeApi.Shape), index);
             }
         }
 
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCallout", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCallout", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
         }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddConnector", typeof(NetOffice.OfficeApi.Shape), new object[] { type, beginX, beginY, endX, endY });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddConnector", typeof(NetOffice.OfficeApi.Shape), new object[] { type, beginX, beginY, endX, endY });
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddCurve(object safeArrayOfPoints)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCurve", typeof(NetOffice.OfficeApi.Shape), safeArrayOfPoints);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCurve", typeof(NetOffice.OfficeApi.Shape), safeArrayOfPoints);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddLabel", typeof(NetOffice.OfficeApi.Shape), new object[] { orientation, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddLabel", typeof(NetOffice.OfficeApi.Shape), new object[] { orientation, left, top, width, height });
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddLine", typeof(NetOffice.OfficeApi.Shape), beginX, beginY, endX, endY);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddLine", typeof(NetOffice.OfficeApi.Shape), beginX, beginY, endX, endY);
         }
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top, width, height });
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top });
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top, width });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", typeof(NetOffice.OfficeApi.Shape), new object[] { fileName, linkToFile, saveWithDocument, left, top, width });
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddPolyline(object safeArrayOfPoints)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPolyline", typeof(NetOffice.OfficeApi.Shape), safeArrayOfPoints);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPolyline", typeof(NetOffice.OfficeApi.Shape), safeArrayOfPoints);
         }
 
         /// <summary>
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddShape", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddShape", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
         }
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTextEffect", typeof(NetOffice.OfficeApi.Shape), new object[] { presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTextEffect", typeof(NetOffice.OfficeApi.Shape), new object[] { presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
         }
 
         /// <summary>
@@ -297,7 +297,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTextbox", typeof(NetOffice.OfficeApi.Shape), new object[] { orientation, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTextbox", typeof(NetOffice.OfficeApi.Shape), new object[] { orientation, left, top, width, height });
         }
 
         /// <summary>
@@ -309,7 +309,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FreeformBuilder>(this, "BuildFreeform", typeof(NetOffice.OfficeApi.FreeformBuilder), editingType, x1, y1);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FreeformBuilder>(this, "BuildFreeform", typeof(NetOffice.OfficeApi.FreeformBuilder), editingType, x1, y1);
         }
 
         /// <summary>
@@ -319,7 +319,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.ShapeRange Range(object index)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ShapeRange>(this, "Range", typeof(NetOffice.OfficeApi.ShapeRange), index);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ShapeRange>(this, "Range", typeof(NetOffice.OfficeApi.ShapeRange), index);
         }
 
         /// <summary>
@@ -328,7 +328,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void SelectAll()
         {
-            Factory.ExecuteMethod(this, "SelectAll");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SelectAll");
         }
 
         /// <summary>
@@ -342,7 +342,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddDiagram", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddDiagram", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
         }
 
         /// <summary>
@@ -356,7 +356,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddCanvas(Single left, Single top, Single width, Single height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCanvas", typeof(NetOffice.OfficeApi.Shape), left, top, width, height);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCanvas", typeof(NetOffice.OfficeApi.Shape), left, top, width, height);
         }
 
         /// <summary>
@@ -370,7 +370,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart(object type, object left, object top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), new object[] { type, left, top, width, height });
         }
 
         /// <summary>
@@ -380,7 +380,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape));
         }
 
         /// <summary>
@@ -391,7 +391,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart(object type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), type);
         }
 
         /// <summary>
@@ -403,7 +403,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart(object type, object left)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), type, left);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), type, left);
         }
 
         /// <summary>
@@ -416,7 +416,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart(object type, object left, object top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), type, left, top);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), type, left, top);
         }
 
         /// <summary>
@@ -430,7 +430,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart(object type, object left, object top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), type, left, top, width);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", typeof(NetOffice.OfficeApi.Shape), type, left, top, width);
         }
 
         /// <summary>
@@ -446,7 +446,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddTable(Int32 numRows, Int32 numColumns, Single left, Single top, Single width, Single height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTable", typeof(NetOffice.OfficeApi.Shape), new object[] { numRows, numColumns, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTable", typeof(NetOffice.OfficeApi.Shape), new object[] { numRows, numColumns, left, top, width, height });
         }
 
         /// <summary>
@@ -460,7 +460,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), new object[] { layout, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), new object[] { layout, left, top, width, height });
         }
 
         /// <summary>
@@ -471,7 +471,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), layout);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), layout);
         }
 
         /// <summary>
@@ -483,7 +483,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), layout, left);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), layout, left);
         }
 
         /// <summary>
@@ -496,7 +496,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), layout, left, top);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), layout, left, top);
         }
 
         /// <summary>
@@ -510,7 +510,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), layout, left, top, width);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", typeof(NetOffice.OfficeApi.Shape), layout, left, top, width);
         }
 
         /// <summary>
@@ -526,7 +526,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top, object width, object height, object newLayout)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), new object[] { style, type, left, top, width, height, newLayout });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), new object[] { style, type, left, top, width, height, newLayout });
         }
 
         /// <summary>
@@ -536,7 +536,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart2()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape));
         }
 
         /// <summary>
@@ -547,7 +547,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart2(object style)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), style);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), style);
         }
 
         /// <summary>
@@ -559,7 +559,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart2(object style, object type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), style, type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), style, type);
         }
 
         /// <summary>
@@ -572,7 +572,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), style, type, left);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), style, type, left);
         }
 
         /// <summary>
@@ -586,7 +586,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), style, type, left, top);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), style, type, left, top);
         }
 
         /// <summary>
@@ -601,7 +601,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), new object[] { style, type, left, top, width });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), new object[] { style, type, left, top, width });
         }
 
         /// <summary>
@@ -617,7 +617,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), new object[] { style, type, left, top, width, height });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", typeof(NetOffice.OfficeApi.Shape), new object[] { style, type, left, top, width, height });
         }
 
         #endregion

@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "DocumentElement", typeof(NetOffice.OfficeApi.CustomXMLNode));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "DocumentElement", typeof(NetOffice.OfficeApi.CustomXMLNode));
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Id");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Id");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "NamespaceURI");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "NamespaceURI");
             }
         }
 
@@ -126,11 +126,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLSchemaCollection>(this, "SchemaCollection", typeof(NetOffice.OfficeApi.CustomXMLSchemaCollection));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLSchemaCollection>(this, "SchemaCollection", typeof(NetOffice.OfficeApi.CustomXMLSchemaCollection));
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "SchemaCollection", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "SchemaCollection", value);
             }
         }
 
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPrefixMappings>(this, "NamespaceManager", typeof(NetOffice.OfficeApi.CustomXMLPrefixMappings));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPrefixMappings>(this, "NamespaceManager", typeof(NetOffice.OfficeApi.CustomXMLPrefixMappings));
             }
         }
 
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "XML");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "XML");
             }
         }
 
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLValidationErrors>(this, "Errors", typeof(NetOffice.OfficeApi.CustomXMLValidationErrors));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLValidationErrors>(this, "Errors", typeof(NetOffice.OfficeApi.CustomXMLValidationErrors));
             }
         }
 
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "BuiltIn");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "BuiltIn");
             }
         }
 
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType, object nodeValue)
         {
-            Factory.ExecuteMethod(this, "AddNode", new object[] { parent, name, namespaceURI, nextSibling, nodeType, nodeValue });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddNode", new object[] { parent, name, namespaceURI, nextSibling, nodeType, nodeValue });
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent)
         {
-            Factory.ExecuteMethod(this, "AddNode", parent);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddNode", parent);
         }
 
         /// <summary>
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name)
         {
-            Factory.ExecuteMethod(this, "AddNode", parent, name);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddNode", parent, name);
         }
 
         /// <summary>
@@ -246,7 +246,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI)
         {
-            Factory.ExecuteMethod(this, "AddNode", parent, name, namespaceURI);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddNode", parent, name, namespaceURI);
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling)
         {
-            Factory.ExecuteMethod(this, "AddNode", parent, name, namespaceURI, nextSibling);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddNode", parent, name, namespaceURI, nextSibling);
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType)
         {
-            Factory.ExecuteMethod(this, "AddNode", new object[] { parent, name, namespaceURI, nextSibling, nodeType });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddNode", new object[] { parent, name, namespaceURI, nextSibling, nodeType });
         }
 
         /// <summary>
@@ -287,7 +287,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -298,7 +298,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual bool Load(string filePath)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Load", filePath);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Load", filePath);
         }
 
         /// <summary>
@@ -309,7 +309,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual bool LoadXML(string xML)
         {
-            return Factory.ExecuteBoolMethodGet(this, "LoadXML", xML);
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "LoadXML", xML);
         }
 
         /// <summary>
@@ -320,7 +320,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "SelectNodes", typeof(NetOffice.OfficeApi.CustomXMLNodes), xPath);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "SelectNodes", typeof(NetOffice.OfficeApi.CustomXMLNodes), xPath);
         }
 
         /// <summary>
@@ -331,7 +331,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNode>(this, "SelectSingleNode", typeof(NetOffice.OfficeApi.CustomXMLNode), xPath);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNode>(this, "SelectSingleNode", typeof(NetOffice.OfficeApi.CustomXMLNode), xPath);
         }
 
         #endregion

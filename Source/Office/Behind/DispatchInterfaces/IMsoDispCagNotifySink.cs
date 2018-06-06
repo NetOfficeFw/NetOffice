@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void InsertClip(object pClipMoniker, object pItemMoniker)
         {
-            Factory.ExecuteMethod(this, "InsertClip", pClipMoniker, pItemMoniker);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertClip", pClipMoniker, pItemMoniker);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void WindowIsClosing()
         {
-            Factory.ExecuteMethod(this, "WindowIsClosing");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "WindowIsClosing");
         }
 
         #endregion

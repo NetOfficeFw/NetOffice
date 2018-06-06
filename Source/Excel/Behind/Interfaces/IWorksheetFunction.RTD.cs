@@ -49,7 +49,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21, object topic22, object topic23, object topic24, object topic25, object topic26, object topic27, object topic28)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25, topic26, topic27, topic28 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25, topic26, topic27, topic28 });
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", progID, server, topic1);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", progID, server, topic1);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", progID, server, topic1, topic2);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", progID, server, topic1, topic2);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3 });
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4 });
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5 });
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6 });
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7 });
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8 });
         }
 
         /// <summary>
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9 });
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10 });
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11 });
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12 });
         }
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13 });
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14 });
         }
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15 });
         }
 
         /// <summary>
@@ -377,7 +377,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16 });
         }
 
         /// <summary>
@@ -406,7 +406,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17 });
         }
 
         /// <summary>
@@ -436,7 +436,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18 });
         }
 
         /// <summary>
@@ -467,7 +467,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19 });
         }
 
         /// <summary>
@@ -499,7 +499,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20 });
         }
 
         /// <summary>
@@ -532,7 +532,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21 });
         }
 
         /// <summary>
@@ -566,7 +566,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21, object topic22)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22 });
         }
 
         /// <summary>
@@ -601,7 +601,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21, object topic22, object topic23)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23 });
         }
 
         /// <summary>
@@ -637,7 +637,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21, object topic22, object topic23, object topic24)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24 });
         }
 
         /// <summary>
@@ -674,7 +674,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21, object topic22, object topic23, object topic24, object topic25)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25 });
         }
 
         /// <summary>
@@ -712,7 +712,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21, object topic22, object topic23, object topic24, object topic25, object topic26)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25, topic26 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25, topic26 });
         }
 
         /// <summary>
@@ -751,7 +751,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object RTD(object progID, object server, object topic1, object topic2, object topic3, object topic4, object topic5, object topic6, object topic7, object topic8, object topic9, object topic10, object topic11, object topic12, object topic13, object topic14, object topic15, object topic16, object topic17, object topic18, object topic19, object topic20, object topic21, object topic22, object topic23, object topic24, object topic25, object topic26, object topic27)
         {
-            return Factory.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25, topic26, topic27 });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "RTD", new object[] { progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25, topic26, topic27 });
         }
 
         #endregion

@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerResult>(this, "Item", typeof(NetOffice.OfficeApi.PickerResult), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerResult>(this, "Item", typeof(NetOffice.OfficeApi.PickerResult), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData, object subItems)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), new object[] { id, displayName, type, sIPId, itemData, subItems });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), new object[] { id, displayName, type, sIPId, itemData, subItems });
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), id, displayName, type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), id, displayName, type);
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), id, displayName, type, sIPId);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), id, displayName, type, sIPId);
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), new object[] { id, displayName, type, sIPId, itemData });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", typeof(NetOffice.OfficeApi.PickerResult), new object[] { id, displayName, type, sIPId, itemData });
         }
 
         #endregion

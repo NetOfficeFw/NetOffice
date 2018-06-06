@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -81,11 +81,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowEdit");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowEdit");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AllowEdit", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AllowEdit", value);
 			}
 		}
 
@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual Int32 Delete()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Delete");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
 		}
 
 		#endregion

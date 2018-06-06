@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "HeartbeatInterval");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "HeartbeatInterval");
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void UpdateNotify()
         {
-            Factory.ExecuteMethod(this, "UpdateNotify");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "UpdateNotify");
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Disconnect()
         {
-            Factory.ExecuteMethod(this, "Disconnect");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Disconnect");
         }
 
         #endregion

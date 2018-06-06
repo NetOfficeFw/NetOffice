@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,11 +115,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Color");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Color");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Color", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Color", value);
 			}
 		}
 
@@ -133,11 +133,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "ColorIndex");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ColorIndex");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "ColorIndex", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ColorIndex", value);
 			}
 		}
 
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -165,11 +165,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "LineStyle");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "LineStyle");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "LineStyle", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "LineStyle", value);
 			}
 		}
 
@@ -183,11 +183,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Value");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Value");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Value", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Value", value);
 			}
 		}
 
@@ -201,11 +201,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Weight");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Weight");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Weight", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Weight", value);
 			}
 		}
 
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Border>(this, "_Default", typeof(NetOffice.ExcelApi.Border), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Border>(this, "_Default", typeof(NetOffice.ExcelApi.Border), index);
 			}
 		}
 
@@ -234,11 +234,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "ThemeColor");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ThemeColor");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "ThemeColor", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ThemeColor", value);
 			}
 		}
 
@@ -252,11 +252,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "TintAndShade");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "TintAndShade");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "TintAndShade", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "TintAndShade", value);
 			}
 		}
 

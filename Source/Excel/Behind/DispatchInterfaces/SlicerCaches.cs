@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerCache>(this, "_Default", typeof(NetOffice.ExcelApi.SlicerCache), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerCache>(this, "_Default", typeof(NetOffice.ExcelApi.SlicerCache), index);
 			}
 		}
 
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name);
 		}
 
 		/// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name, object slicerCacheType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name, slicerCacheType);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name, slicerCacheType);
 		}
 
 		/// <summary>
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField);
 		}
 
 		/// <summary>
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.SlicerCache _Add(object source, object sourceField, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "_Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "_Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField, name);
 		}
 
 		/// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.SlicerCache _Add(object source, object sourceField)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "_Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SlicerCache>(this, "_Add", typeof(NetOffice.ExcelApi.SlicerCache), source, sourceField);
 		}
 
         #endregion

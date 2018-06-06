@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Item", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Item", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
             }
         }
 
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description, object notes)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL, description, notes);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL, description, notes);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL, description);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceLink>(this, "Add", typeof(NetOffice.OfficeApi.SharedWorkspaceLink), uRL, description);
         }
 
         #endregion

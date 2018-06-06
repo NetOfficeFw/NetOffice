@@ -70,11 +70,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSpeakDirection>(this, "Direction");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSpeakDirection>(this, "Direction");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Direction", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Direction", value);
 			}
 		}
 
@@ -88,11 +88,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SpeakCellOnEnter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SpeakCellOnEnter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SpeakCellOnEnter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SpeakCellOnEnter", value);
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void Speak(string text, object speakAsync, object speakXML, object purge)
 		{
-			 Factory.ExecuteMethod(this, "Speak", text, speakAsync, speakXML, purge);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Speak", text, speakAsync, speakXML, purge);
 		}
 
 		/// <summary>
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void Speak(string text)
 		{
-			 Factory.ExecuteMethod(this, "Speak", text);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Speak", text);
 		}
 
 		/// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void Speak(string text, object speakAsync)
 		{
-			 Factory.ExecuteMethod(this, "Speak", text, speakAsync);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Speak", text, speakAsync);
 		}
 
 		/// <summary>
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void Speak(string text, object speakAsync, object speakXML)
 		{
-			 Factory.ExecuteMethod(this, "Speak", text, speakAsync, speakXML);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Speak", text, speakAsync, speakXML);
 		}
 
 		#endregion

@@ -3,18 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice
+namespace NetOffice.CoreServices
 {
-    /*
-    Why so many overloads instead of "params object[]" or optional arguments ? 
-
-    Because for "params" the Compiler generates an argument array for the client caller in MSIL client assembly
-    and it looks like thats bigger than push each argument on stack until it is less than 8 arguments.
-
-    In order to shrink the size of API assemblies as best as possible - we give 4 fixed argument overloads too.
-    (API assemblies in 1.7.4.1 call fixed arguments overloads whenever its possible)
-    */
-
     /// <summary>
     /// Provides top-off Core/Invoker set property services to shrink caller code in Api assemblies and give more refactoring possibilies
     /// </summary>

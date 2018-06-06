@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantMethodGet(this, "Item", index);
+                return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Item", index);
             }
         }
 
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo, object deferUpdate)
         {
-            Factory.ExecuteMethod(this, "Add", new object[] { column, comparison, conjunction, bstrCompareTo, deferUpdate });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", new object[] { column, comparison, conjunction, bstrCompareTo, deferUpdate });
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction)
         {
-            Factory.ExecuteMethod(this, "Add", column, comparison, conjunction);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", column, comparison, conjunction);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo)
         {
-            Factory.ExecuteMethod(this, "Add", column, comparison, conjunction, bstrCompareTo);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", column, comparison, conjunction, bstrCompareTo);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Delete(Int32 index, object deferUpdate)
         {
-            Factory.ExecuteMethod(this, "Delete", index, deferUpdate);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete", index, deferUpdate);
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Delete(Int32 index)
         {
-            Factory.ExecuteMethod(this, "Delete", index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete", index);
         }
 
         #endregion

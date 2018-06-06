@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Delete()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Delete");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Delete");
 		}
 
 		/// <summary>
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Import(string filename)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Import", filename);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Import", filename);
 		}
 
 		/// <summary>
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Play()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Play");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Play");
 		}
 
 		/// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Record()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Record");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Record");
 		}
 
 		#endregion

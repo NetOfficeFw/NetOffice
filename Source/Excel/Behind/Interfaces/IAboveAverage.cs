@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Priority");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Priority");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Priority", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Priority", value);
             }
         }
 
@@ -124,11 +124,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "StopIfTrue");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "StopIfTrue");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "StopIfTrue", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "StopIfTrue", value);
             }
         }
 
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "AppliesTo", typeof(NetOffice.ExcelApi.Range));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "AppliesTo", typeof(NetOffice.ExcelApi.Range));
             }
         }
 
@@ -154,11 +154,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAboveBelow>(this, "AboveBelow");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAboveBelow>(this, "AboveBelow");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "AboveBelow", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "AboveBelow", value);
             }
         }
 
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Interior>(this, "Interior", typeof(NetOffice.ExcelApi.Interior));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Interior>(this, "Interior", typeof(NetOffice.ExcelApi.Interior));
             }
         }
 
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Borders>(this, "Borders", typeof(NetOffice.ExcelApi.Borders));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Borders>(this, "Borders", typeof(NetOffice.ExcelApi.Borders));
             }
         }
 
@@ -197,7 +197,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", typeof(NetOffice.ExcelApi.Font));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", typeof(NetOffice.ExcelApi.Font));
             }
         }
 
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Type");
             }
         }
 
@@ -223,11 +223,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "NumberFormat");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "NumberFormat");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "NumberFormat", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "NumberFormat", value);
             }
         }
 
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "PTCondition");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PTCondition");
             }
         }
 
@@ -253,11 +253,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotConditionScope>(this, "ScopeType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotConditionScope>(this, "ScopeType");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "ScopeType", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ScopeType", value);
             }
         }
 
@@ -270,11 +270,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCalcFor>(this, "CalcFor");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCalcFor>(this, "CalcFor");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "CalcFor", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "CalcFor", value);
             }
         }
 
@@ -287,11 +287,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "NumStdDev");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "NumStdDev");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "NumStdDev", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "NumStdDev", value);
             }
         }
 
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 SetFirstPriority()
         {
-            return Factory.ExecuteInt32MethodGet(this, "SetFirstPriority");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "SetFirstPriority");
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 SetLastPriority()
         {
-            return Factory.ExecuteInt32MethodGet(this, "SetLastPriority");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "SetLastPriority");
         }
 
         /// <summary>
@@ -323,7 +323,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 Delete()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual Int32 ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
         {
-            return Factory.ExecuteInt32MethodGet(this, "ModifyAppliesToRange", range);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ModifyAppliesToRange", range);
         }
 
         #endregion

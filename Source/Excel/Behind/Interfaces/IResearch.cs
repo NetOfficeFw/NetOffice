@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual object Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Query", new object[]{ serviceID, queryString, queryLanguage, useSelection, launchQuery });
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Query", new object[]{ serviceID, queryString, queryLanguage, useSelection, launchQuery });
 		}
 
 		/// <summary>
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual object Query(string serviceID)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Query", serviceID);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Query", serviceID);
 		}
 
 		/// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual object Query(string serviceID, object queryString)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Query", serviceID, queryString);
 		}
 
 		/// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual object Query(string serviceID, object queryString, object queryLanguage)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString, queryLanguage);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Query", serviceID, queryString, queryLanguage);
 		}
 
 		/// <summary>
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual object Query(string serviceID, object queryString, object queryLanguage, object useSelection)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString, queryLanguage, useSelection);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Query", serviceID, queryString, queryLanguage, useSelection);
 		}
 
 		/// <summary>
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual bool IsResearchService(string serviceID)
 		{
-			return Factory.ExecuteBoolMethodGet(this, "IsResearchService", serviceID);
+			return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "IsResearchService", serviceID);
 		}
 
 		/// <summary>
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual object SetLanguagePair(Int32 languageFrom, Int32 languageTo)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "SetLanguagePair", languageFrom, languageTo);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "SetLanguagePair", languageFrom, languageTo);
 		}
 
 		#endregion

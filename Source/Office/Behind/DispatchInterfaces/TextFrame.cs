@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -81,11 +81,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "MarginBottom");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "MarginBottom");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MarginBottom", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarginBottom", value);
             }
         }
 
@@ -98,11 +98,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "MarginLeft");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "MarginLeft");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MarginLeft", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarginLeft", value);
             }
         }
 
@@ -115,11 +115,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "MarginRight");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "MarginRight");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MarginRight", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarginRight", value);
             }
         }
 
@@ -132,11 +132,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "MarginTop");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "MarginTop");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MarginTop", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarginTop", value);
             }
         }
 
@@ -149,11 +149,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextOrientation>(this, "Orientation");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextOrientation>(this, "Orientation");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Orientation", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Orientation", value);
             }
         }
 

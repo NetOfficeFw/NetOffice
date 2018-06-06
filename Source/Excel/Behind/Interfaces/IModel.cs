@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelTables>(this, "ModelTables", typeof(NetOffice.ExcelApi.ModelTables));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelTables>(this, "ModelTables", typeof(NetOffice.ExcelApi.ModelTables));
             }
         }
 
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelRelationships>(this, "ModelRelationships", typeof(NetOffice.ExcelApi.ModelRelationships));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelRelationships>(this, "ModelRelationships", typeof(NetOffice.ExcelApi.ModelRelationships));
             }
         }
 
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "DataModelConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "DataModelConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
             }
         }
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 15, 16)]
         public virtual Int32 Refresh()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Refresh");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Refresh");
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 15, 16)]
         public virtual NetOffice.ExcelApi.WorkbookConnection AddConnection(NetOffice.ExcelApi.WorkbookConnection connectionToDataSource)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddConnection", typeof(NetOffice.ExcelApi.WorkbookConnection), connectionToDataSource);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddConnection", typeof(NetOffice.ExcelApi.WorkbookConnection), connectionToDataSource);
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 15, 16)]
         public virtual NetOffice.ExcelApi.WorkbookConnection CreateModelWorkbookConnection(object modelTable)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "CreateModelWorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection), modelTable);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "CreateModelWorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection), modelTable);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 15, 16)]
         public virtual Int32 Initialize()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Initialize");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Initialize");
         }
 
         #endregion

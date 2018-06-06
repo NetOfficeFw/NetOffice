@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Description");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Description");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Description", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Description", value);
 			}
 		}
 
@@ -147,11 +147,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "_Default");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "_Default");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "_Default", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "_Default", value);
 			}
 		}
 
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlConnectionType>(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlConnectionType>(this, "Type");
 			}
 		}
 
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.OLEDBConnection>(this, "OLEDBConnection", typeof(NetOffice.ExcelApi.OLEDBConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.OLEDBConnection>(this, "OLEDBConnection", typeof(NetOffice.ExcelApi.OLEDBConnection));
 			}
 		}
 
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ODBCConnection>(this, "ODBCConnection", typeof(NetOffice.ExcelApi.ODBCConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ODBCConnection>(this, "ODBCConnection", typeof(NetOffice.ExcelApi.ODBCConnection));
 			}
 		}
 
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Ranges>(this, "Ranges", typeof(NetOffice.ExcelApi.Ranges));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Ranges>(this, "Ranges", typeof(NetOffice.ExcelApi.Ranges));
 			}
 		}
 
@@ -221,7 +221,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelConnection>(this, "ModelConnection", typeof(NetOffice.ExcelApi.ModelConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelConnection>(this, "ModelConnection", typeof(NetOffice.ExcelApi.ModelConnection));
 			}
 		}
 
@@ -235,7 +235,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorksheetDataConnection>(this, "WorksheetDataConnection", typeof(NetOffice.ExcelApi.WorksheetDataConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorksheetDataConnection>(this, "WorksheetDataConnection", typeof(NetOffice.ExcelApi.WorksheetDataConnection));
 			}
 		}
 
@@ -249,11 +249,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RefreshWithRefreshAll");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RefreshWithRefreshAll");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RefreshWithRefreshAll", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RefreshWithRefreshAll", value);
 			}
 		}
 
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.TextConnection>(this, "TextConnection", typeof(NetOffice.ExcelApi.TextConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.TextConnection>(this, "TextConnection", typeof(NetOffice.ExcelApi.TextConnection));
 			}
 		}
 
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DataFeedConnection>(this, "DataFeedConnection", typeof(NetOffice.ExcelApi.DataFeedConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DataFeedConnection>(this, "DataFeedConnection", typeof(NetOffice.ExcelApi.DataFeedConnection));
 			}
 		}
 
@@ -295,7 +295,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "InModel");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "InModel");
 			}
 		}
 
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelTables>(this, "ModelTables", typeof(NetOffice.ExcelApi.ModelTables));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelTables>(this, "ModelTables", typeof(NetOffice.ExcelApi.ModelTables));
 			}
 		}
 
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -334,7 +334,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void Refresh()
 		{
-			 Factory.ExecuteMethod(this, "Refresh");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Refresh");
 		}
 
 		#endregion

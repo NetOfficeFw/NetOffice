@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerCache>(this, "Parent", typeof(NetOffice.ExcelApi.SlicerCache));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerCache>(this, "Parent", typeof(NetOffice.ExcelApi.SlicerCache));
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Caption");
 			}
 		}
 
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "SourceName");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "SourceName");
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceNameStandard");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceNameStandard");
 			}
 		}
 
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Value");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Value");
 			}
 		}
 
@@ -181,11 +181,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Selected");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Selected");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Selected", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Selected", value);
 			}
 		}
 
@@ -199,7 +199,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "HasData");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "HasData");
 			}
 		}
 

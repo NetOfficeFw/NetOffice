@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlParameterDataType>(this, "DataType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlParameterDataType>(this, "DataType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "DataType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "DataType", value);
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlParameterType>(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlParameterType>(this, "Type");
 			}
 		}
 
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "PromptString");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "PromptString");
 			}
 		}
 
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Value");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Value");
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "SourceRange", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "SourceRange", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -186,11 +186,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -204,11 +204,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RefreshOnChange");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RefreshOnChange");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RefreshOnChange", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RefreshOnChange", value);
 			}
 		}
 
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void SetParam(NetOffice.ExcelApi.Enums.XlParameterType type, object value)
 		{
-			 Factory.ExecuteMethod(this, "SetParam", type, value);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SetParam", type, value);
 		}
 
 		#endregion

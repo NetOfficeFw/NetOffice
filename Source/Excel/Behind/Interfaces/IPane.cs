@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
@@ -120,11 +120,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "ScrollColumn");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ScrollColumn");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ScrollColumn", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ScrollColumn", value);
 			}
 		}
 
@@ -137,11 +137,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "ScrollRow");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ScrollRow");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ScrollRow", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ScrollRow", value);
 			}
 		}
 
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "VisibleRange", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "VisibleRange", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual bool Activate()
 		{
-			return Factory.ExecuteBoolMethodGet(this, "Activate");
+			return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Activate");
 		}
 
 		/// <summary>
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object LargeScroll(object down, object up, object toRight, object toLeft)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up, toRight, toLeft);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "LargeScroll", down, up, toRight, toLeft);
 		}
 
 		/// <summary>
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object LargeScroll()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "LargeScroll");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "LargeScroll");
 		}
 
 		/// <summary>
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object LargeScroll(object down)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "LargeScroll", down);
 		}
 
 		/// <summary>
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object LargeScroll(object down, object up)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "LargeScroll", down, up);
 		}
 
 		/// <summary>
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object LargeScroll(object down, object up, object toRight)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up, toRight);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "LargeScroll", down, up, toRight);
 		}
 
 		/// <summary>
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object SmallScroll(object down, object up, object toRight, object toLeft)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up, toRight, toLeft);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "SmallScroll", down, up, toRight, toLeft);
 		}
 
 		/// <summary>
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object SmallScroll()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "SmallScroll");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "SmallScroll");
 		}
 
 		/// <summary>
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object SmallScroll(object down)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "SmallScroll", down);
 		}
 
 		/// <summary>
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object SmallScroll(object down, object up)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "SmallScroll", down, up);
 		}
 
 		/// <summary>
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object SmallScroll(object down, object up, object toRight)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up, toRight);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "SmallScroll", down, up, toRight);
 		}
 
 		/// <summary>
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ScrollIntoView", new object[]{ left, top, width, height, start });
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ScrollIntoView", new object[]{ left, top, width, height, start });
 		}
 
 		/// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ScrollIntoView", left, top, width, height);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ScrollIntoView", left, top, width, height);
 		}
 
 		/// <summary>
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual Int32 PointsToScreenPixelsX(Int32 points)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "PointsToScreenPixelsX", points);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "PointsToScreenPixelsX", points);
 		}
 
 		/// <summary>
@@ -334,7 +334,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual Int32 PointsToScreenPixelsY(Int32 points)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "PointsToScreenPixelsY", points);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "PointsToScreenPixelsY", points);
 		}
 
 		#endregion

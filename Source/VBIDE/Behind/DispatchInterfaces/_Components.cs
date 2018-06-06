@@ -71,7 +71,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application", typeof(NetOffice.VBIDEApi.Application));
+                return InvokerService.InvokeInternal.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application", typeof(NetOffice.VBIDEApi.Application));
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProject>(this, "Parent", typeof(NetOffice.VBIDEApi.VBProject));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProject>(this, "Parent", typeof(NetOffice.VBIDEApi.VBProject));
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -110,7 +110,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -128,7 +128,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Item", typeof(NetOffice.VBIDEApi.Component), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Item", typeof(NetOffice.VBIDEApi.Component), index);
             }
         }
 
@@ -139,7 +139,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Remove(NetOffice.VBIDEApi.Component component)
         {
-            Factory.ExecuteMethod(this, "Remove", component);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Remove", component);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.Component Add(NetOffice.VBIDEApi.Enums.vbext_ComponentType componentType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Add", typeof(NetOffice.VBIDEApi.Component), componentType);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Add", typeof(NetOffice.VBIDEApi.Component), componentType);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.Component Import(string fileName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Import", typeof(NetOffice.VBIDEApi.Component), fileName);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Import", typeof(NetOffice.VBIDEApi.Component), fileName);
         }
 
         #endregion

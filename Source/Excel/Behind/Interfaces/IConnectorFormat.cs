@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "BeginConnected");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "BeginConnected");
             }
         }
 
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Shape>(this, "BeginConnectedShape", typeof(NetOffice.ExcelApi.Shape));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Shape>(this, "BeginConnectedShape", typeof(NetOffice.ExcelApi.Shape));
             }
         }
 
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "BeginConnectionSite");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "BeginConnectionSite");
             }
         }
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "EndConnected");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "EndConnected");
             }
         }
 
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Shape>(this, "EndConnectedShape", typeof(NetOffice.ExcelApi.Shape));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Shape>(this, "EndConnectedShape", typeof(NetOffice.ExcelApi.Shape));
             }
         }
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "EndConnectionSite");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "EndConnectionSite");
             }
         }
 
@@ -185,11 +185,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoConnectorType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoConnectorType>(this, "Type");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Type", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
             }
         }
 
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 BeginConnect(NetOffice.ExcelApi.Shape connectedShape, Int32 connectionSite)
         {
-            return Factory.ExecuteInt32MethodGet(this, "BeginConnect", connectedShape, connectionSite);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "BeginConnect", connectedShape, connectionSite);
         }
 
         /// <summary>
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 BeginDisconnect()
         {
-            return Factory.ExecuteInt32MethodGet(this, "BeginDisconnect");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "BeginDisconnect");
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 EndConnect(NetOffice.ExcelApi.Shape connectedShape, Int32 connectionSite)
         {
-            return Factory.ExecuteInt32MethodGet(this, "EndConnect", connectedShape, connectionSite);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "EndConnect", connectedShape, connectionSite);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 EndDisconnect()
         {
-            return Factory.ExecuteInt32MethodGet(this, "EndDisconnect");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "EndDisconnect");
         }
 
         #endregion

@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Id");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Id");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Description");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Description");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "DocumentLibraryName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DocumentLibraryName");
             }
         }
 
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "DocumentLibraryURL");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DocumentLibraryURL");
             }
         }
 
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual Int32 Show()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Show");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Show");
         }
 
         #endregion

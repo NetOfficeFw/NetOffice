@@ -35,7 +35,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_ReplacementList(object index)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "ReplacementList", index);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ReplacementList", index);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace NetOffice.ExcelApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_ReplacementList(object index, object value)
         {
-            Factory.ExecutePropertySet(this, "ReplacementList", index, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "ReplacementList", index, value);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -176,11 +176,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "CapitalizeNamesOfDays");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "CapitalizeNamesOfDays");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CapitalizeNamesOfDays", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CapitalizeNamesOfDays", value);
             }
         }
 
@@ -194,11 +194,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ReplacementList");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ReplacementList");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "ReplacementList", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ReplacementList", value);
             }
         }
 
@@ -212,11 +212,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ReplaceText");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ReplaceText");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ReplaceText", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ReplaceText", value);
             }
         }
 
@@ -230,11 +230,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "TwoInitialCapitals");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TwoInitialCapitals");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "TwoInitialCapitals", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TwoInitialCapitals", value);
             }
         }
 
@@ -248,11 +248,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "CorrectSentenceCap");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "CorrectSentenceCap");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CorrectSentenceCap", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CorrectSentenceCap", value);
             }
         }
 
@@ -266,11 +266,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "CorrectCapsLock");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "CorrectCapsLock");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CorrectCapsLock", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CorrectCapsLock", value);
             }
         }
 
@@ -284,11 +284,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "DisplayAutoCorrectOptions");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayAutoCorrectOptions");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "DisplayAutoCorrectOptions", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayAutoCorrectOptions", value);
             }
         }
 
@@ -302,11 +302,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AutoExpandListRange");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AutoExpandListRange");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AutoExpandListRange", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AutoExpandListRange", value);
             }
         }
 
@@ -320,11 +320,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AutoFillFormulasInLists");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AutoFillFormulasInLists");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AutoFillFormulasInLists", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AutoFillFormulasInLists", value);
             }
         }
 
@@ -341,7 +341,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object AddReplacement(string what, string replacement)
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddReplacement", what, replacement);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddReplacement", what, replacement);
         }
 
         /// <summary>
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object DeleteReplacement(string what)
         {
-            return Factory.ExecuteVariantMethodGet(this, "DeleteReplacement", what);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "DeleteReplacement", what);
         }
 
         #endregion

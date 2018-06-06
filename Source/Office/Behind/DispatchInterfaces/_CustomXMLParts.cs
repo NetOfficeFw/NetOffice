@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPart>(this, "Item", typeof(NetOffice.OfficeApi.CustomXMLPart), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPart>(this, "Item", typeof(NetOffice.OfficeApi.CustomXMLPart), index);
             }
         }
 
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLPart Add(object xML, object schemaCollection)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLPart>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLPart), xML, schemaCollection);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLPart>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLPart), xML, schemaCollection);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLPart Add()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLPart>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLPart));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLPart>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLPart));
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLPart Add(object xML)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLPart>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLPart), xML);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLPart>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLPart), xML);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLPart SelectByID(string id)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLPart>(this, "SelectByID", typeof(NetOffice.OfficeApi.CustomXMLPart), id);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLPart>(this, "SelectByID", typeof(NetOffice.OfficeApi.CustomXMLPart), id);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLParts SelectByNamespace(string namespaceURI)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLParts>(this, "SelectByNamespace", typeof(NetOffice.OfficeApi.CustomXMLParts), namespaceURI);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLParts>(this, "SelectByNamespace", typeof(NetOffice.OfficeApi.CustomXMLParts), namespaceURI);
         }
 
         #endregion

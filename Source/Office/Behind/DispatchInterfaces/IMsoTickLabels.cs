@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartFont>(this, "Font", typeof(NetOffice.OfficeApi.ChartFont));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartFont>(this, "Font", typeof(NetOffice.OfficeApi.ChartFont));
             }
         }
 
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -108,11 +108,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "NumberFormat");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "NumberFormat");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "NumberFormat", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "NumberFormat", value);
             }
         }
 
@@ -125,11 +125,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "NumberFormatLinked");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "NumberFormatLinked");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "NumberFormatLinked", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "NumberFormatLinked", value);
             }
         }
 
@@ -142,11 +142,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "NumberFormatLocal");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "NumberFormatLocal");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "NumberFormatLocal", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "NumberFormatLocal", value);
             }
         }
 
@@ -159,11 +159,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlTickLabelOrientation>(this, "Orientation");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlTickLabelOrientation>(this, "Orientation");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Orientation", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Orientation", value);
             }
         }
 
@@ -176,11 +176,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "ReadingOrder");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ReadingOrder");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ReadingOrder", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ReadingOrder", value);
             }
         }
 
@@ -193,11 +193,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "AutoScaleFont");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "AutoScaleFont");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "AutoScaleFont", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "AutoScaleFont", value);
             }
         }
 
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Depth");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Depth");
             }
         }
 
@@ -223,11 +223,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Offset");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Offset");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Offset", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Offset", value);
             }
         }
 
@@ -240,11 +240,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Alignment");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Alignment");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Alignment", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Alignment", value);
             }
         }
 
@@ -257,11 +257,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "MultiLevel");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "MultiLevel");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "MultiLevel", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MultiLevel", value);
             }
         }
 
@@ -274,7 +274,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", typeof(NetOffice.OfficeApi.IMsoChartFormat));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", typeof(NetOffice.OfficeApi.IMsoChartFormat));
             }
         }
 
@@ -288,7 +288,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -301,7 +301,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -315,7 +315,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Delete()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -324,7 +324,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Select()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Select");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Select");
         }
 
         #endregion

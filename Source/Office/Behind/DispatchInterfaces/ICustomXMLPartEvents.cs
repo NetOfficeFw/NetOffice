@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void NodeAfterInsert(NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
         {
-            Factory.ExecuteMethod(this, "NodeAfterInsert", newNode, inUndoRedo);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "NodeAfterInsert", newNode, inUndoRedo);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void NodeAfterDelete(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode oldParentNode, NetOffice.OfficeApi.CustomXMLNode oldNextSibling, bool inUndoRedo)
         {
-            Factory.ExecuteMethod(this, "NodeAfterDelete", oldNode, oldParentNode, oldNextSibling, inUndoRedo);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "NodeAfterDelete", oldNode, oldParentNode, oldNextSibling, inUndoRedo);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void NodeAfterReplace(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
         {
-            Factory.ExecuteMethod(this, "NodeAfterReplace", oldNode, newNode, inUndoRedo);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "NodeAfterReplace", oldNode, newNode, inUndoRedo);
         }
 
         #endregion

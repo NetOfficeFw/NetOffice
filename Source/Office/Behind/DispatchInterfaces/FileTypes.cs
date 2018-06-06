@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFileType>(this, "Item", index);
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFileType>(this, "Item", index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Add(NetOffice.OfficeApi.Enums.MsoFileType fileType)
         {
-            Factory.ExecuteMethod(this, "Add", fileType);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", fileType);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Remove(Int32 index)
         {
-            Factory.ExecuteMethod(this, "Remove", index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Remove", index);
         }
 
         #endregion

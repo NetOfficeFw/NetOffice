@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
         {
-            return Factory.ExecuteVariantMethodGet(this, "GetProviderDetail", encprovdet);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "GetProviderDetail", encprovdet);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual Int32 NewSession(object parentWindow)
         {
-            return Factory.ExecuteInt32MethodGet(this, "NewSession", parentWindow);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "NewSession", parentWindow);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual Int32 CloneSession(Int32 sessionHandle)
         {
-            return Factory.ExecuteInt32MethodGet(this, "CloneSession", sessionHandle);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "CloneSession", sessionHandle);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void EndSession(Int32 sessionHandle)
         {
-            Factory.ExecuteMethod(this, "EndSession", sessionHandle);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "EndSession", sessionHandle);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual Int32 Save(Int32 sessionHandle, object encryptionData)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Save", sessionHandle, encryptionData);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Save", sessionHandle, encryptionData);
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void EncryptStream(Int32 sessionHandle, string streamName, object unencryptedStream, object encryptedStream)
         {
-            Factory.ExecuteMethod(this, "EncryptStream", sessionHandle, streamName, unencryptedStream, encryptedStream);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "EncryptStream", sessionHandle, streamName, unencryptedStream, encryptedStream);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void DecryptStream(Int32 sessionHandle, string streamName, object encryptedStream, object unencryptedStream)
         {
-            Factory.ExecuteMethod(this, "DecryptStream", sessionHandle, streamName, encryptedStream, unencryptedStream);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "DecryptStream", sessionHandle, streamName, encryptedStream, unencryptedStream);
         }
 
         /// <summary>

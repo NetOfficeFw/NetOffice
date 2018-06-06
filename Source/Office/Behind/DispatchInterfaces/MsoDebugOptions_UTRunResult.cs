@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Passed");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Passed");
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ErrorString");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ErrorString");
             }
         }
 

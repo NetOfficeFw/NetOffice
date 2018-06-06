@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "PictureOffsetX");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "PictureOffsetX");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "PictureOffsetX", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PictureOffsetX", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "PictureOffsetY");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "PictureOffsetY");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "PictureOffsetY", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PictureOffsetY", value);
             }
         }
 
@@ -106,11 +106,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "PictureWidth");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "PictureWidth");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "PictureWidth", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PictureWidth", value);
             }
         }
 
@@ -124,11 +124,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "PictureHeight");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "PictureHeight");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "PictureHeight", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PictureHeight", value);
             }
         }
 
@@ -142,11 +142,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "ShapeLeft");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "ShapeLeft");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShapeLeft", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShapeLeft", value);
             }
         }
 
@@ -160,11 +160,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "ShapeTop");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "ShapeTop");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShapeTop", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShapeTop", value);
             }
         }
 
@@ -178,11 +178,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "ShapeWidth");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "ShapeWidth");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShapeWidth", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShapeWidth", value);
             }
         }
 
@@ -196,11 +196,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "ShapeHeight");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "ShapeHeight");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShapeHeight", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShapeHeight", value);
             }
         }
 

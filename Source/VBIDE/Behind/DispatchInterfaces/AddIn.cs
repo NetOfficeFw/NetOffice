@@ -67,11 +67,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Description");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Description");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Description", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Description", value);
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Addins>(this, "Collection", typeof(NetOffice.VBIDEApi.Addins));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Addins>(this, "Collection", typeof(NetOffice.VBIDEApi.Addins));
             }
         }
 
@@ -110,7 +110,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ProgId");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ProgId");
             }
         }
 
@@ -123,7 +123,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Guid");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Guid");
             }
         }
 
@@ -136,11 +136,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Connect");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Connect");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Connect", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Connect", value);
             }
         }
 
@@ -154,11 +154,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Object");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Object");
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "Object", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Object", value);
             }
         }
 

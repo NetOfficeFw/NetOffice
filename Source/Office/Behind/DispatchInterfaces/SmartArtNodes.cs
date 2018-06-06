@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behinds
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behinds
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behinds
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "Item", typeof(NetOffice.OfficeApi.SmartArtNode), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "Item", typeof(NetOffice.OfficeApi.SmartArtNode), index);
             }
         }
 
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behinds
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SmartArtNode Add()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "Add", typeof(NetOffice.OfficeApi.SmartArtNode));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "Add", typeof(NetOffice.OfficeApi.SmartArtNode));
         }
 
         #endregion

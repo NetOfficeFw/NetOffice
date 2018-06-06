@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ProportionalFont");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ProportionalFont");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ProportionalFont", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ProportionalFont", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "ProportionalFontSize");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "ProportionalFontSize");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ProportionalFontSize", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ProportionalFontSize", value);
             }
         }
 
@@ -106,11 +106,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "FixedWidthFont");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FixedWidthFont");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FixedWidthFont", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FixedWidthFont", value);
             }
         }
 
@@ -124,11 +124,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "FixedWidthFontSize");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "FixedWidthFontSize");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FixedWidthFontSize", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FixedWidthFontSize", value);
             }
         }
 

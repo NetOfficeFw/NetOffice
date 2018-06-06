@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 BeforeRefresh(bool cancel)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "BeforeRefresh", cancel);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "BeforeRefresh", cancel);
 		}
 
 		/// <summary>
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual Int32 AfterRefresh(bool success)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "AfterRefresh", success);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "AfterRefresh", success);
 		}
 
 		#endregion

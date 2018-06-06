@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "RGB");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RGB");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "RGB", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RGB", value);
             }
         }
 
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex>(this, "ThemeColorSchemeIndex");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex>(this, "ThemeColorSchemeIndex");
             }
         }
 

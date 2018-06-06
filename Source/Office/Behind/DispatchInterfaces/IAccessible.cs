@@ -36,7 +36,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual string get_accName(object varChild)
         {
-            return Factory.ExecuteStringPropertyGet(this, "accName", varChild);
+            return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accName", varChild);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_accName(object varChild, string value)
         {
-            Factory.ExecutePropertySet(this, "accName", varChild, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "accName", varChild, value);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual string get_accValue(object varChild)
         {
-            return Factory.ExecuteStringPropertyGet(this, "accValue", varChild);
+            return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accValue", varChild);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_accValue(object varChild, string value)
         {
-            Factory.ExecutePropertySet(this, "accValue", varChild, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "accValue", varChild, value);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual string get_accDescription(object varChild)
         {
-            return Factory.ExecuteStringPropertyGet(this, "accDescription", varChild);
+            return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accDescription", varChild);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_accRole(object varChild)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "accRole", varChild);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "accRole", varChild);
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_accState(object varChild)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "accState", varChild);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "accState", varChild);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual string get_accHelp(object varChild)
         {
-            return Factory.ExecuteStringPropertyGet(this, "accHelp", varChild);
+            return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accHelp", varChild);
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual string get_accKeyboardShortcut(object varChild)
         {
-            return Factory.ExecuteStringPropertyGet(this, "accKeyboardShortcut", varChild);
+            return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accKeyboardShortcut", varChild);
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual string get_accDefaultAction(object varChild)
         {
-            return Factory.ExecuteStringPropertyGet(this, "accDefaultAction", varChild);
+            return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accDefaultAction", varChild);
         }
 
         /// <summary>
@@ -309,7 +309,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "accParent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "accParent");
             }
         }
 
@@ -323,7 +323,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "accChildCount");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "accChildCount");
             }
         }
 
@@ -337,7 +337,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_accChild(object varChild)
         {
-            return Factory.ExecuteReferencePropertyGet(this, "accChild", varChild);
+            return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "accChild", varChild);
         }
 
         /// <summary>
@@ -362,11 +362,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "accName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accName");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "accName", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "accName", value);
             }
         }
 
@@ -380,11 +380,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "accValue");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accValue");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "accValue", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "accValue", value);
             }
         }
 
@@ -398,7 +398,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "accDescription");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accDescription");
             }
         }
 
@@ -412,7 +412,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "accRole");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "accRole");
             }
         }
 
@@ -426,7 +426,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "accState");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "accState");
             }
         }
 
@@ -440,7 +440,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "accHelp");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accHelp");
             }
         }
 
@@ -512,7 +512,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "accKeyboardShortcut");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accKeyboardShortcut");
             }
         }
 
@@ -526,7 +526,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "accFocus");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "accFocus");
             }
         }
 
@@ -540,7 +540,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "accSelection");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "accSelection");
             }
         }
 
@@ -554,7 +554,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "accDefaultAction");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "accDefaultAction");
             }
         }
 
@@ -571,7 +571,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accSelect(Int32 flagsSelect, object varChild)
         {
-            Factory.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
         }
 
         /// <summary>
@@ -583,7 +583,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accSelect(Int32 flagsSelect)
         {
-            Factory.ExecuteMethod(this, "accSelect", flagsSelect);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accSelect", flagsSelect);
         }
 
         /// <summary>
@@ -645,7 +645,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accNavigate(Int32 navDir, object varStart)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
         }
 
         /// <summary>
@@ -657,7 +657,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accNavigate(Int32 navDir)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accNavigate", navDir);
         }
 
         /// <summary>
@@ -669,7 +669,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accHitTest(Int32 xLeft, Int32 yTop)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
         }
 
         /// <summary>
@@ -680,7 +680,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accDoDefaultAction(object varChild)
         {
-            Factory.ExecuteMethod(this, "accDoDefaultAction", varChild);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accDoDefaultAction", varChild);
         }
 
         /// <summary>
@@ -691,7 +691,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accDoDefaultAction()
         {
-            Factory.ExecuteMethod(this, "accDoDefaultAction");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accDoDefaultAction");
         }
 
         #endregion

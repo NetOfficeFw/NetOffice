@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SortField>(this, "_Default", typeof(NetOffice.ExcelApi.SortField), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SortField>(this, "_Default", typeof(NetOffice.ExcelApi.SortField), index);
 			}
 		}
 
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order, object customOrder, object dataOption)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), new object[]{ key, sortOn, order, customOrder, dataOption });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), new object[]{ key, sortOn, order, customOrder, dataOption });
 		}
 
 		/// <summary>
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key);
 		}
 
 		/// <summary>
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn);
 		}
 
 		/// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn, order);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn, order);
 		}
 
 		/// <summary>
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.SortField Add(NetOffice.ExcelApi.Range key, object sortOn, object order, object customOrder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn, order, customOrder);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.SortField>(this, "Add", typeof(NetOffice.ExcelApi.SortField), key, sortOn, order, customOrder);
 		}
 
 		/// <summary>
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual Int32 Clear()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Clear");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Clear");
 		}
 
         #endregion

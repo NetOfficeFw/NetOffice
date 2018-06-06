@@ -69,11 +69,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "FeatureReports");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "FeatureReports");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FeatureReports", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FeatureReports", value);
             }
         }
 
@@ -86,11 +86,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "OutputToDebugger");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "OutputToDebugger");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "OutputToDebugger", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OutputToDebugger", value);
             }
         }
 
@@ -103,11 +103,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "OutputToFile");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "OutputToFile");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "OutputToFile", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OutputToFile", value);
             }
         }
 
@@ -120,11 +120,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "OutputToMessageBox");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "OutputToMessageBox");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "OutputToMessageBox", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OutputToMessageBox", value);
             }
         }
 
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "UnitTestManager");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "UnitTestManager");
             }
         }
 
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual void AddIgnoredAssertTag(string bstrTagToIgnore)
         {
-            Factory.ExecuteMethod(this, "AddIgnoredAssertTag", bstrTagToIgnore);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddIgnoredAssertTag", bstrTagToIgnore);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual void RemoveIgnoredAssertTag(string bstrTagToIgnore)
         {
-            Factory.ExecuteMethod(this, "RemoveIgnoredAssertTag", bstrTagToIgnore);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RemoveIgnoredAssertTag", bstrTagToIgnore);
         }
 
         #endregion

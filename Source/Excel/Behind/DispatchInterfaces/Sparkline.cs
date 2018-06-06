@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Location", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Location", typeof(NetOffice.ExcelApi.Range));
 			}
 			set
 			{
-				Factory.ExecuteReferencePropertySet(this, "Location", value);
+				InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Location", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceData");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceData");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SourceData", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SourceData", value);
 			}
 		}
 
@@ -150,7 +150,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual void ModifyLocation(NetOffice.ExcelApi.Range range)
 		{
-			 Factory.ExecuteMethod(this, "ModifyLocation", range);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ModifyLocation", range);
 		}
 
 		/// <summary>
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual void ModifySourceData(string formula)
 		{
-			 Factory.ExecuteMethod(this, "ModifySourceData", formula);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ModifySourceData", formula);
 		}
 
 		#endregion

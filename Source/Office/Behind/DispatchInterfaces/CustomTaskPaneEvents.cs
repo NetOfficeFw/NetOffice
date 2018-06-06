@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
         {
-            Factory.ExecuteMethod(this, "VisibleStateChange", customTaskPaneInst);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "VisibleStateChange", customTaskPaneInst);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void DockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
         {
-            Factory.ExecuteMethod(this, "DockPositionStateChange", customTaskPaneInst);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "DockPositionStateChange", customTaskPaneInst);
         }
 
         #endregion

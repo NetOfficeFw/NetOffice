@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Signer");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Signer");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Issuer");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Issuer");
             }
         }
 
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ExpireDate");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ExpireDate");
             }
         }
 
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsValid");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsValid");
             }
         }
 
@@ -121,11 +121,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AttachCertificate");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AttachCertificate");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AttachCertificate", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AttachCertificate", value);
             }
         }
 
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsCertificateExpired");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsCertificateExpired");
             }
         }
 
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsCertificateRevoked");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsCertificateRevoked");
             }
         }
 
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "SignDate");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "SignDate");
             }
         }
 
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsSigned");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsSigned");
             }
         }
 
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SignatureInfo>(this, "Details", typeof(NetOffice.OfficeApi.SignatureInfo));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SignatureInfo>(this, "Details", typeof(NetOffice.OfficeApi.SignatureInfo));
             }
         }
 
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "CanSetup");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "CanSetup");
             }
         }
 
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SignatureSetup>(this, "Setup", typeof(NetOffice.OfficeApi.SignatureSetup));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SignatureSetup>(this, "Setup", typeof(NetOffice.OfficeApi.SignatureSetup));
             }
         }
 
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsSignatureLine");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsSignatureLine");
             }
         }
 
@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "SignatureLineShape");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "SignatureLineShape");
             }
         }
 
@@ -278,7 +278,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "SortHint");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "SortHint");
             }
         }
 
@@ -293,7 +293,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Sign(object varSigImg, object varDelSuggSigner, object varDelSuggSignerLine2, object varDelSuggSignerEmail)
         {
-            Factory.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner, varDelSuggSignerLine2, varDelSuggSignerEmail);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner, varDelSuggSignerLine2, varDelSuggSignerEmail);
         }
 
         /// <summary>
@@ -318,7 +318,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Sign()
         {
-            Factory.ExecuteMethod(this, "Sign");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Sign");
         }
 
         /// <summary>
@@ -330,7 +330,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Sign(object varSigImg)
         {
-            Factory.ExecuteMethod(this, "Sign", varSigImg);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Sign", varSigImg);
         }
 
         /// <summary>
@@ -343,7 +343,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Sign(object varSigImg, object varDelSuggSigner)
         {
-            Factory.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner);
         }
 
         /// <summary>
@@ -357,7 +357,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Sign(object varSigImg, object varDelSuggSigner, object varDelSuggSignerLine2)
         {
-            Factory.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner, varDelSuggSignerLine2);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Sign", varSigImg, varDelSuggSigner, varDelSuggSignerLine2);
         }
 
         /// <summary>
@@ -367,7 +367,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ShowDetails()
         {
-            Factory.ExecuteMethod(this, "ShowDetails");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowDetails");
         }
 
         #endregion

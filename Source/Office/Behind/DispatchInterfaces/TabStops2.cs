@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "DefaultSpacing");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "DefaultSpacing");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "DefaultSpacing", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DefaultSpacing", value);
             }
         }
 
@@ -124,7 +124,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TabStop2>(this, "Item",typeof(NetOffice.OfficeApi.TabStop2), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TabStop2>(this, "Item",typeof(NetOffice.OfficeApi.TabStop2), index);
             }
         }
 
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TabStop2 Add(NetOffice.OfficeApi.Enums.MsoTabStopType type, Single position)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TabStop2>(this, "Add", typeof(NetOffice.OfficeApi.TabStop2), type, position);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TabStop2>(this, "Add", typeof(NetOffice.OfficeApi.TabStop2), type, position);
         }
 
         #endregion

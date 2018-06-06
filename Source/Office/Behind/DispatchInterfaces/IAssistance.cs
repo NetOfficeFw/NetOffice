@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ShowHelp(object helpId, object scope)
         {
-            Factory.ExecuteMethod(this, "ShowHelp", helpId, scope);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowHelp", helpId, scope);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ShowHelp()
         {
-            Factory.ExecuteMethod(this, "ShowHelp");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowHelp");
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ShowHelp(object helpId)
         {
-            Factory.ExecuteMethod(this, "ShowHelp", helpId);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowHelp", helpId);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void SearchHelp(string query, object scope)
         {
-            Factory.ExecuteMethod(this, "SearchHelp", query, scope);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SearchHelp", query, scope);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void SearchHelp(string query)
         {
-            Factory.ExecuteMethod(this, "SearchHelp", query);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SearchHelp", query);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void SetDefaultContext(string helpId)
         {
-            Factory.ExecuteMethod(this, "SetDefaultContext", helpId);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetDefaultContext", helpId);
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ClearDefaultContext(string helpId)
         {
-            Factory.ExecuteMethod(this, "ClearDefaultContext", helpId);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ClearDefaultContext", helpId);
         }
 
         #endregion

@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual Int32 HrReportProgress(UIntPtr uPercentComplete)
         {
-            return Factory.ExecuteInt32MethodGet(this, "HrReportProgress", uPercentComplete);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "HrReportProgress", uPercentComplete);
         }
 
         /// <summary>

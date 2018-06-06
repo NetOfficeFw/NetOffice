@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListObject>(this, "_Default", typeof(NetOffice.ExcelApi.ListObject), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListObject>(this, "_Default", typeof(NetOffice.ExcelApi.ListObject), index);
             }
         }
 
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination });
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination, object tableStyleName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName });
         }
 
         /// <summary>
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject Add()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject));
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject Add(object sourceType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source);
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource);
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource, xlListObjectHasHeaders);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource, xlListObjectHasHeaders);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination });
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject _Add()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject));
         }
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType);
         }
 
         /// <summary>
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType, object source)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source);
         }
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource);
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource, xlListObjectHasHeaders);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", typeof(NetOffice.ExcelApi.ListObject), sourceType, source, linkSource, xlListObjectHasHeaders);
         }
 
         #endregion

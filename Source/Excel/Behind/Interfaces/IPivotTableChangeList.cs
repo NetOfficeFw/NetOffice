@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ValueChange>(this, "_Default", typeof(NetOffice.ExcelApi.ValueChange), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ValueChange>(this, "_Default", typeof(NetOffice.ExcelApi.ValueChange), index);
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod, object allocationWeightExpression)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), new object[]{ tuple, value, allocationValue, allocationMethod, allocationWeightExpression });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), new object[]{ tuple, value, allocationValue, allocationMethod, allocationWeightExpression });
 		}
 
 		/// <summary>
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.ValueChange Add(string tuple, Double value)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value);
 		}
 
 		/// <summary>
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value, allocationValue);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value, allocationValue);
 		}
 
 		/// <summary>
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value, allocationValue, allocationMethod);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ValueChange>(this, "Add", typeof(NetOffice.ExcelApi.ValueChange), tuple, value, allocationValue, allocationMethod);
 		}
 
         #endregion

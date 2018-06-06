@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Signature>(this, "Item", typeof(NetOffice.OfficeApi.Signature), iSig);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Signature>(this, "Item", typeof(NetOffice.OfficeApi.Signature), iSig);
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "CanAddSignatureLine");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "CanAddSignatureLine");
             }
         }
 
@@ -131,11 +131,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSignatureSubset>(this, "Subset");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSignatureSubset>(this, "Subset");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Subset", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Subset", value);
             }
         }
 
@@ -149,11 +149,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ShowSignaturesPane");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowSignaturesPane");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShowSignaturesPane", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowSignaturesPane", value);
             }
         }
 
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Signature Add()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "Add", typeof(NetOffice.OfficeApi.Signature));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "Add", typeof(NetOffice.OfficeApi.Signature));
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Commit()
         {
-            Factory.ExecuteMethod(this, "Commit");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Commit");
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Signature AddNonVisibleSignature(object varSigProv)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddNonVisibleSignature", typeof(NetOffice.OfficeApi.Signature), varSigProv);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddNonVisibleSignature", typeof(NetOffice.OfficeApi.Signature), varSigProv);
         }
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Signature AddNonVisibleSignature()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddNonVisibleSignature", typeof(NetOffice.OfficeApi.Signature));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddNonVisibleSignature", typeof(NetOffice.OfficeApi.Signature));
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Signature AddSignatureLine(object varSigProv)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddSignatureLine", typeof(NetOffice.OfficeApi.Signature), varSigProv);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddSignatureLine", typeof(NetOffice.OfficeApi.Signature), varSigProv);
         }
 
         /// <summary>
@@ -220,7 +220,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Signature AddSignatureLine()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddSignatureLine", typeof(NetOffice.OfficeApi.Signature));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Signature>(this, "AddSignatureLine", typeof(NetOffice.OfficeApi.Signature));
         }
 
         #endregion

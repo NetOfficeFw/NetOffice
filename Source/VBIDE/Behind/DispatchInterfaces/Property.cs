@@ -67,11 +67,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Value");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Value");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Value", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Value", value);
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_IndexedValue(object index1, object index2, object index3, object index4)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2, index3, index4);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2, index3, index4);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_IndexedValue(object index1, object index2, object index3, object index4, object value)
         {
-            Factory.ExecutePropertySet(this, "IndexedValue", new object[] { index1, index2, index3, index4, value });
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "IndexedValue", new object[] { index1, index2, index3, index4, value });
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_IndexedValue(object index1)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "IndexedValue", index1);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_IndexedValue(object index1, object value)
         {
-            Factory.ExecutePropertySet(this, "IndexedValue", index1, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "IndexedValue", index1, value);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_IndexedValue(object index1, object index2)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_IndexedValue(object index1, object index2, object value)
         {
-            Factory.ExecutePropertySet(this, "IndexedValue", index1, index2, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "IndexedValue", index1, index2, value);
         }
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_IndexedValue(object index1, object index2, object index3)
         {
-            return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2, index3);
+            return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2, index3);
         }
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual void set_IndexedValue(object index1, object index2, object index3, object value)
         {
-            Factory.ExecutePropertySet(this, "IndexedValue", index1, index2, index3, value);
+            InvokerService.InvokeInternal.ExecutePropertySet(this, "IndexedValue", index1, index2, index3, value);
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt16PropertyGet(this, "NumIndices");
+                return InvokerService.InvokeInternal.ExecuteInt16PropertyGet(this, "NumIndices");
             }
         }
 
@@ -257,7 +257,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
             }
         }
 
@@ -271,7 +271,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Properties>(this, "Parent", typeof(NetOffice.VBIDEApi.Properties));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Properties>(this, "Parent", typeof(NetOffice.VBIDEApi.Properties));
             }
         }
 
@@ -284,7 +284,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -297,7 +297,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE");
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE");
             }
         }
 
@@ -310,7 +310,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Properties>(this, "Collection", typeof(NetOffice.VBIDEApi.Properties));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Properties>(this, "Collection", typeof(NetOffice.VBIDEApi.Properties));
             }
         }
 
@@ -324,11 +324,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Object");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Object");
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "Object", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Object", value);
             }
         }
 

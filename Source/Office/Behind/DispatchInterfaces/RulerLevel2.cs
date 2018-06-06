@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "FirstMargin");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "FirstMargin");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FirstMargin", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FirstMargin", value);
             }
         }
 
@@ -103,11 +103,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "LeftMargin");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "LeftMargin");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "LeftMargin", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "LeftMargin", value);
             }
         }
 

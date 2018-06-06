@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -84,11 +84,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Value");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Value");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Value", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Value", value);
             }
         }
 

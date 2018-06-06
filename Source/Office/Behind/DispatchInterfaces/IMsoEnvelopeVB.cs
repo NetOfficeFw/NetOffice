@@ -68,11 +68,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Introduction");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Introduction");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Introduction", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Introduction", value);
             }
         }
 
@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Item");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Item");
             }
         }
 
@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "CommandBars");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "CommandBars");
             }
         }
 

@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.UserAccess>(this, "_Default", typeof(NetOffice.ExcelApi.UserAccess), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.UserAccess>(this, "_Default", typeof(NetOffice.ExcelApi.UserAccess), index);
 			}
 		}
 
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.UserAccess Add(string name, bool allowEdit)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.UserAccess>(this, "Add", typeof(NetOffice.ExcelApi.UserAccess), name, allowEdit);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.UserAccess>(this, "Add", typeof(NetOffice.ExcelApi.UserAccess), name, allowEdit);
 		}
 
 		/// <summary>
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual Int32 DeleteAll()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "DeleteAll");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "DeleteAll");
 		}
 
         #endregion

@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoHTMLProjectState>(this, "State");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoHTMLProjectState>(this, "State");
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.HTMLProjectItems>(this, "HTMLProjectItems", typeof(NetOffice.OfficeApi.HTMLProjectItems));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.HTMLProjectItems>(this, "HTMLProjectItems", typeof(NetOffice.OfficeApi.HTMLProjectItems));
             }
         }
 
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void RefreshProject(object refresh)
         {
-            Factory.ExecuteMethod(this, "RefreshProject", refresh);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RefreshProject", refresh);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void RefreshProject()
         {
-            Factory.ExecuteMethod(this, "RefreshProject");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RefreshProject");
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void RefreshDocument(object refresh)
         {
-            Factory.ExecuteMethod(this, "RefreshDocument", refresh);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RefreshDocument", refresh);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void RefreshDocument()
         {
-            Factory.ExecuteMethod(this, "RefreshDocument");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RefreshDocument");
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Open(object openKind)
         {
-            Factory.ExecuteMethod(this, "Open", openKind);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open", openKind);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Open()
         {
-            Factory.ExecuteMethod(this, "Open");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Open");
         }
 
         #endregion

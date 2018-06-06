@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RelyOnCSS");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RelyOnCSS");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RelyOnCSS", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RelyOnCSS", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "OrganizeInFolder");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "OrganizeInFolder");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "OrganizeInFolder", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OrganizeInFolder", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "UseLongFileNames");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "UseLongFileNames");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "UseLongFileNames", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "UseLongFileNames", value);
 			}
 		}
 
@@ -166,11 +166,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "DownloadComponents");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DownloadComponents");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DownloadComponents", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DownloadComponents", value);
 			}
 		}
 
@@ -184,11 +184,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RelyOnVML");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RelyOnVML");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RelyOnVML", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RelyOnVML", value);
 			}
 		}
 
@@ -202,11 +202,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowPNG");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowPNG");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AllowPNG", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AllowPNG", value);
 			}
 		}
 
@@ -220,11 +220,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoScreenSize>(this, "ScreenSize");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoScreenSize>(this, "ScreenSize");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "ScreenSize", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ScreenSize", value);
 			}
 		}
 
@@ -238,11 +238,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "PixelsPerInch");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "PixelsPerInch");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PixelsPerInch", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PixelsPerInch", value);
 			}
 		}
 
@@ -256,11 +256,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "LocationOfComponents");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "LocationOfComponents");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "LocationOfComponents", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "LocationOfComponents", value);
 			}
 		}
 
@@ -274,11 +274,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoEncoding>(this, "Encoding");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoEncoding>(this, "Encoding");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Encoding", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Encoding", value);
 			}
 		}
 
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "FolderSuffix");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "FolderSuffix");
 			}
 		}
 
@@ -306,11 +306,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTargetBrowser>(this, "TargetBrowser");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTargetBrowser>(this, "TargetBrowser");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TargetBrowser", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TargetBrowser", value);
 			}
 		}
 
@@ -325,7 +325,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void UseDefaultFolderSuffix()
 		{
-			 Factory.ExecuteMethod(this, "UseDefaultFolderSuffix");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "UseDefaultFolderSuffix");
 		}
 
 		#endregion

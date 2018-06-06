@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "OLAP");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "OLAP");
 			}
 		}
 
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableSourceType>(this, "SourceType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableSourceType>(this, "SourceType");
 			}
 		}
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
 			}
 		}
 
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Slicers>(this, "Slicers", typeof(NetOffice.ExcelApi.Slicers));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Slicers>(this, "Slicers", typeof(NetOffice.ExcelApi.Slicers));
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerPivotTables>(this, "PivotTables", typeof(NetOffice.ExcelApi.SlicerPivotTables));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerPivotTables>(this, "PivotTables", typeof(NetOffice.ExcelApi.SlicerPivotTables));
 			}
 		}
 
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerCacheLevels>(this, "SlicerCacheLevels", typeof(NetOffice.ExcelApi.SlicerCacheLevels));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerCacheLevels>(this, "SlicerCacheLevels", typeof(NetOffice.ExcelApi.SlicerCacheLevels));
 			}
 		}
 
@@ -198,11 +198,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -215,7 +215,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerItems>(this, "VisibleSlicerItems", typeof(NetOffice.ExcelApi.SlicerItems));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerItems>(this, "VisibleSlicerItems", typeof(NetOffice.ExcelApi.SlicerItems));
 			}
 		}
 
@@ -228,11 +228,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "VisibleSlicerItemsList");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "VisibleSlicerItemsList");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "VisibleSlicerItemsList", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "VisibleSlicerItemsList", value);
 			}
 		}
 
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerItems>(this, "SlicerItems", typeof(NetOffice.ExcelApi.SlicerItems));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SlicerItems>(this, "SlicerItems", typeof(NetOffice.ExcelApi.SlicerItems));
 			}
 		}
 
@@ -258,11 +258,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSlicerCrossFilterType>(this, "CrossFilterType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSlicerCrossFilterType>(this, "CrossFilterType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "CrossFilterType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "CrossFilterType", value);
 			}
 		}
 
@@ -275,11 +275,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSlicerSort>(this, "SortItems");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSlicerSort>(this, "SortItems");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "SortItems", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "SortItems", value);
 			}
 		}
 
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceName");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceName");
 			}
 		}
 
@@ -305,11 +305,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SortUsingCustomLists");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SortUsingCustomLists");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SortUsingCustomLists", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SortUsingCustomLists", value);
 			}
 		}
 
@@ -322,11 +322,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAllItems");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowAllItems");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowAllItems", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowAllItems", value);
 			}
 		}
 
@@ -339,7 +339,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.TimelineState>(this, "TimelineState", typeof(NetOffice.ExcelApi.TimelineState));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.TimelineState>(this, "TimelineState", typeof(NetOffice.ExcelApi.TimelineState));
 			}
 		}
 
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSlicerCacheType>(this, "SlicerCacheType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSlicerCacheType>(this, "SlicerCacheType");
 			}
 		}
 
@@ -365,7 +365,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "FilterCleared");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "FilterCleared");
 			}
 		}
 
@@ -378,7 +378,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "List");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "List");
 			}
 		}
 
@@ -391,11 +391,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RequireManualUpdate");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RequireManualUpdate");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RequireManualUpdate", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RequireManualUpdate", value);
 			}
 		}
 
@@ -408,7 +408,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListObject>(this, "ListObject", typeof(NetOffice.ExcelApi.ListObject));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListObject>(this, "ListObject", typeof(NetOffice.ExcelApi.ListObject));
 			}
 		}
 
@@ -422,7 +422,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 ClearManualFilter()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ClearManualFilter");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ClearManualFilter");
 		}
 
 		/// <summary>
@@ -431,7 +431,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 Delete()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Delete");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
 		}
 
 		/// <summary>
@@ -440,7 +440,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual Int32 ClearAllFilters()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ClearAllFilters");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ClearAllFilters");
 		}
 
 		/// <summary>
@@ -449,7 +449,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual Int32 ClearDateFilter()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ClearDateFilter");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ClearDateFilter");
 		}
 
 		#endregion

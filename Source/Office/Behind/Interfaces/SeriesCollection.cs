@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoSeries>(this, "_Default", typeof(NetOffice.OfficeApi.IMsoSeries), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoSeries>(this, "_Default", typeof(NetOffice.OfficeApi.IMsoSeries), index);
             }
         }
 
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoSeries Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), new object[] { source, rowcol, seriesLabels, categoryLabels, replace });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), new object[] { source, rowcol, seriesLabels, categoryLabels, replace });
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoSeries Add(object source)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), source);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), source);
         }
 
         /// <summary>
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoSeries Add(object source, object rowcol)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), source, rowcol);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), source, rowcol);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoSeries Add(object source, object rowcol, object seriesLabels)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), source, rowcol, seriesLabels);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), source, rowcol, seriesLabels);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoSeries Add(object source, object rowcol, object seriesLabels, object categoryLabels)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), source, rowcol, seriesLabels, categoryLabels);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "Add", typeof(NetOffice.OfficeApi.IMsoSeries), source, rowcol, seriesLabels, categoryLabels);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Extend(object source, object rowcol, object categoryLabels)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Extend", source, rowcol, categoryLabels);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Extend", source, rowcol, categoryLabels);
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Extend(object source)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Extend", source);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Extend", source);
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Extend(object source, object rowcol)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Extend", source, rowcol);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Extend", source, rowcol);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace, object newSeries)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Paste", new object[] { rowcol, seriesLabels, categoryLabels, replace, newSeries });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Paste", new object[] { rowcol, seriesLabels, categoryLabels, replace, newSeries });
         }
 
         /// <summary>
@@ -255,7 +255,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Paste()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Paste");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Paste");
         }
 
         /// <summary>
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Paste(object rowcol)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Paste", rowcol);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Paste", rowcol);
         }
 
         /// <summary>
@@ -278,7 +278,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Paste(object rowcol, object seriesLabels)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels);
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Paste(object rowcol, object seriesLabels, object categoryLabels)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels, categoryLabels);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels, categoryLabels);
         }
 
         /// <summary>
@@ -305,7 +305,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels, categoryLabels, replace);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Paste", rowcol, seriesLabels, categoryLabels, replace);
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoSeries NewSeries()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "NewSeries", typeof(NetOffice.OfficeApi.IMsoSeries));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoSeries>(this, "NewSeries", typeof(NetOffice.OfficeApi.IMsoSeries));
         }
 
         #endregion

@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Priority");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Priority");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Priority", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Priority", value);
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "StopIfTrue");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "StopIfTrue");
 			}
 		}
 
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "AppliesTo", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "AppliesTo", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ConditionValue>(this, "MinPoint", typeof(NetOffice.ExcelApi.ConditionValue));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ConditionValue>(this, "MinPoint", typeof(NetOffice.ExcelApi.ConditionValue));
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ConditionValue>(this, "MaxPoint", typeof(NetOffice.ExcelApi.ConditionValue));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ConditionValue>(this, "MaxPoint", typeof(NetOffice.ExcelApi.ConditionValue));
 			}
 		}
 
@@ -186,11 +186,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "PercentMin");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "PercentMin");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PercentMin", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PercentMin", value);
 			}
 		}
 
@@ -204,11 +204,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "PercentMax");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "PercentMax");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PercentMax", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PercentMax", value);
 			}
 		}
 
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "BarColor");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "BarColor");
 			}
 		}
 
@@ -237,11 +237,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowValue");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowValue");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowValue", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowValue", value);
 			}
 		}
 
@@ -255,11 +255,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Formula");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Formula");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Formula", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Formula", value);
 			}
 		}
 
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Type");
 			}
 		}
 
@@ -287,7 +287,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "PTCondition");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PTCondition");
 			}
 		}
 
@@ -301,11 +301,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotConditionScope>(this, "ScopeType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotConditionScope>(this, "ScopeType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "ScopeType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ScopeType", value);
 			}
 		}
 
@@ -319,11 +319,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Direction");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Direction");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Direction", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Direction", value);
 			}
 		}
 
@@ -337,11 +337,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDataBarFillType>(this, "BarFillType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDataBarFillType>(this, "BarFillType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "BarFillType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "BarFillType", value);
 			}
 		}
 
@@ -355,11 +355,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDataBarAxisPosition>(this, "AxisPosition");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDataBarAxisPosition>(this, "AxisPosition");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "AxisPosition", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "AxisPosition", value);
 			}
 		}
 
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "AxisColor");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "AxisColor");
 			}
 		}
 
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DataBarBorder>(this, "BarBorder", typeof(NetOffice.ExcelApi.DataBarBorder));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DataBarBorder>(this, "BarBorder", typeof(NetOffice.ExcelApi.DataBarBorder));
 			}
 		}
 
@@ -402,7 +402,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.NegativeBarFormat>(this, "NegativeBarFormat", typeof(NetOffice.ExcelApi.NegativeBarFormat));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.NegativeBarFormat>(this, "NegativeBarFormat", typeof(NetOffice.ExcelApi.NegativeBarFormat));
 			}
 		}
 
@@ -417,7 +417,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void SetFirstPriority()
 		{
-			 Factory.ExecuteMethod(this, "SetFirstPriority");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SetFirstPriority");
 		}
 
 		/// <summary>
@@ -427,7 +427,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void SetLastPriority()
 		{
-			 Factory.ExecuteMethod(this, "SetLastPriority");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SetLastPriority");
 		}
 
 		/// <summary>
@@ -437,7 +437,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -448,7 +448,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
 		{
-			 Factory.ExecuteMethod(this, "ModifyAppliesToRange", range);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ModifyAppliesToRange", range);
 		}
 
 		#endregion

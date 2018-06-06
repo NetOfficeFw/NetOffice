@@ -68,11 +68,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ShowLegendKey");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowLegendKey");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShowLegendKey", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowLegendKey", value);
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "HasBorderHorizontal");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "HasBorderHorizontal");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "HasBorderHorizontal", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "HasBorderHorizontal", value);
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "HasBorderVertical");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "HasBorderVertical");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "HasBorderVertical", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "HasBorderVertical", value);
             }
         }
 
@@ -119,11 +119,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "HasBorderOutline");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "HasBorderOutline");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "HasBorderOutline", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "HasBorderOutline", value);
             }
         }
 
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoBorder>(this, "Border", typeof(NetOffice.OfficeApi.IMsoBorder));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoBorder>(this, "Border", typeof(NetOffice.OfficeApi.IMsoBorder));
             }
         }
 
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartFont>(this, "Font", typeof(NetOffice.OfficeApi.ChartFont));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartFont>(this, "Font", typeof(NetOffice.OfficeApi.ChartFont));
             }
         }
 
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -176,11 +176,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "AutoScaleFont");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "AutoScaleFont");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "AutoScaleFont", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "AutoScaleFont", value);
             }
         }
 
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", typeof(NetOffice.OfficeApi.IMsoChartFormat));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", typeof(NetOffice.OfficeApi.IMsoChartFormat));
             }
         }
 
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -220,7 +220,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Select()
         {
-            Factory.ExecuteMethod(this, "Select");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Select");
         }
 
         /// <summary>
@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

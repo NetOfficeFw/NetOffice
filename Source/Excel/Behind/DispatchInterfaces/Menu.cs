@@ -66,7 +66,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -106,11 +106,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Caption");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Caption", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Caption", value);
 			}
 		}
 
@@ -123,11 +123,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Enabled");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Enabled", value);
 			}
 		}
 
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.MenuItems>(this, "MenuItems", typeof(NetOffice.ExcelApi.MenuItems));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.MenuItems>(this, "MenuItems", typeof(NetOffice.ExcelApi.MenuItems));
 			}
 		}
 
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		#endregion

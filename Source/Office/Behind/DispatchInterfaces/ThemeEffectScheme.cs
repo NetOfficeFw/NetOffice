@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Load(string fileName)
         {
-            Factory.ExecuteMethod(this, "Load", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Load", fileName);
         }
 
         #endregion

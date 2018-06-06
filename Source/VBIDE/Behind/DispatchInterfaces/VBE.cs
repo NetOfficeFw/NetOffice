@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProjects>(this, "VBProjects", typeof(NetOffice.VBIDEApi.VBProjects));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProjects>(this, "VBProjects", typeof(NetOffice.VBIDEApi.VBProjects));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(this, "CommandBars", typeof(NetOffice.OfficeApi.CommandBars));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(this, "CommandBars", typeof(NetOffice.OfficeApi.CommandBars));
             }
         }
 
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePanes>(this, "CodePanes", typeof(NetOffice.VBIDEApi.CodePanes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePanes>(this, "CodePanes", typeof(NetOffice.VBIDEApi.CodePanes));
             }
         }
 
@@ -106,7 +106,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Windows>(this, "Windows", typeof(NetOffice.VBIDEApi.Windows));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Windows>(this, "Windows", typeof(NetOffice.VBIDEApi.Windows));
             }
         }
 
@@ -119,7 +119,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Events>(this, "Events", typeof(NetOffice.VBIDEApi.Events));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Events>(this, "Events", typeof(NetOffice.VBIDEApi.Events));
             }
         }
 
@@ -132,11 +132,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProject>(this, "ActiveVBProject", typeof(NetOffice.VBIDEApi.VBProject));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProject>(this, "ActiveVBProject", typeof(NetOffice.VBIDEApi.VBProject));
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "ActiveVBProject", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "ActiveVBProject", value);
             }
         }
 
@@ -149,7 +149,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponent>(this, "SelectedVBComponent", typeof(NetOffice.VBIDEApi.VBComponent));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponent>(this, "SelectedVBComponent", typeof(NetOffice.VBIDEApi.VBComponent));
             }
         }
 
@@ -162,7 +162,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "MainWindow", typeof(NetOffice.VBIDEApi.Window));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "MainWindow", typeof(NetOffice.VBIDEApi.Window));
             }
         }
 
@@ -175,7 +175,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "ActiveWindow", typeof(NetOffice.VBIDEApi.Window));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "ActiveWindow", typeof(NetOffice.VBIDEApi.Window));
             }
         }
 
@@ -188,11 +188,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePane>(this, "ActiveCodePane", typeof(NetOffice.VBIDEApi.CodePane));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePane>(this, "ActiveCodePane", typeof(NetOffice.VBIDEApi.CodePane));
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "ActiveCodePane", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "ActiveCodePane", value);
             }
         }
 
@@ -205,7 +205,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Addins>(this, "Addins", typeof(NetOffice.VBIDEApi.Addins));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Addins>(this, "Addins", typeof(NetOffice.VBIDEApi.Addins));
             }
         }
 

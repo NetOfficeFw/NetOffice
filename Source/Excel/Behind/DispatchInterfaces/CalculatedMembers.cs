@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Default", typeof(NetOffice.ExcelApi.CalculatedMember), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Default", typeof(NetOffice.ExcelApi.CalculatedMember), index);
 			}
 		}
 
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder, object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder, type);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder, type);
 		}
 
 		/// <summary>
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder, object hierarchizeDistinct)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct });
 		}
 
 		/// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember Add(string name, string formula)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula);
 		}
 
 		/// <summary>
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder);
 		}
 
 		/// <summary>
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, dynamic });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, dynamic });
 		}
 
 		/// <summary>
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, dynamic, displayFolder });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, dynamic, displayFolder });
 		}
 
 		/// <summary>
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula, object solveOrder, object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder, type);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder, type);
 		}
 
 		/// <summary>
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula);
 		}
 
 		/// <summary>
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula, object solveOrder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder);
 		}
 
 		/// <summary>
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy, object parentMember, object numberFormat)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember, numberFormat });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember, numberFormat });
 		}
 
 		/// <summary>
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula);
 		}
 
 		/// <summary>
@@ -313,7 +313,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder);
 		}
 
 		/// <summary>
@@ -328,7 +328,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder, type);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), name, formula, solveOrder, type);
 		}
 
 		/// <summary>
@@ -344,7 +344,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder });
 		}
 
 		/// <summary>
@@ -361,7 +361,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup });
 		}
 
 		/// <summary>
@@ -379,7 +379,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy });
 		}
 
 		/// <summary>
@@ -398,7 +398,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy, object parentMember)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", typeof(NetOffice.ExcelApi.CalculatedMember), new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember });
 		}
 
         #endregion

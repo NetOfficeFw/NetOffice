@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartColorFormat>(this, "BackColor", typeof(NetOffice.OfficeApi.ChartColorFormat));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartColorFormat>(this, "BackColor", typeof(NetOffice.OfficeApi.ChartColorFormat));
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartColorFormat>(this, "ForeColor", typeof(NetOffice.OfficeApi.ChartColorFormat));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ChartColorFormat>(this, "ForeColor", typeof(NetOffice.OfficeApi.ChartColorFormat));
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "GradientColorType");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "GradientColorType");
             }
         }
 
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "GradientDegree");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "GradientDegree");
             }
         }
 
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "GradientStyle");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "GradientStyle");
             }
         }
 
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "GradientVariant");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "GradientVariant");
             }
         }
 
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Pattern");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Pattern");
             }
         }
 
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "PresetGradientType");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "PresetGradientType");
             }
         }
 
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "PresetTexture");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "PresetTexture");
             }
         }
 
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "TextureName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextureName");
             }
         }
 
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "TextureType");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "TextureType");
             }
         }
 
@@ -211,7 +211,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Type");
             }
         }
 
@@ -224,11 +224,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Visible");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Visible");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Visible", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Visible", value);
             }
         }
 
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -255,7 +255,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -286,7 +286,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void OneColorGradient(Int32 style, Int32 variant, Single degree)
         {
-            Factory.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
         }
 
         /// <summary>
@@ -297,7 +297,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void TwoColorGradient(Int32 style, Int32 variant)
         {
-            Factory.ExecuteMethod(this, "TwoColorGradient", style, variant);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "TwoColorGradient", style, variant);
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void PresetTextured(Int32 presetTexture)
         {
-            Factory.ExecuteMethod(this, "PresetTextured", presetTexture);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PresetTextured", presetTexture);
         }
 
         /// <summary>
@@ -316,7 +316,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Solid()
         {
-            Factory.ExecuteMethod(this, "Solid");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Solid");
         }
 
         /// <summary>
@@ -326,7 +326,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Patterned(Int32 pattern)
         {
-            Factory.ExecuteMethod(this, "Patterned", pattern);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Patterned", pattern);
         }
 
         /// <summary>
@@ -339,7 +339,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
         {
-            Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
         }
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void UserTextured(string textureFile)
         {
-            Factory.ExecuteMethod(this, "UserTextured", textureFile);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "UserTextured", textureFile);
         }
 
         /// <summary>
@@ -361,7 +361,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void PresetGradient(Int32 style, Int32 variant, Int32 presetGradientType)
         {
-            Factory.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
         }
 
         #endregion

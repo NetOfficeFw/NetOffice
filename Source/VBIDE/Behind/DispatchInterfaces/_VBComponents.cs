@@ -69,7 +69,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.VBComponent AddCustom(string progId)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddCustom", typeof(NetOffice.VBIDEApi.VBComponent), progId);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddCustom", typeof(NetOffice.VBIDEApi.VBComponent), progId);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.VBComponent AddMTDesigner(object index)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddMTDesigner", typeof(NetOffice.VBIDEApi.VBComponent), index);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddMTDesigner", typeof(NetOffice.VBIDEApi.VBComponent), index);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.VBComponent AddMTDesigner()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddMTDesigner", typeof(NetOffice.VBIDEApi.VBComponent));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddMTDesigner", typeof(NetOffice.VBIDEApi.VBComponent));
         }
 
         #endregion

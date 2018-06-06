@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "BackgroundChecking");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "BackgroundChecking");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "BackgroundChecking", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "BackgroundChecking", value);
             }
         }
 
@@ -124,11 +124,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlColorIndex>(this, "IndicatorColorIndex");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlColorIndex>(this, "IndicatorColorIndex");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "IndicatorColorIndex", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "IndicatorColorIndex", value);
             }
         }
 
@@ -141,11 +141,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "EvaluateToError");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EvaluateToError");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "EvaluateToError", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EvaluateToError", value);
             }
         }
 
@@ -158,11 +158,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "TextDate");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextDate");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "TextDate", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextDate", value);
             }
         }
 
@@ -175,11 +175,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "NumberAsText");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "NumberAsText");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "NumberAsText", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "NumberAsText", value);
             }
         }
 
@@ -192,11 +192,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "InconsistentFormula");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "InconsistentFormula");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "InconsistentFormula", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InconsistentFormula", value);
             }
         }
 
@@ -209,11 +209,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "OmittedCells");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "OmittedCells");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "OmittedCells", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OmittedCells", value);
             }
         }
 
@@ -226,11 +226,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "UnlockedFormulaCells");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "UnlockedFormulaCells");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "UnlockedFormulaCells", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "UnlockedFormulaCells", value);
             }
         }
 
@@ -243,11 +243,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "EmptyCellReferences");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EmptyCellReferences");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "EmptyCellReferences", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EmptyCellReferences", value);
             }
         }
 
@@ -260,11 +260,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ListDataValidation");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ListDataValidation");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ListDataValidation", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ListDataValidation", value);
             }
         }
 
@@ -277,11 +277,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "InconsistentTableFormula");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "InconsistentTableFormula");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "InconsistentTableFormula", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InconsistentTableFormula", value);
             }
         }
 

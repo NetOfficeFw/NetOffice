@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
         }
 
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SourceName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceName");
             }
         }
 
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelTableColumns>(this, "ModelTableColumns", typeof(NetOffice.ExcelApi.ModelTableColumns));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ModelTableColumns>(this, "ModelTableColumns", typeof(NetOffice.ExcelApi.ModelTableColumns));
             }
         }
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "SourceWorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "SourceWorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
             }
         }
 
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteDateTimePropertyGet(this, "LastRefresh");
+                return InvokerService.InvokeInternal.ExecuteDateTimePropertyGet(this, "LastRefresh");
             }
         }
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "RecordCount");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RecordCount");
             }
         }
 
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 15, 16)]
         public virtual Int32 Refresh()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Refresh");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Refresh");
         }
 
         #endregion

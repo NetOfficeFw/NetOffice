@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutomaticStyles");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AutomaticStyles");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AutomaticStyles", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AutomaticStyles", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSummaryColumn>(this, "SummaryColumn");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSummaryColumn>(this, "SummaryColumn");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "SummaryColumn", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "SummaryColumn", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSummaryRow>(this, "SummaryRow");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSummaryRow>(this, "SummaryRow");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "SummaryRow", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "SummaryRow", value);
 			}
 		}
 
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object ShowLevels(object rowLevels, object columnLevels)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "ShowLevels", rowLevels, columnLevels);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "ShowLevels", rowLevels, columnLevels);
 		}
 
 		/// <summary>
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object ShowLevels()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "ShowLevels");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "ShowLevels");
 		}
 
 		/// <summary>
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object ShowLevels(object rowLevels)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "ShowLevels", rowLevels);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "ShowLevels", rowLevels);
 		}
 
 		#endregion

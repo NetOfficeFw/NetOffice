@@ -69,11 +69,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ControlCLSID");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ControlCLSID");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ControlCLSID", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ControlCLSID", value);
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual object get_QueryControlInterface(string bstrIid)
         {
-            return Factory.ExecuteReferencePropertyGet(this, "QueryControlInterface", bstrIid);
+            return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "QueryControlInterface", bstrIid);
         }
 
         /// <summary>
@@ -112,11 +112,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "InitWith");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "InitWith");
             }
             set
             {
-                Factory.ExecuteReferencePropertySet(this, "InitWith", value);
+                InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "InitWith", value);
             }
         }
 
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "InstanceIdPtr");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "InstanceIdPtr");
             }
         }
 
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accSelect(Int32 flagsSelect, object varChild)
         {
-            Factory.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accSelect(Int32 flagsSelect)
         {
-            Factory.ExecuteMethod(this, "accSelect", flagsSelect);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accSelect", flagsSelect);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accNavigate(Int32 navDir, object varStart)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accNavigate(Int32 navDir)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accNavigate", navDir);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accHitTest(Int32 xLeft, Int32 yTop)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
         }
 
         /// <summary>
@@ -256,7 +256,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accDoDefaultAction(object varChild)
         {
-            Factory.ExecuteMethod(this, "accDoDefaultAction", varChild);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accDoDefaultAction", varChild);
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accDoDefaultAction()
         {
-            Factory.ExecuteMethod(this, "accDoDefaultAction");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accDoDefaultAction");
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void SetInnerObjectFactory(object pUnk)
         {
-            Factory.ExecuteMethod(this, "SetInnerObjectFactory", pUnk);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetInnerObjectFactory", pUnk);
         }
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void EnsureControl()
         {
-            Factory.ExecuteMethod(this, "EnsureControl");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "EnsureControl");
         }
 
         #endregion

@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "BCCRecipients");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "BCCRecipients");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "BCCRecipients", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "BCCRecipients", value);
             }
         }
 
@@ -124,11 +124,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "CCRecipients");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "CCRecipients");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "CCRecipients", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "CCRecipients", value);
             }
         }
 
@@ -141,11 +141,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Enclosures");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Enclosures");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Enclosures", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Enclosures", value);
             }
         }
 
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Received");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Received");
             }
         }
 
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteDateTimePropertyGet(this, "SendDateTime");
+                return InvokerService.InvokeInternal.ExecuteDateTimePropertyGet(this, "SendDateTime");
             }
         }
 
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Sender");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Sender");
             }
         }
 
@@ -197,11 +197,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Subject");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Subject");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Subject", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Subject", value);
             }
         }
 
@@ -214,11 +214,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ToRecipients");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ToRecipients");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "ToRecipients", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ToRecipients", value);
             }
         }
 
@@ -231,11 +231,11 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "WhichAddress");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "WhichAddress");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "WhichAddress", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "WhichAddress", value);
             }
         }
 

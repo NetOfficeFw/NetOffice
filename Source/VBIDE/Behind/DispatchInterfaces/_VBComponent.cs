@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "DesignerID");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DesignerID");
             }
         }
 

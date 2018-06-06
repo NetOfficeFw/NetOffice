@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.DiagramNodes>(this, "Nodes", typeof(NetOffice.OfficeApi.DiagramNodes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.DiagramNodes>(this, "Nodes", typeof(NetOffice.OfficeApi.DiagramNodes));
             }
         }
 
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoDiagramType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoDiagramType>(this, "Type");
             }
         }
 
@@ -108,11 +108,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AutoLayout");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AutoLayout");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "AutoLayout", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "AutoLayout", value);
             }
         }
 
@@ -125,11 +125,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Reverse");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Reverse");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Reverse", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Reverse", value);
             }
         }
 
@@ -142,11 +142,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AutoFormat");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AutoFormat");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "AutoFormat", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "AutoFormat", value);
             }
         }
 
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Convert(NetOffice.OfficeApi.Enums.MsoDiagramType type)
         {
-            Factory.ExecuteMethod(this, "Convert", type);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Convert", type);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void FitText()
         {
-            Factory.ExecuteMethod(this, "FitText");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "FitText");
         }
 
         #endregion

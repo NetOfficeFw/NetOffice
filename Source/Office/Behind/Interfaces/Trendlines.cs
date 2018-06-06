@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoTrendline>(this, "_Default", typeof(NetOffice.OfficeApi.IMsoTrendline), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoTrendline>(this, "_Default", typeof(NetOffice.OfficeApi.IMsoTrendline), index);
             }
         }
 
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline));
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order, period);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order, period);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order, period, forward);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), type, order, period, forward);
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward });
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept });
         }
 
         /// <summary>
@@ -258,7 +258,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation });
         }
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", typeof(NetOffice.OfficeApi.IMsoTrendline), new object[] { type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
         }
 
         #endregion

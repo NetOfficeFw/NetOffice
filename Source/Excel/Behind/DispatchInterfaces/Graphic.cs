@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Brightness");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Brightness");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Brightness", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Brightness", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureColorType>(this, "ColorType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureColorType>(this, "ColorType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "ColorType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ColorType", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Contrast");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Contrast");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Contrast", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Contrast", value);
 			}
 		}
 
@@ -166,11 +166,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "CropBottom");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "CropBottom");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "CropBottom", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CropBottom", value);
 			}
 		}
 
@@ -184,11 +184,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "CropLeft");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "CropLeft");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "CropLeft", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CropLeft", value);
 			}
 		}
 
@@ -202,11 +202,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "CropRight");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "CropRight");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "CropRight", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CropRight", value);
 			}
 		}
 
@@ -220,11 +220,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "CropTop");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "CropTop");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "CropTop", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CropTop", value);
 			}
 		}
 
@@ -238,11 +238,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Filename");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Filename");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Filename", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Filename", value);
 			}
 		}
 
@@ -256,11 +256,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Height");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Height");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Height", value);
 			}
 		}
 
@@ -274,11 +274,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "LockAspectRatio");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "LockAspectRatio");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "LockAspectRatio", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "LockAspectRatio", value);
 			}
 		}
 
@@ -292,11 +292,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Width");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Width");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Width", value);
 			}
 		}
 

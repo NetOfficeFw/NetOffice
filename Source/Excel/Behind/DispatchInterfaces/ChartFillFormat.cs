@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ChartColorFormat>(this, "BackColor", typeof(NetOffice.ExcelApi.ChartColorFormat));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ChartColorFormat>(this, "BackColor", typeof(NetOffice.ExcelApi.ChartColorFormat));
 			}
 		}
 
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ChartColorFormat>(this, "ForeColor", typeof(NetOffice.ExcelApi.ChartColorFormat));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ChartColorFormat>(this, "ForeColor", typeof(NetOffice.ExcelApi.ChartColorFormat));
 			}
 		}
 
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoGradientColorType>(this, "GradientColorType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoGradientColorType>(this, "GradientColorType");
 			}
 		}
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "GradientDegree");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "GradientDegree");
 			}
 		}
 
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoGradientStyle>(this, "GradientStyle");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoGradientStyle>(this, "GradientStyle");
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "GradientVariant");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "GradientVariant");
 			}
 		}
 
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPatternType>(this, "Pattern");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPatternType>(this, "Pattern");
 			}
 		}
 
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetGradientType>(this, "PresetGradientType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetGradientType>(this, "PresetGradientType");
 			}
 		}
 
@@ -211,7 +211,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetTexture>(this, "PresetTexture");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetTexture>(this, "PresetTexture");
 			}
 		}
 
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "TextureName");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextureName");
 			}
 		}
 
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextureType>(this, "TextureType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextureType>(this, "TextureType");
 			}
 		}
 
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFillType>(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFillType>(this, "Type");
 			}
 		}
 
@@ -263,11 +263,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Visible", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Visible", value);
 			}
 		}
 
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void OneColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
 		{
-			 Factory.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
 		}
 
 		/// <summary>
@@ -295,7 +295,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void TwoColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
 		{
-			 Factory.ExecuteMethod(this, "TwoColorGradient", style, variant);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "TwoColorGradient", style, variant);
 		}
 
 		/// <summary>
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void PresetTextured(NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture)
 		{
-			 Factory.ExecuteMethod(this, "PresetTextured", presetTexture);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "PresetTextured", presetTexture);
 		}
 
 		/// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Solid()
 		{
-			 Factory.ExecuteMethod(this, "Solid");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Solid");
 		}
 
 		/// <summary>
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Patterned(NetOffice.OfficeApi.Enums.MsoPatternType pattern)
 		{
-			 Factory.ExecuteMethod(this, "Patterned", pattern);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Patterned", pattern);
 		}
 
 		/// <summary>
@@ -337,7 +337,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
 		{
-			 Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
 		}
 
 		/// <summary>
@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void UserPicture()
 		{
-			 Factory.ExecuteMethod(this, "UserPicture");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "UserPicture");
 		}
 
 		/// <summary>
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void UserPicture(object pictureFile)
 		{
-			 Factory.ExecuteMethod(this, "UserPicture", pictureFile);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "UserPicture", pictureFile);
 		}
 
 		/// <summary>
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void UserPicture(object pictureFile, object pictureFormat)
 		{
-			 Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat);
 		}
 
 		/// <summary>
@@ -383,7 +383,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit)
 		{
-			 Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit);
 		}
 
 		/// <summary>
@@ -393,7 +393,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void UserTextured(string textureFile)
 		{
-			 Factory.ExecuteMethod(this, "UserTextured", textureFile);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "UserTextured", textureFile);
 		}
 
 		/// <summary>
@@ -405,7 +405,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void PresetGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
 		{
-			 Factory.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
 		}
 
 		#endregion

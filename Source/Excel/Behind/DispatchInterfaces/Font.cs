@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Background");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Background");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Background", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Background", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Bold");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Bold");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Bold", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Bold", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Color");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Color");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Color", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Color", value);
 			}
 		}
 
@@ -166,11 +166,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "ColorIndex");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ColorIndex");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "ColorIndex", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ColorIndex", value);
 			}
 		}
 
@@ -184,11 +184,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "FontStyle");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "FontStyle");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "FontStyle", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "FontStyle", value);
 			}
 		}
 
@@ -202,11 +202,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Italic");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Italic");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Italic", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Italic", value);
 			}
 		}
 
@@ -220,11 +220,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Name");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Name", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Name", value);
 			}
 		}
 
@@ -237,11 +237,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "OutlineFont");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "OutlineFont");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "OutlineFont", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "OutlineFont", value);
 			}
 		}
 
@@ -254,11 +254,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Shadow");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Shadow");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Shadow", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Shadow", value);
 			}
 		}
 
@@ -272,11 +272,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Size");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Size");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Size", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Size", value);
 			}
 		}
 
@@ -290,11 +290,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Strikethrough");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Strikethrough");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Strikethrough", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Strikethrough", value);
 			}
 		}
 
@@ -308,11 +308,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Subscript");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Subscript");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Subscript", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Subscript", value);
 			}
 		}
 
@@ -326,11 +326,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Superscript");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Superscript");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Superscript", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Superscript", value);
 			}
 		}
 
@@ -344,11 +344,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Underline");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Underline");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Underline", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Underline", value);
 			}
 		}
 
@@ -362,11 +362,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "ThemeColor");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ThemeColor");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "ThemeColor", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ThemeColor", value);
 			}
 		}
 
@@ -380,11 +380,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "TintAndShade");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "TintAndShade");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "TintAndShade", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "TintAndShade", value);
 			}
 		}
 
@@ -398,11 +398,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlThemeFont>(this, "ThemeFont");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlThemeFont>(this, "ThemeFont");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "ThemeFont", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ThemeFont", value);
 			}
 		}
 

@@ -68,7 +68,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponent>(this, "Parent", typeof(NetOffice.VBIDEApi.VBComponent));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponent>(this, "Parent", typeof(NetOffice.VBIDEApi.VBComponent));
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -94,11 +94,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual string get_Lines(Int32 startLine, Int32 count)
         {
-            return Factory.ExecuteStringPropertyGet(this, "Lines", startLine, count);
+            return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Lines", startLine, count);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "CountOfLines");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "CountOfLines");
             }
         }
 
@@ -150,7 +150,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual Int32 get_ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
-            return Factory.ExecuteInt32PropertyGet(this, "ProcStartLine", procName, procKind);
+            return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ProcStartLine", procName, procKind);
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual Int32 get_ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
-            return Factory.ExecuteInt32PropertyGet(this, "ProcCountLines", procName, procKind);
+            return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ProcCountLines", procName, procKind);
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace NetOffice.VBIDEApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual Int32 get_ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
         {
-            return Factory.ExecuteInt32PropertyGet(this, "ProcBodyLine", procName, procKind);
+            return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ProcBodyLine", procName, procKind);
         }
 
         /// <summary>
@@ -254,7 +254,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "CountOfDeclarationLines");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "CountOfDeclarationLines");
             }
         }
 
@@ -267,7 +267,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePane>(this, "CodePane", typeof(NetOffice.VBIDEApi.CodePane));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePane>(this, "CodePane", typeof(NetOffice.VBIDEApi.CodePane));
             }
         }
 
@@ -282,7 +282,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void AddFromString(string _string)
         {
-            Factory.ExecuteMethod(this, "AddFromString", _string);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddFromString", _string);
         }
 
         /// <summary>
@@ -292,7 +292,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void AddFromFile(string fileName)
         {
-            Factory.ExecuteMethod(this, "AddFromFile", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddFromFile", fileName);
         }
 
         /// <summary>
@@ -303,7 +303,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void InsertLines(Int32 line, string _string)
         {
-            Factory.ExecuteMethod(this, "InsertLines", line, _string);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertLines", line, _string);
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void DeleteLines(Int32 startLine, object count)
         {
-            Factory.ExecuteMethod(this, "DeleteLines", startLine, count);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "DeleteLines", startLine, count);
         }
 
         /// <summary>
@@ -325,7 +325,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void DeleteLines(Int32 startLine)
         {
-            Factory.ExecuteMethod(this, "DeleteLines", startLine);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "DeleteLines", startLine);
         }
 
         /// <summary>
@@ -336,7 +336,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void ReplaceLine(Int32 line, string _string)
         {
-            Factory.ExecuteMethod(this, "ReplaceLine", line, _string);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReplaceLine", line, _string);
         }
 
         /// <summary>
@@ -347,7 +347,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual Int32 CreateEventProc(string eventName, string objectName)
         {
-            return Factory.ExecuteInt32MethodGet(this, "CreateEventProc", eventName, objectName);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "CreateEventProc", eventName, objectName);
         }
 
         /// <summary>
@@ -364,7 +364,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase, object patternSearch)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch });
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch });
         }
 
         /// <summary>
@@ -379,7 +379,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn });
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn });
         }
 
         /// <summary>
@@ -395,7 +395,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord });
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord });
         }
 
         /// <summary>
@@ -412,7 +412,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase });
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Find", new object[] { target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase });
         }
 
         #endregion

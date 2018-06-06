@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ReadOnly");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ReadOnly");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SignatureProvider");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SignatureProvider");
             }
         }
 
@@ -98,11 +98,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SignatureText");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SignatureText");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SignatureText", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SignatureText", value);
             }
         }
 
@@ -137,11 +137,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SignatureComment");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SignatureComment");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SignatureComment", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SignatureComment", value);
             }
         }
 
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.ContentVerificationResults>(this, "ContentVerificationResults");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.ContentVerificationResults>(this, "ContentVerificationResults");
             }
         }
 
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.CertificateVerificationResults>(this, "CertificateVerificationResults");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.CertificateVerificationResults>(this, "CertificateVerificationResults");
             }
         }
 
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsValid");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsValid");
             }
         }
 
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsCertificateExpired");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsCertificateExpired");
             }
         }
 
@@ -211,7 +211,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsCertificateRevoked");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsCertificateRevoked");
             }
         }
 
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsCertificateUntrusted");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsCertificateUntrusted");
             }
         }
 
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object GetSignatureDetail(NetOffice.OfficeApi.Enums.SignatureDetail sigdet)
         {
-            return Factory.ExecuteVariantMethodGet(this, "GetSignatureDetail", sigdet);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "GetSignatureDetail", sigdet);
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object GetCertificateDetail(NetOffice.OfficeApi.Enums.CertificateDetail certdet)
         {
-            return Factory.ExecuteVariantMethodGet(this, "GetCertificateDetail", certdet);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "GetCertificateDetail", certdet);
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ShowSignatureCertificate(object parentWindow)
         {
-            Factory.ExecuteMethod(this, "ShowSignatureCertificate", parentWindow);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ShowSignatureCertificate", parentWindow);
         }
 
         /// <summary>
@@ -274,7 +274,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void SelectSignatureCertificate(object parentWindow)
         {
-            Factory.ExecuteMethod(this, "SelectSignatureCertificate", parentWindow);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SelectSignatureCertificate", parentWindow);
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void SelectCertificateDetailByThumbprint(string bstrThumbprint)
         {
-            Factory.ExecuteMethod(this, "SelectCertificateDetailByThumbprint", bstrThumbprint);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SelectCertificateDetailByThumbprint", bstrThumbprint);
         }
 
         #endregion

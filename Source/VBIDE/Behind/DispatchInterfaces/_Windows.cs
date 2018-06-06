@@ -73,7 +73,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.Window CreateToolWindow(NetOffice.VBIDEApi.AddIn addInInst, string progId, string caption, string guidPosition, object docObj)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "CreateToolWindow", typeof(NetOffice.VBIDEApi.Window), new object[] { addInInst, progId, caption, guidPosition, docObj });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "CreateToolWindow", typeof(NetOffice.VBIDEApi.Window), new object[] { addInInst, progId, caption, guidPosition, docObj });
         }
 
         #endregion

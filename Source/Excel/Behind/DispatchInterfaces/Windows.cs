@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Window>(this, "_Default", typeof(NetOffice.ExcelApi.Window), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Window>(this, "_Default", typeof(NetOffice.ExcelApi.Window), index);
 			}
 		}
 
@@ -144,11 +144,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SyncScrollingSideBySide");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SyncScrollingSideBySide");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SyncScrollingSideBySide", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SyncScrollingSideBySide", value);
 			}
 		}
 
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal, object syncVertical)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook, syncHorizontal, syncVertical);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook, syncHorizontal, syncVertical);
 		}
 
 		/// <summary>
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Arrange()
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Arrange");
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Arrange");
 		}
 
 		/// <summary>
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Arrange(object arrangeStyle)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle);
 		}
 
 		/// <summary>
@@ -203,7 +203,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Arrange(object arrangeStyle, object activeWorkbook)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook);
 		}
 
 		/// <summary>
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal)
 		{
-			return Factory.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook, syncHorizontal);
+			return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Arrange", arrangeStyle, activeWorkbook, syncHorizontal);
 		}
 
 		/// <summary>
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual bool CompareSideBySideWith(object windowName)
 		{
-			return Factory.ExecuteBoolMethodGet(this, "CompareSideBySideWith", windowName);
+			return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "CompareSideBySideWith", windowName);
 		}
 
 		/// <summary>
@@ -238,7 +238,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual bool BreakSideBySide()
 		{
-			return Factory.ExecuteBoolMethodGet(this, "BreakSideBySide");
+			return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "BreakSideBySide");
 		}
 
 		/// <summary>
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public virtual void ResetPositionsSideBySide()
 		{
-			 Factory.ExecuteMethod(this, "ResetPositionsSideBySide");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ResetPositionsSideBySide");
 		}
 
         #endregion

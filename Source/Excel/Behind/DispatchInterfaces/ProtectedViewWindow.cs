@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "_Default");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "_Default");
 			}
 		}
 
@@ -82,11 +82,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Caption");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Caption", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Caption", value);
 			}
 		}
 
@@ -100,11 +100,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableResize");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EnableResize");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "EnableResize", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EnableResize", value);
 			}
 		}
 
@@ -118,11 +118,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Height");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Height");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Height", value);
 			}
 		}
 
@@ -136,11 +136,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Left");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Left");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Left", value);
 			}
 		}
 
@@ -154,11 +154,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Top");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Top");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Top", value);
 			}
 		}
 
@@ -172,11 +172,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Width");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Width");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Width", value);
 			}
 		}
 
@@ -190,11 +190,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Visible");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Visible", value);
 			}
 		}
 
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceName");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceName");
 			}
 		}
 
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourcePath");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourcePath");
 			}
 		}
 
@@ -236,11 +236,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlProtectedViewWindowState>(this, "WindowState");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlProtectedViewWindowState>(this, "WindowState");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "WindowState", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "WindowState", value);
 			}
 		}
 
@@ -254,7 +254,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbook>(this, "Workbook", typeof(NetOffice.ExcelApi.Workbook));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Workbook>(this, "Workbook", typeof(NetOffice.ExcelApi.Workbook));
 			}
 		}
 
@@ -269,7 +269,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual void Activate()
 		{
-			 Factory.ExecuteMethod(this, "Activate");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Activate");
 		}
 
 		/// <summary>
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual bool Close()
 		{
-			return Factory.ExecuteBoolMethodGet(this, "Close");
+			return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Close");
 		}
 
 		/// <summary>
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Workbook Edit(object writeResPassword, object updateLinks)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook), writeResPassword, updateLinks);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook), writeResPassword, updateLinks);
 		}
 
 		/// <summary>
@@ -302,7 +302,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Workbook Edit()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook));
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook));
 		}
 
 		/// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.Workbook Edit(object writeResPassword)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook), writeResPassword);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", typeof(NetOffice.ExcelApi.Workbook), writeResPassword);
 		}
 
 		#endregion

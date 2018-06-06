@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Default", typeof(NetOffice.ExcelApi.WorkbookConnection), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Default", typeof(NetOffice.ExcelApi.WorkbookConnection), index);
 			}
 		}
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddFromFile", typeof(NetOffice.ExcelApi.WorkbookConnection), filename);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddFromFile", typeof(NetOffice.ExcelApi.WorkbookConnection), filename);
 		}
 
 		/// <summary>
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename, object createModelConnection, object importRelationships)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddFromFile", typeof(NetOffice.ExcelApi.WorkbookConnection), filename, createModelConnection, importRelationships);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddFromFile", typeof(NetOffice.ExcelApi.WorkbookConnection), filename, createModelConnection, importRelationships);
 		}
 
 		/// <summary>
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename, object createModelConnection)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddFromFile", typeof(NetOffice.ExcelApi.WorkbookConnection), filename, createModelConnection);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddFromFile", typeof(NetOffice.ExcelApi.WorkbookConnection), filename, createModelConnection);
 		}
 
 		/// <summary>
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", typeof(NetOffice.ExcelApi.WorkbookConnection), new object[]{ name, description, connectionString, commandText, lCmdtype });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", typeof(NetOffice.ExcelApi.WorkbookConnection), new object[]{ name, description, connectionString, commandText, lCmdtype });
 		}
 
 		/// <summary>
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype, object createModelConnection, object importRelationships)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", typeof(NetOffice.ExcelApi.WorkbookConnection), new object[]{ name, description, connectionString, commandText, lCmdtype, createModelConnection, importRelationships });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", typeof(NetOffice.ExcelApi.WorkbookConnection), new object[]{ name, description, connectionString, commandText, lCmdtype, createModelConnection, importRelationships });
 		}
 
 		/// <summary>
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", typeof(NetOffice.ExcelApi.WorkbookConnection), name, description, connectionString, commandText);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", typeof(NetOffice.ExcelApi.WorkbookConnection), name, description, connectionString, commandText);
 		}
 
 		/// <summary>
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype, object createModelConnection)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", typeof(NetOffice.ExcelApi.WorkbookConnection), new object[]{ name, description, connectionString, commandText, lCmdtype, createModelConnection });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", typeof(NetOffice.ExcelApi.WorkbookConnection), new object[]{ name, description, connectionString, commandText, lCmdtype, createModelConnection });
 		}
 
 		/// <summary>
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection _AddFromFile(string filename)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_AddFromFile", typeof(NetOffice.ExcelApi.WorkbookConnection), filename);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_AddFromFile", typeof(NetOffice.ExcelApi.WorkbookConnection), filename);
 		}
 
 		/// <summary>
@@ -258,7 +258,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection _Add(string name, string description, object connectionString, object commandText, object lCmdtype)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Add", typeof(NetOffice.ExcelApi.WorkbookConnection), new object[]{ name, description, connectionString, commandText, lCmdtype });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Add", typeof(NetOffice.ExcelApi.WorkbookConnection), new object[]{ name, description, connectionString, commandText, lCmdtype });
 		}
 
 		/// <summary>
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.WorkbookConnection _Add(string name, string description, object connectionString, object commandText)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Add", typeof(NetOffice.ExcelApi.WorkbookConnection), name, description, connectionString, commandText);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Add", typeof(NetOffice.ExcelApi.WorkbookConnection), name, description, connectionString, commandText);
 		}
 
         #endregion

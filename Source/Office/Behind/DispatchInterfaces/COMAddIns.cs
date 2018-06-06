@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.COMAddIn>(this, "Item", typeof(NetOffice.OfficeApi.COMAddIn), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.COMAddIn>(this, "Item", typeof(NetOffice.OfficeApi.COMAddIn), index);
             }
         }
 
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Update()
         {
-            Factory.ExecuteMethod(this, "Update");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Update");
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void SetAppModal(bool varfModal)
         {
-            Factory.ExecuteMethod(this, "SetAppModal", varfModal);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetAppModal", varfModal);
         }
 
         #endregion

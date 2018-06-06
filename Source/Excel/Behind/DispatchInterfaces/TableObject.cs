@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RowNumbers");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RowNumbers");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RowNumbers", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RowNumbers", value);
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "FetchedRowOverflow");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "FetchedRowOverflow");
 			}
 		}
 
@@ -144,11 +144,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCellInsertionMode>(this, "RefreshStyle");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCellInsertionMode>(this, "RefreshStyle");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "RefreshStyle", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "RefreshStyle", value);
 			}
 		}
 
@@ -162,11 +162,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableRefresh");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EnableRefresh");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "EnableRefresh", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EnableRefresh", value);
 			}
 		}
 
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Destination", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Destination", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "ResultRange", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "ResultRange", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -208,11 +208,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableEditing");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EnableEditing");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "EnableEditing", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EnableEditing", value);
 			}
 		}
 
@@ -226,11 +226,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "PreserveColumnInfo");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PreserveColumnInfo");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PreserveColumnInfo", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PreserveColumnInfo", value);
 			}
 		}
 
@@ -244,11 +244,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "PreserveFormatting");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PreserveFormatting");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "PreserveFormatting", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "PreserveFormatting", value);
 			}
 		}
 
@@ -262,11 +262,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AdjustColumnWidth");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AdjustColumnWidth");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AdjustColumnWidth", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AdjustColumnWidth", value);
 			}
 		}
 
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListObject>(this, "ListObject", typeof(NetOffice.ExcelApi.ListObject));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListObject>(this, "ListObject", typeof(NetOffice.ExcelApi.ListObject));
 			}
 		}
 
@@ -294,7 +294,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
 			}
 		}
 
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -319,7 +319,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual bool Refresh()
 		{
-			return Factory.ExecuteBoolMethodGet(this, "Refresh");
+			return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Refresh");
 		}
 
 		#endregion

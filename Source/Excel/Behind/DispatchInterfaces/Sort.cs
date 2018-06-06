@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Rng", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Rng", typeof(NetOffice.ExcelApi.Range));
 			}
 		}
 
@@ -126,11 +126,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlYesNoGuess>(this, "Header");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlYesNoGuess>(this, "Header");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Header", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Header", value);
 			}
 		}
 
@@ -144,11 +144,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "MatchCase");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "MatchCase");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MatchCase", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MatchCase", value);
 			}
 		}
 
@@ -162,11 +162,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSortOrientation>(this, "Orientation");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSortOrientation>(this, "Orientation");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Orientation", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Orientation", value);
 			}
 		}
 
@@ -180,11 +180,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSortMethod>(this, "SortMethod");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSortMethod>(this, "SortMethod");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "SortMethod", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "SortMethod", value);
 			}
 		}
 
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SortFields>(this, "SortFields", typeof(NetOffice.ExcelApi.SortFields));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SortFields>(this, "SortFields", typeof(NetOffice.ExcelApi.SortFields));
 			}
 		}
 
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void SetRange(NetOffice.ExcelApi.Range rng)
 		{
-			 Factory.ExecuteMethod(this, "SetRange", rng);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SetRange", rng);
 		}
 
 		/// <summary>
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void Apply()
 		{
-			 Factory.ExecuteMethod(this, "Apply");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Apply");
 		}
 
 		#endregion

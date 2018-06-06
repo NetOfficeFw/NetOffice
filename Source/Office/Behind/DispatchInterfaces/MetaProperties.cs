@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MetaProperty>(this, "Item", typeof(NetOffice.OfficeApi.MetaProperty), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MetaProperty>(this, "Item", typeof(NetOffice.OfficeApi.MetaProperty), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ValidationError");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ValidationError");
             }
         }
 
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SchemaXml");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SchemaXml");
             }
         }
 
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.MetaProperty GetItemByInternalName(string internalName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MetaProperty>(this, "GetItemByInternalName", typeof(NetOffice.OfficeApi.MetaProperty), internalName);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MetaProperty>(this, "GetItemByInternalName", typeof(NetOffice.OfficeApi.MetaProperty), internalName);
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual string Validate()
         {
-            return Factory.ExecuteStringMethodGet(this, "Validate");
+            return InvokerService.InvokeInternal.ExecuteStringMethodGet(this, "Validate");
         }
 
         #endregion

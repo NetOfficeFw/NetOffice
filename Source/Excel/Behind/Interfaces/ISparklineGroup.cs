@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sparkline>(this, "Item", typeof(NetOffice.ExcelApi.Sparkline), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Sparkline>(this, "Item", typeof(NetOffice.ExcelApi.Sparkline), index);
 			}
 		}
 
@@ -137,11 +137,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Location", typeof(NetOffice.ExcelApi.Range));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Location", typeof(NetOffice.ExcelApi.Range));
 			}
 			set
 			{
-				Factory.ExecuteReferencePropertySet(this, "Location", value);
+				InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Location", value);
 			}
 		}
 
@@ -154,11 +154,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceData");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceData");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SourceData", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SourceData", value);
 			}
 		}
 
@@ -171,11 +171,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "DateRange");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DateRange");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DateRange", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DateRange", value);
 			}
 		}
 
@@ -188,11 +188,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSparkType>(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSparkType>(this, "Type");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Type", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
 			}
 		}
 
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.FormatColor>(this, "SeriesColor", typeof(NetOffice.ExcelApi.FormatColor));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.FormatColor>(this, "SeriesColor", typeof(NetOffice.ExcelApi.FormatColor));
 			}
 		}
 
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SparkPoints>(this, "Points", typeof(NetOffice.ExcelApi.SparkPoints));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SparkPoints>(this, "Points", typeof(NetOffice.ExcelApi.SparkPoints));
 			}
 		}
 
@@ -231,7 +231,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SparkAxes>(this, "Axes", typeof(NetOffice.ExcelApi.SparkAxes));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SparkAxes>(this, "Axes", typeof(NetOffice.ExcelApi.SparkAxes));
 			}
 		}
 
@@ -244,11 +244,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDisplayBlanksAs>(this, "DisplayBlanksAs");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlDisplayBlanksAs>(this, "DisplayBlanksAs");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "DisplayBlanksAs", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "DisplayBlanksAs", value);
 			}
 		}
 
@@ -261,11 +261,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayHidden");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayHidden");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "DisplayHidden", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayHidden", value);
 			}
 		}
 
@@ -278,11 +278,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "LineWeight");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "LineWeight");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "LineWeight", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "LineWeight", value);
 			}
 		}
 
@@ -295,11 +295,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSparklineRowCol>(this, "PlotBy");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSparklineRowCol>(this, "PlotBy");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "PlotBy", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "PlotBy", value);
 			}
 		}
 
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 ModifyLocation(NetOffice.ExcelApi.Range location)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ModifyLocation", location);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ModifyLocation", location);
 		}
 
 		/// <summary>
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 ModifySourceData(string sourceData)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ModifySourceData", sourceData);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ModifySourceData", sourceData);
 		}
 
 		/// <summary>
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 Modify(NetOffice.ExcelApi.Range location, string sourceData)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Modify", location, sourceData);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Modify", location, sourceData);
 		}
 
 		/// <summary>
@@ -345,7 +345,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 ModifyDateRange(string dateRange)
 		{
-			return Factory.ExecuteInt32MethodGet(this, "ModifyDateRange", dateRange);
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "ModifyDateRange", dateRange);
 		}
 
 		/// <summary>
@@ -354,7 +354,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual Int32 Delete()
 		{
-			return Factory.ExecuteInt32MethodGet(this, "Delete");
+			return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
 		}
 
         #endregion

@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceMembers>(this, "Members", typeof(NetOffice.OfficeApi.SharedWorkspaceMembers));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceMembers>(this, "Members", typeof(NetOffice.OfficeApi.SharedWorkspaceMembers));
             }
         }
 
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceTasks>(this, "Tasks", typeof(NetOffice.OfficeApi.SharedWorkspaceTasks));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceTasks>(this, "Tasks", typeof(NetOffice.OfficeApi.SharedWorkspaceTasks));
             }
         }
 
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceFiles>(this, "Files", typeof(NetOffice.OfficeApi.SharedWorkspaceFiles));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceFiles>(this, "Files", typeof(NetOffice.OfficeApi.SharedWorkspaceFiles));
             }
         }
 
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceFolders>(this, "Folders", typeof(NetOffice.OfficeApi.SharedWorkspaceFolders));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceFolders>(this, "Folders", typeof(NetOffice.OfficeApi.SharedWorkspaceFolders));
             }
         }
 
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceLinks>(this, "Links", typeof(NetOffice.OfficeApi.SharedWorkspaceLinks));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceLinks>(this, "Links", typeof(NetOffice.OfficeApi.SharedWorkspaceLinks));
             }
         }
 
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "URL");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "URL");
             }
         }
 
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Connected");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Connected");
             }
         }
 
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "LastRefreshed");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "LastRefreshed");
             }
         }
 
@@ -215,11 +215,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SourceURL");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceURL");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SourceURL", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SourceURL", value);
             }
         }
 
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Refresh()
         {
-            Factory.ExecuteMethod(this, "Refresh");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Refresh");
         }
 
         /// <summary>
@@ -246,7 +246,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void CreateNew(object uRL, object name)
         {
-            Factory.ExecuteMethod(this, "CreateNew", uRL, name);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "CreateNew", uRL, name);
         }
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void CreateNew()
         {
-            Factory.ExecuteMethod(this, "CreateNew");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "CreateNew");
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void CreateNew(object uRL)
         {
-            Factory.ExecuteMethod(this, "CreateNew", uRL);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "CreateNew", uRL);
         }
 
         /// <summary>
@@ -279,7 +279,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void RemoveDocument()
         {
-            Factory.ExecuteMethod(this, "RemoveDocument");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RemoveDocument");
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Disconnect()
         {
-            Factory.ExecuteMethod(this, "Disconnect");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Disconnect");
         }
 
         #endregion

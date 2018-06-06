@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Item", typeof(NetOffice.OfficeApi.CustomXMLSchema), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Item", typeof(NetOffice.OfficeApi.CustomXMLSchema), index);
             }
         }
 
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual string get_NamespaceURI(Int32 index)
         {
-            return Factory.ExecuteStringPropertyGet(this, "NamespaceURI", index);
+            return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "NamespaceURI", index);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName, object installForAllUsers)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias, fileName, installForAllUsers);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias, fileName, installForAllUsers);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLSchema Add()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema));
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI);
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias);
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias, fileName);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLSchema>(this, "Add", typeof(NetOffice.OfficeApi.CustomXMLSchema), namespaceURI, alias, fileName);
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddCollection(NetOffice.OfficeApi.CustomXMLSchemaCollection schemaCollection)
         {
-            Factory.ExecuteMethod(this, "AddCollection", schemaCollection);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddCollection", schemaCollection);
         }
 
         /// <summary>
@@ -216,7 +216,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual bool Validate()
         {
-            return Factory.ExecuteBoolMethodGet(this, "Validate");
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "Validate");
         }
 
         #endregion

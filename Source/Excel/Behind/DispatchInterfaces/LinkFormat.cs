@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoUpdate");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AutoUpdate");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AutoUpdate", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AutoUpdate", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "Locked");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Locked");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Locked", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Locked", value);
 			}
 		}
 
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Update()
 		{
-			 Factory.ExecuteMethod(this, "Update");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Update");
 		}
 
 		#endregion

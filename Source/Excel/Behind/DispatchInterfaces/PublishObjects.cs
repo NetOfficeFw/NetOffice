@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PublishObject>(this, "_Default", typeof(NetOffice.ExcelApi.PublishObject), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PublishObject>(this, "_Default", typeof(NetOffice.ExcelApi.PublishObject), index);
 			}
 		}
 
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PublishObject Add(NetOffice.ExcelApi.Enums.XlSourceType sourceType, string filename, object sheet, object source, object htmlType, object divID, object title)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), new object[]{ sourceType, filename, sheet, source, htmlType, divID, title });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), new object[]{ sourceType, filename, sheet, source, htmlType, divID, title });
 		}
 
 		/// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PublishObject Add(NetOffice.ExcelApi.Enums.XlSourceType sourceType, string filename)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), sourceType, filename);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), sourceType, filename);
 		}
 
 		/// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PublishObject Add(NetOffice.ExcelApi.Enums.XlSourceType sourceType, string filename, object sheet)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), sourceType, filename, sheet);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), sourceType, filename, sheet);
 		}
 
 		/// <summary>
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PublishObject Add(NetOffice.ExcelApi.Enums.XlSourceType sourceType, string filename, object sheet, object source)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), sourceType, filename, sheet, source);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), sourceType, filename, sheet, source);
 		}
 
 		/// <summary>
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PublishObject Add(NetOffice.ExcelApi.Enums.XlSourceType sourceType, string filename, object sheet, object source, object htmlType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), new object[]{ sourceType, filename, sheet, source, htmlType });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), new object[]{ sourceType, filename, sheet, source, htmlType });
 		}
 
 		/// <summary>
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PublishObject Add(NetOffice.ExcelApi.Enums.XlSourceType sourceType, string filename, object sheet, object source, object htmlType, object divID)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), new object[]{ sourceType, filename, sheet, source, htmlType, divID });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PublishObject>(this, "Add", typeof(NetOffice.ExcelApi.PublishObject), new object[]{ sourceType, filename, sheet, source, htmlType, divID });
 		}
 
 		/// <summary>
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -247,7 +247,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Publish()
 		{
-			 Factory.ExecuteMethod(this, "Publish");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Publish");
 		}
 
         #endregion

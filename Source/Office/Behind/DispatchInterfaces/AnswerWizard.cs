@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizardFiles>(this, "Files", typeof(NetOffice.OfficeApi.AnswerWizardFiles));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizardFiles>(this, "Files", typeof(NetOffice.OfficeApi.AnswerWizardFiles));
             }
         }
 
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void ClearFileList()
         {
-            Factory.ExecuteMethod(this, "ClearFileList");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ClearFileList");
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void ResetFileList()
         {
-            Factory.ExecuteMethod(this, "ResetFileList");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ResetFileList");
         }
 
         #endregion

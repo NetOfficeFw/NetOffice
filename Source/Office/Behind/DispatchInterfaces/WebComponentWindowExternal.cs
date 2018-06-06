@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "InterfaceVersion");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "InterfaceVersion");
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ApplicationName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ApplicationName");
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "ApplicationVersion");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ApplicationVersion");
             }
         }
 
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.WebComponent>(this, "WebComponent", typeof(NetOffice.OfficeApi.WebComponent));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.WebComponent>(this, "WebComponent", typeof(NetOffice.OfficeApi.WebComponent));
             }
         }
 
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void CloseWindow()
         {
-            Factory.ExecuteMethod(this, "CloseWindow");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "CloseWindow");
         }
 
         #endregion

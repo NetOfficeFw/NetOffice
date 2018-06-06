@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void CreatePictureAccount(string account, string blogProvider, Int32 parentWindow, object document)
         {
-            Factory.ExecuteMethod(this, "CreatePictureAccount", account, blogProvider, parentWindow, document);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "CreatePictureAccount", account, blogProvider, parentWindow, document);
         }
 
         /// <summary>

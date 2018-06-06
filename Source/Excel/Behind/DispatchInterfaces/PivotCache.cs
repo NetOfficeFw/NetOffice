@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "BackgroundQuery");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "BackgroundQuery");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "BackgroundQuery", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "BackgroundQuery", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Connection");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Connection");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Connection", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Connection", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableRefresh");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EnableRefresh");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "EnableRefresh", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EnableRefresh", value);
 			}
 		}
 
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "MemoryUsed");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "MemoryUsed");
 			}
 		}
 
@@ -194,11 +194,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "OptimizeCache");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "OptimizeCache");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "OptimizeCache", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OptimizeCache", value);
 			}
 		}
 
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "RecordCount");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RecordCount");
 			}
 		}
 
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDateTimePropertyGet(this, "RefreshDate");
+				return InvokerService.InvokeInternal.ExecuteDateTimePropertyGet(this, "RefreshDate");
 			}
 		}
 
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "RefreshName");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "RefreshName");
 			}
 		}
 
@@ -254,11 +254,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "RefreshOnFileOpen");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "RefreshOnFileOpen");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RefreshOnFileOpen", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RefreshOnFileOpen", value);
 			}
 		}
 
@@ -272,11 +272,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Sql");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Sql");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Sql", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Sql", value);
 			}
 		}
 
@@ -290,11 +290,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "SavePassword");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "SavePassword");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SavePassword", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SavePassword", value);
 			}
 		}
 
@@ -308,11 +308,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "SourceData");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "SourceData");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "SourceData", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "SourceData", value);
 			}
 		}
 
@@ -326,11 +326,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "CommandText");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "CommandText");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "CommandText", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "CommandText", value);
 			}
 		}
 
@@ -344,11 +344,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCmdType>(this, "CommandType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCmdType>(this, "CommandType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "CommandType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "CommandType", value);
 			}
 		}
 
@@ -362,7 +362,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xlQueryType>(this, "QueryType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xlQueryType>(this, "QueryType");
 			}
 		}
 
@@ -376,11 +376,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "MaintainConnection");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "MaintainConnection");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MaintainConnection", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MaintainConnection", value);
 			}
 		}
 
@@ -394,11 +394,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "RefreshPeriod");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RefreshPeriod");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RefreshPeriod", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RefreshPeriod", value);
 			}
 		}
 
@@ -413,11 +413,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Recordset");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Recordset");
 			}
 			set
 			{
-				Factory.ExecuteReferencePropertySet(this, "Recordset", value);
+				InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "Recordset", value);
 			}
 		}
 
@@ -431,11 +431,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "LocalConnection");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "LocalConnection");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "LocalConnection", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "LocalConnection", value);
 			}
 		}
 
@@ -449,11 +449,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "UseLocalConnection");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "UseLocalConnection");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "UseLocalConnection", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "UseLocalConnection", value);
 			}
 		}
 
@@ -468,7 +468,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "ADOConnection");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "ADOConnection");
 			}
 		}
 
@@ -482,7 +482,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsConnected");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsConnected");
 			}
 		}
 
@@ -496,7 +496,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "OLAP");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "OLAP");
 			}
 		}
 
@@ -510,7 +510,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableSourceType>(this, "SourceType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableSourceType>(this, "SourceType");
 			}
 		}
 
@@ -524,11 +524,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableMissingItems>(this, "MissingItemsLimit");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableMissingItems>(this, "MissingItemsLimit");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "MissingItemsLimit", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "MissingItemsLimit", value);
 			}
 		}
 
@@ -542,11 +542,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceConnectionFile");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceConnectionFile");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "SourceConnectionFile", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SourceConnectionFile", value);
 			}
 		}
 
@@ -560,7 +560,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceDataFile");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SourceDataFile");
 			}
 		}
 
@@ -574,11 +574,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlRobustConnect>(this, "RobustConnect");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlRobustConnect>(this, "RobustConnect");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "RobustConnect", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "RobustConnect", value);
 			}
 		}
 
@@ -592,7 +592,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.WorkbookConnection>(this, "WorkbookConnection", typeof(NetOffice.ExcelApi.WorkbookConnection));
 			}
 		}
 
@@ -606,7 +606,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableVersionList>(this, "Version");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableVersionList>(this, "Version");
 			}
 		}
 
@@ -620,11 +620,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "UpgradeOnRefresh");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "UpgradeOnRefresh");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "UpgradeOnRefresh", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "UpgradeOnRefresh", value);
 			}
 		}
 
@@ -639,7 +639,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void Refresh()
 		{
-			 Factory.ExecuteMethod(this, "Refresh");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Refresh");
 		}
 
 		/// <summary>
@@ -649,7 +649,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void ResetTimer()
 		{
-			 Factory.ExecuteMethod(this, "ResetTimer");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "ResetTimer");
 		}
 
 		/// <summary>
@@ -662,7 +662,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName, readData);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName, readData);
 		}
 
 		/// <summary>
@@ -676,7 +676,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData, object defaultVersion)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName, readData, defaultVersion);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName, readData, defaultVersion);
 		}
 
 		/// <summary>
@@ -688,7 +688,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination);
 		}
 
 		/// <summary>
@@ -701,7 +701,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", typeof(NetOffice.ExcelApi.PivotTable), tableDestination, tableName);
 		}
 
 		/// <summary>
@@ -711,7 +711,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void MakeConnection()
 		{
-			 Factory.ExecuteMethod(this, "MakeConnection");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "MakeConnection");
 		}
 
 		/// <summary>
@@ -724,7 +724,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void SaveAsODC(string oDCFileName, object description, object keywords)
 		{
-			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
 		}
 
 		/// <summary>
@@ -736,7 +736,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void SaveAsODC(string oDCFileName)
 		{
-			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SaveAsODC", oDCFileName);
 		}
 
 		/// <summary>
@@ -749,7 +749,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void SaveAsODC(string oDCFileName, object description)
 		{
-			 Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
 		}
 
 		/// <summary>
@@ -765,7 +765,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top, object width, object height)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ chartDestination, xlChartType, left, top, width, height });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ chartDestination, xlChartType, left, top, width, height });
 		}
 
 		/// <summary>
@@ -777,7 +777,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination);
 		}
 
 		/// <summary>
@@ -790,7 +790,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType);
 		}
 
 		/// <summary>
@@ -804,7 +804,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType, left);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType, left);
 		}
 
 		/// <summary>
@@ -819,7 +819,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType, left, top);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), chartDestination, xlChartType, left, top);
 		}
 
 		/// <summary>
@@ -835,7 +835,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top, object width)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ chartDestination, xlChartType, left, top, width });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", typeof(NetOffice.ExcelApi.Shape), new object[]{ chartDestination, xlChartType, left, top, width });
 		}
 
 		#endregion

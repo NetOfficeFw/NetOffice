@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -110,7 +110,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.FormatCondition>(this, "_Default", typeof(NetOffice.ExcelApi.FormatCondition), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.FormatCondition>(this, "_Default", typeof(NetOffice.ExcelApi.FormatCondition), index);
             }
         }
 
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator, formula1, formula2);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator, formula1, formula2);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator, object scopeType)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator, dateOperator, scopeType });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator, dateOperator, scopeType });
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator, formula1);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.FormatCondition>(this, "Add", typeof(NetOffice.ExcelApi.FormatCondition), type, _operator, formula1);
         }
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string });
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator });
         }
 
         /// <summary>
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator, dateOperator });
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Add", new object[] { type, _operator, formula1, formula2, _string, textOperator, dateOperator });
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Delete()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object AddColorScale(Int32 colorScaleType)
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddColorScale", colorScaleType);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddColorScale", colorScaleType);
         }
 
         /// <summary>
@@ -272,7 +272,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object AddDatabar()
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddDatabar");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddDatabar");
         }
 
         /// <summary>
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object AddIconSetCondition()
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddIconSetCondition");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddIconSetCondition");
         }
 
         /// <summary>
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object AddTop10()
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddTop10");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddTop10");
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object AddAboveAverage()
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddAboveAverage");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddAboveAverage");
         }
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         public virtual object AddUniqueValues()
         {
-            return Factory.ExecuteVariantMethodGet(this, "AddUniqueValues");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "AddUniqueValues");
         }
 
         #endregion

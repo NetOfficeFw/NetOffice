@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,11 +82,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Extended");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Extended");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Extended", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Extended", value);
             }
         }
 
@@ -99,11 +99,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Id");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Id");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Id", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Id", value);
             }
         }
 
@@ -116,11 +116,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoScriptLanguage>(this, "Language");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoScriptLanguage>(this, "Language");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Language", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Language", value);
             }
         }
 
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoScriptLocation>(this, "Location");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoScriptLocation>(this, "Location");
             }
         }
 
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Shape");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Shape");
             }
         }
 
@@ -160,11 +160,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ScriptText");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ScriptText");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ScriptText", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ScriptText", value);
             }
         }
 
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

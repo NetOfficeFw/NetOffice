@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureEffectType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureEffectType>(this, "Type");
             }
         }
 
@@ -84,11 +84,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Position");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Position");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Position", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Position", value);
             }
         }
 
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.EffectParameters>(this, "EffectParameters", typeof(NetOffice.OfficeApi.EffectParameters));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.EffectParameters>(this, "EffectParameters", typeof(NetOffice.OfficeApi.EffectParameters));
             }
         }
 
@@ -116,11 +116,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Visible", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Visible", value);
             }
         }
 
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

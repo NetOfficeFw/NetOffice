@@ -68,7 +68,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePanes>(this, "Collection", typeof(NetOffice.VBIDEApi.CodePanes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePanes>(this, "Collection", typeof(NetOffice.VBIDEApi.CodePanes));
             }
         }
 
@@ -81,7 +81,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -94,7 +94,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "Window", typeof(NetOffice.VBIDEApi.Window));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "Window", typeof(NetOffice.VBIDEApi.Window));
             }
         }
 
@@ -107,11 +107,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "TopLine");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "TopLine");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "TopLine", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TopLine", value);
             }
         }
 
@@ -124,7 +124,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "CountOfVisibleLines");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "CountOfVisibleLines");
             }
         }
 
@@ -137,7 +137,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodeModule>(this, "CodeModule", typeof(NetOffice.VBIDEApi.CodeModule));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodeModule>(this, "CodeModule", typeof(NetOffice.VBIDEApi.CodeModule));
             }
         }
 
@@ -150,7 +150,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_CodePaneview>(this, "CodePaneView");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_CodePaneview>(this, "CodePaneView");
             }
         }
 
@@ -191,7 +191,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void SetSelection(Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
         {
-            Factory.ExecuteMethod(this, "SetSelection", startLine, startColumn, endLine, endColumn);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetSelection", startLine, startColumn, endLine, endColumn);
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Show()
         {
-            Factory.ExecuteMethod(this, "Show");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Show");
         }
 
         #endregion

@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSyncStatusType>(this, "Status");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSyncStatusType>(this, "Status");
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "WorkspaceLastChangedBy");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "WorkspaceLastChangedBy");
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "LastSyncTime");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "LastSyncTime");
             }
         }
 
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSyncErrorType>(this, "ErrorType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSyncErrorType>(this, "ErrorType");
             }
         }
 
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void GetUpdate()
         {
-            Factory.ExecuteMethod(this, "GetUpdate");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "GetUpdate");
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void PutUpdate()
         {
-            Factory.ExecuteMethod(this, "PutUpdate");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PutUpdate");
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void OpenVersion(NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
         {
-            Factory.ExecuteMethod(this, "OpenVersion", syncVersionType);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "OpenVersion", syncVersionType);
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void ResolveConflict(NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
         {
-            Factory.ExecuteMethod(this, "ResolveConflict", syncConflictResolution);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ResolveConflict", syncConflictResolution);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Unsuspend()
         {
-            Factory.ExecuteMethod(this, "Unsuspend");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Unsuspend");
         }
 
         #endregion

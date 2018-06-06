@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Modified");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Modified");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Index");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ModifiedBy");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ModifiedBy");
             }
         }
 
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Comments");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Comments");
             }
         }
 
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual object Open()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Open");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Open");
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual object Restore()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Restore");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Restore");
         }
 
         #endregion

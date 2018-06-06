@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "_Default", typeof(NetOffice.ExcelApi.ProtectedViewWindow), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "_Default", typeof(NetOffice.ExcelApi.ProtectedViewWindow), index);
 			}
 		}
 
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru, object repairMode)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password, addToMru, repairMode);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password, addToMru, repairMode);
 		}
 
 		/// <summary>
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.ProtectedViewWindow Open(string filename)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename);
 		}
 
 		/// <summary>
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password);
 		}
 
 		/// <summary>
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 14,15,16)]
 		public virtual NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password, addToMru);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", typeof(NetOffice.ExcelApi.ProtectedViewWindow), filename, password, addToMru);
 		}
 
         #endregion

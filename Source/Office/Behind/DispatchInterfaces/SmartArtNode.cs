@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType>(this, "OrgChartLayout");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType>(this, "OrgChartLayout");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "OrgChartLayout", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "OrgChartLayout", value);
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ShapeRange>(this, "Shapes", typeof(NetOffice.OfficeApi.ShapeRange));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ShapeRange>(this, "Shapes", typeof(NetOffice.OfficeApi.ShapeRange));
             }
         }
 
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextFrame2>(this, "TextFrame2", typeof(NetOffice.OfficeApi.TextFrame2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextFrame2>(this, "TextFrame2", typeof(NetOffice.OfficeApi.TextFrame2));
             }
         }
 
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Level");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Level");
             }
         }
 
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Hidden");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Hidden");
             }
         }
 
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtNodes>(this, "Nodes", typeof(NetOffice.OfficeApi.SmartArtNodes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtNodes>(this, "Nodes", typeof(NetOffice.OfficeApi.SmartArtNodes));
             }
         }
 
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtNode>(this, "ParentNode", typeof(NetOffice.OfficeApi.SmartArtNode));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtNode>(this, "ParentNode", typeof(NetOffice.OfficeApi.SmartArtNode));
             }
         }
 
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSmartArtNodeType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSmartArtNodeType>(this, "Type");
             }
         }
 
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SmartArtNode AddNode(object position, object type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode), position, type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode), position, type);
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SmartArtNode AddNode()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode));
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.SmartArtNode AddNode(object position)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode), position);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SmartArtNode>(this, "AddNode", typeof(NetOffice.OfficeApi.SmartArtNode), position);
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Promote()
         {
-            Factory.ExecuteMethod(this, "Promote");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Promote");
         }
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Demote()
         {
-            Factory.ExecuteMethod(this, "Demote");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Demote");
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Larger()
         {
-            Factory.ExecuteMethod(this, "Larger");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Larger");
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Smaller()
         {
-            Factory.ExecuteMethod(this, "Smaller");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Smaller");
         }
 
         /// <summary>
@@ -287,7 +287,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void ReorderUp()
         {
-            Factory.ExecuteMethod(this, "ReorderUp");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReorderUp");
         }
 
         /// <summary>
@@ -297,7 +297,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void ReorderDown()
         {
-            Factory.ExecuteMethod(this, "ReorderDown");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReorderDown");
         }
 
         #endregion

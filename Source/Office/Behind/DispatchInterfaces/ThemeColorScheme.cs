@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.ThemeColor Colors(NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex index)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ThemeColor>(this, "Colors", typeof(NetOffice.OfficeApi.ThemeColor), index);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ThemeColor>(this, "Colors", typeof(NetOffice.OfficeApi.ThemeColor), index);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Load(string fileName)
         {
-            Factory.ExecuteMethod(this, "Load", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Load", fileName);
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Save(string fileName)
         {
-            Factory.ExecuteMethod(this, "Save", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Save", fileName);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual Int32 GetCustomColor(string name)
         {
-            return Factory.ExecuteInt32MethodGet(this, "GetCustomColor", name);
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "GetCustomColor", name);
         }
 
         #endregion

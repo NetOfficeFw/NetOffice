@@ -69,7 +69,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.VBProject Add(NetOffice.VBIDEApi.Enums.vbext_ProjectType type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBProject>(this, "Add", typeof(NetOffice.VBIDEApi.VBProject), type);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBProject>(this, "Add", typeof(NetOffice.VBIDEApi.VBProject), type);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Remove(NetOffice.VBIDEApi.VBProject lpc)
         {
-            Factory.ExecuteMethod(this, "Remove", lpc);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Remove", lpc);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.VBProject Open(string bstrPath)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBProject>(this, "Open", typeof(NetOffice.VBIDEApi.VBProject), bstrPath);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBProject>(this, "Open", typeof(NetOffice.VBIDEApi.VBProject), bstrPath);
         }
 
         #endregion

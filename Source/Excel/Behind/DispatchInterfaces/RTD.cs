@@ -70,11 +70,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "ThrottleInterval");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ThrottleInterval");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ThrottleInterval", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ThrottleInterval", value);
 			}
 		}
 
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void RefreshData()
 		{
-			 Factory.ExecuteMethod(this, "RefreshData");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "RefreshData");
 		}
 
 		/// <summary>
@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void RestartServers()
 		{
-			 Factory.ExecuteMethod(this, "RestartServers");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "RestartServers");
 		}
 
 		#endregion

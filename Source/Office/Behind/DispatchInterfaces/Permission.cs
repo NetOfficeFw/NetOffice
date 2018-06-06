@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.UserPermission>(this, "Item", typeof(NetOffice.OfficeApi.UserPermission), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.UserPermission>(this, "Item", typeof(NetOffice.OfficeApi.UserPermission), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "EnableTrustedBrowser");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "EnableTrustedBrowser");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "EnableTrustedBrowser", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "EnableTrustedBrowser", value);
             }
         }
 
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -135,11 +135,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Enabled");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Enabled");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Enabled", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Enabled", value);
             }
         }
 
@@ -153,11 +153,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "RequestPermissionURL");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "RequestPermissionURL");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "RequestPermissionURL", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RequestPermissionURL", value);
             }
         }
 
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "PolicyName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "PolicyName");
             }
         }
 
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "PolicyDescription");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "PolicyDescription");
             }
         }
 
@@ -199,11 +199,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "StoreLicenses");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "StoreLicenses");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "StoreLicenses", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "StoreLicenses", value);
             }
         }
 
@@ -217,11 +217,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "DocumentAuthor");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DocumentAuthor");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "DocumentAuthor", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DocumentAuthor", value);
             }
         }
 
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "PermissionFromPolicy");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "PermissionFromPolicy");
             }
         }
 
@@ -253,7 +253,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId, permission, expirationDate);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId, permission, expirationDate);
         }
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.UserPermission Add(string userId)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId);
         }
 
         /// <summary>
@@ -278,7 +278,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.UserPermission Add(string userId, object permission)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId, permission);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", typeof(NetOffice.OfficeApi.UserPermission), userId, permission);
         }
 
         /// <summary>
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void ApplyPolicy(string fileName)
         {
-            Factory.ExecuteMethod(this, "ApplyPolicy", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ApplyPolicy", fileName);
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void RemoveAll()
         {
-            Factory.ExecuteMethod(this, "RemoveAll");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RemoveAll");
         }
 
         #endregion

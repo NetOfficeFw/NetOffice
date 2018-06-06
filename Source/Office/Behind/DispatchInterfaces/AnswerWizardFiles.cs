@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Item", index);
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Item", index);
             }
         }
 
@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Add(string fileName)
         {
-            Factory.ExecuteMethod(this, "Add", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Add", fileName);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Delete(string fileName)
         {
-            Factory.ExecuteMethod(this, "Delete", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete", fileName);
         }
 
         #endregion

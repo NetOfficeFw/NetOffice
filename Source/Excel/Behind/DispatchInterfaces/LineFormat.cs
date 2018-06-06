@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -86,11 +86,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorFormat>(this, "BackColor", typeof(NetOffice.ExcelApi.ColorFormat));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorFormat>(this, "BackColor", typeof(NetOffice.ExcelApi.ColorFormat));
 			}
 			set
 			{
-				Factory.ExecuteReferencePropertySet(this, "BackColor", value);
+				InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "BackColor", value);
 			}
 		}
 
@@ -104,11 +104,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadLength>(this, "BeginArrowheadLength");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadLength>(this, "BeginArrowheadLength");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "BeginArrowheadLength", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "BeginArrowheadLength", value);
 			}
 		}
 
@@ -122,11 +122,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadStyle>(this, "BeginArrowheadStyle");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadStyle>(this, "BeginArrowheadStyle");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "BeginArrowheadStyle", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "BeginArrowheadStyle", value);
 			}
 		}
 
@@ -140,11 +140,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadWidth>(this, "BeginArrowheadWidth");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadWidth>(this, "BeginArrowheadWidth");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "BeginArrowheadWidth", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "BeginArrowheadWidth", value);
 			}
 		}
 
@@ -158,11 +158,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLineDashStyle>(this, "DashStyle");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLineDashStyle>(this, "DashStyle");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "DashStyle", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "DashStyle", value);
 			}
 		}
 
@@ -176,11 +176,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadLength>(this, "EndArrowheadLength");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadLength>(this, "EndArrowheadLength");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "EndArrowheadLength", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "EndArrowheadLength", value);
 			}
 		}
 
@@ -194,11 +194,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadStyle>(this, "EndArrowheadStyle");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadStyle>(this, "EndArrowheadStyle");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "EndArrowheadStyle", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "EndArrowheadStyle", value);
 			}
 		}
 
@@ -212,11 +212,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadWidth>(this, "EndArrowheadWidth");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoArrowheadWidth>(this, "EndArrowheadWidth");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "EndArrowheadWidth", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "EndArrowheadWidth", value);
 			}
 		}
 
@@ -230,11 +230,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorFormat>(this, "ForeColor", typeof(NetOffice.ExcelApi.ColorFormat));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorFormat>(this, "ForeColor", typeof(NetOffice.ExcelApi.ColorFormat));
 			}
 			set
 			{
-				Factory.ExecuteReferencePropertySet(this, "ForeColor", value);
+				InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "ForeColor", value);
 			}
 		}
 
@@ -248,11 +248,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPatternType>(this, "Pattern");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPatternType>(this, "Pattern");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Pattern", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Pattern", value);
 			}
 		}
 
@@ -266,11 +266,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLineStyle>(this, "Style");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLineStyle>(this, "Style");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Style", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Style", value);
 			}
 		}
 
@@ -284,11 +284,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Transparency");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Transparency");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Transparency", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Transparency", value);
 			}
 		}
 
@@ -302,11 +302,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Visible", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Visible", value);
 			}
 		}
 
@@ -320,11 +320,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Weight");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Weight");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Weight", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Weight", value);
 			}
 		}
 
@@ -338,11 +338,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "InsetPen");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "InsetPen");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "InsetPen", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "InsetPen", value);
 			}
 		}
 

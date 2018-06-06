@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ReadOnly");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ReadOnly");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Id");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Id");
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SignatureProvider");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SignatureProvider");
             }
         }
 
@@ -112,11 +112,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SuggestedSigner");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SuggestedSigner");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SuggestedSigner", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SuggestedSigner", value);
             }
         }
 
@@ -130,11 +130,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SuggestedSignerLine2");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SuggestedSignerLine2");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SuggestedSignerLine2", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SuggestedSignerLine2", value);
             }
         }
 
@@ -148,11 +148,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SuggestedSignerEmail");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SuggestedSignerEmail");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SuggestedSignerEmail", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SuggestedSignerEmail", value);
             }
         }
 
@@ -166,11 +166,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "SigningInstructions");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "SigningInstructions");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SigningInstructions", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SigningInstructions", value);
             }
         }
 
@@ -184,11 +184,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AllowComments");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowComments");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AllowComments", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AllowComments", value);
             }
         }
 
@@ -202,11 +202,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "ShowSignDate");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowSignDate");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShowSignDate", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowSignDate", value);
             }
         }
 
@@ -220,11 +220,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "AdditionalXml");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "AdditionalXml");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AdditionalXml", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AdditionalXml", value);
             }
         }
 

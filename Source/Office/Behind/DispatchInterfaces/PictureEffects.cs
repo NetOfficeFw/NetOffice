@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PictureEffect>(this, "Item", typeof(NetOffice.OfficeApi.PictureEffect), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PictureEffect>(this, "Item", typeof(NetOffice.OfficeApi.PictureEffect), index);
             }
         }
 
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType, object position)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PictureEffect>(this, "Insert", typeof(NetOffice.OfficeApi.PictureEffect), effectType, position);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PictureEffect>(this, "Insert", typeof(NetOffice.OfficeApi.PictureEffect), effectType, position);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PictureEffect>(this, "Insert", typeof(NetOffice.OfficeApi.PictureEffect), effectType);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PictureEffect>(this, "Insert", typeof(NetOffice.OfficeApi.PictureEffect), effectType);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Delete(object index)
         {
-            Factory.ExecuteMethod(this, "Delete", index);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete", index);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

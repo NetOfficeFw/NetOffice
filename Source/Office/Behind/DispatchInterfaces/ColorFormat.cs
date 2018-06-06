@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -83,11 +83,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "RGB");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RGB");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "RGB", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RGB", value);
             }
         }
 
@@ -100,11 +100,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "SchemeColor");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "SchemeColor");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SchemeColor", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SchemeColor", value);
             }
         }
 
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoColorType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoColorType>(this, "Type");
             }
         }
 
@@ -130,11 +130,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "TintAndShade");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "TintAndShade");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "TintAndShade", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TintAndShade", value);
             }
         }
 
@@ -147,11 +147,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoThemeColorIndex>(this, "ObjectThemeColor");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoThemeColorIndex>(this, "ObjectThemeColor");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "ObjectThemeColor", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ObjectThemeColor", value);
             }
         }
 
@@ -164,11 +164,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Brightness");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Brightness");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Brightness", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Brightness", value);
             }
         }
 

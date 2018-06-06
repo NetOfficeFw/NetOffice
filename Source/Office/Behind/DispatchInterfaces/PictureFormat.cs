@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -83,11 +83,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Brightness");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Brightness");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Brightness", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Brightness", value);
             }
         }
 
@@ -100,11 +100,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureColorType>(this, "ColorType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureColorType>(this, "ColorType");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "ColorType", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "ColorType", value);
             }
         }
 
@@ -117,11 +117,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Contrast");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Contrast");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Contrast", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Contrast", value);
             }
         }
 
@@ -134,11 +134,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "CropBottom");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "CropBottom");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CropBottom", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CropBottom", value);
             }
         }
 
@@ -151,11 +151,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "CropLeft");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "CropLeft");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CropLeft", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CropLeft", value);
             }
         }
 
@@ -168,11 +168,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "CropRight");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "CropRight");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CropRight", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CropRight", value);
             }
         }
 
@@ -185,11 +185,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "CropTop");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "CropTop");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "CropTop", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "CropTop", value);
             }
         }
 
@@ -202,11 +202,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "TransparencyColor");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "TransparencyColor");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "TransparencyColor", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TransparencyColor", value);
             }
         }
 
@@ -219,11 +219,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "TransparentBackground");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "TransparentBackground");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "TransparentBackground", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TransparentBackground", value);
             }
         }
 
@@ -236,7 +236,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Crop>(this, "Crop", typeof(NetOffice.OfficeApi.Crop));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Crop>(this, "Crop", typeof(NetOffice.OfficeApi.Crop));
             }
         }
 
@@ -251,7 +251,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void IncrementBrightness(Single increment)
         {
-            Factory.ExecuteMethod(this, "IncrementBrightness", increment);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "IncrementBrightness", increment);
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void IncrementContrast(Single increment)
         {
-            Factory.ExecuteMethod(this, "IncrementContrast", increment);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "IncrementContrast", increment);
         }
 
         #endregion

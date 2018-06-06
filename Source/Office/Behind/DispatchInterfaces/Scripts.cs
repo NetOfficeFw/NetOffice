@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Item", typeof(NetOffice.OfficeApi.Script), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Item", typeof(NetOffice.OfficeApi.Script), index);
             }
         }
 
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended, object scriptText)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), new object[] { anchor, location, language, id, extended, scriptText });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), new object[] { anchor, location, language, id, extended, scriptText });
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Script Add()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script));
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Script Add(object anchor)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Script Add(object anchor, object location)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Script Add(object anchor, object location, object language)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location, language);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location, language);
         }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location, language, id);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), anchor, location, language, id);
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), new object[] { anchor, location, language, id, extended });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Script>(this, "Add", typeof(NetOffice.OfficeApi.Script), new object[] { anchor, location, language, id, extended });
         }
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

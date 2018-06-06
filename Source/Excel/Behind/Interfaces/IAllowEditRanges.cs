@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.AllowEditRange>(this, "_Default", typeof(NetOffice.ExcelApi.AllowEditRange), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.AllowEditRange>(this, "_Default", typeof(NetOffice.ExcelApi.AllowEditRange), index);
             }
         }
 
@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range, object password)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AllowEditRange>(this, "Add", typeof(NetOffice.ExcelApi.AllowEditRange), title, range, password);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AllowEditRange>(this, "Add", typeof(NetOffice.ExcelApi.AllowEditRange), title, range, password);
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AllowEditRange>(this, "Add", typeof(NetOffice.ExcelApi.AllowEditRange), title, range);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.AllowEditRange>(this, "Add", typeof(NetOffice.ExcelApi.AllowEditRange), title, range);
         }
 
         #endregion

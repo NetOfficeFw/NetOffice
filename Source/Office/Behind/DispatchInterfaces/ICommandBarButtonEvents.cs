@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void Click(NetOffice.OfficeApi.CommandBarButton ctrl, bool cancelDefault)
         {
-            Factory.ExecuteMethod(this, "Click", ctrl, cancelDefault);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Click", ctrl, cancelDefault);
         }
 
         #endregion

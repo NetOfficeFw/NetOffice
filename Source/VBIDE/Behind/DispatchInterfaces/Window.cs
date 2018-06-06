@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Windows>(this, "Collection", typeof(NetOffice.VBIDEApi.Windows));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Windows>(this, "Collection", typeof(NetOffice.VBIDEApi.Windows));
             }
         }
 
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Caption");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Caption");
             }
         }
 
@@ -106,11 +106,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Visible");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Visible");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Visible", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Visible", value);
             }
         }
 
@@ -123,11 +123,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Left");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Left");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Left", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Left", value);
             }
         }
 
@@ -140,11 +140,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Top");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Top");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Top", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Top", value);
             }
         }
 
@@ -157,11 +157,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Width");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Width");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Width", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Width", value);
             }
         }
 
@@ -174,11 +174,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Height");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Height");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Height", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Height", value);
             }
         }
 
@@ -191,11 +191,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_WindowState>(this, "WindowState");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_WindowState>(this, "WindowState");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "WindowState", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "WindowState", value);
             }
         }
 
@@ -208,7 +208,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_WindowType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_WindowType>(this, "Type");
             }
         }
 
@@ -221,7 +221,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.LinkedWindows>(this, "LinkedWindows", typeof(NetOffice.VBIDEApi.LinkedWindows));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.LinkedWindows>(this, "LinkedWindows", typeof(NetOffice.VBIDEApi.LinkedWindows));
             }
         }
 
@@ -234,7 +234,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "LinkedWindowFrame", typeof(NetOffice.VBIDEApi.Window));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Window>(this, "LinkedWindowFrame", typeof(NetOffice.VBIDEApi.Window));
             }
         }
 
@@ -248,7 +248,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "HWnd");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "HWnd");
             }
         }
 
@@ -262,7 +262,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Close()
         {
-            Factory.ExecuteMethod(this, "Close");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Close");
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void SetFocus()
         {
-            Factory.ExecuteMethod(this, "SetFocus");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetFocus");
         }
 
         /// <summary>
@@ -282,7 +282,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void SetKind(NetOffice.VBIDEApi.Enums.vbext_WindowType eKind)
         {
-            Factory.ExecuteMethod(this, "SetKind", eKind);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "SetKind", eKind);
         }
 
         /// <summary>
@@ -292,7 +292,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Detach()
         {
-            Factory.ExecuteMethod(this, "Detach");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Detach");
         }
 
         /// <summary>
@@ -303,7 +303,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Attach(Int32 lWindowHandle)
         {
-            Factory.ExecuteMethod(this, "Attach", lWindowHandle);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Attach", lWindowHandle);
         }
 
         #endregion

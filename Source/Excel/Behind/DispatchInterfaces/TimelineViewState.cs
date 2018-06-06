@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowHeader");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowHeader");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowHeader", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowHeader", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowSelectionLabel");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowSelectionLabel");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowSelectionLabel", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowSelectionLabel", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowTimeLevel");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowTimeLevel");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowTimeLevel", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowTimeLevel", value);
 			}
 		}
 
@@ -166,11 +166,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowHorizontalScrollbar");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowHorizontalScrollbar");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowHorizontalScrollbar", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowHorizontalScrollbar", value);
 			}
 		}
 
@@ -184,11 +184,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTimelineLevel>(this, "Level");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTimelineLevel>(this, "Level");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Level", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Level", value);
 			}
 		}
 

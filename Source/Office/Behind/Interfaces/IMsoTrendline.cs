@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -82,11 +82,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Backward");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Backward");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Backward", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Backward", value);
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoBorder>(this, "Border", typeof(NetOffice.OfficeApi.IMsoBorder));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoBorder>(this, "Border", typeof(NetOffice.OfficeApi.IMsoBorder));
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoDataLabel>(this, "DataLabel", typeof(NetOffice.OfficeApi.IMsoDataLabel));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoDataLabel>(this, "DataLabel", typeof(NetOffice.OfficeApi.IMsoDataLabel));
             }
         }
 
@@ -125,11 +125,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "DisplayEquation");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayEquation");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "DisplayEquation", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayEquation", value);
             }
         }
 
@@ -142,11 +142,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "DisplayRSquared");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "DisplayRSquared");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "DisplayRSquared", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DisplayRSquared", value);
             }
         }
 
@@ -159,11 +159,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Forward");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Forward");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Forward", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Forward", value);
             }
         }
 
@@ -176,7 +176,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Index");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Index");
             }
         }
 
@@ -189,11 +189,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Intercept");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Intercept");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Intercept", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Intercept", value);
             }
         }
 
@@ -206,11 +206,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "InterceptIsAuto");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "InterceptIsAuto");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "InterceptIsAuto", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InterceptIsAuto", value);
             }
         }
 
@@ -223,11 +223,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 
@@ -240,11 +240,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "NameIsAuto");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "NameIsAuto");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "NameIsAuto", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "NameIsAuto", value);
             }
         }
 
@@ -257,11 +257,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Order");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Order");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Order", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Order", value);
             }
         }
 
@@ -274,11 +274,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Period");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Period");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Period", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Period", value);
             }
         }
 
@@ -291,11 +291,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlTrendlineType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlTrendlineType>(this, "Type");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Type", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
             }
         }
 
@@ -308,7 +308,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", typeof(NetOffice.OfficeApi.IMsoChartFormat));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", typeof(NetOffice.OfficeApi.IMsoChartFormat));
             }
         }
 
@@ -322,7 +322,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -335,7 +335,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -348,11 +348,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Backward2");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Backward2");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Backward2", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Backward2", value);
             }
         }
 
@@ -365,11 +365,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteDoublePropertyGet(this, "Forward2");
+                return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Forward2");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Forward2", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Forward2", value);
             }
         }
 
@@ -383,7 +383,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object ClearFormats()
         {
-            return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "ClearFormats");
         }
 
         /// <summary>
@@ -392,7 +392,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Delete()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Delete");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Delete");
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual object Select()
         {
-            return Factory.ExecuteVariantMethodGet(this, "Select");
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Select");
         }
 
         #endregion

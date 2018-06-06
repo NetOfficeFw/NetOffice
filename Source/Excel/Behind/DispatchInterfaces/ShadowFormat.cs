@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -86,11 +86,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorFormat>(this, "ForeColor", typeof(NetOffice.ExcelApi.ColorFormat));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorFormat>(this, "ForeColor", typeof(NetOffice.ExcelApi.ColorFormat));
 			}
 			set
 			{
-				Factory.ExecuteReferencePropertySet(this, "ForeColor", value);
+				InvokerService.InvokeInternal.ExecuteReferencePropertySet(this, "ForeColor", value);
 			}
 		}
 
@@ -104,11 +104,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Obscured");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Obscured");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Obscured", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Obscured", value);
 			}
 		}
 
@@ -122,11 +122,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "OffsetX");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "OffsetX");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "OffsetX", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OffsetX", value);
 			}
 		}
 
@@ -140,11 +140,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "OffsetY");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "OffsetY");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "OffsetY", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "OffsetY", value);
 			}
 		}
 
@@ -158,11 +158,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Transparency");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Transparency");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Transparency", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Transparency", value);
 			}
 		}
 
@@ -176,11 +176,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoShadowType>(this, "Type");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoShadowType>(this, "Type");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Type", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
 			}
 		}
 
@@ -194,11 +194,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Visible", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Visible", value);
 			}
 		}
 
@@ -212,11 +212,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoShadowStyle>(this, "Style");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoShadowStyle>(this, "Style");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Style", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Style", value);
 			}
 		}
 
@@ -230,11 +230,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Blur");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Blur");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Blur", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Blur", value);
 			}
 		}
 
@@ -248,11 +248,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "Size");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Size");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Size", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Size", value);
 			}
 		}
 
@@ -266,11 +266,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "RotateWithShape");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "RotateWithShape");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "RotateWithShape", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "RotateWithShape", value);
 			}
 		}
 
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void IncrementOffsetX(Single increment)
 		{
-			 Factory.ExecuteMethod(this, "IncrementOffsetX", increment);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "IncrementOffsetX", increment);
 		}
 
 		/// <summary>
@@ -297,7 +297,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual void IncrementOffsetY(Single increment)
 		{
-			 Factory.ExecuteMethod(this, "IncrementOffsetY", increment);
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "IncrementOffsetY", increment);
 		}
 
 		#endregion

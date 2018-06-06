@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialogFilters>(this, "Filters", typeof(NetOffice.OfficeApi.FileDialogFilters));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialogFilters>(this, "Filters", typeof(NetOffice.OfficeApi.FileDialogFilters));
             }
         }
 
@@ -99,11 +99,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "FilterIndex");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "FilterIndex");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FilterIndex", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FilterIndex", value);
             }
         }
 
@@ -117,11 +117,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Title");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Title");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Title", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Title", value);
             }
         }
 
@@ -135,11 +135,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ButtonName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ButtonName");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ButtonName", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ButtonName", value);
             }
         }
 
@@ -153,11 +153,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "AllowMultiSelect");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowMultiSelect");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "AllowMultiSelect", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AllowMultiSelect", value);
             }
         }
 
@@ -171,11 +171,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFileDialogView>(this, "InitialView");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFileDialogView>(this, "InitialView");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "InitialView", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "InitialView", value);
             }
         }
 
@@ -189,11 +189,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "InitialFileName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "InitialFileName");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "InitialFileName", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "InitialFileName", value);
             }
         }
 
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialogSelectedItems>(this, "SelectedItems", typeof(NetOffice.OfficeApi.FileDialogSelectedItems));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialogSelectedItems>(this, "SelectedItems", typeof(NetOffice.OfficeApi.FileDialogSelectedItems));
             }
         }
 
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFileDialogType>(this, "DialogType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFileDialogType>(this, "DialogType");
             }
         }
 
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Item");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Item");
             }
         }
 
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual Int32 Show()
         {
-            return Factory.ExecuteInt32MethodGet(this, "Show");
+            return InvokerService.InvokeInternal.ExecuteInt32MethodGet(this, "Show");
         }
 
         /// <summary>
@@ -260,7 +260,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public virtual void Execute()
         {
-            Factory.ExecuteMethod(this, "Execute");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Execute");
         }
 
         #endregion

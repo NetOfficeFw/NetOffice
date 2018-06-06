@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoReflectionType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoReflectionType>(this, "Type");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Type", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Type", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Transparency");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Transparency");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Transparency", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Transparency", value);
             }
         }
 
@@ -106,11 +106,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Size");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Size");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Size", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Size", value);
             }
         }
 
@@ -124,11 +124,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Offset");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Offset");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Offset", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Offset", value);
             }
         }
 
@@ -142,11 +142,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "Blur");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "Blur");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Blur", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Blur", value);
             }
         }
 

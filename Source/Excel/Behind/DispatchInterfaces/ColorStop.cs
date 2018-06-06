@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,11 +112,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Color");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Color");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Color", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Color", value);
 			}
 		}
 
@@ -130,11 +130,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "ThemeColor");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ThemeColor");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ThemeColor", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ThemeColor", value);
 			}
 		}
 
@@ -148,11 +148,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "TintAndShade");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "TintAndShade");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "TintAndShade", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "TintAndShade", value);
 			}
 		}
 
@@ -166,11 +166,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "Position");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "Position");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "Position", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Position", value);
 			}
 		}
 
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		#endregion

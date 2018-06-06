@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "Attributes", typeof(NetOffice.OfficeApi.CustomXMLNodes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "Attributes", typeof(NetOffice.OfficeApi.CustomXMLNodes));
             }
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "BaseName");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "BaseName");
             }
         }
 
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "ChildNodes", typeof(NetOffice.OfficeApi.CustomXMLNodes));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "ChildNodes", typeof(NetOffice.OfficeApi.CustomXMLNodes));
             }
         }
 
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "FirstChild", typeof(NetOffice.OfficeApi.CustomXMLNode));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "FirstChild", typeof(NetOffice.OfficeApi.CustomXMLNode));
             }
         }
 
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "LastChild", typeof(NetOffice.OfficeApi.CustomXMLNode));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "LastChild", typeof(NetOffice.OfficeApi.CustomXMLNode));
             }
         }
 
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "NamespaceURI");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "NamespaceURI");
             }
         }
 
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "NextSibling", typeof(NetOffice.OfficeApi.CustomXMLNode));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "NextSibling", typeof(NetOffice.OfficeApi.CustomXMLNode));
             }
         }
 
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType>(this, "NodeType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType>(this, "NodeType");
             }
         }
 
@@ -197,11 +197,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "NodeValue");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "NodeValue");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "NodeValue", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "NodeValue", value);
             }
         }
 
@@ -216,7 +216,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "OwnerDocument");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "OwnerDocument");
             }
         }
 
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPart>(this, "OwnerPart", typeof(NetOffice.OfficeApi.CustomXMLPart));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPart>(this, "OwnerPart", typeof(NetOffice.OfficeApi.CustomXMLPart));
             }
         }
 
@@ -244,7 +244,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "PreviousSibling", typeof(NetOffice.OfficeApi.CustomXMLNode));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "PreviousSibling", typeof(NetOffice.OfficeApi.CustomXMLNode));
             }
         }
 
@@ -258,7 +258,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "ParentNode", typeof(NetOffice.OfficeApi.CustomXMLNode));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "ParentNode", typeof(NetOffice.OfficeApi.CustomXMLNode));
             }
         }
 
@@ -272,11 +272,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Text");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Text");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Text", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Text", value);
             }
         }
 
@@ -290,7 +290,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "XPath");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "XPath");
             }
         }
 
@@ -304,7 +304,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "XML");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "XML");
             }
         }
 
@@ -323,7 +323,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AppendChildNode(object name, object namespaceURI, object nodeType, object nodeValue)
         {
-            Factory.ExecuteMethod(this, "AppendChildNode", name, namespaceURI, nodeType, nodeValue);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AppendChildNode", name, namespaceURI, nodeType, nodeValue);
         }
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AppendChildNode()
         {
-            Factory.ExecuteMethod(this, "AppendChildNode");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AppendChildNode");
         }
 
         /// <summary>
@@ -346,7 +346,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AppendChildNode(object name)
         {
-            Factory.ExecuteMethod(this, "AppendChildNode", name);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AppendChildNode", name);
         }
 
         /// <summary>
@@ -359,7 +359,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AppendChildNode(object name, object namespaceURI)
         {
-            Factory.ExecuteMethod(this, "AppendChildNode", name, namespaceURI);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AppendChildNode", name, namespaceURI);
         }
 
         /// <summary>
@@ -373,7 +373,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AppendChildNode(object name, object namespaceURI, object nodeType)
         {
-            Factory.ExecuteMethod(this, "AppendChildNode", name, namespaceURI, nodeType);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AppendChildNode", name, namespaceURI, nodeType);
         }
 
         /// <summary>
@@ -384,7 +384,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AppendChildSubtree(string xML)
         {
-            Factory.ExecuteMethod(this, "AppendChildSubtree", xML);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AppendChildSubtree", xML);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -404,7 +404,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual bool HasChildNodes()
         {
-            return Factory.ExecuteBoolMethodGet(this, "HasChildNodes");
+            return InvokerService.InvokeInternal.ExecuteBoolMethodGet(this, "HasChildNodes");
         }
 
         /// <summary>
@@ -419,7 +419,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void InsertNodeBefore(object name, object namespaceURI, object nodeType, object nodeValue, object nextSibling)
         {
-            Factory.ExecuteMethod(this, "InsertNodeBefore", new object[] { name, namespaceURI, nodeType, nodeValue, nextSibling });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertNodeBefore", new object[] { name, namespaceURI, nodeType, nodeValue, nextSibling });
         }
 
         /// <summary>
@@ -430,7 +430,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void InsertNodeBefore()
         {
-            Factory.ExecuteMethod(this, "InsertNodeBefore");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertNodeBefore");
         }
 
         /// <summary>
@@ -442,7 +442,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void InsertNodeBefore(object name)
         {
-            Factory.ExecuteMethod(this, "InsertNodeBefore", name);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertNodeBefore", name);
         }
 
         /// <summary>
@@ -455,7 +455,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void InsertNodeBefore(object name, object namespaceURI)
         {
-            Factory.ExecuteMethod(this, "InsertNodeBefore", name, namespaceURI);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertNodeBefore", name, namespaceURI);
         }
 
         /// <summary>
@@ -469,7 +469,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void InsertNodeBefore(object name, object namespaceURI, object nodeType)
         {
-            Factory.ExecuteMethod(this, "InsertNodeBefore", name, namespaceURI, nodeType);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertNodeBefore", name, namespaceURI, nodeType);
         }
 
         /// <summary>
@@ -484,7 +484,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void InsertNodeBefore(object name, object namespaceURI, object nodeType, object nodeValue)
         {
-            Factory.ExecuteMethod(this, "InsertNodeBefore", name, namespaceURI, nodeType, nodeValue);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertNodeBefore", name, namespaceURI, nodeType, nodeValue);
         }
 
         /// <summary>
@@ -496,7 +496,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void InsertSubtreeBefore(string xML, object nextSibling)
         {
-            Factory.ExecuteMethod(this, "InsertSubtreeBefore", xML, nextSibling);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertSubtreeBefore", xML, nextSibling);
         }
 
         /// <summary>
@@ -508,7 +508,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void InsertSubtreeBefore(string xML)
         {
-            Factory.ExecuteMethod(this, "InsertSubtreeBefore", xML);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "InsertSubtreeBefore", xML);
         }
 
         /// <summary>
@@ -519,7 +519,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void RemoveChild(NetOffice.OfficeApi.CustomXMLNode child)
         {
-            Factory.ExecuteMethod(this, "RemoveChild", child);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RemoveChild", child);
         }
 
         /// <summary>
@@ -534,7 +534,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, object name, object namespaceURI, object nodeType, object nodeValue)
         {
-            Factory.ExecuteMethod(this, "ReplaceChildNode", new object[] { oldNode, name, namespaceURI, nodeType, nodeValue });
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReplaceChildNode", new object[] { oldNode, name, namespaceURI, nodeType, nodeValue });
         }
 
         /// <summary>
@@ -546,7 +546,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode)
         {
-            Factory.ExecuteMethod(this, "ReplaceChildNode", oldNode);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReplaceChildNode", oldNode);
         }
 
         /// <summary>
@@ -559,7 +559,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, object name)
         {
-            Factory.ExecuteMethod(this, "ReplaceChildNode", oldNode, name);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReplaceChildNode", oldNode, name);
         }
 
         /// <summary>
@@ -573,7 +573,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, object name, object namespaceURI)
         {
-            Factory.ExecuteMethod(this, "ReplaceChildNode", oldNode, name, namespaceURI);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReplaceChildNode", oldNode, name, namespaceURI);
         }
 
         /// <summary>
@@ -588,7 +588,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, object name, object namespaceURI, object nodeType)
         {
-            Factory.ExecuteMethod(this, "ReplaceChildNode", oldNode, name, namespaceURI, nodeType);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReplaceChildNode", oldNode, name, namespaceURI, nodeType);
         }
 
         /// <summary>
@@ -600,7 +600,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ReplaceChildSubtree(string xML, NetOffice.OfficeApi.CustomXMLNode oldNode)
         {
-            Factory.ExecuteMethod(this, "ReplaceChildSubtree", xML, oldNode);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ReplaceChildSubtree", xML, oldNode);
         }
 
         /// <summary>
@@ -611,7 +611,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "SelectNodes", typeof(NetOffice.OfficeApi.CustomXMLNodes), xPath);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "SelectNodes", typeof(NetOffice.OfficeApi.CustomXMLNodes), xPath);
         }
 
         /// <summary>
@@ -622,7 +622,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNode>(this, "SelectSingleNode", typeof(NetOffice.OfficeApi.CustomXMLNode), xPath);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNode>(this, "SelectSingleNode", typeof(NetOffice.OfficeApi.CustomXMLNode), xPath);
         }
 
         #endregion

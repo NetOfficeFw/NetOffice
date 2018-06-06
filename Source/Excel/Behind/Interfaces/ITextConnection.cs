@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "Connection");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Connection");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "Connection", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Connection", value);
 			}
 		}
 
@@ -124,11 +124,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileHeaderRow");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileHeaderRow");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileHeaderRow", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileHeaderRow", value);
 			}
 		}
 
@@ -141,11 +141,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "TextFileColumnDataTypes");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "TextFileColumnDataTypes");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "TextFileColumnDataTypes", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "TextFileColumnDataTypes", value);
 			}
 		}
 
@@ -158,11 +158,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileCommaDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileCommaDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileCommaDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileCommaDelimiter", value);
 			}
 		}
 
@@ -175,11 +175,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileConsecutiveDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileConsecutiveDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileConsecutiveDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileConsecutiveDelimiter", value);
 			}
 		}
 
@@ -192,11 +192,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "TextFileDecimalSeparator");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextFileDecimalSeparator");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileDecimalSeparator", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileDecimalSeparator", value);
 			}
 		}
 
@@ -209,11 +209,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteVariantPropertyGet(this, "TextFileFixedColumnWidths");
+				return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "TextFileFixedColumnWidths");
 			}
 			set
 			{
-				Factory.ExecuteVariantPropertySet(this, "TextFileFixedColumnWidths", value);
+				InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "TextFileFixedColumnWidths", value);
 			}
 		}
 
@@ -226,11 +226,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "TextFileOtherDelimiter");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextFileOtherDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileOtherDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileOtherDelimiter", value);
 			}
 		}
 
@@ -243,11 +243,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextParsingType>(this, "TextFileParseType");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextParsingType>(this, "TextFileParseType");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TextFileParseType", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextFileParseType", value);
 			}
 		}
 
@@ -260,11 +260,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPlatform>(this, "TextFilePlatform");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPlatform>(this, "TextFilePlatform");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TextFilePlatform", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextFilePlatform", value);
 			}
 		}
 
@@ -277,11 +277,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFilePromptOnRefresh");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFilePromptOnRefresh");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFilePromptOnRefresh", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFilePromptOnRefresh", value);
 			}
 		}
 
@@ -294,11 +294,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileSemicolonDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileSemicolonDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileSemicolonDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileSemicolonDelimiter", value);
 			}
 		}
 
@@ -311,11 +311,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileSpaceDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileSpaceDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileSpaceDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileSpaceDelimiter", value);
 			}
 		}
 
@@ -328,11 +328,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "TextFileStartRow");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "TextFileStartRow");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileStartRow", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileStartRow", value);
 			}
 		}
 
@@ -345,11 +345,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileTabDelimiter");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileTabDelimiter");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileTabDelimiter", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileTabDelimiter", value);
 			}
 		}
 
@@ -362,11 +362,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextQualifier>(this, "TextFileTextQualifier");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextQualifier>(this, "TextFileTextQualifier");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TextFileTextQualifier", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextFileTextQualifier", value);
 			}
 		}
 
@@ -379,11 +379,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "TextFileThousandsSeparator");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "TextFileThousandsSeparator");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileThousandsSeparator", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileThousandsSeparator", value);
 			}
 		}
 
@@ -396,11 +396,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "TextFileTrailingMinusNumbers");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "TextFileTrailingMinusNumbers");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "TextFileTrailingMinusNumbers", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "TextFileTrailingMinusNumbers", value);
 			}
 		}
 
@@ -413,11 +413,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextVisualLayoutType>(this, "TextFileVisualLayout");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTextVisualLayoutType>(this, "TextFileVisualLayout");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "TextFileVisualLayout", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "TextFileVisualLayout", value);
 			}
 		}
 

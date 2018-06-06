@@ -12,6 +12,7 @@ using NetOffice.Resolver;
 using NetOffice.Availity;
 using NetOffice.Dynamics;
 using NetOffice.Exceptions;
+using NetOffice.CoreServices;
 
 namespace NetOffice
 {

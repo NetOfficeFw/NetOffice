@@ -69,7 +69,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application", typeof(NetOffice.VBIDEApi.Application));
+                return InvokerService.InvokeInternal.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application", typeof(NetOffice.VBIDEApi.Application));
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Components>(this, "Parent", typeof(NetOffice.VBIDEApi.Components));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Components>(this, "Parent", typeof(NetOffice.VBIDEApi.Components));
             }
         }
 
@@ -96,11 +96,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "IsDirty");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "IsDirty");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "IsDirty", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "IsDirty", value);
             }
         }
 
@@ -113,11 +113,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 

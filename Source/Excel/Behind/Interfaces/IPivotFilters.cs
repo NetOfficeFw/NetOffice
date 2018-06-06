@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotFilter>(this, "_Default", typeof(NetOffice.ExcelApi.PivotFilter), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotFilter>(this, "_Default", typeof(NetOffice.ExcelApi.PivotFilter), index);
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField });
 		}
 
 		/// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField, object wholeDayFilter, object movingPeriod)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField, wholeDayFilter, movingPeriod });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField, wholeDayFilter, movingPeriod });
 		}
 
 		/// <summary>
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type);
 		}
 
 		/// <summary>
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField);
 		}
 
 		/// <summary>
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1);
 		}
 
 		/// <summary>
@@ -215,7 +215,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1, value2);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1, value2);
 		}
 
 		/// <summary>
@@ -230,7 +230,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order });
 		}
 
 		/// <summary>
@@ -246,7 +246,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name });
 		}
 
 		/// <summary>
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description });
 		}
 
 		/// <summary>
@@ -282,7 +282,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField, object wholeDayFilter)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField, wholeDayFilter });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField, wholeDayFilter });
 		}
 
 		/// <summary>
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description, object memberPropertyField)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description, memberPropertyField });
 		}
 
 		/// <summary>
@@ -312,7 +312,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type);
 		}
 
 		/// <summary>
@@ -325,7 +325,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField);
 		}
 
 		/// <summary>
@@ -339,7 +339,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1);
 		}
 
 		/// <summary>
@@ -354,7 +354,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1, value2);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), type, dataField, value1, value2);
 		}
 
 		/// <summary>
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order });
 		}
 
 		/// <summary>
@@ -387,7 +387,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name });
 		}
 
 		/// <summary>
@@ -405,7 +405,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 15, 16)]
 		public virtual NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description });
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotFilter>(this, "_Add", typeof(NetOffice.ExcelApi.PivotFilter), new object[]{ type, dataField, value1, value2, order, name, description });
 		}
 
         #endregion

@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "MarginBottom");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "MarginBottom");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MarginBottom", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarginBottom", value);
 			}
 		}
 
@@ -124,11 +124,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "MarginLeft");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "MarginLeft");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MarginLeft", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarginLeft", value);
 			}
 		}
 
@@ -141,11 +141,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "MarginRight");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "MarginRight");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MarginRight", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarginRight", value);
 			}
 		}
 
@@ -158,11 +158,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteSinglePropertyGet(this, "MarginTop");
+				return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "MarginTop");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "MarginTop", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "MarginTop", value);
 			}
 		}
 
@@ -175,11 +175,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextOrientation>(this, "Orientation");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTextOrientation>(this, "Orientation");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "Orientation", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Orientation", value);
 			}
 		}
 
@@ -192,11 +192,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlHAlign>(this, "HorizontalAlignment");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlHAlign>(this, "HorizontalAlignment");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "HorizontalAlignment", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "HorizontalAlignment", value);
 			}
 		}
 
@@ -209,11 +209,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlVAlign>(this, "VerticalAlignment");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlVAlign>(this, "VerticalAlignment");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "VerticalAlignment", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "VerticalAlignment", value);
 			}
 		}
 
@@ -226,11 +226,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoSize");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AutoSize");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AutoSize", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AutoSize", value);
 			}
 		}
 
@@ -243,11 +243,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "ReadingOrder");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "ReadingOrder");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ReadingOrder", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ReadingOrder", value);
 			}
 		}
 
@@ -260,11 +260,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoMargins");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AutoMargins");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "AutoMargins", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "AutoMargins", value);
 			}
 		}
 
@@ -277,11 +277,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlOartVerticalOverflow>(this, "VerticalOverflow");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlOartVerticalOverflow>(this, "VerticalOverflow");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "VerticalOverflow", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "VerticalOverflow", value);
 			}
 		}
 
@@ -294,11 +294,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlOartHorizontalOverflow>(this, "HorizontalOverflow");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlOartHorizontalOverflow>(this, "HorizontalOverflow");
 			}
 			set
 			{
-				Factory.ExecuteEnumPropertySet(this, "HorizontalOverflow", value);
+				InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "HorizontalOverflow", value);
 			}
 		}
 
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Characters Characters(object start, object length)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters), start, length);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters), start, length);
 		}
 
 		/// <summary>
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Characters Characters()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters));
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters));
 		}
 
 		/// <summary>
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.Characters Characters(object start)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters), start);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Characters>(this, "Characters", typeof(NetOffice.ExcelApi.Characters), start);
 		}
 
 		#endregion

@@ -7,6 +7,7 @@ using NetOffice.Resolver;
 using NetOffice.Availity;
 using NetOffice.Exceptions;
 using NetOffice.CoreServices;
+using NetOffice.InvokerService;
 
 namespace NetOffice
 {
@@ -144,7 +145,7 @@ namespace NetOffice
         public COMObject(Core factory, ICOMObject replacedObject)
         {
             ICOMObjectInitialize init = (ICOMObjectInitialize)this;
-            init.InitializeCOMObject(factory, replacedObject);            
+            init.InitializeCOMObject(factory, replacedObject);
         }
 
         /// <summary>
@@ -260,7 +261,7 @@ namespace NetOffice
         public COMObject(Core factory, ICOMObject parentObject, object comProxy, Type comProxyType)
         {
             ICOMObjectInitialize init = (ICOMObjectInitialize)this;
-            init.InitializeCOMObject(factory, parentObject, comProxy, comProxyType);    
+            init.InitializeCOMObject(factory, parentObject, comProxy, comProxyType);
         }
 
         /// <summary>
@@ -496,6 +497,145 @@ namespace NetOffice
 
         #endregion
 
+        #region ICOMObjectExecutePropertyGet
+
+        /// <summary>
+        /// Validate arguments and call ExecuteArgumentValidatedPropertyGet
+        /// </summary>
+        /// <param name="name">property name</param>
+        /// <param name="args">arguments as any</param>
+        /// <returns>unknown</returns>
+        protected internal virtual object ExecutePropertyGet(string name, object[] args)
+        {
+            args = Invoker.ValidateParamsArray(args);
+            return ExecuteArgumentValidatedPropertyGet(name, args);
+        }
+
+        /// <summary>
+        /// Performs a property get call for the underlying proxy
+        /// </summary>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        /// <returns>unknown</returns>
+        protected internal virtual object ExecuteArgumentValidatedPropertyGet(string name, object[] validatedArgs)
+        {
+            return Invoker.PropertyGet(this, name, validatedArgs);
+        }
+
+        #endregion
+
+        #region ICOMObjectExecutePropertySet
+
+        /// <summary>
+        /// Validate arguments array and call ExecuteArgumentValidatedPropertySet
+        /// </summary>
+        /// <param name="name">property name</param>
+        /// <param name="args">arguments as any</param>
+        protected internal virtual void ExecutePropertySet(string name, object[] args)
+        {
+            var validatedArgs = Invoker.ValidateParamsArray(args);            
+            ExecuteArgumentValidatedPropertySet(name, validatedArgs);
+        }
+
+        /// <summary>
+        /// Performs a property set call for the underlying proxy
+        /// </summary>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        protected internal virtual void ExecuteArgumentValidatedPropertySet(string name, object[] validatedArgs)
+        {
+            Invoker.PropertySet(this, name, validatedArgs);
+        }
+
+        #endregion
+
+        #region ICOMObjectExecuteMethodGet
+
+        /// <summary>
+        /// Validate arguments and call ExecuteArgumentValidatedMethod
+        /// </summary>
+        /// <param name="name">method name</param>
+        /// <param name="args">arguments as any</param>
+        protected internal void ExecuteMethod(string name, object[] args)
+        {
+            args = Invoker.ValidateParamsArray(args);
+            ExecuteArgumentValidatedMethod(name, args);
+        }
+
+        /// <summary>
+        /// Performs a method call for the underlying proxy
+        /// </summary>
+        /// <param name="name">method name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        protected internal void ExecuteArgumentValidatedMethod(string name, object[] validatedArgs)
+        {
+            Invoker.Method(this, name, validatedArgs);
+        }
+
+        /// <summary>
+        /// Validate arguments and call ExecuteArgumentValidatedMethodGet
+        /// </summary>
+        /// <param name="name">method name</param>
+        /// <param name="args">arguments as any</param>
+        protected internal virtual object ExecuteMethodGet(string name, object[] args)
+        {
+            args = Invoker.ValidateParamsArray(args);
+            return ExecuteArgumentValidatedMethodGet(name, args);
+        }
+
+        /// <summary>
+        /// Performs a method call with return value for the underlying proxy
+        /// </summary>
+        /// <param name="name">method name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        protected internal virtual object ExecuteArgumentValidatedMethodGet(string name, object[] validatedArgs)
+        {
+            return Invoker.MethodReturn(this, name, validatedArgs);
+        }
+
+        #endregion
+
+        #region ICOMObjectExecute
+
+        /// <summary>
+        /// Called from invoker service before a property get/set or method/methodget call is executed
+        /// </summary>
+        /// <param name="mode">execution mode i.e. kind of upcoming call</param>
+        /// <param name="name">method or property name</param>
+        /// <param name="args">property or method arguments</param>
+        protected internal virtual void BeforeExecute(ExecuteMode mode, string name, object[] args)
+        {
+
+        }
+
+        /// <summary>
+        /// Called from invoker service after a property get/set or method/methodget call is executed
+        /// </summary>
+        /// <param name="mode">execution mode i.e. kind of upcoming call</param>
+        /// <param name="name">method or property name</param>
+        /// <param name="args">property or method arguments</param>
+        /// <param name="result">return value from call or null(Nothing in Visual Basic)</param>
+        protected internal virtual void AfterExecute(ExecuteMode mode, string name, object[] args, object result)
+        {
+
+        }
+
+        /// <summary>
+        /// Called from invoker service if an error occured while execution or proceed return value
+        /// </summary>
+        /// <param name="mode">execution mode i.e. kind of upcoming call</param>
+        /// <param name="name">method or property name</param>
+        /// <param name="args">property or method arguments</param>
+        /// <param name="exception">origin exception</param>
+        /// <param name="continueAnyway">true if error can be ignored, otherwise the exception want be rethrown</param>
+        /// <param name="continuteResult">return value if error can be ignored</param>
+        protected internal virtual void ExecutionError(ExecuteMode mode, string name, object[] args, Exception exception, ref bool continueAnyway, ref object continuteResult)
+        {
+
+        }
+
+        #endregion
+        
         #region ICOMObject
 
         /// <summary>

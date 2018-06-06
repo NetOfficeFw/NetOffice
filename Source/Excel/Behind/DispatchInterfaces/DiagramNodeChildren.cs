@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
+				return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DiagramNode>(this, "FirstChild", typeof(NetOffice.ExcelApi.DiagramNode));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DiagramNode>(this, "FirstChild", typeof(NetOffice.ExcelApi.DiagramNode));
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DiagramNode>(this, "LastChild", typeof(NetOffice.ExcelApi.DiagramNode));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.DiagramNode>(this, "LastChild", typeof(NetOffice.ExcelApi.DiagramNode));
 			}
 		}
 
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "Item", typeof(NetOffice.ExcelApi.DiagramNode), index);
+				return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "Item", typeof(NetOffice.ExcelApi.DiagramNode), index);
 			}
 		}
 
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.DiagramNode AddNode(object index, object nodeType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode), index, nodeType);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode), index, nodeType);
 		}
 
 		/// <summary>
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.DiagramNode AddNode()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode));
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode));
 		}
 
 		/// <summary>
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual NetOffice.ExcelApi.DiagramNode AddNode(object index)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode), index);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", typeof(NetOffice.ExcelApi.DiagramNode), index);
 		}
 
 		/// <summary>
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public virtual void SelectAll()
 		{
-			 Factory.ExecuteMethod(this, "SelectAll");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "SelectAll");
 		}
 
         #endregion

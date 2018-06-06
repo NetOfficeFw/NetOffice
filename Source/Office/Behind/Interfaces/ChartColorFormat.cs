@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -81,11 +81,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "SchemeColor");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "SchemeColor");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "SchemeColor", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "SchemeColor", value);
             }
         }
 
@@ -98,11 +98,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "RGB");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "RGB");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "RGB", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RGB", value);
             }
         }
 
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "_Default");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "_Default");
             }
         }
 
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Type");
             }
         }
 
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 

@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "_Default");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "_Default");
 			}
 		}
 
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteStringPropertyGet(this, "NameLocal");
+				return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "NameLocal");
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "BuiltIn");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "BuiltIn");
 			}
 		}
 
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.TableStyleElements>(this, "TableStyleElements", typeof(NetOffice.ExcelApi.TableStyleElements));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.TableStyleElements>(this, "TableStyleElements", typeof(NetOffice.ExcelApi.TableStyleElements));
 			}
 		}
 
@@ -181,11 +181,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsAvailableTableStyle");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowAsAvailableTableStyle");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsAvailableTableStyle", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowAsAvailableTableStyle", value);
 			}
 		}
 
@@ -199,11 +199,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsAvailablePivotTableStyle");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowAsAvailablePivotTableStyle");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsAvailablePivotTableStyle", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowAsAvailablePivotTableStyle", value);
 			}
 		}
 
@@ -217,11 +217,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsAvailableSlicerStyle");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowAsAvailableSlicerStyle");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsAvailableSlicerStyle", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowAsAvailableSlicerStyle", value);
 			}
 		}
 
@@ -235,11 +235,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsAvailableTimelineStyle");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "ShowAsAvailableTimelineStyle");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsAvailableTimelineStyle", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShowAsAvailableTimelineStyle", value);
 			}
 		}
 
@@ -254,7 +254,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual void Delete()
 		{
-			 Factory.ExecuteMethod(this, "Delete");
+			 InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
@@ -265,7 +265,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.TableStyle Duplicate(object newTableStyleName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.TableStyle>(this, "Duplicate", typeof(NetOffice.ExcelApi.TableStyle), newTableStyleName);
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.TableStyle>(this, "Duplicate", typeof(NetOffice.ExcelApi.TableStyle), newTableStyleName);
 		}
 
 		/// <summary>
@@ -276,7 +276,7 @@ namespace NetOffice.ExcelApi.Behind
 		[SupportByVersion("Excel", 12,14,15,16)]
 		public virtual NetOffice.ExcelApi.TableStyle Duplicate()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.TableStyle>(this, "Duplicate", typeof(NetOffice.ExcelApi.TableStyle));
+			return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.TableStyle>(this, "Duplicate", typeof(NetOffice.ExcelApi.TableStyle));
 		}
 
 		#endregion

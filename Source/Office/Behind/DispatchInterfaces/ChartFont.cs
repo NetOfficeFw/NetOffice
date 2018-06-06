@@ -68,11 +68,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Background");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Background");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Background", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Background", value);
             }
         }
 
@@ -85,11 +85,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Bold");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Bold");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Bold", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Bold", value);
             }
         }
 
@@ -102,11 +102,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Color");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Color");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Color", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Color", value);
             }
         }
 
@@ -119,11 +119,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ColorIndex");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ColorIndex");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "ColorIndex", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "ColorIndex", value);
             }
         }
 
@@ -136,11 +136,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "FontStyle");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "FontStyle");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "FontStyle", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "FontStyle", value);
             }
         }
 
@@ -153,11 +153,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Italic");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Italic");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Italic", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Italic", value);
             }
         }
 
@@ -170,11 +170,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Name", value);
             }
         }
 
@@ -187,11 +187,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "OutlineFont");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "OutlineFont");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "OutlineFont", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "OutlineFont", value);
             }
         }
 
@@ -204,11 +204,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Shadow");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Shadow");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Shadow", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Shadow", value);
             }
         }
 
@@ -221,11 +221,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Size");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Size");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Size", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Size", value);
             }
         }
 
@@ -238,11 +238,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "StrikeThrough");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "StrikeThrough");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "StrikeThrough", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "StrikeThrough", value);
             }
         }
 
@@ -255,11 +255,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Subscript");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Subscript");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Subscript", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Subscript", value);
             }
         }
 
@@ -272,11 +272,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Superscript");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Superscript");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Superscript", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Superscript", value);
             }
         }
 
@@ -289,11 +289,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Underline");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Underline");
             }
             set
             {
-                Factory.ExecuteVariantPropertySet(this, "Underline", value);
+                InvokerService.InvokeInternal.ExecuteVariantPropertySet(this, "Underline", value);
             }
         }
 
@@ -307,7 +307,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Application");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Application");
             }
         }
 
@@ -320,7 +320,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Creator");
             }
         }
 
@@ -334,7 +334,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 

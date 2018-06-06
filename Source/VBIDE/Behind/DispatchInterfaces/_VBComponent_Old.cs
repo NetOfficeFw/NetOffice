@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Saved");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Saved");
             }
         }
 
@@ -80,11 +80,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Designer");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Designer");
             }
         }
 
@@ -111,7 +111,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodeModule>(this, "CodeModule", typeof(NetOffice.VBIDEApi.CodeModule));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodeModule>(this, "CodeModule", typeof(NetOffice.VBIDEApi.CodeModule));
             }
         }
 
@@ -124,7 +124,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_ComponentType>(this, "Type");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_ComponentType>(this, "Type");
             }
         }
 
@@ -137,7 +137,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -150,7 +150,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponents>(this, "Collection", typeof(NetOffice.VBIDEApi.VBComponents));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponents>(this, "Collection", typeof(NetOffice.VBIDEApi.VBComponents));
             }
         }
 
@@ -163,7 +163,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "HasOpenDesigner");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "HasOpenDesigner");
             }
         }
 
@@ -176,7 +176,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Properties>(this, "Properties", typeof(NetOffice.VBIDEApi.Properties));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Properties>(this, "Properties", typeof(NetOffice.VBIDEApi.Properties));
             }
         }
 
@@ -191,7 +191,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Export(string fileName)
         {
-            Factory.ExecuteMethod(this, "Export", fileName);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Export", fileName);
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual NetOffice.VBIDEApi.Window DesignerWindow()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "DesignerWindow", typeof(NetOffice.VBIDEApi.Window));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "DesignerWindow", typeof(NetOffice.VBIDEApi.Window));
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace NetOffice.VBIDEApi.Behind
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public virtual void Activate()
         {
-            Factory.ExecuteMethod(this, "Activate");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Activate");
         }
 
         #endregion

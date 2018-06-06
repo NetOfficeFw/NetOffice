@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
             }
         }
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
             }
         }
 
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -110,7 +110,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "_Default", index);
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "_Default", index);
             }
         }
 
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore, object statusBar, object helpFile, object helpContextID)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), new object[] { caption, onAction, shortcutKey, before, restore, statusBar, helpFile, helpContextID });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), new object[] { caption, onAction, shortcutKey, before, restore, statusBar, helpFile, helpContextID });
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.MenuItem Add(string caption)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), caption);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), caption);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.MenuItem Add(string caption, object onAction)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), caption, onAction);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), caption, onAction);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), caption, onAction, shortcutKey);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), caption, onAction, shortcutKey);
         }
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), caption, onAction, shortcutKey, before);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), caption, onAction, shortcutKey, before);
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), new object[] { caption, onAction, shortcutKey, before, restore });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), new object[] { caption, onAction, shortcutKey, before, restore });
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore, object statusBar)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), new object[] { caption, onAction, shortcutKey, before, restore, statusBar });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), new object[] { caption, onAction, shortcutKey, before, restore, statusBar });
         }
 
         /// <summary>
@@ -246,7 +246,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore, object statusBar, object helpFile)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), new object[] { caption, onAction, shortcutKey, before, restore, statusBar, helpFile });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", typeof(NetOffice.ExcelApi.MenuItem), new object[] { caption, onAction, shortcutKey, before, restore, statusBar, helpFile });
         }
 
         /// <summary>
@@ -258,7 +258,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.Menu AddMenu(string caption, object before, object restore)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", typeof(NetOffice.ExcelApi.Menu), caption, before, restore);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", typeof(NetOffice.ExcelApi.Menu), caption, before, restore);
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.Menu AddMenu(string caption)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", typeof(NetOffice.ExcelApi.Menu), caption);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", typeof(NetOffice.ExcelApi.Menu), caption);
         }
 
         /// <summary>
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi.Behind
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public virtual NetOffice.ExcelApi.Menu AddMenu(string caption, object before)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", typeof(NetOffice.ExcelApi.Menu), caption, before);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", typeof(NetOffice.ExcelApi.Menu), caption, before);
         }
 
         #endregion

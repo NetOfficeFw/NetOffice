@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "DataHandlerId");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "DataHandlerId");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "DataHandlerId", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "DataHandlerId", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Title");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Title");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Title", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Title", value);
             }
         }
 
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerProperties>(this, "Properties", typeof(NetOffice.OfficeApi.PickerProperties));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerProperties>(this, "Properties", typeof(NetOffice.OfficeApi.PickerProperties));
             }
         }
 
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResults CreatePickerResults()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "CreatePickerResults", typeof(NetOffice.OfficeApi.PickerResults));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "CreatePickerResults", typeof(NetOffice.OfficeApi.PickerResults));
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResults Show(object isMultiSelect, object existingResults)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults), isMultiSelect, existingResults);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults), isMultiSelect, existingResults);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResults Show()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults));
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResults Show(object isMultiSelect)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults), isMultiSelect);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Show", typeof(NetOffice.OfficeApi.PickerResults), isMultiSelect);
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 14, 15, 16)]
         public virtual NetOffice.OfficeApi.PickerResults Resolve(string tokenText, Int32 duplicateDlgMode)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Resolve", typeof(NetOffice.OfficeApi.PickerResults), tokenText, duplicateDlgMode);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResults>(this, "Resolve", typeof(NetOffice.OfficeApi.PickerResults), tokenText, duplicateDlgMode);
         }
 
         #endregion

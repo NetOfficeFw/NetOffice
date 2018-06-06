@@ -70,11 +70,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "BuiltInFace");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "BuiltInFace");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "BuiltInFace", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "BuiltInFace", value);
             }
         }
 
@@ -88,11 +88,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "FaceId");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "FaceId");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "FaceId", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "FaceId", value);
             }
         }
 
@@ -106,11 +106,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ShortcutText");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ShortcutText");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "ShortcutText", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "ShortcutText", value);
             }
         }
 
@@ -124,11 +124,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoButtonState>(this, "State");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoButtonState>(this, "State");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "State", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "State", value);
             }
         }
 
@@ -142,11 +142,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoButtonStyle>(this, "Style");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoButtonStyle>(this, "Style");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "Style", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "Style", value);
             }
         }
 
@@ -160,11 +160,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCommandBarButtonHyperlinkType>(this, "HyperlinkType");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoCommandBarButtonHyperlinkType>(this, "HyperlinkType");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "HyperlinkType", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "HyperlinkType", value);
             }
         }
 
@@ -220,7 +220,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "InstanceIdPtr");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "InstanceIdPtr");
             }
         }
 
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accSelect(Int32 flagsSelect, object varChild)
         {
-            Factory.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accSelect(Int32 flagsSelect)
         {
-            Factory.ExecuteMethod(this, "accSelect", flagsSelect);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accSelect", flagsSelect);
         }
 
         /// <summary>
@@ -311,7 +311,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accNavigate(Int32 navDir, object varStart)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
         }
 
         /// <summary>
@@ -323,7 +323,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accNavigate(Int32 navDir)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accNavigate", navDir);
         }
 
         /// <summary>
@@ -335,7 +335,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual object accHitTest(Int32 xLeft, Int32 yTop)
         {
-            return Factory.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
+            return InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
         }
 
         /// <summary>
@@ -346,7 +346,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accDoDefaultAction(object varChild)
         {
-            Factory.ExecuteMethod(this, "accDoDefaultAction", varChild);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accDoDefaultAction", varChild);
         }
 
         /// <summary>
@@ -357,7 +357,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void accDoDefaultAction()
         {
-            Factory.ExecuteMethod(this, "accDoDefaultAction");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "accDoDefaultAction");
         }
 
         /// <summary>
@@ -367,7 +367,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void CopyFace()
         {
-            Factory.ExecuteMethod(this, "CopyFace");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "CopyFace");
         }
 
         /// <summary>
@@ -377,7 +377,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public virtual void PasteFace()
         {
-            Factory.ExecuteMethod(this, "PasteFace");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PasteFace");
         }
 
         #endregion

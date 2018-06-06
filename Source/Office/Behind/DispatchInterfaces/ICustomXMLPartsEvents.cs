@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void PartAfterAdd(NetOffice.OfficeApi.CustomXMLPart newPart)
         {
-            Factory.ExecuteMethod(this, "PartAfterAdd", newPart);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PartAfterAdd", newPart);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void PartBeforeDelete(NetOffice.OfficeApi.CustomXMLPart oldPart)
         {
-            Factory.ExecuteMethod(this, "PartBeforeDelete", oldPart);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PartBeforeDelete", oldPart);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void PartAfterLoad(NetOffice.OfficeApi.CustomXMLPart part)
         {
-            Factory.ExecuteMethod(this, "PartAfterLoad", part);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PartAfterLoad", part);
         }
 
         #endregion

@@ -67,11 +67,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "HelpFile");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "HelpFile");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "HelpFile", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "HelpFile", value);
             }
         }
 
@@ -84,11 +84,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "HelpContextID");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "HelpContextID");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "HelpContextID", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "HelpContextID", value);
             }
         }
 
@@ -101,11 +101,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Description");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Description");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Description", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Description", value);
             }
         }
 
@@ -118,7 +118,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_VBAMode>(this, "Mode");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_VBAMode>(this, "Mode");
             }
         }
 
@@ -131,7 +131,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.References>(this, "References", typeof(NetOffice.VBIDEApi.References));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.References>(this, "References", typeof(NetOffice.VBIDEApi.References));
             }
         }
 
@@ -144,11 +144,11 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Name");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Name");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Name", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Name", value);
             }
         }
 
@@ -161,7 +161,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -174,7 +174,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProjects>(this, "Collection", typeof(NetOffice.VBIDEApi.VBProjects));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProjects>(this, "Collection", typeof(NetOffice.VBIDEApi.VBProjects));
             }
         }
 
@@ -187,7 +187,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_ProjectProtection>(this, "Protection");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_ProjectProtection>(this, "Protection");
             }
         }
 
@@ -200,7 +200,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteBoolPropertyGet(this, "Saved");
+                return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "Saved");
             }
         }
 
@@ -213,7 +213,7 @@ namespace NetOffice.VBIDEApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponents>(this, "VBComponents", typeof(NetOffice.VBIDEApi.VBComponents));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponents>(this, "VBComponents", typeof(NetOffice.VBIDEApi.VBComponents));
             }
         }
 

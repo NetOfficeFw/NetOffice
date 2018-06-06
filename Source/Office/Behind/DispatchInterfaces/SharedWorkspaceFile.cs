@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "URL");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "URL");
             }
         }
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "CreatedBy");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "CreatedBy");
             }
         }
 
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "CreatedDate");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "CreatedDate");
             }
         }
 
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "ModifiedBy");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "ModifiedBy");
             }
         }
 
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "ModifiedDate");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "ModifiedDate");
             }
         }
 
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         #endregion

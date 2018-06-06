@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 using System.Collections.Generic;
 using NetOffice.Exceptions;
+using NetOffice.CoreServices;
 
 namespace NetOffice.Availity
 {

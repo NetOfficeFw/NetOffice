@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteVariantPropertyGet(this, "Products");
+                return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Products");
             }
         }
 
@@ -81,11 +81,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Selection");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Selection");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Selection", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Selection", value);
             }
         }
 

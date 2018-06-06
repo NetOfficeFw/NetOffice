@@ -41,7 +41,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Paragraphs(object start, object length)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Paragraphs", typeof(NetOffice.OfficeApi.TextRange2), start, length);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Paragraphs", typeof(NetOffice.OfficeApi.TextRange2), start, length);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Paragraphs(object start)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Paragraphs", typeof(NetOffice.OfficeApi.TextRange2), start);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Paragraphs", typeof(NetOffice.OfficeApi.TextRange2), start);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Sentences(object start, object length)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Sentences", typeof(NetOffice.OfficeApi.TextRange2), start, length);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Sentences", typeof(NetOffice.OfficeApi.TextRange2), start, length);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Sentences(object start)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Sentences", typeof(NetOffice.OfficeApi.TextRange2), start);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Sentences", typeof(NetOffice.OfficeApi.TextRange2), start);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Words(object start, object length)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Words", typeof(NetOffice.OfficeApi.TextRange2), start, length);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Words", typeof(NetOffice.OfficeApi.TextRange2), start, length);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Words(object start)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Words", typeof(NetOffice.OfficeApi.TextRange2), start);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Words", typeof(NetOffice.OfficeApi.TextRange2), start);
         }
 
         /// <summary>
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Characters(object start, object length)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Characters", typeof(NetOffice.OfficeApi.TextRange2), start, length);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Characters", typeof(NetOffice.OfficeApi.TextRange2), start, length);
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Characters(object start)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Characters", typeof(NetOffice.OfficeApi.TextRange2), start);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Characters", typeof(NetOffice.OfficeApi.TextRange2), start);
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Lines(object start, object length)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Lines", typeof(NetOffice.OfficeApi.TextRange2), start, length);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Lines", typeof(NetOffice.OfficeApi.TextRange2), start, length);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Lines(object start)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Lines", typeof(NetOffice.OfficeApi.TextRange2), start);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Lines", typeof(NetOffice.OfficeApi.TextRange2), start);
         }
 
         /// <summary>
@@ -301,7 +301,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Runs(object start, object length)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Runs", typeof(NetOffice.OfficeApi.TextRange2), start, length);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Runs", typeof(NetOffice.OfficeApi.TextRange2), start, length);
         }
 
         /// <summary>
@@ -327,7 +327,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_Runs(object start)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Runs", typeof(NetOffice.OfficeApi.TextRange2), start);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Runs", typeof(NetOffice.OfficeApi.TextRange2), start);
         }
 
         /// <summary>
@@ -353,7 +353,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_MathZones(object start, object length)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "MathZones", typeof(NetOffice.OfficeApi.TextRange2), start, length);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "MathZones", typeof(NetOffice.OfficeApi.TextRange2), start, length);
         }
 
         /// <summary>
@@ -379,7 +379,7 @@ namespace NetOffice.OfficeApi.Behind
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public virtual NetOffice.OfficeApi.TextRange2 get_MathZones(object start)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "MathZones", typeof(NetOffice.OfficeApi.TextRange2), start);
+            return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "MathZones", typeof(NetOffice.OfficeApi.TextRange2), start);
         }
 
         /// <summary>
@@ -465,11 +465,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteStringPropertyGet(this, "Text");
+                return InvokerService.InvokeInternal.ExecuteStringPropertyGet(this, "Text");
             }
             set
             {
-                Factory.ExecuteValuePropertySet(this, "Text", value);
+                InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "Text", value);
             }
         }
 
@@ -483,7 +483,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Count");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Count");
             }
         }
 
@@ -498,7 +498,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+                return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
             }
         }
 
@@ -512,7 +512,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Paragraphs", typeof(NetOffice.OfficeApi.TextRange2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Paragraphs", typeof(NetOffice.OfficeApi.TextRange2));
             }
         }
 
@@ -526,7 +526,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Sentences", typeof(NetOffice.OfficeApi.TextRange2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Sentences", typeof(NetOffice.OfficeApi.TextRange2));
             }
         }
 
@@ -540,7 +540,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Words", typeof(NetOffice.OfficeApi.TextRange2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Words", typeof(NetOffice.OfficeApi.TextRange2));
             }
         }
 
@@ -554,7 +554,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Characters", typeof(NetOffice.OfficeApi.TextRange2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Characters", typeof(NetOffice.OfficeApi.TextRange2));
             }
         }
 
@@ -568,7 +568,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Lines", typeof(NetOffice.OfficeApi.TextRange2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Lines", typeof(NetOffice.OfficeApi.TextRange2));
             }
         }
 
@@ -582,7 +582,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Runs", typeof(NetOffice.OfficeApi.TextRange2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "Runs", typeof(NetOffice.OfficeApi.TextRange2));
             }
         }
 
@@ -596,7 +596,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ParagraphFormat2>(this, "ParagraphFormat", typeof(NetOffice.OfficeApi.ParagraphFormat2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.ParagraphFormat2>(this, "ParagraphFormat", typeof(NetOffice.OfficeApi.ParagraphFormat2));
             }
         }
 
@@ -610,7 +610,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Font2>(this, "Font", typeof(NetOffice.OfficeApi.Font2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Font2>(this, "Font", typeof(NetOffice.OfficeApi.Font2));
             }
         }
 
@@ -624,7 +624,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Length");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Length");
             }
         }
 
@@ -638,7 +638,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteInt32PropertyGet(this, "Start");
+                return InvokerService.InvokeInternal.ExecuteInt32PropertyGet(this, "Start");
             }
         }
 
@@ -652,7 +652,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "BoundLeft");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "BoundLeft");
             }
         }
 
@@ -666,7 +666,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "BoundTop");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "BoundTop");
             }
         }
 
@@ -680,7 +680,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "BoundWidth");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "BoundWidth");
             }
         }
 
@@ -694,7 +694,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteSinglePropertyGet(this, "BoundHeight");
+                return InvokerService.InvokeInternal.ExecuteSinglePropertyGet(this, "BoundHeight");
             }
         }
 
@@ -708,11 +708,11 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLanguageID>(this, "LanguageID");
+                return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLanguageID>(this, "LanguageID");
             }
             set
             {
-                Factory.ExecuteEnumPropertySet(this, "LanguageID", value);
+                InvokerService.InvokeInternal.ExecuteEnumPropertySet(this, "LanguageID", value);
             }
         }
 
@@ -726,7 +726,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "MathZones", typeof(NetOffice.OfficeApi.TextRange2));
+                return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.TextRange2>(this, "MathZones", typeof(NetOffice.OfficeApi.TextRange2));
             }
         }
 
@@ -744,7 +744,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Item", typeof(NetOffice.OfficeApi.TextRange2), index);
+                return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Item", typeof(NetOffice.OfficeApi.TextRange2), index);
             }
         }
 
@@ -755,7 +755,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 TrimText()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "TrimText", typeof(NetOffice.OfficeApi.TextRange2));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "TrimText", typeof(NetOffice.OfficeApi.TextRange2));
         }
 
         /// <summary>
@@ -766,7 +766,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertAfter(object newText)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertAfter", typeof(NetOffice.OfficeApi.TextRange2), newText);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertAfter", typeof(NetOffice.OfficeApi.TextRange2), newText);
         }
 
         /// <summary>
@@ -777,7 +777,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertAfter()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertAfter", typeof(NetOffice.OfficeApi.TextRange2));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertAfter", typeof(NetOffice.OfficeApi.TextRange2));
         }
 
         /// <summary>
@@ -788,7 +788,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertBefore(object newText)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertBefore", typeof(NetOffice.OfficeApi.TextRange2), newText);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertBefore", typeof(NetOffice.OfficeApi.TextRange2), newText);
         }
 
         /// <summary>
@@ -799,7 +799,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertBefore()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertBefore", typeof(NetOffice.OfficeApi.TextRange2));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertBefore", typeof(NetOffice.OfficeApi.TextRange2));
         }
 
         /// <summary>
@@ -812,7 +812,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber, object unicode)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertSymbol", typeof(NetOffice.OfficeApi.TextRange2), fontName, charNumber, unicode);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertSymbol", typeof(NetOffice.OfficeApi.TextRange2), fontName, charNumber, unicode);
         }
 
         /// <summary>
@@ -825,7 +825,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertSymbol", typeof(NetOffice.OfficeApi.TextRange2), fontName, charNumber);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertSymbol", typeof(NetOffice.OfficeApi.TextRange2), fontName, charNumber);
         }
 
         /// <summary>
@@ -835,7 +835,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Select()
         {
-            Factory.ExecuteMethod(this, "Select");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Select");
         }
 
         /// <summary>
@@ -845,7 +845,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Cut()
         {
-            Factory.ExecuteMethod(this, "Cut");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Cut");
         }
 
         /// <summary>
@@ -855,7 +855,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Copy()
         {
-            Factory.ExecuteMethod(this, "Copy");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Copy");
         }
 
         /// <summary>
@@ -865,7 +865,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void Delete()
         {
-            Factory.ExecuteMethod(this, "Delete");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -875,7 +875,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Paste()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Paste", typeof(NetOffice.OfficeApi.TextRange2));
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Paste", typeof(NetOffice.OfficeApi.TextRange2));
         }
 
         /// <summary>
@@ -886,7 +886,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 PasteSpecial(NetOffice.OfficeApi.Enums.MsoClipboardFormat format)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "PasteSpecial", typeof(NetOffice.OfficeApi.TextRange2), format);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "PasteSpecial", typeof(NetOffice.OfficeApi.TextRange2), format);
         }
 
         /// <summary>
@@ -897,7 +897,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void ChangeCase(NetOffice.OfficeApi.Enums.MsoTextChangeCase type)
         {
-            Factory.ExecuteMethod(this, "ChangeCase", type);
+            InvokerService.InvokeInternal.ExecuteMethod(this, "ChangeCase", type);
         }
 
         /// <summary>
@@ -907,7 +907,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void AddPeriods()
         {
-            Factory.ExecuteMethod(this, "AddPeriods");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "AddPeriods");
         }
 
         /// <summary>
@@ -917,7 +917,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void RemovePeriods()
         {
-            Factory.ExecuteMethod(this, "RemovePeriods");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RemovePeriods");
         }
 
         /// <summary>
@@ -931,7 +931,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after, object matchCase, object wholeWords)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Find", typeof(NetOffice.OfficeApi.TextRange2), findWhat, after, matchCase, wholeWords);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Find", typeof(NetOffice.OfficeApi.TextRange2), findWhat, after, matchCase, wholeWords);
         }
 
         /// <summary>
@@ -943,7 +943,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Find(string findWhat)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Find", typeof(NetOffice.OfficeApi.TextRange2), findWhat);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Find", typeof(NetOffice.OfficeApi.TextRange2), findWhat);
         }
 
         /// <summary>
@@ -956,7 +956,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Find", typeof(NetOffice.OfficeApi.TextRange2), findWhat, after);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Find", typeof(NetOffice.OfficeApi.TextRange2), findWhat, after);
         }
 
         /// <summary>
@@ -970,7 +970,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after, object matchCase)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Find", typeof(NetOffice.OfficeApi.TextRange2), findWhat, after, matchCase);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Find", typeof(NetOffice.OfficeApi.TextRange2), findWhat, after, matchCase);
         }
 
         /// <summary>
@@ -985,7 +985,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after, object matchCase, object wholeWords)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Replace", typeof(NetOffice.OfficeApi.TextRange2), new object[] { findWhat, replaceWhat, after, matchCase, wholeWords });
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Replace", typeof(NetOffice.OfficeApi.TextRange2), new object[] { findWhat, replaceWhat, after, matchCase, wholeWords });
         }
 
         /// <summary>
@@ -998,7 +998,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Replace", typeof(NetOffice.OfficeApi.TextRange2), findWhat, replaceWhat);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Replace", typeof(NetOffice.OfficeApi.TextRange2), findWhat, replaceWhat);
         }
 
         /// <summary>
@@ -1012,7 +1012,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Replace", typeof(NetOffice.OfficeApi.TextRange2), findWhat, replaceWhat, after);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Replace", typeof(NetOffice.OfficeApi.TextRange2), findWhat, replaceWhat, after);
         }
 
         /// <summary>
@@ -1027,7 +1027,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after, object matchCase)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Replace", typeof(NetOffice.OfficeApi.TextRange2), findWhat, replaceWhat, after, matchCase);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "Replace", typeof(NetOffice.OfficeApi.TextRange2), findWhat, replaceWhat, after, matchCase);
         }
 
         /// <summary>
@@ -1073,7 +1073,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void RtlRun()
         {
-            Factory.ExecuteMethod(this, "RtlRun");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "RtlRun");
         }
 
         /// <summary>
@@ -1083,7 +1083,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public virtual void LtrRun()
         {
-            Factory.ExecuteMethod(this, "LtrRun");
+            InvokerService.InvokeInternal.ExecuteMethod(this, "LtrRun");
         }
 
         /// <summary>
@@ -1096,7 +1096,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType, object formula, object position)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertChartField", typeof(NetOffice.OfficeApi.TextRange2), chartFieldType, formula, position);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertChartField", typeof(NetOffice.OfficeApi.TextRange2), chartFieldType, formula, position);
         }
 
         /// <summary>
@@ -1108,7 +1108,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertChartField", typeof(NetOffice.OfficeApi.TextRange2), chartFieldType);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertChartField", typeof(NetOffice.OfficeApi.TextRange2), chartFieldType);
         }
 
         /// <summary>
@@ -1121,7 +1121,7 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 15, 16)]
         public virtual NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType, object formula)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertChartField", typeof(NetOffice.OfficeApi.TextRange2), chartFieldType, formula);
+            return InvokerService.InvokeInternal.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.TextRange2>(this, "InsertChartField", typeof(NetOffice.OfficeApi.TextRange2), chartFieldType, formula);
         }
 
         #endregion

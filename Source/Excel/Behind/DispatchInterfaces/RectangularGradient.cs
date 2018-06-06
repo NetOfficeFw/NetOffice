@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", typeof(NetOffice.ExcelApi.Application));
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+				return InvokerService.InvokeInternal.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
+				return InvokerService.InvokeInternal.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorStops>(this, "ColorStops", typeof(NetOffice.ExcelApi.ColorStops));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ColorStops>(this, "ColorStops", typeof(NetOffice.ExcelApi.ColorStops));
 			}
 		}
 
@@ -126,11 +126,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "RectangleTop");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "RectangleTop");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RectangleTop", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RectangleTop", value);
 			}
 		}
 
@@ -144,11 +144,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "RectangleBottom");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "RectangleBottom");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RectangleBottom", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RectangleBottom", value);
 			}
 		}
 
@@ -162,11 +162,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "RectangleLeft");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "RectangleLeft");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RectangleLeft", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RectangleLeft", value);
 			}
 		}
 
@@ -180,11 +180,11 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteDoublePropertyGet(this, "RectangleRight");
+				return InvokerService.InvokeInternal.ExecuteDoublePropertyGet(this, "RectangleRight");
 			}
 			set
 			{
-				Factory.ExecuteValuePropertySet(this, "RectangleRight", value);
+				InvokerService.InvokeInternal.ExecuteValuePropertySet(this, "RectangleRight", value);
 			}
 		}
 

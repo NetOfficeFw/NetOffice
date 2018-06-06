@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowFormattingCells");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowFormattingCells");
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowFormattingColumns");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowFormattingColumns");
 			}
 		}
 
@@ -97,7 +97,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowFormattingRows");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowFormattingRows");
 			}
 		}
 
@@ -111,7 +111,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowInsertingColumns");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowInsertingColumns");
 			}
 		}
 
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowInsertingRows");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowInsertingRows");
 			}
 		}
 
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowInsertingHyperlinks");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowInsertingHyperlinks");
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowDeletingColumns");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowDeletingColumns");
 			}
 		}
 
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowDeletingRows");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowDeletingRows");
 			}
 		}
 
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowSorting");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowSorting");
 			}
 		}
 
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowFiltering");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowFiltering");
 			}
 		}
 
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowUsingPivotTables");
+				return InvokerService.InvokeInternal.ExecuteBoolPropertyGet(this, "AllowUsingPivotTables");
 			}
 		}
 
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.AllowEditRanges>(this, "AllowEditRanges", typeof(NetOffice.ExcelApi.AllowEditRanges));
+				return InvokerService.InvokeInternal.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.AllowEditRanges>(this, "AllowEditRanges", typeof(NetOffice.ExcelApi.AllowEditRanges));
 			}
 		}
 
