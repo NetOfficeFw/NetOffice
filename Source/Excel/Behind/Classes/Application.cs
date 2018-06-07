@@ -139,10 +139,12 @@ namespace NetOffice.ExcelApi.Behind
         /// <returns>count of running application</returns>
         public static int GetActiveInstancesCount()
         {
-            var sequence = Running.ProxyService.GetActiveInstances<Application>("Excel", "Application");
-            int result = sequence.Count;
-            sequence.Dispose();
-            return result;
+            using (var sequence = Running.ProxyService.GetActiveInstances<Application>("Excel", "Application"))
+            {
+                int result = sequence.Count;
+                sequence.Dispose();
+                return result;
+            }            
         }
 
         /// <summary>
@@ -152,10 +154,12 @@ namespace NetOffice.ExcelApi.Behind
         /// <returns>count of running application</returns>
         public static int GetActiveInstancesCount(Func<Application, bool> predicate)
         {
-            var sequence = Running.ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate);
-            int result = sequence.Count;
-            sequence.Dispose();
-            return result;
+            using (var sequence = Running.ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate))
+            {
+                int result = sequence.Count;
+                sequence.Dispose();
+                return result;
+            }
         }
 
         /// <summary>
@@ -1266,7 +1270,7 @@ namespace NetOffice.ExcelApi.Behind
             }
         }
 
-        #endregion
+        #endregions
 
         #region IAutomaticQuit
 

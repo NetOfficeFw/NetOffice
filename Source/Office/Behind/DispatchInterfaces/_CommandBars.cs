@@ -722,8 +722,8 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16), NativeResult]
         public virtual stdole.Picture GetImageMso(string idMso, Int32 width, Int32 height)
         {
-            object[] paramsArray = Invoker.ValidateParamsArray(idMso, width, height);
-            object returnItem = Invoker.MethodReturn(this, "GetImageMso", paramsArray);
+            object[] paramsArray = new object[] { idMso, width, height };
+            object returnItem = InvokerService.InvokeInternal.ExecuteObjectMethodGet(this, "GetImageMso", paramsArray);
             return returnItem as stdole.Picture;
         }
 

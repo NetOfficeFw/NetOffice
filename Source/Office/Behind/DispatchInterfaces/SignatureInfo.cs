@@ -116,14 +116,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                object[] paramsArray = null;
-                object returnItem = Invoker.PropertyGet(this, "SignatureImage", paramsArray);
+                object returnItem = InvokerService.InvokeInternal.ExecuteObjectPropertyGet(this, "SignatureImage");
                 return returnItem as stdole.Picture;
             }
             set
             {
-                object[] paramsArray = Invoker.ValidateParamsArray(value);
-                Invoker.PropertySet(this, "SignatureImage", paramsArray);
+                InvokerService.InvokeInternal.ExecutePropertySet(this, "Picture", value);
             }
         }
 

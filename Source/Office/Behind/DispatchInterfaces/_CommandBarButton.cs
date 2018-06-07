@@ -178,14 +178,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                object[] paramsArray = null;
-                object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
+                object returnItem = InvokerService.InvokeInternal.ExecuteObjectPropertyGet(this, "Picture");
                 return returnItem as stdole.Picture;
             }
             set
             {
-                object[] paramsArray = Invoker.ValidateParamsArray(value);
-                Invoker.PropertySet(this, "Picture", paramsArray);
+                InvokerService.InvokeInternal.ExecutePropertySet(this, "Picture", value);
             }
         }
 
@@ -199,14 +197,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                object[] paramsArray = null;
-                object returnItem = Invoker.PropertyGet(this, "Mask", paramsArray);
+                object returnItem = InvokerService.InvokeInternal.ExecuteObjectPropertyGet(this, "Mask");
                 return returnItem as stdole.Picture;
             }
             set
             {
-                object[] paramsArray = Invoker.ValidateParamsArray(value);
-                Invoker.PropertySet(this, "Mask", paramsArray);
+                InvokerService.InvokeInternal.ExecutePropertySet(this, "Mask", value);
             }
         }
 

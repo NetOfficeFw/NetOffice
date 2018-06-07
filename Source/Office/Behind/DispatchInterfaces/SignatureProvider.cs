@@ -75,8 +75,8 @@ namespace NetOffice.OfficeApi.Behind
         [SupportByVersion("Office", 12, 14, 15, 16), NativeResult]
         public virtual stdole.Picture GenerateSignatureLineImage(NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
         {
-            object[] paramsArray = Invoker.ValidateParamsArray(siglnimg, psigsetup, psiginfo, xmlDsigStream);
-            object returnItem = Invoker.MethodReturn(this, "GenerateSignatureLineImage", paramsArray);
+            object[] paramsArray = new object[] { siglnimg, psigsetup, psiginfo, xmlDsigStream };
+            object returnItem = InvokerService.InvokeInternal.ExecuteObjectMethodGet(this, "GenerateSignatureLineImage", paramsArray); ;            
             return returnItem as stdole.Picture;
         }
 

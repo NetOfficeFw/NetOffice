@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi.Behind
         {
             get
             {
-                return Invoker.PropertyGet(this, "ContentControl");
+                return InvokerService.InvokeInternal.ExecuteObjectPropertyGet(this, "ContentControl");
             }
         }
 
