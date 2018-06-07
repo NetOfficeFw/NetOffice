@@ -84,7 +84,7 @@ namespace NetOffice
     /// Creation Factory for ICOMObject and derived types
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
-    public partial class Core
+    public class Core
     {
         #region Nested
 
@@ -253,9 +253,9 @@ namespace NetOffice
         public FactoryList Assemblies { get; private set; }
 
         /// <summary>
-        /// Time that the initialize process has been used to pass
+        /// Time that the initialize process has needed used to pass
         /// </summary>
-        [Category("Core"), Description("Time that the initialize process has been used to pass")]
+        [Category("Core"), Description("Time that the initialize process has needed used to pass")]
         public TimeSpan InitializedTime { get; private set; }
 
         /// <summary>
@@ -292,8 +292,9 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Provides access to NetOffice instance management
+        /// COM Object Register Services
         /// </summary>
+        /// <remarks>Provides event based access to the NetOffice Instance Table</remarks>
         public ICoreManagement ObjectRegister
         {
             get
@@ -305,6 +306,7 @@ namespace NetOffice
         /// <summary>
         /// COM Object Activation Services
         /// </summary>
+        /// <remarks>Provides event based access to the NetOffice creation factory</remarks>
         [Category("Core"), Description("COM Object Activation Services")]
         public ICoreActivator ObjectActivator
         {
@@ -317,6 +319,7 @@ namespace NetOffice
         /// <summary>
         /// COM Object Resolve Services
         /// </summary>
+        /// <remarks>Provides event based access to the NetOffice type resolver</remarks>
         [Category("Core"), Description("COM Object Resolve Services")]
         public ICoreResolver ObjectResolver
         {
@@ -329,6 +332,7 @@ namespace NetOffice
         /// <summary>
         /// COM Object Event Services
         /// </summary>
+        /// <remarks>Provides event based access to the NetOffice Event Bridge system</remarks>
         [Category("Core"), Description("COM Object Event Services")]
         public ICoreEvents ObjectEvents
         {
@@ -395,12 +399,12 @@ namespace NetOffice
         internal ApplicationVersionHandler VersionProviders { get; private set; }
 
         /// <summary>
-        /// Proxy,Wrapper Type Cache
+        /// Proxy,Contract,Implementation Type Cache
         /// </summary>
         internal TypeDictionary TypeCache { get; private set; }
 
         /// <summary>
-        /// Dependent assemblies analyzed by LoadAPIFactories
+        /// Dependent assemblies analyzed by LoadAPIFactories method
         /// </summary>
         private List<DependentAssembly> DependentAssemblies { get; set; }
 
