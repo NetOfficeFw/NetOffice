@@ -271,26 +271,7 @@ namespace NetOffice
                 return _thisType;
             }
         }
-
-        /// <summary>
-        /// Contains a list of all known netoffice assembly key tokens
-        /// </summary>
-        [Browsable(false)]
-        public KnownKeyTokens KnownNetOfficeKeyTokens
-        {
-            get
-            {
-                if (null == _knownNetOfficeKeyTokens)
-                {
-                    string[] tokens = CurrentAppDomain.KeyTokens(this);
-                    _knownNetOfficeKeyTokens = new KnownKeyTokens();
-                    foreach (string item in tokens)
-                        _knownNetOfficeKeyTokens.Add(item);
-                }
-                return _knownNetOfficeKeyTokens;
-            }
-        }
-
+     
         /// <summary>
         /// COM Object Register Services
         /// </summary>
@@ -372,9 +353,22 @@ namespace NetOffice
                 lock (_thisAssemblyLock)
                 {
                     if (null == _thisAssembly)
-                        _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
+                        _thisAssembly = Assembly.GetAssembly(typeof(Core));
                 }
                 return _thisAssembly;
+            }
+        }
+
+        /// <summary>
+        /// Contains a list of all known netoffice assembly key tokens
+        /// </summary>
+        internal KnownKeyTokens KnownNetOfficeKeyTokens
+        {
+            get
+            {
+                if (null == _knownNetOfficeKeyTokens)
+                    _knownNetOfficeKeyTokens = new KnownKeyTokensReader().Read();
+                return _knownNetOfficeKeyTokens;
             }
         }
 

@@ -28,7 +28,7 @@ namespace NetOffice.Diagnostics.Internal
         private void ValidateKeyTokens(Core factory)
         {
             string version = "Version=" + factory.ThisAssembly.GetName().Version.ToString();
-            string[] keyTokens = NetOffice.Loader.CurrentAppDomain.KeyTokens(factory);
+            string[] keyTokens = new NetOffice.Loader.KnownKeyTokensReader().KeyTokens();
             string[] splitter = new string[] { "," };
             foreach (string line in keyTokens)
             {

@@ -464,6 +464,22 @@ namespace NetOffice
         /// <summary>
         /// Write exception log message
         /// </summary>
+        /// <param name="title">header message</param>
+        /// <param name="exception">origin exception</param>
+        public void WriteException(string title, Exception exception)
+        {
+            lock (_thisLock)
+            {
+                string message = CreateExecptionLog(title, exception);
+                AddToMessageList(message, MessageKind.Error);
+                RaiseOnException(exception);
+                WriteLine(message);
+            }
+        }
+
+        /// <summary>
+        /// Write exception log message
+        /// </summary>
         /// <param name="exception"></param>
         public void WriteException(Exception exception)
         {
@@ -491,8 +507,41 @@ namespace NetOffice
         /// <summary>
         /// Convert an exception to a string
         /// </summary>
-        /// <param name="exception"></param>
-        /// <returns></returns>
+        /// <param name="title">header message</param>
+        /// <param name="exception">origin exception</param>
+        /// <returns>detailed exception string</returns>
+        public static string CreateExecptionLog(string title, Exception exception)
+        {
+            string result = "";
+            Exception ex = exception;
+            while (ex != null)
+            {
+                string type = ex.GetType().Name;
+                string message = ex.Message;
+                string target = "<Empty>";
+                if (null != ex.TargetSite)
+                    target = ex.TargetSite.ToString();
+                string trace = "<Empty>";
+                if (null != ex.StackTrace)
+                    trace = ex.StackTrace.ToString();
+
+                result += "Title:" + (String.IsNullOrWhiteSpace(title) ? "<None>" : title) + Environment.NewLine;
+                result += "Type:" + type + Environment.NewLine;
+                result += "Message:" + message + Environment.NewLine;
+                result += "Target:" + target + Environment.NewLine;
+                result += "Stack:" + trace + Environment.NewLine;
+
+                result += Environment.NewLine;
+                ex = ex.InnerException;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Convert an exception to a string
+        /// </summary>
+        /// <param name="exception">origin exception</param>
+        /// <returns>detailed exception string</returns>
         public static string CreateExecptionLog(Exception exception)
         {
             string result = "";

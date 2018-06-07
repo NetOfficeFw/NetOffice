@@ -221,23 +221,6 @@ namespace NetOffice.Loader
             }
         }
 
-        /// <summary>
-        /// Returns embedded keytoken schema
-        /// </summary>
-        /// <param name="factory">factory type to use</param>
-        /// <returns>keytoken line array</returns>
-        internal static string[] KeyTokens(Core factory)
-        {
-            using (System.IO.Stream ressourceStream = factory.ThisAssembly.GetManifestResourceStream(factory.ThisType.Namespace + ".KeyTokens.txt"))
-            {
-                using (System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream))
-                {
-                    string text = textStreamReader.ReadToEnd();
-                    return text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-                }
-            }
-        }
-
         #endregion
 
         #region Trigger
@@ -284,7 +267,7 @@ namespace NetOffice.Loader
             }
             catch (Exception exception)
             {
-                Owner.Console.WriteException(exception);
+                Owner.Console.WriteException("Unexpected error while resolve assembly(CurrentDomain_AssemblyResolve).", exception);
                 return null;
             }
         }

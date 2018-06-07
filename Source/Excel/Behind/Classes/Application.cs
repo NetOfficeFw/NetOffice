@@ -1270,7 +1270,7 @@ namespace NetOffice.ExcelApi.Behind
             }
         }
 
-        #endregions
+        #endregion
 
         #region IAutomaticQuit
 

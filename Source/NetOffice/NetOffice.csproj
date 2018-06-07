@@ -184,6 +184,7 @@
     <Compile Include="IO\IOPath.cs" />
     <Compile Include="Loader\FactoryList.cs" />
     <Compile Include="Loader\KnownKeyTokens.cs" />
+    <Compile Include="Loader\KnownKeyTokensReader.cs" />
     <Compile Include="Loader\PathBuilder.cs" />
     <Compile Include="Resolver\InstanceTypeNameResolver.cs" />
     <Compile Include="Diagnostics\SelfDiagnostics.cs" />
