@@ -120,8 +120,10 @@ namespace NetOffice.OfficeApi.Behind
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             status = 0;
             results = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(status, results);
-            Invoker.Method(this, "Inspect", paramsArray, modifiers);
+            object[] paramsArray = new object[] { status, results };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "Inspect", paramsArray, modifiers);
+
             status = (NetOffice.OfficeApi.Enums.MsoDocInspectorStatus)paramsArray[0];
             results = paramsArray[1] as string;
         }
@@ -138,8 +140,10 @@ namespace NetOffice.OfficeApi.Behind
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             status = 0;
             results = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(status, results);
-            Invoker.Method(this, "Fix", paramsArray, modifiers);
+            object[] paramsArray = new object[] { status, results };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "Fix", paramsArray, modifiers);
+
             status = (NetOffice.OfficeApi.Enums.MsoDocInspectorStatus)paramsArray[0];
             results = paramsArray[1] as string;
         }

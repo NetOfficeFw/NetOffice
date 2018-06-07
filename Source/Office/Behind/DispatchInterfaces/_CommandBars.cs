@@ -220,10 +220,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
             pbstrName = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(ids, pbstrName);
-            object returnItem = Invoker.PropertyGet(this, "IdsString", paramsArray, modifiers);
+            object[] paramsArray = new object[] { ids, pbstrName };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32PropertyGetExtended(this, "IdsString", paramsArray, modifiers);
+            
             pbstrName = paramsArray[1] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -250,10 +252,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
             pbstrName = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(tmc, pbstrName);
-            object returnItem = Invoker.PropertyGet(this, "TmcGetName", paramsArray, modifiers);
+            object[] paramsArray = new object[] { tmc, pbstrName };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32PropertyGetExtended(this, "TmcGetName", paramsArray, modifiers);
+
             pbstrName = paramsArray[1] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>

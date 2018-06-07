@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace NetOffice.InvokerService
@@ -93,13 +94,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static object ExecuteObjectPropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static object ExecuteObjectPropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = null;
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);                
             }
             catch (Exception exception)
@@ -200,13 +201,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static Int16 ExecuteInt16PropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static Int16 ExecuteInt16PropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(Int16);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? Convert.ToInt16(result) : default(Int16);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -308,13 +309,43 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static Int32 ExecuteInt32PropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static Int32 ExecuteInt32PropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(Int32);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
+                result = null != result ? Convert.ToInt32(result) : (Int32)0;
+                caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
+            }
+            catch (Exception exception)
+            {
+                bool continueAnyway = false;
+                object continueResult = null;
+                caller.ExecutionError(ExecuteMode.PropertyGet, name, args, exception, ref continueAnyway, ref continueResult);
+                if (continueAnyway)
+                    result = continueResult;
+                else
+                    throw;
+            }
+            return (Int32)result;
+        }
+
+        /// <summary>
+        /// Execute a property get with int return value
+        /// </summary>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="args">arguments as any</param>
+        /// <param name="modifiers">optional modifiers to deal with ref out arguments</param>
+        public static Int32 ExecuteInt32PropertyGetExtended(this COMObject caller, string name, object[] args, ParameterModifier[] modifiers)
+        {
+            object result = default(Int32);
+            try
+            {
+                caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
+                result = caller.CallPropertyGet(name, args, modifiers);
                 result = null != result ? Convert.ToInt32(result) : (Int32)0;
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -416,13 +447,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">validated arguments</param>
-        public static Int64 ExecuteInt64PropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static Int64 ExecuteInt64PropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(Int64);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? Convert.ToInt64(result) : (Int64)0;
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -524,13 +555,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static UIntPtr ExecuteUIntPtrPropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static UIntPtr ExecuteUIntPtrPropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(UIntPtr);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? (UIntPtr)result : UIntPtr.Zero;
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -632,13 +663,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static Single ExecuteFloatPropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static Single ExecuteFloatPropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(Single);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? Convert.ToSingle(result) : default(Single);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -740,13 +771,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static double ExecuteDoublePropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static double ExecuteDoublePropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(double);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? Convert.ToDouble(result) : default(double);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -848,13 +879,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static Single ExecuteSinglePropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static Single ExecuteSinglePropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(Single);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? Convert.ToSingle(result) : default(Single);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -956,13 +987,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static DateTime ExecuteDateTimePropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static DateTime ExecuteDateTimePropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(DateTime);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? Convert.ToDateTime(result) : default(DateTime);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -1064,13 +1095,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static byte ExecuteBytePropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static byte ExecuteBytePropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(byte);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? Convert.ToByte(result) : default(byte);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -1172,13 +1203,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static bool ExecuteBoolPropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static bool ExecuteBoolPropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(bool);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 result = null != result ? Convert.ToBoolean(result) : default(bool);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -1206,7 +1237,7 @@ namespace NetOffice.InvokerService
         /// <param name="name">property name</param>
         public static string ExecuteStringPropertyGet(this COMObject caller, string name)
         {
-            return ExecuteStringPropertyInternal(caller, name, _emptyParams);
+            return ExecuteStringPropertyGetInternal(caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -1218,7 +1249,7 @@ namespace NetOffice.InvokerService
         public static string ExecuteStringPropertyGet(this COMObject caller, string name, object argument)
         {
             object[] args = new object[] { argument };
-            return ExecuteStringPropertyInternal(caller, name, args);
+            return ExecuteStringPropertyGetInternal(caller, name, args);
         }
 
         /// <summary>
@@ -1231,7 +1262,7 @@ namespace NetOffice.InvokerService
         public static string ExecuteStringPropertyGet(this COMObject caller, string name, object argument1, object argument2)
         {
             object[] args = new object[] { argument1, argument2};
-            return ExecuteStringPropertyInternal(caller, name, args);
+            return ExecuteStringPropertyGetInternal(caller, name, args);
         }
 
         /// <summary>
@@ -1245,7 +1276,7 @@ namespace NetOffice.InvokerService
         public static string ExecuteStringPropertyGet(this COMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = new object[] { argument1, argument2, argument3 };
-            return ExecuteStringPropertyInternal(caller, name, args);
+            return ExecuteStringPropertyGetInternal(caller, name, args);
         }
 
         /// <summary>
@@ -1260,7 +1291,7 @@ namespace NetOffice.InvokerService
         public static string ExecuteStringPropertyGet(this COMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = new object[] { argument1, argument2, argument3, argument4 };
-            return ExecuteStringPropertyInternal(caller, name, args);
+            return ExecuteStringPropertyGetInternal(caller, name, args);
         }
 
         /// <summary>
@@ -1271,7 +1302,7 @@ namespace NetOffice.InvokerService
         /// <param name="args">arguments as any</param>
         public static string ExecuteStringPropertyGet(this COMObject caller, string name, object[] args)
         {
-            return ExecuteStringPropertyInternal(caller, name, args);
+            return ExecuteStringPropertyGetInternal(caller, name, args);
         }
 
         /// <summary>
@@ -1280,13 +1311,43 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static string ExecuteStringPropertyInternal(this COMObject caller, string name, object[] args)
+        internal static string ExecuteStringPropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(string);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
+                result = null != result ? Convert.ToString(result) : default(string);
+                caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
+            }
+            catch (Exception exception)
+            {
+                bool continueAnyway = false;
+                object continueResult = null;
+                caller.ExecutionError(ExecuteMode.PropertyGet, name, args, exception, ref continueAnyway, ref continueResult);
+                if (continueAnyway)
+                    result = continueResult;
+                else
+                    throw;
+            }
+            return (string)result;
+        }
+
+        /// <summary>
+        /// Execute a property get with string return value
+        /// </summary>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="args">arguments as any</param>
+        /// <param name="modifiers">optional modifiers to deal with ref and out arguments</param>
+        public static string ExecuteStringPropertyGetExtended(this COMObject caller, string name, object[] args, ParameterModifier[] modifiers)
+        {
+            object result = default(string);
+            try
+            {
+                caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
+                result = caller.CallPropertyGet(name, args, modifiers);
                 result = null != result ? Convert.ToString(result) : default(string);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
@@ -1388,13 +1449,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static T ExecuteEnumPropertyGetInternal<T>(this COMObject caller, string name, object[] args) where T : struct, IConvertible
+        internal static T ExecuteEnumPropertyGetInternal<T>(this COMObject caller, string name, object[] args) where T : struct, IConvertible
         {
             object result = default(T);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 object intReturnItem = Convert.ToInt32(result);
                 result = (T)intReturnItem;
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
@@ -1497,13 +1558,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static T ExecuteStructPropertyGetInternal<T>(this COMObject caller, string name, object[] args) where T : struct
+        internal static T ExecuteStructPropertyGetInternal<T>(this COMObject caller, string name, object[] args) where T : struct
         {
             object result = default(T);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
             }
             catch (Exception exception)
@@ -1604,13 +1665,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static ICOMObject ExecuteReferencePropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static ICOMObject ExecuteReferencePropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(ICOMObject);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 if(!(result is ICOMObject))
                     result = caller.Factory.CreateObjectFromComProxy(caller, result, true);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
@@ -1713,13 +1774,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static T ExecuteReferencePropertyGetInternal<T>(this COMObject caller, string name, object[] args) where T : class, ICOMObject
+        internal static T ExecuteReferencePropertyGetInternal<T>(this COMObject caller, string name, object[] args) where T : class, ICOMObject
         {
             object result = default(T);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 if (!(result is ICOMObject))
                     result = caller.Factory.CreateObjectFromComProxy(caller, result, true);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
@@ -1822,13 +1883,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static T ExecuteBaseReferencePropertyGetInternal<T>(this COMObject caller, string name, object[] args) where T : class, ICOMObject
+        internal static T ExecuteBaseReferencePropertyGetInternal<T>(this COMObject caller, string name, object[] args) where T : class, ICOMObject
         {
             object result = default(T);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 if (!(result is ICOMObject))
                     result = caller.Factory.CreateObjectFromComProxy(caller, result, false);
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
@@ -1950,13 +2011,13 @@ namespace NetOffice.InvokerService
         /// <param name="name">property name</param>
         /// <param name="knownType">type of T - given to increase performance</param>
         /// <param name="args">arguments as any</param>
-        public static T ExecuteKnownReferencePropertyGetInternal<T>(this COMObject caller, string name, Type knownType, object[] args) where T : class, ICOMObject
+        internal static T ExecuteKnownReferencePropertyGetInternal<T>(this COMObject caller, string name, Type knownType, object[] args) where T : class, ICOMObject
         {
             object result = default(T);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 if (!(result is ICOMObject))
                     result = caller.Factory.CreateKnownObjectFromComProxy(caller, result, knownType) as T;
                 caller.AfterExecute(ExecuteMode.PropertyGet, name, args, result);
@@ -2059,13 +2120,13 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static object ExecuteVariantPropertyGetInternal(this COMObject caller, string name, object[] args)
+        internal static object ExecuteVariantPropertyGetInternal(this COMObject caller, string name, object[] args)
         {
             object result = default(object);
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertyGet, name, args);
-                result = caller.ExecutePropertyGet(name, args);
+                result = caller.CallPropertyGet(name, args);
                 if ((null != result) && (result is MarshalByRefObject))
                 {
                     result = caller.Factory.CreateObjectFromComProxy(caller, result, false);

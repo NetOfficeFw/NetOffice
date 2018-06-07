@@ -6,6 +6,60 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
+    #region Delegates
+
+    #pragma warning disable
+    public delegate void Application_NewWorkbookEventHandler(NetOffice.ExcelApi.Workbook wb);
+    public delegate void Application_SheetSelectionChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target);
+    public delegate void Application_SheetBeforeDoubleClickEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target, ref bool cancel);
+    public delegate void Application_SheetBeforeRightClickEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target, ref bool cancel);
+    public delegate void Application_SheetActivateEventHandler(ICOMObject sh);
+    public delegate void Application_SheetDeactivateEventHandler(ICOMObject sh);
+    public delegate void Application_SheetCalculateEventHandler(ICOMObject sh);
+    public delegate void Application_SheetChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target);
+    public delegate void Application_WorkbookOpenEventHandler(NetOffice.ExcelApi.Workbook wb);
+    public delegate void Application_WorkbookActivateEventHandler(NetOffice.ExcelApi.Workbook wb);
+    public delegate void Application_WorkbookDeactivateEventHandler(NetOffice.ExcelApi.Workbook wb);
+    public delegate void Application_WorkbookBeforeCloseEventHandler(NetOffice.ExcelApi.Workbook wb, ref bool cancel);
+    public delegate void Application_WorkbookBeforeSaveEventHandler(NetOffice.ExcelApi.Workbook wb, bool saveAsUI, ref bool cancel);
+    public delegate void Application_WorkbookBeforePrintEventHandler(NetOffice.ExcelApi.Workbook wb, ref bool cancel);
+    public delegate void Application_WorkbookNewSheetEventHandler(NetOffice.ExcelApi.Workbook wb, ICOMObject sh);
+    public delegate void Application_WorkbookAddinInstallEventHandler(NetOffice.ExcelApi.Workbook wb);
+    public delegate void Application_WorkbookAddinUninstallEventHandler(NetOffice.ExcelApi.Workbook wb);
+    public delegate void Application_WindowResizeEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn);
+    public delegate void Application_WindowActivateEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn);
+    public delegate void Application_WindowDeactivateEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn);
+    public delegate void Application_SheetFollowHyperlinkEventHandler(ICOMObject sh, NetOffice.ExcelApi.Hyperlink target);
+    public delegate void Application_SheetPivotTableUpdateEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable target);
+    public delegate void Application_WorkbookPivotTableCloseConnectionEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target);
+    public delegate void Application_WorkbookPivotTableOpenConnectionEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target);
+    public delegate void Application_WorkbookSyncEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType);
+    public delegate void Application_WorkbookBeforeXmlImportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, ref bool cancel);
+    public delegate void Application_WorkbookAfterXmlImportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, bool isRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult result);
+    public delegate void Application_WorkbookBeforeXmlExportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, ref bool cancel);
+    public delegate void Application_WorkbookAfterXmlExportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, NetOffice.ExcelApi.Enums.XlXmlExportResult result);
+    public delegate void Application_WorkbookRowsetCompleteEventHandler(NetOffice.ExcelApi.Workbook wb, string description, string sheet, bool success);
+    public delegate void Application_AfterCalculateEventHandler();
+    public delegate void Application_SheetPivotTableAfterValueChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange);
+    public delegate void Application_SheetPivotTableBeforeAllocateChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
+    public delegate void Application_SheetPivotTableBeforeCommitChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
+    public delegate void Application_SheetPivotTableBeforeDiscardChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd);
+    public delegate void Application_ProtectedViewWindowOpenEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw);
+    public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw, ref bool cancel);
+    public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw, NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason reason, ref bool cancel);
+    public delegate void Application_ProtectedViewWindowResizeEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw);
+    public delegate void Application_ProtectedViewWindowActivateEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw);
+    public delegate void Application_ProtectedViewWindowDeactivateEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw);
+    public delegate void Application_WorkbookAfterSaveEventHandler(NetOffice.ExcelApi.Workbook wb, bool success);
+    public delegate void Application_WorkbookNewChartEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Chart ch);
+    public delegate void Application_SheetLensGalleryRenderCompleteEventHandler(ICOMObject sh);
+    public delegate void Application_SheetTableUpdateEventHandler(ICOMObject sh, NetOffice.ExcelApi.TableObject target);
+    public delegate void Application_WorkbookModelChangeEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.ModelChanges changes);
+    public delegate void Application_SheetBeforeDeleteEventHandler(ICOMObject sh);
+    #pragma warning restore
+
+    #endregion
+
     /// <summary>
     /// CoClass Application
     /// This class is an alias/typedef for NetOffice.ExcelApi.Behind.Application
@@ -50,67 +104,13 @@ namespace NetOffice.ExcelApi
         }
     }
 
-	#region Delegates
-
-	#pragma warning disable
-	public delegate void Application_NewWorkbookEventHandler(NetOffice.ExcelApi.Workbook wb);
-	public delegate void Application_SheetSelectionChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target);
-	public delegate void Application_SheetBeforeDoubleClickEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target, ref bool cancel);
-	public delegate void Application_SheetBeforeRightClickEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target, ref bool cancel);
-	public delegate void Application_SheetActivateEventHandler(ICOMObject sh);
-	public delegate void Application_SheetDeactivateEventHandler(ICOMObject sh);
-	public delegate void Application_SheetCalculateEventHandler(ICOMObject sh);
-	public delegate void Application_SheetChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target);
-	public delegate void Application_WorkbookOpenEventHandler(NetOffice.ExcelApi.Workbook wb);
-	public delegate void Application_WorkbookActivateEventHandler(NetOffice.ExcelApi.Workbook wb);
-	public delegate void Application_WorkbookDeactivateEventHandler(NetOffice.ExcelApi.Workbook wb);
-	public delegate void Application_WorkbookBeforeCloseEventHandler(NetOffice.ExcelApi.Workbook wb, ref bool cancel);
-	public delegate void Application_WorkbookBeforeSaveEventHandler(NetOffice.ExcelApi.Workbook wb, bool saveAsUI, ref bool cancel);
-	public delegate void Application_WorkbookBeforePrintEventHandler(NetOffice.ExcelApi.Workbook wb, ref bool cancel);
-	public delegate void Application_WorkbookNewSheetEventHandler(NetOffice.ExcelApi.Workbook wb, ICOMObject sh);
-	public delegate void Application_WorkbookAddinInstallEventHandler(NetOffice.ExcelApi.Workbook wb);
-	public delegate void Application_WorkbookAddinUninstallEventHandler(NetOffice.ExcelApi.Workbook wb);
-	public delegate void Application_WindowResizeEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn);
-	public delegate void Application_WindowActivateEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn);
-	public delegate void Application_WindowDeactivateEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn);
-	public delegate void Application_SheetFollowHyperlinkEventHandler(ICOMObject sh, NetOffice.ExcelApi.Hyperlink target);
-	public delegate void Application_SheetPivotTableUpdateEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable target);
-	public delegate void Application_WorkbookPivotTableCloseConnectionEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target);
-	public delegate void Application_WorkbookPivotTableOpenConnectionEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target);
-	public delegate void Application_WorkbookSyncEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType);
-	public delegate void Application_WorkbookBeforeXmlImportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, ref bool cancel);
-	public delegate void Application_WorkbookAfterXmlImportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, bool isRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult result);
-	public delegate void Application_WorkbookBeforeXmlExportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, ref bool cancel);
-	public delegate void Application_WorkbookAfterXmlExportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, NetOffice.ExcelApi.Enums.XlXmlExportResult result);
-	public delegate void Application_WorkbookRowsetCompleteEventHandler(NetOffice.ExcelApi.Workbook wb, string description, string sheet, bool success);
-	public delegate void Application_AfterCalculateEventHandler();
-	public delegate void Application_SheetPivotTableAfterValueChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange);
-	public delegate void Application_SheetPivotTableBeforeAllocateChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
-	public delegate void Application_SheetPivotTableBeforeCommitChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
-	public delegate void Application_SheetPivotTableBeforeDiscardChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd);
-	public delegate void Application_ProtectedViewWindowOpenEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw);
-	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw, ref bool cancel);
-	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw, NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason reason, ref bool cancel);
-	public delegate void Application_ProtectedViewWindowResizeEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw);
-	public delegate void Application_ProtectedViewWindowActivateEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw);
-	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(NetOffice.ExcelApi.ProtectedViewWindow pvw);
-	public delegate void Application_WorkbookAfterSaveEventHandler(NetOffice.ExcelApi.Workbook wb, bool success);
-	public delegate void Application_WorkbookNewChartEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Chart ch);
-	public delegate void Application_SheetLensGalleryRenderCompleteEventHandler(ICOMObject sh);
-	public delegate void Application_SheetTableUpdateEventHandler(ICOMObject sh, NetOffice.ExcelApi.TableObject target);
-	public delegate void Application_WorkbookModelChangeEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.ModelChanges changes);
-	public delegate void Application_SheetBeforeDeleteEventHandler(ICOMObject sh);
-    #pragma warning restore
-
-    #endregion
-
     /// <summary>
     /// CoClass Application
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
+    [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]    
     public interface Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit
     {

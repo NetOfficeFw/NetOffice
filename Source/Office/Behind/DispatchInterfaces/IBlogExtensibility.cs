@@ -80,8 +80,10 @@ namespace NetOffice.OfficeApi.Behind
             friendlyName = string.Empty;
             categorySupport = 0;
             padding = false;
-            object[] paramsArray = Invoker.ValidateParamsArray(blogProvider, friendlyName, categorySupport, padding);
-            Invoker.Method(this, "BlogProviderProperties", paramsArray, modifiers);
+            object[] paramsArray = new object[] { blogProvider, friendlyName, categorySupport, padding };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "BlogProviderProperties", paramsArray, modifiers);
+
             blogProvider = paramsArray[0] as string;
             friendlyName = paramsArray[1] as string;
             categorySupport = (NetOffice.OfficeApi.Enums.MsoBlogCategorySupport)paramsArray[2];
@@ -102,8 +104,10 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, true);
             showPictureUI = false;
-            object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, newAccount, showPictureUI);
-            Invoker.Method(this, "SetupBlogAccount", paramsArray, modifiers);
+            object[] paramsArray = new object[] { account, parentWindow, document, newAccount, showPictureUI };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "SetupBlogAccount", paramsArray, modifiers);
+
             showPictureUI = (bool)paramsArray[4];
         }
 
@@ -124,8 +128,10 @@ namespace NetOffice.OfficeApi.Behind
             blogNames = null;
             blogIDs = null;
             blogURLs = null;
-            object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)blogNames, (object)blogIDs, (object)blogURLs);
-            Invoker.Method(this, "GetUserBlogs", paramsArray, modifiers);
+            object[] paramsArray = new object[] { account, parentWindow, document, (object)blogNames, (object)blogIDs, (object)blogURLs };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "GetUserBlogs", paramsArray, modifiers);
+
             blogNames = paramsArray[3] as String[];
             blogIDs = paramsArray[4] as String[];
             blogURLs = paramsArray[5] as String[];
@@ -148,8 +154,10 @@ namespace NetOffice.OfficeApi.Behind
             postTitles = null;
             postDates = null;
             postIDs = null;
-            object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)postTitles, (object)postDates, (object)postIDs);
-            Invoker.Method(this, "GetRecentPosts", paramsArray, modifiers);
+            object[] paramsArray = new object[] { account, parentWindow, document, (object)postTitles, (object)postDates, (object)postIDs };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "GetRecentPosts", paramsArray, modifiers);
+
             postTitles = paramsArray[3] as String[];
             postDates = paramsArray[4] as String[];
             postIDs = paramsArray[5] as String[];
@@ -174,8 +182,10 @@ namespace NetOffice.OfficeApi.Behind
             title = string.Empty;
             datePosted = string.Empty;
             categories = null;
-            object[] paramsArray = Invoker.ValidateParamsArray(account, postID, parentWindow, xHTML, title, datePosted, (object)categories);
-            Invoker.Method(this, "Open", paramsArray, modifiers);
+            object[] paramsArray = new object[] { account, postID, parentWindow, xHTML, title, datePosted, (object)categories };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "Open", paramsArray, modifiers);
+
             xHTML = paramsArray[3] as string;
             title = paramsArray[4] as string;
             datePosted = paramsArray[5] as string;
@@ -202,8 +212,10 @@ namespace NetOffice.OfficeApi.Behind
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, false, false, false, false, true, true);
             postID = string.Empty;
             publishMessage = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, xHTML, title, dateTime, (object)categories, draft, postID, publishMessage);
-            Invoker.Method(this, "PublishPost", paramsArray, modifiers);
+            object[] paramsArray = new object[] { account, parentWindow, document, xHTML, title, dateTime, (object)categories, draft, postID, publishMessage };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "PublishPost", paramsArray, modifiers);
+
             postID = paramsArray[8] as string;
             publishMessage = paramsArray[9] as string;
         }
@@ -227,8 +239,10 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, false, false, false, false, false, true);
             publishMessage = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, postID, xHTML, title, dateTime, (object)categories, draft, publishMessage);
-            Invoker.Method(this, "RepublishPost", paramsArray, modifiers);
+            object[] paramsArray = new object[] { account, parentWindow, document, postID, xHTML, title, dateTime, (object)categories, draft, publishMessage };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "RepublishPost", paramsArray, modifiers);
+
             publishMessage = paramsArray[9] as string;
         }
 
@@ -245,8 +259,10 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true);
             categories = null;
-            object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)categories);
-            Invoker.Method(this, "GetCategories", paramsArray, modifiers);
+            object[] paramsArray = new object[] { account, parentWindow, document, (object)categories };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "GetCategories", paramsArray, modifiers);
+
             categories = paramsArray[3] as String[];
         }
 

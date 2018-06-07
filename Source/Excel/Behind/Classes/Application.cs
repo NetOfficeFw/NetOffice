@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi.Behind
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
+    [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]
     [HasInteropCompatibilityClass(typeof(ApplicationClass))]
     public class Application : NetOffice.ExcelApi.Behind._Application, NetOffice.ExcelApi.Application
@@ -1417,7 +1417,7 @@ namespace NetOffice.ExcelApi.Behind
             if (null == ParentObject)
             {
                 _callQuitInDispose = true;
-                GlobalHelperModules.GlobalModule.Instance = this;
+                ModulesLegacy.ApplicationModule.Instance = this;
             }
             base.OnCreate();
         }
@@ -1429,8 +1429,8 @@ namespace NetOffice.ExcelApi.Behind
         [Category("NetOffice"), CoreOverridden]
         public override void Dispose(bool disposeEventBinding)
         {
-            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
-                GlobalHelperModules.GlobalModule.Instance = null;
+            if (this.Equals(ModulesLegacy.ApplicationModule.Instance))
+                ModulesLegacy.ApplicationModule.Instance = null;
             base.Dispose(disposeEventBinding);
         }
 
@@ -1440,8 +1440,8 @@ namespace NetOffice.ExcelApi.Behind
         [Category("NetOffice"), CoreOverridden]
         public override void Dispose()
         {
-            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
-                GlobalHelperModules.GlobalModule.Instance = null;
+            if (this.Equals(ModulesLegacy.ApplicationModule.Instance))
+                ModulesLegacy.ApplicationModule.Instance = null;
             base.Dispose();
         }
 

@@ -4,16 +4,17 @@ using System.ComponentModel;
 using NetOffice.Attributes;
 using NetOffice.CoreServices;
 
-namespace NetOffice.ExcelApi.GlobalHelperModules
+namespace NetOffice.ExcelApi.ModulesLegacy
 {
-    ///<summary>
-    /// Module GlobalModule
+    /// <summary>
+    /// Module ApplicationModule
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
-    ///</summary>
+    /// </summary>
+    /// <remarks>This module supports legacy VB/VBA codebases</remarks>
     [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(ExcelApi.Application))]
-	public static class GlobalModule
-	{
+	public static class ApplicationModule
+    {
         #region Fields
 
         private static ICOMObject _instance;
@@ -21,6 +22,36 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         #endregion
 
         #region Internal Properties
+
+        /// <summary>
+        /// The associated factory core
+        /// </summary>
+        public static Core Factory
+		{
+			get
+			{
+                var instance = _instance;
+				if(null != instance)
+					 return instance.Factory;
+			    else
+				    return Core.Default;
+			}
+		}
+
+        /// <summary>
+        /// The associated invoker
+        /// </summary>
+        public static Invoker Invoker
+		{
+			get
+            {
+                var instance = _instance;
+                if (null != instance)
+					 return instance.Invoker;
+			    else
+				    return Invoker.Default;
+			}
+		}
 
         internal static ICOMObject Instance
         {
@@ -35,37 +66,15 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
             }
         }
 
-        internal static Core Factory
-		{
-			get
-			{
-				if(null != _instance)
-					 return _instance.Factory;
-			else
-				return Core.Default;
-			}
-		}
+        #endregion
 
-		internal static Invoker Invoker
-		{
-			get
-			{
-				if(null != _instance)
-					 return _instance.Invoker;
-			else
-				return Invoker.Default;
-			}
-		}
+        #region Properties
 
-		#endregion
-
-		#region Properties
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public static NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -3868,4 +3877,3 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		#endregion
 	}
 }
-

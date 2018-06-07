@@ -278,8 +278,10 @@ namespace NetOffice.OfficeApi.Behind
             pyTop = 0;
             pcxWidth = 0;
             pcyHeight = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(pxLeft, pyTop, pcxWidth, pcyHeight, varChild);
-            Invoker.Method(this, "accLocation", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pxLeft, pyTop, pcxWidth, pcyHeight, varChild };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "accLocation", paramsArray, modifiers);
+
             pxLeft = (Int32)paramsArray[0];
             pyTop = (Int32)paramsArray[1];
             pcxWidth = (Int32)paramsArray[2];
@@ -303,8 +305,8 @@ namespace NetOffice.OfficeApi.Behind
             pyTop = 0;
             pcxWidth = 0;
             pcyHeight = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(pxLeft, pyTop, pcxWidth, pcyHeight);
-            Invoker.Method(this, "accLocation", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pxLeft, pyTop, pcxWidth, pcyHeight };
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "accLocation", paramsArray, modifiers);
             pxLeft = (Int32)paramsArray[0];
             pyTop = (Int32)paramsArray[1];
             pcxWidth = (Int32)paramsArray[2];

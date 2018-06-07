@@ -77,13 +77,15 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false);
             ppcp = null;
-            object[] paramsArray = Invoker.ValidateParamsArray(pcap, ppcp, pcuic);
-            object returnItem = Invoker.MethodReturn(this, "HrInitConverter", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pcap, ppcp, pcuic };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrInitConverter", paramsArray, modifiers);
+
             if (paramsArray[1] is MarshalByRefObject)
                 ppcp = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.IConverterPreferences>(this, paramsArray[1], typeof(NetOffice.OfficeApi.IConverterPreferences));
             else
                 ppcp = null;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -111,13 +113,15 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true, false);
             ppcp = null;
-            object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, pcap, ppcp, pcuic);
-            object returnItem = Invoker.MethodReturn(this, "HrImport", paramsArray, modifiers);
+            object[] paramsArray = new object[]{ bstrSourcePath, bstrDestPath, pcap, ppcp, pcuic};
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrImport", paramsArray, modifiers);
+
             if (paramsArray[3] is MarshalByRefObject)
                 ppcp = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.IConverterPreferences>(this, paramsArray[3], typeof(NetOffice.OfficeApi.IConverterPreferences));
             else
                 ppcp = null;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -135,13 +139,15 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, true, false);
             ppcp = null;
-            object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, bstrClass, pcap, ppcp, pcuic);
-            object returnItem = Invoker.MethodReturn(this, "HrExport", paramsArray, modifiers);
+            object[] paramsArray = new object[] { bstrSourcePath, bstrDestPath, bstrClass, pcap, ppcp, pcuic };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrExport", paramsArray, modifiers);
+
             if (paramsArray[4] is MarshalByRefObject)
                 ppcp = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.IConverterPreferences>(this, paramsArray[4], typeof(NetOffice.OfficeApi.IConverterPreferences));
             else
                 ppcp = null;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -159,14 +165,16 @@ namespace NetOffice.OfficeApi.Behind
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false, true, false);
             pbstrClass = string.Empty;
             ppcp = null;
-            object[] paramsArray = Invoker.ValidateParamsArray(bstrPath, pbstrClass, pcap, ppcp, pcuic);
-            object returnItem = Invoker.MethodReturn(this, "HrGetFormat", paramsArray, modifiers);
+            object[] paramsArray = new object[] { bstrPath, pbstrClass, pcap, ppcp, pcuic };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrGetFormat", paramsArray, modifiers);
+
             pbstrClass = (string)paramsArray[1];
             if (paramsArray[3] is MarshalByRefObject)
                 ppcp = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.IConverterPreferences>(this, paramsArray[3], typeof(NetOffice.OfficeApi.IConverterPreferences));
             else
                 ppcp = null;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -181,10 +189,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false);
             pbstrErrorMsg = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(hrErr, pbstrErrorMsg, pcap);
-            object returnItem = Invoker.MethodReturn(this, "HrGetErrorString", paramsArray, modifiers);
+            object[] paramsArray = new object[] { hrErr, pbstrErrorMsg, pcap };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrGetErrorString", paramsArray, modifiers);
+
             pbstrErrorMsg = paramsArray[1] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         #endregion

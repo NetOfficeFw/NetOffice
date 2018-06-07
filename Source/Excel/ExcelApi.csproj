@@ -933,6 +933,7 @@
     <Compile Include="Interfaces\IWorksheetFunction.Var_S.cs" />
     <Compile Include="Interfaces\IWorksheetFunction.Xor.cs" />
     <Compile Include="Interfaces\IWorksheetFunction._WSFunction.cs" />
+    <Compile Include="Modules\ApplicationModule.cs" />
     <Compile Include="Tools\Attributes\COMRtdServerAttribute.cs" />
     <Compile Include="Tools\Contribution\FileExtension.cs" />
     <Compile Include="Tools\RealtimeDataServer.cs" />
@@ -1910,7 +1911,6 @@
     <Compile Include="Events\WorkbookEvents.cs" />
     <Compile Include="Events\OLEObjectEvents.cs" />
     <Compile Include="Events\RefreshEvents.cs" />
-    <Compile Include="Modules\Global.cs" />
     <Compile Include="Tools\COMAddin.cs" />
     <Compile Include="Tools\ITaskPane.cs" />
   </ItemGroup>

@@ -99,10 +99,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true);
             permissionsMask = UIntPtr.Zero;
-            object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, encryptionData, permissionsMask);
-            object returnItem = Invoker.MethodReturn(this, "Authenticate", paramsArray, modifiers);
+            object[] paramsArray = new object[] { parentWindow, encryptionData, permissionsMask };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "Authenticate", paramsArray, modifiers);
+
             permissionsMask = (UIntPtr)paramsArray[2];
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -180,8 +182,10 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true);
             remove = false;
-            object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, parentWindow, readOnly, remove);
-            Invoker.Method(this, "ShowSettings", paramsArray, modifiers);
+            object[] paramsArray = new object[] { sessionHandle, parentWindow, readOnly, remove };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "ShowSettings", paramsArray, modifiers);
+
             remove = (bool)paramsArray[3];
         }
 

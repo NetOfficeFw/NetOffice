@@ -77,8 +77,10 @@ namespace NetOffice.OfficeApi.Behind
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             blogPictureProvider = string.Empty;
             friendlyName = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(blogPictureProvider, friendlyName);
-            Invoker.Method(this, "BlogPictureProviderProperties", paramsArray, modifiers);
+            object[] paramsArray = new object[] { blogPictureProvider, friendlyName };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "BlogPictureProviderProperties", paramsArray, modifiers);
+            
             blogPictureProvider = paramsArray[0] as string;
             friendlyName = paramsArray[1] as string;
         }
@@ -112,8 +114,8 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, true, false);
             pictureURI = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, image, pictureURI, imageType);
-            Invoker.Method(this, "PublishPicture", paramsArray, modifiers);
+            object[] paramsArray = new object[] { account, parentWindow, document, image, pictureURI, imageType };
+            InvokerService.InvokeInternal.ExecuteMethod(this, "PublishPicture", paramsArray, modifiers);
             pictureURI = paramsArray[4] as string;
         }
 

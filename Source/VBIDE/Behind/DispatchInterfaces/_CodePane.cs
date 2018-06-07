@@ -173,8 +173,10 @@ namespace NetOffice.VBIDEApi.Behind
             startColumn = 0;
             endLine = 0;
             endColumn = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(startLine, startColumn, endLine, endColumn);
-            Invoker.Method(this, "GetSelection", paramsArray, modifiers);
+            object[] paramsArray = new object[] { startLine, startColumn, endLine, endColumn };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "GetSelection", paramsArray, modifiers);
+
             startLine = (Int32)paramsArray[0];
             startColumn = (Int32)paramsArray[1];
             endLine = (Int32)paramsArray[2];

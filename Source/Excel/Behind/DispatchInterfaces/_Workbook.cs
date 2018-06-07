@@ -4729,14 +4729,17 @@ namespace NetOffice.ExcelApi.Behind
         public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImport(string url, out NetOffice.ExcelApi.XmlMap importMap, object overwrite, object destination)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false, false);
-            object[] paramsArray = Invoker.ValidateParamsArray(url, new object(), overwrite, destination);
-            object returnItem = Invoker.MethodReturn(this, "XmlImport", paramsArray, modifiers);            
+            object[] paramsArray = new object[] { url, new object(), overwrite, destination };
+
+            NetOffice.ExcelApi.Enums.XlXmlImportResult returnItem = 
+                InvokerService.InvokeInternal.ExecuteEnumMethodGetExtended<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "XmlImport", paramsArray, modifiers);
+
             if (paramsArray[1] is MarshalByRefObject)
                 importMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(this, paramsArray[1], typeof(NetOffice.ExcelApi.XmlMap));
             else
                 importMap = null;
-            int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-            return (NetOffice.ExcelApi.Enums.XlXmlImportResult)intReturnItem;
+
+            return returnItem;
         }
 
         /// <summary>
@@ -4750,14 +4753,17 @@ namespace NetOffice.ExcelApi.Behind
         public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImport(string url, out NetOffice.ExcelApi.XmlMap importMap)
         {            
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
-            object[] paramsArray = Invoker.ValidateParamsArray(url, new object());
-            object returnItem = Invoker.MethodReturn(this, "XmlImport", paramsArray, modifiers);
+            object[] paramsArray = new object[] { url, new object() };
+
+            NetOffice.ExcelApi.Enums.XlXmlImportResult returnItem = 
+                InvokerService.InvokeInternal.ExecuteEnumMethodGetExtended<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "XmlImport", paramsArray, modifiers);
+
             if (paramsArray[1] is MarshalByRefObject)
                 importMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(this, paramsArray[1], typeof(NetOffice.ExcelApi.XmlMap));
             else
                 importMap = null;
-            int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-            return (NetOffice.ExcelApi.Enums.XlXmlImportResult)intReturnItem;
+
+            return returnItem;
          }
 
         /// <summary>
@@ -4772,14 +4778,17 @@ namespace NetOffice.ExcelApi.Behind
         public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImport(string url, out NetOffice.ExcelApi.XmlMap importMap, object overwrite)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false);
-            object[] paramsArray = Invoker.ValidateParamsArray(url, new object(), overwrite);
-            object returnItem = Invoker.MethodReturn(this, "XmlImport", paramsArray, modifiers);
+            object[] paramsArray = new object[] { url, new object(), overwrite };
+
+            NetOffice.ExcelApi.Enums.XlXmlImportResult returnItem = 
+                InvokerService.InvokeInternal.ExecuteEnumMethodGetExtended<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "XmlImport", paramsArray, modifiers);
+
             if (paramsArray[1] is MarshalByRefObject)
                 importMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(this, paramsArray[1], typeof(NetOffice.ExcelApi.XmlMap));
             else
                 importMap = null;
-            int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-            return (NetOffice.ExcelApi.Enums.XlXmlImportResult)intReturnItem;
+
+            return returnItem;
         }
 
         /// <summary>
@@ -4794,14 +4803,17 @@ namespace NetOffice.ExcelApi.Behind
         public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, out NetOffice.ExcelApi.XmlMap importMap, object overwrite, object destination)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false, false);
-            object[] paramsArray = Invoker.ValidateParamsArray(data, new object(), overwrite, destination);
-            object returnItem = Invoker.MethodReturn(this, "XmlImportXml", paramsArray, modifiers);
+            object[] paramsArray = new object[] { data, new object(), overwrite, destination };
+
+            NetOffice.ExcelApi.Enums.XlXmlImportResult returnItem = 
+                InvokerService.InvokeInternal.ExecuteEnumMethodGetExtended<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "XmlImportXml", paramsArray, modifiers);
+
             if (paramsArray[1] is MarshalByRefObject)
                 importMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(this, paramsArray[1], typeof(NetOffice.ExcelApi.XmlMap));
             else
                 importMap = null;
-            int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-            return (NetOffice.ExcelApi.Enums.XlXmlImportResult)intReturnItem;
+
+            return returnItem;
         }
 
         /// <summary>
@@ -4815,14 +4827,17 @@ namespace NetOffice.ExcelApi.Behind
         public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, out NetOffice.ExcelApi.XmlMap importMap)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
-            object[] paramsArray = Invoker.ValidateParamsArray(data, new object());
-            object returnItem = Invoker.MethodReturn(this, "XmlImportXml", paramsArray, modifiers);
+            object[] paramsArray = new object[] { data, new object() };
+
+            NetOffice.ExcelApi.Enums.XlXmlImportResult returnItem = 
+                InvokerService.InvokeInternal.ExecuteEnumMethodGetExtended<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "XmlImportXml", paramsArray, modifiers);
+
             if (paramsArray[1] is MarshalByRefObject)
                 importMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(this, paramsArray[1], typeof(NetOffice.ExcelApi.XmlMap));
             else
                 importMap = null;
-            int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-            return (NetOffice.ExcelApi.Enums.XlXmlImportResult)intReturnItem;
+
+            return returnItem;
         }
 
         /// <summary>
@@ -4837,14 +4852,17 @@ namespace NetOffice.ExcelApi.Behind
         public virtual NetOffice.ExcelApi.Enums.XlXmlImportResult XmlImportXml(string data, out NetOffice.ExcelApi.XmlMap importMap, object overwrite)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false);
-            object[] paramsArray = Invoker.ValidateParamsArray(data, new object(), overwrite);
-            object returnItem = Invoker.MethodReturn(this, "XmlImportXml", paramsArray, modifiers);
+            object[] paramsArray = new object[] { data, new object(), overwrite };
+
+            NetOffice.ExcelApi.Enums.XlXmlImportResult returnItem = 
+                InvokerService.InvokeInternal.ExecuteEnumMethodGetExtended<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "XmlImportXml", paramsArray, modifiers);
+
             if (paramsArray[1] is MarshalByRefObject)
                 importMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(this, paramsArray[1], typeof(NetOffice.ExcelApi.XmlMap));
             else
                 importMap = null;
-            int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-            return (NetOffice.ExcelApi.Enums.XlXmlImportResult)intReturnItem;
+
+            return returnItem;
         }
 
         /// <summary>

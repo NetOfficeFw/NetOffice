@@ -40,7 +40,8 @@ namespace NetOffice.ExcelApi.Behind
             get
             {
                 if (null == _type)
-                    _type = typeof(XmlMap);                return _type;
+                    _type = typeof(XmlMap);
+                return _type;
             }
         }
         
@@ -422,11 +423,13 @@ namespace NetOffice.ExcelApi.Behind
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			data = string.Empty;
-			object[] paramsArray = Invoker.ValidateParamsArray(data);
-			object returnItem = Invoker.MethodReturn(this, "ExportXml", paramsArray, modifiers);
-			data = paramsArray[0] as string;
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.ExcelApi.Enums.XlXmlExportResult)intReturnItem;
+            object[] paramsArray = new object[] { data };
+
+            NetOffice.ExcelApi.Enums.XlXmlExportResult returnItem = 
+                InvokerService.InvokeInternal.ExecuteEnumMethodGetExtended<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "ExportXml", paramsArray, modifiers);
+
+            data = paramsArray[0] as string;
+			return returnItem;
 		}
 
 		#endregion

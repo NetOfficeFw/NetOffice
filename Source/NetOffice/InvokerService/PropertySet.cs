@@ -104,12 +104,12 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static void ExecutePropertySetInternal(this COMObject caller, string name, object[] args)
+        internal static void ExecutePropertySetInternal(this COMObject caller, string name, object[] args)
         {
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertySet, name, args);
-                caller.ExecutePropertySet(name, args);
+                caller.CallPropertySet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertySet, name, args, null != args && args.Length > 0 ? args[args.Length -1] : null);
             }
             catch (Exception exception)
@@ -218,12 +218,12 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static void ExecuteValuePropertySetInternal(this COMObject caller, string name, object[] args)
+        internal static void ExecuteValuePropertySetInternal(this COMObject caller, string name, object[] args)
         {
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertySet, name, args);
-                caller.ExecutePropertySet(name, args);
+                caller.CallPropertySet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertySet, name, args, null != args && args.Length > 0 ? args[args.Length - 1] : null);
             }
             catch (Exception exception)
@@ -332,12 +332,12 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static void ExecuteValuePropertySetInternal<T>(this COMObject caller, string name, object[] args)
+        internal static void ExecuteValuePropertySetInternal<T>(this COMObject caller, string name, object[] args)
         {
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertySet, name, args);
-                caller.ExecutePropertySet(name, args);
+                caller.CallPropertySet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertySet, name, args, null != args && args.Length > 0 ? args[args.Length - 1] : null);
             }
             catch (Exception exception)
@@ -446,12 +446,12 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static void ExecuteEnumPropertySetInternal(this COMObject caller, string name, object[] args)
+        internal static void ExecuteEnumPropertySetInternal(this COMObject caller, string name, object[] args)
         {
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertySet, name, args);
-                caller.ExecutePropertySet(name, args);
+                caller.CallPropertySet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertySet, name, args, null != args && args.Length > 0 ? args[args.Length - 1] : null);
             }
             catch (Exception exception)
@@ -560,12 +560,12 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static void ExecuteReferencePropertySetInternal(this COMObject caller, string name, object[] args)
+        internal static void ExecuteReferencePropertySetInternal(this COMObject caller, string name, object[] args)
         {
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertySet, name, args);
-                caller.ExecutePropertySet(name, args);
+                caller.CallPropertySet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertySet, name, args, null != args && args.Length > 0 ? args[args.Length - 1] : null);
             }
             catch (Exception exception)
@@ -674,12 +674,12 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static void ExecuteReferencePropertySetInternal<T>(this COMObject caller, string name, object[] args) where T : class, ICOMObject
+        internal static void ExecuteReferencePropertySetInternal<T>(this COMObject caller, string name, object[] args) where T : class, ICOMObject
         {
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertySet, name, args);
-                caller.ExecutePropertySet(name, args);
+                caller.CallPropertySet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertySet, name, args, null != args && args.Length > 0 ? args[args.Length - 1] : null);
             }
             catch (Exception exception)
@@ -788,12 +788,12 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static void ExecuteVariantPropertySetInternal(this COMObject caller, string name, object[] args)
+        internal static void ExecuteVariantPropertySetInternal(this COMObject caller, string name, object[] args)
         {
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertySet, name, args);
-                caller.ExecutePropertySet(name, args);
+                caller.CallPropertySet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertySet, name, args, null != args && args.Length > 0 ? args[args.Length - 1] : null);
             }
             catch (Exception exception)
@@ -902,12 +902,12 @@ namespace NetOffice.InvokerService
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        public static void ExecuteVariantPropertySetInternal<T>(this COMObject caller, string name, object[] args) where T : class, ICOMObject
+        internal static void ExecuteVariantPropertySetInternal<T>(this COMObject caller, string name, object[] args) where T : class, ICOMObject
         {
             try
             {
                 caller.BeforeExecute(ExecuteMode.PropertySet, name, args);
-                caller.ExecutePropertySet(name, args);
+                caller.CallPropertySet(name, args);
                 caller.AfterExecute(ExecuteMode.PropertySet, name, args, null != args && args.Length > 0 ? args[args.Length - 1] : null);
             }
             catch (Exception exception)

@@ -75,10 +75,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pfMacroEnabled = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(pfMacroEnabled);
-            object returnItem = Invoker.MethodReturn(this, "HrGetMacroEnabled", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pfMacroEnabled };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrGetMacroEnabled", paramsArray, modifiers);
+
             pfMacroEnabled = (Int32)paramsArray[0];
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -91,10 +93,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pFormat = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(pFormat);
-            object returnItem = Invoker.MethodReturn(this, "HrCheckFormat", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pFormat };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrCheckFormat", paramsArray, modifiers);
+
             pFormat = (Int32)paramsArray[0];
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -107,10 +111,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pfLossySave = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(pfLossySave);
-            object returnItem = Invoker.MethodReturn(this, "HrGetLossySave", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pfLossySave };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrGetLossySave", paramsArray, modifiers);
+
             pfLossySave = (Int32)paramsArray[0];
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         #endregion

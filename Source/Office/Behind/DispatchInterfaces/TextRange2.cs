@@ -1054,8 +1054,10 @@ namespace NetOffice.OfficeApi.Behind
             y3 = 0;
             x4 = 0;
             y4 = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(x1, y1, x2, y2, x3, y3, x4, y4);
-            Invoker.Method(this, "RotatedBounds", paramsArray, modifiers);
+            object[] paramsArray = new object[] { x1, y1, x2, y2, x3, y3, x4, y4 };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "RotatedBounds", paramsArray, modifiers);
+
             x1 = (Single)paramsArray[0];
             y1 = (Single)paramsArray[1];
             x2 = (Single)paramsArray[2];

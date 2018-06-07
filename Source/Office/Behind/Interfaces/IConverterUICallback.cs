@@ -89,10 +89,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true);
             pidResult = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, uType, pidResult);
-            object returnItem = Invoker.MethodReturn(this, "HrMessageBox", paramsArray, modifiers);
+            object[] paramsArray = new object[] { bstrText, bstrCaption, uType, pidResult };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrMessageBox", paramsArray, modifiers);
+
             pidResult = (Int32)paramsArray[3];
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -108,10 +110,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true, false);
             pbstrInput = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, pbstrInput, fPassword);
-            object returnItem = Invoker.MethodReturn(this, "HrInputBox", paramsArray, modifiers);
+            object[] paramsArray = new object[] { bstrText, bstrCaption, pbstrInput, fPassword };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrInputBox", paramsArray, modifiers);
+
             pbstrInput = paramsArray[2] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         #endregion

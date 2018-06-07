@@ -8,6 +8,7 @@ using NetOffice.Availity;
 using NetOffice.Exceptions;
 using NetOffice.CoreServices;
 using NetOffice.InvokerService;
+using System.Reflection;
 
 namespace NetOffice
 {
@@ -504,11 +505,12 @@ namespace NetOffice
         /// </summary>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
+        /// <param name="modifiers">optional modifiers to deal with ref and out arguments</param>
         /// <returns>unknown</returns>
-        protected internal virtual object ExecutePropertyGet(string name, object[] args)
+        protected internal virtual object CallPropertyGet(string name, object[] args, ParameterModifier[] modifiers = null)
         {
             args = Invoker.ValidateParamsArray(args);
-            return ExecuteArgumentValidatedPropertyGet(name, args);
+            return CallArgumentValidatedPropertyGet(name, args, modifiers);
         }
 
         /// <summary>
@@ -516,10 +518,14 @@ namespace NetOffice
         /// </summary>
         /// <param name="name">property name</param>
         /// <param name="validatedArgs">validated arguments as any</param>
+        /// <param name="modifiers">optional modifiers to deal with ref and out arguments</param>
         /// <returns>unknown</returns>
-        protected internal virtual object ExecuteArgumentValidatedPropertyGet(string name, object[] validatedArgs)
+        protected internal virtual object CallArgumentValidatedPropertyGet(string name, object[] validatedArgs, ParameterModifier[] modifiers = null)
         {
-            return Invoker.PropertyGet(this, name, validatedArgs);
+            if (null != modifiers)
+                return Invoker.PropertyGet(this, name, validatedArgs, modifiers);
+            else
+                return Invoker.PropertyGet(this, name, validatedArgs);
         }
 
         #endregion
@@ -531,10 +537,10 @@ namespace NetOffice
         /// </summary>
         /// <param name="name">property name</param>
         /// <param name="args">arguments as any</param>
-        protected internal virtual void ExecutePropertySet(string name, object[] args)
+        protected internal virtual void CallPropertySet(string name, object[] args)
         {
-            var validatedArgs = Invoker.ValidateParamsArray(args);            
-            ExecuteArgumentValidatedPropertySet(name, validatedArgs);
+            var validatedArgs = Invoker.ValidateParamsArray(args);
+            CallArgumentValidatedPropertySet(name, validatedArgs);
         }
 
         /// <summary>
@@ -542,24 +548,25 @@ namespace NetOffice
         /// </summary>
         /// <param name="name">property name</param>
         /// <param name="validatedArgs">validated arguments as any</param>
-        protected internal virtual void ExecuteArgumentValidatedPropertySet(string name, object[] validatedArgs)
+        protected internal virtual void CallArgumentValidatedPropertySet(string name, object[] validatedArgs)
         {
             Invoker.PropertySet(this, name, validatedArgs);
         }
 
         #endregion
 
-        #region ICOMObjectExecuteMethodGet
+        #region ICOMObjectExecuteMethod
 
         /// <summary>
         /// Validate arguments and call ExecuteArgumentValidatedMethod
         /// </summary>
         /// <param name="name">method name</param>
         /// <param name="args">arguments as any</param>
-        protected internal void ExecuteMethod(string name, object[] args)
+        /// <param name="modifiers">optional modifiers to deal with ref and out arguments</param>
+        protected internal void CallMethod(string name, object[] args, ParameterModifier[] modifiers = null)
         {
             args = Invoker.ValidateParamsArray(args);
-            ExecuteArgumentValidatedMethod(name, args);
+            CallArgumentValidatedMethod(name, args, modifiers);
         }
 
         /// <summary>
@@ -567,9 +574,13 @@ namespace NetOffice
         /// </summary>
         /// <param name="name">method name</param>
         /// <param name="validatedArgs">validated arguments as any</param>
-        protected internal void ExecuteArgumentValidatedMethod(string name, object[] validatedArgs)
+        /// <param name="modifiers">optional modifiers to deal with ref and out arguments</param>
+        protected internal void CallArgumentValidatedMethod(string name, object[] validatedArgs, ParameterModifier[] modifiers = null)
         {
-            Invoker.Method(this, name, validatedArgs);
+            if (null != modifiers)
+                Invoker.Method(this, name, validatedArgs, modifiers);
+            else
+                Invoker.Method(this, name, validatedArgs);
         }
 
         /// <summary>
@@ -577,10 +588,11 @@ namespace NetOffice
         /// </summary>
         /// <param name="name">method name</param>
         /// <param name="args">arguments as any</param>
-        protected internal virtual object ExecuteMethodGet(string name, object[] args)
+        /// <param name="modifiers">optional modifiers to deal with ref and out arguments</param>
+        protected internal virtual object CallMethodGet(string name, object[] args, ParameterModifier[] modifiers = null)
         {
             args = Invoker.ValidateParamsArray(args);
-            return ExecuteArgumentValidatedMethodGet(name, args);
+            return CallArgumentValidatedMethodGet(name, args, modifiers);
         }
 
         /// <summary>
@@ -588,9 +600,13 @@ namespace NetOffice
         /// </summary>
         /// <param name="name">method name</param>
         /// <param name="validatedArgs">validated arguments as any</param>
-        protected internal virtual object ExecuteArgumentValidatedMethodGet(string name, object[] validatedArgs)
+        /// <param name="modifiers">optional modifiers to deal with ref and out arguments</param>
+        protected internal virtual object CallArgumentValidatedMethodGet(string name, object[] validatedArgs, ParameterModifier[] modifiers = null)
         {
-            return Invoker.MethodReturn(this, name, validatedArgs);
+            if (null != modifiers)
+                return Invoker.MethodReturn(this, name, validatedArgs, modifiers);
+            else
+                return Invoker.MethodReturn(this, name, validatedArgs);
         }
 
         #endregion

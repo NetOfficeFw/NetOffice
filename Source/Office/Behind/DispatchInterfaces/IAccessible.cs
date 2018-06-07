@@ -485,10 +485,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pszHelpFile = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(pszHelpFile);
-            object returnItem = Invoker.PropertyGet(this, "accHelpTopic", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pszHelpFile };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32PropertyGetExtended(this, "accHelpTopic", paramsArray, modifiers);
+
             pszHelpFile = paramsArray[0] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -603,8 +605,10 @@ namespace NetOffice.OfficeApi.Behind
             pyTop = 0;
             pcxWidth = 0;
             pcyHeight = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(pxLeft, pyTop, pcxWidth, pcyHeight, varChild);
-            Invoker.Method(this, "accLocation", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pxLeft, pyTop, pcxWidth, pcyHeight, varChild };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "accLocation", paramsArray, modifiers);
+
             pxLeft = (Int32)paramsArray[0];
             pyTop = (Int32)paramsArray[1];
             pcxWidth = (Int32)paramsArray[2];
@@ -628,8 +632,10 @@ namespace NetOffice.OfficeApi.Behind
             pyTop = 0;
             pcxWidth = 0;
             pcyHeight = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(pxLeft, pyTop, pcxWidth, pcyHeight);
-            Invoker.Method(this, "accLocation", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pxLeft, pyTop, pcxWidth, pcyHeight };
+
+            InvokerService.InvokeInternal.ExecuteMethodExtended(this, "accLocation", paramsArray, modifiers);
+
             pxLeft = (Int32)paramsArray[0];
             pyTop = (Int32)paramsArray[1];
             pcxWidth = (Int32)paramsArray[2];

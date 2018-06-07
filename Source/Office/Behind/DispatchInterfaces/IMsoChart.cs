@@ -1914,19 +1914,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true);
             objType = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(varName, localeID, objType);
-            object returnItem = Invoker.MethodReturn(this, "Evaluate", paramsArray, modifiers);
-            if ((null != returnItem) && (returnItem is MarshalByRefObject))
-            {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
-                objType = (Int32)paramsArray[2];
-                return newObject;
-            }
-            else
-            {
-                objType = (Int32)paramsArray[2];
-                return returnItem;
-            }
+            object[] paramsArray = new object[] { varName, localeID, objType };
+
+            object returnItem = InvokerService.InvokeInternal.ExecuteVariantMethodGet(this, "Evaluate", paramsArray, modifiers);
+
+            objType = (Int32)paramsArray[2];
+            return returnItem;
         }
 
         /// <summary>

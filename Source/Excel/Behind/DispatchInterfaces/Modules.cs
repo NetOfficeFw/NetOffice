@@ -21,7 +21,8 @@ namespace NetOffice.ExcelApi.Behind
 		#region Type Information
 
         /// <summary>
-        /// Instance Type        /// </summary>
+        /// Instance Type
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
@@ -39,7 +40,8 @@ namespace NetOffice.ExcelApi.Behind
             get
             {
                 if (null == _type)
-                    _type = typeof(Modules);                return _type;
+                    _type = typeof(Modules);
+                return _type;
             }
         }
         

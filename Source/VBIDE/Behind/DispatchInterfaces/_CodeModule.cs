@@ -227,10 +227,13 @@ namespace NetOffice.VBIDEApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
             procKind = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(line, procKind);
-            object returnItem = Invoker.PropertyGet(this, "ProcOfLine", paramsArray, modifiers);
+            object[] paramsArray = new object[] { line, procKind };
+
+            
+            string returnItem = InvokerService.InvokeInternal.ExecuteStringPropertyGetExtended(this, "ProcOfLine", paramsArray, modifiers);
+
             procKind = (NetOffice.VBIDEApi.Enums.vbext_ProcKind)paramsArray[1];
-            return NetRuntimeSystem.Convert.ToString(returnItem);
+            return returnItem;
         }
 
         /// <summary>

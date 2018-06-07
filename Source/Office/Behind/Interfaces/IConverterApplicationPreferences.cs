@@ -75,10 +75,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             plcid = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(plcid);
-            object returnItem = Invoker.MethodReturn(this, "HrGetLcid", paramsArray, modifiers);
+            object[] paramsArray = new object[] { plcid };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrGetLcid", paramsArray, modifiers);
+
             plcid = (Int32)paramsArray[0];
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -91,10 +93,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             phwnd = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(phwnd);
-            object returnItem = Invoker.MethodReturn(this, "HrGetHwnd", paramsArray, modifiers);
+            object[] paramsArray = new object[] { phwnd };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrGetHwnd", paramsArray, modifiers);
+
             phwnd = (Int32)paramsArray[0];
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -107,10 +111,12 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pbstrApplication = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(pbstrApplication);
-            object returnItem = Invoker.MethodReturn(this, "HrGetApplication", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pbstrApplication };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrGetApplication", paramsArray, modifiers);
+
             pbstrApplication = paramsArray[0] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -123,10 +129,10 @@ namespace NetOffice.OfficeApi.Behind
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
             pFormat = 0;
-            object[] paramsArray = Invoker.ValidateParamsArray(pFormat);
-            object returnItem = Invoker.MethodReturn(this, "HrCheckFormat", paramsArray, modifiers);
+            object[] paramsArray = new object[] { pFormat };
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "HrCheckFormat", paramsArray, modifiers);
             pFormat = (Int32)paramsArray[0];
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         #endregion

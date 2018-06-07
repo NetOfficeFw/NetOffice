@@ -57,7 +57,7 @@ namespace NetOffice.OfficeApi.Behind
 
 		}
 
-		#endregion
+        #endregion
 
         #region Properties
 
@@ -77,11 +77,13 @@ namespace NetOffice.OfficeApi.Behind
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             name = string.Empty;
             desc = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(name, desc);
-            object returnItem = Invoker.MethodReturn(this, "GetInfo", paramsArray, modifiers);
+            object[] paramsArray = new object[] { name, desc };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "GetInfo", paramsArray, modifiers);
+
             name = paramsArray[0] as string;
             desc = paramsArray[1] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -99,12 +101,14 @@ namespace NetOffice.OfficeApi.Behind
             status = 0;
             result = string.Empty;
             action = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(doc, status, result, action);
-            object returnItem = Invoker.MethodReturn(this, "Inspect", paramsArray, modifiers);
+            object[] paramsArray = new object[] { doc, status, result, action };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "Inspect", paramsArray, modifiers);
+
             status = (NetOffice.OfficeApi.Enums.MsoDocInspectorStatus)paramsArray[1];
             result = paramsArray[2] as string;
             action = paramsArray[3] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         /// <summary>
@@ -121,11 +125,13 @@ namespace NetOffice.OfficeApi.Behind
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true, true);
             status = 0;
             result = string.Empty;
-            object[] paramsArray = Invoker.ValidateParamsArray(doc, hwnd, status, result);
-            object returnItem = Invoker.MethodReturn(this, "Fix", paramsArray, modifiers);
+            object[] paramsArray = new object[] { doc, hwnd, status, result };
+
+            Int32 returnItem = InvokerService.InvokeInternal.ExecuteInt32MethodGetExtended(this, "Fix", paramsArray, modifiers);
+
             status = (NetOffice.OfficeApi.Enums.MsoDocInspectorStatus)paramsArray[2];
             result = paramsArray[3] as string;
-            return NetRuntimeSystem.Convert.ToInt32(returnItem);
+            return returnItem;
         }
 
         #endregion
