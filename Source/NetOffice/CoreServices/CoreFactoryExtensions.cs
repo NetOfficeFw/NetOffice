@@ -45,7 +45,7 @@ namespace NetOffice.CoreServices
         internal static IFactoryInfo GetFactoryInfo(this Core value,
             ICOMObject caller, object comProxy, bool throwException)
         {
-            return GetFactoryInfo(value, value.TypeComponentIdCache, caller, comProxy, throwException);
+            return GetFactoryInfo(value, value.InternalCache.TypeComponentIdCache, caller, comProxy, throwException);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace NetOffice.CoreServices
             Dictionary<Guid, Guid> hostCache, ICOMObject caller,
             object comProxy,  bool throwException)
         {
-            if (value.Assemblies.Count == 0)
+            if (value.InternalFactories.FactoryAssemblies.Count == 0)
                 return null;
 
             string className = ComTypes.TypeDescriptor.GetClassName(comProxy);
@@ -72,7 +72,7 @@ namespace NetOffice.CoreServices
             {
                 // special case: if its a known duplicated type
                 // we prefer to use the type from the caller component
-                foreach (IFactoryInfo item in value.Assemblies)
+                foreach (IFactoryInfo item in value.InternalFactories.FactoryAssemblies)
                 {
                     if (item.AssemblyName != caller.InstanceComponentName)
                         continue;
@@ -83,7 +83,7 @@ namespace NetOffice.CoreServices
             }
             else
             {
-                foreach (IFactoryInfo item in value.Assemblies)
+                foreach (IFactoryInfo item in value.InternalFactories.FactoryAssemblies)
                 {
                     foreach (var guid in item.ComponentGuid)
                         if (true == guid.Equals(hostGuid))
@@ -93,7 +93,7 @@ namespace NetOffice.CoreServices
 
             // failback because some types was multiple defined by its class id (not allowed in COM but in fact MS do this)
             // list of known multiple defined types is available on netoffice.codeplex.com or Attributes\DuplicateAttribute.cs
-            foreach (IFactoryInfo item in value.Assemblies)
+            foreach (IFactoryInfo item in value.InternalFactories.FactoryAssemblies)
             {
                 bool hasComponentID = null != item.ComponentGuid ? item.ComponentGuid.Contains(hostGuid) : false;
                 if (item.Contains(className) && hasComponentID)
@@ -107,7 +107,7 @@ namespace NetOffice.CoreServices
             {
                 string message = string.Format("Class {0}:{1} not found in loaded NetOffice Assemblies{2}", hostGuid, className, Environment.NewLine);
                 message += string.Format("Currently loaded NetOfficeApi Assemblies{0}", Environment.NewLine);
-                foreach (IFactoryInfo item in value.Assemblies)
+                foreach (IFactoryInfo item in value.InternalFactories.FactoryAssemblies)
                     message += string.Format("Loaded NetOffice Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
 
                 throw new FactoryException(message);
@@ -135,7 +135,7 @@ namespace NetOffice.CoreServices
             COMTypes.ITypeLib parentTypeLib = null;
             Guid parentGuid = Guid.Empty;
 
-            if (!value.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
+            if (!value.InternalCache.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
             {
                 int i = 0;
                 typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
@@ -150,7 +150,7 @@ namespace NetOffice.CoreServices
                 parentTypeLib.ReleaseTLibAttr(attributesPointer);
                 Marshal.ReleaseComObject(parentTypeLib);
 
-                value.TypeComponentIdCache.Add(typeGuid, parentGuid);
+                value.InternalCache.TypeComponentIdCache.Add(typeGuid, parentGuid);
             }
 
             Marshal.ReleaseComObject(typeInfo);
@@ -178,7 +178,7 @@ namespace NetOffice.CoreServices
             Guid typeGuid = typeInfo.GetTypeGuid();
             Guid parentGuid = Guid.Empty;
 
-            if (!value.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
+            if (!value.InternalCache.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
             {
                 int i = 0;
                 typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
@@ -193,7 +193,7 @@ namespace NetOffice.CoreServices
                 parentTypeLib.ReleaseTLibAttr(attributesPointer);
                 Marshal.ReleaseComObject(parentTypeLib);
 
-                value.TypeComponentIdCache.Add(typeGuid, parentGuid);
+                value.InternalCache.TypeComponentIdCache.Add(typeGuid, parentGuid);
             }
 
             Marshal.ReleaseComObject(typeInfo);

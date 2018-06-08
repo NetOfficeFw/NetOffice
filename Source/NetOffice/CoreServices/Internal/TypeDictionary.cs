@@ -10,6 +10,14 @@ namespace NetOffice.CoreServices.Internal
     /// </summary>
     internal class TypeDictionary : List<TypeInformation>
     {
+        #region Fields
+
+        private object _thisLock = new object();
+
+        #endregion
+        
+        #region Methods
+
         /// <summary>
         /// Get type info by full qualified contract name
         /// </summary>
@@ -22,15 +30,18 @@ namespace NetOffice.CoreServices.Internal
             if (String.IsNullOrWhiteSpace(fullContractName))
                 throw new ArgumentNullException("fullContractName");
 
-            foreach (var item in this)
+            lock (_thisLock)
             {
-                if (fullContractName == item.Contract.FullName)
+                foreach (var item in this)
                 {
-                    typeInfo = item;
-                    return true;
+                    if (fullContractName == item.Contract.FullName)
+                    {
+                        typeInfo = item;
+                        return true;
+                    }
                 }
+                return false;
             }
-            return false;
         }
 
         /// <summary>
@@ -48,15 +59,18 @@ namespace NetOffice.CoreServices.Internal
             if (!contract.IsInterface)
                 throw new ArgumentException("contract is not an interface.");
 
-            foreach (var item in this)
+            lock (_thisLock)
             {
-                if (contract == item.Contract)
+                foreach (var item in this)
                 {
-                    typeInfo = item;
-                    return true;
+                    if (contract == item.Contract)
+                    {
+                        typeInfo = item;
+                        return true;
+                    }
                 }
-            }
-            return false;
+                return false;
+            }          
         }
 
         /// <summary>
@@ -74,15 +88,18 @@ namespace NetOffice.CoreServices.Internal
             if (!contract.IsInterface)
                 throw new ArgumentException("contract is not an interface.");
 
-            foreach (var item in this)
+            lock (_thisLock)
             {
-                if (contract == item.Contract)
+                foreach (var item in this)
                 {
-                    proxy = item.Proxy;
-                    return true;
+                    if (contract == item.Contract)
+                    {
+                        proxy = item.Proxy;
+                        return true;
+                    }
                 }
+                return false;
             }
-            return false;
         }
 
         /// <summary>
@@ -102,14 +119,36 @@ namespace NetOffice.CoreServices.Internal
             if (null == proxy)
                 throw new ArgumentNullException("proxy");
 
-            if (!contract.IsInterface)
-                throw new ArgumentException("contract is not an interface.");
-            if (implementation.IsInterface)
-                throw new ArgumentException("implementation must be a class.");
-            if (!proxy.IsCOMObject)
-                throw new ArgumentException("proxy must be a com object.");
+            lock (_thisLock)
+            {
+                if (!contract.IsInterface)
+                    throw new ArgumentException("contract is not an interface.");
+                if (implementation.IsInterface)
+                    throw new ArgumentException("implementation must be a class.");
+                if (!proxy.IsCOMObject)
+                    throw new ArgumentException("proxy must be a com object.");
 
-            Add(new TypeInformation(contract, implementation, proxy));
+                Add(new TypeInformation(contract, implementation, proxy));
+            }         
         }
+
+        /// <summary>
+        /// Creates an enumerable copy
+        /// </summary>
+        /// <returns>newly created copy</returns>
+        internal IEnumerable<TypeInformation> ToEnumerable()
+        {
+            lock (_thisLock)
+            {
+                TypeInformation[] result = new TypeInformation[Count];
+                for (int i = 0; i < Count; i++)
+                {
+                    result[i] = this[i].Clone();
+                }
+                return result;
+            }
+        }
+
+        #endregion
     }
 }

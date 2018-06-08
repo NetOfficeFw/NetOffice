@@ -6,13 +6,14 @@ namespace NetOffice.Loader
     /// <summary>
     /// Dependent assembly description
     /// </summary>
-    internal struct DependentAssembly
+    public class DependentAssembly
     {
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
         /// <param name="name">Name of the dependent assembly</param>
         /// <param name="parentAssembly">assembly that is required from</param>
+        /// <exception cref="ArgumentNullException">argument is null or empty</exception>
         internal DependentAssembly(string name, Assembly parentAssembly)
         {
             if (String.IsNullOrWhiteSpace(name))

@@ -7,6 +7,9 @@ using NetOffice.Exceptions;
 
 namespace NetOffice.CoreServices.Internal
 {
+    /// <summary>
+    /// Core Activation Services
+    /// </summary>
     internal class CoreActivator : ICoreActivator
     {
         #region Ctor

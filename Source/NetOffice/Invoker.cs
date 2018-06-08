@@ -15,11 +15,16 @@ namespace NetOffice
     public class Invoker
     {
         #region Fields
+       
+        /// <summary>
+        /// lock field to shared default invoker
+        /// </summary>
+        private static object _defaultLock = new object();
 
         /// <summary>
         /// lock field to perform thread safe operations
         /// </summary>
-        private static object _lockInstance = new object();
+        private object _thisLock = new object();
 
         /// <summary>
         /// shared default invoker
@@ -40,19 +45,21 @@ namespace NetOffice
         /// </summary>
         /// <param name="parentFactory">parent factory</param>
         /// <exception cref="ArgumentNullException">given parent factory is null</exception>
-        internal Invoker(Core parentFactory)
+        protected internal Invoker(Core parentFactory)
         {
             if (null == parentFactory)
                 throw new ArgumentNullException("parentFactory");
             Parent = parentFactory;
+            OnCreate();
         }
-
+       
         /// <summary>
-        /// Creates an instance of the class
+        /// Creates an instance of the class as shared default
         /// </summary>
         internal Invoker()
         {
             IsDefault = true;
+            OnCreate();
         }
 
         #endregion
@@ -66,12 +73,12 @@ namespace NetOffice
         {
             get
             {
-                lock (_lockInstance)
+                lock (_defaultLock)
                 {
                     if (null == _default)
                         _default = new Invoker();
-                    return _default;
                 }
+                return _default;
             }
         }
 
@@ -83,7 +90,7 @@ namespace NetOffice
         /// <summary>
         /// Parent Factory
         /// </summary>
-        internal Core Parent
+        protected internal Core Parent
         {
             get
             {
@@ -98,7 +105,7 @@ namespace NetOffice
         /// <summary>
         /// Associated DebugConsole
         /// </summary>
-        internal DebugConsole Console
+        protected internal DebugConsole Console
         {
             get
             {
@@ -112,7 +119,7 @@ namespace NetOffice
         /// <summary>
         /// Associated Settings
         /// </summary>
-        internal Settings Settings
+        protected internal Settings Settings
         {
             get
             {
@@ -121,6 +128,40 @@ namespace NetOffice
                 else
                     return Settings.Default;
             }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Called from Ctor at last
+        /// </summary>
+        protected internal virtual void OnCreate()
+        {
+
+        }
+
+        /// <summary>
+        /// Before method or property call
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of the method or property</param>
+        /// <param name="args">arguments as any</param>
+        protected internal virtual void BeforeCall(ICOMObject comObject, string name, object[] args)
+        {
+
+        }
+
+        /// <summary>
+        /// After method or property call
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of the method or property</param>
+        /// <param name="args">arguments as any</param>
+        protected internal virtual void AfterCall(ICOMObject comObject, string name, object[] args)
+        {
+
         }
 
         #endregion
@@ -150,49 +191,17 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters and bypass the dispose validation
-        /// </summary>
-        /// <param name="comObject">target object</param>
-        /// <param name="name">name of method</param>
-        /// <param name="paramsArray">array with parameters</param>
-        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        /// <remarks>special workarround for NetOffice.Callers.QuitCaller related to Settings.EnableAutomaticQuit</remarks>
-        internal void MethodBypassDisposeCheck(ICOMObject comObject, string name, object[] paramsArray)
-        {
-            try
-            {
-                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(name);
-
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
-
-                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
-
-                if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
-            }
-            catch (Exception throwedException)
-            {
-                var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
-                    throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
-                Console.WriteException(exception);
-                throw exception;
-            }
-        }
-
-        /// <summary>
         /// Perform method as latebind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public void Method(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual void Method(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -208,11 +217,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -224,10 +237,11 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="value">value to be set</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public void Method(ICOMObject comObject, string name, object[] paramsArray, object value)
+        public virtual void Method(ICOMObject comObject, string name, object[] paramsArray, object value)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -248,11 +262,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -264,10 +282,11 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void MethodWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual void MethodWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
@@ -280,11 +299,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -295,16 +318,20 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public void Method(object comObject, string name, object[] paramsArray)
+        public virtual void Method(object comObject, string name, object[] paramsArray)
         {
+            ICOMObject wrapperInstance = null;
             try
-            {
+            {               
                 object target = null;
                 Type type = null;
 
-                ICOMObject wrapperInstance = comObject as ICOMObject;
+                wrapperInstance = comObject as ICOMObject;
                 if (null != wrapperInstance)
+                {
                     ValidateComObjectIsAlive(wrapperInstance);
+                    BeforeCall(wrapperInstance, name, paramsArray);
+                }
 
                 if (null != wrapperInstance)
                 {
@@ -329,10 +356,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                if (null != wrapperInstance)
+                    AfterCall(wrapperInstance, name, paramsArray);
             }
         }
 
@@ -344,10 +376,11 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public void Method(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public virtual void Method(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -363,13 +396,19 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
             }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
+            }
         }
+
+private static object[] _emptyArgs = new object[0];
 
         /// <summary>
         /// Perform method as latebind call with return value
@@ -378,10 +417,11 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <returns>any return value</returns>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public object MethodReturn(ICOMObject comObject, string name)
+        public virtual object MethodReturn(ICOMObject comObject, string name)
         {
             try
             {
+                BeforeCall(comObject, name, _emptyArgs);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -399,11 +439,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, _emptyArgs);
             }
         }
 
@@ -415,10 +459,11 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public object MethodReturn(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual object MethodReturn(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -436,11 +481,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -453,10 +502,11 @@ namespace NetOffice
         /// <returns>any return value</returns>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object MethodReturnWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual object MethodReturnWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
@@ -471,11 +521,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -488,10 +542,11 @@ namespace NetOffice
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public object MethodReturn(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public virtual object MethodReturn(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -509,11 +564,54 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
+            }
+        }
+
+        /// <summary>
+        /// Perform method as latebind call with parameters and bypass the dispose validation
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
+        /// <remarks>special workarround for NetOffice.Callers.QuitCaller related to Settings.EnableAutomaticQuit</remarks>
+        protected internal virtual void MethodBypassDisposeCheck(ICOMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                BeforeCall(comObject, name, paramsArray);
+
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
+                    throw new EntityNotSupportedException(name);
+
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+
+                comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
+
+                if (measureStarted)
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+            }
+            catch (Exception throwedException)
+            {
+                var exception = new MethodCOMException(
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
+                    throwedException);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                Console.WriteException(exception);
+                throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -550,10 +648,11 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public void SingleMethod(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual void SingleMethod(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -569,11 +668,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -585,10 +688,11 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void SingleMethodWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual void SingleMethodWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
@@ -601,11 +705,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -616,16 +724,21 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public void SingleMethod(object comObject, string name, object[] paramsArray)
+        public virtual void SingleMethod(object comObject, string name, object[] paramsArray)
         {
+            ICOMObject wrapperInstance = null;
             try
             {
                 object target = null;
                 Type type = null;
 
-                ICOMObject wrapperInstance = comObject as ICOMObject;
+                wrapperInstance = comObject as ICOMObject;
                 if (null != wrapperInstance)
+                {
+                    BeforeCall(wrapperInstance, name, paramsArray);
                     ValidateComObjectIsAlive(wrapperInstance);
+
+                }
 
                 if (null != wrapperInstance)
                 {
@@ -650,10 +763,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                if(null != wrapperInstance)
+                    AfterCall(wrapperInstance, name, paramsArray);
             }
         }
 
@@ -665,10 +783,11 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public void SingleMethod(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public virtual void SingleMethod(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.Default.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -684,11 +803,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -699,10 +822,11 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <returns>any return value</returns>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public object SingleMethodReturn(ICOMObject comObject, string name)
+        public virtual object SingleMethodReturn(ICOMObject comObject, string name)
         {
             try
             {
+                BeforeCall(comObject, name, _emptyArgs);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -720,11 +844,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, _emptyArgs);
             }
         }
 
@@ -736,10 +864,11 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public object SingleMethodReturn(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual object SingleMethodReturn(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -757,11 +886,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -774,10 +907,11 @@ namespace NetOffice
         /// <returns>any return value</returns>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object SingleMethodReturnWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual object SingleMethodReturnWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
@@ -792,11 +926,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -809,10 +947,11 @@ namespace NetOffice
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
         /// <exception cref="MethodCOMException">an unexpected error occurs</exception>
-        public object SingleMethodReturn(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public virtual object SingleMethodReturn(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
@@ -830,11 +969,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new MethodCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -849,16 +992,20 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <returns>any return value</returns>
         /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
-        public object PropertyGet(object comObject, string name)
+        public virtual object PropertyGet(object comObject, string name)
         {
+            ICOMObject wrapperInstance = null;
             try
             {
                 object target = null;
                 Type type = null;
 
-                ICOMObject wrapperInstance = comObject as ICOMObject;
+                wrapperInstance = comObject as ICOMObject;
                 if (null != wrapperInstance)
+                {
+                    BeforeCall(wrapperInstance, name, _emptyArgs);
                     ValidateComObjectIsAlive(wrapperInstance);
+                }
 
                 if (null != wrapperInstance)
                 {
@@ -885,10 +1032,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.VersionProviders),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.InternalCache.VersionProviders),
                     throwedException);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                if(null != wrapperInstance)
+                    AfterCall(wrapperInstance, name, _emptyArgs);
             }
         }
 
@@ -899,10 +1051,11 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <returns>any return value</returns>
         /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
-        public object PropertyGet(ICOMObject comObject, string name)
+        public virtual object PropertyGet(ICOMObject comObject, string name)
         {
             try
             {
+                BeforeCall(comObject, name, _emptyArgs);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -920,11 +1073,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.VersionProviders),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.InternalCache.VersionProviders),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, _emptyArgs);
             }
         }
 
@@ -936,16 +1093,20 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
         /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
-        public object PropertyGet(object comObject, string name, object[] paramsArray)
+        public virtual object PropertyGet(object comObject, string name, object[] paramsArray)
         {
+            ICOMObject wrapperInstance = null;
             try
             {
                 object target = null;
                 Type type = null;
 
-                ICOMObject wrapperInstance = comObject as ICOMObject;
+                wrapperInstance = comObject as ICOMObject;
                 if (null != wrapperInstance)
+                {
+                    BeforeCall(wrapperInstance, name, _emptyArgs);
                     ValidateComObjectIsAlive(wrapperInstance);
+                }
 
                 if (null != wrapperInstance)
                 {
@@ -972,10 +1133,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.VersionProviders),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.InternalCache.VersionProviders),
                     throwedException);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                if(null != wrapperInstance)
+                    AfterCall(wrapperInstance, name, _emptyArgs);
             }
         }
 
@@ -991,6 +1157,7 @@ namespace NetOffice
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -1008,11 +1175,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -1025,10 +1196,11 @@ namespace NetOffice
         /// <returns>any return value</returns>
         /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object PropertyGetWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
+        public virtual object PropertyGetWithoutSafeMode(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
@@ -1043,11 +1215,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -1060,10 +1236,11 @@ namespace NetOffice
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
         /// <exception cref="PropertyGetCOMException">an unexpected error occurs</exception>
-        public object PropertyGet(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public virtual object PropertyGet(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -1081,11 +1258,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertyGetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.VersionProviders, paramsArray),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, Parent.InternalCache.VersionProviders, paramsArray),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -1097,10 +1278,11 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="value">value to be set</param>
         /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
-        public void PropertySet(ICOMObject comObject, string name, object[] paramsArray, object value)
+        public virtual void PropertySet(ICOMObject comObject, string name, object[] paramsArray, object value)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -1121,11 +1303,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.VersionProviders, paramsArray, value),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.InternalCache.VersionProviders, paramsArray, value),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -1138,10 +1324,11 @@ namespace NetOffice
         /// <param name="value">value to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
-        public void PropertySet(ICOMObject comObject, string name, object[] paramsArray, object value, ParameterModifier[] paramModifiers)
+        public virtual void PropertySet(ICOMObject comObject, string name, object[] paramsArray, object value, ParameterModifier[] paramModifiers)
         {
             try
             {
+                BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -1162,11 +1349,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.VersionProviders, paramsArray, value),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.InternalCache.VersionProviders, paramsArray, value),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, paramsArray);
             }
         }
 
@@ -1177,10 +1368,11 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="value">value to be set</param>
         /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
-        public void PropertySet(ICOMObject comObject, string name, object value)
+        public virtual void PropertySet(ICOMObject comObject, string name, object value)
         {
             try
             {
+                BeforeCall(comObject, name, _emptyArgs);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -1196,11 +1388,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.VersionProviders, new object[] { value }),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.InternalCache.VersionProviders, new object[] { value }),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, _emptyArgs);
             }
         }
 
@@ -1212,10 +1408,11 @@ namespace NetOffice
         /// <param name="value">value to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
-        public void PropertySet(ICOMObject comObject, string name, object value, ParameterModifier[] paramModifiers)
+        public virtual void PropertySet(ICOMObject comObject, string name, object value, ParameterModifier[] paramModifiers)
         {
             try
             {
+                BeforeCall(comObject, name, new object[] { value });
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -1231,11 +1428,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.VersionProviders, new object[] { value }),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.InternalCache.VersionProviders, new object[] { value }),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, new object[] { value });
             }
         }
 
@@ -1247,10 +1448,11 @@ namespace NetOffice
         /// <param name="value">value array to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
-        public void PropertySet(ICOMObject comObject, string name, object[] value, ParameterModifier[] paramModifiers)
+        public virtual void PropertySet(ICOMObject comObject, string name, object[] value, ParameterModifier[] paramModifiers)
         {
             try
             {
+                BeforeCall(comObject, name, value);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -1266,11 +1468,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.VersionProviders, value),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.InternalCache.VersionProviders, value),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, value);
             }
         }
 
@@ -1281,10 +1487,11 @@ namespace NetOffice
         /// <param name="name">name of the property</param>
         /// <param name="value">new value of the property</param>
         /// <exception cref="PropertySetCOMException">an unexpected error occurs</exception>
-        public void PropertySet(ICOMObject comObject, string name, object[] value)
+        public virtual void PropertySet(ICOMObject comObject, string name, object[] value)
         {
             try
             {
+                BeforeCall(comObject, name, value);
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
@@ -1300,11 +1507,15 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 var exception = new PropertySetCOMException(
-                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.VersionProviders, value),
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, Parent.InternalCache.VersionProviders, value),
                     throwedException);
-                exception.ApplicationVersion = Parent.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
+                exception.ApplicationVersion = Parent.InternalCache.VersionProviders.GetApplicationVersion(comObject.InstanceComponentName);
                 Console.WriteException(exception);
                 throw exception;
+            }
+            finally
+            {
+                AfterCall(comObject, name, value);
             }
         }
 

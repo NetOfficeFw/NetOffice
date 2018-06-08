@@ -1682,7 +1682,7 @@ namespace NetOffice
         {
             var versionProvider = this as IApplicationVersionProvider;
             if (null != versionProvider)
-                return Factory.VersionProviders.RegisterApplicationVersionProvider(versionProvider);
+                return Factory.InternalCache.VersionProviders.RegisterApplicationVersionProvider(versionProvider);
             else
                 throw new InvalidCastException("Instance doesnt implement IApplicationVersionProvider interface.");
         }
@@ -1696,7 +1696,7 @@ namespace NetOffice
         {
             var versionProvider = this as IApplicationVersionProvider;
             if (null != versionProvider)
-                return Factory.VersionProviders.UnregisterApplicationVersionProvider(versionProvider);
+                return Factory.InternalCache.VersionProviders.UnregisterApplicationVersionProvider(versionProvider);
             else
                 throw new InvalidCastException("Instance doesnt implement IApplicationVersionProvider interface.");
         }

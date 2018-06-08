@@ -636,7 +636,11 @@ namespace NetOffice
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void OnPropertyChanged(string propertyName)
+        /// <summary>
+        /// Raise the PropertyChanged event
+        /// </summary>
+        /// <param name="propertyName">name of changed property</param>
+        protected internal virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

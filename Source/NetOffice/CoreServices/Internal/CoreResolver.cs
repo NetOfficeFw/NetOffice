@@ -5,6 +5,9 @@ using System.Text;
 
 namespace NetOffice.CoreServices.Internal
 {
+    /// <summary>
+    /// Core Type Resolver
+    /// </summary>
     internal class CoreResolver : ICoreResolver
     {
         #region Ctor

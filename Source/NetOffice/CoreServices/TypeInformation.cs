@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.CoreServices.Internal
+namespace NetOffice.CoreServices
 {
     /// <summary>
     /// Represents a cache information about a com proxy and its contract and implementation in NetOffice
     /// </summary>
-    internal class TypeInformation
+    public class TypeInformation
     {
         /// <summary>
         /// Creates an instance of the class
@@ -31,12 +31,21 @@ namespace NetOffice.CoreServices.Internal
                 throw new ArgumentException("contract is not an interface.");
             if (implementation.IsInterface)
                 throw new ArgumentException("implementation must be a class.");
-            if(!proxy.IsCOMObject)
+            if (!proxy.IsCOMObject)
                 throw new ArgumentException("proxy must be com a object.");
 
             Contract = contract;
             Implementation = implementation;
             Proxy = proxy;
+        }
+
+        /// <summary>
+        /// Clones the instance
+        /// </summary>
+        /// <returns>newly created instance</returns>
+        internal TypeInformation Clone()
+        {
+            return new TypeInformation(Contract, Implementation, Proxy);
         }
 
         /// <summary>

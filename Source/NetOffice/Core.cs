@@ -123,53 +123,38 @@ namespace NetOffice
         /// Creates an instance of the class
         /// </summary>
         public Core()
-        {
-            TypeCache = new TypeDictionary();
-            Assemblies = new FactoryList();
-            DependentAssemblies = new List<DependentAssembly>();
+        {                      
             CoreDomain = new CurrentAppDomain(this);
-            Settings = new Settings();
-            Console = new DebugConsole();
-            Invoker = new Invoker(this);
-            EntitiesListCache = new Dictionary<string, Dictionary<string, string>>();
-            TypeComponentIdCache = new Dictionary<Guid, Guid>();
-            VersionProviders = new ApplicationVersionHandler(this);
             InternalObjectRegister = new CoreManagement(this);
             InternalObjectActivator = new CoreActivator(this);
             InternalObjectResolver = new CoreResolver(this);
             InternalObjectEvents = new CoreEvents(this);
+            InternalFactories = new CoreFactories(this);
+            InternalCache = new CoreCache(this);
+            Console = OnCreateConsole();
+            Settings = OnCreateSettings();
+            Invoker = OnCreateInvoker();
+            OnCreate();
         }
 
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
         /// <param name="isDefault">mark this instance as default instance</param>
-        private Core(bool isDefault)
+        protected internal Core(bool isDefault)
         {
-            TypeCache = new TypeDictionary();
-            Assemblies = new FactoryList();
-            DependentAssemblies = new List<DependentAssembly>();
+            IsDefault = isDefault;          
             CoreDomain = new CurrentAppDomain(this);
-            EntitiesListCache = new Dictionary<string, Dictionary<string, string>>();
-            TypeComponentIdCache = new Dictionary<Guid, Guid>();
-            IsDefault = isDefault;
-            if (IsDefault)
-            {
-                Settings = Settings.Default;
-                Console = DebugConsole.Default;
-                Invoker = Invoker.Default;
-            }
-            else
-            {
-                Settings = new Settings();
-                Console = new DebugConsole();
-                Invoker = new Invoker(this);
-            }
-            VersionProviders = new ApplicationVersionHandler(this);
             InternalObjectRegister = new CoreManagement(this);
             InternalObjectActivator = new CoreActivator(this);
             InternalObjectResolver = new CoreResolver(this);
             InternalObjectEvents = new CoreEvents(this);
+            InternalFactories = new CoreFactories(this);
+            InternalCache = new CoreCache(this);
+            Console = OnCreateConsole();
+            Settings = OnCreateSettings();
+            Invoker = OnCreateInvoker();
+            OnCreate();
         }
 
         #endregion
@@ -247,12 +232,6 @@ namespace NetOffice
         public bool IsDefault { get; private set; }
 
         /// <summary>
-        /// Returns a sequence of currently loaded NetOffice API assemblies
-        /// </summary>
-        [Browsable(false)]
-        public FactoryList Assemblies { get; private set; }
-
-        /// <summary>
         /// Time that the initialize process has needed used to pass
         /// </summary>
         [Category("Core"), Description("Time that the initialize process has needed used to pass")]
@@ -322,6 +301,32 @@ namespace NetOffice
                 return InternalObjectEvents;
             }
         }
+        
+        /// <summary>
+        /// Contains loaded factories
+        /// </summary>
+        /// <remarks>Provides access to loaded factories</remarks>
+        [Category("Core"), Description("Factory Services")]
+        public ICoreFactories Factories
+        {
+            get
+            {
+                return InternalFactories;
+            }
+        }
+
+        /// <summary>
+        /// Contains all cached types and entites
+        /// </summary>
+        /// <remarks>Provides access to cache system</remarks>
+        [Category("Core"), Description("Cache Services")]
+        public ICoreCache Cache
+        {
+            get
+            {
+                return InternalCache;
+            }
+        }
 
         /// <summary>
         /// Internal COM Object Event Register
@@ -342,6 +347,16 @@ namespace NetOffice
         /// Internal COM Object Event Services
         /// </summary>
         internal CoreEvents InternalObjectEvents { get; private set; }
+
+        /// <summary>
+        /// Internal Factory Holder
+        /// </summary>
+        internal CoreFactories InternalFactories { get; private set; }
+
+        /// <summary>
+        /// Internal type and entities cache
+        /// </summary>
+        internal CoreCache InternalCache { get; private set; }
 
         /// <summary>
         /// Current NetOffice Core Assembly
@@ -377,34 +392,68 @@ namespace NetOffice
         /// </summary>
         internal CurrentAppDomain CoreDomain { get; private set; }
 
-        /// <summary>
-        /// ICOMObjectAvaility Cache
-        /// </summary>
-        internal Dictionary<string, Dictionary<string, string>> EntitiesListCache { get; private set; }
+        #endregion
+
+        #region Methods
 
         /// <summary>
-        /// Cache as Type ID (COM) => ParentLibrary(COM Component) ID 
+        /// Creates a new instance of Invoker
         /// </summary>
-        internal Dictionary<Guid, Guid> TypeComponentIdCache { get; private set; }
+        /// <returns>invoker instance</returns>
+        protected internal virtual Invoker OnCreateInvoker()
+        {
+            return IsDefault ? Invoker.Default : new Invoker(this);
+        }
 
         /// <summary>
-        /// Registered Version Providers
+        /// Creates a new instance of Settings
         /// </summary>
-        internal ApplicationVersionHandler VersionProviders { get; private set; }
+        /// <returns>settings instance</returns>
+        protected internal virtual Settings OnCreateSettings()
+        {
+            return IsDefault ? Settings.Default : new Settings();
+        }
 
         /// <summary>
-        /// Proxy,Contract,Implementation Type Cache
+        /// Creates a new instance of DebugConsole
         /// </summary>
-        internal TypeDictionary TypeCache { get; private set; }
+        /// <returns>DebugConsole instance</returns>
+        protected internal virtual DebugConsole OnCreateConsole()
+        {
+            return IsDefault ? DebugConsole.Default : new DebugConsole();
+        }
 
         /// <summary>
-        /// Dependent assemblies analyzed by LoadAPIFactories method
+        /// Called from ctor at last
         /// </summary>
-        private List<DependentAssembly> DependentAssemblies { get; set; }
+        protected internal virtual void OnCreate()
+        {
+
+        }
 
         #endregion
 
         #region Initialize
+
+        /// <summary>
+        /// Check for initialize state and call Initialize if its necessary
+        /// </summary>
+        /// <returns>initialize state</returns>
+        /// <exception cref="NetOfficeInitializeException">unexpected error. see inner exception(s) for details.</exception>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public bool CheckInitialize()
+        {
+            lock (_checkInitializeLock)
+            {
+                if (!_initalized)
+                {
+#pragma warning disable 612, 618
+                    Initialize();
+#pragma warning restore 612, 618
+                }
+                return _initalized;
+            }
+        }
 
         /// <summary>
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
@@ -423,7 +472,7 @@ namespace NetOffice
         /// </summary>
         /// <exception cref="NetOfficeInitializeException">unexpected error. see inner exception(s) for details.</exception>
         [Obsolete("Not necessary anymore(self-initializing)")]
-        public void Initialize(CacheOptions cacheOptions)
+        public virtual void Initialize(CacheOptions cacheOptions)
         {
 #if DEBUG
             new InternalDebugDiagnostics().ValidateCore(this);
@@ -456,14 +505,14 @@ namespace NetOffice
                     CoreDomain.TryLoadAssemblies(this);
 
                     ClearCaches(false);
-                    LoadAPIFactories();
-                    LoadDependentAPIFactories();
+                    InternalFactories.LoadAPIFactories();
+                    InternalFactories.LoadDependentAPIFactories();
 
                     InitializedTime = DateTime.Now - startTime;
 
                     if (Settings.EnableMoreDebugOutput)
                     {
-                        Console.WriteLine("NetOffice Core contains {0} assemblies", Assemblies.Count);
+                        Console.WriteLine("NetOffice Core contains {0} assemblies", InternalFactories.FactoryAssemblies.Count);
                         Console.WriteLine("NetOffice Core.Initialize() passed in {0} milliseconds", InitializedTime.TotalMilliseconds);
                     }
                 }
@@ -476,152 +525,20 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Check for initialize state and call Initialize if its necessary
-        /// </summary>
-        /// <returns>initialize state</returns>
-        /// <exception cref="NetOfficeInitializeException">unexpected error. see inner exception(s) for details.</exception>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public bool CheckInitialize()
-        {
-            lock (_checkInitializeLock)
-            {
-                if (!_initalized)
-                {
-#pragma warning disable 612, 618
-                    Initialize();
-#pragma warning restore 612, 618
-                }
-                return _initalized;
-            }
-        }
-
-        /// <summary>
         /// Clears all Core caches
         /// </summary>
         /// <param name="forceClear">method want do nothing if cache option is KeepExistingCacheAlive. You can force clear caches anyway by giving true</param>
-        public void ClearCaches(bool forceClear)
+        public virtual void ClearCaches(bool forceClear)
         {
             if (forceClear || CacheOptions.ClearExistingCache == Settings.CacheOptions)
             {
                 lock (_assembliesLock)
                 {
-                    TypeComponentIdCache.Clear();
-                    TypeCache.Clear();
-                    EntitiesListCache.Clear();
-                    Assemblies.Clear();
-                    DependentAssemblies.Clear();
+                    InternalCache.Clear();                    
+                    InternalFactories.Clear();
                     _initalized = false;
                 }
             }
-        }
-
-        /// <summary>
-        /// Analyze assemblies in current appdomain and connect all NetOffice API factories to the core runtime.
-        /// </summary>
-        private void LoadAPIFactories()
-        {
-            DependentAssemblies.Clear();
-            Assembly[] assemblies = CoreDomain.GetAssemblies();
-            foreach (Assembly itemAssembly in assemblies)
-            {
-                string assemblyName = itemAssembly.GetName().Name;
-                if (KnownNetOfficeKeyTokens.ContainsNetOfficeAttribute(itemAssembly))
-                {
-                    string[] depends = RecieveAssemblyFactory(assemblyName, itemAssembly);
-                    foreach (string depend in depends)
-                    {
-                        if (!DependentAssemblies.Any(e => e.Name == depend))
-                            DependentAssemblies.Add(new DependentAssembly(depend, itemAssembly));
-                    }
-                }
-
-                if (Settings.EnableDeepLoading)
-                {
-                    foreach (AssemblyName itemName in itemAssembly.GetReferencedAssemblies())
-                    {
-                        if (KnownNetOfficeKeyTokens.ContainsNetOfficePublicKeyToken(itemName))
-                        {
-                            Assembly deepAssembly = CoreDomain.Load(itemName);
-                            if (null == deepAssembly)
-                                continue;
-
-                            string deepAssemblyName = itemName.Name;
-                            string[] depends = RecieveAssemblyFactory(deepAssemblyName, deepAssembly);
-                            foreach (string depend in depends)
-                            {
-                                if (!DependentAssemblies.Any(e => e.Name == depend))
-                                    DependentAssemblies.Add(new DependentAssembly(depend, itemAssembly));
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// Analyze dependent assemblies and connect there NetOffice API factories to the core runtime
-        /// </summary>
-        private void LoadDependentAPIFactories()
-        {
-            if (!Settings.EnableAdHocLoading)
-                return;
-
-            foreach (DependentAssembly dependAssembly in DependentAssemblies)
-            {
-                if (!Assemblies.Contains(dependAssembly.Name))
-                {
-                    string fileName = PathBuilder.BuildLocalPathFromDependentAssembly(dependAssembly);
-                    if (System.IO.File.Exists(fileName))
-                    {
-                        try
-                        {
-                            Assembly asssembly = CoreDomain.Load(fileName);
-                            RecieveAssemblyFactory(asssembly.GetName().Name, asssembly);
-                        }
-                        catch (Exception exception)
-                        {
-                            Console.WriteException(exception);
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine(string.Format("Assembly {0} not found.", fileName));
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// Recieve factory instance from assembly and add them to factory cache
-        /// </summary>
-        /// <param name="name">name of the assembly</param>
-        /// <param name="assembly">assemmbly to recieve</param>
-        /// <returns>array of dependend assemblies</returns>
-        private string[] RecieveAssemblyFactory(string name, Assembly assembly)
-        {
-            if (false == Attributes.NetOfficeAssemblyAttribute.ContainsAttribute(assembly))
-                return new string[0];
-
-            NetOffice.IFactoryInfo factoryInfo = Assemblies.FirstOrDefault(e => e.AssemblyName == name);
-            if (null == factoryInfo)
-            {
-                List<string> dependAssemblies = new List<string>();
-                Type factoryInfoType = assembly.GetType(name + ".Utils.ProjectInfo");
-                if (null == factoryInfoType)
-                    throw new NetOfficeException(String.Format("Unable to find {0} factory info", name));
-                factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
-                if (null == factoryInfo)
-                    throw new FactoryException(String.Format("Unexpected {0} factory info. Assembly {0}", name, assembly));
-                Assemblies.Add(factoryInfo);
-                Console.WriteLine("NetOffice Core recieved IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
-
-                foreach (string itemDependency in factoryInfo.Dependencies)
-                    dependAssemblies.Add(itemDependency);
-
-                return dependAssemblies.ToArray();
-            }
-            else
-                return new string[0];
         }
 
         #endregion
@@ -638,7 +555,7 @@ namespace NetOffice
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
-        public ICOMObject CreateEventArgumentObjectFromComProxy(ICOMObject caller, object comProxy)
+        public virtual ICOMObject CreateEventArgumentObjectFromComProxy(ICOMObject caller, object comProxy)
         {
             return CreateObjectFromComProxy(caller, comProxy, caller.Settings.EnableDynamicEventArguments);
         }
@@ -654,7 +571,7 @@ namespace NetOffice
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
-        public ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, bool allowDynamicObject)
+        public virtual ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, bool allowDynamicObject)
         {
             if (null == caller)
                 throw new ArgumentNullException("caller");
@@ -673,13 +590,7 @@ namespace NetOffice
                     ICOMObject[] newVariantArray = new ICOMObject[comProxyArray.Length];
                     for (int i = 0; i < comProxyArray.Length; i++)
                     {
-                        /*
-                        todo: handle that better by a cache   
-                        -----------------------------------
-                        analyze proxy interface id and component or id, or name and component name
-                        and use the core type cache to avoid GetType() whenever its possible
-                        */
-                        comVariantType = comProxyArray[i].GetType(); 
+                        comVariantType = comProxyArray[i].GetType(); //  todo: handle that better by a cache   
                         newVariantArray[i] = CreateObjectFromComProxy(caller, comProxyArray[i], allowDynamicObject);
                     }
                     return newVariantArray;
@@ -703,7 +614,7 @@ namespace NetOffice
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
-        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, bool allowDynamicObject)
+        public virtual ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, bool allowDynamicObject)
         {
             if (null == caller)
                 throw new ArgumentNullException("caller");
@@ -753,9 +664,7 @@ namespace NetOffice
         {
             ICOMObject result = null;
             string proxyClassName = ComTypes.TypeDescriptor.GetClassName(comProxy);
-            // important to use the namespace from the factory here
-            // because it is a possible duplicate type and GetFactoryInfo can handle that
-            string wrapperContractNamespace = factoryInfo.AssemblyNamespace;
+            string wrapperContractNamespace = factoryInfo.AssemblyNamespace;   // important to use the namespace from the factory here because it is a possible duplicate type and GetFactoryInfo can handle that
             string wrapperContractName = proxyClassName;
 
             TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformation(this, comProxy, wrapperContractNamespace, wrapperContractName);
@@ -780,7 +689,7 @@ namespace NetOffice
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
-        public ICOMObject[] CreateKnownObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, Type contractWrapperType)
+        public virtual ICOMObject[] CreateKnownObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, Type contractWrapperType)
         {
             CheckInitialize();
             try
@@ -816,7 +725,7 @@ namespace NetOffice
         /// <exception cref="InvalidCastException">T is not equal or base from contractWrapperType argument</exception>
         /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
-        public T CreateKnownObjectFromComProxy<T>(ICOMObject caller, object comProxy, Type contractWrapperType) where T : class, ICOMObject
+        public virtual T CreateKnownObjectFromComProxy<T>(ICOMObject caller, object comProxy, Type contractWrapperType) where T : class, ICOMObject
         {
             return (T)CreateKnownObjectFromComProxy(caller, comProxy, contractWrapperType);
         }
@@ -832,7 +741,7 @@ namespace NetOffice
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find to the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
-        public ICOMObject CreateKnownObjectFromComProxy(ICOMObject caller, object comProxy, Type contractWrapperType)
+        public virtual ICOMObject CreateKnownObjectFromComProxy(ICOMObject caller, object comProxy, Type contractWrapperType)
         {
             if (null == caller)
                 throw new ArgumentNullException("caller");
@@ -851,16 +760,6 @@ namespace NetOffice
             }
         }
 
-        /// <summary>
-        /// Creates a new ICOMObject based on wrapperClassType
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="contractWrapperType">type info from contract wrapper</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
-        /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
         private ICOMObject InternalCreateKnownObjectFromComProxy(ICOMObject caller, object comProxy, Type contractWrapperType)
         {
             CheckInitialize();

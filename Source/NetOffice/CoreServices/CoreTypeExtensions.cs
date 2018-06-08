@@ -34,14 +34,14 @@ namespace NetOffice.CoreServices
         internal static TypeInformation GetTypeInformation(Core value, object comProxy, Type contractWrapperType)
         {
             TypeInformation typeInfo = null;
-            if (false == value.TypeCache.TryGetTypeInfo(contractWrapperType, ref typeInfo))
+            if (false == value.InternalCache.TypeCache.TryGetTypeInfo(contractWrapperType, ref typeInfo))
             {
                 Type comProxyType = comProxy.GetType();
-                Type implementationType = value.Assemblies.GetImplementationType(contractWrapperType, false);
+                Type implementationType = value.InternalFactories.FactoryAssemblies.GetImplementationType(contractWrapperType, false);
                 if (null != implementationType)
                 {
                     typeInfo = new TypeInformation(contractWrapperType, implementationType, comProxyType);
-                    value.TypeCache.Add(typeInfo);
+                    value.InternalCache.TypeCache.Add(typeInfo);
                 }
             }
             return typeInfo;
@@ -50,15 +50,15 @@ namespace NetOffice.CoreServices
         internal static TypeInformation GetTypeInformation(Core value, object comProxy, string contractWrapperNamespace, string contractWrapperTypeName)
         {
             TypeInformation typeInfo = null;
-            if (false == value.TypeCache.TryGetTypeInfo(contractWrapperNamespace + "." + contractWrapperTypeName, ref typeInfo))
+            if (false == value.InternalCache.TypeCache.TryGetTypeInfo(contractWrapperNamespace + "." + contractWrapperTypeName, ref typeInfo))
             {
                 Type comProxyType = comProxy.GetType();
                 Type contractType = null;
                 Type implementationType = null;
-                if (value.Assemblies.GetContractAndImplementationType(contractWrapperNamespace, contractWrapperTypeName, ref contractType, ref implementationType, false))
+                if (value.InternalFactories.FactoryAssemblies.GetContractAndImplementationType(contractWrapperNamespace, contractWrapperTypeName, ref contractType, ref implementationType, false))
                 {
                     typeInfo = new TypeInformation(contractType, implementationType, comProxyType);
-                    value.TypeCache.Add(typeInfo);
+                    value.InternalCache.TypeCache.Add(typeInfo);
                 }
             }
             return typeInfo;

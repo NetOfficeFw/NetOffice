@@ -96,7 +96,7 @@ namespace NetOffice.Availity
                 string key = (parentLibraryGuid.ToString() + className).ToLower();
 
                 Dictionary<string, string> supportList = null;
-                if (factory.EntitiesListCache.TryGetValue(key, out supportList))
+                if (factory.InternalCache.EntitiesListCache.TryGetValue(key, out supportList))
                     return supportList;
 
                 supportList = new Dictionary<string, string>();
@@ -151,7 +151,7 @@ namespace NetOffice.Availity
                 typeInfo.ReleaseTypeAttr(typeAttrPointer);
                 Marshal.ReleaseComObject(typeInfo);
 
-                factory.EntitiesListCache.Add(key, supportList);
+                factory.InternalCache.EntitiesListCache.Add(key, supportList);
 
                 return supportList;
             }

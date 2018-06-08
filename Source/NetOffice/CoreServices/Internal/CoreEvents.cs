@@ -5,10 +5,19 @@ using System.Text;
 
 namespace NetOffice.CoreServices.Internal
 {
+    /// <summary>
+    /// Core Event Bridge Services
+    /// </summary>
     internal class CoreEvents : ICoreEvents
     {
+        #region Fields
+
         private object _thisLock = new object();
         private List<SinkHelper> _pointList = new List<SinkHelper>();
+
+        #endregion
+
+        #region Ctor
 
         /// <summary>
         /// Creates an instance of the class
@@ -21,6 +30,10 @@ namespace NetOffice.CoreServices.Internal
                 throw new ArgumentNullException("parent");
             Parent = parent;
         }
+
+        #endregion
+
+        #region ICoreEvents
 
         /// <summary>
         /// Affected NetOffice Core
@@ -51,6 +64,10 @@ namespace NetOffice.CoreServices.Internal
             }
         }
 
+        #endregion
+        
+        #region Methods
+
         /// <summary>
         /// Add sink helper to the factory sinkhelper table
         /// </summary>
@@ -76,5 +93,7 @@ namespace NetOffice.CoreServices.Internal
                 return _pointList.Remove(point);
             }
         }
+
+        #endregion
     }
 }

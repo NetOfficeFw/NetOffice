@@ -18,7 +18,7 @@ namespace NetOffice
         Unfortunately Microsoft spend no possibilities to influence the managed RCW lifetime service
         for System._ComObject except of Marshal.ReleaseComObject/Marshal.FinalReleaseComObject.
         Thats why we spend this lifetime wrapper arround to have multiple
-        Netoffice wrapper instances with same RCW proxy and keep the managed proxy alive as long we need.
+        NetOffice wrapper instances with same RCW proxy and keep the underlying proxy alive as long we need.
     */
 
     /// <summary>
@@ -32,7 +32,7 @@ namespace NetOffice
         /// COMProxyShare event handler after reference counter has been changed
         /// </summary>
         /// <param name="sender">Event sender</param>
-        public delegate void COMProxyShareCountChangedChangedEventHandler(COMProxyShare sender);
+        public delegate void CountChangedChangedEventHandler(COMProxyShare sender);
 
         #endregion
 
@@ -142,7 +142,7 @@ namespace NetOffice
         /// <summary>
         /// Occurs after reference counter has been changed
         /// </summary>
-        public COMProxyShareCountChangedChangedEventHandler CountChanged;
+        public CountChangedChangedEventHandler CountChanged;
 
         #endregion
 
@@ -231,6 +231,7 @@ namespace NetOffice
         /// Decrement the reference counter by 1 and release the underlying proxy if counter is 0 after decrement
         /// </summary>
         /// <returns>true if underlying proxy is released, otherwise false</returns>
+        /// <exception cref="COMException">throws when counter is zero and SuppressReleaseExceptions is false and proxy is already disconnected</exception>
         public virtual bool Release()
         {
             try
