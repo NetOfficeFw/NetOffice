@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("00024446-0001-0000-C000-000000000046")]
 	public interface IOLEDBErrors : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.OLEDBError>
 	{
 		#region Properties

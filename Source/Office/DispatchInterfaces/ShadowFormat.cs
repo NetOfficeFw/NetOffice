@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.ShadowFormat")]
+	[TypeId("000C031B-0000-0000-C000-000000000046")]
     public interface ShadowFormat : _IMsoDispObj
     {
         #region Properties

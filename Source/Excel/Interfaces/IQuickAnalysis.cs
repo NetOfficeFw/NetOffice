@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 15, 16)]
 	[EntityType(EntityType.IsInterface)]
+	[TypeId("000244D0-0001-0000-C000-000000000046")]
 	public interface IQuickAnalysis : ICOMObject
 	{
 		#region Properties

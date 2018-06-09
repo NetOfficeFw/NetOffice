@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[TypeId("000244B7-0001-0000-C000-000000000046")]
 	public interface ISparklineGroup : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Sparkline>
 	{
 		#region Properties

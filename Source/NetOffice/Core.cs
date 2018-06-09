@@ -623,13 +623,25 @@ namespace NetOffice
             try
             {
                 ICOMObject result = null;
+                Guid typeId = Guid.Empty;
+                Guid componentId = Guid.Empty;
+
+                CoreTypeExtensions.GetComponentAndTypeId(this, comProxy, ref componentId, ref typeId);
 
                 lock (_createComObjectLock)
                 {
-                    IFactoryInfo factoryInfo = CoreFactoryExtensions.GetFactoryInfo(this, caller, comProxy, false);
-                    if (null == factoryInfo)
+                    IFactoryInfo factoryInfo = CoreFactoryExtensions.GetFactoryInfo(this, caller, comProxy, componentId, typeId, false);
+                    if (null != factoryInfo)
                     {
-                        result = CoreCreateExtensions.TryCreateObjectByResolveEvent(this, caller, String.Empty, comProxy);
+                        TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformationForUnknownObject(this, factoryInfo, typeId, comProxy);
+                        if(null == typeInfo)
+                            throw new FactoryException(String.Format("Unable to resolve proxy type:{0}", ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy)));
+
+                        result = CoreCreateExtensions.CreateInstance(this, typeInfo, caller, comProxy);
+                    }
+                    else
+                    {
+                        result = CoreCreateExtensions.TryCreateObjectByResolveEvent(this, caller, null, comProxy);
                         if (null == result)
                         {
                             if (allowDynamicObject && Settings.EnableDynamicObjects)
@@ -644,10 +656,6 @@ namespace NetOffice
                             }
                         }
                     }
-                    else
-                    {
-                        result = InternalCreateObjectFromProxy(factoryInfo, caller, comProxy);
-                    }
 
                     result = InternalObjectActivator.TryReplaceInstance(caller, result);
                     return result;
@@ -658,20 +666,6 @@ namespace NetOffice
                 Console.WriteException(throwedException);
                 throw;
             }
-        }
-
-        private ICOMObject InternalCreateObjectFromProxy(IFactoryInfo factoryInfo, ICOMObject caller, object comProxy)
-        {
-            ICOMObject result = null;
-            string proxyClassName = ComTypes.TypeDescriptor.GetClassName(comProxy);
-            string wrapperContractNamespace = factoryInfo.AssemblyNamespace;   // important to use the namespace from the factory here because it is a possible duplicate type and GetFactoryInfo can handle that
-            string wrapperContractName = proxyClassName;
-
-            TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformation(this, comProxy, wrapperContractNamespace, wrapperContractName);
-            if(null == typeInfo)
-                throw new FactoryException(String.Format("Unable to resolve proxy type:{0}", ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy)));
-            result = CoreCreateExtensions.CreateInstance(this, typeInfo, caller, comProxy);
-            return result;
         }
 
         #endregion
@@ -768,10 +762,10 @@ namespace NetOffice
                 ICOMObject result = null;
                 lock (_createComObjectLock)
                 {
-                    TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformation(this, comProxy, contractWrapperType);
+                    TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformationForKnownObject(this, contractWrapperType, comProxy);
                     if (null == typeInfo)
                     {
-                        result = CoreCreateExtensions.TryCreateObjectByResolveEvent(this, caller, contractWrapperType.FullName, contractWrapperType);
+                        result = CoreCreateExtensions.TryCreateObjectByResolveEvent(this, caller, contractWrapperType, contractWrapperType);
                         if (null == result)
                             throw new FactoryException(String.Format("Unable to find implementation: {0}.", contractWrapperType.FullName));
                     }

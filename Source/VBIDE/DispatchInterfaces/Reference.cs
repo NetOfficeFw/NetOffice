@@ -11,6 +11,7 @@ namespace NetOffice.VBIDEApi
 	/// </summary>
 	[SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("0002E17E-0000-0000-C000-000000000046")]
     public interface Reference : ICOMObject
     {
         #region Properties

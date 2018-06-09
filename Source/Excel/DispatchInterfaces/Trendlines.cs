@@ -15,6 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823099.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[TypeId("000208BD-0000-0000-C000-000000000046")]
 	public interface Trendlines : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Trendline>
 	{
 		#region Properties

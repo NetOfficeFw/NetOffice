@@ -58,6 +58,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
+	[TypeId("000C170F-0000-0000-C000-000000000046")]
     public interface IMsoChartTitle : IMsoChartTitle_
     {
         #region Properties

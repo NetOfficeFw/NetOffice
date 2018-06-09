@@ -61,6 +61,7 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("000C171F-0000-0000-C000-000000000046")]
     public interface IMsoDataLabels : IMsoDataLabels_, IEnumerableProvider<NetOffice.OfficeApi.IMsoDataLabel>
     {
         #region Properties

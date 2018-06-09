@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("000244E1-0001-0000-C000-000000000046")]
     public interface IModelTableNames : ICOMObject, IEnumerableProvider<string>
     {
         #region Properties

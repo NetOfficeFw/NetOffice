@@ -22,8 +22,8 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863497.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts._CustomXMLPartEvents))]
-
+    [ComEventContract(typeof(NetOffice.OfficeApi.EventContracts._CustomXMLPartEvents))]
+	[TypeId("000CDB08-0000-0000-C000-000000000046")]
     public interface CustomXMLPart : _CustomXMLPart, IEventBinding
     {
         #region Events

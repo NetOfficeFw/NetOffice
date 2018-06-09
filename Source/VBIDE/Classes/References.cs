@@ -20,7 +20,8 @@ namespace NetOffice.VBIDEApi
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(EventContracts._dispReferences_Events))]
+    [ComEventContract(typeof(EventContracts._dispReferences_Events))]
+	[TypeId("0002E17C-0000-0000-C000-000000000046")]
     public interface References : _References, IEventBinding
     {
         #region Events

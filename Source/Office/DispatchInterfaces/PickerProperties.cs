@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861162.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[TypeId("000C03E3-0000-0000-C000-000000000046")]
     public interface PickerProperties : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.PickerProperty>
     {
         #region Properties

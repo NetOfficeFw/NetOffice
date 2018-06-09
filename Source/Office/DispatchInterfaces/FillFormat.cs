@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.FillFormat")]
+	[TypeId("000C0314-0000-0000-C000-000000000046")]
     public interface FillFormat : _IMsoDispObj
     {
         #region Properties

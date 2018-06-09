@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863682.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
+	[TypeId("000C03A2-0000-0000-C000-000000000046")]
     public interface ThemeColorScheme : _IMsoDispObj, IEnumerableProvider<object>
     {
         #region Properties

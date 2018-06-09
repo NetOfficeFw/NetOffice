@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860833.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[TypeId("000C0369-0000-0000-C000-000000000046")]
     public interface ScopeFolders : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.ScopeFolder>
     {
         #region Properties

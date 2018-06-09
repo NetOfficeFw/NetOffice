@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]    
-    [ComEventInterface(typeof(NetOffice.VBIDEApi.EventContracts._dispCommandBarControlEvents))]
+    [ComEventContract(typeof(NetOffice.VBIDEApi.EventContracts._dispCommandBarControlEvents))]
     internal class CommandBarEvents : NetOffice.VBIDEApi.Behind._CommandBarControlEvents, NetOffice.VBIDEApi.CommandBarEvents
     {
         #pragma warning disable

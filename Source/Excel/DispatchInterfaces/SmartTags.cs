@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("00024461-0000-0000-C000-000000000046")]
 	public interface SmartTags : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.SmartTag>
 	{
 		#region Properties

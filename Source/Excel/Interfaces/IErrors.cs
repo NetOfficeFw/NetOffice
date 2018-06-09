@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("0002445C-0001-0000-C000-000000000046")]
     public interface IErrors : ICOMObject
     {
         #region Properties

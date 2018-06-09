@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi.Behind
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
-    public class _Application : NetOffice.ExcelApi.Behind._Application_
+    public class _Application : NetOffice.ExcelApi.Behind._Application_, NetOffice.ExcelApi._Application
     {
         #pragma warning disable
 

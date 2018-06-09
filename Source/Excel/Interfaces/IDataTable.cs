@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
+	[TypeId("00020843-0001-0000-C000-000000000046")]
     public interface IDataTable : ICOMObject
     {
         #region Properties

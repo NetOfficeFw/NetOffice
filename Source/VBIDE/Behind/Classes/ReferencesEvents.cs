@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.VBIDEApi.EventContracts._dispReferencesEvents))]
+    [ComEventContract(typeof(NetOffice.VBIDEApi.EventContracts._dispReferencesEvents))]
     internal class ReferencesEvents : NetOffice.VBIDEApi.Behind._ReferencesEvents, NetOffice.VBIDEApi.ReferencesEvents
     {
         #pragma warning disable

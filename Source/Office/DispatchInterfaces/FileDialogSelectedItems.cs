@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863539.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("000C0363-0000-0000-C000-000000000046")]
     public interface FileDialogSelectedItems : _IMsoDispObj, IEnumerableProvider<string>
     {
         #region Properties

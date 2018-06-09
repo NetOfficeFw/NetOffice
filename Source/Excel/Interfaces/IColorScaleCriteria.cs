@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("00024494-0001-0000-C000-000000000046")]
     public interface IColorScaleCriteria : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ColorScaleCriterion>
     {
         #region Properties

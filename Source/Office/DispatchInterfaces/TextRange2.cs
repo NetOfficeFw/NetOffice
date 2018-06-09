@@ -307,6 +307,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863528.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("000C0397-0000-0000-C000-000000000046")]
     public interface TextRange2 : TextRange2_, IEnumerableProvider<NetOffice.OfficeApi.TextRange2>
     {
         #region Properties

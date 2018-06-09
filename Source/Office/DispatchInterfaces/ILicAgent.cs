@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("00194002-D9C3-11D3-8D59-0050048384E3")]
     public interface ILicAgent : ICOMObject
     {
         #region Methods

@@ -15,6 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841148.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[TypeId("0002443A-0000-0000-C000-000000000046")]
 	public interface Shapes : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Shape>
 	{
 		#region Properties

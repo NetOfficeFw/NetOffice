@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("000244A3-0001-0000-C000-000000000046")]
 	public interface IPages : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Page>
 	{
 		#region Properties

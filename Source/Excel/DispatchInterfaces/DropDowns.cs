@@ -115,6 +115,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[TypeId("0002088C-0000-0000-C000-000000000046")]
     public interface DropDowns : DropDowns_, IEnumerableProvider<object>
     {
         #region Properties

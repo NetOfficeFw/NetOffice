@@ -17,12 +17,12 @@ namespace NetOffice.CoreServices
         /// Creates an instance of the class
         /// </summary>
         /// <param name="caller">calling instance</param>
-        /// <param name="fullContractName">name of the target contract</param>
+        /// <param name="contractType">netoffice contract type, can be null</param>
         /// <param name="comProxy">native proxy type</param>
-        public ResolveEventArgs(ICOMObject caller, string fullContractName, object comProxy)
+        public ResolveEventArgs(ICOMObject caller, Type contractType, object comProxy)
         {
             Caller = caller;
-            ContractName = fullContractName;
+            Contract = contractType;
             Proxy = ProxyInformation.Create(comProxy);
         }
 
@@ -32,10 +32,10 @@ namespace NetOffice.CoreServices
         public ICOMObject Caller { get; private set; }
 
         /// <summary>
-        /// Name of the target contract. 
+        /// Type of the target contract. 
         /// Can be null(Nothing in Visual Basic) if its failed to resolve the corresponding factory
         /// </summary>
-        public string ContractName { get; private set; }
+        public Type Contract { get; private set; }
 
         /// <summary>
         /// Detailed proxy informations

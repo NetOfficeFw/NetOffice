@@ -14,6 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("000C1734-0000-0000-C000-000000000046")]
     public interface CategoryCollection : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.IMsoCategory>
     {
         #region Properties

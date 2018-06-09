@@ -72,7 +72,7 @@
     <Compile Include="Attributes\AttributeExtensions.cs" />
     <Compile Include="Attributes\BaseResultAttribute.cs" />
     <Compile Include="Attributes\BaseTypeAttribute.cs" />
-    <Compile Include="Attributes\ComEventInterfaceAttribute.cs" />
+    <Compile Include="Attributes\ComEventContractAttribute.cs" />
     <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
     <Compile Include="Attributes\ComRegisterCallAttribute.cs" />
     <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
@@ -91,6 +91,7 @@
     <Compile Include="Attributes\NativeResultAttribute.cs" />
     <Compile Include="Attributes\ProxyResultAttribute.cs" />
     <Compile Include="Attributes\SinkArgumentAttribute.cs" />
+    <Compile Include="Attributes\TypeIdAttribute.cs" />
     <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
     <Compile Include="Contribution\ProxyInformation.cs" />
     <Compile Include="CoreServices\CoreCreateExtensions.cs" />

@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.DiagramNode")]
+	[TypeId("000C0370-0000-0000-C000-000000000046")]
     public interface DiagramNode : _IMsoDispObj
     {
         #region Properties

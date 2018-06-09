@@ -14,6 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("000C170D-0000-0000-C000-000000000046")]
     public interface Points : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.ChartPoint>
     {
         #region Properties

@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863429.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("000C03CD-0000-0000-C000-000000000046")]
     public interface SmartArtColors : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SmartArtColor>
     {
         #region Properties

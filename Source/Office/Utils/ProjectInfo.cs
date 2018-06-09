@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using System.Reflection;
 using NetOffice;
 using NetOffice.Attributes;
@@ -15,12 +17,13 @@ namespace OfficeApi.Utils
 
         private string    _name;
         private string    _namespace     = "NetOffice.OfficeApi";
-        private Guid[]    _componentGuid = new Guid[]{new Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52")};
+        private Guid      _componentGuid = new Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52");
         private Assembly  _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
         private Type[]	  _exportedTypes;
 		private string[]  _dependents;
-		
+        private Dictionary<Type, Type> _types;
+
         #endregion
 
         #region Ctor
@@ -52,7 +55,7 @@ namespace OfficeApi.Utils
             }
         }
 
-        public Guid[] ComponentGuid
+        public Guid ComponentGuid
         {
             get
             {
@@ -86,6 +89,16 @@ namespace OfficeApi.Utils
             }
         }
 
+        public Type[] ExportedTypes
+        {
+            get
+            {
+                if (null == _exportedTypes)
+                    _exportedTypes = Assembly.GetExportedTypes();
+                return _exportedTypes;
+            }
+        }
+
         public bool IsDuck
         {
             get
@@ -96,10 +109,7 @@ namespace OfficeApi.Utils
 
         public bool Contains(Type type)
         {
-            if (null == _exportedTypes)
-                _exportedTypes = Assembly.GetExportedTypes();
-
-            foreach (Type item in _exportedTypes)
+            foreach (Type item in ExportedTypes)
             {
                 if (item == type)
                     return true;
@@ -110,10 +120,7 @@ namespace OfficeApi.Utils
 
         public bool Contains(string className)
         {
-            if (null == _exportedTypes)
-                _exportedTypes = Assembly.GetExportedTypes();
-
-            foreach (Type item in _exportedTypes)
+            foreach (Type item in ExportedTypes)
             {
                 if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
                     return true;
@@ -122,7 +129,49 @@ namespace OfficeApi.Utils
             return false;
         }
 
+        public bool ContractAndImplementation(Guid typeId, ref Type contract, ref Type implementation)
+        {
+            CreateTypesDictionary();
+            foreach (var item in _types)
+            {
+                if (item.Key.GetCustomAttribute<TypeIdAttribute>().Value == typeId)
+                {
+                    contract = item.Key;
+                    implementation = item.Value;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool Implementation(Type contract, ref Type implementation)
+        {
+            CreateTypesDictionary();
+            return _types.TryGetValue(contract, out implementation);
+        }
+
+        #endregion
+
+        #region Methods
+
+        private void CreateTypesDictionary()
+        {
+            if (null == _types)
+            {
+                _types = new Dictionary<Type, Type>();
+                var contracts = ExportedTypes.Where(e => e.IsInterface
+                                && e.Namespace == "VBIDEApi.Utils"
+                                && null == e.GetCustomAttribute<SyntaxBypassAttribute>());
+                foreach (var contract in contracts)
+                {
+                    var implementation = Assembly.GetType(contract.Namespace + ".Behind." + contract.Name, true);
+                    _types.Add(contract, implementation);
+                }
+
+            }
+        }
+
         #endregion
     }
-    #pragma warning restore
+        #pragma warning restore
 }

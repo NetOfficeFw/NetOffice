@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,6 +11,7 @@ namespace NetOffice.VBIDEApi
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
+	[TypeId("EEE00915-E393-11D1-BB03-00C04FB6C4A6")]
     public interface _VBProject : _VBProject_Old
     {
         #region Properties

@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.OfficeApi.CalloutFormat")]
+	[TypeId("000C0311-0000-0000-C000-000000000046")]
 	public interface CalloutFormat : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#region Properties

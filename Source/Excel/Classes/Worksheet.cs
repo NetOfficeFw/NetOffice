@@ -37,7 +37,8 @@ namespace NetOffice.ExcelApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194464.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(EventContracts.DocEvents))]
+    [ComEventContract(typeof(EventContracts.DocEvents))]
+	[TypeId("00020820-0000-0000-C000-000000000046")]
     public interface Worksheet : _Worksheet, IEventBinding
     {
         #region Events

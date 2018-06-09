@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("00024484-0001-0000-C000-000000000046")]
 	public interface IPivotFilters : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.PivotFilter>
 	{
 		#region Properties

@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.OfficeApi.ColorFormat")]
+	[TypeId("000C0312-0000-0000-C000-000000000046")]
 	public interface ColorFormat : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#region Properties

@@ -58,6 +58,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
+	[TypeId("000244C2-0001-0000-C000-000000000046")]
     public interface IDisplayFormat : IDisplayFormat_
     {
         #region Properties

@@ -5,7 +5,7 @@ using System.Text;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
-using NetOffice.ComTypes;
+
 using NetOffice.Exceptions;
 
 namespace NetOffice.CoreServices
@@ -40,35 +40,17 @@ namespace NetOffice.CoreServices
         /// <param name="value">core to use</param>
         /// <param name="caller">calling instance</param>
         /// <param name="comProxy">new created proxy</param>
+        /// <param name="componentId">com proxy component id</param>
+        /// <param name="typeId">com proxy type id</param>
         /// <param name="throwException">throw exception if no info found or return null</param>
         /// <returns>factory info from corresponding assembly</returns>
-        internal static IFactoryInfo GetFactoryInfo(this Core value,
-            ICOMObject caller, object comProxy, bool throwException)
-        {
-            return GetFactoryInfo(value, value.InternalCache.TypeComponentIdCache, caller, comProxy, throwException);
-        }
-
-        /// <summary>
-        /// Get wrapper class factory info
-        /// </summary>
-        /// <param name="value">core to use</param>
-        /// <param name="hostCache">core host cache</param>
-        /// <param name="caller">calling instance</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="throwException">throw exception if no info found or return null</param>
-        /// <returns>factory info from corresponding assembly</returns>
-        internal static IFactoryInfo GetFactoryInfo(this Core value,
-            Dictionary<Guid, Guid> hostCache, ICOMObject caller,
-            object comProxy,  bool throwException)
+        internal static IFactoryInfo GetFactoryInfo(this Core value, ICOMObject caller, 
+            object comProxy, Guid componentId, Guid typeId, bool throwException)
         {
             if (value.InternalFactories.FactoryAssemblies.Count == 0)
                 return null;
 
-            string className = ComTypes.TypeDescriptor.GetClassName(comProxy);
-            Guid typeid = TypeGuid(comProxy);
-            Guid hostGuid = GetParentLibraryGuid(value, comProxy, typeid);
-
-            if (null != caller && typeid.IsDuplicateType())
+            if (null != caller && typeId.IsDuplicateType())
             {
                 // special case: if its a known duplicated type
                 // we prefer to use the type from the caller component
@@ -76,26 +58,26 @@ namespace NetOffice.CoreServices
                 {
                     if (item.AssemblyName != caller.InstanceComponentName)
                         continue;
-                    foreach (var guid in item.ComponentGuid)
-                        if (true == guid.Equals(hostGuid))
-                            return item;
+                    if (componentId.Equals(item.ComponentGuid))
+                        return item;
                 }
             }
             else
             {
                 foreach (IFactoryInfo item in value.InternalFactories.FactoryAssemblies)
                 {
-                    foreach (var guid in item.ComponentGuid)
-                        if (true == guid.Equals(hostGuid))
-                            return item;
+                    if (componentId.Equals(item.ComponentGuid))
+                        return item;
                 }
             }
 
-            // failback because some types was multiple defined by its class id (not allowed in COM but in fact MS do this)
-            // list of known multiple defined types is available on netoffice.codeplex.com or Attributes\DuplicateAttribute.cs
+            string className = ComTypes.TypeDescriptor.GetClassName(comProxy);
+
+            // failback because some types was multiple defined by its type id (not allowed in COM but in fact MS do this)
+            // list of known multiple defined types is available on Attributes\DuplicateAttribute.cs
             foreach (IFactoryInfo item in value.InternalFactories.FactoryAssemblies)
             {
-                bool hasComponentID = null != item.ComponentGuid ? item.ComponentGuid.Contains(hostGuid) : false;
+                bool hasComponentID = null != item.ComponentGuid ? item.ComponentGuid.Equals(componentId) : false;
                 if (item.Contains(className) && hasComponentID)
                 {
                     value.Console.WriteLine("Failback factory {0}=>{1}recieved.", item.Assembly.FullName, className);
@@ -105,7 +87,7 @@ namespace NetOffice.CoreServices
 
             if (throwException)
             {
-                string message = string.Format("Class {0}:{1} not found in loaded NetOffice Assemblies{2}", hostGuid, className, Environment.NewLine);
+                string message = string.Format("Class {0}:{1} not found in loaded NetOffice Assemblies{2}", componentId, className, Environment.NewLine);
                 message += string.Format("Currently loaded NetOfficeApi Assemblies{0}", Environment.NewLine);
                 foreach (IFactoryInfo item in value.InternalFactories.FactoryAssemblies)
                     message += string.Format("Loaded NetOffice Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
@@ -113,115 +95,57 @@ namespace NetOffice.CoreServices
                 throw new FactoryException(message);
             }
             else
+            {
                 return null;
-        }
-
-        /// <summary>
-        /// Returns parent library(COM component) id
-        /// </summary>
-        /// <param name="value">core to use</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="typeGuid">type id from comProxy</param>
-        /// <returns>parent library/component id</returns>
-        internal static Guid GetParentLibraryGuid(this Core value, object comProxy, Guid typeGuid)
-        {
-            if (null == comProxy)
-                throw new ArgumentNullException();
-
-            IDispatch dispatcher = comProxy as IDispatch;
-            if (null == dispatcher)
-                throw new IDispatchNotImplementedException();
-            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
-            COMTypes.ITypeLib parentTypeLib = null;
-            Guid parentGuid = Guid.Empty;
-
-            if (!value.InternalCache.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
-            {
-                int i = 0;
-                typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
-
-                IntPtr attributesPointer = IntPtr.Zero;
-                parentTypeLib.GetLibAttr(out attributesPointer);
-
-                COMTypes.TYPELIBATTR attributes =
-                    (COMTypes.TYPELIBATTR)Marshal.PtrToStructure(attributesPointer,
-                    typeof(COMTypes.TYPELIBATTR));
-                parentGuid = attributes.guid;
-                parentTypeLib.ReleaseTLibAttr(attributesPointer);
-                Marshal.ReleaseComObject(parentTypeLib);
-
-                value.InternalCache.TypeComponentIdCache.Add(typeGuid, parentGuid);
             }
-
-            Marshal.ReleaseComObject(typeInfo);
-
-            return parentGuid;
         }
 
-        /// <summary>
-        /// Returns parent library id
-        /// </summary>
-        /// <param name="value">core to use</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <returns>parent library/component id</returns>
-        internal static Guid GetParentLibraryGuid(this Core value, object comProxy)
-        {
-            if (null == comProxy)
-                throw new ArgumentNullException();
+      
 
-            IDispatch dispatcher = comProxy as IDispatch;
-            if (null == dispatcher)
-                throw new IDispatchNotImplementedException();
+        ///// <summary>
+        ///// Returns parent library id
+        ///// </summary>
+        ///// <param name="value">core to use</param>
+        ///// <param name="comProxy">new created proxy</param>
+        ///// <returns>parent library/component id</returns>
+        //internal static Guid GetParentLibraryGuid(this Core value, object comProxy)
+        //{
+        //    if (null == comProxy)
+        //        throw new ArgumentNullException();
 
-            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
-            COMTypes.ITypeLib parentTypeLib = null;
-            Guid typeGuid = typeInfo.GetTypeGuid();
-            Guid parentGuid = Guid.Empty;
+        //    IDispatch dispatcher = comProxy as IDispatch;
+        //    if (null == dispatcher)
+        //        throw new IDispatchNotImplementedException();
 
-            if (!value.InternalCache.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
-            {
-                int i = 0;
-                typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
+        //    COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
+        //    COMTypes.ITypeLib parentTypeLib = null;
+        //    Guid typeGuid = typeInfo.GetTypeGuid();
+        //    Guid parentGuid = Guid.Empty;
 
-                IntPtr attributesPointer = IntPtr.Zero;
-                parentTypeLib.GetLibAttr(out attributesPointer);
+        //    if (!value.InternalCache.TypeComponentIdCache.TryGetValue(typeGuid, out parentGuid))
+        //    {
+        //        int i = 0;
+        //        typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
 
-                COMTypes.TYPELIBATTR attributes =
-                    (COMTypes.TYPELIBATTR)Marshal.PtrToStructure(attributesPointer,
-                    typeof(COMTypes.TYPELIBATTR));
-                parentGuid = attributes.guid;
-                parentTypeLib.ReleaseTLibAttr(attributesPointer);
-                Marshal.ReleaseComObject(parentTypeLib);
+        //        IntPtr attributesPointer = IntPtr.Zero;
+        //        parentTypeLib.GetLibAttr(out attributesPointer);
 
-                value.InternalCache.TypeComponentIdCache.Add(typeGuid, parentGuid);
-            }
+        //        COMTypes.TYPELIBATTR attributes =
+        //            (COMTypes.TYPELIBATTR)Marshal.PtrToStructure(attributesPointer,
+        //            typeof(COMTypes.TYPELIBATTR));
+        //        parentGuid = attributes.guid;
+        //        parentTypeLib.ReleaseTLibAttr(attributesPointer);
+        //        Marshal.ReleaseComObject(parentTypeLib);
 
-            Marshal.ReleaseComObject(typeInfo);
+        //        value.InternalCache.TypeComponentIdCache.Add(typeGuid, parentGuid);
+        //    }
 
-            return parentGuid;
-        }
+        //    Marshal.ReleaseComObject(typeInfo);
 
-        /// <summary>
-        /// Get type id from IDispatch GetTypeInfo
-        /// </summary>
-        /// <param name="comProxy">target proxy</param>
-        /// <returns>type id</returns>
-        internal static Guid TypeGuid(this object comProxy)
-        {
-            Guid typeGuid = Guid.Empty;
-            if (null == comProxy)
-                throw new ArgumentNullException();
+        //    return parentGuid;
+        //}
 
-            IDispatch dispatcher = comProxy as IDispatch;
-            if (null == dispatcher)
-                throw new IDispatchNotImplementedException();
 
-            COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
-            typeGuid = typeInfo.GetTypeGuid();
-            Marshal.ReleaseComObject(typeInfo);
-
-            return typeGuid;
-        }
 
         /// <summary>
         /// Returns information the type is a known external duplicate

@@ -14,6 +14,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.TextFrame2")]
+	[TypeId("000C0398-0000-0000-C000-000000000046")]
     public interface TextFrame2 : _IMsoDispObj
     {
         #region Properties

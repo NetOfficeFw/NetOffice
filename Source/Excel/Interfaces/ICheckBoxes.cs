@@ -61,6 +61,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[TypeId("00020880-0001-0000-C000-000000000046")]
     public interface ICheckBoxes : ICheckBoxes_, IEnumerableProvider<object>
     {
         #region Properties

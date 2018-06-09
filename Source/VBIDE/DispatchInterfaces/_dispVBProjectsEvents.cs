@@ -11,7 +11,8 @@ namespace NetOffice.VBIDEApi
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface)]
-    public interface X_dispVBProjectsEvents : ICOMObject
+	[TypeId("0002E103-0000-0000-C000-000000000046")]
+    public interface _dispVBProjectsEvents : ICOMObject
     {
         #region Methods
 

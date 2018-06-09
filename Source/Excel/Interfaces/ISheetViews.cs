@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("0002448C-0001-0000-C000-000000000046")]
 	public interface ISheetViews : ICOMObject, IEnumerableProvider<object>
 	{
 		#region Properties

@@ -32,7 +32,8 @@ namespace NetOffice.ExcelApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194426.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(EventContracts.ChartEvents))]
+    [ComEventContract(typeof(EventContracts.ChartEvents))]
+	[TypeId("00020821-0000-0000-C000-000000000046")]
     public interface Chart : _Chart, IEventBinding
     {
         #region Events

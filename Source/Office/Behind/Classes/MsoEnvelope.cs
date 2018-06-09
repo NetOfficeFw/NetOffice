@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862112.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts.IMsoEnvelopeVBEvents))]
+    [ComEventContract(typeof(NetOffice.OfficeApi.EventContracts.IMsoEnvelopeVBEvents))]
     internal class MsoEnvelope : NetOffice.OfficeApi.Behind.IMsoEnvelopeVB, NetOffice.OfficeApi.MsoEnvelope
     {
         #pragma warning disable

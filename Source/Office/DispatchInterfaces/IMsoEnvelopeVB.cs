@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
+	[TypeId("000672AC-0000-0000-C000-000000000046")]
     public interface IMsoEnvelopeVB : ICOMObject
     {
         #region Properties

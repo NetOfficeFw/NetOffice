@@ -14,6 +14,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("0002446A-0001-0000-C000-000000000046")]
     public interface IAllowEditRanges : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.AllowEditRange>
     {
         #region Properties

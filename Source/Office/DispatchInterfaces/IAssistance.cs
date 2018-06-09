@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864589.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("4291224C-DEFE-485B-8E69-6CF8AA85CB76")]
     public interface IAssistance : ICOMObject
     {
         #region Methods

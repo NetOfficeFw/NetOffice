@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("4CAC6328-B9B0-11D3-8D59-0050048384E3")]
     public interface ILicWizExternal : ICOMObject
     {
         #region Properties

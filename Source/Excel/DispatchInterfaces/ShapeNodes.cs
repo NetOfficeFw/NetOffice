@@ -16,6 +16,7 @@ namespace NetOffice.ExcelApi
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     [Duplicate("NetOffice.OfficeApi.ShapeNodes")]
+	[TypeId("000C0319-0000-0000-C000-000000000046")]
 	public interface ShapeNodes : NetOffice.OfficeApi._IMsoDispObj, IEnumerableProvider<NetOffice.ExcelApi.ShapeNode>
 	{
 		#region Properties

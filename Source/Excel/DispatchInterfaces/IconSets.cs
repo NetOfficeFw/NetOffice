@@ -15,6 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195046.aspx </remarks>
 	[SupportByVersion("Excel", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("0002449C-0000-0000-C000-000000000046")]
 	public interface IconSets : ICOMObject, IEnumerableProvider<object>
 	{
 		#region Properties

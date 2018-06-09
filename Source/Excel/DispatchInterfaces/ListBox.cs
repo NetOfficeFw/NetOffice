@@ -76,6 +76,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("00020887-0000-0000-C000-000000000046")]
     public interface ListBox : ListBox_
     {
         #region Properties

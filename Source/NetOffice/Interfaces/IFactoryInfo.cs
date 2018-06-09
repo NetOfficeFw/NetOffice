@@ -20,9 +20,9 @@ namespace NetOffice
         string AssemblyNamespace { get; }
 
         /// <summary>
-        /// Guid of component there represents the NetOfficeApi assembly
+        /// Guid of the COM component which represents the NetOfficeApi assembly
         /// </summary>
-        Guid[] ComponentGuid { get; }
+        Guid ComponentGuid { get; }
 
         /// <summary>
         /// Native API assembly
@@ -33,6 +33,21 @@ namespace NetOffice
         /// Assembly attribute - Core want check the version for compatibility while initialize
         /// </summary>
         NetOfficeAssemblyAttribute AssemblyAttribute { get; }
+
+        /// <summary>
+        /// Exported/Public Types
+        /// </summary>
+        Type[] ExportedTypes { get; }
+
+        /// <summary>
+        /// Returns a name array of dependent NetOfficeApi assemblies
+        /// </summary>
+        string[] Dependencies { get; }
+
+        /// <summary>
+        /// Returns information the factory serves duck interfaces only
+        /// </summary>
+        bool IsDuck { get; }
 
         /// <summary>
         /// Returns info a class with given name exists in NetOfficeApi assembly
@@ -49,13 +64,20 @@ namespace NetOffice
         bool Contains(Type type);
 
         /// <summary>
-        /// Returns a name array of dependent NetOfficeApi assemblies
+        /// Returns contract and implementation type by COM type id
         /// </summary>
-        string[] Dependencies { get; }
+        /// <param name="typeId">target type id</param>
+        /// <param name="contract">contract type</param>
+        /// <param name="implementation">implementation type</param>
+        /// <returns>true if both filled, otherwise false</returns>
+        bool ContractAndImplementation(Guid typeId, ref Type contract, ref Type implementation);
 
         /// <summary>
-        /// Returns information the factory serves duck interfaces only
+        /// Returns an implementation by its contract
         /// </summary>
-        bool IsDuck { get; }
+        /// <param name="contract">contract type</param>
+        /// <param name="implementation">implementation type</param>
+        /// <returns>true if filled, otherwise false</returns>
+        bool Implementation(Type contract, ref Type implementation);
     }
 }

@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -137,6 +137,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("000C1709-0000-0000-C000-000000000046")]
     public interface IMsoChart : IMsoChart_
     {
         #region Properties

@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 15, 16)]
     [EntityType(EntityType.IsInterface)]
+	[TypeId("000244E2-0001-0000-C000-000000000046")]
     public interface IModelTableNameChange : ICOMObject
     {
         #region Properties

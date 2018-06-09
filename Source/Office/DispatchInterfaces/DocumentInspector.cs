@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862517.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("000C0393-0000-0000-C000-000000000046")]
     public interface DocumentInspector : _IMsoDispObj
     {
         #region Properties

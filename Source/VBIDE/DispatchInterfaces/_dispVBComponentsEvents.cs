@@ -9,6 +9,7 @@ namespace NetOffice.VBIDEApi
     /// DispatchInterface _dispVBComponentsEvents
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
+	[TypeId("0002E116-0000-0000-C000-000000000046")]
     public interface _dispVBComponentsEvents : ICOMObject
     {
         #region Methods

@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
-    [ComEventInterface(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]
+    [ComEventContract(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]
     [HasInteropCompatibilityClass(typeof(ApplicationClass))]
     public class Application : NetOffice.ExcelApi.Behind._Application, NetOffice.ExcelApi.Application
     {

@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.TextEffectFormat")]
+	[TypeId("000C031F-0000-0000-C000-000000000046")]
     public interface TextEffectFormat : _IMsoDispObj
     {
         #region Properties

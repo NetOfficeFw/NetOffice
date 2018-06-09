@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 14,15,16)]
 	[EntityType(EntityType.IsInterface)]
+	[TypeId("000244BD-0001-0000-C000-000000000046")]
 	public interface ISparkColor : ICOMObject
 	{
 		#region Properties

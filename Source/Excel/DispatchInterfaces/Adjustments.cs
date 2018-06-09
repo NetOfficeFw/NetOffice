@@ -16,6 +16,7 @@ namespace NetOffice.ExcelApi
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
     [Duplicate("NetOffice.OfficeApi.Adjustments")]
+	[TypeId("000C0310-0000-0000-C000-000000000046")]
 	public interface Adjustments : NetOffice.OfficeApi._IMsoDispObj, IEnumerableProvider<Single>
 	{
 		#region Properties

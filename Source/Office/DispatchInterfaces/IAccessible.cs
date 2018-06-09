@@ -180,6 +180,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: https://msdn.microsoft.com/en-us/library/microsoft.office.core.iaccessible.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
+	[TypeId("618736E0-3C3D-11CF-810C-00AA00389B71")]
     public interface IAccessible : IAccessible_
     {
         #region Properties

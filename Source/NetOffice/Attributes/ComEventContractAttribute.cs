@@ -9,13 +9,13 @@ namespace NetOffice.Attributes
     /// Gives information about supported events
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface)]
-    public class ComEventInterfaceAttribute : System.Attribute
+    public class ComEventContractAttribute : System.Attribute
     {
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
         /// <param name="sinks">COM event interfaces</param>
-        public ComEventInterfaceAttribute(params Type[] sinks)
+        public ComEventContractAttribute(params Type[] sinks)
         {
             Sinks = sinks;
         }

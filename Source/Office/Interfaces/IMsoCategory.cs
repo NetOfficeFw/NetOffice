@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 15, 16)]
     [EntityType(EntityType.IsInterface)]
+	[TypeId("000C1733-0000-0000-C000-000000000046")]
     public interface IMsoCategory : ICOMObject
     {
         #region Properties

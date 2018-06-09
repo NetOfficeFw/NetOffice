@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860339.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts._CommandBarsEvents))]
+    [ComEventContract(typeof(NetOffice.OfficeApi.EventContracts._CommandBarsEvents))]
     internal class CommandBars : NetOffice.OfficeApi.Behind._CommandBars, NetOffice.OfficeApi.CommandBars
     {
         #pragma warning disable

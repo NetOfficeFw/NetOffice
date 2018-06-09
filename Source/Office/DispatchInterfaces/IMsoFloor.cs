@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("000C1716-0000-0000-C000-000000000046")]
     public interface IMsoFloor : ICOMObject
     {
         #region Properties

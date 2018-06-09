@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195700.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("0002442A-0000-0000-C000-000000000046")]
 	public interface Parameter : ICOMObject
 	{
 		#region Properties

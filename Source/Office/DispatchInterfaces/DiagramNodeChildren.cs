@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     [Duplicate("NetOffice.ExcelApi.DiagramNodeChildren")]
+	[TypeId("000C036F-0000-0000-C000-000000000046")]
     public interface DiagramNodeChildren : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.DiagramNode>
     {
         #region Properties

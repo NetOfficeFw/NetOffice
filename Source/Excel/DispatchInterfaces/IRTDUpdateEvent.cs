@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("A43788C1-D91B-11D3-8F39-00C04F3651B8")]
 	public interface IRTDUpdateEvent : ICOMObject
 	{
 		#region Properties

@@ -14,6 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("000C1719-0000-0000-C000-000000000046")]
     public interface LegendEntries : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.LegendEntry>
     {
         #region Properties

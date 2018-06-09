@@ -15,6 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229516.aspx </remarks>
 	[SupportByVersion("Excel", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[TypeId("000244DC-0000-0000-C000-000000000046")]
 	public interface FullSeriesCollection : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Series>
 	{
 		#region Properties

@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861152.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("000C03A1-0000-0000-C000-000000000046")]
     public interface ThemeColor : _IMsoDispObj
     {
         #region Properties

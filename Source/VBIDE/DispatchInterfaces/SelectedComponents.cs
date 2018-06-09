@@ -14,6 +14,7 @@ namespace NetOffice.VBIDEApi
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("BE39F3D4-1B13-11D0-887F-00A0C90F2744")]
     public interface SelectedComponents : ICOMObject, IEnumerableProvider<NetOffice.VBIDEApi.Component>
     {
         #region Properties

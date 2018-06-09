@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -13,6 +13,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863821.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
+	[TypeId("000C0308-0000-0000-C000-000000000046")]
     public interface CommandBarControl : _IMsoOleAccDispObj
     {
         #region Properties

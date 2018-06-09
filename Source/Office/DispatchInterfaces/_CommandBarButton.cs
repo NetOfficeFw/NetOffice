@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
+	[TypeId("000C030E-0000-0000-C000-000000000046")]
     public interface _CommandBarButton : CommandBarControl
     {
         #region Properties

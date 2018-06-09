@@ -87,8 +87,8 @@ namespace NetOffice.Availity
         internal Dictionary<string, string> GetSupportedEntities(Core factory, object comProxy)
         {
             try
-            {                
-                Guid parentLibraryGuid = CoreFactoryExtensions.GetParentLibraryGuid(factory, comProxy);
+            {
+                Guid parentLibraryGuid = CoreTypeExtensions.GetParentLibraryGuid(factory, comProxy);
                 if (Guid.Empty == parentLibraryGuid)
                     return null;
 

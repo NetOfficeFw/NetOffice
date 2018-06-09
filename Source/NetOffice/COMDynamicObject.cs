@@ -1575,7 +1575,11 @@ namespace NetOffice
             {               
                 string className = TypeDescriptor.GetClassName(UnderlyingObject);
 
-                IFactoryInfo factoryInfo = CoreFactoryExtensions.GetFactoryInfo(Factory, this, UnderlyingObject, true);
+                Guid typeId = Guid.Empty;
+                Guid componentId = Guid.Empty;
+
+                CoreTypeExtensions.GetComponentAndTypeId(Factory, UnderlyingObject, ref componentId, ref typeId);
+                IFactoryInfo factoryInfo = CoreFactoryExtensions.GetFactoryInfo(Factory, this, UnderlyingObject, componentId, typeId, true);
 
                 if (null != factoryInfo && factoryInfo.Contains(binder.ReturnType))
                 {

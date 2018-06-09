@@ -15,6 +15,7 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228628.aspx </remarks>
 	[SupportByVersion("Excel", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[TypeId("000244E6-0000-0000-C000-000000000046")]
 	public interface ModelColumnNames : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ModelColumnName>
 	{
 		#region Properties

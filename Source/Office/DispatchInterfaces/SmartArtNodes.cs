@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861522.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("000C03C7-0000-0000-C000-000000000046")]
     public interface SmartArtNodes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SmartArtNode>
     {
         #region Properties

@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: https://msdn.microsoft.com/en-us/library/microsoft.office.core._imsooleaccdispobj.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
+	[TypeId("000C0301-0000-0000-C000-000000000046")]
     public interface _IMsoOleAccDispObj : IAccessible
     {
         #region Properties

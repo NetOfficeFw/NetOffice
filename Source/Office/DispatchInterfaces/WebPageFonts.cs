@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864178.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[TypeId("000C0914-0000-0000-C000-000000000046")]
     public interface WebPageFonts : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.WebPageFont>
     {
         #region Properties

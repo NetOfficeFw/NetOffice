@@ -21,7 +21,8 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862782.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    [ComEventInterface(typeof(NetOffice.OfficeApi.EventContracts._CustomTaskPaneEvents))]
+    [ComEventContract(typeof(NetOffice.OfficeApi.EventContracts._CustomTaskPaneEvents))]
+	[TypeId("C5771BE5-A188-466B-AB31-00A6A32B1B1C")]
     public interface CustomTaskPane : _CustomTaskPane, IEventBinding
     {
         #region Events

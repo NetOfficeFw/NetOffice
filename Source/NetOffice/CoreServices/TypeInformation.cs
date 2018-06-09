@@ -16,9 +16,11 @@ namespace NetOffice.CoreServices
         /// <param name="contract">contract type</param>
         /// <param name="implementation">implementation type</param>
         /// <param name="proxy">proxy type</param>
+        /// <param name="componentId">origin component id</param>
+        /// <param name="typeId">origin type id</param>
         /// <exception cref ="ArgumentNullException">contract is null</exception>
         /// <exception cref ="ArgumentException">contract is not an interface type</exception>
-        internal TypeInformation(Type contract, Type implementation, Type proxy)
+        internal TypeInformation(Type contract, Type implementation, Type proxy, Guid componentId, Guid typeId)
         {
             if (null == contract)
                 throw new ArgumentNullException("contract");
@@ -37,6 +39,7 @@ namespace NetOffice.CoreServices
             Contract = contract;
             Implementation = implementation;
             Proxy = proxy;
+            TypeId = typeId;
         }
 
         /// <summary>
@@ -45,7 +48,7 @@ namespace NetOffice.CoreServices
         /// <returns>newly created instance</returns>
         internal TypeInformation Clone()
         {
-            return new TypeInformation(Contract, Implementation, Proxy);
+            return new TypeInformation(Contract, Implementation, Proxy, ComponentId, TypeId);
         }
 
         /// <summary>
@@ -62,5 +65,15 @@ namespace NetOffice.CoreServices
         /// Proxy Type
         /// </summary>
         internal Type Proxy { get; private set; }
+
+        /// <summary>
+        /// Origin COM Component Id
+        /// </summary>
+        internal Guid ComponentId { get; private set; }
+
+        /// <summary>
+        /// Origin COM Type Id
+        /// </summary>
+        internal Guid TypeId { get; private set; }
     }
 }

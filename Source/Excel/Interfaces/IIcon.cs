@@ -11,6 +11,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     [SupportByVersion("Excel", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
+	[TypeId("0002449A-0001-0000-C000-000000000046")]
     public interface IIcon : ICOMObject
     {
         #region Properties

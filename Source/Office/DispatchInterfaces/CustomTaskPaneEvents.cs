@@ -11,6 +11,7 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("8A64A872-FC6B-4D4A-926E-3A3689562C1C")]
     public interface CustomTaskPaneEvents  : ICOMObject
     {
         #region Methods

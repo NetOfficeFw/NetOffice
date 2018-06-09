@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863102.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[TypeId("2DF8D04D-5BFA-101B-BDE5-00AA0044DE52")]
     public interface DocumentProperties : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.DocumentProperty>
     {
         #region Properties

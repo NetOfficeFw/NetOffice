@@ -57,6 +57,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+	[TypeId("0002084A-0001-0000-C000-000000000046")]
     public interface IAxisTitle : IAxisTitle_
     {
         #region Properties

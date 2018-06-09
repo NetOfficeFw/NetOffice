@@ -14,6 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[TypeId("000C0338-0000-0000-C000-000000000046")]
     public interface IFoundFiles : ICOMObject, IEnumerableProvider<string>
     {
         #region Properties
