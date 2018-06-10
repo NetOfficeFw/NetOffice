@@ -61,18 +61,17 @@ namespace NetOffice.CoreServices.Internal
             return result;
         }
 
+        /// <summary>
+        /// Try get type info by comonent and type id
+        /// </summary>
+        /// <param name="componentId">target component id</param>
+        /// <param name="typeId">target type id</param>
+        /// <returns>type info or null</returns>
         internal TypeInformation TryGetTypeInfo(Guid componentId, Guid typeId)
         {
             lock (_thisLock)
             {
-                foreach (var item in this)
-                {
-                    if (componentId == item.ComponentId && typeId == item.TypeId)
-                    {
-                        return item;
-                    }
-                }
-                return null;
+                return this.FirstOrDefault(e => componentId == e.ComponentId && typeId == e.TypeId);
             }
         }
 
@@ -102,92 +101,6 @@ namespace NetOffice.CoreServices.Internal
                 return null;
             }
         }
-
-        ///// <summary>
-        ///// Get type info by full qualified contract name
-        ///// </summary>
-        ///// <param name="fullContractName">full qualified contract name</param>
-        ///// <param name="typeInfo">result or null(Nothing in Visual Basic)</param>
-        ///// <returns>true if type info is delivered, otherwise false</returns>
-        ///// <exception cref ="ArgumentNullException">fullContractName is null</exception>
-        //internal bool TryGetTypeInfo(string fullContractName, ref TypeInformation typeInfo)
-        //{
-        //    if (String.IsNullOrWhiteSpace(fullContractName))
-        //        throw new ArgumentNullException("fullContractName");
-
-        //    lock (_thisLock)
-        //    {
-        //        foreach (var item in this)
-        //        {
-        //            if (fullContractName == item.Contract.FullName)
-        //            {
-        //                typeInfo = item;
-        //                return true;
-        //            }
-        //        }
-        //        return false;
-        //    }
-        //}
-
-        ///// <summary>
-        /////  Get type info by contract type
-        ///// </summary>
-        ///// <param name="contract">contract type</param>
-        ///// <param name="typeInfo">result or null(Nothing in Visual Basic)</param>
-        ///// <returns>true if type info is delivered, otherwise false</returns>
-        ///// <exception cref ="ArgumentNullException">contract is null</exception>
-        ///// <exception cref ="ArgumentException">contract is not an interface type</exception>
-        //internal bool TryGetTypeInfo(Type contract, ref TypeInformation typeInfo)
-        //{
-        //    if (null == contract)
-        //        throw new ArgumentNullException("contract");
-        //    if (!contract.IsInterface)
-        //        throw new ArgumentException("contract is not an interface.");
-
-        //    lock (_thisLock)
-        //    {
-        //        foreach (var item in this)
-        //        {
-        //            if (contract == item.Contract)
-        //            {
-        //                typeInfo = item;
-        //                return true;
-        //            }
-        //        }
-        //        return false;
-        //    }          
-        //}
-
-        ///// <summary>
-        /////  Get proxy type by contract type
-        ///// </summary>
-        ///// <param name="contract">contract type</param>
-        ///// <param name="proxy">result or null(Nothing in Visual Basic)</param>
-        ///// <returns>true if type info is delivered, otherwise false</returns>
-        ///// <exception cref ="ArgumentNullException">contract is null</exception>
-        ///// <exception cref ="ArgumentException">contract is not an interface type</exception>
-        //internal bool TryGetProxyType(Type contract, ref Type proxy)
-        //{
-        //    if (null == contract)
-        //        throw new ArgumentNullException("contract");
-        //    if (!contract.IsInterface)
-        //        throw new ArgumentException("contract is not an interface.");
-
-        //    lock (_thisLock)
-        //    {
-        //        foreach (var item in this)
-        //        {
-        //            if (contract == item.Contract)
-        //            {
-        //                proxy = item.Proxy;
-        //                return true;
-        //            }
-        //        }
-        //        return false;
-        //    }
-        //}
-
-
 
         /// <summary>
         /// Creates an enumerable copy

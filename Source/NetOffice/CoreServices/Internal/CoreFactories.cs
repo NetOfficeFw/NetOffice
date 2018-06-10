@@ -47,13 +47,13 @@ namespace NetOffice.CoreServices.Internal
         /// <summary>
         /// Loaded Factories
         /// </summary>
-        public IEnumerable<IFactoryInfo> Factories
+        public IEnumerable<ITypeFactory> Factories
         {
             get
             {
                 lock (_thisLock)
                 {
-                    IFactoryInfo[] result = new IFactoryInfo[FactoryAssemblies.Count];
+                    ITypeFactory[] result = new ITypeFactory[FactoryAssemblies.Count];
                     for (int i = 0; i < FactoryAssemblies.Count; i++)
                         result[i] = FactoryAssemblies[i];
                     return result;
@@ -96,6 +96,9 @@ namespace NetOffice.CoreServices.Internal
 
         #region Methods
 
+        /// <summary>
+        /// Removes all factory informations from the instance
+        /// </summary>
         internal void Clear()
         {
             lock (_thisLock)
@@ -105,20 +108,37 @@ namespace NetOffice.CoreServices.Internal
             }
         }
 
+        /// <summary>
+        /// Removes all dependent assembly informations from the instance
+        /// </summary>
         internal void ClearDependentAssemblies()
         {
-            DependentAssemblies.Clear();
+            lock (this)
+            {
+                DependentAssemblies.Clear();
+            }
+            
         }
 
-        internal bool ContainsDependentAssembly(string name)
-        {
-            return DependentAssemblies.Any(e => e.Name == name);
-        }
-
+        /// <summary>
+        /// Adds an dependent assembly information to the instance
+        /// </summary>
+        /// <param name="name">assembly name</param>
+        /// <param name="parentAssembly">parent assembly</param>
         internal void AddDependentAssembly(string name, Assembly parentAssembly)
         {
             DependentAssemblies.Add(new DependentAssembly(name, parentAssembly));
         }
+
+        /// <summary>
+        /// Determines a depenedent assembly is already registered
+        /// </summary>
+        /// <param name="name">name of the dependent assembly</param>
+        /// <returns>true if registered, otherwise false</returns>
+        internal bool ContainsDependentAssembly(string name)
+        {
+            return DependentAssemblies.Any(e => e.Name == name);
+        }        
         
         /// <summary>
         /// Analyze assemblies in current appdomain and connect all NetOffice API factories to the core runtime.
@@ -207,18 +227,25 @@ namespace NetOffice.CoreServices.Internal
             if (false == Attributes.NetOfficeAssemblyAttribute.ContainsAttribute(assembly))
                 return new string[0];
 
-            NetOffice.IFactoryInfo factoryInfo = FactoryAssemblies.FirstOrDefault(e => e.AssemblyName == name);
+            ITypeFactory factoryInfo = FactoryAssemblies.FirstOrDefault(e => e.FactoryName == name);
             if (null == factoryInfo)
             {
+                string targetTypeFactoryName = String.Format("{0}.{1}", name, ".Tools.Expose.TypeFactory");
+
                 List<string> dependAssemblies = new List<string>();
-                Type factoryInfoType = assembly.GetType(name + ".Utils.ProjectInfo");
+                Type factoryInfoType = assembly.GetType(targetTypeFactoryName);
+
                 if (null == factoryInfoType)
-                    throw new NetOfficeException(String.Format("Unable to find {0} factory info", name));
-                factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
+                    throw new NetOfficeException(String.Format("Unable to find {0} type factory", name));
+
+                factoryInfo = Activator.CreateInstance(factoryInfoType) as ITypeFactory;
+
                 if (null == factoryInfo)
-                    throw new FactoryException(String.Format("Unexpected {0} factory info. Assembly {0}", name, assembly));
+                    throw new FactoryException(String.Format("Unexpected {0} type factory. Assembly {0}", name, assembly));
+
                 FactoryAssemblies.Add(factoryInfo);
-                Console.WriteLine("NetOffice Core recieved IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
+
+                Console.WriteLine("NetOffice Core recieved factory:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
 
                 foreach (string itemDependency in factoryInfo.Dependencies)
                     dependAssemblies.Add(itemDependency);

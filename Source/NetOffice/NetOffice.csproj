@@ -121,6 +121,7 @@
     <Compile Include="CoreServices\Internal\TypeDictionary.cs" />
     <Compile Include="CoreServices\TypeInformation.cs" />
     <Compile Include="Exceptions\ActivationException.cs" />
+    <Compile Include="Exceptions\CreateFactoryInstanceException.cs" />
     <Compile Include="Exceptions\NetOfficeInitializeException.cs" />
     <Compile Include="InvokerService\ExecuteMode.cs" />
     <Compile Include="InvokerService\Method.cs" />
@@ -196,6 +197,7 @@
     <Compile Include="Tools\DontRegisterAddinAttribute.cs" />
     <Compile Include="Dynamics\DynamicObjectEntity.cs" />
     <Compile Include="Availity\SupportedEntityFinder.cs" />
+    <Compile Include="Tools\Expose\Factory.cs" />
     <Compile Include="Tools\ForceInitializeAttribute.cs" />
     <Compile Include="Tools\ICOMAddin.cs" />
     <Compile Include="Running\Win32Window.cs" />
@@ -260,7 +262,7 @@
     <Compile Include="Exceptions\NetOfficeException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="COMObject.cs" />
-    <Compile Include="Interfaces\IFactoryInfo.cs" />
+    <Compile Include="Interfaces\ITypeFactory.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="Filtering\RetryMessageFilter.cs" />
     <Compile Include="Running\RunningObjectTable.cs" />

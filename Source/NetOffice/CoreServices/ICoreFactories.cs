@@ -19,7 +19,7 @@ namespace NetOffice.CoreServices
         /// <summary>
         /// Loaded Factories
         /// </summary>
-        IEnumerable<IFactoryInfo> Factories { get; }
+        IEnumerable<ITypeFactory> Factories { get; }
 
         /// <summary>
         /// Known dependent NetOffice assemblies

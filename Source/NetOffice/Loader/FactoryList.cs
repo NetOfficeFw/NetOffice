@@ -10,8 +10,10 @@ namespace NetOffice.Loader
     /// <summary>
     /// Contains loaded factory informations
     /// </summary>
-    public class FactoryList : List<IFactoryInfo>
+    public class FactoryList : List<ITypeFactory>
     {
+        private static string _dllExtension = ".dll";
+
         /// <summary>
         /// Check for loaded assembly in factory list
         /// </summary>
@@ -22,16 +24,32 @@ namespace NetOffice.Loader
             if (String.IsNullOrWhiteSpace(name))
                 return false;
 
-            if (name.EndsWith(".dll", StringComparison.InvariantCultureIgnoreCase))
-                name = name.Substring(0, name.Length - 4);
+            if (name.EndsWith(_dllExtension, StringComparison.InvariantCultureIgnoreCase))
+                name = name.Substring(0, name.Length - _dllExtension.Length);
 
-            foreach (IFactoryInfo item in this)
+            foreach (ITypeFactory item in this)
             {
-                if (item.AssemblyName.StartsWith(name, StringComparison.InvariantCultureIgnoreCase))
+                if (item.FactoryName.StartsWith(name, StringComparison.InvariantCultureIgnoreCase))
                     return true;
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Returns type factory from contact
+        /// </summary>
+        /// <param name="contractType">target contract type</param>
+        /// <returns>corresponding type factory</returns>
+        /// <exception cref="ArgumentNullException">contractType is null</exception>
+        /// <exception cref="InvalidOperationException">unable to find type factory</exception>
+        public ITypeFactory GetTypeFactory(Type contractType)
+        {
+            if (null == contractType)
+                throw new ArgumentNullException("contractType");
+            string contractTypeNamespace = contractType.Namespace;
+            ITypeFactory item = this.First(e => e.FactoryNamespace == contractTypeNamespace);
+            return item;
         }
 
         /// <summary>
@@ -52,9 +70,9 @@ namespace NetOffice.Loader
             try
             {
                 string contractTypeNamespace = contractType.Namespace;
-                IFactoryInfo item = this.FirstOrDefault(e => e.AssemblyNamespace == contractTypeNamespace);
-                if (null != item)
-                    item.Implementation(contractType, ref result);
+                ITypeFactory factory = this.FirstOrDefault(e => e.FactoryNamespace == contractTypeNamespace);
+                if (null != factory)
+                    factory.Implementation(contractType, ref result);
 
                 if (null != result)
                 {
@@ -63,7 +81,7 @@ namespace NetOffice.Loader
                         result = attribute.Value;
                 }
                 else if (throwException)
-                { 
+                {
                     throw new ArgumentException("Unable to find implementation.");
                 }
 
@@ -73,7 +91,7 @@ namespace NetOffice.Loader
             {
                 throw;
             }
-            catch(ArgumentException)
+            catch (ArgumentException)
             {
                 throw;
             }
@@ -86,57 +104,5 @@ namespace NetOffice.Loader
                 throw new FactoryException(String.Format("Unexcepted type load error(1): {0}.", contractType.FullName), exception);
             }
         }
-
-        ///// <summary>
-        ///// Returns contract and implementation type by contract name
-        ///// </summary>
-        ///// <param name="contractTypeNamespace">contract name space</param>
-        ///// <param name="contractTypeName">contract non-fullqualified name</param>
-        ///// <param name="contract">contract result</param>
-        ///// <param name="implementation">implementation result</param>
-        ///// <param name="throwException">throw exception if failed to resolve</param>
-        ///// <exception cref ="ArgumentNullException">argument is null or empty whitespace</exception>
-        ///// <exception cref ="FactoryException">unexpected type load error</exception>
-        ///// <returns>true if contract and implementation is resolved, otherwise false</returns>
-        //public bool GetContractAndImplementationType(string contractTypeNamespace, string contractTypeName, ref Type contract, ref Type implementation, bool throwException = true)
-        //{
-        //    if (String.IsNullOrWhiteSpace(contractTypeNamespace))
-        //        throw new ArgumentNullException("contractTypeNamespace");
-        //    if (String.IsNullOrWhiteSpace(contractTypeName))
-        //        throw new ArgumentNullException("contractTypeName");
-
-        //    bool result = false;
-        //    try
-        //    {
-        //        var item = this.FirstOrDefault(e => e.AssemblyNamespace == contractTypeNamespace);
-        //        string contractTarget = contractTypeNamespace + "." + contractTypeName;
-        //        string implementationTarget = contractTypeNamespace + ".Behind." + contractTypeName;
-
-        //        Type contractResult = item.Assembly.GetType(contractTarget, false);
-        //        Type implementationResult = item.Assembly.GetType(implementationTarget, false);
-        //        result = null != contractResult && null != implementationResult;
-        //        if (false == result && true == throwException)
-        //            throw new TypeLoadException(String.Format("Failed to resolve type ContractOk:{0}, ImplementationOk:{1}.", null != contractResult, null != implementationResult));
-        //        if (result)
-        //        { 
-        //            var attribute = implementationResult.GetCustomAttribute<HasInteropCompatibilityClass>();
-        //            if (null != attribute)
-        //                implementationResult = attribute.Value;
-
-        //            contract = contractResult;
-        //            implementation = implementationResult;
-        //        }
-
-        //        return result;
-        //    }
-        //    catch (TypeLoadException exception)
-        //    {
-        //        throw new FactoryException(String.Format("Unable to load contract or implementation type: {0}.{1}.", contractTypeNamespace, contractTypeName), exception);
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        throw new FactoryException(String.Format("Unexcepted type load error(2): {0}.{1}.", contractTypeNamespace, contractTypeName), exception);
-        //    }
-        //}
     }
 }

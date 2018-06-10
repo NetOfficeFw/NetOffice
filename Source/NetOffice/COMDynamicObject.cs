@@ -1579,11 +1579,11 @@ namespace NetOffice
                 Guid componentId = Guid.Empty;
 
                 CoreTypeExtensions.GetComponentAndTypeId(Factory, UnderlyingObject, ref componentId, ref typeId);
-                IFactoryInfo factoryInfo = CoreFactoryExtensions.GetFactoryInfo(Factory, this, UnderlyingObject, componentId, typeId, true);
+                ITypeFactory factoryInfo = CoreFactoryExtensions.GetTypeFactory(Factory, this, UnderlyingObject, componentId, typeId, true);
 
-                if (null != factoryInfo && factoryInfo.Contains(binder.ReturnType))
+                if (null != factoryInfo && factoryInfo.ContainsType(binder.ReturnType))
                 {
-                    string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
+                    string fullClassName = factoryInfo.FactoryName + "." + className;
                     if (fullClassName.Equals(binder.ReturnType.FullName))
                     {
                         ICOMObject instance = Activator.CreateInstance(binder.ReturnType, new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;

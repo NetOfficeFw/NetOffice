@@ -91,8 +91,9 @@ namespace NetOffice
         /// <summary>
         /// IsInitializedChanged delegate
         /// </summary>
-        /// <param name="isInitialized"></param>
-        public delegate void IsInitializedChangedHandler(bool isInitialized);
+        /// <param name="sender">sender instance</param>
+        /// <param name="isInitialized">true if already initialized, otherwise false</param>
+        public delegate void IsInitializedChangedHandler(Core sender, bool isInitialized);
 
         #endregion
 
@@ -171,8 +172,9 @@ namespace NetOffice
         /// </summary>
         private void RaiseIsInitializedChanged()
         {
-            if (null != IsInitializedChanged)
-                IsInitializedChanged(_initalized);
+            var handler = IsInitializedChanged;
+            if (null != handler)
+                handler(this, _initalized);
         }
 
         #endregion
@@ -630,14 +632,14 @@ namespace NetOffice
 
                 lock (_createComObjectLock)
                 {
-                    IFactoryInfo factoryInfo = CoreFactoryExtensions.GetFactoryInfo(this, caller, comProxy, componentId, typeId, false);
+                    ITypeFactory factoryInfo = CoreFactoryExtensions.GetTypeFactory(this, caller, comProxy, componentId, typeId, false);
                     if (null != factoryInfo)
                     {
                         TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformationForUnknownObject(this, factoryInfo, typeId, comProxy);
                         if(null == typeInfo)
                             throw new FactoryException(String.Format("Unable to resolve proxy type:{0}", ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy)));
 
-                        result = CoreCreateExtensions.CreateInstance(this, typeInfo, caller, comProxy);
+                        result = CoreCreateExtensions.CreateInstance(this, factoryInfo, typeInfo, caller, comProxy);
                     }
                     else
                     {
@@ -763,15 +765,16 @@ namespace NetOffice
                 lock (_createComObjectLock)
                 {
                     TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformationForKnownObject(this, contractWrapperType, comProxy);
-                    if (null == typeInfo)
+                    if (null != typeInfo)
+                    {
+                        ITypeFactory factory = InternalFactories.FactoryAssemblies.GetTypeFactory(contractWrapperType);
+                        result = CoreCreateExtensions.CreateInstance(this, factory, typeInfo, caller, comProxy);
+                    }
+                    else
                     {
                         result = CoreCreateExtensions.TryCreateObjectByResolveEvent(this, caller, contractWrapperType, contractWrapperType);
                         if (null == result)
                             throw new FactoryException(String.Format("Unable to find implementation: {0}.", contractWrapperType.FullName));
-                    }
-                    else
-                    {
-                        result = CoreCreateExtensions.CreateInstance(this, typeInfo, caller, comProxy);
                     }
                     return result;
                 }

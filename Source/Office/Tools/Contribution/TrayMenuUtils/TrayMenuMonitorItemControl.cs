@@ -628,7 +628,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             TryBeginInvoke(method);
         }
 
-        private void Core_IsInitializedChanged(bool isInitialized)
+        private void Core_IsInitializedChanged(Core sender, bool isInitialized)
         {
             Action method = delegate
             {

@@ -21,8 +21,17 @@ namespace NetOffice.CoreServices
         /// <param name="value">value as any</param>
         /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
         /// <returns>value or wrapped value</returns>
+        /// <exception cref="ArgumentNullException">core or value is null </exception>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
+        /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
         public static object WrapObject(this Core factory, object value, bool allowDynamicObject)
         {
+            if (null == factory)
+                throw new ArgumentNullException("factory");
+            if (null == value)
+                throw new ArgumentNullException("value");
+
             if ((null != value) && (value is MarshalByRefObject))
             {
                 ICOMObject newObject = factory.CreateObjectFromComProxy(null, value, allowDynamicObject);
@@ -34,8 +43,21 @@ namespace NetOffice.CoreServices
             }
         }
 
-        internal static void GetComponentAndTypeId(Core value, object comProxy, ref Guid componentId, ref Guid typeId)
+        /// <summary>
+        /// Retrieve component and type id for given com proxy
+        /// </summary>
+        /// <param name="value">core to extend</param>
+        /// <param name="comProxy">com proxy as any</param>
+        /// <param name="componentId">component id from com proxy</param>
+        /// <param name="typeId">type id from com proxy</param>
+        /// <exception cref="ArgumentNullException">core or comProxy is null </exception>
+        internal static void GetComponentAndTypeId(this Core value, object comProxy, ref Guid componentId, ref Guid typeId)
         {
+            if (null == value)
+                throw new ArgumentNullException("factory");
+            if (null == value)
+                throw new ArgumentNullException("value");
+
             typeId = TypeGuid(comProxy);
             Guid parentGuid = Guid.Empty;
             if (!value.InternalCache.TypeComponentIdCache.TryGetValue(typeId, out parentGuid))
@@ -43,6 +65,67 @@ namespace NetOffice.CoreServices
                 parentGuid = GetParentLibraryGuid(value, comProxy);
                 value.InternalCache.TypeComponentIdCache.Add(typeId, parentGuid);
             }
+        }
+
+        /// <summary>
+        /// Resolve type informations for an unknown proxy
+        /// </summary>
+        /// <param name="value">Core to extend</param>
+        /// <param name="typeFactory">corresponding factory from com proxy</param>
+        /// <param name="typeId">type id from com proxy</param>
+        /// <param name="comProxy">target com proxy</param>
+        /// <returns>type information or null if its not a known type</returns>
+        /// <exception cref="ArgumentNullException">core or typeFactory or com proxy is null </exception>
+        internal static TypeInformation GetTypeInformationForUnknownObject(this Core value, ITypeFactory typeFactory, Guid typeId, object comProxy)
+        {
+            if (null == value)
+                throw new ArgumentNullException("facctory");
+            if (null == typeFactory)
+                throw new ArgumentNullException("typeFactory");
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+
+            TypeInformation result = value.InternalCache.TypeCache.TryGetTypeInfo(typeFactory.ComponentID, typeId);
+            if (null == result)
+            {
+                Type contract = null;
+                Type implementation = null;
+                if (typeFactory.ContractAndImplementation(typeId, ref contract, ref implementation))
+                    result = value.InternalCache.TypeCache.Add(contract, implementation, comProxy.GetType(), typeFactory.ComponentID, typeId);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Resolve type informations for a proxy by known result contract
+        /// </summary>
+        /// <param name="value">Core to extend</param>
+        /// <param name="contractType">known contract</param>
+        /// <param name="comProxy">target com proxy</param>
+        /// <returns>type information or null if its failed to resolve</returns>
+        /// <exception cref="ArgumentNullException">core or contractType or com proxy is null</exception>
+        internal static TypeInformation GetTypeInformationForKnownObject(this Core value, Type contractType, object comProxy)
+        {
+            if (null == value)
+                throw new ArgumentNullException("facctory");
+            if (null == contractType)
+                throw new ArgumentNullException("contractType");
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+
+            TypeInformation result = value.InternalCache.TypeCache.TryGetTypeInfo(contractType);
+            if (null != result)
+            {
+                Type implementationType = value.InternalFactories.FactoryAssemblies.GetImplementationType(contractType, false);
+                if (null != implementationType)
+                {
+                    Guid typeId = Guid.Empty;
+                    Guid componentId = Guid.Empty;
+                    GetComponentAndTypeId(value, componentId, ref componentId, ref typeId);
+                    result = value.InternalCache.TypeCache.Add(contractType, implementationType, comProxy.GetType(), componentId, typeId);
+                }
+            }
+            return result;
         }
 
         /// <summary>
@@ -105,68 +188,5 @@ namespace NetOffice.CoreServices
 
             return typeGuid;
         }
-
-        internal static TypeInformation GetTypeInformationForUnknownObject(Core value, IFactoryInfo factoryInfo, Guid typeId, object comProxy)
-        {
-            TypeInformation result = value.InternalCache.TypeCache.TryGetTypeInfo(factoryInfo.ComponentGuid, typeId);
-            if (null == result)
-            {
-                Type contract = null;
-                Type implementation = null;
-                if(factoryInfo.ContractAndImplementation(typeId, ref contract, ref implementation))
-                    result = value.InternalCache.TypeCache.Add(contract, implementation, comProxy.GetType(), factoryInfo.ComponentGuid, typeId);
-            }
-            return result;
-        }
-
-        internal static TypeInformation GetTypeInformationForKnownObject(Core value, Type contractType, object comProxy)
-        {
-            TypeInformation result = value.InternalCache.TypeCache.TryGetTypeInfo(contractType);
-            if (null != result)
-            {
-                Type implementationType = value.InternalFactories.FactoryAssemblies.GetImplementationType(contractType, false);
-                if (null != implementationType)
-                {
-                    Guid typeId = Guid.Empty;
-                    Guid componentId = Guid.Empty;
-                    GetComponentAndTypeId(value, componentId, ref componentId, ref typeId); 
-                    result = value.InternalCache.TypeCache.Add(contractType, implementationType, comProxy.GetType(), componentId, typeId);
-                }
-            }
-            return result;
-        }
-
-        //internal static TypeInformation GetTypeInformation(Core value, object comProxy, Guid typeId, Type contractWrapperType)
-        //{
-        //    TypeInformation typeInfo = null;
-        //    if (false == value.InternalCache.TypeCache.TryGetTypeInfo(contractWrapperType, ref typeInfo))
-        //    {
-        //        Type comProxyType = comProxy.GetType();
-        //        Type implementationType = value.InternalFactories.FactoryAssemblies.GetImplementationType(contractWrapperType, false);
-        //        if (null != implementationType)
-        //        {
-        //            typeInfo = new TypeInformation(contractWrapperType, implementationType, comProxyType, typeId);
-        //            value.InternalCache.TypeCache.Add(typeInfo);
-        //        }
-        //    }
-        //    return typeInfo;
-        //}
-
-        //internal static TypeInformation GetTypeInformation(Core value, object comProxy, string contractWrapperNamespace, string contractWrapperTypeName, Guid typeId)
-        //{
-        //    TypeInformation typeInfo = null;
-        //    if (false == value.InternalCache.TypeCache.TryGetTypeInfo(contractWrapperNamespace + "." + contractWrapperTypeName, ref typeInfo))
-        //    {
-        //        Type comProxyType = comProxy.GetType();
-        //        Type contractType = null;
-        //        Type implementationType = null;
-        //        if (value.InternalFactories.FactoryAssemblies.GetContractAndImplementationType(contractWrapperNamespace, contractWrapperTypeName, ref contractType, ref implementationType, false))
-        //        {
-        //            typeInfo = new TypeInformation(contractType, implementationType, comProxyType, typeId);
-        //            value.InternalCache.TypeCache.Add(typeInfo);
-        //        }
-        //    }
-        //    return typeInfo;
-        //}
     }
 }

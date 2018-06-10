@@ -9,12 +9,12 @@ namespace NetOffice.CoreServices
 {
     internal static class CoreCreateExtensions
     {
-        internal static ICOMObject CreateInstance(Core value, TypeInformation typeInfo, ICOMObject caller, object comProxy)
+        internal static ICOMObject CreateInstance(Core value, ITypeFactory factory, TypeInformation typeInfo, ICOMObject caller, object comProxy)
         {
             ICOMObject newInstance = null;
             try
             {
-                newInstance = ComActivator.CreateInitializeInstance(typeInfo.Implementation, caller, comProxy, typeInfo.Proxy);
+                newInstance = ComActivator.CreateInitializeInstance(typeInfo.Implementation, factory, caller, comProxy, typeInfo.Proxy);
                 newInstance = value.InternalObjectActivator.TryReplaceInstance(caller, newInstance);
             }
             catch (Exception exception)
