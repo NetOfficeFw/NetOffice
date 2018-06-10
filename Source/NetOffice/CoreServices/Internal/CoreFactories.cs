@@ -116,8 +116,7 @@ namespace NetOffice.CoreServices.Internal
             lock (this)
             {
                 DependentAssemblies.Clear();
-            }
-            
+            }            
         }
 
         /// <summary>
@@ -230,10 +229,10 @@ namespace NetOffice.CoreServices.Internal
             ITypeFactory factoryInfo = FactoryAssemblies.FirstOrDefault(e => e.FactoryName == name);
             if (null == factoryInfo)
             {
-                string targetTypeFactoryName = String.Format("{0}.{1}", name, ".Tools.Expose.TypeFactory");
+                string targetTypeFactoryName = String.Format("NetOffice.{0}.{1}", name, "Tools.Expose.TypeFactory");
 
                 List<string> dependAssemblies = new List<string>();
-                Type factoryInfoType = assembly.GetType(targetTypeFactoryName);
+                Type factoryInfoType = assembly.GetType(targetTypeFactoryName, false);
 
                 if (null == factoryInfoType)
                     throw new NetOfficeException(String.Format("Unable to find {0} type factory", name));
@@ -245,7 +244,7 @@ namespace NetOffice.CoreServices.Internal
 
                 FactoryAssemblies.Add(factoryInfo);
 
-                Console.WriteLine("NetOffice Core recieved factory:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
+                Parent.Console.WriteLine("NetOffice Core recieved factory:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
 
                 foreach (string itemDependency in factoryInfo.Dependencies)
                     dependAssemblies.Add(itemDependency);

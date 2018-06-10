@@ -14,7 +14,7 @@ namespace NetOffice.Resolver
         /// <returns>root namespace</returns>
         internal string GetComponentName(ICOMObject instance)
         {
-            return instance.InstanceType.Namespace;
+            return instance.InstanceType.Namespace.Replace(".Behind", String.Empty);
         }
 
         /// <summary>
@@ -27,6 +27,7 @@ namespace NetOffice.Resolver
             string result = instance.InstanceType.FullName;
             result = result.Replace("NetOffice.", String.Empty);
             result = result.Replace("Api", String.Empty);
+            result = result.Replace("Behind.", String.Empty);
             return result;
         }
     }

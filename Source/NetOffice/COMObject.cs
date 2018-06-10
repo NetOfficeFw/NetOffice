@@ -98,21 +98,6 @@ namespace NetOffice
         private Core _factory;
 
         /// <summary>
-        /// FriendlyTypeName chache field
-        /// </summary>
-        private string _friendlyTypeName;
-
-        /// <summary>
-        /// UnderlyingTypeName chache field
-        /// </summary>
-        private string _underlyingTypeName;
-
-        /// <summary>
-        /// UnderlyingComponentName chache field
-        /// </summary>
-        private string _underlyingComponentName;
-
-        /// <summary>
         /// ComponentRootName chache field
         /// </summary>
         private string _componentRootName;
@@ -814,59 +799,60 @@ namespace NetOffice
             }
         }
 
-        /// <summary>
-        /// NetOffice property: Full type name from UnderlyingObject
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        public string UnderlyingTypeName
-        {
-            get
-            {
-                if (null == _underlyingTypeName)
-                    _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
-                return _underlyingTypeName;
-            }
-        }
+        ///// <summary>
+        ///// NetOffice property: Full type name from UnderlyingObject
+        ///// </summary>
+        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
+        //public string UnderlyingTypeName
+        //{
+        //    get
+        //    {
+        //        if (null == _underlyingTypeName)
+        //            _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
+        //        return _underlyingTypeName;
+        //    }
+        //}
 
-        /// <summary>
-        /// NetOffice property: Friendly type name from UnderlyingObject
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
-        public string UnderlyingFriendlyTypeName
-        {
-            get
-            {
-                if (null == _friendlyTypeName)
-                    _friendlyTypeName = new UnderlyingTypeNameResolver().GetFriendlyClassName(this, _underlyingTypeName);
-                return _friendlyTypeName;
-            }
-        }
+        ///// <summary>
+        ///// NetOffice property: Friendly type name from UnderlyingObject
+        ///// </summary>
+        //[Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
+        //public string UnderlyingFriendlyTypeName
+        //{
+        //    get
+        //    {
+        //        if (null == _friendlyTypeName)
+        //            _friendlyTypeName = new UnderlyingTypeNameResolver().GetFriendlyClassName(this, _underlyingTypeName);
+        //        return _friendlyTypeName;
+        //    }
+        //}
 
-        /// <summary>
-        /// NetOffice property: Component name from UnderlyingObject
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        public string UnderlyingComponentName
-        {
-            get
-            {
-                if (null == _underlyingComponentName)
-                    _underlyingComponentName = new UnderlyingTypeNameResolver().GetComponentName(this);
-                return _underlyingComponentName;
-            }
-        }
+        ///// <summary>
+        ///// NetOffice property: Component name from UnderlyingObject
+        ///// </summary>
+        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
+        //public string UnderlyingComponentName
+        //{
+        //    get
+        //    {
+        //        if (null == _underlyingComponentName)
+        //            _underlyingComponentName = new UnderlyingTypeNameResolver().GetComponentName(this);
+        //        return _underlyingComponentName;
+        //    }
+        //}
 
-        /// <summary>
-        /// NetOffice property: Full Name of the NetOffice Wrapper class
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        public string InstanceName
-        {
-            get
-            {
-                return InstanceType.FullName;
-            }
-        }
+        ///// <summary>
+        ///// NetOffice property: Full Name of the NetOffice Wrapper class
+        ///// </summary>
+        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
+        //public string InstanceName
+        //{
+        //    get
+        //    {
+        //        return InstanceType.FullName;
+        //    }
+        //}
+
         /// <summary>
         /// NetOffice property: Friendly Name of the NetOffice Wrapper class
         /// </summary>
@@ -1032,7 +1018,7 @@ namespace NetOffice
             catch (Exception exception)
             {
                 throw new COMDisposeException("An unexpected error occured while disposing <" +
-                    InstanceName + ">.", exception);
+                    InstanceType.FullName + ">.", exception);
             }
         }
 

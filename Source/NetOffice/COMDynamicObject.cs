@@ -156,21 +156,6 @@ namespace NetOffice
         protected internal COMProxyShare _proxyShare;
 
         /// <summary>
-        /// FriendlyTypeName cache field
-        /// </summary>
-        private string _friendlyTypeName;
-
-        /// <summary>
-        /// UnderlyingTypeName cache field
-        /// </summary>
-        private string _underlyingTypeName;
-
-        /// <summary>
-        /// Name of the proxy hosting component
-        /// </summary>
-        private string _underlyingComponentName;
-
-        /// <summary>
         /// Monitor lock object for accessing the child list
         /// </summary>
         private object _childListLock = new object();
@@ -1002,55 +987,55 @@ namespace NetOffice
         /// </summary>
         public Type UnderlyingType { get; private set; }
 
-        /// <summary>
-        /// Class name from UnderlyingObject
-        /// </summary>
-        public string UnderlyingTypeName
-        {
-            get
-            {
-                if (null == _underlyingTypeName)
-                    _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
-                return _underlyingTypeName;
-            }
-        }
+        ///// <summary>
+        ///// Class name from UnderlyingObject
+        ///// </summary>
+        //public string UnderlyingTypeName
+        //{
+        //    get
+        //    {
+        //        if (null == _underlyingTypeName)
+        //            _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
+        //        return _underlyingTypeName;
+        //    }
+        //}
 
-        /// <summary>
-        /// Returns friendly name for the instance type
-        /// </summary>
-        public string UnderlyingFriendlyTypeName
-        {
-            get
-            {
-                if (null == _friendlyTypeName)
-                    _friendlyTypeName = new UnderlyingTypeNameResolver().GetFriendlyClassName(this, _underlyingTypeName);
-                return _friendlyTypeName;
-            }
-        }
+        ///// <summary>
+        ///// Returns friendly name for the instance type
+        ///// </summary>
+        //public string UnderlyingFriendlyTypeName
+        //{
+        //    get
+        //    {
+        //        if (null == _friendlyTypeName)
+        //            _friendlyTypeName = new UnderlyingTypeNameResolver().GetFriendlyClassName(this, _underlyingTypeName);
+        //        return _friendlyTypeName;
+        //    }
+        //}
 
-        /// <summary>
-        /// Name of the hosting NetOffice component
-        /// </summary>
-        public string UnderlyingComponentName
-        {
-            get
-            {
-                if (null == _underlyingComponentName)
-                    _underlyingComponentName = new UnderlyingTypeNameResolver().GetComponentName(this);
-                return _underlyingComponentName;
-            }
-        }
+        ///// <summary>
+        ///// Name of the hosting NetOffice component
+        ///// </summary>
+        //public string UnderlyingComponentName
+        //{
+        //    get
+        //    {
+        //        if (null == _underlyingComponentName)
+        //            _underlyingComponentName = new UnderlyingTypeNameResolver().GetComponentName(this);
+        //        return _underlyingComponentName;
+        //    }
+        //}
 
-        /// <summary>
-        /// Friendly instance name of the NetOffice Wrapper class
-        /// </summary>
-        public string InstanceName
-        {
-            get
-            {
-                return InstanceType.FullName;
-            }
-        }
+        ///// <summary>
+        ///// Friendly instance name of the NetOffice Wrapper class
+        ///// </summary>
+        //public string InstanceName
+        //{
+        //    get
+        //    {
+        //        return InstanceType.FullName;
+        //    }
+        //}
 
         /// <summary>
         /// Friendly Name of the NetOffice Wrapper class
@@ -1062,7 +1047,7 @@ namespace NetOffice
                 if (null != _progId)
                     return "Dynamic(" + _progId + ")";
                 else
-                    return "Dynamic(" + UnderlyingFriendlyTypeName + ")";
+                    return "Dynamic(" + InstanceFriendlyName + ")";
             }
         }
 
@@ -1207,7 +1192,7 @@ namespace NetOffice
             catch (Exception exception)
             {
                 throw new COMDisposeException("An unexpected error occured while disposing <" +
-                    InstanceName + ">.", exception);
+                    InstanceType.FullName + ">.", exception);
             }
         }
 

@@ -15,7 +15,6 @@ namespace ClientApplication
                 Settings.Default.PerformanceTrace.Alert += new PerformanceTrace.PerformanceAlertEventHandler(PerformanceTrace_Alert);
                 Settings.Default.PerformanceTrace["ExcelApi"].Enabled = true;
                 Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 0;
-
                 app = new Excel.ApplicationClass();
                 //app = COMObject.Create<Excel.Application>();
                 app.Visible = true;

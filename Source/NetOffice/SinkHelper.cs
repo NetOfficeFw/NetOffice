@@ -190,20 +190,20 @@ namespace NetOffice
             }
 
             if (comInstance.Settings.EnableEventDebugOutput)
-                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint");
+                comInstance.Console.WriteLine(comInstance.InstanceType.FullName + " -> Call FindConnectionPoint");
 
             string id = FindConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
 
             if (comInstance.Settings.EnableEventDebugOutput)
-                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
+                comInstance.Console.WriteLine(comInstance.InstanceType.FullName + " -> Call FindConnectionPoint passed");
 
             if (null == id)
             {
                 if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint");
+                    comInstance.Console.WriteLine(comInstance.InstanceType.FullName + " -> Call EnumConnectionPoint");
                 id = EnumConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
                 if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
+                    comInstance.Console.WriteLine(comInstance.InstanceType.FullName + " -> Call EnumConnectionPoint passed");
             }
 
             if (null != id)
@@ -239,20 +239,20 @@ namespace NetOffice
             }
 
             if (comInstance.Settings.EnableEventDebugOutput)
-                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint");
+                comInstance.Console.WriteLine(comInstance.InstanceType.FullName + " -> Call EnumConnectionPoint");
 
             string id = EnumConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
 
             if (comInstance.Settings.EnableEventDebugOutput)
-                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
+                comInstance.Console.WriteLine(comInstance.InstanceType.FullName + " -> Call EnumConnectionPoint passed");
 
             if (null == id)
             {
                 if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint");
+                    comInstance.Console.WriteLine(comInstance.InstanceType.FullName + " -> Call FindConnectionPoint");
                 id = FindConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
                 if (comInstance.Settings.EnableEventDebugOutput)
-                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
+                    comInstance.Console.WriteLine(comInstance.InstanceType.FullName + " -> Call FindConnectionPoint passed");
             }
 
             if (null != id)

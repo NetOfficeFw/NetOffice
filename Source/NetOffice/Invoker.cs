@@ -43,13 +43,13 @@ namespace NetOffice
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
-        /// <param name="parentFactory">parent factory</param>
+        /// <param name="parent">parent factory</param>
         /// <exception cref="ArgumentNullException">given parent factory is null</exception>
-        protected internal Invoker(Core parentFactory)
+        public Invoker(Core parent)
         {
-            if (null == parentFactory)
-                throw new ArgumentNullException("parentFactory");
-            Parent = parentFactory;
+            if (null == parent)
+                throw new ArgumentNullException("parent");
+            Parent = parent;
             OnCreate();
         }
        

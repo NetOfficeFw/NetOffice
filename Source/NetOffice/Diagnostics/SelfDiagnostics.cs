@@ -150,7 +150,7 @@ namespace NetOffice.Diagnostics
 
                 if (null != comAddin.AppInstance)
                 {
-                    Add(new DiagnosticItem("AppInstance", comAddin.AppInstance.InstanceName));
+                    Add(new DiagnosticItem("AppInstance", comAddin.AppInstance.InstanceFriendlyName));
                     if (comAddin.AppInstance.EntityIsAvailable("Version", SupportedEntityType.Property))
                     {
                         try
