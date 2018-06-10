@@ -13,15 +13,18 @@ namespace NetOffice.CoreServices
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
+        /// <param name="factory">factory to create instances from</param>
         /// <param name="contract">contract type</param>
         /// <param name="implementation">implementation type</param>
         /// <param name="proxy">proxy type</param>
         /// <param name="componentId">origin component id</param>
         /// <param name="typeId">origin type id</param>
-        /// <exception cref ="ArgumentNullException">contract is null</exception>
+        /// <exception cref ="ArgumentNullException">factory,contract, implementation or proxy is null</exception>
         /// <exception cref ="ArgumentException">contract is not an interface type</exception>
-        internal TypeInformation(Type contract, Type implementation, Type proxy, Guid componentId, Guid typeId)
+        internal TypeInformation(ITypeFactory factory, Type contract, Type implementation, Type proxy, Guid componentId, Guid typeId)
         {
+            if (null == factory)
+                throw new ArgumentNullException("factory");
             if (null == contract)
                 throw new ArgumentNullException("contract");
             if (null == implementation)
@@ -43,37 +46,42 @@ namespace NetOffice.CoreServices
         }
 
         /// <summary>
-        /// Clones the instance
+        /// Factory to create instances from
         /// </summary>
-        /// <returns>newly created instance</returns>
-        internal TypeInformation Clone()
-        {
-            return new TypeInformation(Contract, Implementation, Proxy, ComponentId, TypeId);
-        }
+        public ITypeFactory Factory { get; private set; }
 
         /// <summary>
         /// Contract Type
         /// </summary>
-        internal Type Contract { get; private set; }
+        public Type Contract { get; private set; }
 
         /// <summary>
         /// Implementation Type
         /// </summary>
-        internal Type Implementation { get; private set; }
+        public Type Implementation { get; private set; }
 
         /// <summary>
         /// Proxy Type
         /// </summary>
-        internal Type Proxy { get; private set; }
+        public Type Proxy { get; private set; }
 
         /// <summary>
         /// Origin COM Component Id
         /// </summary>
-        internal Guid ComponentId { get; private set; }
+        public Guid ComponentId { get; private set; }
 
         /// <summary>
         /// Origin COM Type Id
         /// </summary>
-        internal Guid TypeId { get; private set; }
+        public Guid TypeId { get; private set; }
+
+        /// <summary>
+        /// Clones the instance
+        /// </summary>
+        /// <returns>newly created instance</returns>
+        public TypeInformation Clone()
+        {
+            return new TypeInformation(Factory, Contract, Implementation, Proxy, ComponentId, TypeId);
+        }
     }
 }

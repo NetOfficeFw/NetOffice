@@ -63,6 +63,22 @@ namespace NetOffice.Loader
         /// <exception cref ="ArgumentException">unable to find result and exception should thrown</exception>
         public Type GetImplementationType(Type contractType, bool throwException = true)
         {
+            ITypeFactory factory = null;
+            return GetImplementationType(contractType, ref factory, throwException);
+        }
+
+        /// <summary>
+        /// Returns implementation from contract
+        /// </summary>
+        /// <param name="contractType">target contract</param>
+        /// <param name="factory">corresponding factory</param>
+        /// <param name="throwException">throw exception if failed to resolve</param>
+        /// <returns>implementation type</returns>
+        /// <exception cref ="ArgumentNullException">argument is null</exception>
+        /// <exception cref ="FactoryException">unexpected type load error</exception>
+        /// <exception cref ="ArgumentException">unable to find result and exception should thrown</exception>
+        public Type GetImplementationType(Type contractType, ref ITypeFactory factory, bool throwException = true)
+        {
             if (null == contractType)
                 throw new ArgumentNullException("contractType");
 
@@ -70,7 +86,7 @@ namespace NetOffice.Loader
             try
             {
                 string contractTypeNamespace = contractType.Namespace;
-                ITypeFactory factory = this.FirstOrDefault(e => e.FactoryNamespace == contractTypeNamespace);
+                factory = this.FirstOrDefault(e => e.FactoryNamespace == contractTypeNamespace);
                 if (null != factory)
                     factory.Implementation(contractType, ref result);
 

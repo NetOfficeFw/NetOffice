@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(NetOffice.OfficeApi.EventContracts._CommandBarComboBoxEvents))]
-    internal class CommandBarComboBox : NetOffice.OfficeApi.Behind._CommandBarComboBox, NetOffice.OfficeApi.CommandBarComboBox
+    public class CommandBarComboBox : NetOffice.OfficeApi.Behind._CommandBarComboBox, NetOffice.OfficeApi.CommandBarComboBox
     {
         #pragma warning disable
 

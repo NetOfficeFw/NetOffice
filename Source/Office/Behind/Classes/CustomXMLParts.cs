@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(NetOffice.OfficeApi.EventContracts._CustomXMLPartsEvents))]
-    internal class CustomXMLParts : NetOffice.OfficeApi.Behind._CustomXMLParts, NetOffice.OfficeApi.CustomXMLParts
+    public class CustomXMLParts : NetOffice.OfficeApi.Behind._CustomXMLParts, NetOffice.OfficeApi.CustomXMLParts
     {
         #pragma warning disable
 

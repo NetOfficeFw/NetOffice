@@ -54,9 +54,9 @@ namespace NetOffice.CoreServices
         internal static void GetComponentAndTypeId(this Core value, object comProxy, ref Guid componentId, ref Guid typeId)
         {
             if (null == value)
-                throw new ArgumentNullException("factory");
-            if (null == value)
                 throw new ArgumentNullException("value");
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
 
             typeId = TypeGuid(comProxy);
             Guid parentGuid = Guid.Empty;
@@ -79,7 +79,7 @@ namespace NetOffice.CoreServices
         internal static TypeInformation GetTypeInformationForUnknownObject(this Core value, ITypeFactory typeFactory, Guid typeId, object comProxy)
         {
             if (null == value)
-                throw new ArgumentNullException("facctory");
+                throw new ArgumentNullException("value");
             if (null == typeFactory)
                 throw new ArgumentNullException("typeFactory");
             if (null == comProxy)
@@ -91,7 +91,7 @@ namespace NetOffice.CoreServices
                 Type contract = null;
                 Type implementation = null;
                 if (typeFactory.ContractAndImplementation(typeId, ref contract, ref implementation))
-                    result = value.InternalCache.TypeCache.Add(contract, implementation, comProxy.GetType(), typeFactory.ComponentID, typeId);
+                    result = value.InternalCache.TypeCache.Add(typeFactory, contract, implementation, comProxy.GetType(), typeFactory.ComponentID, typeId);
             }
             return result;
         }
@@ -107,7 +107,7 @@ namespace NetOffice.CoreServices
         internal static TypeInformation GetTypeInformationForKnownObject(this Core value, Type contractType, object comProxy)
         {
             if (null == value)
-                throw new ArgumentNullException("facctory");
+                throw new ArgumentNullException("value");
             if (null == contractType)
                 throw new ArgumentNullException("contractType");
             if (null == comProxy)
@@ -116,13 +116,14 @@ namespace NetOffice.CoreServices
             TypeInformation result = value.InternalCache.TypeCache.TryGetTypeInfo(contractType);
             if (null != result)
             {
-                Type implementationType = value.InternalFactories.FactoryAssemblies.GetImplementationType(contractType, false);
+                ITypeFactory typeFactory = null;
+                Type implementationType = value.InternalFactories.FactoryAssemblies.GetImplementationType(contractType, ref typeFactory, false);
                 if (null != implementationType)
                 {
                     Guid typeId = Guid.Empty;
                     Guid componentId = Guid.Empty;
                     GetComponentAndTypeId(value, componentId, ref componentId, ref typeId);
-                    result = value.InternalCache.TypeCache.Add(contractType, implementationType, comProxy.GetType(), componentId, typeId);
+                    result = value.InternalCache.TypeCache.Add(typeFactory, contractType, implementationType, comProxy.GetType(), componentId, typeId);
                 }
             }
             return result;

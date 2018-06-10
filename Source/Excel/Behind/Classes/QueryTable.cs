@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi.Behind
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(NetOffice.ExcelApi.EventContracts.RefreshEvents))]
-    internal class QueryTable : NetOffice.ExcelApi.Behind._QueryTable, NetOffice.ExcelApi.QueryTable
+    public class QueryTable : NetOffice.ExcelApi.Behind._QueryTable, NetOffice.ExcelApi.QueryTable
     {
         #pragma warning disable
 

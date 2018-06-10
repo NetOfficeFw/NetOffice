@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    internal class CodeModule : NetOffice.VBIDEApi.Behind._CodeModule, NetOffice.VBIDEApi.CodeModule
+    public class CodeModule : NetOffice.VBIDEApi.Behind._CodeModule, NetOffice.VBIDEApi.CodeModule
     {
         #pragma warning disable
 

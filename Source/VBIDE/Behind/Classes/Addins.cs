@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    internal class Addins : NetOffice.VBIDEApi.Behind._AddIns, NetOffice.VBIDEApi.Addins
+    public class Addins : NetOffice.VBIDEApi.Behind._AddIns, NetOffice.VBIDEApi.Addins
     {
         #pragma warning disable
 

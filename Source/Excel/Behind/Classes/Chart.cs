@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi.Behind
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(NetOffice.ExcelApi.EventContracts.ChartEvents))]
-    internal class Chart : NetOffice.ExcelApi.Behind._Chart, NetOffice.ExcelApi.Chart
+    public class Chart : NetOffice.ExcelApi.Behind._Chart, NetOffice.ExcelApi.Chart
     {
         #pragma warning disable
 

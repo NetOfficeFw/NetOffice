@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(NetOffice.OfficeApi.EventContracts._CommandBarButtonEvents))]
-    internal class CommandBarButton : NetOffice.OfficeApi.Behind._CommandBarButton, NetOffice.OfficeApi.CommandBarButton
+    public class CommandBarButton : NetOffice.OfficeApi.Behind._CommandBarButton, NetOffice.OfficeApi.CommandBarButton
     {
         #pragma warning disable
 

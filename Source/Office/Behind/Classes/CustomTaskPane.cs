@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(NetOffice.OfficeApi.EventContracts._CustomTaskPaneEvents))]
-    internal class CustomTaskPane : NetOffice.OfficeApi.Behind._CustomTaskPane, NetOffice.OfficeApi.CustomTaskPane
+    public class CustomTaskPane : NetOffice.OfficeApi.Behind._CustomTaskPane, NetOffice.OfficeApi.CustomTaskPane
     {
         #pragma warning disable
 

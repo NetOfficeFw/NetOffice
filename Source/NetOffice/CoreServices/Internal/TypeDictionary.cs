@@ -23,6 +23,7 @@ namespace NetOffice.CoreServices.Internal
         /// <summary>
         /// Adds new type info to the instance
         /// </summary>
+        /// <param name="factory">factory to create instances from</param>
         /// <param name="contract">contract type</param>
         /// <param name="implementation">implementation type</param>
         /// <param name="proxy">proxy type</param>
@@ -31,17 +32,26 @@ namespace NetOffice.CoreServices.Internal
         /// <exception cref ="ArgumentNullException">one or more arguments is null</exception>
         /// <exception cref ="ArgumentException">one or more arguments does not match</exception>
         /// <returns>newly created typeInformation</returns>
-        internal TypeInformation Add(Type contract, Type implementation, Type proxy, Guid componentId, Guid typeId)
+        internal TypeInformation Add(ITypeFactory factory, Type contract, Type implementation, Type proxy, Guid componentId, Guid typeId)
         {
+            if (null == factory)
+                throw new ArgumentNullException("factory");
             if (null == contract)
                 throw new ArgumentNullException("contract");
             if (null == implementation)
                 throw new ArgumentNullException("implementation");
             if (null == proxy)
                 throw new ArgumentNullException("proxy");
+
 #if DEBUG
             if (this.Any(e => e.Contract == contract))
                 throw new ArgumentException("Duplicated contract in type cache detected.");
+
+            if (!factory.ContainsType(contract))
+                throw new ArgumentException("Factory does not support the target contract.");
+
+            if (!factory.ContainsType(implementation))
+                throw new ArgumentException("Factory does not support the target implementation.");
 #endif
 
             TypeInformation result = null;
@@ -55,7 +65,7 @@ namespace NetOffice.CoreServices.Internal
                 if (!proxy.IsCOMObject)
                     throw new ArgumentException("proxy must be a com object.");
 
-                result = new TypeInformation(contract, implementation, proxy, componentId, typeId);
+                result = new TypeInformation(factory, contract, implementation, proxy, componentId, typeId);
                 Add(result);
             }
             return result;

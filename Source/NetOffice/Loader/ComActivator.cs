@@ -23,24 +23,17 @@ namespace NetOffice
         /// <exception cref="ActivationException">failed to activate or initialize the instance</exception>
         public static ICOMObject CreateInitializeInstance(Type type, ITypeFactory factory, ICOMObject parentObject, object comProxy, Type comProxyType)
         {
-            if (null != factory)
+            try
             {
-                try
-                {
-                    var newInstance = factory.CreateInstance(type);
-                    ICOMObjectInitialize init = (ICOMObjectInitialize)newInstance;
-                    init.InitializeCOMObject(parentObject, comProxy, comProxyType);
-                    return newInstance;
-                }
-                catch (Exception exception)
-                {
-                    throw new ActivationException(exception);
-                }
+                var newInstance = factory.CreateInstance(type);
+                ICOMObjectInitialize init = (ICOMObjectInitialize)newInstance;
+                init.InitializeCOMObject(parentObject, comProxy, comProxyType);
+                return newInstance;
             }
-            else
+            catch (Exception exception)
             {
-                return CreateInitializeInstance(type, parentObject, comProxy, comProxyType);
-            }          
+                throw new ActivationException(exception);
+            }
         }
 
         /// <summary>
@@ -52,7 +45,7 @@ namespace NetOffice
         /// <param name="comProxyType">underlying proxy type</param>
         /// <returns>newly created instance</returns>
         /// <exception cref="ActivationException">failed to activate or initialize the instance</exception>
-        public static ICOMObject CreateInitializeInstance(Type type, ICOMObject parentObject, object comProxy, Type comProxyType)
+        public static ICOMObject CreateInitializeInstanceWithoutFactory(Type type, ICOMObject parentObject, object comProxy, Type comProxyType)
         {
             try
             {

@@ -632,6 +632,7 @@ namespace NetOffice
 
                 lock (_createComObjectLock)
                 {
+                    // get type factory first to handle possible duplicate type
                     ITypeFactory factoryInfo = CoreFactoryExtensions.GetTypeFactory(this, caller, comProxy, componentId, typeId, false);
                     if (null != factoryInfo)
                     {
@@ -639,7 +640,7 @@ namespace NetOffice
                         if(null == typeInfo)
                             throw new FactoryException(String.Format("Unable to resolve proxy type:{0}", ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy)));
 
-                        result = CoreCreateExtensions.CreateInstance(this, factoryInfo, typeInfo, caller, comProxy);
+                        result = CoreCreateExtensions.CreateInstance(this, typeInfo, caller, comProxy);
                     }
                     else
                     {
@@ -767,8 +768,7 @@ namespace NetOffice
                     TypeInformation typeInfo = CoreTypeExtensions.GetTypeInformationForKnownObject(this, contractWrapperType, comProxy);
                     if (null != typeInfo)
                     {
-                        ITypeFactory factory = InternalFactories.FactoryAssemblies.GetTypeFactory(contractWrapperType);
-                        result = CoreCreateExtensions.CreateInstance(this, factory, typeInfo, caller, comProxy);
+                        result = CoreCreateExtensions.CreateInstance(this, typeInfo, caller, comProxy);
                     }
                     else
                     {

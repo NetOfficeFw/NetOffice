@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi.Behind
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860324.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
-    internal class CustomXMLSchemaCollection : NetOffice.OfficeApi.Behind._CustomXMLSchemaCollection, NetOffice.OfficeApi.CustomXMLSchemaCollection
+    public class CustomXMLSchemaCollection : NetOffice.OfficeApi.Behind._CustomXMLSchemaCollection, NetOffice.OfficeApi.CustomXMLSchemaCollection
     {
         #pragma warning disable
 

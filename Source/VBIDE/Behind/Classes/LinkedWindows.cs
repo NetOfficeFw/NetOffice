@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    internal class LinkedWindows : NetOffice.VBIDEApi.Behind._LinkedWindows, NetOffice.VBIDEApi.LinkedWindows
+    public class LinkedWindows : NetOffice.VBIDEApi.Behind._LinkedWindows, NetOffice.VBIDEApi.LinkedWindows
     {
         #pragma warning disable
 

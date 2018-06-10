@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    internal class Component : NetOffice.VBIDEApi.Behind._Component, NetOffice.VBIDEApi.Component
+    public class Component : NetOffice.VBIDEApi.Behind._Component, NetOffice.VBIDEApi.Component
     {
         #pragma warning disable
 

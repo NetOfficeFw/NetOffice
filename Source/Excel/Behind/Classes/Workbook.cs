@@ -15,7 +15,7 @@ namespace NetOffice.ExcelApi.Behind
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(NetOffice.ExcelApi.EventContracts.WorkbookEvents))]
-    internal class Workbook : NetOffice.ExcelApi.Behind._Workbook, NetOffice.ExcelApi.Workbook
+    public class Workbook : NetOffice.ExcelApi.Behind._Workbook, NetOffice.ExcelApi.Workbook
     {
         #pragma warning disable
 

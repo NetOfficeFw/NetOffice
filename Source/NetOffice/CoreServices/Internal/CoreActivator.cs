@@ -114,7 +114,7 @@ namespace NetOffice.CoreServices.Internal
 
             if (null != typeToReplace)
             {
-                ICOMObject replaceInstance = ComActivator.CreateInitializeInstance(typeToReplace, caller, instance.UnderlyingObject, instance.UnderlyingType) as ICOMObject;
+                ICOMObject replaceInstance = ComActivator.CreateInitializeInstanceWithoutFactory(typeToReplace, caller, instance.UnderlyingObject, instance.UnderlyingType) as ICOMObject;
                 if (null != replaceInstance)
                 {
                     caller.RemoveChildObject(instance);

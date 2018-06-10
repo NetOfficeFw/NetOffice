@@ -11,7 +11,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
-    internal class CodePane : NetOffice.VBIDEApi.Behind._CodePane, NetOffice.VBIDEApi.CodePane
+    public class CodePane : NetOffice.VBIDEApi.Behind._CodePane, NetOffice.VBIDEApi.CodePane
     {
         #pragma warning disable
 
