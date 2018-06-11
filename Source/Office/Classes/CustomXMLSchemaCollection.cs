@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi
 
     /// <summary>
     /// CoClass CustomXMLSchemaCollection
-    /// SupportByVersion Office, 12,14,15,16
+    /// SupportByVersion Office 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860324.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]

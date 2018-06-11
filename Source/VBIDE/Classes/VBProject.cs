@@ -7,7 +7,7 @@ namespace NetOffice.VBIDEApi
 {
     /// <summary>
     /// CoClass VBProject
-    /// SupportByVersion VBIDE, 12,14,5.3
+    /// SupportByVersion VBIDE 12, 14, 5.3
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]

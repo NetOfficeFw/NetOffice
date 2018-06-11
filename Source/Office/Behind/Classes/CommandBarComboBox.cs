@@ -8,7 +8,7 @@ namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
     /// CoClass CommandBarComboBox
-    /// SupportByVersion Office, 9,10,11,12,14,15,16
+    /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865547.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
@@ -75,12 +75,12 @@ namespace NetOffice.OfficeApi.Behind
         #region Events
 
         /// <summary>
-        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event CommandBarComboBox_ChangeEventHandler _ChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Office 9 10 11 12 14 15,16
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864955.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]

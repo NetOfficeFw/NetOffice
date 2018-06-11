@@ -16,7 +16,7 @@ namespace NetOffice.ExcelApi
 
     /// <summary>
     /// CoClass QueryTable
-    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198271.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -28,14 +28,14 @@ namespace NetOffice.ExcelApi
         #region Events
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823150.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event QueryTable_BeforeRefreshEventHandler BeforeRefreshEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835922.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]

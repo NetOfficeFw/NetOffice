@@ -8,7 +8,7 @@ namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
     /// CoClass CustomTaskPane
-    /// SupportByVersion Office, 12,14,15,16
+    /// SupportByVersion Office 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862782.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
@@ -75,12 +75,12 @@ namespace NetOffice.OfficeApi.Behind
         #region Events
 
         /// <summary>
-        /// SupportByVersion Office, 12,14,15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         private event CustomTaskPane_VisibleStateChangeEventHandler _VisibleStateChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Office 12 14 15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862422.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
@@ -98,12 +98,12 @@ namespace NetOffice.OfficeApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Office, 12,14,15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         private event CustomTaskPane_DockPositionStateChangeEventHandler _DockPositionStateChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Office 12 14 15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865561.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]

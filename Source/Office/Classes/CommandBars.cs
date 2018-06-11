@@ -15,7 +15,7 @@ namespace NetOffice.OfficeApi
 
     /// <summary>
     /// CoClass CommandBars
-    /// SupportByVersion Office, 9,10,11,12,14,15,16
+    /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860339.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
@@ -27,7 +27,7 @@ namespace NetOffice.OfficeApi
         #region Events
 
         /// <summary>
-		/// SupportByVersion Office 9 10 11 12 14 15,16
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861536.aspx </remarks>
 		[SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]

@@ -7,7 +7,7 @@ namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
     /// CoClass CommandBarButton
-    /// SupportByVersion Office, 9,10,11,12,14,15,16
+    /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865221.aspx </remarks>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
@@ -74,12 +74,12 @@ namespace NetOffice.OfficeApi.Behind
         #region Events
 
         /// <summary>
-        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event CommandBarButton_ClickEventHandler _ClickEvent;
 
         /// <summary>
-        /// SupportByVersion Office 9 10 11 12 14 15,16
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864867.aspx </remarks>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]

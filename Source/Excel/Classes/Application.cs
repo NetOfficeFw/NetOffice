@@ -63,11 +63,12 @@ namespace NetOffice.ExcelApi
     /// <summary>
     /// CoClass Application
     /// This class is an alias/typedef for NetOffice.ExcelApi.Behind.Application
-    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
+    [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.ExcelApi.Behind.Application
     {
         /// <summary>
@@ -106,7 +107,7 @@ namespace NetOffice.ExcelApi
 
     /// <summary>
     /// CoClass Application
-    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -118,330 +119,329 @@ namespace NetOffice.ExcelApi
         #region Events
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837373.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_NewWorkbookEventHandler NewWorkbookEvent;
 
-
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839035.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_SheetSelectionChangeEventHandler SheetSelectionChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836225.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_SheetBeforeDoubleClickEventHandler SheetBeforeDoubleClickEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840532.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_SheetBeforeRightClickEventHandler SheetBeforeRightClickEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193288.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_SheetActivateEventHandler SheetActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823120.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_SheetDeactivateEventHandler SheetDeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835607.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_SheetCalculateEventHandler SheetCalculateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193591.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_SheetChangeEventHandler SheetChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196583.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookOpenEventHandler WorkbookOpenEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837347.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookActivateEventHandler WorkbookActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193560.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookDeactivateEventHandler WorkbookDeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836770.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookBeforeCloseEventHandler WorkbookBeforeCloseEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840422.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookBeforeSaveEventHandler WorkbookBeforeSaveEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195507.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookBeforePrintEventHandler WorkbookBeforePrintEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198367.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookNewSheetEventHandler WorkbookNewSheetEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836206.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookAddinInstallEventHandler WorkbookAddinInstallEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835570.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookAddinUninstallEventHandler WorkbookAddinUninstallEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836166.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WindowResizeEventHandler WindowResizeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821328.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WindowActivateEventHandler WindowActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822473.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_WindowDeactivateEventHandler WindowDeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821956.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         event Application_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 10 11 12 14 15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840950.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         event Application_SheetPivotTableUpdateEventHandler SheetPivotTableUpdateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 10 11 12 14 15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198029.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookPivotTableCloseConnectionEventHandler WorkbookPivotTableCloseConnectionEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 10 11 12 14 15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821547.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         event Application_WorkbookPivotTableOpenConnectionEventHandler WorkbookPivotTableOpenConnectionEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839042.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         event Application_WorkbookSyncEventHandler WorkbookSyncEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196324.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         event Application_WorkbookBeforeXmlImportEventHandler WorkbookBeforeXmlImportEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837416.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         event Application_WorkbookAfterXmlImportEventHandler WorkbookAfterXmlImportEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195824.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         event Application_WorkbookBeforeXmlExportEventHandler WorkbookBeforeXmlExportEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836803.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         event Application_WorkbookAfterXmlExportEventHandler WorkbookAfterXmlExportEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 12 14 15,16
+        /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839165.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         event Application_WorkbookRowsetCompleteEventHandler WorkbookRowsetCompleteEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 12 14 15,16
+        /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840621.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         event Application_AfterCalculateEventHandler AfterCalculateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193316.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_SheetPivotTableAfterValueChangeEventHandler SheetPivotTableAfterValueChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838226.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_SheetPivotTableBeforeAllocateChangesEventHandler SheetPivotTableBeforeAllocateChangesEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838379.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_SheetPivotTableBeforeCommitChangesEventHandler SheetPivotTableBeforeCommitChangesEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835217.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_SheetPivotTableBeforeDiscardChangesEventHandler SheetPivotTableBeforeDiscardChangesEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194431.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838239.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821579.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836848.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_ProtectedViewWindowResizeEventHandler ProtectedViewWindowResizeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195451.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196820.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198184.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_WorkbookAfterSaveEventHandler WorkbookAfterSaveEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834985.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
         event Application_WorkbookNewChartEventHandler WorkbookNewChartEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 15,16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227506.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
         event Application_SheetLensGalleryRenderCompleteEventHandler SheetLensGalleryRenderCompleteEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 15,16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229805.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
         event Application_SheetTableUpdateEventHandler SheetTableUpdateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 15,16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229611.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
         event Application_WorkbookModelChangeEventHandler WorkbookModelChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 15,16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/dn448391.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]

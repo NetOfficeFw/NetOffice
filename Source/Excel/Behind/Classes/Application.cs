@@ -9,7 +9,7 @@ namespace NetOffice.ExcelApi.Behind
 {
     /// <summary>
     /// CoClass Application
-    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -191,12 +191,12 @@ namespace NetOffice.ExcelApi.Behind
         #region Events
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_NewWorkbookEventHandler _NewWorkbookEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837373.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -214,12 +214,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetSelectionChangeEventHandler _SheetSelectionChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839035.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -237,12 +237,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetBeforeDoubleClickEventHandler _SheetBeforeDoubleClickEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836225.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -260,12 +260,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetBeforeRightClickEventHandler _SheetBeforeRightClickEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840532.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -283,12 +283,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetActivateEventHandler _SheetActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193288.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -306,12 +306,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetDeactivateEventHandler _SheetDeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823120.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -329,12 +329,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetCalculateEventHandler _SheetCalculateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835607.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -352,12 +352,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetChangeEventHandler _SheetChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193591.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -375,12 +375,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookOpenEventHandler _WorkbookOpenEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196583.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -398,12 +398,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookActivateEventHandler _WorkbookActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837347.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -421,12 +421,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookDeactivateEventHandler _WorkbookDeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193560.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -444,12 +444,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookBeforeCloseEventHandler _WorkbookBeforeCloseEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836770.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -467,12 +467,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookBeforeSaveEventHandler _WorkbookBeforeSaveEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840422.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -490,12 +490,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookBeforePrintEventHandler _WorkbookBeforePrintEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195507.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -513,12 +513,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookNewSheetEventHandler _WorkbookNewSheetEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198367.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -536,12 +536,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookAddinInstallEventHandler _WorkbookAddinInstallEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836206.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -559,12 +559,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookAddinUninstallEventHandler _WorkbookAddinUninstallEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835570.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -582,12 +582,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WindowResizeEventHandler _WindowResizeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836166.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -605,12 +605,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WindowActivateEventHandler _WindowActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821328.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -628,12 +628,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822473.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -651,12 +651,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetFollowHyperlinkEventHandler _SheetFollowHyperlinkEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821956.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -674,12 +674,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_SheetPivotTableUpdateEventHandler _SheetPivotTableUpdateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 10 11 12 14 15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840950.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
@@ -697,12 +697,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookPivotTableCloseConnectionEventHandler _WorkbookPivotTableCloseConnectionEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 10 11 12 14 15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198029.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
@@ -720,12 +720,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookPivotTableOpenConnectionEventHandler _WorkbookPivotTableOpenConnectionEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 10 11 12 14 15,16
+        /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821547.aspx </remarks>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
@@ -743,12 +743,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 11,12,14,15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookSyncEventHandler _WorkbookSyncEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839042.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
@@ -766,12 +766,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 11,12,14,15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookBeforeXmlImportEventHandler _WorkbookBeforeXmlImportEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196324.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
@@ -789,12 +789,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 11,12,14,15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookAfterXmlImportEventHandler _WorkbookAfterXmlImportEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837416.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
@@ -812,12 +812,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 11,12,14,15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookBeforeXmlExportEventHandler _WorkbookBeforeXmlExportEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195824.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
@@ -835,12 +835,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 11,12,14,15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookAfterXmlExportEventHandler _WorkbookAfterXmlExportEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 11 12 14 15,16
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836803.aspx </remarks>
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
@@ -858,12 +858,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 12,14,15,16
+        /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         private event Application_WorkbookRowsetCompleteEventHandler _WorkbookRowsetCompleteEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 12 14 15,16
+        /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839165.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
@@ -881,12 +881,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 12,14,15,16
+        /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         private event Application_AfterCalculateEventHandler _AfterCalculateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 12 14 15,16
+        /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840621.aspx </remarks>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
@@ -904,12 +904,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_SheetPivotTableAfterValueChangeEventHandler _SheetPivotTableAfterValueChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193316.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -927,12 +927,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_SheetPivotTableBeforeAllocateChangesEventHandler _SheetPivotTableBeforeAllocateChangesEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838226.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -950,12 +950,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_SheetPivotTableBeforeCommitChangesEventHandler _SheetPivotTableBeforeCommitChangesEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838379.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -973,12 +973,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_SheetPivotTableBeforeDiscardChangesEventHandler _SheetPivotTableBeforeDiscardChangesEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835217.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -996,12 +996,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_ProtectedViewWindowOpenEventHandler _ProtectedViewWindowOpenEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194431.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -1019,12 +1019,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_ProtectedViewWindowBeforeEditEventHandler _ProtectedViewWindowBeforeEditEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838239.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -1042,12 +1042,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_ProtectedViewWindowBeforeCloseEventHandler _ProtectedViewWindowBeforeCloseEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821579.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -1065,12 +1065,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_ProtectedViewWindowResizeEventHandler _ProtectedViewWindowResizeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836848.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -1088,12 +1088,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_ProtectedViewWindowActivateEventHandler _ProtectedViewWindowActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195451.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -1111,12 +1111,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_ProtectedViewWindowDeactivateEventHandler _ProtectedViewWindowDeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196820.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -1134,12 +1134,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_WorkbookAfterSaveEventHandler _WorkbookAfterSaveEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198184.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -1157,12 +1157,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 14,15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         private event Application_WorkbookNewChartEventHandler _WorkbookNewChartEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 14 15,16
+        /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834985.aspx </remarks>
         [SupportByVersion("Excel", 14, 15, 16)]
@@ -1180,12 +1180,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 15, 16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         private event Application_SheetLensGalleryRenderCompleteEventHandler _SheetLensGalleryRenderCompleteEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 15,16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227506.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
@@ -1203,12 +1203,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 15, 16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         private event Application_SheetTableUpdateEventHandler _SheetTableUpdateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 15,16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229805.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
@@ -1226,12 +1226,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 15, 16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         private event Application_WorkbookModelChangeEventHandler _WorkbookModelChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 15,16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229611.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
@@ -1249,12 +1249,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 15, 16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         private event Application_SheetBeforeDeleteEventHandler _SheetBeforeDeleteEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 15,16
+        /// SupportByVersion Excel 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/dn448391.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]

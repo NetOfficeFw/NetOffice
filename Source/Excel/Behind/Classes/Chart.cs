@@ -8,7 +8,7 @@ namespace NetOffice.ExcelApi.Behind
 {
     /// <summary>
     /// CoClass Chart
-    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194426.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -76,12 +76,12 @@ namespace NetOffice.ExcelApi.Behind
         #region Events
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_ActivateEventHandler _ActivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834456.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -99,12 +99,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_DeactivateEventHandler _DeactivateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838241.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -122,12 +122,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_ResizeEventHandler _ResizeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839406.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -145,12 +145,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_MouseDownEventHandler _MouseDownEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822567.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -168,12 +168,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_MouseUpEventHandler _MouseUpEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197532.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -191,12 +191,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_MouseMoveEventHandler _MouseMoveEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837995.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -214,12 +214,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_BeforeRightClickEventHandler _BeforeRightClickEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839270.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -237,12 +237,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_DragPlotEventHandler _DragPlotEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_DragPlotEventHandler DragPlotEvent
@@ -259,12 +259,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_DragOverEventHandler _DragOverEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_DragOverEventHandler DragOverEvent
@@ -281,12 +281,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197223.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -304,12 +304,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_SelectEventHandler _SelectEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192964.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -327,12 +327,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_SeriesChangeEventHandler _SeriesChangeEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834746.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
@@ -350,12 +350,12 @@ namespace NetOffice.ExcelApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         private event Chart_CalculateEventHandler _CalculateEvent;
 
         /// <summary>
-        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820890.aspx </remarks>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]

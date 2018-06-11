@@ -17,7 +17,7 @@ namespace NetOffice.OfficeApi
 
     /// <summary>
     /// CoClass CustomXMLParts
-    /// SupportByVersion Office, 12,14,15,16
+    /// SupportByVersion Office 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863162.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
@@ -29,21 +29,21 @@ namespace NetOffice.OfficeApi
         #region Events
 
         /// <summary>
-        /// SupportByVersion Office 12 14 15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864147.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         event CustomXMLParts_PartAfterAddEventHandler PartAfterAddEvent;
 
         /// <summary>
-        /// SupportByVersion Office 12 14 15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861735.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         event CustomXMLParts_PartBeforeDeleteEventHandler PartBeforeDeleteEvent;
 
         /// <summary>
-        /// SupportByVersion Office 12 14 15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864879.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]

@@ -8,7 +8,7 @@ namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
     /// CoClass CustomXMLPart
-    /// SupportByVersion Office, 12,14,15,16
+    /// SupportByVersion Office 12, 14, 15, 16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863497.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
@@ -75,12 +75,12 @@ namespace NetOffice.OfficeApi.Behind
         #region Events
 
         /// <summary>
-        /// SupportByVersion Office, 12,14,15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         private event CustomXMLPart_NodeAfterInsertEventHandler _NodeAfterInsertEvent;
 
         /// <summary>
-        /// SupportByVersion Office 12 14 15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862780.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
@@ -98,12 +98,12 @@ namespace NetOffice.OfficeApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Office, 12,14,15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         private event CustomXMLPart_NodeAfterDeleteEventHandler _NodeAfterDeleteEvent;
 
         /// <summary>
-        /// SupportByVersion Office 12 14 15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861395.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
@@ -121,12 +121,12 @@ namespace NetOffice.OfficeApi.Behind
         }
 
         /// <summary>
-        /// SupportByVersion Office, 12,14,15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         private event CustomXMLPart_NodeAfterReplaceEventHandler _NodeAfterReplaceEvent;
 
         /// <summary>
-        /// SupportByVersion Office 12 14 15,16
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863732.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]

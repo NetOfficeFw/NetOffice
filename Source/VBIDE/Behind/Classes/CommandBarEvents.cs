@@ -7,7 +7,7 @@ namespace NetOffice.VBIDEApi.Behind
 {
     /// <summary>
     /// CoClass CommandBarEvents
-    /// SupportByVersion VBIDE, 12,14,5.3
+    /// SupportByVersion VBIDE 12, 14, 5.3
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]    
@@ -73,12 +73,12 @@ namespace NetOffice.VBIDEApi.Behind
         #region Events
 
         /// <summary>
-        /// SupportByVersion VBIDE, 12,14,5.3
+        /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         private event CommandBarEvents_ClickEventHandler _ClickEvent;
 
         /// <summary>
-        /// SupportByVersion VBIDE 12 14 5.3
+        /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public event CommandBarEvents_ClickEventHandler ClickEvent
