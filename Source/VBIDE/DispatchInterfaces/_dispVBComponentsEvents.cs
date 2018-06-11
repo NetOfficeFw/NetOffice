@@ -10,6 +10,7 @@ namespace NetOffice.VBIDEApi
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
 	[TypeId("0002E116-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.VBIDEApi._dispVBComponentsEvents))]
     public interface _dispVBComponentsEvents : ICOMObject
     {
         #region Methods

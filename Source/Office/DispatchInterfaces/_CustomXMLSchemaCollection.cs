@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000CDB02-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OfficeApi.CustomXMLSchemaCollection))]
     public interface _CustomXMLSchemaCollection : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLSchema>
     {
         #region Properties

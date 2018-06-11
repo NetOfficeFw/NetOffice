@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("000CDB05-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OfficeApi.CustomXMLPart))]
     public interface _CustomXMLPart : _IMsoDispObj
     {
         #region Properties

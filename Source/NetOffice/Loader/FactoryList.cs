@@ -10,9 +10,10 @@ namespace NetOffice.Loader
     /// <summary>
     /// Contains loaded factory informations
     /// </summary>
-    public class FactoryList : List<ITypeFactory>
+    public class FactoryList 
     {
         private static string _dllExtension = ".dll";
+        private List<ITypeFactory> _items = new List<ITypeFactory>();
 
         /// <summary>
         /// Check for loaded assembly in factory list
@@ -27,7 +28,7 @@ namespace NetOffice.Loader
             if (name.EndsWith(_dllExtension, StringComparison.InvariantCultureIgnoreCase))
                 name = name.Substring(0, name.Length - _dllExtension.Length);
 
-            foreach (ITypeFactory item in this)
+            foreach (ITypeFactory item in _items)
             {
                 if (item.FactoryName.StartsWith(name, StringComparison.InvariantCultureIgnoreCase))
                     return true;
@@ -48,8 +49,37 @@ namespace NetOffice.Loader
             if (null == contractType)
                 throw new ArgumentNullException("contractType");
             string contractTypeNamespace = contractType.Namespace;
-            ITypeFactory item = this.First(e => e.FactoryNamespace == contractTypeNamespace);
+            ITypeFactory item = _items.First(e => e.FactoryNamespace == contractTypeNamespace);
             return item;
+        }
+
+        /// <summary>
+        /// Returns contract and implementation type from given factory
+        /// </summary>
+        /// <param name="factory">factory to look into</param>
+        /// <param name="typeId">target type id</param>
+        /// <param name="contract">corresponding contract</param>
+        /// <param name="implementation">corresponding implementation</param>
+        /// <returns>true if both filled, otherwise false</returns>
+        public bool GetContractAndImplementationType(ITypeFactory factory, Guid typeId, ref Type contract, ref Type implementation)
+        {
+            bool result = false;
+            result = factory.ContractAndImplementation(typeId, ref contract, ref implementation);
+            if (result)
+            {
+                var coClass = contract.GetCustomAttribute<CoClassSourceAttribute>();
+                if (null != coClass)
+                {
+                    contract = coClass.Value;
+                    if (!factory.Implementation(contract, ref implementation))
+                        return false;
+                }
+
+                var attribute = implementation.GetCustomAttribute<HasInteropCompatibilityClassAttribute>();
+                if (null != attribute)
+                    implementation = attribute.Value;
+            }
+            return result;
         }
 
         /// <summary>
@@ -86,13 +116,13 @@ namespace NetOffice.Loader
             try
             {
                 string contractTypeNamespace = contractType.Namespace;
-                factory = this.FirstOrDefault(e => e.FactoryNamespace == contractTypeNamespace);
+                factory = _items.FirstOrDefault(e => e.FactoryNamespace == contractTypeNamespace);
                 if (null != factory)
                     factory.Implementation(contractType, ref result);
 
                 if (null != result)
                 {
-                    var attribute = result.GetCustomAttribute<HasInteropCompatibilityClass>();
+                    var attribute = result.GetCustomAttribute<HasInteropCompatibilityClassAttribute>();
                     if (null != attribute)
                         result = attribute.Value;
                 }

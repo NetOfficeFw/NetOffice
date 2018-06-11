@@ -53,6 +53,7 @@ namespace NetOffice.ExcelApi
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("000208DA-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.ExcelApi.Workbook))]
     public interface _Workbook : _Workbook_
     {
         #region Properties

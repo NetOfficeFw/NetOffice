@@ -9,7 +9,7 @@ namespace NetOffice.Attributes
     /// Indicates there is an interop compatibility class for this type
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class HasInteropCompatibilityClass : System.Attribute
+    public class HasInteropCompatibilityClassAttribute : System.Attribute
     {
         /// <summary>
         /// Interop Compatibility Class
@@ -17,10 +17,10 @@ namespace NetOffice.Attributes
         public readonly Type Value;
 
         /// <summary>
-        /// nterop compatibility class
+        /// Creates an instance of the class
         /// </summary>
-        /// <param name="value"></param>
-        public HasInteropCompatibilityClass(Type value)
+        /// <param name="value">interop compatibility class</param>
+        public HasInteropCompatibilityClassAttribute(Type value)
         {
             Value = value;
         }

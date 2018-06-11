@@ -15,6 +15,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000CDB09-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OfficeApi.CustomXMLParts))]
     public interface _CustomXMLParts : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLPart>
     {
         #region Properties

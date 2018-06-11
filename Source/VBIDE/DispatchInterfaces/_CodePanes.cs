@@ -15,6 +15,7 @@ namespace NetOffice.VBIDEApi
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("0002E172-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.VBIDEApi.CodePanes))]
     public interface _CodePanes : ICOMObject, IEnumerableProvider<NetOffice.VBIDEApi.CodePane>
     {
         #region Properties

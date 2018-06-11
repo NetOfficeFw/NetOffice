@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 namespace NetOffice.CoreServices
 {
     /// <summary>
     /// Represents a cache information about a com proxy and its contract and implementation in NetOffice
     /// </summary>
+    [DebuggerDisplay("{Contract}")]
     public class TypeInformation
     {
         /// <summary>
@@ -88,6 +90,15 @@ namespace NetOffice.CoreServices
         public TypeInformation Clone()
         {
             return new TypeInformation(Factory, Contract, Implementation, Proxy, ComponentId, TypeId);
+        }
+
+        /// <summary>
+        /// Represents a System.String of the instance
+        /// </summary>
+        /// <returns>System.String</returns>
+        public override string ToString()
+        {
+            return String.Format("TypeInformation:{0},{1}", Contract.FullName, Implementation.FullName );
         }
     }
 }

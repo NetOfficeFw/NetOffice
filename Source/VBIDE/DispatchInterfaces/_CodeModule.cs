@@ -13,6 +13,7 @@ namespace NetOffice.VBIDEApi
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("0002E16E-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.VBIDEApi.CodeModule))]
     public interface _CodeModule : ICOMObject
     {
         #region Properties

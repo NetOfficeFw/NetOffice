@@ -26,7 +26,7 @@ namespace NetOffice.ExcelApi
 	public delegate void Worksheet_LensGalleryRenderCompleteEventHandler();
 	public delegate void Worksheet_TableUpdateEventHandler(NetOffice.ExcelApi.TableObject target);
 	public delegate void Worksheet_BeforeDeleteEventHandler();
-#pragma warning restore
+    #pragma warning restore
 
     #endregion
 

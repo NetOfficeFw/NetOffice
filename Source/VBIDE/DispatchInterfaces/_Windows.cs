@@ -12,6 +12,7 @@ namespace NetOffice.VBIDEApi
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("F57B7ED0-D8AB-11D1-85DF-00C04F98F42C")]
+    [CoClassSource(typeof(NetOffice.VBIDEApi.Windows))]
     public interface _Windows : _Windows_old
     {
         #region Methods

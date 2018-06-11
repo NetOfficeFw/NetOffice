@@ -72,6 +72,7 @@
     <Compile Include="Attributes\AttributeExtensions.cs" />
     <Compile Include="Attributes\BaseResultAttribute.cs" />
     <Compile Include="Attributes\BaseTypeAttribute.cs" />
+    <Compile Include="Attributes\CoClassSourceAttribute.cs" />
     <Compile Include="Attributes\ComEventContractAttribute.cs" />
     <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
     <Compile Include="Attributes\ComRegisterCallAttribute.cs" />

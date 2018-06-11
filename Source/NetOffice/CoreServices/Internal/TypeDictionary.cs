@@ -54,17 +54,23 @@ namespace NetOffice.CoreServices.Internal
                 throw new ArgumentException("Factory does not support the target implementation.");
 #endif
 
+            if (!contract.IsInterface)
+                throw new ArgumentException("contract is not an interface.");
+            if (implementation.IsInterface)
+                throw new ArgumentException("implementation must be a class.");
+            if (!proxy.IsCOMObject)
+                throw new ArgumentException("proxy must be a com object.");
+
             TypeInformation result = null;
+
+            var coClassSource = contract.GetCustomAttribute<CoClassSourceAttribute>();
+            if (null != coClassSource)
+            {
+                contract = coClassSource.Value;
+            }
 
             lock (_thisLock)
             {
-                if (!contract.IsInterface)
-                    throw new ArgumentException("contract is not an interface.");
-                if (implementation.IsInterface)
-                    throw new ArgumentException("implementation must be a class.");
-                if (!proxy.IsCOMObject)
-                    throw new ArgumentException("proxy must be a com object.");
-
                 result = new TypeInformation(factory, contract, implementation, proxy, componentId, typeId);
                 Add(result);
             }
@@ -81,7 +87,8 @@ namespace NetOffice.CoreServices.Internal
         {
             lock (_thisLock)
             {
-                return this.FirstOrDefault(e => componentId == e.ComponentId && typeId == e.TypeId);
+                var result = this.FirstOrDefault(e => componentId == e.ComponentId && typeId == e.TypeId);
+                return result;
             }
         }
 
@@ -101,14 +108,8 @@ namespace NetOffice.CoreServices.Internal
 
             lock (_thisLock)
             {
-                foreach (var item in this)
-                {
-                    if (contract == item.Contract)
-                    {
-                        return item;
-                    }
-                }
-                return null;
+                var result = this.FirstOrDefault(e => e.Contract == contract);
+                return result;
             }
         }
 

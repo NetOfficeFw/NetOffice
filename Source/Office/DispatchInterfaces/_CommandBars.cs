@@ -16,6 +16,7 @@ namespace NetOffice.OfficeApi
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C0302-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OfficeApi.CommandBars))]
     public interface _CommandBars : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CommandBar>
     {
         #region Properties

@@ -12,6 +12,7 @@ namespace NetOffice.VBIDEApi
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("EEE00921-E393-11D1-BB03-00C04FB6C4A6")]
+    [CoClassSource(typeof(NetOffice.VBIDEApi.VBComponent))]
     public interface _VBComponent : _VBComponent_Old
     {
         #region Properties

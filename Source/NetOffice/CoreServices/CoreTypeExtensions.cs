@@ -89,7 +89,8 @@ namespace NetOffice.CoreServices
             {
                 Type contract = null;
                 Type implementation = null;
-                if (typeFactory.ContractAndImplementation(typeId, ref contract, ref implementation))
+                if(value.InternalFactories.FactoryAssemblies.GetContractAndImplementationType(typeFactory, typeId, ref contract, ref implementation))
+//                if (typeFactory.ContractAndImplementation(typeId, ref contract, ref implementation))
                     result = value.InternalCache.TypeCache.Add(typeFactory, contract, implementation, comProxy.GetType(), typeFactory.ComponentID, typeId);
             }
             return result;
