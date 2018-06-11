@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using TutorialsBase;
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
+using NetOffice.Running;
 
 namespace TutorialsCS4
 {
@@ -16,21 +17,21 @@ namespace TutorialsCS4
             // 1)
             //
             // GetActiveInstance take the first instance in memory
-            Excel.Application application = Excel.Application.GetActiveInstance();
-            if(null != application)
+            Excel.Application application = ProxyService.GetActiveInstance<Excel.Application>();
+            if (null != application)
                 application.Dispose();
 
             // 2)
             //
             // GetActiveInstances takes all instances in memory
-            var applications = Excel.Application.GetActiveInstances();
+            var applications = ProxyService.GetActiveInstances<Excel.Application>();
             applications.Dispose();
 
             // 3)
             //
             // Use special ctor to try access a running application first
             // and if its failed create a new application
-            application = new Excel.Application(new Core(), true);
+            application = new Excel.ApplicationClass(new Core(), true);
             // quit only if its a new application
             if (!application.FromProxyService)
                 application.Quit();

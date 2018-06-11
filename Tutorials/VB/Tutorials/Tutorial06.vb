@@ -13,7 +13,7 @@ Public Class Tutorial06
         ' here is the code to demonstrate this
 
         ' start application
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
 
         ' create new Workbook and a new named style

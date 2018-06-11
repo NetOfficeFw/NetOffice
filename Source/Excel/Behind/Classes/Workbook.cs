@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <returns>Excel.Workbook sequence</returns>
         public static IDisposableSequence<Application> GetActiveInstances()
         {
-            return Running.ProxyService.GetActiveInstances<Application>("Excel", "Workbook");
+            return ProxyService.GetActiveInstances<Application>("Excel", "Workbook");
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <returns>Excel.Workbook instance or null</returns>
         public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
         {
-            return Running.ProxyService.GetActiveInstance<Application>("Excel", "Workbook", throwExceptionIfNotFound);
+            return ProxyService.GetActiveInstance<Application>("Excel", "Workbook", throwExceptionIfNotFound);
         }
 
         #endregion

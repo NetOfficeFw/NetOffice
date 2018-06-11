@@ -40,7 +40,7 @@ namespace NetOffice.CoreServices
     /// </summary>
     /// <param name="sender">Core sender instance</param>
     /// <param name="args">args as provided</param>
-    public delegate void OnCreateInstanceEventHandler(ICoreActivator sender, OnCreateInstanceEventArgs args);
+    public delegate void OnCreateInstanceEventHandler(Core sender, OnCreateInstanceEventArgs args);
 
     #endregion
 
@@ -83,7 +83,7 @@ namespace NetOffice.CoreServices
     /// </summary>
     /// <param name="sender">Core sender instance</param>
     /// <param name="args">args as provided</param>
-    public delegate void OnCreateCOMDynamicEventHandler(ICoreActivator sender, OnCreateCOMDynamicEventArgs args);
+    public delegate void OnCreateCOMDynamicEventHandler(Core sender, OnCreateCOMDynamicEventArgs args);
 
     #endregion
 
@@ -126,7 +126,7 @@ namespace NetOffice.CoreServices
     /// </summary>
     /// <param name="sender">Core sender instance</param>
     /// <param name="args">args as provided</param>
-    public delegate void OnCreateProxyShareEventHandler(ICoreActivator sender, OnCreateProxyShareEventArgs args);
+    public delegate void OnCreateProxyShareEventHandler(Core sender, OnCreateProxyShareEventArgs args);
 
     #endregion
 }

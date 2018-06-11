@@ -16,7 +16,7 @@ Public Class Tutorial14
         ' 1)
         '
         ' GetActiveInstance take the first instance in memory
-        Dim application As Excel.Application = Excel.Application.GetActiveInstance()
+        Dim application As Excel.Application = ProxyService.GetActiveInstance(Of Excel.Application)()
         If Not IsNothing(application) Then
             application.Dispose()
         End If
@@ -24,14 +24,14 @@ Public Class Tutorial14
         ' 2)
         '
         ' GetActiveInstances takes all instances in memory
-        Dim applications As IDisposableSequence(Of Excel.Application) = Excel.Application.GetActiveInstances()
+        Dim applications As IDisposableSequence(Of Excel.Application) = ProxyService.GetActiveInstances(Of Excel.Application)()
         applications.Dispose()
 
         ' 3)
         '
         ' Use special ctor to try access a running application first
         ' and if its failed create a new application
-        application = New Excel.Application(New Core(), True)
+        application = New Excel.ApplicationClass(New Core(), True)
         ' quit only if its a new application
         If Not application.FromProxyService Then
             application.Quit()

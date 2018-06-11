@@ -57,7 +57,7 @@ namespace NetOffice.CoreServices.Internal
             if (null != handler)
             {
                 ResolveEventArgs args = new ResolveEventArgs(caller, contractType, comProxy);
-                handler(this, args);
+                handler(Parent, args);
                 return args.Result;
             }
             else

@@ -23,7 +23,7 @@ namespace ExcelExamplesCS4
             try
             {
                 // start excel and turn off msg boxes
-                excelApplication = new Excel.Application();
+                excelApplication = new Excel.ApplicationClass();
                 excelApplication.DisplayAlerts = false;
                 excelApplication.Visible = false;
 

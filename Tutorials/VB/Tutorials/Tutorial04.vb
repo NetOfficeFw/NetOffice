@@ -11,7 +11,7 @@ Public Class Tutorial04
         ' you have to use th Dispose oder DisposeChildInstances method with a parameter.
 
         ' start application
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
 
         ' create new Workbook & attach close event trigger

@@ -346,7 +346,7 @@ namespace NetOffice.Contribution.Controls
 
         #region Trigger
        
-        private void Core_ProxyAdded(ICoreManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
+        private void Core_ProxyAdded(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             Action method = delegate
             {
@@ -386,7 +386,7 @@ namespace NetOffice.Contribution.Controls
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyRemoved(ICoreManagement sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
+        private void Core_ProxyRemoved(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             Action method = delegate
             {
@@ -443,7 +443,7 @@ namespace NetOffice.Contribution.Controls
             TryBeginInvoke(method);
         }
 
-        private void Core_ProxyCleared(ICoreManagement sender)
+        private void Core_ProxyCleared(Core sender)
         {
             Action method = delegate
             {

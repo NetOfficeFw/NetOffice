@@ -28,7 +28,7 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                _excelApplication = new Excel.Application(null, Application);
+                _excelApplication = COMObject.Create<Excel.Application>(Application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {

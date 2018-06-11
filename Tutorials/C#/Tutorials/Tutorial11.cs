@@ -23,7 +23,7 @@ namespace TutorialsCS4
             // However, the extensions doesnt works like Linq which means calling the result
             // execute the method on demand. Its just ordinary extensions.
 
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
             application.Workbooks.Add();
 

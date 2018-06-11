@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using NetOffice.CollectionsGeneric;
 using NetOffice.Contribution.CollectionsGeneric;
 using NetOffice.Exceptions;
+using NetOffice.Running;
+using NetOffice.Attributes;
 
-namespace NetOffice.Running
+namespace NetOffice
 {
     /// <summary>
     /// Try to find running com instances.
@@ -14,6 +16,105 @@ namespace NetOffice.Running
     /// </summary>
     public static class ProxyService
     {
+        /// <summary>
+        ///  Returns first running com proxy, wrapped by T
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="throwExceptionIfNotFound">throw ArgumentOutOfRangeException if no instance match</param>
+        /// <returns>target instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="NetOfficeException">given type doesnt have a ComProgIdAttribute annotation</exception>
+        /// <exception cref="NetOfficeCOMException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        public static T GetActiveInstance<T>(bool throwExceptionIfNotFound = false) where T : class, ICOMObject
+        {
+            Type type = typeof(T);
+            var attribute = type.GetCustomAttribute<ComProgIdAttribute>();
+            if (null == attribute)
+                throw new NetOfficeException("Missing ComProgIdAttribute.");
+
+            string[] array = ConvertProgId(attribute.Value);
+            IDisposableSequence<T> result = GetActiveInstances<T>(array[0], array[1]);
+            T item = result.FirstOrDefault();
+            result.Dispose(item);
+            if (throwExceptionIfNotFound && null == item)
+                throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", array[0] + " " + array[1]));
+            return item;
+        }
+
+        /// <summary>
+        ///  Returns first running com proxy, wrapped by T
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="predicate">filter predicate</param>
+        /// <param name="throwExceptionIfNotFound">throw ArgumentOutOfRangeException if no instance match</param>
+        /// <returns>target instance or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="NetOfficeException">given type doesnt have a ComProgIdAttribute annotation</exception>
+        /// <exception cref="NetOfficeCOMException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
+        public static T GetActiveInstance<T>(Func<T, bool> predicate, bool throwExceptionIfNotFound = false) where T : class, ICOMObject
+        {
+            Type type = typeof(T);
+            var attribute = type.GetCustomAttribute<ComProgIdAttribute>();
+            if (null == attribute)
+                throw new NetOfficeException("Missing ComProgIdAttribute.");
+
+            string[] array = ConvertProgId(attribute.Value);
+            IDisposableSequence<T> result = GetActiveInstances<T>(array[0], array[1], predicate);
+            T item = result.FirstOrDefault();
+            result.Dispose(item);
+            if (throwExceptionIfNotFound && null == item)
+                throw new NetOfficeCOMException(String.Format("Unable to find active instance {0}.", array[0] + " " + array[1]));
+            return item;
+        }
+
+        /// <summary>
+        ///  Returns all running com proxies, wrapped by T
+        /// </summary>
+        ///  <param name="predicate">filter predicate</param>
+        /// <returns>ICOMObject enumerator</returns>
+        /// <exception cref="NetOfficeException">given type doesnt have a ComProgIdAttribute annotation</exception>
+        public static IDisposableSequence<T> GetActiveInstances<T>(Func<T, bool> predicate) where T : class, ICOMObject
+        {
+            Type type = typeof(T);
+            var attribute = type.GetCustomAttribute<ComProgIdAttribute>();
+            if (null == attribute)
+                throw new NetOfficeException("Missing ComProgIdAttribute.");
+
+            string[] array = ConvertProgId(attribute.Value);
+            IDisposableSequence instances = GetActiveInstances(array[0], array[1]);
+            List<T> result = new List<T>();
+            foreach (object item in instances)
+            {
+                T newItem = Activator.CreateInstance(type, new object[] { null, item }) as T;
+                if (null != predicate && predicate(newItem))
+                {
+                    result.Add(newItem);
+                }
+            }
+            return new DisposableGenericList<T>(result.ToArray());
+        }
+
+        /// <summary>
+        ///  Returns all running com proxies, wrapped by T
+        /// </summary>
+        /// <returns>ICOMObject enumerator</returns>
+        /// <exception cref="NetOfficeException">given type doesnt have a ComProgIdAttribute annotation</exception>
+        public static IDisposableSequence<T> GetActiveInstances<T>() where T : class, ICOMObject
+        {
+            Type type = typeof(T);
+            var attribute = type.GetCustomAttribute<ComProgIdAttribute>();
+            if (null == attribute)
+                throw new NetOfficeException("Missing ComProgIdAttribute.");
+
+            string[] array = ConvertProgId(attribute.Value);
+            IDisposableSequence instances = GetActiveInstances(array[0], array[1]);
+            List<T> result = new List<T>();
+            foreach (object item in instances)
+            {
+                T newItem = Activator.CreateInstance(type, new object[] { null, item }) as T;
+                result.Add(newItem);
+            }
+            return new DisposableGenericList<T>(result.ToArray());
+        }
+
         /// <summary>
         ///  Returns all running com proxies, wrapped by T
         /// </summary>
@@ -140,6 +241,13 @@ namespace NetOffice.Running
             {
                 return RunningObjectTable.GetActiveProxy(componentName, className, throwExceptionIfNothingFound);
             }
+        }
+
+        private static string[] ConvertProgId(string progId)
+        {
+            string componentName = progId.Substring(0, progId.IndexOf(".", StringComparison.InvariantCultureIgnoreCase));
+            string className = progId.Substring(progId.IndexOf(".", StringComparison.InvariantCultureIgnoreCase) + 1);
+            return new string[] { componentName, className };
         }
 
         private static object GetActiveExcelApplicationProxyFromDesktop()

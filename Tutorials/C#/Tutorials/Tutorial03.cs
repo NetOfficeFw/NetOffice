@@ -21,7 +21,7 @@ namespace TutorialsCS4
             InitializeComponent();
             CreateHandle();
             // update proxy count label
-            NetOffice.Core.Default.ProxyCountChanged += delegate (int proxyCount)
+            NetOffice.Core.Default.ObjectRegister.CountChanged += delegate (Core sender, int proxyCount)
             {
                 Action<int> update = delegate(int i) { labelProxyCount.Text = i.ToString(); };
                 labelProxyCount.Invoke(update, proxyCount);
@@ -99,7 +99,7 @@ namespace TutorialsCS4
             if (null == _application)
             {
                 // create application
-                _application = new Excel.Application();
+                _application = new Excel.ApplicationClass();
                 _application.DisplayAlerts = false;
                 buttonExcel.Text = "Quit Excel";
                 buttonWorkbook.Enabled = true;

@@ -58,7 +58,7 @@ Public Class Example08
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' start excel and turn off msg boxes
-        Dim excelApplication As New Excel.Application()
+        Dim excelApplication As New Excel.ApplicationClass()
         excelApplication.DisplayAlerts = False
         excelApplication.Visible = True
 

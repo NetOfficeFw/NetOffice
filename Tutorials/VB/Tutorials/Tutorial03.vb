@@ -13,8 +13,8 @@ Public Class Tutorial03
         InitializeComponent()
 
         CreateHandle()
-        Dim changeHandler As Core.ProxyCountChangedHandler = AddressOf Me.Factory_ProxyCountChanged
-        AddHandler Core.Default.ProxyCountChanged, changeHandler
+        Dim changeHandler As NetOffice.CoreServices.CountChangedHandler = AddressOf Me.Factory_ProxyCountChanged
+        AddHandler Core.Default.ObjectRegister.CountChanged, changeHandler
 
     End Sub
 
@@ -84,7 +84,7 @@ Public Class Tutorial03
 
         If (IsNothing(_application)) Then
             ' start application
-            _application = New Excel.Application()
+            _application = New Excel.ApplicationClass()
             _application.DisplayAlerts = False
             buttonExcel.Text = "Quit Excel"
             buttonWorkbook.Enabled = True
@@ -131,7 +131,7 @@ Public Class Tutorial03
 
     End Sub
 
-    Private Sub Factory_ProxyCountChanged(ByVal proxyCount As Integer)
+    Private Sub Factory_ProxyCountChanged(ByVal sender As Core, ByVal proxyCount As Integer)
 
         If (labelProxyCount.InvokeRequired) Then
             labelProxyCount.Tag = proxyCount.ToString()

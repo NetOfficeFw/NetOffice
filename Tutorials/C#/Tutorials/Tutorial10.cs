@@ -33,7 +33,7 @@ namespace TutorialsCS4
             NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet", "Range"].IntervalMS = 0;
 
             // do some stuff
-            Excel.Application application = new NetOffice.ExcelApi.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
             Excel.Workbook book = application.Workbooks.Add();
             Excel.Worksheet sheet = book.Sheets.Add() as Excel.Worksheet;

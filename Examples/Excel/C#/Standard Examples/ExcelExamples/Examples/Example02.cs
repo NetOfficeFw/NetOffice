@@ -15,7 +15,7 @@ namespace ExcelExamplesCS4
         public void RunExample()
         {
             // start excel and turn off msg boxes
-            Excel.Application excelApplication = new Excel.Application();
+            Excel.Application excelApplication = new Excel.ApplicationClass();
             excelApplication.DisplayAlerts = false;
 
             // create a utils instance, no need for but helpful to keep the lines of code low

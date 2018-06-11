@@ -14,7 +14,7 @@ namespace TutorialsCS4
             // this is a simple demonstration how to convert unkown types at runtime
 
             // start application
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.Visible = false;
             application.DisplayAlerts = false;
 

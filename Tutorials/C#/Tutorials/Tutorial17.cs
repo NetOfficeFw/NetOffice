@@ -18,7 +18,7 @@ namespace TutorialsCS4
             // This tutorial shows only few features in MS-Excel
 
             // start excel and disable alerts
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
 
 

@@ -15,7 +15,7 @@ namespace TutorialsCS4
             // here is some code to demonstrate this
 
             // start application
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
 
             // create new Workbook and a new named style

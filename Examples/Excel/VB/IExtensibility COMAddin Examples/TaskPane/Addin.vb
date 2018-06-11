@@ -31,7 +31,7 @@ Public Class Addin
 
         Try
 
-            Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_excelApplication, CTPFactoryInst)
+            Dim ctpFactory As Office.ICTPFactory = COMObject.Create(Of Office.ICTPFactory)(Application.Factory, Application, CTPFactoryInst)
             Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(VB4)", Type.Missing)
             taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
             taskPane.Width = 300
@@ -56,7 +56,7 @@ Public Class Addin
 
         Try
 
-            _excelApplication = New Excel.Application(Nothing, Application)
+            _excelApplication = COMObject.Create(Of Excel.Application)(Application, COMObjectCreateOptions.CreateNewCore)
 
         Catch ex As Exception
 

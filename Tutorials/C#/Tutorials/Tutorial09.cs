@@ -12,7 +12,7 @@ namespace TutorialsCS4
             // NetOffice instances implements the IClonable interface
             // and deal with underlying proxies as well
 
-            Excel.Application application = new NetOffice.ExcelApi.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
             Excel.Workbook book = application.Workbooks.Add();
 

@@ -30,8 +30,8 @@ namespace COMAddinTaskPaneExampleCS4
         public void CTPFactoryAvailable(object CTPFactoryInst)
         {
             try
-            {
-                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst);
+            {                
+                Office.ICTPFactory ctpFactory = COMObject.Create<NetOffice.OfficeApi.ICTPFactory>(Application.Factory, Application, CTPFactoryInst);
                 Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(CS4)", Type.Missing);
                 taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
                 taskPane.Width = 300;
@@ -54,7 +54,7 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                _excelApplication = new Excel.Application(null, Application);
+                _excelApplication = COMObject.Create<Excel.Application>(Application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {

@@ -316,73 +316,86 @@ namespace NetOffice
 
         #region Methods
 
-        ///// <summary>
-        ///// Creates instance
-        ///// </summary>
-        ///// <typeparam name="T">result type</typeparam>
-        ///// <param name="options">optional create options</param>
-        ///// <returns>new instance of T</returns>
-        ///// <exception cref="CreateInstanceException">unexpected error</exception>
-        //public static T Create<T>(COMObjectCreateOptions options = COMObjectCreateOptions.None) where T : class, ICOMObject
-        //{
-        //    try
-        //    {
-        //        switch (options)
-        //        {
-
-        //            case COMObjectCreateOptions.None:
-        //                return Activator.CreateInstance(typeof(T)) as T;
-        //            case COMObjectCreateOptions.CreateNewCore:
-        //                return Activator.CreateInstance(typeof(T), new Core()) as T;
-        //            default:
-        //                throw new ArgumentOutOfRangeException("options", "<Please report this error.>");
-        //        }
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        throw new CreateInstanceException(exception);
-        //    }
-        //}
-
-        ///// <summary>
-        ///// Creates instance from proxy
-        ///// </summary>
-        ///// <typeparam name="T">result type</typeparam>
-        ///// <param name="comProxy">given proxy as any</param>
-        ///// <param name="options">optional create options</param>
-        ///// <returns>new instance of T</returns>
-        ///// <exception cref="ArgumentNullException">comProxy is null(Nothing in Visual Basic)</exception>
-        ///// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
-        ///// <exception cref="CreateInstanceException">unexpected error</exception>
-        //public static T Create<T>(object comProxy, COMObjectCreateOptions options = COMObjectCreateOptions.None) where T : class, ICOMObject
-        //{
-        //    if (null == comProxy)
-        //        throw new ArgumentNullException("comProxy");
-        //    if (!(comProxy is MarshalByRefObject))
-        //        throw new ArgumentException("Given argument is not a proxy.");
-        //    try
-        //    {
-        //        switch (options)
-        //        {
-        //            case COMObjectCreateOptions.None:
-        //                return Activator.CreateInstance(typeof(T)) as T;
-        //            case COMObjectCreateOptions.CreateNewCore:
-        //                return Activator.CreateInstance(typeof(T), new Core(), null, comProxy) as T;
-        //            default:
-        //                throw new ArgumentOutOfRangeException("options", "<Please report this error.>");
-        //        }
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        throw new CreateInstanceException(exception);
-        //    }
-        //}
+        /// <summary>
+        /// Creates instance
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="options">optional create options</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T Create<T>(COMObjectCreateOptions options = COMObjectCreateOptions.None) where T : class, ICOMObject
+        {
+            try
+            {
+                switch (options)
+                {
+                    case COMObjectCreateOptions.None:
+                        return Create<T>(Core.Default);
+                    case COMObjectCreateOptions.CreateNewCore:
+                        return Create<T>(new Core());
+                    default:
+                        throw new ArgumentOutOfRangeException("options", "<Please report this error.>");
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
 
         /// <summary>
         /// Creates instance from proxy
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
-        /// <param name="factory"></param>
+        /// <param name="comProxy">given proxy as any</param>
+        /// <param name="options">optional create options</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="ArgumentNullException">comProxy is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T Create<T>(object comProxy, COMObjectCreateOptions options = COMObjectCreateOptions.None) where T : class, ICOMObject
+        {
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Given argument is not a proxy.");
+            try
+            {
+                switch (options)
+                {
+                    case COMObjectCreateOptions.None:
+                        return Create<T>(Core.Default, comProxy);
+                    case COMObjectCreateOptions.CreateNewCore:
+                        return Create<T>(new Core(), comProxy);
+                    default:
+                        throw new ArgumentOutOfRangeException("options", "<Please report this error.>");
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
+
+        /// <summary>
+        /// Creates instance from proxy by using the default core
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="comProxy">given proxy as any</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T Create<T>(object comProxy) where T : class, ICOMObject
+        {
+            return Create<T>(null, comProxy);
+        }
+
+        /// <summary>
+        /// Creates instance from proxy
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="factory">affected netoffice core</param>
         /// <param name="comProxy">given proxy as any</param>
         /// <returns>new instance of T</returns>
         /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
@@ -418,10 +431,50 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Creates instance from proxy
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="factory">affected netoffice core</param>
+        /// <param name="parent">parent caller</param>
+        /// <param name="comProxy">given proxy as any</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T Create<T>(Core factory, ICOMObject parent, object comProxy) where T : class, ICOMObject
+        {
+            if (null == factory)
+                throw new ArgumentNullException("factory");
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+            if (false == (comProxy is MarshalByRefObject))
+                throw new ArgumentException("comProxy");
+            try
+            {
+                Type contract = typeof(T);
+                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(factory, contract);
+                T result = (T)Activator.CreateInstance(implementation);
+                ICOMObjectInitialize init = result as ICOMObjectInitialize;
+                if (null != init)
+                {
+                    init.InitializeCOMObject(factory, parent, comProxy);
+                }
+
+                result = (T)factory.InternalObjectActivator.TryReplaceInstance(null, result);
+
+                return result;
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
+
+        /// <summary>
         /// Creates instance with given factory
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
-        /// <param name="factory"></param>
+        /// <param name="factory">affected netoffice core</param>
         /// <returns>new instance of T</returns>
         /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
         /// <exception cref="CreateInstanceException">unexpected error</exception>

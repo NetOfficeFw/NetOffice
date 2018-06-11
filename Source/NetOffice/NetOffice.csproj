@@ -124,6 +124,7 @@
     <Compile Include="Exceptions\ActivationException.cs" />
     <Compile Include="Exceptions\CreateFactoryInstanceException.cs" />
     <Compile Include="Exceptions\NetOfficeInitializeException.cs" />
+    <Compile Include="Interfaces\ICOMObjectProxyService.cs" />
     <Compile Include="InvokerService\ExecuteMode.cs" />
     <Compile Include="InvokerService\Method.cs" />
     <Compile Include="InvokerService\PropertyGet.cs" />

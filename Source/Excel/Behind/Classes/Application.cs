@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi.Behind
         {
             if (tryProxyServiceFirst)
             {
-                object proxy = Running.ProxyService.GetActiveInstance("Excel", "Application", false);
+                object proxy = ProxyService.GetActiveInstance("Excel", "Application", false);
                 if (null != proxy)
                 {
                     CreateFromProxy(proxy, true);
@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region Properties
+        #region ICOMObjectProxyService
 
         /// <summary>
         /// Instance is created from an already running application
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <returns>Excel.Application sequence</returns>
         public static IDisposableSequence<Application> GetActiveInstances()
         {
-            return Running.ProxyService.GetActiveInstances<Application>("Excel", "Application");
+            return ProxyService.GetActiveInstances<Application>("Excel", "Application");
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <returns>Excel.Application sequence</returns>
         public static IDisposableSequence<Application> GetActiveInstances(Func<Application, bool> predicate)
         {
-            return Running.ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate);
+            return ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <returns>count of running application</returns>
         public static int GetActiveInstancesCount()
         {
-            using (var sequence = Running.ProxyService.GetActiveInstances<Application>("Excel", "Application"))
+            using (var sequence = ProxyService.GetActiveInstances<Application>("Excel", "Application"))
             {
                 int result = sequence.Count;
                 sequence.Dispose();
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <returns>count of running application</returns>
         public static int GetActiveInstancesCount(Func<Application, bool> predicate)
         {
-            using (var sequence = Running.ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate))
+            using (var sequence = ProxyService.GetActiveInstances<Application>("Excel", "Application", predicate))
             {
                 int result = sequence.Count;
                 sequence.Dispose();
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
         public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
         {
-            return Running.ProxyService.GetActiveInstance<Application>("Excel", "Application", throwExceptionIfNotFound);
+            return ProxyService.GetActiveInstance<Application>("Excel", "Application", throwExceptionIfNotFound);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi.Behind
         /// <exception cref="ArgumentOutOfRangeException">occurs if no instance match and throwExceptionIfNotFound is set</exception>
         public static Application GetActiveInstance(Func<Application, bool> predicate, bool throwExceptionIfNotFound = false)
         {
-            return Running.ProxyService.GetActiveInstance<Application>("Excel", "Application", predicate, throwExceptionIfNotFound);
+            return ProxyService.GetActiveInstance<Application>("Excel", "Application", predicate, throwExceptionIfNotFound);
         }
 
         #endregion

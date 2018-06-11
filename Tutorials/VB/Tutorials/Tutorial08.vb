@@ -5,17 +5,7 @@ Imports Excel = NetOffice.ExcelApi
 ''' Ouer custom Excel.Workbook
 ''' </summary>
 Public Class MyWorkbook
-    Inherits Excel.Workbook
-
-    Public Sub New(parentObject As ICOMObject, comProxy As Object)
-        MyBase.New(parentObject, comProxy)
-
-    End Sub
-
-    Public Sub New(parentObject As ICOMObject, comProxy As Object, comProxyType As Type)
-        MyBase.New(parentObject, comProxy)
-
-    End Sub
+    Inherits Excel.Behind.Workbook
 
     ' Sample property
     Public ReadOnly Property Has3Sheets As Boolean
@@ -34,11 +24,11 @@ Public Class Tutorial08
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
         'Replace Excel.Workbook with MyWorkbook
-        Dim createHandler As Core.OnCreateInstanceEventHandler = AddressOf Me.OnCreate
-        AddHandler NetOffice.Core.Default.CreateInstance, createHandler
+        Dim createHandler As NetOffice.CoreServices.OnCreateInstanceEventHandler = AddressOf Me.OnCreate
+        AddHandler NetOffice.Core.Default.ObjectActivator.CreateInstance, createHandler
 
         ' start application
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
 
         'add and cast book to MyWorkbook
@@ -54,7 +44,7 @@ Public Class Tutorial08
 
     End Sub
 
-    Public Sub OnCreate(sender As Core, args As Core.OnCreateInstanceEventArgs)
+    Public Sub OnCreate(sender As Core, args As NetOffice.CoreServices.OnCreateInstanceEventArgs)
 
         If args.Instance.InstanceType = GetType(Excel.Workbook) Then
             args.Replace = GetType(MyWorkbook)

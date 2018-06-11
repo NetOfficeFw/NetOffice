@@ -11,7 +11,7 @@ Public Class Tutorial02
         ' this means all child proxies from an instance
 
         ' start application
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
 
         Dim book As Excel.Workbook = application.Workbooks.Add()

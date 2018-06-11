@@ -14,7 +14,7 @@ Public Class Example03
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start excel and turn off msg boxes
-        Dim excelApplication As New Excel.Application()
+        Dim excelApplication As New Excel.ApplicationClass()
         excelApplication.DisplayAlerts = False
 
         ' create a utils instance, no need for but helpful to keep the lines of code low

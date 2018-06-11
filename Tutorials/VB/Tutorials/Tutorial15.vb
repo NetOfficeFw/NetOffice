@@ -12,7 +12,7 @@ Public Class Tutorial15
         ' this example demonstrate the NetOffice low-level interface for latebinding calls
 
         ' start application
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
 
         ' create new Workbook

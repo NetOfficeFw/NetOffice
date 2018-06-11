@@ -1,5 +1,5 @@
 ﻿Imports Excel = NetOffice.ExcelApi
-Imports NetOffice.ExcelApi.GlobalHelperModules.GlobalModule
+Imports NetOffice.ExcelApi.ModulesLegacy.ApplicationModule
 
 Public Class Tutorial16
     Implements ITutorial
@@ -12,14 +12,13 @@ Public Class Tutorial16
         ' the module is a vba compatibility workarround and contains static methods and properties from the coresponding Application class.
 
         ' start excel and add a new workbook
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.Visible = False
         application.DisplayAlerts = False
         application.Workbooks.Add()
 
-        ' GlobalModule contains the well known globals and is located in NetOffice.ExcelApi.GlobalHelperModules
-        ' In VB.NET you can do now: ActiveCell.Value = "ActiveCellValue" and this is helpful 
-        ' to bring code from VBA to VB/NetOffice
+        ' ApplicationModule contains the well known globals and is located in NetOffice.$XXXApi.ModulesLegacy
+        ' This helpful to bring code from VBA to NetOffice
         ActiveCell.Value = "ActiveCellValue"
 
         ' close and dispose excel

@@ -98,7 +98,7 @@ namespace NetOffice.CoreServices.Internal
                 // NetOffice is appending new proxies so we free them in reverse order
                 while (Count > 0)
                     this[Count - 1].Dispose();
-                Cleared?.Invoke(this);
+                Cleared?.Invoke(Parent);
             }
         }
 
@@ -147,10 +147,10 @@ namespace NetOffice.CoreServices.Internal
                     if (null != Added)
                     {
                         IEnumerable<ICOMObject> ownerPath = GetOwnerPath(proxy);
-                        Added?.Invoke(this, ownerPath, proxy);
+                        Added?.Invoke(Parent, ownerPath, proxy);
                     }
                 }
-                CountChanged?.Invoke(this, Count);
+                CountChanged?.Invoke(Parent, Count);
             }
             catch (Exception throwedException)
             {
@@ -171,14 +171,11 @@ namespace NetOffice.CoreServices.Internal
                 lock (_thisLock)
                 {
                     removed = Remove(proxy);
-
-                    if (null != Removed)
-                    {
-                        Removed?.Invoke(this, ownerPath, proxy);
-                    }
+                    if(removed)
+                        Removed?.Invoke(Parent, ownerPath, proxy);                    
                 }
                 if (removed)
-                    CountChanged?.Invoke(this, Count);
+                    CountChanged?.Invoke(Parent, Count);
             }
             catch (Exception throwedException)
             {

@@ -14,7 +14,7 @@ namespace TutorialsCS4
             // you have to use th Dispose oder DisposeChildInstances method with a parameter.
 
             // start application
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
 
             // create new Workbook & attach close event trigger

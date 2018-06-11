@@ -7,14 +7,18 @@ using NetOffice;
 namespace TutorialsCS4
 {
     /// <summary>
-    /// Ouer custom Excel.Workbook
+    /// The custom Excel.Workbook
     /// </summary>
-    public class MyWorkbook : Excel.Workbook
+    public class MyWorkbook : NetOffice.ExcelApi.Behind.Workbook
     {
-        public MyWorkbook(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy) { }
-        public MyWorkbook(ICOMObject parentObject, object comProxy, Type comProxyType) : base(parentObject, comProxy, comProxyType) { }
+        public override Excel.Sheets Sheets
+        {
+            get
+            {
+                return base.Sheets;
+            }
+        }
 
-        // Sample property
         public bool Has3Sheets
         {
             get
@@ -29,13 +33,13 @@ namespace TutorialsCS4
         public void Run()
         {
             // Replace Excel.Workbook with MyWorkbook
-            NetOffice.Core.Default.CreateInstance += delegate(Core sender, Core.OnCreateInstanceEventArgs args)
+            NetOffice.Core.Default.ObjectActivator.CreateInstance += delegate(Core sender, NetOffice.CoreServices.OnCreateInstanceEventArgs args)
             {
                 if (args.Instance.InstanceType == typeof(Excel.Workbook))
                     args.Replace = typeof(MyWorkbook);
             };
 
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
 
             // add and cast book to MyWorkbook

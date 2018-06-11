@@ -24,7 +24,7 @@ Public Class Addin
 
         Try
 
-            _excelApplication = New Excel.Application(Nothing, Application)
+            _excelApplication = COMObject.Create(Of Excel.Application)(Application, COMObjectCreateOptions.CreateNewCore)
 
         Catch ex As Exception
 

@@ -1,16 +1,3 @@
-Für alle constructoren mit anderem Core bereitstellen bzw. Create<T> verbessern
-Dispose Performance Trace aufspalten - ist halt noch die Frage wie
-In examples aufzeigen das man im AutomationMode besser die Füsse still hält, SuspendOnAutomation Attribute(kann vielleicht per Regeintrag an/ausgemacht werden)
-Master Attribute bereitstellen das alle attributierbaren Einstellungen aus einer ConfigDatei liest, auf dem Filesystem oder eingebettet oder auch standard .config file
-OnCreate am ende des ctors wird nicht überall aufgerufen?
-
-IApplicationVersionProvider wird wirksam noch bevor man das einstellen kann
-Versuchen die merkwürdige Stackoverflow exception zu replizieren, evtl. wenn try get version erst am ende das erste mal aufgerufen wird
-
-Methoden/Properties Source Doku mit exception tag ausstatten
-Toolbox Registry Editor => Backup für Machine Keys anbieten auch wenn keine Admin Rechte vorliegen
-Toolbox Wizard Addin.Connect
-Toolbox ROT View prüfen
-Toolbox Reg Search Disabled Items
-Toolbox Reg Search Für Addins die Registrierungseinträge in modaler Box anzeigen lassen
-Toolbox Single Download bei osdn wohlmöglich defekt
+- add exception source docu tag to entities
+- Toolbox Registry Editor => spend save to file in machine key even when no admin
+- Toolbox Reg Search Disabled Items

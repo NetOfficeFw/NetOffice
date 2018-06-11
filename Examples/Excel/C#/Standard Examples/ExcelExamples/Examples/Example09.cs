@@ -74,7 +74,7 @@ namespace ExcelExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {        
             // start excel and turn off msg boxes
-            _excelApplication = new Excel.Application();
+            _excelApplication = new Excel.ApplicationClass();
             _excelApplication.DisplayAlerts = false;
 
             Office.CommandBar commandBar = null;

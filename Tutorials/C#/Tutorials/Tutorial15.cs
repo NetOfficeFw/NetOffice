@@ -13,7 +13,7 @@ namespace TutorialsCS4
         {
             // this example demonstrate the NetOffice low-level interface for latebinding calls
 
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
             application.Workbooks.Add();
 

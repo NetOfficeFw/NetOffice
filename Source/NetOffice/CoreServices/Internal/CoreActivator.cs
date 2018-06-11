@@ -194,7 +194,7 @@ namespace NetOffice.CoreServices.Internal
             if (null != handler)
             {
                 OnCreateInstanceEventArgs args = new OnCreateInstanceEventArgs(instance);
-                handler(this, args);
+                handler(Parent, args);
                 replace = args.Replace;
             }
         }
@@ -210,7 +210,7 @@ namespace NetOffice.CoreServices.Internal
             if (null != CreateDynamicInstance)
             {
                 OnCreateCOMDynamicEventArgs args = new OnCreateCOMDynamicEventArgs(instance, comProxy);
-                CreateDynamicInstance(this, args);
+                CreateDynamicInstance(Parent, args);
                 return args.Result;
             }
             else
@@ -229,7 +229,7 @@ namespace NetOffice.CoreServices.Internal
             if (null != handler)
             {
                 OnCreateProxyShareEventArgs args = new OnCreateProxyShareEventArgs(instance, isEnumerator);
-                handler(this, args);
+                handler(Parent, args);
                 return args.Result;
             }
             else

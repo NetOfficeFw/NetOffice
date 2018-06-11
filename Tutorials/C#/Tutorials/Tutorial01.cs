@@ -14,7 +14,7 @@ namespace TutorialsCS4
             //  and make sure your application instance removes from process list if you want.
 
             // start application
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
 
             Excel.Workbook book = application.Workbooks.Add();

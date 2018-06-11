@@ -16,7 +16,7 @@ namespace TutorialsCS4
             // throws a EntitiyNotSupportedException if missing
 
             // create new instance
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
 
             // any reference type in NetOffice implements the EntityIsAvailable method.
             // you check here your property or method is available.

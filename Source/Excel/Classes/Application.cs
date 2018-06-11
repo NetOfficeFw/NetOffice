@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi
     [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]    
 	[TypeId("00024500-0000-0000-C000-000000000046")]
-    public interface Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit
+    public interface Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit, ICOMObjectProxyService
     {
         #region Events
 

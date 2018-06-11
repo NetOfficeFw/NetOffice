@@ -12,7 +12,7 @@ Public Class Tutorial09
         ' and deal with underlying proxies as well
 
         ' start application
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
         Dim book As Excel.Workbook = application.Workbooks.Add()
 

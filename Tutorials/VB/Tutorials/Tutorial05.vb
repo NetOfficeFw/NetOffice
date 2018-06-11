@@ -12,7 +12,7 @@ Public Class Tutorial05
         ' this is a simple demonstration how i can convert unkown types at runtime
 
         ' start application
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.Visible = False
         application.DisplayAlerts = False
 

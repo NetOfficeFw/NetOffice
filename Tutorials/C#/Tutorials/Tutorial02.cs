@@ -14,7 +14,7 @@ namespace TutorialsCS4
             // this means all child proxies from an instance
 
             // start application
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
 
             Excel.Workbook book = application.Workbooks.Add();

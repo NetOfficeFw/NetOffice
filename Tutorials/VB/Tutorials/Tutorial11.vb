@@ -20,7 +20,7 @@ Public Class Tutorial11
         ' However, the extensions doesnt works like Linq which means calling the result
         ' execute the method on demand. Its just ordinary extensions.
 
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
         application.Workbooks.Add()
 

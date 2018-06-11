@@ -13,7 +13,7 @@ Public Class Tutorial13
         ' throws a EntitiyNotSupportedException if missing
 
         ' create new instance
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
 
         ' check for support at runtime
         Dim enableLivePreviewSupport As Boolean = application.EntityIsAvailable("EnableLivePreview")

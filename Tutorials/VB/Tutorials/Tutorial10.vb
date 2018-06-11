@@ -29,7 +29,7 @@ Public Class Tutorial10
         NetOffice.Settings.Default.PerformanceTrace("NetOffice.ExcelApi", "Worksheet", "Range").IntervalMS = 0
 
         ' do some stuff
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
         Dim book As Excel.Workbook = application.Workbooks.Add()
         Dim sheet As Excel.Worksheet = book.Sheets.Add()

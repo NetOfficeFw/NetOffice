@@ -53,7 +53,7 @@ namespace NetOffice.CoreServices
     /// </summary>
     /// <param name="sender">Core sender instance</param>
     /// <param name="args">args as provided</param>
-    public delegate void ResolveEventHandler(ICoreResolver sender, ResolveEventArgs args);
+    public delegate void ResolveEventHandler(Core sender, ResolveEventArgs args);
 
     #endregion
 }

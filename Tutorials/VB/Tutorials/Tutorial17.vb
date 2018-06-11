@@ -16,7 +16,7 @@ Public Class Tutorial17
         ' This tutorial shows only few features in MS-Excel
 
         ' start excel and disable alerts
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
 
 
