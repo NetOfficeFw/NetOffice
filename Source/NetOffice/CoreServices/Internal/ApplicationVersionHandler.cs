@@ -11,6 +11,7 @@ namespace NetOffice.CoreServices.Internal
     /// </summary>
     internal class ApplicationVersionHandler : IEnumerable<IApplicationVersionProvider>
     {
+        private string _defaultVersion = "<Unknown>";
         private object _thisLock = new object();
         private List<IApplicationVersionProvider> _versionProviders = new List<IApplicationVersionProvider>();
 
@@ -91,24 +92,34 @@ namespace NetOffice.CoreServices.Internal
         /// <returns>application version or empty</returns>
         internal string GetApplicationVersion(string componentName)
         {
+            if (!Parent.Settings.ForceApplicationVersionProviders)
+                return _defaultVersion;
             if (String.IsNullOrWhiteSpace(componentName))
-                return String.Empty;
-            lock (_thisLock)
-            {
-                var provider = _versionProviders.FirstOrDefault();
-                if (null != provider)
-                {
-                    if (!provider.VersionRequested)
-                        provider.TryRequestVersion();
+                return _defaultVersion;
 
-                    if (null != provider.Version)
-                        return String.Format("{0} {1}", provider.Name, provider.Version);
+            try
+            {
+                lock (_thisLock)
+                {
+                    var provider = _versionProviders.FirstOrDefault();
+                    if (null != provider)
+                    {
+                        if (!provider.VersionRequested)
+                            provider.TryRequestVersion();
+
+                        if (null != provider.Version)
+                            return String.Format("{0} {1}", provider.Name, provider.Version);
+                        else
+                            return _defaultVersion;
+                    }
                     else
-                        return String.Empty;
+                        return _defaultVersion;
                 }
-                else
-                    return String.Empty;
             }
+            catch
+            {
+                return _defaultVersion;
+            }            
         }
 
         /// <summary>

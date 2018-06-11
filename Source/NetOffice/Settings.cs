@@ -43,7 +43,7 @@ namespace NetOffice
         private ExceptionMessageHandling _exceptionMessageBehavior = ExceptionMessageHandling.DiagnosticsAndInnerMessage;
         private bool _loadAssembliesUnsafe = true;
         private PerformanceTrace _performanceTrace;
-        private bool _forceApplicationVersionProviders = true;
+        private bool _forceApplicationVersionProviders;
         private static Settings _default;
         private static object _defaultLock = new object();
 

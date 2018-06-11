@@ -96,6 +96,7 @@ namespace NetOffice.ExcelApi.Behind
 
             Factory = null != factory ? factory : Core.Default;
             TryRequestVersion();
+            RegisterAsApplicationVersionProvider();
             OnCreate();
             _isInitialized = true;
         }

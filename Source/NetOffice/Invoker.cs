@@ -98,7 +98,7 @@ namespace NetOffice
             }
             private set
             {
-                _parent = Parent;
+                _parent = value;
             }
         }
 
