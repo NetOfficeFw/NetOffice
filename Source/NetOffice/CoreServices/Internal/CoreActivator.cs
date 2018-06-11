@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using NetOffice;
 using NetOffice.Exceptions;
+using NetOffice.Attributes;
 
 namespace NetOffice.CoreServices.Internal
 {
@@ -12,6 +13,12 @@ namespace NetOffice.CoreServices.Internal
     /// </summary>
     internal class CoreActivator : ICoreActivator
     {
+        #region Fields
+
+        private Dictionary<Type, Type> _customTypes = new Dictionary<Type, Type>();
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -28,22 +35,13 @@ namespace NetOffice.CoreServices.Internal
 
         #endregion
 
-        #region Parent
-
-        /// <summary>
-        /// Affected NetOffice Core
-        /// </summary>
-        public Core Parent { get; private set; }
-
-        #endregion
-
         #region ICOMObjectActivator
-       
+
         /// <summary>
         /// Occours when a new COMObject instance has been created
         /// </summary>
         public event OnCreateInstanceEventHandler CreateInstance;
-       
+
         /// <summary>
         /// Occurs when a new COMDynamicObject instance should be created
         /// </summary>
@@ -53,6 +51,42 @@ namespace NetOffice.CoreServices.Internal
         /// Occurs when a new COMProxyShare instance should be created
         /// </summary>
         public event OnCreateProxyShareEventHandler CreateProxyShare;
+
+        /// <summary>
+        /// Affected NetOffice Core
+        /// </summary>
+        public Core Parent { get; private set; }
+
+        /// <summary>
+        /// Registered custom types
+        /// </summary>
+        public IEnumerable<KeyValuePair<Type, Type>> RegisteredTypes
+        {
+            get
+            {
+                return _customTypes.ToArray();
+            }
+        }
+
+        /// <summary>
+        /// Add a custom type
+        /// </summary>
+        /// <param name="contract">target contract</param>
+        /// <param name="implementation">custom implementation</param>
+        public void RegisterType(Type contract, Type implementation)
+        {
+            _customTypes.Add(contract, implementation);
+        }
+
+        /// <summary>
+        /// Remove a custom type
+        /// </summary>
+        /// <param name="contract">target contract</param>
+        /// <returns>true, if removed, otherwise false</returns>
+        public bool UnRegisterType(Type contract)
+        {
+            return _customTypes.Remove(contract);
+        }
 
         #endregion
 
@@ -105,8 +139,12 @@ namespace NetOffice.CoreServices.Internal
         /// <param name="caller">parent instance</param>
         /// <param name="instance">origin instance</param>
         /// <returns>replace instance or origin instance</returns>
+        /// <exception cref="ArgumentNullException">instance is null</exception>
         internal ICOMObject TryReplaceInstance(ICOMObject caller, ICOMObject instance)
         {
+            if (null == instance)
+                throw new ArgumentNullException("instance");
+
             ICOMObject result = instance;
             Type typeToReplace = null;
             RaiseCreateInstance(instance, ref typeToReplace);
@@ -114,12 +152,31 @@ namespace NetOffice.CoreServices.Internal
 
             if (null != typeToReplace)
             {
-                ICOMObject replaceInstance = ComActivator.CreateInitializeInstanceWithoutFactory(typeToReplace, caller, instance.UnderlyingObject, instance.UnderlyingType) as ICOMObject;
-                if (null != replaceInstance)
+                result = CreateInstanceInternal(typeToReplace, caller, instance, instance.UnderlyingObject, instance.UnderlyingType); 
+            }
+            else if (_customTypes.Count > 0)
+            {
+                Type targetInterface = null;
+                var interfaces = instance.InstanceType.GetInterfaces().Where(e => e.GetCustomAttribute<EntityTypeAttribute>() != null);
+                int interfacesCount = interfaces.Count();
+
+                if (interfacesCount == 1)
                 {
-                    caller.RemoveChildObject(instance);
-                    Parent.InternalObjectRegister.RemoveObjectFromList(instance, null);
-                    result = replaceInstance;
+                    targetInterface = interfaces.First();
+                }
+                else if (interfacesCount > 1)
+                {
+                    targetInterface = interfaces.FirstOrDefault(e => e.GetCustomAttribute<EntityTypeAttribute>().Type == EntityType.IsCoClass);
+                    if (null == targetInterface)
+                    {
+                        var exceptInheritedInterfaces = interfaces.Except(interfaces.SelectMany(t => t.GetInterfaces()));
+                        targetInterface = exceptInheritedInterfaces.FirstOrDefault();
+                    }
+                }
+                
+                if (null != targetInterface && _customTypes.TryGetValue(targetInterface, out typeToReplace))
+                {
+                    result = CreateInstanceInternal(typeToReplace, caller, instance, instance.UnderlyingObject, instance.UnderlyingType);
                 }
             }
 
@@ -177,6 +234,27 @@ namespace NetOffice.CoreServices.Internal
             }
             else
                 return null;
+        }
+
+        /// <summary>
+        /// Creates and initialize an instance without a factory
+        /// </summary>
+        /// <param name="type">type to create</param>
+        /// <param name="caller">caller</param>
+        /// <param name="instance">replaced instance</param>
+        /// <param name="comProxy">com proxy</param>
+        /// <param name="comProxyType">com proxy type</param>
+        /// <returns></returns>
+        private ICOMObject CreateInstanceInternal(Type type, ICOMObject caller, ICOMObject instance, object comProxy, Type comProxyType)
+        {
+            ICOMObject result = ComActivator.CreateInitializeInstanceWithoutFactory(instance.Factory, type, caller, comProxy, comProxyType) as ICOMObject;
+            if (null != result)
+            {
+                if(null != caller)
+                    caller.RemoveChildObject(instance);
+                Parent.InternalObjectRegister.RemoveObjectFromList(instance, null);
+            }
+            return result;
         }
 
         #endregion

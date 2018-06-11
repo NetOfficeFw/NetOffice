@@ -29,5 +29,24 @@ namespace NetOffice.CoreServices
         /// Affected NetOffice Core
         /// </summary>
         Core Parent { get; }
+
+        /// <summary>
+        /// Registered custom types
+        /// </summary>
+        IEnumerable<KeyValuePair<Type, Type>> RegisteredTypes { get; }
+
+        /// <summary>
+        /// Add a custom type
+        /// </summary>
+        /// <param name="contract">target contract</param>
+        /// <param name="implementation">custom implementation</param>
+        void RegisterType(Type contract, Type implementation);
+
+        /// <summary>
+        /// Remove a custom type
+        /// </summary>
+        /// <param name="contract">target contract</param>
+        /// <returns>true, if removed, otherwise false</returns>
+        bool UnRegisterType(Type contract);        
     }
 }

@@ -42,12 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyCore.cs" />
+    <Compile Include="MyExcelApplication.cs" />
+    <Compile Include="MyExcelRange.cs" />
     <Compile Include="MyInvoker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test01.cs" />
     <Compile Include="Test02.cs" />
     <Compile Include="Test03.cs" />
+    <Compile Include="Test04.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Excel\ExcelApi.csproj">

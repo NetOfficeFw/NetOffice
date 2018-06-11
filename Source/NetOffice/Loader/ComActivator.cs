@@ -39,19 +39,20 @@ namespace NetOffice
         /// <summary>
         /// Creates new instance and initialize new instance trough ICOMObjectInitialize interface
         /// </summary>
+        /// <param name="factory">affected netoffice core</param>
         /// <param name="type">type to create</param>
         /// <param name="parentObject">parent caller</param>
         /// <param name="comProxy">underlying proxy</param>
         /// <param name="comProxyType">underlying proxy type</param>
         /// <returns>newly created instance</returns>
         /// <exception cref="ActivationException">failed to activate or initialize the instance</exception>
-        public static ICOMObject CreateInitializeInstanceWithoutFactory(Type type, ICOMObject parentObject, object comProxy, Type comProxyType)
+        public static ICOMObject CreateInitializeInstanceWithoutFactory(Core factory, Type type, ICOMObject parentObject, object comProxy, Type comProxyType)
         {
             try
             {
                 var newInstance = (ICOMObject)Activator.CreateInstance(type);
                 ICOMObjectInitialize init = (ICOMObjectInitialize)newInstance;
-                init.InitializeCOMObject(parentObject, comProxy, comProxyType);
+                init.InitializeCOMObject(factory, parentObject, comProxy, comProxyType);
                 return newInstance;
             }
             catch (Exception exception)

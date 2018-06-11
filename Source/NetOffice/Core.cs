@@ -660,7 +660,7 @@ namespace NetOffice
                         }
                     }
 
-                    result = InternalObjectActivator.TryReplaceInstance(caller, result);
+                    //result = InternalObjectActivator.TryReplaceInstance(caller, result);
                     return result;
                 }
             }
@@ -776,6 +776,8 @@ namespace NetOffice
                         if (null == result)
                             throw new FactoryException(String.Format("Unable to find implementation: {0}.", contractWrapperType.FullName));
                     }
+
+                    result = InternalObjectActivator.TryReplaceInstance(caller, result);
                     return result;
                 }
             }

@@ -8,7 +8,7 @@ namespace NetOffice.Attributes
     /// <summary>
     /// Instance use early bind calls for underlying object
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Interface, AllowMultiple = false)]
     public class NativeCallerAttribute : System.Attribute
     {
         /// <summary>

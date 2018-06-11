@@ -302,6 +302,7 @@
     <Compile Include="Behind\Interfaces\Points.cs" />
     <Compile Include="Behind\Interfaces\SeriesCollection.cs" />
     <Compile Include="Behind\Interfaces\Trendlines.cs" />
+    <Compile Include="Behind\NativeCaller\IRibbonUI.cs" />
     <Compile Include="NativeCaller\IRibbonUI.cs" />
     <Compile Include="Native\EncryptionProvider.cs" />
     <Compile Include="Native\IBlogExtensibility.cs" />

@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [InteropCompatibilityClass]
+    [EntityType(EntityType.IsCoClass)]
     public class ApplicationClass : NetOffice.ExcelApi.Behind.Application
     {
         /// <summary>

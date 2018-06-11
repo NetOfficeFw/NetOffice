@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,51 @@ namespace NetOffice.Loader
     /// <summary>
     /// Contains loaded factory informations
     /// </summary>
-    public class FactoryList 
+    public class FactoryList : IEnumerable<ITypeFactory>
     {
         private static string _dllExtension = ".dll";
         private List<ITypeFactory> _items = new List<ITypeFactory>();
+
+        /// <summary>
+        /// Count of containing factories
+        /// </summary>
+        public int Count
+        {
+            get
+            {
+                return _items.Count;
+            }
+        }
+
+        /// <summary>
+        /// Returns factory at specified position
+        /// </summary>
+        /// <param name="index">target index</param>
+        /// <returns>factory instance</returns>
+        public ITypeFactory this[int index]
+        {
+            get
+            {
+                return _items[index];
+            }
+        }
+
+        /// <summary>
+        /// Clears the instance
+        /// </summary>
+        public void Clear()
+        {
+            _items.Clear();
+        }
+
+        /// <summary>
+        /// Add an item to the collection
+        /// </summary>
+        /// <param name="item"></param>
+        public void Add(ITypeFactory item)
+        {
+            _items.Add(item);
+        }
 
         /// <summary>
         /// Check for loaded assembly in factory list
@@ -149,6 +191,24 @@ namespace NetOffice.Loader
             {
                 throw new FactoryException(String.Format("Unexcepted type load error(1): {0}.", contractType.FullName), exception);
             }
+        }
+
+        /// <summary>
+        /// Enumerator
+        /// </summary>
+        /// <returns>enumerator</returns>
+        public IEnumerator<ITypeFactory> GetEnumerator()
+        {
+            return _items.GetEnumerator();
+        }
+
+        /// <summary>
+        /// Enumerator
+        /// </summary>
+        /// <returns>enumerator</returns>
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _items.GetEnumerator();
         }
     }
 }

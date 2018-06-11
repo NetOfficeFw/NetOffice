@@ -90,7 +90,6 @@ namespace NetOffice.CoreServices
                 Type contract = null;
                 Type implementation = null;
                 if(value.InternalFactories.FactoryAssemblies.GetContractAndImplementationType(typeFactory, typeId, ref contract, ref implementation))
-//                if (typeFactory.ContractAndImplementation(typeId, ref contract, ref implementation))
                     result = value.InternalCache.TypeCache.Add(typeFactory, contract, implementation, comProxy.GetType(), typeFactory.ComponentID, typeId);
             }
             return result;
@@ -125,6 +124,36 @@ namespace NetOffice.CoreServices
                     GetComponentAndTypeId(value, comProxy, ref componentId, ref typeId);
                     result = value.InternalCache.TypeCache.Add(typeFactory, contractType, implementationType, comProxy.GetType(), componentId, typeId);
                 }
+            }
+            return result;
+        }
+
+
+        /// <summary>
+        /// Resolve type informations for a proxy by known result contract
+        /// </summary>
+        /// <param name="value">Core to extend</param>
+        /// <param name="contractType">known contract</param>
+        /// <returns>type information or null if its failed to resolve</returns>
+        /// <exception cref="ArgumentNullException">core or contractType or com proxy is null</exception>
+        internal static Type GetImplementationTypeForKnownObject(this Core value, Type contractType)
+        {
+            if (null == value)
+                throw new ArgumentNullException("value");
+            if (null == contractType)
+                throw new ArgumentNullException("contractType");
+
+            Type result = null;
+
+            TypeInformation typeInfo = value.InternalCache.TypeCache.TryGetTypeInfo(contractType);
+            if (null != typeInfo)
+            {
+                result = typeInfo.Implementation;
+            }
+            else
+            {
+                ITypeFactory typeFactory = null;
+                result = value.InternalFactories.FactoryAssemblies.GetImplementationType(contractType, ref typeFactory, false);
             }
             return result;
         }
