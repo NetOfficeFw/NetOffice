@@ -12,100 +12,8 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845337.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class SynonymInfo : COMObject
+	public interface SynonymInfo : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(SynonymInfo);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public SynonymInfo(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public SynonymInfo(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SynonymInfo(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SynonymInfo(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SynonymInfo(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SynonymInfo(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SynonymInfo() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SynonymInfo(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +22,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196646.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -128,13 +30,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845020.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -143,13 +39,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822685.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -157,13 +47,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839969.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public string Word
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Word");
-			}
-		}
+		string Word { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -171,13 +55,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835807.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool Found
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Found");
-			}
-		}
+		bool Found { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -185,13 +63,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822701.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 MeaningCount
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MeaningCount");
-			}
-		}
+		Int32 MeaningCount { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -199,13 +71,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194650.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public object MeaningList
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "MeaningList");
-			}
-		}
+		object MeaningList { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -213,13 +79,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834846.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public object PartOfSpeechList
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "PartOfSpeechList");
-			}
-		}
+		object PartOfSpeechList { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -229,10 +89,7 @@ namespace NetOffice.WordApi
 		/// <param name="meaning">object meaning</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object get_SynonymList(object meaning)
-		{
-			return Factory.ExecuteVariantPropertyGet(this, "SynonymList", meaning);
-		}
+		object get_SynonymList(object meaning);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -241,10 +98,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837921.aspx </remarks>
 		/// <param name="meaning">object meaning</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), Redirect("get_SynonymList")]
-		public object SynonymList(object meaning)
-		{
-			return get_SynonymList(meaning);
-		}
+		object SynonymList(object meaning);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -252,13 +106,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195305.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public object AntonymList
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "AntonymList");
-			}
-		}
+		object AntonymList { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -266,13 +114,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835976.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public object RelatedExpressionList
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "RelatedExpressionList");
-			}
-		}
+		object RelatedExpressionList { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -280,20 +122,9 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198306.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public object RelatedWordList
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "RelatedWordList");
-			}
-		}
+		object RelatedWordList { get; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

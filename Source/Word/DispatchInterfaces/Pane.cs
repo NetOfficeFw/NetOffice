@@ -12,100 +12,8 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195158.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Pane : COMObject
+	public interface Pane : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Pane);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Pane(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Pane(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Pane(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Pane(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Pane(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Pane(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Pane() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Pane(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +22,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834562.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -128,13 +30,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845791.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -143,13 +39,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191877.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -157,13 +47,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194891.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Document Document
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Document>(this, "Document", NetOffice.WordApi.Document.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Document Document { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -171,13 +55,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845192.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Selection Selection
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Selection>(this, "Selection", NetOffice.WordApi.Selection.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Selection Selection { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -185,17 +63,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192536.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool DisplayRulers
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayRulers");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayRulers", value);
-			}
-		}
+		bool DisplayRulers { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -203,17 +71,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197477.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool DisplayVerticalRuler
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayVerticalRuler");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayVerticalRuler", value);
-			}
-		}
+		bool DisplayVerticalRuler { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -221,13 +79,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197733.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Zooms Zooms
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Zooms>(this, "Zooms", NetOffice.WordApi.Zooms.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Zooms Zooms { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -235,13 +87,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192358.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Index
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
-			}
-		}
+		Int32 Index { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -249,13 +95,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197276.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.View View
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.View>(this, "View", NetOffice.WordApi.View.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.View View { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -263,13 +103,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836136.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Pane Next
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Pane>(this, "Next", NetOffice.WordApi.Pane.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Pane Next { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -277,13 +111,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840379.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Pane Previous
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Pane>(this, "Previous", NetOffice.WordApi.Pane.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Pane Previous { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -291,17 +119,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839141.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 HorizontalPercentScrolled
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "HorizontalPercentScrolled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HorizontalPercentScrolled", value);
-			}
-		}
+		Int32 HorizontalPercentScrolled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -309,17 +127,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192039.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 VerticalPercentScrolled
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "VerticalPercentScrolled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "VerticalPercentScrolled", value);
-			}
-		}
+		Int32 VerticalPercentScrolled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -327,17 +135,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194742.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 MinimumFontSize
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MinimumFontSize");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MinimumFontSize", value);
-			}
-		}
+		Int32 MinimumFontSize { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -345,17 +143,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool BrowseToWindow
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "BrowseToWindow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BrowseToWindow", value);
-			}
-		}
+		bool BrowseToWindow { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -363,13 +151,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822540.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 BrowseWidth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "BrowseWidth");
-			}
-		}
+		Int32 BrowseWidth { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -377,13 +159,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197859.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Frameset Frameset
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Frameset>(this, "Frameset", NetOffice.WordApi.Frameset.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Frameset Frameset { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
@@ -391,13 +167,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191753.aspx </remarks>
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		public NetOffice.WordApi.Pages Pages
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Pages>(this, "Pages", NetOffice.WordApi.Pages.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Pages Pages { get; }
 
 		#endregion
 
@@ -408,20 +178,14 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195045.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Activate()
-		{
-			 Factory.ExecuteMethod(this, "Activate");
-		}
+		void Activate();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845079.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Close()
-		{
-			 Factory.ExecuteMethod(this, "Close");
-		}
+		void Close();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -432,10 +196,7 @@ namespace NetOffice.WordApi
 		/// <param name="toRight">optional object toRight</param>
 		/// <param name="toLeft">optional object toLeft</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void LargeScroll(object down, object up, object toRight, object toLeft)
-		{
-			 Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight, toLeft);
-		}
+		void LargeScroll(object down, object up, object toRight, object toLeft);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -443,10 +204,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void LargeScroll()
-		{
-			 Factory.ExecuteMethod(this, "LargeScroll");
-		}
+		void LargeScroll();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -455,10 +213,7 @@ namespace NetOffice.WordApi
 		/// <param name="down">optional object down</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void LargeScroll(object down)
-		{
-			 Factory.ExecuteMethod(this, "LargeScroll", down);
-		}
+		void LargeScroll(object down);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -468,10 +223,7 @@ namespace NetOffice.WordApi
 		/// <param name="up">optional object up</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void LargeScroll(object down, object up)
-		{
-			 Factory.ExecuteMethod(this, "LargeScroll", down, up);
-		}
+		void LargeScroll(object down, object up);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -482,10 +234,7 @@ namespace NetOffice.WordApi
 		/// <param name="toRight">optional object toRight</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void LargeScroll(object down, object up, object toRight)
-		{
-			 Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight);
-		}
+		void LargeScroll(object down, object up, object toRight);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -496,10 +245,7 @@ namespace NetOffice.WordApi
 		/// <param name="toRight">optional object toRight</param>
 		/// <param name="toLeft">optional object toLeft</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SmallScroll(object down, object up, object toRight, object toLeft)
-		{
-			 Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight, toLeft);
-		}
+		void SmallScroll(object down, object up, object toRight, object toLeft);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -507,10 +253,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SmallScroll()
-		{
-			 Factory.ExecuteMethod(this, "SmallScroll");
-		}
+		void SmallScroll();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -519,10 +262,7 @@ namespace NetOffice.WordApi
 		/// <param name="down">optional object down</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SmallScroll(object down)
-		{
-			 Factory.ExecuteMethod(this, "SmallScroll", down);
-		}
+		void SmallScroll(object down);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -532,10 +272,7 @@ namespace NetOffice.WordApi
 		/// <param name="up">optional object up</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SmallScroll(object down, object up)
-		{
-			 Factory.ExecuteMethod(this, "SmallScroll", down, up);
-		}
+		void SmallScroll(object down, object up);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -546,10 +283,7 @@ namespace NetOffice.WordApi
 		/// <param name="toRight">optional object toRight</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SmallScroll(object down, object up, object toRight)
-		{
-			 Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight);
-		}
+		void SmallScroll(object down, object up, object toRight);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -557,10 +291,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837709.aspx </remarks>
 		/// <param name="velocity">Int32 velocity</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void AutoScroll(Int32 velocity)
-		{
-			 Factory.ExecuteMethod(this, "AutoScroll", velocity);
-		}
+		void AutoScroll(Int32 velocity);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -569,10 +300,7 @@ namespace NetOffice.WordApi
 		/// <param name="down">optional object down</param>
 		/// <param name="up">optional object up</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void PageScroll(object down, object up)
-		{
-			 Factory.ExecuteMethod(this, "PageScroll", down, up);
-		}
+		void PageScroll(object down, object up);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -580,10 +308,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838996.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void PageScroll()
-		{
-			 Factory.ExecuteMethod(this, "PageScroll");
-		}
+		void PageScroll();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -592,33 +317,22 @@ namespace NetOffice.WordApi
 		/// <param name="down">optional object down</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void PageScroll(object down)
-		{
-			 Factory.ExecuteMethod(this, "PageScroll", down);
-		}
+		void PageScroll(object down);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822373.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void NewFrameset()
-		{
-			 Factory.ExecuteMethod(this, "NewFrameset");
-		}
+		void NewFrameset();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840881.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void TOCInFrameset()
-		{
-			 Factory.ExecuteMethod(this, "TOCInFrameset");
-		}
+		void TOCInFrameset();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

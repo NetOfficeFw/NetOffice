@@ -12,100 +12,8 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195142.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Column : COMObject
+	public interface Column : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Column);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Column(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Column(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Column(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Column(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Column(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Column(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Column() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Column(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +22,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192790.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -128,13 +30,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838273.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -143,13 +39,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837510.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -157,17 +47,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820964.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Single Width
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Single Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -175,13 +55,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194360.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool IsFirst
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsFirst");
-			}
-		}
+		bool IsFirst { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -189,13 +63,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835237.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool IsLast
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsLast");
-			}
-		}
+		bool IsLast { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -203,13 +71,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840774.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Index
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
-			}
-		}
+		Int32 Index { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -217,13 +79,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194516.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Cells Cells
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Cells>(this, "Cells", NetOffice.WordApi.Cells.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Cells Cells { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -231,17 +87,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840574.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Borders Borders
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Borders>(this, "Borders", NetOffice.WordApi.Borders.LateBindingApiWrapperType);
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "Borders", value);
-			}
-		}
+		NetOffice.WordApi.Borders Borders { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -249,13 +95,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838949.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shading Shading
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Shading>(this, "Shading", NetOffice.WordApi.Shading.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Shading Shading { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -263,13 +103,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840814.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Column Next
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Column>(this, "Next", NetOffice.WordApi.Column.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Column Next { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -277,13 +111,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197187.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Column Previous
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Column>(this, "Previous", NetOffice.WordApi.Column.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Column Previous { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -291,13 +119,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191824.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 NestingLevel
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "NestingLevel");
-			}
-		}
+		Int32 NestingLevel { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -305,17 +127,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836716.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Single PreferredWidth
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "PreferredWidth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PreferredWidth", value);
-			}
-		}
+		Single PreferredWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -323,17 +135,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193135.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Enums.WdPreferredWidthType PreferredWidthType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdPreferredWidthType>(this, "PreferredWidthType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "PreferredWidthType", value);
-			}
-		}
+		NetOffice.WordApi.Enums.WdPreferredWidthType PreferredWidthType { get; set; }
 
 		#endregion
 
@@ -344,20 +146,14 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193096.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Select()
-		{
-			 Factory.ExecuteMethod(this, "Select");
-		}
+		void Select();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192019.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+		void Delete();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -366,20 +162,14 @@ namespace NetOffice.WordApi
 		/// <param name="columnWidth">Single columnWidth</param>
 		/// <param name="rulerStyle">NetOffice.WordApi.Enums.WdRulerStyle rulerStyle</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SetWidth(Single columnWidth, NetOffice.WordApi.Enums.WdRulerStyle rulerStyle)
-		{
-			 Factory.ExecuteMethod(this, "SetWidth", columnWidth, rulerStyle);
-		}
+		void SetWidth(Single columnWidth, NetOffice.WordApi.Enums.WdRulerStyle rulerStyle);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838466.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void AutoFit()
-		{
-			 Factory.ExecuteMethod(this, "AutoFit");
-		}
+		void AutoFit();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -391,10 +181,7 @@ namespace NetOffice.WordApi
 		/// <param name="languageID">optional object languageID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SortOld(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object languageID)
-		{
-			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, sortFieldType, sortOrder, caseSensitive, languageID });
-		}
+		void SortOld(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object languageID);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -402,10 +189,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SortOld()
-		{
-			 Factory.ExecuteMethod(this, "SortOld");
-		}
+		void SortOld();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -414,10 +198,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SortOld(object excludeHeader)
-		{
-			 Factory.ExecuteMethod(this, "SortOld", excludeHeader);
-		}
+		void SortOld(object excludeHeader);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -427,10 +208,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SortOld(object excludeHeader, object sortFieldType)
-		{
-			 Factory.ExecuteMethod(this, "SortOld", excludeHeader, sortFieldType);
-		}
+		void SortOld(object excludeHeader, object sortFieldType);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -441,10 +219,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SortOld(object excludeHeader, object sortFieldType, object sortOrder)
-		{
-			 Factory.ExecuteMethod(this, "SortOld", excludeHeader, sortFieldType, sortOrder);
-		}
+		void SortOld(object excludeHeader, object sortFieldType, object sortOrder);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -456,10 +231,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SortOld(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive)
-		{
-			 Factory.ExecuteMethod(this, "SortOld", excludeHeader, sortFieldType, sortOrder, caseSensitive);
-		}
+		void SortOld(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -476,10 +248,7 @@ namespace NetOffice.WordApi
 		/// <param name="ignoreHe">optional object ignoreHe</param>
 		/// <param name="languageID">optional object languageID</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
-		{
-			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID });
-		}
+		void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -487,10 +256,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838077.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort()
-		{
-			 Factory.ExecuteMethod(this, "Sort");
-		}
+		void Sort();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -499,10 +265,7 @@ namespace NetOffice.WordApi
 		/// <param name="excludeHeader">optional object excludeHeader</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader)
-		{
-			 Factory.ExecuteMethod(this, "Sort", excludeHeader);
-		}
+		void Sort(object excludeHeader);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -512,10 +275,7 @@ namespace NetOffice.WordApi
 		/// <param name="sortFieldType">optional object sortFieldType</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType)
-		{
-			 Factory.ExecuteMethod(this, "Sort", excludeHeader, sortFieldType);
-		}
+		void Sort(object excludeHeader, object sortFieldType);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -526,10 +286,7 @@ namespace NetOffice.WordApi
 		/// <param name="sortOrder">optional object sortOrder</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType, object sortOrder)
-		{
-			 Factory.ExecuteMethod(this, "Sort", excludeHeader, sortFieldType, sortOrder);
-		}
+		void Sort(object excludeHeader, object sortFieldType, object sortOrder);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -541,10 +298,7 @@ namespace NetOffice.WordApi
 		/// <param name="caseSensitive">optional object caseSensitive</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive)
-		{
-			 Factory.ExecuteMethod(this, "Sort", excludeHeader, sortFieldType, sortOrder, caseSensitive);
-		}
+		void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -557,10 +311,7 @@ namespace NetOffice.WordApi
 		/// <param name="bidiSort">optional object bidiSort</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort)
-		{
-			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort });
-		}
+		void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -574,10 +325,7 @@ namespace NetOffice.WordApi
 		/// <param name="ignoreThe">optional object ignoreThe</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe)
-		{
-			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe });
-		}
+		void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -592,10 +340,7 @@ namespace NetOffice.WordApi
 		/// <param name="ignoreKashida">optional object ignoreKashida</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida)
-		{
-			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida });
-		}
+		void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -611,10 +356,7 @@ namespace NetOffice.WordApi
 		/// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics)
-		{
-			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics });
-		}
+		void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -631,13 +373,8 @@ namespace NetOffice.WordApi
 		/// <param name="ignoreHe">optional object ignoreHe</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe)
-		{
-			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe });
-		}
+		void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

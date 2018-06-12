@@ -12,100 +12,8 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845328.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Language : COMObject
+	public interface Language : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Language);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Language(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Language(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Language(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Language(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Language(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Language(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Language() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Language(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +22,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840525.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -128,13 +30,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194421.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -143,13 +39,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838968.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -157,13 +47,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822694.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Enums.WdLanguageID ID
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdLanguageID>(this, "ID");
-			}
-		}
+		NetOffice.WordApi.Enums.WdLanguageID ID { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -171,13 +55,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836682.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public string NameLocal
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "NameLocal");
-			}
-		}
+		string NameLocal { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -185,13 +63,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194668.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -199,13 +71,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197919.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Dictionary ActiveGrammarDictionary
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Dictionary>(this, "ActiveGrammarDictionary", NetOffice.WordApi.Dictionary.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Dictionary ActiveGrammarDictionary { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -213,13 +79,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193418.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Dictionary ActiveHyphenationDictionary
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Dictionary>(this, "ActiveHyphenationDictionary", NetOffice.WordApi.Dictionary.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Dictionary ActiveHyphenationDictionary { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -227,13 +87,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835767.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Dictionary ActiveSpellingDictionary
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Dictionary>(this, "ActiveSpellingDictionary", NetOffice.WordApi.Dictionary.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Dictionary ActiveSpellingDictionary { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -241,13 +95,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193088.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Dictionary ActiveThesaurusDictionary
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Dictionary>(this, "ActiveThesaurusDictionary", NetOffice.WordApi.Dictionary.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Dictionary ActiveThesaurusDictionary { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -255,17 +103,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822665.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public string DefaultWritingStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "DefaultWritingStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DefaultWritingStyle", value);
-			}
-		}
+		string DefaultWritingStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -273,13 +111,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196515.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public object WritingStyleList
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "WritingStyleList");
-			}
-		}
+		object WritingStyleList { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -287,24 +119,9 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195312.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Enums.WdDictionaryType SpellingDictionaryType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdDictionaryType>(this, "SpellingDictionaryType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "SpellingDictionaryType", value);
-			}
-		}
+		NetOffice.WordApi.Enums.WdDictionaryType SpellingDictionaryType { get; set; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

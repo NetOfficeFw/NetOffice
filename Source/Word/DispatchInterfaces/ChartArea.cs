@@ -12,100 +12,8 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821404.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ChartArea : COMObject
+	public interface ChartArea : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ChartArea);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ChartArea(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ChartArea(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartArea(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartArea(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartArea(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartArea(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartArea() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartArea(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +22,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821083.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -129,13 +31,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836303.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -143,13 +39,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartBorder Border
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartBorder>(this, "Border", NetOffice.WordApi.ChartBorder.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.ChartBorder Border { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -157,13 +47,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartFont Font
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFont>(this, "Font", NetOffice.WordApi.ChartFont.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.ChartFont Font { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -171,17 +55,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197909.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public bool Shadow
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Shadow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Shadow", value);
-			}
-		}
+		bool Shadow { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -189,17 +63,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822903.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public Double Height
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Height");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
-			}
-		}
+		Double Height { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -207,13 +71,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.Interior Interior
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Interior>(this, "Interior", NetOffice.WordApi.Interior.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Interior Interior { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -221,13 +79,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartFillFormat Fill
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFillFormat>(this, "Fill", NetOffice.WordApi.ChartFillFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.ChartFillFormat Fill { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -235,17 +87,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836363.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public Double Left
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
+		Double Left { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -253,17 +95,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838349.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public Double Top
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
+		Double Top { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -271,17 +103,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197124.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public Double Width
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Double Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -289,17 +111,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object AutoScaleFont
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "AutoScaleFont");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "AutoScaleFont", value);
-			}
-		}
+		object AutoScaleFont { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -307,13 +119,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195320.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.ChartFormat Format
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFormat>(this, "Format", NetOffice.WordApi.ChartFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.ChartFormat Format { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -322,13 +128,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822137.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16), ProxyResult]
-		public object Application
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Application");
-			}
-		}
+		object Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -336,13 +136,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839287.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		#endregion
 
@@ -353,53 +147,36 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195701.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public object Select()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Select");
-		}
+		object Select();
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821160.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public object Clear()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Clear");
-		}
+		object Clear();
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838891.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public object ClearContents()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "ClearContents");
-		}
+		object ClearContents();
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196065.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public object Copy()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Copy");
-		}
+		object Copy();
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195172.aspx </remarks>
 		[SupportByVersion("Word", 14,15,16)]
-		public object ClearFormats()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
-		}
+		object ClearFormats();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

@@ -15,100 +15,8 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845240.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Shapes : COMObject, IEnumerableProvider<NetOffice.WordApi.Shape>
+	public interface Shapes : ICOMObject, IEnumerableProvider<NetOffice.WordApi.Shape>
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Shapes);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Shapes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Shapes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shapes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shapes(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shapes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shapes(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shapes() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shapes(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -117,13 +25,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821978.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.WordApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -131,13 +33,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198130.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -146,13 +42,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838499.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -160,13 +50,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194527.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+		Int32 Count { get; }
 
 		#endregion
 
@@ -178,13 +62,7 @@ namespace NetOffice.WordApi
 		/// <param name="index">object index</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.WordApi.Shape this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "Item", NetOffice.WordApi.Shape.LateBindingApiWrapperType, index);
-			}
-		}
+		NetOffice.WordApi.Shape this[object index] { get; }
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -197,10 +75,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddCallout", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -213,10 +88,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddCallout", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -228,10 +100,7 @@ namespace NetOffice.WordApi
 		/// <param name="endY">Single endY</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddConnector", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, beginX, beginY, endX, endY });
-		}
+		NetOffice.WordApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -240,10 +109,7 @@ namespace NetOffice.WordApi
 		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddCurve(object safeArrayOfPoints, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddCurve", NetOffice.WordApi.Shape.LateBindingApiWrapperType, safeArrayOfPoints, anchor);
-		}
+		NetOffice.WordApi.Shape AddCurve(object safeArrayOfPoints, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -252,10 +118,7 @@ namespace NetOffice.WordApi
 		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddCurve(object safeArrayOfPoints)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddCurve", NetOffice.WordApi.Shape.LateBindingApiWrapperType, safeArrayOfPoints);
-		}
+		NetOffice.WordApi.Shape AddCurve(object safeArrayOfPoints);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -268,10 +131,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddLabel", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ orientation, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -284,10 +144,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddLabel", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ orientation, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -299,10 +156,7 @@ namespace NetOffice.WordApi
 		/// <param name="endY">Single endY</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddLine", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ beginX, beginY, endX, endY, anchor });
-		}
+		NetOffice.WordApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -314,10 +168,7 @@ namespace NetOffice.WordApi
 		/// <param name="endY">Single endY</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddLine", NetOffice.WordApi.Shape.LateBindingApiWrapperType, beginX, beginY, endX, endY);
-		}
+		NetOffice.WordApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -332,10 +183,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width, object height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPicture", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width, object height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -344,10 +192,7 @@ namespace NetOffice.WordApi
 		/// <param name="fileName">string fileName</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPicture", NetOffice.WordApi.Shape.LateBindingApiWrapperType, fileName);
-		}
+		NetOffice.WordApi.Shape AddPicture(string fileName);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -357,10 +202,7 @@ namespace NetOffice.WordApi
 		/// <param name="linkToFile">optional object linkToFile</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPicture", NetOffice.WordApi.Shape.LateBindingApiWrapperType, fileName, linkToFile);
-		}
+		NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -371,10 +213,7 @@ namespace NetOffice.WordApi
 		/// <param name="saveWithDocument">optional object saveWithDocument</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPicture", NetOffice.WordApi.Shape.LateBindingApiWrapperType, fileName, linkToFile, saveWithDocument);
-		}
+		NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -386,10 +225,7 @@ namespace NetOffice.WordApi
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPicture", NetOffice.WordApi.Shape.LateBindingApiWrapperType, fileName, linkToFile, saveWithDocument, left);
-		}
+		NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -402,10 +238,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPicture", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top });
-		}
+		NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -419,10 +252,7 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPicture", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top, width });
-		}
+		NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -437,10 +267,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width, object height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPicture", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddPicture(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -449,10 +276,7 @@ namespace NetOffice.WordApi
 		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPolyline(object safeArrayOfPoints, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPolyline", NetOffice.WordApi.Shape.LateBindingApiWrapperType, safeArrayOfPoints, anchor);
-		}
+		NetOffice.WordApi.Shape AddPolyline(object safeArrayOfPoints, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -461,10 +285,7 @@ namespace NetOffice.WordApi
 		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddPolyline(object safeArrayOfPoints)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddPolyline", NetOffice.WordApi.Shape.LateBindingApiWrapperType, safeArrayOfPoints);
-		}
+		NetOffice.WordApi.Shape AddPolyline(object safeArrayOfPoints);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -477,10 +298,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddShape(Int32 type, Single left, Single top, Single width, Single height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddShape", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddShape(Int32 type, Single left, Single top, Single width, Single height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -493,10 +311,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddShape(Int32 type, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddShape", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddShape(Int32 type, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -512,10 +327,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">Single top</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddTextEffect", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top, anchor });
-		}
+		NetOffice.WordApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -531,10 +343,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">Single top</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddTextEffect", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
-		}
+		NetOffice.WordApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -547,10 +356,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddTextbox", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ orientation, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -563,10 +369,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddTextbox", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ orientation, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -576,10 +379,7 @@ namespace NetOffice.WordApi
 		/// <param name="x1">Single x1</param>
 		/// <param name="y1">Single y1</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.FreeformBuilder>(this, "BuildFreeform", NetOffice.WordApi.FreeformBuilder.LateBindingApiWrapperType, editingType, x1, y1);
-		}
+		NetOffice.WordApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -587,20 +387,14 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192568.aspx </remarks>
 		/// <param name="index">object index</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.ShapeRange Range(object index)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.ShapeRange>(this, "Range", NetOffice.WordApi.ShapeRange.LateBindingApiWrapperType, index);
-		}
+		NetOffice.WordApi.ShapeRange Range(object index);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192817.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public void SelectAll()
-		{
-			 Factory.ExecuteMethod(this, "SelectAll");
-		}
+		void SelectAll();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -619,10 +413,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -630,10 +421,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845140.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType);
-		}
+		NetOffice.WordApi.Shape AddOLEObject();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -642,10 +430,7 @@ namespace NetOffice.WordApi
 		/// <param name="classType">optional object classType</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, classType);
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -655,10 +440,7 @@ namespace NetOffice.WordApi
 		/// <param name="fileName">optional object fileName</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, classType, fileName);
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -669,10 +451,7 @@ namespace NetOffice.WordApi
 		/// <param name="linkToFile">optional object linkToFile</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, classType, fileName, linkToFile);
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -684,10 +463,7 @@ namespace NetOffice.WordApi
 		/// <param name="displayAsIcon">optional object displayAsIcon</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, classType, fileName, linkToFile, displayAsIcon);
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -700,10 +476,7 @@ namespace NetOffice.WordApi
 		/// <param name="iconFileName">optional object iconFileName</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName });
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -717,10 +490,7 @@ namespace NetOffice.WordApi
 		/// <param name="iconIndex">optional object iconIndex</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex });
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -735,10 +505,7 @@ namespace NetOffice.WordApi
 		/// <param name="iconLabel">optional object iconLabel</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel });
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -754,10 +521,7 @@ namespace NetOffice.WordApi
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, left });
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -774,10 +538,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top });
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -795,10 +556,7 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width });
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -817,10 +575,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEObject", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -833,10 +588,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top, object width, object height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEControl", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top, object width, object height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -844,10 +596,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840313.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEControl()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEControl", NetOffice.WordApi.Shape.LateBindingApiWrapperType);
-		}
+		NetOffice.WordApi.Shape AddOLEControl();
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -856,10 +605,7 @@ namespace NetOffice.WordApi
 		/// <param name="classType">optional object classType</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEControl(object classType)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEControl", NetOffice.WordApi.Shape.LateBindingApiWrapperType, classType);
-		}
+		NetOffice.WordApi.Shape AddOLEControl(object classType);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -869,10 +615,7 @@ namespace NetOffice.WordApi
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEControl(object classType, object left)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEControl", NetOffice.WordApi.Shape.LateBindingApiWrapperType, classType, left);
-		}
+		NetOffice.WordApi.Shape AddOLEControl(object classType, object left);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -883,10 +626,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEControl", NetOffice.WordApi.Shape.LateBindingApiWrapperType, classType, left, top);
-		}
+		NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -898,10 +638,7 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top, object width)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEControl", NetOffice.WordApi.Shape.LateBindingApiWrapperType, classType, left, top, width);
-		}
+		NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
@@ -914,10 +651,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top, object width, object height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddOLEControl", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ classType, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddOLEControl(object classType, object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
@@ -929,10 +663,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddDiagram", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
@@ -944,10 +675,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddDiagram", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
@@ -959,10 +687,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddCanvas(Single left, Single top, Single width, Single height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddCanvas", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddCanvas(Single left, Single top, Single width, Single height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
@@ -974,10 +699,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">Single height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
-		public NetOffice.WordApi.Shape AddCanvas(Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddCanvas", NetOffice.WordApi.Shape.LateBindingApiWrapperType, left, top, width, height);
-		}
+		NetOffice.WordApi.Shape AddCanvas(Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -989,20 +711,14 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.WordApi.Shape AddChart(object type, object left, object top, object width, object height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddChart(object type, object left, object top, object width, object height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.WordApi.Shape AddChart()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart", NetOffice.WordApi.Shape.LateBindingApiWrapperType);
-		}
+		NetOffice.WordApi.Shape AddChart();
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -1010,10 +726,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.WordApi.Shape AddChart(object type)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart", NetOffice.WordApi.Shape.LateBindingApiWrapperType, type);
-		}
+		NetOffice.WordApi.Shape AddChart(object type);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -1022,10 +735,7 @@ namespace NetOffice.WordApi
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.WordApi.Shape AddChart(object type, object left)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart", NetOffice.WordApi.Shape.LateBindingApiWrapperType, type, left);
-		}
+		NetOffice.WordApi.Shape AddChart(object type, object left);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -1035,10 +745,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.WordApi.Shape AddChart(object type, object left, object top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart", NetOffice.WordApi.Shape.LateBindingApiWrapperType, type, left, top);
-		}
+		NetOffice.WordApi.Shape AddChart(object type, object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -1049,10 +756,7 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.WordApi.Shape AddChart(object type, object left, object top, object width)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart", NetOffice.WordApi.Shape.LateBindingApiWrapperType, type, left, top, width);
-		}
+		NetOffice.WordApi.Shape AddChart(object type, object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -1064,10 +768,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.WordApi.Shape AddChart(object type, object left, object top, object width, object height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddChart(object type, object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -1080,10 +781,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddSmartArt", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ layout, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -1092,10 +790,7 @@ namespace NetOffice.WordApi
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddSmartArt", NetOffice.WordApi.Shape.LateBindingApiWrapperType, layout);
-		}
+		NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout);
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -1105,10 +800,7 @@ namespace NetOffice.WordApi
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddSmartArt", NetOffice.WordApi.Shape.LateBindingApiWrapperType, layout, left);
-		}
+		NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left);
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -1119,10 +811,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddSmartArt", NetOffice.WordApi.Shape.LateBindingApiWrapperType, layout, left, top);
-		}
+		NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -1134,10 +823,7 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddSmartArt", NetOffice.WordApi.Shape.LateBindingApiWrapperType, layout, left, top, width);
-		}
+		NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
@@ -1150,10 +836,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddSmartArt", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ layout, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1170,10 +853,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		/// <param name="anchor">optional object anchor</param>
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left, object top, object width, object height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddWebVideo", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ embedCode, videoWidth, videoHeight, posterFrameImage, url, left, top, width, height, anchor });
-		}
+		NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left, object top, object width, object height, object anchor);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1184,10 +864,7 @@ namespace NetOffice.WordApi
 		/// <param name="videoHeight">object videoHeight</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddWebVideo", NetOffice.WordApi.Shape.LateBindingApiWrapperType, embedCode, videoWidth, videoHeight);
-		}
+		NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1199,10 +876,7 @@ namespace NetOffice.WordApi
 		/// <param name="posterFrameImage">optional object posterFrameImage</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddWebVideo", NetOffice.WordApi.Shape.LateBindingApiWrapperType, embedCode, videoWidth, videoHeight, posterFrameImage);
-		}
+		NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1215,10 +889,7 @@ namespace NetOffice.WordApi
 		/// <param name="url">optional object url</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddWebVideo", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ embedCode, videoWidth, videoHeight, posterFrameImage, url });
-		}
+		NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1232,10 +903,7 @@ namespace NetOffice.WordApi
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddWebVideo", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ embedCode, videoWidth, videoHeight, posterFrameImage, url, left });
-		}
+		NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1250,10 +918,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left, object top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddWebVideo", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ embedCode, videoWidth, videoHeight, posterFrameImage, url, left, top });
-		}
+		NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1269,10 +934,7 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left, object top, object width)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddWebVideo", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ embedCode, videoWidth, videoHeight, posterFrameImage, url, left, top, width });
-		}
+		NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1289,10 +951,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left, object top, object width, object height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddWebVideo", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ embedCode, videoWidth, videoHeight, posterFrameImage, url, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1307,10 +966,7 @@ namespace NetOffice.WordApi
 		/// <param name="anchor">optional object anchor</param>
 		/// <param name="newLayout">optional object newLayout</param>
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top, object width, object height, object anchor, object newLayout)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ style, type, left, top, width, height, anchor, newLayout });
-		}
+		NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top, object width, object height, object anchor, object newLayout);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1318,10 +974,7 @@ namespace NetOffice.WordApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229557.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType);
-		}
+		NetOffice.WordApi.Shape AddChart2();
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1330,10 +983,7 @@ namespace NetOffice.WordApi
 		/// <param name="style">optional Int32 Style = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2(object style)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType, style);
-		}
+		NetOffice.WordApi.Shape AddChart2(object style);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1343,10 +993,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2(object style, object type)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType, style, type);
-		}
+		NetOffice.WordApi.Shape AddChart2(object style, object type);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1357,10 +1004,7 @@ namespace NetOffice.WordApi
 		/// <param name="left">optional object left</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2(object style, object type, object left)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType, style, type, left);
-		}
+		NetOffice.WordApi.Shape AddChart2(object style, object type, object left);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1372,10 +1016,7 @@ namespace NetOffice.WordApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType, style, type, left, top);
-		}
+		NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1388,10 +1029,7 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top, object width)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ style, type, left, top, width });
-		}
+		NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1405,10 +1043,7 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object height</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top, object width, object height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ style, type, left, top, width, height });
-		}
+		NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
@@ -1423,55 +1058,8 @@ namespace NetOffice.WordApi
 		/// <param name="anchor">optional object anchor</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 15, 16)]
-		public NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top, object width, object height, object anchor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Shape>(this, "AddChart2", NetOffice.WordApi.Shape.LateBindingApiWrapperType, new object[]{ style, type, left, top, width, height, anchor });
-		}
-
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.WordApi.Shape>
-
-        ICOMObject IEnumerableProvider<NetOffice.WordApi.Shape>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<NetOffice.WordApi.Shape>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.WordApi.Shape>
-
-        /// <summary>
-        /// SupportByVersion Word, 9,10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.WordApi.Shape> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.WordApi.Shape item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion Word, 9,10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
-		}
+		NetOffice.WordApi.Shape AddChart2(object style, object type, object left, object top, object width, object height, object anchor);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }
