@@ -11,7 +11,9 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
-	public interface _Document : ICOMObject
+	[TypeId("0002096B-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.WordApi.Document))]
+    public interface _Document : ICOMObject
 	{
 		#region Properties
 
@@ -449,12 +451,13 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		bool get_Compatibility(NetOffice.WordApi.Enums.WdCompatibility type);
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <param name="type">NetOffice.WordApi.Enums.WdCompatibility type</param>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="type">NetOffice.WordApi.Enums.WdCompatibility type</param>
+        /// <param name="value">bool value</param>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		void set_Compatibility(NetOffice.WordApi.Enums.WdCompatibility type, bool value);
 
@@ -714,12 +717,13 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		string get_ActiveWritingStyle(object languageID);
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <param name="languageID">object languageID</param>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="languageID">object languageID</param>
+        /// <param name="value">string value</param>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		void set_ActiveWritingStyle(object languageID, string value);
 

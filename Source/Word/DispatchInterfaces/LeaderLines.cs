@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839902.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("36162C62-B59A-4278-AF3D-F2AC1EB999D9")]
 	public interface LeaderLines : ICOMObject
 	{
 		#region Properties

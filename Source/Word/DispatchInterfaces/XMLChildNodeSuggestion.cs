@@ -11,6 +11,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("A87E00E9-3AC3-4B53-ABE3-7379653D0E82")]
 	public interface XMLChildNodeSuggestion : ICOMObject
 	{
 		#region Properties

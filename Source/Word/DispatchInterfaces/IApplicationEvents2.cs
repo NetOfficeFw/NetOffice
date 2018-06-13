@@ -11,6 +11,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("000209FE-0001-0000-C000-000000000046")]
 	public interface IApplicationEvents2 : ICOMObject
 	{
 		#region Methods

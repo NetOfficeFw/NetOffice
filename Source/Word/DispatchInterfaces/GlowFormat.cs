@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838554.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("F1B14F40-5C32-4C8C-B5B2-DE537BB6B89D")]
 	public interface GlowFormat : ICOMObject
 	{
 		#region Properties

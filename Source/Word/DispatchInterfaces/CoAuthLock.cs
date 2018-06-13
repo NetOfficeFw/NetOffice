@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194244.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("99755F80-FE96-4F7D-B636-B8E800E54F44")]
 	public interface CoAuthLock : ICOMObject
 	{
 		#region Properties

@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837026.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("BF043168-F4DE-4E7C-B206-741A8B3EF71A")]
 	public interface EndnoteOptions : ICOMObject
 	{
 		#region Properties

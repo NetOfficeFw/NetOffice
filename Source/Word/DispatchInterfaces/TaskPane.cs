@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196214.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("B9F1A4E2-0D0A-43B7-8495-139E7ACBD840")]
 	public interface TaskPane : ICOMObject
 	{
 		#region Properties

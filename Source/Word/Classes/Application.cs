@@ -50,11 +50,11 @@ namespace NetOffice.WordApi
 
     /// <summary>
     /// CoClass Application
-    /// This class is an alias/typedef for NetOffice.ExcelApi.Behind.Application
-    /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+    /// This class is an alias/typedef for NetOffice.WordApi.Behind.Application
+    /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
     /// </summary>
-    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+    /// <remarks> MSDN Online:  http://msdn.microsoft.com/en-us/en-us/library/office/ff838565.aspx </remarks>
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.WordApi.Behind.Application
@@ -72,8 +72,8 @@ namespace NetOffice.WordApi
         /// Creates a new instance of Microsoft Word based on given id.
         /// This can be used to target a specific version of Microsoft Word.
         /// Example usage:
-        /// "Microsoft.Word.12" to target Excel 2007
-        /// "Microsoft.Word.14" to target Excel 2010
+        /// "Microsoft.Word.12" to target Word 2007
+        /// "Microsoft.Word.14" to target Word 2010
         /// </summary>
         /// <param name="progId">given progid for specific version</param>
         public ApplicationClass(string progId)
@@ -99,8 +99,9 @@ namespace NetOffice.WordApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838565.aspx </remarks>
     [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsCoClass), ComProgId("Word.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
+    [EntityType(EntityType.IsCoClass), ComProgId("Word.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.WordApi.EventContracts.ApplicationEvents2), typeof(NetOffice.WordApi.EventContracts.ApplicationEvents3), typeof(NetOffice.WordApi.EventContracts.ApplicationEvents4))]
+	[TypeId("000209FF-0000-0000-C000-000000000046")]
     public interface Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit, ICOMObjectProxyService
     {
         #region Events

@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194143.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("18CD5EC8-8B7B-42C8-992A-2A407468642C")]
 	public interface OMathAutoCorrectEntries : ICOMObject, IEnumerableProvider<NetOffice.WordApi.OMathAutoCorrectEntry>
 	{
 		#region Properties

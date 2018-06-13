@@ -14,6 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("DB8E3072-E106-4453-8E7C-53056F1D30DC")]
 	public interface SmartTagTypes : ICOMObject, IEnumerableProvider<NetOffice.WordApi.SmartTagType>
 	{
 		#region Properties

@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822693.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("DB77D541-85C3-42E8-8649-AFBD7CF87866")]
 	public interface OMathPhantom : ICOMObject
 	{
 		#region Properties

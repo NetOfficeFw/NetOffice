@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227247.aspx </remarks>
 	[SupportByVersion("Word", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("53FACA33-DB22-473F-BB51-96C2C86C9304")]
 	public interface RepeatingSectionItemColl : ICOMObject, IEnumerableProvider<NetOffice.WordApi.RepeatingSectionItem>
 	{
 		#region Properties

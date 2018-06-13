@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194810.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("9F1DF642-3CCE-4D83-A770-D2634A05D278")]
 	public interface DropLines : ICOMObject
 	{
 		#region Properties

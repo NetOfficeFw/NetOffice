@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838482.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("0C1FABE7-F737-406F-9CA3-B07661F9D1A2")]
 	public interface XMLMapping : ICOMObject
 	{
 		#region Properties

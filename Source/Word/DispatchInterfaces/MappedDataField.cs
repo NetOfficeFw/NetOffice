@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193431.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("5D311669-EA51-11D3-87CC-00105AA31A34")]
 	public interface MappedDataField : ICOMObject
 	{
 		#region Properties

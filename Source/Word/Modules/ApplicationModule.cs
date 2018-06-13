@@ -2,8 +2,9 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CoreServices;
 
-namespace NetOffice.WordApi.GlobalHelperModules
+namespace NetOffice.WordApi.ModulesLegacy
 {
     ///<summary>
     /// Module GlobalModule
@@ -11,8 +12,8 @@ namespace NetOffice.WordApi.GlobalHelperModules
     ///</summary>
     [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(WordApi.Application))]
-	public static class GlobalModule
-	{
+	public static class ApplicationModule
+    {
 		#region Fields
 
 		private static ICOMObject _instance;
@@ -69,8 +70,8 @@ namespace NetOffice.WordApi.GlobalHelperModules
         public static NetOffice.WordApi.Application Application
         {
             get
-            {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(_instance, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
+            {                
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(_instance, "Application", typeof(NetOffice.WordApi.Application));
             }
         }
 
@@ -127,7 +128,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Documents>(_instance, "Documents", NetOffice.WordApi.Documents.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Documents>(_instance, "Documents", typeof(NetOffice.WordApi.Documents));
             }
         }
 
@@ -141,7 +142,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Windows>(_instance, "Windows", NetOffice.WordApi.Windows.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Windows>(_instance, "Windows", typeof(NetOffice.WordApi.Windows));
             }
         }
 
@@ -155,7 +156,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Document>(_instance, "ActiveDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Document>(_instance, "ActiveDocument", typeof(NetOffice.WordApi.Document));
             }
         }
 
@@ -169,7 +170,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Window>(_instance, "ActiveWindow", NetOffice.WordApi.Window.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Window>(_instance, "ActiveWindow", typeof(NetOffice.WordApi.Window));
             }
         }
 
@@ -183,7 +184,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Selection>(_instance, "Selection", NetOffice.WordApi.Selection.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Selection>(_instance, "Selection", typeof(NetOffice.WordApi.Selection));
             }
         }
 
@@ -212,7 +213,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.RecentFiles>(_instance, "RecentFiles", NetOffice.WordApi.RecentFiles.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.RecentFiles>(_instance, "RecentFiles", typeof(NetOffice.WordApi.RecentFiles));
             }
         }
 
@@ -226,7 +227,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Template>(_instance, "NormalTemplate", NetOffice.WordApi.Template.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Template>(_instance, "NormalTemplate", typeof(NetOffice.WordApi.Template));
             }
         }
 
@@ -240,7 +241,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.System>(_instance, "System", NetOffice.WordApi.System.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.System>(_instance, "System", typeof(NetOffice.WordApi.System));
             }
         }
 
@@ -254,7 +255,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.AutoCorrect>(_instance, "AutoCorrect", NetOffice.WordApi.AutoCorrect.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.AutoCorrect>(_instance, "AutoCorrect", typeof(NetOffice.WordApi.AutoCorrect));
             }
         }
 
@@ -268,7 +269,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FontNames>(_instance, "FontNames", NetOffice.WordApi.FontNames.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FontNames>(_instance, "FontNames", typeof(NetOffice.WordApi.FontNames));
             }
         }
 
@@ -282,7 +283,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FontNames>(_instance, "LandscapeFontNames", NetOffice.WordApi.FontNames.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FontNames>(_instance, "LandscapeFontNames", typeof(NetOffice.WordApi.FontNames));
             }
         }
 
@@ -296,7 +297,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FontNames>(_instance, "PortraitFontNames", NetOffice.WordApi.FontNames.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FontNames>(_instance, "PortraitFontNames", typeof(NetOffice.WordApi.FontNames));
             }
         }
 
@@ -310,7 +311,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Languages>(_instance, "Languages", NetOffice.WordApi.Languages.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Languages>(_instance, "Languages", typeof(NetOffice.WordApi.Languages));
             }
         }
 
@@ -323,7 +324,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", typeof(NetOffice.OfficeApi.Assistant));
             }
         }
 
@@ -337,7 +338,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Browser>(_instance, "Browser", NetOffice.WordApi.Browser.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Browser>(_instance, "Browser", typeof(NetOffice.WordApi.Browser));
             }
         }
 
@@ -351,7 +352,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FileConverters>(_instance, "FileConverters", NetOffice.WordApi.FileConverters.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FileConverters>(_instance, "FileConverters", typeof(NetOffice.WordApi.FileConverters));
             }
         }
 
@@ -365,7 +366,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.MailingLabel>(_instance, "MailingLabel", NetOffice.WordApi.MailingLabel.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.MailingLabel>(_instance, "MailingLabel", typeof(NetOffice.WordApi.MailingLabel));
             }
         }
 
@@ -379,7 +380,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Dialogs>(_instance, "Dialogs", NetOffice.WordApi.Dialogs.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Dialogs>(_instance, "Dialogs", typeof(NetOffice.WordApi.Dialogs));
             }
         }
 
@@ -393,7 +394,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.CaptionLabels>(_instance, "CaptionLabels", NetOffice.WordApi.CaptionLabels.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.CaptionLabels>(_instance, "CaptionLabels", typeof(NetOffice.WordApi.CaptionLabels));
             }
         }
 
@@ -407,7 +408,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.AutoCaptions>(_instance, "AutoCaptions", NetOffice.WordApi.AutoCaptions.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.AutoCaptions>(_instance, "AutoCaptions", typeof(NetOffice.WordApi.AutoCaptions));
             }
         }
 
@@ -421,7 +422,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.AddIns>(_instance, "AddIns", NetOffice.WordApi.AddIns.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.AddIns>(_instance, "AddIns", typeof(NetOffice.WordApi.AddIns));
             }
         }
 
@@ -503,7 +504,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Tasks>(_instance, "Tasks", NetOffice.WordApi.Tasks.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Tasks>(_instance, "Tasks", typeof(NetOffice.WordApi.Tasks));
             }
         }
 
@@ -758,7 +759,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", typeof(NetOffice.OfficeApi.CommandBars));
             }
         }
 
@@ -773,7 +774,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word, object languageID)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SynonymInfo>(_instance, "SynonymInfo", NetOffice.WordApi.SynonymInfo.LateBindingApiWrapperType, word, languageID);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SynonymInfo>(_instance, "SynonymInfo", typeof(NetOffice.WordApi.SynonymInfo), word, languageID);
         }
 
         /// <summary>
@@ -799,7 +800,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SynonymInfo>(_instance, "SynonymInfo", NetOffice.WordApi.SynonymInfo.LateBindingApiWrapperType, word);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SynonymInfo>(_instance, "SynonymInfo", typeof(NetOffice.WordApi.SynonymInfo), word);
         }
 
         /// <summary>
@@ -824,7 +825,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(_instance, "VBE", NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(_instance, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -856,7 +857,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ListGalleries>(_instance, "ListGalleries", NetOffice.WordApi.ListGalleries.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ListGalleries>(_instance, "ListGalleries", typeof(NetOffice.WordApi.ListGalleries));
             }
         }
 
@@ -888,7 +889,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Templates>(_instance, "Templates", NetOffice.WordApi.Templates.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Templates>(_instance, "Templates", typeof(NetOffice.WordApi.Templates));
             }
         }
 
@@ -921,7 +922,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeyBindings>(_instance, "KeyBindings", NetOffice.WordApi.KeyBindings.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeyBindings>(_instance, "KeyBindings", typeof(NetOffice.WordApi.KeyBindings));
             }
         }
 
@@ -937,7 +938,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, object commandParameter)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeysBoundTo>(_instance, "KeysBoundTo", NetOffice.WordApi.KeysBoundTo.LateBindingApiWrapperType, keyCategory, command, commandParameter);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeysBoundTo>(_instance, "KeysBoundTo", typeof(NetOffice.WordApi.KeysBoundTo), keyCategory, command, commandParameter);
         }
 
         /// <summary>
@@ -965,7 +966,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeysBoundTo>(_instance, "KeysBoundTo", NetOffice.WordApi.KeysBoundTo.LateBindingApiWrapperType, keyCategory, command);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeysBoundTo>(_instance, "KeysBoundTo", typeof(NetOffice.WordApi.KeysBoundTo), keyCategory, command);
         }
 
         /// <summary>
@@ -992,7 +993,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode, object keyCode2)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeyBinding>(_instance, "FindKey", NetOffice.WordApi.KeyBinding.LateBindingApiWrapperType, keyCode, keyCode2);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeyBinding>(_instance, "FindKey", typeof(NetOffice.WordApi.KeyBinding), keyCode, keyCode2);
         }
 
         /// <summary>
@@ -1018,7 +1019,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeyBinding>(_instance, "FindKey", NetOffice.WordApi.KeyBinding.LateBindingApiWrapperType, keyCode);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.KeyBinding>(_instance, "FindKey", typeof(NetOffice.WordApi.KeyBinding), keyCode);
         }
 
         /// <summary>
@@ -1247,7 +1248,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Options>(_instance, "Options", NetOffice.WordApi.Options.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Options>(_instance, "Options", typeof(NetOffice.WordApi.Options));
             }
         }
 
@@ -1279,7 +1280,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Dictionaries>(_instance, "CustomDictionaries", NetOffice.WordApi.Dictionaries.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Dictionaries>(_instance, "CustomDictionaries", typeof(NetOffice.WordApi.Dictionaries));
             }
         }
 
@@ -1388,7 +1389,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", typeof(NetOffice.OfficeApi.FileSearch));
             }
         }
 
@@ -1495,7 +1496,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.HangulHanjaConversionDictionaries>(_instance, "HangulHanjaDictionaries", NetOffice.WordApi.HangulHanjaConversionDictionaries.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.HangulHanjaConversionDictionaries>(_instance, "HangulHanjaDictionaries", typeof(NetOffice.WordApi.HangulHanjaConversionDictionaries));
             }
         }
 
@@ -1509,7 +1510,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.MailMessage>(_instance, "MailMessage", NetOffice.WordApi.MailMessage.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.MailMessage>(_instance, "MailMessage", typeof(NetOffice.WordApi.MailMessage));
             }
         }
 
@@ -1537,7 +1538,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.EmailOptions>(_instance, "EmailOptions", NetOffice.WordApi.EmailOptions.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.EmailOptions>(_instance, "EmailOptions", typeof(NetOffice.WordApi.EmailOptions));
             }
         }
 
@@ -1565,7 +1566,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", typeof(NetOffice.OfficeApi.COMAddIns));
             }
         }
 
@@ -1597,7 +1598,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.LanguageSettings>(_instance, "LanguageSettings", NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.LanguageSettings>(_instance, "LanguageSettings", typeof(NetOffice.OfficeApi.LanguageSettings));
             }
         }
 
@@ -1624,7 +1625,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", typeof(NetOffice.OfficeApi.AnswerWizard));
             }
         }
 
@@ -1674,7 +1675,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType fileDialogType)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialog>(_instance, "FileDialog", NetOffice.OfficeApi.FileDialog.LateBindingApiWrapperType, fileDialogType);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialog>(_instance, "FileDialog", typeof(NetOffice.OfficeApi.FileDialog), fileDialogType);
         }
 
         /// <summary>
@@ -1734,7 +1735,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.NewFile>(_instance, "NewDocument", NetOffice.OfficeApi.NewFile.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.NewFile>(_instance, "NewDocument", typeof(NetOffice.OfficeApi.NewFile));
             }
         }
 
@@ -1766,7 +1767,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.AutoCorrect>(_instance, "AutoCorrectEmail", NetOffice.WordApi.AutoCorrect.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.AutoCorrect>(_instance, "AutoCorrectEmail", typeof(NetOffice.WordApi.AutoCorrect));
             }
         }
 
@@ -1780,7 +1781,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.TaskPanes>(_instance, "TaskPanes", NetOffice.WordApi.TaskPanes.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.TaskPanes>(_instance, "TaskPanes", typeof(NetOffice.WordApi.TaskPanes));
             }
         }
 
@@ -1811,7 +1812,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SmartTagRecognizers>(_instance, "SmartTagRecognizers", NetOffice.WordApi.SmartTagRecognizers.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SmartTagRecognizers>(_instance, "SmartTagRecognizers", typeof(NetOffice.WordApi.SmartTagRecognizers));
             }
         }
 
@@ -1824,7 +1825,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SmartTagTypes>(_instance, "SmartTagTypes", NetOffice.WordApi.SmartTagTypes.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SmartTagTypes>(_instance, "SmartTagTypes", typeof(NetOffice.WordApi.SmartTagTypes));
             }
         }
 
@@ -1838,7 +1839,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.XMLNamespaces>(_instance, "XMLNamespaces", NetOffice.WordApi.XMLNamespaces.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.XMLNamespaces>(_instance, "XMLNamespaces", typeof(NetOffice.WordApi.XMLNamespaces));
             }
         }
 
@@ -1894,7 +1895,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Bibliography>(_instance, "Bibliography", NetOffice.WordApi.Bibliography.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Bibliography>(_instance, "Bibliography", typeof(NetOffice.WordApi.Bibliography));
             }
         }
 
@@ -1944,7 +1945,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.OMathAutoCorrect>(_instance, "OMathAutoCorrect", NetOffice.WordApi.OMathAutoCorrect.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.OMathAutoCorrect>(_instance, "OMathAutoCorrect", typeof(NetOffice.WordApi.OMathAutoCorrect));
             }
         }
 
@@ -1976,7 +1977,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", typeof(NetOffice.OfficeApi.IAssistance));
             }
         }
 
@@ -2040,7 +2041,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtLayouts>(_instance, "SmartArtLayouts", NetOffice.OfficeApi.SmartArtLayouts.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtLayouts>(_instance, "SmartArtLayouts", typeof(NetOffice.OfficeApi.SmartArtLayouts));
             }
         }
 
@@ -2054,7 +2055,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtQuickStyles>(_instance, "SmartArtQuickStyles", NetOffice.OfficeApi.SmartArtQuickStyles.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtQuickStyles>(_instance, "SmartArtQuickStyles", typeof(NetOffice.OfficeApi.SmartArtQuickStyles));
             }
         }
 
@@ -2068,7 +2069,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtColors>(_instance, "SmartArtColors", NetOffice.OfficeApi.SmartArtColors.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtColors>(_instance, "SmartArtColors", typeof(NetOffice.OfficeApi.SmartArtColors));
             }
         }
 
@@ -2082,7 +2083,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.UndoRecord>(_instance, "UndoRecord", NetOffice.WordApi.UndoRecord.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.UndoRecord>(_instance, "UndoRecord", typeof(NetOffice.WordApi.UndoRecord));
             }
         }
 
@@ -2096,7 +2097,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerDialog>(_instance, "PickerDialog", NetOffice.OfficeApi.PickerDialog.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerDialog>(_instance, "PickerDialog", typeof(NetOffice.OfficeApi.PickerDialog));
             }
         }
 
@@ -2110,7 +2111,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ProtectedViewWindows>(_instance, "ProtectedViewWindows", NetOffice.WordApi.ProtectedViewWindows.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ProtectedViewWindows>(_instance, "ProtectedViewWindows", typeof(NetOffice.WordApi.ProtectedViewWindows));
             }
         }
 
@@ -2124,7 +2125,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ProtectedViewWindow>(_instance, "ActiveProtectedViewWindow", NetOffice.WordApi.ProtectedViewWindow.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ProtectedViewWindow>(_instance, "ActiveProtectedViewWindow", typeof(NetOffice.WordApi.ProtectedViewWindow));
             }
         }
 
@@ -3209,7 +3210,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10 });
         }
 
         /// <summary>
@@ -3221,7 +3222,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, word);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), word);
         }
 
         /// <summary>
@@ -3234,7 +3235,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, word, customDictionary);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), word, customDictionary);
         }
 
         /// <summary>
@@ -3248,7 +3249,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, word, customDictionary, ignoreUppercase);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), word, customDictionary, ignoreUppercase);
         }
 
         /// <summary>
@@ -3263,7 +3264,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, word, customDictionary, ignoreUppercase, mainDictionary);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), word, customDictionary, ignoreUppercase, mainDictionary);
         }
 
         /// <summary>
@@ -3279,7 +3280,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode });
         }
 
         /// <summary>
@@ -3296,7 +3297,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2 });
         }
 
         /// <summary>
@@ -3314,7 +3315,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3 });
         }
 
         /// <summary>
@@ -3333,7 +3334,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4 });
         }
 
         /// <summary>
@@ -3353,7 +3354,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5 });
         }
 
         /// <summary>
@@ -3374,7 +3375,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6 });
         }
 
         /// <summary>
@@ -3396,7 +3397,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7 });
         }
 
         /// <summary>
@@ -3419,7 +3420,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8 });
         }
 
         /// <summary>
@@ -3443,7 +3444,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(_instance, "GetSpellingSuggestions", typeof(NetOffice.WordApi.SpellingSuggestions), new object[] { word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9 });
         }
 
         /// <summary>
@@ -3504,7 +3505,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.Window NewWindow()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Window>(_instance, "NewWindow", NetOffice.WordApi.Window.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Window>(_instance, "NewWindow", typeof(NetOffice.WordApi.Window));
         }
 
         /// <summary>
@@ -3934,7 +3935,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.WordApi.DefaultWebOptions DefaultWebOptions()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DefaultWebOptions>(_instance, "DefaultWebOptions", NetOffice.WordApi.DefaultWebOptions.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DefaultWebOptions>(_instance, "DefaultWebOptions", typeof(NetOffice.WordApi.DefaultWebOptions));
         }
 
         /// <summary>
@@ -5681,7 +5682,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object revisedAuthor, object ignoreAllComparisonWarnings)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, revisedAuthor, ignoreAllComparisonWarnings });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, revisedAuthor, ignoreAllComparisonWarnings });
         }
 
         /// <summary>
@@ -5694,7 +5695,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, originalDocument, revisedDocument);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), originalDocument, revisedDocument);
         }
 
         /// <summary>
@@ -5708,7 +5709,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, originalDocument, revisedDocument, destination);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), originalDocument, revisedDocument, destination);
         }
 
         /// <summary>
@@ -5723,7 +5724,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, originalDocument, revisedDocument, destination, granularity);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), originalDocument, revisedDocument, destination, granularity);
         }
 
         /// <summary>
@@ -5739,7 +5740,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting });
         }
 
         /// <summary>
@@ -5756,7 +5757,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges });
         }
 
         /// <summary>
@@ -5774,7 +5775,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace });
         }
 
         /// <summary>
@@ -5793,7 +5794,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables });
         }
 
         /// <summary>
@@ -5813,7 +5814,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders });
         }
 
         /// <summary>
@@ -5834,7 +5835,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes });
         }
 
         /// <summary>
@@ -5856,7 +5857,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes });
         }
 
         /// <summary>
@@ -5879,7 +5880,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields });
         }
 
         /// <summary>
@@ -5903,7 +5904,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments });
         }
 
         /// <summary>
@@ -5928,7 +5929,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves });
         }
 
         /// <summary>
@@ -5954,7 +5955,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object revisedAuthor)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, revisedAuthor });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "CompareDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, revisedAuthor });
         }
 
         /// <summary>
@@ -5981,7 +5982,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object originalAuthor, object revisedAuthor, object formatFrom)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor, revisedAuthor, formatFrom });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor, revisedAuthor, formatFrom });
         }
 
         /// <summary>
@@ -5994,7 +5995,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, originalDocument, revisedDocument);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), originalDocument, revisedDocument);
         }
 
         /// <summary>
@@ -6008,7 +6009,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, originalDocument, revisedDocument, destination);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), originalDocument, revisedDocument, destination);
         }
 
         /// <summary>
@@ -6023,7 +6024,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, originalDocument, revisedDocument, destination, granularity);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), originalDocument, revisedDocument, destination, granularity);
         }
 
         /// <summary>
@@ -6039,7 +6040,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting });
         }
 
         /// <summary>
@@ -6056,7 +6057,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges });
         }
 
         /// <summary>
@@ -6074,7 +6075,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace });
         }
 
         /// <summary>
@@ -6093,7 +6094,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables });
         }
 
         /// <summary>
@@ -6113,7 +6114,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders });
         }
 
         /// <summary>
@@ -6134,7 +6135,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes });
         }
 
         /// <summary>
@@ -6156,7 +6157,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes });
         }
 
         /// <summary>
@@ -6179,7 +6180,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields });
         }
 
         /// <summary>
@@ -6203,7 +6204,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments });
         }
 
         /// <summary>
@@ -6228,7 +6229,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves });
         }
 
         /// <summary>
@@ -6254,7 +6255,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object originalAuthor)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor });
         }
 
         /// <summary>
@@ -6281,7 +6282,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
         [SupportByVersion("Word", 12, 14, 15, 16)]
         public static NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object originalAuthor, object revisedAuthor)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor, revisedAuthor });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(_instance, "MergeDocuments", typeof(NetOffice.WordApi.Document), new object[] { originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor, revisedAuthor });
         }
 
         /// <summary>

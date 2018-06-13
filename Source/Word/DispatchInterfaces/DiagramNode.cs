@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("000209E9-0000-0000-C000-000000000046")]
 	public interface DiagramNode : ICOMObject
 	{
 		#region Properties

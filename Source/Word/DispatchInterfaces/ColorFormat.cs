@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196880.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("000209C6-0000-0000-C000-000000000046")]
 	public interface ColorFormat : ICOMObject
 	{
 		#region Properties
@@ -96,12 +97,13 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		Single get_Ink(Int32 index);
 
-		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("Word", 10,11,12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion Word 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        /// <param name="value">Single value</param>
+        [SupportByVersion("Word", 10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		void set_Ink(Int32 index, Single value);
 

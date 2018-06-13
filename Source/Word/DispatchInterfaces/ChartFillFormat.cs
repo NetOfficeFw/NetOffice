@@ -11,6 +11,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("F152D349-7D20-4C01-A42B-2D6DE4F3891C")]
 	public interface ChartFillFormat : ICOMObject
 	{
 		#region Properties

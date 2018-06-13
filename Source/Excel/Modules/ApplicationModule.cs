@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi.ModulesLegacy
     /// <remarks>This module supports legacy VB/VBA codebases</remarks>
     [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(ExcelApi.Application))]
-	public static class ApplicationModule
+    public static class ApplicationModule
     {
         #region Fields
 

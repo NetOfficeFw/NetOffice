@@ -11,6 +11,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("AE6D45E5-981E-4547-8752-674BB55420A5")]
 	public interface Corners : ICOMObject
 	{
 		#region Properties

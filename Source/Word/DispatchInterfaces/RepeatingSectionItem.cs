@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229924.aspx </remarks>
 	[SupportByVersion("Word", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("4265ED97-A922-4CA4-8CD8-99684CCA9CDB")]
 	public interface RepeatingSectionItem : ICOMObject
 	{
 		#region Properties

@@ -14,6 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("DE63B5AC-CA4F-46FE-9184-A5719AB9ED5B")]
 	public interface XMLChildNodeSuggestions : ICOMObject, IEnumerableProvider<NetOffice.WordApi.XMLChildNodeSuggestion>
 	{
 		#region Properties

@@ -141,11 +141,18 @@ namespace NetOffice.WordApi.Tools
             }            
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Doc"></param>
+        /// <param name="Status"></param>
+        /// <param name="Result"></param>
+        /// <param name="Action"></param>
         void Office.Native.IDocumentInspector.Inspect(object Doc, out MsoDocInspectorStatus Status, out string Result, out string Action)
         {
             try
-            {
-                Word.Document document = new Word.Document(Factory, null, Doc);
+            {             
+                Word.Document document = COMObject.Create<Word.Document>(Factory, null, Doc);
                 try
                 {
                     Inspect(document, out Status, out Result, out Action);
@@ -176,7 +183,7 @@ namespace NetOffice.WordApi.Tools
         {
             try
             {
-                Word.Document document = new Word.Document(Factory, null, Doc);
+                Word.Document document = COMObject.Create<Word.Document>(Factory, null, Doc);
                 try
                 {
                     Fix(document, Hwnd, out Status, out Result);

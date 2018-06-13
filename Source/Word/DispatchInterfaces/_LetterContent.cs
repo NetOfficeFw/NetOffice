@@ -11,7 +11,9 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
-	public interface _LetterContent : ICOMObject
+	[TypeId("000209A1-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.WordApi.LetterContent))]
+    public interface _LetterContent : ICOMObject
 	{
 		#region Properties
 

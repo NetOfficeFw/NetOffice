@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196931.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("BEA85A24-D7DA-4F3D-B58C-ED90FB01D615")]
 	public interface FootnoteOptions : ICOMObject
 	{
 		#region Properties

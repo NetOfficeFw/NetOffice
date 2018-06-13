@@ -11,6 +11,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("15EBE471-0182-4CCE-98D0-B6614D1C32A1")]
 	public interface SmartTagRecognizer : ICOMObject
 	{
 		#region Properties

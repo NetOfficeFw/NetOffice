@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838535.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("84A6A663-AEF4-4FCD-83FD-9BB707F157CA")]
 	public interface DownBars : ICOMObject
 	{
 		#region Properties

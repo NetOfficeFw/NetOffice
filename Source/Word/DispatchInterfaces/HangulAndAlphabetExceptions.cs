@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839301.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("000209D1-0000-0000-C000-000000000046")]
 	public interface HangulAndAlphabetExceptions : ICOMObject, IEnumerableProvider<NetOffice.WordApi.HangulAndAlphabetException>
 	{
 		#region Properties

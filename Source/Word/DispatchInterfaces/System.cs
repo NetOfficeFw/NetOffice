@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839136.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("00020935-0000-0000-C000-000000000046")]
 	public interface System : ICOMObject
 	{
 		#region Properties
@@ -114,13 +115,14 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		string get_ProfileString(string section, string key);
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <param name="section">string section</param>
-		/// <param name="key">string key</param>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="section">string section</param>
+        /// <param name="key">string key</param>
+        /// <param name="value">string value</param>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		void set_ProfileString(string section, string key, string value);
 
@@ -146,14 +148,15 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		string get_PrivateProfileString(string fileName, string section, string key);
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <param name="fileName">string fileName</param>
-		/// <param name="section">string section</param>
-		/// <param name="key">string key</param>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="fileName">string fileName</param>
+        /// <param name="section">string section</param>
+        /// <param name="key">string key</param>
+        /// <param name="value">string value</param>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		void set_PrivateProfileString(string fileName, string section, string key, string value);
 

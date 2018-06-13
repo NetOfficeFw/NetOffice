@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840762.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("4A6AE865-199D-4EA3-9F6B-125BD9C40EDF")]
 	public interface Source : ICOMObject
 	{
 		#region Properties
@@ -59,12 +60,13 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		string get_Field(string name);
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <param name="name">string name</param>
-		[SupportByVersion("Word", 12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="name">string name</param>
+        /// <param name="value">string value</param>
+        [SupportByVersion("Word", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		void set_Field(string name, string value);
 

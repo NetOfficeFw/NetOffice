@@ -44,6 +44,10 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Behind\Classes\Application.cs" />
     <Compile Include="Behind\Classes\Document.cs" />
+    <Compile Include="Behind\Classes\Font.cs" />
+    <Compile Include="Behind\Classes\LetterContent.cs" />
+    <Compile Include="Behind\Classes\OLEControl.cs" />
+    <Compile Include="Behind\Classes\ParagraphFormat.cs" />
     <Compile Include="Behind\DispatchInterfaces\AddIn.cs" />
     <Compile Include="Behind\DispatchInterfaces\AddIns.cs" />
     <Compile Include="Behind\DispatchInterfaces\Adjustments.cs" />
@@ -57,6 +61,7 @@
     <Compile Include="Behind\DispatchInterfaces\AutoTextEntry.cs" />
     <Compile Include="Behind\DispatchInterfaces\Axes.cs" />
     <Compile Include="Behind\DispatchInterfaces\Axis.cs" />
+    <Compile Include="Behind\DispatchInterfaces\AxisTitle.cs" />
     <Compile Include="Behind\DispatchInterfaces\Bibliography.cs" />
     <Compile Include="Behind\DispatchInterfaces\Bookmark.cs" />
     <Compile Include="Behind\DispatchInterfaces\Bookmarks.cs" />
@@ -81,6 +86,7 @@
     <Compile Include="Behind\DispatchInterfaces\Cell.cs" />
     <Compile Include="Behind\DispatchInterfaces\Cells.cs" />
     <Compile Include="Behind\DispatchInterfaces\Characters.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Chart.cs" />
     <Compile Include="Behind\DispatchInterfaces\ChartArea.cs" />
     <Compile Include="Behind\DispatchInterfaces\ChartBorder.cs" />
     <Compile Include="Behind\DispatchInterfaces\ChartCategory.cs" />
@@ -92,6 +98,7 @@
     <Compile Include="Behind\DispatchInterfaces\ChartFormat.cs" />
     <Compile Include="Behind\DispatchInterfaces\ChartGroup.cs" />
     <Compile Include="Behind\DispatchInterfaces\ChartGroups.cs" />
+    <Compile Include="Behind\DispatchInterfaces\ChartTitle.cs" />
     <Compile Include="Behind\DispatchInterfaces\CheckBox.cs" />
     <Compile Include="Behind\DispatchInterfaces\CoAuthLock.cs" />
     <Compile Include="Behind\DispatchInterfaces\CoAuthLocks.cs" />
@@ -118,6 +125,7 @@
     <Compile Include="Behind\DispatchInterfaces\CustomLabels.cs" />
     <Compile Include="Behind\DispatchInterfaces\CustomProperties.cs" />
     <Compile Include="Behind\DispatchInterfaces\CustomProperty.cs" />
+    <Compile Include="Behind\DispatchInterfaces\DataLabel.cs" />
     <Compile Include="Behind\DispatchInterfaces\DataLabels.cs" />
     <Compile Include="Behind\DispatchInterfaces\DataTable.cs" />
     <Compile Include="Behind\DispatchInterfaces\DefaultWebOptions.cs" />
@@ -129,6 +137,7 @@
     <Compile Include="Behind\DispatchInterfaces\Dialogs.cs" />
     <Compile Include="Behind\DispatchInterfaces\Dictionaries.cs" />
     <Compile Include="Behind\DispatchInterfaces\Dictionary.cs" />
+    <Compile Include="Behind\DispatchInterfaces\DisplayUnitLabel.cs" />
     <Compile Include="Behind\DispatchInterfaces\Documents.cs" />
     <Compile Include="Behind\DispatchInterfaces\DownBars.cs" />
     <Compile Include="Behind\DispatchInterfaces\DropCap.cs" />
@@ -287,6 +296,7 @@
     <Compile Include="Behind\DispatchInterfaces\ProofreadingErrors.cs" />
     <Compile Include="Behind\DispatchInterfaces\ProtectedViewWindow.cs" />
     <Compile Include="Behind\DispatchInterfaces\ProtectedViewWindows.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Range.cs" />
     <Compile Include="Behind\DispatchInterfaces\ReadabilityStatistic.cs" />
     <Compile Include="Behind\DispatchInterfaces\ReadabilityStatistics.cs" />
     <Compile Include="Behind\DispatchInterfaces\RecentFile.cs" />
@@ -303,10 +313,12 @@
     <Compile Include="Behind\DispatchInterfaces\Revision.cs" />
     <Compile Include="Behind\DispatchInterfaces\Revisions.cs" />
     <Compile Include="Behind\DispatchInterfaces\RevisionsFilter.cs" />
+    <Compile Include="Behind\DispatchInterfaces\RoutingSlip.cs" />
     <Compile Include="Behind\DispatchInterfaces\Row.cs" />
     <Compile Include="Behind\DispatchInterfaces\Rows.cs" />
     <Compile Include="Behind\DispatchInterfaces\Section.cs" />
     <Compile Include="Behind\DispatchInterfaces\Sections.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Selection.cs" />
     <Compile Include="Behind\DispatchInterfaces\Sentences.cs" />
     <Compile Include="Behind\DispatchInterfaces\Series.cs" />
     <Compile Include="Behind\DispatchInterfaces\SeriesCollection.cs" />
@@ -387,10 +399,13 @@
     <Compile Include="Behind\DispatchInterfaces\XMLChildNodeSuggestion.cs" />
     <Compile Include="Behind\DispatchInterfaces\XMLChildNodeSuggestions.cs" />
     <Compile Include="Behind\DispatchInterfaces\XMLMapping.cs" />
+    <Compile Include="Behind\DispatchInterfaces\XMLNamespace.cs" />
     <Compile Include="Behind\DispatchInterfaces\XMLNamespaces.cs" />
+    <Compile Include="Behind\DispatchInterfaces\XMLNode.cs" />
     <Compile Include="Behind\DispatchInterfaces\XMLNodes.cs" />
     <Compile Include="Behind\DispatchInterfaces\XMLSchemaReference.cs" />
     <Compile Include="Behind\DispatchInterfaces\XMLSchemaReferences.cs" />
+    <Compile Include="Behind\DispatchInterfaces\XSLTransform.cs" />
     <Compile Include="Behind\DispatchInterfaces\XSLTransforms.cs" />
     <Compile Include="Behind\DispatchInterfaces\Zoom.cs" />
     <Compile Include="Behind\DispatchInterfaces\Zooms.cs" />
@@ -1169,7 +1184,7 @@
     <Compile Include="Events\ApplicationEvents3.cs" />
     <Compile Include="Events\ApplicationEvents4.cs" />
     <Compile Include="Events\DocumentEvents2.cs" />
-    <Compile Include="Modules\Global.cs" />
+    <Compile Include="Modules\ApplicationModule.cs" />
     <Compile Include="Tools\COMAddin.cs" />
     <Compile Include="Tools\ITaskPane.cs" />
   </ItemGroup>

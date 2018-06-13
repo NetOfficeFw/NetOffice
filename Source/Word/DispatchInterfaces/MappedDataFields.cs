@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838895.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("799A6814-EA41-11D3-87CC-00105AA31A34")]
 	public interface MappedDataFields : ICOMObject, IEnumerableProvider<NetOffice.WordApi.MappedDataField>
 	{
 		#region Properties

@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845167.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("DF076FDE-8781-4051-A5BC-99F6B7DC04D4")]
 	public interface LegendKey : ICOMObject
 	{
 		#region Properties

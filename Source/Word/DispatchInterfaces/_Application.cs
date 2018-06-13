@@ -12,6 +12,8 @@ namespace NetOffice.WordApi
     /// </summary>
     [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
+	[TypeId("00020970-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.WordApi.Application))]
     public interface _Application : ICOMObject, IApplicationVersionProvider
     {
         #region Properties

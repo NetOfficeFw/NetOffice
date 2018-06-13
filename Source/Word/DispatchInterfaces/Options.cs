@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822397.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("000209B7-0000-0000-C000-000000000046")]
 	public interface Options : ICOMObject
 	{
 		#region Properties
@@ -335,12 +336,13 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		string get_DefaultFilePath(NetOffice.WordApi.Enums.WdDefaultFilePath path);
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <param name="path">NetOffice.WordApi.Enums.WdDefaultFilePath path</param>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="path">NetOffice.WordApi.Enums.WdDefaultFilePath path</param>
+        /// <param name="value">string value</param>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		void set_DefaultFilePath(NetOffice.WordApi.Enums.WdDefaultFilePath path, string value);
 

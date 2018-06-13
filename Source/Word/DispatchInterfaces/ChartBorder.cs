@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840177.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("AB0D33A3-C9EA-485B-9443-4C1BB3656CEA")]
 	public interface ChartBorder : ICOMObject
 	{
 		#region Properties

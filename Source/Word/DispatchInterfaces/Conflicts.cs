@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194885.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("C2B83A65-B061-4469-83B6-8877437CB8A0")]
 	public interface Conflicts : ICOMObject, IEnumerableProvider<NetOffice.WordApi.Conflict>
 	{
 		#region Properties

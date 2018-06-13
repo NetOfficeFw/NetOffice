@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845131.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[TypeId("54B7061A-D56C-40E5-B85B-58146446C782")]
 	public interface Trendlines : ICOMObject, IEnumerableProvider<NetOffice.WordApi.Trendline>
 	{
 		#region Properties

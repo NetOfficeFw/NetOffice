@@ -22,7 +22,7 @@ namespace NetOffice.WordApi
 	public delegate void Document_ContentControlBeforeStoreUpdateEventHandler(NetOffice.WordApi.ContentControl contentControl, ref string content);
 	public delegate void Document_ContentControlBeforeContentUpdateEventHandler(NetOffice.WordApi.ContentControl contentControl, ref string content);
 	public delegate void Document_BuildingBlockInsertEventHandler(NetOffice.WordApi.Range range, string name, string category, string blockType, string template);
-#pragma warning restore
+    #pragma warning restore
 
     #endregion
 
@@ -34,6 +34,7 @@ namespace NetOffice.WordApi
 	[SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(NetOffice.WordApi.EventContracts.DocumentEvents), typeof(NetOffice.WordApi.EventContracts.DocumentEvents2))]
+	[TypeId("00020906-0000-0000-C000-000000000046")]
     public interface Document : _Document, IEventBinding
     {
         #region Events

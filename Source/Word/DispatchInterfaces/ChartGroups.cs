@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193629.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("F8DDB497-CA6C-4711-9BA4-2718FA3BB6FE")]
 	public interface ChartGroups : ICOMObject, IEnumerableProvider<NetOffice.WordApi.ChartGroup>
 	{
 		#region Properties

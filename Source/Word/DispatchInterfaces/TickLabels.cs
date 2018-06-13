@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838992.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("935D59F5-E365-4F92-B7F5-1C499A63ECA8")]
 	public interface TickLabels : ICOMObject
 	{
 		#region Properties

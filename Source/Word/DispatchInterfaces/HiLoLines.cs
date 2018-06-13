@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835221.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("7A1BCE11-5783-4C7D-BD02-F3D84AB40E7F")]
 	public interface HiLoLines : ICOMObject
 	{
 		#region Properties

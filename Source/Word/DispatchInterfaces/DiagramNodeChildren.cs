@@ -14,6 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("000209EA-0000-0000-C000-000000000046")]
 	public interface DiagramNodeChildren : ICOMObject, IEnumerableProvider<NetOffice.WordApi.DiagramNode>
 	{
 		#region Properties

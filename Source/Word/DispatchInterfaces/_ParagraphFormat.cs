@@ -11,7 +11,9 @@ namespace NetOffice.WordApi
 	/// </summary>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
-	public interface _ParagraphFormat : ICOMObject
+	[TypeId("00020953-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.WordApi.ParagraphFormat))]
+    public interface _ParagraphFormat : ICOMObject
 	{
 		#region Properties
 

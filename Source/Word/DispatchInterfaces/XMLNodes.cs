@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837857.aspx </remarks>
 	[SupportByVersion("Word", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("D36C1F42-7044-4B9E-9CA3-85919454DB04")]
 	public interface XMLNodes : ICOMObject, IEnumerableProvider<NetOffice.WordApi.XMLNode>
 	{
 		#region Properties

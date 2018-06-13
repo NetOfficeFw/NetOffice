@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835165.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("FC9090AF-0DDB-4EC1-86E8-8751F2199F2C")]
 	public interface Gridlines : ICOMObject
 	{
 		#region Properties

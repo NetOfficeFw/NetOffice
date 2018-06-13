@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820943.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("54F46DC4-F6A6-48CC-BD66-46C1DDEADD22")]
 	public interface ContentControlListEntries : ICOMObject, IEnumerableProvider<NetOffice.WordApi.ContentControlListEntry>
 	{
 		#region Properties

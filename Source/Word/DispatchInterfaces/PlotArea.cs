@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820785.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("56AFD330-440C-4F4C-A39C-ED306D084D5F")]
 	public interface PlotArea : ICOMObject
 	{
 		#region Properties

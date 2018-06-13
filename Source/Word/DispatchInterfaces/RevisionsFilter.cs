@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228191.aspx </remarks>
 	[SupportByVersion("Word", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("D523C26B-7278-4FA9-AA0B-0827DC8B41CE")]
 	public interface RevisionsFilter : ICOMObject
 	{
 		#region Properties

@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838924.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("F743EDD0-9B97-4B09-89CC-77BE19B51481")]
 	public interface ProtectedViewWindow : ICOMObject
 	{
 		#region Properties

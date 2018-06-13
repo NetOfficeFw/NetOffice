@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840531.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[TypeId("396F9073-F9FD-11D3-8EA0-0050049A1A01")]
 	public interface CanvasShapes : ICOMObject, IEnumerableProvider<NetOffice.WordApi.Shape>
 	{
 		#region Properties

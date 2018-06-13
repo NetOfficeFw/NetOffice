@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821215.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
+	[TypeId("EE95AFE3-3026-4172-B078-0E79DAB5CC3D")]
 	public interface ContentControl : ICOMObject
 	{
 		#region Properties
@@ -308,7 +309,7 @@ namespace NetOffice.WordApi
 		/// <param name="text">optional string Text = </param>
 		[SupportByVersion("Word", 12,14,15,16)]
 		[KnownIssue]
-		virtual void SetPlaceholderText(object buildingBlock, object range, object text);
+        void SetPlaceholderText(object buildingBlock, object range, object text);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -317,7 +318,7 @@ namespace NetOffice.WordApi
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
 		[KnownIssue]
-		virtual void SetPlaceholderText();
+        void SetPlaceholderText();
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -327,7 +328,7 @@ namespace NetOffice.WordApi
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
 		[KnownIssue]
-		virtual void SetPlaceholderText(object buildingBlock);
+        void SetPlaceholderText(object buildingBlock);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
@@ -338,7 +339,7 @@ namespace NetOffice.WordApi
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
 		[KnownIssue]
-		virtual void SetPlaceholderText(object buildingBlock, object range);
+        void SetPlaceholderText(object buildingBlock, object range);
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16

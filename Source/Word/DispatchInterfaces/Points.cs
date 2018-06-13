@@ -15,6 +15,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838531.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[TypeId("C1A870A0-850E-4D38-98A7-741CB8C3BCA4")]
 	public interface Points : ICOMObject, IEnumerableProvider<NetOffice.WordApi.Point>
 	{
 		#region Properties
