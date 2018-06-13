@@ -10,6 +10,7 @@ namespace NetOffice.WordApi.ModulesLegacy
     /// Module GlobalModule
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     ///</summary>
+    /// <remarks>This module supports legacy VB/VBA codebases</remarks>
     [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(WordApi.Application))]
 	public static class ApplicationModule

@@ -314,8 +314,8 @@ namespace NetOffice.OutlookApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);
                 }
-
-                this.Application = new Outlook.Application(Factory, null, application);
+                
+                this.Application = COMObject.Create<Outlook.Application>(Factory, null, application);
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
@@ -763,8 +763,8 @@ namespace NetOffice.OutlookApi.Tools
         public virtual void BeforeFormRegionShow(object formRegion)
         {
             try
-            {
-                FormRegion form = new Outlook.FormRegion(null, formRegion);
+            {                
+                FormRegion form = COMObject.Create<Outlook.FormRegion>(Factory, null, formRegion);
                 OpenFormRegion openForm = OnCreateOpenFormRegion(form);
                 if (null == openForm)
                     openForm = new OpenFormRegion(form);

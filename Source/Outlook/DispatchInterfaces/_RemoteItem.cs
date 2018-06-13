@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _RemoteItem : COMObject
+	[TypeId("00063023-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OutlookApi.RemoteItem))]
+    public interface _RemoteItem : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_RemoteItem);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _RemoteItem(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _RemoteItem(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RemoteItem(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RemoteItem(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RemoteItem(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RemoteItem(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RemoteItem() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RemoteItem(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +24,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867154.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+		NetOffice.OutlookApi._Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -128,13 +32,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860370.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlObjectClass Class { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -143,13 +41,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862518.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+		NetOffice.OutlookApi._NameSpace Session { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -158,13 +50,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870150.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -172,13 +58,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870139.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Actions Actions
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.Actions>(this, "Actions", NetOffice.OutlookApi.Actions.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.Actions Actions { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -186,13 +66,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870082.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Attachments Attachments
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.Attachments>(this, "Attachments", NetOffice.OutlookApi.Attachments.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.Attachments Attachments { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -200,17 +74,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869051.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string BillingInformation
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "BillingInformation");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BillingInformation", value);
-			}
-		}
+		string BillingInformation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -218,17 +82,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866470.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Body
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Body");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Body", value);
-			}
-		}
+		string Body { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -236,17 +90,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867092.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Categories
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Categories");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Categories", value);
-			}
-		}
+		string Categories { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -254,17 +98,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869856.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Companies
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Companies");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Companies", value);
-			}
-		}
+		string Companies { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -272,13 +106,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867465.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string ConversationIndex
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ConversationIndex");
-			}
-		}
+		string ConversationIndex { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -286,13 +114,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869690.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string ConversationTopic
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ConversationTopic");
-			}
-		}
+		string ConversationTopic { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -300,13 +122,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864233.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public DateTime CreationTime
-		{
-			get
-			{
-				return Factory.ExecuteDateTimePropertyGet(this, "CreationTime");
-			}
-		}
+		DateTime CreationTime { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -314,13 +130,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867536.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string EntryID
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "EntryID");
-			}
-		}
+		string EntryID { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -328,13 +138,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865658.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.FormDescription FormDescription
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.FormDescription>(this, "FormDescription", NetOffice.OutlookApi.FormDescription.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.FormDescription FormDescription { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -343,13 +147,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861057.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Inspector GetInspector
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Inspector>(this, "GetInspector");
-			}
-		}
+		NetOffice.OutlookApi._Inspector GetInspector { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -357,17 +155,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868304.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlImportance Importance
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlImportance>(this, "Importance");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Importance", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlImportance Importance { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -375,13 +163,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866194.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public DateTime LastModificationTime
-		{
-			get
-			{
-				return Factory.ExecuteDateTimePropertyGet(this, "LastModificationTime");
-			}
-		}
+		DateTime LastModificationTime { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -390,13 +172,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object MAPIOBJECT
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "MAPIOBJECT");
-			}
-		}
+		object MAPIOBJECT { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -404,17 +180,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869151.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string MessageClass
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "MessageClass");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MessageClass", value);
-			}
-		}
+		string MessageClass { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -422,17 +188,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863264.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Mileage
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Mileage");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Mileage", value);
-			}
-		}
+		string Mileage { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -440,17 +196,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868724.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public bool NoAging
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "NoAging");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "NoAging", value);
-			}
-		}
+		bool NoAging { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -458,13 +204,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864201.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 OutlookInternalVersion
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "OutlookInternalVersion");
-			}
-		}
+		Int32 OutlookInternalVersion { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -472,13 +212,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865266.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string OutlookVersion
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OutlookVersion");
-			}
-		}
+		string OutlookVersion { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -486,13 +220,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863602.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public bool Saved
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Saved");
-			}
-		}
+		bool Saved { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -500,17 +228,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863470.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlSensitivity Sensitivity
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlSensitivity>(this, "Sensitivity");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Sensitivity", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlSensitivity Sensitivity { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -518,13 +236,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860766.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 Size
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Size");
-			}
-		}
+		Int32 Size { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -532,17 +244,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863897.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Subject
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Subject");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Subject", value);
-			}
-		}
+		string Subject { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -550,17 +252,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869322.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public bool UnRead
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "UnRead");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "UnRead", value);
-			}
-		}
+		bool UnRead { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -568,13 +260,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865013.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.UserProperties UserProperties
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.UserProperties>(this, "UserProperties", NetOffice.OutlookApi.UserProperties.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.UserProperties UserProperties { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -582,13 +268,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868436.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public bool HasAttachment
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HasAttachment");
-			}
-		}
+		bool HasAttachment { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -596,13 +276,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866721.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string RemoteMessageClass
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "RemoteMessageClass");
-			}
-		}
+		string RemoteMessageClass { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -610,13 +284,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861638.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 TransferSize
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "TransferSize");
-			}
-		}
+		Int32 TransferSize { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -624,26 +292,14 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865661.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 TransferTime
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "TransferTime");
-			}
-		}
+		Int32 TransferTime { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Links Links
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.Links>(this, "Links", NetOffice.OutlookApi.Links.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.Links Links { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -651,13 +307,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863082.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlDownloadState DownloadState
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlDownloadState>(this, "DownloadState");
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlDownloadState DownloadState { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -665,13 +315,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860966.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.ItemProperties ItemProperties
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.ItemProperties>(this, "ItemProperties", NetOffice.OutlookApi.ItemProperties.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.ItemProperties ItemProperties { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -679,17 +323,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862137.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlRemoteStatus MarkForDownload
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlRemoteStatus>(this, "MarkForDownload");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MarkForDownload", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlRemoteStatus MarkForDownload { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -697,13 +331,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865279.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public bool IsConflict
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsConflict");
-			}
-		}
+		bool IsConflict { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15, 16
@@ -711,13 +339,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867695.aspx </remarks>
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		public bool AutoResolvedWinner
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoResolvedWinner");
-			}
-		}
+		bool AutoResolvedWinner { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15, 16
@@ -725,13 +347,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868176.aspx </remarks>
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		public NetOffice.OutlookApi.Conflicts Conflicts
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.Conflicts>(this, "Conflicts", NetOffice.OutlookApi.Conflicts.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.Conflicts Conflicts { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -739,13 +355,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869546.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.PropertyAccessor>(this, "PropertyAccessor", NetOffice.OutlookApi.PropertyAccessor.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.PropertyAccessor PropertyAccessor { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
@@ -753,13 +363,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866966.aspx </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
-		public string ConversationID
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ConversationID");
-			}
-		}
+		string ConversationID { get; }
 
 		#endregion
 
@@ -771,30 +375,21 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862661.aspx </remarks>
 		/// <param name="saveMode">NetOffice.OutlookApi.Enums.OlInspectorClose saveMode</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Close(NetOffice.OutlookApi.Enums.OlInspectorClose saveMode)
-		{
-			 Factory.ExecuteMethod(this, "Close", saveMode);
-		}
+		void Close(NetOffice.OutlookApi.Enums.OlInspectorClose saveMode);
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864216.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public object Copy()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Copy");
-		}
+		object Copy();
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860632.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+		void Delete();
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -802,10 +397,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867361.aspx </remarks>
 		/// <param name="modal">optional object modal</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Display(object modal)
-		{
-			 Factory.ExecuteMethod(this, "Display", modal);
-		}
+		void Display(object modal);
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -813,10 +405,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867361.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Display()
-		{
-			 Factory.ExecuteMethod(this, "Display");
-		}
+		void Display();
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -824,30 +413,21 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861016.aspx </remarks>
 		/// <param name="destFldr">NetOffice.OutlookApi.MAPIFolder destFldr</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public object Move(NetOffice.OutlookApi.MAPIFolder destFldr)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Move", destFldr);
-		}
+		object Move(NetOffice.OutlookApi.MAPIFolder destFldr);
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866707.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void PrintOut()
-		{
-			 Factory.ExecuteMethod(this, "PrintOut");
-		}
+		void PrintOut();
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861038.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Save()
-		{
-			 Factory.ExecuteMethod(this, "Save");
-		}
+		void Save();
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -856,10 +436,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="path">string path</param>
 		/// <param name="type">optional object type</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void SaveAs(string path, object type)
-		{
-			 Factory.ExecuteMethod(this, "SaveAs", path, type);
-		}
+		void SaveAs(string path, object type);
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -868,20 +445,14 @@ namespace NetOffice.OutlookApi
 		/// <param name="path">string path</param>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void SaveAs(string path)
-		{
-			 Factory.ExecuteMethod(this, "SaveAs", path);
-		}
+		void SaveAs(string path);
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866947.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public void ShowCategoriesDialog()
-		{
-			 Factory.ExecuteMethod(this, "ShowCategoriesDialog");
-		}
+		void ShowCategoriesDialog();
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
@@ -889,13 +460,8 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860978.aspx </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Conversation GetConversation()
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Conversation>(this, "GetConversation");
-		}
+		NetOffice.OutlookApi._Conversation GetConversation();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

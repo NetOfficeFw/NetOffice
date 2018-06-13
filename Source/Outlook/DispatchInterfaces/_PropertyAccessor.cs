@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _PropertyAccessor : COMObject
+	[TypeId("0006302D-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OutlookApi.PropertyAccessor))]
+    public interface _PropertyAccessor : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_PropertyAccessor);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _PropertyAccessor(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _PropertyAccessor(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PropertyAccessor(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PropertyAccessor(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PropertyAccessor(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PropertyAccessor(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PropertyAccessor() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PropertyAccessor(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +24,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865030.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+		NetOffice.OutlookApi._Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -128,13 +32,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869821.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlObjectClass Class { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -143,13 +41,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869435.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+		NetOffice.OutlookApi._NameSpace Session { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -158,13 +50,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866730.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		#endregion
 
@@ -176,10 +62,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868350.aspx </remarks>
 		/// <param name="schemaName">string schemaName</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public object GetProperty(string schemaName)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "GetProperty", schemaName);
-		}
+		object GetProperty(string schemaName);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -188,10 +71,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="schemaName">string schemaName</param>
 		/// <param name="value">object value</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void SetProperty(string schemaName, object value)
-		{
-			 Factory.ExecuteMethod(this, "SetProperty", schemaName, value);
-		}
+		void SetProperty(string schemaName, object value);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -199,10 +79,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869865.aspx </remarks>
 		/// <param name="schemaNames">object schemaNames</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public object GetProperties(object schemaNames)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "GetProperties", schemaNames);
-		}
+		object GetProperties(object schemaNames);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -211,10 +88,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="schemaNames">object schemaNames</param>
 		/// <param name="values">object values</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public object SetProperties(object schemaNames, object values)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "SetProperties", schemaNames, values);
-		}
+		object SetProperties(object schemaNames, object values);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -222,10 +96,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868342.aspx </remarks>
 		/// <param name="value">DateTime value</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public DateTime UTCToLocalTime(DateTime value)
-		{
-			return Factory.ExecuteDateTimeMethodGet(this, "UTCToLocalTime", value);
-		}
+		DateTime UTCToLocalTime(DateTime value);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -233,10 +104,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868909.aspx </remarks>
 		/// <param name="value">DateTime value</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public DateTime LocalTimeToUTC(DateTime value)
-		{
-			return Factory.ExecuteDateTimeMethodGet(this, "LocalTimeToUTC", value);
-		}
+		DateTime LocalTimeToUTC(DateTime value);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -244,10 +112,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862123.aspx </remarks>
 		/// <param name="value">string value</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public object StringToBinary(string value)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "StringToBinary", value);
-		}
+		object StringToBinary(string value);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -255,10 +120,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864468.aspx </remarks>
 		/// <param name="value">object value</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string BinaryToString(object value)
-		{
-			return Factory.ExecuteStringMethodGet(this, "BinaryToString", value);
-		}
+		string BinaryToString(object value);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -266,10 +128,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868076.aspx </remarks>
 		/// <param name="schemaName">string schemaName</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void DeleteProperty(string schemaName)
-		{
-			 Factory.ExecuteMethod(this, "DeleteProperty", schemaName);
-		}
+		void DeleteProperty(string schemaName);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -277,13 +136,8 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869707.aspx </remarks>
 		/// <param name="schemaNames">object schemaNames</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public object DeleteProperties(object schemaNames)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "DeleteProperties", schemaNames);
-		}
+		object DeleteProperties(object schemaNames);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

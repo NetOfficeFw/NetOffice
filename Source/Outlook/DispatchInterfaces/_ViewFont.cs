@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _ViewFont : COMObject
+	[TypeId("0006309D-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OutlookApi.ViewFont))]
+    public interface _ViewFont : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_ViewFont);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _ViewFont(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _ViewFont(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _ViewFont(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _ViewFont(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _ViewFont(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _ViewFont(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _ViewFont() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _ViewFont(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +24,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869588.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+		NetOffice.OutlookApi._Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -128,13 +32,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861540.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlObjectClass Class { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -143,13 +41,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867618.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+		NetOffice.OutlookApi._NameSpace Session { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -158,13 +50,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863929.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -172,17 +58,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868069.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool Bold
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Bold");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Bold", value);
-			}
-		}
+		bool Bold { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -190,17 +66,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869283.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool Italic
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Italic");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Italic", value);
-			}
-		}
+		bool Italic { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -208,17 +74,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864205.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+		string Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -226,17 +82,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863934.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 Size
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Size");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Size", value);
-			}
-		}
+		Int32 Size { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -244,17 +90,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869278.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool Strikethrough
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Strikethrough");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Strikethrough", value);
-			}
-		}
+		bool Strikethrough { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -262,17 +98,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868534.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool Underline
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Underline");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Underline", value);
-			}
-		}
+		bool Underline { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -280,17 +106,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862703.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlColor Color
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlColor>(this, "Color");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Color", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlColor Color { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
@@ -298,24 +114,9 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866258.aspx </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlCategoryColor ExtendedColor
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlCategoryColor>(this, "ExtendedColor");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ExtendedColor", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlCategoryColor ExtendedColor { get; set; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

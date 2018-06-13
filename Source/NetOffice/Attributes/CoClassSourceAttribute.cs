@@ -23,7 +23,7 @@ namespace NetOffice.Attributes
     /// <summary>
     /// Indicates an interface is a well known CoClass implementation
     /// </summary>
-    [AttributeUsage(AttributeTargets.Interface)]
+    [AttributeUsage(AttributeTargets.Interface, AllowMultiple = true)]
     public class CoClassSourceAttribute : System.Attribute
     {
         /// <summary>

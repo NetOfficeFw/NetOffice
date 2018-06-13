@@ -4,9 +4,9 @@ using Microsoft.Win32;
 namespace NetOffice.OutlookApi.Tools
 {
     /// <summary>
-    /// Signalize to Outlook that the Addin want have Shutdown events
-    /// See https://msdn.microsoft.com/library/office/ee720183.aspx
+    /// Signalize to Outlook that the Addin want to have Shutdown events
     /// </summary>
+    /// <remarks> See https://msdn.microsoft.com/library/office/ee720183.aspx </remarks>
     public class RequireShutdownNotificationAttribute : System.Attribute
     {
         /// <summary>

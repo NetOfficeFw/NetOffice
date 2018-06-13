@@ -11,100 +11,10 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _DRecipientControl : COMObject
+	[TypeId("0006F025-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OutlookApi._RecipientControl))]
+    public interface _DRecipientControl : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_DRecipientControl);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _DRecipientControl(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _DRecipientControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DRecipientControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DRecipientControl(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DRecipientControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DRecipientControl(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DRecipientControl() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DRecipientControl(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,68 +22,28 @@ namespace NetOffice.OutlookApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 BackColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "BackColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BackColor", value);
-			}
-		}
+		Int32 BackColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 ForeColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ForeColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ForeColor", value);
-			}
-		}
+		Int32 ForeColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public bool ReadOnly
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ReadOnly");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ReadOnly", value);
-			}
-		}
+		bool ReadOnly { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -181,41 +51,16 @@ namespace NetOffice.OutlookApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
-		public object Font
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Font");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "Font", value);
-			}
-		}
+		object Font { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 SpecialEffect
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "SpecialEffect");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SpecialEffect", value);
-			}
-		}
+		Int32 SpecialEffect { get; set; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

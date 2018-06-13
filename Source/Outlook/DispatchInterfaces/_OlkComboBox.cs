@@ -11,100 +11,10 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _OlkComboBox : COMObject
+	[TypeId("000672DE-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OutlookApi.OlkComboBox))]
+    public interface _OlkComboBox : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_OlkComboBox);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _OlkComboBox(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _OlkComboBox(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _OlkComboBox(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _OlkComboBox(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _OlkComboBox(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _OlkComboBox(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _OlkComboBox() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _OlkComboBox(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,17 +23,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868375.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool AutoSize
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoSize");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AutoSize", value);
-			}
-		}
+		bool AutoSize { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -131,17 +31,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862519.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool AutoTab
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoTab");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AutoTab", value);
-			}
-		}
+		bool AutoTab { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -149,17 +39,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868605.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool AutoWordSelect
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoWordSelect");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AutoWordSelect", value);
-			}
-		}
+		bool AutoWordSelect { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -167,17 +47,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869935.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 BackColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "BackColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BackColor", value);
-			}
-		}
+		Int32 BackColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -185,17 +55,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864765.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlBorderStyle BorderStyle
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlBorderStyle>(this, "BorderStyle");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "BorderStyle", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlBorderStyle BorderStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -203,17 +63,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866738.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlDragBehavior DragBehavior
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlDragBehavior>(this, "DragBehavior");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "DragBehavior", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlDragBehavior DragBehavior { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -221,17 +71,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869183.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -239,17 +79,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866388.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlEnterFieldBehavior EnterFieldBehavior
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlEnterFieldBehavior>(this, "EnterFieldBehavior");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "EnterFieldBehavior", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlEnterFieldBehavior EnterFieldBehavior { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -257,15 +87,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865809.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16), NativeResult]
-		public stdole.Font Font
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-                return returnItem as stdole.Font;
-            }
-		}
+		stdole.Font Font { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -273,17 +95,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866594.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 ForeColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ForeColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ForeColor", value);
-			}
-		}
+		Int32 ForeColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -291,17 +103,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866248.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool HideSelection
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HideSelection");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HideSelection", value);
-			}
-		}
+		bool HideSelection { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -309,17 +111,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868948.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool Locked
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Locked");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Locked", value);
-			}
-		}
+		bool Locked { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -327,17 +119,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867356.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 MaxLength
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MaxLength");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MaxLength", value);
-			}
-		}
+		Int32 MaxLength { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -345,20 +127,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861321.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16), NativeResult]
-		public stdole.Picture MouseIcon
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-                return returnItem as stdole.Picture;
-            }
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MouseIcon", paramsArray);
-			}
-		}
+		stdole.Picture MouseIcon { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -366,17 +135,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867316.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlMousePointer MousePointer
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlMousePointer>(this, "MousePointer");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MousePointer", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlMousePointer MousePointer { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -384,17 +143,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860367.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool SelectionMargin
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "SelectionMargin");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SelectionMargin", value);
-			}
-		}
+		bool SelectionMargin { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -402,17 +151,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864250.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlComboBoxStyle Style
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlComboBoxStyle>(this, "Style");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Style", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlComboBoxStyle Style { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -420,17 +159,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863608.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string Text
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Text");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Text", value);
-			}
-		}
+		string Text { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -438,17 +167,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865617.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlTextAlign TextAlign
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlTextAlign>(this, "TextAlign");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "TextAlign", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlTextAlign TextAlign { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -456,17 +175,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864429.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 TopIndex
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "TopIndex");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "TopIndex", value);
-			}
-		}
+		Int32 TopIndex { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -474,17 +183,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866485.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public object Value
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Value");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Value", value);
-			}
-		}
+		object Value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -492,17 +191,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861941.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 ListIndex
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ListIndex");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ListIndex", value);
-			}
-		}
+		Int32 ListIndex { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -510,13 +199,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860434.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 ListCount
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ListCount");
-			}
-		}
+		Int32 ListCount { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -524,17 +207,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869908.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 SelStart
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "SelStart");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SelStart", value);
-			}
-		}
+		Int32 SelStart { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -542,17 +215,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863881.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 SelLength
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "SelLength");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SelLength", value);
-			}
-		}
+		Int32 SelLength { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -560,13 +223,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865337.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string SelText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "SelText");
-			}
-		}
+		string SelText { get; }
 
 		#endregion
 
@@ -578,10 +235,7 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865877.aspx </remarks>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string GetItem(Int32 index)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetItem", index);
-		}
+		string GetItem(Int32 index);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -590,50 +244,35 @@ namespace NetOffice.OutlookApi
 		/// <param name="index">Int32 index</param>
 		/// <param name="item">string item</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void SetItem(Int32 index, string item)
-		{
-			 Factory.ExecuteMethod(this, "SetItem", index, item);
-		}
+		void SetItem(Int32 index, string item);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864463.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void Cut()
-		{
-			 Factory.ExecuteMethod(this, "Cut");
-		}
+		void Cut();
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870157.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void Copy()
-		{
-			 Factory.ExecuteMethod(this, "Copy");
-		}
+		void Copy();
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868871.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void Paste()
-		{
-			 Factory.ExecuteMethod(this, "Paste");
-		}
+		void Paste();
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869673.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void Clear()
-		{
-			 Factory.ExecuteMethod(this, "Clear");
-		}
+		void Clear();
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -642,10 +281,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="itemText">string itemText</param>
 		/// <param name="index">optional object index</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void AddItem(string itemText, object index)
-		{
-			 Factory.ExecuteMethod(this, "AddItem", itemText, index);
-		}
+		void AddItem(string itemText, object index);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -654,10 +290,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="itemText">string itemText</param>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void AddItem(string itemText)
-		{
-			 Factory.ExecuteMethod(this, "AddItem", itemText);
-		}
+		void AddItem(string itemText);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -665,23 +298,15 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863944.aspx </remarks>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void RemoveItem(Int32 index)
-		{
-			 Factory.ExecuteMethod(this, "RemoveItem", index);
-		}
+		void RemoveItem(Int32 index);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860405.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void DropDown()
-		{
-			 Factory.ExecuteMethod(this, "DropDown");
-		}
+		void DropDown();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,11 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class MAPIFolder : COMObject
+	[TypeId("00063006-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.OutlookApi.DoNotUseMeFolder))]
+    [CoClassSource(typeof(NetOffice.OutlookApi.Folder))]
+    public interface MAPIFolder : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(MAPIFolder);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public MAPIFolder(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public MAPIFolder(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MAPIFolder(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MAPIFolder(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MAPIFolder(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MAPIFolder(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MAPIFolder() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MAPIFolder(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,26 +24,14 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+		NetOffice.OutlookApi._Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlObjectClass Class { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -140,13 +39,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+		NetOffice.OutlookApi._NameSpace Session { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -154,69 +47,35 @@ namespace NetOffice.OutlookApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlItemType DefaultItemType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlItemType>(this, "DefaultItemType");
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlItemType DefaultItemType { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string DefaultMessageClass
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "DefaultMessageClass");
-			}
-		}
+		string DefaultMessageClass { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Description
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Description");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Description", value);
-			}
-		}
+		string Description { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string EntryID
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "EntryID");
-			}
-		}
+		string EntryID { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -224,13 +83,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Folders Folders
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Folders>(this, "Folders");
-			}
-		}
+		NetOffice.OutlookApi._Folders Folders { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -238,56 +91,28 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Items Items
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Items>(this, "Items");
-			}
-		}
+		NetOffice.OutlookApi._Items Items { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+		string Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string StoreID
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "StoreID");
-			}
-		}
+		string StoreID { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 UnReadItemCount
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "UnReadItemCount");
-			}
-		}
+		Int32 UnReadItemCount { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -296,158 +121,70 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object UserPermissions
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "UserPermissions");
-			}
-		}
+		object UserPermissions { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public bool WebViewOn
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "WebViewOn");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "WebViewOn", value);
-			}
-		}
+		bool WebViewOn { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string WebViewURL
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "WebViewURL");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "WebViewURL", value);
-			}
-		}
+		string WebViewURL { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public bool WebViewAllowNavigation
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "WebViewAllowNavigation");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "WebViewAllowNavigation", value);
-			}
-		}
+		bool WebViewAllowNavigation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public string AddressBookName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "AddressBookName");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AddressBookName", value);
-			}
-		}
+		string AddressBookName { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public bool ShowAsOutlookAB
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowAsOutlookAB");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowAsOutlookAB", value);
-			}
-		}
+		bool ShowAsOutlookAB { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public string FolderPath
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FolderPath");
-			}
-		}
+		string FolderPath { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public bool InAppFolderSyncObject
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "InAppFolderSyncObject");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "InAppFolderSyncObject", value);
-			}
-		}
+		bool InAppFolderSyncObject { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.View CurrentView
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.View>(this, "CurrentView", NetOffice.OutlookApi.View.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.View CurrentView { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public bool CustomViewsOnly
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "CustomViewsOnly");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "CustomViewsOnly", value);
-			}
-		}
+		bool CustomViewsOnly { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -455,13 +192,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Views Views
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Views>(this, "Views");
-			}
-		}
+		NetOffice.OutlookApi._Views Views { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -470,13 +201,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object MAPIOBJECT
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "MAPIOBJECT");
-			}
-		}
+		object MAPIOBJECT { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -484,82 +209,42 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string FullFolderPath
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FullFolderPath");
-			}
-		}
+		string FullFolderPath { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		public bool IsSharePointFolder
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsSharePointFolder");
-			}
-		}
+		bool IsSharePointFolder { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlShowItemCount ShowItemCount
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlShowItemCount>(this, "ShowItemCount");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowItemCount", value);
-			}
-		}
+		NetOffice.OutlookApi.Enums.OlShowItemCount ShowItemCount { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Store Store
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.Store>(this, "Store", NetOffice.OutlookApi.Store.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.Store Store { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.PropertyAccessor>(this, "PropertyAccessor", NetOffice.OutlookApi.PropertyAccessor.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.PropertyAccessor PropertyAccessor { get; }
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.UserDefinedProperties UserDefinedProperties
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.UserDefinedProperties>(this, "UserDefinedProperties", NetOffice.OutlookApi.UserDefinedProperties.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OutlookApi.UserDefinedProperties UserDefinedProperties { get; }
 
 		#endregion
 
@@ -571,28 +256,19 @@ namespace NetOffice.OutlookApi
 		/// <param name="destinationFolder">NetOffice.OutlookApi.MAPIFolder destinationFolder</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi.MAPIFolder CopyTo(NetOffice.OutlookApi.MAPIFolder destinationFolder)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "CopyTo", destinationFolder);
-		}
+		NetOffice.OutlookApi.MAPIFolder CopyTo(NetOffice.OutlookApi.MAPIFolder destinationFolder);
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+		void Delete();
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Display()
-		{
-			 Factory.ExecuteMethod(this, "Display");
-		}
+		void Display();
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -600,10 +276,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="displayMode">optional object displayMode</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._Explorer GetExplorer(object displayMode)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "GetExplorer", displayMode);
-		}
+		NetOffice.OutlookApi._Explorer GetExplorer(object displayMode);
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
@@ -611,30 +284,21 @@ namespace NetOffice.OutlookApi
 		[CustomMethod]
 		[BaseResult]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi._Explorer GetExplorer()
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "GetExplorer");
-		}
+		NetOffice.OutlookApi._Explorer GetExplorer();
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="destinationFolder">NetOffice.OutlookApi.MAPIFolder destinationFolder</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void MoveTo(NetOffice.OutlookApi.MAPIFolder destinationFolder)
-		{
-			 Factory.ExecuteMethod(this, "MoveTo", destinationFolder);
-		}
+		void MoveTo(NetOffice.OutlookApi.MAPIFolder destinationFolder);
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void AddToPFFavorites()
-		{
-			 Factory.ExecuteMethod(this, "AddToPFFavorites");
-		}
+		void AddToPFFavorites();
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -642,20 +306,14 @@ namespace NetOffice.OutlookApi
 		/// <param name="fNoUI">optional object fNoUI</param>
 		/// <param name="name">optional object name</param>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public void AddToFavorites(object fNoUI, object name)
-		{
-			 Factory.ExecuteMethod(this, "AddToFavorites", fNoUI, name);
-		}
+		void AddToFavorites(object fNoUI, object name);
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public void AddToFavorites()
-		{
-			 Factory.ExecuteMethod(this, "AddToFavorites");
-		}
+		void AddToFavorites();
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
@@ -663,10 +321,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="fNoUI">optional object fNoUI</param>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public void AddToFavorites(object fNoUI)
-		{
-			 Factory.ExecuteMethod(this, "AddToFavorites", fNoUI);
-		}
+		void AddToFavorites(object fNoUI);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -675,10 +330,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="storageIdentifierType">NetOffice.OutlookApi.Enums.OlStorageIdentifierType storageIdentifierType</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OutlookApi._StorageItem GetStorage(string storageIdentifier, NetOffice.OutlookApi.Enums.OlStorageIdentifierType storageIdentifierType)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._StorageItem>(this, "GetStorage", storageIdentifier, storageIdentifierType);
-		}
+		NetOffice.OutlookApi._StorageItem GetStorage(string storageIdentifier, NetOffice.OutlookApi.Enums.OlStorageIdentifierType storageIdentifierType);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -686,20 +338,14 @@ namespace NetOffice.OutlookApi
 		/// <param name="filter">optional object filter</param>
 		/// <param name="tableContents">optional object tableContents</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Table GetTable(object filter, object tableContents)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType, filter, tableContents);
-		}
+		NetOffice.OutlookApi.Table GetTable(object filter, object tableContents);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Table GetTable()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType);
-		}
+		NetOffice.OutlookApi.Table GetTable();
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
@@ -707,43 +353,27 @@ namespace NetOffice.OutlookApi
 		/// <param name="filter">optional object filter</param>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Table GetTable(object filter)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType, filter);
-		}
+		NetOffice.OutlookApi.Table GetTable(object filter);
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.CalendarSharing GetCalendarExporter()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.CalendarSharing>(this, "GetCalendarExporter", NetOffice.OutlookApi.CalendarSharing.LateBindingApiWrapperType);
-		}
+		NetOffice.OutlookApi.CalendarSharing GetCalendarExporter();
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Outlook", 14,15,16), NativeResult]
-		public stdole.Picture GetCustomIcon()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCustomIcon", paramsArray);
-            return returnItem as stdole.Picture;
-		}
+		stdole.Picture GetCustomIcon();
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
 		/// <param name="picture">stdole.Picture picture</param>
 		[SupportByVersion("Outlook", 14,15,16)]
-		public void SetCustomIcon(stdole.Picture picture)
-		{
-			 Factory.ExecuteMethod(this, "SetCustomIcon", picture);
-		}
+		void SetCustomIcon(stdole.Picture picture);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }
