@@ -11,7 +11,7 @@ namespace ExcelPrototypeTest
         {
             try
             {
-                new Test07().Run();
+                new Test08().Run();
             }
             catch (Exception exception)
             {

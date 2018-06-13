@@ -54,6 +54,7 @@
     <Compile Include="Test05.cs" />
     <Compile Include="Test06.cs" />
     <Compile Include="Test07.cs" />
+    <Compile Include="Test08.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Excel\ExcelApi.csproj">

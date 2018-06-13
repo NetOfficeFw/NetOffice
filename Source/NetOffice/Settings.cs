@@ -527,9 +527,9 @@ namespace NetOffice
 
         /// <summary>
         /// Request version from application instances for diagnostic purpose.
-        /// These version information is given in any thrown NetOfficeCOMException(and derived) instances. true by default
+        /// These version information is given in any thrown NetOfficeCOMException(and derived) instances. false by default
         /// </summary>
-        [Category("Settings"), Description("Request version from application instances for diagnostic purpose."), DefaultValue(true)]
+        [Category("Settings"), Description("Request version from application instances for diagnostic purpose."), DefaultValue(false)]
         public bool ForceApplicationVersionProviders
         {
             get

@@ -23,7 +23,6 @@ namespace ExcelPrototypeTest
                 Console.WriteLine(sheet);
             }
 
-            // quit and dispose all open proxies
             application.Quit();
             application.Dispose();
         }

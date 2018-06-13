@@ -28,7 +28,8 @@ namespace ExcelPrototypeTest
                 }
                 catch (NetOfficeCOMException exception)
                 {
-                    Console.WriteLine("NetOfficeCOMException, NetOffice Version:{0} Application Version:{1}", exception.NetOfficeVersion, exception.ApplicationVersion);
+                    Console.WriteLine("NetOfficeCOMException, NetOffice Version:{0} Application Version:{1}",
+                        exception.NetOfficeVersion, exception.ApplicationVersion);
                 }
                 catch (Exception exception)
                 {
