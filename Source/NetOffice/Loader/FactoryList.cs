@@ -109,7 +109,7 @@ namespace NetOffice.Loader
             result = factory.ContractAndImplementation(typeId, ref contract, ref implementation);
             if (result)
             {
-                var coClass = contract.GetCustomAttribute<CoClassSourceAttribute>();
+                var coClass = CoClassSourceAttribute.TryGet(contract, typeId);
                 if (null != coClass)
                 {
                     contract = coClass.Value;

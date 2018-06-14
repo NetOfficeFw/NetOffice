@@ -62,8 +62,8 @@ namespace NetOffice.CoreServices.Internal
                 throw new ArgumentException("proxy must be a com object.");
 
             TypeInformation result = null;
-
-            var coClassSource = contract.GetCustomAttribute<CoClassSourceAttribute>();
+           
+            var coClassSource = CoClassSourceAttribute.TryGet(contract, typeId);
             if (null != coClassSource)
             {
                 contract = coClassSource.Value;
