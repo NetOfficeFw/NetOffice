@@ -12,8 +12,7 @@ namespace NetOffice.OutlookApi
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("00063006-0000-0000-C000-000000000046")]
-    [CoClassSource(typeof(NetOffice.OutlookApi.DoNotUseMeFolder))]
-    [CoClassSource(typeof(NetOffice.OutlookApi.Folder))]
+    [CoClassSource(typeof(NetOffice.OutlookApi.Folder), typeof(NetOffice.OutlookApi.DoNotUseMeFolder))]
     public interface MAPIFolder : ICOMObject
 	{
 		#region Properties

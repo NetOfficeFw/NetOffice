@@ -17,7 +17,11 @@ namespace NetOffice.Attributes
         to an id-based resolving(possibly faster). If it doesnt works, this attribute is unused in the future and we go back
         to name-based resolving.
 
-        (In some rare cases, an interface is a base type for more than 1 CoClass.)
+        --In some rare cases, an interface is a base type for more than 1 CoClass.--
+        -- Here is a list of these rare types --
+        ----------------------------------------------------------------------------
+           - NetOffice.OutlookApi.MAPIFolder (DispatchInterface)
+
 
         TODO: Update this comment before release NetOffice 2.0(stable)
     */
@@ -25,41 +29,32 @@ namespace NetOffice.Attributes
     /// <summary>
     /// Indicates an interface is also a well known CoClass
     /// </summary>
-    [AttributeUsage(AttributeTargets.Interface, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Interface, AllowMultiple = false)]
     public class CoClassSourceAttribute : System.Attribute
     {
         /// <summary>
-        /// Co Class Type(Interface)
+        /// Primary Co Class Type(Interface)
         /// </summary>
         public readonly Type Value;
 
         /// <summary>
+        /// Secondary CoClass Types
+        /// </summary>
+        public readonly Type[] Values;
+
+        /// <summary>
         /// Creates an instance of the class
         /// </summary>
-        /// <param name="value">coclass type</param>
-        public CoClassSourceAttribute(Type value)
+        /// <param name="value">primary coclass type</param>
+        /// <param name="values">secondary coclass types</param>
+        public CoClassSourceAttribute(Type value, params Type[] values)
         {
 #if DEBUG
              if(!value.IsInterface)
                 throw new ArgumentException("Invalid value.");
 #endif
             Value = value;
-        }
-
-        /// <summary>
-        /// Returns CoClassSourceAttribute attribute from type or null
-        /// </summary>
-        /// <param name="type">target type</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException">type is null</exception>
-        /// <exception cref="ArgumentException">type does not have a typeid attribute</exception>
-        /// <exception cref="NotSupportedException">type is source for more than 1 coclass. this is currently unsupported</exception>
-        internal static CoClassSourceAttribute TryGet(Type type)
-        {
-            var typeId = type.GetCustomAttribute<TypeIdAttribute>();
-            if (null == typeId)
-                throw new ArgumentException("Invalid type.");
-            return TryGet(type, typeId.Value);
+            Values = values;
         }
 
         /// <summary>
@@ -67,27 +62,18 @@ namespace NetOffice.Attributes
         /// </summary>
         /// <param name="type">target type</param>
         /// <param name="typeId">known type id from target type</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException">type is null</exception>
-        /// <exception cref="NotSupportedException">type is source for more than 1 coclass. this is currently unsupported</exception>
+        /// <returns>attribute or null(Nothing in Visual Basic)</returns>
+        /// <exception cref="ArgumentNullException">type or comProxy is null</exception>
         public static CoClassSourceAttribute TryGet(Type type, Guid typeId)
         {
             if (null == type)
                 throw new ArgumentNullException("type");
 
-            var coClasses = type.GetCustomAttributes<CoClassSourceAttribute>();
-            if (coClasses.Length > 1)
-            {
-                throw new NotSupportedException();
-            }
-            else if (coClasses.Length == 1)
-            {
-                return coClasses.First();
-            }
-            else
-            {
-                return null;
-            }
+            CoClassSourceAttribute result = null;
+
+            result = type.GetCustomAttribute<CoClassSourceAttribute>();
+
+            return result;
         }
     }
 }

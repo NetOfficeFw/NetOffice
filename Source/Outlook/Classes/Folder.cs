@@ -22,8 +22,7 @@ namespace NetOffice.OutlookApi
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [ComEventContract(typeof(EventContracts.MAPIFolderEvents_12))]
-	[TypeId("000610F7-0000-0000-C000-000000000046")]
-    
+	[TypeId("000610F7-0000-0000-C000-000000000046")]    
     public interface Folder : MAPIFolder, IEventBinding
 	{
         #region Events
