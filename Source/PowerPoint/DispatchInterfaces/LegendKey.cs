@@ -12,100 +12,9 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745718.aspx </remarks>
 	[SupportByVersion("PowerPoint", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class LegendKey : COMObject
+	[TypeId("92D41A71-F07E-4CA4-AF6F-BEF486AA4E6F")]
+	public interface LegendKey : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(LegendKey);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public LegendKey(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public LegendKey(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public LegendKey(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public LegendKey(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public LegendKey(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public LegendKey(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public LegendKey() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public LegendKey(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -115,13 +24,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745908.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -129,13 +32,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		[SupportByVersion("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.PowerPointApi.ChartBorder Border
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ChartBorder>(this, "Border", NetOffice.PowerPointApi.ChartBorder.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.ChartBorder Border { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -143,13 +40,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		[SupportByVersion("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.PowerPointApi.Interior Interior
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Interior>(this, "Interior", NetOffice.PowerPointApi.Interior.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.Interior Interior { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -157,13 +48,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		[SupportByVersion("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.PowerPointApi.ChartFillFormat Fill
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ChartFillFormat>(this, "Fill", NetOffice.PowerPointApi.ChartFillFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.ChartFillFormat Fill { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -171,17 +56,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744318.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public bool InvertIfNegative
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "InvertIfNegative");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "InvertIfNegative", value);
-			}
-		}
+		bool InvertIfNegative { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -189,17 +64,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744748.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 MarkerBackgroundColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MarkerBackgroundColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MarkerBackgroundColor", value);
-			}
-		}
+		Int32 MarkerBackgroundColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -207,17 +72,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745497.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Enums.XlColorIndex MarkerBackgroundColorIndex
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlColorIndex>(this, "MarkerBackgroundColorIndex");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MarkerBackgroundColorIndex", value);
-			}
-		}
+		NetOffice.PowerPointApi.Enums.XlColorIndex MarkerBackgroundColorIndex { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -225,17 +80,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745172.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 MarkerForegroundColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MarkerForegroundColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MarkerForegroundColor", value);
-			}
-		}
+		Int32 MarkerForegroundColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -243,17 +88,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744762.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Enums.XlColorIndex MarkerForegroundColorIndex
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlColorIndex>(this, "MarkerForegroundColorIndex");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MarkerForegroundColorIndex", value);
-			}
-		}
+		NetOffice.PowerPointApi.Enums.XlColorIndex MarkerForegroundColorIndex { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -261,17 +96,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745234.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 MarkerSize
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MarkerSize");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MarkerSize", value);
-			}
-		}
+		Int32 MarkerSize { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -279,17 +104,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744069.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Enums.XlMarkerStyle MarkerStyle
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlMarkerStyle>(this, "MarkerStyle");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MarkerStyle", value);
-			}
-		}
+		NetOffice.PowerPointApi.Enums.XlMarkerStyle MarkerStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -297,17 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745790.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 PictureType
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "PictureType");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PictureType", value);
-			}
-		}
+		Int32 PictureType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -315,17 +120,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745357.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public bool Smooth
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Smooth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Smooth", value);
-			}
-		}
+		bool Smooth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -333,13 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745344.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Double Left
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Left");
-			}
-		}
+		Double Left { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -347,13 +136,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746112.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Double Top
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Top");
-			}
-		}
+		Double Top { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -361,13 +144,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745612.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Double Width
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Width");
-			}
-		}
+		Double Width { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -375,13 +152,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746694.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Double Height
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Height");
-			}
-		}
+		Double Height { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -389,17 +160,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745122.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public bool Shadow
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Shadow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Shadow", value);
-			}
-		}
+		bool Shadow { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -407,13 +168,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745751.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.ChartFormat Format
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ChartFormat>(this, "Format", NetOffice.PowerPointApi.ChartFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.ChartFormat Format { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -421,13 +176,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746672.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -435,17 +184,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743844.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Double PictureUnit2
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "PictureUnit2");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PictureUnit2", value);
-			}
-		}
+		Double PictureUnit2 { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -453,13 +192,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745374.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -467,17 +200,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		[SupportByVersion("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 PictureUnit
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "PictureUnit");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PictureUnit", value);
-			}
-		}
+		Int32 PictureUnit { get; set; }
 
 		#endregion
 
@@ -488,33 +211,22 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746651.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public object ClearFormats()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
-		}
+		object ClearFormats();
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744861.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public object Delete()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Delete");
-		}
+		object Delete();
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public object Select()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Select");
-		}
+		object Select();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

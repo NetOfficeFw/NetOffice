@@ -12,100 +12,9 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744554.aspx </remarks>
 	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
- 	public class Sequence : Collection
+	[TypeId("914934DE-5A91-11CF-8700-00AA0060263B")]
+	public interface Sequence : Collection
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Sequence);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Sequence(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Sequence(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sequence(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sequence(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sequence(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sequence(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sequence() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sequence(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +23,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745955.aspx </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -129,13 +32,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746840.aspx </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		#endregion
 
@@ -147,13 +44,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.PowerPointApi.Effect this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "Item", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, index);
-			}
-		}
+		NetOffice.PowerPointApi.Effect this[Int32 index] { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -165,10 +56,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="trigger">optional NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger = 1</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level, object trigger, object index)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, new object[]{ shape, effectId, level, trigger, index });
-		}
+		NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level, object trigger, object index);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -178,10 +66,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, shape, effectId);
-		}
+		NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -192,10 +77,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level = 0</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, shape, effectId, level);
-		}
+		NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -207,10 +89,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="trigger">optional NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger = 1</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level, object trigger)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, shape, effectId, level, trigger);
-		}
+		NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level, object trigger);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -219,10 +98,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect, object index)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "Clone", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect, index);
-		}
+		NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect, object index);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -231,10 +107,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "Clone", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect);
-		}
+		NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -242,10 +115,7 @@ namespace NetOffice.PowerPointApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744048.aspx </remarks>
 		/// <param name="shape">NetOffice.PowerPointApi.Shape shape</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect FindFirstAnimationFor(NetOffice.PowerPointApi.Shape shape)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "FindFirstAnimationFor", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, shape);
-		}
+		NetOffice.PowerPointApi.Effect FindFirstAnimationFor(NetOffice.PowerPointApi.Shape shape);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -253,10 +123,7 @@ namespace NetOffice.PowerPointApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746508.aspx </remarks>
 		/// <param name="click">Int32 click</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect FindFirstAnimationForClick(Int32 click)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "FindFirstAnimationForClick", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, click);
-		}
+		NetOffice.PowerPointApi.Effect FindFirstAnimationForClick(Int32 click);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -265,10 +132,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="level">NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect ConvertToBuildLevel(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "ConvertToBuildLevel", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect, level);
-		}
+		NetOffice.PowerPointApi.Effect ConvertToBuildLevel(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -279,10 +143,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="dimColor">optional Int32 DimColor = 0</param>
 		/// <param name="dimSchemeColor">optional NetOffice.PowerPointApi.Enums.PpColorSchemeIndex DimSchemeColor = 0</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, object dimColor, object dimSchemeColor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "ConvertToAfterEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect, after, dimColor, dimSchemeColor);
-		}
+		NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, object dimColor, object dimSchemeColor);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -292,10 +153,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="after">NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "ConvertToAfterEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect, after);
-		}
+		NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -306,10 +164,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="dimColor">optional Int32 DimColor = 0</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, object dimColor)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "ConvertToAfterEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect, after, dimColor);
-		}
+		NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, object dimColor);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -318,10 +173,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="animateBackground">NetOffice.OfficeApi.Enums.MsoTriState animateBackground</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect ConvertToAnimateBackground(NetOffice.PowerPointApi.Effect effect, NetOffice.OfficeApi.Enums.MsoTriState animateBackground)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "ConvertToAnimateBackground", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect, animateBackground);
-		}
+		NetOffice.PowerPointApi.Effect ConvertToAnimateBackground(NetOffice.PowerPointApi.Effect effect, NetOffice.OfficeApi.Enums.MsoTriState animateBackground);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -330,10 +182,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="animateInReverse">NetOffice.OfficeApi.Enums.MsoTriState animateInReverse</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect ConvertToAnimateInReverse(NetOffice.PowerPointApi.Effect effect, NetOffice.OfficeApi.Enums.MsoTriState animateInReverse)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "ConvertToAnimateInReverse", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect, animateInReverse);
-		}
+		NetOffice.PowerPointApi.Effect ConvertToAnimateInReverse(NetOffice.PowerPointApi.Effect effect, NetOffice.OfficeApi.Enums.MsoTriState animateInReverse);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -342,10 +191,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="unitEffect">NetOffice.PowerPointApi.Enums.MsoAnimTextUnitEffect unitEffect</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect ConvertToTextUnitEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimTextUnitEffect unitEffect)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "ConvertToTextUnitEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, effect, unitEffect);
-		}
+		NetOffice.PowerPointApi.Effect ConvertToTextUnitEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimTextUnitEffect unitEffect);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -358,10 +204,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="bookmark">optional string bookmark = </param>
 		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level = 0</param>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, object bookmark, object level)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddTriggerEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, new object[]{ pShape, effectId, trigger, pTriggerShape, bookmark, level });
-		}
+		NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, object bookmark, object level);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -373,10 +216,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="pTriggerShape">NetOffice.PowerPointApi.Shape pTriggerShape</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddTriggerEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, pShape, effectId, trigger, pTriggerShape);
-		}
+		NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -389,13 +229,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="bookmark">optional string bookmark = </param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, object bookmark)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddTriggerEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, new object[]{ pShape, effectId, trigger, pTriggerShape, bookmark });
-		}
+		NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, object bookmark);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

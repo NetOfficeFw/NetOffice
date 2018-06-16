@@ -12,100 +12,9 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745417.aspx </remarks>
 	[SupportByVersion("PowerPoint", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ProtectedViewWindow : COMObject
+	[TypeId("BA72E55A-4FF5-48F4-8215-5505F990966F")]
+	public interface ProtectedViewWindow : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ProtectedViewWindow);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ProtectedViewWindow(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ProtectedViewWindow(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ProtectedViewWindow(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ProtectedViewWindow(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ProtectedViewWindow(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ProtectedViewWindow(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ProtectedViewWindow() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ProtectedViewWindow(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +23,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743984.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -129,13 +32,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745075.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -143,13 +40,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746470.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Presentation Presentation
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Presentation>(this, "Presentation", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.Presentation Presentation { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -157,13 +48,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745400.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Active
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Active");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState Active { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -171,17 +56,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746062.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Enums.PpWindowState WindowState
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpWindowState>(this, "WindowState");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "WindowState", value);
-			}
-		}
+		NetOffice.PowerPointApi.Enums.PpWindowState WindowState { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -189,13 +64,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744828.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string Caption
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
-			}
-		}
+		string Caption { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -203,13 +72,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744701.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string SourcePath
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "SourcePath");
-			}
-		}
+		string SourcePath { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -217,13 +80,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745032.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string SourceName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "SourceName");
-			}
-		}
+		string SourceName { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -231,17 +88,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744066.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Single Left
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
+		Single Left { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -249,17 +96,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744740.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Single Top
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
+		Single Top { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -267,17 +104,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744647.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Single Width
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Single Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -285,30 +112,14 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744351.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Single Height
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Height");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
-			}
-		}
+		Single Height { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 HWND
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "HWND");
-			}
-		}
+		Int32 HWND { get; }
 
 		#endregion
 
@@ -319,20 +130,14 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744612.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public void Activate()
-		{
-			 Factory.ExecuteMethod(this, "Activate");
-		}
+		void Activate();
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746296.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public void Close()
-		{
-			 Factory.ExecuteMethod(this, "Close");
-		}
+		void Close();
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -340,10 +145,7 @@ namespace NetOffice.PowerPointApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746807.aspx </remarks>
 		/// <param name="modifyPassword">optional string ModifyPassword = </param>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Presentation Edit(object modifyPassword)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Edit", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, modifyPassword);
-		}
+		NetOffice.PowerPointApi.Presentation Edit(object modifyPassword);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -351,13 +153,8 @@ namespace NetOffice.PowerPointApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746807.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Presentation Edit()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Edit", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
-		}
+		NetOffice.PowerPointApi.Presentation Edit();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

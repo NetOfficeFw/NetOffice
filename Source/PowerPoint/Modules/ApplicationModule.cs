@@ -2,20 +2,22 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CoreServices;
 
-namespace NetOffice.PowerPointApi.GlobalHelperModules
+namespace NetOffice.PowerPointApi.ModulesLegacy
 {
     ///<summary>
-    /// Module GlobalModule
+    /// Module ApplicationModule
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     ///</summary>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(PowerPointApi.Application))]
-	public static class GlobalModule
-	{
-		#region Fields
+    /// <remarks>This module supports legacy VB/VBA codebases</remarks>
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsModule), ModuleBaseType(typeof(PowerPointApi.Application))]
+    public static class ApplicationModule
+    {
+        #region Fields
 
-		private static ICOMObject _instance;
+        private static ICOMObject _instance;
 
         #endregion
 
@@ -35,26 +37,26 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         }
 
         internal static Core Factory
-		{
-			get
-			{
-				if(null != _instance)
-					 return _instance.Factory;
-			else
-				return Core.Default;
-			}
-		}
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Factory;
+                else
+                    return Core.Default;
+            }
+        }
 
-		internal static Invoker Invoker
-		{
-			get
-			{
-				if(null != _instance)
-					 return _instance.Invoker;
-			else
-				return Invoker.Default;
-			}
-		}
+        internal static Invoker Invoker
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Invoker;
+                else
+                    return Invoker.Default;
+            }
+        }
 
         #endregion
 
@@ -70,7 +72,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Presentations>(_instance, "Presentations", NetOffice.PowerPointApi.Presentations.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Presentations>(_instance, "Presentations", typeof(NetOffice.PowerPointApi.Presentations));
             }
         }
 
@@ -84,7 +86,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.DocumentWindows>(_instance, "Windows", NetOffice.PowerPointApi.DocumentWindows.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.DocumentWindows>(_instance, "Windows", typeof(NetOffice.PowerPointApi.DocumentWindows));
             }
         }
 
@@ -98,7 +100,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.PPDialogs>(_instance, "Dialogs", NetOffice.PowerPointApi.PPDialogs.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.PPDialogs>(_instance, "Dialogs", typeof(NetOffice.PowerPointApi.PPDialogs));
             }
         }
 
@@ -112,7 +114,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.DocumentWindow>(_instance, "ActiveWindow", NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.DocumentWindow>(_instance, "ActiveWindow", typeof(NetOffice.PowerPointApi.DocumentWindow));
             }
         }
 
@@ -126,7 +128,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Presentation>(_instance, "ActivePresentation", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Presentation>(_instance, "ActivePresentation", typeof(NetOffice.PowerPointApi.Presentation));
             }
         }
 
@@ -140,7 +142,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.SlideShowWindows>(_instance, "SlideShowWindows", NetOffice.PowerPointApi.SlideShowWindows.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.SlideShowWindows>(_instance, "SlideShowWindows", typeof(NetOffice.PowerPointApi.SlideShowWindows));
             }
         }
 
@@ -154,7 +156,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", typeof(NetOffice.OfficeApi.CommandBars));
             }
         }
 
@@ -213,7 +215,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", typeof(NetOffice.OfficeApi.Assistant));
             }
         }
 
@@ -226,7 +228,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", typeof(NetOffice.OfficeApi.FileSearch));
             }
         }
 
@@ -239,7 +241,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IFind>(_instance, "FileFind", NetOffice.OfficeApi.IFind.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IFind>(_instance, "FileFind", typeof(NetOffice.OfficeApi.IFind));
             }
         }
 
@@ -323,7 +325,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.AddIns>(_instance, "AddIns", NetOffice.PowerPointApi.AddIns.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.AddIns>(_instance, "AddIns", typeof(NetOffice.PowerPointApi.AddIns));
             }
         }
 
@@ -337,7 +339,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(_instance, "VBE", NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(_instance, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
         }
 
@@ -485,7 +487,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", typeof(NetOffice.OfficeApi.AnswerWizard));
             }
         }
 
@@ -499,7 +501,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", typeof(NetOffice.OfficeApi.COMAddIns));
             }
         }
 
@@ -526,7 +528,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.DefaultWebOptions>(_instance, "DefaultWebOptions", NetOffice.PowerPointApi.DefaultWebOptions.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.DefaultWebOptions>(_instance, "DefaultWebOptions", typeof(NetOffice.PowerPointApi.DefaultWebOptions));
             }
         }
 
@@ -540,7 +542,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.LanguageSettings>(_instance, "LanguageSettings", NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.LanguageSettings>(_instance, "LanguageSettings", typeof(NetOffice.OfficeApi.LanguageSettings));
             }
         }
 
@@ -554,7 +556,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions>(_instance, "MsoDebugOptions", NetOffice.OfficeApi.MsoDebugOptions.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions>(_instance, "MsoDebugOptions", typeof(NetOffice.OfficeApi.MsoDebugOptions));
             }
         }
 
@@ -586,7 +588,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Marker>(_instance, "Marker", NetOffice.PowerPointApi.Marker.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Marker>(_instance, "Marker", typeof(NetOffice.PowerPointApi.Marker));
             }
         }
 
@@ -618,7 +620,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType type)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialog>(_instance, "FileDialog", NetOffice.OfficeApi.FileDialog.LateBindingApiWrapperType, type);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialog>(_instance, "FileDialog", typeof(NetOffice.OfficeApi.FileDialog), type);
         }
 
         /// <summary>
@@ -679,7 +681,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.NewFile>(_instance, "NewPresentation", NetOffice.OfficeApi.NewFile.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.NewFile>(_instance, "NewPresentation", typeof(NetOffice.OfficeApi.NewFile));
             }
         }
 
@@ -729,7 +731,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.AutoCorrect>(_instance, "AutoCorrect", NetOffice.PowerPointApi.AutoCorrect.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.AutoCorrect>(_instance, "AutoCorrect", typeof(NetOffice.PowerPointApi.AutoCorrect));
             }
         }
 
@@ -743,7 +745,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Options>(_instance, "Options", NetOffice.PowerPointApi.Options.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Options>(_instance, "Options", typeof(NetOffice.PowerPointApi.Options));
             }
         }
 
@@ -775,7 +777,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", typeof(NetOffice.OfficeApi.IAssistance));
             }
         }
 
@@ -803,7 +805,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.FileConverters>(_instance, "FileConverters", NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.FileConverters>(_instance, "FileConverters", typeof(NetOffice.PowerPointApi.FileConverters));
             }
         }
 
@@ -817,7 +819,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtLayouts>(_instance, "SmartArtLayouts", NetOffice.OfficeApi.SmartArtLayouts.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtLayouts>(_instance, "SmartArtLayouts", typeof(NetOffice.OfficeApi.SmartArtLayouts));
             }
         }
 
@@ -831,7 +833,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtQuickStyles>(_instance, "SmartArtQuickStyles", NetOffice.OfficeApi.SmartArtQuickStyles.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtQuickStyles>(_instance, "SmartArtQuickStyles", typeof(NetOffice.OfficeApi.SmartArtQuickStyles));
             }
         }
 
@@ -845,7 +847,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtColors>(_instance, "SmartArtColors", NetOffice.OfficeApi.SmartArtColors.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SmartArtColors>(_instance, "SmartArtColors", typeof(NetOffice.OfficeApi.SmartArtColors));
             }
         }
 
@@ -859,7 +861,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ProtectedViewWindows>(_instance, "ProtectedViewWindows", NetOffice.PowerPointApi.ProtectedViewWindows.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ProtectedViewWindows>(_instance, "ProtectedViewWindows", typeof(NetOffice.PowerPointApi.ProtectedViewWindows));
             }
         }
 
@@ -873,7 +875,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ProtectedViewWindow>(_instance, "ActiveProtectedViewWindow", NetOffice.PowerPointApi.ProtectedViewWindow.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ProtectedViewWindow>(_instance, "ActiveProtectedViewWindow", typeof(NetOffice.PowerPointApi.ProtectedViewWindow));
             }
         }
 
@@ -901,7 +903,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ResampleMediaTasks>(_instance, "ResampleMediaTasks", NetOffice.PowerPointApi.ResampleMediaTasks.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ResampleMediaTasks>(_instance, "ResampleMediaTasks", typeof(NetOffice.PowerPointApi.ResampleMediaTasks));
             }
         }
 
@@ -1040,7 +1042,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         [SupportByVersion("PowerPoint", 9)]
         public static NetOffice.PowerPointApi.FileDialog FileDialog(NetOffice.PowerPointApi.Enums.PpFileDialogType type)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.FileDialog>(_instance, "FileDialog", NetOffice.PowerPointApi.FileDialog.LateBindingApiWrapperType, type);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.FileDialog>(_instance, "FileDialog", typeof(NetOffice.PowerPointApi.FileDialog), type);
         }
 
         /// <summary>
@@ -1173,9 +1175,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         [SupportByVersion("PowerPoint", 15, 16)]
         public static NetOffice.PowerPointApi.Theme OpenThemeFile(string themeFileName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Theme>(_instance, "OpenThemeFile", NetOffice.PowerPointApi.Theme.LateBindingApiWrapperType, themeFileName);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Theme>(_instance, "OpenThemeFile", typeof(NetOffice.PowerPointApi.Theme), themeFileName);
         }
 
         #endregion
     }
 }
+

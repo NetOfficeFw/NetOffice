@@ -12,100 +12,9 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746375.aspx </remarks>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class SlideShowSettings : COMObject
+	[TypeId("9149345A-5A91-11CF-8700-00AA0060263B")]
+	public interface SlideShowSettings : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(SlideShowSettings);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public SlideShowSettings(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public SlideShowSettings(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SlideShowSettings(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SlideShowSettings(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SlideShowSettings(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SlideShowSettings(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SlideShowSettings() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SlideShowSettings(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -114,13 +23,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746639.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -129,13 +32,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745586.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -143,13 +40,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744891.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.ColorFormat PointerColor
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ColorFormat>(this, "PointerColor", NetOffice.PowerPointApi.ColorFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.ColorFormat PointerColor { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -157,13 +48,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745542.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.NamedSlideShows NamedSlideShows
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.NamedSlideShows>(this, "NamedSlideShows", NetOffice.PowerPointApi.NamedSlideShows.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.NamedSlideShows NamedSlideShows { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -171,17 +56,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746575.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public Int32 StartingSlide
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "StartingSlide");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "StartingSlide", value);
-			}
-		}
+		Int32 StartingSlide { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -189,17 +64,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744862.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public Int32 EndingSlide
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "EndingSlide");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "EndingSlide", value);
-			}
-		}
+		Int32 EndingSlide { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -207,17 +72,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744025.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Enums.PpSlideShowAdvanceMode AdvanceMode
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpSlideShowAdvanceMode>(this, "AdvanceMode");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "AdvanceMode", value);
-			}
-		}
+		NetOffice.PowerPointApi.Enums.PpSlideShowAdvanceMode AdvanceMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -225,17 +80,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745301.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState LoopUntilStopped
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "LoopUntilStopped");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "LoopUntilStopped", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState LoopUntilStopped { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -243,17 +88,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745096.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Enums.PpSlideShowType ShowType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpSlideShowType>(this, "ShowType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowType", value);
-			}
-		}
+		NetOffice.PowerPointApi.Enums.PpSlideShowType ShowType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -261,17 +96,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745097.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState ShowWithNarration
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "ShowWithNarration");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowWithNarration", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState ShowWithNarration { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -279,17 +104,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745640.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState ShowWithAnimation
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "ShowWithAnimation");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowWithAnimation", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState ShowWithAnimation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -297,17 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744206.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public string SlideShowName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "SlideShowName");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SlideShowName", value);
-			}
-		}
+		string SlideShowName { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -315,17 +120,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745074.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Enums.PpSlideShowRangeType RangeType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpSlideShowRangeType>(this, "RangeType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "RangeType", value);
-			}
-		}
+		NetOffice.PowerPointApi.Enums.PpSlideShowRangeType RangeType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -333,17 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745792.aspx </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState ShowScrollbar
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "ShowScrollbar");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowScrollbar", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState ShowScrollbar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -351,17 +136,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745062.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState ShowPresenterView
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "ShowPresenterView");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowPresenterView", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState ShowPresenterView { get; set; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -369,17 +144,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745171.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState ShowMediaControls
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "ShowMediaControls");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowMediaControls", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState ShowMediaControls { get; set; }
 
 		#endregion
 
@@ -390,13 +155,8 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744783.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.SlideShowWindow Run()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.SlideShowWindow>(this, "Run", NetOffice.PowerPointApi.SlideShowWindow.LateBindingApiWrapperType);
-		}
+		NetOffice.PowerPointApi.SlideShowWindow Run();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

@@ -14,100 +14,9 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class CanvasShapes : COMObject, IEnumerableProvider<NetOffice.PowerPointApi.Shape>
+	[TypeId("914934EC-5A91-11CF-8700-00AA0060263B")]
+	public interface CanvasShapes : ICOMObject, IEnumerableProvider<NetOffice.PowerPointApi.Shape>
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(CanvasShapes);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public CanvasShapes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CanvasShapes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CanvasShapes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CanvasShapes(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CanvasShapes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CanvasShapes(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CanvasShapes() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CanvasShapes(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -116,26 +25,14 @@ namespace NetOffice.PowerPointApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
-		public object Application
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Application");
-			}
-		}
+		object Application { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -143,39 +40,21 @@ namespace NetOffice.PowerPointApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+		Int32 Count { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape Background
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Shape>(this, "Background", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.Shape Background { get; }
 
 		#endregion
 
@@ -187,13 +66,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="index">object index</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.PowerPointApi.Shape this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "Item", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, index);
-			}
-		}
+		NetOffice.PowerPointApi.Shape this[object index] { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -204,10 +77,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddCallout", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
-		}
+		NetOffice.PowerPointApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -218,20 +88,14 @@ namespace NetOffice.PowerPointApi
 		/// <param name="endX">Single endX</param>
 		/// <param name="endY">Single endY</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddConnector", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ type, beginX, beginY, endX, endY });
-		}
+		NetOffice.PowerPointApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddCurve(object safeArrayOfPoints)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddCurve", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, safeArrayOfPoints);
-		}
+		NetOffice.PowerPointApi.Shape AddCurve(object safeArrayOfPoints);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -242,10 +106,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddLabel", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ orientation, left, top, width, height });
-		}
+		NetOffice.PowerPointApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -255,10 +116,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="endX">Single endX</param>
 		/// <param name="endY">Single endY</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddLine", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, beginX, beginY, endX, endY);
-		}
+		NetOffice.PowerPointApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -271,10 +129,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddPicture", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top, width, height });
-		}
+		NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -286,10 +141,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">Single top</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddPicture", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top });
-		}
+		NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -302,20 +154,14 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddPicture", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top, width });
-		}
+		NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddPolyline(object safeArrayOfPoints)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddPolyline", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, safeArrayOfPoints);
-		}
+		NetOffice.PowerPointApi.Shape AddPolyline(object safeArrayOfPoints);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -326,10 +172,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddShape", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
-		}
+		NetOffice.PowerPointApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -343,10 +186,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">Single left</param>
 		/// <param name="top">Single top</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddTextEffect", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
-		}
+		NetOffice.PowerPointApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -357,10 +197,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">Single width</param>
 		/// <param name="height">Single height</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "AddTextbox", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType, new object[]{ orientation, left, top, width, height });
-		}
+		NetOffice.PowerPointApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
@@ -369,74 +206,21 @@ namespace NetOffice.PowerPointApi
 		/// <param name="x1">Single x1</param>
 		/// <param name="y1">Single y1</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.FreeformBuilder>(this, "BuildFreeform", NetOffice.PowerPointApi.FreeformBuilder.LateBindingApiWrapperType, editingType, x1, y1);
-		}
+		NetOffice.PowerPointApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.ShapeRange Range(object index)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.ShapeRange>(this, "Range", NetOffice.PowerPointApi.ShapeRange.LateBindingApiWrapperType, index);
-		}
+		NetOffice.PowerPointApi.ShapeRange Range(object index);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public void SelectAll()
-		{
-			 Factory.ExecuteMethod(this, "SelectAll");
-		}
-
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.PowerPointApi.Shape>
-
-        ICOMObject IEnumerableProvider<NetOffice.PowerPointApi.Shape>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<NetOffice.PowerPointApi.Shape>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.PowerPointApi.Shape>
-
-        /// <summary>
-        /// SupportByVersion PowerPoint, 10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
-        public IEnumerator<NetOffice.PowerPointApi.Shape> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.PowerPointApi.Shape item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion PowerPoint, 10,11,12,14,15,16
-        /// </summary>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
-		}
+		void SelectAll();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

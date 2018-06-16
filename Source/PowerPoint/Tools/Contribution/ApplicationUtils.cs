@@ -186,8 +186,8 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
             PowerPointApi.Application app = null;
             try
             {
-                Core core = new Core();
-                app = new Application(core, null, applicationProxy);
+                Core core = new Core();               
+                app = COMObject.Create<PowerPointApi.Application>(core, null, applicationProxy);
                 int result = app.VBE.MainWindow.HWnd;
                 return result;
             }

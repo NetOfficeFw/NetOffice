@@ -295,6 +295,13 @@ namespace NetOffice.PowerPointApi.Tools
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="application"></param>
+        /// <param name="ConnectMode"></param>
+        /// <param name="AddInInst"></param>
+        /// <param name="custom"></param>
         void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -305,8 +312,8 @@ namespace NetOffice.PowerPointApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);                    
                 }
-
-                this.Application = new PowerPoint.Application(Factory, null, application);
+                
+                this.Application = COMObject.Create<PowerPoint.Application>(Factory, null, application);
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);

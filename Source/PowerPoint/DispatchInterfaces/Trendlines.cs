@@ -15,100 +15,9 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745537.aspx </remarks>
 	[SupportByVersion("PowerPoint", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
-	public class Trendlines : COMObject, IEnumerableProvider<NetOffice.PowerPointApi.Trendline>
+	[TypeId("92D41A7A-F07E-4CA4-AF6F-BEF486AA4E6F")]
+	public interface Trendlines : ICOMObject, IEnumerableProvider<NetOffice.PowerPointApi.Trendline>
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Trendlines);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Trendlines(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Trendlines(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Trendlines(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Trendlines(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Trendlines(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Trendlines(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Trendlines() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Trendlines(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -118,13 +27,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746317.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -132,13 +35,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746544.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+		Int32 Count { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -146,13 +43,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745141.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+		Int32 Creator { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -160,13 +51,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744597.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PowerPointApi.Application Application { get; }
 
 		#endregion
 
@@ -186,10 +71,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayRSquared">optional object displayRSquared</param>
 		/// <param name="name">optional object name</param>
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -197,10 +79,7 @@ namespace NetOffice.PowerPointApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746402.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType);
-		}
+		NetOffice.PowerPointApi.Trendline Add();
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -209,10 +88,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, type);
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -222,10 +98,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="order">optional object order</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, type, order);
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type, object order);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -236,10 +109,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="period">optional object period</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, type, order, period);
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type, object order, object period);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -251,10 +121,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="forward">optional object forward</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, type, order, period, forward);
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -267,10 +134,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="backward">optional object backward</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward });
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -284,10 +148,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="intercept">optional object intercept</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept });
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -302,10 +163,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayEquation">optional object displayEquation</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation });
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -321,10 +179,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayRSquared">optional object displayRSquared</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "Add", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
-		}
+		NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared);
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
@@ -332,58 +187,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="index">optional object index</param>
 		[SupportByVersion("PowerPoint", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.PowerPointApi.Trendline this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Trendline>(this, "_Default", NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType, index);
-			}
-		}
-
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.PowerPointApi.Trendline>
-
-        ICOMObject IEnumerableProvider<NetOffice.PowerPointApi.Trendline>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<NetOffice.PowerPointApi.Trendline>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.PowerPointApi.Trendline>
-
-        /// <summary>
-        /// SupportByVersion PowerPoint, 14,15,16
-        /// </summary>
-        [SupportByVersion("PowerPoint", 14, 15, 16)]
-        public IEnumerator<NetOffice.PowerPointApi.Trendline> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.PowerPointApi.Trendline item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion PowerPoint, 14,15,16
-        /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
-		}
+		NetOffice.PowerPointApi.Trendline this[object index] { get; }
 
 		#endregion
-
-		#pragma warning restore
 	}
 }
