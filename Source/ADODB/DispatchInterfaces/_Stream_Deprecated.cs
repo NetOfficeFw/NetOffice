@@ -11,100 +11,9 @@ namespace NetOffice.ADODBApi
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class _Stream_Deprecated : COMObject
+	[TypeId("00000565-0000-0010-8000-00AA006D2EA4")]
+	public interface _Stream_Deprecated : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_Stream_Deprecated);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _Stream_Deprecated(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _Stream_Deprecated(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Stream_Deprecated(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Stream_Deprecated(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Stream_Deprecated(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Stream_Deprecated(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Stream_Deprecated() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Stream_Deprecated(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,124 +21,56 @@ namespace NetOffice.ADODBApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public Int32 Size
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Size");
-			}
-		}
+		Int32 Size { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public bool EOS
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "EOS");
-			}
-		}
+		bool EOS { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public Int32 Position
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Position");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Position", value);
-			}
-		}
+		Int32 Position { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public NetOffice.ADODBApi.Enums.StreamTypeEnum Type
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.StreamTypeEnum>(this, "Type");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Type", value);
-			}
-		}
+		NetOffice.ADODBApi.Enums.StreamTypeEnum Type { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public NetOffice.ADODBApi.Enums.LineSeparatorEnum LineSeparator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.LineSeparatorEnum>(this, "LineSeparator");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "LineSeparator", value);
-			}
-		}
+		NetOffice.ADODBApi.Enums.LineSeparatorEnum LineSeparator { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public NetOffice.ADODBApi.Enums.ObjectStateEnum State
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.ObjectStateEnum>(this, "State");
-			}
-		}
+		NetOffice.ADODBApi.Enums.ObjectStateEnum State { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.ConnectModeEnum>(this, "Mode");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Mode", value);
-			}
-		}
+		NetOffice.ADODBApi.Enums.ConnectModeEnum Mode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public string Charset
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Charset");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Charset", value);
-			}
-		}
+		string Charset { get; set; }
 
 		#endregion
 
@@ -240,20 +81,14 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="numBytes">optional Int32 NumBytes = -1</param>
 		[SupportByVersion("ADODB", 2.5)]
-		public object Read(object numBytes)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Read", numBytes);
-		}
+		object Read(object numBytes);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public object Read()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Read");
-		}
+		object Read();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -264,20 +99,14 @@ namespace NetOffice.ADODBApi
 		/// <param name="userName">optional string UserName = </param>
 		/// <param name="password">optional string Password = </param>
 		[SupportByVersion("ADODB", 2.5)]
-		public void Open(object source, object mode, object options, object userName, object password)
-		{
-			 Factory.ExecuteMethod(this, "Open", new object[]{ source, mode, options, userName, password });
-		}
+		void Open(object source, object mode, object options, object userName, object password);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public void Open()
-		{
-			 Factory.ExecuteMethod(this, "Open");
-		}
+		void Open();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -285,10 +114,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="source">optional object source</param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public void Open(object source)
-		{
-			 Factory.ExecuteMethod(this, "Open", source);
-		}
+		void Open(object source);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -297,10 +123,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public void Open(object source, object mode)
-		{
-			 Factory.ExecuteMethod(this, "Open", source, mode);
-		}
+		void Open(object source, object mode);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -310,10 +133,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum Options = -1</param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public void Open(object source, object mode, object options)
-		{
-			 Factory.ExecuteMethod(this, "Open", source, mode, options);
-		}
+		void Open(object source, object mode, object options);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -324,47 +144,32 @@ namespace NetOffice.ADODBApi
 		/// <param name="userName">optional string UserName = </param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public void Open(object source, object mode, object options, object userName)
-		{
-			 Factory.ExecuteMethod(this, "Open", source, mode, options, userName);
-		}
+		void Open(object source, object mode, object options, object userName);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public void Close()
-		{
-			 Factory.ExecuteMethod(this, "Close");
-		}
+		void Close();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public void SkipLine()
-		{
-			 Factory.ExecuteMethod(this, "SkipLine");
-		}
+		void SkipLine();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="buffer">object buffer</param>
 		[SupportByVersion("ADODB", 2.5)]
-		public void Write(object buffer)
-		{
-			 Factory.ExecuteMethod(this, "Write", buffer);
-		}
+		void Write(object buffer);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public void SetEOS()
-		{
-			 Factory.ExecuteMethod(this, "SetEOS");
-		}
+		void SetEOS();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -372,10 +177,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="destStream">NetOffice.ADODBApi._Stream_Deprecated destStream</param>
 		/// <param name="charNumber">optional Int32 CharNumber = -1</param>
 		[SupportByVersion("ADODB", 2.5)]
-		public void CopyTo(NetOffice.ADODBApi._Stream_Deprecated destStream, object charNumber)
-		{
-			 Factory.ExecuteMethod(this, "CopyTo", destStream, charNumber);
-		}
+		void CopyTo(NetOffice.ADODBApi._Stream_Deprecated destStream, object charNumber);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -383,19 +185,13 @@ namespace NetOffice.ADODBApi
 		/// <param name="destStream">NetOffice.ADODBApi._Stream_Deprecated destStream</param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public void CopyTo(NetOffice.ADODBApi._Stream_Deprecated destStream)
-		{
-			 Factory.ExecuteMethod(this, "CopyTo", destStream);
-		}
+		void CopyTo(NetOffice.ADODBApi._Stream_Deprecated destStream);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public void Flush()
-		{
-			 Factory.ExecuteMethod(this, "Flush");
-		}
+		void Flush();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -403,10 +199,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="fileName">string fileName</param>
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.SaveOptionsEnum Options = 1</param>
 		[SupportByVersion("ADODB", 2.5)]
-		public void SaveToFile(string fileName, object options)
-		{
-			 Factory.ExecuteMethod(this, "SaveToFile", fileName, options);
-		}
+		void SaveToFile(string fileName, object options);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -414,40 +207,28 @@ namespace NetOffice.ADODBApi
 		/// <param name="fileName">string fileName</param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public void SaveToFile(string fileName)
-		{
-			 Factory.ExecuteMethod(this, "SaveToFile", fileName);
-		}
+		void SaveToFile(string fileName);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="fileName">string fileName</param>
 		[SupportByVersion("ADODB", 2.5)]
-		public void LoadFromFile(string fileName)
-		{
-			 Factory.ExecuteMethod(this, "LoadFromFile", fileName);
-		}
+		void LoadFromFile(string fileName);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="numChars">optional Int32 NumChars = -1</param>
 		[SupportByVersion("ADODB", 2.5)]
-		public string ReadText(object numChars)
-		{
-			return Factory.ExecuteStringMethodGet(this, "ReadText", numChars);
-		}
+		string ReadText(object numChars);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public string ReadText()
-		{
-			return Factory.ExecuteStringMethodGet(this, "ReadText");
-		}
+		string ReadText();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -455,10 +236,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="data">string data</param>
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.StreamWriteEnum Options = 0</param>
 		[SupportByVersion("ADODB", 2.5)]
-		public void WriteText(string data, object options)
-		{
-			 Factory.ExecuteMethod(this, "WriteText", data, options);
-		}
+		void WriteText(string data, object options);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
@@ -466,22 +244,14 @@ namespace NetOffice.ADODBApi
 		/// <param name="data">string data</param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.5)]
-		public void WriteText(string data)
-		{
-			 Factory.ExecuteMethod(this, "WriteText", data);
-		}
+		void WriteText(string data);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.5)]
-		public void Cancel()
-		{
-			 Factory.ExecuteMethod(this, "Cancel");
-		}
+		void Cancel();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

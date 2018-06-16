@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,9 @@ namespace NetOffice.ADODBApi
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class Connection15 : _ADO
+	[TypeId("00000515-0000-0010-8000-00AA006D2EA4")]
+	public interface Connection15 : _ADO
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Connection15);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Connection15(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Connection15(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Connection15(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Connection15(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Connection15(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Connection15(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Connection15() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Connection15(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,192 +21,84 @@ namespace NetOffice.ADODBApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public string ConnectionString
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ConnectionString");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ConnectionString", value);
-			}
-		}
+		string ConnectionString { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 CommandTimeout
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "CommandTimeout");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "CommandTimeout", value);
-			}
-		}
+		Int32 CommandTimeout { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 ConnectionTimeout
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ConnectionTimeout");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ConnectionTimeout", value);
-			}
-		}
+		Int32 ConnectionTimeout { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public string Version
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Version");
-			}
-		}
+		string Version { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi.Errors Errors
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Errors>(this, "Errors", NetOffice.ADODBApi.Errors.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.ADODBApi.Errors Errors { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public string DefaultDatabase
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "DefaultDatabase");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DefaultDatabase", value);
-			}
-		}
+		string DefaultDatabase { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi.Enums.IsolationLevelEnum IsolationLevel
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.IsolationLevelEnum>(this, "IsolationLevel");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "IsolationLevel", value);
-			}
-		}
+		NetOffice.ADODBApi.Enums.IsolationLevelEnum IsolationLevel { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 Attributes
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Attributes");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Attributes", value);
-			}
-		}
+		Int32 Attributes { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi.Enums.CursorLocationEnum CursorLocation
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.CursorLocationEnum>(this, "CursorLocation");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "CursorLocation", value);
-			}
-		}
+		NetOffice.ADODBApi.Enums.CursorLocationEnum CursorLocation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.ConnectModeEnum>(this, "Mode");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Mode", value);
-			}
-		}
+		NetOffice.ADODBApi.Enums.ConnectModeEnum Mode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public string Provider
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Provider");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Provider", value);
-			}
-		}
+		string Provider { get; set; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 State
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "State");
-			}
-		}
+		Int32 State { get; }
 
 		#endregion
 
@@ -307,10 +108,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void Close()
-		{
-			 Factory.ExecuteMethod(this, "Close");
-		}
+		void Close();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -320,10 +118,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		[BaseResult]
-		public NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected, object options)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", commandText, recordsAffected, options);
-		}
+		NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected, object options);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -333,37 +128,25 @@ namespace NetOffice.ADODBApi
 		[CustomMethod]
 		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", commandText, recordsAffected);
-		}
+		NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 BeginTrans()
-		{
-			return Factory.ExecuteInt32MethodGet(this, "BeginTrans");
-		}
+		Int32 BeginTrans();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void CommitTrans()
-		{
-			 Factory.ExecuteMethod(this, "CommitTrans");
-		}
+		void CommitTrans();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void RollbackTrans()
-		{
-			 Factory.ExecuteMethod(this, "RollbackTrans");
-		}
+		void RollbackTrans();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -373,20 +156,14 @@ namespace NetOffice.ADODBApi
 		/// <param name="password">optional string Password = </param>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void Open(object connectionString, object userID, object password, object options)
-		{
-			 Factory.ExecuteMethod(this, "Open", connectionString, userID, password, options);
-		}
+		void Open(object connectionString, object userID, object password, object options);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void Open()
-		{
-			 Factory.ExecuteMethod(this, "Open");
-		}
+		void Open();
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -394,10 +171,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void Open(object connectionString)
-		{
-			 Factory.ExecuteMethod(this, "Open", connectionString);
-		}
+		void Open(object connectionString);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -406,10 +180,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="userID">optional string UserID = </param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void Open(object connectionString, object userID)
-		{
-			 Factory.ExecuteMethod(this, "Open", connectionString, userID);
-		}
+		void Open(object connectionString, object userID);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -419,10 +190,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="password">optional string Password = </param>
 		[CustomMethod]
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void Open(object connectionString, object userID, object password)
-		{
-			 Factory.ExecuteMethod(this, "Open", connectionString, userID, password);
-		}
+		void Open(object connectionString, object userID, object password);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -432,10 +200,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="schemaID">optional object schemaID</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		[BaseResult]
-		public NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions, object schemaID)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", schema, restrictions, schemaID);
-		}
+		NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions, object schemaID);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -444,10 +209,7 @@ namespace NetOffice.ADODBApi
 		[CustomMethod]
 		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", schema);
-		}
+		NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema);
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
@@ -457,13 +219,8 @@ namespace NetOffice.ADODBApi
 		[CustomMethod]
 		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", schema, restrictions);
-		}
+		NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

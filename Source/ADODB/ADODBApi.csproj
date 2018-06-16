@@ -41,7 +41,72 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Utils\ProjectInfo.cs" />
+    <Compile Include="Behind\Classes\Command.cs" />
+    <Compile Include="Behind\Classes\Connection.cs" />
+    <Compile Include="Behind\Classes\Parameter.cs" />
+    <Compile Include="Behind\Classes\Record.cs" />
+    <Compile Include="Behind\Classes\Recordset.cs" />
+    <Compile Include="Behind\Classes\Stream.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Command15.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Command15_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Connection15.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Connection15_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\ConnectionEvents_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Error.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Errors.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Field.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Field15.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Field15_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Field20.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Field20_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Fields.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Fields15.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Fields15_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Fields20.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Fields20_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Fields_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Field_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IRecFields.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Parameters.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Parameters_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Properties.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Property.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Recordset15.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Recordset15_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Recordset20.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Recordset20_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Recordset21.cs" />
+    <Compile Include="Behind\DispatchInterfaces\Recordset21_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\RecordsetEvents_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_ADO.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Collection.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Command.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Command_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Connection.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Connection_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_DynaCollection.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Parameter.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Parameter_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Record.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Recordset.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Recordset_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Record_Deprecated.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Stream.cs" />
+    <Compile Include="Behind\DispatchInterfaces\_Stream_Deprecated.cs" />
+    <Compile Include="Behind\Events\ConnectionEvents.cs" />
+    <Compile Include="Behind\Events\RecordsetEvents.cs" />
+    <Compile Include="Behind\Interfaces\ADOCommandConstruction.cs" />
+    <Compile Include="Behind\Interfaces\ADOConnectionConstruction.cs" />
+    <Compile Include="Behind\Interfaces\ADOConnectionConstruction15.cs" />
+    <Compile Include="Behind\Interfaces\ADORecordConstruction.cs" />
+    <Compile Include="Behind\Interfaces\ADORecordsetConstruction.cs" />
+    <Compile Include="Behind\Interfaces\ADORecordsetConstruction_Deprecated.cs" />
+    <Compile Include="Behind\Interfaces\ADOStreamConstruction.cs" />
+    <Compile Include="Behind\Interfaces\ConnectionEventsVt.cs" />
+    <Compile Include="Behind\Interfaces\ConnectionEventsVt_Deprecated.cs" />
+    <Compile Include="Behind\Interfaces\RecordsetEventsVt.cs" />
+    <Compile Include="Behind\Interfaces\RecordsetEventsVt_Deprecated.cs" />
+    <Compile Include="Tools\Expose\TypeFactory.cs" />
     <Compile Include="Enums\CursorTypeEnum.cs" />
     <Compile Include="Enums\CursorOptionEnum.cs" />
     <Compile Include="Enums\LockTypeEnum.cs" />
@@ -180,6 +245,7 @@
   <ItemGroup>
     <None Include="ADODBApi_v4.0.snk" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

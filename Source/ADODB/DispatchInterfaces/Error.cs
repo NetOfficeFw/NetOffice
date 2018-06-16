@@ -11,100 +11,9 @@ namespace NetOffice.ADODBApi
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Error : COMObject
+	[TypeId("00000500-0000-0010-8000-00AA006D2EA4")]
+	public interface Error : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Error);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Error(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Error(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Error(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Error(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Error(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Error(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Error() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Error(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,98 +21,51 @@ namespace NetOffice.ADODBApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 Number
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Number");
-			}
-		}
+		Int32 Number { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public string Source
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Source");
-			}
-		}
+		string Source { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public string Description
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Description");
-			}
-		}
+		string Description { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public string HelpFile
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "HelpFile");
-			}
-		}
+		string HelpFile { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 HelpContext
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "HelpContext");
-			}
-		}
+		Int32 HelpContext { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public string SQLState
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "SQLState");
-			}
-		}
+		string SQLState { get; }
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 NativeError
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "NativeError");
-			}
-		}
+		Int32 NativeError { get; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }
