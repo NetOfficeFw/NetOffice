@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.MSComctlLibApi
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IListView : COMObject
+	[TypeId("BDD1F049-858B-11D1-B16A-00C0F0283628")]
+    [CoClassSource(typeof(NetOffice.MSComctlLibApi.ListView))]
+    public interface IListView : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IListView);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IListView(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IListView(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IListView(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IListView(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IListView(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IListView(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IListView() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IListView(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,17 +22,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ListArrangeConstants Arrange
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ListArrangeConstants>(this, "Arrange");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Arrange", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ListArrangeConstants Arrange { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -130,17 +30,7 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
 		[BaseResult]
-		public NetOffice.MSComctlLibApi.IColumnHeaders ColumnHeaders
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IColumnHeaders>(this, "ColumnHeaders");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "ColumnHeaders", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.IColumnHeaders ColumnHeaders { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -149,51 +39,21 @@ namespace NetOffice.MSComctlLibApi
 		[SupportByVersion("MSComctlLib", 6)]
 		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSComctlLibApi.IListItem DropHighlight
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IListItem>(this, "DropHighlight");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "DropHighlight", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.IListItem DropHighlight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool HideColumnHeaders
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HideColumnHeaders");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HideColumnHeaders", value);
-			}
-		}
+		bool HideColumnHeaders { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool HideSelection
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HideSelection");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HideSelection", value);
-			}
-		}
+		bool HideSelection { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -201,17 +61,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6), ProxyResult]
-		public object Icons
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Icons");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "Icons", value);
-			}
-		}
+		object Icons { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -220,105 +70,42 @@ namespace NetOffice.MSComctlLibApi
 		[SupportByVersion("MSComctlLib", 6)]
 		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSComctlLibApi.IListItems ListItems
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IListItems>(this, "ListItems");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "ListItems", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.IListItems ListItems { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ListLabelEditConstants LabelEdit
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ListLabelEditConstants>(this, "LabelEdit");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "LabelEdit", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ListLabelEditConstants LabelEdit { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool LabelWrap
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "LabelWrap");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "LabelWrap", value);
-			}
-		}
+		bool LabelWrap { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6), NativeResult]
-		public stdole.Picture MouseIcon
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-                return returnItem as stdole.Picture;
-            }
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MouseIcon", paramsArray);
-			}
-		}
+		stdole.Picture MouseIcon { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.MousePointerConstants>(this, "MousePointer");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MousePointer", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool MultiSelect
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "MultiSelect");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MultiSelect", value);
-			}
-		}
+		bool MultiSelect { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -327,17 +114,7 @@ namespace NetOffice.MSComctlLibApi
 		[SupportByVersion("MSComctlLib", 6)]
 		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSComctlLibApi.IListItem SelectedItem
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IListItem>(this, "SelectedItem");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "SelectedItem", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.IListItem SelectedItem { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -345,224 +122,91 @@ namespace NetOffice.MSComctlLibApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6), ProxyResult]
-		public object SmallIcons
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "SmallIcons");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "SmallIcons", value);
-			}
-		}
+		object SmallIcons { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool Sorted
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Sorted");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Sorted", value);
-			}
-		}
+		bool Sorted { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Int16 SortKey
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "SortKey");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SortKey", value);
-			}
-		}
+		Int16 SortKey { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ListSortOrderConstants SortOrder
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ListSortOrderConstants>(this, "SortOrder");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "SortOrder", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ListSortOrderConstants SortOrder { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ListViewConstants View
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ListViewConstants>(this, "View");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "View", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ListViewConstants View { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.OLEDragConstants OLEDragMode
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.OLEDragConstants>(this, "OLEDragMode");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "OLEDragMode", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.OLEDragConstants OLEDragMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.OLEDropConstants>(this, "OLEDropMode");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "OLEDropMode", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.AppearanceConstants Appearance
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.AppearanceConstants>(this, "Appearance");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Appearance", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.AppearanceConstants Appearance { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Int32 BackColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "BackColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BackColor", value);
-			}
-		}
+		Int32 BackColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.BorderStyleConstants>(this, "BorderStyle");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "BorderStyle", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6), NativeResult]
-		public stdole.Font Font
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-                return returnItem as stdole.Font;
-			}
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Font", paramsArray);
-			}
-		}
+		stdole.Font Font { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Int32 ForeColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ForeColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ForeColor", value);
-			}
-		}
+		Int32 ForeColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -570,173 +214,70 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 hWnd
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "hWnd");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "hWnd", value);
-			}
-		}
+		Int32 hWnd { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool AllowColumnReorder
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowColumnReorder");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AllowColumnReorder", value);
-			}
-		}
+		bool AllowColumnReorder { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool Checkboxes
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Checkboxes");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Checkboxes", value);
-			}
-		}
+		bool Checkboxes { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool FlatScrollBar
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "FlatScrollBar");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FlatScrollBar", value);
-			}
-		}
+		bool FlatScrollBar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool FullRowSelect
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "FullRowSelect");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FullRowSelect", value);
-			}
-		}
+		bool FullRowSelect { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool GridLines
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "GridLines");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "GridLines", value);
-			}
-		}
+		bool GridLines { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool HotTracking
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HotTracking");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HotTracking", value);
-			}
-		}
+		bool HotTracking { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool HoverSelection
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HoverSelection");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HoverSelection", value);
-			}
-		}
+		bool HoverSelection { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6), NativeResult]
-		public stdole.Picture Picture
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-                return returnItem as stdole.Picture;
-			}
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Picture", paramsArray);
-			}
-		}
+		stdole.Picture Picture { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants PictureAlignment
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants>(this, "PictureAlignment");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "PictureAlignment", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants PictureAlignment { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -744,34 +285,14 @@ namespace NetOffice.MSComctlLibApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6), ProxyResult]
-		public object ColumnHeaderIcons
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "ColumnHeaderIcons");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "ColumnHeaderIcons", value);
-			}
-		}
+		object ColumnHeaderIcons { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ListTextBackgroundConstants TextBackground
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ListTextBackgroundConstants>(this, "TextBackground");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "TextBackground", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ListTextBackgroundConstants TextBackground { get; set; }
 
 		#endregion
 
@@ -786,10 +307,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="fPartial">optional object fPartial</param>
 		[SupportByVersion("MSComctlLib", 6)]
 		[BaseResult]
-		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where, object index, object fPartial)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", sz, where, index, fPartial);
-		}
+		NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where, object index, object fPartial);
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -798,10 +316,7 @@ namespace NetOffice.MSComctlLibApi
 		[CustomMethod]
 		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", sz);
-		}
+		NetOffice.MSComctlLibApi.IListItem FindItem(string sz);
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -811,10 +326,7 @@ namespace NetOffice.MSComctlLibApi
 		[CustomMethod]
 		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", sz, where);
-		}
+		NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where);
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -825,20 +337,14 @@ namespace NetOffice.MSComctlLibApi
 		[CustomMethod]
 		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where, object index)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", sz, where, index);
-		}
+		NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where, object index);
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
 		[BaseResult]
-		public NetOffice.MSComctlLibApi.IListItem GetFirstVisible()
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "GetFirstVisible");
-		}
+		NetOffice.MSComctlLibApi.IListItem GetFirstVisible();
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -848,50 +354,33 @@ namespace NetOffice.MSComctlLibApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.IListItem HitTest(Single x, Single y)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "HitTest", x, y);
-		}
+		NetOffice.MSComctlLibApi.IListItem HitTest(Single x, Single y);
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public void StartLabelEdit()
-		{
-			 Factory.ExecuteMethod(this, "StartLabelEdit");
-		}
+		void StartLabelEdit();
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public void OLEDrag()
-		{
-			 Factory.ExecuteMethod(this, "OLEDrag");
-		}
+		void OLEDrag();
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
+		void Refresh();
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("MSComctlLib", 6)]
-		public void AboutBox()
-		{
-			 Factory.ExecuteMethod(this, "AboutBox");
-		}
+		void AboutBox();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

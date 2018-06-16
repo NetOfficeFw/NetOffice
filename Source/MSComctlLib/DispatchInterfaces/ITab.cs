@@ -11,100 +11,10 @@ namespace NetOffice.MSComctlLibApi
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class ITab : COMObject
+	[TypeId("1EFB6599-857C-11D1-B16A-00C0F0283628")]
+    [CoClassSource(typeof(NetOffice.MSComctlLibApi.Tab))]
+    public interface ITab : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ITab);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ITab(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ITab(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITab(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITab(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITab(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITab(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITab() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ITab(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,228 +22,93 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string _ObjectDefault
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_ObjectDefault");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "_ObjectDefault", value);
-			}
-		}
+		string _ObjectDefault { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string Caption
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Caption", value);
-			}
-		}
+		string Caption { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public object Tag
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Tag");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Tag", value);
-			}
-		}
+		object Tag { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Int16 Index
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Index");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Index", value);
-			}
-		}
+		Int16 Index { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string Key
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Key");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Key", value);
-			}
-		}
+		string Key { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string ToolTipText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ToolTipText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ToolTipText", value);
-			}
-		}
+		string ToolTipText { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Width
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Single Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Height
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Height");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
-			}
-		}
+		Single Height { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Top
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
+		Single Top { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Left
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
+		Single Left { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool Selected
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Selected");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Selected", value);
-			}
-		}
+		bool Selected { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public object Image
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Image");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Image", value);
-			}
-		}
+		object Image { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool HighLighted
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HighLighted");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HighLighted", value);
-			}
-		}
+		bool HighLighted { get; set; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

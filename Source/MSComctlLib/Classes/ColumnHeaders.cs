@@ -5,132 +5,15 @@ using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-	#region Delegates
+    /// <summary>
+    /// CoClass ColumnHeaders 
+    /// SupportByVersion MSComctlLib, 6
+    /// </summary>
+    [SupportByVersion("MSComctlLib", 6)]
+    [EntityType(EntityType.IsCoClass)]
+	[TypeId("0713E8C6-850A-101B-AFC0-4210102A8DA7")]
+    public interface ColumnHeaders : IColumnHeaders
+    {
 
-	#pragma warning disable
-	#pragma warning restore
-
-	#endregion
-
-	/// <summary>
-	/// CoClass ColumnHeaders 
-	/// SupportByVersion MSComctlLib, 6
-	/// </summary>
-	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsCoClass)]
- 	public class ColumnHeaders : IColumnHeaders
-	{
-		#pragma warning disable
-
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
-        private static Type _type;
-
-        #endregion
-
-        #region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        /// <summary>
-        /// Type Cache
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ColumnHeaders);
-                return _type;
-            }
-        }
-        
-        #endregion
-        		
-		#region Construction
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ColumnHeaders(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ColumnHeaders(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ColumnHeaders(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ColumnHeaders(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ColumnHeaders(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
-        /// Creates a new instance of ColumnHeaders 
-        /// </summary>		
-		public ColumnHeaders():base("MSComctlLib.ColumnHeaders")
-		{
-			
-		}
-		
-		/// <summary>
-        /// Creates a new instance of ColumnHeaders
-        /// </summary>
-        ///<param name="progId">registered ProgID</param>
-		public ColumnHeaders(string progId):base(progId)
-		{
-			
-		}
-
-		#endregion
-
-		#region Static CoClass Methods
-		#endregion
-
-		#region Events
-
-		#endregion
-       
-
-		#pragma warning restore
-	}
+    }  
 }
-

@@ -41,7 +41,80 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Utils\ProjectInfo.cs" />
+    <Compile Include="Behind\Classes\Button.cs" />
+    <Compile Include="Behind\Classes\ButtonMenu.cs" />
+    <Compile Include="Behind\Classes\ButtonMenus.cs" />
+    <Compile Include="Behind\Classes\Buttons.cs" />
+    <Compile Include="Behind\Classes\ColumnHeader.cs" />
+    <Compile Include="Behind\Classes\ColumnHeaders.cs" />
+    <Compile Include="Behind\Classes\ComboItem.cs" />
+    <Compile Include="Behind\Classes\ComboItems.cs" />
+    <Compile Include="Behind\Classes\Controls.cs" />
+    <Compile Include="Behind\Classes\DataObject.cs" />
+    <Compile Include="Behind\Classes\DataObjectFiles.cs" />
+    <Compile Include="Behind\Classes\ImageCombo.cs" />
+    <Compile Include="Behind\Classes\ImageList.cs" />
+    <Compile Include="Behind\Classes\ListImage.cs" />
+    <Compile Include="Behind\Classes\ListImages.cs" />
+    <Compile Include="Behind\Classes\ListItem.cs" />
+    <Compile Include="Behind\Classes\ListItems.cs" />
+    <Compile Include="Behind\Classes\ListSubItem.cs" />
+    <Compile Include="Behind\Classes\ListSubItems.cs" />
+    <Compile Include="Behind\Classes\ListView.cs" />
+    <Compile Include="Behind\Classes\Node.cs" />
+    <Compile Include="Behind\Classes\Nodes.cs" />
+    <Compile Include="Behind\Classes\Panel.cs" />
+    <Compile Include="Behind\Classes\Panels.cs" />
+    <Compile Include="Behind\Classes\ProgressBar.cs" />
+    <Compile Include="Behind\Classes\Slider.cs" />
+    <Compile Include="Behind\Classes\StatusBar.cs" />
+    <Compile Include="Behind\Classes\Tab.cs" />
+    <Compile Include="Behind\Classes\Tabs.cs" />
+    <Compile Include="Behind\Classes\TabStrip.cs" />
+    <Compile Include="Behind\Classes\Toolbar.cs" />
+    <Compile Include="Behind\Classes\TreeView.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IButton.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IButtonMenu.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IButtonMenus.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IButtons.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IColumnHeader.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IColumnHeaders.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IComboItem.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IComboItems.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IControls.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IImage.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IImageCombo.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IImageList.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IImages.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IListItem.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IListItems.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IListSubItem.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IListSubItems.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IListView.cs" />
+    <Compile Include="Behind\DispatchInterfaces\INode.cs" />
+    <Compile Include="Behind\DispatchInterfaces\INodes.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IPanel.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IPanels.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IProgressBar.cs" />
+    <Compile Include="Behind\DispatchInterfaces\ISlider.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IStatusBar.cs" />
+    <Compile Include="Behind\DispatchInterfaces\ITab.cs" />
+    <Compile Include="Behind\DispatchInterfaces\ITabs.cs" />
+    <Compile Include="Behind\DispatchInterfaces\ITabStrip.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IToolbar.cs" />
+    <Compile Include="Behind\DispatchInterfaces\ITreeView.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IVBDataObject.cs" />
+    <Compile Include="Behind\DispatchInterfaces\IVBDataObjectFiles.cs" />
+    <Compile Include="Behind\Events\DImageComboEvents.cs" />
+    <Compile Include="Behind\Events\ImageListEvents.cs" />
+    <Compile Include="Behind\Events\IProgressBarEvents.cs" />
+    <Compile Include="Behind\Events\ISliderEvents.cs" />
+    <Compile Include="Behind\Events\IStatusBarEvents.cs" />
+    <Compile Include="Behind\Events\ITabStripEvents.cs" />
+    <Compile Include="Behind\Events\IToolbarEvents.cs" />
+    <Compile Include="Behind\Events\ITreeViewEvents.cs" />
+    <Compile Include="Behind\Events\ListViewEvents.cs" />
+    <Compile Include="Tools\Expose\TypeFactory.cs" />
     <Compile Include="Enums\BorderStyleConstants.cs" />
     <Compile Include="Enums\MousePointerConstants.cs" />
     <Compile Include="Enums\AppearanceConstants.cs" />
@@ -177,6 +250,7 @@
   <ItemGroup>
     <None Include="MSComctlLibApi_v4.0.snk" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

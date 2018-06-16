@@ -11,100 +11,10 @@ namespace NetOffice.MSComctlLibApi
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IProgressBar : COMObject
+	[TypeId("35053A20-8589-11D1-B16A-00C0F0283628")]
+    [CoClassSource(typeof(NetOffice.MSComctlLibApi.ProgressBar))]
+    public interface IProgressBar : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IProgressBar);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IProgressBar(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IProgressBar(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IProgressBar(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IProgressBar(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IProgressBar(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IProgressBar(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IProgressBar() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IProgressBar(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,173 +22,70 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single ControlDefault
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "ControlDefault");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlDefault", value);
-			}
-		}
+		Single ControlDefault { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Max
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Max");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Max", value);
-			}
-		}
+		Single Max { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Min
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Min");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Min", value);
-			}
-		}
+		Single Min { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.MousePointerConstants>(this, "MousePointer");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MousePointer", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6), NativeResult]
-		public stdole.Picture MouseIcon
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-                return returnItem as stdole.Picture;
-            }
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MouseIcon", paramsArray);
-			}
-		}
+		stdole.Picture MouseIcon { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Value
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Value", value);
-			}
-		}
+		Single Value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.OLEDropConstants>(this, "OLEDropMode");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "OLEDropMode", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.AppearanceConstants Appearance
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.AppearanceConstants>(this, "Appearance");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Appearance", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.AppearanceConstants Appearance { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.BorderStyleConstants>(this, "BorderStyle");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "BorderStyle", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.BorderStyleConstants BorderStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -286,47 +93,21 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 hWnd
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "hWnd");
-			}
-		}
+		Int32 hWnd { get; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.OrientationConstants Orientation
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.OrientationConstants>(this, "Orientation");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Orientation", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.OrientationConstants Orientation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ScrollingConstants Scrolling
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ScrollingConstants>(this, "Scrolling");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Scrolling", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ScrollingConstants Scrolling { get; set; }
 
 		#endregion
 
@@ -336,32 +117,21 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public void OLEDrag()
-		{
-			 Factory.ExecuteMethod(this, "OLEDrag");
-		}
+		void OLEDrag();
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("MSComctlLib", 6)]
-		public void AboutBox()
-		{
-			 Factory.ExecuteMethod(this, "AboutBox");
-		}
+		void AboutBox();
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
+		void Refresh();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

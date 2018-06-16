@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.MSComctlLibApi
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IButton : COMObject
+	[TypeId("66833FE9-8583-11D1-B16A-00C0F0283628")]
+    [CoClassSource(typeof(NetOffice.MSComctlLibApi.Button))]
+	public interface IButton : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IButton);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IButton(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IButton(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IButton(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IButton(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IButton(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IButton(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IButton() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IButton(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,289 +22,119 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string _ObjectDefault
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_ObjectDefault");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "_ObjectDefault", value);
-			}
-		}
+		string _ObjectDefault { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string Caption
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Caption", value);
-			}
-		}
+		string Caption { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public object Tag
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Tag");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Tag", value);
-			}
-		}
+		object Tag { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Int16 Index
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Index");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Index", value);
-			}
-		}
+		Int16 Index { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string Key
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Key");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Key", value);
-			}
-		}
+		string Key { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string ToolTipText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ToolTipText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ToolTipText", value);
-			}
-		}
+		string ToolTipText { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool Visible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
-			}
-		}
+		bool Visible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Width
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Single Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Height
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Height");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
-			}
-		}
+		Single Height { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Top
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
+		Single Top { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public Single Left
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
+		Single Left { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ValueConstants Value
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ValueConstants>(this, "Value");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Value", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ValueConstants Value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants Style
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants>(this, "Style");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Style", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants Style { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public string Description
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Description");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Description", value);
-			}
-		}
+		string Description { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public object Image
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Image");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Image", value);
-			}
-		}
+		object Image { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
-		public bool MixedState
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "MixedState");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MixedState", value);
-			}
-		}
+		bool MixedState { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
@@ -402,24 +142,9 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
 		[BaseResult]
-		public NetOffice.MSComctlLibApi.IButtonMenus ButtonMenus
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IButtonMenus>(this, "ButtonMenus");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "ButtonMenus", value);
-			}
-		}
+		NetOffice.MSComctlLibApi.IButtonMenus ButtonMenus { get; set; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }
