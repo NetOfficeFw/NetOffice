@@ -14,100 +14,9 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class PivotMembers : COMObject, IEnumerableProvider<NetOffice.OWC10Api.PivotMember>
+	[TypeId("F5B39B32-1480-11D3-8549-00C04FAC67D7")]
+	public interface PivotMembers : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.PivotMember>
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(PivotMembers);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PivotMembers(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PivotMembers(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMembers(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMembers(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMembers(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMembers(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMembers() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMembers(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -118,75 +27,16 @@ namespace NetOffice.OWC10Api
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.OWC10Api.PivotMember this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.PivotMember>(this, "Item", index);
-			}
-		}
+		NetOffice.OWC10Api.PivotMember this[object index] { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
-
-        #endregion
-
-        #region Methods
-
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.OWC10Api.PivotMember>
-
-        ICOMObject IEnumerableProvider<NetOffice.OWC10Api.PivotMember>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<NetOffice.OWC10Api.PivotMember>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.OWC10Api.PivotMember>
-
-        /// <summary>
-        /// SupportByVersion OWC10, 1
-        /// </summary>
-        [SupportByVersion("OWC10", 1)]
-        public IEnumerator<NetOffice.OWC10Api.PivotMember> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OWC10Api.PivotMember item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion OWC10, 1
-        /// </summary>
-        [SupportByVersion("OWC10", 1)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
-		}
+		Int32 Count { get; }
 
 		#endregion
 
-		#pragma warning restore
 	}
 }

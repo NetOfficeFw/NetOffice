@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,9 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class PivotMember : COMObject
+	[TypeId("F5B39B33-1480-11D3-8549-00C04FAC67D7")]
+	public interface PivotMember : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(PivotMember);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PivotMember(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PivotMember(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMember(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMember(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMember(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMember(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMember() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotMember(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,26 +21,14 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotView View
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotView>(this, "View", NetOffice.OWC10Api.PivotView.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.PivotView View { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotMembers ChildMembers
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotMembers>(this, "ChildMembers", NetOffice.OWC10Api.PivotMembers.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.PivotMembers ChildMembers { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -139,13 +36,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api.PivotMember ParentMember
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.PivotMember>(this, "ParentMember");
-			}
-		}
+		NetOffice.OWC10Api.PivotMember ParentMember { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -155,10 +46,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="format">NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format</param>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OWC10Api.PivotMember get_FindMember(string path, NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format)
-		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotMember>(this, "FindMember", NetOffice.OWC10Api.PivotMember.LateBindingApiWrapperType, path, format);
-		}
+		NetOffice.OWC10Api.PivotMember get_FindMember(string path, NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -167,75 +55,42 @@ namespace NetOffice.OWC10Api
 		/// <param name="path">string path</param>
 		/// <param name="format">NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format</param>
 		[SupportByVersion("OWC10", 1), Redirect("get_FindMember")]
-		public NetOffice.OWC10Api.PivotMember FindMember(string path, NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format)
-		{
-			return get_FindMember(path, format);
-		}
+		NetOffice.OWC10Api.PivotMember FindMember(string path, NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string Caption
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
-			}
-		}
+		string Caption { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public object Value
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Value");
-			}
-		}
+		object Value { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string UniqueName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "UniqueName");
-			}
-		}
+		string UniqueName { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotField Field
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotField>(this, "Field", NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.PivotField Field { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -244,10 +99,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="format">NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format</param>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Path(NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format)
-		{
-			return Factory.ExecuteStringPropertyGet(this, "Path", format);
-		}
+		string get_Path(NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -255,56 +107,30 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="format">NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format</param>
 		[SupportByVersion("OWC10", 1), Redirect("get_Path")]
-		public string Path(NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format)
-		{
-			return get_Path(format);
-		}
+		string Path(NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public object TimeValue
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "TimeValue");
-			}
-		}
+		object TimeValue { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool IsValid
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsValid");
-			}
-		}
+		bool IsValid { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Enums.PivotMemberCustomGroupTypeEnum CustomGroupType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.PivotMemberCustomGroupTypeEnum>(this, "CustomGroupType");
-			}
-		}
+		NetOffice.OWC10Api.Enums.PivotMemberCustomGroupTypeEnum CustomGroupType { get; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

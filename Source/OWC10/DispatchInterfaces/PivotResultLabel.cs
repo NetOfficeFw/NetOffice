@@ -11,100 +11,9 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class PivotResultLabel : COMObject
+	[TypeId("D5A2B201-0334-11D3-8F39-00600893B533")]
+	public interface PivotResultLabel : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(PivotResultLabel);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PivotResultLabel(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PivotResultLabel(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotResultLabel(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotResultLabel(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotResultLabel(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotResultLabel(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotResultLabel() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotResultLabel(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,72 +21,37 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotLabel SourceLabel
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotLabel>(this, "SourceLabel", NetOffice.OWC10Api.PivotLabel.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.PivotLabel SourceLabel { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 Top
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Top");
-			}
-		}
+		Int32 Top { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 Left
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Left");
-			}
-		}
+		Int32 Left { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 Width
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Width");
-			}
-		}
+		Int32 Width { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 Height
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Height");
-			}
-		}
+		Int32 Height { get; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

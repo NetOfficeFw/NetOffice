@@ -124,7 +124,7 @@ namespace NetOffice
         /// Creates an instance of the class
         /// </summary>
         public Core()
-        {                      
+        {
             CoreDomain = new CurrentAppDomain(this);
             InternalObjectRegister = new CoreManagement(this);
             InternalObjectActivator = new CoreActivator(this);
@@ -144,7 +144,7 @@ namespace NetOffice
         /// <param name="isDefault">mark this instance as default instance</param>
         protected internal Core(bool isDefault)
         {
-            IsDefault = isDefault;          
+            IsDefault = isDefault;
             CoreDomain = new CurrentAppDomain(this);
             InternalObjectRegister = new CoreManagement(this);
             InternalObjectActivator = new CoreActivator(this);
@@ -252,7 +252,7 @@ namespace NetOffice
                 return _thisType;
             }
         }
-     
+
         /// <summary>
         /// COM Object Register Services
         /// </summary>
@@ -303,7 +303,7 @@ namespace NetOffice
                 return InternalObjectEvents;
             }
         }
-        
+
         /// <summary>
         /// Contains loaded factories
         /// </summary>
@@ -536,7 +536,7 @@ namespace NetOffice
             {
                 lock (_assembliesLock)
                 {
-                    InternalCache.Clear();                    
+                    InternalCache.Clear();
                     InternalFactories.Clear();
                     _initalized = false;
                 }
@@ -603,6 +603,27 @@ namespace NetOffice
                 Console.WriteException(throwedException);
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Creates a new ICOMObject based on classType of comProxy
+        /// </summary>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <exception cref="ArgumentNullException">one ore more arguments is null</exception>
+        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
+        /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
+        /// <exception cref="InvalidCastException">failed to convert result to type of t</exception>
+        public virtual T CreateObjectFromComProxy<T>(ICOMObject caller, object comProxy, bool allowDynamicObject) where T :class, ICOMObject
+        {
+            object result = CreateObjectFromComProxy(caller, comProxy, allowDynamicObject);
+            if (null != result)
+                return default(T);
+            else
+                return (T)result;
         }
 
         /// <summary>

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class ISpreadsheet : COMObject
+	[TypeId("F5B39A79-1480-11D3-8549-00C04FAC67D7")]
+    [CoClassSource(typeof(NetOffice.OWC10Api.Spreadsheet))]
+    public interface ISpreadsheet : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ISpreadsheet);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ISpreadsheet(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ISpreadsheet(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ISpreadsheet(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ISpreadsheet(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ISpreadsheet(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ISpreadsheet(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ISpreadsheet() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ISpreadsheet(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,69 +23,35 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api._Range ActiveCell
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "ActiveCell");
-			}
-		}
+		NetOffice.OWC10Api._Range ActiveCell { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Worksheet ActiveSheet
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Worksheet>(this, "ActiveSheet", NetOffice.OWC10Api.Worksheet.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Worksheet ActiveSheet { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Window ActiveWindow
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Window>(this, "ActiveWindow", NetOffice.OWC10Api.Window.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Window ActiveWindow { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Workbook ActiveWorkbook
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Workbook>(this, "ActiveWorkbook", NetOffice.OWC10Api.Workbook.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Workbook ActiveWorkbook { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool AllowPropertyToolbox
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowPropertyToolbox");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AllowPropertyToolbox", value);
-			}
-		}
+		bool AllowPropertyToolbox { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -183,116 +59,56 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api.ISpreadsheet Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.ISpreadsheet>(this, "Application");
-			}
-		}
+		NetOffice.OWC10Api.ISpreadsheet Application { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool AutoFit
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoFit");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AutoFit", value);
-			}
-		}
+		bool AutoFit { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 Build
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Build");
-			}
-		}
+		Int32 Build { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string BuildNumber
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "BuildNumber");
-			}
-		}
+		string BuildNumber { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Enums.XlCalculation Calculation
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.XlCalculation>(this, "Calculation");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Calculation", value);
-			}
-		}
+		NetOffice.OWC10Api.Enums.XlCalculation Calculation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 CalculationVersion
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "CalculationVersion");
-			}
-		}
+		Int32 CalculationVersion { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool CanUndo
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "CanUndo");
-			}
-		}
+		bool CanUndo { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string Caption
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Caption", value);
-			}
-		}
+		string Caption { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -300,13 +116,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api._Range Cells
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Cells");
-			}
-		}
+		NetOffice.OWC10Api._Range Cells { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -314,26 +124,14 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api._Range Columns
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Columns");
-			}
-		}
+		NetOffice.OWC10Api._Range Columns { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.OCCommands Commands
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.OCCommands>(this, "Commands", NetOffice.OWC10Api.OCCommands.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.OCCommands Commands { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -342,13 +140,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Constants
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Constants");
-			}
-		}
+		object Constants { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -356,98 +148,42 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string CSVData
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "CSVData");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "CSVData", value);
-			}
-		}
+		string CSVData { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string CSVURL
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "CSVURL");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "CSVURL", value);
-			}
-		}
+		string CSVURL { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string DataMember
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "DataMember");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DataMember", value);
-			}
-		}
+		string DataMember { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.MSDATASRCApi.DataSource DataSource
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSDATASRCApi.DataSource>(this, "DataSource", NetOffice.MSDATASRCApi.DataSource.LateBindingApiWrapperType);
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "DataSource", value);
-			}
-		}
+		NetOffice.MSDATASRCApi.DataSource DataSource { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string DataType
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "DataType");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DataType", value);
-			}
-		}
+		string DataType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool DesignMode
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DesignMode");
-			}
-		}
+		bool DesignMode { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -455,17 +191,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool Dirty
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Dirty");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Dirty", value);
-			}
-		}
+		bool Dirty { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -473,17 +199,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool DisplayBranding
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayBranding");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayBranding", value);
-			}
-		}
+		bool DisplayBranding { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -491,34 +207,14 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool DisplayColumnHeadings
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayColumnHeadings");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayColumnHeadings", value);
-			}
-		}
+		bool DisplayColumnHeadings { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool DisplayDesignTimeUI
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayDesignTimeUI");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayDesignTimeUI", value);
-			}
-		}
+		bool DisplayDesignTimeUI { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -526,17 +222,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool DisplayGridlines
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayGridlines");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayGridlines", value);
-			}
-		}
+		bool DisplayGridlines { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -544,51 +230,21 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool DisplayHorizontalScrollBar
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayHorizontalScrollBar");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayHorizontalScrollBar", value);
-			}
-		}
+		bool DisplayHorizontalScrollBar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool DisplayOfficeLogo
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayOfficeLogo");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayOfficeLogo", value);
-			}
-		}
+		bool DisplayOfficeLogo { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool DisplayPropertyToolbox
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayPropertyToolbox");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayPropertyToolbox", value);
-			}
-		}
+		bool DisplayPropertyToolbox { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -596,51 +252,21 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool DisplayRowHeadings
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayRowHeadings");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayRowHeadings", value);
-			}
-		}
+		bool DisplayRowHeadings { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool DisplayTitleBar
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayTitleBar");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayTitleBar", value);
-			}
-		}
+		bool DisplayTitleBar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool DisplayToolbar
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayToolbar");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayToolbar", value);
-			}
-		}
+		bool DisplayToolbar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -648,17 +274,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool DisplayVerticalScrollBar
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayVerticalScrollBar");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayVerticalScrollBar", value);
-			}
-		}
+		bool DisplayVerticalScrollBar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -666,34 +282,14 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool DisplayWorkbookTabs
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DisplayWorkbookTabs");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayWorkbookTabs", value);
-			}
-		}
+		bool DisplayWorkbookTabs { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool EnableEvents
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableEvents");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "EnableEvents", value);
-			}
-		}
+		bool EnableEvents { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -701,17 +297,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool EnableUndo
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableUndo");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "EnableUndo", value);
-			}
-		}
+		bool EnableUndo { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -719,34 +305,14 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string HTMLData
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "HTMLData");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HTMLData", value);
-			}
-		}
+		string HTMLData { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string HTMLURL
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "HTMLURL");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HTMLURL", value);
-			}
-		}
+		string HTMLURL { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -754,13 +320,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 InstanceID
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "InstanceID");
-			}
-		}
+		Int32 InstanceID { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -769,10 +329,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="index">object index</param>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object get_International(object index)
-		{
-			return Factory.ExecuteVariantPropertyGet(this, "International", index);
-		}
+		object get_International(object index);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -780,143 +337,70 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("OWC10", 1), Redirect("get_International")]
-		public object International(object index)
-		{
-			return get_International(index);
-		}
+		object International(object index);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.OWCLanguageSettings LanguageSettings
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.OWCLanguageSettings>(this, "LanguageSettings", NetOffice.OWC10Api.OWCLanguageSettings.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.OWCLanguageSettings LanguageSettings { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public object MaxHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "MaxHeight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "MaxHeight", value);
-			}
-		}
+		object MaxHeight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public object MaxWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "MaxWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "MaxWidth", value);
-			}
-		}
+		object MaxWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 MajorVersion
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MajorVersion");
-			}
-		}
+		Int32 MajorVersion { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string MinorVersion
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "MinorVersion");
-			}
-		}
+		string MinorVersion { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool MoveAfterReturn
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "MoveAfterReturn");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MoveAfterReturn", value);
-			}
-		}
+		bool MoveAfterReturn { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Enums.XlDirection MoveAfterReturnDirection
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.XlDirection>(this, "MoveAfterReturnDirection");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MoveAfterReturnDirection", value);
-			}
-		}
+		NetOffice.OWC10Api.Enums.XlDirection MoveAfterReturnDirection { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Names Names
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Names>(this, "Names", NetOffice.OWC10Api.Names.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Names Names { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -926,10 +410,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="cell2">optional object cell2</param>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OWC10Api._Range get_Range(object cell1, object cell2)
-		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Range", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, cell1, cell2);
-		}
+		NetOffice.OWC10Api._Range get_Range(object cell1, object cell2);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -938,10 +419,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="cell1">object cell1</param>
 		/// <param name="cell2">optional object cell2</param>
 		[SupportByVersion("OWC10", 1), Redirect("get_Range")]
-		public NetOffice.OWC10Api._Range Range(object cell1, object cell2)
-		{
-			return get_Range(cell1, cell2);
-		}
+		NetOffice.OWC10Api._Range Range(object cell1, object cell2);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -950,10 +428,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="cell1">object cell1</param>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OWC10Api._Range get_Range(object cell1)
-		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Range", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, cell1);
-		}
+		NetOffice.OWC10Api._Range get_Range(object cell1);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -961,40 +436,21 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="cell1">object cell1</param>
 		[SupportByVersion("OWC10", 1), Redirect("get_Range")]
-		public NetOffice.OWC10Api._Range Range(object cell1)
-		{
-			return get_Range(cell1);
-		}
+		NetOffice.OWC10Api._Range Range(object cell1);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string RevisionNumber
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "RevisionNumber");
-			}
-		}
+		string RevisionNumber { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool RightToLeft
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "RightToLeft");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RightToLeft", value);
-			}
-		}
+		bool RightToLeft { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1002,30 +458,14 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api._Range Rows
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Rows");
-			}
-		}
+		NetOffice.OWC10Api._Range Rows { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ScreenUpdating
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ScreenUpdating");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ScreenUpdating", value);
-			}
-		}
+		bool ScreenUpdating { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1033,39 +473,21 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api._Range Selection
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Selection");
-			}
-		}
+		NetOffice.OWC10Api._Range Selection { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Sheets Sheets
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Sheets>(this, "Sheets", NetOffice.OWC10Api.Sheets.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Sheets Sheets { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.TitleBar TitleBar
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.TitleBar>(this, "TitleBar", NetOffice.OWC10Api.TitleBar.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.TitleBar TitleBar { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1073,39 +495,21 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.MSComctlLibApi.IToolbar Toolbar
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IToolbar>(this, "Toolbar");
-			}
-		}
+		NetOffice.MSComctlLibApi.IToolbar Toolbar { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string Value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Value");
-			}
-		}
+		string Value { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string Version
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Version");
-			}
-		}
+		string Version { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1113,69 +517,35 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string ViewableRange
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ViewableRange");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ViewableRange", value);
-			}
-		}
+		string ViewableRange { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ViewOnlyMode
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ViewOnlyMode");
-			}
-		}
+		bool ViewOnlyMode { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Windows Windows
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Windows>(this, "Windows", NetOffice.OWC10Api.Windows.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Windows Windows { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Workbooks Workbooks
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Workbooks>(this, "Workbooks", NetOffice.OWC10Api.Workbooks.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Workbooks Workbooks { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Worksheets Worksheets
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Worksheets>(this, "Worksheets", NetOffice.OWC10Api.Worksheets.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Worksheets Worksheets { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1183,34 +553,14 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string XMLData
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "XMLData");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "XMLData", value);
-			}
-		}
+		string XMLData { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string XMLURL
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "XMLURL");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "XMLURL", value);
-			}
-		}
+		string XMLURL { get; set; }
 
 		#endregion
 
@@ -1221,57 +571,39 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="addIn">object addIn</param>
 		[SupportByVersion("OWC10", 1)]
-		public void AddIn(object addIn)
-		{
-			 Factory.ExecuteMethod(this, "AddIn", addIn);
-		}
+		void AddIn(object addIn);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void BeginUndo()
-		{
-			 Factory.ExecuteMethod(this, "BeginUndo");
-		}
+		void BeginUndo();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void Calculate()
-		{
-			 Factory.ExecuteMethod(this, "Calculate");
-		}
+		void Calculate();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void CalculateFull()
-		{
-			 Factory.ExecuteMethod(this, "CalculateFull");
-		}
+		void CalculateFull();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cancel">optional bool Cancel = false</param>
 		[SupportByVersion("OWC10", 1)]
-		public void EndUndo(object cancel)
-		{
-			 Factory.ExecuteMethod(this, "EndUndo", cancel);
-		}
+		void EndUndo(object cancel);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("OWC10", 1)]
-		public void EndUndo()
-		{
-			 Factory.ExecuteMethod(this, "EndUndo");
-		}
+		void EndUndo();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1279,20 +611,14 @@ namespace NetOffice.OWC10Api
 		/// <param name="expression">object expression</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("OWC10", 1)]
-		public object _Evaluate(object expression)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "_Evaluate", expression);
-		}
+		object _Evaluate(object expression);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		[SupportByVersion("OWC10", 1)]
-		public object Evaluate(object expression)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Evaluate", expression);
-		}
+		object Evaluate(object expression);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1301,20 +627,14 @@ namespace NetOffice.OWC10Api
 		/// <param name="action">optional NetOffice.OWC10Api.Enums.SheetExportActionEnum Action = 1</param>
 		/// <param name="format">optional NetOffice.OWC10Api.Enums.SheetExportFormat Format = 0</param>
 		[SupportByVersion("OWC10", 1)]
-		public void Export(object filename, object action, object format)
-		{
-			 Factory.ExecuteMethod(this, "Export", filename, action, format);
-		}
+		void Export(object filename, object action, object format);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("OWC10", 1)]
-		public void Export()
-		{
-			 Factory.ExecuteMethod(this, "Export");
-		}
+		void Export();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1322,10 +642,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filename">optional string Filename = </param>
 		[CustomMethod]
 		[SupportByVersion("OWC10", 1)]
-		public void Export(object filename)
-		{
-			 Factory.ExecuteMethod(this, "Export", filename);
-		}
+		void Export(object filename);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1334,20 +651,14 @@ namespace NetOffice.OWC10Api
 		/// <param name="action">optional NetOffice.OWC10Api.Enums.SheetExportActionEnum Action = 1</param>
 		[CustomMethod]
 		[SupportByVersion("OWC10", 1)]
-		public void Export(object filename, object action)
-		{
-			 Factory.ExecuteMethod(this, "Export", filename, action);
-		}
+		void Export(object filename, object action);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("OWC10", 1)]
-		public void LocateDataSource()
-		{
-			 Factory.ExecuteMethod(this, "LocateDataSource");
-		}
+		void LocateDataSource();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1355,10 +666,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="bstr">string bstr</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("OWC10", 1)]
-		public object msDataSourceObject(string bstr)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "msDataSourceObject", bstr);
-		}
+		object msDataSourceObject(string bstr);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1367,10 +675,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="range2">NetOffice.OWC10Api._Range range2</param>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api._Range RectIntersect(NetOffice.OWC10Api._Range range1, NetOffice.OWC10Api._Range range2)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "RectIntersect", range1, range2);
-		}
+		NetOffice.OWC10Api._Range RectIntersect(NetOffice.OWC10Api._Range range1, NetOffice.OWC10Api._Range range2);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1379,37 +684,25 @@ namespace NetOffice.OWC10Api
 		/// <param name="range2">NetOffice.OWC10Api._Range range2</param>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api._Range RectUnion(NetOffice.OWC10Api._Range range1, NetOffice.OWC10Api._Range range2)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "RectUnion", range1, range2);
-		}
+		NetOffice.OWC10Api._Range RectUnion(NetOffice.OWC10Api._Range range1, NetOffice.OWC10Api._Range range2);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
+		void Refresh();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void Repaint()
-		{
-			 Factory.ExecuteMethod(this, "Repaint");
-		}
+		void Repaint();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void ShowAbout()
-		{
-			 Factory.ExecuteMethod(this, "ShowAbout");
-		}
+		void ShowAbout();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -1418,41 +711,27 @@ namespace NetOffice.OWC10Api
 		/// <param name="y">Int32 y</param>
 		/// <param name="menu">object menu</param>
 		[SupportByVersion("OWC10", 1)]
-		public void ShowContextMenu(Int32 x, Int32 y, object menu)
-		{
-			 Factory.ExecuteMethod(this, "ShowContextMenu", x, y, menu);
-		}
+		void ShowContextMenu(Int32 x, Int32 y, object menu);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="topic">Int32 topic</param>
 		[SupportByVersion("OWC10", 1)]
-		public void ShowHelp(Int32 topic)
-		{
-			 Factory.ExecuteMethod(this, "ShowHelp", topic);
-		}
+		void ShowHelp(Int32 topic);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void Undo()
-		{
-			 Factory.ExecuteMethod(this, "Undo");
-		}
+		void Undo();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void UpdatePropertyToolbox()
-		{
-			 Factory.ExecuteMethod(this, "UpdatePropertyToolbox");
-		}
+		void UpdatePropertyToolbox();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

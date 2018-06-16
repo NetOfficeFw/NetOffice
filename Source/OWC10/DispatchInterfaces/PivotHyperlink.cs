@@ -11,100 +11,9 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class PivotHyperlink : COMObject
+	[TypeId("F5B39A9C-1480-11D3-8549-00C04FAC67D7")]
+	public interface PivotHyperlink : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(PivotHyperlink);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PivotHyperlink(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PivotHyperlink(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotHyperlink(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotHyperlink(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotHyperlink(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotHyperlink(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotHyperlink() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PivotHyperlink(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,64 +22,28 @@ namespace NetOffice.OWC10Api
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("OWC10", 1), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string Address
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Address");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Address", value);
-			}
-		}
+		string Address { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+		string Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string SubAddress
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "SubAddress");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SubAddress", value);
-			}
-		}
+		string SubAddress { get; set; }
 
 		#endregion
 
@@ -180,33 +53,22 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+		void Delete();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		[SupportByVersion("OWC10", 1)]
-		public void Follow(object newWindow)
-		{
-			 Factory.ExecuteMethod(this, "Follow", newWindow);
-		}
+		void Follow(object newWindow);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("OWC10", 1)]
-		public void Follow()
-		{
-			 Factory.ExecuteMethod(this, "Follow");
-		}
+		void Follow();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

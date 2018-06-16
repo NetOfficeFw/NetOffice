@@ -14,100 +14,9 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Workbooks : COMObject, IEnumerableProvider<NetOffice.OWC10Api.Workbook>
+	[TypeId("F5B39BA5-1480-11D3-8549-00C04FAC67D7")]
+	public interface Workbooks : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.Workbook>
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Workbooks);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Workbooks(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Workbooks(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workbooks(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -116,13 +25,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api.ISpreadsheet Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.ISpreadsheet>(this, "Application");
-			}
-		}
+		NetOffice.OWC10Api.ISpreadsheet Application { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -130,26 +33,14 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[BaseResult]
-		public NetOffice.OWC10Api.ISpreadsheet Parent
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.ISpreadsheet>(this, "Parent");
-			}
-		}
+		NetOffice.OWC10Api.ISpreadsheet Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+		Int32 Count { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -158,62 +49,9 @@ namespace NetOffice.OWC10Api
 		/// <param name="index">object index</param>
 		[SupportByVersion("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.OWC10Api.Workbook this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Workbook>(this, "Item", NetOffice.OWC10Api.Workbook.LateBindingApiWrapperType, index);
-			}
-		}
-
-        #endregion
-
-        #region Methods
-
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.OWC10Api.Workbook>
-
-        ICOMObject IEnumerableProvider<NetOffice.OWC10Api.Workbook>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<NetOffice.OWC10Api.Workbook>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, false);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.OWC10Api.Workbook>
-
-        /// <summary>
-        /// SupportByVersion OWC10, 1
-        /// </summary>
-        [SupportByVersion("OWC10", 1)]
-        public IEnumerator<NetOffice.OWC10Api.Workbook> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OWC10Api.Workbook item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion OWC10, 1
-        /// </summary>
-        [SupportByVersion("OWC10", 1)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
-		}
+		NetOffice.OWC10Api.Workbook this[object index] { get; }
 
 		#endregion
 
-		#pragma warning restore
 	}
 }

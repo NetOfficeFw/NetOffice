@@ -11,100 +11,10 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class INavigationControl : COMObject
+	[TypeId("F5B39AA8-1480-11D3-8549-00C04FAC67D7")]
+    [CoClassSource(typeof(NetOffice.OWC10Api.RecordNavigationControl))]
+    public interface INavigationControl : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(INavigationControl);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public INavigationControl(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public INavigationControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public INavigationControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public INavigationControl(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public INavigationControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public INavigationControl(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public INavigationControl() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public INavigationControl(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,306 +22,126 @@ namespace NetOffice.OWC10Api
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.MSDATASRCApi.DataSource DataSource
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSDATASRCApi.DataSource>(this, "DataSource", NetOffice.MSDATASRCApi.DataSource.LateBindingApiWrapperType);
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "DataSource", value);
-			}
-		}
+		NetOffice.MSDATASRCApi.DataSource DataSource { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string RecordSource
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "RecordSource");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RecordSource", value);
-			}
-		}
+		string RecordSource { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string RecordsetLabel
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "RecordsetLabel");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RecordsetLabel", value);
-			}
-		}
+		string RecordsetLabel { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowFirstButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowFirstButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowFirstButton", value);
-			}
-		}
+		bool ShowFirstButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowPrevButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowPrevButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowPrevButton", value);
-			}
-		}
+		bool ShowPrevButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowNextButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowNextButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowNextButton", value);
-			}
-		}
+		bool ShowNextButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowLastButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowLastButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowLastButton", value);
-			}
-		}
+		bool ShowLastButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowNewButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowNewButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowNewButton", value);
-			}
-		}
+		bool ShowNewButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowDelButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowDelButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowDelButton", value);
-			}
-		}
+		bool ShowDelButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowSaveButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowSaveButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowSaveButton", value);
-			}
-		}
+		bool ShowSaveButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowUndoButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowUndoButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowUndoButton", value);
-			}
-		}
+		bool ShowUndoButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowSortAscendingButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowSortAscendingButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowSortAscendingButton", value);
-			}
-		}
+		bool ShowSortAscendingButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowSortDescendingButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowSortDescendingButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowSortDescendingButton", value);
-			}
-		}
+		bool ShowSortDescendingButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowFilterBySelectionButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowFilterBySelectionButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowFilterBySelectionButton", value);
-			}
-		}
+		bool ShowFilterBySelectionButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowToggleFilterButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowToggleFilterButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowToggleFilterButton", value);
-			}
-		}
+		bool ShowToggleFilterButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowHelpButton
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowHelpButton");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowHelpButton", value);
-			}
-		}
+		bool ShowHelpButton { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool ShowLabel
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowLabel");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowLabel", value);
-			}
-		}
+		bool ShowLabel { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public string FontName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FontName");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FontName", value);
-			}
-		}
+		string FontName { get; set; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -419,17 +149,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string _State
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_State");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "_State", value);
-			}
-		}
+		string _State { get; set; }
 
 		#endregion
 
@@ -440,33 +160,22 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="navbtn">NetOffice.OWC10Api.Enums.NavButtonEnum navbtn</param>
 		[SupportByVersion("OWC10", 1)]
-		public bool IsButtonEnabled(NetOffice.OWC10Api.Enums.NavButtonEnum navbtn)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsButtonEnabled", navbtn);
-		}
+		bool IsButtonEnabled(NetOffice.OWC10Api.Enums.NavButtonEnum navbtn);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("OWC10", 1)]
-		public void Redraw()
-		{
-			 Factory.ExecuteMethod(this, "Redraw");
-		}
+		void Redraw();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("OWC10", 1)]
-		public void ReleaseDataPage()
-		{
-			 Factory.ExecuteMethod(this, "ReleaseDataPage");
-		}
+		void ReleaseDataPage();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

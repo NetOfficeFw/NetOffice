@@ -11,100 +11,9 @@ namespace NetOffice.OWC10Api
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Section : COMObject
+	[TypeId("F5B39A68-1480-11D3-8549-00C04FAC67D7")]
+	public interface Section : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Section);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Section(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Section(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Section(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Section(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Section(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Section(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Section() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Section(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,26 +21,14 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Enums.SectTypeEnum Type
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.SectTypeEnum>(this, "Type");
-			}
-		}
+		NetOffice.OWC10Api.Enums.SectTypeEnum Type { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.DataPage DataPage
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.DataPage>(this, "DataPage", NetOffice.OWC10Api.DataPage.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.DataPage DataPage { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
@@ -139,104 +36,56 @@ namespace NetOffice.OWC10Api
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("OWC10", 1), ProxyResult]
-		public object HTMLContainer
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "HTMLContainer");
-			}
-		}
+		object HTMLContainer { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Section ParentSection
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Section>(this, "ParentSection", NetOffice.OWC10Api.Section.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Section ParentSection { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Section ChildSection
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Section>(this, "ChildSection", NetOffice.OWC10Api.Section.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Section ChildSection { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Section NextSibling
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Section>(this, "NextSibling", NetOffice.OWC10Api.Section.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Section NextSibling { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Section PreviousSibling
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Section>(this, "PreviousSibling", NetOffice.OWC10Api.Section.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Section PreviousSibling { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Section NextSection
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Section>(this, "NextSection", NetOffice.OWC10Api.Section.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Section NextSection { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public NetOffice.OWC10Api.Section PreviousSection
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Section>(this, "PreviousSection", NetOffice.OWC10Api.Section.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OWC10Api.Section PreviousSection { get; }
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public bool IsExpanded
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsExpanded");
-			}
-		}
+		bool IsExpanded { get; }
 
 		#endregion
 
@@ -246,42 +95,28 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void Expand()
-		{
-			 Factory.ExecuteMethod(this, "Expand");
-		}
+		void Expand();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
-		public void Collapse()
-		{
-			 Factory.ExecuteMethod(this, "Collapse");
-		}
+		void Collapse();
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="scrollIntoView">optional bool ScrollIntoView = false</param>
 		[SupportByVersion("OWC10", 1)]
-		public void MakeCurrent(object scrollIntoView)
-		{
-			 Factory.ExecuteMethod(this, "MakeCurrent", scrollIntoView);
-		}
+		void MakeCurrent(object scrollIntoView);
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("OWC10", 1)]
-		public void MakeCurrent()
-		{
-			 Factory.ExecuteMethod(this, "MakeCurrent");
-		}
+		void MakeCurrent();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }
