@@ -21,7 +21,7 @@ namespace NetOffice.Attributes
         -- Here is a list of these rare types --
         ----------------------------------------------------------------------------
            - NetOffice.OutlookApi.MAPIFolder (DispatchInterface)
-
+           - NetOffice.DAOApi._DBEngine      (DispatchInterface)
 
         TODO: Update this comment before release NetOffice 2.0(stable)
     */

@@ -14,100 +14,9 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Workspaces : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi.Workspace>
+	[TypeId("0000003B-0000-0010-8000-00AA006D2EA4")]
+	public interface Workspaces : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi.Workspace>
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Workspaces);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Workspaces(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Workspaces(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workspaces(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workspaces(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workspaces(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workspaces(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workspaces() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Workspaces(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -115,13 +24,7 @@ namespace NetOffice.DAOApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("DAO", 3.6,12.0)]
-		public Int16 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Count");
-			}
-		}
+        new Int16 Count { get; }
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
@@ -130,13 +33,7 @@ namespace NetOffice.DAOApi
 		/// <param name="item">object item</param>
 		[SupportByVersion("DAO", 3.6,12.0)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.DAOApi.Workspace this[object item]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.Workspace>(this, "Item", NetOffice.DAOApi.Workspace.LateBindingApiWrapperType, item);
-			}
-		}
+		NetOffice.DAOApi.Workspace this[object item] { get; }
 
 		#endregion
 
@@ -146,55 +43,8 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[SupportByVersion("DAO", 3.6,12.0)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
-
-        #endregion
-
-        #region IEnumerableProvider<NetOffice.DAOApi.Workspace>
-
-        ICOMObject IEnumerableProvider<NetOffice.DAOApi.Workspace>.GetComObjectEnumerator(ICOMObject parent)
-        {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
-        }
-
-        IEnumerable IEnumerableProvider<NetOffice.DAOApi.Workspace>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
-        {
-            return NetOffice.Utils.FetchVariantComObjectEnumerator(parent, enumerator, true);
-        }
-
-        #endregion
-
-        #region IEnumerable<NetOffice.DAOApi.Workspace>
-
-        /// <summary>
-        /// SupportByVersion DAO, 3.6,12.0
-        /// </summary>
-        [SupportByVersion("DAO", 3.6, 12.0)]
-        public IEnumerator<NetOffice.DAOApi.Workspace> GetEnumerator()
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.DAOApi.Workspace item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-
-        #region IEnumerable
-
-        /// <summary>
-        /// SupportByVersion DAO, 3.6,12.0
-        /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
-		}
+        new void Refresh();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }
