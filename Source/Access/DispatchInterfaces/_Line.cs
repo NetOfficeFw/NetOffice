@@ -11,100 +11,10 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _Line : COMObject
+	[TypeId("3B06E94C-E47C-11CD-8701-00AA003F0F07")]
+    [CoClassSource(typeof(NetOffice.AccessApi.Line))]
+	public interface _Line : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_Line);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _Line(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _Line(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Line(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Line(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Line(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Line(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Line() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Line(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,13 +23,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834739.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(this, "Application", NetOffice.AccessApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.AccessApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -128,13 +32,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837030.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -142,13 +40,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836677.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.Properties Properties
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Properties>(this, "Properties", NetOffice.AccessApi.Properties.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.AccessApi.Properties Properties { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -156,17 +48,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834772.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string EventProcPrefix
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "EventProcPrefix");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "EventProcPrefix", value);
-			}
-		}
+		string EventProcPrefix { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -174,17 +56,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string _Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "_Name", value);
-			}
-		}
+		string _Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -192,17 +64,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834997.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte ControlType
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "ControlType");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlType", value);
-			}
-		}
+		byte ControlType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -210,17 +72,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192326.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool LineSlant
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "LineSlant");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "LineSlant", value);
-			}
-		}
+		bool LineSlant { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -228,17 +80,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821702.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool Visible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
-			}
-		}
+		bool Visible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -246,17 +88,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822093.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte DisplayWhen
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "DisplayWhen");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayWhen", value);
-			}
-		}
+		byte DisplayWhen { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -264,17 +96,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821076.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Left
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
+		Int16 Left { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -282,17 +104,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194321.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Top
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
+		Int16 Top { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -300,17 +112,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844753.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Width
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Int16 Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -318,17 +120,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193866.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Height
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Height");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
-			}
-		}
+		Int16 Height { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -336,17 +128,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192922.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte SpecialEffect
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "SpecialEffect");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SpecialEffect", value);
-			}
-		}
+		byte SpecialEffect { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -354,17 +136,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845801.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte BorderStyle
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "BorderStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BorderStyle", value);
-			}
-		}
+		byte BorderStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -372,17 +144,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845477.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte OldBorderStyle
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "OldBorderStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OldBorderStyle", value);
-			}
-		}
+		byte OldBorderStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -390,17 +152,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835077.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 BorderColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "BorderColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BorderColor", value);
-			}
-		}
+		Int32 BorderColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -408,17 +160,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844944.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte BorderWidth
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "BorderWidth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BorderWidth", value);
-			}
-		}
+		byte BorderWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -426,17 +168,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public byte BorderLineStyle
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "BorderLineStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BorderLineStyle", value);
-			}
-		}
+		byte BorderLineStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -444,17 +176,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835401.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Section
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Section");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Section", value);
-			}
-		}
+		Int16 Section { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -462,17 +184,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string ControlName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ControlName");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlName", value);
-			}
-		}
+		string ControlName { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -480,17 +192,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195249.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string Tag
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Tag");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Tag", value);
-			}
-		}
+		string Tag { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -498,17 +200,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822866.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool IsVisible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsVisible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IsVisible", value);
-			}
-		}
+		bool IsVisible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -517,17 +209,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836249.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool InSelection
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "InSelection");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "InSelection", value);
-			}
-		}
+		bool InSelection { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -535,17 +217,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844751.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+		string Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -553,17 +225,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836591.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.AccessApi.Enums.AcHorizontalAnchor>(this, "HorizontalAnchor");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "HorizontalAnchor", value);
-			}
-		}
+		NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -571,17 +233,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193979.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.AccessApi.Enums.AcVerticalAnchor>(this, "VerticalAnchor");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "VerticalAnchor", value);
-			}
-		}
+		NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -589,17 +241,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835339.aspx </remarks>
 		[SupportByVersion("Access", 14,15,16)]
-		public Int32 BorderThemeColorIndex
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "BorderThemeColorIndex");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BorderThemeColorIndex", value);
-			}
-		}
+		Int32 BorderThemeColorIndex { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -607,17 +249,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197402.aspx </remarks>
 		[SupportByVersion("Access", 14,15,16)]
-		public Single BorderTint
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "BorderTint");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BorderTint", value);
-			}
-		}
+		Single BorderTint { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -625,17 +257,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834810.aspx </remarks>
 		[SupportByVersion("Access", 14,15,16)]
-		public Single BorderShade
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "BorderShade");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BorderShade", value);
-			}
-		}
+		Single BorderShade { get; set; }
 
 		#endregion
 
@@ -646,10 +268,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836366.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SizeToFit()
-		{
-			 Factory.ExecuteMethod(this, "SizeToFit");
-		}
+		void SizeToFit();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -658,10 +277,7 @@ namespace NetOffice.AccessApi
 		/// <param name="ppsa">optional object[] ppsa</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public object _Evaluate(string bstrExpr, object[] ppsa)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "_Evaluate", bstrExpr, ppsa);
-		}
+		object _Evaluate(string bstrExpr, object[] ppsa);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -670,20 +286,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public object _Evaluate(string bstrExpr)
-		{
-            object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr);
-            object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
-            if ((null != returnItem) && (returnItem is MarshalByRefObject))
-            {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
-                return newObject;
-            }
-            else
-            {
-                return returnItem;
-            }
-        }
+		object _Evaluate(string bstrExpr);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -694,10 +297,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void Move(object left, object top, object width, object height)
-		{
-			 Factory.ExecuteMethod(this, "Move", left, top, width, height);
-		}
+		void Move(object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -706,10 +306,7 @@ namespace NetOffice.AccessApi
 		/// <param name="left">object left</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void Move(object left)
-		{
-			 Factory.ExecuteMethod(this, "Move", left);
-		}
+		void Move(object left);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -719,10 +316,7 @@ namespace NetOffice.AccessApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void Move(object left, object top)
-		{
-			 Factory.ExecuteMethod(this, "Move", left, top);
-		}
+		void Move(object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -733,10 +327,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void Move(object left, object top, object width)
-		{
-			 Factory.ExecuteMethod(this, "Move", left, top, width);
-		}
+		void Move(object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
@@ -744,13 +335,8 @@ namespace NetOffice.AccessApi
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 11,12,14,15,16)]
-		public bool IsMemberSafe(Int32 dispid)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
-		}
+		bool IsMemberSafe(Int32 dispid);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _DataAccessPage : COMObject
+	[TypeId("493D8A72-1DB1-11D1-98A2-006008197D41")]
+    [CoClassSource(typeof(NetOffice.AccessApi.DataAccessPage))]
+	public interface _DataAccessPage : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_DataAccessPage);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _DataAccessPage(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _DataAccessPage(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DataAccessPage(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DataAccessPage(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DataAccessPage(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DataAccessPage(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DataAccessPage() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _DataAccessPage(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,112 +23,56 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string _Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_Name");
-			}
-		}
+		string _Name { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool Visible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
-			}
-		}
+		bool Visible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string Tag
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Tag");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Tag", value);
-			}
-		}
+		string Tag { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 WindowWidth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "WindowWidth");
-			}
-		}
+		Int32 WindowWidth { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 WindowHeight
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "WindowHeight");
-			}
-		}
+		Int32 WindowHeight { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 CurrentView
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "CurrentView");
-			}
-		}
+		Int16 CurrentView { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(this, "Application", NetOffice.AccessApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.AccessApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -226,13 +80,7 @@ namespace NetOffice.AccessApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -240,43 +88,21 @@ namespace NetOffice.AccessApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
-		public object Document
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Document");
-			}
-		}
+		object Document { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.WebOptions WebOptions
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.WebOptions>(this, "WebOptions", NetOffice.AccessApi.WebOptions.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.AccessApi.WebOptions WebOptions { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string ConnectionString
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ConnectionString");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ConnectionString", value);
-			}
-		}
+		string ConnectionString { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -285,26 +111,14 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object FieldListConnection
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "FieldListConnection");
-			}
-		}
+		object FieldListConnection { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.MsoEnvelope MailEnvelope
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoEnvelope>(this, "MailEnvelope", NetOffice.OfficeApi.MsoEnvelope.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.OfficeApi.MsoEnvelope MailEnvelope { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -313,13 +127,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object CurrentSelection
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "CurrentSelection");
-			}
-		}
+		object CurrentSelection { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -327,30 +135,14 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.OWC10Api.IDataSourceControl MSODSC
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.IDataSourceControl>(this, "MSODSC");
-			}
-		}
+		NetOffice.OWC10Api.IDataSourceControl MSODSC { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public bool RemovePersonalInformation
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "RemovePersonalInformation");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RemovePersonalInformation", value);
-			}
-		}
+		bool RemovePersonalInformation { get; set; }
 
 		#endregion
 
@@ -361,10 +153,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="themeName">string themeName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void ApplyTheme(string themeName)
-		{
-			 Factory.ExecuteMethod(this, "ApplyTheme", themeName);
-		}
+		void ApplyTheme(string themeName);
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
@@ -372,13 +161,8 @@ namespace NetOffice.AccessApi
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 11,12,14,15,16)]
-		public bool IsMemberSafe(Int32 dispid)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
-		}
+		bool IsMemberSafe(Int32 dispid);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

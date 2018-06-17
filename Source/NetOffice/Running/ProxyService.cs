@@ -27,7 +27,7 @@ namespace NetOffice
         public static T GetActiveInstance<T>(bool throwExceptionIfNotFound = false) where T : class, ICOMObject
         {
             Type type = typeof(T);
-            var attribute = type.GetCustomAttribute<ComProgIdAttribute>();
+            var attribute = type.GetCustomAttribute<ComProgIdAttribute>(true);
             if (null == attribute)
                 throw new NetOfficeException("Missing ComProgIdAttribute.");
 
@@ -52,7 +52,7 @@ namespace NetOffice
         public static T GetActiveInstance<T>(Func<T, bool> predicate, bool throwExceptionIfNotFound = false) where T : class, ICOMObject
         {
             Type type = typeof(T);
-            var attribute = type.GetCustomAttribute<ComProgIdAttribute>();
+            var attribute = type.GetCustomAttribute<ComProgIdAttribute>(true);
             if (null == attribute)
                 throw new NetOfficeException("Missing ComProgIdAttribute.");
 
@@ -74,7 +74,7 @@ namespace NetOffice
         public static IDisposableSequence<T> GetActiveInstances<T>(Func<T, bool> predicate) where T : class, ICOMObject
         {
             Type type = typeof(T);
-            var attribute = type.GetCustomAttribute<ComProgIdAttribute>();
+            var attribute = type.GetCustomAttribute<ComProgIdAttribute>(true);
             if (null == attribute)
                 throw new NetOfficeException("Missing ComProgIdAttribute.");
 
@@ -100,7 +100,7 @@ namespace NetOffice
         public static IDisposableSequence<T> GetActiveInstances<T>() where T : class, ICOMObject
         {
             Type type = typeof(T);
-            var attribute = type.GetCustomAttribute<ComProgIdAttribute>();
+            var attribute = type.GetCustomAttribute<ComProgIdAttribute>(true);
             if (null == attribute)
                 throw new NetOfficeException("Missing ComProgIdAttribute.");
 

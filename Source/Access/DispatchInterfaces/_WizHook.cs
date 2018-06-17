@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _WizHook : COMObject
+	[TypeId("CB9D3171-4728-11D1-8334-006008197CC8")]
+    [CoClassSource(typeof(NetOffice.AccessApi.WizHook))]
+    public interface _WizHook : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_WizHook);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _WizHook(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _WizHook(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _WizHook(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _WizHook(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _WizHook(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _WizHook(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _WizHook() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _WizHook(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,17 +23,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 Key
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Key");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Key", value);
-			}
-		}
+		Int32 Key { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -132,13 +32,7 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.VBIDEApi._VBProject DbcVbProject
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi._VBProject>(this, "DbcVbProject");
-			}
-		}
+		NetOffice.VBIDEApi._VBProject DbcVbProject { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -147,10 +41,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrConnectionString">string bstrConnectionString</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool get_IsMatchToDbcConnectString(string bstrConnectionString)
-		{
-			return Factory.ExecuteBoolPropertyGet(this, "IsMatchToDbcConnectString", bstrConnectionString);
-		}
+		bool get_IsMatchToDbcConnectString(string bstrConnectionString);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -158,10 +49,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="bstrConnectionString">string bstrConnectionString</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), Redirect("get_IsMatchToDbcConnectString")]
-		public bool IsMatchToDbcConnectString(string bstrConnectionString)
-		{
-			return get_IsMatchToDbcConnectString(bstrConnectionString);
-		}
+		bool IsMatchToDbcConnectString(string bstrConnectionString);
 
 		#endregion
 
@@ -173,10 +61,7 @@ namespace NetOffice.AccessApi
 		/// <param name="actid">Int32 actid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string NameFromActid(Int32 actid)
-		{
-			return Factory.ExecuteStringMethodGet(this, "NameFromActid", actid);
-		}
+		string NameFromActid(Int32 actid);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -184,10 +69,7 @@ namespace NetOffice.AccessApi
 		/// <param name="actid">Int32 actid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 ArgsOfActid(Int32 actid)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "ArgsOfActid", actid);
-		}
+		Int32 ArgsOfActid(Int32 actid);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -199,10 +81,7 @@ namespace NetOffice.AccessApi
 		/// <param name="version">Int32 version</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 OpenScript(string script, string label, Int32 openMode, Int32 extra, Int32 version)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "OpenScript", new object[]{ script, label, openMode, extra, version });
-		}
+		Int32 OpenScript(string script, string label, Int32 openMode, Int32 extra, Int32 version);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -212,10 +91,7 @@ namespace NetOffice.AccessApi
 		/// <param name="value">string value</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool GetScriptString(Int32 hScr, Int32 scriptColumn, string value)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "GetScriptString", hScr, scriptColumn, value);
-		}
+		bool GetScriptString(Int32 hScr, Int32 scriptColumn, string value);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -225,10 +101,7 @@ namespace NetOffice.AccessApi
 		/// <param name="value">string value</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool SaveScriptString(Int32 hScr, Int32 scriptColumn, string value)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "SaveScriptString", hScr, scriptColumn, value);
-		}
+		bool SaveScriptString(Int32 hScr, Int32 scriptColumn, string value);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -236,10 +109,7 @@ namespace NetOffice.AccessApi
 		/// <param name="name">string name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool GlobalProcExists(string name)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "GlobalProcExists", name);
-		}
+		bool GlobalProcExists(string name);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -248,10 +118,7 @@ namespace NetOffice.AccessApi
 		/// <param name="columns">string columns</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool TableFieldHasUniqueIndex(string table, string columns)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "TableFieldHasUniqueIndex", table, columns);
-		}
+		bool TableFieldHasUniqueIndex(string table, string columns);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -260,10 +127,7 @@ namespace NetOffice.AccessApi
 		/// <param name="flags">Int32 flags</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool BracketString(string _string, Int32 flags)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "BracketString", _string, flags);
-		}
+		bool BracketString(string _string, Int32 flags);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -273,10 +137,7 @@ namespace NetOffice.AccessApi
 		/// <param name="contextID">Int32 contextID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool WizHelp(string helpFile, Int32 wCmd, Int32 contextID)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "WizHelp", helpFile, wCmd, contextID);
-		}
+		bool WizHelp(string helpFile, Int32 wCmd, Int32 contextID);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -285,10 +146,7 @@ namespace NetOffice.AccessApi
 		/// <param name="cancelled">bool cancelled</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool OpenPictureFile(string file, bool cancelled)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "OpenPictureFile", file, cancelled);
-		}
+		bool OpenPictureFile(string file, bool cancelled);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -297,10 +155,7 @@ namespace NetOffice.AccessApi
 		/// <param name="_out">string out</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool EnglishPictToLocal(string _in, string _out)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "EnglishPictToLocal", _in, _out);
-		}
+		bool EnglishPictToLocal(string _in, string _out);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -311,10 +166,7 @@ namespace NetOffice.AccessApi
 		/// <param name="translateFlags">Int32 translateFlags</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool TranslateExpression(string _in, string _out, Int32 parseFlags, Int32 translateFlags)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "TranslateExpression", _in, _out, parseFlags, translateFlags);
-		}
+		bool TranslateExpression(string _in, string _out, Int32 parseFlags, Int32 translateFlags);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -322,10 +174,7 @@ namespace NetOffice.AccessApi
 		/// <param name="file">string file</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool FileExists(string file)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FileExists", file);
-		}
+		bool FileExists(string file);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -334,10 +183,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fullPath">string fullPath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 FullPath(string relativePath, string fullPath)
-		{
-			return Factory.ExecuteInt16MethodGet(this, "FullPath", relativePath, fullPath);
-		}
+		Int16 FullPath(string relativePath, string fullPath);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -349,10 +195,7 @@ namespace NetOffice.AccessApi
 		/// <param name="ext">string ext</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SplitPath(string path, string drive, string dir, string file, string ext)
-		{
-			 Factory.ExecuteMethod(this, "SplitPath", new object[]{ path, drive, dir, file, ext });
-		}
+		void SplitPath(string path, string drive, string dir, string file, string ext);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -369,10 +212,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dy">Int32 dy</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool TwipsFromFont(string fontName, Int32 size, Int32 weight, bool italic, bool underline, Int32 cch, string caption, Int32 maxWidthCch, Int32 dx, Int32 dy)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "TwipsFromFont", new object[]{ fontName, size, weight, italic, underline, cch, caption, maxWidthCch, dx, dy });
-		}
+		bool TwipsFromFont(string fontName, Int32 size, Int32 weight, bool italic, bool underline, Int32 cch, string caption, Int32 maxWidthCch, Int32 dx, Int32 dy);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -380,10 +220,7 @@ namespace NetOffice.AccessApi
 		/// <param name="recordSource">string recordSource</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 ObjTypOfRecordSource(string recordSource)
-		{
-			return Factory.ExecuteInt16MethodGet(this, "ObjTypOfRecordSource", recordSource);
-		}
+		Int16 ObjTypOfRecordSource(string recordSource);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -391,10 +228,7 @@ namespace NetOffice.AccessApi
 		/// <param name="identifier">string identifier</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool IsValidIdent(string identifier)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsValidIdent", identifier);
-		}
+		bool IsValidIdent(string identifier);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -402,11 +236,7 @@ namespace NetOffice.AccessApi
 		/// <param name="array">String[] array</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SortStringArray(String[] array)
-		{
-            object[] paramsArray = Invoker.ValidateParamsArray((object)array);
-            Invoker.Method(this, "SortStringArray", paramsArray);
-        }
+		void SortStringArray(String[] array);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -418,10 +248,7 @@ namespace NetOffice.AccessApi
 		/// <param name="results">string results</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 AnalyzeTable(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string table, bool returnDebugInfo, string results)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "AnalyzeTable", new object[]{ workspace, database, table, returnDebugInfo, results });
-		}
+		Int32 AnalyzeTable(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string table, bool returnDebugInfo, string results);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -432,10 +259,7 @@ namespace NetOffice.AccessApi
 		/// <param name="results">string results</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 AnalyzeQuery(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string query, string results)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "AnalyzeQuery", workspace, database, query, results);
-		}
+		Int32 AnalyzeQuery(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string query, string results);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -453,10 +277,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fOpen">bool fOpen</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 GetFileName(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "GetFileName", new object[]{ hwndOwner, appName, dlgTitle, openTitle, file, initialDir, filter, filterIndex, view, flags, fOpen });
-		}
+		Int32 GetFileName(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -473,10 +294,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dy">Int32 dy</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void CreateDataPageControl(string dpName, string ctlName, Int32 typ, string section, Int32 sectionType, string appletCode, Int32 x, Int32 y, Int32 dx, Int32 dy)
-		{
-			 Factory.ExecuteMethod(this, "CreateDataPageControl", new object[]{ dpName, ctlName, typ, section, sectionType, appletCode, x, y, dx, dy });
-		}
+		void CreateDataPageControl(string dpName, string ctlName, Int32 typ, string section, Int32 sectionType, string appletCode, Int32 x, Int32 y, Int32 dx, Int32 dy);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -484,10 +302,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fStart">bool fStart</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void KnownWizLeaks(bool fStart)
-		{
-			 Factory.ExecuteMethod(this, "KnownWizLeaks", fStart);
-		}
+		void KnownWizLeaks(bool fStart);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -497,20 +312,14 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrPasswd">string bstrPasswd</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool SetVbaPassword(string bstrDbName, string bstrConnect, string bstrPasswd)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "SetVbaPassword", bstrDbName, bstrConnect, bstrPasswd);
-		}
+		bool SetVbaPassword(string bstrDbName, string bstrConnect, string bstrPasswd);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string LocalFont()
-		{
-			return Factory.ExecuteStringMethodGet(this, "LocalFont");
-		}
+		string LocalFont();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -519,50 +328,35 @@ namespace NetOffice.AccessApi
 		/// <param name="objtyp">Int16 objtyp</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SaveObject(string bstrName, Int16 objtyp)
-		{
-			 Factory.ExecuteMethod(this, "SaveObject", bstrName, objtyp);
-		}
+		void SaveObject(string bstrName, Int16 objtyp);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 CurrentLangID()
-		{
-			return Factory.ExecuteInt32MethodGet(this, "CurrentLangID");
-		}
+		Int32 CurrentLangID();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 KeyboardLangID()
-		{
-			return Factory.ExecuteInt32MethodGet(this, "KeyboardLangID");
-		}
+		Int32 KeyboardLangID();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string AccessUserDataDir()
-		{
-			return Factory.ExecuteStringMethodGet(this, "AccessUserDataDir");
-		}
+		string AccessUserDataDir();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OfficeAddInDir()
-		{
-			return Factory.ExecuteStringMethodGet(this, "OfficeAddInDir");
-		}
+		string OfficeAddInDir();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -571,10 +365,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fileToInsert">string fileToInsert</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string EmbedFileOnDataPage(string dpName, string fileToInsert)
-		{
-			return Factory.ExecuteStringMethodGet(this, "EmbedFileOnDataPage", dpName, fileToInsert);
-		}
+		string EmbedFileOnDataPage(string dpName, string fileToInsert);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -583,10 +374,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrFileOut">string bstrFileOut</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void ReportLeaksToFile(bool fRptToFile, string bstrFileOut)
-		{
-			 Factory.ExecuteMethod(this, "ReportLeaksToFile", fRptToFile, bstrFileOut);
-		}
+		void ReportLeaksToFile(bool fRptToFile, string bstrFileOut);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -594,10 +382,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrFilename">string bstrFilename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void LoadImexSpecSolution(string bstrFilename)
-		{
-			 Factory.ExecuteMethod(this, "LoadImexSpecSolution", bstrFilename);
-		}
+		void LoadImexSpecSolution(string bstrFilename);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -605,10 +390,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fBlockKeys">bool fBlockKeys</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SetDpBlockKeyInput(bool fBlockKeys)
-		{
-			 Factory.ExecuteMethod(this, "SetDpBlockKeyInput", fBlockKeys);
-		}
+		void SetDpBlockKeyInput(bool fBlockKeys);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -618,20 +400,14 @@ namespace NetOffice.AccessApi
 		/// <param name="attribs">Int32 attribs</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool FirstDbcDataObject(string name, NetOffice.AccessApi.Enums.AcObjectType objType, Int32 attribs)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FirstDbcDataObject", name, objType, attribs);
-		}
+		bool FirstDbcDataObject(string name, NetOffice.AccessApi.Enums.AcObjectType objType, Int32 attribs);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool CloseCurrentDatabase()
-		{
-			return Factory.ExecuteBoolMethodGet(this, "CloseCurrentDatabase");
-		}
+		bool CloseCurrentDatabase();
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -639,20 +415,14 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrWhich">string bstrWhich</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public string AccessWizFilePath(string bstrWhich)
-		{
-			return Factory.ExecuteStringMethodGet(this, "AccessWizFilePath", bstrWhich);
-		}
+		string AccessWizFilePath(string bstrWhich);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public bool HideDates()
-		{
-			return Factory.ExecuteBoolMethodGet(this, "HideDates");
-		}
+		bool HideDates();
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -660,10 +430,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrBase">string bstrBase</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public string GetColumns(string bstrBase)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetColumns", bstrBase);
-		}
+		string GetColumns(string bstrBase);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -672,10 +439,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrFilename">string bstrFilename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public Int32 GetFileOdso(string bstrExt, string bstrFilename)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "GetFileOdso", bstrExt, bstrFilename);
-		}
+		Int32 GetFileOdso(string bstrExt, string bstrFilename);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -683,10 +447,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrBase">string bstrBase</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public string GetInfoForColumns(string bstrBase)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetInfoForColumns", bstrBase);
-		}
+		string GetInfoForColumns(string bstrBase);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -705,10 +466,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fFileSystem">object fFileSystem</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public Int32 GetFileName2(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen, object fFileSystem)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "GetFileName2", new object[]{ hwndOwner, appName, dlgTitle, openTitle, file, initialDir, filter, filterIndex, view, flags, fOpen, fFileSystem });
-		}
+		Int32 GetFileName2(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen, object fFileSystem);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -716,10 +474,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fBlockKeys">bool fBlockKeys</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public bool FGetMSDE(bool fBlockKeys)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FGetMSDE", fBlockKeys);
-		}
+		bool FGetMSDE(bool fBlockKeys);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -731,10 +486,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrHelpFileName">string bstrHelpFileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public Int32 WizMsgBox(string bstrText, string bstrCaption, Int32 wStyle, Int32 idHelpID, string bstrHelpFileName)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "WizMsgBox", new object[]{ bstrText, bstrCaption, wStyle, idHelpID, bstrHelpFileName });
-		}
+		Int32 WizMsgBox(string bstrText, string bstrCaption, Int32 wStyle, Int32 idHelpID, string bstrHelpFileName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -743,10 +495,7 @@ namespace NetOffice.AccessApi
 		/// <param name="pbstrPwd">string pbstrPwd</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public bool AdpUIDPwd(string pbstrUID, string pbstrPwd)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "AdpUIDPwd", pbstrUID, pbstrPwd);
-		}
+		bool AdpUIDPwd(string pbstrUID, string pbstrPwd);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -755,10 +504,7 @@ namespace NetOffice.AccessApi
 		/// <param name="vValue">object vValue</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void SetWizGlob(Int32 lWhich, object vValue)
-		{
-			 Factory.ExecuteMethod(this, "SetWizGlob", lWhich, vValue);
-		}
+		void SetWizGlob(Int32 lWhich, object vValue);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -766,10 +512,7 @@ namespace NetOffice.AccessApi
 		/// <param name="lWhich">Int32 lWhich</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public object GetWizGlob(Int32 lWhich)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "GetWizGlob", lWhich);
-		}
+		object GetWizGlob(Int32 lWhich);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -777,10 +520,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrADPName">string bstrADPName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void WizCopyCmdbars(string bstrADPName)
-		{
-			 Factory.ExecuteMethod(this, "WizCopyCmdbars", bstrADPName);
-		}
+		void WizCopyCmdbars(string bstrADPName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -788,10 +528,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrTableName">string bstrTableName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public Int32 GetCurrentView(string bstrTableName)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "GetCurrentView", bstrTableName);
-		}
+		Int32 GetCurrentView(string bstrTableName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -799,10 +536,7 @@ namespace NetOffice.AccessApi
 		/// <param name="wch">Int32 wch</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public bool FIsFEWch(Int32 wch)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FIsFEWch", wch);
-		}
+		bool FIsFEWch(Int32 wch);
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
@@ -810,20 +544,14 @@ namespace NetOffice.AccessApi
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 11,12,14,15,16)]
-		public bool IsMemberSafe(Int32 dispid)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
-		}
+		bool IsMemberSafe(Int32 dispid);
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 11,12,14,15,16)]
-		public string GetAccWizRCPath()
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetAccWizRCPath");
-		}
+		string GetAccWizRCPath();
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
@@ -832,20 +560,14 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrObjName">string bstrObjName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 11,12,14,15,16)]
-		public bool FCreateNameMap(Int16 objtyp, string bstrObjName)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FCreateNameMap", objtyp, bstrObjName);
-		}
+		bool FCreateNameMap(Int16 objtyp, string bstrObjName);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public string GetAdeRegistryPath()
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetAdeRegistryPath");
-		}
+		string GetAdeRegistryPath();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -853,20 +575,14 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrSpecXML">string bstrSpecXML</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void ExecuteTempImexSpec(string bstrSpecXML)
-		{
-			 Factory.ExecuteMethod(this, "ExecuteTempImexSpec", bstrSpecXML);
-		}
+		void ExecuteTempImexSpec(string bstrSpecXML);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public bool FCacheStatus()
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FCacheStatus");
-		}
+		bool FCacheStatus();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -874,10 +590,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrStatus">string bstrStatus</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void CacheStatus(string bstrStatus)
-		{
-			 Factory.ExecuteMethod(this, "CacheStatus", bstrStatus);
-		}
+		void CacheStatus(string bstrStatus);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -885,20 +598,14 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrSpecName">string bstrSpecName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SetDefaultSpecName(string bstrSpecName)
-		{
-			 Factory.ExecuteMethod(this, "SetDefaultSpecName", bstrSpecName);
-		}
+		void SetDefaultSpecName(string bstrSpecName);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public string GetImexTblName()
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetImexTblName");
-		}
+		string GetImexTblName();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -908,10 +615,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fServer">bool fServer</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public string GetLinkedListProperty(string bstrTableName, string bstrPropertyName, bool fServer)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetLinkedListProperty", bstrTableName, bstrPropertyName, fServer);
-		}
+		string GetLinkedListProperty(string bstrTableName, string bstrPropertyName, bool fServer);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -922,20 +626,14 @@ namespace NetOffice.AccessApi
 		/// <param name="version">Int32 version</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public Int32 OpenEmScript(NetOffice.AccessApi._AccessProperty pProperty, Int32 openMode, Int32 extra, Int32 version)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "OpenEmScript", pProperty, openMode, extra, version);
-		}
+		Int32 OpenEmScript(NetOffice.AccessApi._AccessProperty pProperty, Int32 openMode, Int32 extra, Int32 version);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 14,15,16)]
-		public string GetDisabledExtensions()
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetDisabledExtensions");
-		}
+		string GetDisabledExtensions();
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -945,10 +643,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fTablesAsClient">bool fTablesAsClient</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 14,15,16)]
-		public Int32 GetObjPubOption(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp, bool fTablesAsClient)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "GetObjPubOption", bstrObjectName, iobjtyp, fTablesAsClient);
-		}
+		Int32 GetObjPubOption(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp, bool fTablesAsClient);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -956,20 +651,14 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 14,15,16)]
-		public bool FIsPublishedXasTable(string bstrObjectName)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FIsPublishedXasTable", bstrObjectName);
-		}
+		bool FIsPublishedXasTable(string bstrObjectName);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 14,15,16)]
-		public bool FIsXasDb()
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FIsXasDb");
-		}
+		bool FIsXasDb();
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -978,10 +667,7 @@ namespace NetOffice.AccessApi
 		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 14,15,16)]
-		public bool FIsValidXasObjectName(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "FIsValidXasObjectName", bstrObjectName, iobjtyp);
-		}
+		bool FIsValidXasObjectName(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -989,13 +675,8 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public object LoadResourceLibrary(string bstrObjectName)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "LoadResourceLibrary", bstrObjectName);
-		}
+		object LoadResourceLibrary(string bstrObjectName);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

@@ -2,19 +2,20 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CoreServices;
 
-namespace NetOffice.AccessApi.GlobalHelperModules
+namespace NetOffice.AccessApi.ModulesLegacy
 {
     ///<summary>
-    /// Module GlobalModule
+    /// Module ApplicationModule
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     ///</summary>
+    /// <remarks>This module supports legacy VB/VBA codebases</remarks>
     [SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(AccessApi.Application))]
-	public static class GlobalModule
-	{
+	public static class ApplicationModule
+    {
 		#region Fields
-
 		private static ICOMObject _instance;
         
         #endregion
@@ -70,7 +71,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(_instance, "Application", NetOffice.AccessApi.Application.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(_instance, "Application", typeof(NetOffice.AccessApi.Application));
 			}
 		}
 
@@ -160,7 +161,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Forms>(_instance, "Forms", NetOffice.AccessApi.Forms.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Forms>(_instance, "Forms", typeof(NetOffice.AccessApi.Forms));
 			}
 		}
 
@@ -174,7 +175,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Reports>(_instance, "Reports", NetOffice.AccessApi.Reports.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Reports>(_instance, "Reports", typeof(NetOffice.AccessApi.Reports));
 			}
 		}
 
@@ -188,7 +189,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Screen>(_instance, "Screen", NetOffice.AccessApi.Screen.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Screen>(_instance, "Screen", typeof(NetOffice.AccessApi.Screen));
 			}
 		}
 
@@ -202,7 +203,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.DoCmd>(_instance, "DoCmd", NetOffice.AccessApi.DoCmd.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.DoCmd>(_instance, "DoCmd", typeof(NetOffice.AccessApi.DoCmd));
 			}
 		}
 
@@ -270,7 +271,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.DBEngine>(_instance, "DBEngine", NetOffice.DAOApi.DBEngine.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.DBEngine>(_instance, "DBEngine", typeof(NetOffice.DAOApi.DBEngine));
 			}
 		}
 
@@ -284,7 +285,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", typeof(NetOffice.OfficeApi.CommandBars));
 			}
 		}
 
@@ -297,7 +298,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", typeof(NetOffice.OfficeApi.Assistant));
 			}
 		}
 
@@ -311,7 +312,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.References>(_instance, "References", NetOffice.AccessApi.References.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.References>(_instance, "References", typeof(NetOffice.AccessApi.References));
 			}
 		}
 
@@ -325,7 +326,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Modules>(_instance, "Modules", NetOffice.AccessApi.Modules.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Modules>(_instance, "Modules", typeof(NetOffice.AccessApi.Modules));
 			}
 		}
 
@@ -338,7 +339,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", typeof(NetOffice.OfficeApi.FileSearch));
 			}
 		}
 
@@ -366,7 +367,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(_instance, "VBE", NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(_instance, "VBE", typeof(NetOffice.VBIDEApi.VBE));
 			}
 		}
 
@@ -379,7 +380,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.DataAccessPages>(_instance, "DataAccessPages", NetOffice.AccessApi.DataAccessPages.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.DataAccessPages>(_instance, "DataAccessPages", typeof(NetOffice.AccessApi.DataAccessPages));
 			}
 		}
 
@@ -407,7 +408,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.CurrentProject>(_instance, "CurrentProject", NetOffice.AccessApi.CurrentProject.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.CurrentProject>(_instance, "CurrentProject", typeof(NetOffice.AccessApi.CurrentProject));
 			}
 		}
 
@@ -421,7 +422,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.CurrentData>(_instance, "CurrentData", NetOffice.AccessApi.CurrentData.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.CurrentData>(_instance, "CurrentData", typeof(NetOffice.AccessApi.CurrentData));
 			}
 		}
 
@@ -435,7 +436,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.CodeProject>(_instance, "CodeProject", NetOffice.AccessApi.CodeProject.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.CodeProject>(_instance, "CodeProject", typeof(NetOffice.AccessApi.CodeProject));
 			}
 		}
 
@@ -449,7 +450,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.CodeData>(_instance, "CodeData", NetOffice.AccessApi.CodeData.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.CodeData>(_instance, "CodeData", typeof(NetOffice.AccessApi.CodeData));
 			}
 		}
 
@@ -463,7 +464,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.WizHook>(_instance, "WizHook", NetOffice.AccessApi.WizHook.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.WizHook>(_instance, "WizHook", typeof(NetOffice.AccessApi.WizHook));
 			}
 		}
 
@@ -491,7 +492,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", typeof(NetOffice.OfficeApi.COMAddIns));
 			}
 		}
 
@@ -518,7 +519,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.DefaultWebOptions>(_instance, "DefaultWebOptions", NetOffice.AccessApi.DefaultWebOptions.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.DefaultWebOptions>(_instance, "DefaultWebOptions", typeof(NetOffice.AccessApi.DefaultWebOptions));
 			}
 		}
 
@@ -532,7 +533,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.LanguageSettings>(_instance, "LanguageSettings", NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.LanguageSettings>(_instance, "LanguageSettings", typeof(NetOffice.OfficeApi.LanguageSettings));
 			}
 		}
 
@@ -545,7 +546,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", typeof(NetOffice.OfficeApi.AnswerWizard));
 			}
 		}
 
@@ -591,7 +592,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType)
 		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialog>(_instance, "FileDialog", NetOffice.OfficeApi.FileDialog.LateBindingApiWrapperType, dialogType);
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialog>(_instance, "FileDialog", typeof(NetOffice.OfficeApi.FileDialog), dialogType);
 		}
 
         /// <summary>
@@ -630,7 +631,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Printers>(_instance, "Printers", NetOffice.AccessApi.Printers.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Printers>(_instance, "Printers", typeof(NetOffice.AccessApi.Printers));
 			}
 		}
 
@@ -663,7 +664,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions>(_instance, "MsoDebugOptions", NetOffice.OfficeApi.MsoDebugOptions.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions>(_instance, "MsoDebugOptions", typeof(NetOffice.OfficeApi.MsoDebugOptions));
 			}
 		}
 
@@ -705,7 +706,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.NewFile>(_instance, "NewFileTaskPane", NetOffice.OfficeApi.NewFile.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.NewFile>(_instance, "NewFileTaskPane", typeof(NetOffice.OfficeApi.NewFile));
             }
         }
 
@@ -752,7 +753,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.MacroError>(_instance, "MacroError", NetOffice.AccessApi.MacroError.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.MacroError>(_instance, "MacroError", typeof(NetOffice.AccessApi.MacroError));
             }
         }
 
@@ -766,7 +767,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.TempVars>(_instance, "TempVars", NetOffice.AccessApi.TempVars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.TempVars>(_instance, "TempVars", typeof(NetOffice.AccessApi.TempVars));
             }
         }
 
@@ -780,7 +781,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", typeof(NetOffice.OfficeApi.IAssistance));
             }
         }
 
@@ -794,7 +795,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.WebServices>(_instance, "WebServices", NetOffice.AccessApi.WebServices.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.WebServices>(_instance, "WebServices", typeof(NetOffice.AccessApi.WebServices));
             }
         }
 
@@ -808,7 +809,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
 			{
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.LocalVars>(_instance, "LocalVars", NetOffice.AccessApi.LocalVars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.LocalVars>(_instance, "LocalVars", typeof(NetOffice.AccessApi.LocalVars));
             }
         }
 
@@ -822,7 +823,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		{
 			get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.ReturnVars>(_instance, "ReturnVars", NetOffice.AccessApi.ReturnVars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.ReturnVars>(_instance, "ReturnVars", typeof(NetOffice.AccessApi.ReturnVars));
             }
         }
 
@@ -1060,7 +1061,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Form CreateForm(object database, object formTemplate)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Form>(_instance, "CreateForm", NetOffice.AccessApi.Form.LateBindingApiWrapperType, database, formTemplate);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Form>(_instance, "CreateForm", typeof(NetOffice.AccessApi.Form), database, formTemplate);
         }
 
         /// <summary>
@@ -1071,7 +1072,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Form CreateForm()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Form>(_instance, "CreateForm", NetOffice.AccessApi.Form.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Form>(_instance, "CreateForm", typeof(NetOffice.AccessApi.Form));
         }
 
         /// <summary>
@@ -1083,7 +1084,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Form CreateForm(object database)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Form>(_instance, "CreateForm", NetOffice.AccessApi.Form.LateBindingApiWrapperType, database);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Form>(_instance, "CreateForm", typeof(NetOffice.AccessApi.Form), database);
         }
 
         /// <summary>
@@ -1095,7 +1096,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Report CreateReport(object database, object reportTemplate)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Report>(_instance, "CreateReport", NetOffice.AccessApi.Report.LateBindingApiWrapperType, database, reportTemplate);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Report>(_instance, "CreateReport", typeof(NetOffice.AccessApi.Report), database, reportTemplate);
         }
 
         /// <summary>
@@ -1106,7 +1107,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Report CreateReport()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Report>(_instance, "CreateReport", NetOffice.AccessApi.Report.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Report>(_instance, "CreateReport", typeof(NetOffice.AccessApi.Report));
         }
 
         /// <summary>
@@ -1118,7 +1119,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Report CreateReport(object database)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Report>(_instance, "CreateReport", NetOffice.AccessApi.Report.LateBindingApiWrapperType, database);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Report>(_instance, "CreateReport", typeof(NetOffice.AccessApi.Report), database);
         }
 
         /// <summary>
@@ -1137,7 +1138,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName, left, top, width, height });
         }
 
         /// <summary>
@@ -1150,7 +1151,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, formName, controlType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", typeof(NetOffice.AccessApi.Control), formName, controlType);
         }
 
         /// <summary>
@@ -1164,7 +1165,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, formName, controlType, section);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", typeof(NetOffice.AccessApi.Control), formName, controlType, section);
         }
 
         /// <summary>
@@ -1179,7 +1180,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, formName, controlType, section, parent);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", typeof(NetOffice.AccessApi.Control), formName, controlType, section, parent);
         }
 
         /// <summary>
@@ -1195,7 +1196,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName });
         }
 
         /// <summary>
@@ -1212,7 +1213,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName, left });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName, left });
         }
 
         /// <summary>
@@ -1230,7 +1231,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName, left, top });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName, left, top });
         }
 
         /// <summary>
@@ -1249,7 +1250,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName, left, top, width });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControl", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName, left, top, width });
         }
 
         /// <summary>
@@ -1268,7 +1269,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName, left, top, width, height });
         }
 
         /// <summary>
@@ -1281,7 +1282,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, reportName, controlType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", typeof(NetOffice.AccessApi.Control), reportName, controlType);
         }
 
         /// <summary>
@@ -1295,7 +1296,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, reportName, controlType, section);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", typeof(NetOffice.AccessApi.Control), reportName, controlType, section);
         }
 
         /// <summary>
@@ -1310,7 +1311,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, reportName, controlType, section, parent);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", typeof(NetOffice.AccessApi.Control), reportName, controlType, section, parent);
         }
 
         /// <summary>
@@ -1326,7 +1327,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName });
         }
 
         /// <summary>
@@ -1343,7 +1344,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName, left });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName, left });
         }
 
         /// <summary>
@@ -1361,7 +1362,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName, left, top });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName, left, top });
         }
 
         /// <summary>
@@ -1380,7 +1381,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName, left, top, width });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControl", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName, left, top, width });
         }
 
         /// <summary>
@@ -1399,7 +1400,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlEx(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlSource, Int32 left, Int32 top, Int32 width, Int32 height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlEx", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, controlSource, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlEx", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, controlSource, left, top, width, height });
         }
 
         /// <summary>
@@ -1418,7 +1419,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlEx(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlName, Int32 left, Int32 top, Int32 width, Int32 height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlEx", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, controlName, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlEx", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, controlName, left, top, width, height });
         }
 
         /// <summary>
@@ -1869,7 +1870,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.DAOApi.Database CurrentDb()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(_instance, "CurrentDb", NetOffice.DAOApi.Database.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(_instance, "CurrentDb", typeof(NetOffice.DAOApi.Database));
         }
 
         /// <summary>
@@ -1879,7 +1880,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.DAOApi.Database CodeDb()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(_instance, "CodeDb", NetOffice.DAOApi.Database.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(_instance, "CodeDb", typeof(NetOffice.DAOApi.Database));
         }
 
         /// <summary>
@@ -1946,7 +1947,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.DAOApi.Workspace DefaultWorkspaceClone()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Workspace>(_instance, "DefaultWorkspaceClone", NetOffice.DAOApi.Workspace.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Workspace>(_instance, "DefaultWorkspaceClone", typeof(NetOffice.DAOApi.Workspace));
         }
 
         /// <summary>
@@ -3149,7 +3150,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.DataAccessPage CreateDataAccessPage(object fileName, object createNewFile)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.DataAccessPage>(_instance, "CreateDataAccessPage", NetOffice.AccessApi.DataAccessPage.LateBindingApiWrapperType, fileName, createNewFile);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.DataAccessPage>(_instance, "CreateDataAccessPage", typeof(NetOffice.AccessApi.DataAccessPage), fileName, createNewFile);
         }
 
         /// <summary>
@@ -3159,7 +3160,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.DataAccessPage CreateDataAccessPage()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.DataAccessPage>(_instance, "CreateDataAccessPage", NetOffice.AccessApi.DataAccessPage.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.DataAccessPage>(_instance, "CreateDataAccessPage", typeof(NetOffice.AccessApi.DataAccessPage));
         }
 
         /// <summary>
@@ -3170,7 +3171,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.DataAccessPage CreateDataAccessPage(object fileName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.DataAccessPage>(_instance, "CreateDataAccessPage", NetOffice.AccessApi.DataAccessPage.LateBindingApiWrapperType, fileName);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.DataAccessPage>(_instance, "CreateDataAccessPage", typeof(NetOffice.AccessApi.DataAccessPage), fileName);
         }
 
         /// <summary>
@@ -3816,7 +3817,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName, left, top, width, height });
         }
 
         /// <summary>
@@ -3829,7 +3830,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, formName, controlType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", typeof(NetOffice.AccessApi.Control), formName, controlType);
         }
 
         /// <summary>
@@ -3843,7 +3844,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, formName, controlType, section);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", typeof(NetOffice.AccessApi.Control), formName, controlType, section);
         }
 
         /// <summary>
@@ -3858,7 +3859,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, formName, controlType, section, parent);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", typeof(NetOffice.AccessApi.Control), formName, controlType, section, parent);
         }
 
         /// <summary>
@@ -3874,7 +3875,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName });
         }
 
         /// <summary>
@@ -3891,7 +3892,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName, left });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName, left });
         }
 
         /// <summary>
@@ -3909,7 +3910,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName, left, top });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName, left, top });
         }
 
         /// <summary>
@@ -3928,7 +3929,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, columnName, left, top, width });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlOld", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, columnName, left, top, width });
         }
 
         /// <summary>
@@ -3947,7 +3948,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName, left, top, width, height });
         }
 
         /// <summary>
@@ -3960,7 +3961,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, reportName, controlType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", typeof(NetOffice.AccessApi.Control), reportName, controlType);
         }
 
         /// <summary>
@@ -3974,7 +3975,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, reportName, controlType, section);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", typeof(NetOffice.AccessApi.Control), reportName, controlType, section);
         }
 
         /// <summary>
@@ -3989,7 +3990,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, reportName, controlType, section, parent);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", typeof(NetOffice.AccessApi.Control), reportName, controlType, section, parent);
         }
 
         /// <summary>
@@ -4005,7 +4006,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName });
         }
 
         /// <summary>
@@ -4022,7 +4023,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName, left });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName, left });
         }
 
         /// <summary>
@@ -4040,7 +4041,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName, left, top });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName, left, top });
         }
 
         /// <summary>
@@ -4059,7 +4060,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, columnName, left, top, width });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlOld", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, columnName, left, top, width });
         }
 
         /// <summary>
@@ -4078,7 +4079,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateControlExOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlSource, Int32 left, Int32 top, Int32 width, Int32 height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlExOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { formName, controlType, section, parent, controlSource, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateControlExOld", typeof(NetOffice.AccessApi.Control), new object[] { formName, controlType, section, parent, controlSource, left, top, width, height });
         }
 
         /// <summary>
@@ -4097,7 +4098,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Control CreateReportControlExOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlName, Int32 left, Int32 top, Int32 width, Int32 height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlExOld", NetOffice.AccessApi.Control.LateBindingApiWrapperType, new object[] { reportName, controlType, section, parent, controlName, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Control>(_instance, "CreateReportControlExOld", typeof(NetOffice.AccessApi.Control), new object[] { reportName, controlType, section, parent, controlName, left, top, width, height });
         }
 
         /// <summary>
@@ -4500,3 +4501,4 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         #endregion
     }
 }
+

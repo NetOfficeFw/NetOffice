@@ -12,104 +12,9 @@ namespace NetOffice.AccessApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192694.aspx </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class DoCmd : COMObject
+	[TypeId("C547E760-9658-101B-81EE-00AA004750E2")]
+	public interface DoCmd : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(DoCmd);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public DoCmd(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public DoCmd(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DoCmd(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DoCmd(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DoCmd(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DoCmd(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DoCmd() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DoCmd(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
-
-		#endregion
-
 		#region Methods
 
 		/// <summary>
@@ -120,10 +25,7 @@ namespace NetOffice.AccessApi
 		/// <param name="menuMacroName">object menuMacroName</param>
 		/// <param name="statusBarText">object statusBarText</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void AddMenu(object menuName, object menuMacroName, object statusBarText)
-		{
-			 Factory.ExecuteMethod(this, "AddMenu", menuName, menuMacroName, statusBarText);
-		}
+		void AddMenu(object menuName, object menuMacroName, object statusBarText);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -132,10 +34,7 @@ namespace NetOffice.AccessApi
 		/// <param name="filterName">optional object filterName</param>
 		/// <param name="whereCondition">optional object whereCondition</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void ApplyFilter(object filterName, object whereCondition)
-		{
-			 Factory.ExecuteMethod(this, "ApplyFilter", filterName, whereCondition);
-		}
+		void ApplyFilter(object filterName, object whereCondition);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -145,10 +44,7 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object whereCondition</param>
 		/// <param name="controlName">optional object controlName</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void ApplyFilter(object filterName, object whereCondition, object controlName)
-		{
-			 Factory.ExecuteMethod(this, "ApplyFilter", filterName, whereCondition, controlName);
-		}
+		void ApplyFilter(object filterName, object whereCondition, object controlName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -156,10 +52,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void ApplyFilter()
-		{
-			 Factory.ExecuteMethod(this, "ApplyFilter");
-		}
+		void ApplyFilter();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -168,30 +61,21 @@ namespace NetOffice.AccessApi
 		/// <param name="filterName">optional object filterName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void ApplyFilter(object filterName)
-		{
-			 Factory.ExecuteMethod(this, "ApplyFilter", filterName);
-		}
+		void ApplyFilter(object filterName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196680.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Beep()
-		{
-			 Factory.ExecuteMethod(this, "Beep");
-		}
+		void Beep();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836964.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void CancelEvent()
-		{
-			 Factory.ExecuteMethod(this, "CancelEvent");
-		}
+		void CancelEvent();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -201,10 +85,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">optional object objectName</param>
 		/// <param name="save">optional NetOffice.AccessApi.Enums.AcCloseSave Save = 0</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Close(object objectType, object objectName, object save)
-		{
-			 Factory.ExecuteMethod(this, "Close", objectType, objectName, save);
-		}
+		void Close(object objectType, object objectName, object save);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -212,10 +93,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Close()
-		{
-			 Factory.ExecuteMethod(this, "Close");
-		}
+		void Close();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -224,10 +102,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Close(object objectType)
-		{
-			 Factory.ExecuteMethod(this, "Close", objectType);
-		}
+		void Close(object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -237,10 +112,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">optional object objectName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Close(object objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "Close", objectType, objectName);
-		}
+		void Close(object objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -251,10 +123,7 @@ namespace NetOffice.AccessApi
 		/// <param name="sourceObjectType">optional NetOffice.AccessApi.Enums.AcObjectType SourceObjectType = -1</param>
 		/// <param name="sourceObjectName">optional object sourceObjectName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void CopyObject(object destinationDatabase, object newName, object sourceObjectType, object sourceObjectName)
-		{
-			 Factory.ExecuteMethod(this, "CopyObject", destinationDatabase, newName, sourceObjectType, sourceObjectName);
-		}
+		void CopyObject(object destinationDatabase, object newName, object sourceObjectType, object sourceObjectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -262,10 +131,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void CopyObject()
-		{
-			 Factory.ExecuteMethod(this, "CopyObject");
-		}
+		void CopyObject();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -274,10 +140,7 @@ namespace NetOffice.AccessApi
 		/// <param name="destinationDatabase">optional object destinationDatabase</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void CopyObject(object destinationDatabase)
-		{
-			 Factory.ExecuteMethod(this, "CopyObject", destinationDatabase);
-		}
+		void CopyObject(object destinationDatabase);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -287,10 +150,7 @@ namespace NetOffice.AccessApi
 		/// <param name="newName">optional object newName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void CopyObject(object destinationDatabase, object newName)
-		{
-			 Factory.ExecuteMethod(this, "CopyObject", destinationDatabase, newName);
-		}
+		void CopyObject(object destinationDatabase, object newName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -301,10 +161,7 @@ namespace NetOffice.AccessApi
 		/// <param name="sourceObjectType">optional NetOffice.AccessApi.Enums.AcObjectType SourceObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void CopyObject(object destinationDatabase, object newName, object sourceObjectType)
-		{
-			 Factory.ExecuteMethod(this, "CopyObject", destinationDatabase, newName, sourceObjectType);
-		}
+		void CopyObject(object destinationDatabase, object newName, object sourceObjectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -316,10 +173,7 @@ namespace NetOffice.AccessApi
 		/// <param name="subcommand">optional object subcommand</param>
 		/// <param name="version">optional object version</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void DoMenuItem(object menuBar, object menuName, object command, object subcommand, object version)
-		{
-			 Factory.ExecuteMethod(this, "DoMenuItem", new object[]{ menuBar, menuName, command, subcommand, version });
-		}
+		void DoMenuItem(object menuBar, object menuName, object command, object subcommand, object version);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -330,10 +184,7 @@ namespace NetOffice.AccessApi
 		/// <param name="command">object command</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void DoMenuItem(object menuBar, object menuName, object command)
-		{
-			 Factory.ExecuteMethod(this, "DoMenuItem", menuBar, menuName, command);
-		}
+		void DoMenuItem(object menuBar, object menuName, object command);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -345,10 +196,7 @@ namespace NetOffice.AccessApi
 		/// <param name="subcommand">optional object subcommand</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void DoMenuItem(object menuBar, object menuName, object command, object subcommand)
-		{
-			 Factory.ExecuteMethod(this, "DoMenuItem", menuBar, menuName, command, subcommand);
-		}
+		void DoMenuItem(object menuBar, object menuName, object command, object subcommand);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -357,10 +205,7 @@ namespace NetOffice.AccessApi
 		/// <param name="echoOn">object echoOn</param>
 		/// <param name="statusBarText">optional object statusBarText</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Echo(object echoOn, object statusBarText)
-		{
-			 Factory.ExecuteMethod(this, "Echo", echoOn, statusBarText);
-		}
+		void Echo(object echoOn, object statusBarText);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -369,20 +214,14 @@ namespace NetOffice.AccessApi
 		/// <param name="echoOn">object echoOn</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Echo(object echoOn)
-		{
-			 Factory.ExecuteMethod(this, "Echo", echoOn);
-		}
+		void Echo(object echoOn);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196453.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void FindNext()
-		{
-			 Factory.ExecuteMethod(this, "FindNext");
-		}
+		void FindNext();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -396,10 +235,7 @@ namespace NetOffice.AccessApi
 		/// <param name="onlyCurrentField">optional NetOffice.AccessApi.Enums.AcFindField OnlyCurrentField = -1</param>
 		/// <param name="findFirst">optional object findFirst</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted, object onlyCurrentField, object findFirst)
-		{
-			 Factory.ExecuteMethod(this, "FindRecord", new object[]{ findWhat, match, matchCase, search, searchAsFormatted, onlyCurrentField, findFirst });
-		}
+		void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted, object onlyCurrentField, object findFirst);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -408,10 +244,7 @@ namespace NetOffice.AccessApi
 		/// <param name="findWhat">object findWhat</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void FindRecord(object findWhat)
-		{
-			 Factory.ExecuteMethod(this, "FindRecord", findWhat);
-		}
+		void FindRecord(object findWhat);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -421,10 +254,7 @@ namespace NetOffice.AccessApi
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void FindRecord(object findWhat, object match)
-		{
-			 Factory.ExecuteMethod(this, "FindRecord", findWhat, match);
-		}
+		void FindRecord(object findWhat, object match);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -435,10 +265,7 @@ namespace NetOffice.AccessApi
 		/// <param name="matchCase">optional object matchCase</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void FindRecord(object findWhat, object match, object matchCase)
-		{
-			 Factory.ExecuteMethod(this, "FindRecord", findWhat, match, matchCase);
-		}
+		void FindRecord(object findWhat, object match, object matchCase);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -450,10 +277,7 @@ namespace NetOffice.AccessApi
 		/// <param name="search">optional NetOffice.AccessApi.Enums.AcSearchDirection Search = 2</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void FindRecord(object findWhat, object match, object matchCase, object search)
-		{
-			 Factory.ExecuteMethod(this, "FindRecord", findWhat, match, matchCase, search);
-		}
+		void FindRecord(object findWhat, object match, object matchCase, object search);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -466,10 +290,7 @@ namespace NetOffice.AccessApi
 		/// <param name="searchAsFormatted">optional object searchAsFormatted</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted)
-		{
-			 Factory.ExecuteMethod(this, "FindRecord", new object[]{ findWhat, match, matchCase, search, searchAsFormatted });
-		}
+		void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -483,10 +304,7 @@ namespace NetOffice.AccessApi
 		/// <param name="onlyCurrentField">optional NetOffice.AccessApi.Enums.AcFindField OnlyCurrentField = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted, object onlyCurrentField)
-		{
-			 Factory.ExecuteMethod(this, "FindRecord", new object[]{ findWhat, match, matchCase, search, searchAsFormatted, onlyCurrentField });
-		}
+		void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted, object onlyCurrentField);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -494,10 +312,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192079.aspx </remarks>
 		/// <param name="controlName">object controlName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToControl(object controlName)
-		{
-			 Factory.ExecuteMethod(this, "GoToControl", controlName);
-		}
+		void GoToControl(object controlName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -507,10 +322,7 @@ namespace NetOffice.AccessApi
 		/// <param name="right">optional object right</param>
 		/// <param name="down">optional object down</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToPage(object pageNumber, object right, object down)
-		{
-			 Factory.ExecuteMethod(this, "GoToPage", pageNumber, right, down);
-		}
+		void GoToPage(object pageNumber, object right, object down);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -519,10 +331,7 @@ namespace NetOffice.AccessApi
 		/// <param name="pageNumber">object pageNumber</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToPage(object pageNumber)
-		{
-			 Factory.ExecuteMethod(this, "GoToPage", pageNumber);
-		}
+		void GoToPage(object pageNumber);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -532,10 +341,7 @@ namespace NetOffice.AccessApi
 		/// <param name="right">optional object right</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToPage(object pageNumber, object right)
-		{
-			 Factory.ExecuteMethod(this, "GoToPage", pageNumber, right);
-		}
+		void GoToPage(object pageNumber, object right);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -546,10 +352,7 @@ namespace NetOffice.AccessApi
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 1</param>
 		/// <param name="offset">optional object offset</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToRecord(object objectType, object objectName, object record, object offset)
-		{
-			 Factory.ExecuteMethod(this, "GoToRecord", objectType, objectName, record, offset);
-		}
+		void GoToRecord(object objectType, object objectName, object record, object offset);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -557,10 +360,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToRecord()
-		{
-			 Factory.ExecuteMethod(this, "GoToRecord");
-		}
+		void GoToRecord();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -569,10 +369,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToRecord(object objectType)
-		{
-			 Factory.ExecuteMethod(this, "GoToRecord", objectType);
-		}
+		void GoToRecord(object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -582,10 +379,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">optional object objectName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToRecord(object objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "GoToRecord", objectType, objectName);
-		}
+		void GoToRecord(object objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -596,10 +390,7 @@ namespace NetOffice.AccessApi
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void GoToRecord(object objectType, object objectName, object record)
-		{
-			 Factory.ExecuteMethod(this, "GoToRecord", objectType, objectName, record);
-		}
+		void GoToRecord(object objectType, object objectName, object record);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -607,30 +398,21 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835648.aspx </remarks>
 		/// <param name="hourglassOn">object hourglassOn</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Hourglass(object hourglassOn)
-		{
-			 Factory.ExecuteMethod(this, "Hourglass", hourglassOn);
-		}
+		void Hourglass(object hourglassOn);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195449.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Maximize()
-		{
-			 Factory.ExecuteMethod(this, "Maximize");
-		}
+		void Maximize();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837032.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Minimize()
-		{
-			 Factory.ExecuteMethod(this, "Minimize");
-		}
+		void Minimize();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -641,10 +423,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void MoveSize(object right, object down, object width, object height)
-		{
-			 Factory.ExecuteMethod(this, "MoveSize", right, down, width, height);
-		}
+		void MoveSize(object right, object down, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -652,10 +431,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void MoveSize()
-		{
-			 Factory.ExecuteMethod(this, "MoveSize");
-		}
+		void MoveSize();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -664,10 +440,7 @@ namespace NetOffice.AccessApi
 		/// <param name="right">optional object right</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void MoveSize(object right)
-		{
-			 Factory.ExecuteMethod(this, "MoveSize", right);
-		}
+		void MoveSize(object right);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -677,10 +450,7 @@ namespace NetOffice.AccessApi
 		/// <param name="down">optional object down</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void MoveSize(object right, object down)
-		{
-			 Factory.ExecuteMethod(this, "MoveSize", right, down);
-		}
+		void MoveSize(object right, object down);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -691,10 +461,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void MoveSize(object right, object down, object width)
-		{
-			 Factory.ExecuteMethod(this, "MoveSize", right, down, width);
-		}
+		void MoveSize(object right, object down, object width);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -708,10 +475,7 @@ namespace NetOffice.AccessApi
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
 		/// <param name="openArgs">optional object openArgs</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode, object windowMode, object openArgs)
-		{
-			 Factory.ExecuteMethod(this, "OpenForm", new object[]{ formName, view, filterName, whereCondition, dataMode, windowMode, openArgs });
-		}
+		void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode, object windowMode, object openArgs);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -720,10 +484,7 @@ namespace NetOffice.AccessApi
 		/// <param name="formName">object formName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenForm(object formName)
-		{
-			 Factory.ExecuteMethod(this, "OpenForm", formName);
-		}
+		void OpenForm(object formName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -733,10 +494,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenForm(object formName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenForm", formName, view);
-		}
+		void OpenForm(object formName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -747,10 +505,7 @@ namespace NetOffice.AccessApi
 		/// <param name="filterName">optional object filterName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenForm(object formName, object view, object filterName)
-		{
-			 Factory.ExecuteMethod(this, "OpenForm", formName, view, filterName);
-		}
+		void OpenForm(object formName, object view, object filterName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -762,10 +517,7 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object whereCondition</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenForm(object formName, object view, object filterName, object whereCondition)
-		{
-			 Factory.ExecuteMethod(this, "OpenForm", formName, view, filterName, whereCondition);
-		}
+		void OpenForm(object formName, object view, object filterName, object whereCondition);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -778,10 +530,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode)
-		{
-			 Factory.ExecuteMethod(this, "OpenForm", new object[]{ formName, view, filterName, whereCondition, dataMode });
-		}
+		void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -795,10 +544,7 @@ namespace NetOffice.AccessApi
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode, object windowMode)
-		{
-			 Factory.ExecuteMethod(this, "OpenForm", new object[]{ formName, view, filterName, whereCondition, dataMode, windowMode });
-		}
+		void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode, object windowMode);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -808,10 +554,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenQuery(object queryName, object view, object dataMode)
-		{
-			 Factory.ExecuteMethod(this, "OpenQuery", queryName, view, dataMode);
-		}
+		void OpenQuery(object queryName, object view, object dataMode);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -820,10 +563,7 @@ namespace NetOffice.AccessApi
 		/// <param name="queryName">object queryName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenQuery(object queryName)
-		{
-			 Factory.ExecuteMethod(this, "OpenQuery", queryName);
-		}
+		void OpenQuery(object queryName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -833,10 +573,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenQuery(object queryName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenQuery", queryName, view);
-		}
+		void OpenQuery(object queryName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -846,10 +583,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenTable(object tableName, object view, object dataMode)
-		{
-			 Factory.ExecuteMethod(this, "OpenTable", tableName, view, dataMode);
-		}
+		void OpenTable(object tableName, object view, object dataMode);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -858,10 +592,7 @@ namespace NetOffice.AccessApi
 		/// <param name="tableName">object tableName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenTable(object tableName)
-		{
-			 Factory.ExecuteMethod(this, "OpenTable", tableName);
-		}
+		void OpenTable(object tableName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -871,10 +602,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenTable(object tableName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenTable", tableName, view);
-		}
+		void OpenTable(object tableName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -887,10 +615,7 @@ namespace NetOffice.AccessApi
 		/// <param name="copies">optional object copies</param>
 		/// <param name="collateCopies">optional object collateCopies</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality, object copies, object collateCopies)
-		{
-			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ printRange, pageFrom, pageTo, printQuality, copies, collateCopies });
-		}
+		void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality, object copies, object collateCopies);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -898,10 +623,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void PrintOut()
-		{
-			 Factory.ExecuteMethod(this, "PrintOut");
-		}
+		void PrintOut();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -910,10 +632,7 @@ namespace NetOffice.AccessApi
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void PrintOut(object printRange)
-		{
-			 Factory.ExecuteMethod(this, "PrintOut", printRange);
-		}
+		void PrintOut(object printRange);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -923,10 +642,7 @@ namespace NetOffice.AccessApi
 		/// <param name="pageFrom">optional object pageFrom</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void PrintOut(object printRange, object pageFrom)
-		{
-			 Factory.ExecuteMethod(this, "PrintOut", printRange, pageFrom);
-		}
+		void PrintOut(object printRange, object pageFrom);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -937,10 +653,7 @@ namespace NetOffice.AccessApi
 		/// <param name="pageTo">optional object pageTo</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void PrintOut(object printRange, object pageFrom, object pageTo)
-		{
-			 Factory.ExecuteMethod(this, "PrintOut", printRange, pageFrom, pageTo);
-		}
+		void PrintOut(object printRange, object pageFrom, object pageTo);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -952,10 +665,7 @@ namespace NetOffice.AccessApi
 		/// <param name="printQuality">optional NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality)
-		{
-			 Factory.ExecuteMethod(this, "PrintOut", printRange, pageFrom, pageTo, printQuality);
-		}
+		void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -968,10 +678,7 @@ namespace NetOffice.AccessApi
 		/// <param name="copies">optional object copies</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality, object copies)
-		{
-			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ printRange, pageFrom, pageTo, printQuality, copies });
-		}
+		void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality, object copies);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -979,10 +686,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx </remarks>
 		/// <param name="options">optional NetOffice.AccessApi.Enums.AcQuitOption Options = 1</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Quit(object options)
-		{
-			 Factory.ExecuteMethod(this, "Quit", options);
-		}
+		void Quit(object options);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -990,10 +694,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Quit()
-		{
-			 Factory.ExecuteMethod(this, "Quit");
-		}
+		void Quit();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1001,10 +702,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx </remarks>
 		/// <param name="controlName">optional object controlName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Requery(object controlName)
-		{
-			 Factory.ExecuteMethod(this, "Requery", controlName);
-		}
+		void Requery(object controlName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1012,10 +710,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Requery()
-		{
-			 Factory.ExecuteMethod(this, "Requery");
-		}
+		void Requery();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1024,10 +719,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object objectName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RepaintObject(object objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "RepaintObject", objectType, objectName);
-		}
+		void RepaintObject(object objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1035,10 +727,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RepaintObject()
-		{
-			 Factory.ExecuteMethod(this, "RepaintObject");
-		}
+		void RepaintObject();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1047,10 +736,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RepaintObject(object objectType)
-		{
-			 Factory.ExecuteMethod(this, "RepaintObject", objectType);
-		}
+		void RepaintObject(object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1060,10 +746,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="oldName">optional object oldName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Rename(object newName, object objectType, object oldName)
-		{
-			 Factory.ExecuteMethod(this, "Rename", newName, objectType, oldName);
-		}
+		void Rename(object newName, object objectType, object oldName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1072,10 +755,7 @@ namespace NetOffice.AccessApi
 		/// <param name="newName">object newName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Rename(object newName)
-		{
-			 Factory.ExecuteMethod(this, "Rename", newName);
-		}
+		void Rename(object newName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1085,20 +765,14 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Rename(object newName, object objectType)
-		{
-			 Factory.ExecuteMethod(this, "Rename", newName, objectType);
-		}
+		void Rename(object newName, object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193174.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Restore()
-		{
-			 Factory.ExecuteMethod(this, "Restore");
-		}
+		void Restore();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1108,10 +782,7 @@ namespace NetOffice.AccessApi
 		/// <param name="repeatCount">optional object repeatCount</param>
 		/// <param name="repeatExpression">optional object repeatExpression</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RunMacro(object macroName, object repeatCount, object repeatExpression)
-		{
-			 Factory.ExecuteMethod(this, "RunMacro", macroName, repeatCount, repeatExpression);
-		}
+		void RunMacro(object macroName, object repeatCount, object repeatExpression);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1120,10 +791,7 @@ namespace NetOffice.AccessApi
 		/// <param name="macroName">object macroName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RunMacro(object macroName)
-		{
-			 Factory.ExecuteMethod(this, "RunMacro", macroName);
-		}
+		void RunMacro(object macroName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1133,10 +801,7 @@ namespace NetOffice.AccessApi
 		/// <param name="repeatCount">optional object repeatCount</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RunMacro(object macroName, object repeatCount)
-		{
-			 Factory.ExecuteMethod(this, "RunMacro", macroName, repeatCount);
-		}
+		void RunMacro(object macroName, object repeatCount);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1145,10 +810,7 @@ namespace NetOffice.AccessApi
 		/// <param name="sQLStatement">object sQLStatement</param>
 		/// <param name="useTransaction">optional object useTransaction</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RunSQL(object sQLStatement, object useTransaction)
-		{
-			 Factory.ExecuteMethod(this, "RunSQL", sQLStatement, useTransaction);
-		}
+		void RunSQL(object sQLStatement, object useTransaction);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1157,10 +819,7 @@ namespace NetOffice.AccessApi
 		/// <param name="sQLStatement">object sQLStatement</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RunSQL(object sQLStatement)
-		{
-			 Factory.ExecuteMethod(this, "RunSQL", sQLStatement);
-		}
+		void RunSQL(object sQLStatement);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1170,10 +829,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">optional object objectName</param>
 		/// <param name="inDatabaseWindow">optional object inDatabaseWindow</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName, object inDatabaseWindow)
-		{
-			 Factory.ExecuteMethod(this, "SelectObject", objectType, objectName, inDatabaseWindow);
-		}
+		void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName, object inDatabaseWindow);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1182,10 +838,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType objectType</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType)
-		{
-			 Factory.ExecuteMethod(this, "SelectObject", objectType);
-		}
+		void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1195,10 +848,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">optional object objectName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "SelectObject", objectType, objectName);
-		}
+		void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1206,20 +856,14 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837275.aspx </remarks>
 		/// <param name="warningsOn">object warningsOn</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SetWarnings(object warningsOn)
-		{
-			 Factory.ExecuteMethod(this, "SetWarnings", warningsOn);
-		}
+		void SetWarnings(object warningsOn);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195994.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void ShowAllRecords()
-		{
-			 Factory.ExecuteMethod(this, "ShowAllRecords");
-		}
+		void ShowAllRecords();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1230,10 +874,7 @@ namespace NetOffice.AccessApi
 		/// <param name="filterName">optional object filterName</param>
 		/// <param name="whereCondition">optional object whereCondition</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenReport(object reportName, object view, object filterName, object whereCondition)
-		{
-			 Factory.ExecuteMethod(this, "OpenReport", reportName, view, filterName, whereCondition);
-		}
+		void OpenReport(object reportName, object view, object filterName, object whereCondition);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -1246,10 +887,7 @@ namespace NetOffice.AccessApi
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
 		/// <param name="openArgs">optional object openArgs</param>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenReport(object reportName, object view, object filterName, object whereCondition, object windowMode, object openArgs)
-		{
-			 Factory.ExecuteMethod(this, "OpenReport", new object[]{ reportName, view, filterName, whereCondition, windowMode, openArgs });
-		}
+		void OpenReport(object reportName, object view, object filterName, object whereCondition, object windowMode, object openArgs);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1258,10 +896,7 @@ namespace NetOffice.AccessApi
 		/// <param name="reportName">object reportName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenReport(object reportName)
-		{
-			 Factory.ExecuteMethod(this, "OpenReport", reportName);
-		}
+		void OpenReport(object reportName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1271,10 +906,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenReport(object reportName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenReport", reportName, view);
-		}
+		void OpenReport(object reportName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1285,10 +917,7 @@ namespace NetOffice.AccessApi
 		/// <param name="filterName">optional object filterName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenReport(object reportName, object view, object filterName)
-		{
-			 Factory.ExecuteMethod(this, "OpenReport", reportName, view, filterName);
-		}
+		void OpenReport(object reportName, object view, object filterName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -1301,10 +930,7 @@ namespace NetOffice.AccessApi
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenReport(object reportName, object view, object filterName, object whereCondition, object windowMode)
-		{
-			 Factory.ExecuteMethod(this, "OpenReport", new object[]{ reportName, view, filterName, whereCondition, windowMode });
-		}
+		void OpenReport(object reportName, object view, object filterName, object whereCondition, object windowMode);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1319,10 +945,7 @@ namespace NetOffice.AccessApi
 		/// <param name="structureOnly">optional object structureOnly</param>
 		/// <param name="storeLogin">optional object storeLogin</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination, object structureOnly, object storeLogin)
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase", new object[]{ transferType, databaseType, databaseName, objectType, source, destination, structureOnly, storeLogin });
-		}
+		void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination, object structureOnly, object storeLogin);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1330,10 +953,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase()
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase");
-		}
+		void TransferDatabase();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1342,10 +962,7 @@ namespace NetOffice.AccessApi
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase(object transferType)
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase", transferType);
-		}
+		void TransferDatabase(object transferType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1355,10 +972,7 @@ namespace NetOffice.AccessApi
 		/// <param name="databaseType">optional object databaseType</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase(object transferType, object databaseType)
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase", transferType, databaseType);
-		}
+		void TransferDatabase(object transferType, object databaseType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1369,10 +983,7 @@ namespace NetOffice.AccessApi
 		/// <param name="databaseName">optional object databaseName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase(object transferType, object databaseType, object databaseName)
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase", transferType, databaseType, databaseName);
-		}
+		void TransferDatabase(object transferType, object databaseType, object databaseName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1384,10 +995,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType)
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase", transferType, databaseType, databaseName, objectType);
-		}
+		void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1400,10 +1008,7 @@ namespace NetOffice.AccessApi
 		/// <param name="source">optional object source</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source)
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase", new object[]{ transferType, databaseType, databaseName, objectType, source });
-		}
+		void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1417,10 +1022,7 @@ namespace NetOffice.AccessApi
 		/// <param name="destination">optional object destination</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination)
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase", new object[]{ transferType, databaseType, databaseName, objectType, source, destination });
-		}
+		void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1435,10 +1037,7 @@ namespace NetOffice.AccessApi
 		/// <param name="structureOnly">optional object structureOnly</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination, object structureOnly)
-		{
-			 Factory.ExecuteMethod(this, "TransferDatabase", new object[]{ transferType, databaseType, databaseName, objectType, source, destination, structureOnly });
-		}
+		void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination, object structureOnly);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1452,10 +1051,7 @@ namespace NetOffice.AccessApi
 		/// <param name="range">optional object range</param>
 		/// <param name="useOA">optional object useOA</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames, object range, object useOA)
-		{
-			 Factory.ExecuteMethod(this, "TransferSpreadsheet", new object[]{ transferType, spreadsheetType, tableName, fileName, hasFieldNames, range, useOA });
-		}
+		void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames, object range, object useOA);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1463,10 +1059,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferSpreadsheet()
-		{
-			 Factory.ExecuteMethod(this, "TransferSpreadsheet");
-		}
+		void TransferSpreadsheet();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1475,10 +1068,7 @@ namespace NetOffice.AccessApi
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferSpreadsheet(object transferType)
-		{
-			 Factory.ExecuteMethod(this, "TransferSpreadsheet", transferType);
-		}
+		void TransferSpreadsheet(object transferType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1488,10 +1078,7 @@ namespace NetOffice.AccessApi
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferSpreadsheet(object transferType, object spreadsheetType)
-		{
-			 Factory.ExecuteMethod(this, "TransferSpreadsheet", transferType, spreadsheetType);
-		}
+		void TransferSpreadsheet(object transferType, object spreadsheetType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1502,10 +1089,7 @@ namespace NetOffice.AccessApi
 		/// <param name="tableName">optional object tableName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName)
-		{
-			 Factory.ExecuteMethod(this, "TransferSpreadsheet", transferType, spreadsheetType, tableName);
-		}
+		void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1517,10 +1101,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fileName">optional object fileName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName)
-		{
-			 Factory.ExecuteMethod(this, "TransferSpreadsheet", transferType, spreadsheetType, tableName, fileName);
-		}
+		void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1533,10 +1114,7 @@ namespace NetOffice.AccessApi
 		/// <param name="hasFieldNames">optional object hasFieldNames</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames)
-		{
-			 Factory.ExecuteMethod(this, "TransferSpreadsheet", new object[]{ transferType, spreadsheetType, tableName, fileName, hasFieldNames });
-		}
+		void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1550,10 +1128,7 @@ namespace NetOffice.AccessApi
 		/// <param name="range">optional object range</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames, object range)
-		{
-			 Factory.ExecuteMethod(this, "TransferSpreadsheet", new object[]{ transferType, spreadsheetType, tableName, fileName, hasFieldNames, range });
-		}
+		void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames, object range);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1567,10 +1142,7 @@ namespace NetOffice.AccessApi
 		/// <param name="hTMLTableName">optional object hTMLTableName</param>
 		/// <param name="codePage">optional object codePage</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName, object codePage)
-		{
-			 Factory.ExecuteMethod(this, "TransferText", new object[]{ transferType, specificationName, tableName, fileName, hasFieldNames, hTMLTableName, codePage });
-		}
+		void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName, object codePage);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1578,10 +1150,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferText()
-		{
-			 Factory.ExecuteMethod(this, "TransferText");
-		}
+		void TransferText();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1590,10 +1159,7 @@ namespace NetOffice.AccessApi
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferText(object transferType)
-		{
-			 Factory.ExecuteMethod(this, "TransferText", transferType);
-		}
+		void TransferText(object transferType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1603,10 +1169,7 @@ namespace NetOffice.AccessApi
 		/// <param name="specificationName">optional object specificationName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferText(object transferType, object specificationName)
-		{
-			 Factory.ExecuteMethod(this, "TransferText", transferType, specificationName);
-		}
+		void TransferText(object transferType, object specificationName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1617,10 +1180,7 @@ namespace NetOffice.AccessApi
 		/// <param name="tableName">optional object tableName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferText(object transferType, object specificationName, object tableName)
-		{
-			 Factory.ExecuteMethod(this, "TransferText", transferType, specificationName, tableName);
-		}
+		void TransferText(object transferType, object specificationName, object tableName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1632,10 +1192,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fileName">optional object fileName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferText(object transferType, object specificationName, object tableName, object fileName)
-		{
-			 Factory.ExecuteMethod(this, "TransferText", transferType, specificationName, tableName, fileName);
-		}
+		void TransferText(object transferType, object specificationName, object tableName, object fileName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1648,10 +1205,7 @@ namespace NetOffice.AccessApi
 		/// <param name="hasFieldNames">optional object hasFieldNames</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames)
-		{
-			 Factory.ExecuteMethod(this, "TransferText", new object[]{ transferType, specificationName, tableName, fileName, hasFieldNames });
-		}
+		void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1665,10 +1219,7 @@ namespace NetOffice.AccessApi
 		/// <param name="hTMLTableName">optional object hTMLTableName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName)
-		{
-			 Factory.ExecuteMethod(this, "TransferText", new object[]{ transferType, specificationName, tableName, fileName, hasFieldNames, hTMLTableName });
-		}
+		void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1681,10 +1232,7 @@ namespace NetOffice.AccessApi
 		/// <param name="autoStart">optional object autoStart</param>
 		/// <param name="templateFile">optional object templateFile</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
-		{
-			 Factory.ExecuteMethod(this, "OutputTo", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile });
-		}
+		void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -1698,10 +1246,7 @@ namespace NetOffice.AccessApi
 		/// <param name="templateFile">optional object templateFile</param>
 		/// <param name="encoding">optional object encoding</param>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
-		{
-			 Factory.ExecuteMethod(this, "OutputTo", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding });
-		}
+		void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1716,10 +1261,7 @@ namespace NetOffice.AccessApi
 		/// <param name="encoding">optional object encoding</param>
 		/// <param name="outputQuality">optional NetOffice.AccessApi.Enums.AcExportQuality OutputQuality = 0</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding, object outputQuality)
-		{
-			 Factory.ExecuteMethod(this, "OutputTo", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding, outputQuality });
-		}
+		void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding, object outputQuality);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1728,10 +1270,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
-		{
-			 Factory.ExecuteMethod(this, "OutputTo", objectType);
-		}
+		void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1741,10 +1280,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">optional object objectName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "OutputTo", objectType, objectName);
-		}
+		void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1755,10 +1291,7 @@ namespace NetOffice.AccessApi
 		/// <param name="outputFormat">optional object outputFormat</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat)
-		{
-			 Factory.ExecuteMethod(this, "OutputTo", objectType, objectName, outputFormat);
-		}
+		void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1770,10 +1303,7 @@ namespace NetOffice.AccessApi
 		/// <param name="outputFile">optional object outputFile</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile)
-		{
-			 Factory.ExecuteMethod(this, "OutputTo", objectType, objectName, outputFormat, outputFile);
-		}
+		void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1786,10 +1316,7 @@ namespace NetOffice.AccessApi
 		/// <param name="autoStart">optional object autoStart</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart)
-		{
-			 Factory.ExecuteMethod(this, "OutputTo", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart });
-		}
+		void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1798,10 +1325,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object objectName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void DeleteObject(object objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "DeleteObject", objectType, objectName);
-		}
+		void DeleteObject(object objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1809,10 +1333,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void DeleteObject()
-		{
-			 Factory.ExecuteMethod(this, "DeleteObject");
-		}
+		void DeleteObject();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1821,10 +1342,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void DeleteObject(object objectType)
-		{
-			 Factory.ExecuteMethod(this, "DeleteObject", objectType);
-		}
+		void DeleteObject(object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1833,10 +1351,7 @@ namespace NetOffice.AccessApi
 		/// <param name="moduleName">optional object moduleName</param>
 		/// <param name="procedureName">optional object procedureName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenModule(object moduleName, object procedureName)
-		{
-			 Factory.ExecuteMethod(this, "OpenModule", moduleName, procedureName);
-		}
+		void OpenModule(object moduleName, object procedureName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1844,10 +1359,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenModule()
-		{
-			 Factory.ExecuteMethod(this, "OpenModule");
-		}
+		void OpenModule();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1856,10 +1368,7 @@ namespace NetOffice.AccessApi
 		/// <param name="moduleName">optional object moduleName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenModule(object moduleName)
-		{
-			 Factory.ExecuteMethod(this, "OpenModule", moduleName);
-		}
+		void OpenModule(object moduleName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1876,10 +1385,7 @@ namespace NetOffice.AccessApi
 		/// <param name="editMessage">optional object editMessage</param>
 		/// <param name="templateFile">optional object templateFile</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage, object templateFile)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc, subject, messageText, editMessage, templateFile });
-		}
+		void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage, object templateFile);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1887,10 +1393,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject()
-		{
-			 Factory.ExecuteMethod(this, "SendObject");
-		}
+		void SendObject();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1899,10 +1402,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", objectType);
-		}
+		void SendObject(object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1912,10 +1412,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">optional object objectName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", objectType, objectName);
-		}
+		void SendObject(object objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1926,10 +1423,7 @@ namespace NetOffice.AccessApi
 		/// <param name="outputFormat">optional object outputFormat</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName, object outputFormat)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", objectType, objectName, outputFormat);
-		}
+		void SendObject(object objectType, object objectName, object outputFormat);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1941,10 +1435,7 @@ namespace NetOffice.AccessApi
 		/// <param name="to">optional object to</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName, object outputFormat, object to)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", objectType, objectName, outputFormat, to);
-		}
+		void SendObject(object objectType, object objectName, object outputFormat, object to);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1957,10 +1448,7 @@ namespace NetOffice.AccessApi
 		/// <param name="cc">optional object cc</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc });
-		}
+		void SendObject(object objectType, object objectName, object outputFormat, object to, object cc);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1974,10 +1462,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bcc">optional object bcc</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc });
-		}
+		void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1992,10 +1477,7 @@ namespace NetOffice.AccessApi
 		/// <param name="subject">optional object subject</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc, subject });
-		}
+		void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2011,10 +1493,7 @@ namespace NetOffice.AccessApi
 		/// <param name="messageText">optional object messageText</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc, subject, messageText });
-		}
+		void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2031,10 +1510,7 @@ namespace NetOffice.AccessApi
 		/// <param name="editMessage">optional object editMessage</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage)
-		{
-			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc, subject, messageText, editMessage });
-		}
+		void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2043,10 +1519,7 @@ namespace NetOffice.AccessApi
 		/// <param name="toolbarName">object toolbarName</param>
 		/// <param name="show">optional NetOffice.AccessApi.Enums.AcShowToolbar Show = 0</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void ShowToolbar(object toolbarName, object show)
-		{
-			 Factory.ExecuteMethod(this, "ShowToolbar", toolbarName, show);
-		}
+		void ShowToolbar(object toolbarName, object show);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2055,10 +1528,7 @@ namespace NetOffice.AccessApi
 		/// <param name="toolbarName">object toolbarName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void ShowToolbar(object toolbarName)
-		{
-			 Factory.ExecuteMethod(this, "ShowToolbar", toolbarName);
-		}
+		void ShowToolbar(object toolbarName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2067,10 +1537,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object objectName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Save(object objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "Save", objectType, objectName);
-		}
+		void Save(object objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2078,10 +1545,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Save()
-		{
-			 Factory.ExecuteMethod(this, "Save");
-		}
+		void Save();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2090,10 +1554,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Save(object objectType)
-		{
-			 Factory.ExecuteMethod(this, "Save", objectType);
-		}
+		void Save(object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2104,10 +1565,7 @@ namespace NetOffice.AccessApi
 		/// <param name="subcommandIndex">optional object subcommandIndex</param>
 		/// <param name="flag">optional object flag</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SetMenuItem(object menuIndex, object commandIndex, object subcommandIndex, object flag)
-		{
-			 Factory.ExecuteMethod(this, "SetMenuItem", menuIndex, commandIndex, subcommandIndex, flag);
-		}
+		void SetMenuItem(object menuIndex, object commandIndex, object subcommandIndex, object flag);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2116,10 +1574,7 @@ namespace NetOffice.AccessApi
 		/// <param name="menuIndex">object menuIndex</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SetMenuItem(object menuIndex)
-		{
-			 Factory.ExecuteMethod(this, "SetMenuItem", menuIndex);
-		}
+		void SetMenuItem(object menuIndex);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2129,10 +1584,7 @@ namespace NetOffice.AccessApi
 		/// <param name="commandIndex">optional object commandIndex</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SetMenuItem(object menuIndex, object commandIndex)
-		{
-			 Factory.ExecuteMethod(this, "SetMenuItem", menuIndex, commandIndex);
-		}
+		void SetMenuItem(object menuIndex, object commandIndex);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2143,10 +1595,7 @@ namespace NetOffice.AccessApi
 		/// <param name="subcommandIndex">optional object subcommandIndex</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SetMenuItem(object menuIndex, object commandIndex, object subcommandIndex)
-		{
-			 Factory.ExecuteMethod(this, "SetMenuItem", menuIndex, commandIndex, subcommandIndex);
-		}
+		void SetMenuItem(object menuIndex, object commandIndex, object subcommandIndex);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2154,10 +1603,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194612.aspx </remarks>
 		/// <param name="command">NetOffice.AccessApi.Enums.AcCommand command</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void RunCommand(NetOffice.AccessApi.Enums.AcCommand command)
-		{
-			 Factory.ExecuteMethod(this, "RunCommand", command);
-		}
+		void RunCommand(NetOffice.AccessApi.Enums.AcCommand command);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2166,10 +1612,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dataAccessPageName">object dataAccessPageName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcDataAccessPageView View = 0</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenDataAccessPage(object dataAccessPageName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenDataAccessPage", dataAccessPageName, view);
-		}
+		void OpenDataAccessPage(object dataAccessPageName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2178,10 +1621,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dataAccessPageName">object dataAccessPageName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenDataAccessPage(object dataAccessPageName)
-		{
-			 Factory.ExecuteMethod(this, "OpenDataAccessPage", dataAccessPageName);
-		}
+		void OpenDataAccessPage(object dataAccessPageName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2191,10 +1631,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenView(object viewName, object view, object dataMode)
-		{
-			 Factory.ExecuteMethod(this, "OpenView", viewName, view, dataMode);
-		}
+		void OpenView(object viewName, object view, object dataMode);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2203,10 +1640,7 @@ namespace NetOffice.AccessApi
 		/// <param name="viewName">object viewName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenView(object viewName)
-		{
-			 Factory.ExecuteMethod(this, "OpenView", viewName);
-		}
+		void OpenView(object viewName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2216,10 +1650,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenView(object viewName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenView", viewName, view);
-		}
+		void OpenView(object viewName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2227,10 +1658,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821439.aspx </remarks>
 		/// <param name="diagramName">object diagramName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenDiagram(object diagramName)
-		{
-			 Factory.ExecuteMethod(this, "OpenDiagram", diagramName);
-		}
+		void OpenDiagram(object diagramName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2240,10 +1668,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenStoredProcedure(object procedureName, object view, object dataMode)
-		{
-			 Factory.ExecuteMethod(this, "OpenStoredProcedure", procedureName, view, dataMode);
-		}
+		void OpenStoredProcedure(object procedureName, object view, object dataMode);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2252,10 +1677,7 @@ namespace NetOffice.AccessApi
 		/// <param name="procedureName">object procedureName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenStoredProcedure(object procedureName)
-		{
-			 Factory.ExecuteMethod(this, "OpenStoredProcedure", procedureName);
-		}
+		void OpenStoredProcedure(object procedureName);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -2265,10 +1687,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void OpenStoredProcedure(object procedureName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenStoredProcedure", procedureName, view);
-		}
+		void OpenStoredProcedure(object procedureName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2279,10 +1698,7 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object whereCondition</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenReportOld0(object reportName, object view, object filterName, object whereCondition)
-		{
-			 Factory.ExecuteMethod(this, "OpenReportOld0", reportName, view, filterName, whereCondition);
-		}
+		void OpenReportOld0(object reportName, object view, object filterName, object whereCondition);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2291,10 +1707,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenReportOld0(object reportName)
-		{
-			 Factory.ExecuteMethod(this, "OpenReportOld0", reportName);
-		}
+		void OpenReportOld0(object reportName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2304,10 +1717,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenReportOld0(object reportName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenReportOld0", reportName, view);
-		}
+		void OpenReportOld0(object reportName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2318,10 +1728,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenReportOld0(object reportName, object view, object filterName)
-		{
-			 Factory.ExecuteMethod(this, "OpenReportOld0", reportName, view, filterName);
-		}
+		void OpenReportOld0(object reportName, object view, object filterName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2334,10 +1741,7 @@ namespace NetOffice.AccessApi
 		/// <param name="templateFile">optional object templateFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld0", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile });
-		}
+		void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2346,10 +1750,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld0", objectType);
-		}
+		void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2359,10 +1760,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld0", objectType, objectName);
-		}
+		void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2373,10 +1771,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld0", objectType, objectName, outputFormat);
-		}
+		void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2388,10 +1783,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld0", objectType, objectName, outputFormat, outputFile);
-		}
+		void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2404,10 +1796,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld0", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart });
-		}
+		void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2420,10 +1809,7 @@ namespace NetOffice.AccessApi
 		/// <param name="password">optional object password</param>
 		/// <param name="transferCopyData">optional object transferCopyData</param>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login, object password, object transferCopyData)
-		{
-			 Factory.ExecuteMethod(this, "TransferSQLDatabase", new object[]{ server, database, useTrustedConnection, login, password, transferCopyData });
-		}
+		void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login, object password, object transferCopyData);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2433,10 +1819,7 @@ namespace NetOffice.AccessApi
 		/// <param name="database">object database</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void TransferSQLDatabase(object server, object database)
-		{
-			 Factory.ExecuteMethod(this, "TransferSQLDatabase", server, database);
-		}
+		void TransferSQLDatabase(object server, object database);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2447,10 +1830,7 @@ namespace NetOffice.AccessApi
 		/// <param name="useTrustedConnection">optional object useTrustedConnection</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void TransferSQLDatabase(object server, object database, object useTrustedConnection)
-		{
-			 Factory.ExecuteMethod(this, "TransferSQLDatabase", server, database, useTrustedConnection);
-		}
+		void TransferSQLDatabase(object server, object database, object useTrustedConnection);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2462,10 +1842,7 @@ namespace NetOffice.AccessApi
 		/// <param name="login">optional object login</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login)
-		{
-			 Factory.ExecuteMethod(this, "TransferSQLDatabase", server, database, useTrustedConnection, login);
-		}
+		void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2478,10 +1855,7 @@ namespace NetOffice.AccessApi
 		/// <param name="password">optional object password</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login, object password)
-		{
-			 Factory.ExecuteMethod(this, "TransferSQLDatabase", new object[]{ server, database, useTrustedConnection, login, password });
-		}
+		void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login, object password);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2491,10 +1865,7 @@ namespace NetOffice.AccessApi
 		/// <param name="overwriteExistingFile">optional object overwriteExistingFile</param>
 		/// <param name="disconnectAllUsers">optional object disconnectAllUsers</param>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void CopyDatabaseFile(object databaseFileName, object overwriteExistingFile, object disconnectAllUsers)
-		{
-			 Factory.ExecuteMethod(this, "CopyDatabaseFile", databaseFileName, overwriteExistingFile, disconnectAllUsers);
-		}
+		void CopyDatabaseFile(object databaseFileName, object overwriteExistingFile, object disconnectAllUsers);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2503,10 +1874,7 @@ namespace NetOffice.AccessApi
 		/// <param name="databaseFileName">object databaseFileName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void CopyDatabaseFile(object databaseFileName)
-		{
-			 Factory.ExecuteMethod(this, "CopyDatabaseFile", databaseFileName);
-		}
+		void CopyDatabaseFile(object databaseFileName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2516,10 +1884,7 @@ namespace NetOffice.AccessApi
 		/// <param name="overwriteExistingFile">optional object overwriteExistingFile</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void CopyDatabaseFile(object databaseFileName, object overwriteExistingFile)
-		{
-			 Factory.ExecuteMethod(this, "CopyDatabaseFile", databaseFileName, overwriteExistingFile);
-		}
+		void CopyDatabaseFile(object databaseFileName, object overwriteExistingFile);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2529,10 +1894,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenFunction(object functionName, object view, object dataMode)
-		{
-			 Factory.ExecuteMethod(this, "OpenFunction", functionName, view, dataMode);
-		}
+		void OpenFunction(object functionName, object view, object dataMode);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2541,10 +1903,7 @@ namespace NetOffice.AccessApi
 		/// <param name="functionName">object functionName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenFunction(object functionName)
-		{
-			 Factory.ExecuteMethod(this, "OpenFunction", functionName);
-		}
+		void OpenFunction(object functionName);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -2554,10 +1913,7 @@ namespace NetOffice.AccessApi
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void OpenFunction(object functionName, object view)
-		{
-			 Factory.ExecuteMethod(this, "OpenFunction", functionName, view);
-		}
+		void OpenFunction(object functionName, object view);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2566,10 +1922,7 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object whereCondition</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void ApplyFilterOld0(object filterName, object whereCondition)
-		{
-			 Factory.ExecuteMethod(this, "ApplyFilterOld0", filterName, whereCondition);
-		}
+		void ApplyFilterOld0(object filterName, object whereCondition);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2577,10 +1930,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void ApplyFilterOld0()
-		{
-			 Factory.ExecuteMethod(this, "ApplyFilterOld0");
-		}
+		void ApplyFilterOld0();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2589,10 +1939,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void ApplyFilterOld0(object filterName)
-		{
-			 Factory.ExecuteMethod(this, "ApplyFilterOld0", filterName);
-		}
+		void ApplyFilterOld0(object filterName);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2606,10 +1953,7 @@ namespace NetOffice.AccessApi
 		/// <param name="encoding">optional object encoding</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld1", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding });
-		}
+		void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2618,10 +1962,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld1", objectType);
-		}
+		void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2631,10 +1972,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld1", objectType, objectName);
-		}
+		void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2645,10 +1983,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld1", objectType, objectName, outputFormat);
-		}
+		void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2660,10 +1995,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld1", objectType, objectName, outputFormat, outputFile);
-		}
+		void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2676,10 +2008,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld1", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart });
-		}
+		void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2693,10 +2022,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
-		{
-			 Factory.ExecuteMethod(this, "OutputToOld1", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile });
-		}
+		void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2709,10 +2035,7 @@ namespace NetOffice.AccessApi
 		/// <param name="tableName">optional object tableName</param>
 		/// <param name="getLookupDisplayValues">optional object getLookupDisplayValues</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName, object getLookupDisplayValues)
-		{
-			 Factory.ExecuteMethod(this, "TransferSharePointList", new object[]{ transferType, siteAddress, listID, viewID, tableName, getLookupDisplayValues });
-		}
+		void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName, object getLookupDisplayValues);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2723,10 +2046,7 @@ namespace NetOffice.AccessApi
 		/// <param name="listID">object listID</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID)
-		{
-			 Factory.ExecuteMethod(this, "TransferSharePointList", transferType, siteAddress, listID);
-		}
+		void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2738,10 +2058,7 @@ namespace NetOffice.AccessApi
 		/// <param name="viewID">optional object viewID</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID)
-		{
-			 Factory.ExecuteMethod(this, "TransferSharePointList", transferType, siteAddress, listID, viewID);
-		}
+		void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2754,20 +2071,14 @@ namespace NetOffice.AccessApi
 		/// <param name="tableName">optional object tableName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName)
-		{
-			 Factory.ExecuteMethod(this, "TransferSharePointList", new object[]{ transferType, siteAddress, listID, viewID, tableName });
-		}
+		void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844747.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void CloseDatabase()
-		{
-			 Factory.ExecuteMethod(this, "CloseDatabase");
-		}
+		void CloseDatabase();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2776,10 +2087,7 @@ namespace NetOffice.AccessApi
 		/// <param name="category">optional object category</param>
 		/// <param name="group">optional object group</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void NavigateTo(object category, object group)
-		{
-			 Factory.ExecuteMethod(this, "NavigateTo", category, group);
-		}
+		void NavigateTo(object category, object group);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2787,10 +2095,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void NavigateTo()
-		{
-			 Factory.ExecuteMethod(this, "NavigateTo");
-		}
+		void NavigateTo();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2799,10 +2104,7 @@ namespace NetOffice.AccessApi
 		/// <param name="category">optional object category</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void NavigateTo(object category)
-		{
-			 Factory.ExecuteMethod(this, "NavigateTo", category);
-		}
+		void NavigateTo(object category);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2813,10 +2115,7 @@ namespace NetOffice.AccessApi
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 2</param>
 		/// <param name="whereCondition">optional object whereCondition</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SearchForRecord(object objectType, object objectName, object record, object whereCondition)
-		{
-			 Factory.ExecuteMethod(this, "SearchForRecord", objectType, objectName, record, whereCondition);
-		}
+		void SearchForRecord(object objectType, object objectName, object record, object whereCondition);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2824,10 +2123,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SearchForRecord()
-		{
-			 Factory.ExecuteMethod(this, "SearchForRecord");
-		}
+		void SearchForRecord();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2836,10 +2132,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SearchForRecord(object objectType)
-		{
-			 Factory.ExecuteMethod(this, "SearchForRecord", objectType);
-		}
+		void SearchForRecord(object objectType);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2849,10 +2142,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">optional object objectName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SearchForRecord(object objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "SearchForRecord", objectType, objectName);
-		}
+		void SearchForRecord(object objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2863,10 +2153,7 @@ namespace NetOffice.AccessApi
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 2</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SearchForRecord(object objectType, object objectName, object record)
-		{
-			 Factory.ExecuteMethod(this, "SearchForRecord", objectType, objectName, record);
-		}
+		void SearchForRecord(object objectType, object objectName, object record);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2876,10 +2163,7 @@ namespace NetOffice.AccessApi
 		/// <param name="property">optional NetOffice.AccessApi.Enums.AcProperty Property = 0</param>
 		/// <param name="value">optional object value</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SetProperty(object controlName, object property, object value)
-		{
-			 Factory.ExecuteMethod(this, "SetProperty", controlName, property, value);
-		}
+		void SetProperty(object controlName, object property, object value);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2888,10 +2172,7 @@ namespace NetOffice.AccessApi
 		/// <param name="controlName">object controlName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SetProperty(object controlName)
-		{
-			 Factory.ExecuteMethod(this, "SetProperty", controlName);
-		}
+		void SetProperty(object controlName);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2901,30 +2182,21 @@ namespace NetOffice.AccessApi
 		/// <param name="property">optional NetOffice.AccessApi.Enums.AcProperty Property = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SetProperty(object controlName, object property)
-		{
-			 Factory.ExecuteMethod(this, "SetProperty", controlName, property);
-		}
+		void SetProperty(object controlName, object property);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837036.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SingleStep()
-		{
-			 Factory.ExecuteMethod(this, "SingleStep");
-		}
+		void SingleStep();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191914.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void ClearMacroError()
-		{
-			 Factory.ExecuteMethod(this, "ClearMacroError");
-		}
+		void ClearMacroError();
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2933,10 +2205,7 @@ namespace NetOffice.AccessApi
 		/// <param name="show">object show</param>
 		/// <param name="category">optional object category</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SetDisplayedCategories(object show, object category)
-		{
-			 Factory.ExecuteMethod(this, "SetDisplayedCategories", show, category);
-		}
+		void SetDisplayedCategories(object show, object category);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2945,10 +2214,7 @@ namespace NetOffice.AccessApi
 		/// <param name="show">object show</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void SetDisplayedCategories(object show)
-		{
-			 Factory.ExecuteMethod(this, "SetDisplayedCategories", show);
-		}
+		void SetDisplayedCategories(object show);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2956,10 +2222,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195088.aspx </remarks>
 		/// <param name="_lock">object lock</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void LockNavigationPane(object _lock)
-		{
-			 Factory.ExecuteMethod(this, "LockNavigationPane", _lock);
-		}
+		void LockNavigationPane(object _lock);
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -2967,10 +2230,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834375.aspx </remarks>
 		/// <param name="savedImportExportName">object savedImportExportName</param>
 		[SupportByVersion("Access", 12,14,15,16)]
-		public void RunSavedImportExport(object savedImportExportName)
-		{
-			 Factory.ExecuteMethod(this, "RunSavedImportExport", savedImportExportName);
-		}
+		void RunSavedImportExport(object savedImportExportName);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -2983,10 +2243,7 @@ namespace NetOffice.AccessApi
 		/// <param name="page">optional object page</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = 1</param>
 		[SupportByVersion("Access", 14,15,16)]
-		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page, object dataMode)
-		{
-			 Factory.ExecuteMethod(this, "BrowseTo", new object[]{ objectType, objectName, pathtoSubformControl, whereCondition, page, dataMode });
-		}
+		void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page, object dataMode);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -2996,10 +2253,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectName">object objectName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
-		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName)
-		{
-			 Factory.ExecuteMethod(this, "BrowseTo", objectType, objectName);
-		}
+		void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3010,10 +2264,7 @@ namespace NetOffice.AccessApi
 		/// <param name="pathtoSubformControl">optional object pathtoSubformControl</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
-		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl)
-		{
-			 Factory.ExecuteMethod(this, "BrowseTo", objectType, objectName, pathtoSubformControl);
-		}
+		void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3025,10 +2276,7 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object whereCondition</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
-		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition)
-		{
-			 Factory.ExecuteMethod(this, "BrowseTo", objectType, objectName, pathtoSubformControl, whereCondition);
-		}
+		void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3041,10 +2289,7 @@ namespace NetOffice.AccessApi
 		/// <param name="page">optional object page</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
-		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page)
-		{
-			 Factory.ExecuteMethod(this, "BrowseTo", new object[]{ objectType, objectName, pathtoSubformControl, whereCondition, page });
-		}
+		void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3053,10 +2298,7 @@ namespace NetOffice.AccessApi
 		/// <param name="name">object name</param>
 		/// <param name="expression">object expression</param>
 		[SupportByVersion("Access", 14,15,16)]
-		public void SetParameter(object name, object expression)
-		{
-			 Factory.ExecuteMethod(this, "SetParameter", name, expression);
-		}
+		void SetParameter(object name, object expression);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3064,10 +2306,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836068.aspx </remarks>
 		/// <param name="macroName">object macroName</param>
 		[SupportByVersion("Access", 14,15,16)]
-		public void RunDataMacro(object macroName)
-		{
-			 Factory.ExecuteMethod(this, "RunDataMacro", macroName);
-		}
+		void RunDataMacro(object macroName);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3076,10 +2315,7 @@ namespace NetOffice.AccessApi
 		/// <param name="orderBy">object orderBy</param>
 		/// <param name="controlName">optional object controlName</param>
 		[SupportByVersion("Access", 14,15,16)]
-		public void SetOrderBy(object orderBy, object controlName)
-		{
-			 Factory.ExecuteMethod(this, "SetOrderBy", orderBy, controlName);
-		}
+		void SetOrderBy(object orderBy, object controlName);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3088,10 +2324,7 @@ namespace NetOffice.AccessApi
 		/// <param name="orderBy">object orderBy</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
-		public void SetOrderBy(object orderBy)
-		{
-			 Factory.ExecuteMethod(this, "SetOrderBy", orderBy);
-		}
+		void SetOrderBy(object orderBy);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3101,10 +2334,7 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object whereCondition</param>
 		/// <param name="controlName">optional object controlName</param>
 		[SupportByVersion("Access", 14,15,16)]
-		public void SetFilter(object filterName, object whereCondition, object controlName)
-		{
-			 Factory.ExecuteMethod(this, "SetFilter", filterName, whereCondition, controlName);
-		}
+		void SetFilter(object filterName, object whereCondition, object controlName);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3112,10 +2342,7 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
-		public void SetFilter()
-		{
-			 Factory.ExecuteMethod(this, "SetFilter");
-		}
+		void SetFilter();
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3124,10 +2351,7 @@ namespace NetOffice.AccessApi
 		/// <param name="filterName">optional object filterName</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
-		public void SetFilter(object filterName)
-		{
-			 Factory.ExecuteMethod(this, "SetFilter", filterName);
-		}
+		void SetFilter(object filterName);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
@@ -3137,23 +2361,15 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object whereCondition</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
-		public void SetFilter(object filterName, object whereCondition)
-		{
-			 Factory.ExecuteMethod(this, "SetFilter", filterName, whereCondition);
-		}
+		void SetFilter(object filterName, object whereCondition);
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191907.aspx </remarks>
 		[SupportByVersion("Access", 14,15,16)]
-		public void RefreshRecord()
-		{
-			 Factory.ExecuteMethod(this, "RefreshRecord");
-		}
+		void RefreshRecord();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

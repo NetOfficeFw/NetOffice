@@ -20,8 +20,20 @@ namespace NetOffice.Attributes
         --In some rare cases, an interface is a base type for more than 1 CoClass.--
         -- Here is a list of these rare types --
         ----------------------------------------------------------------------------
-           - NetOffice.OutlookApi.MAPIFolder (DispatchInterface)
-           - NetOffice.DAOApi._DBEngine      (DispatchInterface)
+           - NetOffice.OutlookApi.MAPIFolder       (DispatchInterface)
+           - NetOffice.DAOApi._DBEngine            (DispatchInterface)
+           - NetOffice.AccessApi._Section          (DispatchInterface)
+           - NetOffice.AccessApi.AllObjects        (DispatchInterface)
+           - NetOffice.AccessApi._CheckBox         (DispatchInterface)
+           - NetOffice.AccessApi._Control          (DispatchInterface)
+           - NetOffice.AccessApi._CurrentData      (DispatchInterface)
+           - NetOffice.AccessApi._CurrentProject   (DispatchInterface)
+           - NetOffice.AccessApi._CustomControl    (DispatchInterface)
+           - NetOffice.AccessApi._Label            (DispatchInterface)
+           - NetOffice.AccessApi._OptionButton     (DispatchInterface)
+           - NetOffice.AccessApi._ToggleButton     (DispatchInterface)
+
+
 
         TODO: Update this comment before release NetOffice 2.0(stable)
     */

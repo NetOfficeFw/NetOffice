@@ -11,104 +11,9 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class _AddTileUIReceiver : COMObject
+	[TypeId("1DD4E82D-9EF3-4730-A55E-4D179CB08006")]
+	public interface _AddTileUIReceiver : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_AddTileUIReceiver);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _AddTileUIReceiver(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _AddTileUIReceiver(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _AddTileUIReceiver(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _AddTileUIReceiver(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _AddTileUIReceiver(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _AddTileUIReceiver(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _AddTileUIReceiver() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _AddTileUIReceiver(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
-
-		#endregion
-
 		#region Methods
 
 		/// <summary>
@@ -116,10 +21,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public string GetClientProtocolVersion()
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetClientProtocolVersion");
-		}
+		string GetClientProtocolVersion();
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -128,30 +30,21 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrNounID">string bstrNounID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public string CreateCustomTable(string bstrTableName, string bstrNounID)
-		{
-			return Factory.ExecuteStringMethodGet(this, "CreateCustomTable", bstrTableName, bstrNounID);
-		}
+		string CreateCustomTable(string bstrTableName, string bstrNounID);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public string GetNounsVersion()
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetNounsVersion");
-		}
+		string GetNounsVersion();
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public string GetNounsMetadata()
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetNounsMetadata");
-		}
+		string GetNounsMetadata();
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -159,10 +52,7 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrNounID">string bstrNounID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public string GetDefinitionOfNounID(string bstrNounID)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetDefinitionOfNounID", bstrNounID);
-		}
+		string GetDefinitionOfNounID(string bstrNounID);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -171,10 +61,7 @@ namespace NetOffice.AccessApi
 		/// <param name="pdispFinalNameArray">object pdispFinalNameArray</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void CreateObjectFromDefinition(object pdispNounDefArray, object pdispFinalNameArray)
-		{
-			 Factory.ExecuteMethod(this, "CreateObjectFromDefinition", pdispNounDefArray, pdispFinalNameArray);
-		}
+		void CreateObjectFromDefinition(object pdispNounDefArray, object pdispFinalNameArray);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -187,10 +74,7 @@ namespace NetOffice.AccessApi
 		/// <param name="iOptions">Int32 iOptions</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void CreateRelationship(string bstrLeftTable, string bstrRightTable, string bstrLookupFieldName, string bstrLookupFieldDescription, Int32 lookupFieldPosition, Int32 iOptions)
-		{
-			 Factory.ExecuteMethod(this, "CreateRelationship", new object[]{ bstrLeftTable, bstrRightTable, bstrLookupFieldName, bstrLookupFieldDescription, lookupFieldPosition, iOptions });
-		}
+		void CreateRelationship(string bstrLeftTable, string bstrRightTable, string bstrLookupFieldName, string bstrLookupFieldDescription, Int32 lookupFieldPosition, Int32 iOptions);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -198,20 +82,14 @@ namespace NetOffice.AccessApi
 		/// <param name="type">Int16 type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void ImportData(Int16 type)
-		{
-			 Factory.ExecuteMethod(this, "ImportData", type);
-		}
+		void ImportData(Int16 type);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public string GetNounTables()
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetNounTables");
-		}
+		string GetNounTables();
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -219,30 +97,21 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrSearchTerm">string bstrSearchTerm</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void RegisterSearchTerm(string bstrSearchTerm)
-		{
-			 Factory.ExecuteMethod(this, "RegisterSearchTerm", bstrSearchTerm);
-		}
+		void RegisterSearchTerm(string bstrSearchTerm);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void BeginBatchNounAdd()
-		{
-			 Factory.ExecuteMethod(this, "BeginBatchNounAdd");
-		}
+		void BeginBatchNounAdd();
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void FinishBatchNounAdd()
-		{
-			 Factory.ExecuteMethod(this, "FinishBatchNounAdd");
-		}
+		void FinishBatchNounAdd();
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -250,10 +119,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fVisible">bool fVisible</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void NotifyAddTileUIVisibilityChange(bool fVisible)
-		{
-			 Factory.ExecuteMethod(this, "NotifyAddTileUIVisibilityChange", fVisible);
-		}
+		void NotifyAddTileUIVisibilityChange(bool fVisible);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
@@ -262,33 +128,22 @@ namespace NetOffice.AccessApi
 		/// <param name="bstrUrl">string bstrUrl</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void LaunchHyperlink(Int16 type, string bstrUrl)
-		{
-			 Factory.ExecuteMethod(this, "LaunchHyperlink", type, bstrUrl);
-		}
+		void LaunchHyperlink(Int16 type, string bstrUrl);
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public void MetadataLoaded()
-		{
-			 Factory.ExecuteMethod(this, "MetadataLoaded");
-		}
+		void MetadataLoaded();
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 15, 16)]
-		public bool IsOnlineContentAllowed()
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsOnlineContentAllowed");
-		}
+		bool IsOnlineContentAllowed();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

@@ -5,82 +5,30 @@ using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
 using NetOffice.Attributes;
 
-namespace NetOffice.AccessApi.Events
-{	
-	#pragma warning disable
-	
-	#region SinkPoint Interface
-
+namespace NetOffice.AccessApi.EventContracts
+{
+    /// <summary>
+    /// DispSubFormEvents
+    /// </summary>
 	[SupportByVersion("Access", 12,14,15,16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("2E705277-92D1-43CC-A57B-ED48BCCC711D"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface DispSubFormEvents
 	{
+        /// <summary>
+        /// Enter
+        /// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
 		void Enter();
 
+        /// <summary>
+        /// Exit
+        /// </summary>
+        /// <param name="cancel"></param>
 		[SupportByVersion("Access", 12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
 		void Exit([In] [Out] ref object cancel);
 	}
-
-    #endregion
-
-    #region SinkHelper
-
-    [InternalEntity(InternalEntityKind.SinkHelper)]
-    [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class DispSubFormEvents_SinkHelper : SinkHelper, DispSubFormEvents
-	{
-		#region Static
-		
-		public static readonly string Id = "2E705277-92D1-43CC-A57B-ED48BCCC711D";
-		
-		#endregion
-		
-		#region Ctor
-
-		public DispSubFormEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-
-        #endregion
-
-        #region DispSubFormEvents
-
-        public void Enter()
-        {
-            if (!Validate("Enter"))
-            {
-                return;
-            }
-
-            object[] paramsArray = new object[0];
-            EventBinding.RaiseCustomEvent("Enter", ref paramsArray);
-        }
-
-        public void Exit([In] [Out] ref object cancel)
-        {
-            if (!Validate("Exit"))
-            {
-                Invoker.ReleaseParamsArray(cancel);
-                return;
-            }
-
-            object[] paramsArray = new object[1];
-            paramsArray.SetValue(cancel, 0);
-            EventBinding.RaiseCustomEvent("Exit", ref paramsArray);
-
-            cancel = ToInt16(paramsArray[0]);
-        }
-
-        #endregion
-    }
-	
-	#endregion
-	
-	#pragma warning restore
 }

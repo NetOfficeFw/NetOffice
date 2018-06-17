@@ -11,100 +11,10 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _PaletteButton : COMObject
+	[TypeId("9CD4A760-A6A9-11CE-A686-00AA003F0F07")]
+    [CoClassSource(typeof(NetOffice.AccessApi.PaletteButton))]
+    public interface _PaletteButton : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(_PaletteButton);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _PaletteButton(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _PaletteButton(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PaletteButton(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PaletteButton(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PaletteButton(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PaletteButton(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PaletteButton() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _PaletteButton(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,13 +22,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(this, "Application", NetOffice.AccessApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.AccessApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -126,86 +30,42 @@ namespace NetOffice.AccessApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public object OldValue
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "OldValue");
-			}
-		}
+		object OldValue { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.Properties Properties
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Properties>(this, "Properties", NetOffice.AccessApi.Properties.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.AccessApi.Properties Properties { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.Children Controls
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Children>(this, "Controls", NetOffice.AccessApi.Children.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.AccessApi.Children Controls { get; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public object Value
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Value");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Value", value);
-			}
-		}
+		object Value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string EventProcPrefix
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "EventProcPrefix");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "EventProcPrefix", value);
-			}
-		}
+		string EventProcPrefix { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -213,578 +73,238 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string _Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "_Name", value);
-			}
-		}
+		string _Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte ControlType
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "ControlType");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlType", value);
-			}
-		}
+		byte ControlType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 OptionValue
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "OptionValue");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OptionValue", value);
-			}
-		}
+		Int32 OptionValue { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string ControlSource
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ControlSource");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlSource", value);
-			}
-		}
+		string ControlSource { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string DefaultValue
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "DefaultValue");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DefaultValue", value);
-			}
-		}
+		string DefaultValue { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string ValidationRule
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ValidationRule");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ValidationRule", value);
-			}
-		}
+		string ValidationRule { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string ValidationText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ValidationText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ValidationText", value);
-			}
-		}
+		string ValidationText { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string StatusBarText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "StatusBarText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "StatusBarText", value);
-			}
-		}
+		string StatusBarText { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool Visible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
-			}
-		}
+		bool Visible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte DisplayWhen
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "DisplayWhen");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DisplayWhen", value);
-			}
-		}
+		byte DisplayWhen { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool Locked
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Locked");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Locked", value);
-			}
-		}
+		bool Locked { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool TripleState
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "TripleState");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "TripleState", value);
-			}
-		}
+		bool TripleState { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool TabStop
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "TabStop");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "TabStop", value);
-			}
-		}
+		bool TabStop { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 TabIndex
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "TabIndex");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "TabIndex", value);
-			}
-		}
+		Int16 TabIndex { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool HideDuplicates
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HideDuplicates");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HideDuplicates", value);
-			}
-		}
+		bool HideDuplicates { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Left
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
+		Int16 Left { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Top
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
+		Int16 Top { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Width
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Int16 Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Height
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Height");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Height", value);
-			}
-		}
+		Int16 Height { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte BackStyle
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "BackStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BackStyle", value);
-			}
-		}
+		byte BackStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 BackColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "BackColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BackColor", value);
-			}
-		}
+		Int32 BackColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string ShortcutMenuBar
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ShortcutMenuBar");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShortcutMenuBar", value);
-			}
-		}
+		string ShortcutMenuBar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string ControlTipText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ControlTipText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlTipText", value);
-			}
-		}
+		string ControlTipText { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 HelpContextId
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "HelpContextId");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HelpContextId", value);
-			}
-		}
+		Int32 HelpContextId { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 ColumnWidth
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ColumnWidth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ColumnWidth", value);
-			}
-		}
+		Int16 ColumnWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 ColumnOrder
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ColumnOrder");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ColumnOrder", value);
-			}
-		}
+		Int16 ColumnOrder { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool ColumnHidden
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ColumnHidden");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ColumnHidden", value);
-			}
-		}
+		bool ColumnHidden { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool AutoLabel
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoLabel");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AutoLabel", value);
-			}
-		}
+		bool AutoLabel { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool AddColon
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AddColon");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AddColon", value);
-			}
-		}
+		bool AddColon { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 LabelX
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "LabelX");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "LabelX", value);
-			}
-		}
+		Int16 LabelX { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 LabelY
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "LabelY");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "LabelY", value);
-			}
-		}
+		Int16 LabelY { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte LabelAlign
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "LabelAlign");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "LabelAlign", value);
-			}
-		}
+		byte LabelAlign { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 Section
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Section");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Section", value);
-			}
-		}
+		Int16 Section { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -792,51 +312,21 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string ControlName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ControlName");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlName", value);
-			}
-		}
+		string ControlName { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string Tag
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Tag");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Tag", value);
-			}
-		}
+		string Tag { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool IsVisible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsVisible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IsVisible", value);
-			}
-		}
+		bool IsVisible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -844,272 +334,112 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool InSelection
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "InSelection");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "InSelection", value);
-			}
-		}
+		bool InSelection { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string BeforeUpdate
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "BeforeUpdate");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BeforeUpdate", value);
-			}
-		}
+		string BeforeUpdate { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string AfterUpdate
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "AfterUpdate");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AfterUpdate", value);
-			}
-		}
+		string AfterUpdate { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnEnter
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnEnter");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnEnter", value);
-			}
-		}
+		string OnEnter { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnExit
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnExit");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnExit", value);
-			}
-		}
+		string OnExit { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnGotFocus
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnGotFocus");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnGotFocus", value);
-			}
-		}
+		string OnGotFocus { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnLostFocus
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnLostFocus");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnLostFocus", value);
-			}
-		}
+		string OnLostFocus { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnClick
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnClick");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnClick", value);
-			}
-		}
+		string OnClick { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnDblClick
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnDblClick");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnDblClick", value);
-			}
-		}
+		string OnDblClick { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnMouseDown
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnMouseDown");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnMouseDown", value);
-			}
-		}
+		string OnMouseDown { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnMouseMove
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnMouseMove");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnMouseMove", value);
-			}
-		}
+		string OnMouseMove { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnMouseUp
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnMouseUp");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnMouseUp", value);
-			}
-		}
+		string OnMouseUp { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnKeyDown
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnKeyDown");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnKeyDown", value);
-			}
-		}
+		string OnKeyDown { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnKeyUp
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnKeyUp");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnKeyUp", value);
-			}
-		}
+		string OnKeyUp { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string OnKeyPress
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnKeyPress");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnKeyPress", value);
-			}
-		}
+		string OnKeyPress { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+		string Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1117,17 +447,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string BeforeUpdateMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "BeforeUpdateMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BeforeUpdateMacro", value);
-			}
-		}
+		string BeforeUpdateMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1135,17 +455,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string AfterUpdateMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "AfterUpdateMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AfterUpdateMacro", value);
-			}
-		}
+		string AfterUpdateMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1153,17 +463,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnEnterMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnEnterMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnEnterMacro", value);
-			}
-		}
+		string OnEnterMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1171,17 +471,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnExitMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnExitMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnExitMacro", value);
-			}
-		}
+		string OnExitMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1189,17 +479,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnGotFocusMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnGotFocusMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnGotFocusMacro", value);
-			}
-		}
+		string OnGotFocusMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1207,17 +487,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnLostFocusMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnLostFocusMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnLostFocusMacro", value);
-			}
-		}
+		string OnLostFocusMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1225,17 +495,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnClickMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnClickMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnClickMacro", value);
-			}
-		}
+		string OnClickMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1243,17 +503,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnDblClickMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnDblClickMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnDblClickMacro", value);
-			}
-		}
+		string OnDblClickMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1261,17 +511,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnMouseDownMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnMouseDownMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnMouseDownMacro", value);
-			}
-		}
+		string OnMouseDownMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1279,17 +519,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnMouseMoveMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnMouseMoveMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnMouseMoveMacro", value);
-			}
-		}
+		string OnMouseMoveMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1297,17 +527,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnMouseUpMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnMouseUpMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnMouseUpMacro", value);
-			}
-		}
+		string OnMouseUpMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1315,17 +535,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnKeyDownMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnKeyDownMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnKeyDownMacro", value);
-			}
-		}
+		string OnKeyDownMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1333,17 +543,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnKeyUpMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnKeyUpMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnKeyUpMacro", value);
-			}
-		}
+		string OnKeyUpMacro { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
@@ -1351,17 +551,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OnKeyPressMacro
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnKeyPressMacro");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnKeyPressMacro", value);
-			}
-		}
+		string OnKeyPressMacro { get; set; }
 
 		#endregion
 
@@ -1371,38 +561,26 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SizeToFit()
-		{
-			 Factory.ExecuteMethod(this, "SizeToFit");
-		}
+		void SizeToFit();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Requery()
-		{
-			 Factory.ExecuteMethod(this, "Requery");
-		}
+		void Requery();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void Goto()
-		{
-			 Factory.ExecuteMethod(this, "Goto");
-		}
+		void Goto();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public void SetFocus()
-		{
-			 Factory.ExecuteMethod(this, "SetFocus");
-		}
+		void SetFocus();
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1411,20 +589,7 @@ namespace NetOffice.AccessApi
 		/// <param name="ppsa">optional object[] ppsa</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public object _Evaluate(string bstrExpr, object[] ppsa)
-		{
-            object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
-            object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
-            if ((null != returnItem) && (returnItem is MarshalByRefObject))
-            {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
-                return newObject;
-            }
-            else
-            {
-                return returnItem;
-            }
-        }
+		object _Evaluate(string bstrExpr, object[] ppsa);
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
@@ -1433,10 +598,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethod]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public object _Evaluate(string bstrExpr)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "_Evaluate", bstrExpr);
-		}
+		object _Evaluate(string bstrExpr);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -1446,10 +608,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void Move(object left, object top, object width, object height)
-		{
-			 Factory.ExecuteMethod(this, "Move", left, top, width, height);
-		}
+		void Move(object left, object top, object width, object height);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -1457,10 +616,7 @@ namespace NetOffice.AccessApi
 		/// <param name="left">object left</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void Move(object left)
-		{
-			 Factory.ExecuteMethod(this, "Move", left);
-		}
+		void Move(object left);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -1469,10 +625,7 @@ namespace NetOffice.AccessApi
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void Move(object left, object top)
-		{
-			 Factory.ExecuteMethod(this, "Move", left, top);
-		}
+		void Move(object left, object top);
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
@@ -1482,10 +635,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public void Move(object left, object top, object width)
-		{
-			 Factory.ExecuteMethod(this, "Move", left, top, width);
-		}
+		void Move(object left, object top, object width);
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
@@ -1493,13 +643,8 @@ namespace NetOffice.AccessApi
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Access", 11,12,14,15,16)]
-		public bool IsMemberSafe(Int32 dispid)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
-		}
+		bool IsMemberSafe(Int32 dispid);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }
