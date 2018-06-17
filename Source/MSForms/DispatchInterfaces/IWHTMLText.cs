@@ -11,100 +11,10 @@ namespace NetOffice.MSFormsApi
 	/// </summary>
 	[SupportByVersion("MSForms", 2)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IWHTMLText : COMObject
+	[TypeId("5512D11B-5CC6-11CF-8D67-00AA00BDCE1D")]
+    [CoClassSource(typeof(NetOffice.MSFormsApi.HTMLText))]
+    public interface IWHTMLText : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IWHTMLText);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IWHTMLText(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IWHTMLText(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IWHTMLText(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IWHTMLText(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IWHTMLText(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IWHTMLText(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IWHTMLText() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IWHTMLText(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,68 +22,28 @@ namespace NetOffice.MSFormsApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public string HTMLName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "HTMLName");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HTMLName", value);
-			}
-		}
+		string HTMLName { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public string Value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Value", value);
-			}
-		}
+		string Value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 MaxLength
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MaxLength");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MaxLength", value);
-			}
-		}
+		Int32 MaxLength { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 Width
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Width");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Width", value);
-			}
-		}
+		Int32 Width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -181,24 +51,9 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string HTMLType
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "HTMLType");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HTMLType", value);
-			}
-		}
+		string HTMLType { get; set; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

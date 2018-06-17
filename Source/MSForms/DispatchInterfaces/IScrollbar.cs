@@ -11,100 +11,10 @@ namespace NetOffice.MSFormsApi
 	/// </summary>
 	[SupportByVersion("MSForms", 2)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IScrollbar : COMObject
+	[TypeId("04598FC3-866C-11CF-AB7C-00AA00C08FCF")]
+    [CoClassSource(typeof(NetOffice.MSFormsApi.ScrollBar))]
+    public interface IScrollbar : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IScrollbar);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IScrollbar(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IScrollbar(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IScrollbar(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IScrollbar(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IScrollbar(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IScrollbar(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IScrollbar() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IScrollbar(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,231 +22,93 @@ namespace NetOffice.MSFormsApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 BackColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "BackColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BackColor", value);
-			}
-		}
+		Int32 BackColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 ForeColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ForeColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ForeColor", value);
-			}
-		}
+		Int32 ForeColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Enums.fmMousePointer MousePointer
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmMousePointer>(this, "MousePointer");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "MousePointer", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmMousePointer MousePointer { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 Value
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Value", value);
-			}
-		}
+		Int32 Value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 Min
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Min");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Min", value);
-			}
-		}
+		Int32 Min { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 Max
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Max");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Max", value);
-			}
-		}
+		Int32 Max { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 SmallChange
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "SmallChange");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SmallChange", value);
-			}
-		}
+		Int32 SmallChange { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 LargeChange
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "LargeChange");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "LargeChange", value);
-			}
-		}
+		Int32 LargeChange { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public bool ProportionalThumb
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ProportionalThumb");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ProportionalThumb", value);
-			}
-		}
+		bool ProportionalThumb { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Enums.fmOrientation Orientation
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmOrientation>(this, "Orientation");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Orientation", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmOrientation Orientation { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 Delay
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Delay");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Delay", value);
-			}
-		}
+		Int32 Delay { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2), NativeResult]
-		public stdole.Picture MouseIcon
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-                return returnItem as stdole.Picture;
-			}
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MouseIcon", paramsArray);
-			}
-		}
+		stdole.Picture MouseIcon { get; set; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

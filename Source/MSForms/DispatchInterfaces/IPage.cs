@@ -12,100 +12,10 @@ namespace NetOffice.MSFormsApi
 	/// </summary>
 	[SupportByVersion("MSForms", 2)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IPage : COMObject
+	[TypeId("5CEF5613-713D-11CE-80C9-00AA00611080")]
+    [CoClassSource(typeof(NetOffice.MSFormsApi.Page))]
+    public interface IPage : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IPage);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IPage(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IPage(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPage(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPage(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPage(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPage(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPage() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IPage(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,13 +23,7 @@ namespace NetOffice.MSFormsApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Controls Controls
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSFormsApi.Controls>(this, "Controls", NetOffice.MSFormsApi.Controls.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.MSFormsApi.Controls Controls { get; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -127,13 +31,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSFormsApi.Controls Selected
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSFormsApi.Controls>(this, "Selected", NetOffice.MSFormsApi.Controls.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.MSFormsApi.Controls Selected { get; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -141,13 +39,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSFormsApi.Control ActiveControl
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSFormsApi.Control>(this, "ActiveControl", NetOffice.MSFormsApi.Control.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.MSFormsApi.Control ActiveControl { get; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -155,13 +47,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool CanPaste
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "CanPaste");
-			}
-		}
+		bool CanPaste { get; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -169,13 +55,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool CanRedo
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "CanRedo");
-			}
-		}
+		bool CanRedo { get; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -183,365 +63,154 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool CanUndo
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "CanUndo");
-			}
-		}
+		bool CanUndo { get; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Enums.fmCycle Cycle
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmCycle>(this, "Cycle");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Cycle", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmCycle Cycle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public string Caption
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Caption", value);
-			}
-		}
+		string Caption { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public string ControlTipText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ControlTipText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlTipText", value);
-			}
-		}
+		string ControlTipText { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public bool Enabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Enabled", value);
-			}
-		}
+		bool Enabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 Index
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Index", value);
-			}
-		}
+		Int32 Index { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Single InsideHeight
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "InsideHeight");
-			}
-		}
+		Single InsideHeight { get; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Single InsideWidth
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "InsideWidth");
-			}
-		}
+		Single InsideWidth { get; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Enums.fmScrollBars KeepScrollBarsVisible
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmScrollBars>(this, "KeepScrollBarsVisible");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "KeepScrollBarsVisible", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmScrollBars KeepScrollBarsVisible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+		string Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Enums.fmPictureAlignment PictureAlignment
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmPictureAlignment>(this, "PictureAlignment");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "PictureAlignment", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmPictureAlignment PictureAlignment { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2), NativeResult]
-		public stdole.Picture Picture
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-                return returnItem as stdole.Picture;
-			}
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Picture", paramsArray);
-			}
-		}
+		stdole.Picture Picture { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Enums.fmPictureSizeMode PictureSizeMode
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmPictureSizeMode>(this, "PictureSizeMode");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "PictureSizeMode", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmPictureSizeMode PictureSizeMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public bool PictureTiling
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "PictureTiling");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PictureTiling", value);
-			}
-		}
+		bool PictureTiling { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Enums.fmScrollBars ScrollBars
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmScrollBars>(this, "ScrollBars");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ScrollBars", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmScrollBars ScrollBars { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Single ScrollHeight
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "ScrollHeight");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ScrollHeight", value);
-			}
-		}
+		Single ScrollHeight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Single ScrollLeft
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "ScrollLeft");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ScrollLeft", value);
-			}
-		}
+		Single ScrollLeft { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Single ScrollTop
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "ScrollTop");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ScrollTop", value);
-			}
-		}
+		Single ScrollTop { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Single ScrollWidth
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "ScrollWidth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ScrollWidth", value);
-			}
-		}
+		Single ScrollWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public string Tag
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Tag");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Tag", value);
-			}
-		}
+		string Tag { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public NetOffice.MSFormsApi.Enums.fmTransitionEffect TransitionEffect
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmTransitionEffect>(this, "TransitionEffect");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "TransitionEffect", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmTransitionEffect TransitionEffect { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int32 TransitionPeriod
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "TransitionPeriod");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "TransitionPeriod", value);
-			}
-		}
+		Int32 TransitionPeriod { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -549,51 +218,21 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSFormsApi.Enums.fmVerticalScrollBarSide VerticalScrollBarSide
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmVerticalScrollBarSide>(this, "VerticalScrollBarSide");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "VerticalScrollBarSide", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmVerticalScrollBarSide VerticalScrollBarSide { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public bool Visible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
-			}
-		}
+		bool Visible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public Int16 Zoom
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Zoom");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Zoom", value);
-			}
-		}
+		Int16 Zoom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -601,17 +240,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSFormsApi.Enums.fmMode DesignMode
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmMode>(this, "DesignMode");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "DesignMode", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmMode DesignMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -619,17 +248,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSFormsApi.Enums.fmMode ShowToolbox
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmMode>(this, "ShowToolbox");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowToolbox", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmMode ShowToolbox { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -637,17 +256,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSFormsApi.Enums.fmMode ShowGridDots
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmMode>(this, "ShowGridDots");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ShowGridDots", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmMode ShowGridDots { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -655,17 +264,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSFormsApi.Enums.fmMode SnapToGrid
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmMode>(this, "SnapToGrid");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "SnapToGrid", value);
-			}
-		}
+		NetOffice.MSFormsApi.Enums.fmMode SnapToGrid { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -673,17 +272,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Single GridX
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "GridX");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "GridX", value);
-			}
-		}
+		Single GridX { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -691,34 +280,14 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Single GridY
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "GridY");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "GridY", value);
-			}
-		}
+		Single GridY { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public string Accelerator
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Accelerator");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Accelerator", value);
-			}
-		}
+		string Accelerator { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -727,13 +296,7 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		[SupportByVersion("MSForms", 2), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		#endregion
 
@@ -744,217 +307,128 @@ namespace NetOffice.MSFormsApi
 		/// </summary>
 		/// <param name="insideHeight">Int32 insideHeight</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _GetInsideHeight(out Int32 insideHeight)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			insideHeight = 0;
-			object[] paramsArray = Invoker.ValidateParamsArray(insideHeight);
-			Invoker.Method(this, "_GetInsideHeight", paramsArray, modifiers);
-			insideHeight = (Int32)paramsArray[0];
-		}
+		void _GetInsideHeight(out Int32 insideHeight);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="insideWidth">Int32 insideWidth</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _GetInsideWidth(out Int32 insideWidth)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			insideWidth = 0;
-			object[] paramsArray = Invoker.ValidateParamsArray(insideWidth);
-			Invoker.Method(this, "_GetInsideWidth", paramsArray, modifiers);
-			insideWidth = (Int32)paramsArray[0];
-		}
+		void _GetInsideWidth(out Int32 insideWidth);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="scrollHeight">Int32 scrollHeight</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _SetScrollHeight(Int32 scrollHeight)
-		{
-			 Factory.ExecuteMethod(this, "_SetScrollHeight", scrollHeight);
-		}
+		void _SetScrollHeight(Int32 scrollHeight);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="scrollHeight">Int32 scrollHeight</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _GetScrollHeight(out Int32 scrollHeight)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			scrollHeight = 0;
-			object[] paramsArray = Invoker.ValidateParamsArray(scrollHeight);
-			Invoker.Method(this, "_GetScrollHeight", paramsArray, modifiers);
-			scrollHeight = (Int32)paramsArray[0];
-		}
+		void _GetScrollHeight(out Int32 scrollHeight);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="scrollLeft">Int32 scrollLeft</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _SetScrollLeft(Int32 scrollLeft)
-		{
-			 Factory.ExecuteMethod(this, "_SetScrollLeft", scrollLeft);
-		}
+		void _SetScrollLeft(Int32 scrollLeft);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="scrollLeft">Int32 scrollLeft</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _GetScrollLeft(out Int32 scrollLeft)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			scrollLeft = 0;
-			object[] paramsArray = Invoker.ValidateParamsArray(scrollLeft);
-			Invoker.Method(this, "_GetScrollLeft", paramsArray, modifiers);
-			scrollLeft = (Int32)paramsArray[0];
-		}
+		void _GetScrollLeft(out Int32 scrollLeft);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="scrollTop">Int32 scrollTop</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _SetScrollTop(Int32 scrollTop)
-		{
-			 Factory.ExecuteMethod(this, "_SetScrollTop", scrollTop);
-		}
+		void _SetScrollTop(Int32 scrollTop);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="scrollTop">Int32 scrollTop</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _GetScrollTop(out Int32 scrollTop)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			scrollTop = 0;
-			object[] paramsArray = Invoker.ValidateParamsArray(scrollTop);
-			Invoker.Method(this, "_GetScrollTop", paramsArray, modifiers);
-			scrollTop = (Int32)paramsArray[0];
-		}
+		void _GetScrollTop(out Int32 scrollTop);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="scrollWidth">Int32 scrollWidth</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _SetScrollWidth(Int32 scrollWidth)
-		{
-			 Factory.ExecuteMethod(this, "_SetScrollWidth", scrollWidth);
-		}
+		void _SetScrollWidth(Int32 scrollWidth);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="scrollWidth">Int32 scrollWidth</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _GetScrollWidth(out Int32 scrollWidth)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			scrollWidth = 0;
-			object[] paramsArray = Invoker.ValidateParamsArray(scrollWidth);
-			Invoker.Method(this, "_GetScrollWidth", paramsArray, modifiers);
-			scrollWidth = (Int32)paramsArray[0];
-		}
+		void _GetScrollWidth(out Int32 scrollWidth);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="gridX">Int32 gridX</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _SetGridX(Int32 gridX)
-		{
-			 Factory.ExecuteMethod(this, "_SetGridX", gridX);
-		}
+		void _SetGridX(Int32 gridX);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="gridX">Int32 gridX</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _GetGridX(out Int32 gridX)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			gridX = 0;
-			object[] paramsArray = Invoker.ValidateParamsArray(gridX);
-			Invoker.Method(this, "_GetGridX", paramsArray, modifiers);
-			gridX = (Int32)paramsArray[0];
-		}
+		void _GetGridX(out Int32 gridX);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="gridY">Int32 gridY</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _SetGridY(Int32 gridY)
-		{
-			 Factory.ExecuteMethod(this, "_SetGridY", gridY);
-		}
+		void _SetGridY(Int32 gridY);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		/// <param name="gridY">Int32 gridY</param>
 		[SupportByVersion("MSForms", 2)]
-		public void _GetGridY(out Int32 gridY)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
-			gridY = 0;
-			object[] paramsArray = Invoker.ValidateParamsArray(gridY);
-			Invoker.Method(this, "_GetGridY", paramsArray, modifiers);
-			gridY = (Int32)paramsArray[0];
-		}
+		void _GetGridY(out Int32 gridY);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public void Copy()
-		{
-			 Factory.ExecuteMethod(this, "Copy");
-		}
+		void Copy();
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public void Cut()
-		{
-			 Factory.ExecuteMethod(this, "Cut");
-		}
+		void Cut();
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public void Paste()
-		{
-			 Factory.ExecuteMethod(this, "Paste");
-		}
+		void Paste();
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public void RedoAction()
-		{
-			 Factory.ExecuteMethod(this, "RedoAction");
-		}
+		void RedoAction();
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public void Repaint()
-		{
-			 Factory.ExecuteMethod(this, "Repaint");
-		}
+		void Repaint();
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -962,20 +436,14 @@ namespace NetOffice.MSFormsApi
 		/// <param name="xAction">optional object xAction</param>
 		/// <param name="yAction">optional object yAction</param>
 		[SupportByVersion("MSForms", 2)]
-		public void Scroll(object xAction, object yAction)
-		{
-			 Factory.ExecuteMethod(this, "Scroll", xAction, yAction);
-		}
+		void Scroll(object xAction, object yAction);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("MSForms", 2)]
-		public void Scroll()
-		{
-			 Factory.ExecuteMethod(this, "Scroll");
-		}
+		void Scroll();
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
@@ -983,31 +451,20 @@ namespace NetOffice.MSFormsApi
 		/// <param name="xAction">optional object xAction</param>
 		[CustomMethod]
 		[SupportByVersion("MSForms", 2)]
-		public void Scroll(object xAction)
-		{
-			 Factory.ExecuteMethod(this, "Scroll", xAction);
-		}
+		void Scroll(object xAction);
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public void SetDefaultTabOrder()
-		{
-			 Factory.ExecuteMethod(this, "SetDefaultTabOrder");
-		}
+		void SetDefaultTabOrder();
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public void UndoAction()
-		{
-			 Factory.ExecuteMethod(this, "UndoAction");
-		}
+		void UndoAction();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

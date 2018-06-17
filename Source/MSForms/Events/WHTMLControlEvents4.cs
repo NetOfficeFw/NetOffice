@@ -5,62 +5,21 @@ using System.Runtime.InteropServices.ComTypes;
 using NetOffice;
 using NetOffice.Attributes;
 
-namespace NetOffice.MSFormsApi.Events
-{	
-	#pragma warning disable
-	
-	#region SinkPoint Interface
-
+namespace NetOffice.MSFormsApi.EventContracts
+{
+    /// <summary>
+    /// WHTMLControlEvents4
+    /// </summary>
 	[SupportByVersion("MSForms", 2)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("47FF8FE3-6198-11CF-8CE8-00AA006CB389"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface WHTMLControlEvents4
 	{
+        /// <summary>
+        /// Click
+        /// </summary>
 		[SupportByVersion("MSForms", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
 		void Click();
 	}
-
-    #endregion
-
-    #region SinkHelper
-
-    [InternalEntity(InternalEntityKind.SinkHelper)]
-    [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class WHTMLControlEvents4_SinkHelper : SinkHelper, WHTMLControlEvents4
-	{
-		#region Static
-		
-		public static readonly string Id = "47FF8FE3-6198-11CF-8CE8-00AA006CB389";
-		
-		#endregion
-		
-		#region Ctor
-
-		public WHTMLControlEvents4_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-
-		#region WHTMLControlEvents4
-		
-		public void Click()
-		{
-            if (!Validate("Click"))
-            {
-                return;
-            }
-
-            object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
-		}
-
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore
 }
