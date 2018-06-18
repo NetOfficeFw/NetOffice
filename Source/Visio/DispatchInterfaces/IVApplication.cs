@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -12,100 +12,10 @@ namespace NetOffice.VisioApi
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IVApplication : COMObject
+	[TypeId("000D0700-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.VisioApi.Application))]
+    public interface IVApplication : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IVApplication);
-                return _type;
-            }
-        }
-
-        #endregion
-
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IVApplication(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IVApplication(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVApplication(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVApplication(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVApplication(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVApplication(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVApplication() : base()
-		{
-		}
-
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVApplication(string progId) : base(progId)
-		{
-		}
-
-		#endregion
-
 		#region Properties
 
 		/// <summary>
@@ -114,13 +24,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVDocument ActiveDocument
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "ActiveDocument");
-			}
-		}
+		NetOffice.VisioApi.IVDocument ActiveDocument { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -128,13 +32,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVPage ActivePage
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "ActivePage");
-			}
-		}
+		NetOffice.VisioApi.IVPage ActivePage { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -142,13 +40,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVWindow ActiveWindow
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVWindow>(this, "ActiveWindow");
-			}
-		}
+		NetOffice.VisioApi.IVWindow ActiveWindow { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -156,13 +48,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVApplication Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
-			}
-		}
+		NetOffice.VisioApi.IVApplication Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -170,99 +56,49 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVDocuments Documents
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocuments>(this, "Documents");
-			}
-		}
+		NetOffice.VisioApi.IVDocuments Documents { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 ObjectType
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ObjectType");
-			}
-		}
+		Int16 ObjectType { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 OnDataChangeDelay
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "OnDataChangeDelay");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnDataChangeDelay", value);
-			}
-		}
+		Int32 OnDataChangeDelay { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 ProcessID
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ProcessID");
-			}
-		}
+		Int32 ProcessID { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 ScreenUpdating
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ScreenUpdating");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ScreenUpdating", value);
-			}
-		}
+		Int16 ScreenUpdating { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 Stat
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Stat");
-			}
-		}
+		Int16 Stat { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string Version
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Version");
-			}
-		}
+		string Version { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -270,13 +106,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int16 WindowHandle
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "WindowHandle");
-			}
-		}
+		Int16 WindowHandle { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -284,26 +114,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVWindows Windows
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVWindows>(this, "Windows");
-			}
-		}
+		NetOffice.VisioApi.IVWindows Windows { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 Language
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Language");
-			}
-		}
+		Int32 Language { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -311,13 +129,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int16 IsVisio16
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "IsVisio16");
-			}
-		}
+		Int16 IsVisio16 { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -325,26 +137,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int16 IsVisio32
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "IsVisio32");
-			}
-		}
+		Int16 IsVisio32 { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 WindowHandle32
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "WindowHandle32");
-			}
-		}
+		Int32 WindowHandle32 { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -352,26 +152,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int16 InstanceHandle
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "InstanceHandle");
-			}
-		}
+		Int16 InstanceHandle { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 InstanceHandle32
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "InstanceHandle32");
-			}
-		}
+		Int32 InstanceHandle32 { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -379,13 +167,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVUIObject BuiltInMenus
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "BuiltInMenus");
-			}
-		}
+		NetOffice.VisioApi.IVUIObject BuiltInMenus { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -394,10 +176,7 @@ namespace NetOffice.VisioApi
 		/// <param name="fIgnored">Int16 fIgnored</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.VisioApi.IVUIObject get_BuiltInToolbars(Int16 fIgnored)
-		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "BuiltInToolbars", NetOffice.VisioApi.IVUIObject.LateBindingApiWrapperType, fIgnored);
-		}
+		NetOffice.VisioApi.IVUIObject get_BuiltInToolbars(Int16 fIgnored);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -405,10 +184,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fIgnored">Int16 fIgnored</param>
 		[SupportByVersion("Visio", 11,12,14,15,16), Redirect("get_BuiltInToolbars")]
-		public NetOffice.VisioApi.IVUIObject BuiltInToolbars(Int16 fIgnored)
-		{
-			return get_BuiltInToolbars(fIgnored);
-		}
+		NetOffice.VisioApi.IVUIObject BuiltInToolbars(Int16 fIgnored);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -416,30 +192,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVUIObject CustomMenus
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "CustomMenus");
-			}
-		}
+		NetOffice.VisioApi.IVUIObject CustomMenus { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string CustomMenusFile
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "CustomMenusFile");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "CustomMenusFile", value);
-			}
-		}
+		string CustomMenusFile { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -447,64 +207,28 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVUIObject CustomToolbars
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "CustomToolbars");
-			}
-		}
+		NetOffice.VisioApi.IVUIObject CustomToolbars { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string CustomToolbarsFile
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "CustomToolbarsFile");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "CustomToolbarsFile", value);
-			}
-		}
+		string CustomToolbarsFile { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string AddonPaths
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "AddonPaths");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AddonPaths", value);
-			}
-		}
+		string AddonPaths { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string DrawingPaths
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "DrawingPaths");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DrawingPaths", value);
-			}
-		}
+		string DrawingPaths { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -512,119 +236,49 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string FilterPaths
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FilterPaths");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FilterPaths", value);
-			}
-		}
+		string FilterPaths { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string HelpPaths
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "HelpPaths");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HelpPaths", value);
-			}
-		}
+		string HelpPaths { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string StartupPaths
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "StartupPaths");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "StartupPaths", value);
-			}
-		}
+		string StartupPaths { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string StencilPaths
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "StencilPaths");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "StencilPaths", value);
-			}
-		}
+		string StencilPaths { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string TemplatePaths
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "TemplatePaths");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "TemplatePaths", value);
-			}
-		}
+		string TemplatePaths { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string UserName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "UserName");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "UserName", value);
-			}
-		}
+		string UserName { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 PromptForSummary
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "PromptForSummary");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PromptForSummary", value);
-			}
-		}
+		Int16 PromptForSummary { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -632,13 +286,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVAddons Addons
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVAddons>(this, "Addons");
-			}
-		}
+		NetOffice.VisioApi.IVAddons Addons { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -646,13 +294,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string ProfileName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ProfileName");
-			}
-		}
+		string ProfileName { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -661,10 +303,7 @@ namespace NetOffice.VisioApi
 		/// <param name="eventSeqNum">Int32 eventSeqNum</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_EventInfo(Int32 eventSeqNum)
-		{
-			return Factory.ExecuteStringPropertyGet(this, "EventInfo", eventSeqNum);
-		}
+		string get_EventInfo(Int32 eventSeqNum);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -672,10 +311,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="eventSeqNum">Int32 eventSeqNum</param>
 		[SupportByVersion("Visio", 11,12,14,15,16), Redirect("get_EventInfo")]
-		public string EventInfo(Int32 eventSeqNum)
-		{
-			return get_EventInfo(eventSeqNum);
-		}
+		string EventInfo(Int32 eventSeqNum);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -683,90 +319,42 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVEventList EventList
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList");
-			}
-		}
+		NetOffice.VisioApi.IVEventList EventList { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 PersistsEvents
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "PersistsEvents");
-			}
-		}
+		Int16 PersistsEvents { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 Active
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Active");
-			}
-		}
+		Int16 Active { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 DeferRecalc
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "DeferRecalc");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DeferRecalc", value);
-			}
-		}
+		Int16 DeferRecalc { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 AlertResponse
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "AlertResponse");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AlertResponse", value);
-			}
-		}
+		Int16 AlertResponse { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 ShowProgress
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ShowProgress");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowProgress", value);
-			}
-		}
+		Int16 ShowProgress { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -774,13 +362,7 @@ namespace NetOffice.VisioApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16), ProxyResult]
-		public object Vbe
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Vbe");
-			}
-		}
+		object Vbe { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -788,17 +370,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int16 ShowMenus
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ShowMenus");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowMenus", value);
-			}
-		}
+		Int16 ShowMenus { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -806,188 +378,84 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int16 ToolbarStyle
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ToolbarStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ToolbarStyle", value);
-			}
-		}
+		Int16 ToolbarStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 ShowStatusBar
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ShowStatusBar");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowStatusBar", value);
-			}
-		}
+		Int16 ShowStatusBar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 EventsEnabled
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "EventsEnabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "EventsEnabled", value);
-			}
-		}
+		Int16 EventsEnabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string Path
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Path");
-			}
-		}
+		string Path { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 TraceFlags
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "TraceFlags");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "TraceFlags", value);
-			}
-		}
+		Int32 TraceFlags { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 ShowToolbar
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ShowToolbar");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowToolbar", value);
-			}
-		}
+		Int16 ShowToolbar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public bool LiveDynamics
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "LiveDynamics");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "LiveDynamics", value);
-			}
-		}
+		bool LiveDynamics { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public bool AutoLayout
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AutoLayout");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AutoLayout", value);
-			}
-		}
+		bool AutoLayout { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public bool Visible
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Visible", value);
-			}
-		}
+		bool Visible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string CommandLine
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "CommandLine");
-			}
-		}
+		string CommandLine { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public bool IsUndoingOrRedoing
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsUndoingOrRedoing");
-			}
-		}
+		bool IsUndoingOrRedoing { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 CurrentScope
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "CurrentScope");
-			}
-		}
+		Int32 CurrentScope { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -996,10 +464,7 @@ namespace NetOffice.VisioApi
 		/// <param name="nCmdID">Int32 nCmdID</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool get_IsInScope(Int32 nCmdID)
-		{
-			return Factory.ExecuteBoolPropertyGet(this, "IsInScope", nCmdID);
-		}
+		bool get_IsInScope(Int32 nCmdID);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1007,10 +472,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="nCmdID">Int32 nCmdID</param>
 		[SupportByVersion("Visio", 11,12,14,15,16), Redirect("get_IsInScope")]
-		public bool IsInScope(Int32 nCmdID)
-		{
-			return get_IsInScope(nCmdID);
-		}
+		bool IsInScope(Int32 nCmdID);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1019,13 +481,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object old_Addins
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "old_Addins");
-			}
-		}
+		object old_Addins { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1033,139 +489,63 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string ProductName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ProductName");
-			}
-		}
+		string ProductName { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public bool UndoEnabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "UndoEnabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "UndoEnabled", value);
-			}
-		}
+		bool UndoEnabled { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public bool ShowChanges
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowChanges");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowChanges", value);
-			}
-		}
+		bool ShowChanges { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 TypelibMajorVersion
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "TypelibMajorVersion");
-			}
-		}
+		Int16 TypelibMajorVersion { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 TypelibMinorVersion
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "TypelibMinorVersion");
-			}
-		}
+		Int16 TypelibMinorVersion { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int16 AutoRecoverInterval
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "AutoRecoverInterval");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AutoRecoverInterval", value);
-			}
-		}
+		Int16 AutoRecoverInterval { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public bool InhibitSelectChange
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "InhibitSelectChange");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "InhibitSelectChange", value);
-			}
-		}
+		bool InhibitSelectChange { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string ActivePrinter
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ActivePrinter");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ActivePrinter", value);
-			}
-		}
+		string ActivePrinter { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public String[] AvailablePrinters
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = (object)Invoker.PropertyGet(this, "AvailablePrinters", paramsArray);
-				return (String[])returnItem;
-			}
-		}
+		String[] AvailablePrinters { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1173,26 +553,14 @@ namespace NetOffice.VisioApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16), ProxyResult]
-		public object CommandBars
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "CommandBars");
-			}
-		}
+		object CommandBars { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 Build
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Build");
-			}
-		}
+		Int32 Build { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1200,13 +568,7 @@ namespace NetOffice.VisioApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16), ProxyResult]
-		public object COMAddIns
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "COMAddIns");
-			}
-		}
+		object COMAddIns { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1214,139 +576,63 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object DefaultPageUnits
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "DefaultPageUnits");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "DefaultPageUnits", value);
-			}
-		}
+		object DefaultPageUnits { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public object DefaultTextUnits
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "DefaultTextUnits");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "DefaultTextUnits", value);
-			}
-		}
+		object DefaultTextUnits { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public object DefaultAngleUnits
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "DefaultAngleUnits");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "DefaultAngleUnits", value);
-			}
-		}
+		object DefaultAngleUnits { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public object DefaultDurationUnits
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "DefaultDurationUnits");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "DefaultDurationUnits", value);
-			}
-		}
+		object DefaultDurationUnits { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 FullBuild
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "FullBuild");
-			}
-		}
+		Int32 FullBuild { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public bool VBAEnabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "VBAEnabled");
-			}
-		}
+		bool VBAEnabled { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public NetOffice.VisioApi.Enums.VisZoomBehavior DefaultZoomBehavior
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisZoomBehavior>(this, "DefaultZoomBehavior");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "DefaultZoomBehavior", value);
-			}
-		}
+		NetOffice.VisioApi.Enums.VisZoomBehavior DefaultZoomBehavior { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16), NativeResult]
-		public stdole.Font DialogFont
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DialogFont", paramsArray);
-                return returnItem as stdole.Font;
-			}
-		}
+		stdole.Font DialogFont { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 LanguageHelp
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "LanguageHelp");
-			}
-		}
+		Int32 LanguageHelp { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1354,26 +640,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVWindow Window
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVWindow>(this, "Window");
-			}
-		}
+		NetOffice.VisioApi.IVWindow Window { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1381,13 +655,7 @@ namespace NetOffice.VisioApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16), ProxyResult]
-		public object ConnectorToolDataObject
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "ConnectorToolDataObject");
-			}
-		}
+		object ConnectorToolDataObject { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1395,13 +663,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVApplicationSettings Settings
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplicationSettings>(this, "Settings");
-			}
-		}
+        new NetOffice.VisioApi.IVApplicationSettings Settings { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1409,13 +671,7 @@ namespace NetOffice.VisioApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16), ProxyResult]
-		public object SaveAsWebObject
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "SaveAsWebObject");
-			}
-		}
+		object SaveAsWebObject { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
@@ -1424,30 +680,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object MsoDebugOptions
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "MsoDebugOptions");
-			}
-		}
+		object MsoDebugOptions { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public string MyShapesPath
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "MyShapesPath");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MyShapesPath", value);
-			}
-		}
+		string MyShapesPath { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
@@ -1455,26 +695,14 @@ namespace NetOffice.VisioApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16), ProxyResult]
-		public object DefaultRectangleDataObject
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "DefaultRectangleDataObject");
-			}
-		}
+		object DefaultRectangleDataObject { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public bool DataFeaturesEnabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DataFeaturesEnabled");
-			}
-		}
+		bool DataFeaturesEnabled { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
@@ -1482,13 +710,7 @@ namespace NetOffice.VisioApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16), ProxyResult]
-		public object LanguageSettings
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "LanguageSettings");
-			}
-		}
+		object LanguageSettings { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
@@ -1496,56 +718,28 @@ namespace NetOffice.VisioApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16), ProxyResult]
-		public object Assistance
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Assistance");
-			}
-		}
+		object Assistance { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public bool DeferRelationshipRecalc
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DeferRelationshipRecalc");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DeferRelationshipRecalc", value);
-			}
-		}
+		bool DeferRelationshipRecalc { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public NetOffice.VisioApi.Enums.VisEdition CurrentEdition
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisEdition>(this, "CurrentEdition");
-			}
-		}
+		NetOffice.VisioApi.Enums.VisEdition CurrentEdition { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public Int64 InstanceHandle64
-		{
-			get
-			{
-				return Factory.ExecuteInt64PropertyGet(this, "InstanceHandle64");
-			}
-		}
+		Int64 InstanceHandle64 { get; }
 
 		#endregion
 
@@ -1555,66 +749,45 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void Quit()
-		{
-			 Factory.ExecuteMethod(this, "Quit");
-		}
+		void Quit();
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void Redo()
-		{
-			 Factory.ExecuteMethod(this, "Redo");
-		}
+		void Redo();
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void Undo()
-		{
-			 Factory.ExecuteMethod(this, "Undo");
-		}
+		void Undo();
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="menusObject">NetOffice.VisioApi.IVUIObject menusObject</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void SetCustomMenus(NetOffice.VisioApi.IVUIObject menusObject)
-		{
-			 Factory.ExecuteMethod(this, "SetCustomMenus", menusObject);
-		}
+		void SetCustomMenus(NetOffice.VisioApi.IVUIObject menusObject);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void ClearCustomMenus()
-		{
-			 Factory.ExecuteMethod(this, "ClearCustomMenus");
-		}
+		void ClearCustomMenus();
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="toolbarsObject">NetOffice.VisioApi.IVUIObject toolbarsObject</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void SetCustomToolbars(NetOffice.VisioApi.IVUIObject toolbarsObject)
-		{
-			 Factory.ExecuteMethod(this, "SetCustomToolbars", toolbarsObject);
-		}
+		void SetCustomToolbars(NetOffice.VisioApi.IVUIObject toolbarsObject);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void ClearCustomToolbars()
-		{
-			 Factory.ExecuteMethod(this, "ClearCustomToolbars");
-		}
+		void ClearCustomToolbars();
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1622,20 +795,14 @@ namespace NetOffice.VisioApi
 		/// <param name="fileName">string fileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void SaveWorkspaceAs(string fileName)
-		{
-			 Factory.ExecuteMethod(this, "SaveWorkspaceAs", fileName);
-		}
+		void SaveWorkspaceAs(string fileName);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="commandID">Int16 commandID</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void DoCmd(Int16 commandID)
-		{
-			 Factory.ExecuteMethod(this, "DoCmd", commandID);
-		}
+		void DoCmd(Int16 commandID);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1645,10 +812,7 @@ namespace NetOffice.VisioApi
 		/// <param name="unitsOut">object unitsOut</param>
 		/// <param name="format">string format</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string FormatResult(object stringOrNumber, object unitsIn, object unitsOut, string format)
-		{
-			return Factory.ExecuteStringMethodGet(this, "FormatResult", stringOrNumber, unitsIn, unitsOut, format);
-		}
+		string FormatResult(object stringOrNumber, object unitsIn, object unitsOut, string format);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1657,10 +821,7 @@ namespace NetOffice.VisioApi
 		/// <param name="unitsIn">object unitsIn</param>
 		/// <param name="unitsOut">object unitsOut</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Double ConvertResult(object stringOrNumber, object unitsIn, object unitsOut)
-		{
-			return Factory.ExecuteDoubleMethodGet(this, "ConvertResult", stringOrNumber, unitsIn, unitsOut);
-		}
+		Double ConvertResult(object stringOrNumber, object unitsIn, object unitsOut);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1668,43 +829,27 @@ namespace NetOffice.VisioApi
 		/// <param name="pathsString">string pathsString</param>
 		/// <param name="nameArray">String[] nameArray</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void EnumDirectories(string pathsString, out String[] nameArray)
-		{
-			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
-			nameArray = null;
-			object[] paramsArray = Invoker.ValidateParamsArray(pathsString, (object)nameArray);
-			Invoker.Method(this, "EnumDirectories", paramsArray, modifiers);
-			nameArray = paramsArray[1] as String[];
-		}
+		void EnumDirectories(string pathsString, out String[] nameArray);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void PurgeUndo()
-		{
-			 Factory.ExecuteMethod(this, "PurgeUndo");
-		}
+		void PurgeUndo();
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="contextString">string contextString</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 QueueMarkerEvent(string contextString)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "QueueMarkerEvent", contextString);
-		}
+		Int32 QueueMarkerEvent(string contextString);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="bstrUndoScopeName">string bstrUndoScopeName</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public Int32 BeginUndoScope(string bstrUndoScopeName)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "BeginUndoScope", bstrUndoScopeName);
-		}
+		Int32 BeginUndoScope(string bstrUndoScopeName);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1712,30 +857,21 @@ namespace NetOffice.VisioApi
 		/// <param name="nScopeID">Int32 nScopeID</param>
 		/// <param name="bCommit">bool bCommit</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void EndUndoScope(Int32 nScopeID, bool bCommit)
-		{
-			 Factory.ExecuteMethod(this, "EndUndoScope", nScopeID, bCommit);
-		}
+		void EndUndoScope(Int32 nScopeID, bool bCommit);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="pUndoUnit">object pUndoUnit</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void AddUndoUnit(object pUndoUnit)
-		{
-			 Factory.ExecuteMethod(this, "AddUndoUnit", pUndoUnit);
-		}
+		void AddUndoUnit(object pUndoUnit);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="bstrScopeName">string bstrScopeName</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void RenameCurrentScope(string bstrScopeName)
-		{
-			 Factory.ExecuteMethod(this, "RenameCurrentScope", bstrScopeName);
-		}
+		void RenameCurrentScope(string bstrScopeName);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1744,10 +880,7 @@ namespace NetOffice.VisioApi
 		/// <param name="command">Int32 command</param>
 		/// <param name="data">Int32 data</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void InvokeHelp(string bstrHelpFileName, Int32 command, Int32 data)
-		{
-			 Factory.ExecuteMethod(this, "InvokeHelp", bstrHelpFileName, command, data);
-		}
+		void InvokeHelp(string bstrHelpFileName, Int32 command, Int32 data);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1755,10 +888,7 @@ namespace NetOffice.VisioApi
 		/// <param name="uStateID">NetOffice.VisioApi.Enums.VisOnComponentEnterCodes uStateID</param>
 		/// <param name="bEnter">bool bEnter</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public void OnComponentEnterState(NetOffice.VisioApi.Enums.VisOnComponentEnterCodes uStateID, bool bEnter)
-		{
-			 Factory.ExecuteMethod(this, "OnComponentEnterState", uStateID, bEnter);
-		}
+		void OnComponentEnterState(NetOffice.VisioApi.Enums.VisOnComponentEnterCodes uStateID, bool bEnter);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1766,10 +896,7 @@ namespace NetOffice.VisioApi
 		/// <param name="nWhichStatistic">Int32 nWhichStatistic</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public object GetUsageStatistic(Int32 nWhichStatistic)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "GetUsageStatistic", nWhichStatistic);
-		}
+		object GetUsageStatistic(Int32 nWhichStatistic);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1781,10 +908,7 @@ namespace NetOffice.VisioApi
 		/// <param name="langID">optional Int32 LangID = 0</param>
 		/// <param name="calendarID">optional Int32 CalendarID = -1</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format, object langID, object calendarID)
-		{
-			return Factory.ExecuteStringMethodGet(this, "FormatResultEx", new object[]{ stringOrNumber, unitsIn, unitsOut, format, langID, calendarID });
-		}
+		string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format, object langID, object calendarID);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1795,10 +919,7 @@ namespace NetOffice.VisioApi
 		/// <param name="format">string format</param>
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format)
-		{
-			return Factory.ExecuteStringMethodGet(this, "FormatResultEx", stringOrNumber, unitsIn, unitsOut, format);
-		}
+		string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format);
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
@@ -1810,10 +931,7 @@ namespace NetOffice.VisioApi
 		/// <param name="langID">optional Int32 LangID = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format, object langID)
-		{
-			return Factory.ExecuteStringMethodGet(this, "FormatResultEx", new object[]{ stringOrNumber, unitsIn, unitsOut, format, langID });
-		}
+		string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format, object langID);
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
@@ -1823,10 +941,7 @@ namespace NetOffice.VisioApi
 		/// <param name="targetModes">NetOffice.VisioApi.Enums.VisRibbonXModes targetModes</param>
 		/// <param name="friendlyName">string friendlyName</param>
 		[SupportByVersion("Visio", 14,15,16)]
-		public void RegisterRibbonX(object sourceAddOn, NetOffice.VisioApi.IVDocument targetDocument, NetOffice.VisioApi.Enums.VisRibbonXModes targetModes, string friendlyName)
-		{
-			 Factory.ExecuteMethod(this, "RegisterRibbonX", sourceAddOn, targetDocument, targetModes, friendlyName);
-		}
+		void RegisterRibbonX(object sourceAddOn, NetOffice.VisioApi.IVDocument targetDocument, NetOffice.VisioApi.Enums.VisRibbonXModes targetModes, string friendlyName);
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
@@ -1834,20 +949,14 @@ namespace NetOffice.VisioApi
 		/// <param name="sourceAddOn">object sourceAddOn</param>
 		/// <param name="targetDocument">NetOffice.VisioApi.IVDocument targetDocument</param>
 		[SupportByVersion("Visio", 14,15,16)]
-		public void UnregisterRibbonX(object sourceAddOn, NetOffice.VisioApi.IVDocument targetDocument)
-		{
-			 Factory.ExecuteMethod(this, "UnregisterRibbonX", sourceAddOn, targetDocument);
-		}
+		void UnregisterRibbonX(object sourceAddOn, NetOffice.VisioApi.IVDocument targetDocument);
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// </summary>
 		/// <param name="galleryName">string galleryName</param>
 		[SupportByVersion("Visio", 14,15,16)]
-		public bool GetPreviewEnabled(string galleryName)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "GetPreviewEnabled", galleryName);
-		}
+		bool GetPreviewEnabled(string galleryName);
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
@@ -1855,10 +964,7 @@ namespace NetOffice.VisioApi
 		/// <param name="galleryName">string galleryName</param>
 		/// <param name="onOrOff">bool onOrOff</param>
 		[SupportByVersion("Visio", 14,15,16)]
-		public void SetPreviewEnabled(string galleryName, bool onOrOff)
-		{
-			 Factory.ExecuteMethod(this, "SetPreviewEnabled", galleryName, onOrOff);
-		}
+		void SetPreviewEnabled(string galleryName, bool onOrOff);
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
@@ -1866,23 +972,15 @@ namespace NetOffice.VisioApi
 		/// <param name="stencilType">NetOffice.VisioApi.Enums.VisBuiltInStencilTypes stencilType</param>
 		/// <param name="measurementSystem">NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem</param>
 		[SupportByVersion("Visio", 14,15,16)]
-		public string GetBuiltInStencilFile(NetOffice.VisioApi.Enums.VisBuiltInStencilTypes stencilType, NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetBuiltInStencilFile", stencilType, measurementSystem);
-		}
+		string GetBuiltInStencilFile(NetOffice.VisioApi.Enums.VisBuiltInStencilTypes stencilType, NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem);
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// </summary>
 		/// <param name="stencilType">NetOffice.VisioApi.Enums.VisBuiltInStencilTypes stencilType</param>
 		[SupportByVersion("Visio", 14,15,16)]
-		public string GetCustomStencilFile(NetOffice.VisioApi.Enums.VisBuiltInStencilTypes stencilType)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetCustomStencilFile", stencilType);
-		}
+		string GetCustomStencilFile(NetOffice.VisioApi.Enums.VisBuiltInStencilTypes stencilType);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

@@ -125,2658 +125,750 @@ namespace NetOffice.VisioApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769303(v=office.14).aspx </remarks>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events.EApplication_SinkHelper))]
-    [ComEventInterface(typeof(Events.EApplication))]
-    public class InvisibleApp : IVInvisibleApp, IEventBinding
+    [ComEventContract(typeof(NetOffice.VisioApi.EventContracts.EApplication))]
+	[TypeId("000D0A26-0000-0000-C000-000000000046")]
+    public interface InvisibleApp : IVInvisibleApp, IEventBinding
 	{
-		#pragma warning disable
-
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
-        private static Type _type;
-        private Events.EApplication_SinkHelper _eApplication_SinkHelper;
-	
-		#endregion
-
-		#region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        /// <summary>
-        /// Type Cache
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(InvisibleApp);
-                return _type;
-            }
-        }
-        
-        #endregion
-        		
-		#region Construction
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public InvisibleApp(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public InvisibleApp(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public InvisibleApp(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public InvisibleApp(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public InvisibleApp(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
-        /// Creates a new instance of InvisibleApp 
-        /// </summary>		
-		public InvisibleApp():base("Visio.InvisibleApp")
-		{
-			
-		}
-		
-		/// <summary>
-        /// Creates a new instance of InvisibleApp
-        /// </summary>
-        ///<param name="progId">registered ProgID</param>
-		public InvisibleApp(string progId):base(progId)
-		{
-			
-		}
-
-		#endregion
-
-		#region Static CoClass Methods
-		#endregion
-
 		#region Events
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_AppActivatedEventHandler _AppActivatedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767393(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_AppActivatedEventHandler AppActivatedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AppActivatedEvent += value;
-			}
-			remove
-			{
-				_AppActivatedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_AppDeactivatedEventHandler _AppDeactivatedEvent;
+		event InvisibleApp_AppActivatedEventHandler AppActivatedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765522(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_AppDeactivatedEventHandler AppDeactivatedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AppDeactivatedEvent += value;
-			}
-			remove
-			{
-				_AppDeactivatedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_AppObjActivatedEventHandler _AppObjActivatedEvent;
+		event InvisibleApp_AppDeactivatedEventHandler AppDeactivatedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768447(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_AppObjActivatedEventHandler AppObjActivatedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AppObjActivatedEvent += value;
-			}
-			remove
-			{
-				_AppObjActivatedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_AppObjDeactivatedEventHandler _AppObjDeactivatedEvent;
+		event InvisibleApp_AppObjActivatedEventHandler AppObjActivatedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765372(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_AppObjDeactivatedEventHandler AppObjDeactivatedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AppObjDeactivatedEvent += value;
-			}
-			remove
-			{
-				_AppObjDeactivatedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeQuitEventHandler _BeforeQuitEvent;
+		event InvisibleApp_AppObjDeactivatedEventHandler AppObjDeactivatedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767922(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeQuitEventHandler BeforeQuitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeQuitEvent += value;
-			}
-			remove
-			{
-				_BeforeQuitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeModalEventHandler _BeforeModalEvent;
+		event InvisibleApp_BeforeQuitEventHandler BeforeQuitEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767572(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeModalEventHandler BeforeModalEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeModalEvent += value;
-			}
-			remove
-			{
-				_BeforeModalEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_AfterModalEventHandler _AfterModalEvent;
+		event InvisibleApp_BeforeModalEventHandler BeforeModalEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766355(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_AfterModalEventHandler AfterModalEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterModalEvent += value;
-			}
-			remove
-			{
-				_AfterModalEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_WindowOpenedEventHandler _WindowOpenedEvent;
+		event InvisibleApp_AfterModalEventHandler AfterModalEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767410(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_WindowOpenedEventHandler WindowOpenedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowOpenedEvent += value;
-			}
-			remove
-			{
-				_WindowOpenedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_SelectionChangedEventHandler _SelectionChangedEvent;
+		event InvisibleApp_WindowOpenedEventHandler WindowOpenedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766811(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_SelectionChangedEventHandler SelectionChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionChangedEvent += value;
-			}
-			remove
-			{
-				_SelectionChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeWindowClosedEventHandler _BeforeWindowClosedEvent;
+		event InvisibleApp_SelectionChangedEventHandler SelectionChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768040(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeWindowClosedEventHandler BeforeWindowClosedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeWindowClosedEvent += value;
-			}
-			remove
-			{
-				_BeforeWindowClosedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_WindowActivatedEventHandler _WindowActivatedEvent;
+		event InvisibleApp_BeforeWindowClosedEventHandler BeforeWindowClosedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767376(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_WindowActivatedEventHandler WindowActivatedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowActivatedEvent += value;
-			}
-			remove
-			{
-				_WindowActivatedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeWindowSelDeleteEventHandler _BeforeWindowSelDeleteEvent;
+		event InvisibleApp_WindowActivatedEventHandler WindowActivatedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766033(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeWindowSelDeleteEventHandler BeforeWindowSelDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeWindowSelDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeWindowSelDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeWindowPageTurnEventHandler _BeforeWindowPageTurnEvent;
+		event InvisibleApp_BeforeWindowSelDeleteEventHandler BeforeWindowSelDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767063(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeWindowPageTurnEventHandler BeforeWindowPageTurnEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeWindowPageTurnEvent += value;
-			}
-			remove
-			{
-				_BeforeWindowPageTurnEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_WindowTurnedToPageEventHandler _WindowTurnedToPageEvent;
+		event InvisibleApp_BeforeWindowPageTurnEventHandler BeforeWindowPageTurnEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767662(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_WindowTurnedToPageEventHandler WindowTurnedToPageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowTurnedToPageEvent += value;
-			}
-			remove
-			{
-				_WindowTurnedToPageEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DocumentOpenedEventHandler _DocumentOpenedEvent;
+		event InvisibleApp_WindowTurnedToPageEventHandler WindowTurnedToPageEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766381(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_DocumentOpenedEventHandler DocumentOpenedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DocumentOpenedEvent += value;
-			}
-			remove
-			{
-				_DocumentOpenedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DocumentCreatedEventHandler _DocumentCreatedEvent;
+		event InvisibleApp_DocumentOpenedEventHandler DocumentOpenedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767356(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_DocumentCreatedEventHandler DocumentCreatedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DocumentCreatedEvent += value;
-			}
-			remove
-			{
-				_DocumentCreatedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DocumentSavedEventHandler _DocumentSavedEvent;
+		event InvisibleApp_DocumentCreatedEventHandler DocumentCreatedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768368(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_DocumentSavedEventHandler DocumentSavedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DocumentSavedEvent += value;
-			}
-			remove
-			{
-				_DocumentSavedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DocumentSavedAsEventHandler _DocumentSavedAsEvent;
+		event InvisibleApp_DocumentSavedEventHandler DocumentSavedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769114(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_DocumentSavedAsEventHandler DocumentSavedAsEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DocumentSavedAsEvent += value;
-			}
-			remove
-			{
-				_DocumentSavedAsEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DocumentChangedEventHandler _DocumentChangedEvent;
+		event InvisibleApp_DocumentSavedAsEventHandler DocumentSavedAsEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768511(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_DocumentChangedEventHandler DocumentChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DocumentChangedEvent += value;
-			}
-			remove
-			{
-				_DocumentChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeDocumentCloseEventHandler _BeforeDocumentCloseEvent;
+		event InvisibleApp_DocumentChangedEventHandler DocumentChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766731(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeDocumentCloseEventHandler BeforeDocumentCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeDocumentCloseEvent += value;
-			}
-			remove
-			{
-				_BeforeDocumentCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_StyleAddedEventHandler _StyleAddedEvent;
+		event InvisibleApp_BeforeDocumentCloseEventHandler BeforeDocumentCloseEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767954(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_StyleAddedEventHandler StyleAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_StyleAddedEvent += value;
-			}
-			remove
-			{
-				_StyleAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_StyleChangedEventHandler _StyleChangedEvent;
+		event InvisibleApp_StyleAddedEventHandler StyleAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767281(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_StyleChangedEventHandler StyleChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_StyleChangedEvent += value;
-			}
-			remove
-			{
-				_StyleChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeStyleDeleteEventHandler _BeforeStyleDeleteEvent;
+		event InvisibleApp_StyleChangedEventHandler StyleChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765113(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeStyleDeleteEventHandler BeforeStyleDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeStyleDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeStyleDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MasterAddedEventHandler _MasterAddedEvent;
+		event InvisibleApp_BeforeStyleDeleteEventHandler BeforeStyleDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766331(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MasterAddedEventHandler MasterAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MasterAddedEvent += value;
-			}
-			remove
-			{
-				_MasterAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MasterChangedEventHandler _MasterChangedEvent;
+		event InvisibleApp_MasterAddedEventHandler MasterAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768066(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MasterChangedEventHandler MasterChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MasterChangedEvent += value;
-			}
-			remove
-			{
-				_MasterChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeMasterDeleteEventHandler _BeforeMasterDeleteEvent;
+		event InvisibleApp_MasterChangedEventHandler MasterChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767032(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeMasterDeleteEventHandler BeforeMasterDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeMasterDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeMasterDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_PageAddedEventHandler _PageAddedEvent;
+		event InvisibleApp_BeforeMasterDeleteEventHandler BeforeMasterDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768709(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_PageAddedEventHandler PageAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PageAddedEvent += value;
-			}
-			remove
-			{
-				_PageAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_PageChangedEventHandler _PageChangedEvent;
+		event InvisibleApp_PageAddedEventHandler PageAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768785(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_PageChangedEventHandler PageChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PageChangedEvent += value;
-			}
-			remove
-			{
-				_PageChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforePageDeleteEventHandler _BeforePageDeleteEvent;
+		event InvisibleApp_PageChangedEventHandler PageChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768579(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforePageDeleteEventHandler BeforePageDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforePageDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforePageDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ShapeAddedEventHandler _ShapeAddedEvent;
+		event InvisibleApp_BeforePageDeleteEventHandler BeforePageDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767730(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ShapeAddedEventHandler ShapeAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeAddedEvent += value;
-			}
-			remove
-			{
-				_ShapeAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeSelectionDeleteEventHandler _BeforeSelectionDeleteEvent;
+		event InvisibleApp_ShapeAddedEventHandler ShapeAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767690(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeSelectionDeleteEventHandler BeforeSelectionDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeSelectionDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeSelectionDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ShapeChangedEventHandler _ShapeChangedEvent;
+		event InvisibleApp_BeforeSelectionDeleteEventHandler BeforeSelectionDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767622(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ShapeChangedEventHandler ShapeChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeChangedEvent += value;
-			}
-			remove
-			{
-				_ShapeChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_SelectionAddedEventHandler _SelectionAddedEvent;
+		event InvisibleApp_ShapeChangedEventHandler ShapeChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769104(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_SelectionAddedEventHandler SelectionAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionAddedEvent += value;
-			}
-			remove
-			{
-				_SelectionAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeShapeDeleteEventHandler _BeforeShapeDeleteEvent;
+		event InvisibleApp_SelectionAddedEventHandler SelectionAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767037(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeShapeDeleteEventHandler BeforeShapeDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeShapeDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeShapeDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_TextChangedEventHandler _TextChangedEvent;
+		event InvisibleApp_BeforeShapeDeleteEventHandler BeforeShapeDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766913(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_TextChangedEventHandler TextChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_TextChangedEvent += value;
-			}
-			remove
-			{
-				_TextChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_CellChangedEventHandler _CellChangedEvent;
+		event InvisibleApp_TextChangedEventHandler TextChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766877(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_CellChangedEventHandler CellChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CellChangedEvent += value;
-			}
-			remove
-			{
-				_CellChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MarkerEventEventHandler _MarkerEventEvent;
+		event InvisibleApp_CellChangedEventHandler CellChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765651(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MarkerEventEventHandler MarkerEventEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MarkerEventEvent += value;
-			}
-			remove
-			{
-				_MarkerEventEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_NoEventsPendingEventHandler _NoEventsPendingEvent;
+		event InvisibleApp_MarkerEventEventHandler MarkerEventEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766723(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_NoEventsPendingEventHandler NoEventsPendingEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NoEventsPendingEvent += value;
-			}
-			remove
-			{
-				_NoEventsPendingEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_VisioIsIdleEventHandler _VisioIsIdleEvent;
+		event InvisibleApp_NoEventsPendingEventHandler NoEventsPendingEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766985(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_VisioIsIdleEventHandler VisioIsIdleEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_VisioIsIdleEvent += value;
-			}
-			remove
-			{
-				_VisioIsIdleEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MustFlushScopeBeginningEventHandler _MustFlushScopeBeginningEvent;
+		event InvisibleApp_VisioIsIdleEventHandler VisioIsIdleEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768314(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MustFlushScopeBeginningEventHandler MustFlushScopeBeginningEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MustFlushScopeBeginningEvent += value;
-			}
-			remove
-			{
-				_MustFlushScopeBeginningEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MustFlushScopeEndedEventHandler _MustFlushScopeEndedEvent;
+		event InvisibleApp_MustFlushScopeBeginningEventHandler MustFlushScopeBeginningEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768618(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MustFlushScopeEndedEventHandler MustFlushScopeEndedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MustFlushScopeEndedEvent += value;
-			}
-			remove
-			{
-				_MustFlushScopeEndedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_RunModeEnteredEventHandler _RunModeEnteredEvent;
+		event InvisibleApp_MustFlushScopeEndedEventHandler MustFlushScopeEndedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766960(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_RunModeEnteredEventHandler RunModeEnteredEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_RunModeEnteredEvent += value;
-			}
-			remove
-			{
-				_RunModeEnteredEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DesignModeEnteredEventHandler _DesignModeEnteredEvent;
+		event InvisibleApp_RunModeEnteredEventHandler RunModeEnteredEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768667(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_DesignModeEnteredEventHandler DesignModeEnteredEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DesignModeEnteredEvent += value;
-			}
-			remove
-			{
-				_DesignModeEnteredEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeDocumentSaveEventHandler _BeforeDocumentSaveEvent;
+		event InvisibleApp_DesignModeEnteredEventHandler DesignModeEnteredEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768909(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeDocumentSaveEventHandler BeforeDocumentSaveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeDocumentSaveEvent += value;
-			}
-			remove
-			{
-				_BeforeDocumentSaveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeDocumentSaveAsEventHandler _BeforeDocumentSaveAsEvent;
+		event InvisibleApp_BeforeDocumentSaveEventHandler BeforeDocumentSaveEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767685(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeDocumentSaveAsEventHandler BeforeDocumentSaveAsEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeDocumentSaveAsEvent += value;
-			}
-			remove
-			{
-				_BeforeDocumentSaveAsEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_FormulaChangedEventHandler _FormulaChangedEvent;
+		event InvisibleApp_BeforeDocumentSaveAsEventHandler BeforeDocumentSaveAsEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765269(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_FormulaChangedEventHandler FormulaChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_FormulaChangedEvent += value;
-			}
-			remove
-			{
-				_FormulaChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ConnectionsAddedEventHandler _ConnectionsAddedEvent;
+		event InvisibleApp_FormulaChangedEventHandler FormulaChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766595(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ConnectionsAddedEventHandler ConnectionsAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ConnectionsAddedEvent += value;
-			}
-			remove
-			{
-				_ConnectionsAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ConnectionsDeletedEventHandler _ConnectionsDeletedEvent;
+		event InvisibleApp_ConnectionsAddedEventHandler ConnectionsAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767251(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ConnectionsDeletedEventHandler ConnectionsDeletedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ConnectionsDeletedEvent += value;
-			}
-			remove
-			{
-				_ConnectionsDeletedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_EnterScopeEventHandler _EnterScopeEvent;
+		event InvisibleApp_ConnectionsDeletedEventHandler ConnectionsDeletedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766336(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_EnterScopeEventHandler EnterScopeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_EnterScopeEvent += value;
-			}
-			remove
-			{
-				_EnterScopeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ExitScopeEventHandler _ExitScopeEvent;
+		event InvisibleApp_EnterScopeEventHandler EnterScopeEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768144(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ExitScopeEventHandler ExitScopeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ExitScopeEvent += value;
-			}
-			remove
-			{
-				_ExitScopeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelQuitEventHandler _QueryCancelQuitEvent;
+		event InvisibleApp_ExitScopeEventHandler ExitScopeEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768147(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelQuitEventHandler QueryCancelQuitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelQuitEvent += value;
-			}
-			remove
-			{
-				_QueryCancelQuitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QuitCanceledEventHandler _QuitCanceledEvent;
+		event InvisibleApp_QueryCancelQuitEventHandler QueryCancelQuitEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766219(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QuitCanceledEventHandler QuitCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QuitCanceledEvent += value;
-			}
-			remove
-			{
-				_QuitCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_WindowChangedEventHandler _WindowChangedEvent;
+		event InvisibleApp_QuitCanceledEventHandler QuitCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768984(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_WindowChangedEventHandler WindowChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowChangedEvent += value;
-			}
-			remove
-			{
-				_WindowChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ViewChangedEventHandler _ViewChangedEvent;
+		event InvisibleApp_WindowChangedEventHandler WindowChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766826(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ViewChangedEventHandler ViewChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ViewChangedEvent += value;
-			}
-			remove
-			{
-				_ViewChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelWindowCloseEventHandler _QueryCancelWindowCloseEvent;
+		event InvisibleApp_ViewChangedEventHandler ViewChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767013(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelWindowCloseEventHandler QueryCancelWindowCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelWindowCloseEvent += value;
-			}
-			remove
-			{
-				_QueryCancelWindowCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_WindowCloseCanceledEventHandler _WindowCloseCanceledEvent;
+		event InvisibleApp_QueryCancelWindowCloseEventHandler QueryCancelWindowCloseEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766190(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_WindowCloseCanceledEventHandler WindowCloseCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowCloseCanceledEvent += value;
-			}
-			remove
-			{
-				_WindowCloseCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelDocumentCloseEventHandler _QueryCancelDocumentCloseEvent;
+		event InvisibleApp_WindowCloseCanceledEventHandler WindowCloseCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766898(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelDocumentCloseEventHandler QueryCancelDocumentCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelDocumentCloseEvent += value;
-			}
-			remove
-			{
-				_QueryCancelDocumentCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DocumentCloseCanceledEventHandler _DocumentCloseCanceledEvent;
+		event InvisibleApp_QueryCancelDocumentCloseEventHandler QueryCancelDocumentCloseEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765949(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_DocumentCloseCanceledEventHandler DocumentCloseCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DocumentCloseCanceledEvent += value;
-			}
-			remove
-			{
-				_DocumentCloseCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelStyleDeleteEventHandler _QueryCancelStyleDeleteEvent;
+		event InvisibleApp_DocumentCloseCanceledEventHandler DocumentCloseCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767280(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelStyleDeleteEventHandler QueryCancelStyleDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelStyleDeleteEvent += value;
-			}
-			remove
-			{
-				_QueryCancelStyleDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_StyleDeleteCanceledEventHandler _StyleDeleteCanceledEvent;
+		event InvisibleApp_QueryCancelStyleDeleteEventHandler QueryCancelStyleDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768716(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_StyleDeleteCanceledEventHandler StyleDeleteCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_StyleDeleteCanceledEvent += value;
-			}
-			remove
-			{
-				_StyleDeleteCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelMasterDeleteEventHandler _QueryCancelMasterDeleteEvent;
+		event InvisibleApp_StyleDeleteCanceledEventHandler StyleDeleteCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768817(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelMasterDeleteEventHandler QueryCancelMasterDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelMasterDeleteEvent += value;
-			}
-			remove
-			{
-				_QueryCancelMasterDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MasterDeleteCanceledEventHandler _MasterDeleteCanceledEvent;
+		event InvisibleApp_QueryCancelMasterDeleteEventHandler QueryCancelMasterDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767706(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MasterDeleteCanceledEventHandler MasterDeleteCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MasterDeleteCanceledEvent += value;
-			}
-			remove
-			{
-				_MasterDeleteCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelPageDeleteEventHandler _QueryCancelPageDeleteEvent;
+		event InvisibleApp_MasterDeleteCanceledEventHandler MasterDeleteCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768454(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelPageDeleteEventHandler QueryCancelPageDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelPageDeleteEvent += value;
-			}
-			remove
-			{
-				_QueryCancelPageDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_PageDeleteCanceledEventHandler _PageDeleteCanceledEvent;
+		event InvisibleApp_QueryCancelPageDeleteEventHandler QueryCancelPageDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765889(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_PageDeleteCanceledEventHandler PageDeleteCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PageDeleteCanceledEvent += value;
-			}
-			remove
-			{
-				_PageDeleteCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ShapeParentChangedEventHandler _ShapeParentChangedEvent;
+		event InvisibleApp_PageDeleteCanceledEventHandler PageDeleteCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766348(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ShapeParentChangedEventHandler ShapeParentChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeParentChangedEvent += value;
-			}
-			remove
-			{
-				_ShapeParentChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeShapeTextEditEventHandler _BeforeShapeTextEditEvent;
+		event InvisibleApp_ShapeParentChangedEventHandler ShapeParentChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766839(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeShapeTextEditEventHandler BeforeShapeTextEditEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeShapeTextEditEvent += value;
-			}
-			remove
-			{
-				_BeforeShapeTextEditEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ShapeExitedTextEditEventHandler _ShapeExitedTextEditEvent;
+		event InvisibleApp_BeforeShapeTextEditEventHandler BeforeShapeTextEditEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766390(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ShapeExitedTextEditEventHandler ShapeExitedTextEditEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeExitedTextEditEvent += value;
-			}
-			remove
-			{
-				_ShapeExitedTextEditEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelSelectionDeleteEventHandler _QueryCancelSelectionDeleteEvent;
+		event InvisibleApp_ShapeExitedTextEditEventHandler ShapeExitedTextEditEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768063(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelSelectionDeleteEventHandler QueryCancelSelectionDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelSelectionDeleteEvent += value;
-			}
-			remove
-			{
-				_QueryCancelSelectionDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_SelectionDeleteCanceledEventHandler _SelectionDeleteCanceledEvent;
+		event InvisibleApp_QueryCancelSelectionDeleteEventHandler QueryCancelSelectionDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769183(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_SelectionDeleteCanceledEventHandler SelectionDeleteCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionDeleteCanceledEvent += value;
-			}
-			remove
-			{
-				_SelectionDeleteCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelUngroupEventHandler _QueryCancelUngroupEvent;
+		event InvisibleApp_SelectionDeleteCanceledEventHandler SelectionDeleteCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767906(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelUngroupEventHandler QueryCancelUngroupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelUngroupEvent += value;
-			}
-			remove
-			{
-				_QueryCancelUngroupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_UngroupCanceledEventHandler _UngroupCanceledEvent;
+		event InvisibleApp_QueryCancelUngroupEventHandler QueryCancelUngroupEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766810(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_UngroupCanceledEventHandler UngroupCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_UngroupCanceledEvent += value;
-			}
-			remove
-			{
-				_UngroupCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelConvertToGroupEventHandler _QueryCancelConvertToGroupEvent;
+		event InvisibleApp_UngroupCanceledEventHandler UngroupCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765068(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelConvertToGroupEventHandler QueryCancelConvertToGroupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelConvertToGroupEvent += value;
-			}
-			remove
-			{
-				_QueryCancelConvertToGroupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ConvertToGroupCanceledEventHandler _ConvertToGroupCanceledEvent;
+		event InvisibleApp_QueryCancelConvertToGroupEventHandler QueryCancelConvertToGroupEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765686(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_ConvertToGroupCanceledEventHandler ConvertToGroupCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ConvertToGroupCanceledEvent += value;
-			}
-			remove
-			{
-				_ConvertToGroupCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelSuspendEventHandler _QueryCancelSuspendEvent;
+		event InvisibleApp_ConvertToGroupCanceledEventHandler ConvertToGroupCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766235(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_QueryCancelSuspendEventHandler QueryCancelSuspendEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelSuspendEvent += value;
-			}
-			remove
-			{
-				_QueryCancelSuspendEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_SuspendCanceledEventHandler _SuspendCanceledEvent;
+		event InvisibleApp_QueryCancelSuspendEventHandler QueryCancelSuspendEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766499(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_SuspendCanceledEventHandler SuspendCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SuspendCanceledEvent += value;
-			}
-			remove
-			{
-				_SuspendCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeSuspendEventHandler _BeforeSuspendEvent;
+		event InvisibleApp_SuspendCanceledEventHandler SuspendCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769072(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_BeforeSuspendEventHandler BeforeSuspendEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeSuspendEvent += value;
-			}
-			remove
-			{
-				_BeforeSuspendEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_AfterResumeEventHandler _AfterResumeEvent;
+		event InvisibleApp_BeforeSuspendEventHandler BeforeSuspendEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765491(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_AfterResumeEventHandler AfterResumeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterResumeEvent += value;
-			}
-			remove
-			{
-				_AfterResumeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_OnKeystrokeMessageForAddonEventHandler _OnKeystrokeMessageForAddonEvent;
+		event InvisibleApp_AfterResumeEventHandler AfterResumeEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767010(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_OnKeystrokeMessageForAddonEventHandler OnKeystrokeMessageForAddonEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_OnKeystrokeMessageForAddonEvent += value;
-			}
-			remove
-			{
-				_OnKeystrokeMessageForAddonEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MouseDownEventHandler _MouseDownEvent;
+		event InvisibleApp_OnKeystrokeMessageForAddonEventHandler OnKeystrokeMessageForAddonEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768379(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MouseDownEventHandler MouseDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseDownEvent += value;
-			}
-			remove
-			{
-				_MouseDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MouseMoveEventHandler _MouseMoveEvent;
+		event InvisibleApp_MouseDownEventHandler MouseDownEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767115(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MouseMoveEventHandler MouseMoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseMoveEvent += value;
-			}
-			remove
-			{
-				_MouseMoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_MouseUpEventHandler _MouseUpEvent;
+		event InvisibleApp_MouseMoveEventHandler MouseMoveEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767397(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_MouseUpEventHandler MouseUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseUpEvent += value;
-			}
-			remove
-			{
-				_MouseUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_KeyDownEventHandler _KeyDownEvent;
+		event InvisibleApp_MouseUpEventHandler MouseUpEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767556(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_KeyDownEventHandler KeyDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyDownEvent += value;
-			}
-			remove
-			{
-				_KeyDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_KeyPressEventHandler _KeyPressEvent;
+		event InvisibleApp_KeyDownEventHandler KeyDownEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768495(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_KeyPressEventHandler KeyPressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyPressEvent += value;
-			}
-			remove
-			{
-				_KeyPressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event InvisibleApp_KeyUpEventHandler _KeyUpEvent;
+		event InvisibleApp_KeyPressEventHandler KeyPressEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766229(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event InvisibleApp_KeyUpEventHandler KeyUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyUpEvent += value;
-			}
-			remove
-			{
-				_KeyUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelSuspendEventsEventHandler _QueryCancelSuspendEventsEvent;
+		event InvisibleApp_KeyUpEventHandler KeyUpEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765927(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_QueryCancelSuspendEventsEventHandler QueryCancelSuspendEventsEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelSuspendEventsEvent += value;
-			}
-			remove
-			{
-				_QueryCancelSuspendEventsEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_SuspendEventsCanceledEventHandler _SuspendEventsCanceledEvent;
+		event InvisibleApp_QueryCancelSuspendEventsEventHandler QueryCancelSuspendEventsEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765481(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_SuspendEventsCanceledEventHandler SuspendEventsCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SuspendEventsCanceledEvent += value;
-			}
-			remove
-			{
-				_SuspendEventsCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeSuspendEventsEventHandler _BeforeSuspendEventsEvent;
+		event InvisibleApp_SuspendEventsCanceledEventHandler SuspendEventsCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766566(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_BeforeSuspendEventsEventHandler BeforeSuspendEventsEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeSuspendEventsEvent += value;
-			}
-			remove
-			{
-				_BeforeSuspendEventsEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_AfterResumeEventsEventHandler _AfterResumeEventsEvent;
+		event InvisibleApp_BeforeSuspendEventsEventHandler BeforeSuspendEventsEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765853(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_AfterResumeEventsEventHandler AfterResumeEventsEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterResumeEventsEvent += value;
-			}
-			remove
-			{
-				_AfterResumeEventsEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_QueryCancelGroupEventHandler _QueryCancelGroupEvent;
+		event InvisibleApp_AfterResumeEventsEventHandler AfterResumeEventsEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765459(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_QueryCancelGroupEventHandler QueryCancelGroupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelGroupEvent += value;
-			}
-			remove
-			{
-				_QueryCancelGroupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_GroupCanceledEventHandler _GroupCanceledEvent;
+		event InvisibleApp_QueryCancelGroupEventHandler QueryCancelGroupEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765402(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_GroupCanceledEventHandler GroupCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_GroupCanceledEvent += value;
-			}
-			remove
-			{
-				_GroupCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ShapeDataGraphicChangedEventHandler _ShapeDataGraphicChangedEvent;
+		event InvisibleApp_GroupCanceledEventHandler GroupCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765850(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_ShapeDataGraphicChangedEventHandler ShapeDataGraphicChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeDataGraphicChangedEvent += value;
-			}
-			remove
-			{
-				_ShapeDataGraphicChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_BeforeDataRecordsetDeleteEventHandler _BeforeDataRecordsetDeleteEvent;
+		event InvisibleApp_ShapeDataGraphicChangedEventHandler ShapeDataGraphicChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765236(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_BeforeDataRecordsetDeleteEventHandler BeforeDataRecordsetDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeDataRecordsetDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeDataRecordsetDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DataRecordsetChangedEventHandler _DataRecordsetChangedEvent;
+		event InvisibleApp_BeforeDataRecordsetDeleteEventHandler BeforeDataRecordsetDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768548(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_DataRecordsetChangedEventHandler DataRecordsetChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DataRecordsetChangedEvent += value;
-			}
-			remove
-			{
-				_DataRecordsetChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_DataRecordsetAddedEventHandler _DataRecordsetAddedEvent;
+		event InvisibleApp_DataRecordsetChangedEventHandler DataRecordsetChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767031(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_DataRecordsetAddedEventHandler DataRecordsetAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DataRecordsetAddedEvent += value;
-			}
-			remove
-			{
-				_DataRecordsetAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ShapeLinkAddedEventHandler _ShapeLinkAddedEvent;
+		event InvisibleApp_DataRecordsetAddedEventHandler DataRecordsetAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767994(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_ShapeLinkAddedEventHandler ShapeLinkAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeLinkAddedEvent += value;
-			}
-			remove
-			{
-				_ShapeLinkAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_ShapeLinkDeletedEventHandler _ShapeLinkDeletedEvent;
+		event InvisibleApp_ShapeLinkAddedEventHandler ShapeLinkAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765058(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_ShapeLinkDeletedEventHandler ShapeLinkDeletedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeLinkDeletedEvent += value;
-			}
-			remove
-			{
-				_ShapeLinkDeletedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event InvisibleApp_AfterRemoveHiddenInformationEventHandler _AfterRemoveHiddenInformationEvent;
+		event InvisibleApp_ShapeLinkDeletedEventHandler ShapeLinkDeletedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767141(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event InvisibleApp_AfterRemoveHiddenInformationEventHandler AfterRemoveHiddenInformationEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterRemoveHiddenInformationEvent += value;
-			}
-			remove
-			{
-				_AfterRemoveHiddenInformationEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 14,15,16
-		/// </summary>
-		private event InvisibleApp_ContainerRelationshipAddedEventHandler _ContainerRelationshipAddedEvent;
+		event InvisibleApp_AfterRemoveHiddenInformationEventHandler AfterRemoveHiddenInformationEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765415(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15,16)]
-		public event InvisibleApp_ContainerRelationshipAddedEventHandler ContainerRelationshipAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContainerRelationshipAddedEvent += value;
-			}
-			remove
-			{
-				_ContainerRelationshipAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 14,15,16
-		/// </summary>
-		private event InvisibleApp_ContainerRelationshipDeletedEventHandler _ContainerRelationshipDeletedEvent;
+		event InvisibleApp_ContainerRelationshipAddedEventHandler ContainerRelationshipAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766762(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15,16)]
-		public event InvisibleApp_ContainerRelationshipDeletedEventHandler ContainerRelationshipDeletedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContainerRelationshipDeletedEvent += value;
-			}
-			remove
-			{
-				_ContainerRelationshipDeletedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 14,15,16
-		/// </summary>
-		private event InvisibleApp_CalloutRelationshipAddedEventHandler _CalloutRelationshipAddedEvent;
+		event InvisibleApp_ContainerRelationshipDeletedEventHandler ContainerRelationshipDeletedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768554(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15,16)]
-		public event InvisibleApp_CalloutRelationshipAddedEventHandler CalloutRelationshipAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CalloutRelationshipAddedEvent += value;
-			}
-			remove
-			{
-				_CalloutRelationshipAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 14,15,16
-		/// </summary>
-		private event InvisibleApp_CalloutRelationshipDeletedEventHandler _CalloutRelationshipDeletedEvent;
+		event InvisibleApp_CalloutRelationshipAddedEventHandler CalloutRelationshipAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765438(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15,16)]
-		public event InvisibleApp_CalloutRelationshipDeletedEventHandler CalloutRelationshipDeletedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CalloutRelationshipDeletedEvent += value;
-			}
-			remove
-			{
-				_CalloutRelationshipDeletedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 14,15,16
-		/// </summary>
-		private event InvisibleApp_RuleSetValidatedEventHandler _RuleSetValidatedEvent;
+		event InvisibleApp_CalloutRelationshipDeletedEventHandler CalloutRelationshipDeletedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766746(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15,16)]
-		public event InvisibleApp_RuleSetValidatedEventHandler RuleSetValidatedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_RuleSetValidatedEvent += value;
-			}
-			remove
-			{
-				_RuleSetValidatedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 15, 16
-		/// </summary>
-		private event InvisibleApp_QueryCancelReplaceShapesEventHandler _QueryCancelReplaceShapesEvent;
+		event InvisibleApp_RuleSetValidatedEventHandler RuleSetValidatedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 15,16
 		/// </summary>
 		[SupportByVersion("Visio", 15, 16)]
-		public event InvisibleApp_QueryCancelReplaceShapesEventHandler QueryCancelReplaceShapesEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelReplaceShapesEvent += value;
-			}
-			remove
-			{
-				_QueryCancelReplaceShapesEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 15, 16
-		/// </summary>
-		private event InvisibleApp_ReplaceShapesCanceledEventHandler _ReplaceShapesCanceledEvent;
+		event InvisibleApp_QueryCancelReplaceShapesEventHandler QueryCancelReplaceShapesEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 15,16
 		/// </summary>
 		[SupportByVersion("Visio", 15, 16)]
-		public event InvisibleApp_ReplaceShapesCanceledEventHandler ReplaceShapesCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ReplaceShapesCanceledEvent += value;
-			}
-			remove
-			{
-				_ReplaceShapesCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 15, 16
-		/// </summary>
-		private event InvisibleApp_BeforeReplaceShapesEventHandler _BeforeReplaceShapesEvent;
+		event InvisibleApp_ReplaceShapesCanceledEventHandler ReplaceShapesCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 15,16
 		/// </summary>
 		[SupportByVersion("Visio", 15, 16)]
-		public event InvisibleApp_BeforeReplaceShapesEventHandler BeforeReplaceShapesEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeReplaceShapesEvent += value;
-			}
-			remove
-			{
-				_BeforeReplaceShapesEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 15, 16
-		/// </summary>
-		private event InvisibleApp_AfterReplaceShapesEventHandler _AfterReplaceShapesEvent;
+		event InvisibleApp_BeforeReplaceShapesEventHandler BeforeReplaceShapesEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 15,16
 		/// </summary>
 		[SupportByVersion("Visio", 15, 16)]
-		public event InvisibleApp_AfterReplaceShapesEventHandler AfterReplaceShapesEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterReplaceShapesEvent += value;
-			}
-			remove
-			{
-				_AfterReplaceShapesEvent -= value;
-			}
-		}
+		event InvisibleApp_AfterReplaceShapesEventHandler AfterReplaceShapesEvent;
 
 		#endregion
-       
-	    #region IEventBinding
-        
-		/// <summary>
-        /// Creates active sink helper
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
-        {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
-            if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EApplication_SinkHelper.Id);
-
-
-			if (Events.EApplication_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				_eApplication_SinkHelper = new Events.EApplication_SinkHelper(this, _connectPoint);
-				return;
-			} 
-        }
-
-        /// <summary>
-        /// The instance use currently an event listener 
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
-        {
-            get 
-            {
-                return (null != _connectPoint);
-            }
-        }
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <returns>true if one or more event is active, otherwise false</returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
-        }
-
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <param name="eventName">name of the event</param>
-        /// <returns></returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-
-        /// <summary>
-        /// Target methods from its actual event recipients
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-       
-        /// <summary>
-        /// Returns the current count of event recipients
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
-        /// <summary>
-        /// Raise an instance event
-        /// </summary>
-        /// <param name="eventName">name of the event without 'Event' at the end</param>
-        /// <param name="paramsArray">custom arguments for the event</param>
-        /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
-            return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
-        /// <summary>
-        /// Stop listening events for the instance
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
-        {
-			if( null != _eApplication_SinkHelper)
-			{
-				_eApplication_SinkHelper.Dispose();
-				_eApplication_SinkHelper = null;
-			}
-
-			_connectPoint = null;
-		}
-        
-        #endregion
-
-		#pragma warning restore
 	}
 }
-

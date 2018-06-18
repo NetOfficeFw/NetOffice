@@ -324,11 +324,18 @@ namespace NetOffice.VisioApi.Tools
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="application"></param>
+        /// <param name="ConnectMode"></param>
+        /// <param name="AddInInst"></param>
+        /// <param name="custom"></param>
         void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
-            {
-                this.Application = new Visio.Application(null, application);
+            {                
+                this.Application = Factory.CreateKnownObjectFromComProxy<Visio.Application>(null, application, typeof(Visio.Application));
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }

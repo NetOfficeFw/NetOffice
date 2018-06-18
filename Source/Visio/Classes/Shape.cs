@@ -41,730 +41,166 @@ namespace NetOffice.VisioApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769391(v=office.14).aspx </remarks>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events.EShape_SinkHelper))]
-    [ComEventInterface(typeof(Events.EShape))]
-    public class Shape : IVShape, IEventBinding
+    [ComEventContract(typeof(NetOffice.VisioApi.EventContracts.EShape))]
+	[TypeId("000D0A0A-0000-0000-C000-000000000046")]
+    public interface Shape : IVShape, IEventBinding
 	{
-		#pragma warning disable
-
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
-        private static Type _type;
-        private Events.EShape_SinkHelper _eShape_SinkHelper;
-	
-		#endregion
-
-		#region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-
-        /// <summary>
-        /// Type Cache
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Shape);
-                return _type;
-            }
-        }
-        
-        #endregion
-        		
-		#region Construction
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Shape(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Shape(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shape(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shape(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Shape(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
-        /// Creates a new instance of Shape 
-        /// </summary>		
-		public Shape():base("Visio.Shape")
-		{
-			
-		}
-		
-		/// <summary>
-        /// Creates a new instance of Shape
-        /// </summary>
-        ///<param name="progId">registered ProgID</param>
-		public Shape(string progId):base(progId)
-		{
-			
-		}
-
-		#endregion
-
-		#region Static CoClass Methods
-		#endregion
-
 		#region Events
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_CellChangedEventHandler _CellChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768439(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_CellChangedEventHandler CellChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CellChangedEvent += value;
-			}
-			remove
-			{
-				_CellChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_ShapeAddedEventHandler _ShapeAddedEvent;
+		event Shape_CellChangedEventHandler CellChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767288(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_ShapeAddedEventHandler ShapeAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeAddedEvent += value;
-			}
-			remove
-			{
-				_ShapeAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_BeforeSelectionDeleteEventHandler _BeforeSelectionDeleteEvent;
+		event Shape_ShapeAddedEventHandler ShapeAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765958(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_BeforeSelectionDeleteEventHandler BeforeSelectionDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeSelectionDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeSelectionDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_ShapeChangedEventHandler _ShapeChangedEvent;
+		event Shape_BeforeSelectionDeleteEventHandler BeforeSelectionDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766015(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_ShapeChangedEventHandler ShapeChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeChangedEvent += value;
-			}
-			remove
-			{
-				_ShapeChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_SelectionAddedEventHandler _SelectionAddedEvent;
+		event Shape_ShapeChangedEventHandler ShapeChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768302(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_SelectionAddedEventHandler SelectionAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionAddedEvent += value;
-			}
-			remove
-			{
-				_SelectionAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_BeforeShapeDeleteEventHandler _BeforeShapeDeleteEvent;
+		event Shape_SelectionAddedEventHandler SelectionAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766835(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_BeforeShapeDeleteEventHandler BeforeShapeDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeShapeDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeShapeDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_TextChangedEventHandler _TextChangedEvent;
+		event Shape_BeforeShapeDeleteEventHandler BeforeShapeDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768749(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_TextChangedEventHandler TextChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_TextChangedEvent += value;
-			}
-			remove
-			{
-				_TextChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_FormulaChangedEventHandler _FormulaChangedEvent;
+		event Shape_TextChangedEventHandler TextChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768370(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_FormulaChangedEventHandler FormulaChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_FormulaChangedEvent += value;
-			}
-			remove
-			{
-				_FormulaChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_ShapeParentChangedEventHandler _ShapeParentChangedEvent;
+		event Shape_FormulaChangedEventHandler FormulaChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767923(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_ShapeParentChangedEventHandler ShapeParentChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeParentChangedEvent += value;
-			}
-			remove
-			{
-				_ShapeParentChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_BeforeShapeTextEditEventHandler _BeforeShapeTextEditEvent;
+		event Shape_ShapeParentChangedEventHandler ShapeParentChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769047(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_BeforeShapeTextEditEventHandler BeforeShapeTextEditEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeShapeTextEditEvent += value;
-			}
-			remove
-			{
-				_BeforeShapeTextEditEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_ShapeExitedTextEditEventHandler _ShapeExitedTextEditEvent;
+		event Shape_BeforeShapeTextEditEventHandler BeforeShapeTextEditEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768049(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_ShapeExitedTextEditEventHandler ShapeExitedTextEditEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeExitedTextEditEvent += value;
-			}
-			remove
-			{
-				_ShapeExitedTextEditEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_QueryCancelSelectionDeleteEventHandler _QueryCancelSelectionDeleteEvent;
+		event Shape_ShapeExitedTextEditEventHandler ShapeExitedTextEditEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768386(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_QueryCancelSelectionDeleteEventHandler QueryCancelSelectionDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelSelectionDeleteEvent += value;
-			}
-			remove
-			{
-				_QueryCancelSelectionDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_SelectionDeleteCanceledEventHandler _SelectionDeleteCanceledEvent;
+		event Shape_QueryCancelSelectionDeleteEventHandler QueryCancelSelectionDeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765289(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_SelectionDeleteCanceledEventHandler SelectionDeleteCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionDeleteCanceledEvent += value;
-			}
-			remove
-			{
-				_SelectionDeleteCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_QueryCancelUngroupEventHandler _QueryCancelUngroupEvent;
+		event Shape_SelectionDeleteCanceledEventHandler SelectionDeleteCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768619(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_QueryCancelUngroupEventHandler QueryCancelUngroupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelUngroupEvent += value;
-			}
-			remove
-			{
-				_QueryCancelUngroupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_UngroupCanceledEventHandler _UngroupCanceledEvent;
+		event Shape_QueryCancelUngroupEventHandler QueryCancelUngroupEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767820(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_UngroupCanceledEventHandler UngroupCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_UngroupCanceledEvent += value;
-			}
-			remove
-			{
-				_UngroupCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_QueryCancelConvertToGroupEventHandler _QueryCancelConvertToGroupEvent;
+		event Shape_UngroupCanceledEventHandler UngroupCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765418(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_QueryCancelConvertToGroupEventHandler QueryCancelConvertToGroupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelConvertToGroupEvent += value;
-			}
-			remove
-			{
-				_QueryCancelConvertToGroupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15,16
-		/// </summary>
-		private event Shape_ConvertToGroupCanceledEventHandler _ConvertToGroupCanceledEvent;
+		event Shape_QueryCancelConvertToGroupEventHandler QueryCancelConvertToGroupEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769035(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		public event Shape_ConvertToGroupCanceledEventHandler ConvertToGroupCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ConvertToGroupCanceledEvent += value;
-			}
-			remove
-			{
-				_ConvertToGroupCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event Shape_QueryCancelGroupEventHandler _QueryCancelGroupEvent;
+		event Shape_ConvertToGroupCanceledEventHandler ConvertToGroupCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767645(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event Shape_QueryCancelGroupEventHandler QueryCancelGroupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QueryCancelGroupEvent += value;
-			}
-			remove
-			{
-				_QueryCancelGroupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event Shape_GroupCanceledEventHandler _GroupCanceledEvent;
+		event Shape_QueryCancelGroupEventHandler QueryCancelGroupEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767284(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event Shape_GroupCanceledEventHandler GroupCanceledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_GroupCanceledEvent += value;
-			}
-			remove
-			{
-				_GroupCanceledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event Shape_ShapeDataGraphicChangedEventHandler _ShapeDataGraphicChangedEvent;
+		event Shape_GroupCanceledEventHandler GroupCanceledEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766823(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event Shape_ShapeDataGraphicChangedEventHandler ShapeDataGraphicChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeDataGraphicChangedEvent += value;
-			}
-			remove
-			{
-				_ShapeDataGraphicChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event Shape_ShapeLinkAddedEventHandler _ShapeLinkAddedEvent;
+		event Shape_ShapeDataGraphicChangedEventHandler ShapeDataGraphicChangedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766506(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event Shape_ShapeLinkAddedEventHandler ShapeLinkAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeLinkAddedEvent += value;
-			}
-			remove
-			{
-				_ShapeLinkAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio, 12,14,15,16
-		/// </summary>
-		private event Shape_ShapeLinkDeletedEventHandler _ShapeLinkDeletedEvent;
+		event Shape_ShapeLinkAddedEventHandler ShapeLinkAddedEvent;
 
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767434(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15,16)]
-		public event Shape_ShapeLinkDeletedEventHandler ShapeLinkDeletedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShapeLinkDeletedEvent += value;
-			}
-			remove
-			{
-				_ShapeLinkDeletedEvent -= value;
-			}
-		}
+		event Shape_ShapeLinkDeletedEventHandler ShapeLinkDeletedEvent;
 
 		#endregion
-       
-	    #region IEventBinding
-        
-		/// <summary>
-        /// Creates active sink helper
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
-        {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
-            if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EShape_SinkHelper.Id);
-
-
-			if(Events.EShape_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				_eShape_SinkHelper = new Events.EShape_SinkHelper(this, _connectPoint);
-				return;
-			} 
-        }
-
-        /// <summary>
-        /// The instance use currently an event listener 
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
-        {
-            get 
-            {
-                return (null != _connectPoint);
-            }
-        }
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <returns>true if one or more event is active, otherwise false</returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
-        }
-
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <param name="eventName">name of the event</param>
-        /// <returns></returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-
-        /// <summary>
-        /// Target methods from its actual event recipients
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-       
-        /// <summary>
-        /// Returns the current count of event recipients
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
-        /// <summary>
-        /// Raise an instance event
-        /// </summary>
-        /// <param name="eventName">name of the event without 'Event' at the end</param>
-        /// <param name="paramsArray">custom arguments for the event</param>
-        /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
-            return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
-        /// <summary>
-        /// Stop listening events for the instance
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
-        {
-			if( null != _eShape_SinkHelper)
-			{
-				_eShape_SinkHelper.Dispose();
-				_eShape_SinkHelper = null;
-			}
-
-			_connectPoint = null;
-		}
-        
-        #endregion
-
-		#pragma warning restore
 	}
 }
-

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.VisioApi
 	/// </summary>
 	[SupportByVersion("Visio", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IVValidationIssue : COMObject
+	[TypeId("000D0740-0000-0000-C000-000000000046")]
+    [CoClassSource(typeof(NetOffice.VisioApi.ValidationIssue))]
+    public interface IVValidationIssue : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IVValidationIssue);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IVValidationIssue(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IVValidationIssue(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVValidationIssue(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVValidationIssue(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVValidationIssue(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVValidationIssue(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVValidationIssue() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IVValidationIssue(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -113,26 +23,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVApplication Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
-			}
-		}
+		NetOffice.VisioApi.IVApplication Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public Int16 Stat
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Stat");
-			}
-		}
+		Int16 Stat { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
@@ -140,39 +38,21 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVDocument Document
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
-			}
-		}
+		NetOffice.VisioApi.IVDocument Document { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public Int16 ObjectType
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "ObjectType");
-			}
-		}
+		Int16 ObjectType { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public Int32 ID
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ID");
-			}
-		}
+		Int32 ID { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
@@ -180,26 +60,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVPage TargetPage
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "TargetPage");
-			}
-		}
+		NetOffice.VisioApi.IVPage TargetPage { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public Int32 TargetPageID
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "TargetPageID");
-			}
-		}
+		Int32 TargetPageID { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
@@ -207,30 +75,14 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVShape TargetShape
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "TargetShape");
-			}
-		}
+		NetOffice.VisioApi.IVShape TargetShape { get; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public bool Ignored
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Ignored");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Ignored", value);
-			}
-		}
+		bool Ignored { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
@@ -238,13 +90,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
 		[BaseResult]
-		public NetOffice.VisioApi.IVValidationRule Rule
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVValidationRule>(this, "Rule");
-			}
-		}
+		NetOffice.VisioApi.IVValidationRule Rule { get; }
 
 		#endregion
 
@@ -254,13 +100,8 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+		void Delete();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

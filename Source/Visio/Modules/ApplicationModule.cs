@@ -1,18 +1,20 @@
 ﻿using System;
 using NetRuntimeSystem = System;
+using System.Reflection;
 using System.ComponentModel;
 using NetOffice.Attributes;
-using System.Reflection;
+using NetOffice.CoreServices;
 
-namespace NetOffice.VisioApi.GlobalHelperModules
+namespace NetOffice.VisioApi.ModulesLegacy
 {
     ///<summary>
-    /// Module GlobalModule
+    /// Module ApplicationModule
     /// SupportByVersion Visio 11,12,14,15,16
     ///</summary>
+    /// <remarks>This module supports legacy VB/VBA codebases</remarks>
     [SupportByVersion("Visio", 11,12,14,15,16)]
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(VisioApi.Application))]
-	public static class GlobalModule
+	public static class ApplicationModule
 	{
 		#region Fields
 
@@ -349,7 +351,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.VisioApi.IVUIObject get_BuiltInToolbars(Int16 fIgnored)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(_instance, "BuiltInToolbars", NetOffice.VisioApi.IVUIObject.LateBindingApiWrapperType, fIgnored);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(_instance, "BuiltInToolbars", typeof(NetOffice.VisioApi.IVUIObject), fIgnored);
         }
 
         /// <summary>
