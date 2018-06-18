@@ -2,19 +2,20 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CoreServices;
 
-namespace NetOffice.MSProjectApi.GlobalHelperModules
+namespace NetOffice.MSProjectApi.ModulesLegacy
 {
     ///<summary>
-    /// Module GlobalModule
+    /// Module ApplicationModule
     /// SupportByVersion MSProject 11,12,14
     ///</summary>
+    /// <remarks>This module supports legacy VB/VBA codebases</remarks>
     [SupportByVersion("MSProject", 11,12,14)]
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(MSProjectApi.Application))]
-	public static class GlobalModule
+	public static class ApplicationModule
 	{
 		#region Fields
-
 		private static ICOMObject _instance;
 
         #endregion
@@ -65,11 +66,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSProject", 11, 12, 14)]
-        public static NetOffice.MSProjectApi.Application Application
-        {
+        public static NetOffice.MSProjectApi.Application Application        {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Application>(_instance, "Application", NetOffice.MSProjectApi.Application.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Application>(_instance, "Application", typeof(NetOffice.MSProjectApi.Application));
             }
             set
             {
@@ -86,7 +86,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Application>(_instance, "Parent", NetOffice.MSProjectApi.Application.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Application>(_instance, "Parent", typeof(NetOffice.MSProjectApi.Application));
             }
             set
             {
@@ -103,7 +103,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Projects>(_instance, "Projects", NetOffice.MSProjectApi.Projects.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Projects>(_instance, "Projects", typeof(NetOffice.MSProjectApi.Projects));
             }
             set
             {
@@ -120,7 +120,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Selection>(_instance, "ActiveSelection", NetOffice.MSProjectApi.Selection.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Selection>(_instance, "ActiveSelection", typeof(NetOffice.MSProjectApi.Selection));
             }
             set
             {
@@ -137,7 +137,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Cell>(_instance, "ActiveCell", NetOffice.MSProjectApi.Cell.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Cell>(_instance, "ActiveCell", typeof(NetOffice.MSProjectApi.Cell));
             }
             set
             {
@@ -154,7 +154,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Project>(_instance, "ActiveProject", NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Project>(_instance, "ActiveProject", typeof(NetOffice.MSProjectApi.Project));
             }
             set
             {
@@ -171,7 +171,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Window>(_instance, "ActiveWindow", NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Window>(_instance, "ActiveWindow", typeof(NetOffice.MSProjectApi.Window));
             }
             set
             {
@@ -1349,7 +1349,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", typeof(NetOffice.OfficeApi.Assistant));
             }
             set
             {
@@ -1383,7 +1383,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(_instance, "VBE", NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(_instance, "VBE", typeof(NetOffice.VBIDEApi.VBE));
             }
             set
             {
@@ -1485,7 +1485,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", typeof(NetOffice.OfficeApi.FileSearch));
             }
             set
             {
@@ -1587,7 +1587,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Profiles>(_instance, "Profiles", NetOffice.MSProjectApi.Profiles.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Profiles>(_instance, "Profiles", typeof(NetOffice.MSProjectApi.Profiles));
             }
             set
             {
@@ -1604,7 +1604,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Calendars>(_instance, "GlobalBaseCalendars", NetOffice.MSProjectApi.Calendars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Calendars>(_instance, "GlobalBaseCalendars", typeof(NetOffice.MSProjectApi.Calendars));
             }
             set
             {
@@ -1639,7 +1639,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.ViewsSingle>(_instance, "GlobalViewsSingle", NetOffice.MSProjectApi.ViewsSingle.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.ViewsSingle>(_instance, "GlobalViewsSingle", typeof(NetOffice.MSProjectApi.ViewsSingle));
             }
             set
             {
@@ -1656,7 +1656,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.ViewsCombination>(_instance, "GlobalViewsCombination", NetOffice.MSProjectApi.ViewsCombination.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.ViewsCombination>(_instance, "GlobalViewsCombination", typeof(NetOffice.MSProjectApi.ViewsCombination));
             }
             set
             {
@@ -1673,7 +1673,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Tables>(_instance, "GlobalTaskTables", NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Tables>(_instance, "GlobalTaskTables", typeof(NetOffice.MSProjectApi.Tables));
             }
             set
             {
@@ -1690,7 +1690,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Tables>(_instance, "GlobalResourceTables", NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Tables>(_instance, "GlobalResourceTables", typeof(NetOffice.MSProjectApi.Tables));
             }
             set
             {
@@ -1707,7 +1707,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Filters>(_instance, "GlobalTaskFilters", NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Filters>(_instance, "GlobalTaskFilters", typeof(NetOffice.MSProjectApi.Filters));
             }
             set
             {
@@ -1724,7 +1724,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Filters>(_instance, "GlobalResourceFilters", NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Filters>(_instance, "GlobalResourceFilters", typeof(NetOffice.MSProjectApi.Filters));
             }
             set
             {
@@ -1741,7 +1741,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.OutlineCodes>(_instance, "GlobalOutlineCodes", NetOffice.MSProjectApi.OutlineCodes.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.OutlineCodes>(_instance, "GlobalOutlineCodes", typeof(NetOffice.MSProjectApi.OutlineCodes));
             }
             set
             {
@@ -1792,7 +1792,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Windows>(_instance, "Windows", NetOffice.MSProjectApi.Windows.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Windows>(_instance, "Windows", typeof(NetOffice.MSProjectApi.Windows));
             }
         }
 
@@ -1805,7 +1805,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", typeof(NetOffice.OfficeApi.CommandBars));
             }
         }
 
@@ -1818,7 +1818,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", typeof(NetOffice.OfficeApi.AnswerWizard));
             }
         }
 
@@ -1994,7 +1994,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", typeof(NetOffice.OfficeApi.COMAddIns));
             }
         }
 
@@ -2007,7 +2007,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Windows2>(_instance, "Windows2", NetOffice.MSProjectApi.Windows2.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Windows2>(_instance, "Windows2", typeof(NetOffice.MSProjectApi.Windows2));
             }
         }
 
@@ -2020,7 +2020,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.ReportTemplates>(_instance, "VisualReportTemplateList", NetOffice.MSProjectApi.ReportTemplates.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.ReportTemplates>(_instance, "VisualReportTemplateList", typeof(NetOffice.MSProjectApi.ReportTemplates));
             }
             set
             {
@@ -2139,7 +2139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", typeof(NetOffice.OfficeApi.IAssistance));
             }
         }
 
@@ -2288,7 +2288,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Reports>(_instance, "GlobalReports", NetOffice.MSProjectApi.Reports.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Reports>(_instance, "GlobalReports", typeof(NetOffice.MSProjectApi.Reports));
             }
         }
 
@@ -28652,7 +28652,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         [SupportByVersion("MSProject", 11, 12, 14)]
         public static NetOffice.MSProjectApi.Cell GetCellInfo(Int32 x, Int32 y)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.Cell>(_instance, "GetCellInfo", NetOffice.MSProjectApi.Cell.LateBindingApiWrapperType, x, y);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.Cell>(_instance, "GetCellInfo", typeof(NetOffice.MSProjectApi.Cell), x, y);
         }
 
         /// <summary>
@@ -35834,3 +35834,4 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
         #endregion
     }
 }
+

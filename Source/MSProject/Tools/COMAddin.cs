@@ -294,6 +294,13 @@ namespace NetOffice.MSProjectApi.Tools
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="application"></param>
+        /// <param name="ConnectMode"></param>
+        /// <param name="AddInInst"></param>
+        /// <param name="custom"></param>
         void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -304,8 +311,8 @@ namespace NetOffice.MSProjectApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
-
-                this.Application = new MSProject.Application(Factory, null, application);
+                
+                this.Application = Factory.CreateKnownObjectFromComProxy<MSProject.Application>(null, application, typeof(MSProjectApi.Application));
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
