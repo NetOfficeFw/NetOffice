@@ -11,100 +11,9 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IHTMLParamElement : COMObject
+	[TypeId("3050F83D-98B5-11CF-BB82-00AA00BDCE0B")]
+	public interface IHTMLParamElement : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IHTMLParamElement);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IHTMLParamElement(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IHTMLParamElement(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLParamElement(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLParamElement(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLParamElement(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLParamElement(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLParamElement() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLParamElement(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,75 +21,30 @@ namespace NetOffice.MSHTMLApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "name", value);
-			}
-		}
+		string name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "value", value);
-			}
-		}
+		string value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string type
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "type");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "type", value);
-			}
-		}
+		string type { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string valueType
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "valueType");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "valueType", value);
-			}
-		}
+		string valueType { get; set; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

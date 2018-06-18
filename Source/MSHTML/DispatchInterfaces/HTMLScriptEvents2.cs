@@ -11,104 +11,9 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class HTMLScriptEvents2 : DispHTMLScriptElement
+	[TypeId("3050F621-98B5-11CF-BB82-00AA00BDCE0B")]
+	public interface HTMLScriptEvents2 : DispHTMLScriptElement
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(HTMLScriptEvents2);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public HTMLScriptEvents2(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public HTMLScriptEvents2(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLScriptEvents2(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLScriptEvents2(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLScriptEvents2(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLScriptEvents2(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLScriptEvents2() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLScriptEvents2(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
-
-		#endregion
-
 		#region Methods
 
 		/// <summary>
@@ -116,633 +21,442 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onhelp(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onhelp", pEvtObj);
-		}
+        new bool onhelp(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onclick(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onclick", pEvtObj);
-		}
+        new bool onclick(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool ondblclick(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "ondblclick", pEvtObj);
-		}
+        new bool ondblclick(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onkeypress(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onkeypress", pEvtObj);
-		}
+        new bool onkeypress(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onkeydown(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onkeydown", pEvtObj);
-		}
+        new void onkeydown(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onkeyup(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onkeyup", pEvtObj);
-		}
+        new void onkeyup(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmouseout(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmouseout", pEvtObj);
-		}
+        new void onmouseout(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmouseover(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmouseover", pEvtObj);
-		}
+        new void onmouseover(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmousemove(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmousemove", pEvtObj);
-		}
+        new void onmousemove(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmousedown(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmousedown", pEvtObj);
-		}
+        new void onmousedown(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmouseup(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmouseup", pEvtObj);
-		}
+        new void onmouseup(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onselectstart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onselectstart", pEvtObj);
-		}
+        new bool onselectstart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onfilterchange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onfilterchange", pEvtObj);
-		}
+        new void onfilterchange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool ondragstart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "ondragstart", pEvtObj);
-		}
+        new bool ondragstart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onbeforeupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onbeforeupdate", pEvtObj);
-		}
+        new bool onbeforeupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onafterupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onafterupdate", pEvtObj);
-		}
+        new void onafterupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onerrorupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onerrorupdate", pEvtObj);
-		}
+        new bool onerrorupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onrowexit(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onrowexit", pEvtObj);
-		}
+        new bool onrowexit(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onrowenter(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onrowenter", pEvtObj);
-		}
+        new void onrowenter(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void ondatasetchanged(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "ondatasetchanged", pEvtObj);
-		}
+        new void ondatasetchanged(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void ondataavailable(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "ondataavailable", pEvtObj);
-		}
+        new void ondataavailable(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void ondatasetcomplete(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "ondatasetcomplete", pEvtObj);
-		}
+        new void ondatasetcomplete(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onlosecapture(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onlosecapture", pEvtObj);
-		}
+        new void onlosecapture(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onpropertychange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onpropertychange", pEvtObj);
-		}
+        new void onpropertychange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onscroll(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onscroll", pEvtObj);
-		}
+        new void onscroll(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onfocus(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onfocus", pEvtObj);
-		}
+        new void onfocus(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onblur(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onblur", pEvtObj);
-		}
+        new void onblur(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onresize(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onresize", pEvtObj);
-		}
+        new void onresize(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool ondrag(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "ondrag", pEvtObj);
-		}
+        new bool ondrag(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void ondragend(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "ondragend", pEvtObj);
-		}
+        new void ondragend(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool ondragenter(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "ondragenter", pEvtObj);
-		}
+        new bool ondragenter(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool ondragover(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "ondragover", pEvtObj);
-		}
+        new bool ondragover(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void ondragleave(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "ondragleave", pEvtObj);
-		}
+        new void ondragleave(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool ondrop(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "ondrop", pEvtObj);
-		}
+        new bool ondrop(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onbeforecut(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onbeforecut", pEvtObj);
-		}
+        new bool onbeforecut(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool oncut(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "oncut", pEvtObj);
-		}
+        new bool oncut(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onbeforecopy(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onbeforecopy", pEvtObj);
-		}
+        new bool onbeforecopy(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool oncopy(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "oncopy", pEvtObj);
-		}
+        new bool oncopy(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onbeforepaste(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onbeforepaste", pEvtObj);
-		}
+        new bool onbeforepaste(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onpaste(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onpaste", pEvtObj);
-		}
+        new bool onpaste(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool oncontextmenu(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "oncontextmenu", pEvtObj);
-		}
+        new bool oncontextmenu(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onrowsdelete(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onrowsdelete", pEvtObj);
-		}
+        new void onrowsdelete(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onrowsinserted(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onrowsinserted", pEvtObj);
-		}
+        new void onrowsinserted(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void oncellchange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "oncellchange", pEvtObj);
-		}
+        new void oncellchange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onreadystatechange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onreadystatechange", pEvtObj);
-		}
+        new void onreadystatechange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onlayoutcomplete(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onlayoutcomplete", pEvtObj);
-		}
+        new void onlayoutcomplete(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onpage(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onpage", pEvtObj);
-		}
+        new void onpage(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmouseenter(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmouseenter", pEvtObj);
-		}
+        new void onmouseenter(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmouseleave(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmouseleave", pEvtObj);
-		}
+        new void onmouseleave(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onactivate", pEvtObj);
-		}
+        new void onactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void ondeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "ondeactivate", pEvtObj);
-		}
+        new void ondeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onbeforedeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onbeforedeactivate", pEvtObj);
-		}
+        new bool onbeforedeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onbeforeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onbeforeactivate", pEvtObj);
-		}
+        new bool onbeforeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onfocusin(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onfocusin", pEvtObj);
-		}
+        new void onfocusin(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onfocusout(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onfocusout", pEvtObj);
-		}
+        new void onfocusout(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmove(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmove", pEvtObj);
-		}
+        new void onmove(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool oncontrolselect(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "oncontrolselect", pEvtObj);
-		}
+        new bool oncontrolselect(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onmovestart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onmovestart", pEvtObj);
-		}
+        new bool onmovestart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onmoveend(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onmoveend", pEvtObj);
-		}
+        new void onmoveend(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onresizestart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onresizestart", pEvtObj);
-		}
+        new bool onresizestart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onresizeend(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onresizeend", pEvtObj);
-		}
+        new void onresizeend(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool onmousewheel(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "onmousewheel", pEvtObj);
-		}
+        new bool onmousewheel(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void onerror(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
-		{
-			 Factory.ExecuteMethod(this, "onerror", pEvtObj);
-		}
+        new void onerror(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

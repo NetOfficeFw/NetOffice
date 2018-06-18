@@ -86,1720 +86,420 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events.HTMLOptionButtonElementEvents_SinkHelper))]
-    [ComEventInterface(typeof(Events.HTMLOptionButtonElementEvents))]
-    public class HTMLOptionButtonElement : DispIHTMLOptionButtonElement, IEventBinding
+    [ComEventContract(typeof(NetOffice.MSHTMLApi.EventContracts.HTMLOptionButtonElementEvents))]
+	[TypeId("3050F2BE-98B5-11CF-BB82-00AA00BDCE0B")]
+    public interface HTMLOptionButtonElement : DispIHTMLOptionButtonElement, IEventBinding
 	{
-		#pragma warning disable
-
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
-        private static Type _type;
-        private Events.HTMLOptionButtonElementEvents_SinkHelper _hTMLOptionButtonElementEvents_SinkHelper;
-	
-		#endregion
-
-		#region Type Information
-
-        /// <summary>
-        /// Instance Type
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-        public override Type InstanceType
-        {
-            get
-            {
-                return LateBindingApiWrapperType;
-            }
-        }
-         
-        /// <summary>
-        /// Type Cache
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(HTMLOptionButtonElement);
-                return _type;
-            }
-        }
-        
-        #endregion
-        		
-		#region Construction
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public HTMLOptionButtonElement(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public HTMLOptionButtonElement(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLOptionButtonElement(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLOptionButtonElement(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public HTMLOptionButtonElement(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
-        /// Creates a new instance of HTMLOptionButtonElement 
-        /// </summary>		
-		public HTMLOptionButtonElement():base("MSHTML.HTMLOptionButtonElement")
-		{
-			
-		}
-		
-		/// <summary>
-        /// Creates a new instance of HTMLOptionButtonElement
-        /// </summary>
-        ///<param name="progId">registered ProgID</param>
-		public HTMLOptionButtonElement(string progId):base(progId)
-		{
-			
-		}
-
-		#endregion
-
-		#region Static CoClass Methods
-		#endregion
-
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onhelpEventHandler _onhelpEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onhelpEventHandler onhelpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onhelpEvent += value;
-			}
-			remove
-			{
-				_onhelpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onclickEventHandler _onclickEvent;
+		event HTMLOptionButtonElement_onhelpEventHandler onhelpEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onclickEventHandler onclickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onclickEvent += value;
-			}
-			remove
-			{
-				_onclickEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onclickEventHandler onclickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondblclickEventHandler _ondblclickEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondblclickEventHandler ondblclickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondblclickEvent += value;
-			}
-			remove
-			{
-				_ondblclickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onkeypressEventHandler _onkeypressEvent;
+		event HTMLOptionButtonElement_ondblclickEventHandler ondblclickEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onkeypressEventHandler onkeypressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeypressEvent += value;
-			}
-			remove
-			{
-				_onkeypressEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onkeypressEventHandler onkeypressEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onkeydownEventHandler _onkeydownEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onkeydownEventHandler onkeydownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeydownEvent += value;
-			}
-			remove
-			{
-				_onkeydownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onkeyupEventHandler _onkeyupEvent;
+		event HTMLOptionButtonElement_onkeydownEventHandler onkeydownEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onkeyupEventHandler onkeyupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeyupEvent += value;
-			}
-			remove
-			{
-				_onkeyupEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onkeyupEventHandler onkeyupEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmouseoutEventHandler _onmouseoutEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmouseoutEventHandler onmouseoutEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseoutEvent += value;
-			}
-			remove
-			{
-				_onmouseoutEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onmouseoutEventHandler onmouseoutEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmouseoverEventHandler _onmouseoverEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmouseoverEventHandler onmouseoverEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseoverEvent += value;
-			}
-			remove
-			{
-				_onmouseoverEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmousemoveEventHandler _onmousemoveEvent;
+		event HTMLOptionButtonElement_onmouseoverEventHandler onmouseoverEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmousemoveEventHandler onmousemoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmousemoveEvent += value;
-			}
-			remove
-			{
-				_onmousemoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmousedownEventHandler _onmousedownEvent;
+		event HTMLOptionButtonElement_onmousemoveEventHandler onmousemoveEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmousedownEventHandler onmousedownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmousedownEvent += value;
-			}
-			remove
-			{
-				_onmousedownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmouseupEventHandler _onmouseupEvent;
+		event HTMLOptionButtonElement_onmousedownEventHandler onmousedownEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmouseupEventHandler onmouseupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseupEvent += value;
-			}
-			remove
-			{
-				_onmouseupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onselectstartEventHandler _onselectstartEvent;
+		event HTMLOptionButtonElement_onmouseupEventHandler onmouseupEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onselectstartEventHandler onselectstartEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onselectstartEvent += value;
-			}
-			remove
-			{
-				_onselectstartEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onfilterchangeEventHandler _onfilterchangeEvent;
+		event HTMLOptionButtonElement_onselectstartEventHandler onselectstartEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onfilterchangeEventHandler onfilterchangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onfilterchangeEvent += value;
-			}
-			remove
-			{
-				_onfilterchangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondragstartEventHandler _ondragstartEvent;
+		event HTMLOptionButtonElement_onfilterchangeEventHandler onfilterchangeEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondragstartEventHandler ondragstartEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondragstartEvent += value;
-			}
-			remove
-			{
-				_ondragstartEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onbeforeupdateEventHandler _onbeforeupdateEvent;
+		event HTMLOptionButtonElement_ondragstartEventHandler ondragstartEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onbeforeupdateEventHandler onbeforeupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforeupdateEvent += value;
-			}
-			remove
-			{
-				_onbeforeupdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onafterupdateEventHandler _onafterupdateEvent;
+		event HTMLOptionButtonElement_onbeforeupdateEventHandler onbeforeupdateEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onafterupdateEventHandler onafterupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onafterupdateEvent += value;
-			}
-			remove
-			{
-				_onafterupdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onerrorupdateEventHandler _onerrorupdateEvent;
+		event HTMLOptionButtonElement_onafterupdateEventHandler onafterupdateEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onerrorupdateEventHandler onerrorupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onerrorupdateEvent += value;
-			}
-			remove
-			{
-				_onerrorupdateEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onerrorupdateEventHandler onerrorupdateEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onrowexitEventHandler _onrowexitEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onrowexitEventHandler onrowexitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowexitEvent += value;
-			}
-			remove
-			{
-				_onrowexitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onrowenterEventHandler _onrowenterEvent;
+		event HTMLOptionButtonElement_onrowexitEventHandler onrowexitEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onrowenterEventHandler onrowenterEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowenterEvent += value;
-			}
-			remove
-			{
-				_onrowenterEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onrowenterEventHandler onrowenterEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondatasetchangedEventHandler _ondatasetchangedEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondatasetchangedEventHandler ondatasetchangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondatasetchangedEvent += value;
-			}
-			remove
-			{
-				_ondatasetchangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondataavailableEventHandler _ondataavailableEvent;
+		event HTMLOptionButtonElement_ondatasetchangedEventHandler ondatasetchangedEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondataavailableEventHandler ondataavailableEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondataavailableEvent += value;
-			}
-			remove
-			{
-				_ondataavailableEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_ondataavailableEventHandler ondataavailableEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondatasetcompleteEventHandler _ondatasetcompleteEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondatasetcompleteEventHandler ondatasetcompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondatasetcompleteEvent += value;
-			}
-			remove
-			{
-				_ondatasetcompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onlosecaptureEventHandler _onlosecaptureEvent;
+		event HTMLOptionButtonElement_ondatasetcompleteEventHandler ondatasetcompleteEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onlosecaptureEventHandler onlosecaptureEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onlosecaptureEvent += value;
-			}
-			remove
-			{
-				_onlosecaptureEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onlosecaptureEventHandler onlosecaptureEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onpropertychangeEventHandler _onpropertychangeEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onpropertychangeEventHandler onpropertychangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onpropertychangeEvent += value;
-			}
-			remove
-			{
-				_onpropertychangeEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onpropertychangeEventHandler onpropertychangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onscrollEventHandler _onscrollEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onscrollEventHandler onscrollEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onscrollEvent += value;
-			}
-			remove
-			{
-				_onscrollEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onfocusEventHandler _onfocusEvent;
+		event HTMLOptionButtonElement_onscrollEventHandler onscrollEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onfocusEventHandler onfocusEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onfocusEvent += value;
-			}
-			remove
-			{
-				_onfocusEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onblurEventHandler _onblurEvent;
+		event HTMLOptionButtonElement_onfocusEventHandler onfocusEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onblurEventHandler onblurEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onblurEvent += value;
-			}
-			remove
-			{
-				_onblurEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onresizeEventHandler _onresizeEvent;
+		event HTMLOptionButtonElement_onblurEventHandler onblurEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onresizeEventHandler onresizeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onresizeEvent += value;
-			}
-			remove
-			{
-				_onresizeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondragEventHandler _ondragEvent;
+		event HTMLOptionButtonElement_onresizeEventHandler onresizeEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondragEventHandler ondragEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondragEvent += value;
-			}
-			remove
-			{
-				_ondragEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondragendEventHandler _ondragendEvent;
+		event HTMLOptionButtonElement_ondragEventHandler ondragEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondragendEventHandler ondragendEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondragendEvent += value;
-			}
-			remove
-			{
-				_ondragendEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondragenterEventHandler _ondragenterEvent;
+		event HTMLOptionButtonElement_ondragendEventHandler ondragendEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondragenterEventHandler ondragenterEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondragenterEvent += value;
-			}
-			remove
-			{
-				_ondragenterEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondragoverEventHandler _ondragoverEvent;
+		event HTMLOptionButtonElement_ondragenterEventHandler ondragenterEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondragoverEventHandler ondragoverEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondragoverEvent += value;
-			}
-			remove
-			{
-				_ondragoverEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondragleaveEventHandler _ondragleaveEvent;
+		event HTMLOptionButtonElement_ondragoverEventHandler ondragoverEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondragleaveEventHandler ondragleaveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondragleaveEvent += value;
-			}
-			remove
-			{
-				_ondragleaveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondropEventHandler _ondropEvent;
+		event HTMLOptionButtonElement_ondragleaveEventHandler ondragleaveEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondropEventHandler ondropEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondropEvent += value;
-			}
-			remove
-			{
-				_ondropEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_ondropEventHandler ondropEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onbeforecutEventHandler _onbeforecutEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onbeforecutEventHandler onbeforecutEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforecutEvent += value;
-			}
-			remove
-			{
-				_onbeforecutEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_oncutEventHandler _oncutEvent;
+		event HTMLOptionButtonElement_onbeforecutEventHandler onbeforecutEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_oncutEventHandler oncutEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncutEvent += value;
-			}
-			remove
-			{
-				_oncutEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_oncutEventHandler oncutEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onbeforecopyEventHandler _onbeforecopyEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onbeforecopyEventHandler onbeforecopyEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforecopyEvent += value;
-			}
-			remove
-			{
-				_onbeforecopyEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_oncopyEventHandler _oncopyEvent;
+		event HTMLOptionButtonElement_onbeforecopyEventHandler onbeforecopyEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_oncopyEventHandler oncopyEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncopyEvent += value;
-			}
-			remove
-			{
-				_oncopyEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_oncopyEventHandler oncopyEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onbeforepasteEventHandler _onbeforepasteEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onbeforepasteEventHandler onbeforepasteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforepasteEvent += value;
-			}
-			remove
-			{
-				_onbeforepasteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onpasteEventHandler _onpasteEvent;
+		event HTMLOptionButtonElement_onbeforepasteEventHandler onbeforepasteEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onpasteEventHandler onpasteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onpasteEvent += value;
-			}
-			remove
-			{
-				_onpasteEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onpasteEventHandler onpasteEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_oncontextmenuEventHandler _oncontextmenuEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_oncontextmenuEventHandler oncontextmenuEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncontextmenuEvent += value;
-			}
-			remove
-			{
-				_oncontextmenuEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_oncontextmenuEventHandler oncontextmenuEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onrowsdeleteEventHandler _onrowsdeleteEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onrowsdeleteEventHandler onrowsdeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowsdeleteEvent += value;
-			}
-			remove
-			{
-				_onrowsdeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onrowsinsertedEventHandler _onrowsinsertedEvent;
+		event HTMLOptionButtonElement_onrowsdeleteEventHandler onrowsdeleteEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onrowsinsertedEventHandler onrowsinsertedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowsinsertedEvent += value;
-			}
-			remove
-			{
-				_onrowsinsertedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_oncellchangeEventHandler _oncellchangeEvent;
+		event HTMLOptionButtonElement_onrowsinsertedEventHandler onrowsinsertedEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_oncellchangeEventHandler oncellchangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncellchangeEvent += value;
-			}
-			remove
-			{
-				_oncellchangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onreadystatechangeEventHandler _onreadystatechangeEvent;
+		event HTMLOptionButtonElement_oncellchangeEventHandler oncellchangeEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onreadystatechangeEventHandler onreadystatechangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onreadystatechangeEvent += value;
-			}
-			remove
-			{
-				_onreadystatechangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onbeforeeditfocusEventHandler _onbeforeeditfocusEvent;
+		event HTMLOptionButtonElement_onreadystatechangeEventHandler onreadystatechangeEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onbeforeeditfocusEventHandler onbeforeeditfocusEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforeeditfocusEvent += value;
-			}
-			remove
-			{
-				_onbeforeeditfocusEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onlayoutcompleteEventHandler _onlayoutcompleteEvent;
+		event HTMLOptionButtonElement_onbeforeeditfocusEventHandler onbeforeeditfocusEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onlayoutcompleteEventHandler onlayoutcompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onlayoutcompleteEvent += value;
-			}
-			remove
-			{
-				_onlayoutcompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onpageEventHandler _onpageEvent;
+		event HTMLOptionButtonElement_onlayoutcompleteEventHandler onlayoutcompleteEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onpageEventHandler onpageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onpageEvent += value;
-			}
-			remove
-			{
-				_onpageEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onbeforedeactivateEventHandler _onbeforedeactivateEvent;
+		event HTMLOptionButtonElement_onpageEventHandler onpageEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onbeforedeactivateEventHandler onbeforedeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforedeactivateEvent += value;
-			}
-			remove
-			{
-				_onbeforedeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onbeforeactivateEventHandler _onbeforeactivateEvent;
+		event HTMLOptionButtonElement_onbeforedeactivateEventHandler onbeforedeactivateEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onbeforeactivateEventHandler onbeforeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforeactivateEvent += value;
-			}
-			remove
-			{
-				_onbeforeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmoveEventHandler _onmoveEvent;
+		event HTMLOptionButtonElement_onbeforeactivateEventHandler onbeforeactivateEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmoveEventHandler onmoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmoveEvent += value;
-			}
-			remove
-			{
-				_onmoveEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onmoveEventHandler onmoveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_oncontrolselectEventHandler _oncontrolselectEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_oncontrolselectEventHandler oncontrolselectEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncontrolselectEvent += value;
-			}
-			remove
-			{
-				_oncontrolselectEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmovestartEventHandler _onmovestartEvent;
+		event HTMLOptionButtonElement_oncontrolselectEventHandler oncontrolselectEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmovestartEventHandler onmovestartEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmovestartEvent += value;
-			}
-			remove
-			{
-				_onmovestartEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onmovestartEventHandler onmovestartEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmoveendEventHandler _onmoveendEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmoveendEventHandler onmoveendEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmoveendEvent += value;
-			}
-			remove
-			{
-				_onmoveendEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onresizestartEventHandler _onresizestartEvent;
+		event HTMLOptionButtonElement_onmoveendEventHandler onmoveendEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onresizestartEventHandler onresizestartEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onresizestartEvent += value;
-			}
-			remove
-			{
-				_onresizestartEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onresizestartEventHandler onresizestartEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onresizeendEventHandler _onresizeendEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onresizeendEventHandler onresizeendEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onresizeendEvent += value;
-			}
-			remove
-			{
-				_onresizeendEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmouseenterEventHandler _onmouseenterEvent;
+		event HTMLOptionButtonElement_onresizeendEventHandler onresizeendEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmouseenterEventHandler onmouseenterEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseenterEvent += value;
-			}
-			remove
-			{
-				_onmouseenterEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onmouseenterEventHandler onmouseenterEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmouseleaveEventHandler _onmouseleaveEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmouseleaveEventHandler onmouseleaveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseleaveEvent += value;
-			}
-			remove
-			{
-				_onmouseleaveEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onmouseleaveEventHandler onmouseleaveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onmousewheelEventHandler _onmousewheelEvent;
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onmousewheelEventHandler onmousewheelEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmousewheelEvent += value;
-			}
-			remove
-			{
-				_onmousewheelEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onactivateEventHandler _onactivateEvent;
+		event HTMLOptionButtonElement_onmousewheelEventHandler onmousewheelEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onactivateEventHandler onactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onactivateEvent += value;
-			}
-			remove
-			{
-				_onactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_ondeactivateEventHandler _ondeactivateEvent;
+		event HTMLOptionButtonElement_onactivateEventHandler onactivateEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_ondeactivateEventHandler ondeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondeactivateEvent += value;
-			}
-			remove
-			{
-				_ondeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onfocusinEventHandler _onfocusinEvent;
+		event HTMLOptionButtonElement_ondeactivateEventHandler ondeactivateEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onfocusinEventHandler onfocusinEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onfocusinEvent += value;
-			}
-			remove
-			{
-				_onfocusinEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onfocusoutEventHandler _onfocusoutEvent;
+		event HTMLOptionButtonElement_onfocusinEventHandler onfocusinEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onfocusoutEventHandler onfocusoutEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onfocusoutEvent += value;
-			}
-			remove
-			{
-				_onfocusoutEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onchangeEventHandler _onchangeEvent;
+		event HTMLOptionButtonElement_onfocusoutEventHandler onfocusoutEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onchangeEventHandler onchangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onchangeEvent += value;
-			}
-			remove
-			{
-				_onchangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onselectEventHandler _onselectEvent;
+		event HTMLOptionButtonElement_onchangeEventHandler onchangeEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onselectEventHandler onselectEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onselectEvent += value;
-			}
-			remove
-			{
-				_onselectEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onloadEventHandler _onloadEvent;
+		event HTMLOptionButtonElement_onselectEventHandler onselectEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onloadEventHandler onloadEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onloadEvent += value;
-			}
-			remove
-			{
-				_onloadEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onerrorEventHandler _onerrorEvent;
+		event HTMLOptionButtonElement_onloadEventHandler onloadEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onerrorEventHandler onerrorEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onerrorEvent += value;
-			}
-			remove
-			{
-				_onerrorEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML, 4
-		/// </summary>
-		private event HTMLOptionButtonElement_onabortEventHandler _onabortEvent;
+		event HTMLOptionButtonElement_onerrorEventHandler onerrorEvent;
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public event HTMLOptionButtonElement_onabortEventHandler onabortEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onabortEvent += value;
-			}
-			remove
-			{
-				_onabortEvent -= value;
-			}
-		}
+		event HTMLOptionButtonElement_onabortEventHandler onabortEvent;
 
 		#endregion
-       
-	    #region IEventBinding
-        
-		/// <summary>
-        /// Creates active sink helper
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
-        {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
-            if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.HTMLOptionButtonElementEvents_SinkHelper.Id);
-
-
-			if(Events.HTMLOptionButtonElementEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				_hTMLOptionButtonElementEvents_SinkHelper = new Events.HTMLOptionButtonElementEvents_SinkHelper(this, _connectPoint);
-				return;
-			} 
-        }
-
-        /// <summary>
-        /// The instance use currently an event listener 
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
-        {
-            get 
-            {
-                return (null != _connectPoint);
-            }
-        }
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <returns>true if one or more event is active, otherwise false</returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
-        }
-
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <param name="eventName">name of the event</param>
-        /// <returns></returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-
-        /// <summary>
-        /// Target methods from its actual event recipients
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-       
-        /// <summary>
-        /// Returns the current count of event recipients
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
-        /// <summary>
-        /// Raise an instance event
-        /// </summary>
-        /// <param name="eventName">name of the event without 'Event' at the end</param>
-        /// <param name="paramsArray">custom arguments for the event</param>
-        /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
-            return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
-        /// <summary>
-        /// Stop listening events for the instance
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
-        {
-			if( null != _hTMLOptionButtonElementEvents_SinkHelper)
-			{
-				_hTMLOptionButtonElementEvents_SinkHelper.Dispose();
-				_hTMLOptionButtonElementEvents_SinkHelper = null;
-			}
-
-			_connectPoint = null;
-		}
-        
-        #endregion
-
-		#pragma warning restore
 	}
 }
-

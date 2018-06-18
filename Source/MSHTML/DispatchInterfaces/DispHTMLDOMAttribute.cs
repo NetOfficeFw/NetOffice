@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class DispHTMLDOMAttribute : COMObject
+	[TypeId("3050F564-98B5-11CF-BB82-00AA00BDCE0B")]
+    [CoClassSource(typeof(NetOffice.MSHTMLApi.HTMLDOMAttribute))]
+    public interface DispHTMLDOMAttribute : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(DispHTMLDOMAttribute);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public DispHTMLDOMAttribute(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public DispHTMLDOMAttribute(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLDOMAttribute(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLDOMAttribute(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLDOMAttribute(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLDOMAttribute(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLDOMAttribute() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLDOMAttribute(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,99 +22,49 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string nodeName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "nodeName");
-			}
-		}
+		string nodeName { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object nodeValue
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "nodeValue");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "nodeValue", value);
-			}
-		}
+		object nodeValue { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool specified
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "specified");
-			}
-		}
+		bool specified { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "name");
-			}
-		}
+		string name { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "value", value);
-			}
-		}
+		string value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool expando
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "expando");
-			}
-		}
+		bool expando { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 nodeType
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "nodeType");
-			}
-		}
+		Int32 nodeType { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -212,13 +72,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode parentNode
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "parentNode");
-			}
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode parentNode { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -226,13 +80,7 @@ namespace NetOffice.MSHTMLApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("MSHTML", 4), ProxyResult]
-		public object childNodes
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "childNodes");
-			}
-		}
+		object childNodes { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -240,13 +88,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode firstChild
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "firstChild");
-			}
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode firstChild { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -254,13 +96,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode lastChild
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "lastChild");
-			}
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode lastChild { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -268,13 +104,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode previousSibling
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "previousSibling");
-			}
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode previousSibling { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -282,13 +112,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode nextSibling
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "nextSibling");
-			}
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode nextSibling { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -296,13 +120,7 @@ namespace NetOffice.MSHTMLApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("MSHTML", 4), ProxyResult]
-		public object attributes
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "attributes");
-			}
-		}
+		object attributes { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -310,60 +128,28 @@ namespace NetOffice.MSHTMLApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("MSHTML", 4), ProxyResult]
-		public object ownerDocument
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "ownerDocument");
-			}
-		}
+		object ownerDocument { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object ie8_nodeValue
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "ie8_nodeValue");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "ie8_nodeValue", value);
-			}
-		}
+		object ie8_nodeValue { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string ie8_value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ie8_value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ie8_value", value);
-			}
-		}
+		string ie8_value { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool ie8_specified
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ie8_specified");
-			}
-		}
+		bool ie8_specified { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -371,13 +157,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLElement2 ownerElement
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement2>(this, "ownerElement");
-			}
-		}
+		NetOffice.MSHTMLApi.IHTMLElement2 ownerElement { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -386,13 +166,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object constructor
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "constructor");
-			}
-		}
+		object constructor { get; }
 
 		#endregion
 
@@ -405,10 +179,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="refChild">optional object refChild</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode insertBefore(NetOffice.MSHTMLApi.IHTMLDOMNode newChild, object refChild)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "insertBefore", newChild, refChild);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode insertBefore(NetOffice.MSHTMLApi.IHTMLDOMNode newChild, object refChild);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -417,10 +188,7 @@ namespace NetOffice.MSHTMLApi
 		[CustomMethod]
 		[BaseResult]
 		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode insertBefore(NetOffice.MSHTMLApi.IHTMLDOMNode newChild)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "insertBefore", newChild);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode insertBefore(NetOffice.MSHTMLApi.IHTMLDOMNode newChild);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -429,10 +197,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="oldChild">NetOffice.MSHTMLApi.IHTMLDOMNode oldChild</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode replaceChild(NetOffice.MSHTMLApi.IHTMLDOMNode newChild, NetOffice.MSHTMLApi.IHTMLDOMNode oldChild)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "replaceChild", newChild, oldChild);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode replaceChild(NetOffice.MSHTMLApi.IHTMLDOMNode newChild, NetOffice.MSHTMLApi.IHTMLDOMNode oldChild);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -440,10 +205,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="oldChild">NetOffice.MSHTMLApi.IHTMLDOMNode oldChild</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode removeChild(NetOffice.MSHTMLApi.IHTMLDOMNode oldChild)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "removeChild", oldChild);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode removeChild(NetOffice.MSHTMLApi.IHTMLDOMNode oldChild);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -451,19 +213,13 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode appendChild(NetOffice.MSHTMLApi.IHTMLDOMNode newChild)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "appendChild", newChild);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMNode appendChild(NetOffice.MSHTMLApi.IHTMLDOMNode newChild);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool hasChildNodes()
-		{
-			return Factory.ExecuteBoolMethodGet(this, "hasChildNodes");
-		}
+		bool hasChildNodes();
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -471,13 +227,8 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="fDeep">bool fDeep</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute cloneNode(bool fDeep)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "cloneNode", fDeep);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMAttribute cloneNode(bool fDeep);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

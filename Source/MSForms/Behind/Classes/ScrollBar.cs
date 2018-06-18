@@ -81,7 +81,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event ScrollBar_BeforeDragOverEventHandler BeforeDragOverEvent
+		public virtual event ScrollBar_BeforeDragOverEventHandler BeforeDragOverEvent
 		{
 			add
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event ScrollBar_BeforeDropOrPasteEventHandler BeforeDropOrPasteEvent
+		public virtual event ScrollBar_BeforeDropOrPasteEventHandler BeforeDropOrPasteEvent
 		{
 			add
 			{
@@ -125,7 +125,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event ScrollBar_ChangeEventHandler ChangeEvent
+		public virtual event ScrollBar_ChangeEventHandler ChangeEvent
 		{
 			add
 			{
@@ -147,7 +147,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event ScrollBar_ErrorEventHandler ErrorEvent
+		public virtual event ScrollBar_ErrorEventHandler ErrorEvent
 		{
 			add
 			{
@@ -169,7 +169,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event ScrollBar_KeyDownEventHandler KeyDownEvent
+		public virtual event ScrollBar_KeyDownEventHandler KeyDownEvent
 		{
 			add
 			{
@@ -191,7 +191,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event ScrollBar_KeyPressEventHandler KeyPressEvent
+		public virtual event ScrollBar_KeyPressEventHandler KeyPressEvent
 		{
 			add
 			{
@@ -213,7 +213,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event ScrollBar_KeyUpEventHandler KeyUpEvent
+		public virtual event ScrollBar_KeyUpEventHandler KeyUpEvent
 		{
 			add
 			{
@@ -235,7 +235,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event ScrollBar_ScrollEventHandler ScrollEvent
+		public virtual event ScrollBar_ScrollEventHandler ScrollEvent
 		{
 			add
 			{
@@ -256,7 +256,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
+		public virtual void CreateEventBridge()
         {
 			if(false == Factory.Settings.EnableEvents)
 				return;
@@ -279,7 +279,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// The instance use currently an event listener 
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
+        public virtual bool EventBridgeInitialized
         {
             get 
             {
@@ -291,7 +291,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public virtual bool HasEventRecipients()       
         {
             return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
         }
@@ -302,7 +302,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="eventName">name of the event</param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
+        public virtual bool HasEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
@@ -311,7 +311,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Target methods from its actual event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
+        public virtual Delegate[] GetEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
@@ -320,7 +320,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Returns the current count of event recipients
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
+        public virtual int GetCountOfEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
          }
@@ -332,7 +332,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+        public virtual int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
 		}
@@ -340,7 +340,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
+        public virtual void DisposeEventBridge()
         {
 			if( null != _scrollbarEvents_SinkHelper)
 			{

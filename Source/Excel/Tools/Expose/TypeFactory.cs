@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace NetOffice.ExcelApi.Tools.Expose
 {
     /// <summary>
-    /// ExcelApi Default Type Factory
+    /// Excel Default Type Factory
     /// </summary>
     public class TypeFactory : NetOffice.Tools.Expose.Factory
     {

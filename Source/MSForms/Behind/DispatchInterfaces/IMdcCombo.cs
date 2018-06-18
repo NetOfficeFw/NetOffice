@@ -32,7 +32,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="pvargIndex">optional object pvargIndex</param>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_Column(object pvargColumn, object pvargIndex)
+        public virtual object get_Column(object pvargColumn, object pvargIndex)
         {
             return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Column", pvargColumn, pvargIndex);
         }
@@ -46,7 +46,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="value">optional object value</param>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_Column(object pvargColumn, object pvargIndex, object value)
+        public virtual void set_Column(object pvargColumn, object pvargIndex, object value)
         {
             InvokerService.InvokeInternal.ExecutePropertySet(this, "Column", pvargColumn, pvargIndex, value);
         }
@@ -58,7 +58,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="pvargColumn">optional object pvargColumn</param>
         /// <param name="pvargIndex">optional object pvargIndex</param>
         [SupportByVersion("MSForms", 2), Redirect("get_Column")]
-        public object Column(object pvargColumn, object pvargIndex)
+        public virtual object Column(object pvargColumn, object pvargIndex)
         {
             return get_Column(pvargColumn, pvargIndex);
         }
@@ -70,7 +70,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="pvargColumn">optional object pvargColumn</param>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_Column(object pvargColumn)
+        public virtual object get_Column(object pvargColumn)
         {
             return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "Column", pvargColumn);
         }
@@ -83,7 +83,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="value">optional object value</param>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_Column(object pvargColumn, object value)
+        public virtual void set_Column(object pvargColumn, object value)
         {
             InvokerService.InvokeInternal.ExecutePropertySet(this, "Column", pvargColumn, value);
         }
@@ -94,7 +94,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         /// <param name="pvargColumn">optional object pvargColumn</param>
         [SupportByVersion("MSForms", 2), Redirect("get_Column")]
-        public object Column(object pvargColumn)
+        public virtual object Column(object pvargColumn)
         {
             return get_Column(pvargColumn);
         }
@@ -107,7 +107,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="pvargColumn">optional object pvargColumn</param>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_List(object pvargIndex, object pvargColumn)
+        public virtual object get_List(object pvargIndex, object pvargColumn)
         {
             return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "List", pvargIndex, pvargColumn);
         }
@@ -121,7 +121,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="value">optional object value</param>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_List(object pvargIndex, object pvargColumn, object value)
+        public virtual void set_List(object pvargIndex, object pvargColumn, object value)
         {
             InvokerService.InvokeInternal.ExecutePropertySet(this, "List", pvargIndex, pvargColumn, value);
         }
@@ -133,7 +133,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="pvargIndex">optional object pvargIndex</param>
         /// <param name="pvargColumn">optional object pvargColumn</param>
         [SupportByVersion("MSForms", 2), Redirect("get_List")]
-        public object List(object pvargIndex, object pvargColumn)
+        public virtual object List(object pvargIndex, object pvargColumn)
         {
             return get_List(pvargIndex, pvargColumn);
         }
@@ -145,7 +145,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="pvargIndex">optional object pvargIndex</param>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object get_List(object pvargIndex)
+        public virtual object get_List(object pvargIndex)
         {
             return InvokerService.InvokeInternal.ExecuteVariantPropertyGet(this, "List", pvargIndex);
         }
@@ -158,7 +158,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="value">optional object value</param>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void set_List(object pvargIndex, object value)
+        public virtual void set_List(object pvargIndex, object value)
         {
             InvokerService.InvokeInternal.ExecutePropertySet(this, "List", pvargIndex, value);
         }
@@ -169,7 +169,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         /// <param name="pvargIndex">optional object pvargIndex</param>
         [SupportByVersion("MSForms", 2), Redirect("get_List")]
-        public object List(object pvargIndex)
+        public virtual object List(object pvargIndex)
         {
             return get_List(pvargIndex);
         }
@@ -234,7 +234,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool AutoSize
+        public virtual bool AutoSize
         {
             get
             {
@@ -251,7 +251,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool AutoTab
+        public virtual bool AutoTab
         {
             get
             {
@@ -268,7 +268,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool AutoWordSelect
+        public virtual bool AutoWordSelect
         {
             get
             {
@@ -285,7 +285,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public Int32 BackColor
+        public virtual Int32 BackColor
         {
             get
             {
@@ -302,7 +302,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmBackStyle BackStyle
+        public virtual NetOffice.MSFormsApi.Enums.fmBackStyle BackStyle
         {
             get
             {
@@ -319,7 +319,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public Int32 BorderColor
+        public virtual Int32 BorderColor
         {
             get
             {
@@ -336,7 +336,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmBorderStyle BorderStyle
+        public virtual NetOffice.MSFormsApi.Enums.fmBorderStyle BorderStyle
         {
             get
             {
@@ -354,7 +354,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool BordersSuppress
+        public virtual bool BordersSuppress
         {
             get
             {
@@ -371,7 +371,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public object BoundColumn
+        public virtual object BoundColumn
         {
             get
             {
@@ -389,7 +389,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool CanPaste
+        public virtual bool CanPaste
         {
             get
             {
@@ -402,7 +402,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public Int32 ColumnCount
+        public virtual Int32 ColumnCount
         {
             get
             {
@@ -419,7 +419,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool ColumnHeads
+        public virtual bool ColumnHeads
         {
             get
             {
@@ -436,7 +436,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public string ColumnWidths
+        public virtual string ColumnWidths
         {
             get
             {
@@ -454,7 +454,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 CurTargetX
+        public virtual Int32 CurTargetX
         {
             get
             {
@@ -468,7 +468,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 CurTargetY
+        public virtual Int32 CurTargetY
         {
             get
             {
@@ -482,7 +482,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 CurX
+        public virtual Int32 CurX
         {
             get
             {
@@ -499,7 +499,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmDropButtonStyle DropButtonStyle
+        public virtual NetOffice.MSFormsApi.Enums.fmDropButtonStyle DropButtonStyle
         {
             get
             {
@@ -516,7 +516,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool Enabled
+        public virtual bool Enabled
         {
             get
             {
@@ -535,7 +535,7 @@ namespace NetOffice.MSFormsApi.Behind
         [SupportByVersion("MSForms", 2)]
         [BaseResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.MSFormsApi.Font _Font_Reserved
+        public virtual NetOffice.MSFormsApi.Font _Font_Reserved
         {
             get
             {
@@ -553,7 +553,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [BaseResult]
-        public NetOffice.MSFormsApi.Font Font
+        public virtual NetOffice.MSFormsApi.Font Font
         {
             get
             {
@@ -571,7 +571,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool FontBold
+        public virtual bool FontBold
         {
             get
             {
@@ -589,7 +589,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool FontItalic
+        public virtual bool FontItalic
         {
             get
             {
@@ -607,7 +607,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string FontName
+        public virtual string FontName
         {
             get
             {
@@ -625,7 +625,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public float FontSize
+        public virtual float FontSize
         {
             get
             {
@@ -643,7 +643,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool FontStrikethru
+        public virtual bool FontStrikethru
         {
             get
             {
@@ -661,7 +661,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool FontUnderline
+        public virtual bool FontUnderline
         {
             get
             {
@@ -679,7 +679,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int16 FontWeight
+        public virtual Int16 FontWeight
         {
             get
             {
@@ -696,7 +696,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public Int32 ForeColor
+        public virtual Int32 ForeColor
         {
             get
             {
@@ -713,7 +713,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool HideSelection
+        public virtual bool HideSelection
         {
             get
             {
@@ -731,7 +731,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 LineCount
+        public virtual Int32 LineCount
         {
             get
             {
@@ -745,7 +745,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 ListCount
+        public virtual Int32 ListCount
         {
             get
             {
@@ -760,7 +760,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object ListCursor
+        public virtual object ListCursor
         {
             get
             {
@@ -778,7 +778,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object ListIndex
+        public virtual object ListIndex
         {
             get
             {
@@ -795,7 +795,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public Int32 ListRows
+        public virtual Int32 ListRows
         {
             get
             {
@@ -812,7 +812,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmListStyle ListStyle
+        public virtual NetOffice.MSFormsApi.Enums.fmListStyle ListStyle
         {
             get
             {
@@ -829,7 +829,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public object ListWidth
+        public virtual object ListWidth
         {
             get
             {
@@ -846,7 +846,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool Locked
+        public virtual bool Locked
         {
             get
             {
@@ -863,7 +863,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmMatchEntry MatchEntry
+        public virtual NetOffice.MSFormsApi.Enums.fmMatchEntry MatchEntry
         {
             get
             {
@@ -881,7 +881,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool MatchFound
+        public virtual bool MatchFound
         {
             get
             {
@@ -894,7 +894,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool MatchRequired
+        public virtual bool MatchRequired
         {
             get
             {
@@ -911,7 +911,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public Int32 MaxLength
+        public virtual Int32 MaxLength
         {
             get
             {
@@ -928,7 +928,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2), NativeResult]
-        public stdole.Picture MouseIcon
+        public virtual stdole.Picture MouseIcon
         {
             get
             {
@@ -948,7 +948,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmMousePointer MousePointer
+        public virtual NetOffice.MSFormsApi.Enums.fmMousePointer MousePointer
         {
             get
             {
@@ -965,7 +965,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public bool SelectionMargin
+        public virtual bool SelectionMargin
         {
             get
             {
@@ -983,7 +983,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 SelLength
+        public virtual Int32 SelLength
         {
             get
             {
@@ -1001,7 +1001,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 SelStart
+        public virtual Int32 SelStart
         {
             get
             {
@@ -1019,7 +1019,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public string SelText
+        public virtual string SelText
         {
             get
             {
@@ -1036,7 +1036,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmShowDropButtonWhen ShowDropButtonWhen
+        public virtual NetOffice.MSFormsApi.Enums.fmShowDropButtonWhen ShowDropButtonWhen
         {
             get
             {
@@ -1053,7 +1053,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmSpecialEffect SpecialEffect
+        public virtual NetOffice.MSFormsApi.Enums.fmSpecialEffect SpecialEffect
         {
             get
             {
@@ -1070,7 +1070,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmStyle Style
+        public virtual NetOffice.MSFormsApi.Enums.fmStyle Style
         {
             get
             {
@@ -1087,7 +1087,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public string Text
+        public virtual string Text
         {
             get
             {
@@ -1104,7 +1104,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmTextAlign TextAlign
+        public virtual NetOffice.MSFormsApi.Enums.fmTextAlign TextAlign
         {
             get
             {
@@ -1121,7 +1121,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public object TextColumn
+        public virtual object TextColumn
         {
             get
             {
@@ -1139,7 +1139,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Int32 TextLength
+        public virtual Int32 TextLength
         {
             get
             {
@@ -1152,7 +1152,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public object TopIndex
+        public virtual object TopIndex
         {
             get
             {
@@ -1170,7 +1170,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool Valid
+        public virtual bool Valid
         {
             get
             {
@@ -1183,7 +1183,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public object Value
+        public virtual object Value
         {
             get
             {
@@ -1201,7 +1201,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object Column
+        public virtual object Column
         {
             get
             {
@@ -1219,7 +1219,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public object List
+        public virtual object List
         {
             get
             {
@@ -1236,7 +1236,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmIMEMode IMEMode
+        public virtual NetOffice.MSFormsApi.Enums.fmIMEMode IMEMode
         {
             get
             {
@@ -1253,7 +1253,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmEnterFieldBehavior EnterFieldBehavior
+        public virtual NetOffice.MSFormsApi.Enums.fmEnterFieldBehavior EnterFieldBehavior
         {
             get
             {
@@ -1270,7 +1270,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Get/Set
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public NetOffice.MSFormsApi.Enums.fmDragBehavior DragBehavior
+        public virtual NetOffice.MSFormsApi.Enums.fmDragBehavior DragBehavior
         {
             get
             {
@@ -1288,7 +1288,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [SupportByVersion("MSForms", 2)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public NetOffice.MSFormsApi.Enums.fmDisplayStyle DisplayStyle
+        public virtual NetOffice.MSFormsApi.Enums.fmDisplayStyle DisplayStyle
         {
             get
             {
@@ -1306,7 +1306,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="pvargItem">optional object pvargItem</param>
         /// <param name="pvargIndex">optional object pvargIndex</param>
         [SupportByVersion("MSForms", 2)]
-        public void AddItem(object pvargItem, object pvargIndex)
+        public virtual void AddItem(object pvargItem, object pvargIndex)
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "AddItem", pvargItem, pvargIndex);
         }
@@ -1316,7 +1316,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         [CustomMethod]
         [SupportByVersion("MSForms", 2)]
-        public void AddItem()
+        public virtual void AddItem()
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "AddItem");
         }
@@ -1327,7 +1327,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="pvargItem">optional object pvargItem</param>
         [CustomMethod]
         [SupportByVersion("MSForms", 2)]
-        public void AddItem(object pvargItem)
+        public virtual void AddItem(object pvargItem)
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "AddItem", pvargItem);
         }
@@ -1336,7 +1336,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// SupportByVersion MSForms 2
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public void Clear()
+        public virtual void Clear()
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "Clear");
         }
@@ -1345,7 +1345,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// SupportByVersion MSForms 2
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public void DropDown()
+        public virtual void DropDown()
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "DropDown");
         }
@@ -1355,7 +1355,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         /// <param name="pvargIndex">object pvargIndex</param>
         [SupportByVersion("MSForms", 2)]
-        public void RemoveItem(object pvargIndex)
+        public virtual void RemoveItem(object pvargIndex)
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "RemoveItem", pvargIndex);
         }
@@ -1364,7 +1364,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// SupportByVersion MSForms 2
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public void Copy()
+        public virtual void Copy()
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "Copy");
         }
@@ -1373,7 +1373,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// SupportByVersion MSForms 2
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public void Cut()
+        public virtual void Cut()
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "Cut");
         }
@@ -1382,7 +1382,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// SupportByVersion MSForms 2
         /// </summary>
         [SupportByVersion("MSForms", 2)]
-        public void Paste()
+        public virtual void Paste()
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "Paste");
         }

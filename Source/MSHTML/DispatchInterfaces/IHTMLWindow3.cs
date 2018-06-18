@@ -11,100 +11,9 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IHTMLWindow3 : COMObject
+	[TypeId("3050F4AE-98B5-11CF-BB82-00AA00BDCE0B")]
+	public interface IHTMLWindow3 : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IHTMLWindow3);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IHTMLWindow3(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IHTMLWindow3(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLWindow3(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLWindow3(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLWindow3(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLWindow3(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLWindow3() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLWindow3(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,73 +21,35 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 screenLeft
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "screenLeft");
-			}
-		}
+		Int32 screenLeft { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 screenTop
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "screenTop");
-			}
-		}
+		Int32 screenTop { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object onbeforeprint
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onbeforeprint");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onbeforeprint", value);
-			}
-		}
+		object onbeforeprint { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object onafterprint
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onafterprint");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onafterprint", value);
-			}
-		}
+		object onafterprint { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLDataTransfer clipboardData
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDataTransfer>(this, "clipboardData", NetOffice.MSHTMLApi.IHTMLDataTransfer.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.MSHTMLApi.IHTMLDataTransfer clipboardData { get; }
 
 		#endregion
 
@@ -190,10 +61,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="_event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool attachEvent(string _event, object pdisp)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "attachEvent", _event, pdisp);
-		}
+		bool attachEvent(string _event, object pdisp);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -201,10 +69,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="_event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void detachEvent(string _event, object pdisp)
-		{
-			 Factory.ExecuteMethod(this, "detachEvent", _event, pdisp);
-		}
+		void detachEvent(string _event, object pdisp);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -213,10 +78,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="msec">Int32 msec</param>
 		/// <param name="language">optional object language</param>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 setTimeout(object expression, Int32 msec, object language)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "setTimeout", expression, msec, language);
-		}
+		Int32 setTimeout(object expression, Int32 msec, object language);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -225,10 +87,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="msec">Int32 msec</param>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 setTimeout(object expression, Int32 msec)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "setTimeout", expression, msec);
-		}
+		Int32 setTimeout(object expression, Int32 msec);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -237,10 +96,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="msec">Int32 msec</param>
 		/// <param name="language">optional object language</param>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 setInterval(object expression, Int32 msec, object language)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "setInterval", expression, msec, language);
-		}
+		Int32 setInterval(object expression, Int32 msec, object language);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -249,19 +105,13 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="msec">Int32 msec</param>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 setInterval(object expression, Int32 msec)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "setInterval", expression, msec);
-		}
+		Int32 setInterval(object expression, Int32 msec);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public void print()
-		{
-			 Factory.ExecuteMethod(this, "print");
-		}
+		void print();
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -270,20 +120,14 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="varArgIn">optional object varArgIn</param>
 		/// <param name="options">optional object options</param>
 		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn, object options)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLWindow2>(this, "showModelessDialog", NetOffice.MSHTMLApi.IHTMLWindow2.LateBindingApiWrapperType, url, varArgIn, options);
-		}
+		NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn, object options);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLWindow2>(this, "showModelessDialog", NetOffice.MSHTMLApi.IHTMLWindow2.LateBindingApiWrapperType);
-		}
+		NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog();
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -291,10 +135,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="url">optional string url = </param>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLWindow2>(this, "showModelessDialog", NetOffice.MSHTMLApi.IHTMLWindow2.LateBindingApiWrapperType, url);
-		}
+		NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -303,13 +144,8 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="varArgIn">optional object varArgIn</param>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLWindow2>(this, "showModelessDialog", NetOffice.MSHTMLApi.IHTMLWindow2.LateBindingApiWrapperType, url, varArgIn);
-		}
+		NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

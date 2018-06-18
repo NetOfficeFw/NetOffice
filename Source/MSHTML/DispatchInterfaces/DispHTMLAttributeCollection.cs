@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -11,100 +11,10 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class DispHTMLAttributeCollection : COMObject
+	[TypeId("3050F56C-98B5-11CF-BB82-00AA00BDCE0B")]
+    [CoClassSource(typeof(NetOffice.MSHTMLApi.HTMLAttributeCollection))]
+    public interface DispHTMLAttributeCollection : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(DispHTMLAttributeCollection);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public DispHTMLAttributeCollection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public DispHTMLAttributeCollection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLAttributeCollection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLAttributeCollection(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLAttributeCollection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLAttributeCollection(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLAttributeCollection() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLAttributeCollection(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,13 +22,7 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-		}
+		Int32 length { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -127,26 +31,14 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object _newEnum
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "_newEnum");
-			}
-		}
+		object _newEnum { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 ie8_length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ie8_length");
-			}
-		}
+		Int32 ie8_length { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -155,13 +47,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object constructor
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "constructor");
-			}
-		}
+		object constructor { get; }
 
 		#endregion
 
@@ -172,20 +58,14 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="name">optional object name</param>
 		[SupportByVersion("MSHTML", 4)]
-		public object item(object name)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item", name);
-		}
+		object item(object name);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public object item()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item");
-		}
+		object item();
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -193,10 +73,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrName">string bstrName</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute getNamedItem(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "getNamedItem", bstrName);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMAttribute getNamedItem(string bstrName);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -204,10 +81,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="ppNode">NetOffice.MSHTMLApi.IHTMLDOMAttribute ppNode</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute setNamedItem(NetOffice.MSHTMLApi.IHTMLDOMAttribute ppNode)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "setNamedItem", ppNode);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMAttribute setNamedItem(NetOffice.MSHTMLApi.IHTMLDOMAttribute ppNode);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -215,10 +89,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrName">string bstrName</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute removeNamedItem(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "removeNamedItem", bstrName);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMAttribute removeNamedItem(string bstrName);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -226,10 +97,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrName">string bstrName</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_getNamedItem(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "ie8_getNamedItem", bstrName);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_getNamedItem(string bstrName);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -237,10 +105,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="pNodeIn">NetOffice.MSHTMLApi.IHTMLDOMAttribute pNodeIn</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_setNamedItem(NetOffice.MSHTMLApi.IHTMLDOMAttribute pNodeIn)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "ie8_setNamedItem", pNodeIn);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_setNamedItem(NetOffice.MSHTMLApi.IHTMLDOMAttribute pNodeIn);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -248,10 +113,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrName">string bstrName</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_removeNamedItem(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "ie8_removeNamedItem", bstrName);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_removeNamedItem(string bstrName);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -259,13 +121,8 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("MSHTML", 4)]
 		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_item(Int32 index)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "ie8_item", index);
-		}
+		NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_item(Int32 index);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

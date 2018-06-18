@@ -11,100 +11,9 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class IHTMLControlElement : IHTMLDivElement
+	[TypeId("3050F4E9-98B5-11CF-BB82-00AA00BDCE0B")]
+	public interface IHTMLControlElement : IHTMLDivElement
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IHTMLControlElement);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IHTMLControlElement(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IHTMLControlElement(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLControlElement(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLControlElement(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLControlElement(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLControlElement(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLControlElement() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IHTMLControlElement(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,137 +21,63 @@ namespace NetOffice.MSHTMLApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int16 tabIndex
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "tabIndex");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "tabIndex", value);
-			}
-		}
+		Int16 tabIndex { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string accessKey
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "accessKey");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "accessKey", value);
-			}
-		}
+		string accessKey { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object onblur
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onblur");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onblur", value);
-			}
-		}
+		object onblur { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object onfocus
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onfocus");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onfocus", value);
-			}
-		}
+		object onfocus { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object onresize
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onresize");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onresize", value);
-			}
-		}
+		object onresize { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 clientHeight
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "clientHeight");
-			}
-		}
+		Int32 clientHeight { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 clientWidth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "clientWidth");
-			}
-		}
+		Int32 clientWidth { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 clientTop
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "clientTop");
-			}
-		}
+		Int32 clientTop { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 clientLeft
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "clientLeft");
-			}
-		}
+		Int32 clientLeft { get; }
 
 		#endregion
 
@@ -252,42 +87,28 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public void focus()
-		{
-			 Factory.ExecuteMethod(this, "focus");
-		}
+		void focus();
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public void blur()
-		{
-			 Factory.ExecuteMethod(this, "blur");
-		}
+		void blur();
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pUnk">object pUnk</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void addFilter(object pUnk)
-		{
-			 Factory.ExecuteMethod(this, "addFilter", pUnk);
-		}
+		void addFilter(object pUnk);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pUnk">object pUnk</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void removeFilter(object pUnk)
-		{
-			 Factory.ExecuteMethod(this, "removeFilter", pUnk);
-		}
+		void removeFilter(object pUnk);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

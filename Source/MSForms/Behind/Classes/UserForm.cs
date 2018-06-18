@@ -81,7 +81,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_AddControlEventHandler AddControlEvent
+		public virtual event UserForm_AddControlEventHandler AddControlEvent
 		{
 			add
 			{
@@ -103,7 +103,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_BeforeDragOverEventHandler BeforeDragOverEvent
+		public virtual event UserForm_BeforeDragOverEventHandler BeforeDragOverEvent
 		{
 			add
 			{
@@ -125,7 +125,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_BeforeDropOrPasteEventHandler BeforeDropOrPasteEvent
+		public virtual event UserForm_BeforeDropOrPasteEventHandler BeforeDropOrPasteEvent
 		{
 			add
 			{
@@ -147,7 +147,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_ClickEventHandler ClickEvent
+		public virtual event UserForm_ClickEventHandler ClickEvent
 		{
 			add
 			{
@@ -169,7 +169,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_DblClickEventHandler DblClickEvent
+		public virtual event UserForm_DblClickEventHandler DblClickEvent
 		{
 			add
 			{
@@ -191,7 +191,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_ErrorEventHandler ErrorEvent
+		public virtual event UserForm_ErrorEventHandler ErrorEvent
 		{
 			add
 			{
@@ -213,7 +213,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_KeyDownEventHandler KeyDownEvent
+		public virtual event UserForm_KeyDownEventHandler KeyDownEvent
 		{
 			add
 			{
@@ -235,7 +235,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_KeyPressEventHandler KeyPressEvent
+		public virtual event UserForm_KeyPressEventHandler KeyPressEvent
 		{
 			add
 			{
@@ -257,7 +257,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_KeyUpEventHandler KeyUpEvent
+		public virtual event UserForm_KeyUpEventHandler KeyUpEvent
 		{
 			add
 			{
@@ -279,7 +279,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_LayoutEventHandler LayoutEvent
+		public virtual event UserForm_LayoutEventHandler LayoutEvent
 		{
 			add
 			{
@@ -301,7 +301,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_MouseDownEventHandler MouseDownEvent
+		public virtual event UserForm_MouseDownEventHandler MouseDownEvent
 		{
 			add
 			{
@@ -323,7 +323,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_MouseMoveEventHandler MouseMoveEvent
+		public virtual event UserForm_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
 			{
@@ -345,7 +345,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_MouseUpEventHandler MouseUpEvent
+		public virtual event UserForm_MouseUpEventHandler MouseUpEvent
 		{
 			add
 			{
@@ -367,7 +367,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_RemoveControlEventHandler RemoveControlEvent
+		public virtual event UserForm_RemoveControlEventHandler RemoveControlEvent
 		{
 			add
 			{
@@ -389,7 +389,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_ScrollEventHandler ScrollEvent
+		public virtual event UserForm_ScrollEventHandler ScrollEvent
 		{
 			add
 			{
@@ -411,7 +411,7 @@ namespace NetOffice.MSFormsApi.Behind
 		/// SupportByVersion MSForms 2
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
-		public event UserForm_ZoomEventHandler ZoomEvent
+		public virtual event UserForm_ZoomEventHandler ZoomEvent
 		{
 			add
 			{
@@ -432,7 +432,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
+		public virtual void CreateEventBridge()
         {
 			if(false == Factory.Settings.EnableEvents)
 				return;
@@ -455,7 +455,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// The instance use currently an event listener 
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
+        public virtual bool EventBridgeInitialized
         {
             get 
             {
@@ -467,7 +467,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public virtual bool HasEventRecipients()       
         {
             return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
         }
@@ -478,7 +478,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="eventName">name of the event</param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
+        public virtual bool HasEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
@@ -487,7 +487,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Target methods from its actual event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
+        public virtual Delegate[] GetEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
@@ -496,7 +496,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Returns the current count of event recipients
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
+        public virtual int GetCountOfEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
          }
@@ -508,7 +508,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+        public virtual int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
 		}
@@ -516,7 +516,7 @@ namespace NetOffice.MSFormsApi.Behind
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
+        public virtual void DisposeEventBridge()
         {
 			if( null != _formEvents_SinkHelper)
 			{

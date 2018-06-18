@@ -11,100 +11,10 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class DispHTMLScreen : COMObject
+	[TypeId("3050F591-98B5-11CF-BB82-00AA00BDCE0B")]
+    [CoClassSource(typeof(NetOffice.MSHTMLApi.HTMLScreen))]
+    public interface DispHTMLScreen : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(DispHTMLScreen);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public DispHTMLScreen(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public DispHTMLScreen(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLScreen(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLScreen(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLScreen(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLScreen(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLScreen() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLScreen(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,190 +22,98 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 colorDepth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "colorDepth");
-			}
-		}
+		Int32 colorDepth { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 bufferDepth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "bufferDepth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "bufferDepth", value);
-			}
-		}
+		Int32 bufferDepth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 width
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "width");
-			}
-		}
+		Int32 width { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 height
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "height");
-			}
-		}
+		Int32 height { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 updateInterval
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "updateInterval");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "updateInterval", value);
-			}
-		}
+		Int32 updateInterval { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 availHeight
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "availHeight");
-			}
-		}
+		Int32 availHeight { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 availWidth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "availWidth");
-			}
-		}
+		Int32 availWidth { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool fontSmoothingEnabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "fontSmoothingEnabled");
-			}
-		}
+		bool fontSmoothingEnabled { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 logicalXDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "logicalXDPI");
-			}
-		}
+		Int32 logicalXDPI { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 logicalYDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "logicalYDPI");
-			}
-		}
+		Int32 logicalYDPI { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 deviceXDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "deviceXDPI");
-			}
-		}
+		Int32 deviceXDPI { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 deviceYDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "deviceYDPI");
-			}
-		}
+		Int32 deviceYDPI { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 systemXDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "systemXDPI");
-			}
-		}
+		Int32 systemXDPI { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Int32 systemYDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "systemYDPI");
-			}
-		}
+		Int32 systemYDPI { get; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -304,20 +122,9 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object constructor
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "constructor");
-			}
-		}
+		object constructor { get; }
 
 		#endregion
 
-		#region Methods
-
-		#endregion
-
-		#pragma warning restore
 	}
 }

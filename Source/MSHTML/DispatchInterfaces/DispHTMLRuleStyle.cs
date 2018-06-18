@@ -11,100 +11,10 @@ namespace NetOffice.MSHTMLApi
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class DispHTMLRuleStyle : COMObject
+	[TypeId("3050F55C-98B5-11CF-BB82-00AA00BDCE0B")]
+    [CoClassSource(typeof(NetOffice.MSHTMLApi.HTMLRuleStyle))]
+    public interface DispHTMLRuleStyle : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(DispHTMLRuleStyle);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public DispHTMLRuleStyle(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public DispHTMLRuleStyle(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLRuleStyle(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLRuleStyle(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLRuleStyle(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLRuleStyle(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLRuleStyle() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DispHTMLRuleStyle(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,85 +22,35 @@ namespace NetOffice.MSHTMLApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string fontFamily
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "fontFamily");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "fontFamily", value);
-			}
-		}
+		string fontFamily { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string fontStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "fontStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "fontStyle", value);
-			}
-		}
+		string fontStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string fontVariant
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "fontVariant");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "fontVariant", value);
-			}
-		}
+		string fontVariant { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string fontWeight
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "fontWeight");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "fontWeight", value);
-			}
-		}
+		string fontWeight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object fontSize
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "fontSize");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "fontSize", value);
-			}
-		}
+		object fontSize { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -198,34 +58,14 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string font
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "font");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "font", value);
-			}
-		}
+		string font { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object color
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "color");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "color", value);
-			}
-		}
+		object color { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -233,85 +73,35 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string background
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "background");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "background", value);
-			}
-		}
+		string background { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object backgroundColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "backgroundColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "backgroundColor", value);
-			}
-		}
+		object backgroundColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string backgroundImage
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "backgroundImage");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "backgroundImage", value);
-			}
-		}
+		string backgroundImage { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string backgroundRepeat
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "backgroundRepeat");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "backgroundRepeat", value);
-			}
-		}
+		string backgroundRepeat { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string backgroundAttachment
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "backgroundAttachment");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "backgroundAttachment", value);
-			}
-		}
+		string backgroundAttachment { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -319,340 +109,140 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string backgroundPosition
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "backgroundPosition");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "backgroundPosition", value);
-			}
-		}
+		string backgroundPosition { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object backgroundPositionX
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "backgroundPositionX");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "backgroundPositionX", value);
-			}
-		}
+		object backgroundPositionX { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object backgroundPositionY
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "backgroundPositionY");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "backgroundPositionY", value);
-			}
-		}
+		object backgroundPositionY { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object wordSpacing
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "wordSpacing");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "wordSpacing", value);
-			}
-		}
+		object wordSpacing { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object letterSpacing
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "letterSpacing");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "letterSpacing", value);
-			}
-		}
+		object letterSpacing { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textDecoration
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textDecoration");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textDecoration", value);
-			}
-		}
+		string textDecoration { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool textDecorationNone
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "textDecorationNone");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textDecorationNone", value);
-			}
-		}
+		bool textDecorationNone { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool textDecorationUnderline
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "textDecorationUnderline");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textDecorationUnderline", value);
-			}
-		}
+		bool textDecorationUnderline { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool textDecorationOverline
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "textDecorationOverline");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textDecorationOverline", value);
-			}
-		}
+		bool textDecorationOverline { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool textDecorationLineThrough
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "textDecorationLineThrough");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textDecorationLineThrough", value);
-			}
-		}
+		bool textDecorationLineThrough { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool textDecorationBlink
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "textDecorationBlink");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textDecorationBlink", value);
-			}
-		}
+		bool textDecorationBlink { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object verticalAlign
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "verticalAlign");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "verticalAlign", value);
-			}
-		}
+		object verticalAlign { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textTransform
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textTransform");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textTransform", value);
-			}
-		}
+		string textTransform { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textAlign
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textAlign");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textAlign", value);
-			}
-		}
+		string textAlign { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object textIndent
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "textIndent");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "textIndent", value);
-			}
-		}
+		object textIndent { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object lineHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "lineHeight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "lineHeight", value);
-			}
-		}
+		object lineHeight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object marginTop
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "marginTop");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "marginTop", value);
-			}
-		}
+		object marginTop { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object marginRight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "marginRight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "marginRight", value);
-			}
-		}
+		object marginRight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object marginBottom
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "marginBottom");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "marginBottom", value);
-			}
-		}
+		object marginBottom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object marginLeft
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "marginLeft");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "marginLeft", value);
-			}
-		}
+		object marginLeft { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -660,85 +250,35 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string margin
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "margin");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "margin", value);
-			}
-		}
+		string margin { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object paddingTop
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "paddingTop");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "paddingTop", value);
-			}
-		}
+		object paddingTop { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object paddingRight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "paddingRight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "paddingRight", value);
-			}
-		}
+		object paddingRight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object paddingBottom
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "paddingBottom");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "paddingBottom", value);
-			}
-		}
+		object paddingBottom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object paddingLeft
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "paddingLeft");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "paddingLeft", value);
-			}
-		}
+		object paddingLeft { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -746,17 +286,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string padding
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "padding");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "padding", value);
-			}
-		}
+		string padding { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -764,493 +294,203 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string border
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "border");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "border", value);
-			}
-		}
+		string border { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderTop
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderTop");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderTop", value);
-			}
-		}
+		string borderTop { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderRight
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderRight");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderRight", value);
-			}
-		}
+		string borderRight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderBottom
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderBottom");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderBottom", value);
-			}
-		}
+		string borderBottom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderLeft
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderLeft");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderLeft", value);
-			}
-		}
+		string borderLeft { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderColor
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderColor", value);
-			}
-		}
+		string borderColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object borderTopColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "borderTopColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "borderTopColor", value);
-			}
-		}
+		object borderTopColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object borderRightColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "borderRightColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "borderRightColor", value);
-			}
-		}
+		object borderRightColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object borderBottomColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "borderBottomColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "borderBottomColor", value);
-			}
-		}
+		object borderBottomColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object borderLeftColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "borderLeftColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "borderLeftColor", value);
-			}
-		}
+		object borderLeftColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderWidth
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderWidth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderWidth", value);
-			}
-		}
+		string borderWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object borderTopWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "borderTopWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "borderTopWidth", value);
-			}
-		}
+		object borderTopWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object borderRightWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "borderRightWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "borderRightWidth", value);
-			}
-		}
+		object borderRightWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object borderBottomWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "borderBottomWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "borderBottomWidth", value);
-			}
-		}
+		object borderBottomWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object borderLeftWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "borderLeftWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "borderLeftWidth", value);
-			}
-		}
+		object borderLeftWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderStyle", value);
-			}
-		}
+		string borderStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderTopStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderTopStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderTopStyle", value);
-			}
-		}
+		string borderTopStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderRightStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderRightStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderRightStyle", value);
-			}
-		}
+		string borderRightStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderBottomStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderBottomStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderBottomStyle", value);
-			}
-		}
+		string borderBottomStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderLeftStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderLeftStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderLeftStyle", value);
-			}
-		}
+		string borderLeftStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object width
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "width");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "width", value);
-			}
-		}
+		object width { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object height
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "height");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "height", value);
-			}
-		}
+		object height { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string styleFloat
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "styleFloat");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "styleFloat", value);
-			}
-		}
+		string styleFloat { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string clear
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "clear");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "clear", value);
-			}
-		}
+		string clear { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string display
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "display");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "display", value);
-			}
-		}
+		string display { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string visibility
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "visibility");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "visibility", value);
-			}
-		}
+		string visibility { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string listStyleType
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "listStyleType");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "listStyleType", value);
-			}
-		}
+		string listStyleType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string listStylePosition
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "listStylePosition");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "listStylePosition", value);
-			}
-		}
+		string listStylePosition { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string listStyleImage
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "listStyleImage");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "listStyleImage", value);
-			}
-		}
+		string listStyleImage { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -1258,136 +498,56 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string listStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "listStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "listStyle", value);
-			}
-		}
+		string listStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string whiteSpace
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "whiteSpace");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "whiteSpace", value);
-			}
-		}
+		string whiteSpace { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object top
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "top");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "top", value);
-			}
-		}
+		object top { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object left
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "left");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "left", value);
-			}
-		}
+		object left { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object zIndex
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "zIndex");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "zIndex", value);
-			}
-		}
+		object zIndex { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string overflow
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "overflow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "overflow", value);
-			}
-		}
+		string overflow { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string pageBreakBefore
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "pageBreakBefore");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "pageBreakBefore", value);
-			}
-		}
+		string pageBreakBefore { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string pageBreakAfter
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "pageBreakAfter");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "pageBreakAfter", value);
-			}
-		}
+		string pageBreakAfter { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -1395,204 +555,84 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string cssText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "cssText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "cssText", value);
-			}
-		}
+		string cssText { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string cursor
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "cursor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "cursor", value);
-			}
-		}
+		string cursor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string clip
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "clip");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "clip", value);
-			}
-		}
+		string clip { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string filter
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "filter");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "filter", value);
-			}
-		}
+		string filter { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string tableLayout
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "tableLayout");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "tableLayout", value);
-			}
-		}
+		string tableLayout { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderCollapse
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderCollapse");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderCollapse", value);
-			}
-		}
+		string borderCollapse { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string direction
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "direction");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "direction", value);
-			}
-		}
+		string direction { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string behavior
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "behavior");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "behavior", value);
-			}
-		}
+		string behavior { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string position
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "position");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "position", value);
-			}
-		}
+		string position { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string unicodeBidi
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "unicodeBidi");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "unicodeBidi", value);
-			}
-		}
+		string unicodeBidi { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object bottom
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "bottom");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "bottom", value);
-			}
-		}
+		object bottom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object right
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "right");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "right", value);
-			}
-		}
+		object right { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -1600,17 +640,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 pixelBottom
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "pixelBottom");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "pixelBottom", value);
-			}
-		}
+		Int32 pixelBottom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -1618,187 +648,77 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 pixelRight
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "pixelRight");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "pixelRight", value);
-			}
-		}
+		Int32 pixelRight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Single posBottom
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "posBottom");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "posBottom", value);
-			}
-		}
+		Single posBottom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public Single posRight
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "posRight");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "posRight", value);
-			}
-		}
+		Single posRight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string imeMode
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "imeMode");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "imeMode", value);
-			}
-		}
+		string imeMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string rubyAlign
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "rubyAlign");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "rubyAlign", value);
-			}
-		}
+		string rubyAlign { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string rubyPosition
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "rubyPosition");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "rubyPosition", value);
-			}
-		}
+		string rubyPosition { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string rubyOverhang
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "rubyOverhang");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "rubyOverhang", value);
-			}
-		}
+		string rubyOverhang { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object layoutGridChar
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "layoutGridChar");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "layoutGridChar", value);
-			}
-		}
+		object layoutGridChar { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object layoutGridLine
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "layoutGridLine");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "layoutGridLine", value);
-			}
-		}
+		object layoutGridLine { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string layoutGridMode
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "layoutGridMode");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "layoutGridMode", value);
-			}
-		}
+		string layoutGridMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string layoutGridType
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "layoutGridType");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "layoutGridType", value);
-			}
-		}
+		string layoutGridType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -1806,799 +726,329 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string layoutGrid
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "layoutGrid");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "layoutGrid", value);
-			}
-		}
+		string layoutGrid { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textAutospace
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textAutospace");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textAutospace", value);
-			}
-		}
+		string textAutospace { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string wordBreak
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "wordBreak");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "wordBreak", value);
-			}
-		}
+		string wordBreak { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string lineBreak
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "lineBreak");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "lineBreak", value);
-			}
-		}
+		string lineBreak { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textJustify
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textJustify");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textJustify", value);
-			}
-		}
+		string textJustify { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textJustifyTrim
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textJustifyTrim");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textJustifyTrim", value);
-			}
-		}
+		string textJustifyTrim { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object textKashida
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "textKashida");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "textKashida", value);
-			}
-		}
+		object textKashida { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string overflowX
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "overflowX");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "overflowX", value);
-			}
-		}
+		string overflowX { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string overflowY
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "overflowY");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "overflowY", value);
-			}
-		}
+		string overflowY { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string accelerator
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "accelerator");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "accelerator", value);
-			}
-		}
+		string accelerator { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string layoutFlow
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "layoutFlow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "layoutFlow", value);
-			}
-		}
+		string layoutFlow { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object zoom
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "zoom");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "zoom", value);
-			}
-		}
+		object zoom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string wordWrap
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "wordWrap");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "wordWrap", value);
-			}
-		}
+		string wordWrap { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textUnderlinePosition
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textUnderlinePosition");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textUnderlinePosition", value);
-			}
-		}
+		string textUnderlinePosition { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object scrollbarBaseColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "scrollbarBaseColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "scrollbarBaseColor", value);
-			}
-		}
+		object scrollbarBaseColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object scrollbarFaceColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "scrollbarFaceColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "scrollbarFaceColor", value);
-			}
-		}
+		object scrollbarFaceColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object scrollbar3dLightColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "scrollbar3dLightColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "scrollbar3dLightColor", value);
-			}
-		}
+		object scrollbar3dLightColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object scrollbarShadowColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "scrollbarShadowColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "scrollbarShadowColor", value);
-			}
-		}
+		object scrollbarShadowColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object scrollbarHighlightColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "scrollbarHighlightColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "scrollbarHighlightColor", value);
-			}
-		}
+		object scrollbarHighlightColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object scrollbarDarkShadowColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "scrollbarDarkShadowColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "scrollbarDarkShadowColor", value);
-			}
-		}
+		object scrollbarDarkShadowColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object scrollbarArrowColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "scrollbarArrowColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "scrollbarArrowColor", value);
-			}
-		}
+		object scrollbarArrowColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object scrollbarTrackColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "scrollbarTrackColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "scrollbarTrackColor", value);
-			}
-		}
+		object scrollbarTrackColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string writingMode
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "writingMode");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "writingMode", value);
-			}
-		}
+		string writingMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textAlignLast
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textAlignLast");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textAlignLast", value);
-			}
-		}
+		string textAlignLast { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object textKashidaSpace
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "textKashidaSpace");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "textKashidaSpace", value);
-			}
-		}
+		object textKashidaSpace { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string textOverflow
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textOverflow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textOverflow", value);
-			}
-		}
+		string textOverflow { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object minHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "minHeight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "minHeight", value);
-			}
-		}
+		object minHeight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string msInterpolationMode
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "msInterpolationMode");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "msInterpolationMode", value);
-			}
-		}
+		string msInterpolationMode { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object maxHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "maxHeight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "maxHeight", value);
-			}
-		}
+		object maxHeight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object minWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "minWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "minWidth", value);
-			}
-		}
+		object minWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object maxWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "maxWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "maxWidth", value);
-			}
-		}
+		object maxWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string content
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "content");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "content", value);
-			}
-		}
+		string content { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string captionSide
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "captionSide");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "captionSide", value);
-			}
-		}
+		string captionSide { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string counterIncrement
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "counterIncrement");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "counterIncrement", value);
-			}
-		}
+		string counterIncrement { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string counterReset
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "counterReset");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "counterReset", value);
-			}
-		}
+		string counterReset { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string outline
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "outline");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "outline", value);
-			}
-		}
+		string outline { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object outlineWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "outlineWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "outlineWidth", value);
-			}
-		}
+		object outlineWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string outlineStyle
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "outlineStyle");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "outlineStyle", value);
-			}
-		}
+		string outlineStyle { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object outlineColor
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "outlineColor");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "outlineColor", value);
-			}
-		}
+		object outlineColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string boxSizing
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "boxSizing");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "boxSizing", value);
-			}
-		}
+		string boxSizing { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string borderSpacing
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "borderSpacing");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "borderSpacing", value);
-			}
-		}
+		string borderSpacing { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object orphans
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "orphans");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "orphans", value);
-			}
-		}
+		object orphans { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public object widows
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "widows");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "widows", value);
-			}
-		}
+		object widows { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string pageBreakInside
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "pageBreakInside");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "pageBreakInside", value);
-			}
-		}
+		string pageBreakInside { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string emptyCells
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "emptyCells");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "emptyCells", value);
-			}
-		}
+		string emptyCells { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string msBlockProgression
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "msBlockProgression");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "msBlockProgression", value);
-			}
-		}
+		string msBlockProgression { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string quotes
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "quotes");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "quotes", value);
-			}
-		}
+		string quotes { get; set; }
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -2607,13 +1057,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		[SupportByVersion("MSHTML", 4), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object constructor
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "constructor");
-			}
-		}
+		object constructor { get; }
 
 		#endregion
 
@@ -2626,10 +1070,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="attributeValue">object attributeValue</param>
 		/// <param name="lFlags">optional Int32 lFlags = 1</param>
 		[SupportByVersion("MSHTML", 4)]
-		public void setAttribute(string strAttributeName, object attributeValue, object lFlags)
-		{
-			 Factory.ExecuteMethod(this, "setAttribute", strAttributeName, attributeValue, lFlags);
-		}
+		void setAttribute(string strAttributeName, object attributeValue, object lFlags);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -2638,10 +1079,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="attributeValue">object attributeValue</param>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public void setAttribute(string strAttributeName, object attributeValue)
-		{
-			 Factory.ExecuteMethod(this, "setAttribute", strAttributeName, attributeValue);
-		}
+		void setAttribute(string strAttributeName, object attributeValue);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -2649,10 +1087,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 0</param>
 		[SupportByVersion("MSHTML", 4)]
-		public object getAttribute(string strAttributeName, object lFlags)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "getAttribute", strAttributeName, lFlags);
-		}
+		object getAttribute(string strAttributeName, object lFlags);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -2660,10 +1095,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public object getAttribute(string strAttributeName)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "getAttribute", strAttributeName);
-		}
+		object getAttribute(string strAttributeName);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -2671,10 +1103,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 1</param>
 		[SupportByVersion("MSHTML", 4)]
-		public bool removeAttribute(string strAttributeName, object lFlags)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "removeAttribute", strAttributeName, lFlags);
-		}
+		bool removeAttribute(string strAttributeName, object lFlags);
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -2682,13 +1111,8 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		[CustomMethod]
 		[SupportByVersion("MSHTML", 4)]
-		public bool removeAttribute(string strAttributeName)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "removeAttribute", strAttributeName);
-		}
+		bool removeAttribute(string strAttributeName);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }
