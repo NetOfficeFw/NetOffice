@@ -11,100 +11,9 @@ namespace NetOffice.PublisherApi
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ThreeDFormat : COMObject
+	[TypeId("0002126F-0000-0000-C000-000000000046")]
+	public interface ThreeDFormat : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(ThreeDFormat);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ThreeDFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ThreeDFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ThreeDFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ThreeDFormat(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ThreeDFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ThreeDFormat(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ThreeDFormat() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ThreeDFormat(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,13 +21,7 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -126,354 +29,154 @@ namespace NetOffice.PublisherApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object Depth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Depth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Depth", value);
-			}
-		}
+		object Depth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.ColorFormat ExtrusionColor
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ColorFormat>(this, "ExtrusionColor", NetOffice.PublisherApi.ColorFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.ColorFormat ExtrusionColor { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoExtrusionColorType>(this, "ExtrusionColorType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ExtrusionColorType", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Perspective
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Perspective");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Perspective", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState Perspective { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection>(this, "PresetExtrusionDirection");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetLightingDirection>(this, "PresetLightingDirection");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "PresetLightingDirection", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness>(this, "PresetLightingSoftness");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "PresetLightingSoftness", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetMaterial>(this, "PresetMaterial");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "PresetMaterial", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat>(this, "PresetThreeDFormat");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Single RotationX
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "RotationX");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RotationX", value);
-			}
-		}
+		Single RotationX { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Single RotationY
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "RotationY");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RotationY", value);
-			}
-		}
+		Single RotationY { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Visible
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Visible", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState Visible { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBevelType>(this, "BevelTopType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "BevelTopType", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public Single BevelTopInset
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "BevelTopInset");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BevelTopInset", value);
-			}
-		}
+		Single BevelTopInset { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public Single BevelTopDepth
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "BevelTopDepth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BevelTopDepth", value);
-			}
-		}
+		Single BevelTopDepth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBevelType>(this, "BevelBottomType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "BevelBottomType", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public Single BevelBottomInset
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "BevelBottomInset");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BevelBottomInset", value);
-			}
-		}
+		Single BevelBottomInset { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public Single BevelBottomDepth
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "BevelBottomDepth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BevelBottomDepth", value);
-			}
-		}
+		Single BevelBottomDepth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public Single ContourWidth
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "ContourWidth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ContourWidth", value);
-			}
-		}
+		Single ContourWidth { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public NetOffice.PublisherApi.ColorFormat ContourColor
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ColorFormat>(this, "ContourColor", NetOffice.PublisherApi.ColorFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.ColorFormat ContourColor { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 15,16)]
-		public Single FieldOfView
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "FieldOfView");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FieldOfView", value);
-			}
-		}
+		Single FieldOfView { get; set; }
 
 		#endregion
 
@@ -484,52 +187,35 @@ namespace NetOffice.PublisherApi
 		/// </summary>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void IncrementRotationX(Single increment)
-		{
-			 Factory.ExecuteMethod(this, "IncrementRotationX", increment);
-		}
+		void IncrementRotationX(Single increment);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void IncrementRotationY(Single increment)
-		{
-			 Factory.ExecuteMethod(this, "IncrementRotationY", increment);
-		}
+		void IncrementRotationY(Single increment);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ResetRotation()
-		{
-			 Factory.ExecuteMethod(this, "ResetRotation");
-		}
+		void ResetRotation();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		/// <param name="presetThreeDFormat">NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
-		{
-			 Factory.ExecuteMethod(this, "SetThreeDFormat", presetThreeDFormat);
-		}
+		void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		/// <param name="presetExtrusionDirection">NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
-		{
-			 Factory.ExecuteMethod(this, "SetExtrusionDirection", presetExtrusionDirection);
-		}
+		void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

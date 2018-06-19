@@ -11,100 +11,9 @@ namespace NetOffice.PublisherApi
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class PictureFormat : COMObject
+	[TypeId("0002126B-0000-0000-C000-000000000046")]
+	public interface PictureFormat : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(PictureFormat);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PictureFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PictureFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureFormat(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureFormat(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureFormat() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureFormat(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,13 +21,7 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -126,551 +29,273 @@ namespace NetOffice.PublisherApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Single Brightness
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Brightness");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Brightness", value);
-			}
-		}
+		Single Brightness { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureColorType>(this, "ColorType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ColorType", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Single Contrast
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Contrast");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Contrast", value);
-			}
-		}
+		Single Contrast { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object CropBottom
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "CropBottom");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "CropBottom", value);
-			}
-		}
+		object CropBottom { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object CropLeft
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "CropLeft");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "CropLeft", value);
-			}
-		}
+		object CropLeft { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object CropRight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "CropRight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "CropRight", value);
-			}
-		}
+		object CropRight { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object CropTop
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "CropTop");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "CropTop", value);
-			}
-		}
+		object CropTop { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 TransparencyColor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "TransparencyColor");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "TransparencyColor", value);
-			}
-		}
+		Int32 TransparencyColor { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "TransparentBackground");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "TransparentBackground", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Enums.PbVerticalPictureLocking VerticalPictureLocking
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbVerticalPictureLocking>(this, "VerticalPictureLocking");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "VerticalPictureLocking", value);
-			}
-		}
+		NetOffice.PublisherApi.Enums.PbVerticalPictureLocking VerticalPictureLocking { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Enums.PbHorizontalPictureLocking HorizontalPictureLocking
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbHorizontalPictureLocking>(this, "HorizontalPictureLocking");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "HorizontalPictureLocking", value);
-			}
-		}
+		NetOffice.PublisherApi.Enums.PbHorizontalPictureLocking HorizontalPictureLocking { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Enums.PbColorModel ColorModel
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbColorModel>(this, "ColorModel");
-			}
-		}
+		NetOffice.PublisherApi.Enums.PbColorModel ColorModel { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 ColorsInPalette
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ColorsInPalette");
-			}
-		}
+		Int32 ColorsInPalette { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 EffectiveResolution
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "EffectiveResolution");
-			}
-		}
+		Int32 EffectiveResolution { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public string Filename
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Filename");
-			}
-		}
+		string Filename { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 FileSize
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "FileSize");
-			}
-		}
+		Int32 FileSize { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState HasAlphaChannel
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "HasAlphaChannel");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState HasAlphaChannel { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object Height
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Height");
-			}
-		}
+		object Height { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 HorizontalScale
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "HorizontalScale");
-			}
-		}
+		Int32 HorizontalScale { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Enums.PbImageFormat ImageFormat
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbImageFormat>(this, "ImageFormat");
-			}
-		}
+		NetOffice.PublisherApi.Enums.PbImageFormat ImageFormat { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState IsGreyScale
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsGreyScale");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState IsGreyScale { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState IsLinked
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsLinked");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState IsLinked { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState IsTrueColor
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsTrueColor");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState IsTrueColor { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 OriginalColorsInPalette
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "OriginalColorsInPalette");
-			}
-		}
+		Int32 OriginalColorsInPalette { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 OriginalFileSize
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "OriginalFileSize");
-			}
-		}
+		Int32 OriginalFileSize { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState OriginalHasAlphaChannel
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "OriginalHasAlphaChannel");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState OriginalHasAlphaChannel { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object OriginalHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "OriginalHeight");
-			}
-		}
+		object OriginalHeight { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState OriginalIsTrueColor
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "OriginalIsTrueColor");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState OriginalIsTrueColor { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 OriginalResolution
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "OriginalResolution");
-			}
-		}
+		Int32 OriginalResolution { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object OriginalWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "OriginalWidth");
-			}
-		}
+		object OriginalWidth { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 VerticalScale
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "VerticalScale");
-			}
-		}
+		Int32 VerticalScale { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public object Width
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Width");
-			}
-		}
+		object Width { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Enums.PbLinkedFileStatus LinkedFileStatus
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbLinkedFileStatus>(this, "LinkedFileStatus");
-			}
-		}
+		NetOffice.PublisherApi.Enums.PbLinkedFileStatus LinkedFileStatus { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState IsEmpty
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsEmpty");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState IsEmpty { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public bool HasTransparencyColor
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "HasTransparencyColor");
-			}
-		}
+		bool HasTransparencyColor { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.ColorFormat RecoloredPictureColor
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ColorFormat>(this, "RecoloredPictureColor", NetOffice.PublisherApi.ColorFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.ColorFormat RecoloredPictureColor { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState IsRecolored
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsRecolored");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState IsRecolored { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState LeaveBlackAsBlack
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "LeaveBlackAsBlack");
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState LeaveBlackAsBlack { get; }
 
 		#endregion
 
@@ -681,20 +306,14 @@ namespace NetOffice.PublisherApi
 		/// </summary>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void IncrementBrightness(Single increment)
-		{
-			 Factory.ExecuteMethod(this, "IncrementBrightness", increment);
-		}
+		void IncrementBrightness(Single increment);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		/// <param name="increment">Single increment</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void IncrementContrast(Single increment)
-		{
-			 Factory.ExecuteMethod(this, "IncrementContrast", increment);
-		}
+		void IncrementContrast(Single increment);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -702,10 +321,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="pathname">string pathname</param>
 		/// <param name="insertAs">optional NetOffice.PublisherApi.Enums.PbPictureInsertAs InsertAs = 3</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void Replace(string pathname, object insertAs)
-		{
-			 Factory.ExecuteMethod(this, "Replace", pathname, insertAs);
-		}
+		void Replace(string pathname, object insertAs);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -713,10 +329,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="pathname">string pathname</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void Replace(string pathname)
-		{
-			 Factory.ExecuteMethod(this, "Replace", pathname);
-		}
+		void Replace(string pathname);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -724,55 +337,37 @@ namespace NetOffice.PublisherApi
 		/// <param name="color">NetOffice.PublisherApi.ColorFormat color</param>
 		/// <param name="leaveBlackPartsBlack">NetOffice.OfficeApi.Enums.MsoTriState leaveBlackPartsBlack</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void Recolor(NetOffice.PublisherApi.ColorFormat color, NetOffice.OfficeApi.Enums.MsoTriState leaveBlackPartsBlack)
-		{
-			 Factory.ExecuteMethod(this, "Recolor", color, leaveBlackPartsBlack);
-		}
+		void Recolor(NetOffice.PublisherApi.ColorFormat color, NetOffice.OfficeApi.Enums.MsoTriState leaveBlackPartsBlack);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void RestoreOriginalColors()
-		{
-			 Factory.ExecuteMethod(this, "RestoreOriginalColors");
-		}
+		void RestoreOriginalColors();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void FillFrame()
-		{
-			 Factory.ExecuteMethod(this, "FillFrame");
-		}
+		void FillFrame();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void FitFrame()
-		{
-			 Factory.ExecuteMethod(this, "FitFrame");
-		}
+		void FitFrame();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ClearCrop()
-		{
-			 Factory.ExecuteMethod(this, "ClearCrop");
-		}
+		void ClearCrop();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void Remove()
-		{
-			 Factory.ExecuteMethod(this, "Remove");
-		}
+		void Remove();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -781,10 +376,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="insertAs">optional NetOffice.PublisherApi.Enums.PbPictureInsertAs InsertAs = 3</param>
 		/// <param name="fit">optional NetOffice.PublisherApi.Enums.pbPictureInsertFit Fit = 1</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ReplaceEx(string pathname, object insertAs, object fit)
-		{
-			 Factory.ExecuteMethod(this, "ReplaceEx", pathname, insertAs, fit);
-		}
+		void ReplaceEx(string pathname, object insertAs, object fit);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -792,10 +384,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="pathname">string pathname</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ReplaceEx(string pathname)
-		{
-			 Factory.ExecuteMethod(this, "ReplaceEx", pathname);
-		}
+		void ReplaceEx(string pathname);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -804,13 +393,8 @@ namespace NetOffice.PublisherApi
 		/// <param name="insertAs">optional NetOffice.PublisherApi.Enums.PbPictureInsertAs InsertAs = 3</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ReplaceEx(string pathname, object insertAs)
-		{
-			 Factory.ExecuteMethod(this, "ReplaceEx", pathname, insertAs);
-		}
+		void ReplaceEx(string pathname, object insertAs);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

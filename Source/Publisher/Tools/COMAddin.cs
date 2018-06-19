@@ -304,7 +304,7 @@ namespace NetOffice.PublisherApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = new Publisher.Application(Factory, null, application);
+                this.Application = Factory.CreateKnownObjectFromComProxy<Publisher.Application>(null, application, typeof(Publisher.Application));
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);

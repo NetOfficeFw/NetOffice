@@ -11,100 +11,9 @@ namespace NetOffice.PublisherApi
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Page : COMObject
+	[TypeId("00021246-0000-0000-C000-000000000046")]
+	public interface Page : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(Page);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Page(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Page(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Page(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Page(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Page(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Page(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Page() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Page(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,13 +21,7 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -126,358 +29,182 @@ namespace NetOffice.PublisherApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Shapes Shapes
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Shapes>(this, "Shapes", NetOffice.PublisherApi.Shapes.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.Shapes Shapes { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public string PageNumber
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "PageNumber");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PageNumber", value);
-			}
-		}
+		string PageNumber { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Enums.PbPageType PageType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbPageType>(this, "PageType");
-			}
-		}
+		NetOffice.PublisherApi.Enums.PbPageType PageType { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Page Master
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Page>(this, "Master", NetOffice.PublisherApi.Page.LateBindingApiWrapperType);
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "Master", value);
-			}
-		}
+		NetOffice.PublisherApi.Page Master { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 PageID
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "PageID");
-			}
-		}
+		Int32 PageID { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 PageIndex
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "PageIndex");
-			}
-		}
+		Int32 PageIndex { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.RulerGuides RulerGuides
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.RulerGuides>(this, "RulerGuides", NetOffice.PublisherApi.RulerGuides.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.RulerGuides RulerGuides { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public bool IgnoreMaster
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IgnoreMaster");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IgnoreMaster", value);
-			}
-		}
+		bool IgnoreMaster { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Wizard Wizard
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Wizard>(this, "Wizard", NetOffice.PublisherApi.Wizard.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.Wizard Wizard { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Tags Tags
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Tags>(this, "Tags", NetOffice.PublisherApi.Tags.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.Tags Tags { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Single XOffsetWithinReaderSpread
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "XOffsetWithinReaderSpread");
-			}
-		}
+		Single XOffsetWithinReaderSpread { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Single YOffsetWithinReaderSpread
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "YOffsetWithinReaderSpread");
-			}
-		}
+		Single YOffsetWithinReaderSpread { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.ReaderSpread ReaderSpread
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ReaderSpread>(this, "ReaderSpread", NetOffice.PublisherApi.ReaderSpread.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.ReaderSpread ReaderSpread { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 Width
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Width");
-			}
-		}
+		Int32 Width { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 Height
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Height");
-			}
-		}
+		Int32 Height { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+		string Name { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public bool IsTwoPageMaster
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsTwoPageMaster");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IsTwoPageMaster", value);
-			}
-		}
+		bool IsTwoPageMaster { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public bool IsTrailing
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsTrailing");
-			}
-		}
+		bool IsTrailing { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public bool IsLeading
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsLeading");
-			}
-		}
+		bool IsLeading { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.HeaderFooter Header
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.HeaderFooter>(this, "Header", NetOffice.PublisherApi.HeaderFooter.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.HeaderFooter Header { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.HeaderFooter Footer
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.HeaderFooter>(this, "Footer", NetOffice.PublisherApi.HeaderFooter.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.HeaderFooter Footer { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.PageBackground Background
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.PageBackground>(this, "Background", NetOffice.PublisherApi.PageBackground.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.PageBackground Background { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.WebPageOptions WebPageOptions
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.WebPageOptions>(this, "WebPageOptions", NetOffice.PublisherApi.WebPageOptions.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.WebPageOptions WebPageOptions { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.LayoutGuides LayoutGuides
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.LayoutGuides>(this, "LayoutGuides", NetOffice.PublisherApi.LayoutGuides.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.LayoutGuides LayoutGuides { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public bool IsWizardPage
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsWizardPage");
-			}
-		}
+		bool IsWizardPage { get; }
 
 		#endregion
 
@@ -487,10 +214,7 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+		void Delete();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -498,10 +222,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="filename">string filename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void SaveAsPicture10(string filename)
-		{
-			 Factory.ExecuteMethod(this, "SaveAsPicture10", filename);
-		}
+		void SaveAsPicture10(string filename);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -509,20 +230,14 @@ namespace NetOffice.PublisherApi
 		/// <param name="newAbbreviation">optional string NewAbbreviation = </param>
 		/// <param name="newName">optional string NewName = </param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Page Duplicate(object newAbbreviation, object newName)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Page>(this, "Duplicate", NetOffice.PublisherApi.Page.LateBindingApiWrapperType, newAbbreviation, newName);
-		}
+		NetOffice.PublisherApi.Page Duplicate(object newAbbreviation, object newName);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Page Duplicate()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Page>(this, "Duplicate", NetOffice.PublisherApi.Page.LateBindingApiWrapperType);
-		}
+		NetOffice.PublisherApi.Page Duplicate();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -530,10 +245,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="newAbbreviation">optional string NewAbbreviation = </param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Page Duplicate(object newAbbreviation)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Page>(this, "Duplicate", NetOffice.PublisherApi.Page.LateBindingApiWrapperType, newAbbreviation);
-		}
+		NetOffice.PublisherApi.Page Duplicate(object newAbbreviation);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -541,10 +253,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="page">Int32 page</param>
 		/// <param name="after">optional bool After = true</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void Move(Int32 page, object after)
-		{
-			 Factory.ExecuteMethod(this, "Move", page, after);
-		}
+		void Move(Int32 page, object after);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -552,10 +261,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="page">Int32 page</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void Move(Int32 page)
-		{
-			 Factory.ExecuteMethod(this, "Move", page);
-		}
+		void Move(Int32 page);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -563,10 +269,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="filename">string filename</param>
 		/// <param name="pbResolution">optional NetOffice.PublisherApi.Enums.PbPictureResolution pbResolution = 0</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void SaveAsPicture(string filename, object pbResolution)
-		{
-			 Factory.ExecuteMethod(this, "SaveAsPicture", filename, pbResolution);
-		}
+		void SaveAsPicture(string filename, object pbResolution);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -574,23 +277,15 @@ namespace NetOffice.PublisherApi
 		/// <param name="filename">string filename</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void SaveAsPicture(string filename)
-		{
-			 Factory.ExecuteMethod(this, "SaveAsPicture", filename);
-		}
+		void SaveAsPicture(string filename);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		/// <param name="filename">string filename</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ExportEmailHTML(string filename)
-		{
-			 Factory.ExecuteMethod(this, "ExportEmailHTML", filename);
-		}
+		void ExportEmailHTML(string filename);
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

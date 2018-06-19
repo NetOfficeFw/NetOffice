@@ -11,100 +11,9 @@ namespace NetOffice.PublisherApi
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class View : COMObject
+	[TypeId("39051BAC-5CA7-11D3-B65F-00C04F8EF32D")]
+	public interface View : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(View);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public View(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public View(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public View(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public View(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public View(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public View(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public View() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public View(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,13 +21,7 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -126,47 +29,21 @@ namespace NetOffice.PublisherApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Page ActivePage
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Page>(this, "ActivePage", NetOffice.PublisherApi.Page.LateBindingApiWrapperType);
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "ActivePage", value);
-			}
-		}
+		NetOffice.PublisherApi.Page ActivePage { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Enums.PbZoom Zoom
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbZoom>(this, "Zoom");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Zoom", value);
-			}
-		}
+		NetOffice.PublisherApi.Enums.PbZoom Zoom { get; set; }
 
 		#endregion
 
@@ -177,31 +54,20 @@ namespace NetOffice.PublisherApi
 		/// </summary>
 		/// <param name="shape">NetOffice.PublisherApi.Shape shape</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ScrollShapeIntoView(NetOffice.PublisherApi.Shape shape)
-		{
-			 Factory.ExecuteMethod(this, "ScrollShapeIntoView", shape);
-		}
+		void ScrollShapeIntoView(NetOffice.PublisherApi.Shape shape);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ZoomIn()
-		{
-			 Factory.ExecuteMethod(this, "ZoomIn");
-		}
+		void ZoomIn();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ZoomOut()
-		{
-			 Factory.ExecuteMethod(this, "ZoomOut");
-		}
+		void ZoomOut();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

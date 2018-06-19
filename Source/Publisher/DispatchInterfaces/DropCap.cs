@@ -11,100 +11,9 @@ namespace NetOffice.PublisherApi
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class DropCap : COMObject
+	[TypeId("37B3B0AF-44B5-11D3-B65B-00C04F8EF32D")]
+	public interface DropCap : ICOMObject
 	{
-		#pragma warning disable
-
-		#region Type Information
-
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(DropCap);
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Ctor
-
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public DropCap(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public DropCap(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DropCap(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DropCap(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DropCap(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DropCap(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DropCap() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public DropCap(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
 		#region Properties
 
 		/// <summary>
@@ -112,13 +21,7 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.Application Application { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -126,128 +29,56 @@ namespace NetOffice.PublisherApi
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+		object Parent { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public string FontName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FontName");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FontName", value);
-			}
-		}
+		string FontName { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.PublisherApi.ColorFormat FontColor
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ColorFormat>(this, "FontColor", NetOffice.PublisherApi.ColorFormat.LateBindingApiWrapperType);
-			}
-		}
+		NetOffice.PublisherApi.ColorFormat FontColor { get; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState FontBold
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "FontBold");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "FontBold", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState FontBold { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState FontItalic
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "FontItalic");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "FontItalic", value);
-			}
-		}
+		NetOffice.OfficeApi.Enums.MsoTriState FontItalic { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 LinesUp
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "LinesUp");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "LinesUp", value);
-			}
-		}
+		Int32 LinesUp { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 Size
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Size");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Size", value);
-			}
-		}
+		Int32 Size { get; set; }
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public Int32 Span
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Span");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Span", value);
-			}
-		}
+		Int32 Span { get; set; }
 
 		#endregion
 
@@ -263,20 +94,14 @@ namespace NetOffice.PublisherApi
 		/// <param name="bold">optional bool Bold = false</param>
 		/// <param name="italic">optional bool Italic = false</param>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ApplyCustomDropCap(object linesUp, object size, object span, object fontName, object bold, object italic)
-		{
-			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", new object[]{ linesUp, size, span, fontName, bold, italic });
-		}
+		void ApplyCustomDropCap(object linesUp, object size, object span, object fontName, object bold, object italic);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ApplyCustomDropCap()
-		{
-			 Factory.ExecuteMethod(this, "ApplyCustomDropCap");
-		}
+		void ApplyCustomDropCap();
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -284,10 +109,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="linesUp">optional Int32 LinesUp = 0</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ApplyCustomDropCap(object linesUp)
-		{
-			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", linesUp);
-		}
+		void ApplyCustomDropCap(object linesUp);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -296,10 +118,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="size">optional Int32 Size = 5</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ApplyCustomDropCap(object linesUp, object size)
-		{
-			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", linesUp, size);
-		}
+		void ApplyCustomDropCap(object linesUp, object size);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -309,10 +128,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="span">optional Int32 Span = 1</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ApplyCustomDropCap(object linesUp, object size, object span)
-		{
-			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", linesUp, size, span);
-		}
+		void ApplyCustomDropCap(object linesUp, object size, object span);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -323,10 +139,7 @@ namespace NetOffice.PublisherApi
 		/// <param name="fontName">optional string FontName = </param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ApplyCustomDropCap(object linesUp, object size, object span, object fontName)
-		{
-			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", linesUp, size, span, fontName);
-		}
+		void ApplyCustomDropCap(object linesUp, object size, object span, object fontName);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
@@ -338,22 +151,14 @@ namespace NetOffice.PublisherApi
 		/// <param name="bold">optional bool Bold = false</param>
 		[CustomMethod]
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void ApplyCustomDropCap(object linesUp, object size, object span, object fontName, object bold)
-		{
-			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", new object[]{ linesUp, size, span, fontName, bold });
-		}
+		void ApplyCustomDropCap(object linesUp, object size, object span, object fontName, object bold);
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Publisher", 14,15,16)]
-		public void Clear()
-		{
-			 Factory.ExecuteMethod(this, "Clear");
-		}
+		void Clear();
 
 		#endregion
-
-		#pragma warning restore
 	}
 }

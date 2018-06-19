@@ -2,16 +2,18 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CoreServices;
 
-namespace NetOffice.PublisherApi.GlobalHelperModules
+namespace NetOffice.PublisherApi.ModulesLegacy
 {
-    ///<summary>
-    /// Module GlobalModule
+    /// <summary>
+    /// Module ApplicationModule
     /// SupportByVersion Publisher, 14,15,16
-    ///</summary>
+    /// </summary>
+    /// <remarks> This module supports legacy VB/VBA codebases </remarks>
     [SupportByVersion("Publisher", 14,15,16)]
 	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(PublisherApi.Application))]
-	public static class GlobalModule
+	public static class ApplicationModule
 	{
 		#region Fields
 
@@ -69,7 +71,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Document>(_instance, "ActiveDocument", NetOffice.PublisherApi.Document.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Document>(_instance, "ActiveDocument", typeof(NetOffice.PublisherApi.Document));
             }
         }
 
@@ -82,7 +84,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Window>(_instance, "ActiveWindow", NetOffice.PublisherApi.Window.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Window>(_instance, "ActiveWindow", typeof(NetOffice.PublisherApi.Window));
             }
         }
 
@@ -95,7 +97,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(_instance, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(_instance, "Application", typeof(NetOffice.PublisherApi.Application));
             }
         }
 
@@ -109,7 +111,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", typeof(NetOffice.OfficeApi.Assistant));
             }
         }
 
@@ -135,7 +137,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ColorSchemes>(_instance, "ColorSchemes", NetOffice.PublisherApi.ColorSchemes.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ColorSchemes>(_instance, "ColorSchemes", typeof(NetOffice.PublisherApi.ColorSchemes));
             }
         }
 
@@ -148,7 +150,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", typeof(NetOffice.OfficeApi.COMAddIns));
             }
         }
 
@@ -161,7 +163,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBars>(_instance, "CommandBars", typeof(NetOffice.OfficeApi.CommandBars));
             }
         }
 
@@ -174,7 +176,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType type)
         {
-            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialog>(_instance, "FileDialog", NetOffice.OfficeApi.FileDialog.LateBindingApiWrapperType, type);
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileDialog>(_instance, "FileDialog", typeof(NetOffice.OfficeApi.FileDialog), type);
         }
 
         /// <summary>
@@ -198,7 +200,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.FileSearch>(_instance, "FileSearch", typeof(NetOffice.OfficeApi.FileSearch));
             }
         }
 
@@ -237,7 +239,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Options>(_instance, "Options", NetOffice.PublisherApi.Options.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Options>(_instance, "Options", typeof(NetOffice.PublisherApi.Options));
             }
         }
 
@@ -337,7 +339,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Selection>(_instance, "Selection", NetOffice.PublisherApi.Selection.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Selection>(_instance, "Selection", typeof(NetOffice.PublisherApi.Selection));
             }
         }
 
@@ -410,7 +412,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.OfficeDataSourceObject>(_instance, "OfficeDataSourceObject", NetOffice.OfficeApi.OfficeDataSourceObject.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.OfficeDataSourceObject>(_instance, "OfficeDataSourceObject", typeof(NetOffice.OfficeApi.OfficeDataSourceObject));
             }
         }
 
@@ -440,7 +442,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Documents>(_instance, "Documents", NetOffice.PublisherApi.Documents.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Documents>(_instance, "Documents", typeof(NetOffice.PublisherApi.Documents));
             }
         }
 
@@ -453,7 +455,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.WebOptions>(_instance, "WebOptions", NetOffice.PublisherApi.WebOptions.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.WebOptions>(_instance, "WebOptions", typeof(NetOffice.PublisherApi.WebOptions));
             }
         }
 
@@ -466,7 +468,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.InstalledPrinters>(_instance, "InstalledPrinters", NetOffice.PublisherApi.InstalledPrinters.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.InstalledPrinters>(_instance, "InstalledPrinters", typeof(NetOffice.PublisherApi.InstalledPrinters));
             }
         }
 
@@ -480,7 +482,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions>(_instance, "MsoDebugOptions", NetOffice.OfficeApi.MsoDebugOptions.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions>(_instance, "MsoDebugOptions", typeof(NetOffice.OfficeApi.MsoDebugOptions));
             }
         }
 
@@ -561,7 +563,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", typeof(NetOffice.OfficeApi.IAssistance));
             }
         }
 
@@ -574,7 +576,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         {
             get
             {
-                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.CaptionStyles>(_instance, "CaptionStyles", NetOffice.PublisherApi.CaptionStyles.LateBindingApiWrapperType);
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.CaptionStyles>(_instance, "CaptionStyles", typeof(NetOffice.PublisherApi.CaptionStyles));
             }
         }
 
@@ -620,7 +622,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         [SupportByVersion("Publisher", 14, 15, 16)]
         public static NetOffice.PublisherApi.Document NewDocument(object wizard, object design)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "NewDocument", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, wizard, design);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "NewDocument", typeof(NetOffice.PublisherApi.Document), wizard, design);
         }
 
         /// <summary>
@@ -630,7 +632,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         [SupportByVersion("Publisher", 14, 15, 16)]
         public static NetOffice.PublisherApi.Document NewDocument()
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "NewDocument", NetOffice.PublisherApi.Document.LateBindingApiWrapperType);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "NewDocument", typeof(NetOffice.PublisherApi.Document));
         }
 
         /// <summary>
@@ -641,7 +643,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         [SupportByVersion("Publisher", 14, 15, 16)]
         public static NetOffice.PublisherApi.Document NewDocument(object wizard)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "NewDocument", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, wizard);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "NewDocument", typeof(NetOffice.PublisherApi.Document), wizard);
         }
 
         /// <summary>
@@ -654,7 +656,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         [SupportByVersion("Publisher", 14, 15, 16)]
         public static NetOffice.PublisherApi.Document Open(string filename, object readOnly, object addToRecentFiles, object saveChanges)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "Open", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, filename, readOnly, addToRecentFiles, saveChanges);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "Open", typeof(NetOffice.PublisherApi.Document), filename, readOnly, addToRecentFiles, saveChanges);
         }
 
         /// <summary>
@@ -665,7 +667,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         [SupportByVersion("Publisher", 14, 15, 16)]
         public static NetOffice.PublisherApi.Document Open(string filename)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "Open", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, filename);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "Open", typeof(NetOffice.PublisherApi.Document), filename);
         }
 
         /// <summary>
@@ -677,7 +679,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         [SupportByVersion("Publisher", 14, 15, 16)]
         public static NetOffice.PublisherApi.Document Open(string filename, object readOnly)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "Open", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, filename, readOnly);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "Open", typeof(NetOffice.PublisherApi.Document), filename, readOnly);
         }
 
         /// <summary>
@@ -690,7 +692,7 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         [SupportByVersion("Publisher", 14, 15, 16)]
         public static NetOffice.PublisherApi.Document Open(string filename, object readOnly, object addToRecentFiles)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "Open", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, filename, readOnly, addToRecentFiles);
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(_instance, "Open", typeof(NetOffice.PublisherApi.Document), filename, readOnly, addToRecentFiles);
         }
 
         /// <summary>
@@ -895,3 +897,4 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
         #endregion
     }
 }
+
