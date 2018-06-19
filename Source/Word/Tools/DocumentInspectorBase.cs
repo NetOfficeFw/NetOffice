@@ -152,7 +152,7 @@ namespace NetOffice.WordApi.Tools
         {
             try
             {             
-                Word.Document document = COMObject.Create<Word.Document>(Factory, null, Doc);
+                Word.Document document = COMObject.Create<Word.Document>(Factory, Doc);
                 try
                 {
                     Inspect(document, out Status, out Result, out Action);
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi.Tools
         {
             try
             {
-                Word.Document document = COMObject.Create<Word.Document>(Factory, null, Doc);
+                Word.Document document = COMObject.Create<Word.Document>(Factory, Doc);
                 try
                 {
                     Fix(document, Hwnd, out Status, out Result);

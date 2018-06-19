@@ -80,7 +80,7 @@ namespace WordExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start word and turn off msg boxes
-            Word.Application wordApplication = new Word.Application();
+            Word.Application wordApplication = new Word.ApplicationClass();
             wordApplication.Visible = true;            
             
             // we register some events. note: the event trigger was called from word, means an other Thread

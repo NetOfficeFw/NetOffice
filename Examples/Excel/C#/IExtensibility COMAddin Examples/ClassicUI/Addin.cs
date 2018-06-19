@@ -29,15 +29,15 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _contextName            = "Sample ContextMenu CS4";
         private static readonly string _contextMenuButtonName  = "Sample ContextButton CS4";
 
-        private Excel.Application _excelApplication;
+        private Excel.Application Application { get; set; }
 
-        #region IDTExtensibility2 Members
+        #region IDTExtensibility2
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
-                _excelApplication = COMObject.Create<Excel.Application>(Application, COMObjectCreateOptions.CreateNewCore);
+                Application = COMObject.Create<Excel.Application>(application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {
@@ -63,8 +63,11 @@ namespace COMAddinClassicExampleCS4
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != Application)
+                { 
+                    Application.Dispose();
+                    Application = null;
+                }
             }
             catch (Exception exception)
             {
@@ -81,6 +84,88 @@ namespace COMAddinClassicExampleCS4
         void IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
 
+        }
+
+        #endregion
+      
+        #region User Interface
+
+        private void CreateTemporaryUserInterface()
+        {
+            /*
+            // How to: Add Commands to Shortcut Menus in Excel
+            // http://msdn.microsoft.com/en-us/library/0batekf4.aspx            
+            */
+
+            /* create commandbar */
+            Office.CommandBar commandBar = Application.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, true);
+            commandBar.Visible = true;
+
+            // add popup to commandbar
+            Office.CommandBarPopup commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarPop.Caption = _toolbarPopupName;
+            commandBarPop.Tag = _toolbarPopupName;
+
+            // add a button to the popup
+            Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
+            commandBarBtn.FaceId = 9;
+            commandBarBtn.Caption = _toolbarButtonName;
+            commandBarBtn.Tag = _toolbarButtonName;
+            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+
+            /* create menu */
+            commandBar = Application.CommandBars["Worksheet Menu Bar"];
+
+            // add popup to menu bar
+            commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarPop.Caption = _menuName;
+            commandBarPop.Tag = _menuName;
+
+            // add a button to the popup
+            commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
+            commandBarBtn.FaceId = 9;
+            commandBarBtn.Caption = _menuButtonName;
+            commandBarBtn.Tag = _menuButtonName;
+            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+
+            /* create context menu */
+            commandBarPop = (Office.CommandBarPopup)Application.CommandBars["Cell"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarPop.Caption = _contextName;
+            commandBarPop.Tag = _contextName;
+
+            // add a button to the popup
+            commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
+            commandBarBtn.Caption = _contextMenuButtonName;
+            commandBarBtn.Tag = _contextMenuButtonName;
+            commandBarBtn.FaceId = 9;
+            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+        }
+
+        #endregion
+
+        #region UI Trigger
+
+        /// <summary>
+        /// Click event trigger from created buttons. incoming call comes from excel application thread.
+        /// </summary>
+        /// <param name="Ctrl"></param>
+        /// <param name="CancelDefault"></param>
+        private void commandBarBtn_ClickEvent(NetOffice.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault)
+        {
+            try
+            {
+                string message = string.Format("Click from Button {0}.", Ctrl.Caption);
+                MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Ctrl.Dispose();
+            }
+            catch (Exception exception)
+            {
+                string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
+                MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
@@ -138,88 +223,6 @@ namespace COMAddinClassicExampleCS4
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
                 MessageBox.Show("An error occured." + details, "Unregister" + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        #endregion
-      
-        #region UserInterface
-
-        private void CreateTemporaryUserInterface()
-        {
-            /*
-            // How to: Add Commands to Shortcut Menus in Excel
-            // http://msdn.microsoft.com/en-us/library/0batekf4.aspx            
-            */
-
-            /* create commandbar */
-            Office.CommandBar commandBar = _excelApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, true);
-            commandBar.Visible = true;
-
-            // add popup to commandbar
-            Office.CommandBarPopup commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
-            commandBarPop.Caption = _toolbarPopupName;
-            commandBarPop.Tag = _toolbarPopupName;
-
-            // add a button to the popup
-            Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
-            commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
-            commandBarBtn.FaceId = 9;
-            commandBarBtn.Caption = _toolbarButtonName;
-            commandBarBtn.Tag = _toolbarButtonName;
-            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
-
-            /* create menu */
-            commandBar = _excelApplication.CommandBars["Worksheet Menu Bar"];
-
-            // add popup to menu bar
-            commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
-            commandBarPop.Caption = _menuName;
-            commandBarPop.Tag = _menuName;
-
-            // add a button to the popup
-            commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
-            commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
-            commandBarBtn.FaceId = 9;
-            commandBarBtn.Caption = _menuButtonName;
-            commandBarBtn.Tag = _menuButtonName;
-            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
-
-            /* create context menu */
-            commandBarPop = (Office.CommandBarPopup)_excelApplication.CommandBars["Cell"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
-            commandBarPop.Caption = _contextName;
-            commandBarPop.Tag = _contextName;
-
-            // add a button to the popup
-            commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
-            commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
-            commandBarBtn.Caption = _contextMenuButtonName;
-            commandBarBtn.Tag = _contextMenuButtonName;
-            commandBarBtn.FaceId = 9;
-            commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
-        }
-
-        #endregion
-
-        #region UI Trigger
-
-        /// <summary>
-        /// Click event trigger from created buttons. incoming call comes from excel application thread.
-        /// </summary>
-        /// <param name="Ctrl"></param>
-        /// <param name="CancelDefault"></param>
-        private void commandBarBtn_ClickEvent(NetOffice.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault)
-        {
-            try
-            {
-                string message = string.Format("Click from Button {0}.", Ctrl.Caption);
-                MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Ctrl.Dispose();
-            }
-            catch (Exception exception)
-            {
-                string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

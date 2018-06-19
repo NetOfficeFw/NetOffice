@@ -3,8 +3,8 @@ using Extensibility;
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using NetOffice;
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.WordApi.Enums;
@@ -31,7 +31,7 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_wordApplication, CTPFactoryInst);
+                Office.ICTPFactory ctpFactory = COMObject.CreateFromParent<Office.ICTPFactory>(_wordApplication, CTPFactoryInst);
                 Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(CS4)", Type.Missing);
                 taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
                 taskPane.Width = 300;
@@ -54,7 +54,7 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                _wordApplication = new Word.Application(null, Application);
+                _wordApplication = COMObject.Create<Word.Application>(Application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {

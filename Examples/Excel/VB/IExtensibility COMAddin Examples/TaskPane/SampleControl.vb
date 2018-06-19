@@ -15,6 +15,9 @@ Public Class SampleControl
 
     End Sub
 
+    ' Injected from addin to avoid shared members
+    Public HostApplication As Excel.Application
+
 #Region "Private Methods"
 
     Private Sub LoadSampleCustomerData()
@@ -158,8 +161,8 @@ Public Class SampleControl
 
             If (listViewSearchResults.SelectedItems.Count > 0) Then
 
-                Dim activeSheet As Excel.Worksheet = Addin.Application.ActiveSheet
-                Dim activeCell As Excel.Range = Addin.Application.ActiveCell
+                Dim activeSheet As Excel.Worksheet = HostApplication.ActiveSheet
+                Dim activeCell As Excel.Range = HostApplication.ActiveCell
 
                 If Not IsNothing(activeCell) Then
 

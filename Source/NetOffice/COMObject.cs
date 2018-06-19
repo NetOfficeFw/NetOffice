@@ -388,7 +388,7 @@ namespace NetOffice
         /// <exception cref="CreateInstanceException">unexpected error</exception>
         public static T Create<T>(object comProxy) where T : class, ICOMObject
         {
-            return Create<T>(null, comProxy);
+            return CreateFromParent<T>(null, comProxy);
         }
 
         /// <summary>
@@ -434,17 +434,14 @@ namespace NetOffice
         /// Creates instance from proxy
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
-        /// <param name="factory">affected netoffice core</param>
         /// <param name="parent">parent caller</param>
         /// <param name="comProxy">given proxy as any</param>
         /// <returns>new instance of T</returns>
         /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
         /// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
         /// <exception cref="CreateInstanceException">unexpected error</exception>
-        public static T Create<T>(Core factory, ICOMObject parent, object comProxy) where T : class, ICOMObject
+        public static T CreateFromParent<T>(ICOMObject parent, object comProxy) where T : class, ICOMObject
         {
-            if (null == factory)
-                throw new ArgumentNullException("factory");
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
             if (false == (comProxy is MarshalByRefObject))
@@ -452,15 +449,15 @@ namespace NetOffice
             try
             {
                 Type contract = typeof(T);
-                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(factory, contract);
+                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(parent.Factory, contract);
                 T result = (T)Activator.CreateInstance(implementation);
                 ICOMObjectInitialize init = result as ICOMObjectInitialize;
                 if (null != init)
                 {
-                    init.InitializeCOMObject(factory, parent, comProxy);
+                    init.InitializeCOMObject(parent.Factory, parent, comProxy);
                 }
 
-                result = (T)factory.InternalObjectActivator.TryReplaceInstance(null, result);
+                result = (T)parent.Factory.InternalObjectActivator.TryReplaceInstance(null, result);
 
                 return result;
             }

@@ -3,8 +3,8 @@ using Extensibility;
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using NetOffice;
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.WordApi.Enums;
@@ -30,15 +30,22 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _contextMenuButtonName   = "Sample ContextButton CS4";
 
         private Word.Application _wordApplication;
-        private Word.Template    _normalDotTemplate; 
+        private Word.Template    _normalDotTemplate;
 
         #region IDTExtensibility2 Members
 
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="Application"></param>
+        /// <param name="ConnectMode"></param>
+        /// <param name="AddInInst"></param>
+        /// <param name="custom"></param>
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
-                _wordApplication = new Word.Application(null, Application);
+                _wordApplication = COMObject.Create<Word.Application>(Application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {

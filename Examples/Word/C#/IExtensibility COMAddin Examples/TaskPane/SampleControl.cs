@@ -4,10 +4,6 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Reflection;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using System.Runtime.InteropServices;
-using Extensibility;
-
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.WordApi.Enums;

@@ -16,14 +16,8 @@ Public Class Addin
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Task Pane"
 
-    Private Shared _sampleControl As SampleControl
-    Private Shared _excelApplication As Excel.Application
-
-    Public Shared ReadOnly Property Application() As Excel.Application
-        Get
-            Return _excelApplication
-        End Get
-    End Property
+    Private _sampleControl As SampleControl
+    Private _excelApplication As Excel.Application
 
 #Region "ICustomTaskPaneConsumer Member"
 
@@ -31,12 +25,13 @@ Public Class Addin
 
         Try
 
-            Dim ctpFactory As Office.ICTPFactory = COMObject.Create(Of Office.ICTPFactory)(Application.Factory, Application, CTPFactoryInst)
+            Dim ctpFactory As Office.ICTPFactory = COMObject.CreateFromParent(Of Office.ICTPFactory)(_excelApplication, CTPFactoryInst)
             Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(VB4)", Type.Missing)
             taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
             taskPane.Width = 300
             taskPane.Visible = True
             _sampleControl = taskPane.ContentControl
+            _sampleControl.HostApplication = _excelApplication
             ctpFactory.Dispose()
 
         Catch ex As Exception

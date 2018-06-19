@@ -25,7 +25,7 @@ Public Class Addin
 
         Try
 
-            _wordApplication = New Word.Application(Nothing, Application)
+            _wordApplication = COMObject.Create(Of Word.Application)(Application, COMObjectCreateOptions.CreateNewCore)
 
         Catch ex As Exception
 
@@ -41,6 +41,7 @@ Public Class Addin
 
             If (Not IsNothing(_wordApplication)) Then
                 _wordApplication.Dispose()
+                _wordApplication = Nothing
             End If
 
         Catch ex As Exception

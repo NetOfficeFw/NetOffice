@@ -10,6 +10,8 @@ namespace NetOffice.Loader
     /// </summary>
     internal class KnownKeyTokensReader
     {
+        #pragma warning disable
+        
         /// <summary>
         /// Name the file we embedd as static resource in Debug Build
         /// </summary>
@@ -19,6 +21,8 @@ namespace NetOffice.Loader
         /// Name the file we embedd as static resource in Release Build
         /// </summary>
         private string _keyTokensFileNameRelease = "KeyTokens_Release.txt";
+      
+        #pragma warning restore
 
         /// <summary>
         /// Perform reading

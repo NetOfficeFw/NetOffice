@@ -15,6 +15,9 @@ Public Class SampleControl
 
     End Sub
 
+    ' Injected from addin to avoid shared members
+    Public HostApplication As Word.Application
+
 #Region "Private Methods"
 
     Private Sub LoadSampleCustomerData()
@@ -163,11 +166,11 @@ Public Class SampleControl
         Try
             If (listViewSearchResults.SelectedItems.Count > 0) Then
 
-                Dim activeDocument As Word.Document = Addin.Application.ActiveDocument
+                Dim activeDocument As Word.Document = HostApplication.ActiveDocument
                 If Not IsNothing(activeDocument) Then
 
                     Dim selectedCustomer As Customer = listViewSearchResults.SelectedItems(0).Tag
-                    Addin.Application.Selection.TypeText(selectedCustomer.ToString())
+                    HostApplication.Selection.TypeText(selectedCustomer.ToString())
                     activeDocument.Dispose()
 
                 End If

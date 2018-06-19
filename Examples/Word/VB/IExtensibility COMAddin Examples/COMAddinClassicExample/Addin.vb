@@ -35,7 +35,7 @@ Public Class Addin
 
         Try
 
-            _wordApplication = New Word.Application(Nothing, Application)
+            _wordApplication = COMObject.Create(Of Word.Application)(Application, COMObjectCreateOptions.CreateNewCore)
 
         Catch ex As Exception
 
@@ -72,6 +72,7 @@ Public Class Addin
                 ' word ignores the temporary parameter in created menus(not toolbars) and save menu settings to dot file
                 RemoveGui()
                 _wordApplication.Dispose()
+                _wordApplication = Nothing
             End If
 
         Catch ex As Exception

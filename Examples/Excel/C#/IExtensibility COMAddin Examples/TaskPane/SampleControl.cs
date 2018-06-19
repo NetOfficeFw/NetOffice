@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Reflection;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using System.Runtime.InteropServices;
-
 using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
@@ -16,7 +13,7 @@ namespace COMAddinTaskPaneExampleCS4
 {
     public partial class SampleControl : UserControl
     {
-        List<Customer> _customers;
+        private List<Customer> _customers;
 
         public SampleControl()
         {
@@ -25,7 +22,10 @@ namespace COMAddinTaskPaneExampleCS4
             UpdateSearchResult();
         }
 
-        #region Private Methods
+        // Injected from addin to avoid any statics
+        public Excel.Application HostApplication { get; internal set; }
+
+        #region  Methods
 
         private void LoadSampleCustomerData()
         {
@@ -105,25 +105,7 @@ namespace COMAddinTaskPaneExampleCS4
             else
                 propertyGridDetails.SelectedObject = null;
         }
-
-        public static string ToRangeAddress(int rowIndex, int columnIndex)
-        {
-            if (columnIndex < 1) throw (new ArgumentOutOfRangeException("Invalid Argument. columnIndex must be > 0"));
-            if (rowIndex < 1) throw (new ArgumentOutOfRangeException("Invalid Argument. rowIndex must be > 0"));
-
-            string[] columnChars = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-
-            if (columnIndex <= columnChars.Length)
-                return columnChars[columnIndex - 1] + rowIndex.ToString();
-
-            int multi = columnIndex / columnChars.Length;
-            string pre = columnChars[multi - 1];
-
-            int newx = columnIndex;
-            newx -= (multi * columnChars.Length);
-            return pre + columnChars[newx - 1] + rowIndex.ToString();
-        }
-
+       
         private string CalculateRangeArea(int rowIndex, int columnIndex, int countOfProperties)
         {
             string startRangeAddress = ToRangeAddress(rowIndex, columnIndex);
@@ -158,7 +140,25 @@ namespace COMAddinTaskPaneExampleCS4
 
             return customerPropertiesArray;
         }
-       
+
+        private static string ToRangeAddress(int rowIndex, int columnIndex)
+        {
+            if (columnIndex < 1) throw (new ArgumentOutOfRangeException("Invalid Argument. columnIndex must be > 0"));
+            if (rowIndex < 1) throw (new ArgumentOutOfRangeException("Invalid Argument. rowIndex must be > 0"));
+
+            string[] columnChars = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+
+            if (columnIndex <= columnChars.Length)
+                return columnChars[columnIndex - 1] + rowIndex.ToString();
+
+            int multi = columnIndex / columnChars.Length;
+            string pre = columnChars[multi - 1];
+
+            int newx = columnIndex;
+            newx -= (multi * columnChars.Length);
+            return pre + columnChars[newx - 1] + rowIndex.ToString();
+        }
+
         #endregion
 
         #region UI Trigger
@@ -169,8 +169,8 @@ namespace COMAddinTaskPaneExampleCS4
             {
                 if (listViewSearchResults.SelectedItems.Count > 0)
                 {
-                    Excel.Worksheet activeSheet = Addin.Application.ActiveSheet as Excel.Worksheet;
-                    Excel.Range activeCell = Addin.Application.ActiveCell;
+                    Excel.Worksheet activeSheet = HostApplication.ActiveSheet as Excel.Worksheet;
+                    Excel.Range activeCell = HostApplication.ActiveCell;
                     if (null != activeCell)
                     {
                         int rowIndex = activeCell.Row;

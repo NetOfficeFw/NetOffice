@@ -17,14 +17,8 @@ Public Class Addin
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Task Pane"
 
-    Private Shared _sampleControl As SampleControl
-    Private Shared _wordApplication As Word.Application
-
-    Public Shared ReadOnly Property Application() As Word.Application
-        Get
-            Return _wordApplication
-        End Get
-    End Property
+    Private _sampleControl As SampleControl
+    Private _wordApplication As Word.Application
 
 #Region "ICustomTaskPaneConsumer Member"
 
@@ -32,12 +26,13 @@ Public Class Addin
 
         Try
 
-            Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_wordApplication, CTPFactoryInst)
+            Dim ctpFactory As Office.ICTPFactory = COMObject.CreateFromParent(Of Office.ICTPFactory)(_wordApplication, CTPFactoryInst)
             Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(VB4)", Type.Missing)
             taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
             taskPane.Width = 300
             taskPane.Visible = True
             _sampleControl = taskPane.ContentControl
+            _sampleControl.HostApplication = _wordApplication
             ctpFactory.Dispose()
 
         Catch ex As Exception
@@ -57,7 +52,7 @@ Public Class Addin
 
         Try
 
-            _wordApplication = New Word.Application(Nothing, Application)
+            _wordApplication = COMObject.Create(Of Word.Application)(Application, COMObjectCreateOptions.CreateNewCore)
 
         Catch ex As Exception
 
@@ -74,6 +69,7 @@ Public Class Addin
 
             If (Not IsNothing(_wordApplication)) Then
                 _wordApplication.Dispose()
+                _wordApplication = Nothing
             End If
 
         Catch ex As Exception

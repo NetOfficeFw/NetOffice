@@ -41,6 +41,7 @@ Public Class Addin
 
             If (Not IsNothing(_excelApplication)) Then
                 _excelApplication.Dispose()
+                _excelApplication = Nothing
             End If
 
         Catch ex As Exception
@@ -62,60 +63,6 @@ Public Class Addin
 
     Public Sub OnBeginShutdown(ByRef custom As System.Array) Implements IDTExtensibility2.OnBeginShutdown
 
-    End Sub
-
-#End Region
-
-#Region "COM Register Functions"
-
-    <ComRegisterFunctionAttribute()> _
-    Public Shared Sub RegisterFunction(ByVal type As Type)
-        Try
-            ' add codebase value
-            Dim thisAssembly As Assembly = Assembly.GetAssembly(GetType(Addin))
-            Dim key As RegistryKey = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0")
-            key.SetValue("CodeBase", thisAssembly.CodeBase)
-            key.Close()
-
-            Registry.ClassesRoot.CreateSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable")
-
-            ' add bypass key
-            ' http://support.microsoft.com/kb/948461
-            key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}")
-            Dim defaultValue As String = key.GetValue("")
-            If (IsNothing(defaultValue)) Then
-                key.SetValue("", "Office .NET Framework Lockback Bypass Key")
-            End If
-            key.Close()
-
-            ' add excel addin key
-            Dim rk As RegistryKey = Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId)
-            rk.SetValue("LoadBehavior", CInt(3))
-            rk.SetValue("FriendlyName", _addinFriendlyName)
-            rk.SetValue("Description", _addinDescription)
-            rk.Close()
-
-        Catch ex As Exception
-
-            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Register " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-        End Try
-    End Sub
-
-    <ComUnregisterFunctionAttribute()> _
-    Public Shared Sub UnregisterFunction(ByVal type As Type)
-        Try
-
-            Registry.ClassesRoot.DeleteSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable", False)
-            Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _progId, False)
-
-        Catch throwedException As Exception
-
-            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Unregister " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-        End Try
     End Sub
 
 #End Region
@@ -194,6 +141,60 @@ Public Class Addin
         Return text
 
     End Function
+
+#End Region
+
+#Region "COM Register Functions"
+
+    <ComRegisterFunctionAttribute()> _
+    Public Shared Sub RegisterFunction(ByVal type As Type)
+        Try
+            ' add codebase value
+            Dim thisAssembly As Assembly = Assembly.GetAssembly(GetType(Addin))
+            Dim key As RegistryKey = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0")
+            key.SetValue("CodeBase", thisAssembly.CodeBase)
+            key.Close()
+
+            Registry.ClassesRoot.CreateSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable")
+
+            ' add bypass key
+            ' http://support.microsoft.com/kb/948461
+            key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}")
+            Dim defaultValue As String = key.GetValue("")
+            If (IsNothing(defaultValue)) Then
+                key.SetValue("", "Office .NET Framework Lockback Bypass Key")
+            End If
+            key.Close()
+
+            ' add excel addin key
+            Dim rk As RegistryKey = Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId)
+            rk.SetValue("LoadBehavior", CInt(3))
+            rk.SetValue("FriendlyName", _addinFriendlyName)
+            rk.SetValue("Description", _addinDescription)
+            rk.Close()
+
+        Catch ex As Exception
+
+            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
+            MessageBox.Show("An error occured." + details, "Register " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+    End Sub
+
+    <ComUnregisterFunctionAttribute()> _
+    Public Shared Sub UnregisterFunction(ByVal type As Type)
+        Try
+
+            Registry.ClassesRoot.DeleteSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable", False)
+            Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _progId, False)
+
+        Catch throwedException As Exception
+
+            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
+            MessageBox.Show("An error occured." + details, "Unregister " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+    End Sub
 
 #End Region
 

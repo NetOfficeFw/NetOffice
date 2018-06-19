@@ -20,23 +20,23 @@ namespace COMAddinTaskPaneExampleCS4
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Task Pane";
 
-        private static SampleControl _sampleControl;
-        private static Excel.Application _excelApplication;
+        internal Excel.Application Application { get; private set; }
 
-        internal static Excel.Application Application { get { return _excelApplication; } }
+        private SampleControl SampleControl{ get; set; }
 
-        #region ICustomTaskPaneConsumer Member
+        #region ICustomTaskPaneConsumer
 
         public void CTPFactoryAvailable(object CTPFactoryInst)
         {
             try
             {                
-                Office.ICTPFactory ctpFactory = COMObject.Create<NetOffice.OfficeApi.ICTPFactory>(Application.Factory, Application, CTPFactoryInst);
+                Office.ICTPFactory ctpFactory = COMObject.CreateFromParent<NetOffice.OfficeApi.ICTPFactory>(Application, CTPFactoryInst);
                 Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(CS4)", Type.Missing);
                 taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
                 taskPane.Width = 300;
                 taskPane.Visible = true;
-                _sampleControl = taskPane.ContentControl as SampleControl;
+                SampleControl = (SampleControl)taskPane.ContentControl;
+                SampleControl.HostApplication = Application;
                 ctpFactory.Dispose();
             }
             catch (Exception exception)
@@ -48,13 +48,13 @@ namespace COMAddinTaskPaneExampleCS4
 
         #endregion
 
-        #region IDTExtensibility2 Members
+        #region IDTExtensibility2
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object addInInst, ref Array custom)
         {
             try
             {
-                _excelApplication = COMObject.Create<Excel.Application>(Application, COMObjectCreateOptions.CreateNewCore);
+                Application = COMObject.Create<Excel.Application>(application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {
@@ -67,8 +67,11 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != Application)
+                { 
+                    Application.Dispose();
+                    Application = null;
+                }
             }
             catch (Exception exception)
             {

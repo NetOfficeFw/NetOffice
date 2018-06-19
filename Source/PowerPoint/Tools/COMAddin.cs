@@ -313,7 +313,7 @@ namespace NetOffice.PowerPointApi.Tools
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);                    
                 }
                 
-                this.Application = COMObject.Create<PowerPoint.Application>(Factory, null, application);
+                this.Application = COMObject.Create<PowerPoint.Application>(Factory, application);
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);

@@ -20,15 +20,15 @@ namespace COMAddinRibbonExampleCS4
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        private Excel.Application _excelApplication;
+        private Excel.Application Application { get; set; }
 
-        #region IDTExtensibility2 Members
+        #region IDTExtensibility2
          
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
-                _excelApplication = COMObject.Create<Excel.Application>(Application, COMObjectCreateOptions.CreateNewCore);
+                Application = COMObject.Create<Excel.Application>(application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {
@@ -41,8 +41,11 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != Application)
+                { 
+                    Application.Dispose();
+                    Application = null;
+                }
             }
             catch (Exception exception)
             {
@@ -68,7 +71,7 @@ namespace COMAddinRibbonExampleCS4
 
         #endregion
 
-        #region IRibbonExtensibility Members
+        #region IRibbonExtensibility
 
         public string GetCustomUI(string RibbonID)
         {
@@ -106,6 +109,32 @@ namespace COMAddinRibbonExampleCS4
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
                 MessageBox.Show("An error occured in OnAction: " + details, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        #endregion
+
+        #region Private Helper Methods
+
+        /// <summary>
+        /// reads text file from ressource
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        internal string ReadRessourceFile(string fileName)
+        {
+            Assembly assembly = typeof(Addin).Assembly;
+            System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName);
+            if (ressourceStream == null)
+                throw (new System.IO.IOException("Error accessing resource Stream."));
+
+            System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
+            if (textStreamReader == null)
+                throw (new System.IO.IOException("Error accessing resource File."));
+
+            string text = textStreamReader.ReadToEnd();
+            ressourceStream.Close();
+            textStreamReader.Close();
+            return text;
         }
 
         #endregion
@@ -164,32 +193,6 @@ namespace COMAddinRibbonExampleCS4
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
                 MessageBox.Show("An error occured." + details, "Unregister " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        #endregion
-
-        #region Private Helper Methods
-
-        /// <summary>
-        /// reads text file from ressource
-        /// </summary>
-        /// <param name="fileName"></param>
-        /// <returns></returns>
-        protected internal static string ReadRessourceFile(string fileName)
-        {
-            Assembly assembly = typeof(Addin).Assembly;
-            System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName);
-            if (ressourceStream == null)
-                throw (new System.IO.IOException("Error accessing resource Stream."));
-
-            System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
-            if (textStreamReader == null)
-                throw (new System.IO.IOException("Error accessing resource File."));
-
-            string text = textStreamReader.ReadToEnd();
-            ressourceStream.Close();
-            textStreamReader.Close();
-            return text;
         }
 
         #endregion

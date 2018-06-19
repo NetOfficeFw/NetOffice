@@ -308,7 +308,7 @@ namespace NetOffice.WordApi.Tools
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);                    
                 }
                 
-                this.Application = COMObject.Create<Word.Application>(Factory, null, application);
+                this.Application = COMObject.Create<Word.Application>(Factory, application);
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
@@ -659,7 +659,7 @@ namespace NetOffice.WordApi.Tools
             {
                 if (null != CurrentInspector)
                 {
-                    document = COMObject.Create<Word.Document>(Factory, null, Doc);
+                    document = COMObject.Create<Word.Document>(Factory, Doc);
                     CurrentInspector.Inspect(document, out Status, out Result, out Action);
                     return;
                 }
@@ -690,7 +690,7 @@ namespace NetOffice.WordApi.Tools
             {
                 if (null != CurrentInspector)
                 {
-                    document = COMObject.Create<Word.Document>(Factory, null, Doc);
+                    document = COMObject.Create<Word.Document>(Factory, Doc);
                     CurrentInspector.Fix(document, Hwnd, out Status, out Result);
                     return;
                 }

@@ -315,7 +315,7 @@ namespace NetOffice.OutlookApi.Tools
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);
                 }
                 
-                this.Application = COMObject.Create<Outlook.Application>(Factory, null, application);
+                this.Application = COMObject.Create<Outlook.Application>(Factory, application);
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
@@ -764,7 +764,7 @@ namespace NetOffice.OutlookApi.Tools
         {
             try
             {                
-                FormRegion form = COMObject.Create<Outlook.FormRegion>(Factory, null, formRegion);
+                FormRegion form = COMObject.Create<Outlook.FormRegion>(Factory, formRegion);
                 OpenFormRegion openForm = OnCreateOpenFormRegion(form);
                 if (null == openForm)
                     openForm = new OpenFormRegion(form);
