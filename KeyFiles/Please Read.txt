@@ -1,0 +1,7 @@
+Repository contains the key files for debug build.
+The release key files are hidden from public in NetOffice 2.0 and above.
+
+If you want to create a custom release build, you need to create your own key files
+and modify the file "NetOffice\Core\KeyTokens_Release.txt"
+
+You can ask for release key files also.

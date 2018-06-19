@@ -305,11 +305,13 @@
     <EmbeddedResource Include="Contribution\Controls\InstanceMonitor.resx">
       <DependentUpon>InstanceMonitor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KeyTokens.txt" />
+    <EmbeddedResource Include="KeyTokens_Debug.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="NetOffice_v4.0.snk" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="KeyTokens_Release.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

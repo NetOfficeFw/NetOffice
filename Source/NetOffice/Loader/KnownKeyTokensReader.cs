@@ -11,9 +11,14 @@ namespace NetOffice.Loader
     internal class KnownKeyTokensReader
     {
         /// <summary>
-        /// Name the file we embedd as static resource
+        /// Name the file we embedd as static resource in Debug Build
         /// </summary>
-        private static string _keyTokensFileName = "KeyTokens.txt";
+        private string _keyTokensFileNameDebug = "KeyTokens_Debug.txt";
+
+        /// <summary>
+        /// Name the file we embedd as static resource in Release Build
+        /// </summary>
+        private string _keyTokensFileNameRelease = "KeyTokens_Release.txt";
 
         /// <summary>
         /// Perform reading
@@ -37,7 +42,13 @@ namespace NetOffice.Loader
             var coreType = typeof(Core);
             var assembly = coreType.Assembly;
 
-            using (System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(coreType.Namespace + "." + _keyTokensFileName))
+            #if DEBUG
+                string keyTokensFile = _keyTokensFileNameDebug;
+            #else
+                string keyTokensFile = _keyTokensFileNameRelease;
+            #endif
+
+            using (System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(coreType.Namespace + "." + keyTokensFile))
             {
                 using (System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream))
                 {
