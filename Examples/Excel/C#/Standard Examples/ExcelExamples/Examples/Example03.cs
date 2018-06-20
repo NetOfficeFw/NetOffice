@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Globalization;
 using ExampleBase;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Tools.Contribution;
 
@@ -15,7 +16,7 @@ namespace ExcelExamplesCS4
         public void RunExample()
         {
             // start excel and turn Application msg boxes
-            Excel.Application excelApplication = new Excel.ApplicationClass();
+            Excel.Application excelApplication = COMObject.Create<Excel.Application>();
             excelApplication.DisplayAlerts = false;
 
             // create a utils instance, not need for but helpful to keep the lines of code low

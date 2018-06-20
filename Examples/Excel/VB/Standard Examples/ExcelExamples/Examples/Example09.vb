@@ -64,7 +64,7 @@ Public Class Example09
         Dim commandBarBtn As Office.CommandBarButton = Nothing
 
         ' start excel and turn off msg boxes
-        _excelApplication = New Excel.ApplicationClass()
+        _excelApplication = COMObject.Create(Of Excel.Application)()
         _excelApplication.DisplayAlerts = False
 
         ' add a new workbook

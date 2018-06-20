@@ -97,7 +97,7 @@ namespace WordExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start word and turn off msg boxes
-            _wordApplication = new Word.ApplicationClass();
+            _wordApplication = COMObject.Create<Word.Application>();
             _wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
             Office.CommandBar commandBar = null;

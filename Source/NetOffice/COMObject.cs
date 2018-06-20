@@ -317,7 +317,7 @@ namespace NetOffice
         #region Methods
 
         /// <summary>
-        /// Creates instance
+        /// Creates a new instance of T by using the registered default ProgId. 
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
         /// <param name="options">optional create options</param>
@@ -392,7 +392,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates instance from proxy
+        /// Creates instance from proxy by using a given core
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
         /// <param name="factory">affected netoffice core</param>
@@ -430,45 +430,9 @@ namespace NetOffice
             }
         }
 
-        /// <summary>
-        /// Creates instance from proxy
-        /// </summary>
-        /// <typeparam name="T">result type</typeparam>
-        /// <param name="parent">parent caller</param>
-        /// <param name="comProxy">given proxy as any</param>
-        /// <returns>new instance of T</returns>
-        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
-        /// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
-        /// <exception cref="CreateInstanceException">unexpected error</exception>
-        public static T CreateFromParent<T>(ICOMObject parent, object comProxy) where T : class, ICOMObject
-        {
-            if (null == comProxy)
-                throw new ArgumentNullException("comProxy");
-            if (false == (comProxy is MarshalByRefObject))
-                throw new ArgumentException("comProxy");
-            try
-            {
-                Type contract = typeof(T);
-                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(parent.Factory, contract);
-                T result = (T)Activator.CreateInstance(implementation);
-                ICOMObjectInitialize init = result as ICOMObjectInitialize;
-                if (null != init)
-                {
-                    init.InitializeCOMObject(parent.Factory, parent, comProxy);
-                }
-
-                result = (T)parent.Factory.InternalObjectActivator.TryReplaceInstance(null, result);
-
-                return result;
-            }
-            catch (Exception exception)
-            {
-                throw new CreateInstanceException(exception);
-            }
-        }
 
         /// <summary>
-        /// Creates instance with given factory
+        /// Creates a new instance of T by using the registered default ProgId.
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
         /// <param name="factory">affected netoffice core</param>
@@ -496,6 +460,43 @@ namespace NetOffice
                 }
 
                 result = (T)factory.InternalObjectActivator.TryReplaceInstance(null, result);
+
+                return result;
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
+
+        /// <summary>
+        /// Creates instance from a proxy and add the new instance to given parent in NetOffice Instance Management
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="parent">parent caller</param>
+        /// <param name="comProxy">given proxy as any</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="ArgumentException">given comProxy is not a proxy</exception>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T CreateFromParent<T>(ICOMObject parent, object comProxy) where T : class, ICOMObject
+        {
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+            if (false == (comProxy is MarshalByRefObject))
+                throw new ArgumentException("comProxy");
+            try
+            {
+                Type contract = typeof(T);
+                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(parent.Factory, contract);
+                T result = (T)Activator.CreateInstance(implementation);
+                ICOMObjectInitialize init = result as ICOMObjectInitialize;
+                if (null != init)
+                {
+                    init.InitializeCOMObject(parent.Factory, parent, comProxy);
+                }
+
+                result = (T)parent.Factory.InternalObjectActivator.TryReplaceInstance(null, result);
 
                 return result;
             }

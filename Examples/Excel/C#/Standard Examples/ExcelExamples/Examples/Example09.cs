@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ExampleBase;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.OfficeApi.Enums;
@@ -74,7 +75,7 @@ namespace ExcelExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {        
             // start excel and turn off msg boxes
-            _excelApplication = new Excel.ApplicationClass();
+            _excelApplication = COMObject.Create<Excel.Application>();
             _excelApplication.DisplayAlerts = false;
 
             Office.CommandBar commandBar = null;

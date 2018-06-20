@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Globalization;
 using ExampleBase;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.ExcelApi.Enums;
@@ -23,7 +24,7 @@ namespace ExcelExamplesCS4
             try
             {
                 // start excel and turn off msg boxes
-                excelApplication = new Excel.ApplicationClass();
+                excelApplication = COMObject.Create<Excel.Application>();
                 excelApplication.DisplayAlerts = false;
                 excelApplication.Visible = false;
 

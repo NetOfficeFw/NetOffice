@@ -60,7 +60,7 @@ Public Class Example07
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' start word and turn off msg boxes
-        _wordApplication = New Word.Application()
+        _wordApplication = COMObject.Create(Of Word.Application)()
         _wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
 
         Dim commandBar As Office.CommandBar = Nothing

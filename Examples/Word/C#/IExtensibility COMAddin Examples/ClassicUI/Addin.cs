@@ -34,13 +34,6 @@ namespace COMAddinClassicExampleCS4
 
         #region IDTExtensibility2 Members
 
-        /// 
-        /// 
-        /// </summary>
-        /// <param name="Application"></param>
-        /// <param name="ConnectMode"></param>
-        /// <param name="AddInInst"></param>
-        /// <param name="custom"></param>
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try

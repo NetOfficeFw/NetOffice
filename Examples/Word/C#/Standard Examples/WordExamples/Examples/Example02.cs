@@ -16,7 +16,7 @@ namespace WordExamplesCS4
         public void RunExample()
         {
             // start word and turn off msg boxes
-            Word.Application wordApplication = new Word.ApplicationClass();
+            Word.Application wordApplication = COMObject.Create<Word.Application>();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
             // create a utils instance, not need for but helpful to keep the lines of code low

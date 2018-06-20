@@ -60,7 +60,7 @@ Public Class Example06
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' start word and turn off msg boxes
-        Dim wordApplication As New Word.Application()
+        Dim wordApplication As Word.Application = COMObject.Create(Of Word.Application)()
         wordApplication.DisplayAlerts = False
 
         ' we register some events. note: the event trigger was called from word, means an other Thread

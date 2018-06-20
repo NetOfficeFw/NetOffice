@@ -15,7 +15,7 @@ Public Class Example01
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start word and turn off msg boxes
-        Dim wordApplication As New Word.Application
+        Dim wordApplication As Word.Application = COMObject.Create(Of Word.Application)()
         wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
 
         ' create a utils instance, not need for but helpful to keep the lines of code low

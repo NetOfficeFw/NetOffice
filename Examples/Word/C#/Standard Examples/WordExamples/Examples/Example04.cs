@@ -28,7 +28,7 @@ namespace WordExamplesCS4
             File.AppendAllText(fileName, string.Format("{0},{1}{2}", "NetOffice", "https://github.com/NetOfficeFw/NetOffice", Environment.NewLine));
 
             // start word and turn off msg boxes
-            Word.Application wordApplication = new Word.ApplicationClass();
+            Word.Application wordApplication = COMObject.Create<Word.Application>();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
             // create a utils instance, not need for but helpful to keep the lines of code low

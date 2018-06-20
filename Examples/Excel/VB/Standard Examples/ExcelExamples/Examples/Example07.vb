@@ -23,7 +23,7 @@ Public Class Example07
         Try
 
             ' start excel and turn off msg boxes
-            excelApplication = New Excel.ApplicationClass()
+            excelApplication = COMObject.Create(Of Excel.Application)()
             excelApplication.DisplayAlerts = False
             excelApplication.Visible = False
 
