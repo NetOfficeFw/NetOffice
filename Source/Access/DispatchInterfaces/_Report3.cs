@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("B0E35B78-55B0-47FB-8951-CA616F25CEAF")]
     [CoClassSource(typeof(NetOffice.AccessApi.Report))]
     public interface _Report3 : _Report2, IEnumerableProvider<object>

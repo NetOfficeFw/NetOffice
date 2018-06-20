@@ -12,8 +12,7 @@ namespace NetOffice.OWC10Api.Behind
 	/// <summary>
 	/// DispatchInterface Borders 
 	/// SupportByVersion OWC10, 1
-	/// </summary>	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class Borders : COMObject, NetOffice.OWC10Api.Borders
 	{
 		#pragma warning disable

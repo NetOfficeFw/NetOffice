@@ -13,7 +13,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "MSComctlLib", 6), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("1EFB6597-857C-11D1-B16A-00C0F0283628")]
     [CoClassSource(typeof(NetOffice.MSComctlLibApi.Tabs))]
     public interface ITabs : ICOMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.ITab>
@@ -130,6 +130,16 @@ namespace NetOffice.MSComctlLibApi
 		[SupportByVersion("MSComctlLib", 6)]
 		NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey, object pvCaption);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSComctlLibApi.ITab>
+
+        /// <summary>
+        /// SupportByVersion MSComctlLib, 6
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
+        new IEnumerator<NetOffice.MSComctlLibApi.ITab> GetEnumerator();
+
+        #endregion
+    }
 }

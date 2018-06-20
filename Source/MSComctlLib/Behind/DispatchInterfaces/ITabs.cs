@@ -12,8 +12,7 @@ namespace NetOffice.MSComctlLibApi.Behind
 	/// <summary>
 	/// DispatchInterface ITabs 
 	/// SupportByVersion MSComctlLib, 6
-	/// </summary>	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class ITabs : COMObject, NetOffice.MSComctlLibApi.ITabs
 	{
 		#pragma warning disable

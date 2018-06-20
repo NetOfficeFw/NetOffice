@@ -9,12 +9,11 @@ using NetOffice.OWC10Api;
 
 namespace NetOffice.OWC10Api.Behind
 {
-	/// <summary>
-	/// DispatchInterface SchemaRelatedFields 
-	/// SupportByVersion OWC10, 1
-	/// </summary>	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class SchemaRelatedFields : COMObject, NetOffice.OWC10Api.SchemaRelatedFields
+    /// <summary>
+    /// DispatchInterface SchemaRelatedFields 
+    /// SupportByVersion OWC10, 1
+    /// </summary>
+ 	public class SchemaRelatedFields : COMObject, NetOffice.OWC10Api.SchemaRelatedFields
 	{
 		#pragma warning disable
 

@@ -12,8 +12,7 @@ namespace NetOffice.OWC10Api.Behind
 	/// <summary>
 	/// DispatchInterface ChErrorBarsCollection 
 	/// SupportByVersion OWC10, 1
-	/// </summary>	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class ChErrorBarsCollection : COMObject, NetOffice.OWC10Api.ChErrorBarsCollection
 	{
 		#pragma warning disable

@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("30C37028-25CD-11D4-8D9D-00500483860C")]
 	public interface SchemaDiagrams : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.SchemaDiagram>
 	{
@@ -35,7 +35,16 @@ namespace NetOffice.OWC10Api
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.OWC10Api.SchemaDiagram this[object index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.OWC10Api.SchemaDiagram>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        new IEnumerator<NetOffice.OWC10Api.SchemaDiagram> GetEnumerator();
+
+        #endregion
+    }
 }

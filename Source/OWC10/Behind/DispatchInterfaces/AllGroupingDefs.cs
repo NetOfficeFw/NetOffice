@@ -12,8 +12,7 @@ namespace NetOffice.OWC10Api.Behind
 	/// <summary>
 	/// DispatchInterface AllGroupingDefs 
 	/// SupportByVersion OWC10, 1
-	/// </summary>	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class AllGroupingDefs : COMObject, NetOffice.OWC10Api.AllGroupingDefs
 	{
 		#pragma warning disable

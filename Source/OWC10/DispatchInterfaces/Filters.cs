@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("F5B39B04-1480-11D3-8549-00C04FAC67D7")]
 	public interface Filters : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.Filter>
 	{
@@ -50,7 +50,16 @@ namespace NetOffice.OWC10Api
 		[SupportByVersion("OWC10", 1)]
 		NetOffice.OWC10Api.AutoFilter Parent { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.OWC10Api.Filter>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        new IEnumerator<NetOffice.OWC10Api.Filter> GetEnumerator();
+
+        #endregion
+    }
 }

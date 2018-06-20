@@ -13,8 +13,6 @@ namespace NetOffice.ADODBApi.Behind
 	/// DispatchInterface Fields20_Deprecated 
 	/// SupportByVersion ADODB, 2.5
 	/// </summary>
-	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
 	public class Fields20_Deprecated : Fields15_Deprecated, NetOffice.ADODBApi.Fields20_Deprecated
 	{
 		#pragma warning disable

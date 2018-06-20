@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("F5B39AC2-1480-11D3-8549-00C04FAC67D7")]
 	public interface ChDataLabels : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.ChDataLabel>
 	{
@@ -171,6 +171,18 @@ namespace NetOffice.OWC10Api
 		[SupportByVersion("OWC10", 1)]
 		void Select();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.OWC10Api.ChDataLabel>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OWC10Api.ChDataLabel> GetEnumerator();
+
+        #endregion
+    }
 }

@@ -13,8 +13,6 @@ namespace NetOffice.ADODBApi.Behind
 	/// DispatchInterface Parameters 
 	/// SupportByVersion ADODB, 2.1,2.5
 	/// </summary>
-	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class Parameters : _DynaCollection, NetOffice.ADODBApi.Parameters
 	{
 		#pragma warning disable

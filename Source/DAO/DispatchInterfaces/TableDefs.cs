@@ -1,6 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -13,7 +13,7 @@ namespace NetOffice.DAOApi
 	/// SupportByVersion DAO, 3.6,12.0
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "DAO", 3.6, 12.0), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("0000004B-0000-0010-8000-00AA006D2EA4")]
 	public interface TableDefs : _DynaCollection, IEnumerableProvider<NetOffice.DAOApi.TableDef>
 	{
@@ -27,6 +27,16 @@ namespace NetOffice.DAOApi
 		[SupportByVersion("DAO", 3.6,12.0)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.DAOApi.TableDef this[object item] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.DAOApi.TableDef>
+
+        /// <summary>
+        /// SupportByVersion DAO, 3.6,12.0
+        /// </summary>
+        [SupportByVersion("DAO", 3.6, 12.0)]
+        new IEnumerator<NetOffice.DAOApi.TableDef> GetEnumerator();
 
         #endregion
     }

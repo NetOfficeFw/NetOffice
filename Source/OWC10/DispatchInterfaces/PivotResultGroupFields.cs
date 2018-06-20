@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("3A3AF091-8C35-4CC7-A1F4-B70D239D773B")]
 	public interface PivotResultGroupFields : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.PivotResultGroupField>
 	{
@@ -35,7 +35,16 @@ namespace NetOffice.OWC10Api
 		[SupportByVersion("OWC10", 1)]
 		Int32 Count { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.OWC10Api.PivotResultGroupField>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        new IEnumerator<NetOffice.OWC10Api.PivotResultGroupField> GetEnumerator();
+
+        #endregion
+    }
 }

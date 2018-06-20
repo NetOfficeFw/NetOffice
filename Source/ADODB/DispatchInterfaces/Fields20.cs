@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "ADODB", 2.1, 2.5)]
 	[TypeId("0000054D-0000-0010-8000-00AA006D2EA4")]
 	public interface Fields20 : Fields15, IEnumerableProvider<object>
 	{

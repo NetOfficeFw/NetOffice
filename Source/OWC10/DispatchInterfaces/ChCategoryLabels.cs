@@ -41,7 +41,7 @@ namespace NetOffice.OWC10Api
     /// SupportByVersion OWC10, 1
     /// </summary>
     [SupportByVersion("OWC10", 1)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("EDF774DC-D540-40F4-99F2-75C83379CAA8")]
     public interface ChCategoryLabels : ChCategoryLabels_, IEnumerableProvider<NetOffice.OWC10Api.ChCategoryLabel>
     {
@@ -95,6 +95,16 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         [BaseResult]
         NetOffice.OWC10Api.PivotResultGroupAxis PivotAxis { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OWC10Api.ChCategoryLabel>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        new IEnumerator<NetOffice.OWC10Api.ChCategoryLabel> GetEnumerator();
 
         #endregion
     }

@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.1,2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "ADODB", 2.1, 2.5), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("0000050D-0000-0010-8000-00AA006D2EA4")]
 	public interface Parameters : _DynaCollection, IEnumerableProvider<NetOffice.ADODBApi._Parameter>
 	{
@@ -29,7 +29,16 @@ namespace NetOffice.ADODBApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.ADODBApi._Parameter this[object index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.ADODBApi._Parameter>
+
+        /// <summary>
+        /// SupportByVersion ADODB, 2.1,2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.1, 2.5)]
+        new IEnumerator<NetOffice.ADODBApi._Parameter> GetEnumerator();
+
+        #endregion
+    }
 }

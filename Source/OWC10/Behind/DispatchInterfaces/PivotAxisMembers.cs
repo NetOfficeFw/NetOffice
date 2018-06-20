@@ -13,8 +13,6 @@ namespace NetOffice.OWC10Api.Behind
 	/// DispatchInterface PivotAxisMembers 
 	/// SupportByVersion OWC10, 1
 	/// </summary>
-	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class PivotAxisMembers : COMObject, NetOffice.OWC10Api.PivotAxisMembers
 	{
 		#pragma warning disable

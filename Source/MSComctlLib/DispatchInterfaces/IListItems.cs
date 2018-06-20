@@ -13,7 +13,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "MSComctlLib", 6), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("BDD1F04C-858B-11D1-B16A-00C0F0283628")]
     [CoClassSource(typeof(NetOffice.MSComctlLibApi.ListItems))]
     public interface IListItems : ICOMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.IListItem>
@@ -133,6 +133,16 @@ namespace NetOffice.MSComctlLibApi
 		[SupportByVersion("MSComctlLib", 6)]
 		void Remove(object index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSComctlLibApi.IListItem>
+
+        /// <summary>
+        /// SupportByVersion MSComctlLib, 6
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
+        new IEnumerator<NetOffice.MSComctlLibApi.IListItem> GetEnumerator();
+
+        #endregion
+    }
 }

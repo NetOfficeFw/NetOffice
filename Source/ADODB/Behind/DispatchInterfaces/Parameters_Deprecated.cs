@@ -12,9 +12,8 @@ namespace NetOffice.ADODBApi.Behind
 	/// <summary>
 	/// DispatchInterface Parameters_Deprecated 
 	/// SupportByVersion ADODB, 2.5
-	/// </summary>	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Parameters_Deprecated : _DynaCollection, NetOffice.ADODBApi.Parameters_Deprecated
+	/// </summary>	
+ 	public class Parameters_Deprecated : _DynaCollection, NetOffice.ADODBApi.Parameters_Deprecated
 	{
 		#pragma warning disable
 

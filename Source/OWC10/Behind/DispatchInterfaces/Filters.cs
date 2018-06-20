@@ -12,8 +12,7 @@ namespace NetOffice.OWC10Api.Behind
 	/// <summary>
 	/// DispatchInterface Filters 
 	/// SupportByVersion OWC10, 1
-	/// </summary>	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class Filters : COMObject, NetOffice.OWC10Api.Filters
 	{
 		#pragma warning disable
@@ -40,7 +39,8 @@ namespace NetOffice.OWC10Api.Behind
             get
             {
                 if (null == _type)
-                    _type = typeof(Filters);                return _type;
+                    _type = typeof(Filters);
+                return _type;
             }
         }
         

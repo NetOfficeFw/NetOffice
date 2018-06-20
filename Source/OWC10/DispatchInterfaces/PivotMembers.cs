@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("F5B39B32-1480-11D3-8549-00C04FAC67D7")]
 	public interface PivotMembers : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.PivotMember>
 	{
@@ -36,7 +36,16 @@ namespace NetOffice.OWC10Api
 		[SupportByVersion("OWC10", 1)]
 		Int32 Count { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.OWC10Api.PivotMember>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        new IEnumerator<NetOffice.OWC10Api.PivotMember> GetEnumerator();
+
+        #endregion
+    }
 }

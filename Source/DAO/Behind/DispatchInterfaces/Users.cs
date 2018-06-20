@@ -12,9 +12,8 @@ namespace NetOffice.DAOApi.Behind
 	/// <summary>
 	/// DispatchInterface Users 
 	/// SupportByVersion DAO, 3.6,12.0
-	/// </summary>	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Users : _DynaCollection, NetOffice.DAOApi.Users
+	/// </summary>	
+ 	public class Users : _DynaCollection, NetOffice.DAOApi.Users
 	{
 		#pragma warning disable
 

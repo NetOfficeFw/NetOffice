@@ -253,8 +253,6 @@ namespace NetOffice.OWC10Api.Behind
     /// DispatchInterface _Range 
     /// SupportByVersion OWC10, 1
     /// </summary>
-    [SupportByVersion("OWC10", 1)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class _Range : _Range_, NetOffice.OWC10Api._Range
     {
         #pragma warning disable

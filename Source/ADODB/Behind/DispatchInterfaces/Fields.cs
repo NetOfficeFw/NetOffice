@@ -12,8 +12,7 @@ namespace NetOffice.ADODBApi.Behind
 	/// <summary>
 	/// DispatchInterface Fields 
 	/// SupportByVersion ADODB, 2.1,2.5
-	/// </summary>	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class Fields : Fields20, NetOffice.ADODBApi.Fields
 	{
 		#pragma warning disable

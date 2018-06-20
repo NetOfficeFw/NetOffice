@@ -192,7 +192,7 @@ namespace NetOffice.OWC10Api
     /// SupportByVersion OWC10, 1
     /// </summary>
     [SupportByVersion("OWC10", 1)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("F5B39B05-1480-11D3-8549-00C04FAC67D7")]
     [CoClassSource(typeof(NetOffice.OWC10Api.Range))]
     public interface _Range : _Range_, IEnumerableProvider<object>
@@ -1131,6 +1131,16 @@ namespace NetOffice.OWC10Api
         /// </summary>
         [SupportByVersion("OWC10", 1)]
         void UnMerge();
+
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        new IEnumerator<object> GetEnumerator();
 
         #endregion
     }

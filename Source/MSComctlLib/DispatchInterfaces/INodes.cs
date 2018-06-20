@@ -13,7 +13,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "MSComctlLib", 6), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("C74190B7-8589-11D1-B16A-00C0F0283628")]
     [CoClassSource(typeof(NetOffice.MSComctlLibApi.Nodes))]
     public interface INodes : ICOMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.INode>
@@ -157,6 +157,16 @@ namespace NetOffice.MSComctlLibApi
 		[SupportByVersion("MSComctlLib", 6)]
 		void Remove(object index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSComctlLibApi.INode>
+
+        /// <summary>
+        /// SupportByVersion MSComctlLib, 6
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
+        new IEnumerator<NetOffice.MSComctlLibApi.INode> GetEnumerator();
+
+        #endregion
+    }
 }

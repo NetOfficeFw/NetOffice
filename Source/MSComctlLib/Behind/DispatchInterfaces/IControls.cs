@@ -13,8 +13,6 @@ namespace NetOffice.MSComctlLibApi.Behind
 	/// DispatchInterface IControls 
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
-	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class IControls : COMObject, NetOffice.MSComctlLibApi.IControls
 	{
 		#pragma warning disable

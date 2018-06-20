@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.1,2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "ADODB", 2.1, 2.5)]
 	[TypeId("00000512-0000-0010-8000-00AA006D2EA4")]
 	public interface _Collection : ICOMObject, IEnumerableProvider<object>
 	{
@@ -36,6 +36,16 @@ namespace NetOffice.ADODBApi
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		void Refresh();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion ADODB, 2.1,2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.1, 2.5)]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

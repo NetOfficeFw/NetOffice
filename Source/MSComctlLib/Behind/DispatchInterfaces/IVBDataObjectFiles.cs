@@ -13,8 +13,6 @@ namespace NetOffice.MSComctlLibApi.Behind
 	/// DispatchInterface IVBDataObjectFiles 
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
-	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Value, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class IVBDataObjectFiles : COMObject, NetOffice.MSComctlLibApi.IVBDataObjectFiles
 	{
 		#pragma warning disable

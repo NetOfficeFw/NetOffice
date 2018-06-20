@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("F5B39BA3-1480-11D3-8549-00C04FAC67D7")]
 	public interface Headings : ICOMObject , IEnumerableProvider<NetOffice.OWC10Api.Heading>
 	{
@@ -50,7 +50,18 @@ namespace NetOffice.OWC10Api
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.OWC10Api.Heading this[object index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.OWC10Api.Heading>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OWC10Api.Heading> GetEnumerator();
+
+        #endregion
+    }
 }

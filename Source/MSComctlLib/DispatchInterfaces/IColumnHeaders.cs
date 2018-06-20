@@ -13,7 +13,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "MSComctlLib", 6), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("BDD1F050-858B-11D1-B16A-00C0F0283628")]
     [CoClassSource(typeof(NetOffice.MSComctlLibApi.ColumnHeaders))]
     public interface IColumnHeaders : ICOMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.IColumnHeader>
@@ -215,6 +215,16 @@ namespace NetOffice.MSComctlLibApi
 		[SupportByVersion("MSComctlLib", 6)]
 		NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader>
+
+        /// <summary>
+        /// SupportByVersion MSComctlLib, 6
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
+        new IEnumerator<NetOffice.MSComctlLibApi.IColumnHeader> GetEnumerator();
+
+        #endregion
+    }
 }

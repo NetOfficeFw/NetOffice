@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "ADODB", 2.5), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("00000564-0000-0010-8000-00AA006D2EA4")]
 	public interface Fields_Deprecated : Fields20_Deprecated, IEnumerableProvider<NetOffice.ADODBApi.Field_Deprecated>
 	{
@@ -112,6 +112,16 @@ namespace NetOffice.ADODBApi
 		[SupportByVersion("ADODB", 2.5)]
 		void CancelUpdate();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ADODBApi.Field_Deprecated>
+
+        /// <summary>
+        /// SupportByVersion ADODB, 2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.5)]
+        new IEnumerator<NetOffice.ADODBApi.Field_Deprecated> GetEnumerator();
+
+        #endregion
+    }
 }

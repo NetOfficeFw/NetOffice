@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "ADODB", 2.5), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("0000050D-0000-0010-8000-00AA006D2EA4")]
 	public interface Parameters_Deprecated : _DynaCollection, IEnumerableProvider<NetOffice.ADODBApi._Parameter_Deprecated>
 	{
@@ -45,6 +45,16 @@ namespace NetOffice.ADODBApi
 		[SupportByVersion("ADODB", 2.5)]
         new void Refresh();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ADODBApi._Parameter_Deprecated>
+
+        /// <summary>
+        /// SupportByVersion ADODB, 2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.5)]
+        new IEnumerator<NetOffice.ADODBApi._Parameter_Deprecated> GetEnumerator();
+
+        #endregion
+    }
 }

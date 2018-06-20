@@ -12,8 +12,7 @@ namespace NetOffice.MSComctlLibApi.Behind
 	/// <summary>
 	/// DispatchInterface IPanels 
 	/// SupportByVersion MSComctlLib, 6
-	/// </summary>	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class IPanels : COMObject, NetOffice.MSComctlLibApi.IPanels
 	{
 		#pragma warning disable

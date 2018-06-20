@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("BB4C16FA-6BEC-11D3-A18A-00C04F612970")]
 	public interface ChChartFields : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.ChChartField>
 	{
@@ -42,7 +42,18 @@ namespace NetOffice.OWC10Api
 		[SupportByVersion("OWC10", 1)]
 		NetOffice.OWC10Api.ChDropZone Parent { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.OWC10Api.ChChartField> Member
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OWC10Api.ChChartField> GetEnumerator();
+
+        #endregion
+    }
 }

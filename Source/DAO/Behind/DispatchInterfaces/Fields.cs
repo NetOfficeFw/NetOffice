@@ -12,8 +12,7 @@ namespace NetOffice.DAOApi.Behind
 	/// <summary>
 	/// DispatchInterface Fields 
 	/// SupportByVersion DAO, 3.6,12.0
-	/// </summary>	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class Fields : _DynaCollection, NetOffice.DAOApi.Fields
 	{
 		#pragma warning disable

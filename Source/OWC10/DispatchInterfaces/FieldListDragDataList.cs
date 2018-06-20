@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "OWC10", 1), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("2A9DDE7C-D83E-11D3-AE6C-00C04F613171")]
 	public interface FieldListDragDataList : ICOMObject, IEnumerableProvider<NetOffice.OWC10Api.FieldListDragData>
 	{
@@ -35,7 +35,18 @@ namespace NetOffice.OWC10Api
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.OWC10Api.FieldListDragData this[Int32 index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.OWC10Api.FieldListDragData>
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OWC10Api.FieldListDragData> GetEnumerator();
+
+        #endregion
+    }
 }

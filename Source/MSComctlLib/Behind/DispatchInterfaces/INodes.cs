@@ -12,8 +12,7 @@ namespace NetOffice.MSComctlLibApi.Behind
 	/// <summary>
 	/// DispatchInterface INodes 
 	/// SupportByVersion MSComctlLib, 6
-	/// </summary>	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class INodes : COMObject, NetOffice.MSComctlLibApi.INodes
 	{
 		#pragma warning disable

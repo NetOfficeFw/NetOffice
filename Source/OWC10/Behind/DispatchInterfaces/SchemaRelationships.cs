@@ -12,8 +12,6 @@ namespace NetOffice.OWC10Api.Behind
 	/// DispatchInterface SchemaRelationships 
 	/// SupportByVersion OWC10, 1
 	/// </summary>
-	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class SchemaRelationships : COMObject, NetOffice.OWC10Api.SchemaRelationships
 	{
 		#pragma warning disable

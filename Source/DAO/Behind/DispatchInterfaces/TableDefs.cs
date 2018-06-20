@@ -12,8 +12,7 @@ namespace NetOffice.DAOApi.Behind
 	/// <summary>
 	/// DispatchInterface TableDefs 
 	/// SupportByVersion DAO, 3.6,12.0
-	/// </summary>	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>	
 	public class TableDefs : _DynaCollection, NetOffice.DAOApi.TableDefs
 	{
 		#pragma warning disable

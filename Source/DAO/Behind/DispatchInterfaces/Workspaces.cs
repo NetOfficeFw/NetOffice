@@ -12,9 +12,8 @@ namespace NetOffice.DAOApi.Behind
 	/// <summary>
 	/// DispatchInterface Workspaces 
 	/// SupportByVersion DAO, 3.6,12.0
-	/// </summary>	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Workspaces : _DynaCollection, NetOffice.DAOApi.Workspaces
+	/// </summary>	
+ 	public class Workspaces : _DynaCollection, NetOffice.DAOApi.Workspaces
 	{
 		#pragma warning disable
 

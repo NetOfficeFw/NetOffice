@@ -13,7 +13,7 @@ namespace NetOffice.DAOApi
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
     [SupportByVersion("DAO", 3.6, 12.0)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("0000005D-0000-0010-8000-00AA006D2EA4")]
     public interface IndexFields : _DynaCollection
     {

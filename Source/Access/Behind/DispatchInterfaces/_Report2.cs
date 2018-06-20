@@ -13,8 +13,6 @@ namespace NetOffice.AccessApi.Behind
 	/// DispatchInterface _Report2 
 	/// SupportByVersion Access, 10,11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Access", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
 	public class _Report2 : _Report, NetOffice.AccessApi._Report2
     {
 		#pragma warning disable
