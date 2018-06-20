@@ -14,7 +14,7 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191766.aspx </remarks>
 	[SupportByVersion("Access", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Access", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("540FC6D0-9BCA-4236-B6C0-E5598CB7A332")]
 	public interface WSParameters : ICOMObject, IEnumerableProvider<NetOffice.AccessApi.WSParameter>
 	{
@@ -58,6 +58,16 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 14,15,16)]
 		bool IsMemberSafe(Int32 dispid);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi.WSParameter>
+
+        /// <summary>
+        /// SupportByVersion Access, 14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 14, 15, 16)]
+        new IEnumerator<NetOffice.AccessApi.WSParameter> GetEnumerator();
+
+        #endregion
+    }
 }

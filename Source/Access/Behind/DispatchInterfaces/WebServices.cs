@@ -12,9 +12,8 @@ namespace NetOffice.AccessApi.Behind
 	/// <summary>
 	/// DispatchInterface WebServices 
 	/// SupportByVersion Access, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193176.aspx </remarks>
-	[SupportByVersion("Access", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>	
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193176.aspx </remarks>
 	public class WebServices : COMObject, NetOffice.AccessApi.WebServices
 	{
 		#pragma warning disable

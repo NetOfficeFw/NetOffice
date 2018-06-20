@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Access", 9, 10, 11, 12, 14, 15, 16)]
 	[TypeId("3B06E971-E47C-11CD-8701-00AA003F0F07")]
     [CoClassSource(typeof(NetOffice.AccessApi.TabControl))]
     public interface _TabControl : NetOffice.OfficeApi.IAccessible, IEnumerableProvider<object>
@@ -980,6 +980,16 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		bool IsMemberSafe(Int32 dispid);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

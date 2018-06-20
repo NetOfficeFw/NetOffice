@@ -14,7 +14,7 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193898.aspx </remarks>
 	[SupportByVersion("Access", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Access", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("DBC51760-A8ED-11D3-A0DD-00C04F68712B")]
 	public interface Printers : ICOMObject, IEnumerableProvider<NetOffice.AccessApi._Printer>
 	{
@@ -67,6 +67,16 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		bool IsMemberSafe(Int32 dispid);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi._Printer>
+
+        /// <summary>
+        /// SupportByVersion Access, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.AccessApi._Printer> GetEnumerator();
+
+        #endregion
+    }
 }

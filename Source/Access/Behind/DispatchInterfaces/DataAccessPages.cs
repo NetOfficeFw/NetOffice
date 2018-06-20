@@ -12,8 +12,7 @@ namespace NetOffice.AccessApi.Behind
 	/// <summary>
 	/// DispatchInterface DataAccessPages 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class DataAccessPages : COMObject, NetOffice.AccessApi.DataAccessPages
 	{
 		#pragma warning disable

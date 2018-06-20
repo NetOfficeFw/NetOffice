@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Access", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("3836C9EC-E9CB-4817-A738-50B4DD3DDD8D")]
     [CoClassSource(typeof(NetOffice.AccessApi.SmartTagActions))]
     public interface _SmartTagActions : ICOMObject, IEnumerableProvider<NetOffice.AccessApi._SmartTagAction>
@@ -67,6 +67,16 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		bool IsMemberSafe(Int32 dispid);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi._SmartTagAction>
+
+        /// <summary>
+        /// SupportByVersion Access, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.AccessApi._SmartTagAction> GetEnumerator();
+
+        #endregion
+    }
 }

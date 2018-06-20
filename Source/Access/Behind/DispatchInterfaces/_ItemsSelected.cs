@@ -13,8 +13,6 @@ namespace NetOffice.AccessApi.Behind
 	/// DispatchInterface _ItemsSelected 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class _ItemsSelected : COMObject, NetOffice.AccessApi._ItemsSelected
 	{
 		#pragma warning disable

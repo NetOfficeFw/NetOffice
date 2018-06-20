@@ -13,8 +13,6 @@ namespace NetOffice.AccessApi.Behind
 	/// DispatchInterface Controls 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191896.aspx </remarks>
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class Controls : COMObject, NetOffice.AccessApi.Controls
 	{
 		#pragma warning disable

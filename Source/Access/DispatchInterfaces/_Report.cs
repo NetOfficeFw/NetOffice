@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Access", 9, 10, 11, 12, 14, 15, 16)]
 	[TypeId("3E8B6B00-91FF-101B-AF4E-00AA003F0F07")]
     [CoClassSource(typeof(NetOffice.AccessApi.ReportOld))]
     public interface _Report : ICOMObject, IEnumerableProvider<object>
@@ -965,6 +965,16 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		object _Evaluate(string bstrExpr);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

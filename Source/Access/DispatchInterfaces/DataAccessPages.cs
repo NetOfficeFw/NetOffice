@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Access", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("493D8A71-1DB1-11D1-98A2-006008197D41")]
 	public interface DataAccessPages : ICOMObject, IEnumerableProvider<NetOffice.AccessApi.DataAccessPage>
 	{
@@ -62,6 +62,16 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		bool IsMemberSafe(Int32 dispid);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi.DataAccessPage>
+
+        /// <summary>
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.AccessApi.DataAccessPage> GetEnumerator();
+
+        #endregion
+    }
 }

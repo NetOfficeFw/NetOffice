@@ -12,9 +12,8 @@ namespace NetOffice.AccessApi.Behind
 	/// <summary>
 	/// DispatchInterface Printers 
 	/// SupportByVersion Access, 10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193898.aspx </remarks>
-	[SupportByVersion("Access", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>	
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193898.aspx </remarks>
 	public class Printers : COMObject, NetOffice.AccessApi.Printers
 	{
 		#pragma warning disable

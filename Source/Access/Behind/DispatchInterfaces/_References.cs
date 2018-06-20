@@ -12,8 +12,7 @@ namespace NetOffice.AccessApi.Behind
 	/// <summary>
 	/// DispatchInterface _References 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>	
 	public class _References : COMObject, NetOffice.AccessApi._References
 	{
 		#pragma warning disable

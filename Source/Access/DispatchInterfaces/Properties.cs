@@ -70,12 +70,12 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerableProvider
+        #region IEnumerable<object>
 
         /// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15, 16
-		/// </summary>
-        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         new IEnumerator<object> GetEnumerator();
 
         #endregion

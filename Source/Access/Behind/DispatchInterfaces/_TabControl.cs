@@ -12,8 +12,7 @@ namespace NetOffice.AccessApi.Behind
 	/// <summary>
 	/// DispatchInterface _TabControl 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	/// </summary>
 	public class _TabControl : NetOffice.OfficeApi.Behind.IAccessible, NetOffice.AccessApi._TabControl
 	{
 		#pragma warning disable
@@ -2129,7 +2128,7 @@ namespace NetOffice.AccessApi.Behind
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion Access, 9,10,11,12,14,15,16

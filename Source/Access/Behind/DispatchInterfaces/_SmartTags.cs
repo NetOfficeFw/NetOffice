@@ -12,8 +12,7 @@ namespace NetOffice.AccessApi.Behind
 	/// <summary>
 	/// DispatchInterface _SmartTags 
 	/// SupportByVersion Access, 11,12,14,15,16
-	/// </summary>	[SupportByVersion("Access", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>	
 	public class _SmartTags : COMObject, NetOffice.AccessApi._SmartTags
 	{
 		#pragma warning disable

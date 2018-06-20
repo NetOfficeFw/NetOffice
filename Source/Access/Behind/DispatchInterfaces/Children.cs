@@ -13,8 +13,6 @@ namespace NetOffice.AccessApi.Behind
 	/// DispatchInterface Children 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class Children : COMObject, NetOffice.AccessApi.Children
 	{
 		#pragma warning disable

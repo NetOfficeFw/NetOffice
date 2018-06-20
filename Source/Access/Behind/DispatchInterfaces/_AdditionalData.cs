@@ -13,8 +13,6 @@ namespace NetOffice.AccessApi.Behind
 	/// DispatchInterface _AdditionalData 
 	/// SupportByVersion Access, 11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Access", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class _AdditionalData : COMObject, NetOffice.AccessApi._AdditionalData
 	{
 		#pragma warning disable

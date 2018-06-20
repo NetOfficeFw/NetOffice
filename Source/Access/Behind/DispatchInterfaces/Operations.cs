@@ -12,9 +12,8 @@ namespace NetOffice.AccessApi.Behind
 	/// <summary>
 	/// DispatchInterface Operations 
 	/// SupportByVersion Access, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192091.aspx </remarks>
-	[SupportByVersion("Access", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>	
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192091.aspx </remarks>
 	public class Operations : COMObject, NetOffice.AccessApi.Operations
 	{
 		#pragma warning disable

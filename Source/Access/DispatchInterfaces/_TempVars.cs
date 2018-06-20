@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Access", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("9E3F602F-BA36-4865-B3CD-F2EB008F62DE")]
     [CoClassSource(typeof(NetOffice.AccessApi.TempVars))]
     public interface _TempVars : ICOMObject, IEnumerableProvider<NetOffice.AccessApi.TempVar>
@@ -90,6 +90,16 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 12,14,15,16)]
 		bool IsMemberSafe(Int32 dispid);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.AccessApi.TempVar>
+
+        /// <summary>
+        /// SupportByVersion Access, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.AccessApi.TempVar> GetEnumerator();
+
+        #endregion
+    }
 }

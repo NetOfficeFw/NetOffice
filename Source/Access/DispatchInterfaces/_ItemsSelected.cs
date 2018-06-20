@@ -49,12 +49,12 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #region IEnumerableProvider
+        #region IEnumerable<Int32>
 
         /// <summary>
-        /// SupportByVersion Access 11, 12, 14, 15, 16
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         new IEnumerator<Int32> GetEnumerator();
 
         #endregion

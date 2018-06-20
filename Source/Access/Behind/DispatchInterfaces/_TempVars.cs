@@ -9,12 +9,11 @@ using NetOffice.AccessApi;
 
 namespace NetOffice.AccessApi.Behind
 {
-	/// <summary>
-	/// DispatchInterface _TempVars 
-	/// SupportByVersion Access, 12,14,15,16
-	/// </summary>	[SupportByVersion("Access", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class _TempVars : COMObject, NetOffice.AccessApi._TempVars
+    /// <summary>
+    /// DispatchInterface _TempVars 
+    /// SupportByVersion Access, 12,14,15,16
+    /// </summary>
+    public class _TempVars : COMObject, NetOffice.AccessApi._TempVars
 	{
 		#pragma warning disable
 

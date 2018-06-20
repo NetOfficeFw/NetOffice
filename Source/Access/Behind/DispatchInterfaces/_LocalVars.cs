@@ -12,8 +12,7 @@ namespace NetOffice.AccessApi.Behind
 	/// <summary>
 	/// DispatchInterface _LocalVars 
 	/// SupportByVersion Access, 14,15,16
-	/// </summary>	[SupportByVersion("Access", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>	
 	public class _LocalVars : COMObject, NetOffice.AccessApi._LocalVars
 	{
 		#pragma warning disable
