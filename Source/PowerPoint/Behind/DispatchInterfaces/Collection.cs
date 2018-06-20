@@ -13,9 +13,7 @@ namespace NetOffice.PowerPointApi.Behind
 	/// DispatchInterface Collection
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
-	public class Collection : COMObject, NetOffice.PowerPointApi.Collection
+ 	public class Collection : COMObject, NetOffice.PowerPointApi.Collection
 	{
 		#pragma warning disable
 

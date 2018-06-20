@@ -14,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227558.aspx </remarks>
 	[SupportByVersion("PowerPoint", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "PowerPoint", 15, 16), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	[TypeId("2432F529-514B-4575-AA71-1754C74A13D6")]
 	public interface CategoryCollection : ICOMObject, IEnumerableProvider<NetOffice.PowerPointApi.ChartCategory>
 	{
@@ -65,6 +65,18 @@ namespace NetOffice.PowerPointApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.PowerPointApi.ChartCategory this[object index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.PowerPointApi.ChartCategory>
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 15, 16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("PowerPoint", 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.PowerPointApi.ChartCategory> GetEnumerator();
+
+        #endregion
+    }
 }

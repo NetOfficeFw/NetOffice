@@ -14,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746714.aspx </remarks>
 	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "PowerPoint", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	[TypeId("92D41A74-F07E-4CA4-AF6F-BEF486AA4E6F")]
 	public interface Points : ICOMObject, IEnumerableProvider<NetOffice.PowerPointApi.Point>
 	{
@@ -65,6 +65,16 @@ namespace NetOffice.PowerPointApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.PowerPointApi.Point this[Int32 index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.PowerPointApi.Point>
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        new IEnumerator<NetOffice.PowerPointApi.Point> GetEnumerator();
+
+        #endregion
+    }
 }

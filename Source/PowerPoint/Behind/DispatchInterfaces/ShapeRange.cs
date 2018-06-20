@@ -15,8 +15,6 @@ namespace NetOffice.PowerPointApi.Behind
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743949.aspx </remarks>
-	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class ShapeRange : COMObject, NetOffice.PowerPointApi.ShapeRange
 	{
 		#pragma warning disable

@@ -12,8 +12,6 @@ namespace NetOffice.VBIDEApi.Behind
     /// DispatchInterface SelectedComponents
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
-    [SupportByVersion("VBIDE", 12, 14, 5.3)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class SelectedComponents : COMObject, NetOffice.VBIDEApi.SelectedComponents
     {
         #pragma warning disable

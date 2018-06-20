@@ -12,9 +12,8 @@ namespace NetOffice.PowerPointApi.Behind
 	/// <summary>
 	/// DispatchInterface Axes 
 	/// SupportByVersion PowerPoint, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745246.aspx </remarks>
-	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>	
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745246.aspx </remarks>
 	public class Axes : COMObject, NetOffice.PowerPointApi.Axes
 	{
 		#pragma warning disable

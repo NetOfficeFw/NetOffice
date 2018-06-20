@@ -14,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745805.aspx </remarks>
 	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "PowerPoint", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	[TypeId("92D41A62-F07E-4CA4-AF6F-BEF486AA4E6F")]
 	public interface DataLabels : ICOMObject, IEnumerableProvider<NetOffice.PowerPointApi.DataLabel>
 	{
@@ -295,6 +295,16 @@ namespace NetOffice.PowerPointApi
 		[SupportByVersion("PowerPoint", 15, 16)]
 		void Propagate(object index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.PowerPointApi.DataLabel>
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        new IEnumerator<NetOffice.PowerPointApi.DataLabel> GetEnumerator();
+
+        #endregion
+    }
 }

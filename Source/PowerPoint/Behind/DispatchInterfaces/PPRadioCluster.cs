@@ -12,8 +12,7 @@ namespace NetOffice.PowerPointApi.Behind
 	/// <summary>
 	/// DispatchInterface PPRadioCluster 
 	/// SupportByVersion PowerPoint, 9
-	/// </summary>	[SupportByVersion("PowerPoint", 9)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>	
 	public class PPRadioCluster : PPControl, NetOffice.PowerPointApi.PPRadioCluster
 	{
 		#pragma warning disable

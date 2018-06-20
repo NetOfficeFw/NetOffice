@@ -13,7 +13,7 @@ namespace NetOffice.PowerPointApi
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
 	[TypeId("91493450-5A91-11CF-8700-00AA0060263B")]
 	public interface Collection : ICOMObject, IEnumerableProvider<object>
 	{
@@ -37,6 +37,16 @@ namespace NetOffice.PowerPointApi
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		object _Index(Int32 index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

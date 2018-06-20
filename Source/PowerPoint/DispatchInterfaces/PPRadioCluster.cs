@@ -13,7 +13,7 @@ namespace NetOffice.PowerPointApi
 	/// SupportByVersion PowerPoint, 9
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "PowerPoint", 9), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("914934AB-5A91-11CF-8700-00AA0060263B")]
 	public interface PPRadioCluster : PPControl, IEnumerableProvider<NetOffice.PowerPointApi.PPRadioButton>
 	{
@@ -62,6 +62,18 @@ namespace NetOffice.PowerPointApi
 		[SupportByVersion("PowerPoint", 9)]
 		NetOffice.PowerPointApi.PPRadioButton Add(Single left, Single top, Single width, Single height);
 
-		#endregion
-	}
+        #endregion
+        #region IEnumerable<NetOffice.PowerPointApi.PPRadioButton>
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.PowerPointApi.PPRadioButton> GetEnumerator();
+
+        #endregion
+
+    }
 }

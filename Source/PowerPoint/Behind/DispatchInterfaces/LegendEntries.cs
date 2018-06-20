@@ -12,9 +12,8 @@ namespace NetOffice.PowerPointApi.Behind
 	/// <summary>
 	/// DispatchInterface LegendEntries 
 	/// SupportByVersion PowerPoint, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745917.aspx </remarks>
-	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>	
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745917.aspx </remarks>
 	public class LegendEntries : COMObject, NetOffice.PowerPointApi.LegendEntries
 	{
 		#pragma warning disable

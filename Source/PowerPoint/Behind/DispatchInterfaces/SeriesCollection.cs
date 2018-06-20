@@ -13,8 +13,6 @@ namespace NetOffice.PowerPointApi.Behind
 	/// DispatchInterface SeriesCollection 
 	/// SupportByVersion PowerPoint, 14,15,16
 	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745059.aspx </remarks>
-	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	public class SeriesCollection : COMObject, NetOffice.PowerPointApi.SeriesCollection
 	{
 		#pragma warning disable

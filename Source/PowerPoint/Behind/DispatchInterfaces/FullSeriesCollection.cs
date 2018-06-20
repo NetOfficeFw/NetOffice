@@ -12,9 +12,8 @@ namespace NetOffice.PowerPointApi.Behind
 	/// <summary>
 	/// DispatchInterface FullSeriesCollection 
 	/// SupportByVersion PowerPoint, 15, 16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227661.aspx </remarks>
-	[SupportByVersion("PowerPoint", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>	
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227661.aspx </remarks>
 	public class FullSeriesCollection : COMObject, NetOffice.PowerPointApi.FullSeriesCollection
 	{
 		#pragma warning disable

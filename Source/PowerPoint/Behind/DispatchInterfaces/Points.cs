@@ -12,9 +12,8 @@ namespace NetOffice.PowerPointApi.Behind
 	/// <summary>
 	/// DispatchInterface Points 
 	/// SupportByVersion PowerPoint, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746714.aspx </remarks>
-	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>	
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746714.aspx </remarks>
 	public class Points : COMObject, NetOffice.PowerPointApi.Points
 	{
 		#pragma warning disable

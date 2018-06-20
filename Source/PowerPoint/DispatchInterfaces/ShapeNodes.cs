@@ -14,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744776.aspx </remarks>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "PowerPoint", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("91493486-5A91-11CF-8700-00AA0060263B")]
 	public interface ShapeNodes : ICOMObject, IEnumerableProvider<NetOffice.PowerPointApi.ShapeNode>
 	{
@@ -176,6 +176,16 @@ namespace NetOffice.PowerPointApi
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		void SetSegmentType(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.PowerPointApi.ShapeNode>
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.PowerPointApi.ShapeNode> GetEnumerator();
+
+        #endregion
+    }
 }

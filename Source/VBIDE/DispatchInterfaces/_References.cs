@@ -13,7 +13,7 @@ namespace NetOffice.VBIDEApi
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "VBIDE", 12, 14, 5.3), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("0002E17A-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.VBIDEApi.References))]
     public interface _References : ICOMObject, IEnumerableProvider<NetOffice.VBIDEApi.Reference>
@@ -75,6 +75,16 @@ namespace NetOffice.VBIDEApi
         /// <param name="reference">NetOffice.VBIDEApi.Reference reference</param>
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         void Remove(NetOffice.VBIDEApi.Reference reference);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VBIDEApi.Reference>
+
+        /// <summary>
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
+        new IEnumerator<NetOffice.VBIDEApi.Reference> GetEnumerator();
 
         #endregion
     }

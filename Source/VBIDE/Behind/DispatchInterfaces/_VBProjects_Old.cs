@@ -12,9 +12,7 @@ namespace NetOffice.VBIDEApi.Behind
     /// DispatchInterface _VBProjects_Old
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
-    [SupportByVersion("VBIDE", 12, 14, 5.3)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-    public class _VBProjects_Old : COMObject, NetOffice.VBIDEApi._VBProjects_Old
+     public class _VBProjects_Old : COMObject, NetOffice.VBIDEApi._VBProjects_Old
     {
         #pragma warning disable
 

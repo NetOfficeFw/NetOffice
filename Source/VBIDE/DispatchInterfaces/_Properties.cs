@@ -13,7 +13,7 @@ namespace NetOffice.VBIDEApi
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
     [SupportByVersion("VBIDE", 12, 14, 5.3)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "VBIDE", 12, 14, 5.3), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("0002E188-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.VBIDEApi.Properties))]
     public interface _Properties : ICOMObject, IEnumerableProvider<NetOffice.VBIDEApi.Property>
@@ -62,6 +62,16 @@ namespace NetOffice.VBIDEApi
         [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.VBIDEApi.Property this[object index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.VBIDEApi.Property>
+
+        /// <summary>
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
+        new IEnumerator<NetOffice.VBIDEApi.Property> GetEnumerator();
 
         #endregion
     }

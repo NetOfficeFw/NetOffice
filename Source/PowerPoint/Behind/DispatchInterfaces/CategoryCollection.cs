@@ -12,9 +12,8 @@ namespace NetOffice.PowerPointApi.Behind
 	/// <summary>
 	/// DispatchInterface CategoryCollection 
 	/// SupportByVersion PowerPoint, 15, 16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227558.aspx </remarks>
-	[SupportByVersion("PowerPoint", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227558.aspx </remarks>
 	public class CategoryCollection : COMObject, NetOffice.PowerPointApi.CategoryCollection
 	{
 		#pragma warning disable

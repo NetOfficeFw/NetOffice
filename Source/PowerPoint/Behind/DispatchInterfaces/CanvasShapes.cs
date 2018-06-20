@@ -12,8 +12,7 @@ namespace NetOffice.PowerPointApi.Behind
 	/// <summary>
 	/// DispatchInterface CanvasShapes 
 	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class CanvasShapes : COMObject, NetOffice.PowerPointApi.CanvasShapes
 	{
 		#pragma warning disable

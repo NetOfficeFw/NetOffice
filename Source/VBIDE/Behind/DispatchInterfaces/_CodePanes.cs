@@ -12,8 +12,6 @@ namespace NetOffice.VBIDEApi.Behind
     /// DispatchInterface _CodePanes
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
-    [SupportByVersion("VBIDE", 12, 14, 5.3)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class _CodePanes : COMObject, NetOffice.VBIDEApi._CodePanes
     {
         #pragma warning disable

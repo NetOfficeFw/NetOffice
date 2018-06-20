@@ -13,8 +13,6 @@ namespace NetOffice.PowerPointApi.Behind
 	/// DispatchInterface Trendlines 
 	/// SupportByVersion PowerPoint, 14,15,16
 	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745537.aspx </remarks>
-	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	public class Trendlines : COMObject, NetOffice.PowerPointApi.Trendlines
 	{
 		#pragma warning disable
