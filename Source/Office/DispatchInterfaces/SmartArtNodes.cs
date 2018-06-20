@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861522.aspx </remarks>
     [SupportByVersion("Office", 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000C03C7-0000-0000-C000-000000000046")]
     public interface SmartArtNodes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SmartArtNode>
     {
@@ -55,6 +55,16 @@ namespace NetOffice.OfficeApi
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861747.aspx </remarks>
         [SupportByVersion("Office", 14, 15, 16)]
         NetOffice.OfficeApi.SmartArtNode Add();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.SmartArtNode>
+
+        /// <summary>
+        /// SupportByVersion Office, 14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.SmartArtNode> GetEnumerator();
 
         #endregion
     }

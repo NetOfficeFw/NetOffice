@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000C170D-0000-0000-C000-000000000046")]
     public interface Points : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.ChartPoint>
     {
@@ -59,5 +59,15 @@ namespace NetOffice.OfficeApi
         NetOffice.OfficeApi.ChartPoint this[Int32 index] { get; }
 
         #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.ChartPoint>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.ChartPoint> GetEnumerator();
+
+        #endregion
     }
-  }
+}

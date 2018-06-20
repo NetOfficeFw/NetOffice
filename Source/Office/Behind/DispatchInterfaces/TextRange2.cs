@@ -406,8 +406,6 @@ namespace NetOffice.OfficeApi.Behind
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863528.aspx </remarks>
-    [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class TextRange2 : NetOffice.OfficeApi.Behind.TextRange2_, NetOffice.OfficeApi.TextRange2
     {
         #pragma warning disable

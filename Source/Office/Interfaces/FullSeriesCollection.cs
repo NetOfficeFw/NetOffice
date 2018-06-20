@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 15, 16
     /// </summary>
     [SupportByVersion("Office", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Office", 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000C1732-0000-0000-C000-000000000046")]
     public interface FullSeriesCollection : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.IMsoSeries>
     {
@@ -57,6 +57,16 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.OfficeApi.IMsoSeries this[object index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.IMsoSeries>
+
+        /// <summary>
+        /// SupportByVersion Office, 15, 16
+        /// </summary>
+        [SupportByVersion("Office", 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.IMsoSeries> GetEnumerator();
 
         #endregion
     }

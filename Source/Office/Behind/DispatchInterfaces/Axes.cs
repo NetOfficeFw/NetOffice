@@ -13,8 +13,6 @@ namespace NetOffice.OfficeApi.Behind
     /// DispatchInterface Axes 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class Axes : COMObject, NetOffice.OfficeApi.Axes
     {
         #pragma warning disable

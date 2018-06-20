@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864653.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C0390-0000-0000-C000-000000000046")]
     public interface ServerPolicy : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.PolicyItem>
     {
@@ -85,6 +85,18 @@ namespace NetOffice.OfficeApi
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864621.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
         object Parent { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.PolicyItem> Member
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OfficeApi.PolicyItem> GetEnumerator();
 
         #endregion
     }

@@ -20,7 +20,7 @@ namespace AccessExamplesCS4
         public void RunExample()
         {
             // start access 
-            Access.Application accessApplication = new Access.Application();
+            Access.Application accessApplication = COMObject.Create<Access.Application>();
 
             // create a utils instance, not need for but helpful to keep the lines of code low
             CommonUtils utils = new CommonUtils(accessApplication);

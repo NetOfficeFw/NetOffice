@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860226.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000CD903-0000-0000-C000-000000000046")]
     public interface WorkflowTemplates : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.WorkflowTemplate>
     {
@@ -36,6 +36,16 @@ namespace NetOffice.OfficeApi
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861838.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         Int32 Count { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.WorkflowTemplate>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.WorkflowTemplate> GetEnumerator();
 
         #endregion
     }

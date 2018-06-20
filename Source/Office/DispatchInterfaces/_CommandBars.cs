@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C0302-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OfficeApi.CommandBars))]
     public interface _CommandBars : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CommandBar>
@@ -464,6 +464,16 @@ namespace NetOffice.OfficeApi
         /// <param name="hwnd">Int32 hwnd</param>
         [SupportByVersion("Office", 14, 15, 16)]
         void CommitRenderingTransaction(Int32 hwnd);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.CommandBar>
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.CommandBar> GetEnumerator();
 
         #endregion
     }

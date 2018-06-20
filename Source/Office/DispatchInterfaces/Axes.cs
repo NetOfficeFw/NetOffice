@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000C1712-0000-0000-C000-000000000046")]
     public interface Axes : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.IMsoAxis>
     {
@@ -68,6 +68,16 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 14, 15, 16), ProxyResult]
         object Parent { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.IMsoAxis>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.IMsoAxis> GetEnumerator();
 
         #endregion
     }

@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
     [Duplicate("NetOffice.ExcelApi.ShapeNodes")]
 	[TypeId("000C0319-0000-0000-C000-000000000046")]
     public interface ShapeNodes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.ShapeNode>
@@ -147,6 +147,16 @@ namespace NetOffice.OfficeApi
         /// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType segmentType</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         void SetSegmentType(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.ShapeNode>
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.ShapeNode> GetEnumerator();
 
         #endregion
     }

@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000C031E-0000-0000-C000-000000000046")]
     public interface Shapes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.Shape>
     {
@@ -435,6 +435,16 @@ namespace NetOffice.OfficeApi
         [CustomMethod]
         [SupportByVersion("Office", 15, 16)]
         NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top, object width, object height);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.Shape>
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.Shape> GetEnumerator();
 
         #endregion
     }

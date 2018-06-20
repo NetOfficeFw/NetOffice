@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862820.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C0392-0000-0000-C000-000000000046")]
     public interface DocumentInspectors : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.DocumentInspector>
     {
@@ -45,6 +45,16 @@ namespace NetOffice.OfficeApi
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860327.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
         object Parent { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.DocumentInspector>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.DocumentInspector> GetEnumerator();
 
         #endregion
     }

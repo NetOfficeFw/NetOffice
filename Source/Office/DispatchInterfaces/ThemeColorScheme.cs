@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863682.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16)]
 	[TypeId("000C03A2-0000-0000-C000-000000000046")]
     public interface ThemeColorScheme : _IMsoDispObj, IEnumerableProvider<object>
     {
@@ -72,6 +72,16 @@ namespace NetOffice.OfficeApi
         /// <param name="name">string name</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         Int32 GetCustomColor(string name);
+
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<object> GetEnumerator();
 
         #endregion
     }

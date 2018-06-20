@@ -36,6 +36,6 @@ namespace NetOffice.DAOApi
 		[SupportByVersion("DAO", 3.6,12.0)]
 		void Refresh();
 
-		#endregion
-	}
+        #endregion
+    }
 }

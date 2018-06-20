@@ -14,8 +14,6 @@ namespace NetOffice.OfficeApi.Behind
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862049.aspx </remarks>
-    [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class FileTypes : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FileTypes
     {
         #pragma warning disable

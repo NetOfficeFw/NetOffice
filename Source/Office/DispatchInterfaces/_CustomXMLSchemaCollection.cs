@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000CDB02-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OfficeApi.CustomXMLSchemaCollection))]
     public interface _CustomXMLSchemaCollection : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLSchema>
@@ -132,6 +132,16 @@ namespace NetOffice.OfficeApi
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864142.aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         bool Validate();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.CustomXMLSchema>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.CustomXMLSchema> GetEnumerator();
 
         #endregion
     }

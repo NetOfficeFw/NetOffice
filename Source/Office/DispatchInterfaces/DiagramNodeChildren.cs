@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
     [Duplicate("NetOffice.ExcelApi.DiagramNodeChildren")]
 	[TypeId("000C036F-0000-0000-C000-000000000046")]
     public interface DiagramNodeChildren : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.DiagramNode>
@@ -89,6 +89,16 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         void SelectAll();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.DiagramNode>
+
+        /// <summary>
+        /// SupportByVersion Office, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.DiagramNode> GetEnumerator();
 
         #endregion
     }

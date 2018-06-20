@@ -13,8 +13,6 @@ namespace NetOffice.OfficeApi.Behind
     /// Interface Trendlines 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class Trendlines : COMObject, NetOffice.OfficeApi.Trendlines
     {
         #pragma warning disable

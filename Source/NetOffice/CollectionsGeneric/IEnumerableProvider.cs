@@ -29,6 +29,6 @@ namespace NetOffice.CollectionsGeneric
         /// <returns>IEnumerator instance</returns>
         /// <exception cref="ArgumentNullException">argument is null</exception>
         /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        IEnumerable FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator);
+        System.Collections.IEnumerable FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator);
     }
 }

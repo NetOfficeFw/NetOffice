@@ -13,8 +13,6 @@ namespace NetOffice.OfficeApi.Behind
     /// Interface Points 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class Points : COMObject, NetOffice.OfficeApi.Points
     {
         #pragma warning disable

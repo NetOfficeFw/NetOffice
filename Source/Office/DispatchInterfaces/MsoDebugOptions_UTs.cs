@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C038A-0000-0000-C000-000000000046")]
     public interface MsoDebugOptions_UTs : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.MsoDebugOptions_UT>
     {
@@ -61,6 +61,16 @@ namespace NetOffice.OfficeApi
         /// <param name="bstrUnitTestNameFilter">string bstrUnitTestNameFilter</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         NetOffice.OfficeApi.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(string bstrCollectionName, string bstrUnitTestNameFilter);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.MsoDebugOptions_UT>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.MsoDebugOptions_UT> GetEnumerator();
 
         #endregion
     }

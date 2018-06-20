@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000C172B-0000-0000-C000-000000000046")]
     public interface ChartGroups : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.IMsoChartGroup>
     {
@@ -60,6 +60,16 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.OfficeApi.IMsoChartGroup this[object index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.IMsoChartGroup>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.IMsoChartGroup> GetEnumerator();
 
         #endregion
     }

@@ -14,8 +14,6 @@ namespace NetOffice.OfficeApi.Behind
     /// SupportByVersion Office, 14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864858.aspx </remarks>
-    [SupportByVersion("Office", 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class SmartArtQuickStyles : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.SmartArtQuickStyles
     {
         #pragma warning disable

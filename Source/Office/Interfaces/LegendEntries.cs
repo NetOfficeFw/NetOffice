@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000C1719-0000-0000-C000-000000000046")]
     public interface LegendEntries : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.LegendEntry>
     {
@@ -59,5 +59,15 @@ namespace NetOffice.OfficeApi
         NetOffice.OfficeApi.LegendEntry this[object index] { get; }
 
         #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.LegendEntry>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.LegendEntry> GetEnumerator();
+
+        #endregion
     }
-  }
+}

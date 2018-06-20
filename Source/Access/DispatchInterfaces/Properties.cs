@@ -8,13 +8,14 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
-	/// <summary>
-	/// DispatchInterface Properties 
-	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196448.aspx </remarks>
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+    /// <summary>
+    /// DispatchInterface Properties 
+    /// SupportByVersion Access, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196448.aspx </remarks>
+    /// <remarks> Enumerator SupportByVersion Access, 9,10,11,12,14,15,16 </remarks>
+    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Access", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("331FDD02-CF31-11CD-8701-00AA003F0F07")]
 	public interface Properties : ICOMObject, IEnumerableProvider<object>
 	{
@@ -67,6 +68,16 @@ namespace NetOffice.AccessApi
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		bool IsMemberSafe(Int32 dispid);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerableProvider
+
+        /// <summary>
+		/// SupportByVersion Access 11, 12, 14, 15, 16
+		/// </summary>
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

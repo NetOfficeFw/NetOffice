@@ -88,8 +88,6 @@ namespace NetOffice.OfficeApi.Behind
     /// Interface IMsoDataLabels 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class IMsoDataLabels : IMsoDataLabels_, NetOffice.OfficeApi.IMsoDataLabels
     {
         #pragma warning disable

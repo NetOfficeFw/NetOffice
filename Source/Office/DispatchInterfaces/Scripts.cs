@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000C0340-0000-0000-C000-000000000046")]
     public interface Scripts : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.Script>
     {
@@ -120,6 +120,16 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         void Delete();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.Script>
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.Script> GetEnumerator();
 
         #endregion
     }

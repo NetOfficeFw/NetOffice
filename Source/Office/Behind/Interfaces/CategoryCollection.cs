@@ -12,8 +12,6 @@ namespace NetOffice.OfficeApi.Behind
     /// Interface CategoryCollection 
     /// SupportByVersion Office, 15, 16
     /// </summary>
-    [SupportByVersion("Office", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class CategoryCollection : COMObject, NetOffice.OfficeApi.CategoryCollection
     {
         #pragma warning disable

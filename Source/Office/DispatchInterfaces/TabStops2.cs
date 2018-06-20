@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860606.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000C03BA-0000-0000-C000-000000000046")]
     public interface TabStops2 : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.TabStop2>
     {
@@ -65,6 +65,16 @@ namespace NetOffice.OfficeApi
         /// <param name="position">Single position</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         NetOffice.OfficeApi.TabStop2 Add(NetOffice.OfficeApi.Enums.MsoTabStopType type, Single position);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.TabStop2>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.TabStop2> GetEnumerator();
 
         #endregion
     }

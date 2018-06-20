@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000CDB09-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OfficeApi.CustomXMLParts))]
     public interface _CustomXMLParts : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLPart>
@@ -91,6 +91,16 @@ namespace NetOffice.OfficeApi
         /// <param name="namespaceURI">string namespaceURI</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         NetOffice.OfficeApi.CustomXMLParts SelectByNamespace(string namespaceURI);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.CustomXMLPart>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.CustomXMLPart> GetEnumerator();
 
         #endregion
     }

@@ -28,7 +28,6 @@ namespace NetOffice.DAOApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.DAOApi.TableDef this[object item] { get; }
 
-		#endregion
-
-	}
+        #endregion
+    }
 }

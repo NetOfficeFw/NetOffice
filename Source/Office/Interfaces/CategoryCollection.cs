@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 15, 16
     /// </summary>
     [SupportByVersion("Office", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Office", 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000C1734-0000-0000-C000-000000000046")]
     public interface CategoryCollection : ICOMObject, IEnumerableProvider<NetOffice.OfficeApi.IMsoCategory>
     {
@@ -60,5 +60,16 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
+        #region IEnumerable<NetOffice.OfficeApi.IMsoCategory>
+
+        /// <summary>
+        /// SupportByVersion Office, 15, 16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Office", 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OfficeApi.IMsoCategory> GetEnumerator();
+
+        #endregion
     }
 }

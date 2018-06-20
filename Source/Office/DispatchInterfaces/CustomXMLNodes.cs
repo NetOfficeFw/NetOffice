@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862726.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000CDB03-0000-0000-C000-000000000046")]
     public interface CustomXMLNodes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLNode>
     {
@@ -45,6 +45,16 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.OfficeApi.CustomXMLNode this[Int32 index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.CustomXMLNode>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.CustomXMLNode> GetEnumerator();
 
         #endregion
     }

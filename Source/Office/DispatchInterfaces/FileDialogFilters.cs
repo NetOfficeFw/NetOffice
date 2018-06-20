@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863542.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000C0365-0000-0000-C000-000000000046")]
     public interface FileDialogFilters : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.FileDialogFilter>
     {
@@ -91,6 +91,16 @@ namespace NetOffice.OfficeApi
         [CustomMethod]
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.FileDialogFilter>
+
+        /// <summary>
+        /// SupportByVersion Office, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.FileDialogFilter> GetEnumerator();
 
         #endregion
     }

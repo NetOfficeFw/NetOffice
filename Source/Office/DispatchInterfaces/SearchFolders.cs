@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861846.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C036A-0000-0000-C000-000000000046")]
     public interface SearchFolders : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.ScopeFolder>
     {
@@ -56,6 +56,16 @@ namespace NetOffice.OfficeApi
         /// <param name="index">Int32 index</param>
         [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         void Remove(Int32 index);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.ScopeFolder>
+
+        /// <summary>
+        /// SupportByVersion Office, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.ScopeFolder> GetEnumerator();
 
         #endregion
     }

@@ -14,8 +14,6 @@ namespace NetOffice.OfficeApi.Behind
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865267.aspx </remarks>
-    [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class SearchScopes : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.SearchScopes
     {
         #pragma warning disable

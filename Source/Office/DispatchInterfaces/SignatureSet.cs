@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861798.aspx </remarks>
     [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C0410-0000-0000-C000-000000000046")]
     public interface SignatureSet : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.Signature>
     {
@@ -117,6 +117,16 @@ namespace NetOffice.OfficeApi
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
         NetOffice.OfficeApi.Signature AddSignatureLine();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.Signature>
+
+        /// <summary>
+        /// SupportByVersion Office, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.Signature> GetEnumerator();
 
         #endregion
     }

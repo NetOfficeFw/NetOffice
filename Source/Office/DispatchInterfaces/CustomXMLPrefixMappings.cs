@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862759.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000CDB00-0000-0000-C000-000000000046")]
     public interface CustomXMLPrefixMappings : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLPrefixMapping>
     {
@@ -74,6 +74,16 @@ namespace NetOffice.OfficeApi
         /// <param name="namespaceURI">string namespaceURI</param>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         string LookupPrefix(string namespaceURI);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.CustomXMLPrefixMapping>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.CustomXMLPrefixMapping> GetEnumerator();
 
         #endregion
     }

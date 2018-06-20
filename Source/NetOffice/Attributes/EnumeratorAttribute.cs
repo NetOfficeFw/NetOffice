@@ -66,14 +66,28 @@ namespace NetOffice.Attributes
         public readonly EnumeratorInvoke Invoke;
 
         /// <summary>
+        /// Name of the supporting Library
+        /// </summary>
+        public readonly string ComponentName;
+
+        /// <summary>
+        /// All supported library versions
+        /// </summary>
+        public readonly double[] ComponentVersions;
+
+        /// <summary>
         /// Creates an instance of the class
         /// </summary>
         /// <param name="result">return kind</param>
         /// <param name="invoke">internal invoke call</param>
-        public EnumeratorAttribute(Enumerator result, EnumeratorInvoke invoke)
+        /// <param name="supportByVersionComponentName">name of the supporting library</param>
+        /// <param name="supportedComponentVersions">versions of the supporting library</param>
+        public EnumeratorAttribute(Enumerator result, EnumeratorInvoke invoke, string supportByVersionComponentName, params double[] supportedComponentVersions)
         {
             Result = result;
             Invoke = invoke;
+            ComponentName = supportByVersionComponentName;
+            ComponentVersions = supportedComponentVersions;
         }
     }
 }

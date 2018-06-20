@@ -14,8 +14,6 @@ namespace NetOffice.OfficeApi.Behind
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860224.aspx </remarks>
-    [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class RulerLevels2 : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.RulerLevels2
     {
         #pragma warning disable

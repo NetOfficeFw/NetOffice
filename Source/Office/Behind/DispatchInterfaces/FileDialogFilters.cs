@@ -14,9 +14,7 @@ namespace NetOffice.OfficeApi.Behind
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863542.aspx </remarks>
-    [SupportByVersion("Office", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class FileDialogFilters : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FileDialogFilters
+ 	public class FileDialogFilters : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FileDialogFilters
     {
 		#pragma warning disable
 

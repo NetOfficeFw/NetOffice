@@ -13,8 +13,6 @@ namespace NetOffice.OfficeApi.Behind
     /// DispatchInterface AnswerWizardFiles 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class AnswerWizardFiles : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.AnswerWizardFiles
     {
         #pragma warning disable

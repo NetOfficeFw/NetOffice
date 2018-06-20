@@ -12,8 +12,7 @@ namespace NetOffice.DAOApi.Behind
 	/// <summary>
 	/// DispatchInterface Properties 
 	/// SupportByVersion DAO, 3.6,12.0
-	/// </summary>	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>	
 	public class Properties : _DynaCollection, NetOffice.DAOApi.Properties
 	{
 		#pragma warning disable
@@ -117,7 +116,7 @@ namespace NetOffice.DAOApi.Behind
         /// SupportByVersion DAO, 3.6,12.0
         /// </summary>
         [SupportByVersion("DAO", 3.6,12.0)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+        NetRuntimeSystem.Collections.IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
 		}
@@ -127,4 +126,3 @@ namespace NetOffice.DAOApi.Behind
 		#pragma warning restore
 	}
 }
-

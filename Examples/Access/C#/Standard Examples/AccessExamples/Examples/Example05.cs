@@ -86,7 +86,7 @@ namespace AccessExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start access
-            _accessApplication = new Access.Application();
+            _accessApplication = COMObject.Create<Access.Application>();
             CommonUtils utils = new CommonUtils(_accessApplication);
             Office.CommandBarButton commandBarBtn = null;
 

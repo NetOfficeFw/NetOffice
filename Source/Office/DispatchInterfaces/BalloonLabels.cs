@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C032E-0000-0000-C000-000000000046")]
     public interface BalloonLabels : _IMsoDispObj, IEnumerableProvider<object>
     {
@@ -50,6 +50,16 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         Int32 Count { get; set; }
+
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<object> GetEnumerator();
 
         #endregion
     }

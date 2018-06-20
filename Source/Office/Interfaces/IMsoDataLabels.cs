@@ -60,7 +60,7 @@ namespace NetOffice.OfficeApi
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000C171F-0000-0000-C000-000000000046")]
     public interface IMsoDataLabels : IMsoDataLabels_, IEnumerableProvider<NetOffice.OfficeApi.IMsoDataLabel>
     {
@@ -316,6 +316,16 @@ namespace NetOffice.OfficeApi
         /// <param name="index">object index</param>
         [SupportByVersion("Office", 15, 16)]
         Int32 Propagate(object index);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.IMsoDataLabel>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.IMsoDataLabel> GetEnumerator();
 
         #endregion
     }

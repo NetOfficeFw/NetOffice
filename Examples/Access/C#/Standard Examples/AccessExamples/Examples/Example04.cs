@@ -65,7 +65,7 @@ namespace AccessExamplesCS4
         private void ShowDatabaseInfo(string filePath)
         {
             // start access 
-            Access.Application accessApplication = new Access.Application();
+            Access.Application accessApplication = COMObject.Create<Access.Application>();
 
             // open database
             DAO.Database database = accessApplication.DBEngine.Workspaces[0].OpenDatabase(filePath);

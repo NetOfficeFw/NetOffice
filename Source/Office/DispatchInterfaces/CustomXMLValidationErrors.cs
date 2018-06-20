@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860565.aspx </remarks>
     [SupportByVersion("Office", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Office", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000CDB0F-0000-0000-C000-000000000046")]
     public interface CustomXMLValidationErrors : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLValidationError>
     {
@@ -81,6 +81,16 @@ namespace NetOffice.OfficeApi
         [CustomMethod]
         [SupportByVersion("Office", 12, 14, 15, 16)]
         void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.OfficeApi.CustomXMLValidationError>
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OfficeApi.CustomXMLValidationError> GetEnumerator();
 
         #endregion
     }

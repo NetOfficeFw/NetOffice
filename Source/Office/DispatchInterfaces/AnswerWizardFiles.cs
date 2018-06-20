@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom, "Office", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C0361-0000-0000-C000-000000000046")]
     public interface AnswerWizardFiles : _IMsoDispObj, IEnumerableProvider<string>
     {
@@ -60,6 +60,18 @@ namespace NetOffice.OfficeApi
         /// <param name="fileName">string fileName</param>
         [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         void Delete(string fileName);
+
+        #endregion
+
+        #region IEnumerable<string>
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<string> GetEnumerator();
 
         #endregion
     }
