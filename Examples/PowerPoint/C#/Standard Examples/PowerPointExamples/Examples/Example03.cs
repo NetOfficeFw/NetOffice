@@ -24,7 +24,7 @@ namespace PowerPointExamplesCS4
             try
             {
                 // start powerpoint
-                powerApplication = new PowerPoint.Application();
+                powerApplication = COMObject.Create<PowerPoint.Application>();
 
                 // create a utils instance, no need for but helpful to keep the lines of code low
                 CommonUtils utils = new CommonUtils(powerApplication);

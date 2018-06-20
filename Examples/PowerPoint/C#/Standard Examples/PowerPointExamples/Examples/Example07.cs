@@ -83,7 +83,7 @@ namespace PowerPointExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start powerpoint
-            _powerApplication = new PowerPoint.Application();
+            _powerApplication = COMObject.Create<PowerPoint.Application>();
 
             Office.CommandBar commandBar = null;
             Office.CommandBarButton commandBarBtn = null;

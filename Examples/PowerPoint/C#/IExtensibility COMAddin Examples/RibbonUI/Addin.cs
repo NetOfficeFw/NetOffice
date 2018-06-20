@@ -2,9 +2,9 @@
 using System.Reflection;
 using System.Windows.Forms; 
 using Microsoft.Win32;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
+using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.PowerPointApi.Enums;
@@ -28,7 +28,7 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                _powerApplication = new PowerPoint.Application(null, Application);
+                _powerApplication = COMObject.Create<PowerPoint.Application>(Application);
             }
             catch (Exception exception)
             {

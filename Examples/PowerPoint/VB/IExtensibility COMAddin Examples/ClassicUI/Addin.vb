@@ -34,7 +34,7 @@ Public Class Addin
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
 
-            _powerApplication = New PowerPoint.Application(Nothing, Application)
+            _powerApplication = COMObject.Create(Of PowerPoint.Application)(Application)
 
         Catch ex As Exception
 

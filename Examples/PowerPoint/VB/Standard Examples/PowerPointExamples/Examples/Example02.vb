@@ -16,7 +16,7 @@ Public Class Example02
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start powerpoint
-        Dim powerApplication As New PowerPoint.Application()
+        Dim powerApplication As PowerPoint.Application = COMObject.Create(Of PowerPoint.Application)()
 
         ' create a utils instance, no need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(powerApplication)

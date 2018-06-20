@@ -63,7 +63,7 @@ Public Class Example07
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' start powerpoint
-        _powerApplication = New PowerPoint.Application()
+        _powerApplication = COMObject.Create(Of PowerPoint.Application)()
 
         Dim commandBar As Office.CommandBar = Nothing
         Dim commandBarBtn As Office.CommandBarButton = Nothing

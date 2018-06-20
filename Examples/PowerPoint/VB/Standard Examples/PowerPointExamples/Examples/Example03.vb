@@ -24,7 +24,7 @@ Public Class Example03
         Try
 
             ' start powerpoint
-            powerApplication = New PowerPoint.Application()
+            powerApplication = COMObject.Create(Of PowerPoint.Application)()
 
             ' create a utils instance, no need for but helpful to keep the lines of code low
             Dim utils As CommonUtils = New CommonUtils(powerApplication)

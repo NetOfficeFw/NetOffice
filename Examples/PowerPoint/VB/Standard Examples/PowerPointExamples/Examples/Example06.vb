@@ -63,7 +63,7 @@ Public Class Example06
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' start powerpoint and turn off msg boxes
-        Dim powerApplication As New PowerPoint.Application()
+        Dim powerApplication As PowerPoint.Application = COMObject.Create(Of PowerPoint.Application)()
         powerApplication.Visible = MsoTriState.msoTrue
 
         ' PowerPoint 2000 doesnt support DisplayAlerts, we check at runtime its available and set

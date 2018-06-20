@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using System.Runtime.CompilerServices;
+using NetOffice;
 using System.Runtime.InteropServices;
 using Extensibility;
 using PowerPoint = NetOffice.PowerPointApi;
@@ -33,11 +33,18 @@ namespace COMAddinClassicExampleCS4
 
         #region IDTExtensibility2 Members
          
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Application"></param>
+        /// <param name="ConnectMode"></param>
+        /// <param name="AddInInst"></param>
+        /// <param name="custom"></param>
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
-                _powerApplication = new PowerPoint.Application(null, Application);
+                _powerApplication = COMObject.Create<PowerPoint.Application>(Application);
             }
             catch (Exception exception)
             {

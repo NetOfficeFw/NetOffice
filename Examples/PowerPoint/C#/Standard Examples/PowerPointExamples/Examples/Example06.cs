@@ -80,8 +80,8 @@ namespace PowerPointExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start powerpoint and turn off msg boxes
-            PowerPoint.Application powerApplication = new PowerPoint.Application();
-	        powerApplication.Visible = MsoTriState.msoTrue;
+            PowerPoint.Application powerApplication = COMObject.Create<PowerPoint.Application>();
+            powerApplication.Visible = MsoTriState.msoTrue;
 
             // PowerPoint 2000 doesnt support DisplayAlerts, we check at runtime its available and set
             if(powerApplication.EntityIsAvailable("DisplayAlerts"))
