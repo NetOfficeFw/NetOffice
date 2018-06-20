@@ -42,7 +42,7 @@ Public Class Example01
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' start outlook by trying to access running application first
-        Dim outlookApplication = New Outlook.Application(True)
+        Dim outlookApplication As Outlook.Application = COMObject.CreateByRunningInstance(Of Outlook.Application)()
 
         ' Get inbox 
         Dim outlookNS As Outlook._NameSpace = outlookApplication.GetNamespace("MAPI")

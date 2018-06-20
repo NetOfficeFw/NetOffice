@@ -14,7 +14,8 @@ namespace OutlookExamplesCS4
         public void RunExample()
         {
             // start outlook by trying to access running application first
-            Outlook.Application outlookApplication = new Outlook.Application(true);
+            // if its failed to resolve a running instance, we create a new one here
+            Outlook.Application outlookApplication = COMObject.CreateByRunningInstance<Outlook.Application>();
 
             // create a new TaskItem.
             Outlook.TaskItem newTask = outlookApplication.CreateItem(OlItemType.olTaskItem) as Outlook.TaskItem;

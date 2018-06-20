@@ -79,7 +79,7 @@ namespace OutlookExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start outlook by trying to access running application first
-            Outlook.Application outlookApplication = new Outlook.Application(true);
+            Outlook.Application outlookApplication = COMObject.CreateByRunningInstance<Outlook.Application>();
 
             // create MailItem and register close event
             Outlook.MailItem mailItem = outlookApplication.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;

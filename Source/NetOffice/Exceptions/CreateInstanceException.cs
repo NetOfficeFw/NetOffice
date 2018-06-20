@@ -6,7 +6,7 @@ using System.Text;
 namespace NetOffice.Exceptions
 {
     /// <summary>
-    /// Indicates NetOffice.Core failed to create an instance
+    /// Indicates NetOffice failed to create an instance
     /// </summary>
     public class CreateInstanceException : NetOfficeCOMException
     {

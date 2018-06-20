@@ -63,7 +63,7 @@ Public Class Example07
         Dim commandBarBtn As Office.CommandBarButton = Nothing
 
         ' start outlook
-        Dim outlookApplication = New Outlook.Application()
+        Dim outlookApplication As Outlook.Application = COMObject.CreateByRunningInstance(Of Outlook.Application)()
 
         Dim outlookNS As Outlook._NameSpace = _outlookApplication.GetNamespace("MAPI")
         Dim inboxFolder As Outlook.MAPIFolder = outlookNS.GetDefaultFolder(OlDefaultFolders.olFolderInbox)

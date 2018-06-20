@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Windows.Forms; 
 using Microsoft.Win32;
 using Extensibility;
-using System.Runtime.CompilerServices;
+using NetOffice;
 using System.Runtime.InteropServices;
 using Outlook = NetOffice.OutlookApi;
 using Office = NetOffice.OfficeApi;
@@ -28,7 +28,7 @@ namespace COMAddinRibbonExample
         {
             try
             {
-                _outlookApplication = new Outlook.Application(null, Application);
+                _outlookApplication = COMObject.Create<Outlook.Application>(Application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {

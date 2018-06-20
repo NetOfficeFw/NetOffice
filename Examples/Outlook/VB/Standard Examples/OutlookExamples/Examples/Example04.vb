@@ -10,7 +10,7 @@ Public Class Example04
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start outlook by trying to access running application first
-        Dim outlookApplication = New Outlook.Application(True)
+        Dim outlookApplication As Outlook.Application = COMObject.CreateByRunningInstance(Of Outlook.Application)()
 
         ' SendAndReceive is supported from Outlooks 2007 or higher. we check at runtime the feature is available
         If outlookApplication.Session.EntityIsAvailable("SendAndReceive") Then

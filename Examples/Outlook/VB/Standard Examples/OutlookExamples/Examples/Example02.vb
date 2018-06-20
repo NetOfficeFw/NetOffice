@@ -10,7 +10,7 @@ Public Class Example02
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start outlook by trying to access running application first
-        Dim outlookApplication = New Outlook.Application(True)
+        Dim outlookApplication As Outlook.Application = COMObject.CreateByRunningInstance(Of Outlook.Application)()
 
         ' Create a new TaskItem
         Dim newTask As Outlook.TaskItem = outlookApplication.CreateItem(OlItemType.olTaskItem)

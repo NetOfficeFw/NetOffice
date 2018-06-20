@@ -317,6 +317,53 @@ namespace NetOffice
         #region Methods
 
         /// <summary>
+        /// Creates a new instance of T by trying to find a running instance first.
+        /// If its failed to find a running proxy, its create a new instance by given ProgId or using the registered default ProgId. 
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="options">optional create options</param>
+        /// <param name="progId">optional custom progid or null/nothing/empty to use registered progid of T</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        /// <exception cref="ArgumentException">T does not support ComProgIdAttribute and given progId is missing or invalid</exception>
+        public static T CreateByRunningInstance<T>(COMObjectCreateOptions options = COMObjectCreateOptions.None, string progId = null) where T : class, ICOMObject
+        {
+            T result = default(T);
+
+            Core factory = options == COMObjectCreateOptions.CreateNewCore ? new Core() : Core.Default;
+            string targetProgId = String.IsNullOrWhiteSpace(progId) ? progId : String.Empty;
+            if (String.IsNullOrWhiteSpace(targetProgId))
+            {
+                var attribute = AttributeExtensions.GetCustomAttribute<ComProgIdAttribute>(typeof(T), true);
+                if (null == attribute)
+                    throw new ArgumentException("The result type doesnt support ComProgIdAttribute and given ProgId is missing.");
+                targetProgId = attribute.Value;
+            }
+
+            if (ComProgIdAttribute.ValidNonVersionedSignature(targetProgId))
+                throw new ArgumentException("ProgId signature missmatch.");
+
+            try
+            {
+                object comProxy = ProxyService.GetActiveInstance(ComProgIdAttribute.Component(targetProgId), ComProgIdAttribute.Type(targetProgId), false);
+                if (null != comProxy)
+                {
+                    result = Create<T>(comProxy, options);
+                }
+                else
+                {
+                    result = CreateByProgId<T>(factory, targetProgId);
+                }
+
+                return result;
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
+
+        /// <summary>
         /// Creates a new instance of T by using the registered default ProgId. 
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
@@ -457,6 +504,45 @@ namespace NetOffice
                 if (null != init)
                 {
                     init.InitializeCOMObject(factory, progId.Value);
+                }
+
+                result = (T)factory.InternalObjectActivator.TryReplaceInstance(null, result);
+
+                return result;
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
+
+        /// <summary>
+        /// Creates a new instance of T by using the registered default ProgId.
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="factory">affected netoffice core</param>
+        /// <param name="progId">progId as any</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T CreateByProgId<T>(Core factory, string progId) where T : class, ICOMObject
+        {
+            if (null == factory)
+                throw new ArgumentNullException("factory");
+            if (String.IsNullOrWhiteSpace(progId))
+                throw new ArgumentNullException("progId");
+            try
+            {
+                Type contract = typeof(T);
+                factory.CheckInitialize();
+                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(factory, contract);
+
+                T result = (T)Activator.CreateInstance(implementation);
+
+                ICOMObjectInitialize init = result as ICOMObjectInitialize;
+                if (null != init)
+                {
+                    init.InitializeCOMObject(factory, progId);
                 }
 
                 result = (T)factory.InternalObjectActivator.TryReplaceInstance(null, result);

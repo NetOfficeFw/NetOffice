@@ -60,7 +60,7 @@ Public Class Example06
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' start outlook by trying to access running application first
-        Dim outlookApplication = New Outlook.Application(True)
+        Dim outlookApplication As Outlook.Application = COMObject.CreateByRunningInstance(Of Outlook.Application)()
 
         ' we register some events. note: the event trigger was called from word, means an other Thread
         Dim mailItem As Outlook.MailItem = outlookApplication.CreateItem(OlItemType.olMailItem)

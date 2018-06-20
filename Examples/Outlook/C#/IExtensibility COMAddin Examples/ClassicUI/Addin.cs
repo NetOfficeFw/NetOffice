@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using Extensibility;
-using System.Runtime.CompilerServices;
+using NetOffice;
 using System.Runtime.InteropServices;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
@@ -31,11 +31,18 @@ namespace COMAddinClassicExampleCS4
 
         #region IDTExtensibility2 Members
          
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Application"></param>
+        /// <param name="ConnectMode"></param>
+        /// <param name="AddInInst"></param>
+        /// <param name="custom"></param>
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
-                _outlookApplication = new Outlook.Application(null, Application);
+                _outlookApplication = COMObject.Create<Outlook.Application>(Application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {

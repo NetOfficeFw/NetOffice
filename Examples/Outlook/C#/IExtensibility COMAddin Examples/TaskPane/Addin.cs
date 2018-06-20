@@ -5,7 +5,7 @@ using System.Reflection;
 using Microsoft.Win32;
 using System.Windows.Forms;
 using Extensibility;
-using System.Runtime.CompilerServices;
+using NetOffice;
 using System.Runtime.InteropServices;
 using Outlook = NetOffice.OutlookApi;
 using Office = NetOffice.OfficeApi;
@@ -33,7 +33,7 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_outlookApplication, CTPFactoryInst);
+                Office.ICTPFactory ctpFactory = COMObject.CreateFromParent<Office.ICTPFactory>(_outlookApplication, CTPFactoryInst);
                 Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(CS4)", Type.Missing);
                 taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
                 taskPane.Width = 300;
@@ -56,7 +56,7 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                _outlookApplication = new Outlook.Application(null, Application);
+                _outlookApplication = COMObject.Create<Outlook.Application>(Application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {

@@ -42,7 +42,7 @@ Public Class Example03
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' start outlook by trying to access running application first
-        Dim outlookApplication = New Outlook.Application(True)
+        Dim outlookApplication As Outlook.Application = COMObject.CreateByRunningInstance(Of Outlook.Application)()
 
         ' Create a new MailItem.
         Dim mailItem As Outlook.MailItem = outlookApplication.CreateItem(OlItemType.olMailItem)

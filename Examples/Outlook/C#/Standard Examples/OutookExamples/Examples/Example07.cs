@@ -73,7 +73,7 @@ namespace OutlookExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start outlook
-            _outlookApplication = new Outlook.Application();
+            _outlookApplication = COMObject.CreateByRunningInstance<Outlook.Application>();
 
             Office.CommandBar commandBar = null;
             Office.CommandBarButton commandBarBtn = null;

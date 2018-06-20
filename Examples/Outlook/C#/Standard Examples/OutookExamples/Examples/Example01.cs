@@ -62,8 +62,8 @@ namespace OutlookExamplesCS4
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start outlook by trying to access running application first
-            Outlook.Application outlookApplication = new Outlook.Application(true);
-            
+            Outlook.Application outlookApplication = COMObject.Create<Outlook.Application>();
+
             // get inbox 
             Outlook._NameSpace outlookNS = outlookApplication.GetNamespace("MAPI");
             Outlook.MAPIFolder inboxFolder = outlookNS.GetDefaultFolder(OlDefaultFolders.olFolderInbox);

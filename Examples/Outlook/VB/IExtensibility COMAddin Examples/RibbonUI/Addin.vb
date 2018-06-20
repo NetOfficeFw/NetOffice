@@ -24,7 +24,7 @@ Public Class Addin
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
 
-            _outlookApplication = New Outlook.Application(Nothing, Application)
+            _outlookApplication = COMObject.Create(Of Outlook.Application)(Application, COMObjectCreateOptions.CreateNewCore)
 
         Catch ex As Exception
 

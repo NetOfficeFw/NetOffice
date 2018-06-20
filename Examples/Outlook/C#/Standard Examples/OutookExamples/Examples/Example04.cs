@@ -14,7 +14,7 @@ namespace OutlookExamplesCS4
         public void RunExample()
         {
             // start outlook by trying to access running application first
-            Outlook.Application outlookApplication = new Outlook.Application(true);
+            Outlook.Application outlookApplication = COMObject.CreateByRunningInstance<Outlook.Application>();
 
             // SendAndReceive is supported from Outlook 2007 or higher
             // we check at runtime the feature is available

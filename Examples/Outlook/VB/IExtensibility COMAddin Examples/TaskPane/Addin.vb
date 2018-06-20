@@ -1,6 +1,6 @@
-﻿Imports System.Runtime.CompilerServices
-Imports System.Runtime.InteropServices
+﻿Imports System.Runtime.InteropServices
 Imports Microsoft.Win32
+Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OutlookApi.Enums
@@ -30,7 +30,7 @@ Public Class Addin
 
         Try
 
-            Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_outlookApplication, CTPFactoryInst)
+            Dim ctpFactory As Office.ICTPFactory = COMObject.CreateFromParent(Of Office.ICTPFactory)(_outlookApplication, CTPFactoryInst)
             Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(VB4)", Type.Missing)
             taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
             taskPane.Width = 300
@@ -55,7 +55,7 @@ Public Class Addin
 
         Try
 
-            _outlookApplication = New Outlook.Application(Nothing, Application)
+            _outlookApplication = COMObject.Create(Of Outlook.Application)(Application, COMObjectCreateOptions.CreateNewCore)
 
         Catch ex As Exception
 
