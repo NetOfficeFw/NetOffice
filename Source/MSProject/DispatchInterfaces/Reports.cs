@@ -13,7 +13,7 @@ namespace NetOffice.MSProjectApi
 	/// SupportByVersion MSProject, 11
 	/// </summary>
 	[SupportByVersion("MSProject", 11)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("FF59CFBA-CB6F-4B92-A7D2-97D1CAB6EBFF")]
 	public interface Reports : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.Report>
 	{
@@ -75,6 +75,16 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersion("MSProject", 11)]
 		bool IsPresent(string name);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.Report>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11
+        /// </summary>
+        [SupportByVersion("MSProject", 11)]
+        new IEnumerator<NetOffice.MSProjectApi.Report> GetEnumerator();
+
+        #endregion
+    }
 }

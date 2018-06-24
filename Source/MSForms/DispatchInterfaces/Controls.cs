@@ -13,7 +13,7 @@ namespace NetOffice.MSFormsApi
 	/// SupportByVersion MSForms, 2
 	/// </summary>
 	[SupportByVersion("MSForms", 2)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSForms", 2), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("04598FC7-866C-11CF-AB7C-00AA00C08FCF")]
 	public interface Controls : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<object>
 	{
@@ -182,6 +182,16 @@ namespace NetOffice.MSFormsApi
 		[SupportByVersion("MSForms", 2)]
 		void Remove(object varg);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion MSForms, 2
+        /// </summary>
+        [SupportByVersion("MSForms", 2)]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

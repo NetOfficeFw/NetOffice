@@ -14,7 +14,7 @@ namespace NetOffice.MSProjectApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920590(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11, 12, 14), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("9DBAEC97-ADA1-4488-8845-818E734F182E")]
 	public interface Exceptions : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.Exception>
 	{
@@ -188,6 +188,16 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersion("MSProject", 11,12,14)]
 		NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition, object monthItem, object month);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.Exception>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
+        new IEnumerator<NetOffice.MSProjectApi.Exception> GetEnumerator();
+
+        #endregion
+    }
 }

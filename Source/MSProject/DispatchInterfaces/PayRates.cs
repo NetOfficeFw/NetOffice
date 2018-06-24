@@ -14,7 +14,7 @@ namespace NetOffice.MSProjectApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920650(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11, 12, 14), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000C0C57-0000-0000-C000-000000000046")]
 	public interface PayRates : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.PayRate>
 	{
@@ -91,6 +91,16 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersion("MSProject", 11,12,14)]
 		NetOffice.MSProjectApi.PayRate Add(object effectiveDate, object stdRate, object ovtRate);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.PayRate>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
+        new IEnumerator<NetOffice.MSProjectApi.PayRate> GetEnumerator();
+
+        #endregion
+    }
 }

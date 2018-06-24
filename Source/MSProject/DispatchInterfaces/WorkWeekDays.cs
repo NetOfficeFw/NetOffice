@@ -14,7 +14,7 @@ namespace NetOffice.MSProjectApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920778(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11, 12, 14), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("1F4F463F-EB4B-4D2E-86ED-61A9CFA41E89")]
 	public interface WorkWeekDays : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.WorkWeekDay>
 	{
@@ -50,7 +50,16 @@ namespace NetOffice.MSProjectApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.MSProjectApi.WorkWeekDay this[object index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.MSProjectApi.WorkWeekDay>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
+        new IEnumerator<NetOffice.MSProjectApi.WorkWeekDay> GetEnumerator();
+
+        #endregion
+    }
 }

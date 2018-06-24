@@ -13,7 +13,7 @@ namespace NetOffice.MSProjectApi
 	/// SupportByVersion MSProject, 11
 	/// </summary>
 	[SupportByVersion("MSProject", 11)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("C6984804-2C4D-4874-B69F-C14BF97C0BF1")]
 	public interface Shapes : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.Shape>
 	{
@@ -328,6 +328,16 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersion("MSProject", 11)]
 		NetOffice.MSProjectApi.Shape AddTable(Int32 numRows, Int32 numColumns, Single left, Single top, Single width, Single height);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.Shape>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11
+        /// </summary>
+        [SupportByVersion("MSProject", 11)]
+        new IEnumerator<NetOffice.MSProjectApi.Shape> GetEnumerator();
+
+        #endregion
+    }
 }

@@ -12,8 +12,7 @@ namespace NetOffice.MSProjectApi.Behind
 	/// <summary>
 	/// DispatchInterface Reports 
 	/// SupportByVersion MSProject, 11
-	/// </summary>	[SupportByVersion("MSProject", 11)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class Reports : COMObject, NetOffice.MSProjectApi.Reports
 	{
 		#pragma warning disable

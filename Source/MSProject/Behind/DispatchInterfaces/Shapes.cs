@@ -12,8 +12,7 @@ namespace NetOffice.MSProjectApi.Behind
 	/// <summary>
 	/// DispatchInterface Shapes 
 	/// SupportByVersion MSProject, 11
-	/// </summary>	[SupportByVersion("MSProject", 11)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class Shapes : COMObject, NetOffice.MSProjectApi.Shapes
 	{
 		#pragma warning disable

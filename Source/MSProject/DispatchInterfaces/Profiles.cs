@@ -14,7 +14,7 @@ namespace NetOffice.MSProjectApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920661(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11, 12, 14), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("08CD6DE7-87CD-42AB-BD28-6E2C0170A274")]
 	public interface Profiles : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.Profile>
 	{
@@ -83,6 +83,16 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersion("MSProject", 11,12,14)]
 		NetOffice.MSProjectApi.Profile Add(string name, string server, object loginType);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.Profile>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
+        new IEnumerator<NetOffice.MSProjectApi.Profile> GetEnumerator();
+
+        #endregion
+    }
 }

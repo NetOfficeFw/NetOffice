@@ -14,7 +14,7 @@ namespace NetOffice.MSProjectApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920625(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11, 12, 14), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("DA33F25E-AD36-48B9-9CB6-CDB0CF6EE070")]
 	public interface LookupTable : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.LookupTableEntry>
 	{
@@ -70,6 +70,16 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersion("MSProject", 11,12,14)]
 		NetOffice.MSProjectApi.LookupTableEntry AddChild(string name);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.LookupTableEntry>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 12, 14)]
+        new IEnumerator<NetOffice.MSProjectApi.LookupTableEntry> GetEnumerator();
+
+        #endregion
+    }
 }

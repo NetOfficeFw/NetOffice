@@ -12,9 +12,8 @@ namespace NetOffice.MSProjectApi.Behind
 	/// <summary>
 	/// DispatchInterface WorkWeekDays 
 	/// SupportByVersion MSProject, 11,12,14
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920778(v=office.14).aspx </remarks>
-	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920778(v=office.14).aspx </remarks>
 	public class WorkWeekDays : COMObject, NetOffice.MSProjectApi.WorkWeekDays
 	{
 		#pragma warning disable

@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel, 14,15,16
         /// </summary>
         [SupportByVersion("Excel", 14, 15, 16)]
-        new IEnumerator<NetOffice.ExcelApi.FileExportConverter> GetEnumerator()
+        new IEnumerator<NetOffice.ExcelApi.FileExportConverter> GetEnumerator();
 
         #endregion
     }

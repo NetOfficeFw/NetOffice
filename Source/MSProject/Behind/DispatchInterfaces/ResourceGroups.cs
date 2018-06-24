@@ -12,9 +12,8 @@ namespace NetOffice.MSProjectApi.Behind
 	/// <summary>
 	/// DispatchInterface ResourceGroups 
 	/// SupportByVersion MSProject, 11,12,14
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920679(v=office.14).aspx </remarks>
-	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920679(v=office.14).aspx </remarks>
 	public class ResourceGroups : COMObject, NetOffice.MSProjectApi.ResourceGroups
 	{
 		#pragma warning disable

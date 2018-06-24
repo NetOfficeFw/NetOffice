@@ -13,7 +13,7 @@ namespace NetOffice.MSProjectApi
 	/// SupportByVersion MSProject, 11
 	/// </summary>
 	[SupportByVersion("MSProject", 11)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("F7F947D7-DDA9-47CB-842E-7DE3927F1A68")]
 	public interface ShapeRange : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.Shape>
 	{
@@ -617,6 +617,17 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersion("MSProject", 11)]
 		void MergeShapes(NetOffice.OfficeApi.Enums.MsoMergeCmd mergeCmd);
 
-		#endregion
-	}
+        #endregion
+
+
+        #region IEnumerable<NetOffice.MSProjectApi.Shape>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11
+        /// </summary>
+        [SupportByVersion("MSProject", 11)]
+        new IEnumerator<NetOffice.MSProjectApi.Shape> GetEnumerator();
+
+        #endregion
+    }
 }

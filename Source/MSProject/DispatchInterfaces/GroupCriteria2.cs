@@ -14,7 +14,7 @@ namespace NetOffice.MSProjectApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920608(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "MSProject", 11, 14), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("11589056-69F0-11D2-B889-00C04FB90729")]
 	public interface GroupCriteria2 : ICOMObject, IEnumerableProvider<NetOffice.MSProjectApi.GroupCriterion2>
 	{
@@ -416,6 +416,16 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersion("MSProject", 11,14)]
 		NetOffice.MSProjectApi.GroupCriterion2 AddEx(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic, object fontUnderLine, object fontColor, object cellColor, object pattern, object groupOn, object startAt);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.MSProjectApi.GroupCriterion2>
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,14
+        /// </summary>
+        [SupportByVersion("MSProject", 11, 14)]
+        new IEnumerator<NetOffice.MSProjectApi.GroupCriterion2> GetEnumerator();
+
+        #endregion
+    }
 }

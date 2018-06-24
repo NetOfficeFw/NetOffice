@@ -12,8 +12,7 @@ namespace NetOffice.MSFormsApi.Behind
 	/// <summary>
 	/// DispatchInterface Tabs 
 	/// SupportByVersion MSForms, 2
-	/// </summary>	[SupportByVersion("MSForms", 2)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class Tabs : COMObject, NetOffice.MSFormsApi.Tabs
 	{
 		#pragma warning disable

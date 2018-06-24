@@ -12,9 +12,8 @@ namespace NetOffice.MSProjectApi.Behind
 	/// <summary>
 	/// DispatchInterface List 
 	/// SupportByVersion MSProject, 11,12,14
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920623(v=office.14).aspx </remarks>
-	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920623(v=office.14).aspx </remarks>
 	public class List : COMObject, NetOffice.MSProjectApi.List
 	{
 		#pragma warning disable
