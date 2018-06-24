@@ -13,7 +13,7 @@ namespace NetOffice.WordApi
 	/// SupportByVersion Word, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000209EA-0000-0000-C000-000000000046")]
 	public interface DiagramNodeChildren : ICOMObject, IEnumerableProvider<NetOffice.WordApi.DiagramNode>
 	{
@@ -103,6 +103,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		void SelectAll();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.DiagramNode>
+
+        /// <summary>
+        /// SupportByVersion Word, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.DiagramNode> GetEnumerator();
+
+        #endregion
+    }
 }

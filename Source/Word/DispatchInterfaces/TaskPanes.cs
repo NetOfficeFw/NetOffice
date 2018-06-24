@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835773.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("E6AAEC05-E543-4085-BA92-9BF7D2474F5C")]
 	public interface TaskPanes : ICOMObject, IEnumerableProvider<NetOffice.WordApi.TaskPane>
 	{
@@ -65,6 +65,16 @@ namespace NetOffice.WordApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.WordApi.TaskPane this[NetOffice.WordApi.Enums.WdTaskPanes index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.TaskPane>
+
+        /// <summary>
+        /// SupportByVersion Word, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.TaskPane> GetEnumerator();
+
+        #endregion
+    }
 }

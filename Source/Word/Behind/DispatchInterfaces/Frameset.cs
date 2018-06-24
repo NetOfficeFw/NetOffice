@@ -12,9 +12,8 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface Frameset 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838922.aspx </remarks>
-	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838922.aspx </remarks>
 	public class Frameset : COMObject, NetOffice.WordApi.Frameset
 	{
 		#pragma warning disable

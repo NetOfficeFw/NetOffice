@@ -12,9 +12,8 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface FontNames 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838724.aspx </remarks>
-	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838724.aspx </remarks>
 	public class FontNames : COMObject, NetOffice.WordApi.FontNames
 	{
 		#pragma warning disable

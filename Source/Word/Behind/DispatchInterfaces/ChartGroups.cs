@@ -12,9 +12,8 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface ChartGroups 
 	/// SupportByVersion Word, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193629.aspx </remarks>
-	[SupportByVersion("Word", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193629.aspx </remarks>
 	public class ChartGroups : COMObject, NetOffice.WordApi.ChartGroups
 	{
 		#pragma warning disable

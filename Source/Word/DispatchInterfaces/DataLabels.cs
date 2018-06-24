@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835824.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Word", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	[TypeId("D8252C5E-EB9F-4D74-AA72-C178B128FAC4")]
 	public interface DataLabels : ICOMObject, IEnumerableProvider<NetOffice.WordApi.DataLabel>
 	{
@@ -297,6 +297,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 15, 16)]
 		void Propagate(object index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.DataLabel>
+
+        /// <summary>
+        /// SupportByVersion Word, 14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.DataLabel> GetEnumerator();
+
+        #endregion
+    }
 }

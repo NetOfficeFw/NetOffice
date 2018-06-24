@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837731.aspx </remarks>
 	[SupportByVersion("Word", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("7D0F7985-68D9-4D93-91CB-8109280E76CC")]
 	public interface Rectangles : ICOMObject, IEnumerableProvider<NetOffice.WordApi.Rectangle>
 	{
@@ -65,6 +65,16 @@ namespace NetOffice.WordApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.WordApi.Rectangle this[Int32 index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.Rectangle>
+
+        /// <summary>
+        /// SupportByVersion Word, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.Rectangle> GetEnumerator();
+
+        #endregion
+    }
 }

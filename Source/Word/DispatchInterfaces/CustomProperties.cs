@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822700.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("B923FDE1-F08C-11D3-91B0-00105A0A19FD")]
 	public interface CustomProperties : ICOMObject, IEnumerableProvider<NetOffice.WordApi.CustomProperty>
 	{
@@ -74,6 +74,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		NetOffice.WordApi.CustomProperty Add(string name, string value);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.CustomProperty>
+
+        /// <summary>
+        /// SupportByVersion Word, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.CustomProperty> GetEnumerator();
+
+        #endregion
+    }
 }

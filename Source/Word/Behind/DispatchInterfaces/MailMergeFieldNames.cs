@@ -12,9 +12,8 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface MailMergeFieldNames 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196427.aspx </remarks>
-	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196427.aspx </remarks>
 	public class MailMergeFieldNames : COMObject, NetOffice.WordApi.MailMergeFieldNames
 	{
 		#pragma warning disable

@@ -12,9 +12,8 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface Tables 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845117.aspx </remarks>
-	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845117.aspx </remarks>
 	public class Tables : COMObject, NetOffice.WordApi.Tables
 	{
 		#pragma warning disable

@@ -12,9 +12,8 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface ProtectedViewWindows 
 	/// SupportByVersion Word, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197163.aspx </remarks>
-	[SupportByVersion("Word", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197163.aspx </remarks>
 	public class ProtectedViewWindows : COMObject, NetOffice.WordApi.ProtectedViewWindows
 	{
 		#pragma warning disable

@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840595.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Word", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("6E47678B-A879-4E56-8698-3B7CF169FAD4")]
 	public interface Categories : ICOMObject, IEnumerableProvider<NetOffice.WordApi.Category>
 	{
@@ -65,6 +65,18 @@ namespace NetOffice.WordApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.WordApi.Category this[object index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.Category>
+
+        /// <summary>
+        /// SupportByVersion Word, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.WordApi.Category> GetEnumerator();
+
+        #endregion
+    }
 }

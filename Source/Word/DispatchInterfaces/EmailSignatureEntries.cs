@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194538.aspx </remarks>
 	[SupportByVersion("Word", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000209E5-0000-0000-C000-000000000046")]
 	public interface EmailSignatureEntries : ICOMObject, IEnumerableProvider<NetOffice.WordApi.EmailSignatureEntry>
 	{
@@ -74,6 +74,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		NetOffice.WordApi.EmailSignatureEntry Add(string name, NetOffice.WordApi.Range range);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.EmailSignatureEntry>
+
+        /// <summary>
+        /// SupportByVersion Word, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.EmailSignatureEntry> GetEnumerator();
+        
+        #endregion
+    }
 }

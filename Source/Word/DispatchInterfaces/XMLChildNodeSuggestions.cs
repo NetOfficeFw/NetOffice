@@ -13,7 +13,7 @@ namespace NetOffice.WordApi
 	/// SupportByVersion Word, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Word", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("DE63B5AC-CA4F-46FE-9184-A5719AB9ED5B")]
 	public interface XMLChildNodeSuggestions : ICOMObject, IEnumerableProvider<NetOffice.WordApi.XMLChildNodeSuggestion>
 	{
@@ -60,6 +60,16 @@ namespace NetOffice.WordApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.WordApi.XMLChildNodeSuggestion this[object index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.XMLChildNodeSuggestion>
+
+        /// <summary>
+        /// SupportByVersion Word, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.XMLChildNodeSuggestion> GetEnumerator();
+
+        #endregion
+    }
 }

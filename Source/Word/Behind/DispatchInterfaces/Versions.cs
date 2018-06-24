@@ -12,8 +12,7 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface Versions 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class Versions : COMObject, NetOffice.WordApi.Versions
 	{
 		#pragma warning disable
@@ -133,7 +132,6 @@ namespace NetOffice.WordApi.Behind
 
 		#endregion
 
-		
         #region Methods
 
 		/// <summary>
@@ -171,6 +169,7 @@ namespace NetOffice.WordApi.Behind
 		}
 
         #endregion
+    
         #region IEnumerableProvider<NetOffice.WordApi.Version>
 
         ICOMObject IEnumerableProvider<NetOffice.WordApi.Version>.GetComObjectEnumerator(ICOMObject parent)

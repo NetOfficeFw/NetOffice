@@ -12,9 +12,8 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface FullSeriesCollection 
 	/// SupportByVersion Word, 15, 16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231236.aspx </remarks>
-	[SupportByVersion("Word", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231236.aspx </remarks>
 	public class FullSeriesCollection : COMObject, NetOffice.WordApi.FullSeriesCollection
 	{
 		#pragma warning disable

@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837857.aspx </remarks>
 	[SupportByVersion("Word", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("D36C1F42-7044-4B9E-9CA3-85919454DB04")]
 	public interface XMLNodes : ICOMObject, IEnumerableProvider<NetOffice.WordApi.XMLNode>
 	{
@@ -83,6 +83,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 11,12,14,15,16)]
 		NetOffice.WordApi.XMLNode Add(string name, string _namespace);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.XMLNode>
+
+        /// <summary>
+        /// SupportByVersion Word, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.XMLNode> GetEnumerator();
+
+        #endregion
+    }
 }

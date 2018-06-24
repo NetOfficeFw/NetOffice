@@ -12,8 +12,7 @@ namespace NetOffice.WordApi.Behind
 	/// <summary>
 	/// DispatchInterface DiagramNodes 
 	/// SupportByVersion Word, 10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Word", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class DiagramNodes : COMObject, NetOffice.WordApi.DiagramNodes
 	{
 		#pragma warning disable

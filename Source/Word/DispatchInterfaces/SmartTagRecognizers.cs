@@ -13,7 +13,7 @@ namespace NetOffice.WordApi
 	/// SupportByVersion Word, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Word", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("F2B60A10-DED5-46FB-A914-3C6F4EBB6451")]
 	public interface SmartTagRecognizers : ICOMObject, IEnumerableProvider<NetOffice.WordApi.SmartTagRecognizer>
 	{
@@ -66,6 +66,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 11,12,14,15,16)]
 		void ReloadRecognizers();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.SmartTagRecognizer>
+
+        /// <summary>
+        /// SupportByVersion Word, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.SmartTagRecognizer> GetEnumerator();
+
+        #endregion
+    }
 }

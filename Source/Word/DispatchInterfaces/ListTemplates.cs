@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196561.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("00020990-0000-0000-C000-000000000046")]
 	public interface ListTemplates : ICOMObject, IEnumerableProvider<NetOffice.WordApi.ListTemplate>
 	{
@@ -91,6 +91,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		NetOffice.WordApi.ListTemplate Add(object outlineNumbered);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.ListTemplate>
+
+        /// <summary>
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.ListTemplate> GetEnumerator();
+
+        #endregion
+    }
 }

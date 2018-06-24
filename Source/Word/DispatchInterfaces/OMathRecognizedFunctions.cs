@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839421.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("44FEE887-6600-41AB-95A5-DE33C605116C")]
 	public interface OMathRecognizedFunctions : ICOMObject, IEnumerableProvider<NetOffice.WordApi.OMathRecognizedFunction>
 	{
@@ -73,6 +73,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 12,14,15,16)]
 		NetOffice.WordApi.OMathRecognizedFunction Add(string name);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.OMathRecognizedFunction>
+
+        /// <summary>
+        /// SupportByVersion Word, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.OMathRecognizedFunction> GetEnumerator();
+
+        #endregion
+    }
 }

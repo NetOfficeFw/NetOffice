@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197163.aspx </remarks>
 	[SupportByVersion("Word", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Word", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("FD0A74E8-C719-49F6-BA1B-F6D9839D1AB9")]
 	public interface ProtectedViewWindows : ICOMObject, IEnumerableProvider<NetOffice.WordApi.ProtectedViewWindow>
 	{
@@ -119,6 +119,16 @@ namespace NetOffice.WordApi
 		[SupportByVersion("Word", 14,15,16)]
 		NetOffice.WordApi.ProtectedViewWindow Open(object fileName, object addToRecentFiles, object passwordDocument, object visible);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.WordApi.ProtectedViewWindow>
+
+        /// <summary>
+        /// SupportByVersion Word, 14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 14, 15, 16)]
+        new IEnumerator<NetOffice.WordApi.ProtectedViewWindow> GetEnumerator();
+
+        #endregion
+    }
 }
