@@ -14,7 +14,7 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868574.aspx </remarks>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Outlook", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("0006303E-0000-0000-C000-000000000046")]
 	public interface Actions : ICOMObject, IEnumerableProvider<NetOffice.OutlookApi.Action>
 	{
@@ -90,6 +90,18 @@ namespace NetOffice.OutlookApi
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		void Remove(Int32 index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.Action>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OutlookApi.Action> GetEnumerator();
+
+        #endregion
+    }
 }

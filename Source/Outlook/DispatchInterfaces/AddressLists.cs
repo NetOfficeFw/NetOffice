@@ -14,7 +14,7 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868743.aspx </remarks>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Outlook", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("00063048-0000-0000-C000-000000000046")]
 	public interface AddressLists : ICOMObject, IEnumerableProvider<NetOffice.OutlookApi.AddressList>
 	{
@@ -75,6 +75,18 @@ namespace NetOffice.OutlookApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.OutlookApi.AddressList this[object index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.AddressList>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OutlookApi.AddressList> GetEnumerator();
+
+        #endregion
+    }
 }

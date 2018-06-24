@@ -13,8 +13,6 @@ namespace NetOffice.OutlookApi.Behind
 	/// DispatchInterface _SimpleItems 
 	/// SupportByVersion Outlook, 14,15,16
 	/// </summary>
-	[SupportByVersion("Outlook", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _SimpleItems : COMObject, NetOffice.OutlookApi._SimpleItems
 	{
 		#pragma warning disable

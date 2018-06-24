@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom, "Outlook", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("00063102-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OutlookApi.SimpleItems))]
     public interface _SimpleItems : ICOMObject, IEnumerableProvider<object>
@@ -75,6 +75,18 @@ namespace NetOffice.OutlookApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		object this[object index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

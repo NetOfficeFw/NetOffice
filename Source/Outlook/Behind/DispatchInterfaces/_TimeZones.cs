@@ -13,8 +13,6 @@ namespace NetOffice.OutlookApi.Behind
 	/// DispatchInterface _TimeZones 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _TimeZones : COMObject, NetOffice.OutlookApi._TimeZones
 	{
 		#pragma warning disable

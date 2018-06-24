@@ -14,8 +14,6 @@ namespace NetOffice.OutlookApi.Behind
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869772.aspx </remarks>
-	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class Pages : COMObject, NetOffice.OutlookApi.Pages
 	{
 		#pragma warning disable

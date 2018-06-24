@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Outlook", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("00063074-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OutlookApi.OutlookBarShortcuts))]
     public interface _OutlookBarShortcuts : ICOMObject, IEnumerableProvider<NetOffice.OutlookApi.OutlookBarShortcut>
@@ -103,6 +103,18 @@ namespace NetOffice.OutlookApi
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		void Remove(object index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.OutlookBarShortcut>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OutlookApi.OutlookBarShortcut> GetEnumerator();
+
+        #endregion
+    }
 }

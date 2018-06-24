@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Outlook", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000630B1-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OutlookApi.Reminders))]
     public interface _Reminders : ICOMObject, IEnumerableProvider<NetOffice.OutlookApi._Reminder>
@@ -84,6 +84,16 @@ namespace NetOffice.OutlookApi
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		void Remove(object index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi._Reminder>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OutlookApi._Reminder> GetEnumerator();
+
+        #endregion
+    }
 }

@@ -12,8 +12,7 @@ namespace NetOffice.OutlookApi.Behind
 	/// <summary>
 	/// DispatchInterface _Explorers 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class _Explorers : COMObject, NetOffice.OutlookApi._Explorers
 	{
 		#pragma warning disable

@@ -14,8 +14,6 @@ namespace NetOffice.OutlookApi.Behind
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865992.aspx </remarks>
-	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class Panes : COMObject, NetOffice.OutlookApi.Panes
 	{
 		#pragma warning disable
@@ -172,7 +170,7 @@ namespace NetOffice.OutlookApi.Behind
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16
@@ -189,7 +187,7 @@ namespace NetOffice.OutlookApi.Behind
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16

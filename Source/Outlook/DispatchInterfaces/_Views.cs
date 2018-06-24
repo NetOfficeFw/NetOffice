@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Outlook", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("0006308D-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OutlookApi.Views))]
     public interface _Views : ICOMObject, IEnumerableProvider<NetOffice.OutlookApi.View>
@@ -103,6 +103,16 @@ namespace NetOffice.OutlookApi
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		void Remove(object index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi.View>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.OutlookApi.View> GetEnumerator();
+
+        #endregion
+    }
 }

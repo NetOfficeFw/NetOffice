@@ -12,8 +12,7 @@ namespace NetOffice.OutlookApi.Behind
 	/// <summary>
 	/// DispatchInterface _OutlookBarGroups 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class _OutlookBarGroups : COMObject, NetOffice.OutlookApi._OutlookBarGroups
 	{
 		#pragma warning disable

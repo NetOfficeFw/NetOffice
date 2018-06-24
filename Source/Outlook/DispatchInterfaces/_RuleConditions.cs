@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Outlook", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000630D8-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OutlookApi.RuleConditions))]
     public interface _RuleConditions : ICOMObject, IEnumerableProvider<NetOffice.OutlookApi._RuleCondition>
@@ -276,6 +276,18 @@ namespace NetOffice.OutlookApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.OutlookApi._RuleCondition this[Int32 index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi._RuleCondition>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OutlookApi._RuleCondition> GetEnumerator();
+
+        #endregion
+    }
 }

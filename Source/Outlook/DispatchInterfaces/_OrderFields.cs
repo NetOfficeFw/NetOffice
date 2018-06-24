@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Outlook", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("0006309A-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OutlookApi.OrderFields))]
     public interface _OrderFields : ICOMObject, IEnumerableProvider<NetOffice.OutlookApi._OrderField>
@@ -129,6 +129,18 @@ namespace NetOffice.OutlookApi
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		NetOffice.OutlookApi.OrderField Insert(string propertyName, object index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.OutlookApi._OrderField>
+
+        /// <summary>
+        /// SupportByVersion Outlook, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.OutlookApi._OrderField> GetEnumerator();
+
+        #endregion
+    }
 }

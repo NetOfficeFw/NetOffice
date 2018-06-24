@@ -13,8 +13,6 @@ namespace NetOffice.OutlookApi.Behind
 	/// DispatchInterface Selection 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860771.aspx </remarks>
-	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class Selection : COMObject, NetOffice.OutlookApi.Selection
 	{
 		#pragma warning disable

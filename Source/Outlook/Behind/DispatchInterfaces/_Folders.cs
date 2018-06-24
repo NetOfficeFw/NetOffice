@@ -13,8 +13,6 @@ namespace NetOffice.OutlookApi.Behind
 	/// DispatchInterface _Folders 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _Folders : COMObject, NetOffice.OutlookApi._Folders
 	{
 		#pragma warning disable

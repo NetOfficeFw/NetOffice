@@ -13,8 +13,6 @@ namespace NetOffice.OutlookApi.Behind
 	/// DispatchInterface _Accounts 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _Accounts : COMObject, NetOffice.OutlookApi._Accounts
 	{
 		#pragma warning disable

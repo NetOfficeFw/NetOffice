@@ -12,9 +12,8 @@ namespace NetOffice.OutlookApi.Behind
 	/// <summary>
 	/// DispatchInterface Conflicts 
 	/// SupportByVersion Outlook, 11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868978.aspx </remarks>
-	[SupportByVersion("Outlook", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868978.aspx </remarks>
 	public class Conflicts : COMObject, NetOffice.OutlookApi.Conflicts
 	{
 		#pragma warning disable
@@ -136,7 +135,6 @@ namespace NetOffice.OutlookApi.Behind
 		}
 
 		#endregion
-
 		
         #region Methods
 

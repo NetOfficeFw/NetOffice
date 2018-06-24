@@ -12,8 +12,7 @@ namespace NetOffice.OutlookApi.Behind
 	/// <summary>
 	/// DispatchInterface _Views 
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class _Views : COMObject, NetOffice.OutlookApi._Views
 	{
 		#pragma warning disable

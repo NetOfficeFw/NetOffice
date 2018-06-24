@@ -12,9 +12,8 @@ namespace NetOffice.OutlookApi.Behind
 	/// <summary>
 	/// DispatchInterface ItemProperties 
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863357.aspx </remarks>
-	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863357.aspx </remarks>
 	public class ItemProperties : COMObject, NetOffice.OutlookApi.ItemProperties
 	{
 		#pragma warning disable
