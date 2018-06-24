@@ -13,8 +13,6 @@ namespace NetOffice.VisioApi.Behind
 	/// DispatchInterface IVToolbarItems 
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class IVToolbarItems : COMObject, NetOffice.VisioApi.IVToolbarItems
 	{
 		#pragma warning disable

@@ -13,8 +13,6 @@ namespace NetOffice.VisioApi.Behind
 	/// Interface LPVISIODATACOLUMNS 
 	/// SupportByVersion Visio, 12,14,15,16
 	/// </summary>
-	[SupportByVersion("Visio", 12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class LPVISIODATACOLUMNS : COMObject, NetOffice.VisioApi.LPVISIODATACOLUMNS
 	{
 		#pragma warning disable

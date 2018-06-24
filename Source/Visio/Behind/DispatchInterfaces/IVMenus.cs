@@ -13,8 +13,6 @@ namespace NetOffice.VisioApi.Behind
 	/// DispatchInterface IVMenus 
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class IVMenus : COMObject, NetOffice.VisioApi.IVMenus
 	{
 		#pragma warning disable

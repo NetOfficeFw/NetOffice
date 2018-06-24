@@ -14,8 +14,6 @@ namespace NetOffice.VisioApi.Behind
 	/// Interface LPVISIOADDONS 
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class LPVISIOADDONS : COMObject, NetOffice.VisioApi.LPVISIOADDONS
 	{
 		#pragma warning disable

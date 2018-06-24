@@ -14,7 +14,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Visio", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000D0706-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.VisioApi.Documents))]
     public interface IVDocuments : ICOMObject, IEnumerableProvider<NetOffice.VisioApi.IVDocument>
@@ -176,6 +176,16 @@ namespace NetOffice.VisioApi
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		NetOffice.VisioApi.IVDocument AddEx(string fileName, object measurementSystem, object flags);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVDocument>
+
+        /// <summary>
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.VisioApi.IVDocument> GetEnumerator();
+
+        #endregion
+    }
 }

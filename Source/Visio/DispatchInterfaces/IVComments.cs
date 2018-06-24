@@ -13,7 +13,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 15, 16
 	/// </summary>
 	[SupportByVersion("Visio", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Visio", 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000D0743-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.VisioApi.Comments))]
     public interface IVComments : ICOMObject, IEnumerableProvider<NetOffice.VisioApi.IVComment>
@@ -85,6 +85,16 @@ namespace NetOffice.VisioApi
 		[SupportByVersion("Visio", 15, 16)]
 		void DeleteAll();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVComment>
+
+        /// <summary>
+        /// SupportByVersion Visio, 15, 16
+        /// </summary>
+        [SupportByVersion("Visio", 15, 16)]
+        new IEnumerator<NetOffice.VisioApi.IVComment> GetEnumerator();
+
+        #endregion
+    }
 }

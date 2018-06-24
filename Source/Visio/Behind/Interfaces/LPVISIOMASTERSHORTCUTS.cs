@@ -14,8 +14,6 @@ namespace NetOffice.VisioApi.Behind
 	/// Interface LPVISIOMASTERSHORTCUTS 
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class LPVISIOMASTERSHORTCUTS : COMObject, NetOffice.VisioApi.LPVISIOMASTERSHORTCUTS
 	{
 		#pragma warning disable

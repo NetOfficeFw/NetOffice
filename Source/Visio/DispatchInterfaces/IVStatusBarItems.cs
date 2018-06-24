@@ -13,7 +13,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Visio", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000D0275-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.VisioApi.StatusBarItems))]
     public interface IVStatusBarItems : ICOMObject, IEnumerableProvider<NetOffice.VisioApi.IVStatusBarItem>
@@ -72,6 +72,16 @@ namespace NetOffice.VisioApi
 		[BaseResult]
 		NetOffice.VisioApi.IVStatusBarItem AddAt(Int32 lIndex);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVStatusBarItem>
+
+        /// <summary>
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.VisioApi.IVStatusBarItem> GetEnumerator();
+
+        #endregion
+    }
 }

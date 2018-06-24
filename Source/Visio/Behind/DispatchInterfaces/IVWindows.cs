@@ -12,8 +12,7 @@ namespace NetOffice.VisioApi.Behind
 	/// <summary>
 	/// DispatchInterface IVWindows 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// </summary>	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class IVWindows : COMObject, NetOffice.VisioApi.IVWindows
 	{
 		#pragma warning disable

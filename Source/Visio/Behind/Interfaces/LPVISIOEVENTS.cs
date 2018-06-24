@@ -12,8 +12,7 @@ namespace NetOffice.VisioApi.Behind
 	/// <summary>
 	/// Interface LPVISIOEVENTS 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// </summary>	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class LPVISIOEVENTS : COMObject, NetOffice.VisioApi.LPVISIOEVENTS
 	{
 		#pragma warning disable

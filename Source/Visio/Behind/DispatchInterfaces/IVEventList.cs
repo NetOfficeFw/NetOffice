@@ -12,8 +12,7 @@ namespace NetOffice.VisioApi.Behind
 	/// <summary>
 	/// DispatchInterface IVEventList 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// </summary>	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class IVEventList : COMObject, NetOffice.VisioApi.IVEventList
 	{
 		#pragma warning disable

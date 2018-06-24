@@ -14,7 +14,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Visio", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("00000000-0000-0000-0000-000000000000")]
 	public interface LPVISIODATARECORDSETS : ICOMObject, IEnumerableProvider<NetOffice.VisioApi.IVDataRecordset>
 	{
@@ -167,6 +167,16 @@ namespace NetOffice.VisioApi
 		[SupportByVersion("Visio", 12,14,15,16)]
 		void GetLastDataError(out Int32 dataErrorCode, out string dataErrorDescription, out Int32 recordsetID);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVDataRecordset>
+
+        /// <summary>
+        /// SupportByVersion Visio, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.VisioApi.IVDataRecordset> GetEnumerator();
+
+        #endregion
+    }
 }

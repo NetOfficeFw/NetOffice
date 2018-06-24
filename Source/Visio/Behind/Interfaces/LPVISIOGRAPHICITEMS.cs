@@ -12,8 +12,7 @@ namespace NetOffice.VisioApi.Behind
 	/// <summary>
 	/// Interface LPVISIOGRAPHICITEMS 
 	/// SupportByVersion Visio, 12,14,15,16
-	/// </summary>	[SupportByVersion("Visio", 12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class LPVISIOGRAPHICITEMS : COMObject, NetOffice.VisioApi.LPVISIOGRAPHICITEMS
 	{
 		#pragma warning disable

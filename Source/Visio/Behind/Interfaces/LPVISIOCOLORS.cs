@@ -12,8 +12,7 @@ namespace NetOffice.VisioApi.Behind
 	/// <summary>
 	/// Interface LPVISIOCOLORS 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// </summary>	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class LPVISIOCOLORS : COMObject, NetOffice.VisioApi.LPVISIOCOLORS
 	{
 		#pragma warning disable

@@ -14,7 +14,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Visio", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000D0719-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.VisioApi.Addons))]
     public interface IVAddons : ICOMObject, IEnumerableProvider<NetOffice.VisioApi.IVAddon>
@@ -96,6 +96,16 @@ namespace NetOffice.VisioApi
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		void GetNamesU(out String[] nameArray);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVAddon>
+
+        /// <summary>
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.VisioApi.IVAddon> GetEnumerator();
+
+        #endregion
+    }
 }

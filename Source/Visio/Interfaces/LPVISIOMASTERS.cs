@@ -14,7 +14,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Visio", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("00000000-0000-0000-0000-000000000000")]
 	public interface LPVISIOMASTERS : ICOMObject, IEnumerableProvider<NetOffice.VisioApi.IVMaster>
 	{
@@ -173,6 +173,16 @@ namespace NetOffice.VisioApi
 		[BaseResult]
 		NetOffice.VisioApi.IVMaster AddEx(NetOffice.VisioApi.Enums.VisMasterTypes type);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVMaster>
+
+        /// <summary>
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.VisioApi.IVMaster> GetEnumerator();
+
+        #endregion
+    }
 }

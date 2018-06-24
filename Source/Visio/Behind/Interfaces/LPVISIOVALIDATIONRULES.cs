@@ -12,8 +12,7 @@ namespace NetOffice.VisioApi.Behind
 	/// <summary>
 	/// Interface LPVISIOVALIDATIONRULES 
 	/// SupportByVersion Visio, 14,15,16
-	/// </summary>	[SupportByVersion("Visio", 14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class LPVISIOVALIDATIONRULES : COMObject, NetOffice.VisioApi.LPVISIOVALIDATIONRULES
 	{
 		#pragma warning disable

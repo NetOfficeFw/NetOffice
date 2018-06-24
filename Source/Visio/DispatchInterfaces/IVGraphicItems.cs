@@ -13,7 +13,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Visio", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000D0734-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.VisioApi.GraphicItems))]
     public interface IVGraphicItems : ICOMObject, IEnumerableProvider<NetOffice.VisioApi.IVGraphicItem>
@@ -104,6 +104,16 @@ namespace NetOffice.VisioApi
 		[BaseResult]
 		NetOffice.VisioApi.IVGraphicItem AddCopy(NetOffice.VisioApi.IVGraphicItem graphicItem);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.VisioApi.IVGraphicItem>
+
+        /// <summary>
+        /// SupportByVersion Visio, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.VisioApi.IVGraphicItem> GetEnumerator();
+
+        #endregion
+    }
 }

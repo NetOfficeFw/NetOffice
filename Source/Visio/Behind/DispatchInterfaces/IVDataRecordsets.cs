@@ -14,8 +14,6 @@ namespace NetOffice.VisioApi.Behind
 	/// DispatchInterface IVDataRecordsets 
 	/// SupportByVersion Visio, 12,14,15,16
 	/// </summary>
-	[SupportByVersion("Visio", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class IVDataRecordsets : COMObject, NetOffice.VisioApi.IVDataRecordsets
 	{
 		#pragma warning disable

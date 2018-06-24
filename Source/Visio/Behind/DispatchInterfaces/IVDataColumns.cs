@@ -13,8 +13,6 @@ namespace NetOffice.VisioApi.Behind
 	/// DispatchInterface IVDataColumns 
 	/// SupportByVersion Visio, 12,14,15,16
 	/// </summary>
-	[SupportByVersion("Visio", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class IVDataColumns : COMObject, NetOffice.VisioApi.IVDataColumns
 	{
 		#pragma warning disable
