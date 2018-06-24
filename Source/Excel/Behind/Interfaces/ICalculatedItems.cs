@@ -12,8 +12,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface ICalculatedItems 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class ICalculatedItems : COMObject, NetOffice.ExcelApi.ICalculatedItems
     {
         #pragma warning disable

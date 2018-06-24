@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface SparklineGroups 
 	/// SupportByVersion Excel, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836765.aspx </remarks>
-	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836765.aspx </remarks>
 	public class SparklineGroups : COMObject, NetOffice.ExcelApi.SparklineGroups
 	{
 		#pragma warning disable

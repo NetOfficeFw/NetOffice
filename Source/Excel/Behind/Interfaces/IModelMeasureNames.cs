@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IModelMeasureNames 
     /// SupportByVersion Excel, 15, 16
     /// </summary>
-    [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class IModelMeasureNames : COMObject, NetOffice.ExcelApi.IModelMeasureNames
     {
         #pragma warning disable

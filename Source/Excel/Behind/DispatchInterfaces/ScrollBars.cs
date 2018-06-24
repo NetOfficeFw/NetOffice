@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface ScrollBars 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	/// </summary>
 	public class ScrollBars : COMObject, NetOffice.ExcelApi.ScrollBars
 	{
 		#pragma warning disable

@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024426-0001-0000-C000-000000000046")]
     public interface IComments : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Comment>
     {
@@ -56,6 +56,16 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.ExcelApi.Comment this[Int32 index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Comment>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Comment> GetEnumerator();
 
         #endregion
     }

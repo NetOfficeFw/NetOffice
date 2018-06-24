@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface Shapes 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841148.aspx </remarks>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841148.aspx </remarks>
 	public class Shapes : COMObject, NetOffice.ExcelApi.Shapes
 	{
 		#pragma warning disable

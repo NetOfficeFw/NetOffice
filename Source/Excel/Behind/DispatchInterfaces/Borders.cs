@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface Borders 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837809.aspx </remarks>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837809.aspx </remarks>
 	public class Borders : COMObject, NetOffice.ExcelApi.Borders
 	{
 		#pragma warning disable

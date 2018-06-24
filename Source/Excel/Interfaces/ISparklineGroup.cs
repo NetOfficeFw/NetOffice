@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("000244B7-0001-0000-C000-000000000046")]
 	public interface ISparklineGroup : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Sparkline>
 	{
@@ -173,6 +173,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 14,15,16)]
 		Int32 Delete();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Sparkline>
+
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Sparkline> GetEnumerator();
+
+        #endregion
+    }
 }

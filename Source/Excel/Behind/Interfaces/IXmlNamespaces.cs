@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface IXmlNamespaces 
 	/// SupportByVersion Excel, 11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
 	public class IXmlNamespaces : COMObject, NetOffice.ExcelApi.IXmlNamespaces
 	{
 		#pragma warning disable

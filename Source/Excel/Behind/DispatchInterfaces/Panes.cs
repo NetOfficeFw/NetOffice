@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface Panes 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839227.aspx </remarks>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839227.aspx </remarks>
 	public class Panes : COMObject, NetOffice.ExcelApi.Panes
 	{
 		#pragma warning disable

@@ -87,8 +87,6 @@ namespace NetOffice.ExcelApi.Behind
     /// DispatchInterface OptionButtons 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
     public class OptionButtons : NetOffice.ExcelApi.Behind.OptionButtons_, NetOffice.ExcelApi.OptionButtons
     {
         #pragma warning disable

@@ -13,8 +13,6 @@ namespace NetOffice.OfficeApi.Behind
     /// DispatchInterface ShapeNodes 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [Duplicate("NetOffice.ExcelApi.ShapeNodes")]
     public class ShapeNodes : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ShapeNodes
     {
         #pragma warning disable

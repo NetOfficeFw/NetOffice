@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface IPivotTables 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class IPivotTables : COMObject, NetOffice.ExcelApi.IPivotTables
 	{
 		#pragma warning disable
@@ -21,7 +20,8 @@ namespace NetOffice.ExcelApi.Behind
 		#region Type Information
 
         /// <summary>
-        /// Instance Type        /// </summary>
+        /// Instance Type
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {

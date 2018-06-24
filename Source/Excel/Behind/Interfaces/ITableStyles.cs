@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface ITableStyles 
 	/// SupportByVersion Excel, 12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
 	public class ITableStyles : COMObject, NetOffice.ExcelApi.ITableStyles
 	{
 		#pragma warning disable

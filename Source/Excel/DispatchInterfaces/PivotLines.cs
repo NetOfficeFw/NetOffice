@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194540.aspx </remarks>
 	[SupportByVersion("Excel", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024481-0000-0000-C000-000000000046")]
 	public interface PivotLines : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.PivotLine>
 	{
@@ -62,7 +62,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 12,14,15,16)]
 		Int32 Count { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.ExcelApi.PivotLine>
+
+        /// <summary>
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.PivotLine> GetEnumerator();
+
+        #endregion
+    }
 }

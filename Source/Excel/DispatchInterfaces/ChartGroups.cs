@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836490.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("0002085A-0000-0000-C000-000000000046")]
 	public interface ChartGroups : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ChartGroup>
 	{
@@ -65,6 +65,16 @@ namespace NetOffice.ExcelApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.ExcelApi.ChartGroup this[object index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ChartGroup>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ChartGroup> GetEnumerator();
+
+        #endregion
+    }
 }

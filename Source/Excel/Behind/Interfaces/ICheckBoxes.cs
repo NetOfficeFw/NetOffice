@@ -87,8 +87,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface ICheckBoxes 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
     public class ICheckBoxes : NetOffice.ExcelApi.Behind.ICheckBoxes_, NetOffice.ExcelApi.ICheckBoxes
     {
         #pragma warning disable

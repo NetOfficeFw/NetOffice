@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839227.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00020894-0000-0000-C000-000000000046")]
 	public interface Panes : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Pane>
 	{
@@ -62,7 +62,18 @@ namespace NetOffice.ExcelApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.ExcelApi.Pane this[Int32 index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.ExcelApi.Pane>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.ExcelApi.Pane> GetEnumerator();
+
+        #endregion
+    }
 }

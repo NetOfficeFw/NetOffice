@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface DataLabels 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196984.aspx </remarks>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196984.aspx </remarks>
 	public class DataLabels : COMObject, NetOffice.ExcelApi.DataLabels
 	{
 		#pragma warning disable

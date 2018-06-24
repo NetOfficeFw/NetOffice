@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("0002447C-0001-0000-C000-000000000046")]
 	public interface IXmlMaps : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.XmlMap>
 	{
@@ -77,6 +77,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		NetOffice.ExcelApi.XmlMap Add(string schema);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.XmlMap>
+
+        /// <summary>
+        /// SupportByVersion Excel, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.XmlMap> GetEnumerator();
+
+        #endregion
+    }
 }

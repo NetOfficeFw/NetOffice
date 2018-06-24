@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface ISlicerCacheLevels 
     /// SupportByVersion Excel, 14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class ISlicerCacheLevels : COMObject, NetOffice.ExcelApi.ISlicerCacheLevels
     {
         #pragma warning disable

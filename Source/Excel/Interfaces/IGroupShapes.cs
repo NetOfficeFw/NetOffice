@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	[TypeId("0002443C-0001-0000-C000-000000000046")]
     public interface IGroupShapes : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Shape>
     {
@@ -76,6 +76,16 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.ExcelApi.Shape this[object index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Shape>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Shape> GetEnumerator();
 
         #endregion
     }

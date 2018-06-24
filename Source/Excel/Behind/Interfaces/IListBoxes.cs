@@ -111,8 +111,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IListBoxes 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
     public class IListBoxes : NetOffice.ExcelApi.Behind.IListBoxes_, NetOffice.ExcelApi.IListBoxes
     {
         #pragma warning disable
@@ -864,4 +862,3 @@ namespace NetOffice.ExcelApi.Behind
         #pragma warning restore
     }
 }
-

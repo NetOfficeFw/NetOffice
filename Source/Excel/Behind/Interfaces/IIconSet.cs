@@ -13,9 +13,7 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IIconSet 
     /// SupportByVersion Excel, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-    public class IIconSet : COMObject, IEnumerableProvider<NetOffice.ExcelApi.Icon>
+    public class IIconSet : COMObject, NetOffice.ExcelApi.IIconSet
     {
         #pragma warning disable
 

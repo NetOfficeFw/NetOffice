@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839966.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024430-0000-0000-C000-000000000046")]
 	public interface Hyperlinks : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Hyperlink>
 	{
@@ -118,6 +118,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		void Delete();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Hyperlink>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Hyperlink> GetEnumerator();
+
+        #endregion
+    }
 }

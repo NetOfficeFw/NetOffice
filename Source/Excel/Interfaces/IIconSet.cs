@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("0002449B-0001-0000-C000-000000000046")]
     public interface IIconSet : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Icon>
     {
@@ -63,6 +63,16 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.ExcelApi.Icon this[object index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Icon>
+
+        /// <summary>
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Icon> GetEnumerator();
 
         #endregion
     }

@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface ModelColumnChanges 
 	/// SupportByVersion Excel, 15, 16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229024.aspx </remarks>
-	[SupportByVersion("Excel", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229024.aspx </remarks>
 	public class ModelColumnChanges : COMObject, NetOffice.ExcelApi.ModelColumnChanges
 	{
 		#pragma warning disable

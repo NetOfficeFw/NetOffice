@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838667.aspx </remarks>
 	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244CC-0000-0000-C000-000000000046")]
 	public interface ProtectedViewWindows : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ProtectedViewWindow>
 	{
@@ -107,6 +107,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 14,15,16)]
 		NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ProtectedViewWindow>
+
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ProtectedViewWindow> GetEnumerator();
+
+        #endregion
+    }
 }

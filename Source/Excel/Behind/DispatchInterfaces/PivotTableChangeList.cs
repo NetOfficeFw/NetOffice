@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface PivotTableChangeList 
 	/// SupportByVersion Excel, 14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834970.aspx </remarks>
-	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834970.aspx </remarks>
 	public class PivotTableChangeList : COMObject, NetOffice.ExcelApi.PivotTableChangeList
 	{
 		#pragma warning disable

@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244CB-0001-0000-C000-000000000046")]
 	public interface ISlicerPivotTables : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.PivotTable>
 	{
@@ -75,6 +75,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 14,15,16)]
 		Int32 RemovePivotTable(object pivotTable);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.PivotTable>
+
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.PivotTable> GetEnumerator();
+
+        #endregion
+    }
 }

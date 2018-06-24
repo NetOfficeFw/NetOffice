@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00020863-0001-0000-C000-000000000046")]
     public interface IMenuBars : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.MenuBar>
     {
@@ -74,6 +74,16 @@ namespace NetOffice.ExcelApi
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         NetOffice.ExcelApi.MenuBar Add();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.MenuBar>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.MenuBar> GetEnumerator();
 
         #endregion
     }

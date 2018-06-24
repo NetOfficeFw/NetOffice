@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface CubeFields 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839259.aspx </remarks>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839259.aspx </remarks>
 	public class CubeFields : COMObject, NetOffice.ExcelApi.CubeFields
 	{
 		#pragma warning disable
@@ -192,7 +191,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IEnumerable<NetOffice.ExcelApi.CubeField> Member
+        #region IEnumerable<NetOffice.ExcelApi.CubeField>
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
@@ -207,7 +206,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16

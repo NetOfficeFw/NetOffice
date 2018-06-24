@@ -10,9 +10,6 @@ namespace NetOffice.ExcelApi.Behind
 	/// DispatchInterface DiagramNode 
 	/// SupportByVersion Excel, 10,11,12,14,15,16
 	/// </summary>
-	[SupportByVersion("Excel", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
-    [Duplicate("NetOffice.OfficeApi.DiagramNode")]
     public class DiagramNode : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.ExcelApi.DiagramNode
 	{
 		#pragma warning disable

@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("0002445F-0000-0000-C000-000000000046")]
 	public interface SmartTagActions : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.SmartTagAction>
 	{
@@ -57,7 +57,16 @@ namespace NetOffice.ExcelApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.ExcelApi.SmartTagAction this[object index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.ExcelApi.SmartTagAction>
+
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.SmartTagAction> GetEnumerator();
+
+        #endregion
+    }
 }

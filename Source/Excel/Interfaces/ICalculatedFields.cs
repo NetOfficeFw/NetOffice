@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024420-0001-0000-C000-000000000046")]
     public interface ICalculatedFields : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.PivotField>
     {
@@ -86,6 +86,16 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         NetOffice.ExcelApi.PivotField _Add(string name, string formula);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.PivotField>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.PivotField> GetEnumerator();
 
         #endregion
     }

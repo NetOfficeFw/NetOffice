@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834970.aspx </remarks>
 	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244C1-0000-0000-C000-000000000046")]
 	public interface PivotTableChangeList : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ValueChange>
 	{
@@ -111,6 +111,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 14,15,16)]
 		NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ValueChange>
+
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ValueChange> GetEnumerator();
+
+        #endregion
+    }
 }

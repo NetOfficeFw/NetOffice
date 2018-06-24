@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface DialogSheets 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
 	public class DialogSheets : COMObject, NetOffice.ExcelApi.DialogSheets
 	{
 		#pragma warning disable

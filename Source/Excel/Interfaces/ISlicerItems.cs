@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244CA-0001-0000-C000-000000000046")]
 	public interface ISlicerItems : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.SlicerItem>
 	{
@@ -57,7 +57,16 @@ namespace NetOffice.ExcelApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.ExcelApi.SlicerItem this[object index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.ExcelApi.SlicerItem>
+
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.SlicerItem> GetEnumerator();
+
+        #endregion
+    }
 }

@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface IPivotFields 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class IPivotFields : COMObject, NetOffice.ExcelApi.IPivotFields
 	{
 		#pragma warning disable

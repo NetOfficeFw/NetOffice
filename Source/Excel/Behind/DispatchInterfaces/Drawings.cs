@@ -88,8 +88,6 @@ namespace NetOffice.ExcelApi.Behind
     /// DispatchInterface Drawings 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class Drawings : NetOffice.ExcelApi.Behind.Drawings_, NetOffice.ExcelApi.Drawings
     {
         #pragma warning disable

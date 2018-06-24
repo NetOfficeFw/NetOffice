@@ -14,8 +14,6 @@ namespace NetOffice.ExcelApi.Behind
     /// SupportByVersion Excel, 14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822488.aspx </remarks>
-    [SupportByVersion("Excel", 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class SlicerCacheLevels : COMObject, NetOffice.ExcelApi.SlicerCacheLevels
     {
         #pragma warning disable

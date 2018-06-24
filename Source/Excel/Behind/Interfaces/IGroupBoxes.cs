@@ -87,8 +87,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IGroupBoxes 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class IGroupBoxes : NetOffice.ExcelApi.Behind.IGroupBoxes_, NetOffice.ExcelApi.IGroupBoxes
     {
         #pragma warning disable

@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("0002085F-0000-0000-C000-000000000046")]
 	public interface ToolbarButtons : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ToolbarButton>
 	{
@@ -159,6 +159,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ToolbarButton>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ToolbarButton> GetEnumerator();
+
+        #endregion
+    }
 }

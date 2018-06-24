@@ -13,9 +13,7 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IAllowEditRanges 
     /// SupportByVersion Excel, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-    public class IAllowEditRanges : COMObject, IEnumerableProvider<NetOffice.ExcelApi.AllowEditRange>
+    public class IAllowEditRanges : COMObject, NetOffice.ExcelApi.IAllowEditRanges
     {
         #pragma warning disable
 

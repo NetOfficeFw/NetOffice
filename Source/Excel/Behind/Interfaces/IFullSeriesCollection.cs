@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IFullSeriesCollection 
     /// SupportByVersion Excel, 15, 16
     /// </summary>
-    [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
     public class IFullSeriesCollection : COMObject, NetOffice.ExcelApi.IFullSeriesCollection
     {
         #pragma warning disable

@@ -12,7 +12,7 @@ namespace NetOffice.Attributes
     /// <summary>
     /// Known duplicate in MS-Office Automation Model
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface)]
+    [AttributeUsage(AttributeTargets.Interface)]
     public class DuplicateAttribute : System.Attribute
     {
         /// <summary>

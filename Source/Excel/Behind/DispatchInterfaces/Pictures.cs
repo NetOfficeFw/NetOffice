@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface Pictures 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class Pictures : COMObject, NetOffice.ExcelApi.Pictures
 	{
 		#pragma warning disable

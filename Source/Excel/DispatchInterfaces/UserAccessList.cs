@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835541.aspx </remarks>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("0002446C-0000-0000-C000-000000000046")]
 	public interface UserAccessList : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.UserAccess>
 	{
@@ -57,6 +57,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		void DeleteAll();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.UserAccess>
+
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.UserAccess> GetEnumerator();
+
+        #endregion
+    }
 }

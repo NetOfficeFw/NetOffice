@@ -60,7 +60,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Excel", 9, 10, 11, 12, 14, 15, 16)]
 	[TypeId("0002086F-0001-0000-C000-000000000046")]
     public interface IDrawingObjects : IDrawingObjects_, IEnumerableProvider<object>
     {
@@ -780,6 +780,16 @@ namespace NetOffice.ExcelApi
         [CustomMethod]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         object LinkCombo();
+
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<object> GetEnumerator();
 
         #endregion
     }

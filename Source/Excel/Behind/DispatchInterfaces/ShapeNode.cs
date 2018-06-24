@@ -11,9 +11,6 @@ namespace NetOffice.ExcelApi.Behind
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839015.aspx </remarks>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
-    [Duplicate("NetOffice.OfficeApi.ShapeNode")]
     public class ShapeNode : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.ExcelApi.ShapeNode
 	{
 		#pragma warning disable

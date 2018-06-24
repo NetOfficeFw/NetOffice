@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024484-0001-0000-C000-000000000046")]
 	public interface IPivotFilters : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.PivotFilter>
 	{
@@ -283,6 +283,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 15, 16)]
 		NetOffice.ExcelApi.PivotFilter _Add(NetOffice.ExcelApi.Enums.XlPivotFilterType type, object dataField, object value1, object value2, object order, object name, object description);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.PivotFilter>
+
+        /// <summary>
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.PivotFilter> GetEnumerator();
+
+        #endregion
+    }
 }

@@ -87,8 +87,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IEditBoxes 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class IEditBoxes : NetOffice.ExcelApi.Behind.IEditBoxes_, NetOffice.ExcelApi.IEditBoxes
     {
         #pragma warning disable

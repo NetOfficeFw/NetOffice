@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface ILines 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class ILines : COMObject, NetOffice.ExcelApi.ILines
     {
         #pragma warning disable
@@ -577,7 +575,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16

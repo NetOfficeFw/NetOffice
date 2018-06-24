@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IHPageBreaks 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class IHPageBreaks : COMObject, NetOffice.ExcelApi.IHPageBreaks
     {
         #pragma warning disable

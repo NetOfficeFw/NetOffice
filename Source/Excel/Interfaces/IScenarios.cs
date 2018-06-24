@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("00020896-0001-0000-C000-000000000046")]
 	public interface IScenarios : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Scenario>
 	{
@@ -144,6 +144,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		object Merge(object source);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Scenario>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Scenario> GetEnumerator();
+
+        #endregion
+    }
 }

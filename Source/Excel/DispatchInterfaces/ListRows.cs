@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840245.aspx </remarks>
 	[SupportByVersion("Excel", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024474-0000-0000-C000-000000000046")]
 	public interface ListRows : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ListRow>
 	{
@@ -107,6 +107,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 12,14,15,16)]
 		NetOffice.ExcelApi.ListRow _Add();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ListRow>
+
+        /// <summary>
+        /// SupportByVersion Excel, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ListRow> GetEnumerator();
+
+        #endregion
+    }
 }

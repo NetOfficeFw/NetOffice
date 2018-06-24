@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 15, 16
     /// </summary>
     [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Excel", 15, 16), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	[TypeId("000244DE-0001-0000-C000-000000000046")]
     public interface ICategoryCollection : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ChartCategory>
     {
@@ -59,6 +59,18 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.ExcelApi.ChartCategory this[object index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ChartCategory>
+
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.ExcelApi.ChartCategory> GetEnumerator();
 
         #endregion
     }

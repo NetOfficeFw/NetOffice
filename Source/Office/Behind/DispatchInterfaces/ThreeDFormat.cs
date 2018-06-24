@@ -10,9 +10,6 @@ namespace NetOffice.OfficeApi.Behinds
     /// DispatchInterface ThreeDFormat 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface)]
-    [Duplicate("NetOffice.ExcelApi.ThreeDFormat")]
     public class ThreeDFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ThreeDFormat
     {
         #pragma warning disable

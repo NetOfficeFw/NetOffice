@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024463-0000-0000-C000-000000000046")]
 	public interface SmartTagRecognizers : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.SmartTagRecognizer>
 	{
@@ -64,7 +64,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		bool Recognize { get; set; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.ExcelApi.SmartTagRecognizer>
+
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.SmartTagRecognizer> GetEnumerator();
+
+        #endregion
+    }
 }

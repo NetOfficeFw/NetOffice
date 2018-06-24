@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024470-0001-0000-C000-000000000046")]
     public interface IListObjects : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ListObject>
     {
@@ -190,6 +190,16 @@ namespace NetOffice.ExcelApi
         [CustomMethod]
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ListObject>
+
+        /// <summary>
+        /// SupportByVersion Excel, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ListObject> GetEnumerator();
 
         #endregion
     }

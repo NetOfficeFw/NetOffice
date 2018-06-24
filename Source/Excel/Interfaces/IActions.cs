@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024490-0001-0000-C000-000000000046")]
     public interface IActions : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Action>
     {
@@ -56,6 +56,16 @@ namespace NetOffice.ExcelApi
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         Int32 Count { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Action>
+
+        /// <summary>
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Action> GetEnumerator();
 
         #endregion
     }

@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836161.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024429-0000-0000-C000-000000000046")]
 	public interface QueryTables : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.QueryTable>
 	{
@@ -86,6 +86,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		NetOffice.ExcelApi.QueryTable Add(object connection, NetOffice.ExcelApi.Range destination);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.QueryTable>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.QueryTable> GetEnumerator();
+
+        #endregion
+    }
 }

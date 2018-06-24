@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface IToolbars 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
 	public class IToolbars : COMObject, NetOffice.ExcelApi.IToolbars
 	{
 		#pragma warning disable
@@ -168,7 +167,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IEnumerable<NetOffice.ExcelApi.Toolbar> Member
+        #region IEnumerable<NetOffice.ExcelApi.Toolbar>
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
@@ -199,5 +198,3 @@ namespace NetOffice.ExcelApi.Behind
 		#pragma warning restore
 	}
 }
-
-

@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface ISparklineGroup 
 	/// SupportByVersion Excel, 14,15,16
-	/// </summary>	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class ISparklineGroup : COMObject, NetOffice.ExcelApi.ISparklineGroup
 	{
 		#pragma warning disable

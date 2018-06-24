@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024472-0001-0000-C000-000000000046")]
     public interface IListColumns : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ListColumn>
     {
@@ -74,6 +74,16 @@ namespace NetOffice.ExcelApi
         [CustomMethod]
         [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         NetOffice.ExcelApi.ListColumn Add();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ListColumn>
+
+        /// <summary>
+        /// SupportByVersion Excel, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ListColumn> GetEnumerator();
 
         #endregion
     }

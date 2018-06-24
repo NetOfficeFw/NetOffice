@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229970.aspx </remarks>
 	[SupportByVersion("Excel", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244D6-0000-0000-C000-000000000046")]
 	public interface ModelTableColumns : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ModelTableColumn>
 	{
@@ -62,7 +62,16 @@ namespace NetOffice.ExcelApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.ExcelApi.ModelTableColumn this[object index] { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.ExcelApi.ModelTableColumn>
+
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ModelTableColumn> GetEnumerator();
+
+        #endregion
+    }
 }

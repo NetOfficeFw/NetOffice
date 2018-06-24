@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024424-0001-0000-C000-000000000046")]
     public interface IFormatConditions : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.FormatCondition>
     {
@@ -193,6 +193,16 @@ namespace NetOffice.ExcelApi
         /// </summary>
         [SupportByVersion("Excel", 12, 14, 15, 16)]
         object AddUniqueValues();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.FormatCondition>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.FormatCondition> GetEnumerator();
 
         #endregion
     }

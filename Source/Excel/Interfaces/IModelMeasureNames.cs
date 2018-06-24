@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 15, 16
     /// </summary>
     [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 15, 1), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244EA-0001-0000-C000-000000000046")]
     public interface IModelMeasureNames : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ModelMeasureName>
     {
@@ -56,6 +56,16 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.ExcelApi.ModelMeasureName this[object index] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ModelMeasureName>
+
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ModelMeasureName> GetEnumerator();
 
         #endregion
     }

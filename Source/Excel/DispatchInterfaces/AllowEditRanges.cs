@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838626.aspx </remarks>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("0002446A-0000-0000-C000-000000000046")]
 	public interface AllowEditRanges : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.AllowEditRange>
 	{
@@ -61,6 +61,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.AllowEditRange>
+
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.AllowEditRange> GetEnumerator();
+
+        #endregion
+    }
 }

@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface ModelRelationships 
 	/// SupportByVersion Excel, 15, 16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231609.aspx </remarks>
-	[SupportByVersion("Excel", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231609.aspx </remarks>
 	public class ModelRelationships : COMObject, NetOffice.ExcelApi.ModelRelationships
 	{
 		#pragma warning disable

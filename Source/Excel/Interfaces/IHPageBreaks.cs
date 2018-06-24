@@ -8,13 +8,12 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
-
     /// <summary>
     /// Interface IHPageBreaks 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024404-0001-0000-C000-000000000046")]
     public interface IHPageBreaks : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.HPageBreak>
     {
@@ -68,6 +67,16 @@ namespace NetOffice.ExcelApi
         /// <param name="before">object before</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         NetOffice.ExcelApi.HPageBreak Add(object before);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.HPageBreak>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.HPageBreak> GetEnumerator();
 
         #endregion
     }

@@ -10,9 +10,6 @@ namespace NetOffice.OfficeApi.Behind
     /// DispatchInterface ColorFormat 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface)]
-    [Duplicate("NetOffice.ExcelApi.ColorFormat")]
     public class ColorFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.ColorFormat
     {
         #pragma warning disable

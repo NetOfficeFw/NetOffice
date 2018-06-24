@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229516.aspx </remarks>
 	[SupportByVersion("Excel", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Excel", 15, 16), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	[TypeId("000244DC-0000-0000-C000-000000000046")]
 	public interface FullSeriesCollection : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.Series>
 	{
@@ -65,6 +65,16 @@ namespace NetOffice.ExcelApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.ExcelApi.Series this[object index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Series>
+
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Series> GetEnumerator();
+
+        #endregion
+    }
 }

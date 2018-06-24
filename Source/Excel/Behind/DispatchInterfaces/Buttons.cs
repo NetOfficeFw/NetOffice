@@ -88,8 +88,6 @@ namespace NetOffice.ExcelApi.Behind
     /// DispatchInterface Buttons 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class Buttons : NetOffice.ExcelApi.Behind.Buttons_, NetOffice.ExcelApi.Buttons
     {
         #pragma warning disable

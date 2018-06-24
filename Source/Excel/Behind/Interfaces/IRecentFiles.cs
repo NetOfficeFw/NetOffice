@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface IRecentFiles 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
-	public class IRecentFiles : COMObject, NetOffice.ExcelApi.IRecentFiles
+	/// </summary>	
+  	public class IRecentFiles : COMObject, NetOffice.ExcelApi.IRecentFiles
 	{
 		#pragma warning disable
 

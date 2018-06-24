@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 15, 16
     /// </summary>
     [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244DA-0001-0000-C000-000000000046")]
     public interface IModelRelationships : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ModelRelationship>
     {
@@ -68,6 +68,16 @@ namespace NetOffice.ExcelApi
         /// <param name="primaryKeyColumn">NetOffice.ExcelApi.ModelTableColumn primaryKeyColumn</param>
         [SupportByVersion("Excel", 15, 16)]
         NetOffice.ExcelApi.ModelRelationship Add(NetOffice.ExcelApi.ModelTableColumn foreignKeyColumn, NetOffice.ExcelApi.ModelTableColumn primaryKeyColumn);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ModelRelationship>
+
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ModelRelationship> GetEnumerator();
 
         #endregion
     }

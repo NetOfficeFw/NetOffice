@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface IPivotFilters 
 	/// SupportByVersion Excel, 12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
 	public class IPivotFilters : COMObject, NetOffice.ExcelApi.IPivotFilters
 	{
 		#pragma warning disable

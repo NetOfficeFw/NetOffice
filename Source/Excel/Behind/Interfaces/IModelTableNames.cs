@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IModelTableNames 
     /// SupportByVersion Excel, 15, 16
     /// </summary>
-    [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class IModelTableNames : COMObject, NetOffice.ExcelApi.IModelTableNames
     {
         #pragma warning disable
@@ -149,7 +147,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IEnumerable<string> Member
+        #region IEnumerable<string>
 
         /// <summary>
         /// SupportByVersion Excel, 15, 16
@@ -166,7 +164,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Excel, 15, 16

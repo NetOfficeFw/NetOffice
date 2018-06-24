@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IChartObjects 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
     public class IChartObjects : COMObject, NetOffice.ExcelApi.IChartObjects
     {
         #pragma warning disable

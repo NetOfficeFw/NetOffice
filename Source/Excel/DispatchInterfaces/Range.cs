@@ -444,7 +444,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838238.aspx </remarks>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00020846-0000-0000-C000-000000000046")]
     public interface Range : Range_, IEnumerableProvider<NetOffice.ExcelApi.Range>
     {
@@ -5000,6 +5000,16 @@ namespace NetOffice.ExcelApi
         /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228715.aspx </remarks>
         [SupportByVersion("Excel", 15, 16)]
         void FlashFill();
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.Range>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.Range> GetEnumerator();
 
         #endregion
     }

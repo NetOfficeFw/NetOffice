@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IListObjects 
     /// SupportByVersion Excel, 11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class IListObjects : COMObject, NetOffice.ExcelApi.IListObjects
     {
         #pragma warning disable

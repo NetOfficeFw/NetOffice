@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244AA-0001-0000-C000-000000000046")]
 	public interface ISortFields : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.SortField>
 	{
@@ -116,6 +116,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 12,14,15,16)]
 		Int32 Clear();
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.SortField>
+
+        /// <summary>
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.SortField> GetEnumerator();
+
+        #endregion
+    }
 }

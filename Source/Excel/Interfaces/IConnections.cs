@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024486-0001-0000-C000-000000000046")]
     public interface IConnections : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.WorkbookConnection>
     {
@@ -166,6 +166,16 @@ namespace NetOffice.ExcelApi
         [CustomMethod]
         [SupportByVersion("Excel", 15, 16)]
         NetOffice.ExcelApi.WorkbookConnection _Add(string name, string description, object connectionString, object commandText);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.WorkbookConnection>
+
+        /// <summary>
+        /// SupportByVersion Excel, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.WorkbookConnection> GetEnumerator();
 
         #endregion
     }

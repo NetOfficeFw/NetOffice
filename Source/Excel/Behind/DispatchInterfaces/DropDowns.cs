@@ -159,8 +159,6 @@ namespace NetOffice.ExcelApi.Behind
     /// DispatchInterface DropDowns 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
     public class DropDowns : NetOffice.ExcelApi.Behind.DropDowns_, NetOffice.ExcelApi.DropDowns
     {
         #pragma warning disable

@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method, "Excel", 9, 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	[TypeId("000208B3-0001-0000-C000-000000000046")]
     public interface IDataLabels : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.DataLabel>
     {
@@ -296,6 +296,16 @@ namespace NetOffice.ExcelApi
         /// <param name="index">object index</param>
         [SupportByVersion("Excel", 15, 16)]
         Int32 Propagate(object index);
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.DataLabel>
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.DataLabel> GetEnumerator();
 
         #endregion
     }

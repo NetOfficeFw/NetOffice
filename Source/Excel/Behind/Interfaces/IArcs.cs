@@ -87,9 +87,7 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IArcs 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-    public class IArcs : NetOffice.ExcelApi.Behind.IArcs_, NetOffice.ExcelApi.IArcs, IEnumerable<object>
+    public class IArcs : NetOffice.ExcelApi.Behind.IArcs_, NetOffice.ExcelApi.IArcs
     {
         #pragma warning disable
 
@@ -881,7 +879,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IEnumerable<object> Member
+        #region IEnumerable<object>
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
@@ -896,7 +894,7 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16

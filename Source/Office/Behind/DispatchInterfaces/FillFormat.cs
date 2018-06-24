@@ -10,9 +10,6 @@ namespace NetOffice.OfficeApi.Behind
     /// DispatchInterface FillFormat 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface)]
-    [Duplicate("NetOffice.ExcelApi.FillFormat")]
     public class FillFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.FillFormat
     {
         #pragma warning disable

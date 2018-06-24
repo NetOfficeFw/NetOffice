@@ -1,8 +1,9 @@
 ﻿using System;
+
 namespace NetOffice.Attributes
 {
     /// <summary>
-    /// Indicates which COM Type Library Version supports the entity
+    /// Indicates which COM Type Library supports an entity
     /// </summary>
     [AttributeUsage(AttributeTargets.All)]
     public sealed class SupportByVersionAttribute : System.Attribute
@@ -24,8 +25,8 @@ namespace NetOffice.Attributes
         /// <param name="versions">version of the library</param>
         public SupportByVersionAttribute(string name, params double[] versions)
         {
-            this.Name = name;
-            this.Versions = versions;
+            Name = name;
+            Versions = versions;
         }
     }
 }

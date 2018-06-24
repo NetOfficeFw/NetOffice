@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface IProtectedViewWindows 
 	/// SupportByVersion Excel, 14,15,16
-	/// </summary>	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
 	public class IProtectedViewWindows : COMObject, NetOffice.ExcelApi.IProtectedViewWindows
 	{
 		#pragma warning disable

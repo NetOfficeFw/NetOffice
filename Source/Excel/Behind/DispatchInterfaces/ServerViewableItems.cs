@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface ServerViewableItems 
 	/// SupportByVersion Excel, 12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839230.aspx </remarks>
-	[SupportByVersion("Excel", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839230.aspx </remarks>
 	public class ServerViewableItems : COMObject, NetOffice.ExcelApi.ServerViewableItems
 	{
 		#pragma warning disable

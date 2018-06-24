@@ -11,9 +11,6 @@ namespace NetOffice.ExcelApi.Behind
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834660.aspx </remarks>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
-    [Duplicate("NetOffice.OfficeApi.PictureFormat")]
     public class PictureFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.ExcelApi.PictureFormat
 	{
 		#pragma warning disable

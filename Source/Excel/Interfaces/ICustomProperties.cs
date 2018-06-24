@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 10,11,12,14,15,16
     /// </summary>
     [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024452-0001-0000-C000-000000000046")]
     public interface ICustomProperties : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.CustomProperty>
     {
@@ -71,5 +71,14 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
+        #region IEnumerable<NetOffice.ExcelApi.CustomProperty>
+
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.CustomProperty> GetEnumerator();
+
+        #endregion
     }
 }

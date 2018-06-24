@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196948.aspx </remarks>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 10, 11, 12, 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("00024454-0000-0000-C000-000000000046")]
 	public interface CalculatedMembers : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.CalculatedMember>
 	{
@@ -278,6 +278,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 15, 16)]
 		NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy, object parentMember);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.CalculatedMember>
+
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.CalculatedMember> GetEnumerator();
+
+        #endregion
+    }
 }

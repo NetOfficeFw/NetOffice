@@ -13,7 +13,6 @@ namespace NetOffice.OfficeApi.Behind
     /// DispatchInterface DiagramNodeChildren 
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
-    [Duplicate("NetOffice.ExcelApi.DiagramNodeChildren")]
     public class DiagramNodeChildren : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.DiagramNodeChildren
     {
         #pragma warning disable

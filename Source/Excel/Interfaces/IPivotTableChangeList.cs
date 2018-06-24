@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
 	/// SupportByVersion Excel, 14,15,16
 	/// </summary>
 	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244C1-0001-0000-C000-000000000046")]
 	public interface IPivotTableChangeList : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.ValueChange>
 	{
@@ -102,6 +102,16 @@ namespace NetOffice.ExcelApi
 		[SupportByVersion("Excel", 14,15,16)]
 		NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.ValueChange>
+
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.ValueChange> GetEnumerator();
+
+        #endregion
+    }
 }

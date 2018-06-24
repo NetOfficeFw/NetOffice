@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface PivotLineCells 
 	/// SupportByVersion Excel, 12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839258.aspx </remarks>
-	[SupportByVersion("Excel", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839258.aspx </remarks>
 	public class PivotLineCells : COMObject, NetOffice.ExcelApi.PivotLineCells
 	{
 		#pragma warning disable

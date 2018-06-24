@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 15, 16
     /// </summary>
     [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom, "Excel", 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244E1-0001-0000-C000-000000000046")]
     public interface IModelTableNames : ICOMObject, IEnumerableProvider<string>
     {
@@ -58,5 +58,18 @@ namespace NetOffice.ExcelApi
         string this[object index] { get; }
 
         #endregion
+
+        #region IEnumerable<string>
+
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Excel", 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<string> GetEnumerator();
+
+        #endregion
+
     }
 }

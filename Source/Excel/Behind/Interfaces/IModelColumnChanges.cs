@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface IModelColumnChanges 
     /// SupportByVersion Excel, 15, 16
     /// </summary>
-    [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class IModelColumnChanges : COMObject, NetOffice.ExcelApi.IModelColumnChanges
     {
         #pragma warning disable

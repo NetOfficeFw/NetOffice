@@ -12,9 +12,8 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// DispatchInterface XmlNamespaces 
 	/// SupportByVersion Excel, 11,12,14,15,16
-	/// </summary>	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197448.aspx </remarks>
-	[SupportByVersion("Excel", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
+    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197448.aspx </remarks>
 	public class XmlNamespaces : COMObject, NetOffice.ExcelApi.XmlNamespaces
 	{
 		#pragma warning disable

@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface IPoints 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	/// </summary>
 	public class IPoints : COMObject, NetOffice.ExcelApi.IPoints
 	{
 		#pragma warning disable
@@ -39,7 +38,8 @@ namespace NetOffice.ExcelApi.Behind
             get
             {
                 if (null == _type)
-                    _type = typeof(IPoints);                return _type;
+                    _type = typeof(IPoints);
+                return _type;
             }
         }
         

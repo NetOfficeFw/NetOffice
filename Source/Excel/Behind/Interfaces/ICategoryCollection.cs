@@ -13,8 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     /// Interface ICategoryCollection 
     /// SupportByVersion Excel, 15, 16
     /// </summary>
-    [SupportByVersion("Excel", 15, 16)]
-    [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "_Default")]
     public class ICategoryCollection : COMObject, NetOffice.ExcelApi.ICategoryCollection
     {
         #pragma warning disable

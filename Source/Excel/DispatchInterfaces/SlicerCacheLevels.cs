@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822488.aspx </remarks>
     [SupportByVersion("Excel", 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Excel", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	[TypeId("000244C5-0000-0000-C000-000000000046")]
     public interface SlicerCacheLevels : ICOMObject, IEnumerableProvider<NetOffice.ExcelApi.SlicerCacheLevel>
     {
@@ -61,6 +61,16 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.ExcelApi.SlicerCacheLevel this[object level] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.ExcelApi.SlicerCacheLevel>
+
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        [SupportByVersion("Excel", 14, 15, 16)]
+        new IEnumerator<NetOffice.ExcelApi.SlicerCacheLevel> GetEnumerator();
 
         #endregion
     }

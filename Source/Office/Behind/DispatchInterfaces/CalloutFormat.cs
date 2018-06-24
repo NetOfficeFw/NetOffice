@@ -10,9 +10,6 @@ namespace NetOffice.OfficeApi.Behind
     /// DispatchInterface CalloutFormat 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface)]
-    [Duplicate("NetOffice.ExcelApi.CalloutFormat")]
     public class CalloutFormat : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.OfficeApi.CalloutFormat
     {
         #pragma warning disable

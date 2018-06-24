@@ -12,8 +12,7 @@ namespace NetOffice.ExcelApi.Behind
 	/// <summary>
 	/// Interface ISlicers 
 	/// SupportByVersion Excel, 14,15,16
-	/// </summary>	[SupportByVersion("Excel", 14,15,16)]
-	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	/// </summary>
 	public class ISlicers : COMObject, NetOffice.ExcelApi.ISlicers
 	{
 		#pragma warning disable
