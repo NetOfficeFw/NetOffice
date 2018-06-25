@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("286A9096-BD9E-11D3-B675-00C04F8EF32D")]
 	public interface WizardValues : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.WizardValue>
 	{
@@ -50,7 +50,16 @@ namespace NetOffice.PublisherApi
 		[SupportByVersion("Publisher", 14,15,16)]
 		Int32 Count { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.PublisherApi.WizardValue>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new IEnumerator<NetOffice.PublisherApi.WizardValue> GetEnumerator();
+
+        #endregion
+    }
 }

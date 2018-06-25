@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("37B3B0B5-44B5-11D3-B65B-00C04F8EF32D")]
 	public interface TextStyles : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.TextStyle>
 	{
@@ -90,6 +90,16 @@ namespace NetOffice.PublisherApi
 		[SupportByVersion("Publisher", 14,15,16)]
 		NetOffice.PublisherApi.TextStyle Add(string styleName, object basedOn, object font);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.PublisherApi.TextStyle>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new IEnumerator<NetOffice.PublisherApi.TextStyle> GetEnumerator();
+
+        #endregion
+    }
 }

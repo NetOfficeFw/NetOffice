@@ -12,8 +12,7 @@ namespace NetOffice.PublisherApi.Behind
 	/// <summary>
 	/// DispatchInterface MailMergeMappedDataFields 
 	/// SupportByVersion Publisher, 14,15,16
-	/// </summary>	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class MailMergeMappedDataFields : COMObject, NetOffice.PublisherApi.MailMergeMappedDataFields
 	{
 		#pragma warning disable

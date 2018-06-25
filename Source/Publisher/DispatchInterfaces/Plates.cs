@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("DE78CEB8-FEBB-11D3-907D-00C04F799E3F")]
 	public interface Plates : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.Plate>
 	{
@@ -75,6 +75,16 @@ namespace NetOffice.PublisherApi
 		[SupportByVersion("Publisher", 14,15,16)]
 		NetOffice.PublisherApi.Plate FindPlateByInkName(NetOffice.PublisherApi.Enums.PbInkName inkName);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.PublisherApi.Plate>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new IEnumerator<NetOffice.PublisherApi.Plate> GetEnumerator();
+
+        #endregion
+    }
 }

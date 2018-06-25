@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("761ED420-B146-411C-AA6D-C5DC063C1B1B")]
 	public interface BorderArts : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.BorderArt>
 	{
@@ -53,6 +53,16 @@ namespace NetOffice.PublisherApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.PublisherApi.BorderArt this[object index] { get; }
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.PublisherApi.BorderArt>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new IEnumerator<NetOffice.PublisherApi.BorderArt> GetEnumerator();
+
+        #endregion
+    }
 }

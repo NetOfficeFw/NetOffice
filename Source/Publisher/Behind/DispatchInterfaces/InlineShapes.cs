@@ -57,9 +57,7 @@ namespace NetOffice.PublisherApi.Behind
     /// DispatchInterface InlineShapes 
     /// SupportByVersion Publisher, 14,15,16
     /// </summary>
-    [SupportByVersion("Publisher", 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-    public class InlineShapes : InlineShapes_, NetOffice.PublisherApi.InlineShapes
+     public class InlineShapes : InlineShapes_, NetOffice.PublisherApi.InlineShapes
     {
         #pragma warning disable
 

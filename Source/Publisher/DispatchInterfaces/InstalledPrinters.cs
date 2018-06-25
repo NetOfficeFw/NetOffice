@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("571CB5A2-4360-40DD-A767-3BB87C1937AB")]
 	public interface InstalledPrinters : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.Printer>
 	{
@@ -50,7 +50,16 @@ namespace NetOffice.PublisherApi
 		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		object Parent { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.PublisherApi.Printer>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new IEnumerator<NetOffice.PublisherApi.Printer> GetEnumerator();
+
+        #endregion
+    }
 }

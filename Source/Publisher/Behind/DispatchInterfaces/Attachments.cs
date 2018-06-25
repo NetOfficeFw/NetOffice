@@ -12,8 +12,7 @@ namespace NetOffice.PublisherApi.Behind
 	/// <summary>
 	/// DispatchInterface Attachments 
 	/// SupportByVersion Publisher, 14,15,16
-	/// </summary>	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class Attachments : COMObject, NetOffice.PublisherApi.Attachments
 	{
 		#pragma warning disable

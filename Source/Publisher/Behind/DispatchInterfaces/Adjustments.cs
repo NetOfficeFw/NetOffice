@@ -12,8 +12,7 @@ namespace NetOffice.PublisherApi.Behind
 	/// <summary>
 	/// DispatchInterface Adjustments 
 	/// SupportByVersion Publisher, 14,15,16
-	/// </summary>	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+	/// </summary>
 	public class Adjustments : COMObject, NetOffice.PublisherApi.Adjustments
 	{
 		#pragma warning disable

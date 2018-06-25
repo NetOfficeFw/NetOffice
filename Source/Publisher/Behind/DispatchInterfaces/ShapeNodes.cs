@@ -12,8 +12,7 @@ namespace NetOffice.PublisherApi.Behind
 	/// <summary>
 	/// DispatchInterface ShapeNodes 
 	/// SupportByVersion Publisher, 14,15,16
-	/// </summary>	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class ShapeNodes : COMObject, NetOffice.PublisherApi.ShapeNodes
 	{
 		#pragma warning disable

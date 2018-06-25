@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("000C1534-0000-0000-C000-000000000046")]
 	public interface MailMergeFilters : NetOffice.OfficeApi._IMsoDispObj, NetOffice.CollectionsGeneric.IEnumerableProvider<object>
 	{
@@ -94,6 +94,18 @@ namespace NetOffice.PublisherApi
 		[SupportByVersion("Publisher", 14,15,16)]
 		void Delete(Int32 index);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<object>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

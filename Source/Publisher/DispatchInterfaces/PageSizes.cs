@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("6EA002F1-6F1C-4DF8-8177-057E15733DFC")]
 	public interface PageSizes : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.PageSize>
 	{
@@ -50,7 +50,16 @@ namespace NetOffice.PublisherApi
 		[SupportByVersion("Publisher", 14,15,16)]
 		Int32 Count { get; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<NetOffice.PublisherApi.PageSize>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new  IEnumerator<NetOffice.PublisherApi.PageSize> GetEnumerator();
+
+        #endregion
+    }
 }

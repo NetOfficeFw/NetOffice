@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("A05DB779-1FC2-4288-A150-939A955696C4")]
 	public interface WebNavigationBarSets : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.WebNavigationBarSet>
 	{
@@ -79,6 +79,16 @@ namespace NetOffice.PublisherApi
 		[SupportByVersion("Publisher", 14,15,16)]
 		NetOffice.PublisherApi.WebNavigationBarSet AddSet(string name, object design);
 
-		#endregion
-	}
+        #endregion
+
+        #region IEnumerable<NetOffice.PublisherApi.WebNavigationBarSet>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new IEnumerator<NetOffice.PublisherApi.WebNavigationBarSet> GetEnumerator();
+
+        #endregion
+    }
 }

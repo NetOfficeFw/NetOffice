@@ -12,8 +12,7 @@ namespace NetOffice.PublisherApi.Behind
 	/// <summary>
 	/// DispatchInterface ObjectVerbs 
 	/// SupportByVersion Publisher, 14,15,16
-	/// </summary>	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class ObjectVerbs : COMObject , NetOffice.PublisherApi.ObjectVerbs
 	{
 		#pragma warning disable

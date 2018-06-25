@@ -12,8 +12,7 @@ namespace NetOffice.PublisherApi.Behind
 	/// <summary>
 	/// DispatchInterface WebHiddenFields 
 	/// SupportByVersion Publisher, 14,15,16
-	/// </summary>	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class WebHiddenFields : COMObject, NetOffice.PublisherApi.WebHiddenFields
 	{
 		#pragma warning disable

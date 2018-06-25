@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("9DF97ACB-FE7B-47E9-A644-62F8F663C5D4")]
 	public interface MailMergeDataFields : NetOffice.OfficeApi._IMsoDispObj, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.MailMergeDataField>
 	{
@@ -46,6 +46,19 @@ namespace NetOffice.PublisherApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		NetOffice.PublisherApi.MailMergeDataField this[object varIndex] { get; }
 
-		#endregion
-	}
+        #endregion
+
+
+        #region IEnumerable<NetOffice.PublisherApi.MailMergeDataField>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<NetOffice.PublisherApi.MailMergeDataField> GetEnumerator();
+
+        #endregion
+    }
 }

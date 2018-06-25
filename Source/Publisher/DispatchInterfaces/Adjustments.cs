@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("00021262-0000-0000-C000-000000000046")]
 	public interface Adjustments : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<object>
 	{
@@ -50,7 +50,18 @@ namespace NetOffice.PublisherApi
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		object this[Int32 index] { get; set; }
 
-		#endregion
+        #endregion
 
-	}
+        #region IEnumerable<object> Member
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        [CustomEnumerator]
+        new IEnumerator<object> GetEnumerator();
+
+        #endregion
+    }
 }

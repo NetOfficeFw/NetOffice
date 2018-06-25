@@ -12,8 +12,7 @@ namespace NetOffice.PublisherApi.Behind
 	/// <summary>
 	/// DispatchInterface Fields 
 	/// SupportByVersion Publisher, 14,15,16
-	/// </summary>	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	/// </summary>
 	public class Fields : COMObject , NetOffice.PublisherApi.Fields
 	{
 		#pragma warning disable
@@ -226,7 +225,7 @@ namespace NetOffice.PublisherApi.Behind
 
         #endregion
 
-        #region IEnumerable<NetOffice.PublisherApi.Field> Member
+        #region IEnumerable<NetOffice.PublisherApi.Field>
 
         /// <summary>
         /// SupportByVersion Publisher, 14,15,16
@@ -243,7 +242,7 @@ namespace NetOffice.PublisherApi.Behind
 
         #endregion
 
-        #region IEnumerable Members
+        #region IEnumerable
 
         /// <summary>
         /// SupportByVersion Publisher, 14,15,16

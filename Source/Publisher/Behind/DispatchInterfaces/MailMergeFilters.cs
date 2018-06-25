@@ -13,8 +13,6 @@ namespace NetOffice.PublisherApi.Behind
 	/// DispatchInterface MailMergeFilters 
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
-	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class MailMergeFilters : NetOffice.OfficeApi.Behind._IMsoDispObj, NetOffice.PublisherApi.MailMergeFilters
 	{
 		#pragma warning disable

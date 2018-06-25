@@ -41,7 +41,7 @@ namespace NetOffice.PublisherApi
     /// SupportByVersion Publisher, 14,15,16
     /// </summary>
     [SupportByVersion("Publisher", 14, 15, 16)]
-    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Method, "Item")]
 	[TypeId("98091C49-9841-4D1A-BE2D-8FFD9C7702CC")]
     public interface InlineShapes : InlineShapes_, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.Shape>
     {
@@ -87,6 +87,16 @@ namespace NetOffice.PublisherApi
         [SupportByVersion("Publisher", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         NetOffice.PublisherApi.Shape this[object var] { get; }
+
+        #endregion
+
+        #region IEnumerable<NetOffice.PublisherApi.Shape>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new IEnumerator<NetOffice.PublisherApi.Shape> GetEnumerator();
 
         #endregion
     }

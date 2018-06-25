@@ -13,7 +13,7 @@ namespace NetOffice.PublisherApi
 	/// SupportByVersion Publisher, 14,15,16
 	/// </summary>
 	[SupportByVersion("Publisher", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property, "Publisher", 14, 15, 16), HasIndexProperty(IndexInvoke.Property, "Item")]
 	[TypeId("BA716167-A04A-42F3-BEC4-D433F2A7F4EE")]
 	public interface ColorsInUse : ICOMObject, NetOffice.CollectionsGeneric.IEnumerableProvider<NetOffice.PublisherApi.ColorFormat>
 	{
@@ -50,7 +50,17 @@ namespace NetOffice.PublisherApi
 		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		object Parent { get; }
 
-		#endregion
+        #endregion
 
-	}
+
+        #region IEnumerable<NetOffice.PublisherApi.ColorFormat>
+
+        /// <summary>
+        /// SupportByVersion Publisher, 14,15,16
+        /// </summary>
+        [SupportByVersion("Publisher", 14, 15, 16)]
+        new IEnumerator<NetOffice.PublisherApi.ColorFormat> GetEnumerator();
+
+        #endregion
+    }
 }
