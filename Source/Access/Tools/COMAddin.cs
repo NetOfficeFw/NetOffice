@@ -24,10 +24,10 @@ namespace NetOffice.AccessApi.Tools
         #region Fields
 
         /// <summary>
-        /// MS-Access Registry Path 
+        /// MS-Access Registry Path
         /// </summary>
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\Addins\\";
-      
+
         /// <summary>
         /// First field in OnConnection custom argument array
         /// </summary>
@@ -37,7 +37,7 @@ namespace NetOffice.AccessApi.Tools
         /// Cache field used in IsLoadedFromSystem() method
         /// </summary>
         private bool? _isLoadedFromSystem;
-       
+
         /// <summary>
         /// Instance factory to avoid trouble with addins in same appdomain
         /// </summary>
@@ -72,7 +72,7 @@ namespace NetOffice.AccessApi.Tools
         /// Host Application Instance
         /// </summary>
         protected Access.Application Application { get; private set; }
-        
+
         /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
@@ -89,7 +89,7 @@ namespace NetOffice.AccessApi.Tools
 		protected List<ITaskPane> TaskPaneInstances { get; set; }
 
         /// <summary>
-        /// Ribbon instance to manipulate ui at runtime 
+        /// Ribbon instance to manipulate ui at runtime
         /// </summary>
         public Office.IRibbonUI RibbonUI { get; private set; }
 
@@ -155,24 +155,24 @@ namespace NetOffice.AccessApi.Tools
 
         #endregion
 
-        #region IDTExtensibility2 Events 
+        #region IDTExtensibility2 Events
 
         /// <summary>
-        /// The OnStartupComplete event occurs when the host application completes its startup routines, in the case where the COM add-in loads at startup. 
-        /// If the add-in is not loaded when the application loads, the OnStartupComplete event does not occur — 
+        /// The OnStartupComplete event occurs when the host application completes its startup routines, in the case where the COM add-in loads at startup.
+        /// If the add-in is not loaded when the application loads, the OnStartupComplete event does not occur —
         /// even when the user loads the add-in in the COM Add-ins dialog box. When this event does occur, it occurs after the OnConnection event.
-        /// You can use the OnStartupComplete  event procedure to run code that interacts with the application and that should not be run until the application has finished loading. 
-        /// For example, if you want to display a form that gives users a choice of documents to create when they start the application, 
+        /// You can use the OnStartupComplete  event procedure to run code that interacts with the application and that should not be run until the application has finished loading.
+        /// For example, if you want to display a form that gives users a choice of documents to create when they start the application,
         /// you can put that code in the OnStartupComplete event procedure.
         /// </summary>
         public event OnStartupCompleteEventHandler OnStartupComplete;
 
         /// <summary>
-        /// The Shutdown event occurs when the COM add-in is unloaded. 
+        /// The Shutdown event occurs when the COM add-in is unloaded.
         /// You can use the OnDisconnection event procedure to run code that restores any changes made to the application by the add-in and to perform general clean-up operations.
         /// An add-in can be unloaded in one of the following ways:
         /// - The user clears the check box next to the add-in in the COM Add-ins dialog box.
-        /// - The host application closes. If the add-in is loaded when the application closes, it is unloaded. 
+        /// - The host application closes. If the add-in is loaded when the application closes, it is unloaded.
         ///   If the add-in's load behavior is set to Startup, it is reloaded when the application starts again.
         /// - The Connect property of the corresponding COMAddIn object is set to False.
         /// </summary>
@@ -188,17 +188,17 @@ namespace NetOffice.AccessApi.Tools
         public event OnConnectionEventHandler OnConnection;
 
         /// <summary>
-        /// The OnAddInsUpdate event occurs when the set of loaded COM add-ins changes. 
-        /// When an add-in is loaded or unloaded, the OnAddInsUpdate event occurs in any other loaded add-ins. 
-        /// For example, if add-ins A and B both are loaded currently, and then add-in C is loaded, 
-        /// the OnAddInsUpdate event occurs in add-ins A and B. If C is unloaded, the OnAddInsUpdate event occurs again in add-ins A and B. 
+        /// The OnAddInsUpdate event occurs when the set of loaded COM add-ins changes.
+        /// When an add-in is loaded or unloaded, the OnAddInsUpdate event occurs in any other loaded add-ins.
+        /// For example, if add-ins A and B both are loaded currently, and then add-in C is loaded,
+        /// the OnAddInsUpdate event occurs in add-ins A and B. If C is unloaded, the OnAddInsUpdate event occurs again in add-ins A and B.
         /// </summary>
         public event OnAddInsUpdateEventHandler OnAddInsUpdate;
 
         /// <summary>
-        /// The OnBeginShutdown event occurs when the host application begins its shutdown routines, 
-        /// in the case where the application closes while the COM add-in is still loaded. 
-        /// If the add-in is not loaded when the application closes, 
+        /// The OnBeginShutdown event occurs when the host application begins its shutdown routines,
+        /// in the case where the application closes while the COM add-in is still loaded.
+        /// If the add-in is not loaded when the application closes,
         /// the OnBeginShutdown event does not occur. When this event does occur, it occurs before the OnDisconnection event.
         /// You can use the OnBeginShutdown event procedure to run code when the user closes the application. For example, you can run code that saves form data to a file.
         /// </summary>
@@ -324,7 +324,7 @@ namespace NetOffice.AccessApi.Tools
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="application"></param>
         /// <param name="ConnectMode"></param>
@@ -340,7 +340,7 @@ namespace NetOffice.AccessApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
-                
+
                 this.Application = Factory.CreateKnownObjectFromComProxy<Access.Application>(null, application, typeof(Access.Application));
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
@@ -358,7 +358,7 @@ namespace NetOffice.AccessApi.Tools
             try
             {
                 try
-                {                  
+                {
                     RaiseOnDisconnection(RemoveMode, ref custom);
                     Tweaks.DisposeTweaks(Factory, this, Type);
                     Utils.Dispose();
@@ -425,7 +425,7 @@ namespace NetOffice.AccessApi.Tools
                 catch (NetRuntimeSystem.Exception exception)
                 {
                     NetOffice.DebugConsole.Default.WriteException(exception);
-                }	
+                }
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -485,7 +485,7 @@ namespace NetOffice.AccessApi.Tools
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
 				return String.Empty;
-            } 
+            }
         }
 
         /// <summary>
@@ -533,8 +533,8 @@ namespace NetOffice.AccessApi.Tools
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
             }
-        } 
-     
+        }
+
         /// <summary>
         /// The method is called while the CustomPane attribute is processed
         /// </summary>
@@ -544,15 +544,15 @@ namespace NetOffice.AccessApi.Tools
 		{
 			return true;
 		}
-		
+
         /// <summary>
         /// Called after any visibility changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
 		protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
-	
-		}
+
+        }
 
 		/// <summary>
         /// Called after any position changes but not for size changes
@@ -560,84 +560,84 @@ namespace NetOffice.AccessApi.Tools
         /// <param name="customTaskPaneInst">pane instance</param>
 		protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
-			
+
 		}
 
-		private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			try
-			{
-				foreach(TaskPaneInfo item in TaskPanes)
-				{
-					if(item.Pane == customTaskPaneInst)
-					{
-						try
-						{
+        private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane.UnderlyingObject == customTaskPaneInst.UnderlyingObject)
+                    {
+                        try
+                        {
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
-							{
-								try
+                            if (null != target)
+                            {
+                                try
                                 {
-									target.OnVisibleStateChanged(item.Pane.Visible);
-								}
-								catch(Exception exception)
-								{
-									Factory.Console.WriteException(exception);
-								}
-							}
-						}
-						catch(Exception exception)
-						{
-							Factory.Console.WriteException(exception);
-						}
-					}
-				}
+                                    target.OnVisibleStateChanged(item.Pane.Visible);
+                                }
+                                catch (Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
                 TaskPaneVisibleStateChanged(customTaskPaneInst);
-			}
-			catch(Exception exception)
-			{
-			   Factory.Console.WriteException(exception);
-			}
-		}
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
-		private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			try
-			{
-				foreach(TaskPaneInfo item in TaskPanes)
-				{
-					if(item.Pane == customTaskPaneInst)
-					{
-						try
-						{
+        private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane.UnderlyingObject == customTaskPaneInst.UnderlyingObject)
+                    {
+                        try
+                        {
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
-							{
-								try
-								{
+                            if (null != target)
+                            {
+                                try
+                                {
                                     target.OnDockPositionChanged(item.Pane.DockPosition);
-								}
-								catch(Exception exception)
-								{
-									Factory.Console.WriteException(exception);
-								}
-							}
-						}
-						catch(Exception exception)
-						{
-							Factory.Console.WriteException(exception);
-						}
-					}
-				}
+                                }
+                                catch (Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
                 TaskPaneDockStateChanged(customTaskPaneInst);
-			}
-			catch(Exception exception)
-			{
-			   Factory.Console.WriteException(exception);
-			}
-		}
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
-		private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+        private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
 		{
 			try
 			{
@@ -650,9 +650,9 @@ namespace NetOffice.AccessApi.Tools
 				return false;
 			}
 		}
-		
+
         private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
-        {           
+        {
 			try
 			{
 				CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
@@ -672,7 +672,7 @@ namespace NetOffice.AccessApi.Tools
 			catch(Exception exception)
 			{
 				Factory.Console.WriteException(exception);
-			}            
+			}
         }
 
         #endregion
@@ -680,7 +680,7 @@ namespace NetOffice.AccessApi.Tools
         #region Tweaks
 
         /// <summary>
-        /// This is method is called while startup and ask for permissions to apply a tweak. 
+        /// This is method is called while startup and ask for permissions to apply a tweak.
         /// </summary>
         /// <param name="name">name of the tweak</param>
         /// <param name="value">value of the tweak</param>
@@ -799,7 +799,7 @@ namespace NetOffice.AccessApi.Tools
             if (null != _isLoadedFromSystem)
                 return _isLoadedFromSystem;
 
-            OfficeApi.Tools.Contribution.RegistryLocationResult result = 
+            OfficeApi.Tools.Contribution.RegistryLocationResult result =
                             OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(Type,
                                                         ApplicationIdentifiers.ApplicationType.Access);
             switch (result)
@@ -842,7 +842,7 @@ namespace NetOffice.AccessApi.Tools
 
         #endregion
 
-        #region ErrorHandler 
+        #region ErrorHandler
 
         /// <summary>
         /// Custom error handler
@@ -853,13 +853,13 @@ namespace NetOffice.AccessApi.Tools
         {
 
         }
-        
+
         #endregion
 
         #region COM Register Functions
 
         /// <summary>
-        /// Called from regasm while register 
+        /// Called from regasm while register
         /// </summary>
         /// <param name="type">Type information for the class</param>
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
@@ -929,7 +929,7 @@ namespace NetOffice.AccessApi.Tools
         }
 
         /// <summary>
-        /// Called from RegAddin while export registry informations 
+        /// Called from RegAddin while export registry informations
         /// </summary>
         /// <param name="type">Type information for the class</param>
         /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>

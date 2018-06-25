@@ -157,7 +157,7 @@ namespace NetOffice.OfficeApi.Tools
         /// You can use the OnBeginShutdown event procedure to run code when the user closes the application. For example, you can run code that saves form data to a file.
         /// </summary>
         public event OnBeginShutdownEventHandler OnBeginShutdown;
-    
+
         /// <summary>
         /// Raise the OnStartupComplete event
         /// </summary>
@@ -699,81 +699,81 @@ namespace NetOffice.OfficeApi.Tools
 
 		}
 
-		private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			try
-			{
-				foreach(TaskPaneInfo item in TaskPanes)
-				{
-					if(item.Pane == customTaskPaneInst)
-					{
-						try
-						{
+        private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane.UnderlyingObject == customTaskPaneInst.UnderlyingObject)
+                    {
+                        try
+                        {
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
-							{
-								try
+                            if (null != target)
+                            {
+                                try
                                 {
-									target.OnVisibleStateChanged(item.Pane.Visible);
-								}
-								catch(Exception exception)
-								{
-									Factory.Console.WriteException(exception);
-								}
-							}
-						}
-						catch(Exception exception)
-						{
-							Factory.Console.WriteException(exception);
-						}
-					}
-				}
+                                    target.OnVisibleStateChanged(item.Pane.Visible);
+                                }
+                                catch (Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
                 TaskPaneVisibleStateChanged(customTaskPaneInst);
-			}
-			catch(Exception exception)
-			{
-			   Factory.Console.WriteException(exception);
-			}
-		}
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
-		private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			try
-			{
-				foreach(TaskPaneInfo item in TaskPanes)
-				{
-					if(item.Pane == customTaskPaneInst)
-					{
-						try
-						{
+        private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane.UnderlyingObject == customTaskPaneInst.UnderlyingObject)
+                    {
+                        try
+                        {
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
-							{
-								try
-								{
+                            if (null != target)
+                            {
+                                try
+                                {
                                     target.OnDockPositionChanged(item.Pane.DockPosition);
-								}
-								catch(Exception exception)
-								{
-									Factory.Console.WriteException(exception);
-								}
-							}
-						}
-						catch(Exception exception)
-						{
-							Factory.Console.WriteException(exception);
-						}
-					}
-				}
+                                }
+                                catch (Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
                 TaskPaneDockStateChanged(customTaskPaneInst);
-			}
-			catch(Exception exception)
-			{
-			   Factory.Console.WriteException(exception);
-			}
-		}
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
-		private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+        private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
 		{
 			try
 			{

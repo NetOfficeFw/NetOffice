@@ -32,6 +32,26 @@ namespace ExcelAddin
 
         }
 
+        protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
+        {
+            if (null != RibbonUI)
+                RibbonUI.InvalidateControl("PaneVisibleToogleButton");
+        }
+
+        public bool OnGetPressedPanelToggle(Office.IRibbonControl control)
+        {
+            if (TaskPanes.Count > 0)
+                return TaskPanes[0].Visible;
+            else
+                return false;
+        }
+
+        public void OnCheckPanelToggle(Office.IRibbonControl control, bool pressed)
+        {
+            if (TaskPanes.Count > 0)
+                TaskPanes[0].Visible = pressed;
+        }
+
         public void OnClickAboutButton(Office.IRibbonControl control)
         {
             Utils.Dialog.ShowDiagnostics();

@@ -3,9 +3,10 @@
 <customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="CustomUI_OnLoad" >
   <ribbon>
     <tabs>
-      <tab id="ExcelAddin" label="Source">
-        <group id="group1" label="Source(CS4)">
-           <button id="aboutButton" label="About CPU Usage" imageMso="AdvertisePublishAs" size="large" onAction="OnClickAboutButton" />
+      <tab id="Excel02AddinCS4" label="CPU Usage">
+        <group id="group1" label="CPU Usage(CS4)">
+          <toggleButton id="paneVisibleToogleButton" label="Show CPU Usage" imageMso="CreateFormBlankForm" size="large" getPressed="OnGetPressedPanelToggle" onAction="OnCheckPanelToggle" />
+          <button id="aboutButton" label="About CPU Usage" imageMso="AdvertisePublishAs" size="large" onAction="OnClickAboutButton" />
         </group>
       </tab>
     </tabs>

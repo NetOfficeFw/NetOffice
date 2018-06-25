@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
-                
+
                 this.Application = Factory.CreateKnownObjectFromComProxy<Excel.Application>(null, application, typeof(Excel.Application));
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
@@ -561,12 +561,12 @@ namespace NetOffice.ExcelApi.Tools
 			{
 				foreach(TaskPaneInfo item in TaskPanes)
 				{
-					if(item.Pane == customTaskPaneInst)
+					if(item.Pane.UnderlyingObject == customTaskPaneInst.UnderlyingObject)
 					{
 						try
 						{
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
+							if (null != target)
 							{
 								try
                                 {
@@ -598,12 +598,12 @@ namespace NetOffice.ExcelApi.Tools
 			{
 				foreach(TaskPaneInfo item in TaskPanes)
 				{
-					if(item.Pane == customTaskPaneInst)
+					if(item.Pane.UnderlyingObject == customTaskPaneInst.UnderlyingObject)
 					{
 						try
 						{
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
+							if (null != target)
 							{
 								try
 								{

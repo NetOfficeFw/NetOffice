@@ -21,22 +21,22 @@ namespace ExcelAddin
 
         public void OnConnection(NetOffice.ExcelApi.Application application, _CustomTaskPane parentPane, object[] customArguments)
         {
-            
+
         }
 
         public void OnDisconnection()
         {
-            
+
         }
 
         public void OnDockPositionChanged(MsoCTPDockPosition position)
         {
-            
+
         }
 
         public void OnVisibleStateChanged(bool visible)
         {
-            
+
         }
     }
 }

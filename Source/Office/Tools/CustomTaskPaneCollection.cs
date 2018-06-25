@@ -7,7 +7,7 @@ using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 
 namespace NetOffice.OfficeApi.Tools
-{    
+{
     /// <summary>
     /// Wrapper class for CustomTaskPane instance, also used as creation definition if its create before CTPFactoryAvailable is called from MS-Office host application. (Best use in .ctor for creation definition)
     /// </summary>
@@ -42,7 +42,7 @@ namespace NetOffice.OfficeApi.Tools
         /// Occurs when task visibility is changed
         /// </summary>
         public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChange
-        { 
+        {
             add
             {
                 _visibleStateChange += value;
@@ -52,14 +52,15 @@ namespace NetOffice.OfficeApi.Tools
                 _visibleStateChange -= value;
             }
         }
-       
+
         /// <summary>
         /// Raise the VisibleChanged event
         /// </summary>
         internal void RaiseVisibleChanged(Office._CustomTaskPane pane)
         {
-            if (null != _visibleStateChange)
-                _visibleStateChange(pane);
+            var handler = _visibleStateChange;
+            if (null != handler)
+                handler(pane);
         }
 
         /// <summary>
@@ -76,14 +77,15 @@ namespace NetOffice.OfficeApi.Tools
                 _dockPositionStateChange -= value;
             }
         }
-        
+
         /// <summary>
         /// Raise the DockPositionStateChange event
         /// </summary>
         internal void RaiseDockPositionStateChanged(Office._CustomTaskPane pane)
         {
-            if (null != _dockPositionStateChange)
-                _dockPositionStateChange(pane);
+            var handler = _visibleStateChange;
+            if (null != handler)
+                handler(pane);
         }
 
         #endregion
@@ -118,8 +120,8 @@ namespace NetOffice.OfficeApi.Tools
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool Visible 
-        { 
+        public bool Visible
+        {
             get
             {
                 if (IsLoaded)
@@ -150,7 +152,7 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public int Width
-        { 
+        {
             get
             {
                 if (IsLoaded)
@@ -181,7 +183,7 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public int Height
-        { 
+        {
             get
             {
                 if (IsLoaded)
@@ -323,8 +325,8 @@ namespace NetOffice.OfficeApi.Tools
         {
             if (null != Pane && !Pane.IsDisposed && System.Runtime.InteropServices.Marshal.IsComObject(Pane.UnderlyingObject))
             {
-                Pane.VisibleStateChangeEvent += new CustomTaskPane_VisibleStateChangeEventHandler(Pane_VisibleStateChangeEvent);
-                Pane.DockPositionStateChangeEvent += new CustomTaskPane_DockPositionStateChangeEventHandler(Pane_DockPositionStateChangeEvent);
+                Pane.VisibleStateChangeEvent += Pane_VisibleStateChangeEvent;
+                Pane.DockPositionStateChangeEvent += Pane_DockPositionStateChangeEvent;
             }
         }
 
@@ -350,7 +352,6 @@ namespace NetOffice.OfficeApi.Tools
             {
                 DebugConsole.Default.WriteException(exception);
             }
-            
         }
 
         #endregion
