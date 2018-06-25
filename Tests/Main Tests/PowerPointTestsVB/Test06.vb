@@ -41,7 +41,7 @@ Public Class Test06
         Dim startTime As DateTime = DateTime.Now
         Try
             Dim iconBitmap As New Bitmap(System.Reflection.Assembly.GetAssembly(Me.GetType()).GetManifestResourceStream("PowerPointTestsVB.Test06.bmp"))
-            application = New PowerPoint.Application()
+            application = COMObject.Create(Of PowerPoint.Application)(COMObjectCreateOptions.CreateNewCore)
 
             Dim commandBar As Office.CommandBar = Nothing
             Dim commandBarBtn As Office.CommandBarButton = Nothing

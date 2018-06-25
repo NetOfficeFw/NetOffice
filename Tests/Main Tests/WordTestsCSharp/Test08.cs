@@ -41,7 +41,7 @@ namespace WordTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
-                application = new Word.Application();
+                application = COMObject.Create<Word.Application>(COMObjectCreateOptions.CreateNewCore);
                 Word.Document document = application.Documents.Add();
                 application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
                 application.Selection.TypeText("Test with TabIntend C#");

@@ -42,8 +42,8 @@ namespace AccessTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
-                application = new Access.Application();
-                
+                application = COMObject.Create<Access.Application>(COMObjectCreateOptions.CreateNewCore);
+
                 // create database name 
                 string fileExtension = GetDefaultExtension(application);
                 string documentFile = string.Format("{0}\\Test01{1}", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), fileExtension);

@@ -41,7 +41,7 @@ Public Class Test06
         Dim application As Excel.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            application = New NetOffice.ExcelApi.Application()
+            application = COMObject.Create(Of Excel.Application)(COMObjectCreateOptions.CreateNewCore)
             application.DisplayAlerts = False
             application.Visible = True
             application.Workbooks.Add()

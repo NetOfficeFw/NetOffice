@@ -43,7 +43,7 @@ namespace PowerPointTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
-                application = new PowerPoint.Application();
+                application = COMObject.Create<PowerPoint.Application>(COMObjectCreateOptions.CreateNewCore);
                 application.Visible = MsoTriState.msoTrue;
 
                 // PowerPoint 2000 doesnt support DisplayAlerts, we check at runtime its available and set

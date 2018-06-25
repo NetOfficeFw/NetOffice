@@ -38,7 +38,7 @@ Public Class Test06
         Dim startTime As DateTime = DateTime.Now
         Try
 
-            application = New NetOffice.OutlookApi.Application(True)
+            application = COMObject.CreateByRunningInstance(Of Outlook.Application)(COMObjectCreateOptions.CreateNewCore)
             NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             Dim mailItem As Outlook.MailItem = application.CreateItem(OlItemType.olMailItem)

@@ -12,6 +12,8 @@ namespace NetOffice.OfficeApi
     /// <remark> https://msdn.microsoft.com/de-de/library/aa433869(v=office.12).aspx </remark> 
     [SupportByVersion("Office", 12, 14, 15, 16), NativeCaller(typeof(Native.IRibbonUI))]
     [EntityType(EntityType.IsNativeInterfaceCaller)]
+    [TypeId("000C03A7-0000-0000-C000-000000000046")]
+    [NativeCallerWrapper(typeof(NetOffice.OfficeApi.Behind.IRibbonUI))]
     public interface IRibbonUI : ICOMObject
     {
         #region Properties
@@ -74,7 +76,7 @@ namespace NetOffice.OfficeApi
         /// <param name="_namespace">Specifies the namespace of the tab element</param>
         [SupportByVersion("Office", 14, 15, 16)]
         void ActivateTabQ(string controlID, string _namespace);
-    
+
         #endregion
     }
 }

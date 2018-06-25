@@ -36,7 +36,7 @@ Public Class Test08
         Dim startTime As DateTime = DateTime.Now
         Try
 
-            application = New Word.Application()
+            application = COMObject.Create(Of Word.Application)(COMObjectCreateOptions.CreateNewCore)
             Dim document As Word.Document = application.Documents.Add()
             application.DisplayAlerts = WdAlertLevel.wdAlertsNone
             application.Selection.TypeText("Test with TabIntend VB")

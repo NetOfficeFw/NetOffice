@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using Publisher = NetOffice.PublisherApi;
 
 namespace NetOffice.PublisherApi.Tools
@@ -6,6 +7,7 @@ namespace NetOffice.PublisherApi.Tools
     /// <summary>
     /// Task pane UserControl instances can implement these interface in a NetOffice Tools Addin as a special service
     /// </summary>
+    [ComVisible(false)]
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<Publisher.Application>
     {
         /// <summary>

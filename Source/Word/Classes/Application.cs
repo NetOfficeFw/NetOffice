@@ -59,13 +59,15 @@ namespace NetOffice.WordApi
     [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.WordApi.Behind.Application
     {
+        private string _defaultProgId = "Word.Application";
+
         /// <summary>
         /// Creates a new instance of Microsoft Word
         /// </summary>
         public ApplicationClass()
         {
             ICOMObjectInitialize init = (ICOMObjectInitialize)this;
-            init.InitializeCOMObject("Word.Application");
+            init.InitializeCOMObject(_defaultProgId);
         }
 
         /// <summary>
@@ -90,6 +92,19 @@ namespace NetOffice.WordApi
         public ApplicationClass(Core factory = null, bool tryProxyServiceFirst = false) : base(factory, tryProxyServiceFirst)
         {
 
+        }
+
+        /// <summary>
+        /// Creates a new instance of Microsoft Word
+        /// </summary>
+        /// <param name="mode">indicates where is the call coming from</param>
+        public ApplicationClass(NetOffice.Callers.InteropCompatibilityClassCreateMode mode)
+        {
+            if (mode == NetOffice.Callers.InteropCompatibilityClassCreateMode.Direct)
+            {
+                ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+                init.InitializeCOMObject(_defaultProgId);
+            }
         }
     }
 

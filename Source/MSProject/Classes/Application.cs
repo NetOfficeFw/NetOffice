@@ -79,13 +79,15 @@ namespace NetOffice.MSProjectApi
     [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.MSProjectApi.Behind.Application
     {
+        private string _defaultProgId = "MSProject.Application";
+
         /// <summary>
         /// Creates a new instance of Microsoft Project
         /// </summary>
         public ApplicationClass()
         {
             ICOMObjectInitialize init = (ICOMObjectInitialize)this;
-            init.InitializeCOMObject("MSProject.Application");
+            init.InitializeCOMObject(_defaultProgId);
         }
 
         /// <summary>
@@ -110,6 +112,19 @@ namespace NetOffice.MSProjectApi
         public ApplicationClass(Core factory = null, bool tryProxyServiceFirst = false) : base(factory, tryProxyServiceFirst)
         {
 
+        }
+
+        /// <summary>
+        /// Creates a new instance of Microsoft Project
+        /// </summary>
+        /// <param name="mode">indicates where is the call coming from</param>
+        public ApplicationClass(NetOffice.Callers.InteropCompatibilityClassCreateMode mode)
+        {
+            if (mode == NetOffice.Callers.InteropCompatibilityClassCreateMode.Direct)
+            {
+                ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+                init.InitializeCOMObject(_defaultProgId);
+            }
         }
     }
 

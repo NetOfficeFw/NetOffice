@@ -43,13 +43,15 @@ namespace NetOffice.OutlookApi
     [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.OutlookApi.Behind.Application
     {
+        private string _defaultProgId = "Outlook.Application";
+
         /// <summary>
         /// Creates a new instance of Microsoft Outlook
         /// </summary>
         public ApplicationClass()
         {
             ICOMObjectInitialize init = (ICOMObjectInitialize)this;
-            init.InitializeCOMObject("Outlook.Application");
+            init.InitializeCOMObject(_defaultProgId);
         }
 
         /// <summary>
@@ -74,6 +76,19 @@ namespace NetOffice.OutlookApi
         public ApplicationClass(Core factory = null, bool tryProxyServiceFirst = false) : base(factory, tryProxyServiceFirst)
         {
 
+        }
+
+        /// <summary>
+        /// Creates a new instance of Microsoft Outlook
+        /// </summary>
+        /// <param name="mode">indicates where is the call coming from</param>
+        public ApplicationClass(NetOffice.Callers.InteropCompatibilityClassCreateMode mode)
+        {
+            if (mode == NetOffice.Callers.InteropCompatibilityClassCreateMode.Direct)
+            {
+                ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+                init.InitializeCOMObject(_defaultProgId);
+            }
         }
     }
 

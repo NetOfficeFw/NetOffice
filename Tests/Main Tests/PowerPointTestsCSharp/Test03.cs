@@ -40,7 +40,7 @@ namespace PowerPointTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
-                application = new PowerPoint.Application();
+                application = COMObject.Create<PowerPoint.Application>(COMObjectCreateOptions.CreateNewCore);
 
                 // add a new presentation with two new slides
                 PowerPoint.Presentation presentation = application.Presentations.Add(MsoTriState.msoTrue);

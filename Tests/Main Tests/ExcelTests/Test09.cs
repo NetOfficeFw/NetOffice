@@ -39,7 +39,7 @@ namespace ExcelTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
-                application = new NetOffice.ExcelApi.Application();
+                application = COMObject.Create<Excel.Application>(COMObjectCreateOptions.CreateNewCore);
                 application.Visible = true;
                 application.DisplayAlerts = false;
                 application.Workbooks.Add();

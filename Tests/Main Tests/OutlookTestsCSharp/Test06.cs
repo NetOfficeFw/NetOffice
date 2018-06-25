@@ -42,7 +42,7 @@ namespace OutlookTestsCSharp
             try
             {
                 // start outlook
-                application = new Outlook.Application(true);
+                application = COMObject.CreateByRunningInstance<Outlook.Application>(COMObjectCreateOptions.CreateNewCore);
                 NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 Outlook.MailItem mailItem = application.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;

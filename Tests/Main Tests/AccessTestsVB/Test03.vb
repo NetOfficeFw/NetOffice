@@ -42,7 +42,7 @@ Public Class Test03
         Dim application As Access.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            application = New NetOffice.AccessApi.Application()
+            application = COMObject.Create(Of Access.Application)(COMObjectCreateOptions.CreateNewCore)
 
             ' create database name 
             Dim fileExtension As String = GetDefaultExtension(application)

@@ -39,7 +39,7 @@ namespace WordTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
-                application = new Word.Application();
+                application = COMObject.Create<Word.Application>(COMObjectCreateOptions.CreateNewCore);
                 application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
                 // add a new document

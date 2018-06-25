@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-
+using NetOffice;
 using NetOffice.Tools;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
@@ -84,23 +84,15 @@ namespace ExcelAddinCSharp
 
         internal bool TaskPaneOkay { get; set; }
 
-        internal Office.IRibbonUI RibbonUI { get; private set; }
-
         #endregion
 
         #region Trigger
 
         private void TestAddin_OnConnection(object Application, NetOffice.Tools.ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-            Factory.Initialize();
-            Office.COMAddIn addin = new Office.COMAddIn(null, AddInInst);
+            Office.COMAddIn addin = COMObject.Create<Office.COMAddIn>(AddInInst);
             addin.Object = this;
             addin.Dispose();
-        }
-
-        public void OnLoadRibbonUI(Office.IRibbonUI ribbonUI)
-        {
-            RibbonUI = ribbonUI;
         }
 
         public string GetLabel(Office.IRibbonControl control)

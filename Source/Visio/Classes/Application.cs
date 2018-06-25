@@ -130,13 +130,15 @@ namespace NetOffice.VisioApi
     [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.VisioApi.Behind.Application
     {
+        private string _defaultProgId = "Visio.Application";
+
         /// <summary>
         /// Creates a new instance of Microsoft Visio
         /// </summary>
         public ApplicationClass()
         {
             ICOMObjectInitialize init = (ICOMObjectInitialize)this;
-            init.InitializeCOMObject("Visio.Application");
+            init.InitializeCOMObject(_defaultProgId);
         }
 
         /// <summary>
@@ -161,6 +163,19 @@ namespace NetOffice.VisioApi
         public ApplicationClass(Core factory = null, bool tryProxyServiceFirst = false) : base(factory, tryProxyServiceFirst)
         {
 
+        }
+
+        /// <summary>
+        /// Creates a new instance of Microsoft Visio
+        /// </summary>
+        /// <param name="mode">indicates where is the call coming from</param>
+        public ApplicationClass(NetOffice.Callers.InteropCompatibilityClassCreateMode mode)
+        {
+            if (mode == NetOffice.Callers.InteropCompatibilityClassCreateMode.Direct)
+            {
+                ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+                init.InitializeCOMObject(_defaultProgId);
+            }
         }
     }
 

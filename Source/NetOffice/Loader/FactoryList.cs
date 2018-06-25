@@ -116,10 +116,7 @@ namespace NetOffice.Loader
                     if (!factory.Implementation(contract, ref implementation))
                         return false;
                 }
-
-                var attribute = implementation.GetCustomAttribute<HasInteropCompatibilityClassAttribute>();
-                if (null != attribute)
-                    implementation = attribute.Value;
+                implementation = ValidateTypeRedirection(implementation);
             }
             return result;
         }
@@ -138,7 +135,7 @@ namespace NetOffice.Loader
             ITypeFactory factory = null;
             return GetImplementationType(contractType, ref factory, throwException);
         }
-
+        
         /// <summary>
         /// Returns implementation from contract
         /// </summary>
@@ -164,9 +161,7 @@ namespace NetOffice.Loader
 
                 if (null != result)
                 {
-                    var attribute = result.GetCustomAttribute<HasInteropCompatibilityClassAttribute>();
-                    if (null != attribute)
-                        result = attribute.Value;
+                    result = ValidateTypeRedirection(result);
                 }
                 else if (throwException)
                 {
@@ -191,6 +186,26 @@ namespace NetOffice.Loader
             {
                 throw new FactoryException(String.Format("Unexcepted type load error(1): {0}.", contractType.FullName), exception);
             }
+        }
+
+        /// <summary>
+        /// Analyze a type for redirection and returns redirected type
+        /// </summary>
+        /// <param name="type">type as any</param>
+        /// <returns>argument or its redirected type</returns>
+        public Type ValidateTypeRedirection(Type type)
+        {
+            var result = type;
+            var attribute = result.GetCustomAttribute<HasInteropCompatibilityClassAttribute>();
+            if (null != attribute)
+                result = attribute.Value;
+            else
+            {
+                var attribute2 = result.GetCustomAttribute<NativeCallerWrapperAttribute>();
+                if (null != attribute2)
+                    result = attribute2.Caller;
+            }
+            return result;
         }
 
         /// <summary>

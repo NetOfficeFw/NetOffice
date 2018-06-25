@@ -1,4 +1,5 @@
 ﻿Imports Tests.Core
+Imports NetOffice
 Imports MSProject = NetOffice.MSProjectApi
 
 Public Class Test01
@@ -33,7 +34,7 @@ Public Class Test01
         Dim application As MSProject.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            application = New MSProject.Application()
+            application = COMObject.Create(Of MSProject.Application)(COMObjectCreateOptions.CreateNewCore)
 
             Dim newProject As MSProject.Project = application.Projects.Add()
 

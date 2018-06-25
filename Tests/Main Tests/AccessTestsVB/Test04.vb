@@ -49,7 +49,7 @@ Public Class Test04
         Dim startTime As DateTime = DateTime.Now
         Try
             Dim iconBitmap As New Bitmap(System.Reflection.Assembly.GetAssembly(Me.GetType()).GetManifestResourceStream("AccessTestsVB.Test04.bmp"))
-            application = New NetOffice.AccessApi.Application()
+            application = COMObject.Create(Of Access.Application)(COMObjectCreateOptions.CreateNewCore)
 
             Dim commandBar As Office.CommandBar = Nothing
             Dim commandBarBtn As Office.CommandBarButton = Nothing

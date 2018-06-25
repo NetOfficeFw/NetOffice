@@ -29,6 +29,11 @@ namespace NetOffice
                                                                    "from a Windows Service/IIS modul in default configuration because its running in a restricted context/principal.";
 
         /// <summary>
+        /// Factory exception message when Create is unable to find an implementation for given contract
+        /// </summary>
+        private static readonly string _missingImplementationHint = "Unable to locate a contract implementation.";
+
+        /// <summary>
         /// the well know IUnknown Interface ID
         /// </summary>
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
@@ -460,6 +465,9 @@ namespace NetOffice
             {
                 Type contract = typeof(T);
                 Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(factory, contract);
+                if (null == implementation)
+                    throw new FactoryException(_missingImplementationHint);
+
                 T result = (T)Activator.CreateInstance(implementation);
                 ICOMObjectInitialize init = result as ICOMObjectInitialize;
                 if (null != init)
@@ -496,6 +504,9 @@ namespace NetOffice
                 Type contract = typeof(T);
                 factory.CheckInitialize();
                 Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(factory, contract);
+                if (null == implementation)
+                    throw new FactoryException(_missingImplementationHint);
+
                 var progId = contract.GetCustomAttribute<ComProgIdAttribute>();
 
                 T result = (T)Activator.CreateInstance(implementation);
@@ -536,6 +547,8 @@ namespace NetOffice
                 Type contract = typeof(T);
                 factory.CheckInitialize();
                 Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(factory, contract);
+                if (null == implementation)
+                    throw new FactoryException(_missingImplementationHint);
 
                 T result = (T)Activator.CreateInstance(implementation);
 
@@ -574,7 +587,10 @@ namespace NetOffice
             try
             {
                 Type contract = typeof(T);
-                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(parent.Factory, contract);
+                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(null != parent ? parent.Factory : Core.Default, contract);
+                if (null == implementation)
+                    throw new FactoryException(_missingImplementationHint);
+
                 T result = (T)Activator.CreateInstance(implementation);
                 ICOMObjectInitialize init = result as ICOMObjectInitialize;
                 if (null != init)

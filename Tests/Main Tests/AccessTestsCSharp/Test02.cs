@@ -45,7 +45,7 @@ namespace AccessTestsCSharp
             try
             {
               
-                application = new Access.Application();
+                application = COMObject.Create<Access.Application>(COMObjectCreateOptions.CreateNewCore);
 
                 // create database name 
                 string fileExtension = GetDefaultExtension(application);

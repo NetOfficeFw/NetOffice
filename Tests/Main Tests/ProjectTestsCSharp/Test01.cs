@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NetOffice;
 using Tests.Core;
 using MSProject = NetOffice.MSProjectApi;
 using NetOffice.MSProjectApi.Enums;
@@ -38,7 +39,7 @@ namespace ProjectTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
-                application = new MSProject.Application();
+                application = COMObject.Create<MSProject.Application>(COMObjectCreateOptions.CreateNewCore);
 
                 MSProject.Project newProject = application.Projects.Add();
                 

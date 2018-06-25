@@ -37,9 +37,9 @@ namespace WordTestsCSharp
         }
 
 
-        private void Factory_CreateCOMDynamic(Core sender, Core.OnCreateCOMDynamicEventArgs args)
+        private void Factory_CreateCOMDynamic(Core sender, NetOffice.CoreServices.OnCreateCOMDynamicEventArgs args)
         {
-            var infos = Core.ProxyInformations.Create(args.ComProxy);
+            var infos = NetOffice.Contribution.ProxyInformation.Create(args.ComProxy);
             Console.WriteLine(infos);
         }
 
@@ -50,8 +50,8 @@ namespace WordTestsCSharp
             try
             {
                 Bitmap iconBitmap = new Bitmap(System.Reflection.Assembly.GetAssembly(this.GetType()).GetManifestResourceStream("WordTestsCSharp.Test07.bmp"));
-                application = new Word.Application();
-                application.Factory.CreateCOMDynamic += Factory_CreateCOMDynamic;
+                application = COMObject.Create<Word.Application>(COMObjectCreateOptions.CreateNewCore);
+                application.Factory.ObjectActivator.CreateDynamicInstance += Factory_CreateCOMDynamic;
 
                 application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
                 application.Documents.Add();

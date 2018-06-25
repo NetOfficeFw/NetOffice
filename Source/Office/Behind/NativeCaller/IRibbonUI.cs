@@ -9,6 +9,7 @@ namespace NetOffice.OfficeApi.Behind
     /// DispatchInterface IRibbonUI 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
+    [IsNativeCallerWrapper(typeof(NetOffice.OfficeApi.IRibbonUI))]
     public class IRibbonUI : COMObject, NetOffice.OfficeApi.IRibbonUI
     {
         #region Type Information
@@ -71,7 +72,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <summary>
         /// Native EarlyBind Interface used instead of UnderlyingObject
         /// </summary>
-        private Native.IRibbonUI NativeRibbon { get; set; }
+        protected internal Native.IRibbonUI NativeRibbon { get; private set; }
 
         #endregion
 
@@ -96,7 +97,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks> https://msdn.microsoft.com/de-de/library/aa433552(v=office.12).aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void Invalidate()
+        public virtual void Invalidate()
         {
             if (HasUnderlyingObject)
                 NativeRibbon.Invalidate();
@@ -109,7 +110,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="controlID">Specified the identifier of the control that will be invalidated.</param>
         /// <remarks> https://msdn.microsoft.com/de-de/library/aa433553(v=office.12).aspx </remarks>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public void InvalidateControl(string controlID)
+        public virtual void InvalidateControl(string controlID)
         {
             if (HasUnderlyingObject)
                 NativeRibbon.InvalidateControl(controlID);
@@ -121,7 +122,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="controlID">Specified the identifier of the control that will be invalidated.</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void InvalidateControlMso(string controlID)
+        public virtual void InvalidateControlMso(string controlID)
         {
             if (HasUnderlyingObject)
                 NativeRibbon.InvalidateControlMso(controlID);
@@ -133,7 +134,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="controlID">Specifies the identifier of the custom Ribbon tab to be activated</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void ActivateTab(string controlID)
+        public virtual void ActivateTab(string controlID)
         {
             if (HasUnderlyingObject)
                 NativeRibbon.ActivateTab(controlID);
@@ -145,7 +146,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <param name="controlID">Specifies the identifier of the custom Ribbon tab to be activated.</param>
 		[SupportByVersion("Office", 14, 15, 16)]
-        public void ActivateTabMso(string controlID)
+        public virtual void ActivateTabMso(string controlID)
         {
             if (HasUnderlyingObject)
                 NativeRibbon.ActivateTabMso(controlID);
@@ -158,7 +159,7 @@ namespace NetOffice.OfficeApi.Behind
         /// <param name="controlID">Specifies the identifier of the custom Ribbon tab to be activated</param>
         /// <param name="_namespace">Specifies the namespace of the tab element</param>
         [SupportByVersion("Office", 14, 15, 16)]
-        public void ActivateTabQ(string controlID, string _namespace)
+        public virtual void ActivateTabQ(string controlID, string _namespace)
         {
             if (HasUnderlyingObject)
                 NativeRibbon.ActivateTabQ(controlID, _namespace);

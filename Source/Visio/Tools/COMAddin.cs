@@ -16,7 +16,7 @@ namespace NetOffice.VisioApi.Tools
     /// <summary>
     /// NetOffice MS-Visio COM Addin
     /// </summary>
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
+	//[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, ICOMAddin
     {
         #region Fields
@@ -235,12 +235,17 @@ namespace NetOffice.VisioApi.Tools
         /// </summary>
         public event OnBeginShutdownEventHandler OnBeginShutdown;
 
-        private void RaiseOnStartupComplete(ref Array custom)
+        /// <summary>
+        /// Raise the OnStartupComplete event
+        /// </summary>
+        /// <param name="custom">custom arguments</param>
+        protected internal virtual void RaiseOnStartupComplete(ref Array custom)
         {
             try
             {
-                if (null != OnStartupComplete)
-                    OnStartupComplete(ref custom);
+                var handler = OnStartupComplete;
+                if (null != handler)
+                    handler(ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -249,12 +254,18 @@ namespace NetOffice.VisioApi.Tools
             }
         }
 
-        private void RaiseOnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        /// <summary>
+        /// Raise the OnDisconnection event
+        /// </summary>
+        /// <param name="RemoveMode">kind of remove</param>
+        /// <param name="custom">custom arguments</param>
+        protected internal virtual void RaiseOnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             try
             {
-                if (null != OnDisconnection)
-                    OnDisconnection(RemoveMode, ref custom);
+                var handler = OnDisconnection;
+                if (null != handler)
+                    handler(RemoveMode, ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -263,12 +274,20 @@ namespace NetOffice.VisioApi.Tools
             }
         }
 
-        private void RaiseOnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        /// <summary>
+        /// Raise the OnConnection event
+        /// </summary>
+        /// <param name="Application">application host instance</param>
+        /// <param name="ConnectMode">kind of connect</param>
+        /// <param name="AddInInst">addin instance</param>
+        /// <param name="custom">custom arguments</param>
+        protected internal virtual void RaiseOnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
-                if (null != OnConnection)
-                    OnConnection(Application, ConnectMode, AddInInst, ref custom);
+                var handler = OnConnection;
+                if (null != handler)
+                    handler(Application, ConnectMode, AddInInst, ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -277,12 +296,17 @@ namespace NetOffice.VisioApi.Tools
             }
         }
 
-        private void RaiseOnAddInsUpdate(ref Array custom)
+        /// <summary>
+        /// Raise the OnAddInsUpdate event
+        /// </summary>
+        /// <param name="custom">custom arguments</param>
+        protected internal virtual void RaiseOnAddInsUpdate(ref Array custom)
         {
             try
             {
-                if (null != OnAddInsUpdate)
-                    OnAddInsUpdate(ref custom);
+                var handler = OnAddInsUpdate;
+                if (null != handler)
+                    handler(ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -290,13 +314,18 @@ namespace NetOffice.VisioApi.Tools
                 OnError(ErrorMethodKind.OnAddInsUpdate, exception);
             }
         }
-
-        private void RaiseOnBeginShutdown(ref Array custom)
+        
+        /// <summary>
+        /// Raise the OnBeginShutdown event
+        /// </summary>
+        /// <param name="custom">custom arguments</param>
+        protected internal virtual void RaiseOnBeginShutdown(ref Array custom)
         {
             try
             {
-                if (null != OnBeginShutdown)
-                    OnBeginShutdown(ref custom);
+                var handler = OnBeginShutdown;
+                if (null != handler)
+                    handler(ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
             {

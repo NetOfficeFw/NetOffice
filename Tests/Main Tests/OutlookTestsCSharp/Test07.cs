@@ -45,7 +45,7 @@ namespace OutlookTestsCSharp
                 Bitmap iconBitmap = new Bitmap(System.Reflection.Assembly.GetAssembly(this.GetType()).GetManifestResourceStream("OutlookTestsCSharp.Test07.bmp"));
 
                 // start outlook
-                application = new Outlook.Application(true);
+                application = COMObject.CreateByRunningInstance<Outlook.Application>(COMObjectCreateOptions.CreateNewCore);
                 NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 Office.CommandBar commandBar;

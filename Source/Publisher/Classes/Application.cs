@@ -47,13 +47,15 @@ namespace NetOffice.PublisherApi
     [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.PublisherApi.Behind.Application
     {
+        private string _defaultProgId = "Publisher.Application";
+
         /// <summary>
         /// Creates a new instance of Microsoft Publisher
         /// </summary>
         public ApplicationClass()
         {
             ICOMObjectInitialize init = (ICOMObjectInitialize)this;
-            init.InitializeCOMObject("Publisher.Application");
+            init.InitializeCOMObject(_defaultProgId);
         }
 
         /// <summary>
@@ -78,6 +80,19 @@ namespace NetOffice.PublisherApi
         public ApplicationClass(Core factory = null, bool tryProxyServiceFirst = false) : base(factory, tryProxyServiceFirst)
         {
 
+        }
+
+        /// <summary>
+        /// Creates a new instance of Microsoft Publisher
+        /// </summary>
+        /// <param name="mode">indicates where is the call coming from</param>
+        public ApplicationClass(NetOffice.Callers.InteropCompatibilityClassCreateMode mode)
+        {
+            if (mode == NetOffice.Callers.InteropCompatibilityClassCreateMode.Direct)
+            {
+                ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+                init.InitializeCOMObject(_defaultProgId);
+            }
         }
     }
 

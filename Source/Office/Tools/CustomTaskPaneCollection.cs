@@ -13,6 +13,13 @@ namespace NetOffice.OfficeApi.Tools
     /// </summary>
     public class TaskPaneInfo
     {
+        #region Fields
+
+        private CustomTaskPane_VisibleStateChangeEventHandler _visibleStateChange;
+        private CustomTaskPane_DockPositionStateChangeEventHandler _dockPositionStateChange;
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -45,8 +52,7 @@ namespace NetOffice.OfficeApi.Tools
                 _visibleStateChange -= value;
             }
         }
-        private CustomTaskPane_VisibleStateChangeEventHandler _visibleStateChange;
-
+       
         /// <summary>
         /// Raise the VisibleChanged event
         /// </summary>
@@ -70,8 +76,7 @@ namespace NetOffice.OfficeApi.Tools
                 _dockPositionStateChange -= value;
             }
         }
-        private CustomTaskPane_DockPositionStateChangeEventHandler _dockPositionStateChange;
-
+        
         /// <summary>
         /// Raise the DockPositionStateChange event
         /// </summary>

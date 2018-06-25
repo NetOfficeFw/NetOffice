@@ -49,7 +49,7 @@ namespace AccessTestsCSharp
             try
             {
                 Bitmap iconBitmap = new Bitmap(System.Reflection.Assembly.GetAssembly(this.GetType()).GetManifestResourceStream("AccessTestsCSharp.Test04.bmp"));
-                application = new Access.Application();
+                application = COMObject.Create<Access.Application>(COMObjectCreateOptions.CreateNewCore);
 
                 Office.CommandBarButton commandBarBtn;
 

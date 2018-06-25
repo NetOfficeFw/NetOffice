@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Native
     /// </summary>
     [SupportByVersion("Office", 12,14,15,16)]
 	[ComImport, ComVisible(true), Guid("000C0396-0000-0000-C000-000000000046"), TypeLibType((short) 4160)]
-	[EntityType(EntityType.IsNativeInterface)]
+    [EntityType(EntityType.IsNativeInterface)]
 	public interface IRibbonExtensibility
 	{
         #region Methods

@@ -82,16 +82,7 @@ Public Class TestAddin
 
     Private GeneralError As String
 
-    Private RibbonUI As Office.IRibbonUI
-
     Friend TaskPaneOkay As Boolean
-
-
-    Public Sub OnLoadRibbonUI(ByVal ribbUI As Office.IRibbonUI)
-
-        RibbonUI = ribbUI
-
-    End Sub
 
     Public Function GetLabel(ByVal control As Office.IRibbonControl)
 
@@ -101,7 +92,7 @@ Public Class TestAddin
 
     Private Sub Addin_OnConnection(ByVal Application As Object, ByVal ConnectMode As NetOffice.Tools.ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Handles Me.OnConnection
 
-        Dim addin As New Office.COMAddIn(Nothing, AddInInst)
+        Dim addin As Office.COMAddIn = COMObject.Create(Of Office.COMAddIn)(AddInInst, COMObjectCreateOptions.CreateNewCore)
         addin.Object = Me
         addin.Dispose()
 

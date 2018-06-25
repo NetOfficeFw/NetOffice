@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Tests.Core;
+using NetOffice;
 using Core = NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
@@ -41,7 +42,7 @@ namespace ExcelTestsCSharp
             DateTime startTime = DateTime.Now;
             try
             {
-                application = new NetOffice.ExcelApi.Application();
+                application = COMObject.Create<Excel.Application>(COMObjectCreateOptions.CreateNewCore);
                 application.DisplayAlerts = false;
                 application.Workbooks.Add();
                 Excel.Worksheet sheet = application.Workbooks[1].Sheets[1] as Excel.Worksheet;

@@ -1,7 +1,6 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using NetOffice;
-using NetOffice.Attributes;
-using NetOffice.Tools;
 
 namespace NetOffice.OfficeApi.Tools
 {
@@ -9,6 +8,7 @@ namespace NetOffice.OfficeApi.Tools
     /// ITaskPane Connection Part
     /// </summary>
     /// <typeparam name="T">Office Host Application</typeparam>
+    [ComVisible(false)]
     public interface ITaskPaneConnection<T> where T : ICOMObject
     {
         /// <summary>

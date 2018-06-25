@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Forms
 Imports System.Drawing
+Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
@@ -38,7 +39,7 @@ Public Class Test08
         Dim startTime As DateTime = DateTime.Now
         Try
             Dim iconBitmap As New Bitmap(System.Reflection.Assembly.GetAssembly(Me.GetType()).GetManifestResourceStream("ExcelTestsVB.Test08.bmp"))
-            application = New NetOffice.ExcelApi.Application()
+            application = COMObject.Create(Of Excel.Application)(COMObjectCreateOptions.CreateNewCore)
             application.DisplayAlerts = False
             application.Workbooks.Add()
  

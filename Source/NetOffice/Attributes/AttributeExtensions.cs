@@ -8,6 +8,19 @@ namespace NetOffice.Attributes
     public static class AttributeExtensions
     {
         /// <summary>
+        /// Determines an attribute exists on target type
+        /// </summary>
+        /// <typeparam name="T">target attribute type</typeparam>
+        /// <param name="value">value to reflect</param>
+        /// <param name="inherit">search also base types</param>
+        /// <returns>true if attribute exists, otherwise false</returns>
+        public static bool HasCustomAttribute<T>(this Type value, bool inherit = false) where T : Attribute
+        {
+            object[] attributes = value.GetCustomAttributes(typeof(T), inherit);
+            return attributes.Length > 0;
+        }
+
+        /// <summary>
         /// Returns first found attribute or null
         /// </summary>
         /// <typeparam name="T">target attribute type</typeparam>

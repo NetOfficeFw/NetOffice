@@ -37,7 +37,7 @@ Public Class Test02
         Dim application As PowerPoint.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            application = New PowerPoint.Application()
+            application = COMObject.Create(Of PowerPoint.Application)(COMObjectCreateOptions.CreateNewCore)
 
             ' add a new presentation with one new slide
             Dim presentation As PowerPoint.Presentation = application.Presentations.Add(MsoTriState.msoTrue)

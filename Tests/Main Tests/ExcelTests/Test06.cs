@@ -50,7 +50,7 @@ namespace ExcelTestsCSharp
             try
             {
                 // start excel and turn off msg boxes
-                application = new Excel.Application();
+                application = COMObject.Create<Excel.Application>(COMObjectCreateOptions.CreateNewCore);
                 application.DisplayAlerts = false;
                 application.Visible = true;
 

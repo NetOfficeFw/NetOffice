@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Tests.Core;
+using NetOffice;
 using Core = NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
@@ -42,7 +43,7 @@ namespace ExcelTestsCSharp
             try
             {
                 // start excel and turn off msg boxes
-                application = new Excel.Application();
+                application = COMObject.Create<Excel.Application>(COMObjectCreateOptions.CreateNewCore);
                 application.DisplayAlerts = false;
 
                 // add a new workbook

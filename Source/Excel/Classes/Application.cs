@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
     #pragma warning restore
 
     #endregion
-
+    
     /// <summary>
     /// CoClass Application
     /// This class is an alias/typedef for NetOffice.ExcelApi.Behind.Application
@@ -71,13 +71,15 @@ namespace NetOffice.ExcelApi
     [InteropCompatibilityClass]
     public class ApplicationClass : NetOffice.ExcelApi.Behind.Application
     {
+        private string _defaultProgId = "Excel.Application";
+
         /// <summary>
         /// Creates a new instance of Microsoft Excel
         /// </summary>
         public ApplicationClass()
         {
             ICOMObjectInitialize init = (ICOMObjectInitialize)this;
-            init.InitializeCOMObject("Excel.Application");
+            init.InitializeCOMObject(_defaultProgId);
         }
 
         /// <summary>
@@ -102,6 +104,19 @@ namespace NetOffice.ExcelApi
         public ApplicationClass(Core factory = null, bool tryProxyServiceFirst = false) : base(factory, tryProxyServiceFirst)
         {
 
+        }
+
+        /// <summary>
+        /// Creates a new instance of Microsoft Excel
+        /// </summary>
+        /// <param name="mode">indicates where is the call coming from</param>
+        public ApplicationClass(NetOffice.Callers.InteropCompatibilityClassCreateMode mode)
+        {
+            if (mode == NetOffice.Callers.InteropCompatibilityClassCreateMode.Direct)
+            {
+                ICOMObjectInitialize init = (ICOMObjectInitialize)this;
+                init.InitializeCOMObject(_defaultProgId);
+            }
         }
     }
 

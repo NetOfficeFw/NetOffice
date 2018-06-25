@@ -8,6 +8,7 @@ namespace NetOffice.Tools.Native
     /// The well known Extensibility
     /// </summary>
     [Guid("B65AD801-ABAF-11D0-BB8B-00A0C90F2744"), TypeLibType(4160), ComImport]
+    [ComVisible(true)]
     public interface IDTExtensibility2
     {
         /// <summary>

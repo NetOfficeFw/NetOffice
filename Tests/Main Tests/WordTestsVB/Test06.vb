@@ -38,7 +38,7 @@ Public Class Test06
         Dim application As Word.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            application = New NetOffice.WordApi.Application()
+            application = COMObject.Create(Of Word.Application)(COMObjectCreateOptions.CreateNewCore)
             application.DisplayAlerts = WdAlertLevel.wdAlertsNone
 
             ' add a new document

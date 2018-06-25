@@ -44,7 +44,7 @@ namespace PowerPointTestsCSharp
             try
             {
                 Bitmap iconBitmap = new Bitmap(System.Reflection.Assembly.GetAssembly(this.GetType()).GetManifestResourceStream("PowerPointTestsCSharp.Test06.bmp"));
-                application = new PowerPoint.Application();
+                application = COMObject.Create<PowerPoint.Application>(COMObjectCreateOptions.CreateNewCore);
 
                 Office.CommandBar commandBar;
                 Office.CommandBarButton commandBarBtn;

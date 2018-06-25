@@ -1,4 +1,5 @@
 ﻿Imports Tests.Core
+Imports NetOffice
 Imports MSProject = NetOffice.MSProjectApi
 Imports NetOffice.MSProjectApi.Enums
 
@@ -61,7 +62,7 @@ Public Class Test02
         Try
             NetOffice.Settings.Default.MessageFilter.Enabled = True
 
-            application = New MSProject.Application()
+            application = COMObject.Create(Of MSProject.Application)(COMObjectCreateOptions.CreateNewCore)
 
             Dim taskNewHandler As MSProject.Application_ProjectTaskNewEventHandler = AddressOf Me.ApplicationProjectTaskNewEvent
             AddHandler application.ProjectTaskNewEvent, taskNewHandler

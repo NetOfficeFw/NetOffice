@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Tests.Core;
 using Core = NetOffice;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 using Excel = NetOffice.ExcelApi;
@@ -45,7 +46,7 @@ namespace ExcelTestsCSharp
             try
             {
                 Bitmap iconBitmap = new Bitmap(System.Reflection.Assembly.GetAssembly(this.GetType()).GetManifestResourceStream("ExcelTestsCSharp.Test08.bmp"));
-                application = new NetOffice.ExcelApi.Application();
+                application = COMObject.Create<Excel.Application>(COMObjectCreateOptions.CreateNewCore);
                 application.DisplayAlerts = false;
                 application.Workbooks.Add();
                 Excel.Worksheet sheet = application.Workbooks[1].Sheets[1] as Excel.Worksheet;

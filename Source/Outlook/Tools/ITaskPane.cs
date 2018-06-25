@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using Outlook = NetOffice.OutlookApi;
 
 namespace NetOffice.OutlookApi.Tools
 {
- 	/// <summary>
+    /// <summary>
     /// Task pane UserControl instances can implement these interface in a NetOffice Tools Addin as a special service
     /// </summary>
+    [ComVisible(false)]
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<Outlook.Application>
     {
 		/// <summary>

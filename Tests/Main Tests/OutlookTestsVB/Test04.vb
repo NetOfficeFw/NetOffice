@@ -35,7 +35,7 @@ Public Class Test04
         Dim application As Outlook.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            application = New NetOffice.OutlookApi.Application(True)
+            application = COMObject.CreateByRunningInstance(Of Outlook.Application)(COMObjectCreateOptions.CreateNewCore)
             NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             If application.Session.EntityIsAvailable("SendAndReceive") Then

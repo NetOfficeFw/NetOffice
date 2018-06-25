@@ -1,4 +1,5 @@
-﻿Imports Excel = NetOffice.ExcelApi
+﻿Imports NetOffice
+Imports Excel = NetOffice.ExcelApi
 Imports Tests.Core
 
 Public Class Test07
@@ -33,7 +34,7 @@ Public Class Test07
         Dim application As Excel.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            application = New NetOffice.ExcelApi.Application()
+            application = COMObject.Create(Of Excel.Application)(COMObjectCreateOptions.CreateNewCore)
             application.DisplayAlerts = False
             application.Workbooks.Add()
 
