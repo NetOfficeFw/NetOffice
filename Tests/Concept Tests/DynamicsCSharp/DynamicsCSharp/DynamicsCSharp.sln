@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicsCSharp", "DynamicsCSharp.csproj", "{C38DE3F8-4ADE-4B71-B2C3-A8946B6D9132}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IExcelApi", "..\IExcelApi\IExcelApi.csproj", "{5C825D80-F3B8-4534-9854-EFF78FBE4EDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +15,11 @@ Global
 		{C38DE3F8-4ADE-4B71-B2C3-A8946B6D9132}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C38DE3F8-4ADE-4B71-B2C3-A8946B6D9132}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C38DE3F8-4ADE-4B71-B2C3-A8946B6D9132}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C825D80-F3B8-4534-9854-EFF78FBE4EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C825D80-F3B8-4534-9854-EFF78FBE4EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C825D80-F3B8-4534-9854-EFF78FBE4EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C825D80-F3B8-4534-9854-EFF78FBE4EDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA6B6EF8-8B34-4BC9-A089-88F9E85D9D69}
 	EndGlobalSection
 EndGlobal

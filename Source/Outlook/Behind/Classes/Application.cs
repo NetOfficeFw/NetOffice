@@ -124,7 +124,7 @@ namespace NetOffice.OutlookApi.Behind
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
         /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new virtual NetOffice.OutlookApi.Application Clone()
+        public new virtual NetOffice.OutlookApi.Application DeepCopy()
         {
             return base.Clone() as NetOffice.OutlookApi.Application;
         }
@@ -856,7 +856,7 @@ namespace NetOffice.OutlookApi.Behind
 		}
 
         #endregion
-        
+
         #pragma warning restore
     }
 }

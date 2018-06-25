@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
     #pragma warning restore
 
     #endregion
-    
+
     /// <summary>
     /// CoClass Application
     /// This class is an alias/typedef for NetOffice.ExcelApi.Behind.Application

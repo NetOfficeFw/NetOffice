@@ -16,7 +16,8 @@ namespace ConsoleApplication1
             NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].Enabled = true;
             NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 20;
 
-            Excel.Application application = new NetOffice.ExcelApi.Application();
+            Excel.Application application = new Excel.ApplicationClass();
+
             application.DisplayAlerts = false;
             application.Interactive = false;
             application.ScreenUpdating = false;
@@ -25,7 +26,7 @@ namespace ConsoleApplication1
 
             Excel.Worksheet workSheet = (Excel.Worksheet)application.Workbooks[1].Worksheets[1];
             Excel.Range rangeCells = workSheet.Cells;
-           
+
             // row
             int counter = 0;
             DateTime startTime = DateTime.Now;
@@ -42,7 +43,7 @@ namespace ConsoleApplication1
                 if (i % 100 == 0)
                     Console.WriteLine("{0} Cells written. Time elapsed: {1}", counter, DateTime.Now - startTime);
            }
-           
+
            // quit and dispose
            application.Quit();
            application.Dispose();

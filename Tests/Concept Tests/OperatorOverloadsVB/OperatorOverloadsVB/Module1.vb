@@ -1,5 +1,5 @@
 ﻿Imports Excel = NetOffice.ExcelApi
-Imports NetOffice.ExcelApi.GlobalHelperModules.GlobalModule
+Imports NetOffice.ExcelApi.ModulesLegacy.ApplicationModule
 
 Module Module1
     '
@@ -8,7 +8,7 @@ Module Module1
     Sub Main()
 
         ' start excel
-        Dim application As New Excel.Application()
+        Dim application As New Excel.ApplicationClass()
         application.DisplayAlerts = False
 
         ' add 3 workbooks

@@ -16,11 +16,9 @@ namespace ConsoleApplication1
                 System.Console.WriteLine("NetOffice CreateInstance Event Concept Test\r\n");
 
                 // Use this.Factory.CreateInstance instead in NetOffice Tools COMAddin
-                NetOffice.Core.Default.CreateInstance += new Core.OnCreateInstanceEventHandler(Default_CreateInstance);
-                //Disable NO console for clean view/output
-                NetOffice.Core.Default.Console.Mode = DebugConsoleMode.None;
+                NetOffice.Core.Default.ObjectActivator.CreateInstance += ObjectActivator_CreateInstance;
 
-                app = new Excel.Application();
+                app = new Excel.ApplicationClass();
                 Excel.Workbook book = app.Workbooks.Add();
                 MyCustomWorksheet sheet = book.Sheets[1] as MyCustomWorksheet;
                 sheet.PrintName();
@@ -44,48 +42,23 @@ namespace ConsoleApplication1
             }
         }
 
-        private static void Default_CreateInstance(Core sender, Core.OnCreateInstanceEventArgs args)
+        private static void ObjectActivator_CreateInstance(Core sender, NetOffice.CoreServices.OnCreateInstanceEventArgs args)
         {
             // we replace all Worksheet instances with MyCustomWorksheet
 
-            Excel.Worksheet sheet =  args.Instance as Excel.Worksheet;
+            Excel.Worksheet sheet = args.Instance as Excel.Worksheet;
             if (null != sheet)
                 args.Replace = typeof(MyCustomWorksheet);
 
             // keep in your mind: args.Instance.DisposeChildInstances() is called after this event trigger so dont handle your business logic here
+
         }
+
     }
 
-    // A custom worksheet 
-    public class MyCustomWorksheet : Excel.Worksheet
+    // A custom worksheet
+    public class MyCustomWorksheet : Excel.Behind.Worksheet
     {
-        // some ctors we need
-
-		public MyCustomWorksheet(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-		public MyCustomWorksheet(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
-
-		public MyCustomWorksheet(Core factory, COMObject parentObject, object comProxy, Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
-
-		public MyCustomWorksheet(COMObject parentObject, object comProxy, Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-        public MyCustomWorksheet(COMObject replacedObject): base(replacedObject)
-		{
-			
-		}
-
         // extend worksheet with a sample method
         public void PrintName()
         {

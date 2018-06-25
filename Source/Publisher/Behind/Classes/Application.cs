@@ -96,7 +96,7 @@ namespace NetOffice.PublisherApi.Behind
         }
 
         #endregion
-      
+
         #region Properties
 
         /// <summary>
@@ -839,7 +839,7 @@ namespace NetOffice.PublisherApi.Behind
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
         /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new virtual NetOffice.PublisherApi.Application Clone()
+        public new virtual NetOffice.PublisherApi.Application DeepCopy()
         {
             return base.Clone() as NetOffice.PublisherApi.Application;
         }

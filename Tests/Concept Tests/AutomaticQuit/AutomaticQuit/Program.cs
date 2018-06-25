@@ -19,7 +19,7 @@ namespace AutomaticQuit
             core.Settings.ForceApplicationVersionProviders = false;
             core.Settings.EnableAutomaticQuit = true;
 
-            using (var application = new Excel.Application(core))
+            using (var application = new Excel.ApplicationClass(core))
             {
                 application.Visible = true;
                 var sheet = application.

@@ -1,11 +1,11 @@
 ﻿Imports Excel = NetOffice.ExcelApi
-Imports NetOffice.ExcelApi.GlobalHelperModules.GlobalModule
+Imports NetOffice.ExcelApi.ModulesLegacy.ApplicationModule
 
 Module Module1
 
     Sub Main()
 
-        Dim excelApplication As New Excel.Application()
+        Dim excelApplication As New Excel.ApplicationClass()
         excelApplication.DisplayAlerts = False
         excelApplication.Workbooks.Add()
 
@@ -17,7 +17,7 @@ Module Module1
 
         'write test value in active sheet
         ActiveSheet.Range("A1").Value = "myValue"
-        
+
         excelApplication.Quit()
         excelApplication.Dispose()
 

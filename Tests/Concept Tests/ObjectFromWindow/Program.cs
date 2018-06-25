@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using Accessibility;
+using NetOffice;
 
 namespace ObjectFromWindow
 {
     class Program
     {
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             WindowEnumerator enumerator = new WindowEnumerator("XLMAIN");
@@ -22,7 +21,7 @@ namespace ObjectFromWindow
                     object proxy = ExcelApplicationWindow.GetApplicationProxyFromHandle(item);
                     if (null != proxy)
                     {
-                        NetOffice.ExcelApi.Application application = new NetOffice.ExcelApi.Application(null, proxy);
+                        NetOffice.ExcelApi.Application application = COMObject.Create<NetOffice.ExcelApi.Application>(proxy);
                         Console.WriteLine("Excel.Application Hwnd:{0}", application.Hwnd);
                     }
                 }

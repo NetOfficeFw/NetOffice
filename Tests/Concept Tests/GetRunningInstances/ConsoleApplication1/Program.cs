@@ -20,11 +20,11 @@ namespace ConsoleApplication1
         static void GetExcelActiveInstances()
         {
             Console.WriteLine("NetOffice Concept Test - Excel.Application.GetActiveInstances(){0}", Environment.NewLine);
-            Excel.Application[] apps = Excel.Application.GetActiveInstances();
+            var apps = Excel.Behind.Application.GetActiveInstances();
 
-            Console.WriteLine("{0} active Excel instance(s) found.{1}", apps.Length, Environment.NewLine);
+            Console.WriteLine("{0} active Excel instance(s) found.{1}", apps.Count(), Environment.NewLine);
 
-            foreach (Excel.Application app in Excel.Application.GetActiveInstances())
+            foreach (Excel.Application app in Excel.Behind.Application.GetActiveInstances())
             {
                 string workbooks = string.Empty;
                 foreach (Excel.Workbook openBook in app.Workbooks)
@@ -40,14 +40,14 @@ namespace ConsoleApplication1
             PowerPoint.Application application = null;
             try
             {
-                NetOffice.Settings.Default.UseExceptionMessage = NetOffice.ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException;
+                NetOffice.Settings.Default.ExceptionMessageBehavior = NetOffice.ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException;
                 Console.WriteLine("NetOffice Concept Test - PowerPoint.Application.GetActiveInstance(){0}", Environment.NewLine);
-                application = PowerPoint.Application.GetActiveInstance(false);
+                application = PowerPoint.Behind.Application.GetActiveInstance(false);
                 if (null != application)
                 {
                     Console.WriteLine("Current PowerPoint Application Visibility: {0}", application.Visible);
                 }
-                else 
+                else
                 {
                     Console.WriteLine("No PowerPoint Application running.");
                 }

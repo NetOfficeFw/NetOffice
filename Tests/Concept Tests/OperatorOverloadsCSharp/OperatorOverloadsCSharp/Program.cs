@@ -14,7 +14,7 @@ namespace OperatorOverloadsCSharp
         static void Main(string[] args)
         {
             // start excel
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
 
             // add 3 workbooks

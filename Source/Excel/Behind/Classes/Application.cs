@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
         /// <exception cref="NetOffice.Exceptions.CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new virtual ExcelApi.Application Clone()
+        public new virtual ExcelApi.Application DeepCopy()
         {
             return base.Clone() as ExcelApi.Application;
         }

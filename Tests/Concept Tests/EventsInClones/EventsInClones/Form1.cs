@@ -19,28 +19,30 @@ namespace EventsInClones
             Test();
         }
 
+        /// <summary>
+        ///
+        /// </summary>
         private void Test()
         {
             try
             {
-                using (Excel.Application application = new Excel.Application())
+                using (Excel.Application application = new Excel.ApplicationClass())
                 {
                     application.DisplayAlerts = false;
                     application.NewWorkbookEvent += Application1_NewWorkbookEvent;
-                    using (Excel.Application application2 = application.Clone())
+                    using (Excel.Application application2 = application.DeepCopy())
                     {
                         application2.NewWorkbookEvent += Application2_NewWorkbookEvent;
                         application.Workbooks.Add();
                     }
-                    
+
                     application.Quit();
-                  
                 }
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.ToString());
-            }           
+            }
         }
 
         private void Application1_NewWorkbookEvent(Excel.Workbook wb)

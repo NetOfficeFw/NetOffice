@@ -124,7 +124,7 @@ namespace NetOffice.WordApi.Behind
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
         /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new virtual NetOffice.WordApi.Application Clone()
+        public new virtual NetOffice.WordApi.Application DeepCopy()
         {
             return base.Clone() as NetOffice.WordApi.Application;
         }
@@ -1105,7 +1105,7 @@ namespace NetOffice.WordApi.Behind
         }
 
         #endregion
-        
+
         #region IEventBinding
 
         /// <summary>
@@ -1232,7 +1232,7 @@ namespace NetOffice.WordApi.Behind
         }
 
         #endregion
-        
+
         #pragma warning restore
     }
 }

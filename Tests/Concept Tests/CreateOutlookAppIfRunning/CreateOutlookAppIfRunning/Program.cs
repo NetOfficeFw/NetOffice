@@ -12,10 +12,10 @@ namespace CreateOutlookAppIfRunning
         {
             Console.WriteLine("Create 3x Outlook Application");
 
-            Outlook.Application application1 = new Outlook.Application();
-            Outlook.Application application2 = new Outlook.Application();
-            Outlook.Application application3 = new Outlook.Application();
-            
+            Outlook.Application application1 = new Outlook.ApplicationClass();
+            Outlook.Application application2 = new Outlook.ApplicationClass();
+            Outlook.Application application3 = new Outlook.ApplicationClass();
+
             Console.WriteLine("Done! Press any key");
             Console.ReadKey();
 

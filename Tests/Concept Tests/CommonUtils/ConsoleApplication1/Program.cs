@@ -35,12 +35,12 @@ namespace ConsoleApplication1
         private static void TestWord()
         {
             Console.WriteLine("Test Word Application Utils");
-            
-            Word.Application application = new Word.Application();
+
+            Word.Application application = new Word.ApplicationClass();
             application.DisplayAlerts = Word.Enums.WdAlertLevel.wdAlertsNone;
             application.Documents.Add();
 
-            Word.Tools.Utils.CommonUtils utils = new Word.Tools.Utils.CommonUtils(application);
+            Word.Tools.Contribution.CommonUtils utils = new Word.Tools.Contribution.CommonUtils(application);
             int hwnd = utils.Application.TryGetMainWindowHandle(application.Documents[1]);
 
             application.Quit();
@@ -54,11 +54,11 @@ namespace ConsoleApplication1
         {
             Console.WriteLine("Test PowerPoint Application Utils");
 
-            PowerPoint.Application application = new PowerPoint.Application();
+            PowerPoint.Application application = new PowerPoint.ApplicationClass();
             application.Visible = NetOffice.OfficeApi.Enums.MsoTriState.msoTrue;
             application.Presentations.Add();
 
-            PowerPoint.Tools.Utils.CommonUtils utils = new PowerPoint.Tools.Utils.CommonUtils(application);
+            PowerPoint.Tools.Contribution.CommonUtils utils = new PowerPoint.Tools.Contribution.CommonUtils(application);
             int hwnd = utils.Application.HWND;
 
             application.Quit();
@@ -72,8 +72,8 @@ namespace ConsoleApplication1
         {
             Console.WriteLine("Test Outlook Application Utils");
 
-            Outlook.Application application = new Outlook.Application();
-            Outlook.Tools.Utils.CommonUtils utils = new Outlook.Tools.Utils.CommonUtils(application);
+            Outlook.Application application = new Outlook.ApplicationClass();
+            Outlook.Tools.Contribution.CommonUtils utils = new Outlook.Tools.Contribution.CommonUtils(application);
 
             bool visible1 = utils.Application.Visible;
             application.Session.GetDefaultFolder(Outlook.Enums.OlDefaultFolders.olFolderInbox).Display();
@@ -91,11 +91,11 @@ namespace ConsoleApplication1
         {
             Console.WriteLine("Test Excel File Utils");
 
-            Excel.Application application = new Excel.Application();
+            Excel.Application application = new Excel.ApplicationClass();
             application.DisplayAlerts = false;
-            Excel.Tools.Utils.CommonUtils utils = new Excel.Tools.Utils.CommonUtils(application);
+            Excel.Tools.Contribution.CommonUtils utils = new Excel.Tools.Contribution.CommonUtils(application);
 
-            string fileName = utils.File.Combine("C:\\MyFiles", "Test01", Excel.Tools.DocumentFormat.Normal);
+            string fileName = utils.File.Combine("C:\\MyFiles", "Test01", Excel.Tools.Contribution.DocumentFormat.Normal);
 
             application.Quit();
             application.Dispose();
@@ -109,7 +109,7 @@ namespace ConsoleApplication1
             {
                 if ("C:\\MyFiles\\Test01.xls" != fileName)
                     throw new Exception("Unexpected excel filename");
-            }            
+            }
         }
     }
 }
