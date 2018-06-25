@@ -143,8 +143,10 @@ namespace NetOffice.CoreServices
             if (null == contractType)
                 throw new ArgumentNullException("contractType");
 
-            Type result = null;
+            value.CheckInitialize();
 
+            Type result = null;
+            
             TypeInformation typeInfo = value.InternalCache.TypeCache.TryGetTypeInfo(contractType);
             if (null != typeInfo)
             {

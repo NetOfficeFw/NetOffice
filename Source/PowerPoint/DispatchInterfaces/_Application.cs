@@ -89,7 +89,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746231.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		new string Name { get; }
+		string Name { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
@@ -134,7 +134,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746225.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		new string Version { get; }
+		string Version { get; }
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using NetOffice.Attributes;
 using NetOffice.OfficeApi;
 
-namespace NetOffice.OfficeApi.Behinds
+namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
     /// DispatchInterface ThreeDFormat 

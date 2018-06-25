@@ -7,7 +7,7 @@ using NetOffice.Attributes;
 using NetOffice.CollectionsGeneric;
 using NetOffice.OfficeApi;
 
-namespace NetOffice.OfficeApi.Behinds
+namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
     /// DispatchInterface SmartArtNodes 

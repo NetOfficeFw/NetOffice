@@ -633,7 +633,7 @@ namespace NetOffice
         /// <param name="comProxy">new created proxy</param>
         /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding wrapper class instance or plain COMObject</returns>
-        /// <exception cref="ArgumentNullException">one ore more arguments is null</exception>
+        /// <exception cref="ArgumentNullException">comProxy arguments is null</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
@@ -738,7 +738,7 @@ namespace NetOffice
         /// <param name="comProxy">new created proxy</param>
         /// <param name="contractWrapperType">type info from contract wrapper</param>
         /// <returns>corresponding wrapper class instance or plain COMObject</returns>
-        /// <exception cref="ArgumentNullException">one ore more arguments is null</exception>
+        /// <exception cref="ArgumentNullException">comProxy or contractWrapperType is null</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="InvalidCastException">T is not equal or base from contractWrapperType argument</exception>
         /// <exception cref="FactoryException">throws when its failed to find the corresponding factory. this indicates a missing netoffice api assembly</exception>
@@ -755,20 +755,18 @@ namespace NetOffice
         /// <param name="comProxy">new created proxy</param>
         /// <param name="contractWrapperType">type info from contract wrapper</param>
         /// <returns>corresponding wrapper class instance or plain COMObject</returns>        
-        /// <exception cref="ArgumentNullException">one ore more arguments is null</exception>
+        /// <exception cref="ArgumentNullException">comProxy or contractWrapperType</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find to the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
         public virtual ICOMObject CreateKnownObjectFromComProxy(ICOMObject caller, object comProxy, Type contractWrapperType)
-        {
-            if (null == caller)
-                throw new ArgumentNullException("caller");
+        {         
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
             if (null == contractWrapperType)
                 throw new ArgumentNullException("contractWrapperType");
 
-            if (caller.Settings.EnableKnownReferenceInspection)
+            if (Settings.EnableKnownReferenceInspection)
             {
                 return CreateObjectFromComProxy(caller, comProxy, false);
             }

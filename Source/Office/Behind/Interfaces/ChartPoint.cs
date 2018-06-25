@@ -3,7 +3,7 @@ using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
 
-namespace NetOffice.OfficeApi.Behind.Interfaces
+namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
     /// Interface ChartPoint 
