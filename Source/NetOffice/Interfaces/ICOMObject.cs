@@ -34,9 +34,9 @@ namespace NetOffice
         DebugConsole Console { get; }
 
         /// <summary>
-        /// Clone instance as target type of T
+        /// Clone instance as T
         /// </summary>
-        /// <typeparam name="T">any other type to convert</typeparam>
+        /// <typeparam name="T">type to convert</typeparam>
         /// <returns>cloned instance</returns>
         /// <exception cref="CloneException">An unexpected error occurs.</exception>
         T To<T>() where T : class, ICOMObject;

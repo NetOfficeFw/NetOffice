@@ -38,7 +38,8 @@ namespace NetOffice.AccessApi.Behind
             get
             {
                 if (null == _type)
-                    _type = typeof(_Application);                return _type;
+                    _type = typeof(_Application);
+                return _type;
             }
         }
 

@@ -1,4 +1,5 @@
-﻿Imports Access = NetOffice.AccessApi
+﻿Imports NetOffice
+Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports NetOffice.AccessApi.Constants
 Imports DAO = NetOffice.DAOApi
@@ -14,7 +15,7 @@ Public Class Example01
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start access 
-        Dim accessApplication As New Access.Application()
+        Dim accessApplication As Access.Application = COMObject.Create(Of Access.Application)()
 
         ' create a utils instance, not need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(accessApplication)
@@ -46,7 +47,7 @@ Public Class Example01
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return "Create new Database"
+            Return "Create new database"
         End Get
     End Property
 

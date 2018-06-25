@@ -2,6 +2,7 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.CoreServices;
 using NetOffice.CollectionsGeneric;
 using NetOffice.ExcelApi;
 
@@ -16,7 +17,7 @@ namespace NetOffice.ExcelApi.Behind
     [EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.ExcelApi.EventContracts.AppEvents))]
     [HasInteropCompatibilityClass(typeof(ApplicationClass))]
-    public class Application : NetOffice.ExcelApi.Behind._Application, NetOffice.ExcelApi.Application
+    public class Application : NetOffice.ExcelApi.Behind._Application, NetOffice.ExcelApi.Application, IAutomaticQuit, IApplicationVersionProvider
     {
         #pragma warning disable
 
@@ -26,6 +27,10 @@ namespace NetOffice.ExcelApi.Behind
         private string _activeSinkId;
         private static Type _type;
         private EventContracts.AppEvents_SinkHelper _appEvents_SinkHelper;
+
+        private bool _versionRequested;
+        private object _cachedVersion;
+        private object _chachedVersionLock = new object();
 
         #endregion
 
@@ -76,20 +81,18 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         public Application(Core factory = null, bool tryProxyServiceFirst = false) : base()
         {
+            object proxy = null;
             if (tryProxyServiceFirst)
             {
-                object proxy = ProxyService.GetActiveInstance("Excel", "Application", false);
+                proxy = ProxyService.GetActiveInstance("Excel", "Application", false);
                 if (null != proxy)
                 {
                     CreateFromProxy(proxy, true);
                     FromProxyService = true;
                 }
-                else
-                {
-                    CreateFromProgId("Excel.Application", true);
-                }
             }
-            else
+
+            if(null == proxy)
             {
                 CreateFromProgId("Excel.Application", true);
             }
@@ -103,6 +106,20 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
+        #region ICloneable<Application>
+
+        /// <summary>
+        /// Creates a new Application instance that is a copy of the current instance
+        /// </summary>
+        /// <returns>A new Application that is a copy of this instance</returns>
+        /// <exception cref="NetOffice.Exceptions.CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public new virtual ExcelApi.Application Clone()
+        {
+            return base.Clone() as ExcelApi.Application;
+        }
+
+        #endregion
+
         #region ICOMObjectProxyService
 
         /// <summary>
@@ -110,6 +127,102 @@ namespace NetOffice.ExcelApi.Behind
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public virtual bool FromProxyService { get; private set; }
+
+        #endregion
+
+        #region IAutomaticQuit
+
+        /// <summary>
+        /// Determines Quit method want be called while disposing if NetOffice.Settings.EnableAutomaticQuit is true.
+        /// Default is true when instance has no parent object and its not a cloned instance, otherwise false.
+        /// </summary>
+        bool IAutomaticQuit.Enabled
+        {
+
+            get
+            {
+                return _callQuitInDispose;
+            }
+            set
+            {
+                _callQuitInDispose = value;
+            }
+        }
+
+        #endregion
+
+        #region IApplicationVersionProvider
+
+        string IApplicationVersionProvider.Name
+        {
+            get
+            {
+                return "Microsoft Excel";
+            }
+        }
+
+        string IApplicationVersionProvider.ComponentName
+        {
+            get
+            {
+                return "NetOffice.ExcelApi";
+            }
+        }
+
+        /// <summary>
+        /// Request version information on demand and cache to call the remote server only 1x times
+        /// </summary>
+        object IApplicationVersionProvider.Version
+        {
+            get
+            {
+                lock (_chachedVersionLock)
+                {
+                    if (null == _cachedVersion)
+                    {
+                        _cachedVersion = TryVersionPropertyGet();
+                    }
+                }
+                return _cachedVersion;
+            }
+        }
+
+        bool IApplicationVersionProvider.VersionRequested
+        {
+            get
+            {
+                return _versionRequested;
+            }
+        }
+
+        void IApplicationVersionProvider.TryRequestVersion()
+        {
+            _cachedVersion = TryVersionPropertyGet();
+        }
+
+        /// <summary>
+        /// Try get version information without fail
+        /// </summary>
+        /// <returns></returns>
+        private object TryVersionPropertyGet()
+        {
+            try
+            {
+                if (null != _proxyShare)
+                    return Invoker.PropertyGet(this, "Version");
+                else
+                    return null;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                if (null != _proxyShare)
+                    _versionRequested = true;
+            }
+        }
 
         #endregion
 
@@ -1273,27 +1386,6 @@ namespace NetOffice.ExcelApi.Behind
 
         #endregion
 
-        #region IAutomaticQuit
-
-        /// <summary>
-        /// Determines Quit method want be called while disposing if NetOffice.Settings.EnableAutomaticQuit is true.
-        /// Default is true when instance has no parent object and its not a cloned instance, otherwise false.
-        /// </summary>
-        bool IAutomaticQuit.Enabled
-        {
-
-            get
-            {
-                return _callQuitInDispose;
-            }
-            set
-            {
-                _callQuitInDispose = value;
-            }
-        }
-
-        #endregion
-
         #region IEventBinding
 
         /// <summary>
@@ -1394,20 +1486,6 @@ namespace NetOffice.ExcelApi.Behind
             }
 
             _connectPoint = null;
-        }
-
-        #endregion
-
-        #region ICloneable<Application>
-
-        /// <summary>
-        /// Creates a new Application instance that is a copy of the current instance
-        /// </summary>
-        /// <returns>A new Application that is a copy of this instance</returns>
-        /// <exception cref="NetOffice.Exceptions.CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new virtual ExcelApi.Application Clone()
-        {
-            return base.Clone() as ExcelApi.Application;
         }
 
         #endregion

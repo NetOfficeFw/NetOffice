@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Data.OleDb
+Imports NetOffice
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports NetOffice.AccessApi.Constants
@@ -16,7 +17,7 @@ Public Class Example03
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' start access 
-        Dim accessApplication As New Access.Application()
+        Dim accessApplication As Access.Application = COMObject.Create(Of Access.Application)()
 
         ' create a utils instance, not need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(accessApplication)

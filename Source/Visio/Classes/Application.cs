@@ -173,7 +173,7 @@ namespace NetOffice.VisioApi
 	[EntityType(EntityType.IsCoClass), ComProgId("Visio.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.VisioApi.EventContracts.EApplication))]
 	[TypeId("00021A20-0000-0000-C000-000000000046")]
-    public interface Application : IVApplication, ICloneable<Application>, IEventBinding, IAutomaticQuit, ICOMObjectProxyService
+    public interface Application : IVApplication, ICloneable<Application>, IEventBinding, ICOMObjectProxyService
 	{
 		#region Events
 

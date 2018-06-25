@@ -44,7 +44,7 @@ namespace NetOffice.WordApi
 	public delegate void Application_ProtectedViewWindowSizeEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow);
 	public delegate void Application_ProtectedViewWindowActivateEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow);
 	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow);
-#pragma warning restore
+    #pragma warning restore
 
     #endregion
 
@@ -102,7 +102,7 @@ namespace NetOffice.WordApi
     [EntityType(EntityType.IsCoClass), ComProgId("Word.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.WordApi.EventContracts.ApplicationEvents2), typeof(NetOffice.WordApi.EventContracts.ApplicationEvents3), typeof(NetOffice.WordApi.EventContracts.ApplicationEvents4))]
 	[TypeId("000209FF-0000-0000-C000-000000000046")]
-    public interface Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit, ICOMObjectProxyService
+    public interface Application : _Application, ICloneable<Application>, IEventBinding, ICOMObjectProxyService
     {
         #region Events
 

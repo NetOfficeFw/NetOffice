@@ -15,7 +15,7 @@ namespace NetOffice.MSProjectApi.Behind
 	[EntityType(EntityType.IsCoClass), ComProgId("MSProject.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.MSProjectApi.EventContracts._EProjectApp2))]
     [HasInteropCompatibilityClass(typeof(ApplicationClass))]
-    public class Application : _MSProject, NetOffice.MSProjectApi.Application
+    public class Application : _MSProject, NetOffice.MSProjectApi.Application, IAutomaticQuit
     {
 		#pragma warning disable
 
@@ -74,20 +74,18 @@ namespace NetOffice.MSProjectApi.Behind
         /// </summary>
         public Application(Core factory = null, bool enableProxyService = false) : base()
         {
+            object proxy = null;
             if (enableProxyService)
             {
-                object proxy = ProxyService.GetActiveInstance("MSProject", "Application", false);
+                proxy = ProxyService.GetActiveInstance("MSProject", "Application", false);
                 if (null != proxy)
                 {
                     CreateFromProxy(proxy, true);
                     FromProxyService = true;
                 }
-                else
-                {
-                    CreateFromProgId("MSProject.Application", true);
-                }
             }
-            else
+
+            if(null == proxy)
             {
                 CreateFromProgId("MSProject.Application", true);
             }
@@ -100,7 +98,7 @@ namespace NetOffice.MSProjectApi.Behind
 
         #endregion
 
-        #region Properties
+        #region ICOMObjectProxyService
 
         /// <summary>
         /// Instance is created from an already running application

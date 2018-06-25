@@ -14,7 +14,7 @@ namespace NetOffice.OutlookApi
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("00063001-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.OutlookApi.Application))]
-    public interface _Application : ICOMObject, IApplicationVersionProvider
+    public interface _Application : ICOMObject
 	{
 		#region Properties
 

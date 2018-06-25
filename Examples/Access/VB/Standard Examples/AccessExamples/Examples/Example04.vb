@@ -1,4 +1,5 @@
-﻿Imports Access = NetOffice.AccessApi
+﻿Imports NetOffice
+Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports NetOffice.AccessApi.Constants
 Imports DAO = NetOffice.DAOApi
@@ -69,7 +70,7 @@ Public Class Example04
     Private Sub ShowDatabaseInfo(ByVal filePath As String)
 
         ' start access 
-        Dim accessApplication As New Access.Application()
+        Dim accessApplication As Access.Application = COMObject.Create(Of Access.Application)()
 
         'open database
         Dim database As DAO.Database = accessApplication.DBEngine.Workspaces(0).OpenDatabase(filePath)

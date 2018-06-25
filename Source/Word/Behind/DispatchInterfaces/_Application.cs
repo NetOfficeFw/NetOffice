@@ -17,14 +17,6 @@ namespace NetOffice.WordApi.Behind
     {
         #pragma warning disable
 
-        #region Fields
-
-        private bool _versionRequested;
-        private object _cachedVersion;
-        private object _chachedVersionLock = new object();
-
-        #endregion
-
         #region Type Information
 
         /// <summary>
@@ -6318,82 +6310,6 @@ namespace NetOffice.WordApi.Behind
 
         #endregion
 
-        #region IApplicationVersionProvider
-
-        string IApplicationVersionProvider.Name
-        {
-            get
-            {
-                return "Microsoft Word";
-            }
-        }
-
-        string IApplicationVersionProvider.ComponentName
-        {
-            get
-            {
-                return "NetOffice.WordApi";
-            }
-        }
-
-        /// <summary>
-        /// Request version information on demand and cache to call the remote server only 1x times
-        /// </summary>
-        object IApplicationVersionProvider.Version
-        {
-            get
-            {
-                lock (_chachedVersionLock)
-                {
-                    if (null == _cachedVersion)
-                    {
-                        _cachedVersion = TryVersionPropertyGet();
-                    }
-                }
-                return _cachedVersion;
-            }
-        }
-
-        bool IApplicationVersionProvider.VersionRequested
-        {
-            get
-            {
-                return _versionRequested;
-            }
-        }
-
-        void IApplicationVersionProvider.TryRequestVersion()
-        {
-            _cachedVersion = TryVersionPropertyGet();
-        }
-
-        /// <summary>
-        /// Try get version information without fail
-        /// </summary>
-        /// <returns></returns>
-        private object TryVersionPropertyGet()
-        {
-            try
-            {
-                if (null != _proxyShare)
-                    return Invoker.PropertyGet(this, "Version");
-                else
-                    return null;
-            }
-            catch
-            {
-                return null;
-            }
-            finally
-            {
-                if (null != _proxyShare)
-                    _versionRequested = true;
-            }
-        }
-
-        #endregion
-
         #pragma warning restore
     }
 }
-

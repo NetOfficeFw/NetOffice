@@ -15,7 +15,7 @@ namespace NetOffice.PowerPointApi
 	[EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("91493442-5A91-11CF-8700-00AA0060263B")]
     [CoClassSource(typeof(NetOffice.PowerPointApi.Application))]
-	public interface _Application : ICOMObject, IApplicationVersionProvider
+	public interface _Application : ICOMObject
 	{
 		#region Properties
 

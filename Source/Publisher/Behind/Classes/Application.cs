@@ -14,7 +14,7 @@ namespace NetOffice.PublisherApi.Behind
 	[EntityType(EntityType.IsCoClass), ComProgId("Publisher.Application"), ModuleProvider(typeof(NetOffice.PublisherApi.ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.PublisherApi.EventContracts.ApplicationEvents))]
     [HasInteropCompatibilityClass(typeof(ApplicationClass))]
-    public class Application : _Application, NetOffice.PublisherApi.Application
+    public class Application : _Application, NetOffice.PublisherApi.Application, IAutomaticQuit
     {
 		#pragma warning disable
 
@@ -73,20 +73,18 @@ namespace NetOffice.PublisherApi.Behind
         /// </summary>
         public Application(Core factory = null, bool enableProxyService = false) : base()
         {
+            object proxy = null;
             if (enableProxyService)
             {
-                object proxy = ProxyService.GetActiveInstance("Publisher", "Application", false);
+                proxy = ProxyService.GetActiveInstance("Publisher", "Application", false);
                 if (null != proxy)
                 {
                     CreateFromProxy(proxy, true);
                     FromProxyService = true;
                 }
-                else
-                {
-                    CreateFromProgId("Publisher.Application", true);
-                }
             }
-            else
+
+            if(null == proxy)
             {
                 CreateFromProgId("Publisher.Application", true);
             }

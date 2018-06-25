@@ -2,9 +2,9 @@
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
+using NetOffice;
 using Access = NetOffice.AccessApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.AccessApi.Enums;
@@ -35,7 +35,7 @@ namespace COMAddinClassicExampleCS4
         {
             try
             {
-                _accessApplication = new Access.Application(null, Application);
+                _accessApplication = COMObject.Create<Access.Application>(Application, COMObjectCreateOptions.CreateNewCore);
             }
             catch (Exception exception)
             {

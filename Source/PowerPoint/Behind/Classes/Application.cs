@@ -1,6 +1,7 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
+using NetOffice.CoreServices;
 using NetOffice.Attributes;
 using NetOffice.CollectionsGeneric;
 
@@ -15,7 +16,7 @@ namespace NetOffice.PowerPointApi.Behind
     [EntityType(EntityType.IsCoClass), ComProgId("PowerPoint.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.PowerPointApi.EventContracts.EApplication))]
     [HasInteropCompatibilityClass(typeof(ApplicationClass))]
-    public class Application : _Application, NetOffice.PowerPointApi.Application
+    public class Application : _Application, NetOffice.PowerPointApi.Application, IAutomaticQuit, IApplicationVersionProvider
     {
         #pragma warning disable
 
@@ -25,6 +26,10 @@ namespace NetOffice.PowerPointApi.Behind
         private string _activeSinkId;
         private static Type _type;
         private NetOffice.PowerPointApi.Behind.EventContracts.EApplication_SinkHelper _eApplication_SinkHelper;
+
+        private bool _versionRequested;
+        private object _cachedVersion;
+        private object _chachedVersionLock = new object();
 
         #endregion
 
@@ -75,20 +80,18 @@ namespace NetOffice.PowerPointApi.Behind
         /// </summary>
         public Application(Core factory = null, bool tryProxyServiceFirst = false) : base()
         {
+            object proxy = null;
             if (tryProxyServiceFirst)
             {
-                object proxy = ProxyService.GetActiveInstance("PowerPoint", "Application", false);
+                proxy = ProxyService.GetActiveInstance("PowerPoint", "Application", false);
                 if (null != proxy)
                 {
                     CreateFromProxy(proxy, true);
                     FromProxyService = true;
                 }
-                else
-                {
-                    CreateFromProgId("PowerPoint.Application", true);
-                }
             }
-            else
+
+            if(null == proxy)
             {
                 CreateFromProgId("PowerPoint.Application", true);
             }
@@ -102,13 +105,205 @@ namespace NetOffice.PowerPointApi.Behind
 
         #endregion
 
-        #region Properties
+        #region ICloneable<Application>
+
+        /// <summary>
+        /// Creates a new Application that is a copy of the current instance
+        /// </summary>
+        /// <returns>A new Application that is a copy of this instance</returns>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public new virtual NetOffice.PowerPointApi.Application Clone()
+        {
+            return base.Clone() as NetOffice.PowerPointApi.Application;
+        }
+
+        #endregion
+
+        #region ICOMObjectProxyService
 
         /// <summary>
         /// Instance is created from an already running application
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public bool FromProxyService { get; private set; }
+
+        #endregion
+
+        #region IApplicationVersionProvider
+
+        string IApplicationVersionProvider.Name
+        {
+            get
+            {
+                return "Microsoft PowerPoint";
+            }
+        }
+
+        string IApplicationVersionProvider.ComponentName
+        {
+            get
+            {
+                return "NetOffice.PowerPointApi";
+            }
+        }
+
+        /// <summary>
+        /// Request version information on demand and cache to call the remote server only 1x times
+        /// </summary>
+        object IApplicationVersionProvider.Version
+        {
+            get
+            {
+                lock (_chachedVersionLock)
+                {
+                    if (null == _cachedVersion)
+                    {
+                        _cachedVersion = TryVersionPropertyGet();
+                    }
+                }
+                return _cachedVersion;
+            }
+        }
+
+        bool IApplicationVersionProvider.VersionRequested
+        {
+            get
+            {
+                return _versionRequested;
+            }
+        }
+
+        void IApplicationVersionProvider.TryRequestVersion()
+        {
+            _cachedVersion = TryVersionPropertyGet();
+        }
+
+        /// <summary>
+        /// Try get version information without fail
+        /// </summary>
+        /// <returns></returns>
+        private object TryVersionPropertyGet()
+        {
+            try
+            {
+                if (null != _proxyShare)
+                    return Invoker.PropertyGet(this, "Version");
+                else
+                    return null;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                if (null != _proxyShare)
+                    _versionRequested = true;
+            }
+        }
+
+        #endregion
+
+        #region IEventBinding
+
+        /// <summary>
+        /// Creates active sink helper
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public void CreateEventBridge()
+        {
+            if (false == Factory.Settings.EnableEvents)
+                return;
+
+            if (null != _connectPoint)
+                return;
+
+            if (null == _activeSinkId)
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NetOffice.PowerPointApi.Behind.EventContracts.EApplication_SinkHelper.Id);
+
+
+            if (NetOffice.PowerPointApi.Behind.EventContracts.EApplication_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            {
+                _eApplication_SinkHelper = new NetOffice.PowerPointApi.Behind.EventContracts.EApplication_SinkHelper(this, _connectPoint);
+                return;
+            }
+        }
+
+        /// <summary>
+        /// The instance use currently an event listener
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public bool EventBridgeInitialized
+        {
+            get
+            {
+                return (null != _connectPoint);
+            }
+        }
+        /// <summary>
+        /// Instance has one or more event recipients
+        /// </summary>
+        /// <returns>true if one or more event is active, otherwise false</returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public bool HasEventRecipients()
+        {
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
+        }
+
+        /// <summary>
+        /// Instance has one or more event recipients
+        /// </summary>
+        /// <param name="eventName">name of the event</param>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public bool HasEventRecipients(string eventName)
+        {
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Delegate[] GetEventRecipients(string eventName)
+        {
+            return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+        {
+            return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
+        }
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public void DisposeEventBridge()
+        {
+            if (null != _eApplication_SinkHelper)
+            {
+                _eApplication_SinkHelper.Dispose();
+                _eApplication_SinkHelper = null;
+            }
+
+            _connectPoint = null;
+        }
 
         #endregion
 
@@ -962,123 +1157,6 @@ namespace NetOffice.PowerPointApi.Behind
             {
                 _callQuitInDispose = value;
             }
-        }
-
-        #endregion
-
-        #region IEventBinding
-
-        /// <summary>
-        /// Creates active sink helper
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void CreateEventBridge()
-        {
-            if (false == Factory.Settings.EnableEvents)
-                return;
-
-            if (null != _connectPoint)
-                return;
-
-            if (null == _activeSinkId)
-                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NetOffice.PowerPointApi.Behind.EventContracts.EApplication_SinkHelper.Id);
-
-
-            if (NetOffice.PowerPointApi.Behind.EventContracts.EApplication_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-            {
-                _eApplication_SinkHelper = new NetOffice.PowerPointApi.Behind.EventContracts.EApplication_SinkHelper(this, _connectPoint);
-                return;
-            }
-        }
-
-        /// <summary>
-        /// The instance use currently an event listener
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
-        {
-            get
-            {
-                return (null != _connectPoint);
-            }
-        }
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <returns>true if one or more event is active, otherwise false</returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
-        }
-
-        /// <summary>
-        /// Instance has one or more event recipients
-        /// </summary>
-        /// <param name="eventName">name of the event</param>
-        /// <returns></returns>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-
-        /// <summary>
-        /// Target methods from its actual event recipients
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public Delegate[] GetEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-
-        /// <summary>
-        /// Returns the current count of event recipients
-        /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int GetCountOfEventRecipients(string eventName)
-        {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
-        }
-
-        /// <summary>
-        /// Raise an instance event
-        /// </summary>
-        /// <param name="eventName">name of the event without 'Event' at the end</param>
-        /// <param name="paramsArray">custom arguments for the event</param>
-        /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-        {
-            return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-        }
-        /// <summary>
-        /// Stop listening events for the instance
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeEventBridge()
-        {
-            if (null != _eApplication_SinkHelper)
-            {
-                _eApplication_SinkHelper.Dispose();
-                _eApplication_SinkHelper = null;
-            }
-
-            _connectPoint = null;
-        }
-
-        #endregion
-
-        #region ICloneable<Application>
-
-        /// <summary>
-        /// Creates a new Application that is a copy of the current instance
-        /// </summary>
-        /// <returns>A new Application that is a copy of this instance</returns>
-        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new virtual NetOffice.PowerPointApi.Application Clone()
-        {
-            return base.Clone() as NetOffice.PowerPointApi.Application;
         }
 
         #endregion

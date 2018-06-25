@@ -1,4 +1,4 @@
-﻿Example01		- create new Database
+﻿Example01		- create new database
 Example02		- write data
 Example03		- use compactdatabase
 Example04		- database informations

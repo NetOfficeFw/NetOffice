@@ -86,7 +86,7 @@ namespace NetOffice.OutlookApi
 	[EntityType(EntityType.IsCoClass), ComProgId("Outlook.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(EventContracts.ApplicationEvents), typeof(EventContracts.ApplicationEvents_10), typeof(EventContracts.ApplicationEvents_11))]
 	[TypeId("0006F03A-0000-0000-C000-000000000046")]
-    public interface Application : _Application, ICloneable<Application>, IEventBinding, IAutomaticQuit, ICOMObjectProxyService
+    public interface Application : _Application, ICloneable<Application>, IEventBinding, ICOMObjectProxyService
     {
         #region Events
 

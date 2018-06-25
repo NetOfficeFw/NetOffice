@@ -15,7 +15,7 @@ namespace NetOffice.VisioApi.Behind
 	[EntityType(EntityType.IsCoClass), ComProgId("Visio.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(NetOffice.VisioApi.EventContracts.EApplication))]
     [HasInteropCompatibilityClass(typeof(ApplicationClass))]
-    public class Application : IVApplication, NetOffice.VisioApi.Application
+    public class Application : IVApplication, NetOffice.VisioApi.Application, IAutomaticQuit
     {
 		#pragma warning disable
 
@@ -75,20 +75,18 @@ namespace NetOffice.VisioApi.Behind
         /// </summary>
         public Application(Core factory = null, bool tryProxyServiceFirst = false) : base()
         {
+            object proxy = null;
             if (tryProxyServiceFirst)
             {
-                object proxy = ProxyService.GetActiveInstance("Visio", "Application", false);
+                proxy = ProxyService.GetActiveInstance("Visio", "Application", false);
                 if (null != proxy)
                 {
                     CreateFromProxy(proxy, true);
                     FromProxyService = true;
                 }
-                else
-                {
-                    CreateFromProgId("Visio.Application", true);
-                }
             }
-            else
+
+            if(null == proxy)
             {
                 CreateFromProgId("Visio.Application", true);
             }
@@ -102,7 +100,7 @@ namespace NetOffice.VisioApi.Behind
 
         #endregion
 
-        #region Properties
+        #region ICOMObjectProxyService
 
         /// <summary>
         /// Instance is created from an already running application

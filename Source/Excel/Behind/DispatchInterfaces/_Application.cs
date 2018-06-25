@@ -13,14 +13,6 @@ namespace NetOffice.ExcelApi.Behind
     [SyntaxBypass]
     public class _Application_ : COMObject, NetOffice.ExcelApi._Application_
     {
-        #region Fields
-
-        private bool _versionRequested;
-        private object _cachedVersion;
-        private object _chachedVersionLock = new object();
-
-        #endregion
-
         #region Ctor
 
         /// <summary>
@@ -52,7 +44,8 @@ namespace NetOffice.ExcelApi.Behind
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Alias for get_Caller
         /// </summary>
-        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193687.aspx </remarks>        /// <param name="index">optional object index</param>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193687.aspx </remarks>
+        /// <param name="index">optional object index</param>
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Caller")]
         public virtual object Caller(object index)
         {
@@ -241,81 +234,6 @@ namespace NetOffice.ExcelApi.Behind
         #endregion
 
         #region Methods
-
-        #endregion
-
-        #region IApplicationVersionProvider
-
-        string IApplicationVersionProvider.Name
-        {
-            get
-            {
-                return "Microsoft Excel";
-            }
-        }
-
-        string IApplicationVersionProvider.ComponentName
-        {
-            get
-            {
-                return "NetOffice.ExcelApi";
-            }
-        }
-
-        /// <summary>
-        /// Request version information on demand and cache to call the remote server only 1x times
-        /// </summary>
-        object IApplicationVersionProvider.Version
-        {
-            get
-            {
-                lock (_chachedVersionLock)
-                {
-                    if (null == _cachedVersion)
-                    {
-                        _cachedVersion = TryVersionPropertyGet();
-                    }
-                }
-                return _cachedVersion;
-            }
-        }
-
-        bool IApplicationVersionProvider.VersionRequested
-        {
-            get
-            {
-                return _versionRequested;
-            }
-        }
-
-        void IApplicationVersionProvider.TryRequestVersion()
-        {
-            _cachedVersion = TryVersionPropertyGet();
-        }
-
-        /// <summary>
-        /// Try get version information without fail
-        /// </summary>
-        /// <returns></returns>
-        private object TryVersionPropertyGet()
-        {
-            try
-            {
-                if (null != _proxyShare)
-                    return Invoker.PropertyGet(this, "Version");
-                else
-                    return null;
-            }
-            catch
-            {
-                return null;
-            }
-            finally
-            {
-                if (null != _proxyShare)
-                    _versionRequested = true;
-            }
-        }
 
         #endregion
     }

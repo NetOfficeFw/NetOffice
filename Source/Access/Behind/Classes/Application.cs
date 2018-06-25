@@ -15,7 +15,7 @@ namespace NetOffice.AccessApi.Behind
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass), ComProgId("Access.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [HasInteropCompatibilityClass(typeof(ApplicationClass))]
-    public class Application : _Application, NetOffice.AccessApi.Application
+    public class Application : _Application, NetOffice.AccessApi.Application, IAutomaticQuit, IApplicationVersionProvider
     {
 		#pragma warning disable
 
@@ -78,20 +78,18 @@ namespace NetOffice.AccessApi.Behind
         /// </summary>
         public Application(Core factory = null, bool tryProxyServiceFirst = false) : base()
         {
+            object proxy = null;
             if (tryProxyServiceFirst)
             {
-                object proxy = ProxyService.GetActiveInstance("Access", "Application", false);
+                proxy = ProxyService.GetActiveInstance("Access", "Application", false);
                 if (null != proxy)
                 {
                     CreateFromProxy(proxy, true);
                     FromProxyService = true;
                 }
-                else
-                {
-                    CreateFromProgId("Access.Application", true);
-                }
             }
-            else
+
+            if(null == proxy)
             {
                 CreateFromProgId("Access.Application", true);
             }
@@ -105,7 +103,21 @@ namespace NetOffice.AccessApi.Behind
 
         #endregion
 
-        #region Properties
+        #region ICloneable<Application>
+
+        /// <summary>
+        /// Creates a new Application that is a copy of the current instance
+        /// </summary>
+        /// <returns>A new Application that is a copy of this instance</returns>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public new virtual NetOffice.AccessApi.Application Clone()
+        {
+            return base.Clone() as NetOffice.AccessApi.Application;
+        }
+
+        #endregion
+
+        #region ICOMObjectProxyService
 
         /// <summary>
         /// Instance is created from an already running application
@@ -282,20 +294,6 @@ namespace NetOffice.AccessApi.Behind
             {
                 _callQuitInDispose = value;
             }
-        }
-
-        #endregion
-
-        #region ICloneable<Application>
-
-        /// <summary>
-        /// Creates a new Application that is a copy of the current instance
-        /// </summary>
-        /// <returns>A new Application that is a copy of this instance</returns>
-        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new virtual NetOffice.AccessApi.Application Clone()
-        {
-            return base.Clone() as NetOffice.AccessApi.Application;
         }
 
         #endregion

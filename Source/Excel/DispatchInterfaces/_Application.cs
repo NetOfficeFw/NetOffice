@@ -1,7 +1,6 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice.CoreServices;
 using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi
@@ -10,7 +9,7 @@ namespace NetOffice.ExcelApi
     /// _Application
     /// </summary>
     [SyntaxBypass]
-    public interface _Application_ : ICOMObject, IApplicationVersionProvider
+    public interface _Application_ : ICOMObject
     {
         #region Properties
 

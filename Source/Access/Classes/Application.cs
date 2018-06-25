@@ -51,7 +51,6 @@ namespace NetOffice.AccessApi
         }
     }
 
-
     /// <summary>
     /// CoClass Application
     /// SupportByVersion Access, 9,10,11,12,14,15,16
@@ -60,7 +59,7 @@ namespace NetOffice.AccessApi
     [SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass), ComProgId("Access.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
 	[TypeId("73A4C9C1-D68D-11D0-98BF-00A0C90DC8D9")]
-    public interface Application : _Application, ICloneable<Application>, IAutomaticQuit, IApplicationVersionProvider, ICOMObjectProxyService
+    public interface Application : _Application, ICloneable<Application>, ICOMObjectProxyService
 	{
 
 	}

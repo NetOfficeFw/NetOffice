@@ -55,7 +55,7 @@ namespace AccessExamplesCS4
 
         public string Description
         {
-            get { return "Create new Database"; }
+            get { return "Create new database"; }
         }
 
         public UserControl Panel

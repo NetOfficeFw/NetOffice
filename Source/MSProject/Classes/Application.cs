@@ -122,7 +122,7 @@ namespace NetOffice.MSProjectApi
 	[EntityType(EntityType.IsCoClass), ComProgId("MSProject.Application"), ModuleProvider(typeof(ModulesLegacy.ApplicationModule))]
     [ComEventContract(typeof(EventContracts._EProjectApp2))]
 	[TypeId("36D27C48-A1E8-11D3-BA55-00C04F72F325")]
-    public interface Application : _MSProject, ICloneable<Application>, IEventBinding, IAutomaticQuit, ICOMObjectProxyService
+    public interface Application : _MSProject, ICloneable<Application>, IEventBinding, ICOMObjectProxyService
     {
 		#region Events
 

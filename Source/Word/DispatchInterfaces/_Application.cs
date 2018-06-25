@@ -2,7 +2,6 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
-using NetOffice.CoreServices;
 
 namespace NetOffice.WordApi
 {
@@ -14,7 +13,7 @@ namespace NetOffice.WordApi
     [EntityType(EntityType.IsDispatchInterface), BaseType]
 	[TypeId("00020970-0000-0000-C000-000000000046")]
     [CoClassSource(typeof(NetOffice.WordApi.Application))]
-    public interface _Application : ICOMObject, IApplicationVersionProvider
+    public interface _Application : ICOMObject
     {
         #region Properties
 

@@ -1,4 +1,5 @@
-﻿Imports Office = NetOffice.OfficeApi
+﻿Imports NetOffice
+Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
@@ -66,7 +67,7 @@ Public Class Example05
         Dim commandBarBtn As Office.CommandBarButton = Nothing
 
         ' start access 
-        _accessApplication = New Access.Application()
+        _accessApplication = COMObject.Create(Of Access.Application)()
 
         ' add a commandbar popup
         Dim commandBarPopup As Office.CommandBarPopup = _accessApplication.CommandBars("Menu Bar").Controls.Add(MsoControlType.msoControlPopup)
