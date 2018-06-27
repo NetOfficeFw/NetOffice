@@ -641,7 +641,7 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         protected void CreateFromProgId(string progId, bool factoryAddObject = false)
         {
-            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::CreateFromProgId", PerformanceTrace.CallType.Method);
+            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::CreateFromProgId", PerformanceTrace.CallType.Method);
 
             _underlyingType = System.Type.GetTypeFromProgID(progId, false);
             if (null == _underlyingType)
@@ -653,7 +653,7 @@ namespace NetOffice
                 underlyingObject = Activator.CreateInstance(_underlyingType);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::CreateFromProgId");
+                    Settings.PerformanceTrace.StopMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::CreateFromProgId");
             }
             catch (Exception exception)
             {
@@ -675,11 +675,11 @@ namespace NetOffice
             // release himself from COM Runtime System
             if (!_proxyShare.Released)
             {
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy", PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::ReleaseCOMProxy", PerformanceTrace.CallType.Method);
                 _proxyShare.Release();
                 Factory.InternalObjectRegister.RemoveObjectFromList(this, ownerPath);
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy");
+                    Settings.PerformanceTrace.StopMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::ReleaseCOMProxy");
             }
         }
 
@@ -1125,7 +1125,7 @@ namespace NetOffice
         /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
         public virtual void Dispose(bool disposeEventBinding)
         {
-            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::Dispose", PerformanceTrace.CallType.Method);
+            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::Dispose", PerformanceTrace.CallType.Method);
             bool isRootObject = null == ParentObject;
             try
             {
@@ -1193,7 +1193,7 @@ namespace NetOffice
                 }
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::Dispose");
+                    Settings.PerformanceTrace.StopMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::Dispose");
             }
             catch (Exception exception)
             {
@@ -1894,51 +1894,7 @@ namespace NetOffice
 
         #endregion
 
-        #region Overrides
-
-        /// <summary>
-        /// Serves as a hash function for a particular type.
-        /// </summary>
-        /// <returns>System.Int32 instance</returns>
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>System.String instance</returns>
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public override string ToString()
-        {
-            return InstanceType.Name;
-        }
-
-        /// <summary>
-        /// Determines whether two Object instances are equal.
-        /// </summary>
-        /// <returns>true if equal, otherwise false</returns>
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public override bool Equals(Object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        /// <summary>
-        /// Gets a Type object that represents the specified type.
-        /// </summary>
-        /// <returns></returns>
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public new Type GetType()
-        {
-            return base.GetType();
-        }
-
-        #endregion
-
-        #region Operator Overloads
+        #region Equals
 
         /// <summary>
         /// Determines whether two ICOMObject instances pointing to the same remote server instance.
@@ -2008,6 +1964,50 @@ namespace NetOffice
                 if (IntPtr.Zero != outValueB)
                     Marshal.Release(outValueB);
             }
+        }
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Serves as a hash function for a particular type.
+        /// </summary>
+        /// <returns>System.Int32 instance</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>System.String instance</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public override string ToString()
+        {
+            return InstanceType.Name;
+        }
+
+        /// <summary>
+        /// Determines whether two Object instances are equal.
+        /// </summary>
+        /// <returns>true if equal, otherwise false</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public override bool Equals(Object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        /// <summary>
+        /// Gets a Type object that represents the specified type.
+        /// </summary>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public new Type GetType()
+        {
+            return base.GetType();
         }
 
         #endregion

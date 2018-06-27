@@ -22,7 +22,7 @@ namespace Ref_Parameters_in_Events
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _application = new Word.Application();
+            _application = new Word.ApplicationClass();
             _application.Visible = true;
             _application.Documents.Add();
             _application.Selection.TypeText("Hello World!");
@@ -41,7 +41,7 @@ namespace Ref_Parameters_in_Events
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);            
+                Console.WriteLine(exception.Message);
             }
         }
 

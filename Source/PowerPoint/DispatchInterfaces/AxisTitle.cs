@@ -57,7 +57,7 @@ namespace NetOffice.PowerPointApi
     }
 
     /// <summary>
-    /// DispatchInterface AxisTitle 
+    /// DispatchInterface AxisTitle
     /// SupportByVersion PowerPoint, 14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745597.aspx </remarks>
@@ -294,7 +294,7 @@ namespace NetOffice.PowerPointApi
         string FormulaR1C1Local { get; set; }
 
         #endregion
-        
+
         #region Methods
 
         /// <summary>
@@ -312,5 +312,5 @@ namespace NetOffice.PowerPointApi
         object Select();
 
         #endregion
-    } 
+    }
 }

@@ -21,7 +21,7 @@ namespace AccessingWordBasicInterop
 
                 basic = application.WordBasic;
                 object[] argValues = { 1 };
-                basic.GetType().InvokeMember("DisableAutoMacros", BindingFlags.InvokeMethod, null, basic, argValues, null, null, null);     
+                basic.GetType().InvokeMember("DisableAutoMacros", BindingFlags.InvokeMethod, null, basic, argValues, null, null, null);
                 Console.WriteLine("Fine");
             }
             catch (Exception exception)

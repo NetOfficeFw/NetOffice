@@ -19,15 +19,15 @@ namespace UserformExporter
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-            }            
+            }
         }
 
         internal static void Run()
         {
             NetOffice.Settings.Default.EnableAutomaticQuit = true;
 
-            string fileName = @"C:\Sebastian\NetOffice11\Tests\Concept Tests\DynamicsCSharp\Document.docm";
-            using (Word.Application application = new NetOffice.WordApi.Application())
+            string fileName = @"C:\Sebastian\NetOffice\Tests\Concept Tests\DynamicsCSharp\Document.docm";
+            using (Word.Application application = new NetOffice.WordApi.ApplicationClass())
             {
                 using (var doc = application.Documents.Open(fileName))
                 {

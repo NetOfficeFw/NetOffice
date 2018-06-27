@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -55,7 +55,7 @@ namespace Interop
             Marshal.ReleaseComObject(sheet);
             Marshal.ReleaseComObject(sheets);
             Marshal.ReleaseComObject(book);
-            Marshal.ReleaseComObject(books); 
+            Marshal.ReleaseComObject(books);
 
             excelApplication.Quit();
             Marshal.ReleaseComObject(excelApplication);

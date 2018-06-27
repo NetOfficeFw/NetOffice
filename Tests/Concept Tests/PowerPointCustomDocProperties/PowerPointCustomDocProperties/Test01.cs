@@ -41,6 +41,8 @@ namespace PowerPointCustomDocProperties
                     MsoDocProperties.msoPropertyTypeNumber,
                     new Random().Next(1, 999)
                     );
+
+                application.Quit();
             }
         }
     }

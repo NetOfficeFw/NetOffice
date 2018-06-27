@@ -461,11 +461,11 @@ namespace NetOffice
             // release himself from COM Runtime System
             if (!_proxyShare.Released)
             {
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy", PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::ReleaseCOMProxy", PerformanceTrace.CallType.Method);
                 _proxyShare.Release();
                 Factory.InternalObjectRegister.RemoveObjectFromList(this, ownerPath);
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::ReleaseCOMProxy");
+                    Settings.PerformanceTrace.StopMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::ReleaseCOMProxy");
             }
         }
 
@@ -511,13 +511,13 @@ namespace NetOffice
         /// <returns>newly created instance</returns>
         private object CreateFromProgId(string progId)
         {
-            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::CreateFromProgId", PerformanceTrace.CallType.Method);
+            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::CreateFromProgId", PerformanceTrace.CallType.Method);
 
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
 
             if (measureStarted)
-                Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::CreateFromProgId");
+                Settings.PerformanceTrace.StopMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::CreateFromProgId");
 
             return underlyingObject;
         }
@@ -1098,7 +1098,7 @@ namespace NetOffice
         /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
         public virtual void Dispose(bool disposeEventBinding)
         {
-            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::Dispose", PerformanceTrace.CallType.Method);
+            bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::Dispose", PerformanceTrace.CallType.Method);
             bool isRootObject = null == ParentObject;
             try
             {
@@ -1165,7 +1165,7 @@ namespace NetOffice
                 }
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(InstanceType.Namespace, InstanceType.Name, "NetOffice::Dispose");
+                    Settings.PerformanceTrace.StopMeasureTime(ContractType.Namespace, ContractType.Name, "NetOffice::Dispose");
             }
             catch (Exception exception)
             {
@@ -1438,6 +1438,80 @@ namespace NetOffice
 
         #endregion
 
+        #region Equals
+
+        /// <summary>
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
+        /// </summary>
+        /// <param name="objectA">first instance to compare</param>
+        /// <param name="objectB">second instance to compare</param>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
+        public static bool EqualsOnServer(object objectA, object objectB)
+        {
+            ICOMObject objA = objectA as ICOMObject;
+            ICOMObject objB = objectA as ICOMObject;
+
+            if (null != objA)
+                return objA.EqualsOnServer(objB);
+            else if (null != objB)
+                return false;
+            else
+                return Object.ReferenceEquals(objA, objectB);
+        }
+
+        /// <summary>
+        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
+        /// </summary>
+        /// <param name="obj">target instance to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public bool EqualsOnServer(ICOMObject obj)
+        {
+            if (_isCurrentlyDisposing || _isDisposed)
+                return base.Equals(obj);
+
+            if (Object.ReferenceEquals(obj, null))
+                return false;
+
+            IntPtr outValueA = IntPtr.Zero;
+            IntPtr outValueB = IntPtr.Zero;
+            IntPtr ptrA = IntPtr.Zero;
+            IntPtr ptrB = IntPtr.Zero;
+            try
+            {
+                ptrA = Marshal.GetIUnknownForObject(this.UnderlyingObject);
+                int hResultA = Marshal.QueryInterface(ptrA, ref IID_IUnknown, out outValueA);
+
+                ptrB = Marshal.GetIUnknownForObject(obj.UnderlyingObject);
+                int hResultB = Marshal.QueryInterface(ptrB, ref IID_IUnknown, out outValueB);
+
+                return (hResultA == 0 && hResultB == 0 && ptrA == ptrB);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                throw new NetOfficeCOMException("Unexpected error during semantically instance comparsion.", exception);
+            }
+            finally
+            {
+                if (IntPtr.Zero != ptrA)
+                    Marshal.Release(ptrA);
+
+                if (IntPtr.Zero != outValueA)
+                    Marshal.Release(outValueA);
+
+                if (IntPtr.Zero != ptrB)
+                    Marshal.Release(ptrB);
+
+                if (IntPtr.Zero != outValueB)
+                    Marshal.Release(outValueB);
+            }
+        }
+
+        #endregion
+
         #region Overrides
 
         /// <summary>
@@ -1682,80 +1756,6 @@ namespace NetOffice
             {
                 result = InvokeMethod(binder.Name, args);
                 return true;
-            }
-        }
-
-        #endregion
-
-        #region Operator Overloads
-
-        /// <summary>
-        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
-        /// </summary>
-        /// <param name="objectA">first instance to compare</param>
-        /// <param name="objectB">second instance to compare</param>
-        /// <returns>true if arguments equal, otherwise false</returns>
-        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        public static bool EqualsOnServer(object objectA, object objectB)
-        {
-            ICOMObject objA = objectA as ICOMObject;
-            ICOMObject objB = objectA as ICOMObject;
-
-            if (null != objA)
-                return objA.EqualsOnServer(objB);
-            else if (null != objB)
-                return false;
-            else
-                return Object.ReferenceEquals(objA, objectB);
-        }
-
-        /// <summary>
-        /// Determines whether two ICOMObject instances pointing to the same remote server instance.
-        /// </summary>
-        /// <param name="obj">target instance to compare</param>
-        /// <returns>true if equal, otherwise false</returns>
-        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public bool EqualsOnServer(ICOMObject obj)
-        {
-            if (_isCurrentlyDisposing || _isDisposed)
-                return base.Equals(obj);
-
-            if (Object.ReferenceEquals(obj, null))
-                return false;
-
-            IntPtr outValueA = IntPtr.Zero;
-            IntPtr outValueB = IntPtr.Zero;
-            IntPtr ptrA = IntPtr.Zero;
-            IntPtr ptrB = IntPtr.Zero;
-            try
-            {
-                ptrA = Marshal.GetIUnknownForObject(this.UnderlyingObject);
-                int hResultA = Marshal.QueryInterface(ptrA, ref IID_IUnknown, out outValueA);
-
-                ptrB = Marshal.GetIUnknownForObject(obj.UnderlyingObject);
-                int hResultB = Marshal.QueryInterface(ptrB, ref IID_IUnknown, out outValueB);
-
-                return (hResultA == 0 && hResultB == 0 && ptrA == ptrB);
-            }
-            catch (Exception exception)
-            {
-                Factory.Console.WriteException(exception);
-                throw new NetOfficeCOMException("Unexpected error during semantically instance comparsion.", exception);
-            }
-            finally
-            {
-                if (IntPtr.Zero != ptrA)
-                    Marshal.Release(ptrA);
-
-                if (IntPtr.Zero != outValueA)
-                    Marshal.Release(outValueA);
-
-                if (IntPtr.Zero != ptrB)
-                    Marshal.Release(ptrB);
-
-                if (IntPtr.Zero != outValueB)
-                    Marshal.Release(outValueB);
             }
         }
 

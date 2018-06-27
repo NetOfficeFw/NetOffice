@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NetOffice.OutlookSecurity;
+using NetOffice.OutlookApi.Tools.Contribution.Security;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
 
@@ -11,28 +11,33 @@ namespace SuppressOutlookSecurity
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Concept Test - SuppressOutlookSecurity");
-            Suppress.Enabled = true;
-            Suppress.OnAction += new Suppress.SecurityDialogAction(Suppress_OnAction);
-            Suppress.OnError += new Suppress.ErrorOccuredEventHandler(Suppress_OnError);
-            Outlook.Application application = null;
-            try
+
+            using (var suppress = new Automation())
             {
-                application = new Outlook.Application();
-                SendMail(application);
-                Console.WriteLine("Press any key...");
-                Console.ReadKey();
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.ToString());
-            }
-            finally
-            {
-                if (null != application)
+                Console.WriteLine("Concept Test - SuppressOutlookSecurity");
+                suppress.Enabled = true;
+                suppress.OnAction += Suppress_OnAction;
+                suppress.OnError += Suppress_OnError;
+                Outlook.Application application = null;
+                try
                 {
-                    application.Quit();
-                    application.Dispose();
+                    application = new Outlook.ApplicationClass(new NetOffice.Core(), true);
+                    SendMail(application);
+                    Console.WriteLine("Press any key...");
+                    Console.ReadKey();
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception.ToString());
+                }
+                finally
+                {
+                    if (null != application)
+                    {
+                        if(application.FromProxyService)
+                           application.Quit();
+                        application.Dispose();
+                    }
                 }
             }
         }
@@ -45,7 +50,6 @@ namespace SuppressOutlookSecurity
             mailItem.Body = "This is a test mail from NetOffice concept test.";
             mailItem.Send();
         }
-
 
         private static void Suppress_OnError(Exception exception)
         {

@@ -15,7 +15,7 @@ namespace NetOffice
     public class Invoker
     {
         #region Fields
-       
+
         /// <summary>
         /// lock field to shared default invoker
         /// </summary>
@@ -36,6 +36,11 @@ namespace NetOffice
         /// </summary>
         private Core _parent;
 
+        /// <summary>
+        /// Empty Arguments Field
+        /// </summary>
+        private static object[] _emptyArgs = new object[0];
+
         #endregion
 
         #region Ctor
@@ -52,7 +57,7 @@ namespace NetOffice
             Parent = parent;
             OnCreate();
         }
-       
+
         /// <summary>
         /// Creates an instance of the class as shared default
         /// </summary>
@@ -207,12 +212,12 @@ namespace NetOffice
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -252,12 +257,12 @@ namespace NetOffice
                     newParamsArray[i] = paramsArray[i];
                 newParamsArray[newParamsArray.Length - 1] = ValidateParam(value);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, newParamsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -289,12 +294,12 @@ namespace NetOffice
                 BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -322,7 +327,7 @@ namespace NetOffice
         {
             ICOMObject wrapperInstance = null;
             try
-            {               
+            {
                 object target = null;
                 Type type = null;
 
@@ -346,12 +351,12 @@ namespace NetOffice
 
                 bool measureStarted = false;
                 if(null != wrapperInstance)
-                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.ContractType.Namespace, wrapperInstance.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 type.InvokeMember(name, BindingFlags.InvokeMethod, null, target, paramsArray, null != wrapperInstance ? wrapperInstance.Settings.ThreadCulture : Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.ContractType.Namespace, wrapperInstance.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -386,12 +391,12 @@ namespace NetOffice
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -408,7 +413,7 @@ namespace NetOffice
             }
         }
 
-private static object[] _emptyArgs = new object[0];
+
 
         /// <summary>
         /// Perform method as latebind call with return value
@@ -427,12 +432,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -469,12 +474,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -509,12 +514,12 @@ private static object[] _emptyArgs = new object[0];
                 BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Name, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Name, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -552,12 +557,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -593,12 +598,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -658,12 +663,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -695,12 +700,12 @@ private static object[] _emptyArgs = new object[0];
                 BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -753,12 +758,12 @@ private static object[] _emptyArgs = new object[0];
 
                 bool measureStarted = false;
                 if (null != wrapperInstance)
-                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.ContractType.Namespace, wrapperInstance.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 type.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, target, paramsArray, null != wrapperInstance ? wrapperInstance.Settings.ThreadCulture : Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.ContractType.Namespace, wrapperInstance.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -793,12 +798,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.Default.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -832,12 +837,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -874,12 +879,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -914,12 +919,12 @@ private static object[] _emptyArgs = new object[0];
                 BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -957,12 +962,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -1020,12 +1025,12 @@ private static object[] _emptyArgs = new object[0];
 
                 bool measureStarted = false;
                 if (null != wrapperInstance)
-                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
+                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.ContractType.Namespace, wrapperInstance.ContractType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, null, null != wrapperInstance ? wrapperInstance.Settings.ThreadCulture : Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.ContractType.Namespace, wrapperInstance.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -1061,12 +1066,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -1121,12 +1126,12 @@ private static object[] _emptyArgs = new object[0];
 
                 bool measureStarted = false;
                 if(null != wrapperInstance)
-                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
+                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.ContractType.Namespace, wrapperInstance.ContractType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, paramsArray, null != wrapperInstance ? wrapperInstance.Settings.ThreadCulture : Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.ContractType.Namespace, wrapperInstance.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -1163,12 +1168,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -1203,12 +1208,12 @@ private static object[] _emptyArgs = new object[0];
                 BeforeCall(comObject, name, paramsArray);
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -1246,12 +1251,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name);
 
                 return returnValue;
             }
@@ -1293,12 +1298,12 @@ private static object[] _emptyArgs = new object[0];
                     newParamsArray[i] = paramsArray[i];
                 newParamsArray[newParamsArray.Length - 1] = ValidateParam(value);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1339,12 +1344,12 @@ private static object[] _emptyArgs = new object[0];
                     newParamsArray[i] = paramsArray[i];
                 newParamsArray[newParamsArray.Length - 1] = value;
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1378,12 +1383,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, comObject.Settings.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1418,12 +1423,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1458,12 +1463,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, comObject.Settings.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1497,12 +1502,12 @@ private static object[] _emptyArgs = new object[0];
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, comObject.Settings.ThreadCulture);
 
                 if(measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.ContractType.Namespace, comObject.ContractType.Name, name, value);
             }
             catch (Exception throwedException)
             {

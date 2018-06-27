@@ -10,7 +10,7 @@ namespace ThreadSafe
     public class Program
     {
         private static Excel.Application _application;
-         
+
         public static void Main(string[] args)
         {
             try
@@ -36,7 +36,7 @@ namespace ThreadSafe
 
         private static void DoTest()
         {
-            _application = new Excel.Application();
+            _application = new Excel.ApplicationClass();
             Excel.Workbook book = _application.Workbooks.Add();
 
             WaitHandle[] waitHandles = new WaitHandle[3];
@@ -76,7 +76,7 @@ namespace ThreadSafe
                     Excel.Worksheet otherSheet = item as Excel.Worksheet;
                     Excel.Range rng = otherSheet.Cells[1, 1];
                 }
-                range.Dispose();   
+                range.Dispose();
             }
             (mre as ManualResetEvent).Set();
         }

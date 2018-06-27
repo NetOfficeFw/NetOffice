@@ -16,8 +16,7 @@ namespace AccessingWordBasic
             Word.Application application = null;
             try
             {
-              
-                application = new Word.Application();
+                application = new Word.ApplicationClass();
                 application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
                 object basic = application.WordBasic;

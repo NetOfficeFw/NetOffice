@@ -24,23 +24,23 @@ namespace ConsoleApplication1
 
                 // Criteria 1
                 // Enable performance trace in excel generaly. set interval limit to 100 to see all actions there need >= 100 milliseconds
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].Enabled = true;
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 100;
+                NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi"].Enabled = true;
+                NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi"].IntervalMS = 100;
 
                 // Criteria 2
                 // Enable additional performance trace for all members of Range in excel. set interval limit to 20 to see all actions there need >=20 milliseconds
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range"].Enabled = true;
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range"].IntervalMS = 20;
+                NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Range"].Enabled = true;
+                NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Range"].IntervalMS = 20;
 
                 // Criteria 3
                 // Enable additional performance trace for WorkSheet Range property in excel. set interval limit to 0 to see all calls anywhere
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Worksheet", "Range"].Enabled = true;
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Worksheet", "Range"].IntervalMS = 0;
+                NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet", "Range"].Enabled = true;
+                NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Worksheet", "Range"].IntervalMS = 0;
 
                 // Criteria 4
                 // Enable additional performance trace for Range this[] indexer in excel. set interval limit to 0 to see all calls anywhere
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range", "_Default"].Enabled = true;
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range", "_Default"].IntervalMS = 0;
+                NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Range", "_Default"].Enabled = true;
+                NetOffice.Settings.Default.PerformanceTrace["NetOffice.ExcelApi", "Range", "_Default"].IntervalMS = 0;
 
                 Excel.Application application = new Excel.ApplicationClass();
                 application.DisplayAlerts = false;

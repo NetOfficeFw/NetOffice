@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution.Security
     /// <summary>
     /// Outlook Security Automation
     /// </summary>
-    public class Automation : IDisposable 
+    public class Automation : IDisposable
     {
         #region Fields
 
@@ -99,7 +99,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution.Security
         }
 
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution.Security
         }
 
         /// <summary>
-        /// If a security dialog is still visible after TimeOutSeconds 
+        /// If a security dialog is still visible after TimeOutSeconds
         /// the OnError event occurs and Suppress stop try close the dialog. Default:10
         /// </summary>
         public int TimeOutSeconds
@@ -142,7 +142,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution.Security
         }
 
         /// <summary>
-        /// Current used strategy to simulate click for security dialogs 
+        /// Current used strategy to simulate click for security dialogs
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public ClickStrategy Strategy

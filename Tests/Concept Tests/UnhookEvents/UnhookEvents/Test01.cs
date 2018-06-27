@@ -16,7 +16,7 @@ namespace UnhookEvents
 
         public void Proceed()
         {
-            using (var application = new Excel.Application())
+            using (var application = new Excel.ApplicationClass())
             {
                 application.Settings.ExceptionMessageBehavior = ExceptionMessageHandling.DiagnosticsAndInnerMessage;
                 application.Settings.EnableAutomaticQuit = true;

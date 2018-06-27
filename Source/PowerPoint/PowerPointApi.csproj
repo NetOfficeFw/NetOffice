@@ -60,6 +60,7 @@
     <Compile Include="Behind\DispatchInterfaces\AutoCorrect.cs" />
     <Compile Include="Behind\DispatchInterfaces\Axes.cs" />
     <Compile Include="Behind\DispatchInterfaces\Axis.cs" />
+    <Compile Include="Behind\DispatchInterfaces\AxisTitle.cs" />
     <Compile Include="Behind\DispatchInterfaces\Borders.cs" />
     <Compile Include="Behind\DispatchInterfaces\Broadcast.cs" />
     <Compile Include="Behind\DispatchInterfaces\BulletFormat.cs" />

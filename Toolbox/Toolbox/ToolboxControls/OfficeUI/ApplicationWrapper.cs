@@ -65,7 +65,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
                     case "Outlook":
                          Outlook._NameSpace outlookNS = _outlookApplication.GetNamespace("MAPI");
                          Outlook.MAPIFolder inboxFolder = outlookNS.GetDefaultFolder(OutlookApi.Enums.OlDefaultFolders.olFolderInbox);
-                         inboxFolder.Display();                        
+                         inboxFolder.Display();
                         return (_outlookApplication.ActiveWindow() as OutlookApi.Explorer) .CommandBars;
                     case "Power Point":
                         return _powerpointApplication.CommandBars;
@@ -159,25 +159,25 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             switch (_officeApp)
             {
                 case "Excel":
-                    _excelApplication = new Excel.Application("Excel.Application");
+                    _excelApplication = new Excel.ApplicationClass("Excel.Application");
                     break;
                 case "Word":
-                    _wordApplication = new Word.Application("Word.Application");
+                    _wordApplication = new Word.ApplicationClass("Word.Application");
                     break;
                 case "Outlook":
-                    _outlookApplication = new Outlook.Application("Outlook.Application");
+                    _outlookApplication = new Outlook.ApplicationClass("Outlook.Application");
                     break;
                 case "Power Point":
-                    _powerpointApplication = new PowerPoint.Application("PowerPoint.Application");
+                    _powerpointApplication = new PowerPoint.ApplicationClass("PowerPoint.Application");
                     break;
                 case "Access":
-                    _accessApplication = new Access.Application("Access.Application");
+                    _accessApplication = new Access.ApplicationClass("Access.Application");
                     break;
                 case "Project":
-                    _projectApplication = new Project.Application("MSProject.Application");
+                    _projectApplication = new Project.ApplicationClass("MSProject.Application");
                     break;
                 case "Visio":
-                    _visioApplication = new Visio.Application("Visio.Application");
+                    _visioApplication = new Visio.ApplicationClass("Visio.Application");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException("officeApp");

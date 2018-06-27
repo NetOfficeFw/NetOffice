@@ -60,7 +60,7 @@ namespace NetOffice
         /// <returns></returns>
         static Excel.Application CreateExcelApplication()
         {
-            Excel.Application excelApplication = new Excel.Application();
+            Excel.Application excelApplication = new Excel.ApplicationClass();
             excelApplication.DisplayAlerts = false;
             excelApplication.Interactive = false;
             excelApplication.ScreenUpdating = false;

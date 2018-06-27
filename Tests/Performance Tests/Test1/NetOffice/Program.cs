@@ -18,7 +18,7 @@ namespace NetOffice
             // start excel, and get a new sheet reference
             Excel.Application excelApplication = CreateExcelApplication();
             Excel.Worksheet sheet = excelApplication.Workbooks.Add().Worksheets.Add() as Excel.Worksheet;
-          
+
             // do test 10 times
             List<TimeSpan> timeElapsedList = new List<TimeSpan>();
             for (int i = 1; i <= 10; i++)
@@ -36,7 +36,7 @@ namespace NetOffice
                 timeElapsedList.Add(timeElapsed);
                 sheet.DisposeChildInstances();
             }
-          
+
             // display info & log to file
             TimeSpan timeAverage = AppendResultToLogFile(timeElapsedList, "Test1-NetOffice.log");
             Console.WriteLine("Time Average: {0}{1}Press any key...", timeAverage, Environment.NewLine);
@@ -53,13 +53,13 @@ namespace NetOffice
         /// <returns></returns>
         static Excel.Application CreateExcelApplication()
         {
-            Excel.Application excelApplication = new Excel.Application();
+            Excel.Application excelApplication = new Excel.ApplicationClass();
             excelApplication.DisplayAlerts = false;
             excelApplication.Interactive = false;
             excelApplication.ScreenUpdating = false;
             return excelApplication;
         }
-        
+
         /// <summary>
         /// writes list items to a logile and append average of items at the end
         /// </summary>
