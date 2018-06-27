@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+    This part of the code is inspired by the legendary COM Shim Wizard.
+    Credits goes to Garry Trinder and Misha Shneerson. (MSFT)
+ */
+
+using System;
 using System.Runtime.InteropServices;
 
 namespace NetOffice.Tools.Isolation
