@@ -8,7 +8,6 @@ using NetOffice.Exceptions;
 
 namespace NetOffice.AccessApi.Behind.EventContracts
 {
-
 	/// <summary>
 	/// Default implementation of <see cref="NetOffice.AccessApi.EventContracts.__ControlInReportEvents"/>
 	/// </summary>
@@ -17,12 +16,12 @@ namespace NetOffice.AccessApi.Behind.EventContracts
 	public class __ControlInReportEvents_SinkHelper : SinkHelper, NetOffice.AccessApi.EventContracts.__ControlInReportEvents
 	{
 		#region Static
-		
+
 		/// <summary>
 		/// Interface Id from __ControlInReportEvents
 		/// </summary>
 		public static readonly string Id = "90B322A5-F1D9-11CD-8701-00AA003F0F07";
-		
+
 		#endregion
 
 		#region Ctor
@@ -37,12 +36,11 @@ namespace NetOffice.AccessApi.Behind.EventContracts
 		{
 			SetupEventBinding(connectPoint);
 		}
-		
+
 		#endregion
 
 		#region __ControlInReportEvents
-		
+
 		#endregion
 	}
-	
 }

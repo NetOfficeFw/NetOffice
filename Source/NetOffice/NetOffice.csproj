@@ -222,6 +222,9 @@
     <Compile Include="Running\RunningWindowTable.cs" />
     <Compile Include="Running\RunningWindowTable.Nested.cs" />
     <Compile Include="Tools\IDisposableState.cs" />
+    <Compile Include="Tools\Isolation\IManagedInnerAggregator.cs" />
+    <Compile Include="Tools\Isolation\IOuterComAggregator.cs" />
+    <Compile Include="Tools\Isolation\ManagedInnerAggregator.cs" />
     <Compile Include="Tools\LockbackAttribute.cs" />
     <Compile Include="Tools\CodebaseAttribute.cs" />
     <Compile Include="Tools\Native\Bridge\CdeclHandle.cs" />
