@@ -16,6 +16,22 @@ namespace NetOffice.ExcelApi.Behind
     {
 
         #region Type Information
+
+        /// <summary>
+        /// Contract Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type ContractType
+        {
+            get
+            {
+                if(null == _contractType)
+                    _contractType = typeof(NetOffice.ExcelApi.IDropLines);
+                return _contractType;
+            }
+        }
+        private static Type _contractType;
+
         #pragma warning disable
 
         /// <summary>        /// Instance Type

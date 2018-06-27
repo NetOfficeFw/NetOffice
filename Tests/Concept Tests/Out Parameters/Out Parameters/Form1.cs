@@ -17,7 +17,7 @@ namespace Out_Parameters
         {
             InitializeComponent();
 
-            Word.Application application = new Word.Application();
+            Word.Application application = new Word.ApplicationClass();
             application.Visible = true;
             application.DisplayAlerts = NetOffice.WordApi.Enums.WdAlertLevel.wdAlertsNone;
             Word.Document document = application.Documents.Add();
@@ -40,7 +40,7 @@ namespace Out_Parameters
             catch
             {
                 // may closed by user
-            }           
+            }
         }
     }
 }

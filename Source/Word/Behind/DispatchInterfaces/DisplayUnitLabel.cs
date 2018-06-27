@@ -97,6 +97,22 @@ namespace NetOffice.WordApi.Behind
         #region Type Information
 
         /// <summary>
+        /// Contract Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type ContractType
+        {
+            get
+            {
+                if(null == _contractType)
+                    _contractType = typeof(NetOffice.WordApi.DisplayUnitLabel);
+                return _contractType;
+            }
+        }
+        private static Type _contractType;
+
+
+        /// <summary>
         /// Instance Type
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]

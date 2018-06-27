@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NetOffice.ExcelApi.Tools.Expose
+namespace NetOffice.MSHTMLApi.Tools.Expose
 {
     /// <summary>
     /// MSHTML Default Type Factory

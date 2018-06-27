@@ -116,7 +116,7 @@ namespace NetOffice.CoreServices.Internal
             lock (this)
             {
                 DependentAssemblies.Clear();
-            }            
+            }
         }
 
         /// <summary>
@@ -137,8 +137,8 @@ namespace NetOffice.CoreServices.Internal
         internal bool ContainsDependentAssembly(string name)
         {
             return DependentAssemblies.Any(e => e.Name == name);
-        }        
-        
+        }
+
         /// <summary>
         /// Analyze assemblies in current appdomain and connect all NetOffice API factories to the core runtime.
         /// </summary>
@@ -200,7 +200,8 @@ namespace NetOffice.CoreServices.Internal
                         try
                         {
                             Assembly asssembly = Parent.CoreDomain.Load(fileName);
-                            RecieveAssemblyFactory(asssembly.GetName().Name, asssembly);
+                            if(null != asssembly)
+                                RecieveAssemblyFactory(asssembly.GetName().Name, asssembly);
                         }
                         catch (Exception exception)
                         {

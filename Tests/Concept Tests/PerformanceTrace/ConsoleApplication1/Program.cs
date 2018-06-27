@@ -15,10 +15,11 @@ namespace ConsoleApplication1
         {
             try
             {
-                // 
+                //
                 Console.WriteLine("NetOffice Utils Concept Test");
                 Console.WriteLine("0 Milliseconds trace values is not a bug - its just to fast\r\n");
 
+                NetOffice.Settings.Default.PerformanceTrace.Enabled = true;
                 NetOffice.Settings.Default.PerformanceTrace.Alert += new NetOffice.PerformanceTrace.PerformanceAlertEventHandler(PerformanceTrace_Alert);
 
                 // Criteria 1
@@ -41,7 +42,7 @@ namespace ConsoleApplication1
                 NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range", "_Default"].Enabled = true;
                 NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range", "_Default"].IntervalMS = 0;
 
-                Excel.Application application = new Excel.Application();
+                Excel.Application application = new Excel.ApplicationClass();
                 application.DisplayAlerts = false;
                 Excel.Workbook book = application.Workbooks.Add();
                 Excel.Worksheet sheet = book.Sheets.Add() as Excel.Worksheet;

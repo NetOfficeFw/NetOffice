@@ -8,7 +8,7 @@ using NetOffice.WordApi;
 namespace NetOffice.WordApi.Behind
 {
 	/// <summary>
-	/// DispatchInterface Window 
+	/// DispatchInterface Window
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838990.aspx </remarks>
@@ -19,6 +19,22 @@ namespace NetOffice.WordApi.Behind
 		#pragma warning disable
 
 		#region Type Information
+
+        /// <summary>
+        /// Contract Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type ContractType
+        {
+            get
+            {
+                if(null == _contractType)
+                    _contractType = typeof(NetOffice.WordApi.Window);
+                return _contractType;
+            }
+        }
+        private static Type _contractType;
+
 
 		/// <summary>
 		/// Instance Type
@@ -43,9 +59,9 @@ namespace NetOffice.WordApi.Behind
                     _type = typeof(Window);                return _type;
             }
         }
-        
+
         #endregion
-        
+
 		#region Ctor
 
 		/// <summary>
@@ -57,7 +73,7 @@ namespace NetOffice.WordApi.Behind
 		}
 
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>

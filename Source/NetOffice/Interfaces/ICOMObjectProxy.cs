@@ -33,9 +33,15 @@ namespace NetOffice
         string InstanceComponentName { get; }
 
         /// <summary>
-        /// Type informations from ICOMObject instance
+        /// Type informations from ICOMObject implementation
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         Type InstanceType { get; }
+
+        /// <summary>
+        /// Type informations from ICOMObject contract
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        Type ContractType { get; }
     }
 }

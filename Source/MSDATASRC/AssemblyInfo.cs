@@ -20,7 +20,7 @@ using NetOffice.Attributes;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.07.0.0")]
+[assembly: AssemblyFileVersion("2.0.0.0")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSDATASRC")]
 [assembly: Guid("7C0FFAB0-CD84-11D0-949A-00A0C91110ED")]

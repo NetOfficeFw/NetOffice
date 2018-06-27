@@ -7,9 +7,11 @@ using System.ComponentModel;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 using System.Dynamic;
 using System.Collections;
+using System.Linq;
 using System.Linq.Expressions;
 using NetOffice.Resolver;
 using NetOffice.Availity;
+using NetOffice.Attributes;
 using NetOffice.Dynamics;
 using NetOffice.Exceptions;
 using NetOffice.CoreServices;
@@ -194,6 +196,11 @@ namespace NetOffice
         /// Self Type Cache
         /// </summary>
         private static Type _instanceType = typeof(COMDynamicObject);
+
+        /// <summary>
+        /// Contract Type cache field
+        /// </summary>
+        private Type _contractType = null;
 
         /// <summary>
         /// Given ProgID in ctor or null
@@ -974,6 +981,7 @@ namespace NetOffice
         /// <summary>
         /// Returns the native wrapped proxy
         /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public object UnderlyingObject
         {
             get
@@ -987,59 +995,10 @@ namespace NetOffice
         /// </summary>
         public Type UnderlyingType { get; private set; }
 
-        ///// <summary>
-        ///// Class name from UnderlyingObject
-        ///// </summary>
-        //public string UnderlyingTypeName
-        //{
-        //    get
-        //    {
-        //        if (null == _underlyingTypeName)
-        //            _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
-        //        return _underlyingTypeName;
-        //    }
-        //}
-
-        ///// <summary>
-        ///// Returns friendly name for the instance type
-        ///// </summary>
-        //public string UnderlyingFriendlyTypeName
-        //{
-        //    get
-        //    {
-        //        if (null == _friendlyTypeName)
-        //            _friendlyTypeName = new UnderlyingTypeNameResolver().GetFriendlyClassName(this, _underlyingTypeName);
-        //        return _friendlyTypeName;
-        //    }
-        //}
-
-        ///// <summary>
-        ///// Name of the hosting NetOffice component
-        ///// </summary>
-        //public string UnderlyingComponentName
-        //{
-        //    get
-        //    {
-        //        if (null == _underlyingComponentName)
-        //            _underlyingComponentName = new UnderlyingTypeNameResolver().GetComponentName(this);
-        //        return _underlyingComponentName;
-        //    }
-        //}
-
-        ///// <summary>
-        ///// Friendly instance name of the NetOffice Wrapper class
-        ///// </summary>
-        //public string InstanceName
-        //{
-        //    get
-        //    {
-        //        return InstanceType.FullName;
-        //    }
-        //}
-
         /// <summary>
         /// Friendly Name of the NetOffice Wrapper class
         /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public string InstanceFriendlyName
         {
             get
@@ -1054,6 +1013,7 @@ namespace NetOffice
         /// <summary>
         /// Name of the hosting NetOffice component
         /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public string InstanceComponentName
         {
             get
@@ -1065,11 +1025,29 @@ namespace NetOffice
         /// <summary>
         /// Type informations from ICOMObject instance
         /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public Type InstanceType
         {
             get
             {
                 return _instanceType;
+            }
+        }
+
+        /// <summary>
+        /// Type informations from ICOMObject contract
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        public virtual Type ContractType
+        {
+            get
+            {
+                if (null == _contractType)
+                {
+                    Type[] allInterfaces = InstanceType.GetInterfaces();
+                    _contractType = allInterfaces.Except(allInterfaces.SelectMany(t => t.GetInterfaces())).FirstOrDefault(e => e.HasCustomAttribute<TypeIdAttribute>());
+                }
+                return _contractType;
             }
         }
 

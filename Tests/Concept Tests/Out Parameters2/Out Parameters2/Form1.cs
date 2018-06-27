@@ -19,7 +19,7 @@ namespace Out_Parameters2
         {
             InitializeComponent();
 
-            Visio.Application application = new Visio.Application();
+            Visio.Application application = new Visio.ApplicationClass();
             application.Visible = true;
             var doc = application.Documents.Add("");
             Visio.IVPage page = application.ActivePage;
@@ -35,7 +35,7 @@ namespace Out_Parameters2
 
             try
             {
-                object[] a = null;// new Array[4];               
+                object[] a = null;// new Array[4];
                 page.GetFormulas(SID_SRCStream, out a);
                 // page.GetFormulas(SID_SRCStream, out a);
             }

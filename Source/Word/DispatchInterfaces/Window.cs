@@ -7,7 +7,7 @@ using NetOffice.Attributes;
 namespace NetOffice.WordApi
 {
 	/// <summary>
-	/// DispatchInterface Window 
+	/// DispatchInterface Window
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838990.aspx </remarks>

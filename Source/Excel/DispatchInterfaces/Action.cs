@@ -6,7 +6,7 @@ using NetOffice.Attributes;
 namespace NetOffice.ExcelApi
 {
 	/// <summary>
-	/// DispatchInterface Action 
+	/// DispatchInterface Action
 	/// SupportByVersion Excel, 12,14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835506.aspx </remarks>

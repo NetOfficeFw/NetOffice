@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -114,9 +115,14 @@ namespace NetOffice
         private string _instanceName;
 
         /// <summary>
-        /// InstanceType chache field
+        /// Instance Type chache field (Default implementations override them for performance)
         /// </summary>
         private Type _instanceType;
+
+        /// <summary>
+        /// Contract Type cache field (Default implementations override them for performance)
+        /// </summary>
+        private Type _contractType = null;
 
         /// <summary>
         /// Initialized flag
@@ -1010,60 +1016,6 @@ namespace NetOffice
             }
         }
 
-        ///// <summary>
-        ///// NetOffice property: Full type name from UnderlyingObject
-        ///// </summary>
-        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        //public string UnderlyingTypeName
-        //{
-        //    get
-        //    {
-        //        if (null == _underlyingTypeName)
-        //            _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
-        //        return _underlyingTypeName;
-        //    }
-        //}
-
-        ///// <summary>
-        ///// NetOffice property: Friendly type name from UnderlyingObject
-        ///// </summary>
-        //[Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
-        //public string UnderlyingFriendlyTypeName
-        //{
-        //    get
-        //    {
-        //        if (null == _friendlyTypeName)
-        //            _friendlyTypeName = new UnderlyingTypeNameResolver().GetFriendlyClassName(this, _underlyingTypeName);
-        //        return _friendlyTypeName;
-        //    }
-        //}
-
-        ///// <summary>
-        ///// NetOffice property: Component name from UnderlyingObject
-        ///// </summary>
-        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        //public string UnderlyingComponentName
-        //{
-        //    get
-        //    {
-        //        if (null == _underlyingComponentName)
-        //            _underlyingComponentName = new UnderlyingTypeNameResolver().GetComponentName(this);
-        //        return _underlyingComponentName;
-        //    }
-        //}
-
-        ///// <summary>
-        ///// NetOffice property: Full Name of the NetOffice Wrapper class
-        ///// </summary>
-        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        //public string InstanceName
-        //{
-        //    get
-        //    {
-        //        return InstanceType.FullName;
-        //    }
-        //}
-
         /// <summary>
         /// NetOffice property: Friendly Name of the NetOffice Wrapper class
         /// </summary>
@@ -1103,6 +1055,23 @@ namespace NetOffice
                 if (null == _instanceType)
                     _instanceType = GetType();
                 return _instanceType;
+            }
+        }
+
+        /// <summary>
+        /// Type informations from ICOMObject contract
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        public virtual Type ContractType
+        {
+            get
+            {
+                if (null == _contractType)
+                {
+                    Type[] allInterfaces = InstanceType.GetInterfaces();
+                    _contractType = allInterfaces.Except(allInterfaces.SelectMany(t => t.GetInterfaces())).FirstOrDefault(e => e.HasCustomAttribute<TypeIdAttribute>());
+                }
+                return _contractType;
             }
         }
 
@@ -2040,7 +2009,7 @@ namespace NetOffice
                     Marshal.Release(outValueB);
             }
         }
- 
+
         #endregion
     }
 }

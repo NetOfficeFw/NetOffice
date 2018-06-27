@@ -45,7 +45,7 @@ namespace NetOffice.Loader
         internal Core Owner { get; private set; }
 
         /// <summary>
-        /// Core should load these assemblies while initialize if files exists in current codebase 
+        /// Core should load these assemblies while initialize if files exists in current codebase
         /// </summary>
         internal string[] AssemblyNames
         {
@@ -190,18 +190,18 @@ namespace NetOffice.Loader
         }
 
         /// <summary>
-        /// Try to validate argument file version match with current NetOffice version. 
+        /// Try to validate argument file version match with current NetOffice version.
         /// </summary>
         /// <param name="name">given assembly specification</param>
         /// <returns>true if file exists in current NetOffice version</returns>
         internal bool ValidateVersion(AssemblyName name)
         {
             if (name.Version == AssemblyVersion)
-            { 
+            {
                 return true;
             }
             else
-            { 
+            {
                 Owner.Console.WriteLine("Assembly Version {0} missmatch.", name.Version);
                 return false;
             }
@@ -215,7 +215,7 @@ namespace NetOffice.Loader
         {
             foreach (string item in AssemblyNames)
             {
-                string fileName = PathBuilder.BuildLocalPathFromAssemblyFileName(factory, item);               
+                string fileName = PathBuilder.BuildLocalPathFromAssemblyFileName(factory, item);
                 Assembly assembly = Load(fileName);
                 Owner.Console.WriteLine("TryLoad {0} {1}", fileName, null != assembly ? "#ok" : "#fail");
             }
@@ -260,7 +260,7 @@ namespace NetOffice.Loader
                     return assembly;
                 }
                 else
-                { 
+                {
                     Owner.Console.WriteLine(string.Format("Unable to resolve assembly {0}. The file doesnt exists in current codebase.", args.Name));
                     return null;
                 }
