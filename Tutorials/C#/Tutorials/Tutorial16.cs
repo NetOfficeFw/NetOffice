@@ -22,7 +22,7 @@ namespace TutorialsCS4
             // ApplicationModule contains the well known globals and its located in NetOffice.$XXXApi.ModulesLegacy
             // This helpful to bring code from VBA to NetOffice
             ActiveCell.Value = "ActiveCellValue";
-            
+
             // quit and dispose excel
             application.Quit();
             application.Dispose();

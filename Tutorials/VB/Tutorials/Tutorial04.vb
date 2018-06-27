@@ -28,11 +28,11 @@ Public Class Tutorial04
 
         application.Quit()
         application.Dispose()
-        ' 
+        '
         ' the application object is ouer root object
         ' dispose them release himself and any childs of application, in this case workbooks and workbook
         ' the excel instance are now removed from process list
-        ' 
+        '
 
         _hostApplication.ShowFinishDialog()
 
@@ -46,7 +46,7 @@ Public Class Tutorial04
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return "Using Dispose with event exporting Objects"
+            Return "Using Dispose with event exporting instances"
         End Get
     End Property
 

@@ -146,13 +146,14 @@ namespace NetOffice.CoreServices.Internal
                 throw new ArgumentNullException("instance");
 
             ICOMObject result = instance;
-            Type typeToReplace = null;
-            RaiseCreateInstance(instance, ref typeToReplace);
+            ICOMObject replaceInstance = null;
+            RaiseCreateInstance(instance, ref replaceInstance);
             instance.DisposeChildInstances();
 
-            if (null != typeToReplace)
+            if (null != replaceInstance)
             {
-                result = CreateInstanceInternal(typeToReplace, caller, instance, instance.UnderlyingObject, instance.UnderlyingType); 
+                ProceedReplaceByEventInstance(caller, instance, replaceInstance);
+                result = replaceInstance;
             }
             else if (_customTypes.Count > 0)
             {
@@ -173,7 +174,8 @@ namespace NetOffice.CoreServices.Internal
                         targetInterface = exceptInheritedInterfaces.FirstOrDefault();
                     }
                 }
-                
+
+                Type typeToReplace = null;
                 if (null != targetInterface && _customTypes.TryGetValue(targetInterface, out typeToReplace))
                 {
                     result = CreateInstanceInternal(typeToReplace, caller, instance, instance.UnderlyingObject, instance.UnderlyingType);
@@ -188,7 +190,7 @@ namespace NetOffice.CoreServices.Internal
         /// </summary>
         /// <param name="instance">origin instance</param>
         /// <param name="replace">type to replace the instance</param>
-        internal void RaiseCreateInstance(ICOMObject instance, ref Type replace)
+        internal void RaiseCreateInstance(ICOMObject instance, ref ICOMObject replace)
         {
             var handler = CreateInstance;
             if (null != handler)
@@ -211,10 +213,28 @@ namespace NetOffice.CoreServices.Internal
             {
                 OnCreateCOMDynamicEventArgs args = new OnCreateCOMDynamicEventArgs(instance, comProxy);
                 CreateDynamicInstance(Parent, args);
-                return args.Result;
+                return args.Replace;
             }
             else
                 return null;
+        }
+
+        /// <summary>
+        /// Initialize replace instance if necessary
+        /// </summary>
+        /// <param name="caller">calling instance</param>
+        /// <param name="instance">instance to replace</param>
+        /// <param name="replaceInstance">new replaced instance</param>
+        private void ProceedReplaceByEventInstance(ICOMObject caller, ICOMObject instance, ICOMObject replaceInstance)
+        {
+            ICOMObjectInitialize init = replaceInstance as ICOMObjectInitialize;
+            if (null != init && false == init.IsInitialized)
+            {
+                init.InitializeCOMObject(Parent, caller, instance.UnderlyingObject, instance.UnderlyingType);
+            }
+            if (null != caller)
+                caller.RemoveChildObject(instance);
+            Parent.InternalObjectRegister.RemoveObjectFromList(instance, null);
         }
 
         /// <summary>

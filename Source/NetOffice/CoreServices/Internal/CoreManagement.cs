@@ -172,7 +172,7 @@ namespace NetOffice.CoreServices.Internal
                 {
                     removed = Remove(proxy);
                     if(removed)
-                        Removed?.Invoke(Parent, ownerPath, proxy);                    
+                        Removed?.Invoke(Parent, ownerPath, proxy);
                 }
                 if (removed)
                     CountChanged?.Invoke(Parent, Count);

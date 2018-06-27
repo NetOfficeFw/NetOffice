@@ -46,8 +46,8 @@ Public Class Tutorial08
 
     Public Sub OnCreate(sender As Core, args As NetOffice.CoreServices.OnCreateInstanceEventArgs)
 
-        If args.Instance.InstanceType = GetType(Excel.Workbook) Then
-            args.Replace = GetType(MyWorkbook)
+        If args.RequestedFrom.ContractType = GetType(Excel.Workbook) Then
+            args.Replace = New MyWorkbook()
         End If
 
     End Sub

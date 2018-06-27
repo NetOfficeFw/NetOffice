@@ -166,6 +166,7 @@
     <Compile Include="Tutorial15.vb" />
     <Compile Include="Tutorial16.vb" />
     <Compile Include="Tutorial17.vb" />
+    <Compile Include="Tutorial18.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormMain.resx">
@@ -194,6 +195,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Overview.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -29,6 +29,7 @@
         LoadTutorial(New Tutorial15())
         LoadTutorial(New Tutorial16())
         LoadTutorial(New Tutorial17())
+        LoadTutorial(New Tutorial18())
 
     End Sub
 

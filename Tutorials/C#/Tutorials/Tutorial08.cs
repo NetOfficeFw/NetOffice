@@ -35,8 +35,8 @@ namespace TutorialsCS4
             // Replace Excel.Workbook with MyWorkbook
             NetOffice.Core.Default.ObjectActivator.CreateInstance += delegate(Core sender, NetOffice.CoreServices.OnCreateInstanceEventArgs args)
             {
-                if (args.Instance.InstanceType == typeof(Excel.Workbook))
-                    args.Replace = typeof(MyWorkbook);
+                if (args.RequestedFrom.ContractType == typeof(Excel.Workbook))
+                    args.Replace = new MyWorkbook();
             };
 
             Excel.Application application = new Excel.ApplicationClass();

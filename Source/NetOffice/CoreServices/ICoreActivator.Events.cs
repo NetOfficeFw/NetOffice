@@ -20,19 +20,19 @@ namespace NetOffice.CoreServices
         {
             if (null == instance)
                 throw new ArgumentNullException();
-            Instance = instance;
+            RequestedFrom = instance;
         }
 
         /// <summary>
         /// The instance candidate to replace.
         /// DisposeChildInstances is called for the instance after event triger
         /// </summary>
-        public ICOMObject Instance { get; private set; }
+        public ICOMObject RequestedFrom { get; private set; }
 
         /// <summary>
         /// Type muste inherit from origin instance interface and make empty public ctor available
         /// </summary>
-        public Type Replace { get; set; }
+        public ICOMObject Replace { get; set; }
     }
 
     /// <summary>
@@ -75,7 +75,7 @@ namespace NetOffice.CoreServices
         /// <summary>
         /// COMDynamicObject instance to set or null for default
         /// </summary>
-        public COMDynamicObject Result { get; set; }
+        public COMDynamicObject Replace { get; set; }
     }
 
     /// <summary>
