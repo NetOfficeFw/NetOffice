@@ -323,7 +323,7 @@ namespace NetOffice
 
         /// <summary>
         /// Creates a new instance of T by trying to find a running instance first.
-        /// If its failed to find a running proxy, its create a new instance by given ProgId or using the registered default ProgId. 
+        /// If its failed to find a running proxy, its create a new instance by given ProgId or using the registered default ProgId.
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
         /// <param name="options">optional create options</param>
@@ -369,7 +369,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new instance of T by using the registered default ProgId. 
+        /// Creates a new instance of T by using the registered default ProgId.
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
         /// <param name="options">optional create options</param>
@@ -840,7 +840,7 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region ICOMObject
 
         /// <summary>
@@ -952,7 +952,7 @@ namespace NetOffice
                     throw new InvalidCastException("Unexpected Instance.");
 
                 init.InitializeCOMObject(Factory, ParentObject, UnderlyingObject);
-               
+
                 ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
                 if (null == shareProvider)
                     throw new InvalidCastException("Newly created instance does not implement the ICOMProxyShareProvider interface.");
@@ -1834,7 +1834,7 @@ namespace NetOffice
             _isInitialized = true;
         }
 
-        #endregion      
+        #endregion
 
         #region ICloneable
 
@@ -1944,7 +1944,7 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public override string ToString()
         {
-            return GetType().Name;
+            return InstanceType.Name;
         }
 
         /// <summary>
@@ -2040,140 +2040,7 @@ namespace NetOffice
                     Marshal.Release(outValueB);
             }
         }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are equal.
-        /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns>true if arguments equal, otherwise false</returns>
-        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        public static bool operator ==(COMObject objectA, COMObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return true;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.EqualsOnServer(objectB);
-            else
-                return false;
-        }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are equal.
-        /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns>true if arguments equal</returns>
-        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        public static bool operator ==(COMObject objectA, object objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return true;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.EqualsOnServer(objectB as ICOMObject);
-            else
-                return false;
-        }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are equal.
-        /// </summary>
-        /// <param name="objectA">first instance</param>
-        /// <param name="objectB">second instance</param>
-        /// <returns>true if arguments equal, otherwise false</returns>
-        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        public static bool operator ==(object objectA, COMObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return true;
-            else if (!Object.ReferenceEquals(objectA, null))
-            {
-                ICOMObject a = (objectA as ICOMObject);
-                if (null != a)
-                    return a.EqualsOnServer(objectB);
-                else
-                    return false;
-            }
-            else
-                return false;
-        }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are not equal.
-        /// </summary>
-        /// <param name="objectA">first instance</param>
-        /// <param name="objectB">second instance</param>
-        /// <returns>true if arguments equal, otherwise false</returns>
-        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        public static bool operator !=(COMObject objectA, COMObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return false;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return !objectA.EqualsOnServer(objectB);
-            else
-                return true;
-        }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are not equal.
-        /// </summary>
-        /// <param name="objectA">first instance</param>
-        /// <param name="objectB">second instance</param>
-        /// <returns>true if arguments equal, otherwise false</returns>
-        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        public static bool operator !=(COMObject objectA, object objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return false;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return !objectA.EqualsOnServer(objectB as ICOMObject);
-            else
-                return true;
-        }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are not equal.
-        /// </summary>
-        /// <param name="objectA">first instance</param>
-        /// <param name="objectB">second instance</param>
-        /// <returns>true if arguments equal, otherwise false</returns>
-        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
-        public static bool operator !=(object objectA, COMObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return false;
-            else if (!Object.ReferenceEquals(objectA, null))
-            {
-                ICOMObject a = objectA as ICOMObject;
-                if (null != a)
-                    return !a.EqualsOnServer(objectB);
-                else
-                    return null == objectB ? false : true;
-            }
-            else
-                return true;
-        }
-
-
+ 
         #endregion
     }
 }

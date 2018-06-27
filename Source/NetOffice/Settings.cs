@@ -37,7 +37,6 @@ namespace NetOffice
 
         private bool _enableProxyManagement = true;
         private CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
-        private bool _enableOperatorOverlads = true;
         private string _exceptionDefaultMessage = "See inner exception(s) for details.";
         private string _exceptionDiagnosticsMessage = "Failed to proceed {CallInstance}={CallType}=>{Name}.";
         private ExceptionMessageHandling _exceptionMessageBehavior = ExceptionMessageHandling.DiagnosticsAndInnerMessage;
@@ -482,30 +481,6 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set NetOffice overrides the "==" and "!=" operator for semanticly comparsion.
-        /// That means determine 2 instances pointing on the same remote server instance or not.
-        /// true by default.
-        /// These property can only set in the shared default core/settings.
-        /// </summary>
-        /// <remarks>Use the static methods Object.ReferenceEquals for plain reference compare and COMObject.EqualsOnServerfor for semanticly compare whenever you can to avoid side effects ‎especially in unshimmed addins because you may not the only consumer here.</remarks>
-        [Category("Settings"), Description("Redirect equal operations like '==' or '!=' for proxy wrapping objects to the com server to determine 2 instances are equal."), DefaultValue(true)]
-        public bool EnableOperatorOverlads
-        {
-            get
-            {
-                return _enableOperatorOverlads;
-            }
-            set
-            {
-                if (value != _enableOperatorOverlads)
-                {
-                    _enableOperatorOverlads = value;
-                    OnPropertyChanged("EnableOperatorOverlads");
-                }
-            }
-        }
-
-        /// <summary>
         /// Get or set NetOffice try load dependent assemblies unsafe(System.Reflection.Assembly.UnsafeLoadFrom). true by default
         /// </summary>
         [Category("Settings"), Description("Load assemblies unsafe and bypass some security checks."), DefaultValue(true)]
@@ -582,8 +557,7 @@ namespace NetOffice
                  EnableMoreDebugOutput != settings.EnableMoreDebugOutput || EnableEventDebugOutput != settings.EnableEventDebugOutput)
                 return false;
 
-            if (CacheOptions != settings.CacheOptions || EnableOperatorOverlads != settings.EnableOperatorOverlads ||
-                LoadAssembliesUnsafe != settings.LoadAssembliesUnsafe)
+            if (CacheOptions != settings.CacheOptions || LoadAssembliesUnsafe != settings.LoadAssembliesUnsafe)
                 return false;
 
             return true;
@@ -623,7 +597,6 @@ namespace NetOffice
             EnableEventDebugOutput = settings.EnableEventDebugOutput;
 
             CacheOptions = settings.CacheOptions;
-            EnableOperatorOverlads = settings.EnableOperatorOverlads;
             LoadAssembliesUnsafe = settings.LoadAssembliesUnsafe;
         }
 

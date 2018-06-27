@@ -8,7 +8,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
     /// Office Application and NetOffice related diagnostic informations
     /// </summary>
     public class HostInfo : IEnumerable<KeyValuePair<string, string>>
-    {      
+    {
         #region Fields
 
         private Contribution.CommonUtils _owner;
@@ -81,13 +81,12 @@ namespace NetOffice.OfficeApi.Tools.Informations
             if(null != _owner.Owner)
                 list.Add(new KeyValuePair<string, string>("Loaded Time MS", _owner.Owner.LoadingTimeElapsed.TotalMilliseconds.ToString()));
             list.Add(new KeyValuePair<string, string>("Load Assemblies Unsafe", _owner.OwnerApplication.Factory.Settings.LoadAssembliesUnsafe.ToString()));
-            list.Add(new KeyValuePair<string, string>("Operators Enabled", _owner.OwnerApplication.Factory.Settings.EnableOperatorOverlads.ToString()));
             list.Add(new KeyValuePair<string, string>("Management Enabled", _owner.OwnerApplication.Factory.Settings.EnableProxyManagement.ToString()));
-            list.Add(new KeyValuePair<string, string>("Safe Enabled", _owner.OwnerApplication.Factory.Settings.EnableSafeMode.ToString()));                       
+            list.Add(new KeyValuePair<string, string>("Safe Enabled", _owner.OwnerApplication.Factory.Settings.EnableSafeMode.ToString()));
             list.Add(new KeyValuePair<string, string>("Filter Enabled", _owner.OwnerApplication.Factory.Settings.MessageFilter.Enabled.ToString()));
             list.Add(new KeyValuePair<string, string>("Events Enabled", _owner.OwnerApplication.Factory.Settings.EnableEvents.ToString()));
             list.Add(new KeyValuePair<string, string>("Thread Culture", _owner.OwnerApplication.Factory.Settings.ThreadCulture.LCID.ToString()));
-            
+
             return list;
         }
 
