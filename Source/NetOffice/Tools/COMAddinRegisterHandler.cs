@@ -9,7 +9,7 @@ namespace NetOffice.Tools
     /// Handle COMAddin register process
     /// </summary>
     public static class COMAddinRegisterHandler
-    {  
+    {
         /// <summary>
         /// Do register process per user installation
         /// </summary>
@@ -22,7 +22,7 @@ namespace NetOffice.Tools
         }
 
         /// <summary>
-        /// Do register process 
+        /// Do register process
         /// </summary>
         /// <param name="type">addin type</param>
         /// <param name="addinOfficeRegistryKey">office application registry path</param>
@@ -58,12 +58,14 @@ namespace NetOffice.Tools
                 try
                 {
                     registerMethodPresent = AttributeReflector.GetRegisterAttribute(type, ref registerMethod, ref registerAttribute);
-                    if (null != registerAttribute && true == registerMethodPresent && (registerAttribute.Value == RegisterMode.CallBefore || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
+                    if (null != registerAttribute &&
+                        true == registerMethodPresent &&
+                        (registerAttribute.Value == RegisterMode.CallBefore || registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.Replace))
                     {
                         if (!CallDerivedRegisterMethod(registerMethod, type, registerAttribute.Value == RegisterMode.Replace ? RegisterCall.Replace : RegisterCall.CallBefore, scope, keyState))
                         {
-                            if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, 
-                                                                                    RegisterErrorMethodKind.Register, 
+                            if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type,
+                                                                                    RegisterErrorMethodKind.Register,
                                                                                     new RegisterException(errorBlock)))
                                 return;
                         }
@@ -77,7 +79,7 @@ namespace NetOffice.Tools
                     errorBlock = 1;
                     throw;
                 }
-                
+
                 if (null != programmable)
                 {
                     try
@@ -103,7 +105,7 @@ namespace NetOffice.Tools
                     {
                         errorBlock = 3;
                         throw;
-                    }                  
+                    }
                 }
 
                 if (null != lockBack)
@@ -117,7 +119,7 @@ namespace NetOffice.Tools
                     try
                     {
                         foreach (string item in addinOfficeRegistryKey)
-                        {                        
+                        {
                             RegistryLocationAttribute.CreateApplicationKey(isSystemAddin, item, progId.Value,
                                                                            addin.LoadBehavior, addin.Name, addin.Description, addin.CommandLineSafe, null != timestamp);
                         }
@@ -126,7 +128,7 @@ namespace NetOffice.Tools
                     {
                         errorBlock = 5;
                         throw;
-                    }                      
+                    }
                 }
 
                 if ((null != registerAttribute && true == registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallAfter || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
@@ -153,7 +155,7 @@ namespace NetOffice.Tools
         /// <param name="scope">current register scope</param>
         /// <param name="keyState">office reg key state</param>
         /// <returns>true if no exception occurs, otherwise false</returns>
-        public static bool CallDerivedRegisterMethod(MethodInfo registerMethod, Type type, 
+        public static bool CallDerivedRegisterMethod(MethodInfo registerMethod, Type type,
             RegisterCall callType, InstallScope scope, OfficeRegisterKeyState keyState)
         {
             try
@@ -190,7 +192,7 @@ namespace NetOffice.Tools
             catch (Exception)
             {
                 return false;
-            }          
-        }        
+            }
+        }
     }
 }
