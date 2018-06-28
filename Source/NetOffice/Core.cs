@@ -754,13 +754,13 @@ namespace NetOffice
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
         /// <param name="contractWrapperType">type info from contract wrapper</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>        
+        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
         /// <exception cref="ArgumentNullException">comProxy or contractWrapperType</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find to the corresponding factory. this indicates a missing netoffice api assembly</exception>
         /// <exception cref="NetOfficeInitializeException">unexpected initialization error. see inner exception(s) for details</exception>
         public virtual ICOMObject CreateKnownObjectFromComProxy(ICOMObject caller, object comProxy, Type contractWrapperType)
-        {         
+        {
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
             if (null == contractWrapperType)

@@ -344,7 +344,7 @@ namespace NetOffice.OutlookApi.Tools
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = COMObject.Create<Outlook.Application>(Factory, application);
+                this.Application = Factory.CreateKnownObjectFromComProxy<Outlook.Application>(null, application, typeof(Outlook.Application));
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);

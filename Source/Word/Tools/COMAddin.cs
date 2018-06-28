@@ -337,7 +337,7 @@ namespace NetOffice.WordApi.Tools
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = COMObject.Create<Word.Application>(Factory, application);
+                this.Application = Factory.CreateKnownObjectFromComProxy<Word.Application>(null, application, typeof(Word.Application));
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);

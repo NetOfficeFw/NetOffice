@@ -113,15 +113,5 @@ namespace NetOffice.OfficeApi.Behind
         #endregion
 
         #pragma warning restore
-
-        public override void Dispose()
-        {
-            base.Dispose();
-        }
-
-        public override void Dispose(bool disposeEventBinding)
-        {
-            base.Dispose(disposeEventBinding);
-        }
     }
 }

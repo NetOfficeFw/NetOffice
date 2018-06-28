@@ -469,21 +469,8 @@ namespace NetOffice
                 throw new ArgumentException("comProxy");
             try
             {
-                Type contract = typeof(T);
-                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(factory, contract);
-                if (null == implementation)
-                    throw new FactoryException(_missingImplementationHint);
-
-                T result = (T)Activator.CreateInstance(implementation);
-                ICOMObjectInitialize init = result as ICOMObjectInitialize;
-                if (null != init)
-                {
-                    init.InitializeCOMObject(factory, comProxy);
-                }
-
-                result = (T)factory.InternalObjectActivator.TryReplaceInstance(null, result);
-
-                return result;
+                factory.CheckInitialize();
+                return factory.CreateKnownObjectFromComProxy<T>(null, comProxy, typeof(T));
             }
             catch (Exception exception)
             {
@@ -592,21 +579,9 @@ namespace NetOffice
                 throw new ArgumentException("comProxy");
             try
             {
-                Type contract = typeof(T);
-                Type implementation = CoreTypeExtensions.GetImplementationTypeForKnownObject(null != parent ? parent.Factory : Core.Default, contract);
-                if (null == implementation)
-                    throw new FactoryException(_missingImplementationHint);
-
-                T result = (T)Activator.CreateInstance(implementation);
-                ICOMObjectInitialize init = result as ICOMObjectInitialize;
-                if (null != init)
-                {
-                    init.InitializeCOMObject(parent.Factory, parent, comProxy);
-                }
-
-                result = (T)parent.Factory.InternalObjectActivator.TryReplaceInstance(null, result);
-
-                return result;
+                Core factory = null != parent ? parent.Factory : Core.Default;
+                factory.CheckInitialize();
+                return factory.CreateKnownObjectFromComProxy<T>(parent, comProxy, typeof(T));
             }
             catch (Exception exception)
             {

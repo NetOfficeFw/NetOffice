@@ -54,6 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RibbonUI.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
       <Name>NetOffice</Name>
@@ -70,9 +73,6 @@
       <Project>{acd7db2e-ddb2-4bbb-bdb9-c2fd953585c4}</Project>
       <Name>VBIDEApi</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="RibbonUI.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

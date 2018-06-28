@@ -104,10 +104,6 @@ namespace NetOffice.PowerPointApi
                 init.InitializeCOMObject(_defaultProgId);
             }
         }
-        protected override bool RaiseOnDispose()
-        {
-            return base.RaiseOnDispose();
-        }
     }
 
     /// <summary>

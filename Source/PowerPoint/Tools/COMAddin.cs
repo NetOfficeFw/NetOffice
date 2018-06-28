@@ -19,7 +19,7 @@ namespace NetOffice.PowerPointApi.Tools
     /// <summary>
     /// NetOffice MS-PowerPoint COM Addin
     /// </summary>
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
+	//[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
     {
         #region Fields
@@ -315,10 +315,6 @@ namespace NetOffice.PowerPointApi.Tools
                 Tweaks.ApplyTweaks(Factory, this, Type, "PowerPoint", IsLoadedFromSystem);
                 LoadingTimeElapsed = (DateTime.Now - _creationTime);
                 Roots = OnCreateRoots();
-
-                CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
-                paneHandler.Proceed<ITaskPane, PowerPoint.Application>(Factory, TaskPaneFactory, TaskPanes, TaskPaneInstances, OnError, Application);
-
                 RaiseOnStartupComplete(ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
@@ -338,8 +334,7 @@ namespace NetOffice.PowerPointApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);
                 }
-
-                this.Application = COMObject.Create<PowerPoint.Application>(Factory, application);
+                this.Application = Factory.CreateKnownObjectFromComProxy<PowerPoint.Application>(null, application, typeof(PowerPoint.Application));
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
@@ -525,7 +520,7 @@ namespace NetOffice.PowerPointApi.Tools
                 CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
                 paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
                 TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, PowerPoint.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
-      
+
             }
             catch (NetRuntimeSystem.Exception exception)
             {

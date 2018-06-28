@@ -58,112 +58,6 @@ namespace NetOffice.OfficeApi.Tools
             }
         }
 
-        public void Proceed<T, N>(Core factory, OfficeApi.ICTPFactory taskPaneFactory, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
-            List<T> taskPaneInstances, NetOffice.Tools.OnErrorHandler onError, ICOMObject application) where T : class where N : ICOMObject
-        {
-            try
-            {
-                foreach (TaskPaneInfo item in taskPanes)
-                {
-                    string title = item.Title;
-                    OfficeApi.CustomTaskPane taskPane = CreateCTP(taskPaneFactory, item.Type.FullName, title, onError);
-                    if (null == taskPane)
-                        continue;
-
-                    Type taskPaneType = taskPane.GetType();
-
-                    item.Pane = taskPane;
-
-
-                    item.AssignEvents();
-                    item.IsLoaded = true;
-
-                    switch (taskPane.DockPosition)
-                    {
-                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionLeft:
-                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionRight:
-                            taskPane.Width = item.Width >= 0 ? item.Width : TaskPaneInfo.DefaultSize;
-                            break;
-                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionTop:
-                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionBottom:
-                            taskPane.Height = item.Height >= 0 ? item.Height : TaskPaneInfo.DefaultSize;
-                            break;
-                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionFloating:
-                            item.Width = item.Width >= 0 ? item.Width : TaskPaneInfo.DefaultSize;
-                            taskPane.Height = item.Height >= 0 ? item.Height : TaskPaneInfo.DefaultSize;
-                            break;
-                        default:
-                            break;
-                    }
-
-                    T pane = taskPane.ContentControl as T;
-                    if (null != pane)
-                    {
-                        taskPaneInstances.Add(pane);
-                        object[] argumentArray = new object[0];
-
-                        if (item.Arguments != null)
-                            argumentArray = item.Arguments;
-
-                        try
-                        {
-                            OfficeApi.Tools.ITaskPaneConnection<N> foo = pane as OfficeApi.Tools.ITaskPaneConnection<N>;
-                            if (null != foo)
-                                foo.OnConnection((N)application, taskPane, argumentArray);
-                        }
-                        catch (Exception exception)
-                        {
-                            factory.Console.WriteException(exception);
-                        }
-                    }
-
-                    foreach (KeyValuePair<string, object> property in item.ChangedProperties)
-                    {
-                        if (property.Key == "Title")
-                            continue;
-
-                        try
-                        {
-                            if (property.Key == "Width") // avoid to set width in top and bottom align
-                            {
-                                object outValue = null;
-                                item.ChangedProperties.TryGetValue("DockPosition", out outValue);
-                                if (null != outValue)
-                                {
-
-                                    OfficeApi.Enums.MsoCTPDockPosition position = (OfficeApi.Enums.MsoCTPDockPosition)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPosition), outValue.ToString());
-                                    if (position == OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionTop || position == OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionBottom)
-                                        continue;
-                                }
-                            }
-
-                            if (property.Key == "Height")   // avoid to set height in left and right align
-                            {
-                                object outValue = null;
-                                item.ChangedProperties.TryGetValue("DockPosition", out outValue);
-                                if (null == outValue)
-                                    outValue = OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionRight; // NetOffice default position if unset
-
-                                OfficeApi.Enums.MsoCTPDockPosition position = (OfficeApi.Enums.MsoCTPDockPosition)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPosition), outValue.ToString());
-                                if (position == OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionLeft || position == OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionRight)
-                                    continue;
-                            }
-
-                            taskPaneType.InvokeMember(property.Key, System.Reflection.BindingFlags.SetProperty, null, taskPane, new object[] { property.Value });
-                        }
-                        catch
-                        {
-                            factory.Console.WriteLine("Failed to set TaskPane property {0}", property.Key);
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
         /// <summary>
         /// Create taskpanes
         /// </summary>
@@ -178,9 +72,7 @@ namespace NetOffice.OfficeApi.Tools
         public OfficeApi.ICTPFactory CreateCustomPanes<T,N>(Core factory, object ctpFactoryInst, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
             List<T> taskPaneInstances, NetOffice.Tools.OnErrorHandler onError, ICOMObject application) where T: class where N:ICOMObject
         {
-            OfficeApi.ICTPFactory taskPaneFactory = new NetOffice.OfficeApi.Behind.ICTPFactory(factory, null, ctpFactoryInst);
-            //return taskPaneFactory;
-            ////OfficeApi.ICTPFactory taskPaneFactory = factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.ICTPFactory>(null, ctpFactoryInst, typeof(NetOffice.OfficeApi.ICTPFactory));
+            OfficeApi.ICTPFactory taskPaneFactory = factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.ICTPFactory>(null, ctpFactoryInst, typeof(NetOffice.OfficeApi.ICTPFactory));
             try
             {
                 foreach (TaskPaneInfo item in taskPanes)
@@ -195,7 +87,7 @@ namespace NetOffice.OfficeApi.Tools
                     Type taskPaneType = taskPane.GetType();
 
                     item.Pane = taskPane;
-                    
+
 
                     item.AssignEvents();
                     item.IsLoaded = true;

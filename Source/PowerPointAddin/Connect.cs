@@ -17,39 +17,12 @@ namespace PowerPointAddin
     [CustomPane(typeof(PowerPointAddin.Pane), "Source", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
     public class Connect : COMAddin
     {
-        public Connect()
-        {
-
-        }
-
         protected override Core CreateFactory()
         {
-            var factory =  base.CreateFactory();
+            var factory = base.CreateFactory();
             factory.ObjectActivator.RegisterType(typeof(Office.ICTPFactory), typeof(MyICTPFactory));
             factory.ObjectActivator.RegisterType(typeof(Office.CustomTaskPane), typeof(MyCustomTaskPane));
             return factory;
-        }
-
-        public override void CTPFactoryAvailable(object CTPFactoryInst)
-        {
-            try
-            {
-               base.CTPFactoryAvailable(CTPFactoryInst);
-            }
-            catch (Exception exception)
-            {
-                throw;
-            }           
-        }
-
-        protected override void RaiseOnStartupComplete(ref Array custom)
-        {
-            base.RaiseOnStartupComplete(ref custom);
-        }
-
-        protected override void RaiseOnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
-        {
-            base.RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
 
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
