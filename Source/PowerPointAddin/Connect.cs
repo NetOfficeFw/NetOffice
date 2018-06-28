@@ -1,37 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using NetOffice;
 using NetOffice.Tools;
-using NetOffice.ExcelApi.Tools;
 using Office = NetOffice.OfficeApi;
+using NetOffice.OfficeApi.Enums;
+using PowerPoint = NetOffice.PowerPointApi;
+using NetOffice.PowerPointApi.Enums;
+using NetOffice.PowerPointApi.Tools;
 
-namespace ExcelAddin
+namespace PowerPointAddin
 {
     [COMAddin("Addin Source Sample Addin CS4", "Addin Source Sample", LoadBehavior.LoadAtStartup)]
-    [ProgId("ExcelAddin.Connect"), Guid("CDDF2714-BC19-4CD5-860A-9119AC445914"), Codebase, Timestamp]
+    [ProgId("PowerPointAddin.Connect"), Guid("A922E452-D598-4CF4-9239-B23093F17783"), Codebase, Timestamp]
     [RegistryLocation(RegistrySaveLocation.InstallScopeCurrentUser)]
     [CustomUI("RibbonUI.xml", true)]
-    [CustomPane(typeof(Pane), "Source", true)]
+    [CustomPane(typeof(Pane), "Source", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
     public class Connect : COMAddin
     {
-        public Connect()
-        {
-            OnStartupComplete += Addin_OnStartupComplete;
-            OnDisconnection += Addin_OnDisconnection;
-        }
-
-        private void Addin_OnStartupComplete(ref Array custom)
-        {
-            Factory.Console.Mode = DebugConsoleMode.Trace;
-            Factory.Console.WriteLine("Factory initialized in {0}", Factory.InitializedTime);
-            Factory.Console.WriteLine("LoadingTimeElapsed {0}", LoadingTimeElapsed);
-        }
-
-        private void Addin_OnDisconnection(ext_DisconnectMode removeMode, ref Array custom)
-        {
-
-        }
-
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
         {
             if (null != RibbonUI)
