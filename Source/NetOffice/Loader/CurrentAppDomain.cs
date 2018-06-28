@@ -107,7 +107,7 @@ namespace NetOffice.Loader
                         return Assembly.UnsafeLoadFrom(fileName);
                     else
                         return Assembly.LoadFrom(fileName);
-                        // changed Load to LoadFrom, thanks to Frank Fajardo
+                    // changed Load to LoadFrom, thanks to Frank Fajardo
                 }
                 else
                     return null;

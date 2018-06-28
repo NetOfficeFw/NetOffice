@@ -14,7 +14,7 @@ namespace NetOffice.CoreServices
             ICOMObject newInstance = null;
             try
             {
-                newInstance = ComActivator.CreateInitializeInstance(typeInfo.Implementation, typeInfo.Factory, caller, comProxy, typeInfo.Proxy);
+                newInstance = ComActivator.CreateInitializeInstance(value, typeInfo.Implementation, typeInfo.Factory, caller, comProxy, typeInfo.Proxy);
                 newInstance = value.InternalObjectActivator.TryReplaceInstance(caller, newInstance);
             }
             catch (Exception exception)

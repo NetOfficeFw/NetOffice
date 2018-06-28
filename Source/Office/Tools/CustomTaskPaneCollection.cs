@@ -5,6 +5,7 @@ using NetOffice;
 using NetOffice.Attributes;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
+using System.Diagnostics;
 
 namespace NetOffice.OfficeApi.Tools
 {
@@ -360,6 +361,7 @@ namespace NetOffice.OfficeApi.Tools
     /// <summary>
     /// TaskCollection for COMAddin
     /// </summary>
+    [DebuggerDisplay("{Count} Items")]
     public class CustomTaskPaneCollection : IEnumerable<TaskPaneInfo>
     {
         private List<TaskPaneInfo> InnerList { get; set; }

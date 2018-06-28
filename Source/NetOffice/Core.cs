@@ -662,6 +662,7 @@ namespace NetOffice
                             throw new FactoryException(String.Format("Unable to resolve proxy type:{0}", ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy)));
 
                         result = CoreCreateExtensions.CreateInstance(this, typeInfo, caller, comProxy);
+                        //result = InternalObjectActivator.TryReplaceInstance(caller, result);
                     }
                     else
                     {
@@ -680,8 +681,7 @@ namespace NetOffice
                             }
                         }
                     }
-
-                    //result = InternalObjectActivator.TryReplaceInstance(caller, result);
+                   
                     return result;
                 }
             }
@@ -796,7 +796,7 @@ namespace NetOffice
                             throw new FactoryException(String.Format("Unable to find implementation: {0}.", contractWrapperType.FullName));
                     }
 
-                    result = InternalObjectActivator.TryReplaceInstance(caller, result);
+                    //result = InternalObjectActivator.TryReplaceInstance(caller, result);
                     return result;
                 }
             }

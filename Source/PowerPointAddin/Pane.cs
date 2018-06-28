@@ -16,7 +16,7 @@ namespace PowerPointAddin
     {
         public Pane()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         public void OnConnection(NetOffice.PowerPointApi.Application application, _CustomTaskPane parentPane, object[] customArguments)

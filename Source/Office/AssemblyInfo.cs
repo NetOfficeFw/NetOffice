@@ -29,7 +29,7 @@ using NetOffice.Attributes;
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Office")]
 [assembly: Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.1")]
+[assembly: NetOfficeAssemblyAttribute("2.0.0.0")]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
 
 

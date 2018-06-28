@@ -6,7 +6,6 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi.Native
 {
-    #pragma warning disable
     /// <summary>
     /// NativeInterface ICustomTaskPaneConsumer SupportByVersion Office, 12,14,15,16
     /// </summary>
@@ -27,5 +26,4 @@ namespace NetOffice.OfficeApi.Native
 
 		#endregion
 	}
-    #pragma warning restore
 }

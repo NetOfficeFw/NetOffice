@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 	Word - Microsoft Word 12.0 Object Library - 12
 	Word - Microsoft Word 14.0 Object Library - 14
 	Word - Microsoft Word 15.0 Object Library - 15
-    Word - Microsoft Word 16.0 Object Library - 16
+    	Word - Microsoft Word 16.0 Object Library - 16
 */
 
 [assembly: AssemblyTitle("Word")]
@@ -29,7 +29,7 @@ using NetOffice.Attributes;
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Word")]
 [assembly: Guid("00020905-0000-0000-C000-000000000046")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.1")]
+[assembly: NetOfficeAssemblyAttribute("2.0.0.0")]
 [assembly: Dependency("OfficeApi.dll", LoadHint.Default)]
 [assembly: Dependency("VBIDEApi.dll", LoadHint.Default)]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]

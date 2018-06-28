@@ -5,7 +5,6 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi.Native
 {
-    #pragma warning disable
     /// <summary>
     /// NativeInterface IRibbonExtensibility SupportByVersion Office, 12,14,15,16
     /// The interface through which the Ribbon user interface (UI) communicates with a COM add-in to customize the UI.
@@ -30,5 +29,4 @@ namespace NetOffice.OfficeApi.Native
 
 		#endregion
 	}
-    #pragma warning restore
 }

@@ -6,7 +6,6 @@ using NetOffice.Attributes;
 // Not in NetOffice.OfficeApi.Native namespace for backward compatibility
 namespace NetOffice.OfficeApi
 {
-    #pragma warning disable
     /// <summary>
     /// NativeInterface IRibbonControl SupportByVersion Office, 12,14,15,16
     /// Represents the object passed into every Ribbon user interface (UI) control's callback procedure.
@@ -47,8 +46,4 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 	}
-    #pragma warning restore
 }
-
-
-

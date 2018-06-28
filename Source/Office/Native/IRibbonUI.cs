@@ -5,7 +5,6 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi.Native
 {
-    #pragma warning disable
     /// <summary>
     /// NativeInterface IRibbonUI SupportByVersion Office, 12,14,15,16
     /// The object that is returned by the onLoad procedure specified on the customUI tag.
@@ -74,5 +73,4 @@ namespace NetOffice.OfficeApi.Native
 
 		#endregion
 	}
-    #pragma warning restore
 }

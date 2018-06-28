@@ -12,12 +12,46 @@ using NetOffice.PowerPointApi.Tools;
 namespace PowerPointAddin
 {
     [COMAddin("Addin Source Sample Addin CS4", "Addin Source Sample", LoadBehavior.LoadAtStartup)]
-    [ProgId("PowerPointAddin.Connect"), Guid("A922E452-D598-4CF4-9239-B23093F17783"), Codebase, Timestamp]
-    [RegistryLocation(RegistrySaveLocation.InstallScopeCurrentUser)]
+    [ProgId("PPAddin.Connect"), Guid("B6A2376C-1C4A-4917-B5DA-01442CF2C71F"), Codebase, Timestamp]
     [CustomUI("RibbonUI.xml", true)]
-    [CustomPane(typeof(Pane), "Source", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
+    [CustomPane(typeof(PowerPointAddin.Pane), "Source", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
     public class Connect : COMAddin
     {
+        public Connect()
+        {
+
+        }
+
+        protected override Core CreateFactory()
+        {
+            var factory =  base.CreateFactory();
+            factory.ObjectActivator.RegisterType(typeof(Office.ICTPFactory), typeof(MyICTPFactory));
+            factory.ObjectActivator.RegisterType(typeof(Office.CustomTaskPane), typeof(MyCustomTaskPane));
+            return factory;
+        }
+
+        public override void CTPFactoryAvailable(object CTPFactoryInst)
+        {
+            try
+            {
+               base.CTPFactoryAvailable(CTPFactoryInst);
+            }
+            catch (Exception exception)
+            {
+                throw;
+            }           
+        }
+
+        protected override void RaiseOnStartupComplete(ref Array custom)
+        {
+            base.RaiseOnStartupComplete(ref custom);
+        }
+
+        protected override void RaiseOnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        {
+            base.RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+        }
+
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
         {
             if (null != RibbonUI)

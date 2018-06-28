@@ -29,7 +29,7 @@ using NetOffice.Attributes;
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Access")]
 [assembly: Guid("4AFFC9A0-5F99-101B-AF4E-00AA003F0F07")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.1")]
+[assembly: NetOfficeAssemblyAttribute("2.0.0.0")]
 [assembly: Dependency("OfficeApi.dll", LoadHint.Default)]
 [assembly: Dependency("DAOApi.dll", LoadHint.Default)]
 [assembly: Dependency("VBIDEApi.dll", LoadHint.Default)]

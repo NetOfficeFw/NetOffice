@@ -72,7 +72,13 @@ namespace NetOffice.OfficeApi.Behind
 
 		}
 
-		#endregion
+
+
+        public ICTPFactory(Core factory, ICOMObject caller, object comProxy) : base(factory, caller, comProxy)
+        {
+
+        }
+        #endregion
 
         #region Methods
 
@@ -107,5 +113,15 @@ namespace NetOffice.OfficeApi.Behind
         #endregion
 
         #pragma warning restore
+
+        public override void Dispose()
+        {
+            base.Dispose();
+        }
+
+        public override void Dispose(bool disposeEventBinding)
+        {
+            base.Dispose(disposeEventBinding);
+        }
     }
 }

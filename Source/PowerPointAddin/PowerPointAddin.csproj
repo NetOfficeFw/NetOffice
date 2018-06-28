@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connect.cs" />
+    <Compile Include="MyCustomTaskPane.cs" />
+    <Compile Include="MyICTPFactory.cs" />
     <Compile Include="Pane.cs">
       <SubType>UserControl</SubType>
     </Compile>

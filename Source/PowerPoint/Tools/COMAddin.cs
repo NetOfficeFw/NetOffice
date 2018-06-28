@@ -19,7 +19,7 @@ namespace NetOffice.PowerPointApi.Tools
     /// <summary>
     /// NetOffice MS-PowerPoint COM Addin
     /// </summary>
-	//[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
+	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
     {
         #region Fields
@@ -315,6 +315,10 @@ namespace NetOffice.PowerPointApi.Tools
                 Tweaks.ApplyTweaks(Factory, this, Type, "PowerPoint", IsLoadedFromSystem);
                 LoadingTimeElapsed = (DateTime.Now - _creationTime);
                 Roots = OnCreateRoots();
+
+                CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
+                paneHandler.Proceed<ITaskPane, PowerPoint.Application>(Factory, TaskPaneFactory, TaskPanes, TaskPaneInstances, OnError, Application);
+
                 RaiseOnStartupComplete(ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
@@ -324,13 +328,6 @@ namespace NetOffice.PowerPointApi.Tools
             }
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="application"></param>
-        /// <param name="ConnectMode"></param>
-        /// <param name="AddInInst"></param>
-        /// <param name="custom"></param>
         void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -521,13 +518,14 @@ namespace NetOffice.PowerPointApi.Tools
             {
                 if (null == CTPFactoryInst)
                 {
-                    Factory.Console.WriteLine("Warning: null argument recieved in CTPFactoryAvailable. argument name: CTPFactoryInst");
+                    Factory.Console.WriteLine("Warning: CTPFactoryAvailable recieve argument null value. argument name: CTPFactoryInst");
                     return;
                 }
 
                 CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
                 paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
                 TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, PowerPoint.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
+      
             }
             catch (NetRuntimeSystem.Exception exception)
             {

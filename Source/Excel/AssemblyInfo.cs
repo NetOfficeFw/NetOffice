@@ -29,7 +29,7 @@ using NetOffice.Attributes;
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Excel")]
 [assembly: Guid("00020813-0000-0000-C000-000000000046")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.1")]
+[assembly: NetOfficeAssemblyAttribute("2.0.0.0")]
 [assembly: Dependency("OfficeApi.dll", LoadHint.Default)]
 [assembly: Dependency("VBIDEApi.dll", LoadHint.Default)]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
