@@ -46,6 +46,7 @@ namespace NetOffice
         private static Settings _default;
         private static object _defaultLock = new object();
 
+        private static bool _enableOperatorOverloads = true;
         #endregion
 
         #region Ctor
@@ -518,6 +519,47 @@ namespace NetOffice
                     _forceApplicationVersionProviders = value;
                     OnPropertyChanged("ForceApplicationVersionProviders");
                 }
+            }
+        }
+
+        #endregion
+
+        #region Static Properties
+
+        /// <summary>
+        /// Get or set NetOffice overrides the "==" and "!=" operator for semanticly comparsion.
+        /// That means determine 2 instances pointing on the same remote server instance or not.
+        /// true by default.
+        ///
+        /// Only works for implempentations and cannot be isolated to a single core.
+        /// Its recommomended to use ComObject.EqualsOnServer or IEquatable interface instead.
+        /// </summary>
+        /// <remarks>Use the static methods Object.ReferenceEquals for plain reference compare and COMObject.EqualsOnServerfor for semanticly compare whenever you can to avoid side effects ‎especially in unshimmed addins because you may not the only consumer here.</remarks>
+        [Category("Settings"), Description("Redirect equal operations like '==' or '!=' for proxy wrapping objects to the com server to determine 2 instances are equal."), DefaultValue(true)]
+        [Obsolete("Unable to provide in NetOffice 2.0 . Use ComObject.EqualsOnServer or IEquatable interface instead.")]
+        public static bool EnableOperatorOverloads
+        {
+            get
+            {
+                return _enableOperatorOverloads;
+            }
+            set
+            {
+                if (value != _enableOperatorOverloads)
+                {
+                    _enableOperatorOverloads = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Points to EnableOperatorOverloads and avoid obsolete warning
+        /// </summary>
+        internal static bool EnableOperatorOverloadsInternal
+        {
+            get
+            {
+                return _enableOperatorOverloads;
             }
         }
 

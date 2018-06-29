@@ -19,7 +19,8 @@ namespace InnerAddin
 	//[COMAddin("InnerAddin", "InnerAddin Description", LoadBehavior.LoadAtStartup), ProgId("InnerAddin.Addin"), Guid("78A97F88-B796-403D-9658-B379E5385512")]
 	[CustomUI("RibbonUI.xml", true)]
     [CustomPane(typeof(InnerAddinPane), "InnerAddin Pane", true)]
-    [ClassInterface(ClassInterfaceType.AutoDispatch)]
+    [RegistryLocation(RegistrySaveLocation.InstallScopeCurrentUser)]
+    [DontRegisterAddin]
     public class Addin : PowerPoint.Tools.COMAddin
 	{
 		public Addin()
@@ -29,6 +30,29 @@ namespace InnerAddin
 			this.OnStartupComplete += Addin_OnStartupComplete;
 			this.OnDisconnection += Addin_OnDisconnection;
             this.OnAddInsUpdate += Addin_OnAddInsUpdate;
+        }
+
+        protected override bool QueryInterface(Guid interfaceId, ref Type type, ref object instance)
+        {
+            var iids = new NetOffice.ComTypes.WellKnownIID();
+            MessageBox.Show("QueryInterface " + iids.GetIID(interfaceId));
+
+            if(iids.IID_IRibbonExtensibility == interfaceId)
+            {
+                type = typeof(NetOffice.OfficeApi.Native.IRibbonExtensibility);
+                instance = new MyRibbonExtensibility();
+                return true;
+            }
+
+            if (interfaceId == Guid.Parse("e19c7100-9709-4db7-9373-e7b518b47086"))
+            {
+                MessageBox.Show("QueryInterface decline " + iids.GetIID(interfaceId));
+                return true;
+            }
+            else
+            {
+                return base.QueryInterface(interfaceId, ref type, ref instance);
+            }
         }
 
         private void Addin_OnAddInsUpdate(ref Array custom)
@@ -58,15 +82,14 @@ namespace InnerAddin
             //MessageBox.Show("Addin_OnStartupComplete");
         }
 
-		protected override void OnError(ErrorMethodKind methodKind, System.Exception exception)
+        protected override void OnError(ErrorMethodKind methodKind, System.Exception exception)
 		{
-            Utils.Dialog.ShowError(exception, "An error occurend in " + methodKind.ToString());
-            throw exception;
+            MessageBox.Show(exception.ToString(), methodKind.ToString());
 		}
 
         public void SampleButton_Click(Office.IRibbonControl control)
         {
-            System.Windows.Forms.MessageBox.Show("Thanks!", "InnerAddin");
+            MessageBox.Show("Thanks!", "InnerAddin");
         }
 
         [RegisterErrorHandler]

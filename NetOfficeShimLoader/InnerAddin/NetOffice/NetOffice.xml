@@ -901,6 +901,132 @@
             </summary>
             <param name="keepAliveItem">dont dispose or release this item</param>
         </member>
+        <member name="T:NetOffice.ComTypes.WellKnownIID">
+            <summary>
+            Contains the most common interface id's related to COM and Microsoft Office
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_IUnkown">
+            <summary>
+            00000000-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_IDispatch">
+            <summary>
+            00020400-0000-0000-c000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_Extensibility2">
+            <summary>
+            B65AD801-ABAF-11D0-BB8B-00A0C90F2744
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_IRibbonExtensibility">
+            <summary>
+            000C0396-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_ICustomTaskPaneConsumer">
+            <summary>
+            000C033E-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_IDocumentInspector">
+            <summary>
+            000CD706-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_IBlogExtensibility">
+            <summary>
+            000C03C4-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_IBlogPictureExtensibility">
+            <summary>
+            000C03C5-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_SignatureProvider">
+            <summary>
+            000CD6A3-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_FormRegionStartup">
+            <summary>
+            00063059-0000-0000-C000-000000000046"
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_PropertyPage">
+            <summary>
+            0006307E-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_PropertyPageSite">
+            <summary>
+            0006307F-0000-0000-C000-000000000046
+            </summary>
+        </member>
+        <member name="F:NetOffice.ComTypes.WellKnownIID.IID_IRtdServer">
+            <summary>
+            EC0E6191-DB51-11D3-8F3E-00C04F3651B8
+            </summary>
+        </member>
+        <member name="M:NetOffice.ComTypes.WellKnownIID.GetIID(System.Guid,System.String)">
+            <summary>
+            Returns the IID constant for an id if its well known
+            </summary>
+            <param name="id">target id</param>
+            <param name="faulty">result if not found or null/empty to return id argument as string</param>
+            <returns>iid or id string</returns>
+        </member>
+        <member name="M:NetOffice.ComTypes.ITypeInfoExtensions.GetTypeGuid(System.Runtime.InteropServices.ComTypes.ITypeInfo)">
+            <summary>
+            Returns id of an interface
+            </summary>
+            <param name="typeInfo">com type informations</param>
+            <returns>interface id(iid)</returns>
+        </member>
+        <member name="T:NetOffice.ComTypes.TypeDescriptor">
+            <summary>
+            TypeDescriptor Services
+            </summary>
+        </member>
+        <member name="M:NetOffice.ComTypes.TypeDescriptor.GetClassName(System.Object)">
+            <summary>
+            Returns the name of the class for the specified component using the default type descriptor.
+            </summary>
+            <param name="component">The System.Object for which you want the class name</param>
+            <returns>A System.String containing the name of the class for the specified component.</returns>
+        </member>
+        <member name="M:NetOffice.ComTypes.TypeDescriptor.GetComponentName(System.Object)">
+            <summary>
+            Returns the name of the component for the specified component using the default type descriptor.
+            </summary>
+            <param name="component">The System.Object for which you want the component name</param>
+            <returns>A System.String containing the name of the component for the specified component.</returns>
+        </member>
+        <member name="M:NetOffice.ComTypes.TypeDescriptor.GetFullComponentName(System.Object)">
+            <summary>
+            Returns the name of the component for the specified component using the default type descriptor.
+            </summary>
+            <param name="component">The System.Object for which you want the component name</param>
+            <returns>A System.String containing the name of the component for the specified component.</returns>
+        </member>
+        <member name="M:NetOffice.ComTypes.TypeDescriptor.GetFullComponentClassName(System.Object)">
+            <summary>
+            Combines GetFullComponentName/GetClassName
+            </summary>
+            <param name="component">The System.Object for which you want the component+class name</param>
+            <returns>A System.String containing the name of the component for the specified component.</returns>
+        </member>
+        <member name="M:NetOffice.ComTypes.TypeDescriptor.WriteFullComponentClassName(NetOffice.DebugConsole,System.String,System.Object)">
+            <summary>
+            Write GetFullComponentClassName
+            </summary>
+            <param name="console">console to write</param>
+            <param name="message">message as any</param>
+            <param name="component">The System.Object for which you want the component+class name</param>
+        </member>
         <member name="T:NetOffice.Contribution.ProxyInformation">
             <summary>
             Provides detailed information about a com proxy
@@ -9896,54 +10022,6 @@
             Create and use own core instead of default core
             </summary>
         </member>
-        <member name="M:NetOffice.ComTypes.ITypeInfoExtensions.GetTypeGuid(System.Runtime.InteropServices.ComTypes.ITypeInfo)">
-            <summary>
-            Returns id of an interface
-            </summary>
-            <param name="typeInfo">com type informations</param>
-            <returns>interface id(iid)</returns>
-        </member>
-        <member name="T:NetOffice.ComTypes.TypeDescriptor">
-            <summary>
-            TypeDescriptor Services
-            </summary>
-        </member>
-        <member name="M:NetOffice.ComTypes.TypeDescriptor.GetClassName(System.Object)">
-            <summary>
-            Returns the name of the class for the specified component using the default type descriptor.
-            </summary>
-            <param name="component">The System.Object for which you want the class name</param>
-            <returns>A System.String containing the name of the class for the specified component.</returns>
-        </member>
-        <member name="M:NetOffice.ComTypes.TypeDescriptor.GetComponentName(System.Object)">
-            <summary>
-            Returns the name of the component for the specified component using the default type descriptor.
-            </summary>
-            <param name="component">The System.Object for which you want the component name</param>
-            <returns>A System.String containing the name of the component for the specified component.</returns>
-        </member>
-        <member name="M:NetOffice.ComTypes.TypeDescriptor.GetFullComponentName(System.Object)">
-            <summary>
-            Returns the name of the component for the specified component using the default type descriptor.
-            </summary>
-            <param name="component">The System.Object for which you want the component name</param>
-            <returns>A System.String containing the name of the component for the specified component.</returns>
-        </member>
-        <member name="M:NetOffice.ComTypes.TypeDescriptor.GetFullComponentClassName(System.Object)">
-            <summary>
-            Combines GetFullComponentName/GetClassName
-            </summary>
-            <param name="component">The System.Object for which you want the component+class name</param>
-            <returns>A System.String containing the name of the component for the specified component.</returns>
-        </member>
-        <member name="M:NetOffice.ComTypes.TypeDescriptor.WriteFullComponentClassName(NetOffice.DebugConsole,System.String,System.Object)">
-            <summary>
-            Write GetFullComponentClassName
-            </summary>
-            <param name="console">console to write</param>
-            <param name="message">message as any</param>
-            <param name="component">The System.Object for which you want the component+class name</param>
-        </member>
         <member name="T:NetOffice.Converter.ExpandableSettingsConverter">
             <summary>
             NetOffice Settings Converter (for future use)
@@ -10649,6 +10727,78 @@
             </summary>
             <param name="obj">target instance to compare</param>
             <returns>true if equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMDynamicObject.op_Equality(NetOffice.COMDynamicObject,NetOffice.ICOMObject)">
+            <summary>
+            Determines whether two COMObject instances are equal.
+            </summary>
+            <param name="objectA"></param>
+            <param name="objectB"></param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMDynamicObject.op_Inequality(NetOffice.COMDynamicObject,NetOffice.ICOMObject)">
+            <summary>
+            Determines whether two COMObject instances are not equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMDynamicObject.op_Equality(NetOffice.COMDynamicObject,NetOffice.COMDynamicObject)">
+            <summary>
+            Determines whether two COMObject instances are equal.
+            </summary>
+            <param name="objectA"></param>
+            <param name="objectB"></param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMDynamicObject.op_Equality(NetOffice.COMDynamicObject,System.Object)">
+            <summary>
+            Determines whether two COMObject instances are equal.
+            </summary>
+            <param name="objectA"></param>
+            <param name="objectB"></param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMDynamicObject.op_Equality(System.Object,NetOffice.COMDynamicObject)">
+            <summary>
+            Determines whether two COMObject instances are equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMDynamicObject.op_Inequality(NetOffice.COMDynamicObject,NetOffice.COMDynamicObject)">
+            <summary>
+            Determines whether two COMObject instances are not equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMDynamicObject.op_Inequality(NetOffice.COMDynamicObject,System.Object)">
+            <summary>
+            Determines whether two COMObject instances are not equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMDynamicObject.op_Inequality(System.Object,NetOffice.COMDynamicObject)">
+            <summary>
+            Determines whether two COMObject instances are not equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
             <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
         </member>
         <member name="M:NetOffice.COMDynamicObject.GetHashCode">
@@ -12748,7 +12898,7 @@
         </member>
         <member name="M:NetOffice.Tools.COMAddinRegisterHandler.Proceed(System.Type,System.String[],NetOffice.Tools.InstallScope,NetOffice.Tools.OfficeRegisterKeyState)">
             <summary>
-            Do register process 
+            Do register process
             </summary>
             <param name="type">addin type</param>
             <param name="addinOfficeRegistryKey">office application registry path</param>
@@ -12806,7 +12956,7 @@
         </member>
         <member name="M:NetOffice.Tools.COMAddinUnRegisterHandler.Proceed(System.Type,System.String[],NetOffice.Tools.InstallScope,NetOffice.Tools.OfficeUnRegisterKeyState)">
             <summary>
-            Do unregister process 
+            Do unregister process
             </summary>
             <param name="type">addin type</param>
             <param name="addinOfficeRegistryKey">office application registry path</param>
@@ -13064,7 +13214,7 @@
         </member>
         <member name="T:NetOffice.Tools.COMAddinBase">
             <summary>
-            Encapsulate generic addin services 
+            Encapsulate generic addin services
             </summary>
         </member>
         <member name="F:NetOffice.Tools.COMAddinBase._creationTime">
@@ -13112,10 +13262,28 @@
             Instance managed root com objects
             </summary>
         </member>
+        <member name="M:NetOffice.Tools.COMAddinBase.System#Runtime#InteropServices#ICustomQueryInterface#GetInterface(System.Guid@,System.IntPtr@)">
+            <summary>
+            Returns an interface according to a specified interface ID
+            </summary>
+            <param name="iid">the GUID of the requested interface</param>
+            <param name="ppv">a reference to the requested interface, when this method returns</param>
+            <returns>one of the enumeration values that indicates whether a custom implementation of IUnknown::QueryInterface was used</returns>
+        </member>
         <member name="M:NetOffice.Tools.COMAddinBase.EnableVisualStyles">
             <summary>
             Call System.Windows.Forms.Application.EnableVisualStyles
             </summary>
+        </member>
+        <member name="M:NetOffice.Tools.COMAddinBase.QueryInterface(System.Guid,System.Type@,System.Object@)">
+            <summary>
+            Overrides QueryInterface default behavior
+            </summary>
+            <param name="interfaceId">target interface id</param>
+            <param name="type">out argument - interface type</param>
+            <param name="instance">out argument - instance that implements target interface</param>
+            <returns>true if handle, otherwise false</returns>
+            <remarks>this method allows to seperate interfaces from addin connect class</remarks>
         </member>
         <member name="T:NetOffice.Tools.PaneDockPosition">
             <summary>
@@ -16399,6 +16567,60 @@
             <returns>true if equal, otherwise false</returns>
             <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
         </member>
+        <member name="M:NetOffice.COMObject.op_Equality(NetOffice.COMObject,NetOffice.COMObject)">
+            <summary>
+            Determines whether two COMObject instances are equal.
+            </summary>
+            <param name="objectA"></param>
+            <param name="objectB"></param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMObject.op_Equality(NetOffice.COMObject,System.Object)">
+            <summary>
+            Determines whether two COMObject instances are equal.
+            </summary>
+            <param name="objectA"></param>
+            <param name="objectB"></param>
+            <returns>true if arguments equal</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMObject.op_Equality(System.Object,NetOffice.COMObject)">
+            <summary>
+            Determines whether two COMObject instances are equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMObject.op_Inequality(NetOffice.COMObject,NetOffice.COMObject)">
+            <summary>
+            Determines whether two COMObject instances are not equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMObject.op_Inequality(NetOffice.COMObject,System.Object)">
+            <summary>
+            Determines whether two COMObject instances are not equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
+        <member name="M:NetOffice.COMObject.op_Inequality(System.Object,NetOffice.COMObject)">
+            <summary>
+            Determines whether two COMObject instances are not equal.
+            </summary>
+            <param name="objectA">first instance</param>
+            <param name="objectB">second instance</param>
+            <returns>true if arguments equal, otherwise false</returns>
+            <exception cref="T:NetOffice.Exceptions.NetOfficeCOMException">unexpected error</exception>
+        </member>
         <member name="M:NetOffice.COMObject.GetHashCode">
             <summary>
             Serves as a hash function for a particular type.
@@ -17112,6 +17334,22 @@
             <summary>
             Request version from application instances for diagnostic purpose.
             These version information is given in any thrown NetOfficeCOMException(and derived) instances. false by default
+            </summary>
+        </member>
+        <member name="P:NetOffice.Settings.EnableOperatorOverloads">
+             <summary>
+             Get or set NetOffice overrides the "==" and "!=" operator for semanticly comparsion.
+             That means determine 2 instances pointing on the same remote server instance or not.
+             true by default.
+            
+             Only works for implempentations and cannot be isolated to a single core.
+             Its recommomended to use ComObject.EqualsOnServer or IEquatable interface instead.
+             </summary>
+             <remarks>Use the static methods Object.ReferenceEquals for plain reference compare and COMObject.EqualsOnServerfor for semanticly compare whenever you can to avoid side effects ‎especially in unshimmed addins because you may not the only consumer here.</remarks>
+        </member>
+        <member name="P:NetOffice.Settings.EnableOperatorOverloadsInternal">
+            <summary>
+            Points to EnableOperatorOverloads and avoid obsolete warning
             </summary>
         </member>
         <member name="M:NetOffice.Settings.IsEqualTo(NetOffice.Settings)">

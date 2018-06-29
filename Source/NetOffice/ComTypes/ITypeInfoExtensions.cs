@@ -8,10 +8,10 @@ namespace NetOffice.ComTypes
     internal static class ITypeInfoExtensions
     {
         /// <summary>
-      /// Returns id of an interface
-      /// </summary>
-      /// <param name="typeInfo">com type informations</param>
-      /// <returns>interface id(iid)</returns>
+        /// Returns id of an interface
+        /// </summary>
+        /// <param name="typeInfo">com type informations</param>
+        /// <returns>interface id(iid)</returns>
         internal static Guid GetTypeGuid(this COMTypes.ITypeInfo typeInfo)
         {
             IntPtr attribPtr = IntPtr.Zero;

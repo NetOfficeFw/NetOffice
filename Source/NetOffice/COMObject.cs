@@ -1943,6 +1943,142 @@ namespace NetOffice
 
         #endregion
 
+        #region Operators
+
+        /// <summary>
+        /// Determines whether two COMObject instances are equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
+        public static bool operator ==(COMObject objectA, COMObject objectB)
+        {
+            if (!Settings.EnableOperatorOverloadsInternal)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return true;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return objectA.EqualsOnServer(objectB);
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns>true if arguments equal</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
+        public static bool operator ==(COMObject objectA, object objectB)
+        {
+            if (!Settings.EnableOperatorOverloadsInternal)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return true;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return objectA.EqualsOnServer(objectB as ICOMObject);
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are equal.
+        /// </summary>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
+        public static bool operator ==(object objectA, COMObject objectB)
+        {
+            if (!Settings.EnableOperatorOverloadsInternal)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return true;
+            else if (!Object.ReferenceEquals(objectA, null))
+            {
+                ICOMObject a = (objectA as ICOMObject);
+                if (null != a)
+                    return a.EqualsOnServer(objectB);
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are not equal.
+        /// </summary>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
+        public static bool operator !=(COMObject objectA, COMObject objectB)
+        {
+            if (!Settings.EnableOperatorOverloadsInternal)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return false;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return !objectA.EqualsOnServer(objectB);
+            else
+                return true;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are not equal.
+        /// </summary>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
+        public static bool operator !=(COMObject objectA, object objectB)
+        {
+            if (!Settings.EnableOperatorOverloadsInternal)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return false;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return !objectA.EqualsOnServer(objectB as ICOMObject);
+            else
+                return true;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are not equal.
+        /// </summary>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if arguments equal, otherwise false</returns>
+        /// <exception cref="NetOfficeCOMException">unexpected error</exception>
+        public static bool operator !=(object objectA, COMObject objectB)
+        {
+            if (!Settings.EnableOperatorOverloadsInternal)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return false;
+            else if (!Object.ReferenceEquals(objectA, null))
+            {
+                ICOMObject a = objectA as ICOMObject;
+                if (null != a)
+                    return !a.EqualsOnServer(objectB);
+                else
+                    return null == objectB ? false : true;
+            }
+            else
+                return true;
+        }
+
+        #endregion
+
         #region Overrides
 
         /// <summary>

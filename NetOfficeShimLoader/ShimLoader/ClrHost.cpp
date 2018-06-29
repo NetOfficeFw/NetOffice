@@ -72,6 +72,7 @@ HRESULT ClrHost::Load()
 	IfFailGo(runtimeHost->CreateDomainSetup(&unkAppDomainSetup));
 	IfFailGo(unkAppDomainSetup->QueryInterface(__uuidof(pDomainSetup), (LPVOID*)&pDomainSetup));
 	pDomainSetup->put_ApplicationBase(CComBSTR(directoryPath));
+
 	if (PathFileExists(fullInnerAddinConfigFilePath))
 	{
 		IfFailGo(pDomainSetup->put_ConfigurationFile(fullInnerAddinConfigFilePath));
@@ -92,8 +93,6 @@ HRESULT ClrHost::Load()
 	IfFailGo(srpManagedAggregator->CreateAggregatedInstance(CComBSTR(Target_AssemblyName), CComBSTR(Target_ConnectClassName), srpComAggregator));
 
 	_runtimeHost = runtimeHost;
-	//hr = E_FAIL;
-	//goto Error;
 
 	return S_OK;
 
@@ -117,11 +116,11 @@ HRESULT ClrHost::Unload()
 
 	if (_appDomain)
 	{
-		IfFailGo(_appDomain->QueryInterface(__uuidof(IUnknown), (LPVOID*)&pUnkDomain));
-
 		if (_runtimeHost)
 		{
-			hr = _runtimeHost->UnloadDomain(pUnkDomain);
+			hr = _appDomain->QueryInterface(__uuidof(IUnknown), (LPVOID*)&pUnkDomain);
+			if(S_OK == hr)
+				hr = _runtimeHost->UnloadDomain(pUnkDomain);
 			_runtimeHost = nullptr;
 		}
 
@@ -135,10 +134,10 @@ HRESULT ClrHost::Unload()
 		_runtimeHost = nullptr;
 	}
 
-Error:
 	if (pUnkDomain)
 	{
 		pUnkDomain->Release();
+		pUnkDomain = nullptr;
 	}
 	return hr;
 }

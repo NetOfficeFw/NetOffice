@@ -24,14 +24,14 @@ namespace NetOffice.ExcelApi.Native
         [DispId(11)]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         int HeartbeatInterval
-        { 
+        {
             //SupportByVersion Excel, 9,10,11,12,14,15,16
             [DispId(11), MethodImpl(4096)]
             [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
             get;
             //SupportByVersion Excel, 9,10,11,12,14,15,16
             [DispId(11), MethodImpl(4096)]
-            [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]          
+            [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
             set;
         }
 

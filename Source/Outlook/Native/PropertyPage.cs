@@ -25,7 +25,7 @@ namespace NetOffice.OutlookApi.Native
         [SinkArgument("HelpContext", SinkArgumentType.Int32)]
         [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(8448)]
         void GetPageInfo([MarshalAs(19)] [In] [Out] ref string HelpFile, [In] [Out] ref int HelpContext);
-      
+
         /// <summary>
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16
         /// Get

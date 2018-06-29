@@ -97,6 +97,7 @@
     <Compile Include="Attributes\TypeIdAttribute.cs" />
     <Compile Include="Callers\InteropCompatibilityClassCreateMode.cs" />
     <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
+    <Compile Include="ComTypes\WellKnownIID.cs" />
     <Compile Include="Contribution\ProxyInformation.cs" />
     <Compile Include="CoreServices\CoreCreateExtensions.cs" />
     <Compile Include="CoreServices\CoreFactoryExtensions.cs" />

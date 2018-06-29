@@ -32,7 +32,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         #endregion
 
         #region Methods
-        
+
         /// <summary>
         /// Read bytes from resource in executing assembly
         /// </summary>
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>resource string</returns>
         public string ReadString(string resourceAddress, Assembly assembly)
         {
-            System.IO.Stream resourceStream = ReadStream(resourceAddress);
+            System.IO.Stream resourceStream = ReadStream(resourceAddress, assembly);
             System.IO.StreamReader textStreamReader = new System.IO.StreamReader(resourceStream);
             if (textStreamReader == null)
                 throw (new System.IO.IOException("Error accessing resource string."));
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>Resource icon</returns>
         public Icon ReadIcon(string resourceAddress, Assembly assembly)
         {
-            Stream resourceStream = ReadStream(resourceAddress, assembly);            
+            Stream resourceStream = ReadStream(resourceAddress, assembly);
             return new Icon(resourceStream);
         }
 

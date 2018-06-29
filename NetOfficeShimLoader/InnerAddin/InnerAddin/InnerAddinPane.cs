@@ -7,9 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace InnerAddin
 {
+    /*
+     *
+     * Basisklasse und interface ähnlich COMAddin anbieten.
+    */
+    [ComVisible(true)]
+    [ProgId("InnerAddin.InnerAddinPane")]
+    [Guid("E702FB12-92C4-4DBA-8848-45134BFD3448")]
     public partial class InnerAddinPane : UserControl
     {
         public InnerAddinPane()
