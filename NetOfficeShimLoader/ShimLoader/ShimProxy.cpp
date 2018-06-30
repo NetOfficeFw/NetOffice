@@ -141,7 +141,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 	{
 		IUnknown* inner = _loader->Aggregator()->Addin()->InnerUnkown();
 		IRibbonExtensibility* ribbon = nullptr;
-		hr = inner->QueryInterface(__uuidof(IRibbonExtensibility), (LPVOID*)&ribbon);
+		hr = inner->QueryInterface(riid, (LPVOID*)&ribbon);
 		if (S_OK == hr)
 		{
 			ManagedRibbonExtensibility* result = new (std::nothrow) ManagedRibbonExtensibility(ribbon);
@@ -161,7 +161,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 	{
 		IUnknown* inner = _loader->Aggregator()->Addin()->InnerUnkown();
 		ICustomTaskPaneConsumer* consumer = nullptr;
-		hr = inner->QueryInterface(__uuidof(ICustomTaskPaneConsumer), (LPVOID*)&consumer);
+		hr = inner->QueryInterface(riid, (LPVOID*)&consumer);
 		if (S_OK == hr)
 		{
 			ManagedCustomTaskPaneConsumer* result = new (std::nothrow) ManagedCustomTaskPaneConsumer(consumer);
@@ -177,10 +177,14 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 			}
 		}
 	}
+	else if (_loader && _loader->IsLoaded())
+	{
+		IUnknown* inner = _loader->Aggregator()->Addin()->InnerUnkown();
+		hr = inner->QueryInterface(riid, ppv);
+	}
 	else
 	{
 		hr = E_NOINTERFACE;
-
 	}
 
 	if (NULL != *ppv)
