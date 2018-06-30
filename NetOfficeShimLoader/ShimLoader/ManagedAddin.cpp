@@ -218,7 +218,8 @@ STDMETHODIMP ManagedAddin::QueryInterface(REFIID riid, void** ppv)
 
 STDMETHODIMP_(ULONG) ManagedAddin::AddRef(void)
 {
-	return ++_refCounter;
+	_refCounter++;
+	return _refCounter;
 }
 
 STDMETHODIMP_(ULONG) ManagedAddin::Release(void)
