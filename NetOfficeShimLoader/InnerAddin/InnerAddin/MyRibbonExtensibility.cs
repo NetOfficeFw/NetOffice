@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using Office = NetOffice.OfficeApi;
 
 namespace InnerAddin
 {
@@ -16,6 +17,11 @@ namespace InnerAddin
             MessageBox.Show("getCustomUI");
             var result = ReadString("RibbonUI.xml", typeof(MyRibbonExtensibility).Assembly);
             return result;
+        }
+
+        public void SampleButton_Click(Office.IRibbonControl control)
+        {
+            MessageBox.Show("Thanks!", "InnerAddin.MyRibbonExtensibility");
         }
 
         public string ReadString(string resourceAddress, Assembly assembly)

@@ -1,14 +1,14 @@
 #pragma once
 #include "stdAfx.h"
-#include "Extensibility2.h"
 #include "ClrHost.h"
 #include "Aggregators.h"
+#include "Extensibility2.h"
 
 extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
 
-class ShimProxy
+class ShimProxy : public IDTExtensibility2
 {
 
 public:
@@ -16,6 +16,13 @@ public:
 	// Ctor, Dtor
 	ShimProxy();
 	~ShimProxy();
+
+	// IDTExtensibility2 Implementation
+	STDMETHODIMP OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom);
+	STDMETHODIMP OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom);
+	STDMETHODIMP OnAddInsUpdate(LPSAFEARRAY* custom);
+	STDMETHODIMP OnStartupComplete(LPSAFEARRAY* custom);
+	STDMETHODIMP OnBeginShutdown(LPSAFEARRAY* custom);
 
 	// IDispatch Implementation
 	STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);

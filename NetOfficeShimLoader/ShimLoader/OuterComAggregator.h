@@ -28,7 +28,7 @@ public:
 
 private:
 
-	ManagedAddin* _innerAddin;
-	ULONG _refCounter;
+	ManagedAddin*		_innerAddin;
+	ULONG				_refCounter;
 
 };

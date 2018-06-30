@@ -1,9 +1,9 @@
 #pragma once
 #include "StdAfx.h"
-#include "clrhost.h"
 #include "metahost.h"
 #include "atlbase.h"
 #include "strsafe.h"
+#include "ClrHost.h"
 #include "Vars.hpp"
 #include "Aggregators.h"
 #include "Extensibility2.h"
@@ -23,6 +23,7 @@ public:
 	~ClrHost();
 
 	// ClrLoader Methods
+	bool IsLoaded();
 	OuterComAggregator* Aggregator();
 	HRESULT Load();
 	HRESULT Unload();
@@ -37,5 +38,6 @@ private:
 	mscorlib::_AppDomain*	_appDomain;
 	OuterComAggregator*		_aggregator;
 	ULONG					_refCounter;
+	bool					_isLoaded;
 
 };

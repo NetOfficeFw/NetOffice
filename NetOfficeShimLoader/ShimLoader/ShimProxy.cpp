@@ -9,9 +9,7 @@
 ShimProxy::ShimProxy()
 {
 	_refCounter = 0;
-	_loader = new (std::nothrow) ClrHost();
-	if (_loader)
-		_loader->Load();
+	_loader = nullptr;
 	_components++;
 }
 
@@ -23,6 +21,78 @@ ShimProxy::~ShimProxy()
 		_loader = nullptr;
 	}
 	_components--;
+}
+
+
+/***************************************************************************
+* IDTExtensibility2 Implementation
+***************************************************************************/
+
+STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom)
+{
+	HRESULT hr = E_FAIL;
+
+	_loader = new (std::nothrow) ClrHost();
+	if (_loader)
+		_loader->Load();
+
+	if (_loader && _loader->IsLoaded())
+	{
+		hr = _loader->Aggregator()->Addin()->OnConnection(application, connectMode, addInInst, custom);
+	}
+	else if(_loader)
+	{
+		delete _loader;
+		_loader = nullptr;
+	}
+	return hr;
+}
+
+STDMETHODIMP ShimProxy::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom)
+{
+	HRESULT hr = E_FAIL;
+	if (_loader)
+	{
+		hr = _loader->Aggregator()->Addin()->OnDisconnection(removeMode, custom);
+	}
+
+	if (_loader)
+	{
+		delete _loader;
+		_loader = nullptr;
+	}
+
+	return hr;
+}
+
+STDMETHODIMP ShimProxy::OnAddInsUpdate(LPSAFEARRAY* custom)
+{
+	HRESULT hr = E_FAIL;
+	if (_loader)
+	{
+		hr = _loader->Aggregator()->Addin()->OnAddInsUpdate(custom);
+	}
+	return hr;
+}
+
+STDMETHODIMP ShimProxy::OnStartupComplete(LPSAFEARRAY* custom)
+{
+	HRESULT hr = E_FAIL;
+	if (_loader)
+	{
+		hr = _loader->Aggregator()->Addin()->OnStartupComplete(custom);
+	}
+	return hr;
+}
+
+STDMETHODIMP ShimProxy::OnBeginShutdown(LPSAFEARRAY* custom)
+{
+	HRESULT hr = E_FAIL;
+	if (_loader)
+	{
+		hr = _loader->Aggregator()->Addin()->OnBeginShutdown(custom);
+	}
+	return hr;
 }
 
 
@@ -62,9 +132,9 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 
 	HRESULT hr = E_FAIL;
 
-	if (((IID_IDTExtensibility2 == riid) || (IID_IUnknown == riid) || (IID_IDispatch == riid)) && NULL != _loader)
+	if (((IID_IDTExtensibility2 == riid) || (IID_IUnknown == riid) || (IID_IDispatch == riid)))
 	{
-		*ppv = static_cast<IDTExtensibility2*>(_loader->Aggregator()->Addin());
+		*ppv = static_cast<IDTExtensibility2*>(this);
 		hr = S_OK;
 	}
 	else
@@ -80,13 +150,14 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 
 STDMETHODIMP_(ULONG) ShimProxy::AddRef(void)
 {
-	return ++_refCounter;
+	_refCounter++;
+	return _refCounter;
 }
 
 STDMETHODIMP_(ULONG) ShimProxy::Release(void)
 {
-	if (0 != --_refCounter)
-		return _refCounter;
-	delete this;
+	_refCounter--;
+	if(0 == _refCounter)
+		delete this;
 	return 0;
 }

@@ -50,6 +50,7 @@ STDMETHODIMP ManagedAddin::OnDisconnection(ext_DisconnectMode removeMode, LPSAFE
 		hr = extensibility->OnDisconnection(removeMode, custom);
 		extensibility->Release();
 	}
+
 	return hr;
 }
 

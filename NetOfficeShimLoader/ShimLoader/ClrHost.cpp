@@ -13,9 +13,9 @@ static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize);
 ClrHost::ClrHost() : _runtimeHost(NULL), _appDomain(NULL), _aggregator(NULL)
 {
 	_refCounter = 0;
+	_isLoaded = false;
 	_components++;
 }
-
 
 ClrHost::~ClrHost()
 {
@@ -26,6 +26,11 @@ ClrHost::~ClrHost()
 /***************************************************************************
 * ClrLoader Methods
 ***************************************************************************/
+
+bool ClrHost::IsLoaded()
+{
+	return _isLoaded;
+}
 
 OuterComAggregator* ClrHost::Aggregator()
 {
@@ -94,6 +99,7 @@ HRESULT ClrHost::Load()
 
 	_runtimeHost = runtimeHost;
 
+	_isLoaded = true;
 	return S_OK;
 
 Error:
@@ -139,6 +145,9 @@ HRESULT ClrHost::Unload()
 		pUnkDomain->Release();
 		pUnkDomain = nullptr;
 	}
+
+	_isLoaded = true;
+
 	return hr;
 }
 

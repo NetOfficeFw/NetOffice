@@ -10,7 +10,9 @@ extern ULONG _locks;
 
 class ShimArguments
 {
+
 public:
+
 	ShimArguments();
 	~ShimArguments();
 

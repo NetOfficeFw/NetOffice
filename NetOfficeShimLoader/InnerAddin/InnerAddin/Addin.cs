@@ -68,7 +68,7 @@ namespace InnerAddin
         private void Addin_OnConnection(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom)
         {
             Console.WriteLine("Addin_OnConnection");
-            MessageBox.Show("Addin_OnConnection");
+            //MessageBox.Show("InnerAddin Addin_OnConnection");
         }
 
         private void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
@@ -89,7 +89,7 @@ namespace InnerAddin
 
         public void SampleButton_Click(Office.IRibbonControl control)
         {
-            MessageBox.Show("Thanks!", "InnerAddin");
+            MessageBox.Show("Thanks!", "InnerAddin.Addin");
         }
 
         [RegisterErrorHandler]
