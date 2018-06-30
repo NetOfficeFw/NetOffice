@@ -137,8 +137,51 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IDTExtensibility2*>(this);
 		hr = S_OK;
 	}
+	else if ((__uuidof(IRibbonExtensibility) == riid) && (_loader && _loader->IsLoaded()))
+	{
+		IUnknown* inner = _loader->Aggregator()->Addin()->InnerUnkown();
+		IRibbonExtensibility* ribbon = nullptr;
+		hr = inner->QueryInterface(__uuidof(IRibbonExtensibility), (LPVOID*)&ribbon);
+		if (S_OK == hr)
+		{
+			ManagedRibbonExtensibility* result = new (std::nothrow) ManagedRibbonExtensibility(ribbon);
+			if (result)
+			{
+				*ppv = static_cast<IRibbonExtensibility*>(result);
+				hr = S_OK;
+			}
+			else
+			{
+				ribbon->Release();
+				hr = E_OUTOFMEMORY;
+			}
+		}
+	}
+	else if ((__uuidof(ICustomTaskPaneConsumer) == riid) && (_loader && _loader->IsLoaded()))
+	{
+		IUnknown* inner = _loader->Aggregator()->Addin()->InnerUnkown();
+		ICustomTaskPaneConsumer* consumer = nullptr;
+		hr = inner->QueryInterface(__uuidof(ICustomTaskPaneConsumer), (LPVOID*)&consumer);
+		if (S_OK == hr)
+		{
+			ManagedCustomTaskPaneConsumer* result = new (std::nothrow) ManagedCustomTaskPaneConsumer(consumer);
+			if (result)
+			{
+				*ppv = static_cast<ICustomTaskPaneConsumer*>(result);
+				hr = S_OK;
+			}
+			else
+			{
+				consumer->Release();
+				hr = E_OUTOFMEMORY;
+			}
+		}
+	}
 	else
+	{
 		hr = E_NOINTERFACE;
+
+	}
 
 	if (NULL != *ppv)
 	{

@@ -172,6 +172,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="ICTPFactory.h" />
     <ClInclude Include="IRibbonExtensibility.h" />
     <ClInclude Include="ManagedAddin.h" />
+    <ClInclude Include="ManagedCustomTaskPaneConsumer.h" />
     <ClInclude Include="ManagedRibbonExtensibility.h" />
     <ClInclude Include="OuterComAggregator.h" />
     <ClInclude Include="ShimArguments.h" />
@@ -186,6 +187,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClCompile Include="DllMain.cpp" />
     <ClCompile Include="DllRegister.cpp" />
     <ClCompile Include="ManagedAddin.cpp" />
+    <ClCompile Include="ManagedCustomTaskPaneConsumer.cpp" />
     <ClCompile Include="ManagedRibbonExtensibility.cpp" />
     <ClCompile Include="OuterComAggregator.cpp" />
     <ClCompile Include="ShimArguments.cpp" />

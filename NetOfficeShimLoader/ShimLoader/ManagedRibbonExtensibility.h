@@ -12,7 +12,7 @@ class ManagedRibbonExtensibility : public IRibbonExtensibility
 public:
 
 	// Ctor, Dtor
-	ManagedRibbonExtensibility(IUnknown* innerUnkown);
+	ManagedRibbonExtensibility(IRibbonExtensibility* innerExtensibility);
 	~ManagedRibbonExtensibility();
 
 	// IRibbonExtensibility Implementation
@@ -31,7 +31,7 @@ public:
 
 private:
 
-	IUnknown*					_innerUnkown;
+	IRibbonExtensibility*		_innerExtensibility;
 	ULONG						_refCounter;
 
 };

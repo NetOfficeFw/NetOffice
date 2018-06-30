@@ -1,6 +1,7 @@
 #pragma once
 #include "Aggregators.h"
 #include "ManagedAddin.h"
+#include "ManagedRibbonExtensibility.h"
 
 extern HINSTANCE _module;
 extern ULONG _components;
@@ -17,6 +18,7 @@ public:
 
 	// OuterComAggregator Methods
 	ManagedAddin* Addin();
+	ManagedRibbonExtensibility* Ribbon();
 
 	// IOuterComAggregator Implementation
 	HRESULT __stdcall SetInnerAddin(IUnknown *innerAddin);

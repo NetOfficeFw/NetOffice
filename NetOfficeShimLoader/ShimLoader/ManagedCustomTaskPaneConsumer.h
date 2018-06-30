@@ -1,32 +1,22 @@
 #pragma once
 #include "stdafx.h"
-#include "Aggregators.h"
-#include "Extensibility2.h"
-#include "IRibbonExtensibility.h"
 #include "ICTPFactory.h"
 
 extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
 
-class ManagedAddin : public IDTExtensibility2
+class ManagedCustomTaskPaneConsumer : public ICustomTaskPaneConsumer
 {
 
 public:
 
 	// Ctor, Dtor
-	ManagedAddin(IUnknown* innerUnkown);
-	~ManagedAddin();
+	ManagedCustomTaskPaneConsumer(ICustomTaskPaneConsumer* innerConsumer);
+	~ManagedCustomTaskPaneConsumer();
 
-	// ManagedAddin Methods
-	IUnknown* InnerUnkown();
-
-	// IDTExtensibility2 Implementation
-	STDMETHODIMP OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom);
-	STDMETHODIMP OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom);
-	STDMETHODIMP OnAddInsUpdate(LPSAFEARRAY* custom);
-	STDMETHODIMP OnStartupComplete(LPSAFEARRAY* custom);
-	STDMETHODIMP OnBeginShutdown(LPSAFEARRAY* custom);
+	// ICustomTaskPaneConsumer Implementation
+	STDMETHOD(CTPFactoryAvailable) (ICTPFactory* CTPFactoryInst);
 
 	// IDispatch Implementation
 	STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
@@ -41,7 +31,7 @@ public:
 
 private:
 
-	IUnknown*					_innerUnkown;
+	ICustomTaskPaneConsumer*	_innerConsumer;
 	ULONG						_refCounter;
 
 };

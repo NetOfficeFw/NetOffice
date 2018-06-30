@@ -10,11 +10,12 @@ using Office = NetOffice.OfficeApi;
 
 namespace InnerAddin
 {
-    internal class MyRibbonExtensibility : NetOffice.OfficeApi.Native.IRibbonExtensibility
+    [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
+    public class MyRibbonExtensibility : NetOffice.OfficeApi.Native.IRibbonExtensibility
     {
         public string GetCustomUI(string RibbonID)
         {
-            MessageBox.Show("getCustomUI");
+            //MessageBox.Show("getCustomUI");
             var result = ReadString("RibbonUI.xml", typeof(MyRibbonExtensibility).Assembly);
             return result;
         }
@@ -43,7 +44,7 @@ namespace InnerAddin
             if (resourceStream == null)
             {
                 string target = typeof(MyRibbonExtensibility).Namespace + "." + resourceAddress;
-                MessageBox.Show(target);
+                //MessageBox.Show(target);
                 resourceStream = assembly.GetManifestResourceStream(target);
             }
 

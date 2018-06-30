@@ -3,6 +3,7 @@
 #include "ClrHost.h"
 #include "Aggregators.h"
 #include "Extensibility2.h"
+#include "ManagedCustomTaskPaneConsumer.h"
 
 extern HINSTANCE _module;
 extern ULONG _components;

@@ -26,6 +26,16 @@ ManagedAddin::~ManagedAddin()
 
 
 /***************************************************************************
+* ManagedAddin Methods
+***************************************************************************/
+
+IUnknown* ManagedAddin::InnerUnkown()
+{
+	return _innerUnkown;
+}
+
+
+/***************************************************************************
 * IDTExtensibility2 Implementation
 ***************************************************************************/
 
@@ -86,40 +96,6 @@ STDMETHODIMP ManagedAddin::OnBeginShutdown(LPSAFEARRAY* custom)
 	{
 		hr = extensibility->OnBeginShutdown(custom);
 		extensibility->Release();
-	}
-	return hr;
-}
-
-
-/***************************************************************************
-* IRibbonExtensibility Implementation
-***************************************************************************/
-
-STDMETHODIMP ManagedAddin::GetCustomUI(BSTR RibbonID, BSTR* RibbonXml)
-{
-	IRibbonExtensibility* ribbon = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IRibbonExtensibility), (LPVOID*)&ribbon);
-	if (hr == S_OK)
-	{
-		hr = ribbon->GetCustomUI(RibbonID, RibbonXml);
-		ribbon->Release();
-	}
-	return hr;
-}
-
-
-/***************************************************************************
-* ICustomTaskPaneConsumer Implementation
-***************************************************************************/
-
-STDMETHODIMP ManagedAddin::CTPFactoryAvailable(ICTPFactory* CTPFactoryInst)
-{
-	ICustomTaskPaneConsumer* paneConsumer = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(ICustomTaskPaneConsumer), (LPVOID*)&paneConsumer);
-	if (hr == S_OK)
-	{
-		hr = paneConsumer->CTPFactoryAvailable(CTPFactoryInst);
-		paneConsumer->Release();
 	}
 	return hr;
 }
@@ -195,16 +171,16 @@ STDMETHODIMP ManagedAddin::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IDTExtensibility2*>(this);
 		hr = S_OK;
 	}
-	else if ((__uuidof(IRibbonExtensibility) == riid))
-	{
-		*ppv = static_cast<IRibbonExtensibility*>(this);
-		hr = S_OK;
-	}
-	else if ((__uuidof(ICustomTaskPaneConsumer) == riid))
-	{
-		*ppv = static_cast<ICustomTaskPaneConsumer*>(this);
-		hr = S_OK;
-	}
+	//else if ((__uuidof(IRibbonExtensibility) == riid))
+	//{
+	//	*ppv = static_cast<IRibbonExtensibility*>(this);
+	//	hr = S_OK;
+	//}
+	//else if ((__uuidof(ICustomTaskPaneConsumer) == riid))
+	//{
+	//	*ppv = static_cast<ICustomTaskPaneConsumer*>(this);
+	//	hr = S_OK;
+	//}
 	else
 		hr = E_NOINTERFACE;
 

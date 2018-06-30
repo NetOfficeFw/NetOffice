@@ -1,39 +1,42 @@
 #include "stdafx.h"
-#include "ManagedRibbonExtensibility.h"
+#include "ManagedCustomTaskPaneConsumer.h"
 
 
 /***************************************************************************
 * Ctor, Dtor
 ***************************************************************************/
 
-ManagedRibbonExtensibility::ManagedRibbonExtensibility(IRibbonExtensibility* innerExtensibility)
+ManagedCustomTaskPaneConsumer::ManagedCustomTaskPaneConsumer(ICustomTaskPaneConsumer* innerConsumer)
 {
 	_refCounter = 0;
-	_innerExtensibility = innerExtensibility;
+	_innerConsumer = innerConsumer;
 	_components++;
 }
 
-ManagedRibbonExtensibility::~ManagedRibbonExtensibility()
+
+ManagedCustomTaskPaneConsumer::~ManagedCustomTaskPaneConsumer()
 {
-	if (_innerExtensibility)
+	if (_innerConsumer)
 	{
-		_innerExtensibility->Release();
-		_innerExtensibility = nullptr;
+		_innerConsumer->Release();
+		_innerConsumer = nullptr;
 	}
 	_components--;
 }
 
 
 /***************************************************************************
-* IRibbonExtensibility Implementation
+* ICustomTaskPaneConsumer Implementation
 ***************************************************************************/
 
-STDMETHODIMP ManagedRibbonExtensibility::GetCustomUI(BSTR RibbonID, BSTR* RibbonXml)
+STDMETHODIMP ManagedCustomTaskPaneConsumer::CTPFactoryAvailable(ICTPFactory* CTPFactoryInst)
 {
-	HRESULT hr = E_FAIL;
-	if (_innerExtensibility)
+	ICustomTaskPaneConsumer* paneConsumer = nullptr;
+	HRESULT hr = _innerConsumer->QueryInterface(__uuidof(ICustomTaskPaneConsumer), (LPVOID*)&paneConsumer);
+	if (hr == S_OK)
 	{
-		hr = _innerExtensibility->GetCustomUI(RibbonID, RibbonXml);
+		hr = paneConsumer->CTPFactoryAvailable(CTPFactoryInst);
+		paneConsumer->Release();
 	}
 	return hr;
 }
@@ -43,10 +46,10 @@ STDMETHODIMP ManagedRibbonExtensibility::GetCustomUI(BSTR RibbonID, BSTR* Ribbon
 * IDispatch Implementation
 ***************************************************************************/
 
-STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfoCount(UINT* pctinfo)
+STDMETHODIMP ManagedCustomTaskPaneConsumer::GetTypeInfoCount(UINT* pctinfo)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
+	HRESULT hr = _innerConsumer->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
 	if (hr == S_OK)
 	{
 		hr = dispatch->GetTypeInfoCount(pctinfo);
@@ -55,10 +58,10 @@ STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfoCount(UINT* pctinfo)
 	return hr;
 }
 
-STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo)
+STDMETHODIMP ManagedCustomTaskPaneConsumer::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
+	HRESULT hr = _innerConsumer->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
 	if (hr == S_OK)
 	{
 		hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
@@ -67,10 +70,10 @@ STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfo(UINT iTInfo, LCID lcid, ITy
 	return hr;
 }
 
-STDMETHODIMP ManagedRibbonExtensibility::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
+STDMETHODIMP ManagedCustomTaskPaneConsumer::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
+	HRESULT hr = _innerConsumer->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
 	if (hr == S_OK)
 	{
 		hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
@@ -79,10 +82,10 @@ STDMETHODIMP ManagedRibbonExtensibility::GetIDsOfNames(REFIID riid, LPOLESTR* rg
 	return hr;
 }
 
-STDMETHODIMP ManagedRibbonExtensibility::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
+STDMETHODIMP ManagedCustomTaskPaneConsumer::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
+	HRESULT hr = _innerConsumer->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
 	if (hr == S_OK)
 	{
 		hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
@@ -96,7 +99,7 @@ STDMETHODIMP ManagedRibbonExtensibility::Invoke(DISPID dispIdMember, REFIID riid
 * IUnknown Implementation
 ***************************************************************************/
 
-STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
+STDMETHODIMP ManagedCustomTaskPaneConsumer::QueryInterface(REFIID riid, void** ppv)
 {
 	if (NULL == ppv)
 		return E_POINTER;
@@ -114,9 +117,9 @@ STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IDispatch*>(this);
 		hr = S_OK;
 	}
-	else if ((__uuidof(IRibbonExtensibility) == riid))
+	else if ((__uuidof(ICustomTaskPaneConsumer) == riid))
 	{
-		*ppv = static_cast<IRibbonExtensibility*>(this);
+		*ppv = static_cast<ICustomTaskPaneConsumer*>(this);
 		hr = S_OK;
 	}
 	else
@@ -130,13 +133,13 @@ STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
 	return hr;
 }
 
-STDMETHODIMP_(ULONG) ManagedRibbonExtensibility::AddRef(void)
+STDMETHODIMP_(ULONG) ManagedCustomTaskPaneConsumer::AddRef(void)
 {
 	_refCounter++;
 	return _refCounter;
 }
 
-STDMETHODIMP_(ULONG) ManagedRibbonExtensibility::Release(void)
+STDMETHODIMP_(ULONG) ManagedCustomTaskPaneConsumer::Release(void)
 {
 	_refCounter--;
 	if (0 == _refCounter)
