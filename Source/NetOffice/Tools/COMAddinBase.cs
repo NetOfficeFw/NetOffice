@@ -3,9 +3,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using System.Runtime.InteropServices.ComTypes;
+using NetOffice.Tools.Isolation;
 
 namespace NetOffice.Tools
 {
@@ -13,7 +11,7 @@ namespace NetOffice.Tools
     /// Encapsulate generic addin services
     /// </summary>
     [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
-    public abstract class COMAddinBase : ICustomQueryInterface
+    public abstract class COMAddinBase : ICustomQueryInterface, IInnerUpdateAggregator
     {
         #region Fields
 
@@ -80,8 +78,14 @@ namespace NetOffice.Tools
         /// <summary>
         /// Instance managed root com objects
         /// </summary>
-        [System.ComponentModel.Browsable(false), System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        [Browsable(false), System.ComponentModel.EditorBrowsable(EditorBrowsableState.Never)]
         public abstract IEnumerable Roots { get; protected set; }
+
+        /// <summary>
+        /// Outer COM Shim if addin is isolated by a Shim
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        protected internal IOuterUpdateAggregator ShimHost { get; private set; }
 
         #endregion
 
@@ -108,6 +112,19 @@ namespace NetOffice.Tools
             }
 
             return result;
+        }
+
+        #endregion
+
+        #region IInnerUpdateAggregator
+
+        /// <summary>
+        /// Set an unmanaged aggregator to a managed addin instance
+        /// </summary>
+        /// <param name="aggregator">outer aggregator</param>
+        void IInnerUpdateAggregator.SetOuterAggregator(IOuterUpdateAggregator aggregator)
+        {
+            ShimHost = aggregator;
         }
 
         #endregion

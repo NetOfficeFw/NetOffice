@@ -3,6 +3,8 @@
 #include "ManagedAddin.h"
 #include "ManagedRibbonExtensibility.h"
 
+using namespace NetOffice_Tools_Isolation;
+
 extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
@@ -18,7 +20,6 @@ public:
 
 	// OuterComAggregator Methods
 	ManagedAddin* Addin();
-	ManagedRibbonExtensibility* Ribbon();
 
 	// IOuterComAggregator Implementation
 	HRESULT __stdcall SetInnerAddin(IUnknown *innerAddin);

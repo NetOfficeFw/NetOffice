@@ -23,6 +23,7 @@ namespace NetOffice.Tools.Isolation
         /// <param name="assemblyName">name or strong name where the target type is located</param>
         /// <param name="fullQualifiedTypeName">type to create</param>
         /// <param name="outerAggregator">caller as outer aggregator</param>
+        /// <param name="outerUpdateAggregator">outer update aggregator</param>
         /// <exception cref="ArgumentNullException">argument is null or empty</exception>
         /// <exception cref="MissingMethodException">no matching public constructor was found</exception>/param>
         /// <exception cref="TypeLoadException">typename was not found in assemblyName</exception>/param>
@@ -32,6 +33,6 @@ namespace NetOffice.Tools.Isolation
         /// <exception cref="BadImageFormatException">assemblyName is not a valid assembly</exception>
         /// <exception cref="FileLoadException">an assembly or module was loaded twice with two different evidences</exception>
         /// <exception cref="InvalidOperationException">unexpected error</exception>
-        void CreateAggregatedInstance(string assemblyName, string fullQualifiedTypeName, IOuterComAggregator outerAggregator);
+        void CreateAggregatedInstance(string assemblyName, string fullQualifiedTypeName, IOuterComAggregator outerAggregator, IOuterUpdateAggregator outerUpdateAggregator);
     }
 }

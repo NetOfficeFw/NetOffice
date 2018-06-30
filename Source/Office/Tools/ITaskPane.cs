@@ -22,7 +22,7 @@ namespace NetOffice.OfficeApi.Tools
 
     /// <summary>
     /// Office TaskPane UserControl classes can implement these interface in a NetOffice Tools Addin(COMAddin) as a special service.
-    /// NetOffice want call ITaskPane members automaticly 
+    /// NetOffice want call ITaskPane members automaticly
     /// </summary>
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<ICOMObject>
     {

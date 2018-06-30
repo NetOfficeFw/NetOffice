@@ -79,6 +79,7 @@
     <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
     <Compile Include="Attributes\ContractTargetAttribute.cs" />
     <Compile Include="Attributes\CoreOverriddenAttribute.cs" />
+    <Compile Include="Attributes\CustomEventAttribute.cs" />
     <Compile Include="Attributes\CustomIndexerAttribute.cs" />
     <Compile Include="Attributes\DuplicateAttribute.cs" />
     <Compile Include="Attributes\EventTargetAttribute.cs" />
@@ -223,8 +224,10 @@
     <Compile Include="Running\RunningWindowTable.cs" />
     <Compile Include="Running\RunningWindowTable.Nested.cs" />
     <Compile Include="Tools\IDisposableState.cs" />
+    <Compile Include="Tools\Isolation\IInnerUpdateAggregator.cs" />
     <Compile Include="Tools\Isolation\IManagedInnerAggregator.cs" />
     <Compile Include="Tools\Isolation\IOuterComAggregator.cs" />
+    <Compile Include="Tools\Isolation\IOuterUpdateAggregator.cs" />
     <Compile Include="Tools\Isolation\ManagedInnerAggregator.cs" />
     <Compile Include="Tools\LockbackAttribute.cs" />
     <Compile Include="Tools\CodebaseAttribute.cs" />

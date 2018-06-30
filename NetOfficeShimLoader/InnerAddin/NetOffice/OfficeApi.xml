@@ -22970,7 +22970,7 @@
         </member>
         <member name="T:NetOffice.OfficeApi.Behind._CustomTaskPane">
             <summary>
-            DispatchInterface _CustomTaskPane 
+            DispatchInterface _CustomTaskPane
             SupportByVersion Office, 12,14,15,16
             </summary>
         </member>
@@ -22988,6 +22988,12 @@
             <summary>
             Stub Ctor, not indented to use
             </summary>
+        </member>
+        <member name="E:NetOffice.OfficeApi.Behind._CustomTaskPane.AfterDelete">
+            <summary>
+            Occurs after Delete for the proxy has been called
+            </summary>
+            <remarks>The event occurs for the proxy instance only.</remarks>
         </member>
         <member name="P:NetOffice.OfficeApi.Behind._CustomTaskPane.Title">
             <summary>
@@ -27636,7 +27642,7 @@
             <param name="visibleStateChange">visible changed event handler</param>
             <param name="dockPositionStateChange">dock state changed event handler</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.Tools.CustomTaskPaneHandler.CreateCustomPanes``2(NetOffice.Core,System.Object,NetOffice.OfficeApi.Tools.CustomTaskPaneCollection,System.Collections.Generic.List{``0},NetOffice.Tools.OnErrorHandler,NetOffice.ICOMObject)">
+        <member name="M:NetOffice.OfficeApi.Tools.CustomTaskPaneHandler.CreateCustomPanes``2(NetOffice.Core,System.Object,NetOffice.OfficeApi.Tools.CustomTaskPaneCollection,NetOffice.Tools.OnErrorHandler,NetOffice.ICOMObject)">
             <summary>
             Create taskpanes
             </summary>
@@ -27645,7 +27651,6 @@
             <param name="factory">current used factory</param>
             <param name="ctpFactoryInst">taskpane creator given from office application</param>
             <param name="taskPanes">taskpane you want to create</param>
-            <param name="taskPaneInstances">create taskpane instances</param>
             <param name="onError">Error callback if somthings fails</param>
             <param name="application">host application in base definition</param>
         </member>
@@ -32392,14 +32397,14 @@
             Host Application Instance
             </summary>
         </member>
+        <member name="P:NetOffice.OfficeApi.Tools.COMAddin.TaskPaneFactory">
+            <summary>
+            TaskPaneFactory to create custom task panes
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.Tools.COMAddin.TaskPanes">
             <summary>
             Collection with all created custom Task Panes
-            </summary>
-        </member>
-        <member name="P:NetOffice.OfficeApi.Tools.COMAddin.TaskPaneFactory">
-            <summary>
-            TaskPaneFactory from CTPFactoryAvailable
             </summary>
         </member>
         <member name="P:NetOffice.OfficeApi.Tools.COMAddin.TaskPaneInstances">
@@ -32426,6 +32431,27 @@
             <summary>
             Cached Register Error Method Delegate
             </summary>
+        </member>
+        <member name="P:NetOffice.OfficeApi.Tools.COMAddin.AppInstance">
+            <summary>
+            Generic Host Application Instance
+            </summary>
+        </member>
+        <member name="P:NetOffice.OfficeApi.Tools.COMAddin.Factory">
+            <summary>
+            The used factory core
+            </summary>
+        </member>
+        <member name="P:NetOffice.OfficeApi.Tools.COMAddin.Roots">
+            <summary>
+            Instance managed root proxies
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.COMAddin.OnCreateRoots">
+            <summary>
+            Returns an enumerable sequence with instance managed com objects on root level
+            </summary>
+            <returns>ICOMObject enumerator</returns>
         </member>
         <member name="E:NetOffice.OfficeApi.Tools.COMAddin.OnStartupComplete">
             <summary>
@@ -32507,27 +32533,6 @@
             Raise the OnBeginShutdown event
             </summary>
             <param name="custom">custom arguments</param>
-        </member>
-        <member name="P:NetOffice.OfficeApi.Tools.COMAddin.AppInstance">
-            <summary>
-            Generic Host Application Instance
-            </summary>
-        </member>
-        <member name="P:NetOffice.OfficeApi.Tools.COMAddin.Factory">
-            <summary>
-            The used factory core
-            </summary>
-        </member>
-        <member name="P:NetOffice.OfficeApi.Tools.COMAddin.Roots">
-            <summary>
-            Instance managed root proxies
-            </summary>
-        </member>
-        <member name="M:NetOffice.OfficeApi.Tools.COMAddin.OnCreateRoots">
-            <summary>
-            Returns an enumerable sequence with instance managed com objects on root level
-            </summary>
-            <returns>ICOMObject enumerator</returns>
         </member>
         <member name="M:NetOffice.OfficeApi.Tools.COMAddin.GetCustomUI(System.String)">
             <summary>
@@ -32715,7 +32720,7 @@
         <member name="T:NetOffice.OfficeApi.Tools.ITaskPane">
             <summary>
             Office TaskPane UserControl classes can implement these interface in a NetOffice Tools Addin(COMAddin) as a special service.
-            NetOffice want call ITaskPane members automaticly 
+            NetOffice want call ITaskPane members automaticly
             </summary>
         </member>
         <member name="M:NetOffice.OfficeApi.Tools.ITaskPane.OnDisconnection">
@@ -66859,9 +66864,16 @@
         </member>
         <member name="T:NetOffice.OfficeApi._CustomTaskPane">
             <summary>
-            DispatchInterface _CustomTaskPane 
+            DispatchInterface _CustomTaskPane
             SupportByVersion Office, 12,14,15,16
             </summary>
+        </member>
+        <member name="E:NetOffice.OfficeApi._CustomTaskPane.AfterDelete">
+            <summary>
+            Occurs after Delete for the proxy has been called.
+            This is a custom event from NetOffice.
+            </summary>
+            <remarks>The event occurs for the proxy instance only.</remarks>
         </member>
         <member name="P:NetOffice.OfficeApi._CustomTaskPane.Title">
             <summary>

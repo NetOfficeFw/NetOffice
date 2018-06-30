@@ -17,7 +17,6 @@ namespace NetOffice.OfficeApi.Tools
     /// <summary>
     /// NetOffice COM Addin
     /// </summary>
-	//[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
     {
         #region Fields
@@ -55,7 +54,6 @@ namespace NetOffice.OfficeApi.Tools
             if (null == _factory)
                 _factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
-			TaskPaneInstances = new List<ITaskPane>();
         }
 
         #endregion
@@ -73,19 +71,33 @@ namespace NetOffice.OfficeApi.Tools
         protected internal ICOMObject Application { get; private set; }
 
         /// <summary>
+        /// TaskPaneFactory to create custom task panes
+        /// </summary>
+        public Office.ICTPFactory TaskPaneFactory { get; set; }
+
+        /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
         protected CustomTaskPaneCollection TaskPanes { get; private set; }
 
         /// <summary>
-        /// TaskPaneFactory from CTPFactoryAvailable
-        /// </summary>
-        protected Office.ICTPFactory TaskPaneFactory { get; set; }
-
-		/// <summary>
         /// ITaskPane Instances
         /// </summary>
-		protected List<ITaskPane> TaskPaneInstances { get; set; }
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        protected IEnumerable<ITaskPane> TaskPaneInstances
+        {
+            get
+            {
+                List<ITaskPane> result = new List<ITaskPane>();
+                foreach (var item in TaskPanes)
+                {
+                    ITaskPane match = item.Pane as ITaskPane;
+                    if (null != match)
+                        result.Add(match);
+                }
+                return result.ToArray();
+            }
+        }
 
         /// <summary>
         /// Ribbon instance to manipulate ui at runtime
@@ -106,6 +118,51 @@ namespace NetOffice.OfficeApi.Tools
         /// Cached Register Error Method Delegate
         /// </summary>
 		private static MethodInfo RegisterErrorMethod { get; set; }
+
+        #endregion
+
+        #region COMAddinBase
+
+        /// <summary>
+        /// Generic Host Application Instance
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override ICOMObject AppInstance
+        {
+            get { return Application; }
+        }
+
+        /// <summary>
+        /// The used factory core
+        /// </summary>
+        public override Core Factory
+        {
+            get
+            {
+                return _factory;
+            }
+        }
+
+        /// <summary>
+        /// Instance managed root proxies
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override IEnumerable Roots { get; protected set; }
+
+        /// <summary>
+        /// Returns an enumerable sequence with instance managed com objects on root level
+        /// </summary>
+        /// <returns>ICOMObject enumerator</returns>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        protected internal virtual IEnumerable<ICOMObject> OnCreateRoots()
+        {
+            List<ICOMObject> result = new List<ICOMObject>();
+            result.Add(Application);
+            if (null != TaskPaneFactory)
+                result.Add(TaskPaneFactory);
+
+            return result.ToArray();
+        }
 
         #endregion
 
@@ -259,52 +316,7 @@ namespace NetOffice.OfficeApi.Tools
 
         #endregion
 
-        #region COMAddinBase
-
-        /// <summary>
-        /// Generic Host Application Instance
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        public override ICOMObject AppInstance
-        {
-            get { return Application; }
-        }
-
-        /// <summary>
-        /// The used factory core
-        /// </summary>
-        public override Core Factory
-        {
-            get
-            {
-                return _factory;
-            }
-        }
-
-        /// <summary>
-        /// Instance managed root proxies
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        public override IEnumerable Roots { get; protected set; }
-
-        /// <summary>
-        /// Returns an enumerable sequence with instance managed com objects on root level
-        /// </summary>
-        /// <returns>ICOMObject enumerator</returns>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        protected internal virtual IEnumerable<ICOMObject> OnCreateRoots()
-        {
-            List<ICOMObject> result = new List<ICOMObject>();
-            result.Add(Application);
-            if (null != TaskPaneFactory)
-                result.Add(TaskPaneFactory);
-
-            return result.ToArray();
-        }
-
-        #endregion
-
-        #region IDTExtensibility2 Members
+        #region IDTExtensibility2
 
         void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
@@ -460,7 +472,7 @@ namespace NetOffice.OfficeApi.Tools
 
         #endregion
 
-        #region IRibbonExtensibility Members
+        #region IRibbonExtensibility
 
         /// <summary>
         /// IRibbonExtensibility implementation
@@ -505,7 +517,7 @@ namespace NetOffice.OfficeApi.Tools
 
         #endregion
 
-        #region ICustomTaskPaneConsumer Member
+        #region ICustomTaskPaneConsumer
 
         /// <summary>
         /// ICustomTaskPaneConsumer implementation
@@ -572,6 +584,7 @@ namespace NetOffice.OfficeApi.Tools
                     continue;
 
                 item.Pane = taskPane;
+                taskPane.AfterDelete += TaskPanes.TaskPaneDeleted;
                 item.AssignEvents();
                 item.IsLoaded = true;
 
@@ -596,7 +609,6 @@ namespace NetOffice.OfficeApi.Tools
                 ITaskPane pane = taskPane.ContentControl as ITaskPane;
                 if (null != pane)
                 {
-                    TaskPaneInstances.Add(pane);
                     object[] argumentArray = new object[0];
 
                     if (item.Arguments != null)

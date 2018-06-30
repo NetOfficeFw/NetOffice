@@ -22,6 +22,7 @@ namespace NetOffice.Tools.Isolation
         /// <param name="assemblyName">name or strong name where the target type is located</param>
         /// <param name="fullQualifiedTypeName">type to create</param>
         /// <param name="outerAggregator">caller as outer aggregator</param>
+        /// <param name="outerUpdateAggregator">outer update aggregator</param>
         /// <exception cref="ArgumentNullException">argument is null or empty</exception>
         /// <exception cref="MissingMethodException">no matching public constructor was found</exception>/param>
         /// <exception cref="TypeLoadException">typename was not found in assemblyName</exception>/param>
@@ -31,7 +32,7 @@ namespace NetOffice.Tools.Isolation
         /// <exception cref="BadImageFormatException">assemblyName is not a valid assembly</exception>
         /// <exception cref="FileLoadException">an assembly or module was loaded twice with two different evidences</exception>
         /// <exception cref="InvalidOperationException">unexpected error</exception>
-        public void CreateAggregatedInstance(string assemblyName, string fullQualifiedTypeName, IOuterComAggregator outerAggregator)
+        public void CreateAggregatedInstance(string assemblyName, string fullQualifiedTypeName, IOuterComAggregator outerAggregator, IOuterUpdateAggregator outerUpdateAggregator)
         {
             if (String.IsNullOrWhiteSpace(assemblyName))
                 throw new ArgumentNullException("assemblyName");
@@ -49,6 +50,7 @@ namespace NetOffice.Tools.Isolation
                 if (IntPtr.Zero != pOuter)
                 {
                     object innerObject = AppDomain.CurrentDomain.CreateInstanceAndUnwrap(assemblyName, fullQualifiedTypeName);
+                    TrySetUpdateAggregator(innerObject, outerUpdateAggregator);
                     pInner = Marshal.CreateAggregatedObject(pOuter, innerObject);
                     if (IntPtr.Zero != pInner)
                         outerAggregator.SetInnerAddin(pInner);
@@ -69,6 +71,26 @@ namespace NetOffice.Tools.Isolation
                 if (IntPtr.Zero  != pInner)
                     Marshal.Release(pInner);
                 Marshal.ReleaseComObject(outerAggregator);
+            }
+        }
+
+        /// <summary>
+        /// Try set an outer to an inner update aggregator and suspend errors
+        /// </summary>
+        /// <param name="innerObject">inner aggregator</param>
+        /// <param name="outerAggregator">outer aggregator</param>
+        private void TrySetUpdateAggregator(object innerObject, IOuterUpdateAggregator outerAggregator)
+        {
+            IInnerUpdateAggregator innerAggreator = innerObject as IInnerUpdateAggregator;
+
+            try
+            {
+                if (null != innerAggreator && null != outerAggregator)
+                    innerAggreator.SetOuterAggregator(outerAggregator);
+            }
+            catch
+            {
+                ;
             }
         }
     }

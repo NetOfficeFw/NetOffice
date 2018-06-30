@@ -32,6 +32,26 @@ namespace InnerAddin
             this.OnAddInsUpdate += Addin_OnAddInsUpdate;
         }
 
+        public bool HasShimHost
+        {
+            get
+            {
+                return null != ShimHost;
+            }
+        }
+
+        public void CallShimHost()
+        {
+            foreach (var item in TaskPanes.ToArray())
+            {
+                if(null != item.Pane)
+                    item.Pane.Delete();
+            }
+
+            if (null != ShimHost)
+                ShimHost.Reload();
+        }
+
         protected override bool QueryInterface(Guid interfaceId, ref Type type, ref object instance)
         {
             var iids = new NetOffice.ComTypes.WellKnownIID();
@@ -40,7 +60,7 @@ namespace InnerAddin
             if(iids.IID_IRibbonExtensibility == interfaceId)
             {
                 type = typeof(NetOffice.OfficeApi.Native.IRibbonExtensibility);
-                instance = new MyRibbonExtensibility();
+                instance = new MyRibbonExtensibility(this);
                 return true;
             }
 

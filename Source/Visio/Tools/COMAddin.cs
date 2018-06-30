@@ -16,7 +16,6 @@ namespace NetOffice.VisioApi.Tools
     /// <summary>
     /// NetOffice MS-Visio COM Addin
     /// </summary>
-	//[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, ICOMAddin
     {
         #region Fields

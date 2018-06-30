@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "OuterComAggregator.h"
 
+using namespace NetOffice_Tools_Isolation;
+
+
 /***************************************************************************
 * Ctor, Dtor
 ***************************************************************************/
@@ -37,13 +40,9 @@ ManagedAddin* OuterComAggregator::Addin()
 HRESULT __stdcall OuterComAggregator::SetInnerAddin(IUnknown* innerAddin)
 {
 	if (innerAddin == NULL)
-	{
 		return E_POINTER;
-	}
 	if (_innerAddin != NULL)
-	{
 		return E_UNEXPECTED;
-	}
 
 	_innerAddin = new ManagedAddin(innerAddin);
 

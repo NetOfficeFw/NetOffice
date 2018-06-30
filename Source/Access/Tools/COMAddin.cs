@@ -18,7 +18,6 @@ namespace NetOffice.AccessApi.Tools
     /// <summary>
     /// NetOffice MS-Access COM Addin
     /// </summary>
-	//[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
     {
         #region Fields
@@ -56,7 +55,6 @@ namespace NetOffice.AccessApi.Tools
             if (null == _factory)
                 _factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
-			TaskPaneInstances = new List<ITaskPane>();
         }
 
         #endregion
@@ -74,19 +72,33 @@ namespace NetOffice.AccessApi.Tools
         protected Access.Application Application { get; private set; }
 
         /// <summary>
+        /// TaskPaneFactory to create custom task panes
+        /// </summary>
+        public Office.ICTPFactory TaskPaneFactory { get; set; }
+
+        /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
         protected CustomTaskPaneCollection TaskPanes { get; private set; }
 
         /// <summary>
-        /// TaskPaneFactory from CTPFactoryAvailable
-        /// </summary>
-        protected Office.ICTPFactory TaskPaneFactory { get; set; }
-
-		/// <summary>
         /// ITaskPane Instances
         /// </summary>
-		protected List<ITaskPane> TaskPaneInstances { get; set; }
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        protected IEnumerable<ITaskPane> TaskPaneInstances
+        {
+            get
+            {
+                List<ITaskPane> result = new List<ITaskPane>();
+                foreach (var item in TaskPanes)
+                {
+                    ITaskPane match = item.Pane as ITaskPane;
+                    if (null != match)
+                        result.Add(match);
+                }
+                return result.ToArray();
+            }
+        }
 
         /// <summary>
         /// Ribbon instance to manipulate ui at runtime
@@ -305,7 +317,7 @@ namespace NetOffice.AccessApi.Tools
 
         #endregion
 
-        #region IDTExtensibility2 Members
+        #region IDTExtensibility2
 
         void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
@@ -462,7 +474,7 @@ namespace NetOffice.AccessApi.Tools
 
         #endregion
 
-        #region IRibbonExtensibility Members
+        #region IRibbonExtensibility
 
         /// <summary>
         /// IRibbonExtensibility implementation
@@ -507,7 +519,7 @@ namespace NetOffice.AccessApi.Tools
 
         #endregion
 
-        #region ICustomTaskPaneConsumer Member
+        #region ICustomTaskPaneConsumer
 
         /// <summary>
         /// ICustomTaskPaneConsumer implementation
@@ -526,7 +538,7 @@ namespace NetOffice.AccessApi.Tools
 
                 CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
                 paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
-                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Access.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
+                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Access.Application>(Factory, CTPFactoryInst, TaskPanes, OnError, Application);
             }
             catch (NetRuntimeSystem.Exception exception)
             {

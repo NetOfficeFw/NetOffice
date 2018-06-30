@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
 using NetOffice;
@@ -440,6 +441,13 @@ namespace NetOffice.OfficeApi.Tools
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             return InnerList.GetEnumerator();
+        }
+
+        internal void TaskPaneDeleted(_CustomTaskPane pane)
+        {
+            var target = this.FirstOrDefault(e => e.Pane == pane);
+            if(null != target)
+                Remove(target);
         }
     }
 }

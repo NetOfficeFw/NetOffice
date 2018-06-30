@@ -38,7 +38,7 @@ STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode con
 
 	if (_loader && _loader->IsLoaded())
 	{
-		hr = _loader->Aggregator()->Addin()->OnConnection(application, connectMode, addInInst, custom);
+		hr = _loader->OuterAggregator()->Addin()->OnConnection(application, connectMode, addInInst, custom);
 	}
 	else if(_loader)
 	{
@@ -51,26 +51,24 @@ STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode con
 STDMETHODIMP ShimProxy::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom)
 {
 	HRESULT hr = E_FAIL;
-	if (_loader)
+	if (_loader && _loader->IsLoaded())
 	{
-		hr = _loader->Aggregator()->Addin()->OnDisconnection(removeMode, custom);
+		hr = _loader->OuterAggregator()->Addin()->OnDisconnection(removeMode, custom);
 	}
-
 	if (_loader)
 	{
 		delete _loader;
 		_loader = nullptr;
 	}
-
 	return hr;
 }
 
 STDMETHODIMP ShimProxy::OnAddInsUpdate(LPSAFEARRAY* custom)
 {
 	HRESULT hr = E_FAIL;
-	if (_loader)
+	if (_loader && _loader->IsLoaded())
 	{
-		hr = _loader->Aggregator()->Addin()->OnAddInsUpdate(custom);
+		hr = _loader->OuterAggregator()->Addin()->OnAddInsUpdate(custom);
 	}
 	return hr;
 }
@@ -78,9 +76,9 @@ STDMETHODIMP ShimProxy::OnAddInsUpdate(LPSAFEARRAY* custom)
 STDMETHODIMP ShimProxy::OnStartupComplete(LPSAFEARRAY* custom)
 {
 	HRESULT hr = E_FAIL;
-	if (_loader)
+	if (_loader && _loader->IsLoaded())
 	{
-		hr = _loader->Aggregator()->Addin()->OnStartupComplete(custom);
+		hr = _loader->OuterAggregator()->Addin()->OnStartupComplete(custom);
 	}
 	return hr;
 }
@@ -88,9 +86,9 @@ STDMETHODIMP ShimProxy::OnStartupComplete(LPSAFEARRAY* custom)
 STDMETHODIMP ShimProxy::OnBeginShutdown(LPSAFEARRAY* custom)
 {
 	HRESULT hr = E_FAIL;
-	if (_loader)
+	if (_loader && _loader->IsLoaded())
 	{
-		hr = _loader->Aggregator()->Addin()->OnBeginShutdown(custom);
+		hr = _loader->OuterAggregator()->Addin()->OnBeginShutdown(custom);
 	}
 	return hr;
 }
@@ -139,7 +137,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 	}
 	else if ((__uuidof(IRibbonExtensibility) == riid) && (_loader && _loader->IsLoaded()))
 	{
-		IUnknown* inner = _loader->Aggregator()->Addin()->InnerUnkown();
+		IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
 		IRibbonExtensibility* ribbon = nullptr;
 		hr = inner->QueryInterface(riid, (LPVOID*)&ribbon);
 		if (S_OK == hr)
@@ -159,7 +157,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 	}
 	else if ((__uuidof(ICustomTaskPaneConsumer) == riid) && (_loader && _loader->IsLoaded()))
 	{
-		IUnknown* inner = _loader->Aggregator()->Addin()->InnerUnkown();
+		IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
 		ICustomTaskPaneConsumer* consumer = nullptr;
 		hr = inner->QueryInterface(riid, (LPVOID*)&consumer);
 		if (S_OK == hr)
@@ -179,7 +177,8 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 	}
 	else if (_loader && _loader->IsLoaded())
 	{
-		IUnknown* inner = _loader->Aggregator()->Addin()->InnerUnkown();
+		// This may cause problems when reload managed addin
+		IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
 		hr = inner->QueryInterface(riid, ppv);
 	}
 	else

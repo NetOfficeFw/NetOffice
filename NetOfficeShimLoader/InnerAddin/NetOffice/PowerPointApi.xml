@@ -30411,14 +30411,14 @@
             Host Application Instance
             </summary>
         </member>
+        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.TaskPaneFactory">
+            <summary>
+            TaskPaneFactory to create custom task panes
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.TaskPanes">
             <summary>
             Collection with all created custom Task Panes
-            </summary>
-        </member>
-        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.TaskPaneFactory">
-            <summary>
-            TaskPaneFactory from CTPFactoryAvailable
             </summary>
         </member>
         <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.TaskPaneInstances">

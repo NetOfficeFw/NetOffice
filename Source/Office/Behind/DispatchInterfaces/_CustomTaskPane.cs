@@ -7,7 +7,7 @@ using NetOffice.OfficeApi;
 namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
-    /// DispatchInterface _CustomTaskPane 
+    /// DispatchInterface _CustomTaskPane
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12, 14, 15, 16)]
@@ -71,7 +71,18 @@ namespace NetOffice.OfficeApi.Behind
 
 		}
 
-		#endregion
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// Occurs after Delete for the proxy has been called
+        /// </summary>
+        /// <remarks>The event occurs for the proxy instance only.</remarks>
+        [CustomEvent]
+        public event Action<NetOffice.OfficeApi._CustomTaskPane> AfterDelete;
+
+        #endregion
 
         #region Properties
 
@@ -236,6 +247,9 @@ namespace NetOffice.OfficeApi.Behind
         public virtual void Delete()
         {
             InvokerService.InvokeInternal.ExecuteMethod(this, "Delete");
+            var handler = AfterDelete;
+            if (null != handler)
+                handler(this);
         }
 
         #endregion

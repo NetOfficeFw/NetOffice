@@ -9,7 +9,7 @@ namespace NetOffice.PowerPointApi.Tools
     /// </summary>
     [ComVisible(false)]
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<PowerPoint.Application>
-    {      
+    {
 		/// <summary>
         /// While Excel Application shutdown. The method is not called in case of unexpected termination (may user kill the instance in task manager)
         /// </summary>

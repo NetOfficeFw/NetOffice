@@ -20,7 +20,6 @@ namespace NetOffice.OutlookApi.Tools
     /// <summary>
     /// NetOffice MS-Outlook COM Addin
     /// </summary>
-	//[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin, Native.FormRegionStartup
     {
         #region Fields
@@ -63,7 +62,6 @@ namespace NetOffice.OutlookApi.Tools
             if (null == _factory)
                 _factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
-			TaskPaneInstances = new List<ITaskPane>();
             OpenFormRegions = new List<OpenFormRegion>();
         }
 
@@ -82,19 +80,33 @@ namespace NetOffice.OutlookApi.Tools
         protected internal Outlook.Application Application { get; private set; }
 
         /// <summary>
+        /// TaskPaneFactory to create custom task panes
+        /// </summary>
+        public Office.ICTPFactory TaskPaneFactory { get; set; }
+
+        /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
         protected CustomTaskPaneCollection TaskPanes { get; private set; }
 
         /// <summary>
-        /// TaskPaneFactory from CTPFactoryAvailable
-        /// </summary>
-        public Office.ICTPFactory TaskPaneFactory { get; set; }
-
-		/// <summary>
         /// ITaskPane Instances
         /// </summary>
-		protected List<ITaskPane> TaskPaneInstances { get; set; }
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        protected IEnumerable<ITaskPane> TaskPaneInstances
+        {
+            get
+            {
+                List<ITaskPane> result = new List<ITaskPane>();
+                foreach (var item in TaskPanes)
+                {
+                    ITaskPane match = item.Pane as ITaskPane;
+                    if (null != match)
+                        result.Add(match);
+                }
+                return result.ToArray();
+            }
+        }
 
         /// <summary>
         /// Ribbon instance to manipulate ui at runtime
@@ -115,6 +127,51 @@ namespace NetOffice.OutlookApi.Tools
         /// Cached Register Error Method Delegate
         /// </summary>
 		private static MethodInfo RegisterErrorMethod { get; set; }
+
+        #endregion
+
+        #region COMAddinBase
+
+        /// <summary>
+        /// Generic Host Application Instance
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override ICOMObject AppInstance
+        {
+            get { return Application; }
+        }
+
+        /// <summary>
+        /// The used factory core
+        /// </summary>
+        public override Core Factory
+        {
+            get
+            {
+                return _factory;
+            }
+        }
+
+        /// <summary>
+        /// Instance managed root com objects
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override IEnumerable Roots { get; protected set; }
+
+        /// <summary>
+        /// Returns an enumerable sequence with instance managed com objects on root level
+        /// </summary>
+        /// <returns>ICOMObject enumerator</returns>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        protected internal virtual IEnumerable<ICOMObject> OnCreateRoots()
+        {
+            List<ICOMObject> result = new List<ICOMObject>();
+            result.Add(Application);
+            if (null != TaskPaneFactory)
+                result.Add(TaskPaneFactory);
+
+            return result.ToArray();
+        }
 
         #endregion
 
@@ -270,52 +327,7 @@ namespace NetOffice.OutlookApi.Tools
 
         #endregion
 
-        #region COMAddinBase
-
-        /// <summary>
-        /// Generic Host Application Instance
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        public override ICOMObject AppInstance
-        {
-            get { return Application; }
-        }
-
-        /// <summary>
-        /// The used factory core
-        /// </summary>
-        public override Core Factory
-        {
-            get
-            {
-                return _factory;
-            }
-        }
-
-        /// <summary>
-        /// Instance managed root com objects
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        public override IEnumerable Roots { get; protected set; }
-
-        /// <summary>
-        /// Returns an enumerable sequence with instance managed com objects on root level
-        /// </summary>
-        /// <returns>ICOMObject enumerator</returns>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        protected internal virtual IEnumerable<ICOMObject> OnCreateRoots()
-        {
-            List<ICOMObject> result = new List<ICOMObject>();
-            result.Add(Application);
-            if (null != TaskPaneFactory)
-                result.Add(TaskPaneFactory);
-
-            return result.ToArray();
-        }
-
-        #endregion
-
-        #region IDTExtensibility2 Members
+        #region IDTExtensibility2
 
         void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
@@ -488,7 +500,7 @@ namespace NetOffice.OutlookApi.Tools
 
         #endregion
 
-        #region IRibbonExtensibility Members
+        #region IRibbonExtensibility
 
         /// <summary>
         /// IRibbonExtensibility implementation
@@ -541,7 +553,7 @@ namespace NetOffice.OutlookApi.Tools
 
         #endregion
 
-        #region ICustomTaskPaneConsumer Member
+        #region ICustomTaskPaneConsumer
 
         /// <summary>
         /// ICustomTaskPaneConsumer implementation
@@ -560,7 +572,7 @@ namespace NetOffice.OutlookApi.Tools
 
                 CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
                 paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
-                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Outlook.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
+                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Outlook.Application>(Factory, CTPFactoryInst, TaskPanes, OnError, Application);
             }
             catch (NetRuntimeSystem.Exception exception)
             {

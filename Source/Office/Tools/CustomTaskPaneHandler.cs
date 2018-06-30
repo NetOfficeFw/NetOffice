@@ -66,11 +66,10 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="factory">current used factory</param>
         /// <param name="ctpFactoryInst">taskpane creator given from office application</param>
         /// <param name="taskPanes">taskpane you want to create</param>
-        /// <param name="taskPaneInstances">create taskpane instances</param>
         /// <param name="onError">Error callback if somthings fails</param>
         /// <param name="application">host application in base definition</param>
         public OfficeApi.ICTPFactory CreateCustomPanes<T,N>(Core factory, object ctpFactoryInst, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
-            List<T> taskPaneInstances, NetOffice.Tools.OnErrorHandler onError, ICOMObject application) where T: class where N:ICOMObject
+            NetOffice.Tools.OnErrorHandler onError, ICOMObject application) where T: class where N:ICOMObject
         {
             OfficeApi.ICTPFactory taskPaneFactory = factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.ICTPFactory>(null, ctpFactoryInst, typeof(NetOffice.OfficeApi.ICTPFactory));
             try
@@ -82,12 +81,9 @@ namespace NetOffice.OfficeApi.Tools
                     if (null == taskPane)
                         continue;
 
-                    //return taskPaneFactory;
-
                     Type taskPaneType = taskPane.GetType();
-
                     item.Pane = taskPane;
-
+                    taskPane.AfterDelete += taskPanes.TaskPaneDeleted;
 
                     item.AssignEvents();
                     item.IsLoaded = true;
@@ -113,7 +109,6 @@ namespace NetOffice.OfficeApi.Tools
                     T pane = taskPane.ContentControl as T;
                     if (null != pane)
                     {
-                        taskPaneInstances.Add(pane);
                         object[] argumentArray = new object[0];
 
                         if (item.Arguments != null)
