@@ -2,13 +2,19 @@
 #include "ShimProxyFactory.h"
 #include "ShimProxy.h"
 
+/***************************************************************************
+* Ctor, Dtor
+***************************************************************************/
+
 ShimProxyFactory::ShimProxyFactory()
 {
 	_refCount = 0;
+	_components++;
 }
 
 ShimProxyFactory::~ShimProxyFactory()
 {
+	_components--;
 }
 
 /***************************************************************************
@@ -48,6 +54,7 @@ STDMETHODIMP_(ULONG) ShimProxyFactory::Release(void)
 	delete this;
 	return 0;
 }
+
 
 /***************************************************************************
 * IClassFactory Implementation

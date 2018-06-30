@@ -11,7 +11,7 @@ class OuterComAggregator : public IOuterComAggregator
 
 public:
 
-	// Ctor
+	// Ctor, Dtor
 	OuterComAggregator();
 	~OuterComAggregator();
 
@@ -30,5 +30,5 @@ private:
 
 	ManagedAddin* _innerAddin;
 	ULONG _refCounter;
-};
 
+};

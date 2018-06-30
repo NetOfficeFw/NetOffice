@@ -1,8 +1,11 @@
 #pragma once
+
 class ShimProxyFactory : public IClassFactory
 {
+
 public:
 
+	// Ctor, Dtor
 	ShimProxyFactory();
 	~ShimProxyFactory();
 

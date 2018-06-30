@@ -15,6 +15,7 @@ extern ULONG _locks;
 
 class ClrHost
 {
+
 public:
 
 	// Ctor, Dtor
@@ -32,8 +33,9 @@ protected:
 
 private:
 
-	ICorRuntimeHost * _runtimeHost;
+	ICorRuntimeHost*		_runtimeHost;
 	mscorlib::_AppDomain*	_appDomain;
 	OuterComAggregator*		_aggregator;
 	ULONG					_refCounter;
+
 };

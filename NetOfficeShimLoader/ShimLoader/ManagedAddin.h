@@ -45,10 +45,6 @@ public:
 private:
 
 	IUnknown*					_innerUnkown;
-	IDTExtensibility2*			_innerExtensibility;
-	IDispatch*					_innerDispatch;
-	IRibbonExtensibility*		_innerRibbonExtensibility;
-	ICustomTaskPaneConsumer*	_innerTaskPaneConsumer;
 	ULONG						_refCounter;
 
 };

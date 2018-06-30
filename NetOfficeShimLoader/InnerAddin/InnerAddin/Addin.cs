@@ -35,7 +35,7 @@ namespace InnerAddin
         protected override bool QueryInterface(Guid interfaceId, ref Type type, ref object instance)
         {
             var iids = new NetOffice.ComTypes.WellKnownIID();
-            MessageBox.Show("QueryInterface " + iids.GetIID(interfaceId));
+            //MessageBox.Show("QueryInterface " + iids.GetIID(interfaceId));
 
             if(iids.IID_IRibbonExtensibility == interfaceId)
             {
@@ -46,7 +46,7 @@ namespace InnerAddin
 
             if (interfaceId == Guid.Parse("e19c7100-9709-4db7-9373-e7b518b47086"))
             {
-                MessageBox.Show("QueryInterface decline " + iids.GetIID(interfaceId));
+                //MessageBox.Show("QueryInterface decline " + iids.GetIID(interfaceId));
                 return true;
             }
             else
@@ -68,7 +68,7 @@ namespace InnerAddin
         private void Addin_OnConnection(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom)
         {
             Console.WriteLine("Addin_OnConnection");
-            //MessageBox.Show("Addin_OnConnection");
+            MessageBox.Show("Addin_OnConnection");
         }
 
         private void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
