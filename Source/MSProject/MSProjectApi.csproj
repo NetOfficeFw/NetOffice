@@ -425,7 +425,6 @@
     <Compile Include="Events\_EProjectApp2.cs" />
     <Compile Include="Modules\ApplicationModule.cs" />
     <Compile Include="Tools\COMAddin.cs" />
-    <Compile Include="Tools\ITaskPane.cs" />
     <Compile Include="Tools\Utils\CommonUtils.cs" />
   </ItemGroup>
   <ItemGroup>

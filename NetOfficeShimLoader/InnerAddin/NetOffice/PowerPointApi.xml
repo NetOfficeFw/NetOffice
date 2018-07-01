@@ -30381,16 +30381,6 @@
             MS-PowerPoint Registry Path
             </summary>
         </member>
-        <member name="F:NetOffice.PowerPointApi.Tools.COMAddin._automationCode">
-            <summary>
-            First field in OnConnection custom argument array
-            </summary>
-        </member>
-        <member name="F:NetOffice.PowerPointApi.Tools.COMAddin._isLoadedFromSystem">
-            <summary>
-            Cache field used in IsLoadedFromSystem() method
-            </summary>
-        </member>
         <member name="F:NetOffice.PowerPointApi.Tools.COMAddin._factory">
             <summary>
             Instance factory to avoid trouble with addins in same appdomain
@@ -30411,36 +30401,6 @@
             Host Application Instance
             </summary>
         </member>
-        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.TaskPaneFactory">
-            <summary>
-            TaskPaneFactory to create custom task panes
-            </summary>
-        </member>
-        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.TaskPanes">
-            <summary>
-            Collection with all created custom Task Panes
-            </summary>
-        </member>
-        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.TaskPaneInstances">
-            <summary>
-            ITaskPane Instances
-            </summary>
-        </member>
-        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.RibbonUI">
-            <summary>
-            Ribbon instance to manipulate ui at runtime
-            </summary>
-        </member>
-        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.CustomObject">
-            <summary>
-            Custom addin object if created
-            </summary>
-        </member>
-        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.ErrorMethod">
-            <summary>
-            Cached Error Method Delegate
-            </summary>
-        </member>
         <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.RegisterErrorMethod">
             <summary>
             Cached Register Error Method Delegate
@@ -30456,176 +30416,39 @@
             The used factory core
             </summary>
         </member>
-        <member name="P:NetOffice.PowerPointApi.Tools.COMAddin.Roots">
+        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.HandleOnConnection(System.Object,NetOffice.Tools.ext_ConnectMode,System.Object,System.Array@)">
             <summary>
-            Instance managed root com objects
+            Occurs whenever an add-in is loaded into MS-Office
             </summary>
+            <param name="application">A reference to an instance of the office application</param>
+            <param name="connectMode">An ext_ConnectMode enumeration value that indicates the way the add-in was loaded into MS-Office</param>
+            <param name="addInInst">An AddIn reference to the add-in's own instance. This is stored for later use, such as determining the parent collection for the add-in</param>
+            <param name="custom">An empty array that you can use to pass host-specific data for use in the add-in</param>
         </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.OnCreateRoots">
+        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.HandleOnDisconnection(NetOffice.Tools.ext_DisconnectMode,System.Array@)">
             <summary>
-            Returns an enumerable sequence with instance managed com objects on root level
+            Occurs whenever an add-in is unloaded from MS Office
             </summary>
-            <returns>ICOMObject enumerator</returns>
+            <param name="removeMode">An ext_DisconnectMode enumeration value that informs an add-in why it was unloaded.</param>
+            <param name="custom">An empty array that you can use to pass host-specific data for use after the add-in unloads</param>
         </member>
-        <member name="E:NetOffice.PowerPointApi.Tools.COMAddin.OnStartupComplete">
+        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.HandleOnStartupComplete(System.Array@)">
             <summary>
-            The OnStartupComplete event occurs when the host application completes its startup routines, in the case where the COM add-in loads at startup.
-            If the add-in is not loaded when the application loads, the OnStartupComplete event does not occur —
-            even when the user loads the add-in in the COM Add-ins dialog box. When this event does occur, it occurs after the OnConnection event.
-            You can use the OnStartupComplete  event procedure to run code that interacts with the application and that should not be run until the application has finished loading.
-            For example, if you want to display a form that gives users a choice of documents to create when they start the application,
-            you can put that code in the OnStartupComplete event procedure.
+             Occurs whenever an add-in, which is set to load when MS Office starts, loads.
             </summary>
+            <param name="custom">An empty array that you can use to pass host-specific data for use when the add-in loads</param>
         </member>
-        <member name="E:NetOffice.PowerPointApi.Tools.COMAddin.OnDisconnection">
+        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.HandleOnAddInsUpdate(System.Array@)">
             <summary>
-            The Shutdown event occurs when the COM add-in is unloaded.
-            You can use the OnDisconnection event procedure to run code that restores any changes made to the application by the add-in and to perform general clean-up operations.
-            An add-in can be unloaded in one of the following ways:
-            - The user clears the check box next to the add-in in the COM Add-ins dialog box.
-            - The host application closes. If the add-in is loaded when the application closes, it is unloaded.
-              If the add-in's load behavior is set to Startup, it is reloaded when the application starts again.
-            - The Connect property of the corresponding COMAddIn object is set to False.
+            Occurs whenever an add-in is loaded or unloaded from MS Office
             </summary>
+            <param name="custom">An empty array that you can use to pass host-specific data for use in the add-in</param>
         </member>
-        <member name="E:NetOffice.PowerPointApi.Tools.COMAddin.OnConnection">
+        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.HandleOnBeginShutdown(System.Array@)">
             <summary>
-            The OnConnection event occurs when the COM add-in is loaded (connected). An add-in can be loaded in one of the following ways:
-            The user starts the host application and the add-in's load behavior is specified to load when the application starts.
-            The user loads the add-in in the COM Add-ins dialog box.
-            The Connect property of the corresponding COMAddIn object is set to True.
-            For more information about the COMAddIn object, search the Microsoft® Office Visual Basic Reference Help index for "COMAddIn object."
+            Occurs whenever MS Office shuts down while an add-in is running
             </summary>
-        </member>
-        <member name="E:NetOffice.PowerPointApi.Tools.COMAddin.OnAddInsUpdate">
-            <summary>
-            The OnAddInsUpdate event occurs when the set of loaded COM add-ins changes.
-            When an add-in is loaded or unloaded, the OnAddInsUpdate event occurs in any other loaded add-ins.
-            For example, if add-ins A and B both are loaded currently, and then add-in C is loaded,
-            the OnAddInsUpdate event occurs in add-ins A and B. If C is unloaded, the OnAddInsUpdate event occurs again in add-ins A and B.
-            </summary>
-        </member>
-        <member name="E:NetOffice.PowerPointApi.Tools.COMAddin.OnBeginShutdown">
-            <summary>
-            The OnBeginShutdown event occurs when the host application begins its shutdown routines,
-            in the case where the application closes while the COM add-in is still loaded.
-            If the add-in is not loaded when the application closes,
-            the OnBeginShutdown event does not occur. When this event does occur, it occurs before the OnDisconnection event.
-            You can use the OnBeginShutdown event procedure to run code when the user closes the application. For example, you can run code that saves form data to a file.
-            </summary>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.RaiseOnStartupComplete(System.Array@)">
-            <summary>
-            Raise the OnStartupComplete event
-            </summary>
-            <param name="custom">custom arguments</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.RaiseOnDisconnection(NetOffice.Tools.ext_DisconnectMode,System.Array@)">
-            <summary>
-            Raise the OnDisconnection event
-            </summary>
-            <param name="RemoveMode">kind of remove</param>
-            <param name="custom">custom arguments</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.RaiseOnConnection(System.Object,NetOffice.Tools.ext_ConnectMode,System.Object,System.Array@)">
-            <summary>
-            Raise the OnConnection event
-            </summary>
-            <param name="Application">application host instance</param>
-            <param name="ConnectMode">kind of connect</param>
-            <param name="AddInInst">addin instance</param>
-            <param name="custom">custom arguments</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.RaiseOnAddInsUpdate(System.Array@)">
-            <summary>
-            Raise the OnAddInsUpdate event
-            </summary>
-            <param name="custom">custom arguments</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.RaiseOnBeginShutdown(System.Array@)">
-            <summary>
-            Raise the OnBeginShutdown event
-            </summary>
-            <param name="custom">custom arguments</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.GetCustomUI(System.String)">
-            <summary>
-            IRibbonExtensibility implementation
-            </summary>
-            <param name="RibbonID">target ribbon id</param>
-            <returns>XML content or String.Empty</returns>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.CustomUI_OnLoad(NetOffice.OfficeApi.Native.IRibbonUI)">
-            <summary>
-            Pre-defined Ribbon Loader
-            </summary>
-            <param name="ribbonUI">actual ribbon ui</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.CTPFactoryAvailable(System.Object)">
-            <summary>
-            ICustomTaskPaneConsumer implementation
-            </summary>
-            <param name="CTPFactoryInst">factory proxy from host application</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.OnCreateTaskPaneInfo(NetOffice.OfficeApi.Tools.TaskPaneInfo)">
-            <summary>
-            The method is called while the CustomPane attribute is processed
-            </summary>
-            <param name="paneInfo">pane definition</param>
-            <returns>true if pane should be create, otherwise false</returns>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane)">
-            <summary>
-            Called after any visibility changes
-            </summary>
-            <param name="customTaskPaneInst">pane instance</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane)">
-            <summary>
-            Called after any position changes but not for size changes
-            </summary>
-            <param name="customTaskPaneInst">pane instance</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.AllowApplyTweak(System.String,System.String)">
-            <summary>
-            This is method is called while startup and ask for permissions to apply a tweak.
-            </summary>
-            <param name="name">name of the tweak</param>
-            <param name="value">value of the tweak</param>
-            <returns>true(default) or false if you dont want this tweak is affected to the addin instance</returns>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.ApplyCustomTweak(System.String,System.String)">
-            <summary>
-            Called for custom tweaks to apply the tweak.
-            </summary>
-            <param name="name">name for the tweak</param>
-            <param name="value">value for the teak</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.DisposeCustomTweak(System.String,System.String)">
-            <summary>
-            Called for custom tweaks to unload a tweak. Please note: This method is not called in case of unexpected termination.
-            You have no warranties for dispose your tweak.
-            </summary>
-            <param name="name">name for the tweak</param>
-            <param name="value">value for the teak</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.SetTweakPersistenceEntry(System.Type,System.String,System.String,System.Boolean)">
-            <summary>
-            Creates an registry tweak entry in the current addin key
-            </summary>
-            <param name="addinType">addin type information</param>
-            <param name="name">name for the tweak</param>
-            <param name="value">value for the tweak</param>
-            <param name="throwException">throw exception on error</param>
-            <returns>true if key was created otherwise false</returns>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.OnCreateObjectInstance">
-            <summary>
-            Returns an instance to publish them as addin custom object.
-            External code like vba can access this object if instance is available as COM component.
-            This object is available as Appplication.COMAddins(?).Object
-            </summary>
-            <returns>addin instance object or null(Nothing in Visual Basic)</returns>
+            <param name="custom">An empty array that you can use to pass host-specific data for use in the add-in</param>
         </member>
         <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.OnCreateUtils">
             <summary>
@@ -30644,25 +30467,6 @@
             Create the necessary factory and was called in the first line in base ctor
             </summary>
             <returns></returns>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.IsLoadedFromSystem">
-            <summary>
-            Try to detect the addin is loaded from system hive key
-            </summary>
-            <returns>null if unkown or true/false</returns>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.TryCreateCustomObject(System.Object)">
-            <summary>
-            Try to create a custom addin object instance
-            </summary>
-            <param name="addInInst">given instance from OnConnection event</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.OnError(NetOffice.Tools.ErrorMethodKind,System.Exception)">
-            <summary>
-            Custom error handler
-            </summary>
-            <param name="methodKind">origin method where the error comes from</param>
-            <param name="exception">occured exception</param>
         </member>
         <member name="M:NetOffice.PowerPointApi.Tools.COMAddin.RegisterFunction(System.Type)">
             <summary>
@@ -30700,28 +30504,6 @@
             <param name="scope">NetOffice.Tools.InstallScope enum value</param>
             <param name="keyState">NetOffice.Tools.OfficeRegisterKeyState enum value</param>
             <returns>Registry keys/values to be add in the registry export or null</returns>
-        </member>
-        <member name="T:NetOffice.PowerPointApi.Tools.ITaskPane">
-            <summary>
-            Task pane UserControl instances can implement these interface in a NetOffice Tools Addin as a special service
-            </summary>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.ITaskPane.OnDisconnection">
-            <summary>
-            While Excel Application shutdown. The method is not called in case of unexpected termination (may user kill the instance in task manager)
-            </summary>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.ITaskPane.OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition)">
-            <summary>
-            Called after any position changes but not for size changes. Use the UserControl.Resize event instead for size changes
-            </summary>
-            <param name="position">the current alignment for the instance</param>
-        </member>
-        <member name="M:NetOffice.PowerPointApi.Tools.ITaskPane.OnVisibleStateChanged(System.Boolean)">
-            <summary>
-            Called after any visibility changes because the UserControl.VisibleChanged event doesnt work as expected in a task pane scenario
-            </summary>
-            <param name="visible">the current visibility for the instance</param>
         </member>
         <member name="T:NetOffice.PowerPointApi.Enums.PpWindowState">
              <summary>

@@ -1912,7 +1912,6 @@
     <Compile Include="Events\OLEObjectEvents.cs" />
     <Compile Include="Events\RefreshEvents.cs" />
     <Compile Include="Tools\COMAddin.cs" />
-    <Compile Include="Tools\ITaskPane.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">

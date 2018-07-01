@@ -180,7 +180,6 @@
     <Compile Include="Behind\Events\DocumentEvents.cs" />
     <Compile Include="Tools\COMAddin.cs" />
     <Compile Include="Tools\Expose\TypeFactory.cs" />
-    <Compile Include="Tools\ITaskPane.cs" />
     <Compile Include="Tools\Contribution\CommonUtils.cs" />
     <Compile Include="Enums\PbSchemeColorIndex.cs" />
     <Compile Include="Enums\PbColorType.cs" />

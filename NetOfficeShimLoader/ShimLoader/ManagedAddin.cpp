@@ -171,16 +171,6 @@ STDMETHODIMP ManagedAddin::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IDTExtensibility2*>(this);
 		hr = S_OK;
 	}
-	//else if ((__uuidof(IRibbonExtensibility) == riid))
-	//{
-	//	*ppv = static_cast<IRibbonExtensibility*>(this);
-	//	hr = S_OK;
-	//}
-	//else if ((__uuidof(ICustomTaskPaneConsumer) == riid))
-	//{
-	//	*ppv = static_cast<ICustomTaskPaneConsumer*>(this);
-	//	hr = S_OK;
-	//}
 	else
 		hr = E_NOINTERFACE;
 

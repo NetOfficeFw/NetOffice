@@ -27,7 +27,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="callOnCreateTaskPaneInfo">callback to manipulate the process dynamicly</param>
         /// <param name="visibleStateChange">visible changed event handler</param>
         /// <param name="dockPositionStateChange">dock state changed event handler</param>
-        public void ProceedCustomPaneAttributes(OfficeApi.Tools.CustomTaskPaneCollection taskPanes, Type addinType, COMAddinBase addin,
+        public void ProceedCustomPaneAttributes(OfficeApi.Tools.CustomTaskPaneCollection taskPanes, Type addinType, IOfficeCOMAddin addin,
             CallOnCreateTaskPaneInfoHandler callOnCreateTaskPaneInfo,
             CustomTaskPane_VisibleStateChangeEventHandler visibleStateChange,
             CustomTaskPane_DockPositionStateChangeEventHandler dockPositionStateChange)
@@ -61,17 +61,14 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Create taskpanes
         /// </summary>
-        /// <typeparam name="T">Taskpane interface type from</typeparam>
-        /// <typeparam name="N">Current host application</typeparam>
         /// <param name="factory">current used factory</param>
-        /// <param name="ctpFactoryInst">taskpane creator given from office application</param>
+        /// <param name="taskPaneFactory">taskpane creator given from office application</param>
         /// <param name="taskPanes">taskpane you want to create</param>
         /// <param name="onError">Error callback if somthings fails</param>
         /// <param name="application">host application in base definition</param>
-        public OfficeApi.ICTPFactory CreateCustomPanes<T,N>(Core factory, object ctpFactoryInst, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
-            NetOffice.Tools.OnErrorHandler onError, ICOMObject application) where T: class where N:ICOMObject
+        public void CreateCustomPanes(Core factory, OfficeApi.ICTPFactory taskPaneFactory, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
+            NetOffice.Tools.OnErrorHandler onError, ICOMObject application)
         {
-            OfficeApi.ICTPFactory taskPaneFactory = factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.ICTPFactory>(null, ctpFactoryInst, typeof(NetOffice.OfficeApi.ICTPFactory));
             try
             {
                 foreach (TaskPaneInfo item in taskPanes)
@@ -106,7 +103,7 @@ namespace NetOffice.OfficeApi.Tools
                             break;
                     }
 
-                    T pane = taskPane.ContentControl as T;
+                    OfficeApi.Tools.ITaskPane pane = taskPane.ContentControl as OfficeApi.Tools.ITaskPane;
                     if (null != pane)
                     {
                         object[] argumentArray = new object[0];
@@ -116,9 +113,9 @@ namespace NetOffice.OfficeApi.Tools
 
                         try
                         {
-                            OfficeApi.Tools.ITaskPaneConnection<N> foo = pane as OfficeApi.Tools.ITaskPaneConnection<N>;
+                            OfficeApi.Tools.ITaskPane foo = pane as OfficeApi.Tools.ITaskPane;
                             if(null != foo)
-                                foo.OnConnection((N)application, taskPane, argumentArray);
+                                foo.OnConnection(application, taskPane, argumentArray);
                         }
                         catch (Exception exception)
                         {
@@ -166,8 +163,6 @@ namespace NetOffice.OfficeApi.Tools
                         }
                     }
                 }
-
-                return taskPaneFactory;
             }
             catch (Exception)
             {

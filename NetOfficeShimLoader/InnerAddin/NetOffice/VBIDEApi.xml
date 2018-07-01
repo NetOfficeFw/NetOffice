@@ -2981,11 +2981,6 @@
             The used factory core
             </summary>
         </member>
-        <member name="P:NetOffice.VBIDEApi.Tools.COMAddin.Roots">
-            <summary>
-            Instance managed root com objects
-            </summary>
-        </member>
         <member name="M:NetOffice.VBIDEApi.Tools.COMAddin.OnCreateRoots">
             <summary>
             Returns an enumerable sequence with instance managed com objects on root level

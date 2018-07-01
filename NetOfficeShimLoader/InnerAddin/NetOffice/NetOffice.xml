@@ -13815,46 +13815,6 @@
             </summary>
             <returns>null if unknown or true/false</returns>
         </member>
-        <member name="T:NetOffice.Tools.Tweaks">
-            <summary>
-            Tweak Handler to customize some settings at runtime (if wanted)
-            </summary>
-        </member>
-        <member name="M:NetOffice.Tools.Tweaks.#cctor">
-            <summary>
-            Creates no instance of the class
-            </summary>
-        </member>
-        <member name="P:NetOffice.Tools.Tweaks.CustomTweaks">
-            <summary>
-            Store applied custom teaks. int = GetHashCode() from COMAddin instance. Dictionary string string = name, value of applied tweak
-            </summary>
-        </member>
-        <member name="M:NetOffice.Tools.Tweaks.ApplyTweaks(NetOffice.Core,System.Object,System.Type,System.String,NetOffice.Tools.IsLoadedFromSystemKeyDelegate)">
-            <summary>
-            Analyze a COMAddin for the TweakAttribute and try to set given arguments(registry) if exists
-            </summary>
-            <param name="factory">current used factory or null for default</param>
-            <param name="addinInstance">COMAddin instance</param>
-            <param name="addinType">Type info from COMAddin instance</param>
-            <param name="registryEndPoint">specific office registry key endpoint</param>
-            <param name="useSystemRegistryKey">Try read in HKEY_LOCAL_Machine otherwise HKEY_CURRENT_USER</param>
-        </member>
-        <member name="M:NetOffice.Tools.Tweaks.DisposeTweaks(NetOffice.Core,System.Object,System.Type)">
-            <summary>
-            Dispose applied tweaks for COMAddin instance
-            </summary>
-            <param name="factory">current used factory or null for default</param>
-            <param name="addinInstance">COMAddin instance</param>
-            <param name="addinType">Type info from COMAddin instance</param>
-        </member>
-        <member name="M:NetOffice.Tools.Tweaks.IsWellKnownName(System.String)">
-            <summary>
-            Returns info the regkey value name is addin standard or NetOffice tweak
-            </summary>
-            <param name="name">target regky name</param>
-            <returns>true if found</returns>
-        </member>
         <member name="T:NetOffice.Tools.UnRegisterFunctionAttribute">
             <summary>
             Mark a static method as UnRegister method. the method need the following signature public void UnRegister(Type type, RegisterCall callType)

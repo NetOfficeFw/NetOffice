@@ -11,6 +11,10 @@ ShimProxy::ShimProxy()
 	_refCounter = 0;
 	_loader = nullptr;
 	_components++;
+
+	_loader = new (std::nothrow) ClrHost();
+	if (_loader)
+		_loader->Load();
 }
 
 ShimProxy::~ShimProxy()
@@ -31,11 +35,6 @@ ShimProxy::~ShimProxy()
 STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom)
 {
 	HRESULT hr = E_FAIL;
-
-	_loader = new (std::nothrow) ClrHost();
-	if (_loader)
-		_loader->Load();
-
 	if (_loader && _loader->IsLoaded())
 	{
 		hr = _loader->OuterAggregator()->Addin()->OnConnection(application, connectMode, addInInst, custom);

@@ -60,7 +60,7 @@ namespace NetOffice.VBIDEApi.Tools
         /// <summary>
         /// Host Application Instance
         /// </summary>
-        protected internal VBE Application { get; private set; }
+        public VBE Application { get; private set; }
 
         /// <summary>
         /// Custom addin object if created
@@ -100,12 +100,6 @@ namespace NetOffice.VBIDEApi.Tools
                 return _factory;
             }
         }
-
-        /// <summary>
-        /// Instance managed root com objects
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        public override IEnumerable Roots { get; protected set; }
 
         /// <summary>
         /// Returns an enumerable sequence with instance managed com objects on root level
@@ -289,7 +283,6 @@ namespace NetOffice.VBIDEApi.Tools
                 try
                 {
                     RaiseOnDisconnection(RemoveMode, ref custom);
-                    Tweaks.DisposeTweaks(Factory, this, Type);
                 }
                 catch (System.Exception exception)
                 {

@@ -123,7 +123,11 @@ STDMETHODIMP ManagedCustomTaskPaneConsumer::QueryInterface(REFIID riid, void** p
 		hr = S_OK;
 	}
 	else
+	{
+		/*hr = _innerConsumer->QueryInterface(riid, ppv);*/
+
 		hr = E_NOINTERFACE;
+	}
 
 	if (NULL != *ppv)
 	{

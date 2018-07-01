@@ -31,6 +31,9 @@ STDMETHODIMP ShimProxyFactory::CreateInstance(LPUNKNOWN punk, REFIID riid, void*
 	if (NULL != punk)
 		return CLASS_E_NOAGGREGATION;
 
+	if (riid != IID_IDTExtensibility2)
+		return E_NOINTERFACE;
+
 	ShimProxy* pObj = new (std::nothrow) ShimProxy();
 	if (NULL == pObj)
 		return E_OUTOFMEMORY;

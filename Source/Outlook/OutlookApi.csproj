@@ -913,7 +913,6 @@
     <Compile Include="Events\AccountSelectorEvents.cs" />
     <Compile Include="Modules\AppliationModule.cs" />
     <Compile Include="Tools\COMAddin.cs" />
-    <Compile Include="Tools\ITaskPane.cs" />
     <Compile Include="Tools\Contribution\ApplicationUtils.cs" />
     <Compile Include="Tools\Contribution\CommonUtils.cs" />
     <Compile Include="Tools\Contribution\OutlookDialogUtils.cs" />

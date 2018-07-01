@@ -203,7 +203,8 @@ static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize)
 STDMETHODIMP ClrHost::Reload()
 {
 	HRESULT hr = E_FAIL;
-	hr = Unload();
+	MessageBox(GetDesktopWindow(), L"Reload", L"ClrHost", 0);
+	//hr = Unload();
 	return hr;
 }
 

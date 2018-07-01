@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Addin.cs" />
+    <Compile Include="MyCustomTaskPaneConsumer.cs" />
     <Compile Include="InnerAddinPane.cs">
       <SubType>UserControl</SubType>
     </Compile>

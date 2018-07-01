@@ -78,8 +78,8 @@ namespace NetOffice.Tools
         /// <summary>
         /// Instance managed root com objects
         /// </summary>
-        [Browsable(false), System.ComponentModel.EditorBrowsable(EditorBrowsableState.Never)]
-        public abstract IEnumerable Roots { get; protected set; }
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public IEnumerable Roots { get; protected set; }
 
         /// <summary>
         /// Outer COM Shim if addin is isolated by a Shim

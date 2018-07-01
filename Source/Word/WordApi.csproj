@@ -1186,7 +1186,6 @@
     <Compile Include="Events\DocumentEvents2.cs" />
     <Compile Include="Modules\ApplicationModule.cs" />
     <Compile Include="Tools\COMAddin.cs" />
-    <Compile Include="Tools\ITaskPane.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">
