@@ -13,28 +13,20 @@ extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
 
-class ClrHost : public IOuterUpdateAggregator
+class ClrHost
 {
 
 public:
 
 	// Ctor, Dtor
-	ClrHost();
+	ClrHost(IOuterUpdateAggregator* updateAggregator);
 	~ClrHost();
 
 	// ClrLoader Methods
-	bool IsLoaded();
+	BOOL IsLoaded();
 	OuterComAggregator* OuterAggregator();
 	HRESULT Load();
 	HRESULT Unload();
-
-	// IOuterComAggregator Implementation
-	STDMETHODIMP Reload();
-
-	// IUnknown Implementation
-	STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
-	STDMETHODIMP_(ULONG) AddRef(void);
-	STDMETHODIMP_(ULONG) Release(void);
 
 protected:
 
@@ -45,7 +37,8 @@ private:
 	ICorRuntimeHost*			_runtimeHost;
 	mscorlib::_AppDomain*		_appDomain;
 	OuterComAggregator*			_outerAggregator;
-	bool						_isLoaded;
-	ULONG						_refCounter;
+	IOuterUpdateAggregator*		_outerUpdateAggregator;
+	BOOL						_isLoaded;
+	IOuterUpdateAggregator*		_updateAggregator;
 
 };

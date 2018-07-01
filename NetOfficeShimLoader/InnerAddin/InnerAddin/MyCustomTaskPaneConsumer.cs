@@ -20,16 +20,6 @@ namespace InnerAddin
     {
         public MyCustomTaskPaneConsumer(Addin parent) : base(parent)
         {
-            
-        }
-
-
-
-        protected override bool QueryInterface(Guid interfaceId, ref Type type, ref object instance)
-        {
-            NetOffice.ComTypes.WellKnownIID id = new NetOffice.ComTypes.WellKnownIID();
-            MessageBox.Show("Query " + id.GetIID(interfaceId));
-            return base.QueryInterface(interfaceId, ref type, ref instance);
         }
     }
 }

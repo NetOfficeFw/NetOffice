@@ -298,6 +298,15 @@ namespace NetOffice.VBIDEApi.Tools
                 {
                     Factory.Console.WriteException(exception);
                 }
+
+                try
+                {
+                    CleanUp();
+                }
+                catch (Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
+                }
             }
             catch (System.Exception exception)
             {

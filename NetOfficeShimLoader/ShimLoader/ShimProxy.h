@@ -2,14 +2,16 @@
 #include "stdAfx.h"
 #include "ClrHost.h"
 #include "Aggregators.h"
+#include "IShimProxy.hpp"
 #include "Extensibility2.h"
 #include "ManagedCustomTaskPaneConsumer.h"
+#include "OuterUpdateAggregator.h"
 
 extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
 
-class ShimProxy : public IDTExtensibility2
+class ShimProxy : public IDTExtensibility2, public IShimProxy
 {
 
 public:
@@ -18,12 +20,20 @@ public:
 	ShimProxy();
 	~ShimProxy();
 
+	// ShimProxy Methods
+	STDMETHODIMP Cleanup();
+
 	// IDTExtensibility2 Implementation
 	STDMETHODIMP OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom);
 	STDMETHODIMP OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom);
 	STDMETHODIMP OnAddInsUpdate(LPSAFEARRAY* custom);
 	STDMETHODIMP OnStartupComplete(LPSAFEARRAY* custom);
 	STDMETHODIMP OnBeginShutdown(LPSAFEARRAY* custom);
+
+	// IShimProxy Implementation
+	BOOL STDMETHODCALLTYPE IsCLRLoaded();
+	STDMETHODIMP ReloadCLR();
+	STDMETHODIMP UnloadCLR();
 
 	// IDispatch Implementation
 	STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
@@ -38,7 +48,10 @@ public:
 
 private:
 
-	ULONG					_refCounter;
-	ClrHost*				_loader;
+	ULONG								_refCounter;
+	ClrHost*							_loader;
+	OuterUpdateAggregator*				_updateAggregator;
+	ManagedRibbonExtensibility*			_ribbonExtensibility;
+	ManagedCustomTaskPaneConsumer*		_paneConsumer;
 
 };

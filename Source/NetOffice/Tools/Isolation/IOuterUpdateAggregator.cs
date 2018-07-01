@@ -16,7 +16,13 @@ namespace NetOffice.Tools.Isolation
     public interface IOuterUpdateAggregator
     {
         /// <summary>
-        /// Recreate the managed appdomain and create a new instance of the managed addin
+        /// Determines the outer update aggregator is available.
+        /// </summary>
+        /// <returns>true if outer update aggregator is enabled, otherwise false</returns>
+        void IsAvailable([In, Out, MarshalAs(UnmanagedType.Bool)] ref bool available);
+
+        /// <summary>
+        /// Recreate the managed appdomain and create a new instance of the managed addin.
         /// </summary>
         void Reload();
     }

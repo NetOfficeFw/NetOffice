@@ -7,7 +7,7 @@ using NetOffice.OfficeApi;
 namespace NetOffice.OfficeApi.Behind
 {
     /// <summary>
-    /// DispatchInterface ICTPFactory 
+    /// DispatchInterface ICTPFactory
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864938.aspx </remarks>

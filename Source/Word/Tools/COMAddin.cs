@@ -198,6 +198,15 @@ namespace NetOffice.WordApi.Tools
             {
                 Factory.Console.WriteException(exception);
             }
+
+            try
+            {
+                CleanUp();
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
         }
 
         /// <summary>

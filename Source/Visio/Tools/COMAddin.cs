@@ -383,6 +383,15 @@ namespace NetOffice.VisioApi.Tools
                 {
                     Factory.Console.WriteException(exception);
                 }
+
+                try
+                {
+                    CleanUp();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
+                }
             }
             catch (System.Exception exception)
             {

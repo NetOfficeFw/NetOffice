@@ -171,10 +171,12 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="DllRegister.h" />
     <ClInclude Include="ICTPFactory.h" />
     <ClInclude Include="IRibbonExtensibility.h" />
+    <ClInclude Include="IShimProxy.hpp" />
     <ClInclude Include="ManagedAddin.h" />
     <ClInclude Include="ManagedCustomTaskPaneConsumer.h" />
     <ClInclude Include="ManagedRibbonExtensibility.h" />
     <ClInclude Include="OuterComAggregator.h" />
+    <ClInclude Include="OuterUpdateAggregator.h" />
     <ClInclude Include="ShimArguments.h" />
     <ClInclude Include="ShimProxy.h" />
     <ClInclude Include="ShimProxyFactory.h" />
@@ -190,6 +192,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClCompile Include="ManagedCustomTaskPaneConsumer.cpp" />
     <ClCompile Include="ManagedRibbonExtensibility.cpp" />
     <ClCompile Include="OuterComAggregator.cpp" />
+    <ClCompile Include="OuterUpdateAggregator.cpp" />
     <ClCompile Include="ShimArguments.cpp" />
     <ClCompile Include="ShimProxy.cpp" />
     <ClCompile Include="ShimProxyFactory.cpp" />

@@ -9,7 +9,7 @@
 ManagedRibbonExtensibility::ManagedRibbonExtensibility(IRibbonExtensibility* innerExtensibility)
 {
 	_refCounter = 0;
-	_innerExtensibility = innerExtensibility;
+	SetInnerPointer(innerExtensibility);
 	_components++;
 }
 
@@ -21,6 +21,27 @@ ManagedRibbonExtensibility::~ManagedRibbonExtensibility()
 		_innerExtensibility = nullptr;
 	}
 	_components--;
+}
+
+
+/***************************************************************************
+* ManagedRibbonExtensibility Methods
+***************************************************************************/
+
+STDMETHODIMP ManagedRibbonExtensibility::SetInnerPointer(IRibbonExtensibility* innerExtensibility)
+{
+	HRESULT hr = E_FAIL;
+
+	if (innerExtensibility)
+	{
+		_innerExtensibility = innerExtensibility;
+		hr = S_OK;
+	}
+	else
+	{
+		hr = E_POINTER;
+	}
+	return hr;
 }
 
 
@@ -103,6 +124,7 @@ STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
 	*ppv = NULL;
 
 	HRESULT hr = E_FAIL;
+	bool isBlind = false;
 
 	if (IID_IUnknown == riid)
 	{
@@ -119,10 +141,17 @@ STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IRibbonExtensibility*>(this);
 		hr = S_OK;
 	}
+	else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION)
+	{
+		hr = _innerExtensibility->QueryInterface(riid, ppv);
+		isBlind = true;
+	}
 	else
+	{
 		hr = E_NOINTERFACE;
+	}
 
-	if (NULL != *ppv)
+	if (NULL != *ppv && !isBlind)
 	{
 		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
 	}
@@ -139,13 +168,5 @@ STDMETHODIMP_(ULONG) ManagedRibbonExtensibility::AddRef(void)
 STDMETHODIMP_(ULONG) ManagedRibbonExtensibility::Release(void)
 {
 	_refCounter--;
-	if (0 == _refCounter)
-	{
-		delete this;
-		return 0;
-	}
-	else
-	{
-		return _refCounter;
-	}
+	return _refCounter;
 }

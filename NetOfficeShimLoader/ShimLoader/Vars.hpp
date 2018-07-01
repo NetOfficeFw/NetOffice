@@ -22,3 +22,10 @@ static LPCWSTR Target_ConfigFileName = L"InnerAddin.dll.config";
 //
 static const LPCWSTR ManagedAggregator_AssemblyName = L"NetOffice, PublicKeyToken=82590859a0ddadaf";
 static const LPCWSTR ManagedAggregator_ClassName = L"NetOffice.Tools.Isolation.ManagedInnerAggregator";
+
+//
+// Settings
+//
+static bool ENABLE_SELF_REGISTRATION = true;
+static bool ENABLE_BLIND_AGGREGATION = false;
+static bool ENABLE_OUTER_UPDATE_AGGREGATOR = true;

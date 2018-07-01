@@ -207,8 +207,16 @@ namespace NetOffice.PublisherApi.Tools
             {
                 Factory.Console.WriteException(exception);
             }
-        }
 
+            try
+            {
+                CleanUp();
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
         /// <summary>
         ///  Occurs whenever an add-in, which is set to load when MS Office starts, loads.

@@ -26,30 +26,20 @@ namespace InnerAddin
 	{
 		public Addin()
 		{
-            AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
-            AppDomain.CurrentDomain.TypeResolve += CurrentDomain_TypeResolve;
-            bool b = AppDomain.CurrentDomain.IsDefaultAppDomain();
-            if (!b)
-                MessageBox.Show("no default domain");
-        }
 
-        private Assembly CurrentDomain_TypeResolve(object sender, ResolveEventArgs args)
-        {
-            MessageBox.Show("CurrentDomain_TypeResolve " + args.Name);
-            return null;
-        }
-
-        private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
-        {
-            MessageBox.Show("CurrentDomain_AssemblyResolve " + args.Name);
-            return null;
         }
 
         public bool HasShimHost
         {
             get
             {
-                return null != ShimHost;
+                bool b = false;
+                if (null != ShimHost)
+                {
+                    ShimHost.IsAvailable(ref b);
+                }
+
+                return null != ShimHost && true == b;
             }
         }
 

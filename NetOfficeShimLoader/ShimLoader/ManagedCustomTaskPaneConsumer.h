@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "ICTPFactory.h"
+#include "Vars.hpp"
 
 extern HINSTANCE _module;
 extern ULONG _components;
@@ -14,6 +15,9 @@ public:
 	// Ctor, Dtor
 	ManagedCustomTaskPaneConsumer(ICustomTaskPaneConsumer* innerConsumer);
 	~ManagedCustomTaskPaneConsumer();
+
+	// ManagedRibbonExtensibility Methods
+	STDMETHODIMP SetInnerPointer(ICustomTaskPaneConsumer* innerConsumer);
 
 	// ICustomTaskPaneConsumer Implementation
 	STDMETHOD(CTPFactoryAvailable) (ICTPFactory* CTPFactoryInst);

@@ -12445,9 +12445,15 @@
              Represents an outer aggregator by a shim that handle update/reload possibilites
             </summary>
         </member>
+        <member name="M:NetOffice.Tools.Isolation.IOuterUpdateAggregator.IsAvailable(System.Boolean@)">
+            <summary>
+            Determines the outer update aggregator is available.
+            </summary>
+            <returns>true if outer update aggregator is enabled, otherwise false</returns>
+        </member>
         <member name="M:NetOffice.Tools.Isolation.IOuterUpdateAggregator.Reload">
             <summary>
-            Recreate the managed appdomain and create a new instance of the managed addin
+            Recreate the managed appdomain and create a new instance of the managed addin.
             </summary>
         </member>
         <member name="T:NetOffice.Tools.Isolation.ManagedInnerAggregator">
@@ -13320,6 +13326,11 @@
             Set an unmanaged aggregator to a managed addin instance
             </summary>
             <param name="aggregator">outer aggregator</param>
+        </member>
+        <member name="M:NetOffice.Tools.COMAddinBase.CleanUp">
+            <summary>
+            Cleanup instance resources
+            </summary>
         </member>
         <member name="M:NetOffice.Tools.COMAddinBase.EnableVisualStyles">
             <summary>

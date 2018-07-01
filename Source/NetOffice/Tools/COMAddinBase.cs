@@ -132,6 +132,18 @@ namespace NetOffice.Tools
         #region Methods
 
         /// <summary>
+        /// Cleanup instance resources
+        /// </summary>
+        protected internal virtual void CleanUp()
+        {
+            if(null != ShimHost)
+            {
+                Marshal.ReleaseComObject(ShimHost);
+                ShimHost = null;
+            }
+        }
+
+        /// <summary>
         /// Call System.Windows.Forms.Application.EnableVisualStyles
         /// </summary>
         protected internal virtual void EnableVisualStyles()

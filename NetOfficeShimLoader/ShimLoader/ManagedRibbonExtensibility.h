@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "IRibbonExtensibility.h"
+#include "Vars.hpp"
 
 extern HINSTANCE _module;
 extern ULONG _components;
@@ -14,6 +15,9 @@ public:
 	// Ctor, Dtor
 	ManagedRibbonExtensibility(IRibbonExtensibility* innerExtensibility);
 	~ManagedRibbonExtensibility();
+
+	// ManagedRibbonExtensibility Methods
+	STDMETHODIMP SetInnerPointer(IRibbonExtensibility* innerExtensibility);
 
 	// IRibbonExtensibility Implementation
 	STDMETHOD(GetCustomUI)(BSTR RibbonID, BSTR* RibbonXml);

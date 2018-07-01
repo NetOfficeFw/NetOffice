@@ -10,9 +10,15 @@ namespace NetOffice_Tools_Isolation
 		IOuterUpdateAggregator : public IUnknown
 	{
 		//
+		// Determines the outer update aggregator is available
+		// The aggregator is never available if blind aggregation is enabled
+		//
+		STDMETHODIMP IsAvailable(BOOL* available);
+
+		//
 		// Recreate the managed appdomain and create a new instance of the managed addin
 		//
-		HRESULT __stdcall Reload();
+		STDMETHODIMP Reload();
 	};
 	static const GUID IID_IOuterUpdateAggregator = __uuidof(IOuterUpdateAggregator);
 

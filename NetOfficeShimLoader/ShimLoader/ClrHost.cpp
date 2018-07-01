@@ -10,10 +10,10 @@ static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize);
 * Ctor, Dtor
 ***************************************************************************/
 
-ClrHost::ClrHost() : _runtimeHost(NULL), _appDomain(NULL), _outerAggregator(NULL)
+ClrHost::ClrHost(IOuterUpdateAggregator* updateAggregator) : _runtimeHost(NULL), _appDomain(NULL), _outerAggregator(NULL)
 {
-	_refCounter = 0;
 	_isLoaded = false;
+	_updateAggregator = updateAggregator;
 	_components++;
 }
 
@@ -23,11 +23,12 @@ ClrHost::~ClrHost()
 	_components--;
 }
 
+
 /***************************************************************************
 * ClrLoader Methods
 ***************************************************************************/
 
-bool ClrHost::IsLoaded()
+BOOL ClrHost::IsLoaded()
 {
 	return _isLoaded;
 }
@@ -37,7 +38,6 @@ OuterComAggregator* ClrHost::OuterAggregator()
 	return _outerAggregator;
 }
 
-
 HRESULT ClrHost::Load()
 {
 	HRESULT hr = E_FAIL;
@@ -46,7 +46,6 @@ HRESULT ClrHost::Load()
 
 	_ObjectHandle* srpObjectHandle = nullptr;
 	IOuterComAggregator* srpOuterComAggregator = nullptr;
-	IOuterUpdateAggregator* srpOuterUpdateAggregator = nullptr;
 	IManagedInnerAggregator* srpManagedAggregator = nullptr;
 
 	ICLRMetaHost* metaHost = nullptr;
@@ -98,12 +97,11 @@ HRESULT ClrHost::Load()
 	IfFailGo(srpObjectHandle->Unwrap(&cvarManagedAggregator));
 	IfFailGo(cvarManagedAggregator.pdispVal->QueryInterface(&srpManagedAggregator));
 	IfFailGo(_outerAggregator->QueryInterface(__uuidof(IOuterComAggregator), (LPVOID*)&srpOuterComAggregator));
-	IfFailGo(this->QueryInterface(__uuidof(IOuterUpdateAggregator), (LPVOID*)&srpOuterUpdateAggregator));
 
 	IfFailGo(srpManagedAggregator->CreateAggregatedInstance(
 		CComBSTR(Target_AssemblyName),
 		CComBSTR(Target_ConnectClassName),
-		srpOuterComAggregator, srpOuterUpdateAggregator));
+		srpOuterComAggregator, _updateAggregator));
 
 	_runtimeHost = runtimeHost;
 
@@ -169,6 +167,52 @@ HRESULT ClrHost::AppendPath(LPWSTR pszPath, LPCWSTR pszMore)
 	return hr;
 }
 
+
+/***************************************************************************
+* IUnknown Implementation
+***************************************************************************/
+
+//STDMETHODIMP ClrHost::QueryInterface(REFIID riid, void** ppv)
+//{
+//	if (NULL == ppv)
+//		return E_POINTER;
+//	*ppv = NULL;
+//
+//	HRESULT hr = E_FAIL;
+//
+//	if ((IID_IUnknown == riid))
+//	{
+//		*ppv = static_cast<IUnknown*>(this);
+//		hr = S_OK;
+//	}
+//	else
+//		hr = E_NOINTERFACE;
+//
+//	if (NULL != *ppv)
+//	{
+//		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
+//	}
+//
+//	return hr;
+//}
+//
+//STDMETHODIMP_(ULONG) ClrHost::AddRef(void)
+//{
+//	return ++_refCounter;
+//}
+//
+//STDMETHODIMP_(ULONG) ClrHost::Release(void)
+//{
+//	if (_refCounter > 0)
+//		_refCounter--;
+//	return _refCounter;
+//}
+
+
+/***************************************************************************
+* Static Utils
+***************************************************************************/
+
 static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize)
 {
 	HMODULE hInstance = _AtlBaseModule.GetModuleInstance();
@@ -193,63 +237,4 @@ static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize)
 
 	*pszFileName = 0;
 	return S_OK;
-}
-
-
-/***************************************************************************
-* IOuterComAggregator Implementation
-***************************************************************************/
-
-STDMETHODIMP ClrHost::Reload()
-{
-	HRESULT hr = E_FAIL;
-	MessageBox(GetDesktopWindow(), L"Reload", L"ClrHost", 0);
-	//hr = Unload();
-	return hr;
-}
-
-
-/***************************************************************************
-* IUnknown Implementation
-***************************************************************************/
-
-STDMETHODIMP ClrHost::QueryInterface(REFIID riid, void** ppv)
-{
-	if (NULL == ppv)
-		return E_POINTER;
-	*ppv = NULL;
-
-	HRESULT hr = E_FAIL;
-
-	if ((IID_IUnknown == riid))
-	{
-		*ppv = static_cast<IUnknown*>(this);
-		hr = S_OK;
-	}
-	else if ((__uuidof(IOuterUpdateAggregator) == riid))
-	{
-		*ppv = static_cast<IOuterUpdateAggregator*>(this);
-		hr = S_OK;
-	}
-	else
-		hr = E_NOINTERFACE;
-
-	if (NULL != *ppv)
-	{
-		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
-	}
-
-	return hr;
-}
-
-STDMETHODIMP_(ULONG) ClrHost::AddRef(void)
-{
-	return ++_refCounter;
-}
-
-STDMETHODIMP_(ULONG) ClrHost::Release(void)
-{
-	if (_refCounter > 0)
-		_refCounter--;
-	return _refCounter;
 }

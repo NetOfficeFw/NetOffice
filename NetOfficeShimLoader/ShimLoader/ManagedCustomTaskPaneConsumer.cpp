@@ -9,10 +9,9 @@
 ManagedCustomTaskPaneConsumer::ManagedCustomTaskPaneConsumer(ICustomTaskPaneConsumer* innerConsumer)
 {
 	_refCounter = 0;
-	_innerConsumer = innerConsumer;
+	SetInnerPointer(innerConsumer);
 	_components++;
 }
-
 
 ManagedCustomTaskPaneConsumer::~ManagedCustomTaskPaneConsumer()
 {
@@ -22,6 +21,27 @@ ManagedCustomTaskPaneConsumer::~ManagedCustomTaskPaneConsumer()
 		_innerConsumer = nullptr;
 	}
 	_components--;
+}
+
+
+/***************************************************************************
+* ManagedCustomTaskPaneConsumer Methods
+***************************************************************************/
+
+STDMETHODIMP ManagedCustomTaskPaneConsumer::SetInnerPointer(ICustomTaskPaneConsumer* innerConsumer)
+{
+	HRESULT hr = E_FAIL;
+
+	if (innerConsumer)
+	{
+		_innerConsumer = innerConsumer;
+		hr = S_OK;
+	}
+	else
+	{
+		hr = E_POINTER;
+	}
+	return hr;
 }
 
 
@@ -106,6 +126,7 @@ STDMETHODIMP ManagedCustomTaskPaneConsumer::QueryInterface(REFIID riid, void** p
 	*ppv = NULL;
 
 	HRESULT hr = E_FAIL;
+	bool isBlind = false;
 
 	if (IID_IUnknown == riid)
 	{
@@ -122,14 +143,17 @@ STDMETHODIMP ManagedCustomTaskPaneConsumer::QueryInterface(REFIID riid, void** p
 		*ppv = static_cast<ICustomTaskPaneConsumer*>(this);
 		hr = S_OK;
 	}
+	else if(!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION)
+	{
+		hr = _innerConsumer->QueryInterface(riid, ppv);
+		isBlind = true;
+	}
 	else
 	{
-		/*hr = _innerConsumer->QueryInterface(riid, ppv);*/
-
 		hr = E_NOINTERFACE;
 	}
 
-	if (NULL != *ppv)
+	if (NULL != *ppv && !isBlind)
 	{
 		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
 	}
@@ -146,13 +170,5 @@ STDMETHODIMP_(ULONG) ManagedCustomTaskPaneConsumer::AddRef(void)
 STDMETHODIMP_(ULONG) ManagedCustomTaskPaneConsumer::Release(void)
 {
 	_refCounter--;
-	if (0 == _refCounter)
-	{
-		delete this;
-		return 0;
-	}
-	else
-	{
-		return _refCounter;
-	}
+	return _refCounter;
 }
