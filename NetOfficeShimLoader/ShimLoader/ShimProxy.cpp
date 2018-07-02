@@ -236,48 +236,50 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 	}
 	else if ((__uuidof(IRibbonExtensibility) == riid) && (_loader && _loader->IsLoaded()))
 	{
-		IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
-		IRibbonExtensibility* ribbon = nullptr;
-		hr = inner->QueryInterface(riid, (LPVOID*)&ribbon);
-		if (S_OK == hr)
+		if (!_ribbonExtensibility)
 		{
+			IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
+			IRibbonExtensibility* ribbon = nullptr;
+			hr = inner->QueryInterface(riid, (LPVOID*)&ribbon);
+			_ribbonExtensibility = new (std::nothrow) ManagedRibbonExtensibility(ribbon);
 			if (!_ribbonExtensibility)
-			{
-				_ribbonExtensibility = new (std::nothrow) ManagedRibbonExtensibility(ribbon);
-			}
-			if (_ribbonExtensibility)
-			{
-				*ppv = static_cast<IRibbonExtensibility*>(_ribbonExtensibility);
-				hr = S_OK;
-			}
-			else
 			{
 				ribbon->Release();
 				hr = E_OUTOFMEMORY;
 			}
 		}
+		if (_ribbonExtensibility)
+		{
+			*ppv = static_cast<IRibbonExtensibility*>(_ribbonExtensibility);
+			hr = S_OK;
+		}
+		else
+		{
+			hr = E_NOINTERFACE;
+		}
 	}
 	else if ((__uuidof(ICustomTaskPaneConsumer) == riid) && (_loader && _loader->IsLoaded()))
 	{
-		IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
-		ICustomTaskPaneConsumer* consumer = nullptr;
-		hr = inner->QueryInterface(riid, (LPVOID*)&consumer);
-		if (S_OK == hr)
+		if (!_paneConsumer)
 		{
+			IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
+			ICustomTaskPaneConsumer* consumer = nullptr;
+			hr = inner->QueryInterface(riid, (LPVOID*)&consumer);
+			_paneConsumer = new (std::nothrow) ManagedCustomTaskPaneConsumer(consumer);
 			if (!_paneConsumer)
-			{
-				_paneConsumer = new (std::nothrow) ManagedCustomTaskPaneConsumer(consumer);
-			}
-			if (_paneConsumer)
-			{
-				*ppv = static_cast<ICustomTaskPaneConsumer*>(_paneConsumer);
-				hr = S_OK;
-			}
-			else
 			{
 				consumer->Release();
 				hr = E_OUTOFMEMORY;
 			}
+		}
+		if (_paneConsumer)
+		{
+			*ppv = static_cast<ICustomTaskPaneConsumer*>(_paneConsumer);
+			hr = S_OK;
+		}
+		else
+		{
+			hr = E_NOINTERFACE;
 		}
 	}
 	else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && _loader && _loader->IsLoaded())
