@@ -42,8 +42,8 @@ IUnknown* ManagedAddin::InnerUnkown()
 STDMETHODIMP ManagedAddin::OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom)
 {
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDTExtensibility2), (LPVOID*)&extensibility);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+	if (SUCCEEDED(hr))
 	{
 		hr = extensibility->OnConnection(application, connectMode, addInInst, custom);
 		extensibility->Release();
@@ -54,8 +54,8 @@ STDMETHODIMP ManagedAddin::OnConnection(IDispatch* application, ext_ConnectMode 
 STDMETHODIMP ManagedAddin::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom)
 {
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDTExtensibility2), (LPVOID*)&extensibility);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+	if (SUCCEEDED(hr))
 	{
 		hr = extensibility->OnDisconnection(removeMode, custom);
 		extensibility->Release();
@@ -67,8 +67,8 @@ STDMETHODIMP ManagedAddin::OnDisconnection(ext_DisconnectMode removeMode, LPSAFE
 STDMETHODIMP ManagedAddin::OnAddInsUpdate(LPSAFEARRAY* custom)
 {
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDTExtensibility2), (LPVOID*)&extensibility);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+	if (SUCCEEDED(hr))
 	{
 		hr = extensibility->OnAddInsUpdate(custom);
 		extensibility->Release();
@@ -79,8 +79,8 @@ STDMETHODIMP ManagedAddin::OnAddInsUpdate(LPSAFEARRAY* custom)
 STDMETHODIMP ManagedAddin::OnStartupComplete(LPSAFEARRAY* custom)
 {
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDTExtensibility2), (LPVOID*)&extensibility);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+	if (SUCCEEDED(hr))
 	{
 		hr = extensibility->OnStartupComplete(custom);
 		extensibility->Release();
@@ -91,8 +91,8 @@ STDMETHODIMP ManagedAddin::OnStartupComplete(LPSAFEARRAY* custom)
 STDMETHODIMP ManagedAddin::OnBeginShutdown(LPSAFEARRAY* custom)
 {
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDTExtensibility2), (LPVOID*)&extensibility);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+	if (SUCCEEDED(hr))
 	{
 		hr = extensibility->OnBeginShutdown(custom);
 		extensibility->Release();
@@ -108,8 +108,8 @@ STDMETHODIMP ManagedAddin::OnBeginShutdown(LPSAFEARRAY* custom)
 STDMETHODIMP ManagedAddin::GetTypeInfoCount(UINT* pctinfo)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+	if (SUCCEEDED(hr))
 	{
 		hr = dispatch->GetTypeInfoCount(pctinfo);
 		dispatch->Release();
@@ -120,8 +120,8 @@ STDMETHODIMP ManagedAddin::GetTypeInfoCount(UINT* pctinfo)
 STDMETHODIMP ManagedAddin::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+	if (SUCCEEDED(hr))
 	{
 		hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
 		dispatch->Release();
@@ -132,8 +132,8 @@ STDMETHODIMP ManagedAddin::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTIn
 STDMETHODIMP ManagedAddin::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+	if (SUCCEEDED(hr))
 	{
 		hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
 		dispatch->Release();
@@ -144,8 +144,8 @@ STDMETHODIMP ManagedAddin::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT 
 STDMETHODIMP ManagedAddin::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
-	if (hr == S_OK)
+	HRESULT hr = _innerUnkown->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+	if (SUCCEEDED(hr))
 	{
 		hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
 		dispatch->Release();
@@ -172,7 +172,9 @@ STDMETHODIMP ManagedAddin::QueryInterface(REFIID riid, void** ppv)
 		hr = S_OK;
 	}
 	else
+	{
 		hr = E_NOINTERFACE;
+	}
 
 	if (NULL != *ppv)
 	{

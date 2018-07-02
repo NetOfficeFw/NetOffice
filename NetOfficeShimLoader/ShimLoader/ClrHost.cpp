@@ -131,7 +131,7 @@ HRESULT ClrHost::Unload()
 		if (_runtimeHost)
 		{
 			hr = _appDomain->QueryInterface(__uuidof(IUnknown), (LPVOID*)&pUnkDomain);
-			if(S_OK == hr)
+			if(SUCCEEDED(hr))
 				hr = _runtimeHost->UnloadDomain(pUnkDomain);
 			_runtimeHost = nullptr;
 		}
@@ -166,47 +166,6 @@ HRESULT ClrHost::AppendPath(LPWSTR pszPath, LPCWSTR pszMore)
 	}
 	return hr;
 }
-
-
-/***************************************************************************
-* IUnknown Implementation
-***************************************************************************/
-
-//STDMETHODIMP ClrHost::QueryInterface(REFIID riid, void** ppv)
-//{
-//	if (NULL == ppv)
-//		return E_POINTER;
-//	*ppv = NULL;
-//
-//	HRESULT hr = E_FAIL;
-//
-//	if ((IID_IUnknown == riid))
-//	{
-//		*ppv = static_cast<IUnknown*>(this);
-//		hr = S_OK;
-//	}
-//	else
-//		hr = E_NOINTERFACE;
-//
-//	if (NULL != *ppv)
-//	{
-//		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
-//	}
-//
-//	return hr;
-//}
-//
-//STDMETHODIMP_(ULONG) ClrHost::AddRef(void)
-//{
-//	return ++_refCounter;
-//}
-//
-//STDMETHODIMP_(ULONG) ClrHost::Release(void)
-//{
-//	if (_refCounter > 0)
-//		_refCounter--;
-//	return _refCounter;
-//}
 
 
 /***************************************************************************

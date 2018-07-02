@@ -66,7 +66,7 @@ STDMETHODIMP ShimProxy::Cleanup()
 
 STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom)
 {
-	HRESULT hr = E_FAIL;
+	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
 	if (IsCLRLoaded())
 	{
 		IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(application, connectMode, addInInst, custom));
@@ -75,17 +75,19 @@ STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode con
 	{
 		delete _loader;
 		_loader = nullptr;
-		hr = S_OK; // host application want change load behavior from 3 to 2 if we signalize fail
 	}
 
 	return hr;
+
 Error:
+
+	ValidateExtensibilityFail(hr);
 	return hr;
 }
 
 STDMETHODIMP ShimProxy::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom)
 {
-	HRESULT hr = E_FAIL;
+	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
 	if (IsCLRLoaded())
 	{
 		IfFailGo(_loader->OuterAggregator()->Addin()->OnDisconnection(removeMode, custom));
@@ -93,44 +95,58 @@ STDMETHODIMP ShimProxy::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARR
 	// no cleanup call here because host application may still holds IUnkown Pointer to ribbon/taskpane/etc.
 
 	return hr;
+
 Error:
+
+	ValidateExtensibilityFail(hr);
 	return hr;
 }
 
 STDMETHODIMP ShimProxy::OnAddInsUpdate(LPSAFEARRAY* custom)
 {
-	HRESULT hr = E_FAIL;
-	if (_loader && _loader->IsLoaded())
+	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
+	if (IsCLRLoaded())
 	{
 		IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(custom));
 	}
+
 	return hr;
+
 Error:
+
+	ValidateExtensibilityFail(hr);
 	return hr;
 }
 
 STDMETHODIMP ShimProxy::OnStartupComplete(LPSAFEARRAY* custom)
 {
-	HRESULT hr = E_FAIL;
+	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
 	if (IsCLRLoaded())
 	{
 		IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(custom));
 	}
+
 	return hr;
+
 Error:
+
+	ValidateExtensibilityFail(hr);
 	return hr;
 }
 
 STDMETHODIMP ShimProxy::OnBeginShutdown(LPSAFEARRAY* custom)
 {
-	HRESULT hr = E_FAIL;
+	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
 	if (IsCLRLoaded())
 	{
 		IfFailGo(_loader->OuterAggregator()->Addin()->OnBeginShutdown(custom));
 	}
 
 	return hr;
+
 Error:
+
+	ValidateExtensibilityFail(hr);
 	return hr;
 }
 
@@ -234,15 +250,18 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IDTExtensibility2*>(this);
 		hr = S_OK;
 	}
-	else if ((__uuidof(IRibbonExtensibility) == riid) && (_loader && _loader->IsLoaded()))
+	else if ((IID_IRibbonExtensibility == riid) && (_loader && _loader->IsLoaded()))
 	{
+		// wrap and cache to encapsulate from host application
+		// this is to prevent conflicts when reload the CLR on the fly
 		if (!_ribbonExtensibility)
 		{
 			IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
 			IRibbonExtensibility* ribbon = nullptr;
 			hr = inner->QueryInterface(riid, (LPVOID*)&ribbon);
-			_ribbonExtensibility = new (std::nothrow) ManagedRibbonExtensibility(ribbon);
-			if (!_ribbonExtensibility)
+			if (SUCCEEDED(hr))
+				_ribbonExtensibility = new (std::nothrow) ManagedRibbonExtensibility(ribbon);
+			if (!_ribbonExtensibility && NULL != ribbon)
 			{
 				ribbon->Release();
 				hr = E_OUTOFMEMORY;
@@ -253,20 +272,19 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 			*ppv = static_cast<IRibbonExtensibility*>(_ribbonExtensibility);
 			hr = S_OK;
 		}
-		else
-		{
-			hr = E_NOINTERFACE;
-		}
 	}
-	else if ((__uuidof(ICustomTaskPaneConsumer) == riid) && (_loader && _loader->IsLoaded()))
+	else if ((IID_ICustomTaskPaneConsumer == riid) && (_loader && _loader->IsLoaded()))
 	{
+		// wrap and cache to encapsulate from host application
+		// this is to prevent conflicts when reload the CLR on the fly
 		if (!_paneConsumer)
 		{
 			IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
 			ICustomTaskPaneConsumer* consumer = nullptr;
 			hr = inner->QueryInterface(riid, (LPVOID*)&consumer);
-			_paneConsumer = new (std::nothrow) ManagedCustomTaskPaneConsumer(consumer);
-			if (!_paneConsumer)
+			if(SUCCEEDED(hr))
+				_paneConsumer = new (std::nothrow) ManagedCustomTaskPaneConsumer(consumer);
+			if (!_paneConsumer && NULL != consumer)
 			{
 				consumer->Release();
 				hr = E_OUTOFMEMORY;
@@ -277,25 +295,24 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 			*ppv = static_cast<ICustomTaskPaneConsumer*>(_paneConsumer);
 			hr = S_OK;
 		}
-		else
-		{
-			hr = E_NOINTERFACE;
-		}
 	}
-	else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && _loader && _loader->IsLoaded())
+	else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && IsCLRLoaded())
 	{
+		// blind aggregation means the inner pointer is not bridged by the shim
+		// so we can not reload the CLR on the fly because host application is not aware of the
+		// fact that the pointers are no longer valid
 		IUnknown* inner = _loader->OuterAggregator()->Addin()->InnerUnkown();
 		hr = inner->QueryInterface(riid, ppv);
 		isBlind = true;
-	}
-	else
-	{
-		hr = E_NOINTERFACE;
 	}
 
 	if (NULL != *ppv && !isBlind)
 	{
 		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
+	}
+	else if (NULL == *ppv)
+	{
+		hr = E_NOINTERFACE;
 	}
 
 	return hr;

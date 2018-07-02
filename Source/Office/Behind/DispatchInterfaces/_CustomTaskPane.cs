@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Behind
         /// </summary>
         /// <remarks>The event occurs for the proxy instance only.</remarks>
         [CustomEvent]
-        public event Action<NetOffice.OfficeApi._CustomTaskPane> AfterDelete;
+        public event _CustomTaskPaneDeleteHandler AfterDelete;
 
         #endregion
 

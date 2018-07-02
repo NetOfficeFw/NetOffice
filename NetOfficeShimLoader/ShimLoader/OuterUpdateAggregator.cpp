@@ -60,7 +60,7 @@ STDMETHODIMP OuterUpdateAggregator::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IUnknown*>(this);
 		hr = S_OK;
 	}
-	else if ((__uuidof(IOuterUpdateAggregator) == riid))
+	else if ((IID_IOuterUpdateAggregator == riid))
 	{
 		*ppv = static_cast<IOuterUpdateAggregator*>(this);
 		hr = S_OK;

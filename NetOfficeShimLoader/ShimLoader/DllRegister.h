@@ -2,7 +2,7 @@
 #include "stdafx.h"
 
 /*
-	Determines the Assembly Registration Mode
+Determines the Assembly Registration Mode
 */
 enum RegisterMode
 {
@@ -17,14 +17,6 @@ enum RegisterMode
 	SystemComponentAndUserAddin = 2
 };
 
-HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplication, DWORD addinLoadBehavior, LPCWSTR progId, LPCWSTR classId, LPCWSTR description, RegisterMode mode);
+HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplication, DWORD addinLoadBehavior, DWORD addinCommandLineSafe, LPCWSTR progId, LPCWSTR classId, LPCWSTR friendlyName, LPCWSTR description, LPCWSTR version, RegisterMode mode);
 
-HRESULT DllUnregister(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, RegisterMode mode);
-
-//HRESULT RegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, LPCWSTR pszFriendlyName, DWORD dwStartupContext);
-//
-//HRESULT UnRegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID);
-//
-//BOOL SetKeyAndValue(HKEY hKeyRoot, LPCWSTR pszPath, LPCWSTR pszSubkey, LPCWSTR pszValue);
-//
-//LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild);
+HRESULT DllUnregister(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode);

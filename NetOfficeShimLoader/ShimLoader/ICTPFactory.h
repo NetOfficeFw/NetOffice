@@ -44,6 +44,7 @@ __interface __declspec(uuid("000c033b-0000-0000-c000-000000000046"))
 		/*[in]*/ enum MsoCTPDockPositionRestrict prop) = 0;
 	virtual HRESULT __stdcall Delete() = 0;
 };
+static const GUID IID_CustomTaskPane = __uuidof(_CustomTaskPane);
 
 __interface __declspec(uuid("000c033d-0000-0000-c000-000000000046"))
 	ICTPFactory : IDispatch
@@ -54,9 +55,11 @@ __interface __declspec(uuid("000c033d-0000-0000-c000-000000000046"))
 			/*[in]*/ VARIANT CTPParentWindow,
 			/*[out,retval]*/ struct _CustomTaskPane * * CTPInst) PURE;
 };
+static const GUID IID_ICTPFactory = __uuidof(ICTPFactory);
 
 __interface __declspec(uuid("000c033e-0000-0000-c000-000000000046"))
 	ICustomTaskPaneConsumer : IDispatch
 {
 	STDMETHOD(CTPFactoryAvailable) (THIS_/*[in]*/ ICTPFactory* CTPFactoryInst) PURE;
 };
+static const GUID IID_ICustomTaskPaneConsumer = __uuidof(ICustomTaskPaneConsumer);

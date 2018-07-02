@@ -67145,6 +67145,13 @@
             </summary>
             <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865234.aspx </remarks>
         </member>
+        <member name="T:NetOffice.OfficeApi._CustomTaskPaneDeleteHandler">
+            <summary>
+            _CustomTaskPane AfterDelete Event Handler
+            AfterDelete is a custom event from NetOffice
+            </summary>
+            <param name="sender">deleted pane</param>
+        </member>
         <member name="T:NetOffice.OfficeApi._CustomTaskPane">
             <summary>
             DispatchInterface _CustomTaskPane

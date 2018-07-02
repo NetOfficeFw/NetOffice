@@ -70,11 +70,11 @@ HKEY RootKey(RegisterMode mode)
 	return hKeyRoot;
 }
 
-void ClassIdKey(LPCWSTR classId, RegisterMode mode, WCHAR* classIdKey)
+void ClassIdKey(LPCWSTR classId,  RegisterMode mode, WCHAR* classIdKey)
 {
-	if (mode == SystemComponentAndUserAddin || mode == User)
+	if (mode == User)
 	{
-		lstrcpy(classIdKey, L"Software\\Classes");
+		lstrcpy(classIdKey, L"Software\\Classes\\");
 	}
 	else
 	{
@@ -84,42 +84,38 @@ void ClassIdKey(LPCWSTR classId, RegisterMode mode, WCHAR* classIdKey)
 	lstrcat(classIdKey, classId);
 }
 
-LPCWSTR ProgIdKey(LPCWSTR progId, RegisterMode mode, WCHAR* progIdKey)
+LPCWSTR ProgIdKey(LPCWSTR progId,  RegisterMode mode, WCHAR* progIdKey)
 {
-	if (mode == SystemComponentAndUserAddin || mode == User)
+	if (mode == User)
 	{
-		lstrcpy(progIdKey, L"Software\\Classes");
+		lstrcpy(progIdKey, L"Software\\Classes\\");
 	}
 	else
 	{
 		lstrcpy(progIdKey, L"");
 	}
 	lstrcat(progIdKey, progId);
-
 	return progIdKey;
 }
 
-HRESULT RegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, LPCWSTR pszFriendlyName, DWORD dwStartupContext)
+HRESULT RegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, LPCWSTR pszFriendlyName, LPCWSTR pszDescription, DWORD dwStartupContext, DWORD dwCommandLineSafe, bool registerPerMachine)
 {
-	//MessageBox(GetDesktopWindow(), L"Start", L"RegisterCOMAddin", 0);
-
-	HKEY hKey;
+	HRESULT hr = S_OK;
 	WCHAR szKeyBuf[1024];
+	DWORD dwTemp = 0;
+	bool keyCreated = false;
+	HKEY hKey;
 
 	lstrcpy(szKeyBuf, L"Software\\Microsoft\\Office\\");
 	lstrcat(szKeyBuf, pszOfficeApp);
 	lstrcat(szKeyBuf, L"\\Addins\\");
 	lstrcat(szKeyBuf, pszProgID);
 
-	long lResult = RegCreateKeyEx(HKEY_CURRENT_USER, szKeyBuf, 0, NULL, REG_OPTION_NON_VOLATILE,
-		KEY_ALL_ACCESS, NULL, &hKey, NULL);
+	HKEY root = registerPerMachine ? HKEY_LOCAL_MACHINE : HKEY_CURRENT_USER;
+	IfFailGo(RegCreateKeyEx(root, szKeyBuf, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hKey, NULL));
 
-	if (lResult != ERROR_SUCCESS)
-		return E_ACCESSDENIED;
-
-	DWORD dwTemp = 0;
-	RegSetValueEx(hKey, L"LoadBehavior", 0, REG_DWORD, (BYTE*)&dwStartupContext, 4);
-	RegSetValueEx(hKey, L"CommandLineSafe", 0, REG_DWORD, (BYTE*)&dwTemp, 4);
+	IfFailGo(RegSetValueEx(hKey, L"LoadBehavior", 0, REG_DWORD, (BYTE*)&dwStartupContext, sizeof(DWORD)));
+	IfFailGo(RegSetValueEx(hKey, L"CommandLineSafe", 0, REG_DWORD, (BYTE*)&dwCommandLineSafe, sizeof(DWORD)));
 
 	if (NULL != pszFriendlyName)
 	{
@@ -128,13 +124,26 @@ HRESULT RegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, LPCWSTR pszFri
 		#else
 			dwTemp = lstrlen(pszFriendlyName) + 1;
 		#endif
-		RegSetValueEx(hKey, L"FriendlyName", 0, REG_SZ, (BYTE*)pszFriendlyName, dwTemp);
-		RegSetValueEx(hKey, L"Description", 0, REG_SZ, (BYTE*)pszFriendlyName, dwTemp);
+		IfFailGo(RegSetValueEx(hKey, L"FriendlyName", 0, REG_SZ, (BYTE*)pszFriendlyName, dwTemp));
+
+		#if UNICODE
+			dwTemp = lstrlen(pszDescription) * 2 + 2;
+		#else
+			dwTemp = lstrlen(pszDescription) + 1;
+		#endif
+		IfFailGo(RegSetValueEx(hKey, L"Description", 0, REG_SZ, (BYTE*)pszDescription, dwTemp));
 	}
 
 	RegCloseKey(hKey);
 
-	return S_OK;
+	return hr;
+Error:
+	if (keyCreated)
+	{
+		RegCloseKey(hKey);
+		RegDeleteKey(hKey, szKeyBuf);
+	}
+	return hr;
 }
 
 HRESULT UnRegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID)
@@ -149,12 +158,14 @@ HRESULT UnRegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID)
 
 	HRESULT hr = RecursiveDeleteKey(HKEY_CURRENT_USER, szKeyBuf);
 	if (E_ACCESSDENIED != hr) // if key is missing - we dont care
+	{
 		result = hr;
+	}
 
 	return result;
 }
 
-HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR description, RegisterMode mode)
+HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, LPCWSTR description, RegisterMode mode)
 {
 	WCHAR szModule[512];
 	DWORD dwResult = ::GetModuleFileName(module, szModule, 512);
@@ -167,9 +178,15 @@ HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR officeApplication, LPCWST
 	WCHAR progIdKey[512];
 	ProgIdKey(progId, mode, progIdKey);
 
+	WCHAR inProcServer32[128];
+	lstrcpy(inProcServer32, L"");
+	lstrcat(inProcServer32, L"InprocServer32");
+	//lstrcat(inProcServer32, version);
+	// todo: version and programmable key
+
 	if (!SetKeyAndValue(hKeyRoot, classIdKey, NULL, description))
 		return S_FALSE;
-	if (!SetKeyAndValue(hKeyRoot, classIdKey, L"InprocServer32", szModule))
+	if (!SetKeyAndValue(hKeyRoot, classIdKey, inProcServer32, szModule))
 		return S_FALSE;
 	if (!SetKeyAndValue(hKeyRoot, classIdKey, L"ProgID", progId))
 		return S_FALSE;
@@ -181,7 +198,7 @@ HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR officeApplication, LPCWST
 	return S_OK;
 }
 
-HRESULT UnregisterCOMComponent(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, RegisterMode mode)
+HRESULT UnregisterCOMComponent(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
 {
 	HRESULT result = S_OK;
 
@@ -199,24 +216,24 @@ HRESULT UnregisterCOMComponent(LPCWSTR officeApplication, LPCWSTR progId, LPCWST
 	return result;
 }
 
-HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplication, DWORD addinLoadBehavior, LPCWSTR progId, LPCWSTR classId, LPCWSTR description, RegisterMode mode)
+HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplication, DWORD addinLoadBehavior, DWORD addinCommandLineSafe, LPCWSTR progId, LPCWSTR classId, LPCWSTR friendlyName, LPCWSTR description, LPCWSTR version, RegisterMode mode)
 {
 	HRESULT result = S_OK;
 
-	result = RegisterCOMComponent(module, officeApplication, progId, classId, description, mode);
+	result = RegisterCOMComponent(module, officeApplication, progId, classId, version, description, mode);
 	if (S_OK == result)
-		result = RegisterCOMAddin(officeApplication, progId, description, addinLoadBehavior);
+		result = RegisterCOMAddin(officeApplication, progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, 0 == mode);
 
 	return result;
 }
 
-HRESULT DllUnregister(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, RegisterMode mode)
+HRESULT DllUnregister(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
 {
 	HRESULT result = S_OK;
 
 	result = UnRegisterCOMAddin(officeApplication, progId);
 	if (S_OK == result)
-		result = UnregisterCOMComponent(officeApplication, progId, classId, mode);
+		result = UnregisterCOMComponent(officeApplication, progId, classId, version, mode);
 
 	return result;
 }

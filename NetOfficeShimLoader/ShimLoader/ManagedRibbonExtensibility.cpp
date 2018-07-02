@@ -67,8 +67,8 @@ STDMETHODIMP ManagedRibbonExtensibility::GetCustomUI(BSTR RibbonID, BSTR* Ribbon
 STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfoCount(UINT* pctinfo)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
-	if (hr == S_OK)
+	HRESULT hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+	if (SUCCEEDED(hr))
 	{
 		hr = dispatch->GetTypeInfoCount(pctinfo);
 		dispatch->Release();
@@ -79,8 +79,8 @@ STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfoCount(UINT* pctinfo)
 STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
-	if (hr == S_OK)
+	HRESULT hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+	if (SUCCEEDED(hr))
 	{
 		hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
 		dispatch->Release();
@@ -91,8 +91,8 @@ STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfo(UINT iTInfo, LCID lcid, ITy
 STDMETHODIMP ManagedRibbonExtensibility::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
-	if (hr == S_OK)
+	HRESULT hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+	if (SUCCEEDED(hr))
 	{
 		hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
 		dispatch->Release();
@@ -103,8 +103,8 @@ STDMETHODIMP ManagedRibbonExtensibility::GetIDsOfNames(REFIID riid, LPOLESTR* rg
 STDMETHODIMP ManagedRibbonExtensibility::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
 {
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(__uuidof(IDispatch), (LPVOID*)&dispatch);
-	if (hr == S_OK)
+	HRESULT hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+	if (SUCCEEDED(hr))
 	{
 		hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
 		dispatch->Release();
@@ -136,7 +136,7 @@ STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IDispatch*>(this);
 		hr = S_OK;
 	}
-	else if ((__uuidof(IRibbonExtensibility) == riid))
+	else if ((IID_IRibbonExtensibility == riid))
 	{
 		*ppv = static_cast<IRibbonExtensibility*>(this);
 		hr = S_OK;
