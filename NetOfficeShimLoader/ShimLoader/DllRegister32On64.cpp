@@ -85,17 +85,17 @@ namespace ShimLoader_Register32On64
 				return S_FALSE;
 
 			// HKEY_CLASSES_ROOT IID
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, NULL, NULL, NULL, progId))
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, NULL, NULL, NULL, progId))
 				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", NULL, L"ThreadingModel", L"Apartment"))
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", NULL, L"ThreadingModel", L"Apartment"))
 				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", NULL, NULL, moduleFullFileName))
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", NULL, NULL, moduleFullFileName))
 				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", version, L"ThreadingModel", L"Apartment"))
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", version, L"ThreadingModel", L"Apartment"))
 				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", version, NULL, moduleFullFileName))
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", version, NULL, moduleFullFileName))
 				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"ProgId", NULL, NULL, progId))
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"ProgId", NULL, NULL, progId))
 				return S_FALSE;
 		}
 
@@ -116,7 +116,7 @@ namespace ShimLoader_Register32On64
 		{
 			if (ERROR_SUCCESS != RecursiveDeleteKey(HKEY_CLASSES_ROOT, progId))
 				result = E_FAIL;
-			if (ERROR_SUCCESS != RecursiveDeleteKey(HKEY_CLASSES_ROOT, L"CLSID", progId))
+			if (ERROR_SUCCESS != RecursiveDeleteKey(HKEY_CLASSES_ROOT, L"CLSID", classId))
 				result = E_FAIL;
 		}
 
