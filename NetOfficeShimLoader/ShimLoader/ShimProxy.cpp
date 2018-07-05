@@ -9,15 +9,19 @@
 ShimProxy::ShimProxy()
 {
 	_refCounter = 0;
+	_updateAggregator = nullptr;
 	_loader = nullptr;
 	_ribbonExtensibility = nullptr;
 	_paneConsumer = nullptr;
 	_components++;
 
 	// load the CLR here because host application may call QueryInterface before OnConnection
-	_updateAggregator = new OuterUpdateAggregator(this);
-	_loader = new (std::nothrow) ClrHost(_updateAggregator);
-	_loader->Load();
+	if (ENABLE_SHIM)
+	{
+		_updateAggregator = new OuterUpdateAggregator(this);
+		_loader = new (std::nothrow) ClrHost(_updateAggregator);
+		_loader->Load();
+	}
 }
 
 ShimProxy::~ShimProxy()
@@ -67,20 +71,29 @@ STDMETHODIMP ShimProxy::Cleanup()
 STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom)
 {
 	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
-	if (IsCLRLoaded())
-	{
-		IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(application, connectMode, addInInst, custom));
-	}
-	else if(_loader)
-	{
-		delete _loader;
-		_loader = nullptr;
-	}
 
-	return hr;
+	try
+	{
+		if (ENABLE_SHIM && IsCLRLoaded())
+		{
+			IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(application, connectMode, addInInst, custom));
+		}
+		else if (_loader)
+		{
+			delete _loader;
+			_loader = nullptr;
+		}
+
+		return hr;
+	}
+	catch (...)
+	{
+		MessageBox(GetDesktopWindow(), L"Error", L"OnConnection", 0);
+		hr = E_FAIL;
+	}
 
 Error:
-
+	MessageBox(GetDesktopWindow(), L"Fail", L"OnConnection", 0);
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -88,16 +101,25 @@ Error:
 STDMETHODIMP ShimProxy::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom)
 {
 	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
-	if (IsCLRLoaded())
-	{
-		IfFailGo(_loader->OuterAggregator()->Addin()->OnDisconnection(removeMode, custom));
-	}
-	// no cleanup call here because host application may still holds IUnkown Pointer to ribbon/taskpane/etc.
 
-	return hr;
+	try
+	{
+		if (ENABLE_SHIM && IsCLRLoaded())
+		{
+			IfFailGo(_loader->OuterAggregator()->Addin()->OnDisconnection(removeMode, custom));
+		}
+		// no cleanup call here because host application may still holds IUnkown Pointer to ribbon/taskpane/etc.
+
+		return hr;
+	}
+	catch (...)
+	{
+		MessageBox(GetDesktopWindow(), L"Error", L"OnDisconnection", 0);
+		hr = E_FAIL;
+	}
 
 Error:
-
+	MessageBox(GetDesktopWindow(), L"Fail", L"OnDisconnection", 0);
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -105,15 +127,24 @@ Error:
 STDMETHODIMP ShimProxy::OnAddInsUpdate(LPSAFEARRAY* custom)
 {
 	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
-	if (IsCLRLoaded())
+
+	try
 	{
-		IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(custom));
+		if (ENABLE_SHIM && IsCLRLoaded())
+		{
+			IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(custom));
+		}
+	}
+	catch (...)
+	{
+		MessageBox(GetDesktopWindow(), L"Error", L"OnAddInsUpdate", 0);
+		hr = E_FAIL;
 	}
 
 	return hr;
 
 Error:
-
+	MessageBox(GetDesktopWindow(), L"Fail", L"OnAddInsUpdate", 0);
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -121,15 +152,24 @@ Error:
 STDMETHODIMP ShimProxy::OnStartupComplete(LPSAFEARRAY* custom)
 {
 	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
-	if (IsCLRLoaded())
+
+	try
 	{
-		IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(custom));
+		if (ENABLE_SHIM && IsCLRLoaded())
+		{
+			IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(custom));
+		}
+	}
+	catch (...)
+	{
+		MessageBox(GetDesktopWindow(), L"Error", L"OnStartupComplete", 0);
+		hr = E_FAIL;
 	}
 
 	return hr;
 
 Error:
-
+	MessageBox(GetDesktopWindow(), L"Fail", L"OnStartupComplete", 0);
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -137,15 +177,25 @@ Error:
 STDMETHODIMP ShimProxy::OnBeginShutdown(LPSAFEARRAY* custom)
 {
 	HRESULT hr = EXTENSIBILITY_DEFAULT_RESULT;
-	if (IsCLRLoaded())
+
+	try
 	{
-		IfFailGo(_loader->OuterAggregator()->Addin()->OnBeginShutdown(custom));
+		if (ENABLE_SHIM && IsCLRLoaded())
+		{
+			IfFailGo(_loader->OuterAggregator()->Addin()->OnBeginShutdown(custom));
+		}
+
+	}
+	catch (...)
+	{
+		MessageBox(GetDesktopWindow(), L"Error", L"OnBeginShutdown", 0);
+		hr = E_FAIL;
 	}
 
 	return hr;
 
 Error:
-
+	MessageBox(GetDesktopWindow(), L"Fail", L"OnBeginShutdown", 0);
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -250,7 +300,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IDTExtensibility2*>(this);
 		hr = S_OK;
 	}
-	else if ((IID_IRibbonExtensibility == riid) && (_loader && _loader->IsLoaded()))
+	else if (ENABLE_SHIM && (IID_IRibbonExtensibility == riid) && (_loader && _loader->IsLoaded()))
 	{
 		// wrap and cache to encapsulate from host application
 		// this is to prevent conflicts when reload the CLR on the fly
@@ -273,7 +323,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 			hr = S_OK;
 		}
 	}
-	else if ((IID_ICustomTaskPaneConsumer == riid) && (_loader && _loader->IsLoaded()))
+	else if (ENABLE_SHIM && (IID_ICustomTaskPaneConsumer == riid) && (_loader && _loader->IsLoaded()))
 	{
 		// wrap and cache to encapsulate from host application
 		// this is to prevent conflicts when reload the CLR on the fly
@@ -296,7 +346,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 			hr = S_OK;
 		}
 	}
-	else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && IsCLRLoaded())
+	else if (ENABLE_SHIM && (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && IsCLRLoaded()))
 	{
 		// blind aggregation means the inner pointer is not bridged by the shim
 		// so we can not reload the CLR on the fly because host application is not aware of the

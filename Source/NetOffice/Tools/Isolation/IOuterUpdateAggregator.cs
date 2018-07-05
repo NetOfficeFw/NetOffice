@@ -11,8 +11,8 @@ namespace NetOffice.Tools.Isolation
     /// <summary>
     ///  Represents an outer aggregator by a shim that handle update/reload possibilites
     /// </summary>
-    [ComImport, Guid("F7BCF161-FCB2-4880-9C33-78C456B1F291")]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+    [ComImport, Guid("F7BCF161-FCB2-4880-9C33-78C456B1F291")]
     public interface IOuterUpdateAggregator
     {
         /// <summary>

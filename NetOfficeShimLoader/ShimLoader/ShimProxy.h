@@ -1,5 +1,6 @@
 #pragma once
 #include "stdAfx.h"
+#include "Vars.hpp"
 #include "ClrHost.h"
 #include "Aggregators.h"
 #include "IShimProxy.hpp"

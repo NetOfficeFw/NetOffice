@@ -7,7 +7,7 @@ using NetOffice.PowerPointApi;
 namespace NetOffice.PowerPointApi.Behind
 {
 	/// <summary>
-	/// DispatchInterface DocumentWindow 
+	/// DispatchInterface DocumentWindow
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
@@ -60,7 +60,7 @@ namespace NetOffice.PowerPointApi.Behind
         }
         
         #endregion
-        
+
 		#region Ctor
 
 		/// <summary>
@@ -72,7 +72,7 @@ namespace NetOffice.PowerPointApi.Behind
 		}
 
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>

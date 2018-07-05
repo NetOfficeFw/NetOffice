@@ -12,8 +12,8 @@ namespace NetOffice.Tools.Isolation
     /// <summary>
     ///  Represents an inner aggregator by a managed addin
     /// </summary>
-    [ComImport, Guid("FBA7450D-B6E0-4E5C-908D-396BEFFC1D9B")]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+    [ComImport, Guid("FBA7450D-B6E0-4E5C-908D-396BEFFC1D9B")]
     public interface IManagedInnerAggregator
     {
         /// <summary>

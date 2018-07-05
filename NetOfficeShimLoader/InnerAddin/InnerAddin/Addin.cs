@@ -14,6 +14,7 @@ using NetOffice.OfficeApi.Tools;
 using VBIDE = NetOffice.VBIDEApi;
 using NetOffice.VBIDEApi.Enums;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace InnerAddin
 {
@@ -58,7 +59,7 @@ namespace InnerAddin
         protected override bool QueryInterface(Guid interfaceId, ref Type type, ref object instance)
         {
             var iids = new NetOffice.ComTypes.WellKnownIID();
-            //MessageBox.Show("QueryInterface " + iids.GetIID(interfaceId));
+            Trace.WriteLine("QueryInterface " + iids.GetIID(interfaceId));
 
             if(iids.IID_IRibbonExtensibility == interfaceId)
             {
@@ -68,15 +69,8 @@ namespace InnerAddin
             }
             else if (iids.IID_ICustomTaskPaneConsumer == interfaceId)
             {
-                //MessageBox.Show("QueryInterface " + iids.GetIID(interfaceId));
-
                 type = typeof(NetOffice.OfficeApi.Native.ICustomTaskPaneConsumer);
                 instance = new MyCustomTaskPaneConsumer(this);
-                return true;
-            }
-            else if (interfaceId == Guid.Parse("e19c7100-9709-4db7-9373-e7b518b47086"))
-            {
-                //MessageBox.Show("QueryInterface decline " + iids.GetIID(interfaceId));
                 return true;
             }
             else
@@ -89,11 +83,6 @@ namespace InnerAddin
 		{
             MessageBox.Show(exception.ToString(), methodKind.ToString());
 		}
-
-        public void SampleButton_Click(Office.IRibbonControl control)
-        {
-            MessageBox.Show("Thanks!", "InnerAddin.Addin");
-        }
 
         [RegisterErrorHandler]
 		public static void RegisterErrorHandler(RegisterErrorMethodKind methodKind, System.Exception exception)

@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace Excel02AddinCS4
 {
-    public partial class SamplePane : UserControl, NetOffice.ExcelApi.Tools.ITaskPane // Not necessary to implement ITaskPane but its helpful
+    public partial class SamplePane : UserControl, NetOffice.OfficeApi.Tools.ITaskPane // Not necessary to implement ITaskPane but its helpful
     {
         #region Ctor
 
@@ -24,7 +24,7 @@ namespace Excel02AddinCS4
 
         #region ITaskpane
 
-        public void OnConnection(NetOffice.ExcelApi.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
+        public void OnConnection(NetOffice.ICOMObject application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
         {
             Addin parentAddin = customArguments[0] as Addin;
         }
