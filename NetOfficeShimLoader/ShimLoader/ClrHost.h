@@ -27,6 +27,7 @@ public:
 	OuterComAggregator* OuterAggregator();
 	HRESULT Load();
 	HRESULT Unload();
+	HRESULT LastLoadError();
 
 protected:
 
@@ -40,5 +41,6 @@ private:
 	IOuterUpdateAggregator*		_outerUpdateAggregator;
 	BOOL						_isLoaded;
 	IOuterUpdateAggregator*		_updateAggregator;
+	HRESULT						_lastLoadError;
 
 };

@@ -33,7 +33,7 @@ static const LPCWSTR ManagedAggregator_ClassName = L"NetOffice.Tools.Isolation.M
 //
 static const BOOL ENABLE_SHIM = TRUE;
 static const BOOL ENABLE_SELF_REGISTRATION = TRUE;
-static const int SELF_REGISTER_MODE = 0;
+static const int SELF_REGISTER_MODE = 2;
 static const BOOL ENABLE_BLIND_AGGREGATION = FALSE;
 static const BOOL ENABLE_OUTER_UPDATE_AGGREGATOR = TRUE;
 

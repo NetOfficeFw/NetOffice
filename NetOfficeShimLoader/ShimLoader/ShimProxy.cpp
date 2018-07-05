@@ -83,6 +83,11 @@ STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode con
 			delete _loader;
 			_loader = nullptr;
 		}
+		if (ENABLE_SHIM && !IsCLRLoaded())
+		{
+			hr = E_FAIL;
+			goto Error;
+		}
 
 		return hr;
 	}
@@ -300,7 +305,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 		*ppv = static_cast<IDTExtensibility2*>(this);
 		hr = S_OK;
 	}
-	else if (ENABLE_SHIM && (IID_IRibbonExtensibility == riid) && (_loader && _loader->IsLoaded()))
+	else if (ENABLE_SHIM && (IID_IRibbonExtensibility == riid) && IsCLRLoaded())
 	{
 		// wrap and cache to encapsulate from host application
 		// this is to prevent conflicts when reload the CLR on the fly
@@ -323,7 +328,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 			hr = S_OK;
 		}
 	}
-	else if (ENABLE_SHIM && (IID_ICustomTaskPaneConsumer == riid) && (_loader && _loader->IsLoaded()))
+	else if (ENABLE_SHIM && (IID_ICustomTaskPaneConsumer == riid) && IsCLRLoaded())
 	{
 		// wrap and cache to encapsulate from host application
 		// this is to prevent conflicts when reload the CLR on the fly

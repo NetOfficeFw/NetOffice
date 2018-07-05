@@ -8770,7 +8770,7 @@
         </member>
         <member name="T:NetOffice.PowerPointApi.Behind.DocumentWindow">
             <summary>
-            DispatchInterface DocumentWindow 
+            DispatchInterface DocumentWindow
             SupportByVersion PowerPoint, 9,10,11,12,14,15,16
             </summary>
         </member>
@@ -41138,7 +41138,7 @@
         </member>
         <member name="T:NetOffice.PowerPointApi.DocumentWindow">
             <summary>
-            DispatchInterface DocumentWindow 
+            DispatchInterface DocumentWindow
             SupportByVersion PowerPoint, 9,10,11,12,14,15,16
             </summary>
         </member>

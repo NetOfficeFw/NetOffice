@@ -13,8 +13,10 @@ namespace ShimLoader_Register64
 	HKEY TargetRootKey(RegisterMode mode);
 	void ProgIdSubKey(LPCWSTR progId, RegisterMode mode, WCHAR* progIdKey);
 	void ClassIdSubKey(LPCWSTR classId, RegisterMode mode, WCHAR* classIdKey);
-	BOOL SetKeyAndValue(HKEY hKeyRoot, LPCWSTR pszPath, LPCWSTR pszSubkey1, LPCWSTR pszSubkey2, LPCWSTR pszvalueName, LPCWSTR pszValue);
+	BOOL SetKeyAndValue(HKEY hKeyRoot, LPCWSTR pszPath, LPCWSTR pszSubkey1, LPCWSTR pszSubkey2, LPCWSTR pszSubkey3, LPCWSTR pszvalueName, LPCWSTR pszValue);
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild);
+	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2);
+	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2, LPCWSTR pszKeyChild3);
 
 	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplication, DWORD addinLoadBehavior, DWORD addinCommandLineSafe, LPCWSTR progId, LPCWSTR classId, LPCWSTR friendlyName, LPCWSTR description, LPCWSTR version, RegisterMode mode)
 	{
@@ -55,36 +57,47 @@ namespace ShimLoader_Register64
 		ProgIdSubKey(progId, mode, progIdKey);
 
 		// Target Key ProgId
-		if (!SetKeyAndValue(targetRootKey, progIdKey, NULL, NULL, NULL, progId))
+		if (!SetKeyAndValue(targetRootKey, progIdKey, NULL, NULL, NULL, NULL, progId))
 			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, progIdKey, L"CLSID", NULL, NULL, classId))
+		if (!SetKeyAndValue(targetRootKey, progIdKey, L"CLSID", NULL, NULL, NULL, classId))
 			return S_FALSE;
 
 		// Target Key IID
-		if (!SetKeyAndValue(targetRootKey, classIdKey, NULL, NULL, NULL, progId))
+		if (!SetKeyAndValue(targetRootKey, classIdKey, NULL, NULL, NULL, NULL, progId))
 			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", NULL, NULL, moduleFullFileName))
+		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", NULL, NULL, L"ThreadingModel", L"Apartment"))
 			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", NULL, L"ThreadingModel", L"Apartment"))
+		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", NULL, NULL, NULL, moduleFullFileName))
 			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, classIdKey, L"ProgId", NULL, L"", progId))
+		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", version, NULL, L"ThreadingModel", L"Apartment"))
 			return S_FALSE;
-
-		// HKEY_CLASSES_ROOT ProgId
-		if (!SetKeyAndValue(HKEY_CLASSES_ROOT, progId, NULL, NULL, NULL, progId))
+		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", version, NULL, NULL, moduleFullFileName))
 			return S_FALSE;
-		if (!SetKeyAndValue(HKEY_CLASSES_ROOT, progId, L"CLSID", NULL, NULL, classId))
+		if (!SetKeyAndValue(targetRootKey, classIdKey, L"ProgId", NULL, NULL, NULL, progId))
 			return S_FALSE;
 
-		// HKEY_CLASSES_ROOT IID
-		if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, NULL, NULL, progId))
-			return S_FALSE;
-		if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", NULL, moduleFullFileName))
-			return S_FALSE;
-		if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", L"ThreadingModel", L"Apartment"))
-			return S_FALSE;
-		if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"ProgId", NULL, progId))
-			return S_FALSE;
+		if (mode != User)
+		{
+			// HKEY_CLASSES_ROOT ProgId
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, progId, NULL, NULL, NULL, NULL, progId))
+				return S_FALSE;
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, progId, L"CLSID", NULL, NULL, NULL, classId))
+				return S_FALSE;
+
+			// HKEY_CLASSES_ROOT IID
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, NULL, NULL, NULL, progId))
+				return S_FALSE;
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", NULL, L"ThreadingModel", L"Apartment"))
+				return S_FALSE;
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", NULL, NULL, moduleFullFileName))
+				return S_FALSE;
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", version, L"ThreadingModel", L"Apartment"))
+				return S_FALSE;
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"InprocServer32", version, NULL, moduleFullFileName))
+				return S_FALSE;
+			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", progId, L"ProgId", NULL, NULL, progId))
+				return S_FALSE;
+		}
 
 		return result;
 	}
@@ -99,10 +112,17 @@ namespace ShimLoader_Register64
 		WCHAR progIdKey[512];
 		ProgIdSubKey(progId, mode, progIdKey);
 
-		if (ERROR_SUCCESS != RecursiveDeleteKey(HKEY_CLASSES_ROOT, progId))
-			result = E_FAIL;
+		if (mode != User)
+		{
+			if (ERROR_SUCCESS != RecursiveDeleteKey(HKEY_CLASSES_ROOT, progId))
+				result = E_FAIL;
+			if (ERROR_SUCCESS != RecursiveDeleteKey(HKEY_CLASSES_ROOT, L"CLSID", progId))
+				result = E_FAIL;
+		}
+
 		if (ERROR_SUCCESS != RecursiveDeleteKey(hKeyRoot, classIdKey))
 			result = E_FAIL;
+
 		if (ERROR_SUCCESS != RecursiveDeleteKey(hKeyRoot, progIdKey))
 			result = E_FAIL;
 
@@ -199,9 +219,10 @@ namespace ShimLoader_Register64
 	void ProgIdSubKey(LPCWSTR progId, RegisterMode mode, WCHAR* progIdKey)
 	{
 		lstrcpy(progIdKey, L"Software\\Classes\\");
+		lstrcat(progIdKey, progId);
 	}
 
-	BOOL SetKeyAndValue(HKEY hKeyRoot, LPCWSTR pszPath, LPCWSTR pszSubkey1, LPCWSTR pszSubkey2, LPCWSTR pszvalueName, LPCWSTR pszValue)
+	BOOL SetKeyAndValue(HKEY hKeyRoot, LPCWSTR pszPath, LPCWSTR pszSubkey1, LPCWSTR pszSubkey2, LPCWSTR pszSubkey3, LPCWSTR pszvalueName, LPCWSTR pszValue)
 	{
 		HKEY hKey;
 		WCHAR szKeyBuf[1024];
@@ -217,6 +238,11 @@ namespace ShimLoader_Register64
 		{
 			lstrcat(szKeyBuf, L"\\");
 			lstrcat(szKeyBuf, pszSubkey2);
+		}
+		if (pszSubkey3 != NULL)
+		{
+			lstrcat(szKeyBuf, L"\\");
+			lstrcat(szKeyBuf, pszSubkey3);
 		}
 
 		// if its return 5 - E_ACCESS_DENIED
@@ -235,6 +261,26 @@ namespace ShimLoader_Register64
 
 		RegCloseKey(hKey);
 		return TRUE;
+	}
+
+	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2)
+	{
+		WCHAR szKeyBuf[1024];
+		lstrcpy(szKeyBuf, pszKeyChild);
+		lstrcat(szKeyBuf, L"\\");
+		lstrcat(szKeyBuf, pszKeyChild2);
+		return RecursiveDeleteKey(hKeyParent, szKeyBuf);
+	}
+
+	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2, LPCWSTR pszKeyChild3)
+	{
+		WCHAR szKeyBuf[1024];
+		lstrcpy(szKeyBuf, pszKeyChild);
+		lstrcat(szKeyBuf, L"\\");
+		lstrcat(szKeyBuf, pszKeyChild2);
+		lstrcat(szKeyBuf, L"\\");
+		lstrcat(szKeyBuf, pszKeyChild3);
+		return RecursiveDeleteKey(hKeyParent, szKeyBuf);
 	}
 
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild)

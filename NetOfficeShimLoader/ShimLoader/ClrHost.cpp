@@ -13,6 +13,7 @@ static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize);
 ClrHost::ClrHost(IOuterUpdateAggregator* updateAggregator) : _runtimeHost(NULL), _appDomain(NULL), _outerAggregator(NULL)
 {
 	_isLoaded = false;
+	_lastLoadError = S_OK;
 	_updateAggregator = updateAggregator;
 	_components++;
 }
@@ -110,6 +111,7 @@ HRESULT ClrHost::Load()
 
 Error:
 
+	_lastLoadError = hr;
 	_runtimeHost = runtimeHost;
 	Unload();
 	return hr;
@@ -155,6 +157,11 @@ HRESULT ClrHost::Unload()
 	_isLoaded = false;
 
 	return hr;
+}
+
+HRESULT ClrHost::LastLoadError()
+{
+	return _lastLoadError;
 }
 
 HRESULT ClrHost::AppendPath(LPWSTR pszPath, LPCWSTR pszMore)
