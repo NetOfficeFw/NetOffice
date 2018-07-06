@@ -255,8 +255,6 @@
     <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
     <Compile Include="Attributes\CustomMethodAttribute.cs" />
     <Compile Include="Tools\COMAddinBase.cs" />
-    <Compile Include="Tools\CustomPaneAttribute.cs" />
-    <Compile Include="Tools\CustomUIAttribute.cs" />
     <Compile Include="Attributes\NetOfficeAssemblyAttribute.cs" />
     <Compile Include="Tools\ErrorMethodKind.cs" />
     <Compile Include="Tools\RegisterErrorHandlerAttribute.cs" />

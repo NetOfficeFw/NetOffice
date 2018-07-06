@@ -289,11 +289,11 @@ namespace NetOffice.OutlookApi.Tools
                 }
                 else
                 {
-                    CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, ribbonID);
-                    if (null != ribbon)
+                    var ribbon = NetOffice.Attributes.AttributeExtensions.GetCustomAttribute<CustomUIAttribute>(Type);
+                    if (null != ribbon && CustomUIAttribute.ContainsProcessedRibbonId(ribbon, ribbon.RibbonID))
                         return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                     else
-                        return String.Empty;
+                        return string.Empty;
                 }
             }
             catch (NetRuntimeSystem.Exception exception)

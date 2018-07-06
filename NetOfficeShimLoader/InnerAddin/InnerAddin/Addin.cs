@@ -27,7 +27,12 @@ namespace InnerAddin
 	{
 		public Addin()
 		{
+            AppDomain.CurrentDomain.DomainUnload += CurrentDomain_DomainUnload;
+        }
 
+        private void CurrentDomain_DomainUnload(object sender, EventArgs e)
+        {
+            Trace.WriteLine("CurrentDomain_DomainUnload");
         }
 
         public bool HasShimHost

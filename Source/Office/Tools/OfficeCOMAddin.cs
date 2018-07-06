@@ -7,6 +7,7 @@ using System.IO;
 using NetOffice.Tools;
 using Office = NetOffice.OfficeApi;
 using System.Runtime.CompilerServices;
+using System.Linq;
 
 namespace NetOffice.OfficeApi.Tools
 {
@@ -87,7 +88,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
-        protected CustomTaskPaneCollection TaskPanes { get; private set; }
+        public CustomTaskPaneCollection TaskPanes { get; private set; }
 
         /// <summary>
         /// ITaskPane Instances
@@ -366,8 +367,8 @@ namespace NetOffice.OfficeApi.Tools
         /// <returns>XML content or String.Empty</returns>
         protected internal virtual string OnGetCustomUI(string ribbonID)
         {
-            CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, ribbonID);
-            if (null != ribbon)
+            var ribbon = NetOffice.Attributes.AttributeExtensions.GetCustomAttribute<CustomUIAttribute>(Type);
+            if (null != ribbon && ribbon.RibbonIDs.Contains(ribbonID))
                 return ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
             else
                 return string.Empty;
@@ -426,7 +427,7 @@ namespace NetOffice.OfficeApi.Tools
         protected internal virtual void OnCTPFactoryAvailable(OfficeApi.ICTPFactory ctpFactoryInst)
         {
             CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
-            paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
+            paneHandler.ProceedCustomPaneAttributes(Factory, ctpFactoryInst, TaskPanes, OnError, Application, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
             paneHandler.CreateCustomPanes(Factory, ctpFactoryInst, TaskPanes, OnError, Application);
         }
 

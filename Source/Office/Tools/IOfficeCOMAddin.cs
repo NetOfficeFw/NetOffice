@@ -25,5 +25,10 @@ namespace NetOffice.OfficeApi.Tools
         /// Instance Type (cached)
         /// </summary>
         Type Type { get; }
+
+        /// <summary>
+        /// Collection with all created custom Task Panes
+        /// </summary>
+        CustomTaskPaneCollection TaskPanes { get; }
     }
 }

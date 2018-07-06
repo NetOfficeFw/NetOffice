@@ -27620,6 +27620,280 @@
             <param name="applicationType">target value to convert</param>
             <returns>System.String</returns>
         </member>
+        <member name="T:NetOffice.OfficeApi.Tools.PaneDockPosition">
+            <summary>
+            Pane Dock Position
+             SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPosition.msoCTPDockPositionLeft">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPosition.msoCTPDockPositionTop">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPosition.msoCTPDockPositionRight">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPosition.msoCTPDockPositionBottom">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPosition.msoCTPDockPositionFloating">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="T:NetOffice.OfficeApi.Tools.PaneDockPositionRestrict">
+            <summary>
+            Pane Dock Restrictions
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPositionRestrict.msoCTPDockPositionRestrictNone">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPositionRestrict.msoCTPDockPositionRestrictNoHorizontal">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical">
+            <summary>
+            SupportByVersion Office 12, 14, 15, 16
+            </summary>
+        </member>
+        <member name="T:NetOffice.OfficeApi.Tools.PaneCreation">
+             <summary>
+            
+             SupportByVersion Office 12, 14, 15, 16
+             </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneCreation.AutomaticallyAtStartup">
+            <summary>
+            Create pane automatically while addin startup
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.PaneCreation.Manually">
+            <summary>
+            Create pane at hand using the TaskpaneInfo->Create method.
+            Attributed panes are available in the addin instance property Taskpanes.
+            </summary>
+        </member>
+        <member name="T:NetOffice.OfficeApi.Tools.CustomPaneAttribute">
+            <summary>
+            Specify a custom task pane
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomPaneAttribute.PaneType">
+            <summary>
+            Type of the custom task pane
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomPaneAttribute.Title">
+            <summary>
+            Pane Title (Default is Pane Type Name)
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomPaneAttribute.Visible">
+            <summary>
+            Pane Visibility (Default is true)
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomPaneAttribute.DockPosition">
+            <summary>
+            Pane dock alignment direction (Default is Right)
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomPaneAttribute.DockPositionRestrict">
+            <summary>
+            Pane dock alignment restriction (Default is None)
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomPaneAttribute.Width">
+            <summary>
+            Pane Width (Default is 150)
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomPaneAttribute.Height">
+            <summary>
+            Pane Height (Default is 150)
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomPaneAttribute.Creation">
+            <summary>
+            Pane Creation Mode
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="paneType">type of the custom task pane</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="paneType">type of the custom task pane</param>
+            <param name="title">pane caption</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type,System.String,System.Boolean)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="paneType">type of the custom task pane</param>
+            <param name="title">pane caption</param>
+            <param name="visible">pane visibility</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type,System.String,System.Boolean,NetOffice.OfficeApi.Tools.PaneCreation)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="paneType">type of the custom task pane</param>
+            <param name="title">pane caption</param>
+            <param name="visible">pane visibility</param>
+            <param name="creation">pane creation mode</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type,System.String,System.Boolean,NetOffice.OfficeApi.Tools.PaneDockPosition)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="title">pane caption</param>
+            <param name="visible">pane visibility</param>
+            <param name="paneType">type of the custom task pane</param>
+            <param name="dockPosition">pane dock alignment direction</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type,System.String,System.Boolean,NetOffice.OfficeApi.Tools.PaneDockPosition,NetOffice.OfficeApi.Tools.PaneDockPositionRestrict)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="paneType">type of the custom task pane</param>
+            <param name="title">pane caption</param>
+            <param name="visible">pane visibility</param>
+            <param name="dockPosition">pane dock alignment direction</param>
+            <param name="restriction">pane dock alignment restriction</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type,System.String,System.Boolean,NetOffice.OfficeApi.Tools.PaneDockPosition,NetOffice.OfficeApi.Tools.PaneDockPositionRestrict,NetOffice.OfficeApi.Tools.PaneCreation)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="paneType">type of the custom task pane</param>
+            <param name="title">pane caption</param>
+            <param name="visible">pane visibility</param>
+            <param name="dockPosition">pane dock alignment direction</param>
+            <param name="restriction">pane dock alignment restriction</param>
+            <param name="creation">pane creation mode</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type,System.String,System.Boolean,NetOffice.OfficeApi.Tools.PaneDockPosition,NetOffice.OfficeApi.Tools.PaneDockPositionRestrict,System.Int32,System.Int32)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="paneType">type of the custom task pane</param>
+            <param name="title">pane caption</param>
+            <param name="visible">pane visibility</param>
+            <param name="dockPosition">pane dock alignment direction</param>
+            <param name="restriction">pane dock alignment restriction</param>
+            <param name="width">pane width</param>
+            <param name="height">pane height</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomPaneAttribute.#ctor(System.Type,System.String,System.Boolean,NetOffice.OfficeApi.Tools.PaneDockPosition,NetOffice.OfficeApi.Tools.PaneDockPositionRestrict,System.Int32,System.Int32,NetOffice.OfficeApi.Tools.PaneCreation)">
+            <summary>
+            Creates an instance of the Attribute
+            </summary>
+            <param name="paneType">type of the custom task pane</param>
+            <param name="title">pane caption</param>
+            <param name="visible">pane visibility</param>
+            <param name="dockPosition">pane dock alignment direction</param>
+            <param name="restriction">pane dock alignment restriction</param>
+            <param name="width">pane width</param>
+            <param name="height">pane height</param>
+            <param name="creation">pane creation mode</param>
+        </member>
+        <member name="T:NetOffice.OfficeApi.Tools.CustomUIAttribute">
+            <summary>
+            Specify an embedded XML File for RibbonUI
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomUIAttribute.Value">
+            <summary>
+            Full qualified location
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomUIAttribute.RibbonID">
+            <summary>
+            Target ribbon id(s) - comma separated or empty as wildcard
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomUIAttribute.UseAssemblyNamespace">
+            <summary>
+            Use root namespace of the calling instance
+            </summary>
+        </member>
+        <member name="F:NetOffice.OfficeApi.Tools.CustomUIAttribute.RibbonIDs">
+            <summary>
+            Processed Ribbon ID's
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomUIAttribute.#ctor(System.String)">
+            <summary>
+            Creates an instance of the attribute
+            </summary>
+            <param name="value">Full qualified location</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomUIAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Creates an instance of the attribute
+            </summary>
+            <param name="ribbonID">target ribbon id(s) - comma separated or empty as wildcard</param>
+            <param name="value">Full qualified location</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomUIAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates an instance of the attribute
+            </summary>
+            <param name="value">Full qualified location</param>
+            <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomUIAttribute.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Creates an instance of the attribute
+            </summary>
+            <param name="ribbonID">target ribbon id(s) - comma separated or empty as wildcard</param>
+            <param name="value">Full qualified location</param>
+            <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomUIAttribute.BuildPath(System.String,System.Boolean,System.String)">
+            <summary>
+            Build resource path with attribute values
+            </summary>
+            <param name="resourcePath">resource path</param>
+            <param name="useAssemblyNamespace">use assembly namespace</param>
+            <param name="assemblyNamespace">root assembly namespace</param>
+            <returns>return resource path</returns>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.CustomUIAttribute.ContainsProcessedRibbonId(NetOffice.OfficeApi.Tools.CustomUIAttribute,System.String)">
+            <summary>
+            Determines the attribute contains a processed ribbon id
+            </summary>
+            <param name="attribute">target attribute</param>
+            <param name="ribbonid">target ribbon id</param>
+            <returns>true if set, otherwise false</returns>
+        </member>
         <member name="T:NetOffice.OfficeApi.Tools.OfficeCOMAddin">
             <summary>
             Represents common addin services
@@ -27940,11 +28214,6 @@
             TaskPaneFactory to create custom task panes
             </summary>
         </member>
-        <member name="P:NetOffice.OfficeApi.Tools.CustomTaskPaneConsumer.TaskPanes">
-            <summary>
-            Collection with all created custom Task Panes
-            </summary>
-        </member>
         <member name="P:NetOffice.OfficeApi.Tools.CustomTaskPaneConsumer.TaskPaneInstances">
             <summary>
             ITaskPane Instances
@@ -28027,11 +28296,15 @@
             Manage Taskpane creation process
             </summary>
         </member>
-        <member name="M:NetOffice.OfficeApi.Tools.CustomTaskPaneHandler.ProceedCustomPaneAttributes(NetOffice.OfficeApi.Tools.CustomTaskPaneCollection,System.Type,NetOffice.OfficeApi.Tools.IOfficeCOMAddin,NetOffice.OfficeApi.Tools.CallOnCreateTaskPaneInfoHandler,NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler,NetOffice.OfficeApi.CustomTaskPane_DockPositionStateChangeEventHandler)">
+        <member name="M:NetOffice.OfficeApi.Tools.CustomTaskPaneHandler.ProceedCustomPaneAttributes(NetOffice.Core,NetOffice.OfficeApi.ICTPFactory,NetOffice.OfficeApi.Tools.CustomTaskPaneCollection,NetOffice.Tools.OnErrorHandler,NetOffice.ICOMObject,System.Type,NetOffice.OfficeApi.Tools.IOfficeCOMAddin,NetOffice.OfficeApi.Tools.CallOnCreateTaskPaneInfoHandler,NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler,NetOffice.OfficeApi.CustomTaskPane_DockPositionStateChangeEventHandler)">
             <summary>
             Analyze COMAddin custom taskpane attributes
             </summary>
+            <param name="factory">current used factory</param>
+            <param name="taskPaneFactory">taskpane creator given from office application</param>
             <param name="taskPanes">taskpanes you want to create</param>
+            <param name="onError">Error callback if somthings fails</param>
+            <param name="application">host application in base definition</param>
             <param name="addinType">addin class type informations</param>
             <param name="addin">addin instance</param>
             <param name="callOnCreateTaskPaneInfo">callback to manipulate the process dynamicly</param>
@@ -28951,6 +29224,11 @@
         <member name="P:NetOffice.OfficeApi.Tools.IOfficeCOMAddin.Type">
             <summary>
             Instance Type (cached)
+            </summary>
+        </member>
+        <member name="P:NetOffice.OfficeApi.Tools.IOfficeCOMAddin.TaskPanes">
+            <summary>
+            Collection with all created custom Task Panes
             </summary>
         </member>
         <member name="T:NetOffice.OfficeApi.Tools.Contribution.ColorUtils">
@@ -32946,12 +33224,13 @@
             Wrapper class for CustomTaskPane instance, also used as creation definition if its create before CTPFactoryAvailable is called from MS-Office host application. (Best use in .ctor for creation definition)
             </summary>
         </member>
-        <member name="M:NetOffice.OfficeApi.Tools.TaskPaneInfo.#ctor(System.Type,System.String)">
+        <member name="M:NetOffice.OfficeApi.Tools.TaskPaneInfo.#ctor(System.Type,System.String,System.Boolean)">
             <summary>
             Creates an instance of the class
             </summary>
             <param name="type">Type information for the specified UserControl</param>
             <param name="title">title of the control</param>
+            <param name="createAtStartup">create pane while addin startup, otherwise on demand</param>
         </member>
         <member name="E:NetOffice.OfficeApi.Tools.TaskPaneInfo.VisibleStateChange">
             <summary>
@@ -32986,6 +33265,11 @@
         <member name="P:NetOffice.OfficeApi.Tools.TaskPaneInfo.IsLoaded">
             <summary>
             info about the inner taskpane instance is already created
+            </summary>
+        </member>
+        <member name="P:NetOffice.OfficeApi.Tools.TaskPaneInfo.CreateAtStartup">
+            <summary>
+            Determines the pane should created while addin startup, otherwise on demand
             </summary>
         </member>
         <member name="P:NetOffice.OfficeApi.Tools.TaskPaneInfo.Visible">
@@ -33036,8 +33320,19 @@
         </member>
         <member name="P:NetOffice.OfficeApi.Tools.TaskPaneInfo.Arguments">
             <summary>
-            Additional Arguments for OnConnection. The UserControl must implement ITaskPane to use it
+            Additional arguments for OnConnection. The UserControl must implement ITaskPane to use it
             </summary>
+        </member>
+        <member name="P:NetOffice.OfficeApi.Tools.TaskPaneInfo.Tag">
+            <summary>
+            Custom Tag as any
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Tools.TaskPaneInfo.Create">
+            <summary>
+            Creates the pane in office application if necessary
+            </summary>
+            <returns>true if pane is newly created, otherwise false</returns>
         </member>
         <member name="M:NetOffice.OfficeApi.Tools.TaskPaneInfo.AssignEvents">
             <summary>
@@ -33054,12 +33349,13 @@
             Creates an instance of the class
             </summary>
         </member>
-        <member name="M:NetOffice.OfficeApi.Tools.CustomTaskPaneCollection.Add(System.Type,System.String)">
+        <member name="M:NetOffice.OfficeApi.Tools.CustomTaskPaneCollection.Add(System.Type,System.String,NetOffice.OfficeApi.Tools.PaneCreation)">
             <summary>
             Add a new child to the list
             </summary>
             <param name="taskPaneType">new child</param>
             <param name="title">title(caption) of the child</param>
+            <param name="paneCreation">create at startup, otherwise on demand</param>
             <returns>new instance</returns>
         </member>
         <member name="M:NetOffice.OfficeApi.Tools.CustomTaskPaneCollection.Remove(NetOffice.OfficeApi.Tools.TaskPaneInfo)">
@@ -33079,6 +33375,13 @@
             Returns an element from specified index
             </summary>
             <param name="index">specified index</param>
+            <returns>TaskPaneInfo instance</returns>
+        </member>
+        <member name="P:NetOffice.OfficeApi.Tools.CustomTaskPaneCollection.Item(System.String)">
+            <summary>
+            Returns first element with specified title or null(Nothing in Visual Basic)
+            </summary>
+            <param name="title">specified title</param>
             <returns>TaskPaneInfo instance</returns>
         </member>
         <member name="M:NetOffice.OfficeApi.Tools.CustomTaskPaneCollection.GetEnumerator">

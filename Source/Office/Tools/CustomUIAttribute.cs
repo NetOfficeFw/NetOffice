@@ -1,28 +1,26 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace NetOffice.OutlookApi.Tools
+namespace NetOffice.OfficeApi.Tools
 {
     /// <summary>
-    /// Specify an embedded XML File for RibbonUI on a specific window
+    /// Specify an embedded XML File for RibbonUI
     /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = true)]
-    public class OlCustomUIAttribute : System.Attribute
+    [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = false)]
+    public class CustomUIAttribute : System.Attribute
     {
-
-        /// <summary>
-        /// Explorer Ribbon ID
-        /// </summary>
-        private static string _mainWindowRibbonID = "Microsoft.Outlook.Explorer";
-
-        /// <summary>
-        /// Target Window ID
-        /// </summary>
-        public readonly string RibbonID;
-
         /// <summary>
         /// Full qualified location
         /// </summary>
         public readonly string Value;
+
+        /// <summary>
+        /// Target ribbon id(s) - comma separated or empty as wildcard
+        /// </summary>
+        public readonly string RibbonID;
 
         /// <summary>
         /// Use root namespace of the calling instance
@@ -30,76 +28,69 @@ namespace NetOffice.OutlookApi.Tools
         public readonly bool UseAssemblyNamespace;
 
         /// <summary>
-        /// Creates an instance of the Attribute
+        /// Processed Ribbon ID's
         /// </summary>
-        /// <param name="value">Full qualified location</param>
-        public OlCustomUIAttribute(string value)
-        {
-            RibbonID = _mainWindowRibbonID;
-            Value = value;
-        }
+        internal readonly string[] RibbonIDs;
 
         /// <summary>
-        /// Creates an instance of the Attribute
+        /// Creates an instance of the attribute
         /// </summary>
-        /// <param name="ribbonID">Target Window ID</param>
         /// <param name="value">Full qualified location</param>
-        public OlCustomUIAttribute(string ribbonID, string value)
-        {
-            if (String.IsNullOrEmpty(ribbonID))
-                ribbonID = _mainWindowRibbonID;
-            if (String.IsNullOrEmpty(value))
-                throw new ArgumentException("value");
-
-            RibbonID = ribbonID;
-            Value = value;
-        }
-
-        /// <summary>
-        /// Creates an instance of the Attribute
-        /// </summary>
-        /// <param name="ribbonID">Target Window ID</param>
-        /// <param name="value">Full qualified location</param>
-        public OlCustomUIAttribute(OlRibbonType ribbonID, string value)
+        public CustomUIAttribute(string value)
         {
             if (String.IsNullOrEmpty(value))
                 throw new ArgumentException("value");
 
-            RibbonID = ribbonID.ToString().Replace("_", ".");
             Value = value;
         }
 
         /// <summary>
-        /// Creates an instance of the Attribute
+        /// Creates an instance of the attribute
         /// </summary>
-        /// <param name="ribbonID">Target Window ID</param>
+        /// <param name="ribbonID">target ribbon id(s) - comma separated or empty as wildcard</param>
+        /// <param name="value">Full qualified location</param>
+        public CustomUIAttribute(string ribbonID, string value)
+        {
+            if (String.IsNullOrEmpty(value))
+                throw new ArgumentException("value");
+
+            RibbonID = null != ribbonID ? ribbonID : String.Empty;
+            Value = value;
+
+            RibbonIDs = RibbonID.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        /// <summary>
+        /// Creates an instance of the attribute
+        /// </summary>
         /// <param name="value">Full qualified location</param>
         /// <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
-        public OlCustomUIAttribute(string ribbonID, string value, bool useAssemblyNamespace)
+        public CustomUIAttribute(string value, bool useAssemblyNamespace)
         {
-            if (String.IsNullOrEmpty(ribbonID))
-                ribbonID = _mainWindowRibbonID;
             if (String.IsNullOrEmpty(value))
                 throw new ArgumentException("value");
 
-            RibbonID = ribbonID;
             Value = value;
             UseAssemblyNamespace = useAssemblyNamespace;
+
+            RibbonIDs = new string[0];
         }
 
         /// <summary>
-        /// Creates an instance of the Attribute
+        /// Creates an instance of the attribute
         /// </summary>
-        /// <param name="ribbonID">Target Window ID</param>
+        /// <param name="ribbonID">target ribbon id(s) - comma separated or empty as wildcard</param>
         /// <param name="value">Full qualified location</param>
         /// <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
-        public OlCustomUIAttribute(OlRibbonType ribbonID, string value, bool useAssemblyNamespace)
+        public CustomUIAttribute(string ribbonID, string value, bool useAssemblyNamespace)
         {
             if (String.IsNullOrEmpty(value))
                 throw new ArgumentException("value");
-            RibbonID = ribbonID.ToString().Replace("_", ".");
+            RibbonID = RibbonID = null != ribbonID ? ribbonID : String.Empty;
             Value = value;
             UseAssemblyNamespace = useAssemblyNamespace;
+
+            RibbonIDs = RibbonID.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
         }
 
         /// <summary>
@@ -126,6 +117,21 @@ namespace NetOffice.OutlookApi.Tools
             {
                 return resourcePath;
             }
+        }
+
+        /// <summary>
+        /// Determines the attribute contains a processed ribbon id
+        /// </summary>
+        /// <param name="attribute">target attribute</param>
+        /// <param name="ribbonid">target ribbon id</param>
+        /// <returns>true if set, otherwise false</returns>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public static bool ContainsProcessedRibbonId(CustomUIAttribute attribute, string ribbonid)
+        {
+            if (null != attribute && null != attribute.RibbonIDs)
+                return attribute.RibbonIDs.Any(e => e == ribbonid);
+            else
+                return false;
         }
     }
 }

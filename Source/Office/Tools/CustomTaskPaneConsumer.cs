@@ -34,7 +34,6 @@ namespace NetOffice.OfficeApi.Tools
             if (null == parent)
                 throw new ArgumentNullException("parent");
             Parent = parent;
-            TaskPanes = new CustomTaskPaneCollection();
         }
 
         #endregion
@@ -52,11 +51,6 @@ namespace NetOffice.OfficeApi.Tools
         public Office.ICTPFactory TaskPaneFactory { get; set; }
 
         /// <summary>
-        /// Collection with all created custom Task Panes
-        /// </summary>
-        protected CustomTaskPaneCollection TaskPanes { get; private set; }
-
-        /// <summary>
         /// ITaskPane Instances
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
@@ -65,7 +59,7 @@ namespace NetOffice.OfficeApi.Tools
             get
             {
                 List<ITaskPane> result = new List<ITaskPane>();
-                foreach (var item in TaskPanes)
+                foreach (var item in Parent.TaskPanes)
                 {
                     ITaskPane match = item.Pane as ITaskPane;
                     if (null != match)
@@ -134,8 +128,8 @@ namespace NetOffice.OfficeApi.Tools
         protected internal virtual void OnCTPFactoryAvailable(OfficeApi.ICTPFactory ctpFactoryInst)
         {
             CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
-            paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, Parent, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
-            paneHandler.CreateCustomPanes(Factory, ctpFactoryInst, TaskPanes, OnError, Parent.Application);
+            paneHandler.ProceedCustomPaneAttributes(Factory, ctpFactoryInst, Parent.TaskPanes, OnError, Parent.Application, Type, Parent, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
+            paneHandler.CreateCustomPanes(Factory, ctpFactoryInst, Parent.TaskPanes, OnError, Parent.Application);
         }
 
         #endregion
@@ -250,7 +244,7 @@ namespace NetOffice.OfficeApi.Tools
         {
             try
             {
-                foreach (TaskPaneInfo item in TaskPanes)
+                foreach (TaskPaneInfo item in Parent.TaskPanes)
                 {
                     if (item.Pane.UnderlyingObject == customTaskPaneInst.UnderlyingObject)
                     {
@@ -287,7 +281,7 @@ namespace NetOffice.OfficeApi.Tools
         {
             try
             {
-                foreach (TaskPaneInfo item in TaskPanes)
+                foreach (TaskPaneInfo item in Parent.TaskPanes)
                 {
                     if (item.Pane.UnderlyingObject == customTaskPaneInst.UnderlyingObject)
                     {

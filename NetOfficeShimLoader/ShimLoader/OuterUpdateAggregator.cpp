@@ -34,10 +34,10 @@ STDMETHODIMP OuterUpdateAggregator::IsAvailable(BOOL* available)
 STDMETHODIMP OuterUpdateAggregator::Reload()
 {
 	HRESULT hr = E_FAIL;
-	//MessageBox(GetDesktopWindow(), L"Reload", L"OuterUpdateAggregator", 0);
-	if(_parent->IsCLRLoaded())
-		IfFailGo(_parent->UnloadCLR());
+
 	IfFailGo(_parent->ReloadCLR());
+
+	return hr;
 
 Error:
 	return hr;

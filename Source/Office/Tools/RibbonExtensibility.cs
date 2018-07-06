@@ -106,8 +106,8 @@ namespace NetOffice.OfficeApi.Tools
         /// <returns>XML content or String.Empty</returns>
         protected internal virtual string OnGetCustomUI(string ribbonID)
         {
-            CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, ribbonID);
-            if (null != ribbon)
+            var ribbon = NetOffice.Attributes.AttributeExtensions.GetCustomAttribute<CustomUIAttribute>(Type);
+            if (null != ribbon && ribbon.RibbonIDs.Contains(ribbonID))
                 return ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
             else
                 return string.Empty;

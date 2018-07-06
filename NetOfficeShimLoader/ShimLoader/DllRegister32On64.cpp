@@ -5,8 +5,8 @@ namespace ShimLoader_Register32On64
 {
 	DWORD _regKeyOptions = KEY_ALL_ACCESS;
 
-	HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, LPCWSTR description, RegisterMode mode);
-	HRESULT UnregisterCOMComponent(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode);
+	HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, LPCWSTR description, RegisterMode mode);
+	HRESULT UnregisterCOMComponent(LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode);
 	HRESULT RegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, LPCWSTR pszFriendlyName, LPCWSTR pszDescription, DWORD dwStartupContext, DWORD dwCommandLineSafe, bool registerPerMachine);
 	HRESULT UnRegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, bool registerPerMachine);
 
@@ -18,28 +18,67 @@ namespace ShimLoader_Register32On64
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2);
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2, LPCWSTR pszKeyChild3);
 
-	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplication, DWORD addinLoadBehavior, DWORD addinCommandLineSafe, LPCWSTR progId, LPCWSTR classId, LPCWSTR friendlyName, LPCWSTR description, LPCWSTR version, RegisterMode mode)
+	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplications[], DWORD addinLoadBehavior, DWORD addinCommandLineSafe, LPCWSTR progId, LPCWSTR classId, LPCWSTR friendlyName, LPCWSTR description, LPCWSTR version, RegisterMode mode)
 	{
-		HRESULT result = S_OK;
+		HRESULT hr = S_OK;
 
-		result = RegisterCOMComponent(module, officeApplication, progId, classId, version, description, mode);
-		if (S_OK == result)
-			result = RegisterCOMAddin(officeApplication, progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, 0 == mode);
+		if (NULL == module)
+			return E_INVALIDARG;
+		if (NULL == officeApplications)
+			return E_INVALIDARG;
+		if (!progId || !progId[0])
+			return E_INVALIDARG;
+		if (!classId || !classId[0])
+			return E_INVALIDARG;
+		if (!friendlyName || !friendlyName[0])
+			return E_INVALIDARG;
+		if (!description || !description[0])
+			return E_INVALIDARG;
+		if (!version || !version[0])
+			return E_INVALIDARG;
 
-		return result;
+		hr = RegisterCOMComponent(module, progId, classId, version, description, mode);
+		if (SUCCEEDED(hr))
+		{
+			size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
+			for (size_t i = 0; i < arraySize; i++)
+			{
+				hr = RegisterCOMAddin(officeApplications[i], progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, 0 == mode);
+				if (!SUCCEEDED(hr))
+					break;
+			}
+		}
+
+		return hr;
 	}
 
-	HRESULT DllUnregister(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
+	HRESULT DllUnregister(LPCWSTR officeApplications[], LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
 	{
-		HRESULT result = S_OK;
+		HRESULT hr = S_OK;
+		HRESULT addin = S_OK;
 
-		UnRegisterCOMAddin(officeApplication, progId, 0 == mode);
-		result = UnregisterCOMComponent(officeApplication, progId, classId, version, mode);
+		if (NULL == officeApplications)
+			return E_INVALIDARG;
+		if (!progId || !progId[0])
+			return E_INVALIDARG;
+		if (!classId || !classId[0])
+			return E_INVALIDARG;
+		if (!version || !version[0])
+			return E_INVALIDARG;
 
-		return result;
+		size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
+		for (size_t i = 0; i < arraySize; i++)
+		{
+			if (!SUCCEEDED(UnRegisterCOMAddin(officeApplications[i], progId, 0 == mode)))
+				addin = E_FAIL;
+		}
+
+		hr = UnregisterCOMComponent(progId, classId, version, mode);
+
+		return addin != S_OK ? addin : hr;
 	}
 
-	HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, LPCWSTR description, RegisterMode mode)
+	HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, LPCWSTR description, RegisterMode mode)
 	{
 		HRESULT result = S_OK;
 
@@ -102,7 +141,7 @@ namespace ShimLoader_Register32On64
 		return result;
 	}
 
-	HRESULT UnregisterCOMComponent(LPCWSTR officeApplication, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
+	HRESULT UnregisterCOMComponent(LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
 	{
 		HRESULT result = S_OK;
 

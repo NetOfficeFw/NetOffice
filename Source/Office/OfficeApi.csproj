@@ -310,6 +310,8 @@
     <Compile Include="Native\IDocumentInspector.cs" />
     <Compile Include="Native\SignatureProvider.cs" />
     <Compile Include="Tools\ApplicationIdentifiers.cs" />
+    <Compile Include="Tools\CustomPaneAttribute.cs" />
+    <Compile Include="Tools\CustomUIAttribute.cs" />
     <Compile Include="Tools\OfficeCOMAddin.cs" />
     <Compile Include="Tools\CustomTaskPaneConsumer.cs" />
     <Compile Include="Tools\CustomTaskPaneHandler.cs" />

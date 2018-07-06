@@ -12,7 +12,7 @@ static const LPCWSTR ShimProxy_FriendlyName = L"NetOffice Generic COM Shim";
 static const LPCWSTR ShimProxy_Description = L"NetOffice Generic COM Shim";
 static const DWORD ShimProxy_LoadBehavior = 3;
 static const DWORD ShimProxy_CommandLineSafe = 0;
-static const LPCWSTR ShimProxy_Host_Application = L"PowerPoint";
+static LPCWSTR* ShimProxy_Host_Application = NULL;
 
 //
 // Addin Target
@@ -36,6 +36,7 @@ static const BOOL ENABLE_SELF_REGISTRATION = TRUE;
 static const int SELF_REGISTER_MODE = 2; // System = 0, User = 1, SystemComponentAndUserAddin = 2
 static const BOOL ENABLE_BLIND_AGGREGATION = FALSE;
 static const BOOL ENABLE_OUTER_UPDATE_AGGREGATOR = TRUE;
+static const BOOL ENABLE_DEBUG_MESSAGE_BOX = TRUE;
 
 //
 // Defaults

@@ -98,7 +98,7 @@ namespace NetOffice.Tools
             }
             return false;
         }
-        
+
         /// <summary>
         /// Looks for a method with the UnRegisterFunctionAttribute
         /// </summary>
@@ -119,61 +119,6 @@ namespace NetOffice.Tools
                 }
             }
             return false;
-        }
-
-        /// <summary>
-        /// Looks for the CustomUIAttribute
-        /// </summary>
-        /// <param name="type">the type you want looking for the attribute</param>
-        /// <param name="ribbonID">given ribbon id from Office</param>
-        /// <returns>CustomUIAttribute or null</returns>
-        public static CustomUIAttribute GetRibbonAttribute(Type type, string ribbonID)
-        {
-            object[] array = type.GetCustomAttributes(typeof(CustomUIAttribute), false);
-            if (array.Length == 0)
-                return null;
-            CustomUIAttribute attribute = array[0] as CustomUIAttribute;
-            if (String.IsNullOrWhiteSpace(attribute.RibbonID))
-                return attribute;
-
-            if (attribute.RibbonIDs.Contains(ribbonID))
-                return attribute;
-            else
-                return null;
-        }
-
-        /// <summary>
-        /// Looks for the CustomPaneAttribute
-        /// </summary>
-        /// <param name="type">the type you want looking for the attribute</param>
-        /// <returns>CustomPaneAttribute or null</returns>
-        public static CustomPaneAttribute GetCustomPaneAttribute(Type type)
-        {
-            object[] array = type.GetCustomAttributes(typeof(CustomPaneAttribute), false);
-            if (array.Length == 0)
-                return null;
-            return array[0] as CustomPaneAttribute;
-        }
-
-        /// <summary>
-        /// Looks the CustomPaneAttributes
-        /// </summary>
-        /// <param name="type">the type you want looking for the attribute</param>
-        /// <returns>CustomPaneAttribute[] instance</returns>
-        public static CustomPaneAttribute[] GetCustomPaneAttributes(Type type)
-        {
-            object[] array = type.GetCustomAttributes(typeof(CustomPaneAttribute), false);
-            if (array.Length > 0)
-            {
-                CustomPaneAttribute[] result = new CustomPaneAttribute[array.Length];
-                for (int i = 0; i < array.Length; i++)
-                    result[i] = array[i] as CustomPaneAttribute;
-                return result;
-            }
-            else
-            { 
-                return new CustomPaneAttribute[0];
-            }
         }
 
         /// <summary>

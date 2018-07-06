@@ -35,6 +35,7 @@ public:
 	BOOL STDMETHODCALLTYPE IsCLRLoaded();
 	STDMETHODIMP ReloadCLR();
 	STDMETHODIMP UnloadCLR();
+	STDMETHODIMP CloseReloadThread();
 
 	// IDispatch Implementation
 	STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
@@ -54,5 +55,6 @@ private:
 	OuterUpdateAggregator*				_updateAggregator;
 	ManagedRibbonExtensibility*			_ribbonExtensibility;
 	ManagedCustomTaskPaneConsumer*		_paneConsumer;
+	HANDLE								_currentReloadTread;
 
 };

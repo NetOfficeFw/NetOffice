@@ -1,6 +1,7 @@
 #include "StdAfx.h"
 #include "ShimProxy.h"
 
+DWORD WINAPI ReloadCLRInternal(LPVOID lpParameter);
 
 /***************************************************************************
 * Ctor Dtor
@@ -13,13 +14,15 @@ ShimProxy::ShimProxy()
 	_loader = nullptr;
 	_ribbonExtensibility = nullptr;
 	_paneConsumer = nullptr;
+	_currentReloadTread = nullptr;
 	_components++;
 
 	// load the CLR here because host application may call QueryInterface before OnConnection
 	if (ENABLE_SHIM)
 	{
 		_updateAggregator = new OuterUpdateAggregator(this);
-		_loader = new (std::nothrow) ClrHost(_updateAggregator);
+		IOuterUpdateAggregator* updateAggregator = static_cast<IOuterUpdateAggregator*>(_updateAggregator);
+		_loader = new (std::nothrow) ClrHost(updateAggregator);
 		_loader->Load();
 	}
 }
@@ -93,12 +96,13 @@ STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode con
 	}
 	catch (...)
 	{
-		MessageBox(GetDesktopWindow(), L"Error", L"OnConnection", 0);
+		ShimDebugMessageBox(L"Error", L"OnConnection");
 		hr = E_FAIL;
 	}
 
 Error:
-	MessageBox(GetDesktopWindow(), L"Fail", L"OnConnection", 0);
+
+	ShimDebugMessageBox(L"Fail", L"OnConnection");
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -119,12 +123,13 @@ STDMETHODIMP ShimProxy::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARR
 	}
 	catch (...)
 	{
-		MessageBox(GetDesktopWindow(), L"Error", L"OnDisconnection", 0);
+		ShimDebugMessageBox(L"Error", L"OnDisconnection");
 		hr = E_FAIL;
 	}
 
 Error:
-	MessageBox(GetDesktopWindow(), L"Fail", L"OnDisconnection", 0);
+
+	ShimDebugMessageBox(L"Fail", L"OnDisconnection");
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -142,14 +147,15 @@ STDMETHODIMP ShimProxy::OnAddInsUpdate(LPSAFEARRAY* custom)
 	}
 	catch (...)
 	{
-		MessageBox(GetDesktopWindow(), L"Error", L"OnAddInsUpdate", 0);
+		ShimDebugMessageBox(L"Error", L"OnAddInsUpdate");
 		hr = E_FAIL;
 	}
 
 	return hr;
 
 Error:
-	MessageBox(GetDesktopWindow(), L"Fail", L"OnAddInsUpdate", 0);
+
+	ShimDebugMessageBox(L"Fail", L"OnAddInsUpdate");
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -174,7 +180,8 @@ STDMETHODIMP ShimProxy::OnStartupComplete(LPSAFEARRAY* custom)
 	return hr;
 
 Error:
-	MessageBox(GetDesktopWindow(), L"Fail", L"OnStartupComplete", 0);
+
+	ShimDebugMessageBox(L"Fail", L"OnStartupComplete");
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -193,14 +200,15 @@ STDMETHODIMP ShimProxy::OnBeginShutdown(LPSAFEARRAY* custom)
 	}
 	catch (...)
 	{
-		MessageBox(GetDesktopWindow(), L"Error", L"OnBeginShutdown", 0);
+		ShimDebugMessageBox(L"Error", L"OnBeginShutdown");
 		hr = E_FAIL;
 	}
 
 	return hr;
 
 Error:
-	MessageBox(GetDesktopWindow(), L"Fail", L"OnBeginShutdown", 0);
+
+	ShimDebugMessageBox(L"Fail", L"OnBeginShutdown");
 	ValidateExtensibilityFail(hr);
 	return hr;
 }
@@ -219,29 +227,42 @@ BOOL STDMETHODCALLTYPE ShimProxy::IsCLRLoaded()
 
 STDMETHODIMP ShimProxy::ReloadCLR()
 {
-	HRESULT hr = E_FAIL;
-	if (!IsCLRLoaded() && _loader)
-	{
-		IfFailGo(_loader->Load());
+	if (_currentReloadTread)
+		return E_UNEXPECTED;
 
-		// todo: store args in OnConnection and recall OnConnection/StartupComplete here
+	DWORD dwThreadId;
+	_currentReloadTread = CreateThread(
+		(SECURITY_ATTRIBUTES *)0,
+		0,
+		&ReloadCLRInternal,
+		static_cast<IShimProxy*>(this),
+		0,
+		&dwThreadId
+	);
 
-		if (_paneConsumer)
-		{
-			IUnknown* unknown = _loader->OuterAggregator()->Addin()->InnerUnkown();
-			ICustomTaskPaneConsumer* consumer = nullptr;
-			if (SUCCEEDED(unknown->QueryInterface(IID_IRibbonExtensibility, (LPVOID*)&consumer)))
-				hr = _paneConsumer->SetInnerPointer(consumer);
-		}
+	HRESULT hr = S_OK;
+	//// WaitForSingleObject
+	//HRESULT hr = E_FAIL;
+	//if (!IsCLRLoaded() && _loader)
+	//{
+	//	// todo: store args in OnConnection and recall OnConnection/StartupComplete here
 
-		if (_ribbonExtensibility)
-		{
-			IUnknown* unknown = _loader->OuterAggregator()->Addin()->InnerUnkown();
-			IRibbonExtensibility* ribbon = nullptr;
-			if (SUCCEEDED(unknown->QueryInterface(IID_IRibbonExtensibility, (LPVOID*)&ribbon)))
-				hr = _ribbonExtensibility->SetInnerPointer(ribbon);
-		}
-	}
+	//	if (_paneConsumer)
+	//	{
+	//		IUnknown* unknown = _loader->OuterAggregator()->Addin()->InnerUnkown();
+	//		ICustomTaskPaneConsumer* consumer = nullptr;
+	//		if (SUCCEEDED(unknown->QueryInterface(IID_IRibbonExtensibility, (LPVOID*)&consumer)))
+	//			hr = _paneConsumer->SetInnerPointer(consumer);
+	//	}
+
+	//	if (_ribbonExtensibility)
+	//	{
+	//		IUnknown* unknown = _loader->OuterAggregator()->Addin()->InnerUnkown();
+	//		IRibbonExtensibility* ribbon = nullptr;
+	//		if (SUCCEEDED(unknown->QueryInterface(IID_IRibbonExtensibility, (LPVOID*)&ribbon)))
+	//			hr = _ribbonExtensibility->SetInnerPointer(ribbon);
+	//	}
+	//}
 
 	return hr;
 Error:
@@ -258,6 +279,37 @@ STDMETHODIMP ShimProxy::UnloadCLR()
 
 	return hr;
 Error:
+	return hr;
+}
+
+STDMETHODIMP ShimProxy::CloseReloadThread()
+{
+	HRESULT hr = S_OK;
+	if (NULL != _currentReloadTread)
+	{
+		if (!CloseHandle(_currentReloadTread))
+			hr = E_FAIL;
+	}
+	return hr;
+}
+
+DWORD WINAPI ReloadCLRInternal(LPVOID lpParameter)
+{
+	HRESULT hr = S_OK;
+	IShimProxy* proxy = (IShimProxy*)lpParameter;
+
+	if (proxy->IsCLRLoaded())
+	{
+		hr = proxy->UnloadCLR();
+	}
+
+	//if (SUCCEEDED(hr))
+	//{
+	//	hr = proxy->ReloadCLR();
+	//}
+
+	proxy->CloseReloadThread();
+
 	return hr;
 }
 
