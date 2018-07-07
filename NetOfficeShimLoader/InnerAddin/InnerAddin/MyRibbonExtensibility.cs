@@ -26,7 +26,7 @@ namespace InnerAddin
         {
             try
             {
-                MessageBox.Show("Me is " + _id.ToString());
+                //MessageBox.Show("Me is " + _id.ToString());
 
                 if (Parent.HasShimHost)
                 {
@@ -47,7 +47,7 @@ namespace InnerAddin
 
         public void SampleButton2_Click(Office.IRibbonControl control)
         {
-            string message = "I'm alive :) " + Parent.GetHashCode().ToString();
+            string message = "I'm alive :)" + Environment.NewLine + "My Hash is: " + GetHashCode();
             MessageBox.Show(message, "InnerAddin.MyRibbonExtensibility");
         }
 

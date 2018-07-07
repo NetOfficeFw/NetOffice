@@ -70,7 +70,7 @@ namespace InnerAddin
 
         public void CallShimHost()
         {
-            MessageBox.Show("CallShimHost");
+            //MessageBox.Show("CallShimHost");
 
             foreach (var item in TaskPanes.ToArray())
             {
@@ -80,7 +80,7 @@ namespace InnerAddin
 
             if (null != ShimHost)
             {
-                MessageBox.Show("Call Reload");
+                //MessageBox.Show("Call Reload");
                 ShimHost.Reload();
             }
             else

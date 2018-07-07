@@ -13,7 +13,7 @@ namespace InnerAddin
 {
     /*
      *
-     * Basisklasse und interface ähnlich COMAddin anbieten.
+     * TODO: provide optional interface and base class
     */
     [ComVisible(true)]
     [ProgId("InnerAddin.InnerAddinPane")]
@@ -27,7 +27,11 @@ namespace InnerAddin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This is button 1.");
+
+            MessageBox.Show(
+                "This is button 1." + Environment.NewLine +
+                "AppDomain HashCode:" + AppDomain.CurrentDomain.GetHashCode().ToString()
+                );
         }
     }
 }
