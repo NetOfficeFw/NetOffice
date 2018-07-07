@@ -2,6 +2,7 @@
 #include "ShimProxyFactory.h"
 #include "ShimProxy.h"
 
+
 /***************************************************************************
 * Ctor, Dtor
 ***************************************************************************/
@@ -34,7 +35,7 @@ STDMETHODIMP ShimProxyFactory::CreateInstance(LPUNKNOWN punk, REFIID riid, void*
 	if (riid != IID_IDTExtensibility2)
 		return E_NOINTERFACE;
 
-	ShimProxy* pObj = new (std::nothrow) ShimProxy();
+	NetOffice_ShimLoader::ShimProxy* pObj = new (std::nothrow) NetOffice_ShimLoader::ShimProxy();
 	if (NULL == pObj)
 		return E_OUTOFMEMORY;
 

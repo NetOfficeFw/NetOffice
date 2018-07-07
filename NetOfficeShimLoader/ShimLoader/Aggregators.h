@@ -4,7 +4,7 @@
 namespace NetOffice_Tools_Isolation
 {
 	//
-	// Represents an outer aggregator by a addin that handle update/reload possibilites
+	// Represents an outer aggregator by an addin that handle update/reload possibilites
 	//
 	__interface __declspec(uuid("F7BCF161-FCB2-4880-9C33-78C456B1F291"))
 		IOuterUpdateAggregator : public IUnknown
@@ -20,7 +20,24 @@ namespace NetOffice_Tools_Isolation
 		//
 		STDMETHODIMP Reload();
 	};
+	// F7BCF161-FCB2-4880-9C33-78C456B1F291
 	static const GUID IID_IOuterUpdateAggregator = __uuidof(IOuterUpdateAggregator);
+
+	//
+	// Represents a managed inner aggregator by an addin that handle update/reload possibilites
+	//
+	__interface __declspec(uuid("EF261BCD-3078-459E-9448-13845BEED136"))
+		IInnerUpdateAggregator : public IUnknown
+	{
+		//
+		// Set an unmanaged aggregator to managed addin instance
+		//
+		// param "aggregator": outer shim aggregator
+		//
+		void SetOuterAggregator(IOuterUpdateAggregator* aggregator);
+	};
+	// F7BCF161-FCB2-4880-9C33-78C456B1F291
+	static const GUID IID_IInnerUpdateAggregator = __uuidof(IInnerUpdateAggregator);
 
 	//
 	// Definition of Aggregators
@@ -32,9 +49,10 @@ namespace NetOffice_Tools_Isolation
 		//
 		// Inner managed aggreator call this method to publish the managed addin instance to the shim
 		//
-		// param pUnkInner: managed addin instance
+		// param "pUnkInner": managed addin instance
 		HRESULT __stdcall SetInnerAddin(IUnknown* pUnkInner);
 	};
+	// E8E14A9B-6FB4-45A6-BFF2-47610F68D075
 	static const GUID IID_IOuterComAggregator = __uuidof(IOuterComAggregator);
 
 	//
@@ -46,11 +64,12 @@ namespace NetOffice_Tools_Isolation
 		//
 		// Creates a managed instance by name and call SetInnerAddin for pOuterObject argument
 		//
-		// param assemblyName: name or strong name from the assembly where the managed addin type is located
-		// param fullQualifiedTypeName: full qualified name of the managed addin type
-		// param pOuterObject: outer aggregator in order to call SetInnerAddin to publish the newly created instance
-		// param pOuterUpdateObject : outer update aggregator to spend update possibilites
+		// param "assemblyName": name or strong name from the assembly where the managed addin type is located
+		// param "fullQualifiedTypeName": full qualified name of the managed addin type
+		// param "pOuterObject": outer aggregator in order to call SetInnerAddin to publish the newly created instance
+		// param "pOuterUpdateObject" : outer update aggregator to spend update possibilites
 		HRESULT __stdcall CreateAggregatedInstance(BSTR assemblyName, BSTR fullQualifiedTypeName, IOuterComAggregator* pOuterObject, IOuterUpdateAggregator* pOuterUpdateObject);
 	};
+	// FBA7450D-B6E0-4E5C-908D-396BEFFC1D9B
 	static const GUID IID_IManagedInnerAggregator = __uuidof(IManagedInnerAggregator);
 }

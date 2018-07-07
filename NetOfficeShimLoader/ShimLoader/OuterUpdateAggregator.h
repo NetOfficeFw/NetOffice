@@ -4,32 +4,37 @@
 #include "Vars.hpp"
 #include "IShimProxy.hpp"
 
-extern HINSTANCE _module;
-extern ULONG _components;
-extern ULONG _locks;
+extern HANDLE		_thread;
+extern HINSTANCE	_module;
+extern ULONG		_components;
+extern ULONG		_locks;
 
 using namespace NetOffice_Tools_Isolation;
 
-class OuterUpdateAggregator : public IOuterUpdateAggregator
+namespace NetOffice_ShimLoader
 {
+	class OuterUpdateAggregator : public IOuterUpdateAggregator
+	{
 
-public:
+	public:
 
-	// Ctor, Dtor
-	OuterUpdateAggregator(IShimProxy* parent);
-	~OuterUpdateAggregator();
+		// Ctor, Dtor
+		OuterUpdateAggregator(IShimProxy* parent);
+		~OuterUpdateAggregator();
 
-	// IOuterUpdateAggregator Implementation
-	STDMETHODIMP IsAvailable(BOOL* available);
-	STDMETHODIMP Reload();
+		// IOuterUpdateAggregator Implementation
+		STDMETHODIMP IsAvailable(BOOL* available);
+		STDMETHODIMP Reload();
 
-	// IUnknown Implementation
-	STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
-	STDMETHODIMP_(ULONG) AddRef(void);
-	STDMETHODIMP_(ULONG) Release(void);
+		// IUnknown Implementation
+		STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
+		STDMETHODIMP_(ULONG) AddRef(void);
+		STDMETHODIMP_(ULONG) Release(void);
 
-private:
+	private:
 
-	ULONG								_refCounter;
-	IShimProxy*							_parent;
-};
+		ULONG								_refCounter;
+		IShimProxy*							_parent;
+	};
+
+}

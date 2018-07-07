@@ -9,38 +9,43 @@
 #include "Extensibility2.h"
 #include "OuterComAggregator.h"
 
-extern HINSTANCE _module;
-extern ULONG _components;
-extern ULONG _locks;
+extern HANDLE		_thread;
+extern HINSTANCE	_module;
+extern ULONG		_components;
+extern ULONG		_locks;
 
-class ClrHost
+namespace NetOffice_ShimLoader
 {
+	class ClrHost
+	{
 
-public:
+	public:
 
-	// Ctor, Dtor
-	ClrHost(IOuterUpdateAggregator* updateAggregator);
-	~ClrHost();
+		// Ctor, Dtor
+		ClrHost(IOuterUpdateAggregator* updateAggregator);
+		~ClrHost();
 
-	// ClrLoader Methods
-	BOOL IsLoaded();
-	OuterComAggregator* OuterAggregator();
-	HRESULT Load();
-	HRESULT Unload();
-	HRESULT LastLoadError();
+		// ClrLoader Methods
+		BOOL IsLoaded();
+		OuterComAggregator* OuterAggregator();
+		HRESULT Load();
+		HRESULT Unload();
+		HRESULT LastLoadError();
 
-protected:
+	protected:
 
-	HRESULT AppendPath(LPWSTR pszPath, LPCWSTR pszMore);
+		HRESULT AppendPath(LPWSTR pszPath, LPCWSTR pszMore);
 
-private:
+	private:
 
-	ICorRuntimeHost*			_runtimeHost;
-	mscorlib::_AppDomain*		_appDomain;
-	OuterComAggregator*			_outerAggregator;
-	IOuterUpdateAggregator*		_outerUpdateAggregator;
-	BOOL						_isLoaded;
-	IOuterUpdateAggregator*		_updateAggregator;
-	HRESULT						_lastLoadError;
+		ICorRuntimeHost * _runtimeHost;
+		mscorlib::_AppDomain*		_appDomain;
+		OuterComAggregator*			_outerAggregator;
+		IOuterUpdateAggregator*		_outerUpdateAggregator;
+		BOOL						_isLoaded;
+		IOuterUpdateAggregator*		_updateAggregator;
+		HRESULT						_lastLoadError;
 
-};
+	};
+
+}

@@ -4,23 +4,27 @@
 #include "atlbase.h"
 #include "strsafe.h"
 
+extern HANDLE _thread;
 extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
 
-class ShimArguments
+namespace NetOffice_ShimLoader
 {
+	class ShimArguments
+	{
 
-public:
+	public:
 
-	ShimArguments();
-	~ShimArguments();
+		ShimArguments();
+		~ShimArguments();
 
-	HRESULT Load();
-	HRESULT Unload();
+		HRESULT Load();
+		HRESULT Unload();
 
-protected:
+	protected:
 
-	HRESULT AppendPath(LPWSTR pszPath, LPCWSTR pszMore);
+		HRESULT AppendPath(LPWSTR pszPath, LPCWSTR pszMore);
 
-};
+	};
+}

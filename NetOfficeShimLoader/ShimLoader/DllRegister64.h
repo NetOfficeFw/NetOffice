@@ -2,7 +2,9 @@
 #include "stdafx.h"
 #include "DllRegisterMode.hpp"
 
-namespace ShimLoader_Register64
+using namespace NetOffice_ShimLoader;
+
+namespace NetOffice_ShimLoader_Register64
 {
 	//
 	// Register Shim as 64 Bit Build on a 64 Bit System

@@ -4,43 +4,46 @@
 #include "IShimProxy.hpp"
 #include "Vars.hpp"
 
-extern HANDLE _thread;
-extern HINSTANCE _module;
-extern ULONG _components;
-extern ULONG _locks;
+extern HANDLE		_thread;
+extern HINSTANCE	_module;
+extern ULONG		_components;
+extern ULONG		_locks;
 
-class ManagedCustomTaskPaneConsumer : public ICustomTaskPaneConsumer
+namespace NetOffice_ShimLoader
 {
+	class ManagedCustomTaskPaneConsumer : public ICustomTaskPaneConsumer
+	{
 
-public:
+	public:
 
-	// Ctor, Dtor
-	ManagedCustomTaskPaneConsumer(IShimProxy* parent, ICustomTaskPaneConsumer* innerConsumer);
-	~ManagedCustomTaskPaneConsumer();
+		// Ctor, Dtor
+		ManagedCustomTaskPaneConsumer(IShimProxy* parent, ICustomTaskPaneConsumer* innerConsumer);
+		~ManagedCustomTaskPaneConsumer();
 
-	// ManagedRibbonExtensibility Methods
-	STDMETHODIMP SetInnerPointer(ICustomTaskPaneConsumer* innerConsumer);
+		// ManagedRibbonExtensibility Methods
+		STDMETHODIMP SetInnerPointer(ICustomTaskPaneConsumer* innerConsumer);
 
-	// ICustomTaskPaneConsumer Implementation
-	STDMETHOD(CTPFactoryAvailable) (ICTPFactory* CTPFactoryInst);
-	ICTPFactory* InnerCtpFactory();
+		// ICustomTaskPaneConsumer Implementation
+		STDMETHOD(CTPFactoryAvailable) (ICTPFactory* CTPFactoryInst);
+		ICTPFactory* InnerCtpFactory();
 
-	// IDispatch Implementation
-	STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
-	STDMETHODIMP GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo);
-	STDMETHODIMP GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId);
-	STDMETHODIMP Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr);
+		// IDispatch Implementation
+		STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
+		STDMETHODIMP GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo);
+		STDMETHODIMP GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId);
+		STDMETHODIMP Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr);
 
-	// IUnknown Implementation
-	STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
-	STDMETHODIMP_(ULONG) AddRef(void);
-	STDMETHODIMP_(ULONG) Release(void);
+		// IUnknown Implementation
+		STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
+		STDMETHODIMP_(ULONG) AddRef(void);
+		STDMETHODIMP_(ULONG) Release(void);
 
-private:
+	private:
 
-	IShimProxy*					_parent;
-	ICustomTaskPaneConsumer*	_innerConsumer;
-	ICTPFactory*				_ctpFactoryInst;
-	ULONG						_refCounter;
+		IShimProxy * _parent;
+		ICustomTaskPaneConsumer*	_innerConsumer;
+		ICTPFactory*				_ctpFactoryInst;
+		ULONG						_refCounter;
 
-};
+	};
+}

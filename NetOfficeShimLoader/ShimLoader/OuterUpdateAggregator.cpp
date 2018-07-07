@@ -1,91 +1,93 @@
 #include "stdafx.h"
 #include "OuterUpdateAggregator.h"
 
-
-/***************************************************************************
-* Ctor Dtor
-***************************************************************************/
-
-OuterUpdateAggregator::OuterUpdateAggregator(IShimProxy* parent)
+namespace NetOffice_ShimLoader
 {
-	_refCounter = 0;
-	_parent = parent;
-	_components++;
-}
+	/***************************************************************************
+	* Ctor Dtor
+	***************************************************************************/
 
-OuterUpdateAggregator::~OuterUpdateAggregator()
-{
-	_components--;
-}
-
-
-/***************************************************************************
-* IOuteUpdateAggregator Implementation
-***************************************************************************/
-
-STDMETHODIMP OuterUpdateAggregator::IsAvailable(BOOL* available)
-{
-	HRESULT hr = S_OK;
-	bool result = ENABLE_OUTER_UPDATE_AGGREGATOR && !ENABLE_BLIND_AGGREGATION;
-	*available = result;
-	return hr;
-}
-
-STDMETHODIMP OuterUpdateAggregator::Reload()
-{
-	HRESULT hr = E_FAIL;
-
-	IfFailGo(_parent->ReloadCLR(TRUE));
-
-	return hr;
-
-Error:
-	return hr;
-}
-
-/***************************************************************************
-* IUnknown Implementation
-***************************************************************************/
-
-STDMETHODIMP OuterUpdateAggregator::QueryInterface(REFIID riid, void** ppv)
-{
-	if (NULL == ppv)
-		return E_POINTER;
-	*ppv = NULL;
-
-	HRESULT hr = E_FAIL;
-
-	if (IID_IUnknown == riid)
+	OuterUpdateAggregator::OuterUpdateAggregator(IShimProxy* parent)
 	{
-		*ppv = static_cast<IUnknown*>(this);
-		hr = S_OK;
-	}
-	else if ((IID_IOuterUpdateAggregator == riid))
-	{
-		*ppv = static_cast<IOuterUpdateAggregator*>(this);
-		hr = S_OK;
-	}
-	else
-	{
-		hr = E_NOINTERFACE;
+		_refCounter = 0;
+		_parent = parent;
+		_components++;
 	}
 
-	if (NULL != *ppv)
+	OuterUpdateAggregator::~OuterUpdateAggregator()
 	{
-		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
+		_components--;
 	}
 
-	return hr;
-}
 
-STDMETHODIMP_(ULONG) OuterUpdateAggregator::AddRef(void)
-{
-	_refCounter++;
-	return _refCounter;
-}
+	/***************************************************************************
+	* IOuteUpdateAggregator Implementation
+	***************************************************************************/
 
-STDMETHODIMP_(ULONG) OuterUpdateAggregator::Release(void)
-{
-	_refCounter--;
-	return _refCounter;
+	STDMETHODIMP OuterUpdateAggregator::IsAvailable(BOOL* available)
+	{
+		HRESULT hr = S_OK;
+		bool result = ENABLE_OUTER_UPDATE_AGGREGATOR && !ENABLE_BLIND_AGGREGATION;
+		*available = result;
+		return hr;
+	}
+
+	STDMETHODIMP OuterUpdateAggregator::Reload()
+	{
+		HRESULT hr = E_FAIL;
+
+		IfFailGo(_parent->ReloadCLR(TRUE));
+
+		return hr;
+
+	Error:
+		return hr;
+	}
+
+	/***************************************************************************
+	* IUnknown Implementation
+	***************************************************************************/
+
+	STDMETHODIMP OuterUpdateAggregator::QueryInterface(REFIID riid, void** ppv)
+	{
+		if (NULL == ppv)
+			return E_POINTER;
+		*ppv = NULL;
+
+		HRESULT hr = E_FAIL;
+
+		if (IID_IUnknown == riid)
+		{
+			*ppv = static_cast<IUnknown*>(this);
+			hr = S_OK;
+		}
+		else if ((IID_IOuterUpdateAggregator == riid))
+		{
+			*ppv = static_cast<IOuterUpdateAggregator*>(this);
+			hr = S_OK;
+		}
+		else
+		{
+			hr = E_NOINTERFACE;
+		}
+
+		if (NULL != *ppv)
+		{
+			reinterpret_cast<IUnknown*>(*ppv)->AddRef();
+		}
+
+		return hr;
+	}
+
+	STDMETHODIMP_(ULONG) OuterUpdateAggregator::AddRef(void)
+	{
+		_refCounter++;
+		return _refCounter;
+	}
+
+	STDMETHODIMP_(ULONG) OuterUpdateAggregator::Release(void)
+	{
+		_refCounter--;
+		return _refCounter;
+	}
 }

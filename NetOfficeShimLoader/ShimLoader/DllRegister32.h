@@ -2,7 +2,9 @@
 #include "stdafx.h"
 #include "DllRegisterMode.hpp"
 
-namespace ShimLoader_Register32
+using namespace NetOffice_ShimLoader;
+
+namespace NetOffice_ShimLoader_Register32
 {
 	//
 	// Register Shim as 32 Bit Build on a 32 Bit System

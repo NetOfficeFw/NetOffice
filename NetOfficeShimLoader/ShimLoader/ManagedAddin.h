@@ -5,43 +5,47 @@
 #include "IRibbonExtensibility.h"
 #include "ICTPFactory.h"
 
-extern HINSTANCE _module;
-extern ULONG _components;
-extern ULONG _locks;
+extern HANDLE		_tread;
+extern HINSTANCE	_module;
+extern ULONG		_components;
+extern ULONG		_locks;
 
-class ManagedAddin : public IDTExtensibility2
+namespace NetOffice_ShimLoader
 {
+	class ManagedAddin : public IDTExtensibility2
+	{
 
-public:
+	public:
 
-	// Ctor, Dtor
-	ManagedAddin(IUnknown* innerUnkown);
-	~ManagedAddin();
+		// Ctor, Dtor
+		ManagedAddin(IUnknown* innerUnkown);
+		~ManagedAddin();
 
-	// ManagedAddin Methods
-	IUnknown* InnerUnkown();
+		// ManagedAddin Methods
+		IUnknown* InnerUnkown();
 
-	// IDTExtensibility2 Implementation
-	STDMETHODIMP OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom);
-	STDMETHODIMP OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom);
-	STDMETHODIMP OnAddInsUpdate(LPSAFEARRAY* custom);
-	STDMETHODIMP OnStartupComplete(LPSAFEARRAY* custom);
-	STDMETHODIMP OnBeginShutdown(LPSAFEARRAY* custom);
+		// IDTExtensibility2 Implementation
+		STDMETHODIMP OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom);
+		STDMETHODIMP OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom);
+		STDMETHODIMP OnAddInsUpdate(LPSAFEARRAY* custom);
+		STDMETHODIMP OnStartupComplete(LPSAFEARRAY* custom);
+		STDMETHODIMP OnBeginShutdown(LPSAFEARRAY* custom);
 
-	// IDispatch Implementation
-	STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
-	STDMETHODIMP GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo);
-	STDMETHODIMP GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId);
-	STDMETHODIMP Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr);
+		// IDispatch Implementation
+		STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
+		STDMETHODIMP GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo);
+		STDMETHODIMP GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId);
+		STDMETHODIMP Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr);
 
-	// IUnknown Implementation
-	STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
-	STDMETHODIMP_(ULONG) AddRef(void);
-	STDMETHODIMP_(ULONG) Release(void);
+		// IUnknown Implementation
+		STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
+		STDMETHODIMP_(ULONG) AddRef(void);
+		STDMETHODIMP_(ULONG) Release(void);
 
-private:
+	private:
 
-	IUnknown*					_innerUnkown;
-	ULONG						_refCounter;
+		IUnknown *	_innerUnkown;
+		ULONG		_refCounter;
 
-};
+	};
+}

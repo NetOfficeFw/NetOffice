@@ -14,9 +14,9 @@ namespace NetOffice.Tools.Isolation
     public interface IInnerUpdateAggregator
     {
         /// <summary>
-        /// Set an unmanaged aggregator to a managed addin instance
+        /// Set an unmanaged aggregator to managed addin instance
         /// </summary>
-        /// <param name="aggregator">outer aggregator</param>
+        /// <param name="aggregator">outer shim aggregator</param>
         void SetOuterAggregator([In, Out, MarshalAs(UnmanagedType.IUnknown)] IOuterUpdateAggregator aggregator);
     }
 }

@@ -1,198 +1,200 @@
 #include "stdafx.h"
 #include "ManagedRibbonExtensibility.h"
 
-
-/***************************************************************************
-* Ctor, Dtor
-***************************************************************************/
-
-ManagedRibbonExtensibility::ManagedRibbonExtensibility(IShimProxy* parent, IRibbonExtensibility* innerExtensibility)
+namespace NetOffice_ShimLoader
 {
-	_refCounter = 0;
-	_parent = parent;
-	SetInnerPointer(innerExtensibility);
-	_components++;
-}
+	/***************************************************************************
+	* Ctor, Dtor
+	***************************************************************************/
 
-ManagedRibbonExtensibility::~ManagedRibbonExtensibility()
-{
-	if (_innerExtensibility)
+	ManagedRibbonExtensibility::ManagedRibbonExtensibility(IShimProxy* parent, IRibbonExtensibility* innerExtensibility)
 	{
-		_innerExtensibility->Release();
-		_innerExtensibility = nullptr;
+		_refCounter = 0;
+		_parent = parent;
+		SetInnerPointer(innerExtensibility);
+		_components++;
 	}
-	_components--;
-}
 
-
-/***************************************************************************
-* ManagedRibbonExtensibility Methods
-***************************************************************************/
-
-STDMETHODIMP ManagedRibbonExtensibility::SetInnerPointer(IRibbonExtensibility* innerExtensibility)
-{
-	HRESULT hr = E_FAIL;
-
-	if (innerExtensibility)
+	ManagedRibbonExtensibility::~ManagedRibbonExtensibility()
 	{
-		_innerExtensibility = innerExtensibility;
-		hr = S_OK;
-	}
-	else
-	{
-		hr = E_POINTER;
-	}
-	return hr;
-}
-
-
-/***************************************************************************
-* IRibbonExtensibility Implementation
-***************************************************************************/
-
-STDMETHODIMP ManagedRibbonExtensibility::GetCustomUI(BSTR RibbonID, BSTR* RibbonXml)
-{
-	HRESULT hr = E_FAIL;
-	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
-	{
-		hr = _innerExtensibility->GetCustomUI(RibbonID, RibbonXml);
-	}
-	return hr;
-}
-
-
-/***************************************************************************
-* IDispatch Implementation
-***************************************************************************/
-
-STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfoCount(UINT* pctinfo)
-{
-	HRESULT hr = E_FAIL;
-	IDispatch* dispatch = nullptr;
-
-	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
-	{
-		hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-		if (SUCCEEDED(hr))
+		if (_innerExtensibility)
 		{
-			hr = dispatch->GetTypeInfoCount(pctinfo);
-			dispatch->Release();
+			_innerExtensibility->Release();
+			_innerExtensibility = nullptr;
 		}
+		_components--;
 	}
 
-	return hr;
-}
 
-STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo)
-{
-	HRESULT hr = E_FAIL;
-	IDispatch* dispatch = nullptr;
+	/***************************************************************************
+	* ManagedRibbonExtensibility Methods
+	***************************************************************************/
 
-	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
+	STDMETHODIMP ManagedRibbonExtensibility::SetInnerPointer(IRibbonExtensibility* innerExtensibility)
 	{
-		hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-		if (SUCCEEDED(hr))
+		HRESULT hr = E_FAIL;
+
+		if (innerExtensibility)
 		{
-			hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
-			dispatch->Release();
+			_innerExtensibility = innerExtensibility;
+			hr = S_OK;
 		}
-	}
-
-	return hr;
-}
-
-STDMETHODIMP ManagedRibbonExtensibility::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
-{
-	HRESULT hr = E_FAIL;
-	IDispatch* dispatch = nullptr;
-
-	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
-	{
-		hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-		if (SUCCEEDED(hr))
+		else
 		{
-			hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
-			dispatch->Release();
+			hr = E_POINTER;
 		}
+		return hr;
 	}
 
-	return hr;
-}
 
-STDMETHODIMP ManagedRibbonExtensibility::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
-{
-	HRESULT hr = E_FAIL;
-	IDispatch* dispatch = nullptr;
+	/***************************************************************************
+	* IRibbonExtensibility Implementation
+	***************************************************************************/
 
-	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
+	STDMETHODIMP ManagedRibbonExtensibility::GetCustomUI(BSTR RibbonID, BSTR* RibbonXml)
 	{
-		hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-		if (SUCCEEDED(hr))
+		HRESULT hr = E_FAIL;
+		if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
 		{
-			hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
-			dispatch->Release();
+			hr = _innerExtensibility->GetCustomUI(RibbonID, RibbonXml);
 		}
+		return hr;
 	}
 
-	return hr;
-}
 
+	/***************************************************************************
+	* IDispatch Implementation
+	***************************************************************************/
 
-/***************************************************************************
-* IUnknown Implementation
-***************************************************************************/
-
-STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
-{
-	if (NULL == ppv)
-		return E_POINTER;
-	*ppv = NULL;
-
-	HRESULT hr = E_FAIL;
-	bool isBlind = false;
-	bool available = _parent && !_parent->IsReloadThreadInProgress();
-
-	if (IID_IUnknown == riid && available)
+	STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfoCount(UINT* pctinfo)
 	{
-		*ppv = static_cast<IUnknown*>(this);
-		hr = S_OK;
-	}
-	else if (IID_IDispatch == riid && available)
-	{
-		*ppv = static_cast<IDispatch*>(this);
-		hr = S_OK;
-	}
-	else if ((IID_IRibbonExtensibility == riid && available))
-	{
-		*ppv = static_cast<IRibbonExtensibility*>(this);
-		hr = S_OK;
-	}
-	else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && available)
-	{
-		hr = _innerExtensibility->QueryInterface(riid, ppv);
-		isBlind = true;
-	}
-	else
-	{
-		hr = E_NOINTERFACE;
+		HRESULT hr = E_FAIL;
+		IDispatch* dispatch = nullptr;
+
+		if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
+		{
+			hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+			if (SUCCEEDED(hr))
+			{
+				hr = dispatch->GetTypeInfoCount(pctinfo);
+				dispatch->Release();
+			}
+		}
+
+		return hr;
 	}
 
-	if (NULL != *ppv && !isBlind)
+	STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo)
 	{
-		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
+		HRESULT hr = E_FAIL;
+		IDispatch* dispatch = nullptr;
+
+		if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
+		{
+			hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+			if (SUCCEEDED(hr))
+			{
+				hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
+				dispatch->Release();
+			}
+		}
+
+		return hr;
 	}
 
-	return hr;
-}
+	STDMETHODIMP ManagedRibbonExtensibility::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
+	{
+		HRESULT hr = E_FAIL;
+		IDispatch* dispatch = nullptr;
 
-STDMETHODIMP_(ULONG) ManagedRibbonExtensibility::AddRef(void)
-{
-	_refCounter++;
-	return _refCounter;
-}
+		if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
+		{
+			hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+			if (SUCCEEDED(hr))
+			{
+				hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
+				dispatch->Release();
+			}
+		}
 
-STDMETHODIMP_(ULONG) ManagedRibbonExtensibility::Release(void)
-{
-	_refCounter--;
-	return _refCounter;
+		return hr;
+	}
+
+	STDMETHODIMP ManagedRibbonExtensibility::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
+	{
+		HRESULT hr = E_FAIL;
+		IDispatch* dispatch = nullptr;
+
+		if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
+		{
+			hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+			if (SUCCEEDED(hr))
+			{
+				hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
+				dispatch->Release();
+			}
+		}
+
+		return hr;
+	}
+
+
+	/***************************************************************************
+	* IUnknown Implementation
+	***************************************************************************/
+
+	STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
+	{
+		if (NULL == ppv)
+			return E_POINTER;
+		*ppv = NULL;
+
+		HRESULT hr = E_FAIL;
+		bool isBlind = false;
+		bool available = _parent && !_parent->IsReloadThreadInProgress();
+
+		if (IID_IUnknown == riid && available)
+		{
+			*ppv = static_cast<IUnknown*>(this);
+			hr = S_OK;
+		}
+		else if (IID_IDispatch == riid && available)
+		{
+			*ppv = static_cast<IDispatch*>(this);
+			hr = S_OK;
+		}
+		else if ((IID_IRibbonExtensibility == riid && available))
+		{
+			*ppv = static_cast<IRibbonExtensibility*>(this);
+			hr = S_OK;
+		}
+		else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && available)
+		{
+			hr = _innerExtensibility->QueryInterface(riid, ppv);
+			isBlind = true;
+		}
+		else
+		{
+			hr = E_NOINTERFACE;
+		}
+
+		if (NULL != *ppv && !isBlind)
+		{
+			reinterpret_cast<IUnknown*>(*ppv)->AddRef();
+		}
+
+		return hr;
+	}
+
+	STDMETHODIMP_(ULONG) ManagedRibbonExtensibility::AddRef(void)
+	{
+		_refCounter++;
+		return _refCounter;
+	}
+
+	STDMETHODIMP_(ULONG) ManagedRibbonExtensibility::Release(void)
+	{
+		_refCounter--;
+		return _refCounter;
+	}
 }

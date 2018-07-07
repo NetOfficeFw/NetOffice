@@ -1,7 +1,9 @@
 #include "stdafx.h"
 #include "DllRegisterMode.hpp"
 
-namespace ShimLoader_Register32On64
+using namespace NetOffice_ShimLoader;
+
+namespace NetOffice_ShimLoader_Register32On64
 {
 	DWORD _regKeyOptions = KEY_ALL_ACCESS;
 
