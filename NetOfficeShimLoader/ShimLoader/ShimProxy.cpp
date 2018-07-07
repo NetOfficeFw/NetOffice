@@ -69,6 +69,7 @@ namespace NetOffice_ShimLoader
 		_customOnConnection = nullptr;
 		_customOnAddInsUpdate = nullptr;
 		_customOnStartupComplete = nullptr;
+
 		if (_customEmptyArgs)
 		{
 			_customEmptyArgs = nullptr;
@@ -337,20 +338,17 @@ namespace NetOffice_ShimLoader
 
 		if (async)
 		{
-			//DWORD dwThreadId;
-			//_currentReloadTread = CreateThread(
-			//	(SECURITY_ATTRIBUTES*)0,
-			//	0,
-			//	&ReloadCLRInternal,
-			//	this,
-			//	0,
-			//	&dwThreadId
-			//);
-			// execute in ui thread
+			// redirect execution to the dll creation thread
+			// we need this to avoid custom marshaling between COM Apartments
+			// (we need no elevated permissions because as an addin we are in the same process)
 			QueueUserAPC((PAPCFUNC)ReloadCLRInternal, _thread, (ULONG_PTR)this);
 		}
 		else
 		{
+			// this is a cheap trick, we dont set a pointer adress here and just set S_OK
+			// ShimProxy::CloseReloadThread is aware to handle that
+			// remarks: CloseReloadThread is called at the end of ReloadCLRInternal, so the thread close its self.
+			// (unusual but necesary if the calling thread comes from the managed addin)
 			_currentReloadTread = S_OK;
 			hr = ReloadCLRInternal(this);
 		}
