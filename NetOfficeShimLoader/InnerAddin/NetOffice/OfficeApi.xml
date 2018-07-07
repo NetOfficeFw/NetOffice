@@ -28152,6 +28152,7 @@
         <member name="M:NetOffice.OfficeApi.Tools.OfficeCOMAddin.IsLoadedFromSystem">
             <summary>
             Try to detect the addin is loaded from system hive key
+            The method does not work for non specific application addins
             </summary>
             <returns>null if unkown or true/false</returns>
         </member>
@@ -29408,6 +29409,7 @@
         <member name="M:NetOffice.OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(System.Type,NetOffice.OfficeApi.Tools.ApplicationIdentifiers.ApplicationType)">
             <summary>
             Try to detect the registry load location from an addin
+            This implementation does not handle the fact that addins can bew loaded from non specific application key like "Software\Microsoft\Office\Addins"
             </summary>
             <param name="addinType">addin class type informations</param>
             <param name="applicationType">which office application</param>

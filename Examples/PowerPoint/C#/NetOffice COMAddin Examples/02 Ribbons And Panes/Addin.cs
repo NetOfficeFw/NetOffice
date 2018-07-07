@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using NetOffice;
 using NetOffice.Tools;
 using Office = NetOffice.OfficeApi;
+using NetOffice.OfficeApi.Tools;
 using NetOffice.OfficeApi.Enums;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
@@ -17,7 +18,8 @@ namespace PowerPoint02AddinCS4
     [ProgId("PowerPoint02AddinCS4.Connect"), Guid("A8589603-587D-4887-9DE6-19F03C53304A"), Codebase, Timestamp]
     [CustomUI("RibbonUI.xml", true)]
     [CustomPane(typeof(SamplePane), "PowerPoint CPU Usage", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
-    public class Addin : COMAddin
+    [RegistryLocation(RegistrySaveLocation.InstallScopeCurrentUser)]
+    public class Addin : PowerPoint.Tools.COMAddin
     {
         // Taskpane visibility has been changed. We upate the checkbutton in the ribbon ui for show/hide taskpane
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)

@@ -339,7 +339,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <returns>true if pane is newly created, otherwise false</returns>
         public bool Create()
         {
-            if (null == Pane && null == _createAction)
+            if (null == Pane && null != _createAction)
             {
                 _createAction(this);
                 return true;
@@ -420,7 +420,7 @@ namespace NetOffice.OfficeApi.Tools
 		/// <returns>new instance</returns>
         public TaskPaneInfo Add(Type taskPaneType, string title, PaneCreation paneCreation)
         {
-			TaskPaneInfo item = new TaskPaneInfo(taskPaneType, title, paneCreation == PaneCreation.Manually);
+			TaskPaneInfo item = new TaskPaneInfo(taskPaneType, title, paneCreation == PaneCreation.AutomaticallyAtStartup);
             InnerList.Add(item);
 			return item;
         }

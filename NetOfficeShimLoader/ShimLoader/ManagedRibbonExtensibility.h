@@ -1,8 +1,10 @@
 #pragma once
 #include "stdafx.h"
 #include "IRibbonExtensibility.h"
+#include "IShimProxy.hpp"
 #include "Vars.hpp"
 
+extern HANDLE _thread;
 extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
@@ -13,7 +15,7 @@ class ManagedRibbonExtensibility : public IRibbonExtensibility
 public:
 
 	// Ctor, Dtor
-	ManagedRibbonExtensibility(IRibbonExtensibility* innerExtensibility);
+	ManagedRibbonExtensibility(IShimProxy* parent, IRibbonExtensibility* innerExtensibility);
 	~ManagedRibbonExtensibility();
 
 	// ManagedRibbonExtensibility Methods
@@ -35,6 +37,7 @@ public:
 
 private:
 
+	IShimProxy*					_parent;
 	IRibbonExtensibility*		_innerExtensibility;
 	ULONG						_refCounter;
 

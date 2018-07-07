@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using NetOffice;
 using NetOffice.Tools;
 using Office = NetOffice.OfficeApi;
+using NetOffice.OfficeApi.Tools;
 using NetOffice.OfficeApi.Enums;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
@@ -14,8 +15,9 @@ namespace PowerPointAddin
     [COMAddin("Addin Source Sample Addin CS4", "Addin Source Sample", LoadBehavior.LoadAtStartup)]
     [ProgId("PPAddin.Connect"), Guid("B6A2376C-1C4A-4917-B5DA-01442CF2C71F"), Codebase, Timestamp]
     [CustomUI("RibbonUI.xml", true)]
-    [CustomPane(typeof(PowerPointAddin.Pane), "Source", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
-    public class Connect : COMAddin
+    [CustomPane(typeof(PowerPointAddin.Pane), "Source", true, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
+    [RegistryLocation(RegistrySaveLocation.InstallScopeCurrentUser)]
+    public class Connect : PowerPoint.Tools.COMAddin
     {
         protected override Core CreateFactory()
         {

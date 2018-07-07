@@ -6,9 +6,10 @@
 * Ctor, Dtor
 ***************************************************************************/
 
-ManagedRibbonExtensibility::ManagedRibbonExtensibility(IRibbonExtensibility* innerExtensibility)
+ManagedRibbonExtensibility::ManagedRibbonExtensibility(IShimProxy* parent, IRibbonExtensibility* innerExtensibility)
 {
 	_refCounter = 0;
+	_parent = parent;
 	SetInnerPointer(innerExtensibility);
 	_components++;
 }
@@ -52,7 +53,7 @@ STDMETHODIMP ManagedRibbonExtensibility::SetInnerPointer(IRibbonExtensibility* i
 STDMETHODIMP ManagedRibbonExtensibility::GetCustomUI(BSTR RibbonID, BSTR* RibbonXml)
 {
 	HRESULT hr = E_FAIL;
-	if (_innerExtensibility)
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
 	{
 		hr = _innerExtensibility->GetCustomUI(RibbonID, RibbonXml);
 	}
@@ -66,49 +67,73 @@ STDMETHODIMP ManagedRibbonExtensibility::GetCustomUI(BSTR RibbonID, BSTR* Ribbon
 
 STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfoCount(UINT* pctinfo)
 {
+	HRESULT hr = E_FAIL;
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-	if (SUCCEEDED(hr))
+
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
 	{
-		hr = dispatch->GetTypeInfoCount(pctinfo);
-		dispatch->Release();
+		hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+		if (SUCCEEDED(hr))
+		{
+			hr = dispatch->GetTypeInfoCount(pctinfo);
+			dispatch->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedRibbonExtensibility::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo)
 {
+	HRESULT hr = E_FAIL;
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-	if (SUCCEEDED(hr))
+
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
 	{
-		hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
-		dispatch->Release();
+		hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+		if (SUCCEEDED(hr))
+		{
+			hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
+			dispatch->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedRibbonExtensibility::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
 {
+	HRESULT hr = E_FAIL;
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-	if (SUCCEEDED(hr))
+
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
 	{
-		hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
-		dispatch->Release();
+		hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+		if (SUCCEEDED(hr))
+		{
+			hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
+			dispatch->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedRibbonExtensibility::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
 {
+	HRESULT hr = E_FAIL;
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-	if (SUCCEEDED(hr))
+
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerExtensibility)
 	{
-		hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
-		dispatch->Release();
+		hr = _innerExtensibility->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+		if (SUCCEEDED(hr))
+		{
+			hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
+			dispatch->Release();
+		}
 	}
+
 	return hr;
 }
 
@@ -125,23 +150,24 @@ STDMETHODIMP ManagedRibbonExtensibility::QueryInterface(REFIID riid, void** ppv)
 
 	HRESULT hr = E_FAIL;
 	bool isBlind = false;
+	bool available = _parent && !_parent->IsReloadThreadInProgress();
 
-	if (IID_IUnknown == riid)
+	if (IID_IUnknown == riid && available)
 	{
 		*ppv = static_cast<IUnknown*>(this);
 		hr = S_OK;
 	}
-	else if (IID_IDispatch == riid)
+	else if (IID_IDispatch == riid && available)
 	{
 		*ppv = static_cast<IDispatch*>(this);
 		hr = S_OK;
 	}
-	else if ((IID_IRibbonExtensibility == riid))
+	else if ((IID_IRibbonExtensibility == riid && available))
 	{
 		*ppv = static_cast<IRibbonExtensibility*>(this);
 		hr = S_OK;
 	}
-	else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION)
+	else if (!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && available)
 	{
 		hr = _innerExtensibility->QueryInterface(riid, ppv);
 		isBlind = true;

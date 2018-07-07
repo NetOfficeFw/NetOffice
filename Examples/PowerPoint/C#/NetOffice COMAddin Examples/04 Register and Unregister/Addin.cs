@@ -17,13 +17,13 @@ namespace PowerPoint04AddinCS4
     [ProgId("PowerPoint04AddinCS4.Connect"), Guid("A5FD2DA0-8F65-4AB1-862A-B9D01D65ECCB"), Codebase, Timestamp]
     [RegistryLocation(RegistrySaveLocation.InstallScopeCurrentUser)]
     public class Addin : COMAddin
-    {       
+    {
         [RegisterFunction(RegisterMode.CallAfter)]  // We want that NetOffice call this method after register
         private static void Register(Type type, RegisterCall registerCall, InstallScope scope, OfficeRegisterKeyState keyState)
         {
 
         }
-        
+
         [UnRegisterFunction(RegisterMode.CallBeforeAndAfter)] // We want that NetOffice call this method before and after unregister
         private static void UnRegister(Type type, RegisterCall registerCall, InstallScope scope, OfficeUnRegisterKeyState keyState)
         {

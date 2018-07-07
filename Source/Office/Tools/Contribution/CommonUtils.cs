@@ -367,6 +367,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
 
         /// <summary>
         /// Try to detect the registry load location from an addin
+        /// This implementation does not handle the fact that addins can bew loaded from non specific application key like "Software\Microsoft\Office\Addins"
         /// </summary>
         /// <param name="addinType">addin class type informations</param>
         /// <param name="applicationType">which office application</param>

@@ -13,6 +13,8 @@ namespace InnerAddin
     [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public class MyRibbonExtensibility : NetOffice.OfficeApi.Native.IRibbonExtensibility
     {
+        private Guid _id = Guid.NewGuid();
+
         public MyRibbonExtensibility(Addin parent)
         {
             Parent = parent;
@@ -20,17 +22,33 @@ namespace InnerAddin
 
         private Addin Parent { get; set; }
 
-        public void SampleButton_Click(Office.IRibbonControl control)
+        public void SampleButton1_Click(Office.IRibbonControl control)
         {
-            if (Parent.HasShimHost)
+            try
             {
-                Parent.CallShimHost();
+                MessageBox.Show("Me is " + _id.ToString());
+
+                if (Parent.HasShimHost)
+                {
+                    Parent.CallShimHost();
+                }
+                else
+                {
+                    string message = "I dont have a shim host :(";
+                    MessageBox.Show(message, "InnerAddin.MyRibbonExtensibility");
+                }
             }
-            else
+            catch (Exception exception)
             {
-                string message = "I dont have a shim host :(";
-                MessageBox.Show(message, "InnerAddin.MyRibbonExtensibility");
+                MessageBox.Show(exception.ToString(), "SampleButton1_Click");
+                throw;
             }
+        }
+
+        public void SampleButton2_Click(Office.IRibbonControl control)
+        {
+            string message = "I'm alive :) " + Parent.GetHashCode().ToString();
+            MessageBox.Show(message, "InnerAddin.MyRibbonExtensibility");
         }
 
         public string GetCustomUI(string RibbonID)

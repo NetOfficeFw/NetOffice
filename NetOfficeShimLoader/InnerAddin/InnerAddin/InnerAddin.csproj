@@ -39,22 +39,6 @@
     <RegisterForComInterop>true</RegisterForComInterop>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PowerPoint, Version=1.7.4.4, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NetOffice\PowerPointApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Office, Version=1.7.4.4, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NetOffice\OfficeApi.dll</HintPath>
-    </Reference>
-    <Reference Include="VBIDE, Version=1.7.4.4, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NetOffice\VBIDEApi.dll</HintPath>
-    </Reference>
-    <Reference Include="NetOffice, Version=1.7.4.4, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NetOffice\NetOffice.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -81,6 +65,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="InnerAddin.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Source\NetOffice\NetOffice.csproj">
+      <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Office\OfficeApi.csproj">
+      <Project>{79b19a83-a79f-446c-9b7e-9b595e918e40}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\PowerPoint\PowerPointApi.csproj">
+      <Project>{d2df07d1-46ea-4578-9183-9abb368547e5}</Project>
+      <Name>PowerPointApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\VBIDE\VBIDEApi.csproj">
+      <Project>{acd7db2e-ddb2-4bbb-bdb9-c2fd953585c4}</Project>
+      <Name>VBIDEApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

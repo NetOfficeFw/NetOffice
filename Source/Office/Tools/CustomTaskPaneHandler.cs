@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="callOnCreateTaskPaneInfo">callback to manipulate the process dynamicly</param>
         /// <param name="visibleStateChange">visible changed event handler</param>
         /// <param name="dockPositionStateChange">dock state changed event handler</param>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public void ProceedCustomPaneAttributes(Core factory, OfficeApi.ICTPFactory taskPaneFactory, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
              NetOffice.Tools.OnErrorHandler onError, ICOMObject application,
             Type addinType, IOfficeCOMAddin addin,
@@ -39,38 +41,46 @@ namespace NetOffice.OfficeApi.Tools
             CustomTaskPane_VisibleStateChangeEventHandler visibleStateChange,
             CustomTaskPane_DockPositionStateChangeEventHandler dockPositionStateChange)
         {
-            var paneAttributes = NetOffice.Attributes.AttributeExtensions.GetCustomAttributes<CustomPaneAttribute>(addinType);
-            foreach (CustomPaneAttribute itemPane in paneAttributes)
+            try
             {
-                if (null != itemPane)
+                var paneAttributes = NetOffice.Attributes.AttributeExtensions.GetCustomAttributes<CustomPaneAttribute>(addinType);
+                foreach (CustomPaneAttribute itemPane in paneAttributes)
                 {
-                    TaskPaneInfo item = taskPanes.Add(itemPane.PaneType, itemPane.PaneType.Name, itemPane.Creation);
-                    if (!item.CreateAtStartup)
+                    if (null != itemPane)
                     {
-                        Action<TaskPaneInfo> method = delegate(TaskPaneInfo info)
+                        TaskPaneInfo item = taskPanes.Add(itemPane.PaneType, itemPane.PaneType.Name, itemPane.Creation);
+                        if (!item.CreateAtStartup)
                         {
-                            CreateCustomPane(info, factory, taskPaneFactory, taskPanes, onError, application);
-                        };
-                        item.SetCreateAction(method);
-                    }
+                            Action<TaskPaneInfo> method = delegate (TaskPaneInfo info)
+                            {
+                                CreateCustomPane(info, factory, taskPaneFactory, taskPanes, onError, application);
+                            };
+                            item.SetCreateAction(method);
+                        }
 
-                    item.Title = itemPane.Title;
-                    item.Visible = itemPane.Visible;
-                    item.DockPosition = (OfficeApi.Enums.MsoCTPDockPosition)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPosition), itemPane.DockPosition.ToString());
-                    item.DockPositionRestrict = (OfficeApi.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPositionRestrict), itemPane.DockPositionRestrict.ToString());
-                    item.Width = itemPane.Width;
-                    item.Height = itemPane.Height;
-                    item.Arguments = new object[] { addin, this };
-                    if (callOnCreateTaskPaneInfo(item))
-                    {
-                        item.VisibleStateChange += visibleStateChange;
-                        item.DockPositionStateChange += dockPositionStateChange;
-                    }
-                    else
-                    {
-                        taskPanes.Remove(item);
+                        item.Title = itemPane.Title;
+                        item.Visible = itemPane.Visible;
+                        item.DockPosition = (OfficeApi.Enums.MsoCTPDockPosition)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPosition), itemPane.DockPosition.ToString());
+                        item.DockPositionRestrict = (OfficeApi.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(OfficeApi.Enums.MsoCTPDockPositionRestrict), itemPane.DockPositionRestrict.ToString());
+                        item.Width = itemPane.Width;
+                        item.Height = itemPane.Height;
+                        item.Arguments = new object[] { addin, this };
+                        if (callOnCreateTaskPaneInfo(item))
+                        {
+                            item.VisibleStateChange += visibleStateChange;
+                            item.DockPositionStateChange += dockPositionStateChange;
+                        }
+                        else
+                        {
+                            taskPanes.Remove(item);
+                        }
                     }
                 }
+            }
+            catch (Exception exception)
+            {
+                if (null != onError)
+                    onError(ErrorMethodKind.CTPFactoryAvailable, exception);
             }
         }
 
@@ -82,6 +92,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="taskPanes">taskpane you want to create</param>
         /// <param name="onError">Error callback if somthings fails</param>
         /// <param name="application">host application in base definition</param>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public void CreateCustomPanes(Core factory, OfficeApi.ICTPFactory taskPaneFactory, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
             NetOffice.Tools.OnErrorHandler onError, ICOMObject application)
         {
@@ -106,10 +117,10 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (Exception exception)
             {
-                onError(ErrorMethodKind.CTPFactoryAvailable, exception);
+                if(null != onError)
+                    onError(ErrorMethodKind.CTPFactoryAvailable, exception);
             }
         }
-
 
         private void CreateCustomPane(TaskPaneInfo item, Core factory, OfficeApi.ICTPFactory taskPaneFactory, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
            NetOffice.Tools.OnErrorHandler onError, ICOMObject application)
@@ -126,13 +137,15 @@ namespace NetOffice.OfficeApi.Tools
                     return;
                 if (null == item)
                     return;
-                if (null == item.Pane)
+                if (null != item.Pane)
                     return;
 
                 string title = item.Title;
                 OfficeApi.CustomTaskPane taskPane = CreateCTP(taskPaneFactory, item.Type.FullName, title, onError);
                 if (null == taskPane)
+                {
                     return;
+                }
 
                 Type taskPaneType = taskPane.GetType();
                 item.Pane = taskPane;
@@ -221,7 +234,8 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (Exception exception)
             {
-                onError(ErrorMethodKind.CTPFactoryAvailable, exception);
+                if (null != onError)
+                    onError(ErrorMethodKind.CTPFactoryAvailable, exception);
             }
         }
 
@@ -234,10 +248,13 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (System.Exception exception)
             {
-                string message = String.Format("Unable to create {0}({1}).", fullName, title);
-                System.Runtime.InteropServices.COMException wrapperException = new System.Runtime.InteropServices.COMException(message, exception);
-                taskPaneFactory.Factory.Console.WriteException(wrapperException);
-                onError(NetOffice.Tools.ErrorMethodKind.CTPFactoryAvailable, wrapperException);
+                if (null != onError)
+                {
+                    string message = String.Format("Unable to create {0}(Title:{1}).", fullName, title);
+                    System.Runtime.InteropServices.COMException wrapperException = new NetOffice.Exceptions.NetOfficeCOMException(message, exception);
+                    taskPaneFactory.Factory.Console.WriteException(wrapperException);
+                    onError(NetOffice.Tools.ErrorMethodKind.CTPFactoryAvailable, wrapperException);
+                }
             }
             return taskPane;
         }

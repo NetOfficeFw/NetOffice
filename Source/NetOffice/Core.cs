@@ -592,7 +592,7 @@ namespace NetOffice
                     ICOMObject[] newVariantArray = new ICOMObject[comProxyArray.Length];
                     for (int i = 0; i < comProxyArray.Length; i++)
                     {
-                        comVariantType = comProxyArray[i].GetType(); //  todo: handle that better by a cache   
+                        comVariantType = comProxyArray[i].GetType(); //  TODO: handle that better by a cache
                         newVariantArray[i] = CreateObjectFromComProxy(caller, comProxyArray[i], allowDynamicObject);
                     }
                     return newVariantArray;
@@ -681,7 +681,7 @@ namespace NetOffice
                             }
                         }
                     }
-                   
+
                     return result;
                 }
             }

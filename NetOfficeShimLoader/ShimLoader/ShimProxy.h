@@ -8,6 +8,7 @@
 #include "ManagedCustomTaskPaneConsumer.h"
 #include "OuterUpdateAggregator.h"
 
+extern HANDLE _thread;
 extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
@@ -33,9 +34,13 @@ public:
 
 	// IShimProxy Implementation
 	BOOL STDMETHODCALLTYPE IsCLRLoaded();
-	STDMETHODIMP ReloadCLR();
+	STDMETHODIMP LoadCLR();
 	STDMETHODIMP UnloadCLR();
+	BOOL IsReloadThreadInProgress();
+	BOOL IsAsyncReloadThreadInProgress();
+	STDMETHODIMP ReloadCLR(BOOL async);
 	STDMETHODIMP CloseReloadThread();
+	STDMETHODIMP AssignInnerPointers();
 
 	// IDispatch Implementation
 	STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
@@ -55,6 +60,14 @@ private:
 	OuterUpdateAggregator*				_updateAggregator;
 	ManagedRibbonExtensibility*			_ribbonExtensibility;
 	ManagedCustomTaskPaneConsumer*		_paneConsumer;
-	HANDLE								_currentReloadTread;
+	volatile HANDLE						_currentReloadTread;
+	IDispatch*							_application;
+	IDispatch*							_addInInst;
+	ext_ConnectMode						_connectMode;
+	LPSAFEARRAY*						_customOnConnection;
+	LPSAFEARRAY*						_customOnAddInsUpdate;
+	LPSAFEARRAY*						_customOnStartupComplete;
+
+	LPSAFEARRAY*						_customEmptyArgs;
 
 };

@@ -16,6 +16,7 @@ namespace PowerPoint03AddinCS4
 {
     [COMAddin("PowerPoint03 Sample Addin CS4", "Diagnostics Addin Example", LoadBehavior.LoadAtStartup)]
     [ProgId("PowerPoint03AddinCS4.Connect"), Guid("E9767011-C360-430B-9495-41E42B4B08E7"), Timestamp, ForceInitialize, Codebase]
+    [RegistryLocation(RegistrySaveLocation.InstallScopeCurrentUser)]
     public class Addin : COMAddin
     {
         public Addin()

@@ -577,7 +577,7 @@ namespace NetOffice
             if (null == settings || settings == this)
                 return true;
 
-            // todo: handle that better by reflection
+            // TODO: handle that better by reflection
 
             if (PerformanceTrace.Enabled != settings.PerformanceTrace.Enabled || EnableProxyManagement != settings.EnableProxyManagement ||
                 EnableDynamicObjects != settings.EnableDynamicObjects || EnableDynamicEventArguments != settings.EnableDynamicEventArguments)

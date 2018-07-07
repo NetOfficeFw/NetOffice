@@ -6,9 +6,11 @@
 * Ctor, Dtor
 ***************************************************************************/
 
-ManagedCustomTaskPaneConsumer::ManagedCustomTaskPaneConsumer(ICustomTaskPaneConsumer* innerConsumer)
+ManagedCustomTaskPaneConsumer::ManagedCustomTaskPaneConsumer(IShimProxy* parent, ICustomTaskPaneConsumer* innerConsumer)
 {
 	_refCounter = 0;
+	_parent = parent;
+	_ctpFactoryInst = nullptr;
 	SetInnerPointer(innerConsumer);
 	_components++;
 }
@@ -19,6 +21,11 @@ ManagedCustomTaskPaneConsumer::~ManagedCustomTaskPaneConsumer()
 	{
 		_innerConsumer->Release();
 		_innerConsumer = nullptr;
+	}
+	if (_ctpFactoryInst)
+	{
+		_ctpFactoryInst->Release();
+		_ctpFactoryInst = nullptr;
 	}
 	_components--;
 }
@@ -44,6 +51,10 @@ STDMETHODIMP ManagedCustomTaskPaneConsumer::SetInnerPointer(ICustomTaskPaneConsu
 	return hr;
 }
 
+ICTPFactory* ManagedCustomTaskPaneConsumer::InnerCtpFactory()
+{
+	return _ctpFactoryInst;
+}
 
 /***************************************************************************
 * ICustomTaskPaneConsumer Implementation
@@ -51,13 +62,28 @@ STDMETHODIMP ManagedCustomTaskPaneConsumer::SetInnerPointer(ICustomTaskPaneConsu
 
 STDMETHODIMP ManagedCustomTaskPaneConsumer::CTPFactoryAvailable(ICTPFactory* CTPFactoryInst)
 {
+	HRESULT hr = E_FAIL;
 	ICustomTaskPaneConsumer* paneConsumer = nullptr;
-	HRESULT hr = _innerConsumer->QueryInterface(IID_ICustomTaskPaneConsumer, (LPVOID*)&paneConsumer);
-	if (SUCCEEDED(hr))
+	if (_ctpFactoryInst)
 	{
-		hr = paneConsumer->CTPFactoryAvailable(CTPFactoryInst);
-		paneConsumer->Release();
+		_ctpFactoryInst->Release();
 	}
+	_ctpFactoryInst = CTPFactoryInst;
+	if (_ctpFactoryInst)
+	{
+		_ctpFactoryInst->AddRef();
+	}
+
+	if (_innerConsumer)
+	{
+		hr = _innerConsumer->QueryInterface(IID_ICustomTaskPaneConsumer, (LPVOID*)&paneConsumer);
+		if (SUCCEEDED(hr))
+		{
+			hr = paneConsumer->CTPFactoryAvailable(CTPFactoryInst);
+			paneConsumer->Release();
+		}
+	}
+
 	return hr;
 }
 
@@ -68,49 +94,73 @@ STDMETHODIMP ManagedCustomTaskPaneConsumer::CTPFactoryAvailable(ICTPFactory* CTP
 
 STDMETHODIMP ManagedCustomTaskPaneConsumer::GetTypeInfoCount(UINT* pctinfo)
 {
+	HRESULT hr = E_FAIL;
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerConsumer->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-	if (SUCCEEDED(hr))
+
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerConsumer)
 	{
-		hr = dispatch->GetTypeInfoCount(pctinfo);
-		dispatch->Release();
+		hr = _innerConsumer->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+		if (SUCCEEDED(hr))
+		{
+			hr = dispatch->GetTypeInfoCount(pctinfo);
+			dispatch->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedCustomTaskPaneConsumer::GetTypeInfo(UINT iTInfo, LCID lcid, ITypeInfo** ppTInfo)
 {
+	HRESULT hr = E_FAIL;
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerConsumer->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-	if (SUCCEEDED(hr))
+
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerConsumer)
 	{
-		hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
-		dispatch->Release();
+		hr = _innerConsumer->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+		if (SUCCEEDED(hr))
+		{
+			hr = dispatch->GetTypeInfo(iTInfo, lcid, ppTInfo);
+			dispatch->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedCustomTaskPaneConsumer::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
 {
+	HRESULT hr = E_FAIL;
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerConsumer->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-	if (SUCCEEDED(hr))
+
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerConsumer)
 	{
-		hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
-		dispatch->Release();
+		hr = _innerConsumer->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+		if (SUCCEEDED(hr))
+		{
+			hr = dispatch->GetIDsOfNames(riid, rgszNames, cNames, lcid, rgDispId);
+			dispatch->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedCustomTaskPaneConsumer::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
 {
+	HRESULT hr = E_FAIL;
 	IDispatch* dispatch = nullptr;
-	HRESULT hr = _innerConsumer->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
-	if (SUCCEEDED(hr))
+
+	if (_parent && !_parent->IsReloadThreadInProgress() && _innerConsumer)
 	{
-		hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
-		dispatch->Release();
+		hr = _innerConsumer->QueryInterface(IID_IDispatch, (LPVOID*)&dispatch);
+		if (SUCCEEDED(hr))
+		{
+			hr = dispatch->Invoke(dispIdMember, riid, lcid, wFlags, pDispParams, pVarResult, pExcepInfo, puArgErr);
+			dispatch->Release();
+		}
 	}
+
 	return hr;
 }
 
@@ -127,23 +177,24 @@ STDMETHODIMP ManagedCustomTaskPaneConsumer::QueryInterface(REFIID riid, void** p
 
 	HRESULT hr = E_FAIL;
 	bool isBlind = false;
+	bool available = _parent && !_parent->IsReloadThreadInProgress();
 
-	if (IID_IUnknown == riid)
+	if (IID_IUnknown == riid && available)
 	{
 		*ppv = static_cast<IUnknown*>(this);
 		hr = S_OK;
 	}
-	else if (IID_IDispatch == riid)
+	else if (IID_IDispatch == riid && available)
 	{
 		*ppv = static_cast<IDispatch*>(this);
 		hr = S_OK;
 	}
-	else if ((IID_ICustomTaskPaneConsumer == riid))
+	else if (IID_ICustomTaskPaneConsumer == riid && available)
 	{
 		*ppv = static_cast<ICustomTaskPaneConsumer*>(this);
 		hr = S_OK;
 	}
-	else if(!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION)
+	else if(!ENABLE_OUTER_UPDATE_AGGREGATOR && ENABLE_BLIND_AGGREGATION && available)
 	{
 		hr = _innerConsumer->QueryInterface(riid, ppv);
 		isBlind = true;

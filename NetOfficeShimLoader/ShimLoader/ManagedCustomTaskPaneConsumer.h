@@ -1,8 +1,10 @@
 #pragma once
 #include "stdafx.h"
 #include "ICTPFactory.h"
+#include "IShimProxy.hpp"
 #include "Vars.hpp"
 
+extern HANDLE _thread;
 extern HINSTANCE _module;
 extern ULONG _components;
 extern ULONG _locks;
@@ -13,7 +15,7 @@ class ManagedCustomTaskPaneConsumer : public ICustomTaskPaneConsumer
 public:
 
 	// Ctor, Dtor
-	ManagedCustomTaskPaneConsumer(ICustomTaskPaneConsumer* innerConsumer);
+	ManagedCustomTaskPaneConsumer(IShimProxy* parent, ICustomTaskPaneConsumer* innerConsumer);
 	~ManagedCustomTaskPaneConsumer();
 
 	// ManagedRibbonExtensibility Methods
@@ -21,6 +23,7 @@ public:
 
 	// ICustomTaskPaneConsumer Implementation
 	STDMETHOD(CTPFactoryAvailable) (ICTPFactory* CTPFactoryInst);
+	ICTPFactory* InnerCtpFactory();
 
 	// IDispatch Implementation
 	STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
@@ -35,7 +38,9 @@ public:
 
 private:
 
+	IShimProxy*					_parent;
 	ICustomTaskPaneConsumer*	_innerConsumer;
+	ICTPFactory*				_ctpFactoryInst;
 	ULONG						_refCounter;
 
 };

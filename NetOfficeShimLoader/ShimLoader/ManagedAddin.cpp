@@ -41,24 +41,35 @@ IUnknown* ManagedAddin::InnerUnkown()
 
 STDMETHODIMP ManagedAddin::OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom)
 {
+	HRESULT hr = E_FAIL;
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
-	if (SUCCEEDED(hr))
+
+	if (_innerUnkown)
 	{
-		hr = extensibility->OnConnection(application, connectMode, addInInst, custom);
-		extensibility->Release();
+		hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+		if (SUCCEEDED(hr))
+		{
+			hr = extensibility->OnConnection(application, connectMode, addInInst, custom);
+			extensibility->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedAddin::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARRAY* custom)
 {
+	HRESULT hr = E_FAIL;
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
-	if (SUCCEEDED(hr))
+
+	if (_innerUnkown)
 	{
-		hr = extensibility->OnDisconnection(removeMode, custom);
-		extensibility->Release();
+		hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+		if (SUCCEEDED(hr))
+		{
+			hr = extensibility->OnDisconnection(removeMode, custom);
+			extensibility->Release();
+		}
 	}
 
 	return hr;
@@ -66,37 +77,55 @@ STDMETHODIMP ManagedAddin::OnDisconnection(ext_DisconnectMode removeMode, LPSAFE
 
 STDMETHODIMP ManagedAddin::OnAddInsUpdate(LPSAFEARRAY* custom)
 {
+	HRESULT hr = E_FAIL;
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
-	if (SUCCEEDED(hr))
+
+	if (_innerUnkown)
 	{
-		hr = extensibility->OnAddInsUpdate(custom);
-		extensibility->Release();
+		hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+		if (SUCCEEDED(hr))
+		{
+			hr = extensibility->OnAddInsUpdate(custom);
+			extensibility->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedAddin::OnStartupComplete(LPSAFEARRAY* custom)
 {
+	HRESULT hr = E_FAIL;
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
-	if (SUCCEEDED(hr))
+
+	if (_innerUnkown)
 	{
-		hr = extensibility->OnStartupComplete(custom);
-		extensibility->Release();
+		hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+		if (SUCCEEDED(hr))
+		{
+			hr = extensibility->OnStartupComplete(custom);
+			extensibility->Release();
+		}
 	}
+
 	return hr;
 }
 
 STDMETHODIMP ManagedAddin::OnBeginShutdown(LPSAFEARRAY* custom)
 {
+	HRESULT hr = E_FAIL;
 	IDTExtensibility2* extensibility = nullptr;
-	HRESULT hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
-	if (SUCCEEDED(hr))
+
+	if (_innerUnkown)
 	{
-		hr = extensibility->OnBeginShutdown(custom);
-		extensibility->Release();
+		hr = _innerUnkown->QueryInterface(IID_IDTExtensibility2, (LPVOID*)&extensibility);
+		if (SUCCEEDED(hr))
+		{
+			hr = extensibility->OnBeginShutdown(custom);
+			extensibility->Release();
+		}
 	}
+
 	return hr;
 }
 

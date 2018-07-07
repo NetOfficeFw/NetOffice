@@ -690,6 +690,7 @@ namespace NetOffice.OfficeApi.Tools
 
         /// <summary>
         /// Try to detect the addin is loaded from system hive key
+        /// The method does not work for non specific application addins
         /// </summary>
         /// <returns>null if unkown or true/false</returns>
         protected internal bool? IsLoadedFromSystem()

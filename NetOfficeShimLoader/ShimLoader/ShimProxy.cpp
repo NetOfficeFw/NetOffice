@@ -15,6 +15,13 @@ ShimProxy::ShimProxy()
 	_ribbonExtensibility = nullptr;
 	_paneConsumer = nullptr;
 	_currentReloadTread = nullptr;
+	_application = nullptr;
+	_addInInst = nullptr;
+	_customOnConnection = nullptr;
+	_customOnAddInsUpdate = nullptr;
+	_customOnStartupComplete = nullptr;
+	_customEmptyArgs = new LPSAFEARRAY();
+	_connectMode = static_cast<ext_ConnectMode>(0);
 	_components++;
 
 	// load the CLR here because host application may call QueryInterface before OnConnection
@@ -23,6 +30,19 @@ ShimProxy::ShimProxy()
 		_updateAggregator = new OuterUpdateAggregator(this);
 		IOuterUpdateAggregator* updateAggregator = static_cast<IOuterUpdateAggregator*>(_updateAggregator);
 		_loader = new (std::nothrow) ClrHost(updateAggregator);
+
+		//DWORD dwThreadId;
+		//HANDLE handle =_currentReloadTread = CreateThread(
+		//	(SECURITY_ATTRIBUTES *)0,
+		//	0,
+		//	&ReloadCLRInternal,
+		//	this,
+		//	0,
+		//	&dwThreadId
+		//);
+
+		//WaitForSingleObject(handle, INFINITE);
+
 		_loader->Load();
 	}
 }
@@ -42,6 +62,16 @@ STDMETHODIMP ShimProxy::Cleanup()
 {
 	HRESULT hr = S_OK;
 
+	CloseReloadThread();
+
+	_customOnConnection = nullptr;
+	_customOnAddInsUpdate = nullptr;
+	_customOnStartupComplete = nullptr;
+	if (_customEmptyArgs)
+	{
+		_customEmptyArgs = nullptr;
+		delete _customEmptyArgs;
+	}
 	if (_paneConsumer)
 	{
 		delete _paneConsumer;
@@ -77,6 +107,19 @@ STDMETHODIMP ShimProxy::OnConnection(IDispatch* application, ext_ConnectMode con
 
 	try
 	{
+		_customOnConnection = custom;
+		if (application)
+		{
+			_application = application;
+			_application->AddRef();
+
+		}
+		if (addInInst)
+		{
+			_addInInst = addInInst;
+			_addInInst->AddRef();
+		}
+
 		if (ENABLE_SHIM && IsCLRLoaded())
 		{
 			IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(application, connectMode, addInInst, custom));
@@ -119,6 +162,17 @@ STDMETHODIMP ShimProxy::OnDisconnection(ext_DisconnectMode removeMode, LPSAFEARR
 		}
 		// no cleanup call here because host application may still holds IUnkown Pointer to ribbon/taskpane/etc.
 
+		if (_application)
+		{
+			_application->Release();
+			_application = nullptr;
+		}
+		if (_addInInst)
+		{
+			_addInInst->Release();
+			_addInInst = nullptr;
+		}
+
 		return hr;
 	}
 	catch (...)
@@ -140,6 +194,7 @@ STDMETHODIMP ShimProxy::OnAddInsUpdate(LPSAFEARRAY* custom)
 
 	try
 	{
+		_customOnAddInsUpdate = custom;
 		if (ENABLE_SHIM && IsCLRLoaded())
 		{
 			IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(custom));
@@ -166,6 +221,7 @@ STDMETHODIMP ShimProxy::OnStartupComplete(LPSAFEARRAY* custom)
 
 	try
 	{
+		_customOnStartupComplete = custom;
 		if (ENABLE_SHIM && IsCLRLoaded())
 		{
 			IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(custom));
@@ -225,47 +281,18 @@ BOOL STDMETHODCALLTYPE ShimProxy::IsCLRLoaded()
 	return result;
 }
 
-STDMETHODIMP ShimProxy::ReloadCLR()
+STDMETHODIMP ShimProxy::LoadCLR()
 {
-	if (_currentReloadTread)
-		return E_UNEXPECTED;
-
-	DWORD dwThreadId;
-	_currentReloadTread = CreateThread(
-		(SECURITY_ATTRIBUTES *)0,
-		0,
-		&ReloadCLRInternal,
-		static_cast<IShimProxy*>(this),
-		0,
-		&dwThreadId
-	);
-
-	HRESULT hr = S_OK;
-	//// WaitForSingleObject
-	//HRESULT hr = E_FAIL;
-	//if (!IsCLRLoaded() && _loader)
-	//{
-	//	// todo: store args in OnConnection and recall OnConnection/StartupComplete here
-
-	//	if (_paneConsumer)
-	//	{
-	//		IUnknown* unknown = _loader->OuterAggregator()->Addin()->InnerUnkown();
-	//		ICustomTaskPaneConsumer* consumer = nullptr;
-	//		if (SUCCEEDED(unknown->QueryInterface(IID_IRibbonExtensibility, (LPVOID*)&consumer)))
-	//			hr = _paneConsumer->SetInnerPointer(consumer);
-	//	}
-
-	//	if (_ribbonExtensibility)
-	//	{
-	//		IUnknown* unknown = _loader->OuterAggregator()->Addin()->InnerUnkown();
-	//		IRibbonExtensibility* ribbon = nullptr;
-	//		if (SUCCEEDED(unknown->QueryInterface(IID_IRibbonExtensibility, (LPVOID*)&ribbon)))
-	//			hr = _ribbonExtensibility->SetInnerPointer(ribbon);
-	//	}
-	//}
+	HRESULT hr = E_FAIL;
+	if (!IsCLRLoaded())
+	{
+		IfFailGo(_loader->Load());
+	}
 
 	return hr;
+
 Error:
+
 	return hr;
 }
 
@@ -282,31 +309,147 @@ Error:
 	return hr;
 }
 
+BOOL ShimProxy::IsReloadThreadInProgress()
+{
+	return NULL != _currentReloadTread ? TRUE : FALSE;
+}
+
+BOOL ShimProxy::IsAsyncReloadThreadInProgress()
+{
+	if (_currentReloadTread)
+	{
+		return S_OK != _currentReloadTread ? TRUE : FALSE;
+	}
+	else
+	{
+		return FALSE;
+	}
+}
+
+STDMETHODIMP ShimProxy::ReloadCLR(BOOL async)
+{
+	if (IsReloadThreadInProgress())
+		return E_UNEXPECTED;
+
+	HRESULT hr = S_OK;
+
+	if (async)
+	{
+		//DWORD dwThreadId;
+		//_currentReloadTread = CreateThread(
+		//	(SECURITY_ATTRIBUTES*)0,
+		//	0,
+		//	&ReloadCLRInternal,
+		//	this,
+		//	0,
+		//	&dwThreadId
+		//);
+		// execute in ui thread
+		QueueUserAPC((PAPCFUNC)ReloadCLRInternal, _thread, (ULONG_PTR)this);
+	}
+	else
+	{
+		_currentReloadTread = S_OK;
+		hr = ReloadCLRInternal(this);
+	}
+
+	return hr;
+}
+
 STDMETHODIMP ShimProxy::CloseReloadThread()
 {
 	HRESULT hr = S_OK;
 	if (NULL != _currentReloadTread)
 	{
-		if (!CloseHandle(_currentReloadTread))
-			hr = E_FAIL;
+		if (S_OK != _currentReloadTread)
+		{
+			if (!CloseHandle(_currentReloadTread))
+				hr = E_FAIL;
+		}
+		_currentReloadTread = nullptr;
 	}
+	return hr;
+}
+
+STDMETHODIMP ShimProxy::AssignInnerPointers()
+{
+	HRESULT hr = S_OK;
+
+	if (IsCLRLoaded())
+	{
+		HRESULT res = S_OK;
+
+		if (_paneConsumer)
+		{
+			IUnknown* unknown = _loader->OuterAggregator()->Addin()->InnerUnkown();
+			ICustomTaskPaneConsumer* consumer = nullptr;
+			if (SUCCEEDED(unknown->QueryInterface(IID_ICustomTaskPaneConsumer, (LPVOID*)&consumer)))
+			{
+				HRESULT setResult = _paneConsumer->SetInnerPointer(consumer);
+				if (!SUCCEEDED(setResult))
+					hr = setResult;
+			}
+			else
+			{
+				hr = E_FAIL;
+			}
+		}
+
+		if (_ribbonExtensibility)
+		{
+			IUnknown* unknown = _loader->OuterAggregator()->Addin()->InnerUnkown();
+			IRibbonExtensibility* ribbon = nullptr;
+			if (SUCCEEDED(unknown->QueryInterface(IID_IRibbonExtensibility, (LPVOID*)&ribbon)))
+			{
+				HRESULT setResult = _ribbonExtensibility->SetInnerPointer(ribbon);
+				if (!SUCCEEDED(setResult))
+					hr = setResult;
+			}
+			else
+			{
+				hr = E_FAIL;
+			}
+		}
+
+		IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(_application, _connectMode, _addInInst, _customEmptyArgs));
+		IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(_customEmptyArgs));
+		if (_paneConsumer)
+		{
+			res = _paneConsumer->CTPFactoryAvailable(_paneConsumer->InnerCtpFactory());
+			if (!SUCCEEDED(res))
+				hr = res;
+		}
+		IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(_customEmptyArgs));
+	}
+	else
+	{
+		hr = E_UNEXPECTED;
+	}
+
+	return hr;
+
+Error:
+
 	return hr;
 }
 
 DWORD WINAPI ReloadCLRInternal(LPVOID lpParameter)
 {
 	HRESULT hr = S_OK;
-	IShimProxy* proxy = (IShimProxy*)lpParameter;
+	ShimProxy* proxy = (ShimProxy*)lpParameter;
 
 	if (proxy->IsCLRLoaded())
 	{
 		hr = proxy->UnloadCLR();
 	}
 
-	//if (SUCCEEDED(hr))
-	//{
-	//	hr = proxy->ReloadCLR();
-	//}
+	if (!proxy->IsCLRLoaded())
+	{
+		hr = proxy->LoadCLR();
+	}
+
+	if (SUCCEEDED(hr))
+		hr = proxy->AssignInnerPointers();
 
 	proxy->CloseReloadThread();
 
@@ -367,7 +510,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 			IRibbonExtensibility* ribbon = nullptr;
 			hr = inner->QueryInterface(riid, (LPVOID*)&ribbon);
 			if (SUCCEEDED(hr))
-				_ribbonExtensibility = new (std::nothrow) ManagedRibbonExtensibility(ribbon);
+				_ribbonExtensibility = new (std::nothrow) ManagedRibbonExtensibility(static_cast<IShimProxy*>(this), ribbon);
 			if (!_ribbonExtensibility && NULL != ribbon)
 			{
 				ribbon->Release();
@@ -390,7 +533,7 @@ STDMETHODIMP ShimProxy::QueryInterface(REFIID riid, void** ppv)
 			ICustomTaskPaneConsumer* consumer = nullptr;
 			hr = inner->QueryInterface(riid, (LPVOID*)&consumer);
 			if(SUCCEEDED(hr))
-				_paneConsumer = new (std::nothrow) ManagedCustomTaskPaneConsumer(consumer);
+				_paneConsumer = new (std::nothrow) ManagedCustomTaskPaneConsumer(static_cast<IShimProxy*>(this), consumer);
 			if (!_paneConsumer && NULL != consumer)
 			{
 				consumer->Release();

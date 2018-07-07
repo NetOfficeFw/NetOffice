@@ -6,20 +6,16 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using NetOffice;
 using NetOffice.PowerPointApi;
 using NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 
 namespace PowerPointAddin
 {
-    public partial class Pane : UserControl, NetOffice.PowerPointApi.Tools.ITaskPane
+    public partial class Pane : UserControl, NetOffice.OfficeApi.Tools.ITaskPane
     {
-        public Pane()
-        {
-            //InitializeComponent();
-        }
-
-        public void OnConnection(NetOffice.PowerPointApi.Application application, _CustomTaskPane parentPane, object[] customArguments)
+        public void OnConnection(ICOMObject application, _CustomTaskPane parentPane, object[] customArguments)
         {
 
         }

@@ -30,6 +30,25 @@ namespace InnerAddin
             AppDomain.CurrentDomain.DomainUnload += CurrentDomain_DomainUnload;
         }
 
+        protected override void RaiseOnConnection(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom)
+        {
+            //MessageBox.Show("RaiseOnConnection Application: " + System.ComponentModel.TypeDescriptor.GetClassName(application));
+            PrintArray("RaiseOnConnection", custom);
+            base.RaiseOnConnection(application, connectMode, addInInst, ref custom);
+        }
+
+        protected override void RaiseOnAddInsUpdate(ref Array custom)
+        {
+            PrintArray("RaiseOnAddInsUpdate", custom);
+            base.RaiseOnAddInsUpdate(ref custom);
+        }
+
+        protected override void RaiseOnStartupComplete(ref Array custom)
+        {
+            PrintArray("RaiseOnStartupComplete", custom);
+            base.RaiseOnStartupComplete(ref custom);
+        }
+
         private void CurrentDomain_DomainUnload(object sender, EventArgs e)
         {
             Trace.WriteLine("CurrentDomain_DomainUnload");
@@ -51,6 +70,8 @@ namespace InnerAddin
 
         public void CallShimHost()
         {
+            MessageBox.Show("CallShimHost");
+
             foreach (var item in TaskPanes.ToArray())
             {
                 if(null != item.Pane)
@@ -58,7 +79,31 @@ namespace InnerAddin
             }
 
             if (null != ShimHost)
+            {
+                MessageBox.Show("Call Reload");
                 ShimHost.Reload();
+            }
+            else
+            {
+                MessageBox.Show("I dont have a shim host :(");
+            }
+        }
+
+        private void PrintArray(string caller, Array custom)
+        {
+            string message = caller;
+            if (null != custom)
+            {
+                foreach (var item in custom)
+                {
+                    message += "," + (null != item ? item.ToString() : "<Empty>");
+                }
+            }
+            else
+            {
+                message += "<Empty>";
+            }
+            Trace.WriteLine(message);
         }
 
         protected override bool QueryInterface(Guid interfaceId, ref Type type, ref object instance)
@@ -85,9 +130,10 @@ namespace InnerAddin
         }
 
         protected override void OnError(ErrorMethodKind methodKind, System.Exception exception)
-		{
+        {
+            Trace.WriteLine("OnError " + methodKind.ToString() + " " + exception.Message);
             MessageBox.Show(exception.ToString(), methodKind.ToString());
-		}
+        }
 
         [RegisterErrorHandler]
 		public static void RegisterErrorHandler(RegisterErrorMethodKind methodKind, System.Exception exception)

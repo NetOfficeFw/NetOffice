@@ -2,10 +2,11 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
+using NetOffice;
 
 namespace PowerPoint02AddinCS4
 {
-    public partial class SamplePane : UserControl, NetOffice.PowerPointApi.Tools.ITaskPane // Not necessary to implement ITaskPane but its helpful
+    public partial class SamplePane : UserControl, NetOffice.OfficeApi.Tools.ITaskPane // Not necessary to implement ITaskPane but its helpful
     {
         #region Ctor
 
@@ -24,7 +25,7 @@ namespace PowerPoint02AddinCS4
 
         #region ITaskpane
 
-        public void OnConnection(NetOffice.PowerPointApi.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
+        public void OnConnection(ICOMObject application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
         {
 
         }

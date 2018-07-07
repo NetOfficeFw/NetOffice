@@ -35,7 +35,7 @@ STDMETHODIMP OuterUpdateAggregator::Reload()
 {
 	HRESULT hr = E_FAIL;
 
-	IfFailGo(_parent->ReloadCLR());
+	IfFailGo(_parent->ReloadCLR(TRUE));
 
 	return hr;
 

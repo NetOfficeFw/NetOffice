@@ -5,7 +5,8 @@
     <tabs>
       <tab id="InnerAddin" label="InnerAddin">
         <group id="group1" label="InnerAddin">
-           <button id="exceptionButton" label="SampleButton" imageMso="AdvertisePublishAs" size="large" onAction="SampleButton_Click" />
+           <button id="SampleButton1" label="SampleButton1" imageMso="AdvertisePublishAs" size="large" onAction="SampleButton1_Click" />
+          <button id="SampleButton2" label="SampleButton2" imageMso="AdvertisePublishAs" size="large" onAction="SampleButton2_Click" />
         </group>
       </tab>
     </tabs>
