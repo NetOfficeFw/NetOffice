@@ -12,7 +12,7 @@ namespace NetOffice_ShimLoader
 		_refCounter = 0;
 		_parent = parent;
 		SetInnerPointer(innerExtensibility);
-		_components++;
+		IncComponents(L"ManagedRibbonExtensibility");
 	}
 
 	ManagedRibbonExtensibility::~ManagedRibbonExtensibility()
@@ -22,7 +22,7 @@ namespace NetOffice_ShimLoader
 			_innerExtensibility->Release();
 			_innerExtensibility = nullptr;
 		}
-		_components--;
+		DecComponents(L"ManagedRibbonExtensibility");
 	}
 
 

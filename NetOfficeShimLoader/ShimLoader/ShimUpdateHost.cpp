@@ -1,7 +1,5 @@
 #include "stdafx.h"
-#include "OuterComAggregator.h"
-
-using namespace NetOffice_Tools_Isolation;
+#include "ShimUpdateHost.h"
 
 namespace NetOffice_ShimLoader
 {
@@ -9,47 +7,57 @@ namespace NetOffice_ShimLoader
 	* Ctor, Dtor
 	***************************************************************************/
 
-	OuterComAggregator::OuterComAggregator()
+	ShimUpdateHost::ShimUpdateHost()
 	{
 		_refCounter = 0;
-		IncComponents(L"OuterComAggregator");
+		_customData = nullptr;
+		IncComponents(L"ShimUpdateHost");
 	}
 
-	OuterComAggregator::~OuterComAggregator()
+	ShimUpdateHost::~ShimUpdateHost()
 	{
-		if (_innerAddin)
+		if (_customData)
 		{
-			delete _innerAddin;
-			_innerAddin = nullptr;
+			delete _customData;
+			_customData = nullptr;
 		}
-		DecComponents(L"OuterComAggregator");
+		DecComponents(L"ShimUpdateHost");
 	}
 
 
 	/***************************************************************************
-	* OuterComAggregator Methods
+	* ShimUpdateHost Methods
 	***************************************************************************/
 
-	ManagedAddin* OuterComAggregator::Addin()
+	BSTR ShimUpdateHost::CustomData()
 	{
-		return _innerAddin;
+		return  NULL != _customData ? _customData->copy(true) : NULL;
 	}
 
 
 	/***************************************************************************
-	* IOuterComAggregator Implementation
+	* IShimUpdateHost Implementation
 	***************************************************************************/
 
-	HRESULT __stdcall OuterComAggregator::SetInnerAddin(IUnknown* innerAddin)
+	STDMETHODIMP ShimUpdateHost::SetCustomData(BSTR custom)
 	{
-		if (innerAddin == NULL)
-			return E_POINTER;
-		if (_innerAddin != NULL)
-			return E_UNEXPECTED;
+		HRESULT hr = S_OK;
 
-		_innerAddin = new ManagedAddin(innerAddin);
+		if (_customData)
+		{
+			delete _customData;
+			_customData = nullptr;
+		}
+		_customData = new _bstr_t(custom, true);
 
-		return S_OK;
+		return hr;
+	}
+
+	STDMETHODIMP ShimUpdateHost::Done()
+	{
+		HRESULT hr = S_OK;
+
+		return hr;
 	}
 
 
@@ -57,7 +65,7 @@ namespace NetOffice_ShimLoader
 	* IUnknown Implementation
 	***************************************************************************/
 
-	STDMETHODIMP OuterComAggregator::QueryInterface(REFIID riid, void** ppv)
+	STDMETHODIMP ShimUpdateHost::QueryInterface(REFIID riid, void** ppv)
 	{
 		if (NULL == ppv)
 			return E_POINTER;
@@ -65,18 +73,20 @@ namespace NetOffice_ShimLoader
 
 		HRESULT hr = E_FAIL;
 
-		if ((IID_IUnknown == riid))
+		if (IID_IUnknown == riid)
 		{
 			*ppv = static_cast<IUnknown*>(this);
 			hr = S_OK;
 		}
-		else if ((IID_IOuterComAggregator == riid))
+		else if ((IID_IShimUpdateHost == riid))
 		{
-			*ppv = static_cast<IOuterComAggregator*>(this);
+			*ppv = static_cast<IShimUpdateHost*>(this);
 			hr = S_OK;
 		}
 		else
+		{
 			hr = E_NOINTERFACE;
+		}
 
 		if (NULL != *ppv)
 		{
@@ -86,15 +96,15 @@ namespace NetOffice_ShimLoader
 		return hr;
 	}
 
-	STDMETHODIMP_(ULONG) OuterComAggregator::AddRef(void)
+	STDMETHODIMP_(ULONG) ShimUpdateHost::AddRef(void)
 	{
-		return ++_refCounter;
+		_refCounter++;
+		return _refCounter;
 	}
 
-	STDMETHODIMP_(ULONG) OuterComAggregator::Release(void)
+	STDMETHODIMP_(ULONG) ShimUpdateHost::Release(void)
 	{
-		if (_refCounter > 0)
-			_refCounter--;
+		_refCounter--;
 		return _refCounter;
 	}
 }

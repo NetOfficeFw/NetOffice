@@ -3,46 +3,54 @@
 
 namespace NetOffice_ShimLoader
 {
+
 	/***************************************************************************
-	* Ctor Dtor
+	* Ctor, Dtor
 	***************************************************************************/
 
-	OuterUpdateAggregator::OuterUpdateAggregator(IShimProxy* parent)
+	OuterUpdateAggregator::OuterUpdateAggregator()
 	{
 		_refCounter = 0;
-		_parent = parent;
-		_components++;
+		IncComponents(L"OuterUpdateAggregator");
 	}
 
 	OuterUpdateAggregator::~OuterUpdateAggregator()
 	{
-		_components--;
+		if (_innerHandler)
+		{
+			delete _innerHandler;
+			_innerHandler = nullptr;
+		}
+		DecComponents(L"OuterUpdateAggregator");
 	}
 
 
 	/***************************************************************************
-	* IOuteUpdateAggregator Implementation
+	* OuterUpdateAggregator Methods
 	***************************************************************************/
 
-	STDMETHODIMP OuterUpdateAggregator::IsAvailable(BOOL* available)
+	ManagedUpdateHandler* OuterUpdateAggregator::ManagedUpdater()
 	{
-		HRESULT hr = S_OK;
-		bool result = ENABLE_OUTER_UPDATE_AGGREGATOR && !ENABLE_BLIND_AGGREGATION;
-		*available = result;
-		return hr;
+		return _innerHandler;
 	}
 
-	STDMETHODIMP OuterUpdateAggregator::Reload()
+
+	/***************************************************************************
+	* IOuterComAggregator Implementation
+	***************************************************************************/
+
+	HRESULT __stdcall OuterUpdateAggregator::SetInnerHandler(IUnknown* innerHandler)
 	{
-		HRESULT hr = E_FAIL;
+		if (innerHandler == NULL)
+			return E_POINTER;
+		if (_innerHandler != NULL)
+			return E_UNEXPECTED;
 
-		IfFailGo(_parent->ReloadCLR(TRUE));
+		_innerHandler = new ManagedUpdateHandler(innerHandler);
 
-		return hr;
-
-	Error:
-		return hr;
+		return S_OK;
 	}
+
 
 	/***************************************************************************
 	* IUnknown Implementation
@@ -56,7 +64,7 @@ namespace NetOffice_ShimLoader
 
 		HRESULT hr = E_FAIL;
 
-		if (IID_IUnknown == riid)
+		if ((IID_IUnknown == riid))
 		{
 			*ppv = static_cast<IUnknown*>(this);
 			hr = S_OK;
@@ -67,9 +75,7 @@ namespace NetOffice_ShimLoader
 			hr = S_OK;
 		}
 		else
-		{
 			hr = E_NOINTERFACE;
-		}
 
 		if (NULL != *ppv)
 		{
@@ -81,13 +87,13 @@ namespace NetOffice_ShimLoader
 
 	STDMETHODIMP_(ULONG) OuterUpdateAggregator::AddRef(void)
 	{
-		_refCounter++;
-		return _refCounter;
+		return ++_refCounter;
 	}
 
 	STDMETHODIMP_(ULONG) OuterUpdateAggregator::Release(void)
 	{
-		_refCounter--;
+		if (_refCounter > 0)
+			_refCounter--;
 		return _refCounter;
 	}
 }

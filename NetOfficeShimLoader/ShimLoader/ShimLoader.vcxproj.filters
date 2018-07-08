@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ClrHost.cpp" />
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="ManagedAddin.cpp" />
+    <ClCompile Include="ManagedCustomTaskPaneConsumer.cpp" />
+    <ClCompile Include="ManagedRibbonExtensibility.cpp" />
+    <ClCompile Include="OuterComAggregator.cpp" />
+    <ClCompile Include="ShimArguments.cpp" />
+    <ClCompile Include="ShimProxy.cpp" />
+    <ClCompile Include="ShimProxyFactory.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="ShimHost.cpp" />
+    <ClCompile Include="ShimUpdateHost.cpp">
+      <Filter>Updates</Filter>
+    </ClCompile>
+    <ClCompile Include="CLRUpdateHost.cpp">
+      <Filter>Updates</Filter>
+    </ClCompile>
+    <ClCompile Include="DllRegister32.cpp">
+      <Filter>Register</Filter>
+    </ClCompile>
+    <ClCompile Include="DllRegister32On64.cpp">
+      <Filter>Register</Filter>
+    </ClCompile>
+    <ClCompile Include="DllRegister64.cpp">
+      <Filter>Register</Filter>
+    </ClCompile>
+    <ClCompile Include="OuterUpdateAggregator.cpp">
+      <Filter>Updates</Filter>
+    </ClCompile>
+    <ClCompile Include="ManagedUpdateHandler.cpp">
+      <Filter>Updates</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aggregators.h" />
+    <ClInclude Include="ClrHost.h" />
+    <ClInclude Include="IShimProxy.hpp" />
+    <ClInclude Include="ManagedAddin.h" />
+    <ClInclude Include="ManagedCustomTaskPaneConsumer.h" />
+    <ClInclude Include="ManagedRibbonExtensibility.h" />
+    <ClInclude Include="OuterComAggregator.h" />
+    <ClInclude Include="ShimArguments.h" />
+    <ClInclude Include="ShimProxy.h" />
+    <ClInclude Include="ShimProxyFactory.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Vars.hpp" />
+    <ClInclude Include="ShimHost.h" />
+    <ClInclude Include="ShimUpdateHost.h">
+      <Filter>Updates</Filter>
+    </ClInclude>
+    <ClInclude Include="CLRUpdateHost.h">
+      <Filter>Updates</Filter>
+    </ClInclude>
+    <ClInclude Include="DllRegister32.h">
+      <Filter>Register</Filter>
+    </ClInclude>
+    <ClInclude Include="DllRegister32On64.h">
+      <Filter>Register</Filter>
+    </ClInclude>
+    <ClInclude Include="DllRegister64.h">
+      <Filter>Register</Filter>
+    </ClInclude>
+    <ClInclude Include="DllRegisterMode.hpp">
+      <Filter>Register</Filter>
+    </ClInclude>
+    <ClInclude Include="Extensibility2.h">
+      <Filter>Interop</Filter>
+    </ClInclude>
+    <ClInclude Include="ICTPFactory.h">
+      <Filter>Interop</Filter>
+    </ClInclude>
+    <ClInclude Include="IRibbonExtensibility.h">
+      <Filter>Interop</Filter>
+    </ClInclude>
+    <ClInclude Include="OuterUpdateAggregator.h">
+      <Filter>Updates</Filter>
+    </ClInclude>
+    <ClInclude Include="ManagedUpdateHandler.h">
+      <Filter>Updates</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ShimLoader.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ShimLoader.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Updates">
+      <UniqueIdentifier>{08119fa8-4938-4ada-8d3f-ea52fab79a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Register">
+      <UniqueIdentifier>{2470e796-b1a1-4aae-a7fe-09bc7e39681a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interop">
+      <UniqueIdentifier>{6c99f5bd-2854-4256-a2b0-520fa297c09b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

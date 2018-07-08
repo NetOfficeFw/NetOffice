@@ -180,14 +180,18 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="ManagedAddin.h" />
     <ClInclude Include="ManagedCustomTaskPaneConsumer.h" />
     <ClInclude Include="ManagedRibbonExtensibility.h" />
+    <ClInclude Include="ManagedUpdateHandler.h" />
     <ClInclude Include="OuterComAggregator.h" />
     <ClInclude Include="OuterUpdateAggregator.h" />
+    <ClInclude Include="ShimHost.h" />
     <ClInclude Include="DllRegisterMode.hpp" />
     <ClInclude Include="ShimArguments.h" />
     <ClInclude Include="ShimProxy.h" />
     <ClInclude Include="ShimProxyFactory.h" />
+    <ClInclude Include="ShimUpdateHost.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="CLRUpdateHost.h" />
     <ClInclude Include="Vars.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -199,17 +203,21 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClCompile Include="ManagedAddin.cpp" />
     <ClCompile Include="ManagedCustomTaskPaneConsumer.cpp" />
     <ClCompile Include="ManagedRibbonExtensibility.cpp" />
+    <ClCompile Include="ManagedUpdateHandler.cpp" />
     <ClCompile Include="OuterComAggregator.cpp" />
     <ClCompile Include="OuterUpdateAggregator.cpp" />
+    <ClCompile Include="ShimHost.cpp" />
     <ClCompile Include="ShimArguments.cpp" />
     <ClCompile Include="ShimProxy.cpp" />
     <ClCompile Include="ShimProxyFactory.cpp" />
+    <ClCompile Include="ShimUpdateHost.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="CLRUpdateHost.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ShimLoader.def" />

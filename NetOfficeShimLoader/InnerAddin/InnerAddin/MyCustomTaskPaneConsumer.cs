@@ -19,7 +19,7 @@ namespace InnerAddin
     [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public class MyCustomTaskPaneConsumer : NetOffice.OfficeApi.Tools.CustomTaskPaneConsumer
     {
-        public MyCustomTaskPaneConsumer(Addin parent) : base(parent)
+        public MyCustomTaskPaneConsumer(Connect parent) : base(parent)
         {
         }
 

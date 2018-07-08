@@ -13,7 +13,7 @@ namespace NetOffice_ShimLoader
 		_parent = parent;
 		_ctpFactoryInst = nullptr;
 		SetInnerPointer(innerConsumer);
-		_components++;
+		IncComponents(L"ManagedCustomTaskPaneConsumer");
 	}
 
 	ManagedCustomTaskPaneConsumer::~ManagedCustomTaskPaneConsumer()
@@ -28,7 +28,7 @@ namespace NetOffice_ShimLoader
 			_ctpFactoryInst->Release();
 			_ctpFactoryInst = nullptr;
 		}
-		_components--;
+		DecComponents(L"ManagedCustomTaskPaneConsumer");
 	}
 
 

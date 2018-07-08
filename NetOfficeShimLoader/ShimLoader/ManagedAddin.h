@@ -5,10 +5,10 @@
 #include "IRibbonExtensibility.h"
 #include "ICTPFactory.h"
 
-extern HANDLE		_tread;
+extern HANDLE		_thread;
 extern HINSTANCE	_module;
-extern ULONG		_components;
-extern ULONG		_locks;
+extern void IncComponents(LPCWSTR type);
+extern void DecComponents(LPCWSTR type);
 
 namespace NetOffice_ShimLoader
 {
@@ -23,6 +23,7 @@ namespace NetOffice_ShimLoader
 
 		// ManagedAddin Methods
 		IUnknown* InnerUnkown();
+		STDMETHODIMP ReloadNotification(BSTR custom);
 
 		// IDTExtensibility2 Implementation
 		STDMETHODIMP OnConnection(IDispatch* application, ext_ConnectMode connectMode, IDispatch* addInInst, LPSAFEARRAY* custom);

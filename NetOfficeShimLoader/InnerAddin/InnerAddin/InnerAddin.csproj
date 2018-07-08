@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Addin.cs" />
+    <Compile Include="Connect.cs" />
     <Compile Include="MyCustomTaskPaneConsumer.cs" />
     <Compile Include="InnerAddinPane.cs">
       <SubType>UserControl</SubType>

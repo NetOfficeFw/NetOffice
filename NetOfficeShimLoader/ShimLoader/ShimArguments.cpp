@@ -14,12 +14,12 @@ namespace NetOffice_ShimLoader
 
 	ShimArguments::ShimArguments()
 	{
-		_components++;
+		IncComponents(L"ShimArguments");
 	}
 
 	ShimArguments::~ShimArguments()
 	{
-		_components--;
+		DecComponents(L"ShimArguments");
 	}
 
 	HRESULT ShimArguments::Load()

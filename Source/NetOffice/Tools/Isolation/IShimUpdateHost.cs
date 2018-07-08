@@ -6,19 +6,20 @@
 using System;
 using System.Runtime.InteropServices;
 
+
 namespace NetOffice.Tools.Isolation
 {
     /// <summary>
     ///  Represents an outer shim host for a managed update handler
     /// </summary>
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    [ComImport, Guid("E20B53FD-03C8-4977-8725-7E0C89657960")]
-    public interface IOuterUpdateAggregator
+    [ComImport, Guid("EF2F0985-2D4F-45AA-ADB6-510271A6EFC3")]
+    public interface IShimUpdateHost
     {
         /// <summary>
-        /// Publish managed addin as IUnknown* to the shim host
+        /// Signalize the update is done
+        /// The host want unload the update handler and reload the managed addin
         /// </summary>
-        /// <param name="innnerHandlerAsUnknown">managed addin as IUnknown*</param>
-        void SetInnerHandler(IntPtr innnerHandlerAsUnknown);
+        void Done();
     }
 }

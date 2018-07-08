@@ -2,16 +2,17 @@
 #include "stdAfx.h"
 #include "Vars.hpp"
 #include "ClrHost.h"
+#include "CLRUpdateHost.h"
 #include "Aggregators.h"
 #include "IShimProxy.hpp"
 #include "Extensibility2.h"
 #include "ManagedCustomTaskPaneConsumer.h"
-#include "OuterUpdateAggregator.h"
+#include "ShimHost.h"
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;
-extern ULONG		_components;
-extern ULONG		_locks;
+extern void IncComponents(LPCWSTR type);
+extern void DecComponents(LPCWSTR type);
 
 namespace NetOffice_ShimLoader
 {
@@ -43,6 +44,8 @@ namespace NetOffice_ShimLoader
 		STDMETHODIMP ReloadCLR(BOOL async);
 		STDMETHODIMP CloseReloadThread();
 		STDMETHODIMP AssignInnerPointers();
+		STDMETHODIMP LoadUpdateHandler();
+		STDMETHODIMP Update(BOOL async);
 
 		// IDispatch Implementation
 		STDMETHODIMP GetTypeInfoCount(UINT* pctinfo);
@@ -59,18 +62,17 @@ namespace NetOffice_ShimLoader
 
 		ULONG								_refCounter;
 		ClrHost*							_loader;
-		OuterUpdateAggregator*				_updateAggregator;
+		CLRUpdateHost*						_updateLoader;
+		ShimHost*							_shimHost;
 		ManagedRibbonExtensibility*			_ribbonExtensibility;
 		ManagedCustomTaskPaneConsumer*		_paneConsumer;
-		volatile HANDLE						_currentReloadTread;
+		volatile DWORD						_currentReloadTread;
 		IDispatch*							_application;
 		IDispatch*							_addInInst;
 		ext_ConnectMode						_connectMode;
-		LPSAFEARRAY*						_customOnConnection;
-		LPSAFEARRAY*						_customOnAddInsUpdate;
-		LPSAFEARRAY*						_customOnStartupComplete;
-
+		LPSAFEARRAY*						_customOnConnectionArgs;
+		LPSAFEARRAY*						_customOnAddInsUpdateArgs;
+		LPSAFEARRAY*						_customOnStartupCompleteArgs;
 		LPSAFEARRAY*						_customEmptyArgs;
-
 	};
 }

@@ -11,7 +11,7 @@ namespace NetOffice.Tools
     /// Encapsulate generic addin services
     /// </summary>
     [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
-    public abstract class COMAddinBase : ICustomQueryInterface, IInnerUpdateAggregator
+    public abstract class COMAddinBase : ICustomQueryInterface, IManagedInnerAddin
     {
         #region Fields
 
@@ -85,7 +85,7 @@ namespace NetOffice.Tools
         /// Outer COM Shim if addin is isolated by a Shim
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
-        protected internal IOuterUpdateAggregator ShimHost { get; private set; }
+        protected internal IShimHost ShimHost { get; private set; }
 
         #endregion
 
@@ -116,15 +116,36 @@ namespace NetOffice.Tools
 
         #endregion
 
-        #region IInnerUpdateAggregator
+        #region IManagedInnerAddin
 
         /// <summary>
         /// Set an unmanaged aggregator to a managed addin instance
         /// </summary>
         /// <param name="aggregator">outer aggregator</param>
-        void IInnerUpdateAggregator.SetOuterAggregator(IOuterUpdateAggregator aggregator)
+        void IManagedInnerAddin.SetParent(IShimHost aggregator)
         {
             ShimHost = aggregator;
+        }
+
+        void IManagedInnerAddin.ReloadNotification(string custom)
+        {
+            try
+            {
+                RecieveCustomData(custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
+
+        /// <summary>
+        /// Recieve custom data from an addin update handler
+        /// </summary>
+        /// <param name="custom">custom data as any</param>
+        protected virtual void RecieveCustomData(string custom)
+        {
+
         }
 
         #endregion

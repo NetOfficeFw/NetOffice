@@ -1,15 +1,14 @@
 #pragma once
 #include "stdafx.h"
 #include "Aggregators.h"
-#include "Vars.hpp"
-#include "IShimProxy.hpp"
+#include "ManagedUpdateHandler.h"
+
+using namespace NetOffice_Tools_Isolation;
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;
-extern ULONG		_components;
-extern ULONG		_locks;
-
-using namespace NetOffice_Tools_Isolation;
+extern void IncComponents(LPCWSTR type);
+extern void DecComponents(LPCWSTR type);
 
 namespace NetOffice_ShimLoader
 {
@@ -19,12 +18,14 @@ namespace NetOffice_ShimLoader
 	public:
 
 		// Ctor, Dtor
-		OuterUpdateAggregator(IShimProxy* parent);
+		OuterUpdateAggregator();
 		~OuterUpdateAggregator();
 
+		// OuterUpdateAggregator
+		ManagedUpdateHandler* ManagedUpdater();
+
 		// IOuterUpdateAggregator Implementation
-		STDMETHODIMP IsAvailable(BOOL* available);
-		STDMETHODIMP Reload();
+		STDMETHODIMP SetInnerHandler(IUnknown* innerHandler);
 
 		// IUnknown Implementation
 		STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
@@ -33,8 +34,7 @@ namespace NetOffice_ShimLoader
 
 	private:
 
-		ULONG								_refCounter;
-		IShimProxy*							_parent;
+		ULONG						_refCounter;
+		ManagedUpdateHandler*		_innerHandler;
 	};
-
 }

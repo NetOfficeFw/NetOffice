@@ -1,5 +1,5 @@
-#include "StdAfx.h"
-#include "ClrHost.h"
+#include "stdafx.h"
+#include "CLRUpdateHost.h"
 
 namespace NetOffice_ShimLoader
 {
@@ -8,51 +8,58 @@ namespace NetOffice_ShimLoader
 
 	static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize);
 
+
 	/***************************************************************************
 	* Ctor, Dtor
 	***************************************************************************/
 
-	ClrHost::ClrHost(IShimHost* shimHost)
+	CLRUpdateHost::CLRUpdateHost()
 	{
 		_runtimeHost = nullptr;
 		_appDomain = nullptr;
 		_outerAggregator = nullptr;
 		_isLoaded = false;
 		_lastLoadError = S_OK;
-		_shimHost = shimHost;
-		IncComponents(L"ClrHost");
+		_shimHost = nullptr;
+		IncComponents(L"CLRUpdateHost");
 	}
 
-	ClrHost::~ClrHost()
+
+	CLRUpdateHost::~CLRUpdateHost()
 	{
 		Unload();
-		DecComponents(L"ClrHost");
+		DecComponents(L"CLRUpdateHost");
 	}
 
 
 	/***************************************************************************
-	* ClrLoader Methods
+	* UpdateHost Methods
 	***************************************************************************/
 
-	BOOL ClrHost::IsLoaded()
+	BOOL STDMETHODCALLTYPE CLRUpdateHost::IsLoaded()
 	{
 		return _isLoaded;
 	}
 
-	OuterComAggregator* ClrHost::OuterAggregator()
+	OuterUpdateAggregator* STDMETHODCALLTYPE CLRUpdateHost::OuterAggregator()
 	{
 		return _outerAggregator;
 	}
 
-	HRESULT ClrHost::Load()
+	ShimUpdateHost* STDMETHODCALLTYPE CLRUpdateHost::Host()
+	{
+		return _shimHost;
+	}
+
+	STDMETHODIMP CLRUpdateHost::Load()
 	{
 		HRESULT hr = E_FAIL;
 
 		CComVariant cvarManagedAggregator;
 
 		_ObjectHandle* srpObjectHandle = nullptr;
-		IOuterComAggregator* srpOuterComAggregator = nullptr;
-		IManagedInnerComAggregator* srpManagedAggregator = nullptr;
+		IOuterUpdateAggregator* srpOuterComAggregator = nullptr;
+		IManagedInnerUpdateAggregator* srpManagedAggregator = nullptr;
 
 		ICLRMetaHost* metaHost = nullptr;
 		ICLRRuntimeInfo* runtimeInfo = nullptr;
@@ -94,19 +101,20 @@ namespace NetOffice_ShimLoader
 		IfFailGo(runtimeHost->CreateDomainEx(T2W(directoryPath), pDomainSetup, 0, &unkAppDomain));
 		IfFailGo(unkAppDomain->QueryInterface(__uuidof(_appDomain), (LPVOID*)&_appDomain));
 		IfFailGo(_appDomain->CreateInstance(
-			CComBSTR(TargetManagedAggregator_AssemblyName),
-			CComBSTR(TargetManagedAggregator_ClassName),
+			CComBSTR(UpdateManagedAggregator_AssemblyName),
+			CComBSTR(UpdateManagedAggregator_ClassName),
 			&srpObjectHandle));
 
-		_outerAggregator = new OuterComAggregator();
+		_outerAggregator = new OuterUpdateAggregator();
+		_shimHost = new ShimUpdateHost();
 
 		IfFailGo(srpObjectHandle->Unwrap(&cvarManagedAggregator));
 		IfFailGo(cvarManagedAggregator.pdispVal->QueryInterface(&srpManagedAggregator));
-		IfFailGo(_outerAggregator->QueryInterface(IID_IOuterComAggregator, (LPVOID*)&srpOuterComAggregator));
+		IfFailGo(_outerAggregator->QueryInterface(IID_IOuterUpdateAggregator, (LPVOID*)&srpOuterComAggregator));
 
 		IfFailGo(srpManagedAggregator->CreateAggregatedInstance(
-			CComBSTR(Target_AssemblyName),
-			CComBSTR(Target_ConnectClassName),
+			CComBSTR(Update_AssemblyName),
+			CComBSTR(Update_ConnectClassName),
 			srpOuterComAggregator, _shimHost));
 
 		_runtimeHost = runtimeHost;
@@ -122,10 +130,16 @@ namespace NetOffice_ShimLoader
 		return hr;
 	}
 
-	HRESULT ClrHost::Unload()
+	STDMETHODIMP CLRUpdateHost::Unload()
 	{
 		HRESULT hr = S_OK;
 		IUnknown* pUnkDomain = NULL;
+
+		if (_shimHost)
+		{
+			delete _shimHost;
+			_shimHost = nullptr;
+		}
 
 		if (_outerAggregator)
 		{
@@ -164,12 +178,12 @@ namespace NetOffice_ShimLoader
 		return hr;
 	}
 
-	HRESULT ClrHost::LastLoadError()
+	STDMETHODIMP CLRUpdateHost::LastLoadError()
 	{
 		return _lastLoadError;
 	}
 
-	HRESULT ClrHost::AppendPath(LPWSTR pszPath, LPCWSTR pszMore)
+	HRESULT STDMETHODCALLTYPE CLRUpdateHost::AppendPath(LPWSTR pszPath, LPCWSTR pszMore)
 	{
 		HRESULT hr = S_OK;
 		if (!PathAppend(pszPath, pszMore))

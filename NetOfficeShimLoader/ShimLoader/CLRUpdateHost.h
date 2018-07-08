@@ -3,10 +3,12 @@
 #include "metahost.h"
 #include "atlbase.h"
 #include "strsafe.h"
+#include "ClrHost.h"
 #include "Vars.hpp"
 #include "Aggregators.h"
 #include "Extensibility2.h"
-#include "OuterComAggregator.h"
+#include "OuterUpdateAggregator.h"
+#include "ShimUpdateHost.h"
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;
@@ -15,32 +17,33 @@ extern void DecComponents(LPCWSTR type);
 
 namespace NetOffice_ShimLoader
 {
-	class ClrHost
+	class CLRUpdateHost
 	{
 
 	public:
 
 		// Ctor, Dtor
-		ClrHost(IShimHost* shimHost);
-		~ClrHost();
+		CLRUpdateHost();
+		~CLRUpdateHost();
 
 		// ClrLoader Methods
-		BOOL IsLoaded();
-		OuterComAggregator* OuterAggregator();
-		HRESULT Load();
-		HRESULT Unload();
-		HRESULT LastLoadError();
+		BOOL STDMETHODCALLTYPE IsLoaded();
+		OuterUpdateAggregator* STDMETHODCALLTYPE OuterAggregator();
+		ShimUpdateHost* STDMETHODCALLTYPE Host();
+		STDMETHODIMP Load();
+		STDMETHODIMP Unload();
+		STDMETHODIMP LastLoadError();
 
 	protected:
 
-		HRESULT AppendPath(LPWSTR pszPath, LPCWSTR pszMore);
+		HRESULT STDMETHODCALLTYPE AppendPath(LPWSTR pszPath, LPCWSTR pszMore);
 
 	private:
 
 		ICorRuntimeHost*			_runtimeHost;
 		mscorlib::_AppDomain*		_appDomain;
-		OuterComAggregator*			_outerAggregator;
-		IShimHost*					_shimHost;
+		ShimUpdateHost*				_shimHost;
+		OuterUpdateAggregator*		_outerAggregator;
 		BOOL						_isLoaded;
 		HRESULT						_lastLoadError;
 

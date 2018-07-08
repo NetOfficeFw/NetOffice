@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "ShimProxyFactory.h"
-#include "ShimProxy.h"
 
 
 /***************************************************************************
@@ -10,12 +9,12 @@
 ShimProxyFactory::ShimProxyFactory()
 {
 	_refCount = 0;
-	_components++;
+	IncComponents(L"ShimProxyFactory");
 }
 
 ShimProxyFactory::~ShimProxyFactory()
 {
-	_components--;
+	DecComponents(L"ShimProxyFactory");
 }
 
 /***************************************************************************

@@ -1,7 +1,8 @@
 #pragma once
+#include "stdafx.h"
 #include "Aggregators.h"
-#include "ManagedAddin.h"
-#include "ManagedRibbonExtensibility.h"
+#include "Vars.hpp"
+#include "IShimProxy.hpp"
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;
@@ -12,20 +13,21 @@ using namespace NetOffice_Tools_Isolation;
 
 namespace NetOffice_ShimLoader
 {
-	class OuterComAggregator : public IOuterComAggregator
+	class ShimUpdateHost : public IShimUpdateHost
 	{
 
 	public:
 
 		// Ctor, Dtor
-		OuterComAggregator();
-		~OuterComAggregator();
+		ShimUpdateHost();
+		~ShimUpdateHost();
 
-		// OuterComAggregator Methods
-		ManagedAddin* Addin();
+		// ShimUpdateHost Methods
+		BSTR CustomData();
 
-		// IOuterComAggregator Implementation
-		HRESULT __stdcall SetInnerAddin(IUnknown *innerAddin);
+		// IShimUpdateHost Implementation
+		STDMETHODIMP SetCustomData(BSTR custom);
+		STDMETHODIMP Done();
 
 		// IUnknown Implementation
 		STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
@@ -34,8 +36,7 @@ namespace NetOffice_ShimLoader
 
 	private:
 
-		ManagedAddin*		_innerAddin;
-		ULONG				_refCounter;
-
+		ULONG								_refCounter;
+		_bstr_t*							_customData;
 	};
 }

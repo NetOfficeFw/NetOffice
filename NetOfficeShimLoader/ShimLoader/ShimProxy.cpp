@@ -4,6 +4,7 @@
 namespace NetOffice_ShimLoader
 {
 	DWORD WINAPI ReloadCLRInternal(LPVOID lpParameter);
+	DWORD WINAPI UpdateInternal(LPVOID lpParameter);
 
 	/***************************************************************************
 	* Ctor Dtor
@@ -12,47 +13,36 @@ namespace NetOffice_ShimLoader
 	ShimProxy::ShimProxy()
 	{
 		_refCounter = 0;
-		_updateAggregator = nullptr;
+		_shimHost = nullptr;
 		_loader = nullptr;
+		_updateLoader = nullptr;
 		_ribbonExtensibility = nullptr;
 		_paneConsumer = nullptr;
-		_currentReloadTread = nullptr;
+		_currentReloadTread = 0;
 		_application = nullptr;
 		_addInInst = nullptr;
-		_customOnConnection = nullptr;
-		_customOnAddInsUpdate = nullptr;
-		_customOnStartupComplete = nullptr;
+		_customOnConnectionArgs = nullptr;
+		_customOnAddInsUpdateArgs = nullptr;
+		_customOnStartupCompleteArgs = nullptr;
 		_customEmptyArgs = new LPSAFEARRAY();
 		_connectMode = static_cast<ext_ConnectMode>(0);
-		_components++;
+		IncComponents(L"ShimProxy");
 
 		// load the CLR here because host application may call QueryInterface before OnConnection
 		if (ENABLE_SHIM)
 		{
-			_updateAggregator = new OuterUpdateAggregator(this);
-			IOuterUpdateAggregator* updateAggregator = static_cast<IOuterUpdateAggregator*>(_updateAggregator);
-			_loader = new (std::nothrow) ClrHost(updateAggregator);
-
-			//DWORD dwThreadId;
-			//HANDLE handle =_currentReloadTread = CreateThread(
-			//	(SECURITY_ATTRIBUTES *)0,
-			//	0,
-			//	&ReloadCLRInternal,
-			//	this,
-			//	0,
-			//	&dwThreadId
-			//);
-
-			//WaitForSingleObject(handle, INFINITE);
-
-			_loader->Load();
+			_shimHost = new ShimHost(this);
+			IShimHost* shimHost = static_cast<IShimHost*>(_shimHost);
+			_loader = new (std::nothrow) ClrHost(shimHost);
+			if(_loader)
+				_loader->Load();
 		}
 	}
 
 	ShimProxy::~ShimProxy()
 	{
 		Cleanup();
-		_components--;
+		DecComponents(L"ShimProxy");
 	}
 
 
@@ -66,9 +56,9 @@ namespace NetOffice_ShimLoader
 
 		CloseReloadThread();
 
-		_customOnConnection = nullptr;
-		_customOnAddInsUpdate = nullptr;
-		_customOnStartupComplete = nullptr;
+		_customOnConnectionArgs = nullptr;
+		_customOnAddInsUpdateArgs = nullptr;
+		_customOnStartupCompleteArgs = nullptr;
 
 		if (_customEmptyArgs)
 		{
@@ -90,12 +80,16 @@ namespace NetOffice_ShimLoader
 			delete _loader;
 			_loader = nullptr;
 		}
-		if (_updateAggregator)
+		if (_shimHost)
 		{
-			delete _updateAggregator;
-			_updateAggregator = nullptr;
+			delete _shimHost;
+			_shimHost = nullptr;
 		}
-
+		if (_updateLoader)
+		{
+			delete _updateLoader;
+			_updateLoader = nullptr;
+		}
 		return hr;
 	}
 
@@ -110,7 +104,7 @@ namespace NetOffice_ShimLoader
 
 		try
 		{
-			_customOnConnection = custom;
+			_customOnConnectionArgs = custom;
 			if (application)
 			{
 				_application = application;
@@ -197,7 +191,7 @@ namespace NetOffice_ShimLoader
 
 		try
 		{
-			_customOnAddInsUpdate = custom;
+			_customOnAddInsUpdateArgs = custom;
 			if (ENABLE_SHIM && IsCLRLoaded())
 			{
 				IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(custom));
@@ -224,7 +218,7 @@ namespace NetOffice_ShimLoader
 
 		try
 		{
-			_customOnStartupComplete = custom;
+			_customOnStartupCompleteArgs = custom;
 			if (ENABLE_SHIM && IsCLRLoaded())
 			{
 				IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(custom));
@@ -314,14 +308,14 @@ namespace NetOffice_ShimLoader
 
 	BOOL ShimProxy::IsReloadThreadInProgress()
 	{
-		return NULL != _currentReloadTread ? TRUE : FALSE;
+		return 1 == _currentReloadTread ? TRUE : FALSE;
 	}
 
 	BOOL ShimProxy::IsAsyncReloadThreadInProgress()
 	{
 		if (_currentReloadTread)
 		{
-			return S_OK != _currentReloadTread ? TRUE : FALSE;
+			return 2 == _currentReloadTread ? TRUE : FALSE;
 		}
 		else
 		{
@@ -338,18 +332,13 @@ namespace NetOffice_ShimLoader
 
 		if (async)
 		{
-			// redirect execution to the dll creation thread
-			// we need this to avoid custom marshaling between COM Apartments
-			// (we need no elevated permissions because as an addin we are in the same process)
-			QueueUserAPC((PAPCFUNC)ReloadCLRInternal, _thread, (ULONG_PTR)this);
+			if (0 == QueueUserAPC((PAPCFUNC)ReloadCLRInternal, _thread, (ULONG_PTR)this))
+				hr = E_FAIL;
+			_currentReloadTread = 2;
 		}
 		else
 		{
-			// this is a cheap trick, we dont set a pointer adress here and just set S_OK
-			// ShimProxy::CloseReloadThread is aware to handle that
-			// remarks: CloseReloadThread is called at the end of ReloadCLRInternal, so the thread close its self.
-			// (unusual but necesary if the calling thread comes from the managed addin)
-			_currentReloadTread = S_OK;
+			_currentReloadTread = 1;
 			hr = ReloadCLRInternal(this);
 		}
 
@@ -359,14 +348,13 @@ namespace NetOffice_ShimLoader
 	STDMETHODIMP ShimProxy::CloseReloadThread()
 	{
 		HRESULT hr = S_OK;
-		if (NULL != _currentReloadTread)
+		if (0 != _currentReloadTread)
 		{
-			if (S_OK != _currentReloadTread)
-			{
-				if (!CloseHandle(_currentReloadTread))
-					hr = E_FAIL;
-			}
-			_currentReloadTread = nullptr;
+			_currentReloadTread = 0;
+		}
+		else
+		{
+			hr = E_UNEXPECTED;
 		}
 		return hr;
 	}
@@ -411,15 +399,24 @@ namespace NetOffice_ShimLoader
 				}
 			}
 
-			IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(_application, _connectMode, _addInInst, _customEmptyArgs));
-			IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(_customEmptyArgs));
+			BSTR customData = _shimHost->CustomData();
+			_loader->OuterAggregator()->Addin()->ReloadNotification(customData);
+
+			// custom args not set means these methods hasnt been called yet
+			// (its possible to request update also in OnConnection)
+
+			if(_customOnConnectionArgs)
+				IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(_application, _connectMode, _addInInst, _customEmptyArgs));
+			if(_customOnAddInsUpdateArgs)
+				IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(_customEmptyArgs));
 			if (_paneConsumer)
 			{
 				res = _paneConsumer->CTPFactoryAvailable(_paneConsumer->InnerCtpFactory());
 				if (!SUCCEEDED(res))
 					hr = res;
 			}
-			IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(_customEmptyArgs));
+			if(_customOnStartupCompleteArgs)
+				IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(_customEmptyArgs));
 		}
 		else
 		{
@@ -429,6 +426,114 @@ namespace NetOffice_ShimLoader
 		return hr;
 
 	Error:
+
+		return hr;
+	}
+
+	STDMETHODIMP ShimProxy::LoadUpdateHandler()
+	{
+		HRESULT hr = E_FAIL;
+		if (!IsCLRLoaded() && NULL == _updateLoader)
+		{
+			_updateLoader = new (std::nothrow) CLRUpdateHost();
+			if (_updateLoader)
+				hr = _updateLoader->Load();
+			else
+				hr = E_OUTOFMEMORY;
+
+			if (SUCCEEDED(hr))
+			{
+				ManagedUpdateHandler* updater = _updateLoader->OuterAggregator()->ManagedUpdater();
+				if (updater && _application)
+				{
+					hr = updater->SetApplication(_application);
+				}
+
+				if (updater && SUCCEEDED(hr))
+				{
+					BSTR customData = _shimHost->CustomData();
+					hr = updater->SetCustomData(customData);
+				}
+
+				if (updater && SUCCEEDED(hr) && updater->CanExecute())
+				{
+					updater->Execute();
+				}
+
+				if (updater)
+					updater->Close();
+
+				BSTR customData = _updateLoader->Host()->CustomData();
+				if(customData)
+					_shimHost->SetCustomData(customData);
+
+				hr = _updateLoader->Unload();
+
+				if(SUCCEEDED(hr))
+					IfFailGo(ReloadCLR(false));
+			}
+		}
+		else
+		{
+			hr = E_UNEXPECTED;
+			goto Error;
+		}
+
+		if (_updateLoader)
+		{
+			delete _updateLoader;
+			_updateLoader = nullptr;
+		}
+		return hr;
+
+	Error:
+
+		if (_updateLoader)
+		{
+			delete _updateLoader;
+			_updateLoader = nullptr;
+		}
+		ReloadCLR(false);
+		return hr;
+	}
+
+	STDMETHODIMP ShimProxy::Update(BOOL async)
+	{
+		if (IsReloadThreadInProgress())
+			return E_UNEXPECTED;
+
+		HRESULT hr = S_OK;
+
+
+		if (async)
+		{
+			if (0 == QueueUserAPC((PAPCFUNC)UpdateInternal, _thread, (ULONG_PTR)this))
+				hr = E_FAIL;
+			_currentReloadTread = 2;
+		}
+		else
+		{
+			_currentReloadTread = 1;
+			hr = UpdateInternal(this);
+		}
+
+		return hr;
+	}
+
+	DWORD WINAPI UpdateInternal(LPVOID lpParameter)
+	{
+		HRESULT hr = S_OK;
+		ShimProxy* proxy = (ShimProxy*)lpParameter;
+
+		if (proxy->IsCLRLoaded())
+		{
+			hr = proxy->UnloadCLR();
+		}
+
+		if (!proxy->IsCLRLoaded())
+		{
+			hr = proxy->LoadUpdateHandler();
+		}
 
 		return hr;
 	}

@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "ManagedAddin.h"
 
+using namespace NetOffice_Tools_Isolation;
+
 namespace NetOffice_ShimLoader
 {
 	/***************************************************************************
@@ -11,7 +13,7 @@ namespace NetOffice_ShimLoader
 	{
 		_refCounter = 0;
 		_innerUnkown = innerUnkown;
-		_components++;
+		IncComponents(L"ManagedAddin");
 	}
 
 	ManagedAddin::~ManagedAddin()
@@ -22,7 +24,7 @@ namespace NetOffice_ShimLoader
 			_innerUnkown = nullptr;
 
 		}
-		_components--;
+		DecComponents(L"ManagedAddin");
 	}
 
 
@@ -35,6 +37,24 @@ namespace NetOffice_ShimLoader
 		return _innerUnkown;
 	}
 
+	STDMETHODIMP ManagedAddin::ReloadNotification(BSTR custom)
+	{
+		HRESULT hr = E_FAIL;
+
+		IManagedInnerAddin* inner = nullptr;
+
+		if (_innerUnkown)
+		{
+			hr = _innerUnkown->QueryInterface(IID_IManagedInnerAddin, (LPVOID*)&inner);
+			if (SUCCEEDED(hr))
+			{
+				hr = inner->ReloadNotification(custom);
+				inner->Release();
+			}
+		}
+
+		return hr;
+	}
 
 	/***************************************************************************
 	* IDTExtensibility2 Implementation

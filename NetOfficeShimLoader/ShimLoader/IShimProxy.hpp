@@ -63,6 +63,16 @@ namespace NetOffice_ShimLoader
 		//
 		//
 		STDMETHODIMP AssignInnerPointers();
+
+		//
+		//
+		//
+		STDMETHODIMP LoadUpdateHandler();
+
+		//
+		//
+		//
+		STDMETHODIMP Update(BOOL async);
 	};
 	// D3614A78-BA1D-49B7-BC02-991762879CA3
 	static const GUID IID_IShimProxy = __uuidof(IShimProxy);

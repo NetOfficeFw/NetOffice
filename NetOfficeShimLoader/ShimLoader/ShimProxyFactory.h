@@ -1,4 +1,11 @@
 #pragma once
+#include "stdafx.h"
+#include "ShimProxy.h"
+
+extern HANDLE		_thread;
+extern HINSTANCE	_module;
+extern void IncComponents(LPCWSTR type);
+extern void DecComponents(LPCWSTR type);
 
 class ShimProxyFactory : public IClassFactory
 {

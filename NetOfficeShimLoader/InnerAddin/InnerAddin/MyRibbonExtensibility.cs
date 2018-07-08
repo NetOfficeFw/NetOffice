@@ -15,12 +15,12 @@ namespace InnerAddin
     {
         private Guid _id = Guid.NewGuid();
 
-        public MyRibbonExtensibility(Addin parent)
+        public MyRibbonExtensibility(Connect parent)
         {
             Parent = parent;
         }
 
-        private Addin Parent { get; set; }
+        private Connect Parent { get; set; }
 
         public void SampleButton1_Click(Office.IRibbonControl control)
         {
