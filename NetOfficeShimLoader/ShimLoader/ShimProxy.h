@@ -74,5 +74,8 @@ namespace NetOffice_ShimLoader
 		LPSAFEARRAY*						_customOnAddInsUpdateArgs;
 		LPSAFEARRAY*						_customOnStartupCompleteArgs;
 		LPSAFEARRAY*						_customEmptyArgs;
+		BOOL								_onConnectionPassed;
+		BOOL								_onAddInsUpdatePassed;
+		BOOL								_onStartupCompletePassed;
 	};
 }

@@ -21,9 +21,15 @@ namespace NetOffice_ShimLoader
 		_currentReloadTread = 0;
 		_application = nullptr;
 		_addInInst = nullptr;
+
 		_customOnConnectionArgs = nullptr;
 		_customOnAddInsUpdateArgs = nullptr;
 		_customOnStartupCompleteArgs = nullptr;
+
+		_onConnectionPassed = FALSE;
+		_onAddInsUpdatePassed = FALSE;
+		_onStartupCompletePassed = FALSE;
+
 		_customEmptyArgs = new LPSAFEARRAY();
 		_connectMode = static_cast<ext_ConnectMode>(0);
 		IncComponents(L"ShimProxy");
@@ -56,9 +62,24 @@ namespace NetOffice_ShimLoader
 
 		CloseReloadThread();
 
-		_customOnConnectionArgs = nullptr;
-		_customOnAddInsUpdateArgs = nullptr;
-		_customOnStartupCompleteArgs = nullptr;
+		if (_customOnConnectionArgs)
+		{
+			SafeArrayDestroy(*_customOnConnectionArgs);
+			delete _customOnConnectionArgs;
+			_customOnConnectionArgs = nullptr;
+		}
+		if (_customOnAddInsUpdateArgs)
+		{
+			SafeArrayDestroy(*_customOnAddInsUpdateArgs);
+			delete _customOnAddInsUpdateArgs;
+			_customOnAddInsUpdateArgs = nullptr;
+		}
+		if (_customOnStartupCompleteArgs)
+		{
+			SafeArrayDestroy(*_customOnStartupCompleteArgs);
+			delete _customOnStartupCompleteArgs;
+			_customOnStartupCompleteArgs = nullptr;
+		}
 
 		if (_customEmptyArgs)
 		{
@@ -104,7 +125,17 @@ namespace NetOffice_ShimLoader
 
 		try
 		{
-			_customOnConnectionArgs = custom;
+			_onConnectionPassed = TRUE;
+
+			if (custom && (*custom))
+			{
+				_customOnConnectionArgs = new LPSAFEARRAY();
+				if (!SUCCEEDED(SafeArrayCopy((*custom), _customOnConnectionArgs)))
+				{
+					delete _customOnConnectionArgs;
+					_customOnConnectionArgs = nullptr;
+				}
+			}
 			if (application)
 			{
 				_application = application;
@@ -157,6 +188,27 @@ namespace NetOffice_ShimLoader
 			{
 				IfFailGo(_loader->OuterAggregator()->Addin()->OnDisconnection(removeMode, custom));
 			}
+
+			if (_customOnConnectionArgs)
+			{
+				SafeArrayDestroy(*_customOnConnectionArgs);
+				delete _customOnConnectionArgs;
+				_customOnConnectionArgs = nullptr;
+			}
+			if (_customOnAddInsUpdateArgs)
+			{
+				SafeArrayDestroy(*_customOnAddInsUpdateArgs);
+				delete _customOnAddInsUpdateArgs;
+				_customOnAddInsUpdateArgs = nullptr;
+			}
+			if (_customOnStartupCompleteArgs)
+			{
+				SafeArrayDestroy(*_customOnStartupCompleteArgs);
+				delete _customOnStartupCompleteArgs;
+				_customOnStartupCompleteArgs = nullptr;
+			}
+
+
 			// no cleanup call here because host application may still holds IUnkown Pointer to ribbon/taskpane/etc.
 
 			if (_application)
@@ -191,7 +243,15 @@ namespace NetOffice_ShimLoader
 
 		try
 		{
-			_customOnAddInsUpdateArgs = custom;
+			_onAddInsUpdatePassed = TRUE;
+
+			_customOnAddInsUpdateArgs = new LPSAFEARRAY();
+			if (!SUCCEEDED(SafeArrayCopy((*custom), _customOnAddInsUpdateArgs)))
+			{
+				delete _customOnAddInsUpdateArgs;
+				_customOnAddInsUpdateArgs = nullptr;
+			}
+
 			if (ENABLE_SHIM && IsCLRLoaded())
 			{
 				IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(custom));
@@ -218,7 +278,15 @@ namespace NetOffice_ShimLoader
 
 		try
 		{
-			_customOnStartupCompleteArgs = custom;
+			_onStartupCompletePassed = TRUE;
+
+			_customOnStartupCompleteArgs = new LPSAFEARRAY();
+			if (!SUCCEEDED(SafeArrayCopy((*custom), _customOnStartupCompleteArgs)))
+			{
+				delete _customOnStartupCompleteArgs;
+				_customOnStartupCompleteArgs = nullptr;
+			}
+
 			if (ENABLE_SHIM && IsCLRLoaded())
 			{
 				IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(custom));
@@ -402,21 +470,18 @@ namespace NetOffice_ShimLoader
 			BSTR customData = _shimHost->CustomData();
 			_loader->OuterAggregator()->Addin()->ReloadNotification(customData);
 
-			// custom args not set means these methods hasnt been called yet
-			// (its possible to request update also in OnConnection)
-
-			if(_customOnConnectionArgs)
-				IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(_application, _connectMode, _addInInst, _customEmptyArgs));
-			if(_customOnAddInsUpdateArgs)
-				IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(_customEmptyArgs));
+			if(_onConnectionPassed)
+				IfFailGo(_loader->OuterAggregator()->Addin()->OnConnection(_application, _connectMode, _addInInst,  NULL != _customOnConnectionArgs ? _customOnConnectionArgs : _customEmptyArgs));
+			if(_onAddInsUpdatePassed)
+				IfFailGo(_loader->OuterAggregator()->Addin()->OnAddInsUpdate(NULL != _customOnAddInsUpdateArgs ? _customOnAddInsUpdateArgs : _customEmptyArgs));
 			if (_paneConsumer)
 			{
 				res = _paneConsumer->CTPFactoryAvailable(_paneConsumer->InnerCtpFactory());
 				if (!SUCCEEDED(res))
 					hr = res;
 			}
-			if(_customOnStartupCompleteArgs)
-				IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(_customEmptyArgs));
+			if(_onStartupCompletePassed)
+				IfFailGo(_loader->OuterAggregator()->Addin()->OnStartupComplete(NULL != _customOnStartupCompleteArgs ? _customOnStartupCompleteArgs : _customEmptyArgs));
 		}
 		else
 		{
@@ -469,8 +534,8 @@ namespace NetOffice_ShimLoader
 
 				hr = _updateLoader->Unload();
 
-				if(SUCCEEDED(hr))
-					IfFailGo(ReloadCLR(false));
+				if (SUCCEEDED(hr))
+					hr = ReloadCLR(FALSE);
 			}
 		}
 		else
@@ -503,7 +568,6 @@ namespace NetOffice_ShimLoader
 			return E_UNEXPECTED;
 
 		HRESULT hr = S_OK;
-
 
 		if (async)
 		{
