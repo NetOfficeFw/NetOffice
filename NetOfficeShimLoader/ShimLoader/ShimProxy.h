@@ -11,6 +11,7 @@
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;
+extern BOOL			_unloadAllowed;
 extern void IncComponents(LPCWSTR type);
 extern void DecComponents(LPCWSTR type);
 
@@ -23,7 +24,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		ShimProxy();
-		~ShimProxy();
+		virtual ~ShimProxy();
 
 		// ShimProxy Methods
 		STDMETHODIMP Cleanup();

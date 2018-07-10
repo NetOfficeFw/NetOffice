@@ -19,7 +19,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		OuterUpdateAggregator();
-		~OuterUpdateAggregator();
+		virtual ~OuterUpdateAggregator();
 
 		// OuterUpdateAggregator
 		ManagedUpdateHandler* ManagedUpdater();

@@ -19,7 +19,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		ManagedAddin(IUnknown* innerUnkown);
-		~ManagedAddin();
+		virtual ~ManagedAddin();
 
 		// ManagedAddin Methods
 		IUnknown* InnerUnkown();

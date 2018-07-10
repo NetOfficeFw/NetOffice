@@ -14,7 +14,7 @@ public:
 
 	// Ctor, Dtor
 	ShimProxyFactory();
-	~ShimProxyFactory();
+	virtual ~ShimProxyFactory();
 
 	// IClassFactory Implementation
 	STDMETHODIMP  CreateInstance(LPUNKNOWN punk, REFIID riid, void** ppv);

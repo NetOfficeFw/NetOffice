@@ -22,7 +22,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		ClrHost(IShimHost* shimHost);
-		~ClrHost();
+		virtual ~ClrHost();
 
 		// ClrLoader Methods
 		BOOL IsLoaded();

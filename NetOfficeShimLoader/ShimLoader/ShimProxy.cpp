@@ -49,6 +49,7 @@ namespace NetOffice_ShimLoader
 	{
 		Cleanup();
 		DecComponents(L"ShimProxy");
+		_unloadAllowed = TRUE;
 	}
 
 
@@ -126,6 +127,7 @@ namespace NetOffice_ShimLoader
 		try
 		{
 			_onConnectionPassed = TRUE;
+			_unloadAllowed = FALSE;
 
 			if (custom && (*custom))
 			{
@@ -173,6 +175,7 @@ namespace NetOffice_ShimLoader
 
 	Error:
 
+		_unloadAllowed = TRUE;
 		ShimDebugMessageBox(L"Fail", L"OnConnection");
 		ValidateExtensibilityFail(hr);
 		return hr;
@@ -184,6 +187,8 @@ namespace NetOffice_ShimLoader
 
 		try
 		{
+			_unloadAllowed = TRUE;
+
 			if (ENABLE_SHIM && IsCLRLoaded())
 			{
 				IfFailGo(_loader->OuterAggregator()->Addin()->OnDisconnection(removeMode, custom));

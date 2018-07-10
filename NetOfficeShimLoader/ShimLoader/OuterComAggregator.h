@@ -19,7 +19,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		OuterComAggregator();
-		~OuterComAggregator();
+		virtual ~OuterComAggregator();
 
 		// OuterComAggregator Methods
 		ManagedAddin* Addin();

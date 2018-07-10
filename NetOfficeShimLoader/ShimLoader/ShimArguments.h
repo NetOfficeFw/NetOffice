@@ -17,7 +17,7 @@ namespace NetOffice_ShimLoader
 	public:
 
 		ShimArguments();
-		~ShimArguments();
+		virtual ~ShimArguments();
 
 		HRESULT Load();
 		HRESULT Unload();

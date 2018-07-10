@@ -18,7 +18,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		ManagedRibbonExtensibility(IShimProxy* parent, IRibbonExtensibility* innerExtensibility);
-		~ManagedRibbonExtensibility();
+		virtual ~ManagedRibbonExtensibility();
 
 		// ManagedRibbonExtensibility Methods
 		STDMETHODIMP SetInnerPointer(IRibbonExtensibility* innerExtensibility);

@@ -18,7 +18,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		ManagedUpdateHandler(IUnknown* innerHandler);
-		~ManagedUpdateHandler();
+		virtual ~ManagedUpdateHandler();
 
 		// ManagedAddin Methods
 		STDMETHODIMP SetApplication(IDispatch* application);

@@ -20,7 +20,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		ShimUpdateHost();
-		~ShimUpdateHost();
+		virtual ~ShimUpdateHost();
 
 		// ShimUpdateHost Methods
 		BSTR CustomData();

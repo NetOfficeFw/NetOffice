@@ -18,7 +18,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		ManagedCustomTaskPaneConsumer(IShimProxy* parent, ICustomTaskPaneConsumer* innerConsumer);
-		~ManagedCustomTaskPaneConsumer();
+		virtual ~ManagedCustomTaskPaneConsumer();
 
 		// ManagedRibbonExtensibility Methods
 		STDMETHODIMP SetInnerPointer(ICustomTaskPaneConsumer* innerConsumer);

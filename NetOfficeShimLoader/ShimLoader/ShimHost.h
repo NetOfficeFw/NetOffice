@@ -20,7 +20,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		ShimHost(IShimProxy* parent);
-		~ShimHost();
+		virtual ~ShimHost();
 
 		// ShimHost methods
 		BSTR STDMETHODCALLTYPE CustomData();

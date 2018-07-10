@@ -24,7 +24,7 @@ namespace NetOffice_ShimLoader
 
 		// Ctor, Dtor
 		CLRUpdateHost();
-		~CLRUpdateHost();
+		virtual ~CLRUpdateHost();
 
 		// ClrLoader Methods
 		BOOL STDMETHODCALLTYPE IsLoaded();
