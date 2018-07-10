@@ -35,7 +35,7 @@ namespace InnerUpdate
         {
             Application = application;
 
-            string applicationName = TypeDescriptor.GetClassName(application);
+            //string applicationName = TypeDescriptor.GetClassName(application);
             //MessageBox.Show(String.Format("Execute Applications is {0}", applicationName), "IManagedInnerUpdateHandler::Connect");
         }
 

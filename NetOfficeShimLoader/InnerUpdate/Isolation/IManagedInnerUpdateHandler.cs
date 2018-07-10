@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 namespace NetOffice.Tools.Isolation
 {
     /// <summary>
-    /// To implement by a managed addin to recieve an outer shim host
+    /// To implement by a managed update handler to recieve an outer shim host
     /// </summary>
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     [ComImport, Guid("BA23F519-0F53-4EC7-A416-2681BE22150F")]

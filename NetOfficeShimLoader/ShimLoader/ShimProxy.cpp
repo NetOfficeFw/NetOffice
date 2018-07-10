@@ -21,17 +21,15 @@ namespace NetOffice_ShimLoader
 		_currentReloadTread = 0;
 		_application = nullptr;
 		_addInInst = nullptr;
-
 		_customOnConnectionArgs = nullptr;
 		_customOnAddInsUpdateArgs = nullptr;
 		_customOnStartupCompleteArgs = nullptr;
-
 		_onConnectionPassed = FALSE;
 		_onAddInsUpdatePassed = FALSE;
 		_onStartupCompletePassed = FALSE;
-
 		_customEmptyArgs = new LPSAFEARRAY();
 		_connectMode = static_cast<ext_ConnectMode>(0);
+
 		IncComponents(L"ShimProxy");
 
 		// load the CLR here because host application may call QueryInterface before OnConnection
@@ -40,14 +38,22 @@ namespace NetOffice_ShimLoader
 			_shimHost = new ShimHost(this);
 			IShimHost* shimHost = static_cast<IShimHost*>(_shimHost);
 			_loader = new (std::nothrow) ClrHost(shimHost);
-			if(_loader)
-				_loader->Load();
+			if (_loader)
+			{
+				if(!SUCCEEDED(_loader->Load()))
+					DebugOutput(L"ClrHost::Load failed.");
+			}
+			else
+			{
+				DebugOutput(L"ClrHost::ClrHost failed.");
+			}
 		}
 	}
 
 	ShimProxy::~ShimProxy()
 	{
-		Cleanup();
+		if (!SUCCEEDED(Cleanup()))
+			DebugOutput(L"ShimProxy::Cleanup failed.");
 		DecComponents(L"ShimProxy");
 		_unloadAllowed = TRUE;
 	}
@@ -65,27 +71,32 @@ namespace NetOffice_ShimLoader
 
 		if (_customOnConnectionArgs)
 		{
-			SafeArrayDestroy(*_customOnConnectionArgs);
+			HRESULT sad = SafeArrayDestroy(*_customOnConnectionArgs);
+			if (!SUCCEEDED(sad))
+				hr = sad;
 			delete _customOnConnectionArgs;
 			_customOnConnectionArgs = nullptr;
 		}
 		if (_customOnAddInsUpdateArgs)
 		{
-			SafeArrayDestroy(*_customOnAddInsUpdateArgs);
+			HRESULT sad = SafeArrayDestroy(*_customOnAddInsUpdateArgs);
+			if (!SUCCEEDED(sad))
+				hr = sad;
 			delete _customOnAddInsUpdateArgs;
 			_customOnAddInsUpdateArgs = nullptr;
 		}
 		if (_customOnStartupCompleteArgs)
 		{
-			SafeArrayDestroy(*_customOnStartupCompleteArgs);
+			HRESULT sad = SafeArrayDestroy(*_customOnStartupCompleteArgs);
+			if (!SUCCEEDED(sad))
+				hr = sad;
 			delete _customOnStartupCompleteArgs;
 			_customOnStartupCompleteArgs = nullptr;
 		}
-
 		if (_customEmptyArgs)
 		{
-			_customEmptyArgs = nullptr;
 			delete _customEmptyArgs;
+			_customEmptyArgs = nullptr;
 		}
 		if (_paneConsumer)
 		{
@@ -212,7 +223,6 @@ namespace NetOffice_ShimLoader
 				delete _customOnStartupCompleteArgs;
 				_customOnStartupCompleteArgs = nullptr;
 			}
-
 
 			// no cleanup call here because host application may still holds IUnkown Pointer to ribbon/taskpane/etc.
 
