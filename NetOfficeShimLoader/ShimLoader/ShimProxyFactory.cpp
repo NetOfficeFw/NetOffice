@@ -1,95 +1,97 @@
 #include "stdafx.h"
 #include "ShimProxyFactory.h"
 
-
-/***************************************************************************
-* Ctor, Dtor
-***************************************************************************/
-
-ShimProxyFactory::ShimProxyFactory()
+namespace NetOffice_ShimLoader
 {
-	_refCount = 0;
-	IncComponents(L"ShimProxyFactory");
-}
+	/***************************************************************************
+	* Ctor, Dtor
+	***************************************************************************/
 
-ShimProxyFactory::~ShimProxyFactory()
-{
-	DecComponents(L"ShimProxyFactory");
-}
+	ShimProxyFactory::ShimProxyFactory()
+	{
+		_refCount = 0;
+		IncComponents(L"ShimProxyFactory");
+	}
 
-/***************************************************************************
-* IClassFactory Implementation
-***************************************************************************/
+	ShimProxyFactory::~ShimProxyFactory()
+	{
+		DecComponents(L"ShimProxyFactory");
+	}
 
-STDMETHODIMP ShimProxyFactory::CreateInstance(LPUNKNOWN punk, REFIID riid, void** ppv)
-{
-	if (NULL == ppv)
-		return E_POINTER;
+	/***************************************************************************
+	* IClassFactory Implementation
+	***************************************************************************/
 
-	*ppv = NULL;
+	STDMETHODIMP ShimProxyFactory::CreateInstance(LPUNKNOWN punk, REFIID riid, void** ppv)
+	{
+		if (NULL == ppv)
+			return E_POINTER;
 
-	if (NULL != punk)
-		return CLASS_E_NOAGGREGATION;
+		*ppv = NULL;
 
-	if (riid != IID_IDTExtensibility2)
-		return E_NOINTERFACE;
+		if (NULL != punk)
+			return CLASS_E_NOAGGREGATION;
 
-	NetOffice_ShimLoader::ShimProxy* pObj = new (std::nothrow) NetOffice_ShimLoader::ShimProxy();
-	if (NULL == pObj)
-		return E_OUTOFMEMORY;
+		if (riid != IID_IDTExtensibility2)
+			return E_NOINTERFACE;
 
-	HRESULT hr = pObj->QueryInterface(riid, ppv);
-	if (!SUCCEEDED(hr))
-		delete pObj;
+		NetOffice_ShimLoader::ShimProxy* pObj = new (std::nothrow) NetOffice_ShimLoader::ShimProxy();
+		if (NULL == pObj)
+			return E_OUTOFMEMORY;
 
-	return hr;
-}
+		HRESULT hr = pObj->QueryInterface(riid, ppv);
+		if (!SUCCEEDED(hr))
+			delete pObj;
 
-STDMETHODIMP ShimProxyFactory::LockServer(BOOL fLock)
-{
-	if (fLock)
-		++_refCount;
-	else
-		--_refCount;
+		return hr;
+	}
 
-	return S_OK;
-}
+	STDMETHODIMP ShimProxyFactory::LockServer(BOOL fLock)
+	{
+		if (fLock)
+			++_refCount;
+		else
+			--_refCount;
+
+		return S_OK;
+	}
 
 
-/***************************************************************************
-* IUnknown Implementation
-***************************************************************************/
+	/***************************************************************************
+	* IUnknown Implementation
+	***************************************************************************/
 
-STDMETHODIMP ShimProxyFactory::QueryInterface(REFIID riid, void** ppv)
-{
-	if (NULL == ppv)
-		return E_POINTER;
+	STDMETHODIMP ShimProxyFactory::QueryInterface(REFIID riid, void** ppv)
+	{
+		if (NULL == ppv)
+			return E_POINTER;
 
-	*ppv = NULL;
+		*ppv = NULL;
 
-	HRESULT hr = S_OK;
+		HRESULT hr = S_OK;
 
-	if ((IID_IUnknown == riid) || (IID_IClassFactory == riid))
-		*ppv = static_cast<IClassFactory*>(this);
-	else
-		hr = E_NOINTERFACE;
+		if ((IID_IUnknown == riid) || (IID_IClassFactory == riid))
+			*ppv = static_cast<IClassFactory*>(this);
+		else
+			hr = E_NOINTERFACE;
 
-	if (NULL != *ppv)
-		reinterpret_cast<IUnknown*>(*ppv)->AddRef();
+		if (NULL != *ppv)
+			reinterpret_cast<IUnknown*>(*ppv)->AddRef();
 
-	return hr;
-}
+		return hr;
+	}
 
-STDMETHODIMP_(ULONG) ShimProxyFactory::AddRef(void)
-{
-	_refCount++;
-	return _refCount;
-}
+	STDMETHODIMP_(ULONG) ShimProxyFactory::AddRef(void)
+	{
+		_refCount++;
+		return _refCount;
+	}
 
-STDMETHODIMP_(ULONG) ShimProxyFactory::Release(void)
-{
-	_refCount--;
-	if (0 == _refCount)
-		delete this;
-	return 0;
+	STDMETHODIMP_(ULONG) ShimProxyFactory::Release(void)
+	{
+		_refCount--;
+		if (0 == _refCount)
+			delete this;
+		return 0;
+	}
 }

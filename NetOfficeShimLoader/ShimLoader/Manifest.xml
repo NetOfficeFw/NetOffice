@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <ManagedAggregator>
+    <Folder></Folder>
+    <AssemblyName>NetOffice, PublicKeyToken=82590859a0ddadaf</AssemblyName>
+    <ClassName>NetOffice.Tools.Isolation.ManagedInnerComAggregator</ClassName>
+    <AppDomain>
+      <FriendlyName></FriendlyName>
+      <BaseFolder></BaseFolder>
+    </AppDomain>
+    <Target>
+      <AssemblyFileName>InnerAddin.dll</AssemblyFileName>
+      <AssemblyName>InnerAddin, PublicKeyToken=6153aeeaee4248b8</AssemblyName>
+      <ConfigFileName>InnerAddin.dll</ConfigFileName>
+      <ClassName>InnerAddin.Connect"</ClassName>
+    </Target>
+  </ManagedAggregator>
+</Root>

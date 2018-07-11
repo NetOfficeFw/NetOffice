@@ -7,25 +7,28 @@ extern HINSTANCE	_module;
 extern void IncComponents(LPCWSTR type);
 extern void DecComponents(LPCWSTR type);
 
-class ShimProxyFactory : public IClassFactory
+namespace NetOffice_ShimLoader
 {
+	class ShimProxyFactory : public IClassFactory
+	{
 
-public:
+	public:
 
-	// Ctor, Dtor
-	ShimProxyFactory();
-	virtual ~ShimProxyFactory();
+		// Ctor, Dtor
+		ShimProxyFactory();
+		virtual ~ShimProxyFactory();
 
-	// IClassFactory Implementation
-	STDMETHODIMP  CreateInstance(LPUNKNOWN punk, REFIID riid, void** ppv);
-	STDMETHODIMP  LockServer(BOOL fLock);
+		// IClassFactory Implementation
+		STDMETHODIMP  CreateInstance(LPUNKNOWN punk, REFIID riid, void** ppv);
+		STDMETHODIMP  LockServer(BOOL fLock);
 
-	// IUnknown Implementation
-	STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
-	STDMETHODIMP_(ULONG) AddRef(void);
-	STDMETHODIMP_(ULONG) Release(void);
+		// IUnknown Implementation
+		STDMETHODIMP         QueryInterface(REFIID riid, void ** ppv);
+		STDMETHODIMP_(ULONG) AddRef(void);
+		STDMETHODIMP_(ULONG) Release(void);
 
-private:
+	private:
 
-	ULONG           _refCount;
-};
+		ULONG           _refCount;
+	};
+}

@@ -24,6 +24,9 @@ namespace NetOffice_ShimLoader
 
 	protected:
 
+		HRESULT LoadManagedAddin(MSXML::IXMLDOMDocument2Ptr docPtr);
+		HRESULT LoadManagedAggregator(MSXML::IXMLDOMDocument2Ptr docPtr);
+		HRESULT LoadAppDomain(MSXML::IXMLDOMDocument2Ptr docPtr);
 		HRESULT AppendPath(LPWSTR pszPath, LPCWSTR pszMore);
 
 	};

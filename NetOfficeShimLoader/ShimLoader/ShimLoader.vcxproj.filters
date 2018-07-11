@@ -100,4 +100,7 @@
       <UniqueIdentifier>{6c99f5bd-2854-4256-a2b0-520fa297c09b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Manifest.xml" />
+  </ItemGroup>
 </Project>

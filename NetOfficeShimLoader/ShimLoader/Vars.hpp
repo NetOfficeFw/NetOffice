@@ -2,6 +2,26 @@
 #include "stdafx.h"
 
 //
+// Addin Aggregator
+//
+static LPCWSTR TargetManagedAggregator_AssemblyName = L"NetOffice, PublicKeyToken=82590859a0ddadaf";
+static LPCWSTR TargetManagedAggregator_ClassName = L"NetOffice.Tools.Isolation.ManagedInnerComAggregator";
+
+//
+// Addin Aggregator
+//
+static LPCWSTR AppDomain_FriendlyName = L"";
+static LPCWSTR AppDomain_BaseFolder = L"";
+
+//
+// Addin Target
+//
+static LPCWSTR Target_AssemblyName = L"InnerAddin, PublicKeyToken=6153aeeaee4248b8";
+static LPCWSTR Target_AssemblyFileName = L"InnerAddin.dll";
+static LPCWSTR Target_ConnectClassName = L"InnerAddin.Connect";
+static LPCWSTR Target_ConfigFileName = L"InnerAddin.dll.config";
+
+//
 // Register Values
 //
 static const GUID ShimProxy_CLSID = { 0xff724928, 0x8e6b, 0x4a1e, 0x97, 0xf3, 0xc6, 0xb9, 0xa9, 0x44, 0x15, 0x4c };
@@ -14,19 +34,6 @@ static const DWORD ShimProxy_LoadBehavior					= 3;
 static const DWORD ShimProxy_CommandLineSafe				= 0;
 static LPCWSTR* ShimProxy_Host_Application					= NULL;
 
-//
-// Addin Aggregator
-//
-static const LPCWSTR TargetManagedAggregator_AssemblyName	= L"NetOffice, PublicKeyToken=82590859a0ddadaf";
-static const LPCWSTR TargetManagedAggregator_ClassName		= L"NetOffice.Tools.Isolation.ManagedInnerComAggregator";
-
-//
-// Addin Target
-//
-static const LPCWSTR Target_AssemblyName					= L"InnerAddin, PublicKeyToken=6153aeeaee4248b8";
-static const LPCWSTR Target_AssemblyFileName				= L"InnerAddin.dll";
-static const LPCWSTR Target_ConnectClassName				= L"InnerAddin.Connect";
-static const LPCWSTR Target_ConfigFileName					= L"InnerAddin.dll.config";
 
 
 
