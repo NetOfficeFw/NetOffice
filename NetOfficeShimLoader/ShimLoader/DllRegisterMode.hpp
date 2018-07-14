@@ -8,15 +8,15 @@ namespace NetOffice_ShimLoader
 	*/
 	enum RegisterMode
 	{
+		// Component is registered per Machine
+		// Addin is registered per current User
+		SystemComponentAndUserAddin = 0,
+
 		// Component and Addin is registered per Machine
-		System = 0,
+		System = 1,
 
 		// Component and Addin is registered per current User
 		// This cause issues when application is started with admin privileges
-		User = 1,
-
-		// Component is registered per Machine
-		// Addin is registered per current User
-		SystemComponentAndUserAddin = 2
+		User = 2,
 	};
 }

@@ -9,6 +9,9 @@ extern void DecComponents(LPCWSTR type);
 
 namespace NetOffice_ShimLoader
 {
+	// TODO: rename this class because its construct
+	// all COM instances per design, not just the ShimProxy
+	// in fact yes its construct only the ShimProxy but not from a general design point of view
 	class ShimProxyFactory : public IClassFactory
 	{
 

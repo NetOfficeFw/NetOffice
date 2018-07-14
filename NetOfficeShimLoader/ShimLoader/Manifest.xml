@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Root>
-  <ManagedAggregator>
+<ShimLoader>
+  <Shim>
+    <Register>
+      <Mode>SystemComponentAndUserAddin</Mode>
+      <RegisterTarget>true</RegisterTarget>
+      <Component>
+        <CLSID>{FF724928-8E6B-4A1E-97F3-C6B9A944154C}</CLSID>
+        <ProgId>ZLoaderShim.Connect</ProgId>
+        <Version></Version>
+      </Component>
+      <Addin>
+        <PowerPoint>
+          <FriendlyName>NetOffice Generic COM Shim</FriendlyName>
+          <Description>Shim Loader supplied by NetOffice</Description>
+          <LoadBehavior>3</LoadBehavior>
+          <CommandLineSafe>0</CommandLineSafe>
+          <CustomRegs>
+            <CustomReg>
+              <Name>Greetings</Name>
+              <Type>REG_SZ</Type>
+              <Value>Greetings from Shim Register</Value>
+            </CustomReg>
+          </CustomRegs>
+        </PowerPoint>
+      </Addin>
+    </Register>
+    <Settings>
+      <AggregationEnabled>true</AggregationEnabled>
+      <SelfRegistrationEnabled>true</SelfRegistrationEnabled>
+      <BlindAggregationEnabled>false</BlindAggregationEnabled>
+      <UpdateEnabled>true</UpdateEnabled>
+      <DebugMsgBoxEnabled>true</DebugMsgBoxEnabled>
+    </Settings>
+    <Defaults>
+      <ExtensibilityDefaultResult>0</ExtensibilityDefaultResult>
+      <ExtensibilityFailResult>0</ExtensibilityFailResult>
+    </Defaults>
+  </Shim>
+  <ManagedAddinAggregator>
     <Folder></Folder>
     <AssemblyName>NetOffice, PublicKeyToken=82590859a0ddadaf</AssemblyName>
     <ClassName>NetOffice.Tools.Isolation.ManagedInnerComAggregator</ClassName>
@@ -12,7 +49,22 @@
       <AssemblyFileName>InnerAddin.dll</AssemblyFileName>
       <AssemblyName>InnerAddin, PublicKeyToken=6153aeeaee4248b8</AssemblyName>
       <ConfigFileName>InnerAddin.dll</ConfigFileName>
-      <ClassName>InnerAddin.Connect"</ClassName>
+      <ClassName>InnerAddin.Connect</ClassName>
     </Target>
-  </ManagedAggregator>
-</Root>
+  </ManagedAddinAggregator>
+  <ManagedUpdateAggregator>
+    <Folder></Folder>
+    <AssemblyName>InnerUpdate, PublicKeyToken=e58b77e9e2189611</AssemblyName>
+    <ClassName>NetOffice.Tools.Isolation.ManagedInnerUpdateAggregator</ClassName>
+    <AppDomain>
+      <FriendlyName></FriendlyName>
+      <BaseFolder></BaseFolder>
+    </AppDomain>
+    <Target>
+      <AssemblyFileName>InnerUpdate.dll</AssemblyFileName>
+      <AssemblyName>InnerUpdate, PublicKeyToken=e58b77e9e2189611</AssemblyName>
+      <ConfigFileName>InnerUpdate.dll.config</ConfigFileName>
+      <ClassName>InnerUpdate.Connect</ClassName>
+    </Target>
+  </ManagedUpdateAggregator>
+</ShimLoader>

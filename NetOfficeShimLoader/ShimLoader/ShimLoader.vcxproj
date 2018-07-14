@@ -173,6 +173,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="DllRegister32.h" />
     <ClInclude Include="DllRegister32On64.h" />
     <ClInclude Include="DllRegister64.h" />
+    <ClInclude Include="DllRegisterModeParser.h" />
     <ClInclude Include="Extensibility2.h" />
     <ClInclude Include="ICTPFactory.h" />
     <ClInclude Include="IRibbonExtensibility.h" />
@@ -200,6 +201,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClCompile Include="DllRegister32.cpp" />
     <ClCompile Include="DllRegister32On64.cpp" />
     <ClCompile Include="DllRegister64.cpp" />
+    <ClCompile Include="DllRegisterModeParser.cpp" />
     <ClCompile Include="ManagedAddin.cpp" />
     <ClCompile Include="ManagedCustomTaskPaneConsumer.cpp" />
     <ClCompile Include="ManagedRibbonExtensibility.cpp" />
@@ -227,6 +229,7 @@ regsvr32.exe  $(TargetPath)</Command>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Manifest.xml" />
+    <Xml Include="Redirection.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

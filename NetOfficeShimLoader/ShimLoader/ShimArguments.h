@@ -19,8 +19,11 @@ namespace NetOffice_ShimLoader
 		ShimArguments();
 		virtual ~ShimArguments();
 
+		BOOL IsLoaded();
 		HRESULT Load();
 		HRESULT Unload();
+
+		HRESULT ReadRegisterArguments();
 
 	protected:
 
@@ -29,5 +32,12 @@ namespace NetOffice_ShimLoader
 		HRESULT LoadAppDomain(MSXML::IXMLDOMDocument2Ptr docPtr);
 		HRESULT AppendPath(LPWSTR pszPath, LPCWSTR pszMore);
 
+	private:
+
+		HRESULT ComInitialize();
+		HRESULT ComUninitialize();
+
+		MSXML::IXMLDOMDocument2Ptr	_document;
+		bool						_coInitialized;
 	};
 }

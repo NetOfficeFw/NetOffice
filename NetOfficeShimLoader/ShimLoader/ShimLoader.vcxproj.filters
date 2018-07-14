@@ -2,15 +2,12 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="ClrHost.cpp" />
-    <ClCompile Include="DllMain.cpp" />
     <ClCompile Include="ManagedAddin.cpp" />
     <ClCompile Include="ManagedCustomTaskPaneConsumer.cpp" />
     <ClCompile Include="ManagedRibbonExtensibility.cpp" />
     <ClCompile Include="OuterComAggregator.cpp" />
     <ClCompile Include="ShimArguments.cpp" />
     <ClCompile Include="ShimProxy.cpp" />
-    <ClCompile Include="ShimProxyFactory.cpp" />
-    <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="ShimHost.cpp" />
     <ClCompile Include="ShimUpdateHost.cpp">
       <Filter>Updates</Filter>
@@ -33,21 +30,27 @@
     <ClCompile Include="ManagedUpdateHandler.cpp">
       <Filter>Updates</Filter>
     </ClCompile>
+    <ClCompile Include="DllRegisterModeParser.cpp">
+      <Filter>Register</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ShimProxyFactory.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Aggregators.h" />
     <ClInclude Include="ClrHost.h" />
-    <ClInclude Include="IShimProxy.hpp" />
     <ClInclude Include="ManagedAddin.h" />
     <ClInclude Include="ManagedCustomTaskPaneConsumer.h" />
     <ClInclude Include="ManagedRibbonExtensibility.h" />
     <ClInclude Include="OuterComAggregator.h" />
     <ClInclude Include="ShimArguments.h" />
     <ClInclude Include="ShimProxy.h" />
-    <ClInclude Include="ShimProxyFactory.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="Vars.hpp" />
     <ClInclude Include="ShimHost.h" />
     <ClInclude Include="ShimUpdateHost.h">
       <Filter>Updates</Filter>
@@ -82,12 +85,27 @@
     <ClInclude Include="ManagedUpdateHandler.h">
       <Filter>Updates</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="ShimLoader.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ShimLoader.def" />
+    <ClInclude Include="DllRegisterModeParser.h">
+      <Filter>Register</Filter>
+    </ClInclude>
+    <ClInclude Include="ShimProxyFactory.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Vars.hpp">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="IShimProxy.hpp">
+      <Filter>Contracts</Filter>
+    </ClInclude>
+    <ClInclude Include="Aggregators.h">
+      <Filter>Contracts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Updates">
@@ -99,8 +117,35 @@
     <Filter Include="Interop">
       <UniqueIdentifier>{6c99f5bd-2854-4256-a2b0-520fa297c09b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{89464900-5216-49de-adeb-a6f5974acbf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{6c711b00-63b8-4da7-ab0e-c0da66b92bc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exports">
+      <UniqueIdentifier>{31a0c94c-ebf6-48bb-ba68-9dbe604ddc87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contracts">
+      <UniqueIdentifier>{95c25273-cfe6-49db-94ef-8b185d14716e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Manifest.xml" />
+    <Xml Include="Manifest.xml">
+      <Filter>Resources</Filter>
+    </Xml>
+    <Xml Include="Redirection.xml">
+      <Filter>Resources</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ShimLoader.def">
+      <Filter>Exports</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ShimLoader.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
