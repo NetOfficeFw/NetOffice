@@ -194,6 +194,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="targetver.h" />
     <ClInclude Include="CLRUpdateHost.h" />
     <ClInclude Include="Vars.hpp" />
+    <ClInclude Include="Vars.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClrHost.cpp" />

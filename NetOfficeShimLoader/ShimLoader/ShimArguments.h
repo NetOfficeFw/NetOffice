@@ -3,6 +3,14 @@
 #include "metahost.h"
 #include "atlbase.h"
 #include "strsafe.h"
+#include "string.h"
+#include "wchar.h"
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <msxml.h>
+#include "DllRegisterModeParser.h"
+//#include "Vars.hpp"
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;
@@ -36,6 +44,8 @@ namespace NetOffice_ShimLoader
 
 		HRESULT ComInitialize();
 		HRESULT ComUninitialize();
+
+		BOOL ToBool(_bstr_t value);
 
 		MSXML::IXMLDOMDocument2Ptr	_document;
 		bool						_coInitialized;

@@ -1,7 +1,6 @@
 #pragma once
 #include "stdafx.h"
 #include "Aggregators.h"
-#include "Vars.hpp"
 #include "IShimProxy.hpp"
 
 extern HANDLE		_thread;

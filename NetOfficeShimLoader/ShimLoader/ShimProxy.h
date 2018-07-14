@@ -1,6 +1,5 @@
 #pragma once
 #include "stdAfx.h"
-#include "Vars.hpp"
 #include "ClrHost.h"
 #include "CLRUpdateHost.h"
 #include "Aggregators.h"
@@ -14,6 +13,10 @@ extern HINSTANCE	_module;
 extern BOOL			_unloadAllowed;
 extern void IncComponents(LPCWSTR type);
 extern void DecComponents(LPCWSTR type);
+extern BOOL ENABLE_SHIM;
+extern BOOL ENABLE_DEBUG_MESSAGE_BOX;
+extern HRESULT EXTENSIBILITY_DEFAULT_RESULT;
+extern HRESULT EXTENSIBILITY_FAIL_RESULT;
 
 namespace NetOffice_ShimLoader
 {

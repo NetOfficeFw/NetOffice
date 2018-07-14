@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CLRUpdateHost.h"
+#include "Vars.h"
 
 namespace NetOffice_ShimLoader
 {
@@ -70,11 +71,11 @@ namespace NetOffice_ShimLoader
 
 		WCHAR fullInnerAddinFilePath[MAX_PATH + 1];
 		IfFailGo(AppendPath(fullInnerAddinFilePath, directoryPath));
-		IfFailGo(AppendPath(fullInnerAddinFilePath, Target_AssemblyFileName));
+		IfFailGo(AppendPath(fullInnerAddinFilePath, Update_AssemblyFileName));
 
 		WCHAR fullInnerAddinConfigFilePath[MAX_PATH + 1];
 		IfFailGo(AppendPath(fullInnerAddinConfigFilePath, directoryPath));
-		IfFailGo(AppendPath(fullInnerAddinConfigFilePath, Target_ConfigFileName));
+		IfFailGo(AppendPath(fullInnerAddinConfigFilePath, Update_ConfigFileName));
 
 		WCHAR runtimeVersion[30];
 		DWORD cwchruntimeVersion = ARRAYSIZE(runtimeVersion);

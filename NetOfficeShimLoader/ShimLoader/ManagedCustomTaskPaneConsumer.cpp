@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "ManagedCustomTaskPaneConsumer.h"
+#include "Vars.h"
 
 namespace NetOffice_ShimLoader
 {

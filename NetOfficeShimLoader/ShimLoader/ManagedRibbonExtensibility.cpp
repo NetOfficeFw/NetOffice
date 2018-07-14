@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "ManagedRibbonExtensibility.h"
+#include "Vars.h"
 
 namespace NetOffice_ShimLoader
 {

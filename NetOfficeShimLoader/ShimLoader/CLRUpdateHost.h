@@ -4,7 +4,6 @@
 #include "atlbase.h"
 #include "strsafe.h"
 #include "ClrHost.h"
-#include "Vars.hpp"
 #include "Aggregators.h"
 #include "Extensibility2.h"
 #include "OuterUpdateAggregator.h"
@@ -12,8 +11,14 @@
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;
-extern void IncComponents(LPCWSTR type);
-extern void DecComponents(LPCWSTR type);
+//extern void IncComponents(LPCWSTR type);
+//extern void DecComponents(LPCWSTR type);
+//extern LPCWSTR UpdateManagedAggregator_AssemblyName;
+//extern LPCWSTR UpdateManagedAggregator_ClassName;
+//extern LPCWSTR Update_AssemblyName;
+//extern LPCWSTR Update_AssemblyFileName;
+//extern LPCWSTR Update_ConnectClassName;
+//extern LPCWSTR Update_ConfigFileName;
 
 namespace NetOffice_ShimLoader
 {

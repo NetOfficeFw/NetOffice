@@ -3,10 +3,10 @@
 #include "metahost.h"
 #include "atlbase.h"
 #include "strsafe.h"
-#include "Vars.hpp"
 #include "Aggregators.h"
 #include "Extensibility2.h"
 #include "OuterComAggregator.h"
+//#include "Vars.hpp"
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;

@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "ShimProxy.h"
+#include "Vars.h"
 
 namespace NetOffice_ShimLoader
 {

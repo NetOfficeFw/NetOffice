@@ -1,12 +1,6 @@
 #include "stdafx.h"
 #include "ShimArguments.h"
-#include "string.h"
-#include "wchar.h"
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <msxml.h>
-#include "Vars.hpp"
+#include "Vars.h"
 
 using namespace std;
 
@@ -50,28 +44,20 @@ namespace NetOffice_ShimLoader
 
 		IfFalseGo(PathFileExists(target));
 
+		IfFailGo(ComInitialize());
+		IfFailGo(_document.CreateInstance(__uuidof(MSXML::DOMDocument60), NULL, CLSCTX_INPROC_SERVER));
+		IfFailGo(VARIANT_TRUE == _document->load(target) ? S_OK : E_FAIL);
+		IfFailGo(_document->setProperty("SelectionLanguage", "XPath"));
 
-		hr = ComInitialize();
-		hr = _document.CreateInstance(__uuidof(MSXML::DOMDocument60), NULL, CLSCTX_INPROC_SERVER);
-		hr = VARIANT_TRUE == _document->load(target) ? S_OK : E_FAIL;
-
-		//if (VARIANT_TRUE == _document->load(target))
-		//{
-		//	IfFailGo(_document->setProperty("SelectionLanguage", "XPath"));
-		//	IfFailGo(LoadManagedAggregator(_document));
-		//	IfFailGo(LoadAppDomain(_document));
-		//	IfFailGo(LoadManagedAddin(_document));
-		//}
-		//_document.Release();
-
-
-
-		hr = S_OK;
+		return hr;
 
 	Error:
 
 		if (_document)
+		{
 			_document.Release();
+			_document = nullptr;
+		}
 
 		return hr;
 	}
@@ -95,18 +81,53 @@ namespace NetOffice_ShimLoader
 	HRESULT ShimArguments::ReadRegisterArguments()
 	{
 		HRESULT hr = E_FAIL;
+		MSXML::IXMLDOMNodePtr document = nullptr;
+		MSXML::IXMLDOMNodePtr registerShim = nullptr;
+		MSXML::IXMLDOMNodePtr registerTarget = nullptr;
+		MSXML::IXMLDOMNodePtr registerMode = nullptr;
+		MSXML::IXMLDOMNodePtr registerClsId = nullptr;
+		MSXML::IXMLDOMNodePtr registerProgId = nullptr;
 
 		if (IsLoaded())
 		{
-			MSXML::IXMLDOMNodePtr registerMode = _document->selectSingleNode("/ShimLoader/Shim/Register/Mode");
+			hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
+			if (SUCCEEDED(hr))
+			{
+				registerShim = document->selectSingleNode("/ShimLoader/Shim/Register/RegisterShim");
+				IfNullGo(registerShim);
+				registerTarget = document->selectSingleNode("/ShimLoader/Shim/Register/RegisterTarget");
+				IfNullGo(registerTarget);
+				registerMode = document->selectSingleNode("/ShimLoader/Shim/Register/Mode");
+				IfNullGo(registerMode);
+				registerClsId = document->selectSingleNode("/ShimLoader/Shim/Register/Component/CLSID");
+				IfNullGo(registerClsId);
+				registerProgId = document->selectSingleNode("/ShimLoader/Shim/Register/Component/ProgId");
+				IfNullGo(registerProgId);
 
-
+				ENABLE_SELF_REGISTRATION = ToBool(registerShim->text);
+				ENABLE_TARGET_REGISTRATION = ToBool(registerTarget->text);
+				ShimProxy_CLSID = registerClsId->text;
+				ShimProxy_ProgID = registerProgId->text;
+				DllRegisterModeParser parser;
+				auto mode = parser.Parse(registerMode->text);
+				SELF_REGISTER_MODE = mode;
+			}
 		}
-		else
+
+		if (document)
 		{
-			hr = E_FAIL;
+			document.Release();
+			document = nullptr;
 		}
+		return hr;
 
+	Error:
+
+		if (document)
+		{
+			document.Release();
+			document = nullptr;
+		}
 		return hr;
 	}
 
@@ -126,14 +147,14 @@ namespace NetOffice_ShimLoader
 
 	HRESULT ShimArguments::ComUninitialize()
 	{
-		HRESULT hr = E_FAIL;
+		HRESULT hr = S_OK;
 
 		if (_coInitialized)
 		{
 			CoUninitialize();
 			_coInitialized = false;
-			hr = S_OK;
 		}
+
 		return hr;
 	}
 
@@ -146,7 +167,7 @@ namespace NetOffice_ShimLoader
 		MSXML::IXMLDOMNodePtr configFileName = nullptr;
 		MSXML::IXMLDOMNodePtr className = nullptr;
 
-		assemblyName = docPtr->selectSingleNode("/Root/ManagedAggregator/Target/AssemblyName");
+		/*assemblyName = docPtr->selectSingleNode("/Root/ManagedAggregator/Target/AssemblyName");
 		if (assemblyName)
 			Target_AssemblyName = assemblyName->text;
 		else
@@ -168,20 +189,20 @@ namespace NetOffice_ShimLoader
 		if (className)
 			Target_ConnectClassName = className->text;
 		else
-			goto Error;
+			goto Error;*/
 
 		return hr;
 
-	Error:
+	//Error:
 
-		return hr;
+	//	return hr;
 	}
 
 	HRESULT ShimArguments::LoadManagedAggregator(MSXML::IXMLDOMDocument2Ptr docPtr)
 	{
 		HRESULT hr = S_OK;
 
-		MSXML::IXMLDOMNodePtr assemblyName = nullptr;
+		/*MSXML::IXMLDOMNodePtr assemblyName = nullptr;
 		MSXML::IXMLDOMNodePtr className = nullptr;
 
 		assemblyName = docPtr->selectSingleNode("/Root/ManagedAggregator/AssemblyName");
@@ -194,21 +215,21 @@ namespace NetOffice_ShimLoader
 		if (assemblyName)
 			TargetManagedAggregator_ClassName = className->text;
 		else
-			goto Error;
+			goto Error;*/
 
 		return hr;
 
-	Error:
+	//Error:
 
-		hr = E_FAIL;
-		return hr;
+	//	hr = E_FAIL;
+	//	return hr;
 	}
 
 	HRESULT ShimArguments::LoadAppDomain(MSXML::IXMLDOMDocument2Ptr docPtr)
 	{
 		HRESULT hr = S_OK;
 
-		MSXML::IXMLDOMNodePtr friendlyName = nullptr;
+		/*MSXML::IXMLDOMNodePtr friendlyName = nullptr;
 		MSXML::IXMLDOMNodePtr baseFolder = nullptr;
 
 		friendlyName = docPtr->selectSingleNode("/Root/ManagedAggregator/AppDomain/FriendlyName");
@@ -221,16 +242,15 @@ namespace NetOffice_ShimLoader
 		if (baseFolder)
 			TargetManagedAggregator_AppDomain_BaseFolder = baseFolder->text;
 		else
-			goto Error;
+			goto Error;*/
 
 		return hr;
 
-	Error:
+	//Error:
 
-		hr = E_FAIL;
-		return hr;
+	//	hr = E_FAIL;
+	//	return hr;
 	}
-
 
 	HRESULT ShimArguments::AppendPath(LPWSTR pszPath, LPCWSTR pszMore)
 	{
@@ -240,6 +260,17 @@ namespace NetOffice_ShimLoader
 			hr = E_UNEXPECTED;
 		}
 		return hr;
+	}
+
+	BOOL ShimArguments::ToBool(_bstr_t value)
+	{
+		if (0 == wcscmp(value, L"true") ||
+			0 == wcscmp(value, L"TRUE") ||
+			0 == wcscmp(value, L"True") ||
+			0 == wcscmp(value, L"1"))
+			return TRUE;
+		else
+			return FALSE;
 	}
 
 	static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize)

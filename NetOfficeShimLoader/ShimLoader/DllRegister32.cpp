@@ -45,7 +45,7 @@ namespace NetOffice_ShimLoader_Register32
 			size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
 			for (size_t i = 0; i < arraySize; i++)
 			{
-				hr = RegisterCOMAddin(officeApplications[i], progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, 0 == mode);
+				hr = RegisterCOMAddin(officeApplications[i], progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, System == mode);
 				if (!SUCCEEDED(hr))
 					break;
 			}

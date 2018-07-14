@@ -106,6 +106,9 @@
     <ClInclude Include="Aggregators.h">
       <Filter>Contracts</Filter>
     </ClInclude>
+    <ClInclude Include="Vars.h">
+      <Filter>Main</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Updates">

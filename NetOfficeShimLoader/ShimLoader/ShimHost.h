@@ -1,8 +1,8 @@
 #pragma once
 #include "stdafx.h"
 #include "Aggregators.h"
-#include "Vars.hpp"
 #include "IShimProxy.hpp"
+//#include "Vars.hpp"
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;

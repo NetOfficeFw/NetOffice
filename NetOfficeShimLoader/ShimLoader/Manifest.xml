@@ -2,12 +2,12 @@
 <ShimLoader>
   <Shim>
     <Register>
-      <Mode>SystemComponentAndUserAddin</Mode>
+      <RegisterShim>true</RegisterShim>
       <RegisterTarget>true</RegisterTarget>
+      <Mode>SystemComponentAndUserAddin</Mode>
       <Component>
         <CLSID>{FF724928-8E6B-4A1E-97F3-C6B9A944154C}</CLSID>
         <ProgId>ZLoaderShim.Connect</ProgId>
-        <Version></Version>
       </Component>
       <Addin>
         <PowerPoint>
