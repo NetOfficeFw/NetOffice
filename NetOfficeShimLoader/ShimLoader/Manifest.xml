@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ShimLoader>
+<ShimLoader Version="1.0.0.0">
   <Shim>
     <Register>
       <RegisterShim>true</RegisterShim>
+      <CreateAddinKeys>true</CreateAddinKeys>
       <RegisterTarget>true</RegisterTarget>
       <Mode>SystemComponentAndUserAddin</Mode>
       <Component>
@@ -10,24 +11,24 @@
         <ProgId>ZLoaderShim.Connect</ProgId>
       </Component>
       <Addin>
-        <PowerPoint>
-          <FriendlyName>NetOffice Generic COM Shim</FriendlyName>
-          <Description>Shim Loader supplied by NetOffice</Description>
-          <LoadBehavior>3</LoadBehavior>
-          <CommandLineSafe>0</CommandLineSafe>
-          <CustomRegs>
-            <CustomReg>
-              <Name>Greetings</Name>
-              <Type>REG_SZ</Type>
-              <Value>Greetings from Shim Register</Value>
-            </CustomReg>
-          </CustomRegs>
-        </PowerPoint>
+        <Applications>
+          <PowerPoint></PowerPoint>
+        </Applications>
+        <FriendlyName>NetOffice Generic COM Shim</FriendlyName>
+        <Description>Shim Loader supplied by NetOffice</Description>
+        <LoadBehavior>3</LoadBehavior>
+        <CommandLineSafe>0</CommandLineSafe>
+        <CustomRegs>
+          <CustomReg>
+            <Name>Greetings</Name>
+            <Type>REG_SZ</Type>
+            <Value>Greetings from Shim Register</Value>
+          </CustomReg>
+        </CustomRegs>
       </Addin>
     </Register>
     <Settings>
-      <AggregationEnabled>true</AggregationEnabled>
-      <SelfRegistrationEnabled>true</SelfRegistrationEnabled>
+      <Enabled>true</Enabled>
       <BlindAggregationEnabled>false</BlindAggregationEnabled>
       <UpdateEnabled>true</UpdateEnabled>
       <DebugMsgBoxEnabled>true</DebugMsgBoxEnabled>
@@ -38,12 +39,18 @@
     </Defaults>
   </Shim>
   <ManagedAddinAggregator>
-    <Folder></Folder>
     <AssemblyName>NetOffice, PublicKeyToken=82590859a0ddadaf</AssemblyName>
     <ClassName>NetOffice.Tools.Isolation.ManagedInnerComAggregator</ClassName>
+    <Folder Special="true">
+      <Path>LocalAppData</Path>
+      <SubFolder>NetOffice\InnerAddin\1.0.0.0</SubFolder>
+    </Folder>
     <AppDomain>
       <FriendlyName></FriendlyName>
-      <BaseFolder></BaseFolder>
+      <Folder Special="true">
+        <Path>LocalAppData</Path>
+        <SubFolder>NetOffice\InnerAddin\1.0.0.0</SubFolder>
+      </Folder>
     </AppDomain>
     <Target>
       <AssemblyFileName>InnerAddin.dll</AssemblyFileName>

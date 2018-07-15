@@ -170,6 +170,7 @@ regsvr32.exe  $(TargetPath)</Command>
   <ItemGroup>
     <ClInclude Include="Aggregators.h" />
     <ClInclude Include="ClrHost.h" />
+    <ClInclude Include="CustomRegisterValue.h" />
     <ClInclude Include="DllRegister32.h" />
     <ClInclude Include="DllRegister32On64.h" />
     <ClInclude Include="DllRegister64.h" />
@@ -198,6 +199,7 @@ regsvr32.exe  $(TargetPath)</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClrHost.cpp" />
+    <ClCompile Include="CustomRegisterValue.cpp" />
     <ClCompile Include="DllMain.cpp" />
     <ClCompile Include="DllRegister32.cpp" />
     <ClCompile Include="DllRegister32On64.cpp" />

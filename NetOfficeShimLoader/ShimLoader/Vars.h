@@ -1,8 +1,5 @@
-#ifndef VARS2__H
-#define VARS2__H
-#include "StdAfx.h"
-
 #pragma once
+#include "CustomRegisterValue.h"
 
 //
 // Addin Aggregator
@@ -33,7 +30,7 @@ extern LPCWSTR  ShimProxy_Description;
 extern DWORD    ShimProxy_LoadBehavior;
 extern DWORD    ShimProxy_CommandLineSafe;
 extern LPCWSTR* ShimProxy_Host_Application;
-
+extern NetOffice_ShimLoader_Register::PCustomRegisterValue* Custom_Register_Values;
 
 //
 // Update Aggregator
@@ -57,6 +54,7 @@ extern LPCWSTR Update_ConfigFileName;
 extern BOOL ENABLE_SHIM;
 extern BOOL ENABLE_SELF_REGISTRATION;
 extern BOOL ENABLE_TARGET_REGISTRATION;
+extern BOOL ENABLE_ADDIN_REGISTRATION;
 extern int	SELF_REGISTER_MODE;
 extern BOOL ENABLE_BLIND_AGGREGATION;
 extern BOOL ENABLE_OUTER_UPDATE_AGGREGATOR;
@@ -68,5 +66,3 @@ extern BOOL ENABLE_DEBUG_MESSAGE_BOX;
 //
 extern HRESULT EXTENSIBILITY_DEFAULT_RESULT;
 extern HRESULT EXTENSIBILITY_FAIL_RESULT;
-
-#endif !VARS2__H

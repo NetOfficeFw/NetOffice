@@ -2,6 +2,7 @@
 #include "Aggregators.h"
 #include "ManagedAddin.h"
 #include "ManagedRibbonExtensibility.h"
+#include "CustomRegisterValue.h"
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;

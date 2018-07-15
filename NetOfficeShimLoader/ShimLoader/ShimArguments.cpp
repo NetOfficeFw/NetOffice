@@ -3,6 +3,7 @@
 #include "Vars.h"
 
 using namespace std;
+using namespace NetOffice_ShimLoader_Register;
 
 namespace NetOffice_ShimLoader
 {
@@ -18,6 +19,7 @@ namespace NetOffice_ShimLoader
 	ShimArguments::~ShimArguments()
 	{
 		Unload();
+		ComUninitialize();
 		DecComponents(L"ShimArguments");
 	}
 
@@ -78,15 +80,22 @@ namespace NetOffice_ShimLoader
 		return hr;
 	}
 
-	HRESULT ShimArguments::ReadRegisterArguments()
+	HRESULT ShimArguments::ReadShimRegisterArguments()
 	{
 		HRESULT hr = E_FAIL;
 		MSXML::IXMLDOMNodePtr document = nullptr;
 		MSXML::IXMLDOMNodePtr registerShim = nullptr;
 		MSXML::IXMLDOMNodePtr registerTarget = nullptr;
+		MSXML::IXMLDOMNodePtr registerAddin = nullptr;
 		MSXML::IXMLDOMNodePtr registerMode = nullptr;
 		MSXML::IXMLDOMNodePtr registerClsId = nullptr;
 		MSXML::IXMLDOMNodePtr registerProgId = nullptr;
+		MSXML::IXMLDOMNodePtr friendlyName = nullptr;
+		MSXML::IXMLDOMNodePtr description = nullptr;
+		MSXML::IXMLDOMNodePtr loadBehavior = nullptr;
+		MSXML::IXMLDOMNodePtr commandLineSafe = nullptr;
+		MSXML::IXMLDOMNodeListPtr addins = nullptr;
+		MSXML::IXMLDOMNodeListPtr customRegs = nullptr;
 
 		if (IsLoaded())
 		{
@@ -97,20 +106,157 @@ namespace NetOffice_ShimLoader
 				IfNullGo(registerShim);
 				registerTarget = document->selectSingleNode("/ShimLoader/Shim/Register/RegisterTarget");
 				IfNullGo(registerTarget);
+				registerAddin = document->selectSingleNode("/ShimLoader/Shim/Register/CreateAddinKeys");
+				IfNullGo(registerAddin);
 				registerMode = document->selectSingleNode("/ShimLoader/Shim/Register/Mode");
 				IfNullGo(registerMode);
 				registerClsId = document->selectSingleNode("/ShimLoader/Shim/Register/Component/CLSID");
 				IfNullGo(registerClsId);
 				registerProgId = document->selectSingleNode("/ShimLoader/Shim/Register/Component/ProgId");
 				IfNullGo(registerProgId);
+				friendlyName = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/FriendlyName");
+				IfNullGo(friendlyName);
+				description = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/Description");
+				IfNullGo(description);
+				loadBehavior = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/LoadBehavior");
+				IfNullGo(loadBehavior);
+				commandLineSafe = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/CommandLineSafe");
+				IfNullGo(commandLineSafe);
 
-				ENABLE_SELF_REGISTRATION = ToBool(registerShim->text);
-				ENABLE_TARGET_REGISTRATION = ToBool(registerTarget->text);
-				ShimProxy_CLSID = registerClsId->text;
-				ShimProxy_ProgID = registerProgId->text;
+				addins = document->selectNodes("/ShimLoader/Shim/Register/Addin/Applications/*");
+				IfNullGo(addins);
+
+				ShimProxy_Host_Application = new LPCWSTR[addins->length];
+
+				for (int i = 0; i < addins->length; i++)
+				{
+					MSXML::IXMLDOMNode* domNode = nullptr;
+					if (SUCCEEDED(addins->get_item(i, &domNode)))
+					{
+						_bstr_t foo = domNode->GetnodeName();
+						ShimProxy_Host_Application[i] = foo;
+						domNode->Release();
+					}
+				}
+
+				ENABLE_SELF_REGISTRATION = ToBool(registerShim->text.copy(true));
+				ENABLE_TARGET_REGISTRATION = ToBool(registerTarget->text.copy(true));
+				ENABLE_ADDIN_REGISTRATION = ToBool(registerAddin->text.copy(true));
+				ShimProxy_CLSID = registerClsId->text.copy(true);
+				ShimProxy_ProgID = registerProgId->text.copy(true);
 				DllRegisterModeParser parser;
-				auto mode = parser.Parse(registerMode->text);
+				auto mode = parser.Parse(registerMode->text.copy(true));
 				SELF_REGISTER_MODE = mode;
+
+				customRegs = document->selectNodes("/ShimLoader/Shim/Register/Addin/CustomRegs/CustomReg");
+				if (customRegs)
+				{
+					Custom_Register_Values = new PCustomRegisterValue[customRegs->length];
+					for (int i = 0; i < customRegs->length; i++)
+					{
+						MSXML::IXMLDOMNode* domNode = nullptr;
+						if (SUCCEEDED(customRegs->get_item(i, &domNode)))
+						{
+							auto nameNode = domNode->selectSingleNode("Name");
+							auto typeNode = domNode->selectSingleNode("Type");
+							auto valueNode = domNode->selectSingleNode("Value");
+							if (nameNode && typeNode && valueNode)
+							{
+								auto theName = nameNode->text.copy(true);
+								auto theType = typeNode->text.copy(true);
+								auto theValue = valueNode->text.copy(true);
+								Custom_Register_Values[i] = new CustomRegisterValue(theName, theType, theValue);
+							}
+							domNode->Release();
+						}
+					}
+				}
+			}
+		}
+
+		if (document)
+		{
+			document.Release();
+			document = nullptr;
+		}
+		return hr;
+
+	Error:
+
+		if (document)
+		{
+			document.Release();
+			document = nullptr;
+		}
+		return hr;
+	}
+
+	HRESULT ShimArguments::ReadShimSettingsArguments()
+	{
+		HRESULT hr = E_FAIL;
+		MSXML::IXMLDOMNodePtr document = nullptr;
+		MSXML::IXMLDOMNodePtr enabledNode = nullptr;
+		MSXML::IXMLDOMNodePtr blindAggEnabledNode = nullptr;
+		MSXML::IXMLDOMNodePtr updateEnabledNode = nullptr;
+		MSXML::IXMLDOMNodePtr debugMessageBoxNode = nullptr;
+
+		if (IsLoaded())
+		{
+			hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
+			if (SUCCEEDED(hr))
+			{
+				enabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/Enabled");
+				IfNullGo(enabledNode);
+				blindAggEnabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/BlindAggregationEnabled");
+				IfNullGo(blindAggEnabledNode);
+				updateEnabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/UpdateEnabled");
+				IfNullGo(updateEnabledNode);
+				debugMessageBoxNode = document->selectSingleNode("/ShimLoader/Shim/Settings/DebugMsgBoxEnabled");
+
+				ENABLE_SHIM = ToBool(enabledNode->text.copy(true));
+				ENABLE_BLIND_AGGREGATION = ToBool(blindAggEnabledNode->text.copy(true));
+				ENABLE_OUTER_UPDATE_AGGREGATOR = ToBool(updateEnabledNode->text.copy(true));
+				if(debugMessageBoxNode)
+					ENABLE_DEBUG_MESSAGE_BOX = ToBool(debugMessageBoxNode->text.copy(true));
+			}
+		}
+
+		if (document)
+		{
+			document.Release();
+			document = nullptr;
+		}
+		return hr;
+
+	Error:
+
+		if (document)
+		{
+			document.Release();
+			document = nullptr;
+		}
+		return hr;
+	}
+
+	HRESULT ShimArguments::ReadShimDefaultArguments()
+	{
+		HRESULT hr = E_FAIL;
+		MSXML::IXMLDOMNodePtr document = nullptr;
+		MSXML::IXMLDOMNodePtr extensibilityDefaultNode = nullptr;
+		MSXML::IXMLDOMNodePtr extensibilityFailNode = nullptr;
+
+		if (IsLoaded())
+		{
+			hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
+			if (SUCCEEDED(hr))
+			{
+				extensibilityDefaultNode = document->selectSingleNode("/ShimLoader/Shim/Defaults/ExtensibilityDefaultResult");
+				IfNullGo(extensibilityDefaultNode);
+				extensibilityFailNode = document->selectSingleNode("/ShimLoader/Shim/Defaults/ExtensibilityFailResult");
+				IfNullGo(extensibilityFailNode);
+
+				EXTENSIBILITY_DEFAULT_RESULT = stol(extensibilityDefaultNode->text.copy(true));
+				EXTENSIBILITY_FAIL_RESULT = stol(extensibilityFailNode->text.copy(true));
 			}
 		}
 

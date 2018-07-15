@@ -2,6 +2,7 @@
 #include "ShimProxy.h"
 #include "Vars.h"
 
+
 namespace NetOffice_ShimLoader
 {
 	DWORD WINAPI ReloadCLRInternal(LPVOID lpParameter);

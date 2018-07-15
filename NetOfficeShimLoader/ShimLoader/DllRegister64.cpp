@@ -20,7 +20,7 @@ namespace NetOffice_ShimLoader_Register64
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2);
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2, LPCWSTR pszKeyChild3);
 
-	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplications[], DWORD addinLoadBehavior, DWORD addinCommandLineSafe, LPCWSTR progId, LPCWSTR classId, LPCWSTR friendlyName, LPCWSTR description, LPCWSTR version, RegisterMode mode)
+	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplications[], DWORD addinLoadBehavior, DWORD addinCommandLineSafe, LPCWSTR progId, LPCWSTR classId, LPCWSTR friendlyName, LPCWSTR description, LPCWSTR version, RegisterMode mode, BOOL addinRegistration)
 	{
 		HRESULT hr = S_OK;
 
@@ -40,7 +40,7 @@ namespace NetOffice_ShimLoader_Register64
 			return E_INVALIDARG;
 
 		hr = RegisterCOMComponent(module, progId, classId, version, description, mode);
-		if (SUCCEEDED(hr))
+		if (SUCCEEDED(hr) && addinRegistration)
 		{
 			size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
 			for (size_t i = 0; i < arraySize; i++)
@@ -54,7 +54,7 @@ namespace NetOffice_ShimLoader_Register64
 		return hr;
 	}
 
-	HRESULT DllUnregister(LPCWSTR officeApplications[], LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
+	HRESULT DllUnregister(LPCWSTR officeApplications[], LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode, BOOL addinRegistration)
 	{
 		HRESULT hr = S_OK;
 		HRESULT addin = S_OK;
@@ -68,11 +68,14 @@ namespace NetOffice_ShimLoader_Register64
 		if (!version || !version[0])
 			return E_INVALIDARG;
 
-		size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
-		for (size_t i = 0; i < arraySize; i++)
+		if (addinRegistration)
 		{
-			if (!SUCCEEDED(UnRegisterCOMAddin(officeApplications[i], progId, 0 == mode)))
-				addin = E_FAIL;
+			size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
+			for (size_t i = 0; i < arraySize; i++)
+			{
+				if (!SUCCEEDED(UnRegisterCOMAddin(officeApplications[i], progId, 0 == mode)))
+					addin = E_FAIL;
+			}
 		}
 
 		hr = UnregisterCOMComponent(progId, classId, version, mode);

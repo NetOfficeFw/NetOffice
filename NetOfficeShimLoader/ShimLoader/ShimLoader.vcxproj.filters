@@ -42,6 +42,9 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="CustomRegisterValue.cpp">
+      <Filter>Register</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClrHost.h" />
@@ -108,6 +111,9 @@
     </ClInclude>
     <ClInclude Include="Vars.h">
       <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomRegisterValue.h">
+      <Filter>Register</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

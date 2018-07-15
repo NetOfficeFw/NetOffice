@@ -10,7 +10,6 @@
 #include <string>
 #include <msxml.h>
 #include "DllRegisterModeParser.h"
-//#include "Vars.hpp"
 
 extern HANDLE		_thread;
 extern HINSTANCE	_module;
@@ -31,7 +30,9 @@ namespace NetOffice_ShimLoader
 		HRESULT Load();
 		HRESULT Unload();
 
-		HRESULT ReadRegisterArguments();
+		HRESULT ReadShimRegisterArguments();
+		HRESULT ReadShimSettingsArguments();
+		HRESULT ReadShimDefaultArguments();
 
 	protected:
 
