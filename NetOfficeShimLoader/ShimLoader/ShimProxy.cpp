@@ -2,6 +2,7 @@
 #include "ShimProxy.h"
 #include "Vars.h"
 
+#include "ShimArguments.h"
 
 namespace NetOffice_ShimLoader
 {

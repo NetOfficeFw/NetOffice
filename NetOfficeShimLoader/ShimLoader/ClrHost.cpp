@@ -185,7 +185,7 @@ namespace NetOffice_ShimLoader
 	* Static Utils
 	***************************************************************************/
 
-	static HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize)
+	static HRESULT GetDllDirectory(TCHAR* szPath, DWORD nPathBufferSize)
 	{
 		HMODULE hInstance = _AtlBaseModule.GetModuleInstance();
 		if (0 == hInstance)

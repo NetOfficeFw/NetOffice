@@ -1,51 +1,58 @@
 #pragma once
 #include "CustomRegisterValue.h"
 
+using namespace NetOffice_ShimLoader_Register;
+
 //
-// Addin Aggregator
+// Managed Addin Aggregator
 //
-LPCWSTR TargetManagedAggregator_AssemblyName				= L"NetOffice, PublicKeyToken=82590859a0ddadaf";
-LPCWSTR TargetManagedAggregator_ClassName					= L"NetOffice.Tools.Isolation.ManagedInnerComAggregator";
-LPCWSTR TargetManagedAggregator_AppDomain_FriendlyName		= L"";
-LPCWSTR TargetManagedAggregator_AppDomain_BaseFolder		= L"";
+WCHAR* TargetManagedAggregator_Folder						= nullptr;
+WCHAR* TargetManagedAggregator_AssemblyName					= nullptr; // = L"NetOffice, PublicKeyToken=82590859a0ddadaf";
+WCHAR* TargetManagedAggregator_ClassName					= nullptr; // = L"NetOffice.Tools.Isolation.ManagedInnerComAggregator";
+WCHAR* TargetManagedAggregator_AppDomain_FriendlyName		= nullptr;
+WCHAR* TargetManagedAggregator_AppDomain_BaseFolder			= nullptr;
 
 
 //
-// Addin Target
+// Managed Addin Target
 //
-LPCWSTR Target_AssemblyName									= L"InnerAddin, PublicKeyToken=6153aeeaee4248b8";
-LPCWSTR Target_AssemblyFileName								= L"InnerAddin.dll";
-LPCWSTR Target_ConnectClassName								= L"InnerAddin.Connect";
-LPCWSTR Target_ConfigFileName								= L"InnerAddin.dll.config";
+WCHAR* Target_AssemblyName									= nullptr; // = L"InnerAddin, PublicKeyToken=6153aeeaee4248b8";
+WCHAR* Target_AssemblyFileName								= nullptr; // = L"InnerAddin.dll";
+WCHAR* Target_ConnectClassName								= nullptr; // = L"InnerAddin.Connect";
+WCHAR* Target_ConfigFileName								= nullptr; // = L"InnerAddin.dll.config";
 
 
 //
 // Register Values
 //
-LPCWSTR  ShimProxy_CLSID									= L"{FF724928-8E6B-4A1E-97F3-C6B9A944154C}";
-LPCWSTR  ShimProxy_ProgID									= L"ZLoaderShim.Connect";
-LPCWSTR  ShimProxy_Version									= L"1.0.0.0";
-LPCWSTR  ShimProxy_FriendlyName								= L"NetOffice Generic COM Shim";
-LPCWSTR  ShimProxy_Description								= L"NetOffice Generic COM Shim";
-DWORD    ShimProxy_LoadBehavior								= 3;
-DWORD    ShimProxy_CommandLineSafe							= 0;
-LPCWSTR* ShimProxy_Host_Application							= nullptr;
-NetOffice_ShimLoader_Register::PCustomRegisterValue* Custom_Register_Values				= nullptr;
-
-//
-// Update Aggregator
-//
-LPCWSTR UpdateManagedAggregator_AssemblyName				= L"InnerUpdate, PublicKeyToken=e58b77e9e2189611";
-LPCWSTR UpdateManagedAggregator_ClassName					= L"NetOffice.Tools.Isolation.ManagedInnerUpdateAggregator";
+WCHAR*  ShimProxy_CLSID										= nullptr; // = L"{FF724928-8E6B-4A1E-97F3-C6B9A944154C}";
+WCHAR*  ShimProxy_ProgID									= nullptr; // = L"ZLoaderShim.Connect";
+WCHAR*  ShimProxy_Version									= nullptr; // = L"1.0.0.0";
+WCHAR*  ShimProxy_FriendlyName								= nullptr; // = L"NetOffice Generic COM Shim";
+WCHAR*  ShimProxy_Description								= nullptr; // = L"NetOffice Generic COM Shim";
+DWORD   ShimProxy_LoadBehavior								= 3;
+DWORD   ShimProxy_CommandLineSafe							= 0;
+LPCWSTR*  ShimProxy_Host_Application						= nullptr;
+PCustomRegisterValue* Custom_Register_Values				= nullptr;
 
 
 //
-// Update Handler
+// Managed Update Aggregator
 //
-LPCWSTR Update_AssemblyName									= L"InnerUpdate, PublicKeyToken=e58b77e9e2189611";
-LPCWSTR Update_AssemblyFileName								= L"InnerUpdate.dll";
-LPCWSTR Update_ConnectClassName								= L"InnerUpdate.Connect";
-LPCWSTR Update_ConfigFileName								= L"InnerUpdate.dll.config";
+WCHAR* UpdateManagedAggregator_Folder						= nullptr;
+WCHAR* UpdateManagedAggregator_AssemblyName					= L"InnerUpdate, PublicKeyToken=e58b77e9e2189611";
+WCHAR* UpdateManagedAggregator_ClassName					= L"NetOffice.Tools.Isolation.ManagedInnerUpdateAggregator";
+WCHAR* UpdateManagedAggregator_AppDomain_FriendlyName		= nullptr;
+WCHAR* UpdateManagedAggregator_AppDomain_BaseFolder			= nullptr;
+
+
+//
+// Managed Update Handler
+//
+WCHAR* Update_AssemblyName									= L"InnerUpdate, PublicKeyToken=e58b77e9e2189611";
+WCHAR* Update_AssemblyFileName								= L"InnerUpdate.dll";
+WCHAR* Update_ConnectClassName								= L"InnerUpdate.Connect";
+WCHAR* Update_ConfigFileName								= L"InnerUpdate.dll.config";
 
 
 //

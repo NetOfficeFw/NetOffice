@@ -185,6 +185,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="ManagedUpdateHandler.h" />
     <ClInclude Include="OuterComAggregator.h" />
     <ClInclude Include="OuterUpdateAggregator.h" />
+    <ClInclude Include="PathParser.h" />
     <ClInclude Include="ShimHost.h" />
     <ClInclude Include="DllRegisterMode.hpp" />
     <ClInclude Include="ShimArguments.h" />
@@ -211,6 +212,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClCompile Include="ManagedUpdateHandler.cpp" />
     <ClCompile Include="OuterComAggregator.cpp" />
     <ClCompile Include="OuterUpdateAggregator.cpp" />
+    <ClCompile Include="PathParser.cpp" />
     <ClCompile Include="ShimHost.cpp" />
     <ClCompile Include="ShimArguments.cpp" />
     <ClCompile Include="ShimProxy.cpp" />

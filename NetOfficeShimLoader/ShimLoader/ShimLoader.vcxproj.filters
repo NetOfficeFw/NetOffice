@@ -45,6 +45,7 @@
     <ClCompile Include="CustomRegisterValue.cpp">
       <Filter>Register</Filter>
     </ClCompile>
+    <ClCompile Include="PathParser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClrHost.h" />
@@ -115,6 +116,7 @@
     <ClInclude Include="CustomRegisterValue.h">
       <Filter>Register</Filter>
     </ClInclude>
+    <ClInclude Include="PathParser.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Updates">

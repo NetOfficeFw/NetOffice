@@ -1,51 +1,58 @@
 #pragma once
 #include "CustomRegisterValue.h"
 
+using namespace NetOffice_ShimLoader_Register;
+
 //
-// Addin Aggregator
+// Managed Addin Aggregator
 //
-extern LPCWSTR TargetManagedAggregator_AssemblyName;
-extern LPCWSTR TargetManagedAggregator_ClassName;
-extern LPCWSTR TargetManagedAggregator_AppDomain_FriendlyName;
-extern LPCWSTR TargetManagedAggregator_AppDomain_BaseFolder;
+extern WCHAR* TargetManagedAggregator_Folder;
+extern WCHAR* TargetManagedAggregator_AssemblyName;
+extern WCHAR* TargetManagedAggregator_ClassName;
+extern WCHAR* TargetManagedAggregator_AppDomain_FriendlyName;
+extern WCHAR* TargetManagedAggregator_AppDomain_BaseFolder;
 
 
 //
-// Addin Target
+// Managed Addin Target
 //
-extern LPCWSTR Target_AssemblyName;
-extern LPCWSTR Target_AssemblyFileName;
-extern LPCWSTR Target_ConnectClassName;
-extern LPCWSTR Target_ConfigFileName;
+extern WCHAR* Target_AssemblyName;
+extern WCHAR* Target_AssemblyFileName;
+extern WCHAR* Target_ConnectClassName;
+extern WCHAR* Target_ConfigFileName;
 
 
 //
 // Register Values
 //
-extern LPCWSTR  ShimProxy_CLSID;
-extern LPCWSTR  ShimProxy_ProgID;
-extern LPCWSTR  ShimProxy_Version;
-extern LPCWSTR  ShimProxy_FriendlyName;
-extern LPCWSTR  ShimProxy_Description;
-extern DWORD    ShimProxy_LoadBehavior;
-extern DWORD    ShimProxy_CommandLineSafe;
-extern LPCWSTR* ShimProxy_Host_Application;
-extern NetOffice_ShimLoader_Register::PCustomRegisterValue* Custom_Register_Values;
-
-//
-// Update Aggregator
-//
-extern LPCWSTR UpdateManagedAggregator_AssemblyName;
-extern LPCWSTR UpdateManagedAggregator_ClassName;
+extern WCHAR*  ShimProxy_CLSID;
+extern WCHAR*  ShimProxy_ProgID;
+extern WCHAR*  ShimProxy_Version;
+extern WCHAR*  ShimProxy_FriendlyName;
+extern WCHAR*  ShimProxy_Description;
+extern DWORD   ShimProxy_LoadBehavior;
+extern DWORD   ShimProxy_CommandLineSafe;
+extern LPCWSTR*  ShimProxy_Host_Application;
+extern PCustomRegisterValue* Custom_Register_Values;
 
 
 //
-// Update Handler
+// Managed Update Aggregator
 //
-extern LPCWSTR Update_AssemblyName;
-extern LPCWSTR Update_AssemblyFileName;
-extern LPCWSTR Update_ConnectClassName;
-extern LPCWSTR Update_ConfigFileName;
+extern WCHAR* UpdateManagedAggregator_Folder;
+extern WCHAR* UpdateManagedAggregator_AssemblyName;
+extern WCHAR* UpdateManagedAggregator_ClassName;
+extern WCHAR* UpdateManagedAggregator_AppDomain_FriendlyName;
+extern WCHAR* UpdateManagedAggregator_AppDomain_BaseFolder;
+
+
+//
+// Managed Update Handler
+//
+extern WCHAR* Update_AssemblyName;
+extern WCHAR* Update_AssemblyFileName;
+extern WCHAR* Update_ConnectClassName;
+extern WCHAR* Update_ConfigFileName;
 
 
 //

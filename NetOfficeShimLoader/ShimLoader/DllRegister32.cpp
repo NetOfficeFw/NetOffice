@@ -20,7 +20,7 @@ namespace NetOffice_ShimLoader_Register32
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2);
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2, LPCWSTR pszKeyChild3);
 
-	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplications[], DWORD addinLoadBehavior, DWORD addinCommandLineSafe, LPCWSTR progId, LPCWSTR classId, LPCWSTR friendlyName, LPCWSTR description, LPCWSTR version, RegisterMode mode, BOOL addinRegistration)
+	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplications[], DWORD addinLoadBehavior, DWORD addinCommandLineSafe, WCHAR* progId, WCHAR* classId, WCHAR* friendlyName, WCHAR* description, WCHAR* version, RegisterMode mode, BOOL addinRegistration)
 	{
 		HRESULT hr = S_OK;
 
@@ -54,7 +54,7 @@ namespace NetOffice_ShimLoader_Register32
 		return hr;
 	}
 
-	HRESULT DllUnregister(LPCWSTR officeApplications[], LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode, BOOL addinRegistration)
+	HRESULT DllUnregister(LPCWSTR officeApplications[], WCHAR* progId, WCHAR* classId, WCHAR* version, RegisterMode mode, BOOL addinRegistration)
 	{
 		HRESULT hr = S_OK;
 		HRESULT addin = S_OK;

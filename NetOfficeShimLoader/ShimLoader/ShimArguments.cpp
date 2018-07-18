@@ -1,18 +1,25 @@
 #include "stdafx.h"
 #include "ShimArguments.h"
 #include "Vars.h"
+#include "PathParser.h"
 
 using namespace std;
 using namespace NetOffice_ShimLoader_Register;
 
 namespace NetOffice_ShimLoader
 {
+	// TODO: check if needed
 	HRESULT GetDllDirectory(TCHAR *szPath, DWORD nPathBufferSize);
+
+	/***************************************************************************
+	* Ctor, Dtor
+	***************************************************************************/
 
 	ShimArguments::ShimArguments()
 	{
 		_document = nullptr;
 		_coInitialized = false;
+		_readState = E_NOT_SET;
 		IncComponents(L"ShimArguments");
 	}
 
@@ -22,6 +29,11 @@ namespace NetOffice_ShimLoader
 		ComUninitialize();
 		DecComponents(L"ShimArguments");
 	}
+
+
+	/***************************************************************************
+	* ShimArguments Methods
+	***************************************************************************/
 
 	BOOL ShimArguments::IsLoaded()
 	{
@@ -80,10 +92,49 @@ namespace NetOffice_ShimLoader
 		return hr;
 	}
 
-	HRESULT ShimArguments::ReadShimRegisterArguments()
+	HRESULT ShimArguments::ReadState()
+	{
+		return _readState;
+	}
+
+	HRESULT ShimArguments::Read()
 	{
 		HRESULT hr = E_FAIL;
 		MSXML::IXMLDOMNodePtr document = nullptr;
+		if (IsLoaded())
+		{
+			hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
+			if (SUCCEEDED(hr))
+			{
+				hr = ReadShimRegister(document);
+				if(SUCCEEDED(hr))
+					hr = ReadShimSettings(document);
+				if (SUCCEEDED(hr))
+					hr = ReadShimDefaults(document);
+				if (SUCCEEDED(hr))
+					hr = ReadManagedAddinAggregator(document);
+				if (SUCCEEDED(hr))
+					hr = ReadManagedUpdateAggregator(document);
+			}
+		}
+		else
+		{
+			hr = E_ABORT;
+		}
+
+		_readState = hr;
+		if (document)
+		{
+			document.Release();
+			document = nullptr;
+		}
+		return hr;
+	}
+
+	HRESULT ShimArguments::ReadShimRegister(MSXML::IXMLDOMNodePtr document)
+	{
+		HRESULT hr = S_OK;
+		DllRegisterModeParser parser;
 		MSXML::IXMLDOMNodePtr registerShim = nullptr;
 		MSXML::IXMLDOMNodePtr registerTarget = nullptr;
 		MSXML::IXMLDOMNodePtr registerAddin = nullptr;
@@ -97,183 +148,256 @@ namespace NetOffice_ShimLoader
 		MSXML::IXMLDOMNodeListPtr addins = nullptr;
 		MSXML::IXMLDOMNodeListPtr customRegs = nullptr;
 
-		if (IsLoaded())
+		registerShim = document->selectSingleNode("/ShimLoader/Shim/Register/RegisterShim");
+		IfNullGo(registerShim);
+		registerTarget = document->selectSingleNode("/ShimLoader/Shim/Register/RegisterTarget");
+		IfNullGo(registerTarget);
+		registerAddin = document->selectSingleNode("/ShimLoader/Shim/Register/CreateAddinKeys");
+		IfNullGo(registerAddin);
+		registerMode = document->selectSingleNode("/ShimLoader/Shim/Register/Mode");
+		IfNullGo(registerMode);
+		registerClsId = document->selectSingleNode("/ShimLoader/Shim/Register/Component/CLSID");
+		IfNullGo(registerClsId);
+		registerProgId = document->selectSingleNode("/ShimLoader/Shim/Register/Component/ProgId");
+		IfNullGo(registerProgId);
+		friendlyName = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/FriendlyName");
+		IfNullGo(friendlyName);
+		description = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/Description");
+		IfNullGo(description);
+		loadBehavior = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/LoadBehavior");
+		IfNullGo(loadBehavior);
+		commandLineSafe = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/CommandLineSafe");
+		IfNullGo(commandLineSafe);
+		addins = document->selectNodes("/ShimLoader/Shim/Register/Addin/Applications/*");
+		IfNullGo(addins);
+
+		ShimProxy_Host_Application = new LPCWSTR[addins->length];
+		for (int i = 0; i < addins->length; i++)
 		{
-			hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
-			if (SUCCEEDED(hr))
+			MSXML::IXMLDOMNode* domNode = nullptr;
+			if (SUCCEEDED(addins->get_item(i, &domNode)))
 			{
-				registerShim = document->selectSingleNode("/ShimLoader/Shim/Register/RegisterShim");
-				IfNullGo(registerShim);
-				registerTarget = document->selectSingleNode("/ShimLoader/Shim/Register/RegisterTarget");
-				IfNullGo(registerTarget);
-				registerAddin = document->selectSingleNode("/ShimLoader/Shim/Register/CreateAddinKeys");
-				IfNullGo(registerAddin);
-				registerMode = document->selectSingleNode("/ShimLoader/Shim/Register/Mode");
-				IfNullGo(registerMode);
-				registerClsId = document->selectSingleNode("/ShimLoader/Shim/Register/Component/CLSID");
-				IfNullGo(registerClsId);
-				registerProgId = document->selectSingleNode("/ShimLoader/Shim/Register/Component/ProgId");
-				IfNullGo(registerProgId);
-				friendlyName = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/FriendlyName");
-				IfNullGo(friendlyName);
-				description = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/Description");
-				IfNullGo(description);
-				loadBehavior = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/LoadBehavior");
-				IfNullGo(loadBehavior);
-				commandLineSafe = document->selectSingleNode("/ShimLoader/Shim/Register/Addin/CommandLineSafe");
-				IfNullGo(commandLineSafe);
+				_bstr_t foo = domNode->GetnodeName();
+				ShimProxy_Host_Application[i] = foo;
+				domNode->Release();
+			}
+		}
 
-				addins = document->selectNodes("/ShimLoader/Shim/Register/Addin/Applications/*");
-				IfNullGo(addins);
+		ENABLE_SELF_REGISTRATION = ToBool(registerShim->text);
+		ENABLE_TARGET_REGISTRATION = ToBool(registerTarget->text);
+		ENABLE_ADDIN_REGISTRATION = ToBool(registerAddin->text);
+		lstrcpyn(ShimProxy_CLSID, registerClsId->text, MAX_PATH + 1);
+		lstrcpyn(ShimProxy_ProgID, registerProgId->text, MAX_PATH + 1);
+		lstrcpyn(ShimProxy_FriendlyName, registerProgId->text, MAX_PATH + 1);
+		lstrcpyn(ShimProxy_Description, registerProgId->text, MAX_PATH + 1);
 
-				ShimProxy_Host_Application = new LPCWSTR[addins->length];
+		auto mode = parser.Parse(registerMode->text);
+		SELF_REGISTER_MODE = mode;
 
-				for (int i = 0; i < addins->length; i++)
+		customRegs = document->selectNodes("/ShimLoader/Shim/Register/Addin/CustomRegs/CustomReg");
+		if (customRegs)
+		{
+			Custom_Register_Values = new PCustomRegisterValue[customRegs->length];
+			for (int i = 0; i < customRegs->length; i++)
+			{
+				MSXML::IXMLDOMNode* domNode = nullptr;
+				if (SUCCEEDED(customRegs->get_item(i, &domNode)))
 				{
-					MSXML::IXMLDOMNode* domNode = nullptr;
-					if (SUCCEEDED(addins->get_item(i, &domNode)))
+					auto nameNode = domNode->selectSingleNode("Name");
+					auto typeNode = domNode->selectSingleNode("Type");
+					auto valueNode = domNode->selectSingleNode("Value");
+					if (nameNode && typeNode && valueNode)
 					{
-						_bstr_t foo = domNode->GetnodeName();
-						ShimProxy_Host_Application[i] = foo;
-						domNode->Release();
+						auto theName = nameNode->text.copy(true);
+						auto theType = typeNode->text.copy(true);
+						auto theValue = valueNode->text.copy(true);
+						Custom_Register_Values[i] = new CustomRegisterValue(theName, theType, theValue);
 					}
-				}
-
-				ENABLE_SELF_REGISTRATION = ToBool(registerShim->text.copy(true));
-				ENABLE_TARGET_REGISTRATION = ToBool(registerTarget->text.copy(true));
-				ENABLE_ADDIN_REGISTRATION = ToBool(registerAddin->text.copy(true));
-				ShimProxy_CLSID = registerClsId->text.copy(true);
-				ShimProxy_ProgID = registerProgId->text.copy(true);
-				DllRegisterModeParser parser;
-				auto mode = parser.Parse(registerMode->text.copy(true));
-				SELF_REGISTER_MODE = mode;
-
-				customRegs = document->selectNodes("/ShimLoader/Shim/Register/Addin/CustomRegs/CustomReg");
-				if (customRegs)
-				{
-					Custom_Register_Values = new PCustomRegisterValue[customRegs->length];
-					for (int i = 0; i < customRegs->length; i++)
-					{
-						MSXML::IXMLDOMNode* domNode = nullptr;
-						if (SUCCEEDED(customRegs->get_item(i, &domNode)))
-						{
-							auto nameNode = domNode->selectSingleNode("Name");
-							auto typeNode = domNode->selectSingleNode("Type");
-							auto valueNode = domNode->selectSingleNode("Value");
-							if (nameNode && typeNode && valueNode)
-							{
-								auto theName = nameNode->text.copy(true);
-								auto theType = typeNode->text.copy(true);
-								auto theValue = valueNode->text.copy(true);
-								Custom_Register_Values[i] = new CustomRegisterValue(theName, theType, theValue);
-							}
-							domNode->Release();
-						}
-					}
+					domNode->Release();
 				}
 			}
 		}
 
-		if (document)
-		{
-			document.Release();
-			document = nullptr;
-		}
 		return hr;
 
 	Error:
 
-		if (document)
-		{
-			document.Release();
-			document = nullptr;
-		}
+		hr = E_FAIL;
 		return hr;
 	}
 
-	HRESULT ShimArguments::ReadShimSettingsArguments()
+	HRESULT ShimArguments::ReadShimSettings(MSXML::IXMLDOMNodePtr document)
 	{
-		HRESULT hr = E_FAIL;
-		MSXML::IXMLDOMNodePtr document = nullptr;
+		HRESULT hr = S_OK;
 		MSXML::IXMLDOMNodePtr enabledNode = nullptr;
 		MSXML::IXMLDOMNodePtr blindAggEnabledNode = nullptr;
 		MSXML::IXMLDOMNodePtr updateEnabledNode = nullptr;
 		MSXML::IXMLDOMNodePtr debugMessageBoxNode = nullptr;
 
-		if (IsLoaded())
-		{
-			hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
-			if (SUCCEEDED(hr))
-			{
-				enabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/Enabled");
-				IfNullGo(enabledNode);
-				blindAggEnabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/BlindAggregationEnabled");
-				IfNullGo(blindAggEnabledNode);
-				updateEnabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/UpdateEnabled");
-				IfNullGo(updateEnabledNode);
-				debugMessageBoxNode = document->selectSingleNode("/ShimLoader/Shim/Settings/DebugMsgBoxEnabled");
+		enabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/Enabled");
+		IfNullGo(enabledNode);
+		blindAggEnabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/BlindAggregationEnabled");
+		IfNullGo(blindAggEnabledNode);
+		updateEnabledNode = document->selectSingleNode("/ShimLoader/Shim/Settings/UpdateEnabled");
+		IfNullGo(updateEnabledNode);
+		debugMessageBoxNode = document->selectSingleNode("/ShimLoader/Shim/Settings/DebugMsgBoxEnabled");
 
-				ENABLE_SHIM = ToBool(enabledNode->text.copy(true));
-				ENABLE_BLIND_AGGREGATION = ToBool(blindAggEnabledNode->text.copy(true));
-				ENABLE_OUTER_UPDATE_AGGREGATOR = ToBool(updateEnabledNode->text.copy(true));
-				if(debugMessageBoxNode)
-					ENABLE_DEBUG_MESSAGE_BOX = ToBool(debugMessageBoxNode->text.copy(true));
-			}
-		}
+		ENABLE_SHIM = ToBool(enabledNode->text);
+		ENABLE_BLIND_AGGREGATION = ToBool(blindAggEnabledNode->text);
+		ENABLE_OUTER_UPDATE_AGGREGATOR = ToBool(updateEnabledNode->text);
+		if (debugMessageBoxNode)
+			ENABLE_DEBUG_MESSAGE_BOX = ToBool(debugMessageBoxNode->text);
 
-		if (document)
-		{
-			document.Release();
-			document = nullptr;
-		}
 		return hr;
 
 	Error:
 
-		if (document)
-		{
-			document.Release();
-			document = nullptr;
-		}
+		hr = E_FAIL;
 		return hr;
 	}
 
-	HRESULT ShimArguments::ReadShimDefaultArguments()
+	HRESULT ShimArguments::ReadShimDefaults(MSXML::IXMLDOMNodePtr document)
 	{
-		HRESULT hr = E_FAIL;
-		MSXML::IXMLDOMNodePtr document = nullptr;
+		HRESULT hr = S_OK;
 		MSXML::IXMLDOMNodePtr extensibilityDefaultNode = nullptr;
 		MSXML::IXMLDOMNodePtr extensibilityFailNode = nullptr;
 
-		if (IsLoaded())
-		{
-			hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
-			if (SUCCEEDED(hr))
-			{
-				extensibilityDefaultNode = document->selectSingleNode("/ShimLoader/Shim/Defaults/ExtensibilityDefaultResult");
-				IfNullGo(extensibilityDefaultNode);
-				extensibilityFailNode = document->selectSingleNode("/ShimLoader/Shim/Defaults/ExtensibilityFailResult");
-				IfNullGo(extensibilityFailNode);
+		extensibilityDefaultNode = document->selectSingleNode("/ShimLoader/Shim/Defaults/ExtensibilityDefaultResult");
+		IfNullGo(extensibilityDefaultNode);
+		extensibilityFailNode = document->selectSingleNode("/ShimLoader/Shim/Defaults/ExtensibilityFailResult");
+		IfNullGo(extensibilityFailNode);
 
-				EXTENSIBILITY_DEFAULT_RESULT = stol(extensibilityDefaultNode->text.copy(true));
-				EXTENSIBILITY_FAIL_RESULT = stol(extensibilityFailNode->text.copy(true));
-			}
-		}
+		EXTENSIBILITY_DEFAULT_RESULT = stol(extensibilityDefaultNode->text.copy());
+		EXTENSIBILITY_FAIL_RESULT = stol(extensibilityFailNode->text.copy());
 
-		if (document)
-		{
-			document.Release();
-			document = nullptr;
-		}
 		return hr;
 
 	Error:
 
-		if (document)
-		{
-			document.Release();
-			document = nullptr;
-		}
+		hr = E_FAIL;
+		return hr;
+	}
+
+	HRESULT ShimArguments::ReadManagedAddinAggregator(MSXML::IXMLDOMNodePtr document)
+	{
+		HRESULT hr = S_OK;
+		PathParser parser;
+		MSXML::IXMLDOMNodePtr folderPathNode = nullptr;
+		MSXML::IXMLDOMNodePtr folderPathSubFolderNode = nullptr;
+		MSXML::IXMLDOMNodePtr assemblyNameNode = nullptr;
+		MSXML::IXMLDOMNodePtr classNameNode = nullptr;
+
+		MSXML::IXMLDOMNodePtr appDomainFriendlyNameNode = nullptr;
+		MSXML::IXMLDOMNodePtr appDomainFolderPathNode = nullptr;
+		MSXML::IXMLDOMNodePtr appDomainSubFolderNode = nullptr;
+
+		MSXML::IXMLDOMNodePtr targetAssemblyFileName = nullptr;
+		MSXML::IXMLDOMNodePtr targetAssemblyName = nullptr;
+		MSXML::IXMLDOMNodePtr targetConfigFileName = nullptr;
+		MSXML::IXMLDOMNodePtr targetClassName = nullptr;
+
+		folderPathNode = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/Folder/Path");
+		IfNullGo(folderPathNode);
+		folderPathSubFolderNode = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/Folder/SubFolder");
+		IfNullGo(folderPathSubFolderNode);
+		assemblyNameNode = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/AssemblyName");
+		IfNullGo(assemblyNameNode);
+		classNameNode = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/ClassName");
+		IfNullGo(classNameNode);
+		appDomainFriendlyNameNode = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/AppDomain/FriendlyName");
+		IfNullGo(appDomainFriendlyNameNode);
+		appDomainFolderPathNode = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/AppDomain/Folder/Path");
+		IfNullGo(appDomainFolderPathNode);
+		appDomainSubFolderNode = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/AppDomain/Folder/SubFolder");
+		IfNullGo(appDomainSubFolderNode);
+		targetAssemblyFileName = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/Target/AssemblyFileName");
+		IfNullGo(targetAssemblyFileName);
+		targetAssemblyName = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/Target/AssemblyName");
+		IfNullGo(targetAssemblyName);
+		targetConfigFileName = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/Target/ConfigFileName");
+		IfNullGo(targetConfigFileName);
+		targetClassName = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/Target/ClassName");
+		IfNullGo(targetClassName);
+
+		IfFailGo(parser.ParseEx(folderPathNode->text, folderPathSubFolderNode->text, TargetManagedAggregator_Folder, MAX_PATH + 1));
+		IfFailGo(parser.ParseEx(appDomainFolderPathNode->text, appDomainSubFolderNode->text, TargetManagedAggregator_AppDomain_BaseFolder, MAX_PATH + 1));
+
+		lstrcpyn(TargetManagedAggregator_AssemblyName, assemblyNameNode->text, MAX_PATH + 1);
+		lstrcpyn(TargetManagedAggregator_ClassName, classNameNode->text, MAX_PATH + 1);
+		lstrcpyn(TargetManagedAggregator_AppDomain_FriendlyName, appDomainFriendlyNameNode->text, MAX_PATH + 1);
+		lstrcpyn(Target_AssemblyName, targetAssemblyName->text, MAX_PATH + 1);
+		lstrcpyn(Target_AssemblyFileName, targetAssemblyFileName->text, MAX_PATH + 1);
+		lstrcpyn(Target_ConfigFileName, targetConfigFileName->text, MAX_PATH + 1);
+		lstrcpyn(Target_ConnectClassName, targetClassName->text, MAX_PATH + 1);
+
+		return hr;
+
+	Error:
+
+		hr = E_FAIL;
+		return hr;
+	}
+
+	HRESULT ShimArguments::ReadManagedUpdateAggregator(MSXML::IXMLDOMNodePtr document)
+	{
+		HRESULT hr = S_OK;
+		PathParser parser;
+
+		MSXML::IXMLDOMNodePtr folderPathNode = nullptr;
+		MSXML::IXMLDOMNodePtr folderPathSubFolderNode = nullptr;
+		MSXML::IXMLDOMNodePtr assemblyNameNode = nullptr;
+		MSXML::IXMLDOMNodePtr classNameNode = nullptr;
+
+		MSXML::IXMLDOMNodePtr appDomainFriendlyNameNode = nullptr;
+		MSXML::IXMLDOMNodePtr appDomainFolderPathNode = nullptr;
+		MSXML::IXMLDOMNodePtr appDomainSubFolderNode = nullptr;
+
+		MSXML::IXMLDOMNodePtr targetAssemblyFileName = nullptr;
+		MSXML::IXMLDOMNodePtr targetAssemblyName = nullptr;
+		MSXML::IXMLDOMNodePtr targetConfigFileName = nullptr;
+		MSXML::IXMLDOMNodePtr targetClassName = nullptr;
+
+		folderPathNode = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/Folder/Path");
+		IfNullGo(folderPathNode);
+		folderPathSubFolderNode = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/Folder/SubFolder");
+		IfNullGo(folderPathSubFolderNode);
+		assemblyNameNode = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/AssemblyName");
+		IfNullGo(assemblyNameNode);
+		classNameNode = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/ClassName");
+		IfNullGo(classNameNode);
+
+		appDomainFriendlyNameNode = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/AppDomain/FriendlyName");
+		IfNullGo(appDomainFriendlyNameNode);
+		appDomainFolderPathNode = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/AppDomain/Folder/Path");
+		IfNullGo(appDomainFolderPathNode);
+		appDomainSubFolderNode = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/AppDomain/Folder/SubFolder");
+		IfNullGo(appDomainSubFolderNode);
+
+		targetAssemblyFileName = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/Target/AssemblyFileName");
+		IfNullGo(targetAssemblyFileName);
+		targetAssemblyName = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/Target/AssemblyName");
+		IfNullGo(targetAssemblyName);
+		targetConfigFileName = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/Target/ConfigFileName");
+		IfNullGo(targetConfigFileName);
+		targetClassName = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/Target/ClassName");
+		IfNullGo(targetClassName);
+
+		IfFailGo(parser.ParseEx(folderPathNode->text, folderPathSubFolderNode->text, UpdateManagedAggregator_Folder, MAX_PATH + 1));
+		IfFailGo(parser.ParseEx(appDomainFolderPathNode->text, appDomainSubFolderNode->text, UpdateManagedAggregator_AppDomain_BaseFolder, MAX_PATH + 1));
+
+		lstrcpyn(UpdateManagedAggregator_AssemblyName, assemblyNameNode->text, MAX_PATH + 1);
+		lstrcpyn(UpdateManagedAggregator_ClassName, classNameNode->text, MAX_PATH + 1);
+		lstrcpyn(UpdateManagedAggregator_AppDomain_FriendlyName, appDomainFriendlyNameNode->text, MAX_PATH + 1);
+		lstrcpyn(Update_AssemblyName, targetAssemblyName->text, MAX_PATH + 1);
+		lstrcpyn(Update_AssemblyFileName, targetAssemblyFileName->text, MAX_PATH + 1);
+		lstrcpyn(Update_ConfigFileName, targetConfigFileName->text, MAX_PATH + 1);
+		lstrcpyn(Update_ConnectClassName, targetClassName->text, MAX_PATH + 1);
+
+		return hr;
+
+	Error:
+
+		hr = E_FAIL;
 		return hr;
 	}
 
@@ -302,100 +426,6 @@ namespace NetOffice_ShimLoader
 		}
 
 		return hr;
-	}
-
-	HRESULT ShimArguments::LoadManagedAddin(MSXML::IXMLDOMDocument2Ptr docPtr)
-	{
-		HRESULT hr = S_OK;
-
-		MSXML::IXMLDOMNodePtr assemblyName = nullptr;
-		MSXML::IXMLDOMNodePtr assemblyFileName = nullptr;
-		MSXML::IXMLDOMNodePtr configFileName = nullptr;
-		MSXML::IXMLDOMNodePtr className = nullptr;
-
-		/*assemblyName = docPtr->selectSingleNode("/Root/ManagedAggregator/Target/AssemblyName");
-		if (assemblyName)
-			Target_AssemblyName = assemblyName->text;
-		else
-			goto Error;
-
-		assemblyFileName = docPtr->selectSingleNode("/Root/ManagedAggregator/Target/AssemblyFileName");
-		if (assemblyFileName)
-			Target_AssemblyFileName = assemblyFileName->text;
-		else
-			goto Error;
-
-		configFileName = docPtr->selectSingleNode("/Root/ManagedAggregator/Target/ConfigFileName");
-		if (configFileName)
-			Target_ConfigFileName = configFileName->text;
-		else
-			goto Error;
-
-		className = docPtr->selectSingleNode("/Root/ManagedAggregator/Target/ClassName");
-		if (className)
-			Target_ConnectClassName = className->text;
-		else
-			goto Error;*/
-
-		return hr;
-
-	//Error:
-
-	//	return hr;
-	}
-
-	HRESULT ShimArguments::LoadManagedAggregator(MSXML::IXMLDOMDocument2Ptr docPtr)
-	{
-		HRESULT hr = S_OK;
-
-		/*MSXML::IXMLDOMNodePtr assemblyName = nullptr;
-		MSXML::IXMLDOMNodePtr className = nullptr;
-
-		assemblyName = docPtr->selectSingleNode("/Root/ManagedAggregator/AssemblyName");
-		if (assemblyName)
-			TargetManagedAggregator_AssemblyName = assemblyName->text;
-		else
-			goto Error;
-
-		className = docPtr->selectSingleNode("/Root/ManagedAggregator/ClassName");
-		if (assemblyName)
-			TargetManagedAggregator_ClassName = className->text;
-		else
-			goto Error;*/
-
-		return hr;
-
-	//Error:
-
-	//	hr = E_FAIL;
-	//	return hr;
-	}
-
-	HRESULT ShimArguments::LoadAppDomain(MSXML::IXMLDOMDocument2Ptr docPtr)
-	{
-		HRESULT hr = S_OK;
-
-		/*MSXML::IXMLDOMNodePtr friendlyName = nullptr;
-		MSXML::IXMLDOMNodePtr baseFolder = nullptr;
-
-		friendlyName = docPtr->selectSingleNode("/Root/ManagedAggregator/AppDomain/FriendlyName");
-		if (friendlyName)
-			TargetManagedAggregator_AppDomain_FriendlyName = friendlyName->text;
-		else
-			goto Error;
-
-		baseFolder = docPtr->selectSingleNode("/Root/ManagedAggregator/AppDomain/BaseFolder");
-		if (baseFolder)
-			TargetManagedAggregator_AppDomain_BaseFolder = baseFolder->text;
-		else
-			goto Error;*/
-
-		return hr;
-
-	//Error:
-
-	//	hr = E_FAIL;
-	//	return hr;
 	}
 
 	HRESULT ShimArguments::AppendPath(LPWSTR pszPath, LPCWSTR pszMore)
