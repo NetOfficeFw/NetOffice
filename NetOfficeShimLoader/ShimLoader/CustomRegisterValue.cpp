@@ -51,4 +51,12 @@ namespace NetOffice_ShimLoader_Register
 	{
 		return _value;
 	}
+
+	DWORD CustomRegisterValue::RegKind()
+	{
+		if (0 == wcscmp(_kind, L"REG_DWORD"))
+			return REG_DWORD;
+		else
+			return REG_SZ;
+	}
 }

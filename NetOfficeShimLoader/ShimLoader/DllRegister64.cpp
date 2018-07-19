@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "DllRegister64.h"
+#include "Vars.h"
 
 using namespace NetOffice_ShimLoader;
 
@@ -15,6 +16,7 @@ namespace NetOffice_ShimLoader_Register64
 	HKEY TargetRootKey(RegisterMode mode);
 	void ProgIdSubKey(LPCWSTR progId, RegisterMode mode, WCHAR* progIdKey, int maxLen);
 	void ClassIdSubKey(LPCWSTR classId, RegisterMode mode, WCHAR* classIdKey, int maxLen);
+	HRESULT SetCustomValue(HKEY hKey, PCustomRegisterValue value);
 	BOOL SetKeyAndValue(HKEY hKeyRoot, LPCWSTR pszPath, LPCWSTR pszSubkey1, LPCWSTR pszSubkey2, LPCWSTR pszSubkey3, LPCWSTR pszvalueName, LPCWSTR pszValue);
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild);
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2);
@@ -209,6 +211,17 @@ namespace NetOffice_ShimLoader_Register64
 			IfFailGo(RegSetValueEx(hKey, L"Description", 0, REG_SZ, (BYTE*)pszDescription, dwTemp));
 		}
 
+		if (NULL != Custom_Register_Values)
+		{
+			size_t arraySize = (sizeof(Custom_Register_Values) / sizeof(*Custom_Register_Values));
+			for (size_t i = 0; i < arraySize; i++)
+			{
+				auto value = Custom_Register_Values[i];
+				if (value->SeemsToBeValid())
+					SetCustomValue(hKey, value);
+			}
+		}
+
 		RegCloseKey(hKey);
 
 		return hr;
@@ -239,6 +252,17 @@ namespace NetOffice_ShimLoader_Register64
 		}
 
 		return result;
+	}
+
+	HRESULT SetCustomValue(HKEY hKey, PCustomRegisterValue value)
+	{
+		DWORD dwTemp = 0;
+#if UNICODE
+		dwTemp = lstrlen(value->Name()) * 2 + 2;
+#else
+		dwTemp = lstrlen(value->Name()) + 1;
+#endif
+		return RegSetValueEx(hKey, value->Name(), 0, value->RegKind(), (BYTE*)value->Value().copy(), dwTemp);
 	}
 
 	HKEY TargetRootKey(RegisterMode mode)

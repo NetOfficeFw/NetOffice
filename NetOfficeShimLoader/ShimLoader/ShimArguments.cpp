@@ -177,8 +177,8 @@ namespace NetOffice_ShimLoader
 			MSXML::IXMLDOMNode* domNode = nullptr;
 			if (SUCCEEDED(addins->get_item(i, &domNode)))
 			{
-				_bstr_t foo = domNode->GetnodeName();
-				ShimProxy_Host_Application[i] = foo;
+				_bstr_t appName = domNode->GetnodeName();
+				ShimProxy_Host_Application[i] = appName.copy(TRUE);
 				domNode->Release();
 			}
 		}
@@ -188,8 +188,8 @@ namespace NetOffice_ShimLoader
 		ENABLE_ADDIN_REGISTRATION = ToBool(registerAddin->text);
 		lstrcpyn(ShimProxy_CLSID, registerClsId->text, MAX_PATH + 1);
 		lstrcpyn(ShimProxy_ProgID, registerProgId->text, MAX_PATH + 1);
-		lstrcpyn(ShimProxy_FriendlyName, registerProgId->text, MAX_PATH + 1);
-		lstrcpyn(ShimProxy_Description, registerProgId->text, MAX_PATH + 1);
+		lstrcpyn(ShimProxy_FriendlyName, friendlyName->text, MAX_PATH + 1);
+		lstrcpyn(ShimProxy_Description, description->text, MAX_PATH + 1);
 
 		auto mode = parser.Parse(registerMode->text);
 		SELF_REGISTER_MODE = mode;

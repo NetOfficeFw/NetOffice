@@ -16,6 +16,7 @@ namespace NetOffice_ShimLoader_Register
 		_bstr_t Name();
 		_bstr_t Kind();
 		_bstr_t Value();
+		DWORD RegKind();
 
 	private:
 
