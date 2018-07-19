@@ -59,8 +59,7 @@ namespace NetOffice_ShimLoader
 		ICLRRuntimeInfo* runtimeInfo = nullptr;
 		ICorRuntimeHost* runtimeHost = nullptr;
 
-		WCHAR directoryPath[MAX_PATH + 1];
-		IfFailGo(GetDllDirectory(directoryPath, ARRAYSIZE(directoryPath)));
+		auto directoryPath = TargetManagedAggregator_Folder;
 
 		WCHAR fullInnerAddinFilePath[MAX_PATH + 1];
 		IfFailGo(AppendPath(fullInnerAddinFilePath, directoryPath));
@@ -85,14 +84,15 @@ namespace NetOffice_ShimLoader
 
 		IfFailGo(runtimeHost->CreateDomainSetup(&unkAppDomainSetup));
 		IfFailGo(unkAppDomainSetup->QueryInterface(__uuidof(pDomainSetup), (LPVOID*)&pDomainSetup));
-		pDomainSetup->put_ApplicationBase(CComBSTR(directoryPath));
+		pDomainSetup->put_ApplicationBase(CComBSTR(TargetManagedAggregator_AppDomain_BaseFolder));
 
 		if (PathFileExists(fullInnerAddinConfigFilePath))
 		{
 			IfFailGo(pDomainSetup->put_ConfigurationFile(fullInnerAddinConfigFilePath));
 		}
 
-		IfFailGo(runtimeHost->CreateDomainEx(T2W(directoryPath), pDomainSetup, 0, &unkAppDomain));
+		auto appDomainFriendlyName = wcslen(TargetManagedAggregator_AppDomain_FriendlyName) > 0 ? T2W(TargetManagedAggregator_AppDomain_FriendlyName) : T2W(directoryPath);
+		IfFailGo(runtimeHost->CreateDomainEx(appDomainFriendlyName, pDomainSetup, 0, &unkAppDomain));
 		IfFailGo(unkAppDomain->QueryInterface(__uuidof(_appDomain), (LPVOID*)&_appDomain));
 		IfFailGo(_appDomain->CreateInstance(
 			CComBSTR(TargetManagedAggregator_AssemblyName),

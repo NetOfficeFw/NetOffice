@@ -66,8 +66,7 @@ namespace NetOffice_ShimLoader
 		ICLRRuntimeInfo* runtimeInfo = nullptr;
 		ICorRuntimeHost* runtimeHost = nullptr;
 
-		WCHAR directoryPath[MAX_PATH + 1];
-		IfFailGo(GetDllDirectory(directoryPath, ARRAYSIZE(directoryPath)));
+		auto directoryPath = UpdateManagedAggregator_Folder;
 
 		WCHAR fullInnerAddinFilePath[MAX_PATH + 1];
 		IfFailGo(AppendPath(fullInnerAddinFilePath, directoryPath));

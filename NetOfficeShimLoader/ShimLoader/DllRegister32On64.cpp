@@ -13,8 +13,8 @@ namespace NetOffice_ShimLoader_Register32On64
 	HRESULT UnRegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, bool registerPerMachine);
 
 	HKEY TargetRootKey(RegisterMode mode);
-	void ProgIdSubKey(LPCWSTR progId, RegisterMode mode, WCHAR* progIdKey);
-	void ClassIdSubKey(LPCWSTR classId, RegisterMode mode, WCHAR* classIdKey);
+	void ProgIdSubKey(LPCWSTR progId, RegisterMode mode, WCHAR* progIdKey, int maxLen);
+	void ClassIdSubKey(LPCWSTR classId, RegisterMode mode, WCHAR* classIdKey, int maxLen);
 	BOOL SetKeyAndValue(HKEY hKeyRoot, LPCWSTR pszPath, LPCWSTR pszSubkey1, LPCWSTR pszSubkey2, LPCWSTR pszSubkey3, LPCWSTR pszvalueName, LPCWSTR pszValue);
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild);
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2);
@@ -95,10 +95,10 @@ namespace NetOffice_ShimLoader_Register32On64
 		HKEY targetRootKey = TargetRootKey(mode);
 
 		WCHAR classIdKey[512];
-		ClassIdSubKey(classId, mode, classIdKey);
+		ClassIdSubKey(classId, mode, classIdKey, 512);
 
 		WCHAR progIdKey[512];
-		ProgIdSubKey(progId, mode, progIdKey);
+		ProgIdSubKey(progId, mode, progIdKey, 512);
 
 		// Target Key ProgId
 		if (!SetKeyAndValue(targetRootKey, progIdKey, NULL, NULL, NULL, NULL, progId))
@@ -152,9 +152,9 @@ namespace NetOffice_ShimLoader_Register32On64
 
 		HKEY hKeyRoot = TargetRootKey(mode);
 		WCHAR classIdKey[512];
-		ClassIdSubKey(classId, mode, classIdKey);
+		ClassIdSubKey(classId, mode, classIdKey, 512);
 		WCHAR progIdKey[512];
-		ProgIdSubKey(progId, mode, progIdKey);
+		ProgIdSubKey(progId, mode, progIdKey, 512);
 
 		if (mode != User)
 		{
@@ -181,10 +181,10 @@ namespace NetOffice_ShimLoader_Register32On64
 		bool keyCreated = false;
 		HKEY hKey;
 
-		lstrcpy(szKeyBuf, L"Software\\Microsoft\\Office\\");
-		lstrcat(szKeyBuf, pszOfficeApp);
-		lstrcat(szKeyBuf, L"\\Addins\\");
-		lstrcat(szKeyBuf, pszProgID);
+		StringCchCopy(szKeyBuf, 1024, L"Software\\Microsoft\\Office\\");
+		StringCchCat(szKeyBuf, 1024, pszOfficeApp);
+		StringCchCat(szKeyBuf, 1024, L"\\Addins\\");
+		StringCchCat(szKeyBuf, 1024, pszProgID);
 
 		HKEY root = registerPerMachine ? HKEY_LOCAL_MACHINE : HKEY_CURRENT_USER;
 		IfFailGo(RegCreateKeyEx(root, szKeyBuf, 0, NULL, REG_OPTION_NON_VOLATILE, _regKeyOptions, NULL, &hKey, NULL));
@@ -227,10 +227,10 @@ namespace NetOffice_ShimLoader_Register32On64
 
 		HKEY root = registerPerMachine ? HKEY_LOCAL_MACHINE : HKEY_CURRENT_USER;
 		WCHAR szKeyBuf[1024];
-		lstrcpy(szKeyBuf, L"Software\\Microsoft\\Office\\");
-		lstrcat(szKeyBuf, pszOfficeApp);
-		lstrcat(szKeyBuf, L"\\Addins\\");
-		lstrcat(szKeyBuf, pszProgID);
+		StringCchCopy(szKeyBuf, 1024, L"Software\\Microsoft\\Office\\");
+		StringCchCat(szKeyBuf, 1024, pszOfficeApp);
+		StringCchCat(szKeyBuf, 1024, L"\\Addins\\");
+		StringCchCat(szKeyBuf, 1024, pszProgID);
 
 		HRESULT hr = RecursiveDeleteKey(root, szKeyBuf);
 		if (E_ACCESSDENIED != hr) // if key is missing - we dont care
@@ -254,16 +254,16 @@ namespace NetOffice_ShimLoader_Register32On64
 		return hKeyRoot;
 	}
 
-	void ClassIdSubKey(LPCWSTR classId, RegisterMode mode, WCHAR* classIdKey)
+	void ClassIdSubKey(LPCWSTR classId, RegisterMode mode, WCHAR* classIdKey, int maxLen)
 	{
-		lstrcpy(classIdKey, L"Software\\Classes\\CLSID\\");
-		lstrcat(classIdKey, classId);
+		StringCchCopy(classIdKey, maxLen, L"Software\\Classes\\CLSID\\");
+		StringCchCat(classIdKey, maxLen, classId);
 	}
 
-	void ProgIdSubKey(LPCWSTR progId, RegisterMode mode, WCHAR* progIdKey)
+	void ProgIdSubKey(LPCWSTR progId, RegisterMode mode, WCHAR* progIdKey, int maxLen)
 	{
-		lstrcpy(progIdKey, L"Software\\Classes\\");
-		lstrcat(progIdKey, progId);
+		StringCchCopy(progIdKey, maxLen, L"Software\\Classes\\");
+		StringCchCat(progIdKey, maxLen, progId);
 	}
 
 	BOOL SetKeyAndValue(HKEY hKeyRoot, LPCWSTR pszPath, LPCWSTR pszSubkey1, LPCWSTR pszSubkey2, LPCWSTR pszSubkey3, LPCWSTR pszvalueName, LPCWSTR pszValue)
@@ -271,22 +271,22 @@ namespace NetOffice_ShimLoader_Register32On64
 		HKEY hKey;
 		WCHAR szKeyBuf[1024];
 
-		lstrcpy(szKeyBuf, pszPath);
+		StringCchCopy(szKeyBuf, 1024, pszPath);
 
 		if (pszSubkey1 != NULL)
 		{
-			lstrcat(szKeyBuf, L"\\");
-			lstrcat(szKeyBuf, pszSubkey1);
+			StringCchCat(szKeyBuf, 1024, L"\\");
+			StringCchCat(szKeyBuf, 1024, pszSubkey1);
 		}
 		if (pszSubkey2 != NULL)
 		{
-			lstrcat(szKeyBuf, L"\\");
-			lstrcat(szKeyBuf, pszSubkey2);
+			StringCchCat(szKeyBuf, 1024, L"\\");
+			StringCchCat(szKeyBuf, 1024, pszSubkey2);
 		}
 		if (pszSubkey3 != NULL)
 		{
-			lstrcat(szKeyBuf, L"\\");
-			lstrcat(szKeyBuf, pszSubkey3);
+			StringCchCat(szKeyBuf, 1024, L"\\");
+			StringCchCat(szKeyBuf, 1024, pszSubkey3);
 		}
 
 		// if its return 5 - E_ACCESS_DENIED
@@ -310,20 +310,20 @@ namespace NetOffice_ShimLoader_Register32On64
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2)
 	{
 		WCHAR szKeyBuf[1024];
-		lstrcpy(szKeyBuf, pszKeyChild);
-		lstrcat(szKeyBuf, L"\\");
-		lstrcat(szKeyBuf, pszKeyChild2);
+		StringCchCopy(szKeyBuf, 1024, pszKeyChild);
+		StringCchCat(szKeyBuf, 1024, L"\\");
+		StringCchCat(szKeyBuf, 1024, pszKeyChild2);
 		return RecursiveDeleteKey(hKeyParent, szKeyBuf);
 	}
 
 	LONG RecursiveDeleteKey(HKEY hKeyParent, LPCWSTR pszKeyChild, LPCWSTR pszKeyChild2, LPCWSTR pszKeyChild3)
 	{
 		WCHAR szKeyBuf[1024];
-		lstrcpy(szKeyBuf, pszKeyChild);
-		lstrcat(szKeyBuf, L"\\");
-		lstrcat(szKeyBuf, pszKeyChild2);
-		lstrcat(szKeyBuf, L"\\");
-		lstrcat(szKeyBuf, pszKeyChild3);
+		StringCchCopy(szKeyBuf, 1024, pszKeyChild);
+		StringCchCat(szKeyBuf, 1024, L"\\");
+		StringCchCat(szKeyBuf, 1024, pszKeyChild2);
+		StringCchCat(szKeyBuf, 1024, L"\\");
+		StringCchCat(szKeyBuf, 1024, pszKeyChild3);
 		return RecursiveDeleteKey(hKeyParent, szKeyBuf);
 	}
 
