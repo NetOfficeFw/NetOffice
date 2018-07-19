@@ -33,8 +33,9 @@ WCHAR*  ShimProxy_Description								= nullptr; // = L"NetOffice Generic COM Shi
 DWORD   ShimProxy_LoadBehavior								= 3;
 DWORD   ShimProxy_CommandLineSafe							= 0;
 LPCWSTR*  ShimProxy_Host_Application						= nullptr;
+size_t  ShimProxy_Host_Application_Length					= 0;
 PCustomRegisterValue* Custom_Register_Values				= nullptr;
-
+size_t  Custom_Register_Values_Length						= 0;
 
 //
 // Managed Update Aggregator

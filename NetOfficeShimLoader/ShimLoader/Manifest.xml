@@ -13,6 +13,7 @@
       <Addin>
         <Applications>
           <PowerPoint></PowerPoint>
+          <Word></Word>
         </Applications>
         <FriendlyName>NetOffice Generic COM Shim</FriendlyName>
         <Description>Shim Loader supplied by NetOffice</Description>
@@ -23,6 +24,13 @@
             <Name>Greetings</Name>
             <Type>REG_SZ</Type>
             <Value>Greetings from Shim Register</Value>
+            <ParseValue>false</ParseValue>
+          </CustomReg>
+          <CustomReg>
+            <Name>CreatedAt</Name>
+            <Type>REG_SZ</Type>
+            <Value>$LocalTime</Value>
+            <ParseValue>true</ParseValue>
           </CustomReg>
         </CustomRegs>
       </Addin>

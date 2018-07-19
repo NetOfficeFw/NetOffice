@@ -171,6 +171,7 @@ namespace NetOffice_ShimLoader
 		addins = document->selectNodes("/ShimLoader/Shim/Register/Addin/Applications/*");
 		IfNullGo(addins);
 
+		ShimProxy_Host_Application_Length = addins->length;
 		ShimProxy_Host_Application = new LPCWSTR[addins->length];
 		for (int i = 0; i < addins->length; i++)
 		{
@@ -197,6 +198,7 @@ namespace NetOffice_ShimLoader
 		customRegs = document->selectNodes("/ShimLoader/Shim/Register/Addin/CustomRegs/CustomReg");
 		if (customRegs)
 		{
+			Custom_Register_Values_Length = customRegs->length;
 			Custom_Register_Values = new PCustomRegisterValue[customRegs->length];
 			for (int i = 0; i < customRegs->length; i++)
 			{
@@ -206,12 +208,15 @@ namespace NetOffice_ShimLoader
 					auto nameNode = domNode->selectSingleNode("Name");
 					auto typeNode = domNode->selectSingleNode("Type");
 					auto valueNode = domNode->selectSingleNode("Value");
+					auto parseValueNode = domNode->selectSingleNode("ParseValue");
+
 					if (nameNode && typeNode && valueNode)
 					{
 						auto theName = nameNode->text.copy(true);
 						auto theType = typeNode->text.copy(true);
 						auto theValue = valueNode->text.copy(true);
-						Custom_Register_Values[i] = new CustomRegisterValue(theName, theType, theValue);
+						auto parseTheValue = NULL != parseValueNode ? ToBool(parseValueNode->text) : FALSE;
+						Custom_Register_Values[i] = new CustomRegisterValue(theName, theType, theValue, parseTheValue);
 					}
 					domNode->Release();
 				}

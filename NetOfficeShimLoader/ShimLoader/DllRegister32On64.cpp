@@ -44,7 +44,7 @@ namespace NetOffice_ShimLoader_Register32On64
 		hr = RegisterCOMComponent(module, progId, classId, version, description, mode);
 		if (SUCCEEDED(hr) && addinRegistration)
 		{
-			size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
+			size_t arraySize = ShimProxy_Host_Application_Length;
 			for (size_t i = 0; i < arraySize; i++)
 			{
 				hr = RegisterCOMAddin(officeApplications[i], progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, System == mode);
@@ -72,7 +72,7 @@ namespace NetOffice_ShimLoader_Register32On64
 
 		if (addinRegistration)
 		{
-			size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
+			size_t arraySize = ShimProxy_Host_Application_Length;
 			for (size_t i = 0; i < arraySize; i++)
 			{
 				if (!SUCCEEDED(UnRegisterCOMAddin(officeApplications[i], progId, 0 == mode)))
@@ -213,11 +213,11 @@ namespace NetOffice_ShimLoader_Register32On64
 
 		if (NULL != Custom_Register_Values)
 		{
-			size_t arraySize = (sizeof(Custom_Register_Values) / sizeof(*Custom_Register_Values));
+			size_t arraySize = Custom_Register_Values_Length;
 			for (size_t i = 0; i < arraySize; i++)
 			{
 				auto value = Custom_Register_Values[i];
-				if(value->SeemsToBeValid())
+				if (value->SeemsToBeValid())
 					SetCustomValue(hKey, value);
 			}
 		}
@@ -256,14 +256,17 @@ namespace NetOffice_ShimLoader_Register32On64
 
 	HRESULT SetCustomValue(HKEY hKey, PCustomRegisterValue value)
 	{
+		WCHAR valueBuffer[256];
+		value->ProcessedValue(valueBuffer, 256);
+
 		DWORD dwTemp = 0;
 #if UNICODE
-		dwTemp = lstrlen(value->Value()) * 2 + 2;
+		dwTemp = lstrlen(valueBuffer) * 2 + 2;
 #else
-		dwTemp = lstrlen(value->Value()) + 1;
+		dwTemp = lstrlen(valueBuffer) + 1;
 #endif
 
-		return RegSetValueEx(hKey, value->Name(), 0, value->RegKind(), (BYTE*)value->Value().copy(), dwTemp);
+		return RegSetValueEx(hKey, value->Name(), 0, value->RegKind(), (BYTE*)valueBuffer, dwTemp);
 	}
 
 	HKEY TargetRootKey(RegisterMode mode)

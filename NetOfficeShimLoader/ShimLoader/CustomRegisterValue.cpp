@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CustomRegisterValue.h"
+#include <ctime>
 
 namespace NetOffice_ShimLoader_Register
 {
@@ -12,13 +13,15 @@ namespace NetOffice_ShimLoader_Register
 		/*_name = nullptr;
 		_kind = 0;
 		_value = nullptr;*/
+		_parseValue = FALSE;
 	}
 
-	CustomRegisterValue::CustomRegisterValue(_bstr_t name, _bstr_t kind, _bstr_t value)
+	CustomRegisterValue::CustomRegisterValue(_bstr_t name, _bstr_t kind, _bstr_t value, BOOL parseValue)
 	{
 		_name = name;
 		_kind = kind;
 		_value = value;
+		_parseValue = parseValue;
 	}
 
 	CustomRegisterValue::~CustomRegisterValue()
@@ -50,6 +53,38 @@ namespace NetOffice_ShimLoader_Register
 	_bstr_t CustomRegisterValue::Value()
 	{
 		return _value;
+	}
+
+	void CustomRegisterValue::ProcessedValue(WCHAR* buffer, int maxLen)
+	{
+		time_t t = time(NULL);
+		struct tm buf;
+
+		if (_parseValue && 0 == wcscmp(_value, L"$LocalTime"))
+		{
+			if(NULL == localtime_s(&buf, &t))
+				wcsftime(buffer, maxLen, L"%d-%m-%Y %I:%M:%S", &buf);
+			else
+				StringCchCopy(buffer, maxLen, _value);
+		}
+		else if (_parseValue && 0 == wcscmp(_value, L"$LocalTimeUSFormat"))
+		{
+			if (NULL == localtime_s(&buf, &t))
+				wcsftime(buffer, maxLen, L"%m/%d/%Y %I:%M:%S", &buf);
+			else
+				StringCchCopy(buffer, maxLen, _value);
+		}
+		else if (_parseValue && 0 == wcscmp(_value, L"$LocalTimeDEFormat"))
+		{
+			if (NULL == localtime_s(&buf, &t))
+				wcsftime(buffer, maxLen, L"%d.%m.%Y %I:%M:%S", &buf);
+			else
+				StringCchCopy(buffer, maxLen, _value);
+		}
+		else
+		{
+			StringCchCopy(buffer, maxLen, _value);
+		}
 	}
 
 	DWORD CustomRegisterValue::RegKind()

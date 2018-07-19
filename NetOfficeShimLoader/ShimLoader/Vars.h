@@ -33,8 +33,9 @@ extern WCHAR*  ShimProxy_Description;
 extern DWORD   ShimProxy_LoadBehavior;
 extern DWORD   ShimProxy_CommandLineSafe;
 extern LPCWSTR*  ShimProxy_Host_Application;
+extern size_t  ShimProxy_Host_Application_Length;
 extern PCustomRegisterValue* Custom_Register_Values;
-
+extern size_t  Custom_Register_Values_Length;
 
 //
 // Managed Update Aggregator

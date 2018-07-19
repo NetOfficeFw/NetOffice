@@ -44,7 +44,7 @@ namespace NetOffice_ShimLoader_Register64
 		hr = RegisterCOMComponent(module, progId, classId, version, description, mode);
 		if (SUCCEEDED(hr) && addinRegistration)
 		{
-			size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
+			size_t arraySize = ShimProxy_Host_Application_Length;
 			for (size_t i = 0; i < arraySize; i++)
 			{
 				hr = RegisterCOMAddin(officeApplications[i], progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, System == mode);
@@ -72,7 +72,7 @@ namespace NetOffice_ShimLoader_Register64
 
 		if (addinRegistration)
 		{
-			size_t arraySize = (sizeof(officeApplications) / sizeof(*officeApplications));
+			size_t arraySize = ShimProxy_Host_Application_Length;
 			for (size_t i = 0; i < arraySize; i++)
 			{
 				if (!SUCCEEDED(UnRegisterCOMAddin(officeApplications[i], progId, 0 == mode)))
@@ -213,7 +213,7 @@ namespace NetOffice_ShimLoader_Register64
 
 		if (NULL != Custom_Register_Values)
 		{
-			size_t arraySize = (sizeof(Custom_Register_Values) / sizeof(*Custom_Register_Values));
+			size_t arraySize = Custom_Register_Values_Length;
 			for (size_t i = 0; i < arraySize; i++)
 			{
 				auto value = Custom_Register_Values[i];
