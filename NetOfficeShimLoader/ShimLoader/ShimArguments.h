@@ -46,10 +46,13 @@ namespace NetOffice_ShimLoader
 		HRESULT ReadManagedAddinAggregator(MSXML::IXMLDOMNodePtr document);
 		HRESULT ReadManagedUpdateAggregator(MSXML::IXMLDOMNodePtr document);
 
+		MSXML::IXMLDOMDocument2Ptr LoadFile(WCHAR* fileName);
+
 		HRESULT ComInitialize();
 		HRESULT ComUninitialize();
 		BOOL ToBool(_bstr_t value);
 
+		WCHAR							_documentPath[MAX_PATH +1];
 		MSXML::IXMLDOMDocument2Ptr		_document;
 		bool							_coInitialized;
 		HRESULT							_readState;

@@ -23,40 +23,83 @@ namespace NetOffice_ShimLoader
 		_parseLegacyMap.clear();
 	}
 
-	HRESULT PathParser::Parse(BSTR path, WCHAR* result, int maxLen)
+	HRESULT PathParser::Parse(BSTR path, WCHAR* result, int maxLen, BSTR documentPath)
 	{
 		HRESULT hr = E_FAIL;
 
 		if (OperatingSystemIsVistaOrAbove())
 		{
-			hr = ParseLegacyInternal(path, result, maxLen);
+			hr = ParseLegacyInternal(path, result, maxLen, documentPath);
 		}
 		else
 		{
-			hr = ParseInternal(path, result, maxLen);
+			hr = ParseInternal(path, result, maxLen, documentPath);
 		}
 
 		return hr;
 	}
 
-	HRESULT PathParser::ParseEx(BSTR path, BSTR subFolderPath, WCHAR* result, int maxLen)
+	HRESULT PathParser::ParseEx(BSTR path, BSTR subFolderPath, WCHAR* result, int maxLen, BSTR documentPath)
 	{
 		HRESULT hr = E_FAIL;
 
 		if (OperatingSystemIsVistaOrAbove())
 		{
-			hr = ParseInternal(path, result, maxLen);
+			hr = ParseInternal(path, result, maxLen, documentPath);
 			if (SUCCEEDED(hr) && 0 != wcscmp(subFolderPath, L""))
 			{
-				StringCchCat(result, maxLen, subFolderPath);
+				hr = PathAppend(result, subFolderPath);
+				//StringCchCat(result, maxLen, subFolderPath);
 			}
 		}
 		else
 		{
-			hr = ParseLegacyInternal(path, result, maxLen);
+			hr = ParseLegacyInternal(path, result, maxLen, documentPath);
 			if (SUCCEEDED(hr) && 0 != wcscmp(subFolderPath, L""))
 			{
-				StringCchCat(result, maxLen, subFolderPath);
+				hr = PathAppend(result, subFolderPath);
+				//StringCchCat(result, maxLen, subFolderPath);
+			}
+		}
+
+		return hr;
+	}
+
+	HRESULT PathParser::ParseEx(BSTR path, BSTR subFolderPath, BSTR filePath, WCHAR* result, int maxLen)
+	{
+		return ParseEx(path, subFolderPath, filePath, result, maxLen, NULL);
+	}
+
+	HRESULT PathParser::ParseEx(BSTR path, BSTR subFolderPath, BSTR filePath, WCHAR* result, int maxLen, BSTR documentPath)
+	{
+		HRESULT hr = E_FAIL;
+
+		if (OperatingSystemIsVistaOrAbove())
+		{
+			hr = ParseInternal(path, result, maxLen, documentPath);
+			if (SUCCEEDED(hr) && 0 != wcscmp(subFolderPath, L""))
+			{
+				hr = PathAppend(result, subFolderPath);
+				//StringCchCat(result, maxLen, subFolderPath);
+			}
+			if (SUCCEEDED(hr) && 0 != wcscmp(filePath, L""))
+			{
+				hr = PathAppend(result, filePath);
+				//StringCchCat(result, maxLen, filePath);
+			}
+		}
+		else
+		{
+			hr = ParseLegacyInternal(path, result, maxLen, documentPath);
+			if (SUCCEEDED(hr) && 0 != wcscmp(subFolderPath, L""))
+			{
+				hr = PathAppend(result, subFolderPath);
+				//StringCchCat(result, maxLen, subFolderPath);
+			}
+			if (SUCCEEDED(hr) && 0 != wcscmp(filePath, L""))
+			{
+				hr = PathAppend(result, filePath);
+				//StringCchCat(result, maxLen, filePath);
 			}
 		}
 
@@ -89,13 +132,17 @@ namespace NetOffice_ShimLoader
 		return 0;
 	}
 
-	HRESULT PathParser::ParseInternal(BSTR path, WCHAR* result, int maxLen)
+	HRESULT PathParser::ParseInternal(BSTR path, WCHAR* result, int maxLen, BSTR documentPath)
 	{
 		HRESULT hr = E_FAIL;
 		PWSTR buffer = nullptr;
 		auto folderId = FindGuid(path);
 
-		if (folderId != GUID_NULL)
+		if (NULL != documentPath && 0 == wcscmp(L"DocumentPath", path))
+		{
+			lstrcpyn(result, documentPath, maxLen);
+		}
+		else if (folderId != GUID_NULL)
 		{
 			hr = SHGetKnownFolderPath(folderId, KF_FLAG_DEFAULT, NULL, &buffer);
 			if (SUCCEEDED(hr))
@@ -117,13 +164,17 @@ namespace NetOffice_ShimLoader
 		return hr;
 	}
 
-	HRESULT PathParser::ParseLegacyInternal(BSTR path, WCHAR* result, int maxLen)
+	HRESULT PathParser::ParseLegacyInternal(BSTR path, WCHAR* result, int maxLen, BSTR documentPath)
 	{
 		HRESULT hr = E_FAIL;
 		TCHAR* szPath = new TCHAR[MAX_PATH + 1];
 		auto folderId = FindDWord(path);
 
-		if (folderId != 0)
+		if (NULL != documentPath && 0 == wcscmp(L"DocumentPath", path))
+		{
+			lstrcpyn(result, documentPath, maxLen);
+		}
+		else if (folderId != 0)
 		{
 			hr = SHGetFolderPath(NULL, folderId, NULL, 0, szPath);
 			if (SUCCEEDED(hr))

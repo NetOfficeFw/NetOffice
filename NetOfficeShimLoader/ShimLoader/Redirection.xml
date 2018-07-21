@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ShimLoaderRedirection>
-  <Folder isSpecialFolder="false"></Folder>
-  <SubFolder></SubFolder>
-  <File></File>
-</ShimLoaderRedirection>
+<ShimLoader Version="1.0.0.0">
+  <Manifest>
+    <Folder>LocalAppData</Folder>
+    <SubFolder>NetOffice\InnerAddin</SubFolder>
+    <File>InnerAddin.dll.ShimSettings</File>
+  </Manifest>
+</ShimLoader>

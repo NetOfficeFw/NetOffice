@@ -7,7 +7,7 @@ using NetOffice.PowerPointApi;
 namespace NetOffice.PowerPointApi.Behind
 {
 	/// <summary>
-	/// DispatchInterface Point 
+	/// DispatchInterface Point
 	/// SupportByVersion PowerPoint, 14,15,16
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746485.aspx </remarks>
@@ -57,9 +57,9 @@ namespace NetOffice.PowerPointApi.Behind
                     _type = typeof(Point);                return _type;
             }
         }
-        
+
         #endregion
-        
+
 		#region Ctor
 
 		/// <summary>
@@ -71,8 +71,8 @@ namespace NetOffice.PowerPointApi.Behind
 		}
 
 		#endregion
-		
-		#region Properties
+
+        #region Properties
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16

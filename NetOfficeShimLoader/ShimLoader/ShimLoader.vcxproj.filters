@@ -117,6 +117,9 @@
       <Filter>Register</Filter>
     </ClInclude>
     <ClInclude Include="PathParser.h" />
+    <ClInclude Include="WriteLog.hpp">
+      <Filter>Analytics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Updates">
@@ -139,6 +142,9 @@
     </Filter>
     <Filter Include="Contracts">
       <UniqueIdentifier>{95c25273-cfe6-49db-94ef-8b185d14716e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Analytics">
+      <UniqueIdentifier>{03bddb3e-a138-4f59-adec-c7f1957fe90f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

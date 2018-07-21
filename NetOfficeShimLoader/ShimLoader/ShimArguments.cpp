@@ -18,6 +18,7 @@ namespace NetOffice_ShimLoader
 	ShimArguments::ShimArguments()
 	{
 		_document = nullptr;
+		lstrcpyn(_documentPath, L"", MAX_PATH);
 		_coInitialized = false;
 		_readState = E_NOT_SET;
 		IncComponents(L"ShimArguments");
@@ -35,6 +36,42 @@ namespace NetOffice_ShimLoader
 	* ShimArguments Methods
 	***************************************************************************/
 
+	MSXML::IXMLDOMDocument2Ptr ShimArguments::LoadFile(WCHAR* fileName)
+	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::LoadFile::Enter");
+
+		HRESULT hr = E_FAIL;
+		bool b = FALSE;
+		MSXML::IXMLDOMDocument2Ptr document;
+
+		b = PathFileExists(fileName);
+		if (!b)
+		{
+			NetOffice_ShimLoader_Analytics::WriteError(L"ShimArguments::LoadFile::MissingFile", fileName);
+		}
+		IfFalseGo(b);
+
+		IfFailGo(ComInitialize());
+		IfFailGo(document.CreateInstance(__uuidof(MSXML::DOMDocument60), NULL, CLSCTX_INPROC_SERVER));
+		IfFailGo(VARIANT_TRUE == document->load(fileName) ? S_OK : E_FAIL);
+
+		IfFailGo(document->setProperty("SelectionLanguage", "XPath"));
+
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::LoadFile::Exit");
+		return document;
+
+	Error:
+
+		NetOffice_ShimLoader_Analytics::WriteError(L"ShimArguments::LoadFile::Error", hr);
+		if (document)
+		{
+			document.Release();
+			document = nullptr;
+		}
+
+		return NULL;
+	}
+
 	BOOL ShimArguments::IsLoaded()
 	{
 		return NULL != _document;
@@ -42,12 +79,18 @@ namespace NetOffice_ShimLoader
 
 	HRESULT ShimArguments::Load()
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::Load::Enter");
+
 		HRESULT hr = E_FAIL;
-		bool b = FALSE;
+		MSXML::IXMLDOMNodePtr redirectFolderNode = nullptr;
+		MSXML::IXMLDOMNodePtr redirectSubFolderNode = nullptr;
+		MSXML::IXMLDOMNodePtr redirectFileNode = nullptr;
+
+		PathParser parser;
 
 		WCHAR directoryPath[MAX_PATH + 1];
 		IfFailGo(GetDllDirectory(directoryPath, ARRAYSIZE(directoryPath)));
-
+		lstrcpyn(_documentPath, directoryPath, MAX_PATH);
 		WCHAR moduleFileName[MAX_PATH + 1];
 		IfFailGo(GetModuleFileName(_module, moduleFileName, ARRAYSIZE(moduleFileName)));
 
@@ -55,17 +98,54 @@ namespace NetOffice_ShimLoader
 		IfFailGo(AppendPath(fullSettingsFilePath, directoryPath));
 		IfFailGo(AppendPath(fullSettingsFilePath, moduleFileName));
 		PWSTR target = StrCatBuff(fullSettingsFilePath, L".ShimSettings", ARRAYSIZE(fullSettingsFilePath));
+		// TODO: delete target then?
 
-		IfFalseGo(PathFileExists(target));
+		_document = LoadFile(target);
 
-		IfFailGo(ComInitialize());
-		IfFailGo(_document.CreateInstance(__uuidof(MSXML::DOMDocument60), NULL, CLSCTX_INPROC_SERVER));
-		IfFailGo(VARIANT_TRUE == _document->load(target) ? S_OK : E_FAIL);
-		IfFailGo(_document->setProperty("SelectionLanguage", "XPath"));
+		if (_document)
+		{
+			for (size_t i = 0; i < 3; i++)
+			{
+				MSXML::IXMLDOMNodePtr document = nullptr;
+				hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
+				if (SUCCEEDED(hr))
+				{
+					redirectFolderNode = document->selectSingleNode("/ShimLoader/Manifest/Folder");
+					if (!redirectFolderNode)
+						break;
+					redirectSubFolderNode = document->selectSingleNode("/ShimLoader/Manifest/SubFolder");
+					if (!redirectSubFolderNode)
+						break;
+					redirectFileNode = document->selectSingleNode("/ShimLoader/Manifest/File");
+					if (!redirectFileNode)
+						break;
 
+					auto foo1 = redirectFolderNode->text.copy();
+					auto foo2 = redirectSubFolderNode->text.copy();
+					auto foo3 = redirectFileNode->text.copy();
+					parser.ParseEx(foo1, foo2, foo3, _documentPath, MAX_PATH);
+
+					_document = LoadFile(_documentPath);
+
+					document.Release();
+					document = nullptr;
+
+					break;
+				}
+			}
+		}
+		else
+		{
+			hr = E_FAIL;
+			goto Error;
+		}
+
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::Load::Exit");
 		return hr;
 
 	Error:
+
+		NetOffice_ShimLoader_Analytics::WriteError(L"ShimArguments::Load::FailExit", hr);
 
 		if (_document)
 		{
@@ -78,6 +158,8 @@ namespace NetOffice_ShimLoader
 
 	HRESULT ShimArguments::Unload()
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::Unload::Enter");
+
 		HRESULT hr = S_OK;
 		if (_document)
 		{
@@ -89,6 +171,8 @@ namespace NetOffice_ShimLoader
 		{
 			hr = E_FAIL;
 		}
+
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::Unload::Exit", hr);
 		return hr;
 	}
 
@@ -99,8 +183,11 @@ namespace NetOffice_ShimLoader
 
 	HRESULT ShimArguments::Read()
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::Read::Enter");
+
 		HRESULT hr = E_FAIL;
 		MSXML::IXMLDOMNodePtr document = nullptr;
+
 		if (IsLoaded())
 		{
 			hr = _document.QueryInterface(__uuidof(IXMLDOMNode), &document);
@@ -128,11 +215,19 @@ namespace NetOffice_ShimLoader
 			document.Release();
 			document = nullptr;
 		}
+
+		if(SUCCEEDED(hr))
+			NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::Read::Exit");
+		else
+			NetOffice_ShimLoader_Analytics::WriteError(L"ShimArguments::Read::FailExit", hr);
+
 		return hr;
 	}
 
 	HRESULT ShimArguments::ReadShimRegister(MSXML::IXMLDOMNodePtr document)
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimRegister::Enter");
+
 		HRESULT hr = S_OK;
 		DllRegisterModeParser parser;
 		MSXML::IXMLDOMNodePtr registerShim = nullptr;
@@ -223,16 +318,20 @@ namespace NetOffice_ShimLoader
 			}
 		}
 
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimRegister::Exit");
 		return hr;
 
 	Error:
 
 		hr = E_FAIL;
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimRegister::FailExit", hr);
 		return hr;
 	}
 
 	HRESULT ShimArguments::ReadShimSettings(MSXML::IXMLDOMNodePtr document)
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimSettings::Enter");
+
 		HRESULT hr = S_OK;
 		MSXML::IXMLDOMNodePtr enabledNode = nullptr;
 		MSXML::IXMLDOMNodePtr blindAggEnabledNode = nullptr;
@@ -253,16 +352,20 @@ namespace NetOffice_ShimLoader
 		if (debugMessageBoxNode)
 			ENABLE_DEBUG_MESSAGE_BOX = ToBool(debugMessageBoxNode->text);
 
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimSettings::Exit");
 		return hr;
 
 	Error:
 
 		hr = E_FAIL;
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimSettings::FailExit");
 		return hr;
 	}
 
 	HRESULT ShimArguments::ReadShimDefaults(MSXML::IXMLDOMNodePtr document)
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimDefaults::Enter");
+
 		HRESULT hr = S_OK;
 		MSXML::IXMLDOMNodePtr extensibilityDefaultNode = nullptr;
 		MSXML::IXMLDOMNodePtr extensibilityFailNode = nullptr;
@@ -275,16 +378,20 @@ namespace NetOffice_ShimLoader
 		EXTENSIBILITY_DEFAULT_RESULT = stol(extensibilityDefaultNode->text.copy());
 		EXTENSIBILITY_FAIL_RESULT = stol(extensibilityFailNode->text.copy());
 
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimDefaults::Exit");
 		return hr;
 
 	Error:
 
 		hr = E_FAIL;
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadShimDefaults::FailExit");
 		return hr;
 	}
 
 	HRESULT ShimArguments::ReadManagedAddinAggregator(MSXML::IXMLDOMNodePtr document)
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadManagedAddinAggregator::Enter");
+
 		HRESULT hr = S_OK;
 		PathParser parser;
 		MSXML::IXMLDOMNodePtr folderPathNode = nullptr;
@@ -324,8 +431,8 @@ namespace NetOffice_ShimLoader
 		targetClassName = document->selectSingleNode("/ShimLoader/ManagedAddinAggregator/Target/ClassName");
 		IfNullGo(targetClassName);
 
-		IfFailGo(parser.ParseEx(folderPathNode->text, folderPathSubFolderNode->text, TargetManagedAggregator_Folder, MAX_PATH + 1));
-		IfFailGo(parser.ParseEx(appDomainFolderPathNode->text, appDomainSubFolderNode->text, TargetManagedAggregator_AppDomain_BaseFolder, MAX_PATH + 1));
+		IfFailGo(parser.ParseEx(folderPathNode->text, folderPathSubFolderNode->text, TargetManagedAggregator_Folder, MAX_PATH + 1, _documentPath));
+		IfFailGo(parser.ParseEx(appDomainFolderPathNode->text, appDomainSubFolderNode->text, TargetManagedAggregator_AppDomain_BaseFolder, MAX_PATH + 1, _documentPath));
 
 		lstrcpyn(TargetManagedAggregator_AssemblyName, assemblyNameNode->text, MAX_PATH + 1);
 		lstrcpyn(TargetManagedAggregator_ClassName, classNameNode->text, MAX_PATH + 1);
@@ -335,16 +442,20 @@ namespace NetOffice_ShimLoader
 		lstrcpyn(Target_ConfigFileName, targetConfigFileName->text, MAX_PATH + 1);
 		lstrcpyn(Target_ConnectClassName, targetClassName->text, MAX_PATH + 1);
 
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadManagedAddinAggregator::Exit");
 		return hr;
 
 	Error:
 
 		hr = E_FAIL;
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadManagedAddinAggregator::FailExit");
 		return hr;
 	}
 
 	HRESULT ShimArguments::ReadManagedUpdateAggregator(MSXML::IXMLDOMNodePtr document)
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadManagedUpdateAggregator::Enter");
+
 		HRESULT hr = S_OK;
 		PathParser parser;
 
@@ -387,8 +498,8 @@ namespace NetOffice_ShimLoader
 		targetClassName = document->selectSingleNode("/ShimLoader/ManagedUpdateAggregator/Target/ClassName");
 		IfNullGo(targetClassName);
 
-		IfFailGo(parser.ParseEx(folderPathNode->text, folderPathSubFolderNode->text, UpdateManagedAggregator_Folder, MAX_PATH + 1));
-		IfFailGo(parser.ParseEx(appDomainFolderPathNode->text, appDomainSubFolderNode->text, UpdateManagedAggregator_AppDomain_BaseFolder, MAX_PATH + 1));
+		IfFailGo(parser.ParseEx(folderPathNode->text, folderPathSubFolderNode->text, UpdateManagedAggregator_Folder, MAX_PATH + 1, _documentPath));
+		IfFailGo(parser.ParseEx(appDomainFolderPathNode->text, appDomainSubFolderNode->text, UpdateManagedAggregator_AppDomain_BaseFolder, MAX_PATH + 1, _documentPath));
 
 		lstrcpyn(UpdateManagedAggregator_AssemblyName, assemblyNameNode->text, MAX_PATH + 1);
 		lstrcpyn(UpdateManagedAggregator_ClassName, classNameNode->text, MAX_PATH + 1);
@@ -398,17 +509,19 @@ namespace NetOffice_ShimLoader
 		lstrcpyn(Update_ConfigFileName, targetConfigFileName->text, MAX_PATH + 1);
 		lstrcpyn(Update_ConnectClassName, targetClassName->text, MAX_PATH + 1);
 
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadManagedUpdateAggregator::Exit");
 		return hr;
 
 	Error:
 
 		hr = E_FAIL;
+		NetOffice_ShimLoader_Analytics::WriteLog(L"ShimArguments::ReadManagedUpdateAggregator::FailExit");
 		return hr;
 	}
 
 	HRESULT ShimArguments::ComInitialize()
 	{
-		HRESULT hr = E_FAIL;
+		HRESULT hr = S_OK;
 
 		if (!_coInitialized)
 		{

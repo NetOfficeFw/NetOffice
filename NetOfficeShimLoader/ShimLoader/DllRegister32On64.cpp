@@ -24,22 +24,19 @@ namespace NetOffice_ShimLoader_Register32On64
 
 	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplications[], DWORD addinLoadBehavior, DWORD addinCommandLineSafe, WCHAR* progId, WCHAR* classId, WCHAR* friendlyName, WCHAR* description, WCHAR* version, RegisterMode mode, BOOL addinRegistration)
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"Register32On64::DllRegister::Enter");
+
 		HRESULT hr = S_OK;
 
-		if (NULL == module)
-			return E_INVALIDARG;
-		if (NULL == officeApplications)
-			return E_INVALIDARG;
-		if (!progId || !progId[0])
-			return E_INVALIDARG;
-		if (!classId || !classId[0])
-			return E_INVALIDARG;
-		if (!friendlyName || !friendlyName[0])
-			return E_INVALIDARG;
-		if (!description || !description[0])
-			return E_INVALIDARG;
-		if (!version || !version[0])
-			return E_INVALIDARG;
+		if (NULL == module || NULL == officeApplications ||
+			!progId || !progId[0] || !classId || !classId[0] ||
+			!friendlyName || !friendlyName[0] || !description || !description[0] ||
+			!version || !version[0])
+		{
+			hr = E_INVALIDARG;
+			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllRegister::FailExit", hr);
+			return hr;
+		}
 
 		hr = RegisterCOMComponent(module, progId, classId, version, description, mode);
 		if (SUCCEEDED(hr) && addinRegistration)
@@ -49,26 +46,38 @@ namespace NetOffice_ShimLoader_Register32On64
 			{
 				hr = RegisterCOMAddin(officeApplications[i], progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, System == mode);
 				if (!SUCCEEDED(hr))
+				{
+					NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllRegister::Error#RegisterCOMAddin");
 					break;
+				}
 			}
 		}
+		else
+		{
+			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllRegister::Error#RegisterCOMComponent");
+		}
+
+		if (SUCCEEDED(hr))
+			NetOffice_ShimLoader_Analytics::WriteLog(L"Register32On64::DllRegister::Exit");
+		else
+			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllRegister::FailExit");
 
 		return hr;
 	}
 
 	HRESULT DllUnregister(LPCWSTR officeApplications[], WCHAR* progId, WCHAR* classId, WCHAR* version, RegisterMode mode, BOOL addinRegistration)
 	{
+		NetOffice_ShimLoader_Analytics::WriteLog(L"Register32On64::DllUnregister::Enter");
+
 		HRESULT hr = S_OK;
 		HRESULT addin = S_OK;
 
-		if (NULL == officeApplications)
-			return E_INVALIDARG;
-		if (!progId || !progId[0])
-			return E_INVALIDARG;
-		if (!classId || !classId[0])
-			return E_INVALIDARG;
-		if (!version || !version[0])
-			return E_INVALIDARG;
+		if (NULL == officeApplications || !progId || !progId[0] || !classId || !classId[0] || !version || !version[0])
+		{
+			hr = E_INVALIDARG;
+			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllUnregister::FailExit", hr);
+			return hr;
+		}
 
 		if (addinRegistration)
 		{
@@ -76,81 +85,102 @@ namespace NetOffice_ShimLoader_Register32On64
 			for (size_t i = 0; i < arraySize; i++)
 			{
 				if (!SUCCEEDED(UnRegisterCOMAddin(officeApplications[i], progId, 0 == mode)))
+				{
+					NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllUnregister::Error#UnRegisterCOMAddin");
 					addin = E_FAIL;
+				}
 			}
 		}
 
 		hr = UnregisterCOMComponent(progId, classId, version, mode);
+		if(FAILED(hr))
+			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllUnregister::Error#UnregisterCOMComponent");
+
+		if(SUCCEEDED(addin != S_OK ? addin : hr))
+			NetOffice_ShimLoader_Analytics::WriteLog(L"Register32On64::DllUnregister::Exit");
+		else
+			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllUnregister::FailExit");
 
 		return addin != S_OK ? addin : hr;
 	}
 
 	HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, LPCWSTR description, RegisterMode mode)
 	{
-		HRESULT result = S_OK;
+		HRESULT hr = S_OK;
+		BOOL setKeyResult = FALSE;
 
 		WCHAR moduleFullFileName[512];
 		DWORD dwResult = ::GetModuleFileName(module, moduleFullFileName, 512);
-		if (0 == dwResult)
-			return E_FAIL;
-
-		HKEY targetRootKey = TargetRootKey(mode);
-
-		WCHAR classIdKey[512];
-		ClassIdSubKey(classId, mode, classIdKey, 512);
-
-		WCHAR progIdKey[512];
-		ProgIdSubKey(progId, mode, progIdKey, 512);
-
-		// Target Key ProgId
-		if (!SetKeyAndValue(targetRootKey, progIdKey, NULL, NULL, NULL, NULL, progId))
-			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, progIdKey, L"CLSID", NULL, NULL, NULL, classId))
-			return S_FALSE;
-
-		// Target Key IID
-		if (!SetKeyAndValue(targetRootKey, classIdKey, NULL, NULL, NULL, NULL, progId))
-			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", NULL, NULL, L"ThreadingModel", L"Apartment"))
-			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", NULL, NULL, NULL, moduleFullFileName))
-			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", version, NULL, L"ThreadingModel", L"Apartment"))
-			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", version, NULL, NULL, moduleFullFileName))
-			return S_FALSE;
-		if (!SetKeyAndValue(targetRootKey, classIdKey, L"ProgId", NULL, NULL, NULL, progId))
-			return S_FALSE;
-
-		if(mode != User)
+		if (0 != dwResult)
 		{
-			// HKEY_CLASSES_ROOT ProgId
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, progId, NULL, NULL, NULL, NULL, progId))
-				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, progId, L"CLSID", NULL, NULL, NULL, classId))
-				return S_FALSE;
+			HKEY targetRootKey = TargetRootKey(mode);
 
-			// HKEY_CLASSES_ROOT IID
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, NULL, NULL, NULL, progId))
-				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", NULL, L"ThreadingModel", L"Apartment"))
-				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", NULL, NULL, moduleFullFileName))
-				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", version, L"ThreadingModel", L"Apartment"))
-				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", version, NULL, moduleFullFileName))
-				return S_FALSE;
-			if (!SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"ProgId", NULL, NULL, progId))
-				return S_FALSE;
+			WCHAR classIdKey[512];
+			ClassIdSubKey(classId, mode, classIdKey, 512);
+
+			WCHAR progIdKey[512];
+			ProgIdSubKey(progId, mode, progIdKey, 512);
+
+			// Target Key ProgId
+			setKeyResult = SetKeyAndValue(targetRootKey, progIdKey, NULL, NULL, NULL, NULL, progId);
+			IfFalseGo(setKeyResult);
+			setKeyResult = SetKeyAndValue(targetRootKey, progIdKey, L"CLSID", NULL, NULL, NULL, classId);
+			IfFalseGo(setKeyResult);
+
+			// Target Key IID
+			setKeyResult = SetKeyAndValue(targetRootKey, classIdKey, NULL, NULL, NULL, NULL, progId);
+			IfFalseGo(setKeyResult);
+			setKeyResult = SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", NULL, NULL, L"ThreadingModel", L"Apartment");
+			IfFalseGo(setKeyResult);
+			setKeyResult = SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", NULL, NULL, NULL, moduleFullFileName);
+			IfFalseGo(setKeyResult);
+			setKeyResult = SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", version, NULL, L"ThreadingModel", L"Apartment");
+			IfFalseGo(setKeyResult);
+			setKeyResult = SetKeyAndValue(targetRootKey, classIdKey, L"InprocServer32", version, NULL, NULL, moduleFullFileName);
+			IfFalseGo(setKeyResult);
+			setKeyResult = SetKeyAndValue(targetRootKey, classIdKey, L"ProgId", NULL, NULL, NULL, progId);
+			IfFalseGo(setKeyResult);
+
+			//if (mode != User)
+			//{
+			//	// HKEY_CLASSES_ROOT ProgId
+			//	setKeyResult = SetKeyAndValue(HKEY_CLASSES_ROOT, progId, NULL, NULL, NULL, NULL, progId);
+			//	IfFalseGo(setKeyResult);
+			//	setKeyResult = SetKeyAndValue(HKEY_CLASSES_ROOT, progId, L"CLSID", NULL, NULL, NULL, classId);
+			//	IfFalseGo(setKeyResult);
+
+			//	// HKEY_CLASSES_ROOT IID
+			//	setKeyResult = SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, NULL, NULL, NULL, progId);
+			//	IfFalseGo(setKeyResult);
+			//	setKeyResult = SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", NULL, L"ThreadingModel", L"Apartment");
+			//	IfFalseGo(setKeyResult);
+			//	setKeyResult = SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", NULL, NULL, moduleFullFileName);
+			//	IfFalseGo(setKeyResult);
+			//	setKeyResult = SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", version, L"ThreadingModel", L"Apartment");
+			//	IfFalseGo(setKeyResult);
+			//	setKeyResult = SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"InprocServer32", version, NULL, moduleFullFileName);
+			//	IfFalseGo(setKeyResult);
+			//	setKeyResult = SetKeyAndValue(HKEY_CLASSES_ROOT, L"CLSID", classId, L"ProgId", NULL, NULL, progId);
+			//	IfFalseGo(setKeyResult);
+			//}
+		}
+		else
+		{
+			hr = E_FAIL;
+			goto Error;
 		}
 
-		return result;
+		return hr;
+
+	Error:
+
+		return hr;
 	}
 
 	HRESULT UnregisterCOMComponent(LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
 	{
-		HRESULT result = S_OK;
+		HRESULT hr = S_OK;
+		LONG deleteKeyResult = 0;
 
 		HKEY hKeyRoot = TargetRootKey(mode);
 		WCHAR classIdKey[512];
@@ -158,21 +188,26 @@ namespace NetOffice_ShimLoader_Register32On64
 		WCHAR progIdKey[512];
 		ProgIdSubKey(progId, mode, progIdKey, 512);
 
-		if (mode != User)
-		{
-			if (ERROR_SUCCESS != RecursiveDeleteKey(HKEY_CLASSES_ROOT, progId))
-				result = E_FAIL;
-			if (ERROR_SUCCESS != RecursiveDeleteKey(HKEY_CLASSES_ROOT, L"CLSID", classId))
-				result = E_FAIL;
-		}
+		//if (mode != User)
+		//{
+		//	deleteKeyResult = RecursiveDeleteKey(HKEY_CLASSES_ROOT, progId);
+		//	IfZeroGo(deleteKeyResult);
 
-		if (ERROR_SUCCESS != RecursiveDeleteKey(hKeyRoot, classIdKey))
-			result = E_FAIL;
+		//	deleteKeyResult = RecursiveDeleteKey(HKEY_CLASSES_ROOT, L"CLSID", classId);
+		//	IfZeroGo(deleteKeyResult);
+		//}
 
-		if (ERROR_SUCCESS != RecursiveDeleteKey(hKeyRoot, progIdKey))
-			result = E_FAIL;
+		deleteKeyResult = RecursiveDeleteKey(hKeyRoot, progIdKey);
+		IfNotZeroGo(deleteKeyResult);
 
-		return result;
+		deleteKeyResult = RecursiveDeleteKey(hKeyRoot, classIdKey);
+		IfNotZeroGo(deleteKeyResult);
+
+		return hr;
+
+	Error:
+
+		return hr;
 	}
 
 	HRESULT RegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, LPCWSTR pszFriendlyName, LPCWSTR pszDescription, DWORD dwStartupContext, DWORD dwCommandLineSafe, bool registerPerMachine)
@@ -223,9 +258,10 @@ namespace NetOffice_ShimLoader_Register32On64
 		}
 
 		RegCloseKey(hKey);
-
 		return hr;
+
 	Error:
+
 		if (keyCreated)
 		{
 			RegCloseKey(hKey);
@@ -236,6 +272,7 @@ namespace NetOffice_ShimLoader_Register32On64
 
 	HRESULT UnRegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, bool registerPerMachine)
 	{
+		HRESULT hr = S_OK;
 		HRESULT result = S_OK;
 
 		HKEY root = registerPerMachine ? HKEY_LOCAL_MACHINE : HKEY_CURRENT_USER;
@@ -245,12 +282,7 @@ namespace NetOffice_ShimLoader_Register32On64
 		StringCchCat(szKeyBuf, 1024, L"\\Addins\\");
 		StringCchCat(szKeyBuf, 1024, pszProgID);
 
-		HRESULT hr = RecursiveDeleteKey(root, szKeyBuf);
-		if (E_ACCESSDENIED != hr) // if key is missing - we dont care
-		{
-			result = hr;
-		}
-
+		hr = RecursiveDeleteKey(root, szKeyBuf);
 		return result;
 	}
 
@@ -359,6 +391,8 @@ namespace NetOffice_ShimLoader_Register32On64
 	{
 		HKEY hKeyChild;
 		LONG lRes = RegOpenKeyEx(hKeyParent, pszKeyChild, 0, _regKeyOptions, &hKeyChild);
+		if (lRes == ERROR_PATH_NOT_FOUND)
+			return 0;
 		if (lRes != ERROR_SUCCESS)
 			return lRes;
 

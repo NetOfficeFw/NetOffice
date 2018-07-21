@@ -176,6 +176,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="DllRegister64.h" />
     <ClInclude Include="DllRegisterModeParser.h" />
     <ClInclude Include="Extensibility2.h" />
+    <ClInclude Include="WriteLog.hpp" />
     <ClInclude Include="ICTPFactory.h" />
     <ClInclude Include="IRibbonExtensibility.h" />
     <ClInclude Include="IShimProxy.hpp" />
