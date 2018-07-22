@@ -3,6 +3,12 @@
 
 using namespace NetOffice_ShimLoader_Register;
 
+WCHAR* LogFile_Path;
+WCHAR* LogFile_Register_Path;
+WCHAR* LogFile_UnRegister_Path;
+
+BOOL Internal_LogError_MessageBoxes_Enabled;
+
 //
 // Managed Addin Aggregator
 //

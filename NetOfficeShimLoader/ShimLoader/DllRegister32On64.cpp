@@ -24,7 +24,7 @@ namespace NetOffice_ShimLoader_Register32On64
 
 	HRESULT DllRegister(HINSTANCE module, LPCWSTR officeApplications[], DWORD addinLoadBehavior, DWORD addinCommandLineSafe, WCHAR* progId, WCHAR* classId, WCHAR* friendlyName, WCHAR* description, WCHAR* version, RegisterMode mode, BOOL addinRegistration)
 	{
-		NetOffice_ShimLoader_Analytics::WriteLog(L"Register32On64::DllRegister::Enter");
+		NetOffice_ShimLoader_Analytics::WriteRegisterLog(L"Register32On64::DllRegister::Enter");
 
 		HRESULT hr = S_OK;
 
@@ -34,7 +34,7 @@ namespace NetOffice_ShimLoader_Register32On64
 			!version || !version[0])
 		{
 			hr = E_INVALIDARG;
-			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllRegister::FailExit", hr);
+			NetOffice_ShimLoader_Analytics::WriteRegisterError(L"Register32On64::DllRegister::FailExit", hr);
 			return hr;
 		}
 
@@ -47,27 +47,27 @@ namespace NetOffice_ShimLoader_Register32On64
 				hr = RegisterCOMAddin(officeApplications[i], progId, friendlyName, description, addinLoadBehavior, addinCommandLineSafe, System == mode);
 				if (!SUCCEEDED(hr))
 				{
-					NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllRegister::Error#RegisterCOMAddin");
+					NetOffice_ShimLoader_Analytics::WriteRegisterError(L"Register32On64::DllRegister::Error#RegisterCOMAddin", hr);
 					break;
 				}
 			}
 		}
 		else
 		{
-			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllRegister::Error#RegisterCOMComponent");
+			NetOffice_ShimLoader_Analytics::WriteRegisterError(L"Register32On64::DllRegister::Error#RegisterCOMComponent", hr);
 		}
 
 		if (SUCCEEDED(hr))
-			NetOffice_ShimLoader_Analytics::WriteLog(L"Register32On64::DllRegister::Exit");
+			NetOffice_ShimLoader_Analytics::WriteRegisterLog(L"Register32On64::DllRegister::Exit");
 		else
-			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllRegister::FailExit");
+			NetOffice_ShimLoader_Analytics::WriteRegisterError(L"Register32On64::DllRegister::FailExit", hr);
 
 		return hr;
 	}
 
 	HRESULT DllUnregister(LPCWSTR officeApplications[], WCHAR* progId, WCHAR* classId, WCHAR* version, RegisterMode mode, BOOL addinRegistration)
 	{
-		NetOffice_ShimLoader_Analytics::WriteLog(L"Register32On64::DllUnregister::Enter");
+		NetOffice_ShimLoader_Analytics::WriteUnRegisterLog(L"Register32On64::DllUnregister::Enter");
 
 		HRESULT hr = S_OK;
 		HRESULT addin = S_OK;
@@ -75,7 +75,7 @@ namespace NetOffice_ShimLoader_Register32On64
 		if (NULL == officeApplications || !progId || !progId[0] || !classId || !classId[0] || !version || !version[0])
 		{
 			hr = E_INVALIDARG;
-			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllUnregister::FailExit", hr);
+			NetOffice_ShimLoader_Analytics::WriteUnRegisterError(L"Register32On64::DllUnregister::FailExit", hr);
 			return hr;
 		}
 
@@ -86,7 +86,7 @@ namespace NetOffice_ShimLoader_Register32On64
 			{
 				if (!SUCCEEDED(UnRegisterCOMAddin(officeApplications[i], progId, 0 == mode)))
 				{
-					NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllUnregister::Error#UnRegisterCOMAddin");
+					NetOffice_ShimLoader_Analytics::WriteUnRegisterError(L"Register32On64::DllUnregister::Error#UnRegisterCOMAddin", hr);
 					addin = E_FAIL;
 				}
 			}
@@ -94,18 +94,20 @@ namespace NetOffice_ShimLoader_Register32On64
 
 		hr = UnregisterCOMComponent(progId, classId, version, mode);
 		if(FAILED(hr))
-			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllUnregister::Error#UnregisterCOMComponent");
+			NetOffice_ShimLoader_Analytics::WriteUnRegisterError(L"Register32On64::DllUnregister::Error#UnregisterCOMComponent", hr);
 
 		if(SUCCEEDED(addin != S_OK ? addin : hr))
-			NetOffice_ShimLoader_Analytics::WriteLog(L"Register32On64::DllUnregister::Exit");
+			NetOffice_ShimLoader_Analytics::WriteRegisterLog(L"Register32On64::DllUnregister::Exit");
 		else
-			NetOffice_ShimLoader_Analytics::WriteError(L"Register32On64::DllUnregister::FailExit");
+			NetOffice_ShimLoader_Analytics::WriteUnRegisterError(L"Register32On64::DllUnregister::FailExit", (addin != S_OK ? addin : hr));
 
 		return addin != S_OK ? addin : hr;
 	}
 
 	HRESULT RegisterCOMComponent(HINSTANCE module, LPCWSTR progId, LPCWSTR classId, LPCWSTR version, LPCWSTR description, RegisterMode mode)
 	{
+		NetOffice_ShimLoader_Analytics::WriteRegisterLog(L"Register32On64::RegisterCOMComponent::Enter");
+
 		HRESULT hr = S_OK;
 		BOOL setKeyResult = FALSE;
 
@@ -170,15 +172,19 @@ namespace NetOffice_ShimLoader_Register32On64
 			goto Error;
 		}
 
+		NetOffice_ShimLoader_Analytics::WriteRegisterLog(L"Register32On64::RegisterCOMComponent::Exit");
 		return hr;
 
 	Error:
 
+		NetOffice_ShimLoader_Analytics::WriteRegisterError(L"Register32On64::RegisterCOMComponent::FailExit", hr);
 		return hr;
 	}
 
 	HRESULT UnregisterCOMComponent(LPCWSTR progId, LPCWSTR classId, LPCWSTR version, RegisterMode mode)
 	{
+		NetOffice_ShimLoader_Analytics::WriteUnRegisterLog(L"Register32On64::UnregisterCOMComponent::Enter");
+
 		HRESULT hr = S_OK;
 		LONG deleteKeyResult = 0;
 
@@ -203,15 +209,19 @@ namespace NetOffice_ShimLoader_Register32On64
 		deleteKeyResult = RecursiveDeleteKey(hKeyRoot, classIdKey);
 		IfNotZeroGo(deleteKeyResult);
 
+		NetOffice_ShimLoader_Analytics::WriteUnRegisterLog(L"Register32On64::UnregisterCOMComponent::Exit");
 		return hr;
 
 	Error:
 
+		NetOffice_ShimLoader_Analytics::WriteUnRegisterError(L"Register32On64::UnregisterCOMComponent::FailExit", hr);
 		return hr;
 	}
 
 	HRESULT RegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, LPCWSTR pszFriendlyName, LPCWSTR pszDescription, DWORD dwStartupContext, DWORD dwCommandLineSafe, bool registerPerMachine)
 	{
+		NetOffice_ShimLoader_Analytics::WriteRegisterLog(L"Register32On64::RegisterCOMAddin::Enter");
+
 		HRESULT hr = S_OK;
 		WCHAR szKeyBuf[1024];
 		DWORD dwTemp = 0;
@@ -258,6 +268,7 @@ namespace NetOffice_ShimLoader_Register32On64
 		}
 
 		RegCloseKey(hKey);
+		NetOffice_ShimLoader_Analytics::WriteRegisterLog(L"Register32On64::RegisterCOMAddin::Exit");
 		return hr;
 
 	Error:
@@ -267,11 +278,14 @@ namespace NetOffice_ShimLoader_Register32On64
 			RegCloseKey(hKey);
 			RegDeleteKey(hKey, szKeyBuf);
 		}
+		NetOffice_ShimLoader_Analytics::WriteRegisterError(L"Register32On64::RegisterCOMAddin::FailExit", hr);
 		return hr;
 	}
 
 	HRESULT UnRegisterCOMAddin(LPCWSTR pszOfficeApp, LPCWSTR pszProgID, bool registerPerMachine)
 	{
+		NetOffice_ShimLoader_Analytics::WriteUnRegisterLog(L"Register32On64::UnRegisterCOMAddin::Enter");
+
 		HRESULT hr = S_OK;
 		HRESULT result = S_OK;
 
@@ -283,6 +297,10 @@ namespace NetOffice_ShimLoader_Register32On64
 		StringCchCat(szKeyBuf, 1024, pszProgID);
 
 		hr = RecursiveDeleteKey(root, szKeyBuf);
+		if(SUCCEEDED(hr))
+			NetOffice_ShimLoader_Analytics::WriteUnRegisterLog(L"Register32On64::UnRegisterCOMAddin::Exit");
+		else
+			NetOffice_ShimLoader_Analytics::WriteUnRegisterError(L"Register32On64::UnRegisterCOMAddin::FailExit", hr);
 		return result;
 	}
 

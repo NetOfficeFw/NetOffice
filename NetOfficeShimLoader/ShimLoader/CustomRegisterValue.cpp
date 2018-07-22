@@ -63,7 +63,7 @@ namespace NetOffice_ShimLoader_Register
 		if (_parseValue && 0 == wcscmp(_value, L"$LocalTime"))
 		{
 			if(NULL == localtime_s(&buf, &t))
-				wcsftime(buffer, maxLen, L"%d-%m-%Y %I:%M:%S", &buf);
+				wcsftime(buffer, maxLen, L"%d-%m-%Y %I:%M:%S %p", &buf);
 			else
 				StringCchCopy(buffer, maxLen, _value);
 		}
@@ -77,7 +77,7 @@ namespace NetOffice_ShimLoader_Register
 		else if (_parseValue && 0 == wcscmp(_value, L"$LocalTimeDEFormat"))
 		{
 			if (NULL == localtime_s(&buf, &t))
-				wcsftime(buffer, maxLen, L"%d.%m.%Y %I:%M:%S", &buf);
+				wcsftime(buffer, maxLen, L"%d.%m.%Y %H:%M:%S", &buf);
 			else
 				StringCchCopy(buffer, maxLen, _value);
 		}
