@@ -176,6 +176,7 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="DllRegister64.h" />
     <ClInclude Include="DllRegisterModeParser.h" />
     <ClInclude Include="Extensibility2.h" />
+    <ClInclude Include="Module.hpp" />
     <ClInclude Include="WriteLog.hpp" />
     <ClInclude Include="ICTPFactory.h" />
     <ClInclude Include="IRibbonExtensibility.h" />
@@ -198,6 +199,8 @@ regsvr32.exe  $(TargetPath)</Command>
     <ClInclude Include="CLRUpdateHost.h" />
     <ClInclude Include="Vars.hpp" />
     <ClInclude Include="Vars.h" />
+    <ClInclude Include="WriteRegisterLog.hpp" />
+    <ClInclude Include="WriteUnRegisterLog.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClrHost.cpp" />

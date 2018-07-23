@@ -97,7 +97,7 @@ namespace NetOffice_ShimLoader_Register32On64
 			NetOffice_ShimLoader_Analytics::WriteUnRegisterError(L"Register32On64::DllUnregister::Error#UnregisterCOMComponent", hr);
 
 		if(SUCCEEDED(addin != S_OK ? addin : hr))
-			NetOffice_ShimLoader_Analytics::WriteRegisterLog(L"Register32On64::DllUnregister::Exit");
+			NetOffice_ShimLoader_Analytics::WriteUnRegisterLog(L"Register32On64::DllUnregister::Exit");
 		else
 			NetOffice_ShimLoader_Analytics::WriteUnRegisterError(L"Register32On64::DllUnregister::FailExit", (addin != S_OK ? addin : hr));
 

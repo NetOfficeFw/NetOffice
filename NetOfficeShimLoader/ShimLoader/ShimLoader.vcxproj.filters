@@ -120,6 +120,15 @@
     <ClInclude Include="WriteLog.hpp">
       <Filter>Analytics</Filter>
     </ClInclude>
+    <ClInclude Include="WriteRegisterLog.hpp">
+      <Filter>Analytics</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteUnRegisterLog.hpp">
+      <Filter>Analytics</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.hpp">
+      <Filter>Module</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Updates">
@@ -145,6 +154,9 @@
     </Filter>
     <Filter Include="Analytics">
       <UniqueIdentifier>{03bddb3e-a138-4f59-adec-c7f1957fe90f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{9d048b22-12ad-476d-8df1-15b234eede35}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
