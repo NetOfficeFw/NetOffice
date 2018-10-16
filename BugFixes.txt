@@ -1,3 +1,7 @@
+--- Version 1.7.4.4 ---
+
+01.) Fix github ticket #223 (OlRibbonType.cs wrong enum for Microsoft.Outlook.Mail.Compose)
+
 --- Version 1.7.4.3 ---
 
 01.) Fix github ticket #193 (ITaskPane::OnConnection custom arg array doesnt spend parent addin)
