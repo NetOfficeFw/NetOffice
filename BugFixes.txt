@@ -1,0 +1,8 @@
+--- Version 1.7.4.3 ---
+
+01.) Fix github ticket #193 (ITaskPane::OnConnection custom arg array doesnt spend parent addin)
+
+--- Version 1.7.4.2 ---
+
+01.) Fix osdn ticket #37880 (Underlying ribbon does not calling)
+02.) Fix osdn ticket #37747 (DAO Fields)

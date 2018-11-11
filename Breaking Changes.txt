@@ -1,3 +1,12 @@
+  --- Version 1.7.4.3 ---
+  --- Breaking Changes ---
+  
+1) virtual bool COMAddin::OnCreateTaskPaneInfo(TaskPaneInfo paneInfo);
+   The meaning of the bool result has been changed and its now true by default.
+   true means the pane should be create, otherwise false
+
+
+  --- Version 1.7.4.1 ---
   --- Breaking Changes ---
   (for the records: i dislike breaking changes, but sometimes it is necessary.) 
 
