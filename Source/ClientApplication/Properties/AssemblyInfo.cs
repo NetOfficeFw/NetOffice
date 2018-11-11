@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("netoffice.codeplex.com")]
 [assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("2011 Sebastian Lange")]
+[assembly: AssemblyCopyright("Copyright © 2011 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
