@@ -19,12 +19,12 @@ using NetOffice.Attributes;
 [assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.4")]
-[assembly: AssemblyFileVersion("1.7.4.4")]
+[assembly: AssemblyVersion("1.7.4.5")]
+[assembly: AssemblyFileVersion("1.7.4.5")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSDATASRC")]
 [assembly: Guid("7C0FFAB0-CD84-11D0-949A-00A0C91110ED")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.4")]
+[assembly: NetOfficeAssemblyAttribute("1.7.4.5")]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
 
 

@@ -1,6 +1,10 @@
---- Version 1.7.4.4 ---
+--- Version 1.7.4.5 ---
 
 01.) Fix github ticket #223 (OlRibbonType.cs wrong enum for Microsoft.Outlook.Mail.Compose)
+
+--- Version 1.7.4.4 ---
+
+01.) MS Publisher package contains correct assemblies #216 (Publisher NuGet Package has WordApi.dll/xml and not PublisherApi.dll/xml)
 
 
 --- Version 1.7.4.2 ---
