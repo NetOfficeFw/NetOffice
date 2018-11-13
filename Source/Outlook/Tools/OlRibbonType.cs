@@ -5,6 +5,9 @@ namespace NetOffice.OutlookApi.Tools
     /// <summary>
     /// Outlook Ribbon Types
     /// </summary>
+    /// <remarks>
+    /// https://docs.microsoft.com/en-us/office/vba/outlook/how-to/office-fluent-ui-extensibility/implementing-the-iribbonextensibility-interface
+    /// </remarks>
     public enum OlRibbonType
     {
         /// <summary>
