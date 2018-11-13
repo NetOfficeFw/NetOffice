@@ -33,9 +33,9 @@ namespace NetOffice.OutlookApi.Tools
         Microsoft_Outlook_Journal = 4,
 
         /// <summary>
-        /// Microsoft.OutlookMail.Compose
+        /// Microsoft.Outlook.Mail.Compose
         /// </summary>
-        Microsoft_OutlookMail_Compose = 5,
+        Microsoft_Outlook_Mail_Compose = 5,
 
         /// <summary>
         /// Microsoft.Outlook.Mail.Read
