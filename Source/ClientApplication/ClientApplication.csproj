@@ -3,7 +3,6 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net40</TargetFramework>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <AssemblyTitle>ClientApplication</AssemblyTitle>
     <Company>netoffice.codeplex.com</Company>
     <Product>NetOffice</Product>
@@ -50,8 +49,5 @@
     <EmbeddedResource Update="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Form1.cs" />
   </ItemGroup>
 </Project>

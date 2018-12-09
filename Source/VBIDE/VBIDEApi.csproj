@@ -3,7 +3,6 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <RootNamespace>NetOffice.VBIDEApi</RootNamespace>
     <TargetFramework>net40</TargetFramework>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>VBIDEApi_v4.0.snk</AssemblyOriginatorKeyFile>
     <AssemblyTitle>VBIDE</AssemblyTitle>

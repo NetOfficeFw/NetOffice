@@ -3,7 +3,6 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <RootNamespace>NetOffice.OfficeApi</RootNamespace>
     <TargetFramework>net40</TargetFramework>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -17,7 +16,15 @@
     <DebugType>pdbonly</DebugType>
     <DocumentationFile>bin\$(Configuration)\OfficeApi.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="stdole" Version="7.0.3300.0">
+      <!-- <HintPath>C:\Windows\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll</HintPath> -->
+      <Private>false</Private>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
@@ -112,21 +119,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Tools\Dialogs\AboutDialog.cs" />
-    <Compile Remove="Tools\Dialogs\AboutDialog.Designer.cs" />
-    <Compile Remove="Tools\Dialogs\DiagnosticsDialog.cs" />
-    <Compile Remove="Tools\Dialogs\DiagnosticsDialog.Designer.cs" />
-    <Compile Remove="Tools\Dialogs\ErrorDialog.cs" />
-    <Compile Remove="Tools\Dialogs\ErrorDialog.Designer.cs" />
-    <Compile Remove="Tools\Dialogs\PropertyGridDialog.cs" />
-    <Compile Remove="Tools\Dialogs\PropertyGridDialog.Designer.cs" />
-    <Compile Remove="Tools\Dialogs\RichTextDialog.cs" />
-    <Compile Remove="Tools\Dialogs\RichTextDialog.Designer.cs" />
-    <Compile Remove="Tools\Dialogs\ToolsDialog.cs" />
-    <Compile Remove="Tools\Dialogs\ToolsDialog.Designer.cs" />
-    <Compile Remove="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.cs" />
-    <Compile Remove="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.Designer.cs" />
   </ItemGroup>
 </Project>
