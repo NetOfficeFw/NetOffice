@@ -20,7 +20,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <AssemblyTitle>NetOffice</AssemblyTitle>
     <Company>NetOfficeFw</Company>
     <Product>Netoffice</Product>
@@ -71,7 +70,5 @@
     <Compile Remove="Tools\ErrorHandlerAttribute.cs" />
     <Compile Remove="Tools\ErrorHandlerFunctionAttribute.cs" />
     <Compile Remove="Tools\IErrorHandler.cs" />
-    <Compile Remove="Contribution\Controls\InstanceMonitor.cs" />
-    <Compile Remove="Contribution\Controls\InstanceMonitor.designer.cs" />
   </ItemGroup>
 </Project>
