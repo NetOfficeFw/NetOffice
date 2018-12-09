@@ -3,7 +3,6 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <RootNamespace>NetOffice.PublisherApi</RootNamespace>
     <TargetFramework>net40</TargetFramework>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <AssemblyTitle>Publisher</AssemblyTitle>
     <Company>NetOfficeFw</Company>
     <Product>NetOffice</Product>
@@ -21,6 +20,16 @@
     <DebugType>pdbonly</DebugType>
     <DocumentationFile>bin\$(Configuration)\PublisherApi.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="stdole" Version="7.0.3300.0">
+      <!-- <HintPath>C:\Windows\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll</HintPath> -->
+      <Private>false</Private>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
