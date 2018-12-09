@@ -3,6 +3,7 @@
     <AssemblyTitle>ClientApplication</AssemblyTitle>
     <Description>Compile Dumy</Description>
     <OutputType>WinExe</OutputType>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
