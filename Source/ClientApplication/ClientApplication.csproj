@@ -1,20 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <OutputType>WinExe</OutputType>
     <TargetFramework>net40</TargetFramework>
+    <OutputType>WinExe</OutputType>
     <AssemblyTitle>ClientApplication</AssemblyTitle>
     <Company>netoffice.codeplex.com</Company>
     <Product>NetOffice</Product>
     <Description>Compile Dumy</Description>
     <Copyright>Copyright © 2011 Sebastian Lange</Copyright>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
