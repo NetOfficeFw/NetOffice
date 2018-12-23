@@ -12,7 +12,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("MSForms")]
-[assembly: AssemblyDescription("Netoffice MSForms Api")]
+[assembly: AssemblyDescription("NetOffice MSForms Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
 [assembly: AssemblyProduct("NetOffice")]

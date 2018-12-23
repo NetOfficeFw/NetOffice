@@ -12,7 +12,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("MSComctlLib")]
-[assembly: AssemblyDescription("Netoffice MSComctlLib Api")]
+[assembly: AssemblyDescription("NetOffice MSComctlLib Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
 [assembly: AssemblyProduct("NetOffice")]

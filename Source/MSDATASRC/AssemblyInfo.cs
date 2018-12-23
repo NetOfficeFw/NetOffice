@@ -12,7 +12,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("MSDATASRC")]
-[assembly: AssemblyDescription("Netoffice MSDATASRC Api")]
+[assembly: AssemblyDescription("NetOffice MSDATASRC Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
 [assembly: AssemblyProduct("NetOffice")]

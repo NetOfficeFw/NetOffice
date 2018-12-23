@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("ADODB")]
-[assembly: AssemblyDescription("Netoffice ADODB Api")]
+[assembly: AssemblyDescription("NetOffice ADODB Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
 [assembly: AssemblyProduct("NetOffice")]

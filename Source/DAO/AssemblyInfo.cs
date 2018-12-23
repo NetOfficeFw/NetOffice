@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("DAO")]
-[assembly: AssemblyDescription("Netoffice DAO Api")]
+[assembly: AssemblyDescription("NetOffice DAO Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
 [assembly: AssemblyProduct("NetOffice")]

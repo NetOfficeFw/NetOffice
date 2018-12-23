@@ -12,7 +12,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("OWC10")]
-[assembly: AssemblyDescription("Netoffice OWC10 Api")]
+[assembly: AssemblyDescription("NetOffice OWC10 Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
 [assembly: AssemblyProduct("NetOffice")]

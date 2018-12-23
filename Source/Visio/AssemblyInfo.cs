@@ -15,7 +15,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("Visio")]
-[assembly: AssemblyDescription("Netoffice Visio Api")]
+[assembly: AssemblyDescription("NetOffice Visio Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
 [assembly: AssemblyProduct("NetOffice")]
