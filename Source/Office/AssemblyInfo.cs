@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 	Office - Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
 	Office - Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 14
 	Office - Microsoft Office 15.0 Object Library - 15
-    Office - Microsoft Office 16.0 Object Library - 16
+	Office - Microsoft Office 16.0 Object Library - 16
 */
 
 [assembly: AssemblyTitle("Office")]

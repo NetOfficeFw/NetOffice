@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 	Excel - Microsoft Excel 12.0 Object Library - 12
 	Excel - Microsoft Excel 14.0 Object Library - 14
 	Excel - Microsoft Excel 15.0 Object Library - 15
-    Excel - Microsoft Excel 16.0 Object Library - 16
+	Excel - Microsoft Excel 16.0 Object Library - 16
 */
 
 [assembly: AssemblyTitle("Excel")]

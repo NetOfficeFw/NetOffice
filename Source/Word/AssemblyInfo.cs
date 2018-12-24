@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 	Word - Microsoft Word 12.0 Object Library - 12
 	Word - Microsoft Word 14.0 Object Library - 14
 	Word - Microsoft Word 15.0 Object Library - 15
-    Word - Microsoft Word 16.0 Object Library - 16
+	Word - Microsoft Word 16.0 Object Library - 16
 */
 
 [assembly: AssemblyTitle("Word")]
