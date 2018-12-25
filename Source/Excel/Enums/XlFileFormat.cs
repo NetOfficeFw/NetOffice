@@ -390,10 +390,10 @@ namespace NetOffice.ExcelApi.Enums
 		 xlOpenDocumentSpreadsheet = 60,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>61</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlOpenXMLStrictWorkbook = 61
 	}
 }

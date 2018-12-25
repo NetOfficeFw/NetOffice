@@ -117,10 +117,10 @@ namespace NetOffice.WordApi.Enums
 		 wdInlineShapeSmartArt = 15,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdInlineShapeWebVideo = 16
 	}
 }

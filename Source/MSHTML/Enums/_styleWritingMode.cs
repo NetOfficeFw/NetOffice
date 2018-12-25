@@ -78,6 +78,27 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersion("MSHTML", 4)]
-		 styleWritingMode_Max = 2147483647
+		 styleWritingMode_Max = 2147483647,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>9</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleWritingModeLr = 9,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>10</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleWritingModeRl = 10,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>11</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleWritingModeTb = 11
 	}
 }

@@ -152,31 +152,31 @@ namespace NetOffice.WordApi.Enums
 		 wdTaskPaneSelection = 19,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdTaskPaneProofing = 20,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdTaskPaneXMLMapping = 21,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdTaskPaneRevPaneFlex = 22,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdTaskPaneThesaurus = 23
 	}
 }

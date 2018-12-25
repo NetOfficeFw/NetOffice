@@ -197,6 +197,69 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersion("MSHTML", 4)]
-		 styleCursor_Max = 2147483647
+		 styleCursor_Max = 2147483647,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>24</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorNone = 24,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>25</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorContext_menu = 25,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>26</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorEw_resize = 26,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>27</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorNs_resize = 27,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>28</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorNesw_resize = 28,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>29</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorNwse_resize = 29,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>30</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorCell = 30,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>31</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorCopy = 31,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>32</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleCursorAlias = 32
 	}
 }

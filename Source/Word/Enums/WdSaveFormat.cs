@@ -201,10 +201,10 @@ namespace NetOffice.WordApi.Enums
 		 wdFormatOpenDocumentText = 23,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdFormatStrictOpenXMLDocument = 24
 	}
 }

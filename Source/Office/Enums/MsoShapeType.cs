@@ -194,10 +194,17 @@ namespace NetOffice.OfficeApi.Enums
 		 msoSlicer = 25,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>26</remarks>
-		 [SupportByVersion("Office", 15, 16)]
-		 msoWebVideo = 26
+		 [SupportByVersion("Office", 15,16)]
+		 msoWebVideo = 26,
+
+		 /// <summary>
+		 /// SupportByVersion Office 16
+		 /// </summary>
+		 /// <remarks>27</remarks>
+		 [SupportByVersion("Office", 16)]
+		 msoContentApp = 27
 	}
 }

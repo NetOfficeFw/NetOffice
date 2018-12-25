@@ -520,6 +520,48 @@ namespace NetOffice.ExcelApi.Enums
 		 /// </summary>
 		 /// <remarks>-4151</remarks>
 		 [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		 xlRadar = -4151
+		 xlRadar = -4151,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>117</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlTreemap = 117,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>118</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlHistogram = 118,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>119</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlWaterfall = 119,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>120</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlSunburst = 120,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>121</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlBoxwhisker = 121,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>122</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlPareto = 122
 	}
 }

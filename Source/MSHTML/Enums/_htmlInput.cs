@@ -120,6 +120,48 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersion("MSHTML", 4)]
-		 htmlInput_Max = 2147483647
+		 htmlInput_Max = 2147483647,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>15</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 htmlInputRange = 15,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>16</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 htmlInputUrl = 16,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>17</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 htmlInputEmail = 17,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>18</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 htmlInputNumber = 18,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>19</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 htmlInputTel = 19,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>20</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 htmlInputSearch = 20
 	}
 }

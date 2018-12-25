@@ -26,10 +26,10 @@ namespace NetOffice.ExcelApi.Enums
 		 xlCalculatedSet = 1,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlCalculatedMeasure = 2
 	}
 }

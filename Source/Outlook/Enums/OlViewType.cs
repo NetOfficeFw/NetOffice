@@ -61,10 +61,17 @@ namespace NetOffice.OutlookApi.Enums
 		 olDailyTaskListView = 6,
 
 		 /// <summary>
-		 /// SupportByVersion Outlook 15,16
+		 /// SupportByVersion Outlook 15, 16
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByVersion("Outlook", 15, 16)]
-		 olPeopleView = 7
+		 [SupportByVersion("Outlook", 15,16)]
+		 olPeopleView = 7,
+
+		 /// <summary>
+		 /// SupportByVersion Outlook 16
+		 /// </summary>
+		 /// <remarks>8</remarks>
+		 [SupportByVersion("Outlook", 16)]
+		 olThreadView = 8
 	}
 }

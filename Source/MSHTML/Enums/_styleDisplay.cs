@@ -169,6 +169,62 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersion("MSHTML", 4)]
-		 styleDisplay_Max = 2147483647
+		 styleDisplay_Max = 2147483647,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>22</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleDisplayMsFlexbox = 22,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>23</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleDisplayMsInlineFlexbox = 23,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>24</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleDisplayMsGrid = 24,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>25</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleDisplayMsInlineGrid = 25,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>26</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleDisplayFlex = 26,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>27</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleDisplayInlineFlex = 27,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>28</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleDisplayWebkitBox = 28,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>29</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 styleDisplayWebkitInlineBox = 29
 	}
 }

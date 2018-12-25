@@ -40,10 +40,10 @@ namespace NetOffice.OutlookApi.Enums
 		 olSearchScopeSubfolders = 3,
 
 		 /// <summary>
-		 /// SupportByVersion Outlook 15,16
+		 /// SupportByVersion Outlook 15, 16
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByVersion("Outlook", 15, 16)]
+		 [SupportByVersion("Outlook", 15,16)]
 		 olSearchScopeCurrentStore = 4
 	}
 }

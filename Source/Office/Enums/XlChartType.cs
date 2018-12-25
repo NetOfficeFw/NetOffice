@@ -522,45 +522,87 @@ namespace NetOffice.OfficeApi.Enums
 		 xlRadar = -4151,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>-4152</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 xlCombo = -4152,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>113</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 xlComboColumnClusteredLine = 113,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>114</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 xlComboColumnClusteredLineSecondaryAxis = 114,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>115</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 xlComboAreaStackedColumnClustered = 115,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>116</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 xlOtherCombinations = 116,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByVersion("Office", 15, 16)]
-		 xlSuggestedChart = -2
+		 [SupportByVersion("Office", 15,16)]
+		 xlSuggestedChart = -2,
+
+		 /// <summary>
+		 /// SupportByVersion Office 16
+		 /// </summary>
+		 /// <remarks>117</remarks>
+		 [SupportByVersion("Office", 16)]
+		 xlTreemap = 117,
+
+		 /// <summary>
+		 /// SupportByVersion Office 16
+		 /// </summary>
+		 /// <remarks>118</remarks>
+		 [SupportByVersion("Office", 16)]
+		 xlHistogram = 118,
+
+		 /// <summary>
+		 /// SupportByVersion Office 16
+		 /// </summary>
+		 /// <remarks>119</remarks>
+		 [SupportByVersion("Office", 16)]
+		 xlWaterfall = 119,
+
+		 /// <summary>
+		 /// SupportByVersion Office 16
+		 /// </summary>
+		 /// <remarks>120</remarks>
+		 [SupportByVersion("Office", 16)]
+		 xlSunburst = 120,
+
+		 /// <summary>
+		 /// SupportByVersion Office 16
+		 /// </summary>
+		 /// <remarks>121</remarks>
+		 [SupportByVersion("Office", 16)]
+		 xlBoxwhisker = 121,
+
+		 /// <summary>
+		 /// SupportByVersion Office 16
+		 /// </summary>
+		 /// <remarks>122</remarks>
+		 [SupportByVersion("Office", 16)]
+		 xlPareto = 122
 	}
 }

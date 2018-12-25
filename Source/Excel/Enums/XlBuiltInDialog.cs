@@ -1825,24 +1825,31 @@ namespace NetOffice.ExcelApi.Enums
 		 xlDialogSetTupleEditorOnColumns = 1108,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>1271</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlDialogManageRelationships = 1271,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>1272</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlDialogCreateRelationship = 1272,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>1258</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
-		 xlDialogRecommendedPivotTables = 1258
+		 [SupportByVersion("Excel", 15,16)]
+		 xlDialogRecommendedPivotTables = 1258,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>1299</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlDialogForecastETS = 1299
 	}
 }

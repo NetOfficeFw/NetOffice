@@ -47,10 +47,10 @@ namespace NetOffice.OutlookApi.Enums
 		 olOtherAccount = 5,
 
 		 /// <summary>
-		 /// SupportByVersion Outlook 15,16
+		 /// SupportByVersion Outlook 15, 16
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByVersion("Outlook", 15, 16)]
+		 [SupportByVersion("Outlook", 15,16)]
 		 olEas = 4
 	}
 }

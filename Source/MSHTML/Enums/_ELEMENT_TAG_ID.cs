@@ -806,6 +806,797 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersion("MSHTML", 4)]
-		 ELEMENT_TAG_ID_Max = 2147483647
+		 ELEMENT_TAG_ID_Max = 2147483647,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>111</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_A = 111,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>112</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_ALTGLYPH = 112,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>113</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_ALTGLYPHDEF = 113,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>114</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_ALTGLYPHITEM = 114,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>115</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_ANIMATE = 115,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>116</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_ANIMATECOLOR = 116,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>117</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_ANIMATEMOTION = 117,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>118</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_ANIMATETRANSFORM = 118,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>119</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_CIRCLE = 119,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>120</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_CLIPPATH = 120,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>121</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_COLOR_PROFILE = 121,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>122</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_CURSOR = 122,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>123</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_DEFINITION_SRC = 123,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>124</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_DEFS = 124,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>125</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_DESC = 125,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>126</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_ELLIPSE = 126,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>127</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEBLEND = 127,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>128</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FECOLORMATRIX = 128,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>129</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FECOMPONENTTRANSFER = 129,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>130</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FECOMPOSITE = 130,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>131</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FECONVOLVEMATRIX = 131,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>132</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEDIFFUSELIGHTING = 132,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>133</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEDISPLACEMENTMAP = 133,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>134</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEDISTANTLIGHT = 134,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>135</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEFLOOD = 135,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>136</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEFUNCA = 136,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>137</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEFUNCB = 137,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>138</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEFUNCG = 138,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>139</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEFUNCR = 139,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>140</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEGAUSSIANBLUR = 140,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>141</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEIMAGE = 141,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>142</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEMERGE = 142,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>143</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEMERGENODE = 143,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>144</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEMORPHOLOGY = 144,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>145</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEOFFSET = 145,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>146</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FEPOINTLIGHT = 146,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>147</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FESPECULARLIGHTING = 147,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>148</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FESPOTLIGHT = 148,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>149</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FETILE = 149,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>150</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FETURBULENCE = 150,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>151</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FILTER = 151,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>152</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FONT = 152,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>153</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FONT_FACE = 153,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>154</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FONT_FACE_FORMAT = 154,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>155</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FONT_FACE_NAME = 155,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>156</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FONT_FACE_SRC = 156,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>157</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FONT_FACE_URI = 157,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>158</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_FOREIGNOBJECT = 158,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>159</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_G = 159,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>160</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_GLYPH = 160,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>161</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_GLYPHREF = 161,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>162</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_HKERN = 162,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>163</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_IMAGE = 163,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>164</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_LINE = 164,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>165</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_LINEARGRADIENT = 165,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>166</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_MARKER = 166,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>167</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_MASK = 167,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>168</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_METADATA = 168,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>169</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_MISSING_GLYPH = 169,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>170</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_MPATH = 170,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>171</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_PATH = 171,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>172</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_PATTERN = 172,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>173</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_POLYGON = 173,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>174</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_POLYLINE = 174,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>175</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_RADIALGRADIENT = 175,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>176</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_RECT = 176,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>177</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_SCRIPT = 177,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>178</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_SET = 178,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>179</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_STOP = 179,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>180</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_STYLE = 180,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>181</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_SVG = 181,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>182</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_SWITCH = 182,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>183</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_SYMBOL = 183,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>184</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_TEXT = 184,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>185</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_TEXTPATH = 185,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>186</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_TITLE = 186,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>187</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_TREF = 187,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>188</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_TSPAN = 188,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>189</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_USE = 189,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>190</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_VIEW = 190,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>191</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SVG_VKERN = 191,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>192</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_AUDIO = 192,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>193</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SOURCE = 193,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>194</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_VIDEO = 194,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>195</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_CANVAS = 195,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>196</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_DOCTYPE = 196,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>197</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_KEYGEN = 197,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>198</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_PROCESSINGINSTRUCTION = 198,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>199</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_ARTICLE = 199,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>200</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_ASIDE = 200,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>201</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_FIGCAPTION = 201,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>202</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_FIGURE = 202,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>203</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_FOOTER = 203,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>204</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_HEADER = 204,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>205</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_HGROUP = 205,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>206</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_MARK = 206,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>207</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_NAV = 207,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>208</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SECTION = 208,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>209</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_PROGRESS = 209,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>210</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_MATHML_ANNOTATION_XML = 210,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>211</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_MATHML_MATH = 211,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>212</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_MATHML_MI = 212,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>213</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_MATHML_MN = 213,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>214</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_MATHML_MO = 214,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>215</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_MATHML_MS = 215,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>216</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_MATHML_MTEXT = 216,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>217</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_DATALIST = 217,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>218</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_TRACK = 218,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>219</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_ISINDEX = 219,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>220</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_COMMAND = 220,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>221</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_DETAILS = 221,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>222</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_SUMMARY = 222,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>223</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 TAGID_X_MS_WEBVIEW = 223
 	}
 }

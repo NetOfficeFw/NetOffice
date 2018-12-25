@@ -324,6 +324,13 @@ namespace NetOffice.ExcelApi.Enums
 		 /// </summary>
 		 /// <remarks>19</remarks>
 		 [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		 xlYearCode = 19
+		 xlYearCode = 19,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>46</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlUICultureTag = 46
 	}
 }

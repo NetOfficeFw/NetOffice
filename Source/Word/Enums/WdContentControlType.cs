@@ -75,10 +75,10 @@ namespace NetOffice.WordApi.Enums
 		 wdContentControlCheckBox = 8,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdContentControlRepeatingSection = 9
 	}
 }

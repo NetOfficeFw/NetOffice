@@ -96,10 +96,10 @@ namespace NetOffice.ExcelApi.Enums
 		 xlUnknown = 1000,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlDistinctCount = 11
 	}
 }

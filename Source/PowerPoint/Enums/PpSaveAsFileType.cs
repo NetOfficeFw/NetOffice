@@ -271,17 +271,17 @@ namespace NetOffice.PowerPointApi.Enums
 		 ppSaveAsExternalConverter = 64000,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>38</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppSaveAsStrictOpenXMLPresentation = 38,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>39</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppSaveAsMP4 = 39
 	}
 }

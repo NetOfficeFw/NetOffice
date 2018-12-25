@@ -64,6 +64,13 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersion("MSHTML", 4)]
-		 FINDTEXT_FLAGS_Max = 2147483647
+		 FINDTEXT_FLAGS_Max = 2147483647,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>262144</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 FINDTEXT_MATCHREPEATEDWHITESPACE = 262144
 	}
 }

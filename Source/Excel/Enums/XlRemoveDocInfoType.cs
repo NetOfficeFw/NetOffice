@@ -131,24 +131,24 @@ namespace NetOffice.ExcelApi.Enums
 		 xlRDIAll = 99,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlRDIInlineWebExtensions = 21,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlRDITaskpaneWebExtensions = 22,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlRDIExcelDataModel = 23
 	}
 }

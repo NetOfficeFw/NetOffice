@@ -89,10 +89,10 @@ namespace NetOffice.ExcelApi.Enums
 		 xlLinearTrend = 9,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlFlashFill = 11
 	}
 }

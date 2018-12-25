@@ -1192,6 +1192,146 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// </summary>
 		 /// <remarks>3933</remarks>
 		 [SupportByVersion("PowerPoint", 14,15,16)]
-		 ppEffectPanDown = 3933
+		 ppEffectPanDown = 3933,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3934</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectFallOverLeft = 3934,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3935</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectFallOverRight = 3935,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3936</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectDrapeLeft = 3936,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3937</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectDrapeRight = 3937,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3938</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectCurtains = 3938,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3939</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectWindLeft = 3939,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3940</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectWindRight = 3940,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3941</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectPrestige = 3941,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3942</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectFracture = 3942,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3943</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectCrush = 3943,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3944</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectPeelOffLeft = 3944,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3945</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectPeelOffRight = 3945,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3946</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectPageCurlSingleLeft = 3946,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3947</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectPageCurlSingleRight = 3947,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3948</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectPageCurlDoubleLeft = 3948,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3949</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectPageCurlDoubleRight = 3949,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3950</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectAirplaneLeft = 3950,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3951</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectAirplaneRight = 3951,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3952</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectOrigamiLeft = 3952,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>3953</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppEffectOrigamiRight = 3953
 	}
 }

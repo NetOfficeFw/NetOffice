@@ -1048,10 +1048,24 @@ namespace NetOffice.OutlookApi.Enums
 		 olConversationHeader = 182,
 
 		 /// <summary>
-		 /// SupportByVersion Outlook 15,16
+		 /// SupportByVersion Outlook 15, 16
 		 /// </summary>
 		 /// <remarks>183</remarks>
-		 [SupportByVersion("Outlook", 15, 16)]
-		 olClassPeopleView = 183
+		 [SupportByVersion("Outlook", 15,16)]
+		 olClassPeopleView = 183,
+
+		 /// <summary>
+		 /// SupportByVersion Outlook 16
+		 /// </summary>
+		 /// <remarks>184</remarks>
+		 [SupportByVersion("Outlook", 16)]
+		 olClassThreadView = 184,
+
+		 /// <summary>
+		 /// SupportByVersion Outlook 16
+		 /// </summary>
+		 /// <remarks>185</remarks>
+		 [SupportByVersion("Outlook", 16)]
+		 olPreviewPane = 185
 	}
 }

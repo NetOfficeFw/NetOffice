@@ -22,6 +22,13 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersion("MSHTML", 4)]
-		 PARSE_FLAGS_Max = 2147483647
+		 PARSE_FLAGS_Max = 2147483647,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>2</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 PARSE_DISABLEVML = 2
 	}
 }

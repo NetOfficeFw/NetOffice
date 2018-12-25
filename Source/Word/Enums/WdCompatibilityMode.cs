@@ -40,10 +40,17 @@ namespace NetOffice.WordApi.Enums
 		 wdCurrent = 65535,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByVersion("Word", 15, 16)]
-		 wdWord2012 = 15
+		 [SupportByVersion("Word", 15)]
+		 wdWord2012 = 15,
+
+		 /// <summary>
+		 /// SupportByVersion Word 16
+		 /// </summary>
+		 /// <remarks>15</remarks>
+		 [SupportByVersion("Word", 16)]
+		 wdWord2013 = 15
 	}
 }

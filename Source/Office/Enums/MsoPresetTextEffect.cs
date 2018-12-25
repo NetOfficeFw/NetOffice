@@ -229,143 +229,143 @@ namespace NetOffice.OfficeApi.Enums
 		 msoTextEffect30 = 29,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>30</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect31 = 30,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>31</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect32 = 31,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect33 = 32,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>33</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect34 = 33,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>34</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect35 = 34,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>35</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect36 = 35,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>36</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect37 = 36,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>37</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect38 = 37,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>38</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect39 = 38,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>39</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect40 = 39,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>40</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect41 = 40,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>41</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect42 = 41,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>42</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect43 = 42,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>43</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect44 = 43,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>44</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect45 = 44,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>45</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect46 = 45,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>46</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect47 = 46,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>47</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect48 = 47,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>48</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect49 = 48,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>49</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoTextEffect50 = 49
 	}
 }

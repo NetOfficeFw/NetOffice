@@ -670,17 +670,17 @@ namespace NetOffice.WordApi.Enums
 		 wdFieldBibliography = 97,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>98</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdFieldMergeBarcode = 98,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>99</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdFieldDisplayBarcode = 99
 	}
 }

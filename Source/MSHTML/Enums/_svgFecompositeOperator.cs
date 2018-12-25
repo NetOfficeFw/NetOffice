@@ -1,0 +1,69 @@
+﻿using System;
+using NetOffice;
+using NetOffice.Attributes;
+namespace NetOffice.MSHTMLApi.Enums
+{
+	 /// <summary>
+	 /// SupportByVersion MSHTML 4
+	 /// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsEnum)]
+	public enum _svgFecompositeOperator
+	{
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>0</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 SVG_FECOMPOSITE_OPERATOR_UNKNOWN = 0,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>1</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 SVG_FECOMPOSITE_OPERATOR_OVER = 1,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>2</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 SVG_FECOMPOSITE_OPERATOR_IN = 2,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>3</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 SVG_FECOMPOSITE_OPERATOR_OUT = 3,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>4</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 SVG_FECOMPOSITE_OPERATOR_ATOP = 4,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>5</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 SVG_FECOMPOSITE_OPERATOR_XOR = 5,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>6</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 SVG_FECOMPOSITE_OPERATOR_ARITHMETIC = 6,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>2147483647</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 svgFecompositeOperator_Max = 2147483647
+	}
+}

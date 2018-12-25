@@ -271,10 +271,10 @@ namespace NetOffice.OfficeApi.Enums
 		 msoWarpFormat36 = 35,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>36</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoWarpFormat37 = 36
 	}
 }

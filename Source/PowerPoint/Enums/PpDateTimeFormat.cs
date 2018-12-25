@@ -117,52 +117,52 @@ namespace NetOffice.PowerPointApi.Enums
 		 ppDateTimeFigureOut = 14,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppDateTimeUAQ1 = 15,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppDateTimeUAQ2 = 16,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppDateTimeUAQ3 = 17,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppDateTimeUAQ4 = 18,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppDateTimeUAQ5 = 19,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppDateTimeUAQ6 = 20,
 
 		 /// <summary>
-		 /// SupportByVersion PowerPoint 15,16
+		 /// SupportByVersion PowerPoint 15, 16
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByVersion("PowerPoint", 15, 16)]
+		 [SupportByVersion("PowerPoint", 15,16)]
 		 ppDateTimeUAQ7 = 21
 	}
 }

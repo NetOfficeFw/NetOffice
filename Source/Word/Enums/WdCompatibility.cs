@@ -488,10 +488,17 @@ namespace NetOffice.WordApi.Enums
 		 wdDontOverrideTableStyleFontSzAndJustification = 68,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>69</remarks>
-		 [SupportByVersion("Word", 15, 16)]
-		 wdUseWord2010TableStyleRules = 69
+		 [SupportByVersion("Word", 15,16)]
+		 wdUseWord2010TableStyleRules = 69,
+
+		 /// <summary>
+		 /// SupportByVersion Word 16
+		 /// </summary>
+		 /// <remarks>70</remarks>
+		 [SupportByVersion("Word", 16)]
+		 wdDelayableFloatingTable = 70
 	}
 }

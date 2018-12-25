@@ -54,10 +54,10 @@ namespace NetOffice.ExcelApi.Enums
 		 xlPivotTableVersion14 = 4,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlPivotTableVersion15 = 5
 	}
 }

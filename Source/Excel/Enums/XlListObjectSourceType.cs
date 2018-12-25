@@ -40,10 +40,10 @@ namespace NetOffice.ExcelApi.Enums
 		 xlSrcQuery = 3,
 
 		 /// <summary>
-		 /// SupportByVersion Excel 15,16
+		 /// SupportByVersion Excel 15, 16
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByVersion("Excel", 15, 16)]
+		 [SupportByVersion("Excel", 15,16)]
 		 xlSrcModel = 4
 	}
 }

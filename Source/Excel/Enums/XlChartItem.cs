@@ -233,6 +233,20 @@ namespace NetOffice.ExcelApi.Enums
 		 /// </summary>
 		 /// <remarks>32</remarks>
 		 [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		 xlPivotChartDropZone = 32
+		 xlPivotChartDropZone = 32,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>33</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlPivotChartExpandEntireFieldButton = 33,
+
+		 /// <summary>
+		 /// SupportByVersion Excel 16
+		 /// </summary>
+		 /// <remarks>34</remarks>
+		 [SupportByVersion("Excel", 16)]
+		 xlPivotChartCollapseEntireFieldButton = 34
 	}
 }

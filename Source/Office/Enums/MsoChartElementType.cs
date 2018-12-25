@@ -894,10 +894,10 @@ namespace NetOffice.OfficeApi.Enums
 		 msoElementChartFloorShow = 1201,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// SupportByVersion Office 15, 16
 		 /// </summary>
 		 /// <remarks>211</remarks>
-		 [SupportByVersion("Office", 15, 16)]
+		 [SupportByVersion("Office", 15,16)]
 		 msoElementDataLabelCallout = 211
 	}
 }

@@ -50,6 +50,13 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersion("MSHTML", 4)]
-		 COORD_SYSTEM_Max = 2147483647
+		 COORD_SYSTEM_Max = 2147483647,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>5</remarks>
+		 [SupportByVersion("MSHTML", 4)]
+		 COORD_SYSTEM_CLIENT = 5
 	}
 }

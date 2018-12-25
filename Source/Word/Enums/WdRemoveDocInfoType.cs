@@ -117,10 +117,10 @@ namespace NetOffice.WordApi.Enums
 		 wdRDIAll = 99,
 
 		 /// <summary>
-		 /// SupportByVersion Word 15,16
+		 /// SupportByVersion Word 15, 16
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByVersion("Word", 15, 16)]
+		 [SupportByVersion("Word", 15,16)]
 		 wdRDITaskpaneWebExtensions = 17
 	}
 }
