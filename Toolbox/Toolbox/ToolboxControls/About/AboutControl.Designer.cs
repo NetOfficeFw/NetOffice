@@ -113,7 +113,8 @@
             this.linkLabelMono.Size = new System.Drawing.Size(148, 16);
             this.linkLabelMono.TabIndex = 99;
             this.linkLabelMono.TabStop = true;
-            this.linkLabelMono.Text = "http://mono-project.com";
+            this.linkLabelMono.Text = "https://www.mono-project.com/";
+            this.linkLabelMono.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // labelHotKey
             // 
@@ -146,7 +147,8 @@
             this.linkLabelHotKey.Size = new System.Drawing.Size(320, 16);
             this.linkLabelHotKey.TabIndex = 97;
             this.linkLabelHotKey.TabStop = true;
-            this.linkLabelHotKey.Text = "http://mycsharp.de/wbb2/thread.php?threadid=65760";
+            this.linkLabelHotKey.Text = "https://mycsharp.de/wbb2/thread.php?threadid=65760";
+            this.linkLabelHotKey.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // pictureBoxInfo5
             // 
@@ -178,7 +180,8 @@
             this.linkLabelHexBox.Size = new System.Drawing.Size(232, 16);
             this.linkLabelHexBox.TabIndex = 95;
             this.linkLabelHexBox.TabStop = true;
-            this.linkLabelHexBox.Text = "http://sourceforge.net/projects/hexbox";
+            this.linkLabelHexBox.Text = "https://sourceforge.net/projects/hexbox/";
+            this.linkLabelHexBox.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // panelAboutDetails
             // 
@@ -213,8 +216,8 @@
             this.linkLabelLicenceLink.Size = new System.Drawing.Size(216, 16);
             this.linkLabelLicenceLink.TabIndex = 94;
             this.linkLabelLicenceLink.TabStop = true;
-            this.linkLabelLicenceLink.Text = "http://opensource.org/licenses/MIT";
-            this.linkLabelLicenceLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCompany_LinkClicked);
+            this.linkLabelLicenceLink.Text = "https://opensource.org/licenses/MIT";
+            this.linkLabelLicenceLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // labelCopyrightText
             // 

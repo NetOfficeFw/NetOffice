@@ -218,7 +218,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             }
         }
 
-        private void linkLabelCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {

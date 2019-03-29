@@ -9,7 +9,7 @@ labelWarranty3 = Wenn Sie Facebook Nutzer sind erscheint Ihnen das am Anfang vie
 labelTechnicalDetails = Technische Details
 labelContainsExistingWorks = Dieses Programm enthält Code von anderen Open Source Projekten
 labelHotKey = Systemweite Hotkey-Klasse
-labelLicense = Die Developer Toolbox steht unter der MIT Lizenz (MIT)
+labelLicense = NetOffice Developer Toolbox steht unter der MIT Lizenz (MIT)
 labelLanguageCredits = Sprachpakete
 [End]
 [1033]
@@ -23,6 +23,6 @@ labelWarranty3 = If you are using Facebook this might be unfamiliar to you.
 labelTechnicalDetails = Technical Details
 labelContainsExistingWorks = This program contains code from other open source projects
 labelHotKey = systemwide hotkey-class
-labelLicense = The developer toolbox is licensed under the MIT License (MIT)
+labelLicense = NetOffice Developer Toolbox is licensed under the MIT License (MIT)
 labelLanguageCredits = Language Credits
 [End]
