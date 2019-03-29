@@ -388,7 +388,6 @@
             this.labelNetOfficeIsFree.Size = new System.Drawing.Size(221, 21);
             this.labelNetOfficeIsFree.TabIndex = 83;
             this.labelNetOfficeIsFree.Text = "NetOffice ist freie Software.";
-            this.labelNetOfficeIsFree.Click += new System.EventHandler(this.labelNetOfficeIsFree_Click);
             // 
             // label11
             // 

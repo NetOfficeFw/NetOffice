@@ -230,42 +230,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
-
-        private void labelNetOfficeIsFree_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                EasterEggControl ctrl = new EasterEggControl(Host.CurrentLanguageID);
-                ctrl.Dock = DockStyle.Fill;
-                Controls.Add(ctrl);
-                ctrl.BringToFront();
-                ctrl.Done += new EventHandler(EasterEgg_Done);
-                ctrl.Visible = true;
-                ctrl.ShowGernot();
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
-            }
-        }
-
-        private void EasterEgg_Done(object sender, EventArgs e)
-        {
-            try
-            {
-                EasterEggControl ctrl = sender as EasterEggControl;
-                if (null != ctrl && Controls.Contains(ctrl))
-                {
-                    Controls.Remove(ctrl);
-                    ctrl.Dispose();
-                }
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
-            }
-        }
-
         #endregion
     }
 }
