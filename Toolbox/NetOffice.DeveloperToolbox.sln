@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice.DeveloperToolbox", "Toolbox\NetOffice.DeveloperToolbox.csproj", "{9B6C8DAB-83ED-4C92-8491-BFF9B8984D4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice.OutlookSecurity", "NetOffice.OutlookSecurity\NetOffice.OutlookSecurity.csproj", "{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}"
@@ -22,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F53E2EB4-7218-4B39-9473-91DD027B22AD}
 	EndGlobalSection
 EndGlobal
