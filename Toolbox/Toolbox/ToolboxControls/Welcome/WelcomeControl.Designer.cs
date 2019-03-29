@@ -194,7 +194,7 @@
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(293, 48);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(338, 324);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(288, 324);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 95;
             this.pictureBoxLogo.TabStop = false;
@@ -214,9 +214,9 @@
             this.panelMainRight.Controls.Add(this.linkLabelNetOfficeIssues);
             this.panelMainRight.Controls.Add(this.labelIWant);
             this.panelMainRight.Controls.Add(this.linkLabelNetOfficeUpdates);
-            this.panelMainRight.Location = new System.Drawing.Point(633, 68);
+            this.panelMainRight.Location = new System.Drawing.Point(583, 68);
             this.panelMainRight.Name = "panelMainRight";
-            this.panelMainRight.Size = new System.Drawing.Size(271, 304);
+            this.panelMainRight.Size = new System.Drawing.Size(321, 304);
             this.panelMainRight.TabIndex = 98;
             // 
             // labelMailMe
@@ -241,7 +241,7 @@
             this.linkLabelMailMe.Size = new System.Drawing.Size(194, 17);
             this.linkLabelMailMe.TabIndex = 80;
             this.linkLabelMailMe.TabStop = true;
-            this.linkLabelMailMe.Text = "mailto:public.sebastian@web.de";
+            this.linkLabelMailMe.Text = "https://github.com/NetOfficeFw/NetOffice/issues";
             this.linkLabelMailMe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // labelQuestion
@@ -266,7 +266,7 @@
             this.linkLabelNetOfficeQuestions.Size = new System.Drawing.Size(249, 17);
             this.linkLabelNetOfficeQuestions.TabIndex = 78;
             this.linkLabelNetOfficeQuestions.TabStop = true;
-            this.linkLabelNetOfficeQuestions.Text = "http://netoffice.codeplex.com/discussions";
+            this.linkLabelNetOfficeQuestions.Text = "https://github.com/NetOfficeFw/NetOffice/issues";
             this.linkLabelNetOfficeQuestions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // labelUpdate
@@ -313,7 +313,7 @@
             this.linkLabelNetOfficeIssues.Size = new System.Drawing.Size(218, 17);
             this.linkLabelNetOfficeIssues.TabIndex = 10;
             this.linkLabelNetOfficeIssues.TabStop = true;
-            this.linkLabelNetOfficeIssues.Text = "http://netoffice.codeplex.com/issues";
+            this.linkLabelNetOfficeIssues.Text = "https://github.com/NetOfficeFw/NetOffice/issues";
             this.linkLabelNetOfficeIssues.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // labelIWant
@@ -337,7 +337,7 @@
             this.linkLabelNetOfficeUpdates.Size = new System.Drawing.Size(231, 17);
             this.linkLabelNetOfficeUpdates.TabIndex = 12;
             this.linkLabelNetOfficeUpdates.TabStop = true;
-            this.linkLabelNetOfficeUpdates.Text = "http://netoffice.codeplex.com/releases";
+            this.linkLabelNetOfficeUpdates.Text = "https://github.com/NetOfficeFw/NetOffice/releases";
             this.linkLabelNetOfficeUpdates.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // panelOptions
