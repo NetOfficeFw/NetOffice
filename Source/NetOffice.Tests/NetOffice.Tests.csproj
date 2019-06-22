@@ -46,11 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessApi\Utils\ProjectInfoTests.cs" />
     <Compile Include="OutlookApi\Tools\OlRibbonTypeTests.cs" />
     <Compile Include="OutlookApi\Tools\OlCustomUIAttributeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Access\AccessApi.csproj">
+      <Project>{61C1EB27-64CC-4E88-A3AE-1E6D002E15D1}</Project>
+      <Name>AccessApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
       <Name>NetOffice</Name>
