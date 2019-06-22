@@ -12,7 +12,8 @@ Current\ Binaries\
 Persistance\ Cache*\
 Toolbox/Libs/
 ..svnbridge/
-
+out/
+.vs/
 
 ### SVN ###
 .svn/
