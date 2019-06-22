@@ -1,3 +1,7 @@
+--- Version 1.7.4.6 ---
+
+01.) Fix github ticket #231 (Access library ProjectInfo returns incorrect AssemblyName value)
+
 --- Version 1.7.4.5 ---
 
 01.) Fix github ticket #223 (OlRibbonType.cs wrong enum for Microsoft.Outlook.Mail.Compose)
