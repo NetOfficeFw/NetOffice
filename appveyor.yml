@@ -1,0 +1,52 @@
+# NetOffice project build definition
+version: 1.7.4.6-b{build}
+
+
+image: Visual Studio 2017
+
+platform: Any CPU
+configuration:
+  - Debug
+  - Release
+
+environment:
+  VisualStudioVersion: 15.0
+
+init:
+  - git config --global core.autocrlf true
+
+before_build:
+  - cmd: |
+      mkdir artifacts
+      mkdir build_tmp
+      xcopy /s /e /y Source build_tmp\Source\
+  - appveyor-retry nuget restore Source\NetOffice.sln
+
+build_script:
+  - set MSBuildLogger="C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - msbuild.exe Source\NetOffice.sln /Target:Build /Verbosity:normal /logger:%MSBuildLogger%
+
+after_build:
+  - cmd: |
+      del /s /q Source\ClientApplication\bin\%configuration%\ClientApplication.*
+      del /s /q Source\ClientApplication\bin\%configuration%\stdole.dll
+
+test: on
+
+after_test:
+  - cmd: |
+      xcopy /y Source\ClientApplication\bin\%configuration% "build_tmp\Assemblies\Any CPU\"
+      xcopy /s /e /y Documentation build_tmp\Documentation\
+      xcopy /s /e /y Examples build_tmp\Examples\
+      xcopy /s /e /y Tutorials build_tmp\Tutorials\
+      xcopy /y "Breaking Changes.txt" build_tmp\
+      xcopy /y BugFixes.txt build_tmp\
+      xcopy /y ChangeLog.txt build_tmp\
+      xcopy /y LICENSE.txt build_tmp\
+  - cmd: |
+      cd build_tmp
+      7z a -tzip ..\artifacts\NetOffice_v1.7.4.6_unsigned.zip .
+
+artifacts:
+  - path: 'artifacts\NetOffice_*.zip'
+    name: NetOffice package

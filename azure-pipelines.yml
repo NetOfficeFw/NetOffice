@@ -1,0 +1,67 @@
+# NetOffice project build pipeline
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+variables:
+  solution: Source/NetOffice.sln
+  buildPlatform: Any CPU
+  buildConfiguration: Release
+
+steps:
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)\Source'
+    contents: '**' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)\Source'
+
+- task: NuGetToolInstaller@0
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  displayName: Build NetOffice
+  inputs:
+    solution: '$(solution)'
+    vsVersion: '15.0'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    msbuildArgs: '/t:Build'
+    createLogFile: true
+    logFileVerbosity: 'detailed'
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      Source\NetOffice.Tests\bin\**\NetOffice.Tests.dll
+
+- task: DeleteFiles@1
+  displayName: Cleanup assemblies output
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
+    contents: |
+      'ClientApplication.*'
+      'stdole.dll'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
+    contents: '**' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)\Assemblies\Any CPU'
+
+- task: ArchiveFiles@2
+  displayName: Create NetOffice Package
+  inputs:
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.6_unsigned_build$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.6_unsigned_build$(Build.BuildId).zip'
+    artifactName: NetOffice Package
