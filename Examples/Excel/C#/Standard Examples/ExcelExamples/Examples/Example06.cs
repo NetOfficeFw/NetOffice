@@ -92,7 +92,7 @@ namespace ExcelExamplesCS4
 
                 case "xlDialogEditColor":
 
-                    returnValue = excelApplication.Dialogs[XlBuiltInDialog.xlDialogEditColor].Show();
+                    returnValue = excelApplication.Dialogs[XlBuiltInDialog.xlDialogEditColor].Show(1);
                     break;
 
                 case "xlDialogGallery3dBar":
