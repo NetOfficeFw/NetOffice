@@ -65,7 +65,12 @@ namespace ExampleBase
         {
             try
             {
-                Process.Start(_documentPath);
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = _documentPath,
+                    UseShellExecute = true
+                };
+                Process.Start(psi);
                 this.Close();
             }
             catch
