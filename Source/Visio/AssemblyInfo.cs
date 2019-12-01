@@ -14,16 +14,6 @@ using NetOffice.Attributes;
     Visio - <NoDescription> - 16
 */
 
-[assembly: AssemblyTitle("Visio")]
-[assembly: AssemblyDescription("Netoffice Visio Api")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NetOfficeFw")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.6")]
-[assembly: AssemblyFileVersion("1.7.4.6")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Visio")]
 [assembly: Guid("00021A98-0000-0000-C000-000000000046")]

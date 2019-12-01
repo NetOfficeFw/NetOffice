@@ -16,16 +16,6 @@ using NetOffice.Attributes;
     Access - Microsoft Access 15.0 Object Library - 16
 */
 
-[assembly: AssemblyTitle("Access")]
-[assembly: AssemblyDescription("Netoffice Access Api")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NetOfficeFw")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.6")]
-[assembly: AssemblyFileVersion("1.7.4.6")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Access")]
 [assembly: Guid("4AFFC9A0-5F99-101B-AF4E-00AA003F0F07")]
