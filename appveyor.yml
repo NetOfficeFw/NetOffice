@@ -2,7 +2,7 @@
 version: 1.7.4.6-b{build}
 
 
-image: Visual Studio 2017
+image: Visual Studio 2019
 
 platform: Any CPU
 configuration:
@@ -10,7 +10,7 @@ configuration:
   - Release
 
 environment:
-  VisualStudioVersion: 15.0
+  VisualStudioVersion: 16.0
 
 init:
   - git config --global core.autocrlf true
