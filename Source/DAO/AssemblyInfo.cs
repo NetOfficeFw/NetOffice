@@ -12,16 +12,6 @@ using NetOffice.Attributes;
 
 */
 
-[assembly: AssemblyTitle("DAO")]
-[assembly: AssemblyDescription("Netoffice DAO Api")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NetOfficeFw")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.6")]
-[assembly: AssemblyFileVersion("1.7.4.6")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("DAO")]
 [assembly: Guid("00025E01-0000-0000-C000-000000000046")]

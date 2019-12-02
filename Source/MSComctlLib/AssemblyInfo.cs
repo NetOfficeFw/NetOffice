@@ -11,16 +11,6 @@ using NetOffice.Attributes;
 
 */
 
-[assembly: AssemblyTitle("MSComctlLib")]
-[assembly: AssemblyDescription("Netoffice MSComctlLib Api")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NetOfficeFw")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.6")]
-[assembly: AssemblyFileVersion("1.7.4.6")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSComctlLib")]
 [assembly: Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1")]

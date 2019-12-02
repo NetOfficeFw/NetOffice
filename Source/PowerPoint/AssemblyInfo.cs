@@ -16,16 +16,6 @@ using NetOffice.Attributes;
     PowerPoint - <NoDescription> - 16
 */
 
-[assembly: AssemblyTitle("PowerPoint")]
-[assembly: AssemblyDescription("Netoffice PowerPoint Api")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NetOfficeFw")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.6")]
-[assembly: AssemblyFileVersion("1.7.4.6")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("PowerPoint")]
 [assembly: Guid("91493440-5A91-11CF-8700-00AA0060263B")]

@@ -28,7 +28,7 @@ steps:
     vsVersion: '15.0'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArgs: '/t:Build'
+    msbuildArgs: '/t:Build;Pack'
     createLogFile: true
     logFileVerbosity: 'detailed'
 
@@ -58,10 +58,10 @@ steps:
     rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.6_unsigned_build$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/NetOffice_unsigned_build$(Build.BuildId).zip'
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.6_unsigned_build$(Build.BuildId).zip'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_unsigned_build$(Build.BuildId).zip'
     artifactName: NetOffice Package
