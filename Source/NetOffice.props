@@ -1,0 +1,27 @@
+﻿<Project>
+  <!-- Common properties for NetOffice projects -->
+  <PropertyGroup>
+    <NetOfficeRelease>1.8.0</NetOfficeRelease>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Product>NetOffice</Product>
+    <Copyright>Copyright © 2012-2018 Sebastian Lange</Copyright>
+    <Company>NetOfficeFw</Company>
+  </PropertyGroup>
+
+  <!-- Versioning and packaging for NetOffice projects -->
+  <PropertyGroup>
+    <VersionPrefix>$(NetOfficeRelease)</VersionPrefix>
+    <VersionSuffix Condition=" '$(VersionSuffix)'=='' ">local</VersionSuffix>
+    <AssemblyVersion>$(NetOfficeRelease).0</AssemblyVersion>
+    <FileVersion>$(NetOfficeRelease).0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net40</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+  </PropertyGroup>
+</Project>

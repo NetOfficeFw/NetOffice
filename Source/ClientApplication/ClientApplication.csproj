@@ -1,13 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
-    <OutputType>WinExe</OutputType>
     <AssemblyTitle>ClientApplication</AssemblyTitle>
-    <Company>netoffice.codeplex.com</Company>
-    <Product>NetOffice</Product>
     <Description>Compile Dumy</Description>
-    <Copyright>Copyright © 2011 Sebastian Lange</Copyright>
+    <OutputType>WinExe</OutputType>
   </PropertyGroup>
+
+  <Import Project="..\NetOffice.props" />
+
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />

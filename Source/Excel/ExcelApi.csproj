@@ -1,20 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
     <AssemblyTitle>Excel</AssemblyTitle>
-    <Company>NetOfficeFw</Company>
-    <Product>NetOffice</Product>
     <Description>Netoffice Excel Api</Description>
-    <Copyright>Copyright © 2012-2018 Sebastian Lange</Copyright>
-    <AssemblyVersion>1.8.0.0</AssemblyVersion>
-    <FileVersion>1.8.0.0</FileVersion>
     <RootNamespace>NetOffice.ExcelApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>ExcelApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+
+  <Import Project="..\NetOffice.props" />
+
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
