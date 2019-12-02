@@ -184,8 +184,10 @@ namespace NetOffice.Diagnostics
             Add(new DiagnosticItem("---", "AppDomain"));
             Add(new DiagnosticItem("FriendlyName", AppDomain.CurrentDomain.FriendlyName));
             Add(new DiagnosticItem("Id", AppDomain.CurrentDomain.Id.ToString()));
+#if NETFRAMEWORK
             if (null != AppDomain.CurrentDomain.ApplicationIdentity)
                 Add(new DiagnosticItem("ApplicationIdentity", AppDomain.CurrentDomain.ApplicationIdentity.ToString()));
+#endif
 
             Add(new DiagnosticItem("---", "Assemblies"));
             foreach (Assembly item in AppDomain.CurrentDomain.GetAssemblies())
@@ -197,6 +199,6 @@ namespace NetOffice.Diagnostics
             }
         }
 
-        #endregion
+#endregion
     }
 }

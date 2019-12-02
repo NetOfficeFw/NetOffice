@@ -9,8 +9,10 @@
   <Import Project="..\NetOffice.props" />
 
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' ">
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Access\AccessApi.csproj" />
