@@ -20,7 +20,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net40;net45;net47;netcoreapp3.1</TargetFrameworks>
-    <Configuration>Debug;Release</Configuration>
+    <Configuration>Debug</Configuration>
   </PropertyGroup>
 
   <PropertyGroup>
