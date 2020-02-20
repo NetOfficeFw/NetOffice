@@ -3,6 +3,7 @@
     <AssemblyTitle>NetOffice.Tests</AssemblyTitle>
     <Description>NetOffice unit tests</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
