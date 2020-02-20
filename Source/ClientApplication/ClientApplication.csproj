@@ -5,6 +5,10 @@
     <OutputType>WinExe</OutputType>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1701;1702;1519</NoWarn>
+  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 
