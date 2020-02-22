@@ -12,9 +12,11 @@ strategy:
     Debug:
       buildPlatform: 'Any CPU'
       buildConfiguration: 'Debug'
+      VersionSuffix: alpha
     Release:
       buildPlatform: 'Any CPU'
       buildConfiguration: 'Release'
+      VersionSuffix: alpha
 
 steps:
 - task: NuGetToolInstaller@1
@@ -57,7 +59,7 @@ steps:
     vsVersion: '16.0'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArgs: '/t:Build'
+    msbuildArgs: '/t:Build;Pack /p:VersionSuffix="$(VersionSuffix).$(Build.BuildNumber)" /p:RepositoryBranch="$(Build.SourceBranchName)" /p:RepositoryCommit="$(Build.SourceVersion)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)\nuget"'
     createLogFile: true
     logFileVerbosity: 'detailed'
 
@@ -122,3 +124,8 @@ steps:
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.8.1.0_$(buildConfiguration)_build$(Build.BuildId).zip'
     artifactName: NetOffice $(buildConfiguration) Package
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)\nuget'
+    artifactName: NetOffice NuGet Packages
