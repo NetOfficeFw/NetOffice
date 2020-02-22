@@ -36,7 +36,7 @@ steps:
     vsVersion: '16.0'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArgs: '/t:Build;Pack /p:RepositoryBranch="$(Build.SourceBranchName)" /p:RepositoryCommit="$(Build.SourceVersion)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)"'
+    msbuildArgs: '/t:Build;Pack /p:RepositoryBranch="$(Build.SourceBranchName)" /p:RepositoryCommit="$(Build.SourceVersion)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)\nuget"'
     createLogFile: true
     logFileVerbosity: 'detailed'
 
@@ -73,3 +73,8 @@ steps:
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_unsigned_build$(Build.BuildId).zip'
     artifactName: NetOffice Package
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)\nuget'
+    artifactName: NetOffice NuGet Packages
