@@ -10,6 +10,7 @@
     <Copyright>Copyright © 2012-2018 Sebastian Lange, Copyright © 2015-2019 Jozef Izso</Copyright>
     <Company>NetOfficeFw</Company>
     <Authors>Sebastian Lange, Jozef Izso</Authors>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <!-- Versioning and packaging for NetOffice projects -->
@@ -32,4 +33,8 @@
     <!-- CS0618: 'member' is obsolete: 'text' -->
     <NoWarn>$(NoWarn);0618</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+  </ItemGroup>
 </Project>
