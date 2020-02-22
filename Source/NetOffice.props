@@ -23,6 +23,13 @@
     <FileVersion>$(NetOfficeRelease).0</FileVersion>
   </PropertyGroup>
 
+  <!-- Source code and debug symbols configuration for NetOffice projects -->
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSource>true</IncludeSource>
+  </PropertyGroup>
+
   <PropertyGroup>
     <TargetFrameworks>net40;net45;net47;netcoreapp3.1</TargetFrameworks>
     <Configuration>Debug</Configuration>
