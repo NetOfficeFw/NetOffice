@@ -11,6 +11,8 @@
     <Company>NetOfficeFw</Company>
     <Authors>Sebastian Lange, Jozef Izso</Authors>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/NetOfficeFw/NetOffice.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <!-- Versioning and packaging for NetOffice projects -->
