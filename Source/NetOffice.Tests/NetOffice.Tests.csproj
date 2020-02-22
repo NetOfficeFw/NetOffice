@@ -4,6 +4,7 @@
     <Description>NetOffice unit tests</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
