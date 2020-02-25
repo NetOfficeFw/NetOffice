@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>NetOffice.Samples.SimpleNetCoreAddin</RootNamespace>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+    <EnableComHosting>true</EnableComHosting>
+    <Platforms>x86</Platforms>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetOfficeFw.WordApi" Version="1.8.0-alpha01" />
+  </ItemGroup>
+
+</Project>
