@@ -11,8 +11,10 @@
     <Company>NetOfficeFw</Company>
     <Authors>Sebastian Lange, Jozef Izso</Authors>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/NetOfficeFw/NetOffice.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageIconUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice-Assets/master/NetOfficeLogo_128x128.png</PackageIconUrl>
   </PropertyGroup>
 
   <!-- Versioning and packaging for NetOffice projects -->
@@ -44,6 +46,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+    <None Include="$(MSBuildThisFileDirectory)..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+    <None Include="$(MSBuildThisFileDirectory)..\Assets\NetOfficeLogo_128x128.png" Pack="true" PackagePath="$(PackageIcon)" />
   </ItemGroup>
 </Project>
