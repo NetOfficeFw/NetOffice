@@ -10,7 +10,7 @@
     <Copyright>Copyright © 2011-2018 Sebastian Lange, Copyright © 2015-2019 Jozef Izso</Copyright>
     <Company>NetOfficeFw</Company>
     <Authors>Sebastian Lange, Jozef Izso</Authors>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/NetOfficeFw/NetOffice.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
