@@ -3,6 +3,13 @@
     <AssemblyTitle>Outlook</AssemblyTitle>
     <Description>NetOffice wrapper for Microsoft Outlook interop library.</Description>
     <RootNamespace>NetOffice.OutlookApi</RootNamespace>
+    <PackageDescription>NetOffice Outlook library for extending and automating Microsoft Outlook.
+
+NetOffice is a set of libraries and tools for building addins, extending and automating Microsoft Office applications.
+NetOffice supports extending and automating Microsoft Office applications: Excel, Word, Outlook, PowerPoint, Access, Project, Publisher and Visio.
+
+This is upgrade for the legacy NetOffice.Outlook nuget package.
+    </PackageDescription>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>OutlookApi_v4.0.snk</AssemblyOriginatorKeyFile>

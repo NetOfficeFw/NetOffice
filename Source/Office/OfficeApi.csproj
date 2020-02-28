@@ -3,6 +3,11 @@
     <AssemblyTitle>Office</AssemblyTitle>
     <Description>NetOffice wrapper for Microsoft Office interop library.</Description>
     <RootNamespace>NetOffice.OfficeApi</RootNamespace>
+    <PackageDescription>NetOffice library for extending and automating Microsoft Office applications.
+
+NetOffice is a set of libraries and tools for building addins, extending and automating Microsoft Office applications.
+NetOffice supports extending and automating Microsoft Office applications: Excel, Word, Outlook, PowerPoint, Access, Project, Publisher and Visio.
+    </PackageDescription>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>

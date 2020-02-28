@@ -3,6 +3,13 @@
     <AssemblyTitle>Excel</AssemblyTitle>
     <Description>NetOffice wrapper for Microsoft Excel interop library.</Description>
     <RootNamespace>NetOffice.ExcelApi</RootNamespace>
+    <PackageDescription>NetOffice Excel library for extending and automating Microsoft Excel.
+
+NetOffice is a set of libraries and tools for building addins, extending and automating Microsoft Office applications.
+NetOffice supports extending and automating Microsoft Office applications: Excel, Word, Outlook, PowerPoint, Access, Project, Publisher and Visio.
+
+This is upgrade for the legacy NetOffice.Excel nuget package.
+    </PackageDescription>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>ExcelApi_v4.0.snk</AssemblyOriginatorKeyFile>

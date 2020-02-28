@@ -3,6 +3,13 @@
     <AssemblyTitle>MSForms</AssemblyTitle>
     <Description>NetOffice wrapper for Microsoft MSForms interop library.</Description>
     <RootNamespace>NetOffice.MSFormsApi</RootNamespace>
+    <PackageDescription>NetOffice MSFormsApi library is wrapper for MSForms COM type library.
+
+NetOffice is a set of libraries and tools for building addins, extending and automating Microsoft Office applications.
+NetOffice supports extending and automating Microsoft Office applications: Excel, Word, Outlook, PowerPoint, Access, Project, Publisher and Visio.
+
+This is upgrade for the legacy NetOffice.MSFormsApi nuget package.
+    </PackageDescription>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>MSFormsApi_v4.0.snk</AssemblyOriginatorKeyFile>

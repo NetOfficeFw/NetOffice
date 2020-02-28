@@ -3,6 +3,13 @@
     <AssemblyTitle>Access</AssemblyTitle>
     <Description>NetOffice wrapper for Microsoft Access interop library.</Description>
     <RootNamespace>NetOffice.AccessApi</RootNamespace>
+    <PackageDescription>NetOffice Access library for extending and automating Microsoft Access.
+
+NetOffice is a set of libraries and tools for building addins, extending and automating Microsoft Office applications.
+NetOffice supports extending and automating Microsoft Office applications: Excel, Word, Outlook, PowerPoint, Access, Project, Publisher and Visio.
+
+This is upgrade for the legacy NetOffice.Access nuget package.
+    </PackageDescription>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>AccessApi_v4.0.snk</AssemblyOriginatorKeyFile>

@@ -3,6 +3,13 @@
     <AssemblyTitle>PowerPoint</AssemblyTitle>
     <Description>NetOffice wrapper for Microsoft PowerPoint interop library.</Description>
     <RootNamespace>NetOffice.PowerPointApi</RootNamespace>
+    <PackageDescription>NetOffice PowerPoint library for extending and automating Microsoft PowerPoint.
+
+NetOffice is a set of libraries and tools for building addins, extending and automating Microsoft Office applications.
+NetOffice supports extending and automating Microsoft Office applications: Excel, Word, Outlook, PowerPoint, Access, Project, Publisher and Visio.
+
+This is upgrade for the legacy NetOffice.PowerPoint nuget package.
+    </PackageDescription>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>PowerPointApi_v4.0.snk</AssemblyOriginatorKeyFile>
