@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>OWC10</AssemblyTitle>
-    <Description>Netoffice OWC10 Api</Description>
+    <Description>NetOffice wrapper for Microsoft OWC10 interop library.</Description>
     <RootNamespace>NetOffice.OWC10Api</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

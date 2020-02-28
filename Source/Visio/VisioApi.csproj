@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>Visio</AssemblyTitle>
-    <Description>Netoffice Visio Api</Description>
+    <Description>NetOffice wrapper for Microsoft Visio interop library.</Description>
     <RootNamespace>NetOffice.VisioApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>Excel</AssemblyTitle>
-    <Description>Netoffice Excel Api</Description>
+    <Description>NetOffice wrapper for Microsoft Excel interop library.</Description>
     <RootNamespace>NetOffice.ExcelApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

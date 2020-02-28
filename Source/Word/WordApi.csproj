@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>Word</AssemblyTitle>
-    <Description>Netoffice Word Api</Description>
+    <Description>NetOffice wrapper for Microsoft Word interop library.</Description>
     <RootNamespace>NetOffice.WordApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

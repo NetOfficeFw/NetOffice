@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>ADODB</AssemblyTitle>
-    <Description>Netoffice ADODB Api</Description>
+    <Description>NetOffice wrapper for Microsoft ADODB interop library.</Description>
     <RootNamespace>NetOffice.ADODBApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

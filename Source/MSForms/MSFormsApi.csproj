@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>MSForms</AssemblyTitle>
-    <Description>Netoffice MSForms Api</Description>
+    <Description>NetOffice wrapper for Microsoft MSForms interop library.</Description>
     <RootNamespace>NetOffice.MSFormsApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

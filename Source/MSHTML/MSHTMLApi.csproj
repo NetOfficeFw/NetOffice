@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>MSHTML</AssemblyTitle>
-    <Description>Netoffice MSHTML Api</Description>
+    <Description>NetOffice wrapper for Microsoft MSHTML interop library.</Description>
     <RootNamespace>NetOffice.MSHTMLApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

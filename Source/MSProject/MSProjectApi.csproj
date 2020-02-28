@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>MSProject</AssemblyTitle>
-    <Description>Netoffice MSProject Api</Description>
+    <Description>NetOffice wrapper for Microsoft Project interop library.</Description>
     <RootNamespace>NetOffice.MSProjectApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>MSDATASRC</AssemblyTitle>
-    <Description>Netoffice MSDATASRC Api</Description>
+    <Description>NetOffice wrapper for Microsoft MSDATASRC interop library.</Description>
     <RootNamespace>NetOffice.MSDATASRCApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

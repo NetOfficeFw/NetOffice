@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>MSComctlLib</AssemblyTitle>
-    <Description>Netoffice MSComctlLib Api</Description>
+    <Description>NetOffice wrapper for Microsoft MSComctlLib interop library.</Description>
     <RootNamespace>NetOffice.MSComctlLibApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

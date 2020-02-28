@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>Access</AssemblyTitle>
-    <Description>Netoffice Access Api</Description>
+    <Description>NetOffice wrapper for Microsoft Access interop library.</Description>
     <RootNamespace>NetOffice.AccessApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>DAO</AssemblyTitle>
-    <Description>Netoffice DAO Api</Description>
+    <Description>NetOffice wrapper for Microsoft DAO interop library.</Description>
     <RootNamespace>NetOffice.DAOApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>

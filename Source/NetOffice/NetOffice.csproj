@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>NetOffice</AssemblyTitle>
-    <Description>NetOffice Core Api</Description>
+    <Description>NetOffice core library.</Description>
     <RootNamespace>NetOffice</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
