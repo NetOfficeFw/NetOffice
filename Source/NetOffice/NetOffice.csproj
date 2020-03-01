@@ -2,6 +2,7 @@
   <PropertyGroup>
     <AssemblyTitle>NetOffice</AssemblyTitle>
     <Description>NetOffice core library.</Description>
+    <PackageId>NetOfficeFw.Core</PackageId>
     <RootNamespace>NetOffice</RootNamespace>
     <PackageDescription>NetOffice core library for extending and automating Microsoft Office applications.
 
