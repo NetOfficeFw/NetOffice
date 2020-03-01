@@ -48,5 +48,6 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
     <None Include="$(MSBuildThisFileDirectory)..\Assets\NetOfficeLogo_128x128.png" Pack="true" PackagePath="$(PackageIcon)" />
+    <None Include="$(MSBuildThisFileDirectory)NetOfficeFw.install.ps1" Pack="true" PackagePath="tools\install.ps1" />
   </ItemGroup>
 </Project>
