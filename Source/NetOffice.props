@@ -30,6 +30,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <IncludeSource>true</IncludeSource>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -44,6 +45,10 @@
     <!-- CS0618: 'member' is obsolete: 'text' -->
     <NoWarn>$(NoWarn);0618</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />

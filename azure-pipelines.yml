@@ -37,7 +37,7 @@ steps:
     vsVersion: '16.0'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArgs: '/t:Build;Pack /p:VersionSuffix="$(VersionSuffix).$(Build.BuildNumber)" /p:RepositoryBranch="$(Build.SourceBranchName)" /p:RepositoryCommit="$(Build.SourceVersion)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)\nuget"'
+    msbuildArgs: '/t:Build;Pack /p:VersionSuffix="$(VersionSuffix).$(Build.BuildNumber)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)\nuget"'
     createLogFile: true
     logFileVerbosity: 'detailed'
 
