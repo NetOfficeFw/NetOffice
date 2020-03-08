@@ -15,6 +15,7 @@
     <RepositoryUrl>https://github.com/NetOfficeFw/NetOffice.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageIconUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice-Assets/master/NetOfficeLogo_128x128.png</PackageIconUrl>
+    <PackageTags>$(PackageTags);netoffice;netofficefw;office;excel;word;outlook;powerpoint;access;project;visio;publisher;interop;wrapper;net40;net45;vsto</PackageTags>
   </PropertyGroup>
 
   <!-- Versioning and packaging for NetOffice projects -->
