@@ -71,17 +71,17 @@ namespace NetOffice.PowerPointApi.Events
 		void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-        [SinkArgument("wn", typeof(PowerPointApi.DocumentWindow))]
+        [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2011)]
 		void SlideShowBegin([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-        [SinkArgument("wn", typeof(PowerPointApi.DocumentWindow))]
+        [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2012)]
 		void SlideShowNextBuild([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-        [SinkArgument("wn", typeof(PowerPointApi.DocumentWindow))]
+        [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2013)]
 		void SlideShowNextSlide([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
@@ -162,6 +162,7 @@ namespace NetOffice.PowerPointApi.Events
 
 		[SupportByVersion("PowerPoint", 14,15,16)]
         [SinkArgument("protViewWindow", typeof(PowerPointApi.ProtectedViewWindow))]
+        [SinkArgument("protectedViewCloseReason", SinkArgumentType.Enum , typeof(PowerPointApi.Enums.PpProtectedViewCloseReason))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2028)]
 		void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] object protectedViewCloseReason, [In] [Out] ref object cancel);
@@ -377,7 +378,7 @@ namespace NetOffice.PowerPointApi.Events
                 return;
             }
 
-            NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.DocumentWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			EventBinding.RaiseCustomEvent("SlideShowBegin", ref paramsArray);
@@ -391,7 +392,7 @@ namespace NetOffice.PowerPointApi.Events
                 return;
             }
 
-            NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.DocumentWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			EventBinding.RaiseCustomEvent("SlideShowNextBuild", ref paramsArray);
@@ -405,7 +406,7 @@ namespace NetOffice.PowerPointApi.Events
                 return;
             }
 
-            NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.DocumentWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			EventBinding.RaiseCustomEvent("SlideShowNextSlide", ref paramsArray);
