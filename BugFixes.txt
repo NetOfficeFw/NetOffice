@@ -1,6 +1,11 @@
+--- Version 1.7.4.7 ---
+
+01.) Fix github ticket #262 (ActivePowerPointApp.SlideShowBeginEvent doesn't work in versions 1.7.4.x)
+
 --- Version 1.7.4.6 ---
 
 01.) Fix github ticket #231 (Access library ProjectInfo returns incorrect AssemblyName value)
+02.) Fix github ticket #264 (NetOfficeException "Keytoken missmatch" when running NetOffice in debug mode)
 
 --- Version 1.7.4.5 ---
 

@@ -1,7 +1,9 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-set _version=1.7.4.6
+set _version=1.7.4.7
+set _certificate=goIT Solutions, s.r.o.
+set _thumbprint=AC6DBFFB1BF8B62281DEB8641023A66CDDC5DB57
 
 mkdir out
 
@@ -17,10 +19,12 @@ del /s /q Source\ClientApplication\bin\Release\ClientApplication.*
 del /s /q Source\ClientApplication\bin\Release\stdole.dll
 
 xcopy /y Source\ClientApplication\bin\Release "out\Assemblies\Any CPU\"
+signtool.exe sign /v /fd sha256 /td sha256 /sha1 "%_thumbprint%" /tr http://timestamp.comodoca.com/rfc3161 "out\Assemblies\Any CPU\*.dll"
 
 xcopy /y "Breaking Changes.txt" out\
 xcopy /y BugFixes.txt out\
 xcopy /y ChangeLog.txt out\
+xcopy /y LICENSE.txt out\
 
 pushd out
 7z a -tzip ..\NetOffice_v%_version%.zip .
