@@ -5,6 +5,11 @@
 ### Breaking Changes
 * `Settings.EnableOperatorOverlads` was renamed to `Settings.EnableOperatorOverloads` [#306](https://github.com/NetOfficeFw/NetOffice/issues/306)  
   If you listened to changes using `Settings.PropertyChanged` event, ensure you fix your code with the new property name.
+* Fixed typo in word **Availability** used in namespace and class names [#307](https://github.com/NetOfficeFw/NetOffice/issues/307)  
+  Affected types:
+  * namespace `NetOffice.Availity` 🡒 `NetOffice.Availability`
+  * class `AvailityException` 🡒 `AvailabilityException`
+  * interface `ICOMObjectAvaility` 🡒 `ICOMObjectAvailability`
 
 ## v1.7.9
 * Links now point to Microsoft Docs website

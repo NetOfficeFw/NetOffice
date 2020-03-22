@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Linq;
 using System.Text;
 using NetOffice.Tools;
-using NetOffice.Availity;
+using NetOffice.Availability;
 
 namespace NetOffice.Diagnostics
 {
