@@ -325,11 +325,14 @@ namespace NetOffice.Tools
                 value = value.ToLower().Trim();
                 switch (value)
                 {
-                    case "copyInnerexceptionmessagetotoplevelexception":
+                    case "copyinnerexceptionmessagetotoplevelexception":
                         factory.Settings.ExceptionMessageBehavior = ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException;
                         return;
                     case "copyallinnerexceptionmessagestotoplevelexception":
                         factory.Settings.ExceptionMessageBehavior = ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException;
+                        return;
+                    case "diagnostics":
+                        factory.Settings.ExceptionMessageBehavior = ExceptionMessageHandling.Diagnostics;
                         return;
                     default:
                         break;
