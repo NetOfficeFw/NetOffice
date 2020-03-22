@@ -17,7 +17,7 @@ namespace NetOffice
      
         Unfortunately Microsoft spend no possibilities to influence the managed RCW lifetime service 
         for System._ComObject except of Marshal.ReleaseComObject/Marshal.FinalReleaseComObject.
-        Thats why we spend this lifetime wrapper arround to have multiple 
+        Thats why we spend this lifetime wrapper around to have multiple 
         NetOffice wrapper instances with same RCW proxy and keep the managed proxy alive as long we need.
     */
 

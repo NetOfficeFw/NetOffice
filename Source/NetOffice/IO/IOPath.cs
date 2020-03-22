@@ -8,7 +8,7 @@ using NetOffice.Exceptions;
 namespace NetOffice.IO
 {
     /// <summary>
-    /// Wrapper arround System.IO.Path to throw NetOfficeIOException if something failed
+    /// Wrapper around System.IO.Path to throw NetOfficeIOException if something failed
     /// </summary>
     public static class IOPath
     {

@@ -1449,7 +1449,7 @@ namespace NetOffice
         #region Type Methods
 
         /// <summary>
-        /// Analyze an object and create wrapper arround if necessary
+        /// Analyze an object and create wrapper around if necessary
         /// </summary>
         /// <param name="value">value as any</param>
         /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>

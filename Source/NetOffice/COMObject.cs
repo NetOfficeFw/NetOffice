@@ -40,7 +40,7 @@ namespace NetOffice
         protected internal Type _underlyingType;
 
         /// <summary>
-        /// Returns a shared access wrapper arround the native wrapped RCW System._ComObject
+        /// Returns a shared access wrapper around the native wrapped RCW System._ComObject
         /// </summary>
         protected internal COMProxyShare _proxyShare;
 
