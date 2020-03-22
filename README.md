@@ -54,7 +54,7 @@ These branches are archived of the source code from CodePlex and OSDN.
 NetOffice source code is licensed under [MIT License](LICENSE.txt).
 
 Copyright © 2011-2018 Sebastian Lange  
-Copyright © 2015-2019 Jozef Izso
+Copyright © 2015-2020 Jozef Izso
 
 
 [VSTO]: http://msdn.microsoft.com/en-us/library/jj620922.aspx
