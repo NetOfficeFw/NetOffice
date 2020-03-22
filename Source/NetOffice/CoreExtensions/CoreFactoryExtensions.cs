@@ -78,8 +78,8 @@ namespace NetOffice
                 }
             }
 
-            // failback because some types was multiple defined by its class id (not allowed in COM but in fact MS do this)
-            // list of known multiple defined types is available on netoffice.codeplex.com or Attributes\DuplicateAttribute.cs
+            // fallback because some types was multiple defined by its class id (not allowed in COM but in fact Microsoft does this)
+            // list of known multiple defined types is available in Attributes\DuplicateAttribute.cs file
             foreach (IFactoryInfo item in value.Assemblies)
             {
                 if (item.IsDuck != wantTheDuck)
@@ -87,7 +87,7 @@ namespace NetOffice
                 bool hasComponentID = null != item.ComponentGuid ? item.ComponentGuid.Contains(hostGuid) : false;
                 if (item.Contains(className) && hasComponentID)
                 {
-                    value.Console.WriteLine("Failback factory {0}=>{1}recieved.", item.Assembly.FullName, className);
+                    value.Console.WriteLine("Fallback factory {0}=>{1} received.", item.Assembly.FullName, className);
                     return item;
                 }
             }
@@ -223,16 +223,16 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Performs GetTypeInfo on IDispatch
-        /// Handle the strange cast behavior - see remarks. 
+        /// Performs GetTypeInfo on IDispatch object.
+        /// Handles the strange cast behavior - see remarks.
         /// </summary>
         /// <remarks>
-        /// Seems to be cast to IDispatch never failed
-        /// even the instance behind comProxy doesnt implement the interface.
-        /// If its failed to cast, an InvalidCastException occurs 
-        /// while first use the interface.
-        /// The method catch arround here and throws IDispatchNotImplementedException 
-        /// to signalize the missing IDispatch suport.    
+        /// It seems the cast to IDispatch never fails
+        /// even when the instance behind COM proxy doesn't implement the interface.
+        /// If it fails to cast, an InvalidCastException occurs
+        /// on first use of the interface.
+        /// This method will catch InvalidCastException here and it will throw IDispatchNotImplementedException
+        /// to signalize the missing IDispatch support.
         /// </remarks>
         /// <param name="dispatcher">given IDispatch as any </param>
         /// <returns>type information or null if dispatcher argument is null</returns>

@@ -8,7 +8,7 @@ namespace NetOffice.Dynamics
     */
 
     /// <summary>
-    /// Wrapper arround underylying DynamicMetaObject for debugging purpose
+    /// Wrapper around underlying DynamicMetaObject for debugging purposes.
     /// </summary>
     public class COMDynamicMetaObject : DynamicMetaObject
     {
