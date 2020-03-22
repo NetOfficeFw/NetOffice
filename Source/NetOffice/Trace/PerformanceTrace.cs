@@ -72,12 +72,12 @@ namespace NetOffice
             public string MethodName { get; private set; }
 
             /// <summary>
-            /// The time in milliseconds totaly
+            /// The total elapsed time in milliseconds
             /// </summary>
             public double TimeElapsedMS { get; private set; }
 
             /// <summary>
-            /// The ticks totaly its need
+            /// The total elapsed ticks
             /// </summary>
             public long Ticks { get; private set; }
 

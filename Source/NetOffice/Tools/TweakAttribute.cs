@@ -5,9 +5,9 @@ using System.Text;
 namespace NetOffice.Tools
 {
     /// <summary>
-    /// Activate COMAddin tweak options. you can add various values in the office add-in regristry location
+    /// Activate COMAddin tweak options. You can add various values in the Microsoft Office Add-ins registry location
     /// to customize NetOffice diagnostic/log settings at runtime. This can be very helpful in troubleshooting.
-    /// See tweak overview here: http://netoffice.codeplex.com/wikipage?title=Tweaks_EN
+    /// See tweaks overview here: http://netoffice.codeplex.com/wikipage?title=Tweaks_EN
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple= false)]
     public class TweakAttribute : System.Attribute

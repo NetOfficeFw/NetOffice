@@ -13,7 +13,7 @@ namespace NetOffice.Tools
     public static class AttributeReflector
     {
         /// <summary>
-        /// Anyalyze first parameter and returns the register error method delegate if exists
+        /// Analyze first parameter and returns the register error method delegate if exists
         /// </summary>
         /// <param name="type">Type of target addin</param>
         /// <returns>delegate or null</returns>

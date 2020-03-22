@@ -25,7 +25,7 @@ namespace NetOffice
 
         /// <summary>
         /// Returns a performance trace setting by its entity name.
-        /// Creates automaticaly a new performance trace setting if entity name not exists.
+        /// Creates automatically a new performance trace setting if entity name not exists.
         /// </summary>
         /// <param name="entityName">target entity name</param>
         /// <returns>existing or new created performance trace settings</returns>
@@ -46,7 +46,7 @@ namespace NetOffice
 
         /// <summary>
         /// Returns a performance trace setting by its entity name.
-        /// Creates automaticaly a new performance trace setting if entity name/method name not exists.
+        /// Creates automatically a new performance trace setting if entity name/method name not exists.
         /// </summary>
         /// <param name="entityName">target entity name</param>
         /// <param name="methodName">target method name</param>

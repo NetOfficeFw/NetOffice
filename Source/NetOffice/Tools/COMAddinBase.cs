@@ -45,7 +45,7 @@ namespace NetOffice.Tools
         public abstract ICOMObject AppInstance { get; }
 
         /// <summary>
-        /// Current asscociated Core
+        /// Current associated Core
         /// </summary>
         public abstract Core Factory { get; }
 

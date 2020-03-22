@@ -14,7 +14,7 @@ namespace NetOffice.Tools
     public class RegExport : Dictionary<string, IList<RegExportValue>>
     {
         /// <summary>
-        ///  Add a new key to the instancc
+        ///  Add a new key to the instance
         /// </summary>
         /// <param name="key">target unique key</param>
         /// <returns>value list</returns>
@@ -26,7 +26,7 @@ namespace NetOffice.Tools
         }
 
         /// <summary>
-        /// Add a new key to the instancc
+        /// Add a new key to the instance
         /// </summary>
         /// <param name="key">target unique key</param>
         /// <param name="values">target values</param>

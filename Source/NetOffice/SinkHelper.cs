@@ -63,7 +63,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// CoClass Factore Core
+        /// CoClass Factory Core
         /// </summary>
         protected internal Core Factory
         {
@@ -321,7 +321,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform cast to System.String and suspress any exception(s)
+        /// Perform cast to System.String and suppresses any exception(s)
         /// </summary>
         /// <param name="value">value to cast</param>
         /// <returns>cast value or false if exception occurs</returns>
@@ -338,7 +338,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform cast to System.Boolean and suspress any exception(s)
+        /// Perform cast to System.Boolean and suppresses any exception(s)
         /// </summary>
         /// <param name="value">value to cast</param>
         /// <returns>cast value or false if exception occurs</returns>
@@ -355,7 +355,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform cast to System.Int16 and suspress any exception(s)
+        /// Perform cast to System.Int16 and suppresses any exception(s)
         /// </summary>
         /// <param name="value">value to cast</param>
         /// <returns>cast value or 0 if exception occurs</returns>
@@ -372,7 +372,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform cast to System.Int32 and suspress any exception(s)
+        /// Perform cast to System.Int32 and suppresses any exception(s)
         /// </summary>
         /// <param name="value">value to cast</param>
         /// <returns>cast value or 0 if exception occurs</returns>
@@ -389,7 +389,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform cast to System.Double and suspress any exception(s)
+        /// Perform cast to System.Double and suppresses any exception(s)
         /// </summary>
         /// <param name="value">value to cast</param>
         /// <returns>cast value or 0 if exception occurs</returns>
@@ -406,7 +406,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform cast to System.Single and suspress any exception(s)
+        /// Perform cast to System.Single and suppresses any exception(s)
         /// </summary>
         /// <param name="value">value to cast</param>
         /// <returns>cast value or 0 if exception occurs</returns>
@@ -423,7 +423,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform cast to System.Enum and suspress any exception(s)
+        /// Perform cast to System.Enum and suppresses any exception(s)
         /// </summary>
         /// <typeparam name="T">type of System.Enum</typeparam>
         /// <param name="value">value to cast</param>
