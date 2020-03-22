@@ -19,7 +19,7 @@ PowerPoint, Access, Project and Visio.
 * Easy add-ins development
 * No deployment hurdles, no registration
 * No dependencies, no interop assemblies, no need for [VSTO][VSTO]
-* Visual Studio Project Templates and Wizards available [Photo Gallery][NetOffice Photo Gallery]
+* Visual Studio Project Templates and Wizards available in [NetOffice Toolbox][NetOffice Toolbox]
 
 ## Getting Started
 
@@ -57,5 +57,5 @@ Copyright © 2011-2018 Sebastian Lange
 Copyright © 2015-2020 Jozef Izso
 
 
-[VSTO]: http://msdn.microsoft.com/en-us/library/jj620922.aspx
-[NetOffice Photo Gallery]: http://netoffice.codeplex.com/wikipage?title=ProjectWizardScreenshots_English
+[VSTO]: https://docs.microsoft.com/en-us/visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
+[NetOffice Toolbox]: https://netoffice.io/toolbox/
