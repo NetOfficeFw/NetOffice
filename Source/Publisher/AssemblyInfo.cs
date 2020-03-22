@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("Publisher")]
-[assembly: AssemblyDescription("Netoffice Publisher Api")]
+[assembly: AssemblyDescription("NetOffice Publisher Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]

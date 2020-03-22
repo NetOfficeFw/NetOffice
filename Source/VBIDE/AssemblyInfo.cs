@@ -14,7 +14,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("VBIDE")]
-[assembly: AssemblyDescription("Netoffice VBIDE Api")]
+[assembly: AssemblyDescription("NetOffice VBIDE Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]

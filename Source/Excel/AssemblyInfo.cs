@@ -17,7 +17,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("Excel")]
-[assembly: AssemblyDescription("Netoffice Excel Api")]
+[assembly: AssemblyDescription("NetOffice Excel Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]

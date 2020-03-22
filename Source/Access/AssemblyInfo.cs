@@ -17,7 +17,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("Access")]
-[assembly: AssemblyDescription("Netoffice Access Api")]
+[assembly: AssemblyDescription("NetOffice Access Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]

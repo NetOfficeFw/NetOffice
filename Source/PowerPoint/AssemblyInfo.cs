@@ -17,7 +17,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("PowerPoint")]
-[assembly: AssemblyDescription("Netoffice PowerPoint Api")]
+[assembly: AssemblyDescription("NetOffice PowerPoint Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]

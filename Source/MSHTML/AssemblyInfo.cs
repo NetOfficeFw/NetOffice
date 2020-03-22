@@ -12,7 +12,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("MSHTML")]
-[assembly: AssemblyDescription("Netoffice MSHTML Api")]
+[assembly: AssemblyDescription("NetOffice MSHTML Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]

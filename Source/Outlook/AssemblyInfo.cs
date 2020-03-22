@@ -17,7 +17,7 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("Outlook")]
-[assembly: AssemblyDescription("Netoffice Outlook Api")]
+[assembly: AssemblyDescription("NetOffice Outlook Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]

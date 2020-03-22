@@ -435,7 +435,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Contains a list of all known netoffice assembly key tokens
+        /// Contains a list of all known key tokens of NetOffice assemblies.
         /// </summary>
         [Browsable(false)]
         public KnownKeyTokens KnownNetOfficeKeyTokens
