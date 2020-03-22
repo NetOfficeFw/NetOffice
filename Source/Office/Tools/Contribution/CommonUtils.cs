@@ -370,7 +370,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// </summary>
         /// <param name="addinType">addin class type information</param>
         /// <param name="applicationType">which office application</param>
-        /// <returns>location or unkown</returns>
+        /// <returns>location or unknown</returns>
         public static RegistryLocationResult TryFindAddinLoadLocation(Type addinType, ApplicationIdentifiers.ApplicationType applicationType)
         {
             try

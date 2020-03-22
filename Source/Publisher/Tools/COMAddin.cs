@@ -495,7 +495,7 @@ namespace NetOffice.PublisherApi.Tools
             {
                 if (null == CTPFactoryInst)
                 {
-                    Factory.Console.WriteLine("Warning: null argument recieved in CTPFactoryAvailable. argument name: CTPFactoryInst");
+                    Factory.Console.WriteLine("Warning: null argument received in CTPFactoryAvailable. argument name: CTPFactoryInst");
                     return;
                 }
 
@@ -771,7 +771,7 @@ namespace NetOffice.PublisherApi.Tools
         /// <summary>
         /// Try to detect the addin is loaded from system hive key
         /// </summary>
-        /// <returns>null if unkown or true/false</returns>
+        /// <returns>null if unknown or true/false</returns>
         private bool? IsLoadedFromSystem()
         {
             if (null != _isLoadedFromSystem)

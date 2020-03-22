@@ -12,7 +12,7 @@ namespace NetOffice.Resolver
         /// Returns the name of the hosting type library
         /// </summary>
         /// <param name="instance">target instance</param>
-        /// <returns>library name or empty if its failed to recieve</returns>
+        /// <returns>library name or empty if its failed to receive</returns>
         internal string GetComponentName(ICOMObject instance)
         {
             return null != instance ? TypeDescriptor.GetComponentName(instance.UnderlyingObject) : String.Empty;
@@ -22,7 +22,7 @@ namespace NetOffice.Resolver
         /// Returns the class name of the underlying proxy
         /// </summary>
         /// <param name="instance">target instance</param>
-        /// <returns>class name or empty if its failed to recieve</returns>
+        /// <returns>class name or empty if its failed to receive</returns>
         internal string GetClassName(ICOMObject instance)
         {
             return null != instance ? TypeDescriptor.GetClassName(instance.UnderlyingObject) : String.Empty;

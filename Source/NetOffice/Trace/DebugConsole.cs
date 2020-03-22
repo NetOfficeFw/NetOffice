@@ -383,7 +383,7 @@ namespace NetOffice
                         // do nothing
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException("Unkown Log Mode.");
+                        throw new ArgumentOutOfRangeException("Unknown Log Mode.");
                 }
 
                 TryWritePipe(output);

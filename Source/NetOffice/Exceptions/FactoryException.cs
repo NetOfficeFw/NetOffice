@@ -6,7 +6,7 @@ using System.Text;
 namespace NetOffice.Exceptions
 {
     /// <summary>
-    /// Indicates NetOffice.Core failed to recieve required factory info
+    /// Indicates NetOffice.Core failed to receive required factory info
     /// </summary>
     public class FactoryException : NetOfficeException
     {
@@ -23,7 +23,7 @@ namespace NetOffice.Exceptions
         /// Creates an instance of the class
         /// </summary>
         /// <param name="innerException">inner exception</param>
-        public FactoryException(Exception innerException) : base("Failed to recieve required factory info")
+        public FactoryException(Exception innerException) : base("Failed to receive required factory info")
         {
 
         }

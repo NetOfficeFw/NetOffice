@@ -7,12 +7,12 @@ namespace NetOffice
         Purpose:
 
         Managed proxies (System._ComObject) implement its own managed lifetime service and reference counter.
-        Marshal.ReleaseComObject does NOT! decrement the remote IUnkown interface directly - 
+        Marshal.ReleaseComObject does NOT! decrement the remote IUnknown interface directly - 
         its decrement its own managed reference counter and 
-        if the managed ref counter is == 0 then the remote IUnkown interface want be decremented.       
+        if the managed ref counter is == 0 then the remote IUnknown interface want be decremented.       
         (a common missunderstanding)
 
-        If you increment the IUnkown reference counter directly(Marshal.AddRef) means 
+        If you increment the IUnknown reference counter directly(Marshal.AddRef) means 
         the RCW(System._ComObject) does not recognize that in its own managed lifetime service. 
      
         Unfortunately Microsoft spend no possibilities to influence the managed RCW lifetime service 
