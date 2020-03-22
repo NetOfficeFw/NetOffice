@@ -130,7 +130,7 @@
     <Compile Include="Attributes\SyntaxBypassAttribute.cs" />
     <Compile Include="DuckTales\VisibleAttribute.cs" />
     <Compile Include="Events\CoClassEventReflector.cs" />
-    <Compile Include="Exceptions\AvailityException.cs" />
+    <Compile Include="Exceptions\AvailabilityException.cs" />
     <Compile Include="Exceptions\CloneException.cs" />
     <Compile Include="Exceptions\COMChildRelationException.cs" />
     <Compile Include="Exceptions\COMDisposeException.cs" />
@@ -157,7 +157,7 @@
     <Compile Include="Filtering\RetryMessageFilterLogMode.cs" />
     <Compile Include="Filtering\RetryMessageFilterMode.cs" />
     <Compile Include="Interfaces\ICloneable.cs" />
-    <Compile Include="Interfaces\ICOMObjectAvaility.cs" />
+    <Compile Include="Interfaces\ICOMObjectAvailability.cs" />
     <Compile Include="Interfaces\ICOMProxyShareProvider.cs" />
     <Compile Include="IO\IOPath.cs" />
     <Compile Include="Loader\FactoryList.cs" />
@@ -168,7 +168,7 @@
     <Compile Include="StringEx.cs" />
     <Compile Include="Tools\DontRegisterAddinAttribute.cs" />
     <Compile Include="Dynamics\DynamicObjectEntity.cs" />
-    <Compile Include="Availity\SupportedEntityFinder.cs" />
+    <Compile Include="Availability\SupportedEntityFinder.cs" />
     <Compile Include="Tools\ForceInitializeAttribute.cs" />
     <Compile Include="Tools\ICOMAddin.cs" />
     <Compile Include="Running\Win32Window.cs" />
@@ -246,7 +246,7 @@
     <Compile Include="SinkHelper.cs" />
     <Compile Include="Attributes\SupportByVersionAttribute.cs" />
     <Compile Include="Interfaces\IEventBinding.cs" />
-    <Compile Include="Availity\SupportedEntityType.cs" />
+    <Compile Include="Availability\SupportedEntityType.cs" />
     <Compile Include="Tools\COMAddinEventHandler.cs" />
     <Compile Include="Tools\Native\IDTExtensibility2.cs" />
     <Compile Include="Running\ChildWindowEnumerator.cs" />

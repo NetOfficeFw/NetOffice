@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Collections.Generic;
 using System.Text;
 using NetOffice.Exceptions;
-using NetOffice.Availity;
+using NetOffice.Availability;
 
 namespace NetOffice
 {

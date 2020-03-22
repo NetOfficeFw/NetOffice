@@ -475,7 +475,7 @@ namespace NetOffice
         internal CurrentAppDomain CoreDomain { get; private set; }
 
         /// <summary>
-        /// ICOMObjectAvaility Cache
+        /// ICOMObjectAvailability Cache
         /// </summary>
         internal Dictionary<string, Dictionary<string, string>> EntitiesListCache { get; private set; }
 

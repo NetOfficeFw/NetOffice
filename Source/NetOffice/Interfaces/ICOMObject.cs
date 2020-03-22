@@ -6,7 +6,7 @@ namespace NetOffice
     /// <summary>
     /// Represents a managed/wrapped COM proxy implementation 
     /// </summary>
-    public interface ICOMObject : ICOMObjectProxy, ICOMObjectDisposable, ICOMObjectTable, ICOMObjectTableDisposable, ICOMObjectEvents, ICOMObjectAvaility, ICloneable
+    public interface ICOMObject : ICOMObjectProxy, ICOMObjectDisposable, ICOMObjectTable, ICOMObjectTableDisposable, ICOMObjectEvents, ICOMObjectAvailability, ICloneable
     {
         /// <summary>
         /// Monitor Lock
