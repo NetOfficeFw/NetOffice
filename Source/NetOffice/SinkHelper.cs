@@ -189,7 +189,7 @@ namespace NetOffice
             if (null != id)
                 return id;
             else
-                throw new COMException("Specified instance doesnt implement the target event interface.");
+                throw new COMException("Specified instance doesn't implement the target event interface.");
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace NetOffice
             if (null != id)
                 return id;
             else
-                throw new COMException("Specified instance doesnt implement the target event interface.");
+                throw new COMException("Specified instance doesn't implement the target event interface.");
         }
 
         /// <summary>

@@ -204,7 +204,7 @@ namespace NetOffice
 
         /// <summary>
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
-        /// This option can be used to set the top level exception message or copy the innerst message to top.
+        /// This option can be used to set the top level exception message or copy the inner message to top.
         /// </summary>
         [Category("Settings"), Description("Determine exception message behavior."), DefaultValue(typeof(ExceptionMessageHandling), "Diagnostics")]
         public ExceptionMessageHandling ExceptionMessageBehavior
@@ -337,7 +337,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set the Quit method for an application object was automaticly called while Dispose. false by default
+        /// Get or set the Quit method for an application object was automatically called while Dispose. false by default
         /// </summary>
         [Category("Settings"), Description("Call Quit in dispose automatically if the instance support a Quit method."), DefaultValue(false)]
         public bool EnableAutomaticQuit
@@ -357,7 +357,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set the core api checks at runtime the target method or property is supported in current version. if it doesnt a EntityNotSupportedException is thrown. false by default
+        /// Get or set the core api checks at runtime the target method or property is supported in current version. if it doesn't a EntityNotSupportedException is thrown. false by default
         /// </summary>
         [Category("Settings"), Description("Check method or property is supported before call them and throw an EntityNotSupportedException if unable to find."), DefaultValue(false)]
         public bool EnableSafeMode
@@ -459,7 +459,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set Core.Initialize() try to load non loaded dependend assemblies to fetch type information. KeepExistingCacheAlive by default
+        /// Get or set Core.Initialize() try to load non loaded dependent assemblies to fetch type information. KeepExistingCacheAlive by default
         /// </summary>
         [Category("Settings"), Description("Re-use or skip existing information while initialize."), DefaultValue(typeof(CacheOptions), "KeepExistingCacheAlive")]
         public CacheOptions CacheOptions
@@ -479,8 +479,8 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set NetOffice spend custom overloads for the "==" and "!=" operators for semanticly comparsion. true by default
-        /// </summary>      
+        /// Get or set NetOffice should create custom overloads for the "==" and "!=" operators for semantic comparisons. true by default
+        /// </summary>
         [Category("Settings"), Description("Redirect equal operations like '==' or '!=' for proxy wrapping objects to the com server to determine 2 instances are equal."), DefaultValue(true)]
         public bool EnableOperatorOverlads
         {

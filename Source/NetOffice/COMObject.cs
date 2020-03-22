@@ -22,7 +22,7 @@ namespace NetOffice
         /// Create from ProgId Failed Message
         /// </summary>
         private static readonly string _createFromProgIdFailMessageHint = "This is typically because you have no access to the desktop subsystem " +
-                                                                   "from a Windows Service/IIS modul in default configuration because its running in a restricted context/principal.";
+                                                                   "from a Windows Service/IIS module in default configuration because it is running in a restricted context/principal.";
 
         /// <summary>
         /// the well know IUnknown Interface ID

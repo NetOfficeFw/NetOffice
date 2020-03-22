@@ -10,7 +10,7 @@ namespace NetOffice.Tools
     public enum RegisterMode
     {
         /// <summary>
-        /// the base class COMAddin doesnt perform any register operations and call the specified register method with the parameter RegisterCall.Replace. The specified register method has to do all register operations
+        /// the base class COMAddin doesn't perform any register operations and call the specified register method with the parameter RegisterCall.Replace. The specified register method has to do all register operations
         /// </summary>
         Replace = 0,
 

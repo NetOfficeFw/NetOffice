@@ -6,7 +6,7 @@ using System.Text;
 namespace NetOffice.Exceptions
 {
     /// <summary>
-    /// Indicates a given com proxy/result doesnt implement the IDispatch COM Import Interface.
+    /// Indicates a given com proxy/result doesn't implement the IDispatch COM Import Interface.
     /// The IDispatch interface is the key interface for latebinding which NetOffice use strictly.
     /// </summary>
     public class IDispatchNotImplementedException : NetOfficeException
@@ -14,7 +14,7 @@ namespace NetOffice.Exceptions
         /// <summary>
         /// Default Exception Message
         /// </summary>
-        private static readonly string _defaultMessage = "Instance behind proxy doesnt implement IDispatch.";
+        private static readonly string _defaultMessage = "Instance behind proxy doesn't implement IDispatch.";
 
         /// <summary>
         /// Creates an instance of the class
