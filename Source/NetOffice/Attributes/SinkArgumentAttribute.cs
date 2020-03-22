@@ -57,7 +57,7 @@ namespace NetOffice.Attributes
     }
 
     /// <summary>
-    /// Sink Interface Argument Informations
+    /// Sink Interface Argument Information
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public class SinkArgumentAttribute : System.Attribute

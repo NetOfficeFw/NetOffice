@@ -1237,7 +1237,7 @@ namespace NetOffice
 
         /// <summary>
         /// NetOffice method: Set the inner proxy shared access handler.
-        /// The method want aquire the share 1x times
+        /// The method want acquire the share 1x times
         /// </summary>
         /// <param name="share">target share</param>
         /// <exception cref="ArgumentNullException">Throws when given share is null(Nothing in Visual Basic)</exception>

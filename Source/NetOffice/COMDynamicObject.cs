@@ -16,16 +16,16 @@ using NetOffice.Exceptions;
 namespace NetOffice
 {
     /*
-        This is designed to use as dynamic in C# or as object in visual basic.
-        Allows to use dynamic late-binding with proxy managed service from Netoffice.(best of both worlds)
+        This is designed to be used as dynamic in C# or as object in Visual Basic.
+        Allows to use dynamic late-binding with proxy managed service from NetOffice. (best of both worlds)
 
-        NetOffice.Settings.EnableDynamicObjects(currently true by default - Netoffice 1.7.4.1) want enable
-        the behavior that Netoffice returns a COMDynamicObject instance if its
-        failed to resolve a wrapper class for a com proxy.
+        NetOffice.Settings.EnableDynamicObjects(currently true by default - NetOffice 1.7.4.1) will enable
+        the behavior that NetOffice returns a COMDynamicObject instance if it has
+        failed to resolve a wrapper class for a COM proxy.
     */
 
     /// <summary>
-    /// Represents a managed COM proxy with dynamic runtime type informations.
+    /// Represents a managed COM proxy with dynamic runtime type information.
     /// </summary>
     [DebuggerDisplay("{InstanceFriendlyName}")]
     [TypeConverter(typeof(Converter.COMDynamicObjectExpandableObjectConverter))]
@@ -123,12 +123,12 @@ namespace NetOffice
         protected internal List<ICOMObject> _listChildObjects = new List<ICOMObject>();
 
         /// <summary>
-        /// Returns instance is currently in disposing progress
+        /// Returns instance is currently in disposing process
         /// </summary>
         protected internal volatile bool _isCurrentlyDisposing;
 
         /// <summary>
-        /// Returns instance is diposed means unusable
+        /// Returns instance is disposed (means unusable).
         /// </summary>
         protected internal volatile bool _isDisposed;
 
@@ -148,7 +148,7 @@ namespace NetOffice
         private Dictionary<string, string> _listSupportedEntities;
 
         /// <summary>
-        /// Returns a shared access wrapper arrount the native wrapped proxy
+        /// Returns a shared access wrapper around the native wrapped proxy
         /// </summary>
         protected internal COMProxyShare _proxyShare;
 
@@ -198,7 +198,7 @@ namespace NetOffice
         private object _entitiesLock = new object();
 
         /// <summary>
-        /// Empty arguments dumy
+        /// Empty arguments dummy
         /// </summary>
         private static object[] _emptyArgs = new object[0];
 
@@ -303,7 +303,7 @@ namespace NetOffice
         /// <summary>
         /// Creates new instance with given proxy and parent info
         /// </summary>
-        /// <param name="factory">current factory instance or null for defauslt</param>
+        /// <param name="factory">current factory instance or null for default factory</param>
         /// <param name="parentObject">the parent instance where you have these instance from</param>
         /// <param name="comProxy">the now wrapped comProxy instance</param>       
         public COMDynamicObject(Core factory, ICOMObject parentObject, object comProxy)
@@ -334,7 +334,7 @@ namespace NetOffice
         /// <summary>
         /// Creates new instance with given proxy and parent info
         /// </summary>
-        /// <param name="factory">current factory instance or null for defauslt</param>
+        /// <param name="factory">current factory instance or null for default factory</param>
         /// <param name="parentObject">the parent instance where you have these instance from</param>
         /// <param name="comProxy">proxy share instead of proxy</param>       
         public COMDynamicObject(Core factory, ICOMObject parentObject, COMProxyShare comProxy)
@@ -361,7 +361,7 @@ namespace NetOffice
         }
         
         /// <summary>
-        /// Create new instance from given progid
+        /// Create new instance from given ProgId
         /// </summary>
         /// <param name="factory">used factory core</param>
         /// <param name="progId"></param>
@@ -386,7 +386,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Create new instance from given progid
+        /// Create new instance from given progId
         /// </summary>
         /// <param name="progId"></param>
         public COMDynamicObject(string progId)
@@ -496,7 +496,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Check for GetEntites has been called for the instance and call if not
+        /// Check if GetEntities has been called for the instance and call it otherwise.
         /// </summary>
         private void CheckEntities()
         {
@@ -508,7 +508,7 @@ namespace NetOffice
         }
         
         /// <summary>
-        /// Recieve self description from UnderlyingObject through IDispatch
+        /// Receive self description from UnderlyingObject through IDispatch
         /// </summary>
         /// <returns>entity collection</returns>
         private DynamicObjectEntity[] GetEntities()
@@ -521,7 +521,7 @@ namespace NetOffice
 
             COMTypes.ITypeInfo typeInfo = dispatch.GetTypeInfo(0, 0);
             if (null == typeInfo)
-                throw new COMException("Unable to get type informations.");
+                throw new COMException("Unable to get type information.");
 
             IntPtr typeAttrPointer;
             typeInfo.GetTypeAttr(out typeAttrPointer);
@@ -628,7 +628,7 @@ namespace NetOffice
         }
         
         /// <summary>
-        /// Find item in collection. (Wrapper to bypass missing Linq in former .Net runtimes)
+        /// Find item in collection. (Wrapper to bypass missing Linq in older .NET runtimes)
         /// </summary>
         /// <param name="values">collection</param>
         /// <param name="name">target name</param>

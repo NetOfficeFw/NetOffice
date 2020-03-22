@@ -10,7 +10,7 @@ namespace NetOffice.Attributes
         /// <summary>
         /// Returns first found attribute or null
         /// </summary>
-        /// <typeparam name="T">target attriute</typeparam>
+        /// <typeparam name="T">target attribute</typeparam>
         /// <param name="value">value to reflect</param>
         /// <param name="inherit">search also base types</param>
         /// <returns>target or null</returns>
