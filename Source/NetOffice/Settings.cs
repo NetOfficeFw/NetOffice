@@ -247,7 +247,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
         /// This is the default message for the top level exception when ExceptionMessageBehavior is Diagnostics.
-        /// See ExceptionMessageHandling.Diagnostics for further informations.
+        /// See ExceptionMessageHandling.Diagnostics for further information.
         /// </summary>
         [Category("Settings"), Description("Top Level  exception diagnostics message text."), DefaultValue("Failed to proceed {CallType} on {CallInstance}=>{Name}.")]
         public string ExceptionDiagnosticsMessage
@@ -377,7 +377,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set Core.Initialize() try to load unloaded dependent assemblies to fetch type informations. true by default
+        /// Get or set Core.Initialize() try to load unloaded dependent assemblies to fetch type information. true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [Category("Settings"), Description("Load assemblies from file system while initialize."), DefaultValue(true)]
@@ -459,9 +459,9 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set Core.Initialize() try to load non loaded dependend assemblies to fetch type informations. KeepExistingCacheAlive by default
+        /// Get or set Core.Initialize() try to load non loaded dependend assemblies to fetch type information. KeepExistingCacheAlive by default
         /// </summary>
-        [Category("Settings"), Description("Re-use or skip existing informations while initialize."), DefaultValue(typeof(CacheOptions), "KeepExistingCacheAlive")]
+        [Category("Settings"), Description("Re-use or skip existing information while initialize."), DefaultValue(typeof(CacheOptions), "KeepExistingCacheAlive")]
         public CacheOptions CacheOptions
         {
             get

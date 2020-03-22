@@ -13,7 +13,7 @@ namespace NetOffice
     internal static class CoreFactoryExtensions
     {
         /// <summary>
-        /// See Attributes\DuplicateAttribute.cs for further informations
+        /// See Attributes\DuplicateAttribute.cs for further information
         /// </summary>
         private static Guid[] _duplicateTypes = new Guid[]
             {
@@ -235,7 +235,7 @@ namespace NetOffice
         /// to signalize the missing IDispatch suport.    
         /// </remarks>
         /// <param name="dispatcher">given IDispatch as any </param>
-        /// <returns>type informations or null if dispatcher argument is null</returns>
+        /// <returns>type information or null if dispatcher argument is null</returns>
         internal static COMTypes.ITypeInfo GetTypeInfo(this IDispatch dispatcher)
         {
             if (null == dispatcher)

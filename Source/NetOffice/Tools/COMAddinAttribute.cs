@@ -29,7 +29,7 @@ namespace NetOffice.Tools
     }
 
     /// <summary>
-    /// Specify essential COMAddin informations
+    /// Specify essential COMAddin information
     /// </summary>
     [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = false)]
     public class COMAddinAttribute : System.Attribute

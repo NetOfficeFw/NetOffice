@@ -12,7 +12,7 @@ namespace NetOffice
         #region Nested
 
         /// <summary>
-        /// Provides detailed informations about a com proxy
+        /// Provides detailed information about a com proxy
         /// </summary>
         public class ProxyInformations
         {

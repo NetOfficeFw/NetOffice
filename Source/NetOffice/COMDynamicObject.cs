@@ -1036,7 +1036,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Type informations from ICOMObject instance
+        /// Type information from ICOMObject instance
         /// </summary>
         public Type InstanceType
         {

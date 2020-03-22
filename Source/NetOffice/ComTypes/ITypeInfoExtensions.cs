@@ -10,7 +10,7 @@ namespace NetOffice.ComTypes
         /// <summary>
       /// Returns id of an interface
       /// </summary>
-      /// <param name="typeInfo">com type informations</param>
+      /// <param name="typeInfo">com type information</param>
       /// <returns>interface id(iid)</returns>
         internal static Guid GetTypeGuid(this COMTypes.ITypeInfo typeInfo)
         {

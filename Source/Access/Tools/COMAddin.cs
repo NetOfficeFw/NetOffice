@@ -893,7 +893,7 @@ namespace NetOffice.AccessApi.Tools
         }
 
         /// <summary>
-        /// Called from RegAddin while export registry informations 
+        /// Called from RegAddin while export registry information 
         /// </summary>
         /// <param name="type">Type information for the class</param>
         /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>

@@ -159,7 +159,7 @@
             this.buttonShowDetails.Name = "buttonShowDetails";
             this.buttonShowDetails.Size = new System.Drawing.Size(217, 29);
             this.buttonShowDetails.TabIndex = 8;
-            this.buttonShowDetails.Text = "Show detailed error informations";
+            this.buttonShowDetails.Text = "Show detailed error information";
             this.buttonShowDetails.UseVisualStyleBackColor = true;
             this.buttonShowDetails.Click += new System.EventHandler(this.buttonShowDetails_Click);
             // 
