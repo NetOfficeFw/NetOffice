@@ -12,7 +12,7 @@ namespace NetOffice.Tools
     public enum InstallScope
     {
         /// <summary>
-        /// Whole Sstem
+        /// Whole system
         /// </summary>
         System = 0,
 

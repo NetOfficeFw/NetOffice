@@ -6,7 +6,7 @@ using NetOffice.Attributes;
 namespace NetOffice
 {
     /// <summary>
-    /// Handle access to share an underlying COM proxy. Not intended to use outside from Netoffice infrastructure.
+    /// Handle access to share an underlying COM proxy. Not intended to use outside from NetOffice infrastructure.
     /// </summary>
     public interface ICOMProxyShareProvider
     {

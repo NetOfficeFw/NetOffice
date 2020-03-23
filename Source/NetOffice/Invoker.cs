@@ -110,7 +110,7 @@ namespace NetOffice
         #region Method Invokes
         
         /// <summary>
-        /// Perform method as latebind call without parameters 
+        /// Executes method as latebind call without parameters 
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -120,7 +120,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call without parameters 
+        /// Executes method as latebind call without parameters 
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
@@ -130,7 +130,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters
+        /// Executes method as latebind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -161,7 +161,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters
+        /// Executes method as latebind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -198,7 +198,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters
+        /// Executes method as latebind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -227,7 +227,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters 
+        /// Executes method as latebind call with parameters 
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
@@ -273,12 +273,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters and parameter modifiers to use ref parameter(s)
+        /// Executes method as latebind call with parameters and parameter modifiers to use ref parameter(s)
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
-        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         public void Method(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
@@ -305,7 +305,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with return value
+        /// Executes method as latebind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -338,7 +338,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with return value
+        /// Executes method as latebind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -372,7 +372,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with return value
+        /// Executes method as latebind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -404,12 +404,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with return value
+        /// Executes method as latebind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
-        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
         public object MethodReturn(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
@@ -443,7 +443,7 @@ namespace NetOffice
         #region Method (BindingFlags.InvokeMethod) Invokes
 
         /// <summary>
-        /// Perform method as latebind call without parameters 
+        /// Executes method as latebind call without parameters 
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -453,7 +453,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call without parameters 
+        /// Executes method as latebind call without parameters 
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
@@ -463,7 +463,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters
+        /// Executes method as latebind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -494,7 +494,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters
+        /// Executes method as latebind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -523,7 +523,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters 
+        /// Executes method as latebind call with parameters 
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
@@ -569,12 +569,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with parameters and parameter modifiers to use ref parameter(s)
+        /// Executes method as latebind call with parameters and parameter modifiers to use ref parameter(s)
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
-        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         public void SingleMethod(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
@@ -601,7 +601,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with return value
+        /// Executes method as latebind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -634,7 +634,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with return value
+        /// Executes method as latebind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -668,7 +668,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with return value
+        /// Executes method as latebind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -700,12 +700,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform method as latebind call with return value
+        /// Executes method as latebind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
-        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
         public object SingleMethodReturn(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
@@ -940,7 +940,7 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
         /// <param name="paramsArray">array with parameters</param>
-        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
         public object PropertyGet(ICOMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
@@ -1233,7 +1233,7 @@ namespace NetOffice
         }
         
         /// <summary>
-        /// Calls dipose in case if param is COMObject, calls Marshal.ReleaseComObject in case of param is a COM proxy
+        /// Calls dispose in case if param is COMObject, calls Marshal.ReleaseComObject in case of param is a COM proxy
         /// </summary>
         public static void ReleaseParam(object param)
         {
@@ -1293,7 +1293,7 @@ namespace NetOffice
         /// <summary>
         /// Copy the param array or returns null if paramsArray not set
         /// </summary>
-        /// <param name="paramsModifier">ararry with modifiers correspond paramsArray</param>
+        /// <param name="paramsModifier">array with modifiers correspond paramsArray</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>array copy or null</returns>
         public static object[] CreateEventParamsArray(bool[] paramsModifier, params object[] paramsArray)

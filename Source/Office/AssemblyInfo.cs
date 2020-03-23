@@ -17,19 +17,19 @@ using NetOffice.Attributes;
 */
 
 [assembly: AssemblyTitle("Office")]
-[assembly: AssemblyDescription("Netoffice Office Api")]
+[assembly: AssemblyDescription("NetOffice Office Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]
 [assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange, © 2015-2020 Jozef Izso")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.7")]
-[assembly: AssemblyFileVersion("1.7.4.7")]
+[assembly: AssemblyVersion("1.7.4.8")]
+[assembly: AssemblyFileVersion("1.7.4.8")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Office")]
 [assembly: Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.7")]
+[assembly: NetOfficeAssemblyAttribute("1.7.4.8")]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
 
 

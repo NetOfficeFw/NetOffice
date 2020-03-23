@@ -127,7 +127,7 @@ namespace NetOffice.Running
         }
 
         /// <summary>
-        ///  Returns all accessible com proxies and additional informations through the IAccessible interface 
+        ///  Returns all accessible com proxies and additional information through the IAccessible interface 
         /// </summary>
         /// <param name="type">target proxy type</param>
         /// <returns>proxy information enumerator</returns>

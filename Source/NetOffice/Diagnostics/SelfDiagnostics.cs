@@ -9,7 +9,7 @@ using NetOffice.Availity;
 namespace NetOffice.Diagnostics
 {
     /// <summary>
-    /// Represents a collection with self diagnostic informations
+    /// Represents a collection with self diagnostic information
     /// </summary>
     public class SelfDiagnostics : List<DiagnosticItem>
     {

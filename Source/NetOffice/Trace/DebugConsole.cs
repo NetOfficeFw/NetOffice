@@ -277,7 +277,7 @@ namespace NetOffice
                 if (!String.IsNullOrEmpty(value))
                 {
                     if (value.Length > 32)
-                        throw new FormatException("Name lenght must be < 32");
+                        throw new FormatException("Name length must be less than 32 characters");
                     char[] invalids = System.IO.Path.GetInvalidPathChars();
                     foreach (char item in invalids)
                     {
@@ -383,7 +383,7 @@ namespace NetOffice
                         // do nothing
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException("Unkown Log Mode.");
+                        throw new ArgumentOutOfRangeException("Unknown Log Mode.");
                 }
 
                 TryWritePipe(output);

@@ -39,7 +39,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         #region Properties
 
         /// <summary>
-        /// Executing Assembly Informations
+        /// Executing Assembly Information
         /// </summary>
         public AssemblyInfo Assembly
         {
@@ -55,7 +55,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         }
 
         /// <summary>
-        /// Current AppDomain Informations
+        /// Current AppDomain Information
         /// </summary>
         public AppDomainInfo AppDomain
         {
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         }
 
         /// <summary>
-        /// Current Environment Informations
+        /// Current Environment Information
         /// </summary>
         public EnvironmentInfo Environment
         {
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         }
 
         /// <summary>
-        /// Current Host Informations
+        /// Current Host Information
         /// </summary>
         public HostInfo Host
         {
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         #region Methods
 
         /// <summary>
-        /// Called from DiagnosticPairCollection to add custom system informations
+        /// Called from DiagnosticPairCollection to add custom system information
         /// </summary>
         /// <param name="diagnostics">sender instance</param>
         protected internal virtual void GetCustomInformations(DiagnosticPairCollection diagnostics)

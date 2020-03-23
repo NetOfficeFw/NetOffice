@@ -6,7 +6,7 @@ using NetOffice.Attributes;
 namespace NetOffice
 {
     /// <summary>
-    /// Represents informations about the event state
+    /// Represents information about the event state
     /// </summary>
     public interface ICOMObjectEvents
     {

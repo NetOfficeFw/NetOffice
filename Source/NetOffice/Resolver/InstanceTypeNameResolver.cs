@@ -3,7 +3,7 @@
 namespace NetOffice.Resolver
 {
     /// <summary>
-    /// Spend informations about ICOMObject instances
+    /// Spend information about ICOMObject instances
     /// </summary>
     internal class InstanceTypeNameResolver
     {

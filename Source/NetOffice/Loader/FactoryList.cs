@@ -6,7 +6,7 @@ using System.Text;
 namespace NetOffice.Loader
 {
     /// <summary>
-    /// Contains loaded factory informations
+    /// Contains loaded factory information
     /// </summary>
     public class FactoryList: List<IFactoryInfo>
     {

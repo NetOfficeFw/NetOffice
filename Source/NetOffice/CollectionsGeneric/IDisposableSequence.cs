@@ -24,7 +24,7 @@ namespace NetOffice.CollectionsGeneric
         /// <summary>
         /// Dispose the instance
         /// </summary>
-        /// <param name="keepAliveItem">dont dispose this item</param>
+        /// <param name="keepAliveItem">don't dispose this item</param>
         void Dispose(T keepAliveItem);
     }
 
@@ -48,7 +48,7 @@ namespace NetOffice.CollectionsGeneric
         /// <summary>
         /// Dispose the instance
         /// </summary>
-        /// <param name="keepAliveItem">dont dispose this item</param>
+        /// <param name="keepAliveItem">don't dispose this item</param>
         void Dispose(T keepAliveItem);
     }
 
@@ -74,7 +74,7 @@ namespace NetOffice.CollectionsGeneric
         /// <summary>
         /// Dispose the instance
         /// </summary>
-        /// <param name="keepAliveItem">dont dispose or release this item</param>
+        /// <param name="keepAliveItem">don't dispose or release this item</param>
         void Dispose(object keepAliveItem);
     }
 }

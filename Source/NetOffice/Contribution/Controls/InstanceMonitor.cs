@@ -148,7 +148,7 @@ namespace NetOffice.Contribution.Controls
         }
 
         /// <summary>
-        /// Automaticly expand all nodes
+        /// Automatically expand all nodes
         /// </summary>
         [Description("Automaticly expand all nodes"), DefaultValue(true), Category("InstanceMonitor")]
         public bool AutoExpandNodes { get; set; }
@@ -198,12 +198,12 @@ namespace NetOffice.Contribution.Controls
                 View.Nodes.Clear();
         }
         
-        private void EnumerateProxies(TreeNode node, ICOMObject[] childs)
+        private void EnumerateProxies(TreeNode node, ICOMObject[] children)
         {
-            TreeNode[] childNodes = new TreeNode[childs.Length];
-            for (int i = 0; i < childs.Length; i++)
+            TreeNode[] childNodes = new TreeNode[children.Length];
+            for (int i = 0; i < children.Length; i++)
             {
-                ICOMObject child = childs[i];
+                ICOMObject child = children[i];
                 TreeNode childNode = new TreeNode(ComObjectName(child));
                 childNodes[i] = childNode;
                 EnumerateProxies(childNode, ToArray(child.ChildObjects));

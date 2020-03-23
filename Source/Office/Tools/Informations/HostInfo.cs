@@ -5,7 +5,7 @@ using System.Text;
 namespace NetOffice.OfficeApi.Tools.Informations
 {
     /// <summary>
-    /// Office Application and NetOffice related diagnostic informations
+    /// Office Application and NetOffice related diagnostic information
     /// </summary>
     public class HostInfo : IEnumerable<KeyValuePair<string, string>>
     {      

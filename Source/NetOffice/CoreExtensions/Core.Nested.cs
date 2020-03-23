@@ -12,7 +12,7 @@ namespace NetOffice
         #region Nested
 
         /// <summary>
-        /// Provides detailed informations about a com proxy
+        /// Provides detailed information about a com proxy
         /// </summary>
         public class ProxyInformations
         {
@@ -130,7 +130,7 @@ namespace NetOffice
             /// <summary>
             /// Creates an instance of the class
             /// </summary>
-            /// <param name="instance">origin instane</param>
+            /// <param name="instance">original instance</param>
             internal OnCreateInstanceEventArgs(ICOMObject instance)
             {
                 if (null == instance)
@@ -140,12 +140,12 @@ namespace NetOffice
 
             /// <summary>
             /// The instance candidate to replace.
-            /// DisposeChildInstances is called for the instance after event triger
+            /// DisposeChildInstances is called for the instance after event trigger
             /// </summary>
             public ICOMObject Instance { get; private set; }
 
             /// <summary>
-            /// Type muste inherit from origin instance class type and make COMObject public .ctors available
+            /// Type must inherit from original instance class type and make COMObject public constructors available
             /// </summary>
             public Type Replace { get; set; }
         }

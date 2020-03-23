@@ -82,7 +82,7 @@ namespace NetOffice.Availity
         /// <param name="factory">core to perform searching</param>
         /// <param name="comProxy">proxy to analyze</param>
         /// <returns>supported methods and properties as name/kind dictionary</returns>
-        /// <exception cref="COMException">Throws generaly if any exception occurs. See inner exception(s) for details</exception>
+        /// <exception cref="COMException">Thrown in general if any exception occurs. See inner exception(s) for details</exception>
         internal Dictionary<string, string> GetSupportedEntities(Core factory, object comProxy)
         {
             try

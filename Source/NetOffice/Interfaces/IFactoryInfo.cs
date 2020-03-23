@@ -5,7 +5,7 @@ using NetOffice.Attributes;
 namespace NetOffice
 {
     /// <summary>
-    /// Informations about a NetOffice assembly
+    /// Information about a NetOffice assembly
     /// </summary>
     public interface IFactoryInfo
     {

@@ -79,7 +79,7 @@ namespace NetOffice.Contribution.CollectionsGeneric
         /// <summary>
         /// Dispose the instance
         /// </summary>
-        /// <param name="keepAliveItem">dont dispose this item</param>
+        /// <param name="keepAliveItem">don't dispose this item</param>
         public void Dispose(T keepAliveItem)
         {
             foreach (IDisposable item in this)
@@ -228,7 +228,7 @@ namespace NetOffice.Contribution.CollectionsGeneric
         /// <summary>
         /// Dispose the instance
         /// </summary>
-        /// <param name="keepAliveItem">dont dispose or release this item</param>
+        /// <param name="keepAliveItem">don't dispose or release this item</param>
         public void Dispose(object keepAliveItem)
         {
             foreach (object item in this)
@@ -395,7 +395,7 @@ namespace NetOffice.Contribution.CollectionsGeneric
         /// <summary>
         /// Dispose the instance
         /// </summary>
-        /// <param name="keepAliveItem">dont dispose this item</param>
+        /// <param name="keepAliveItem">don't dispose this item</param>
         public void Dispose(T keepAliveItem)
         {
             foreach (T item in this)

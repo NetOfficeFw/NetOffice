@@ -9,7 +9,7 @@ namespace NetOffice.Running
     /// <summary>
     /// Try to find running com instances.
     /// The strategy to find is -depending on the arguments- the Running Object Table(ROT) or Windows Desktop Subsystem through IAccessible.
-    /// The reason is because the Running Object Table wont give you all com instances - its just shows only the informations.
+    /// The reason is because the Running Object Table wont give you all com instances - its just shows only the information.
     /// </summary>
     public static class ProxyService
     {

@@ -12,7 +12,7 @@ namespace NetOffice.Loader
         /// <summary>
         /// Returns info the assembly is a NetOffice Api Assembly
         /// </summary>
-        /// <param name="itemAssembly">assembly informations</param>
+        /// <param name="itemAssembly">assembly information</param>
         /// <returns>true if NetOffice assembly, otherwise false</returns>
         internal bool ContainsNetOfficeAttribute(Assembly itemAssembly)
         {
@@ -37,7 +37,7 @@ namespace NetOffice.Loader
         /// <summary>
         /// Returns info the assembly is a NetOffice Api Assembly with known keytoken
         /// </summary>
-        /// <param name="itemName">assembly informations</param>
+        /// <param name="itemName">assembly information</param>
         /// <returns>true if NetOffice assembly with token, otherwise false</returns>
         internal bool ContainsNetOfficePublicKeyToken(AssemblyName itemName)
         {

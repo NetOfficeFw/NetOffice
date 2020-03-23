@@ -21,9 +21,9 @@ namespace NetOffice.Attributes
         Method = 1,
        
         /// <summary>
-        /// Underlying instance doesnt have an enumerator. Enumerator is spend by NetOffice instead by using this+Count.
+        /// Underlying instance doesn't have an enumerator. Enumerator is created by NetOffice instead by using this+Count.
         /// Using a custom enumerator may cause performance/memory dropdown when heavy amount of data is returned
-        /// or fetching result cause remote calls - for example get thousands of outlook mail items 
+        /// or fetching result cause remote calls - for example to get thousands of Outlook mail items 
         /// from an Exchange Server through NetOffice custom enumerator isn't a good idea. 
         /// </summary>
         Custom = 2

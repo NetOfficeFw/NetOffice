@@ -8,7 +8,7 @@ using System.Text;
 namespace NetOffice.Running
 {
     /// <summary>
-    /// Encapsulate a Proxy and spend some additional informations about
+    /// Encapsulate a Proxy and spend some additional information about
     /// </summary>
     public class ProxyInformation : IDisposable
     {

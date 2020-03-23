@@ -22,7 +22,7 @@ namespace NetOffice
         /// Create from ProgId Failed Message
         /// </summary>
         private static readonly string _createFromProgIdFailMessageHint = "This is typically because you have no access to the desktop subsystem " +
-                                                                   "from a Windows Service/IIS modul in default configuration because its running in a restricted context/principal.";
+                                                                   "from a Windows Service/IIS module in default configuration because it is running in a restricted context/principal.";
 
         /// <summary>
         /// the well know IUnknown Interface ID
@@ -40,7 +40,7 @@ namespace NetOffice
         protected internal Type _underlyingType;
 
         /// <summary>
-        /// Returns a shared access wrapper arround the native wrapped RCW System._ComObject
+        /// Returns a shared access wrapper around the native wrapped RCW System._ComObject
         /// </summary>
         protected internal COMProxyShare _proxyShare;
 
@@ -775,7 +775,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// NetOffice property: Type informations from UnderlyingObject
+        /// NetOffice property: Type information from UnderlyingObject
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
         public Type UnderlyingType
@@ -892,7 +892,7 @@ namespace NetOffice
         public event OnDisposeEventHandler OnDispose;
         
         /// <summary>
-        /// NetOffice property: returns informations the instance is already disposed
+        /// NetOffice property: returns information the instance is already disposed
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         public bool IsDisposed
@@ -1237,7 +1237,7 @@ namespace NetOffice
 
         /// <summary>
         /// NetOffice method: Set the inner proxy shared access handler.
-        /// The method want aquire the share 1x times
+        /// The method want acquire the share 1x times
         /// </summary>
         /// <param name="share">target share</param>
         /// <exception cref="ArgumentNullException">Throws when given share is null(Nothing in Visual Basic)</exception>

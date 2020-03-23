@@ -358,12 +358,12 @@ namespace NetOffice.Running
         }
 
         /// <summary>
-        /// Returns all running com proxies + add. informations from the running object table there matched with the input parameters
+        /// Returns all running com proxies + add. information from the running object table there matched with the input parameters
         /// WARNING: the method returns always the first com proxy from the running object table if multiple (match) proxies exists.
         /// </summary>
         /// <param name="componentName">name of the target component</param>
         /// <param name="className">name of the target proxy class name</param>
-        /// <returns>IDisposableEnumeration with proxy informations</returns>
+        /// <returns>IDisposableEnumeration with proxy information</returns>
         public static IDisposableSequence<ProxyInformation> GetActiveProxyInformations(string componentName, string className)
         {
             IEnumMoniker monikerList = null;
@@ -472,10 +472,10 @@ namespace NetOffice.Running
         }
 
         /// <summary>
-        /// Returns all running com proxies + add. informations from the running object table there matched with the input parameters
+        /// Returns all running com proxies + add. information from the running object table there matched with the input parameters
         /// WARNING: the method returns always the first com proxy from the running object table if multiple (match) proxies exists.
         /// </summary>
-        /// <returns>IDisposableEnumeration with proxy informations</returns>
+        /// <returns>IDisposableEnumeration with proxy information</returns>
         public static IDisposableSequence<ProxyInformation> GetActiveProxyInformations()
         {
             IEnumMoniker monikerList = null;

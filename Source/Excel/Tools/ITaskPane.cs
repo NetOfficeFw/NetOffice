@@ -20,7 +20,7 @@ namespace NetOffice.ExcelApi.Tools
         void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position);
 
         /// <summary>
-        /// Called after any visibility changes because the UserControl.VisibleChanged event doesnt work as expected in a task pane scenario
+        /// Called after any visibility changes because the UserControl.VisibleChanged event doesn't work as expected in a task pane scenario
         /// </summary>
         /// <param name="visible">the current visibility for the instance</param>
         void OnVisibleStateChanged(bool visible);

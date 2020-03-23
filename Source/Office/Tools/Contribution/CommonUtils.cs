@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         /// <summary>
-        /// Various system informations
+        /// Various system information
         /// </summary>
         public Infos Infos
         {
@@ -346,7 +346,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         /// <summary>
-        /// Assembly informations used in AssemblyInfo
+        /// Assembly information used in AssemblyInfo
         /// </summary>
         protected internal Assembly OwnerAssembly
         {
@@ -368,9 +368,9 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Try to detect the registry load location from an addin
         /// </summary>
-        /// <param name="addinType">addin class type informations</param>
+        /// <param name="addinType">addin class type information</param>
         /// <param name="applicationType">which office application</param>
-        /// <returns>location or unkown</returns>
+        /// <returns>location or unknown</returns>
         public static RegistryLocationResult TryFindAddinLoadLocation(Type addinType, ApplicationIdentifiers.ApplicationType applicationType)
         {
             try

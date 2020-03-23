@@ -12,7 +12,7 @@ namespace NetOffice.ExcelApi.Tools.Exceptions
     public enum RTDMethods
     {
         /// <summary>
-        /// Error occured not IRtdServer method - see stacktrace for further informations 
+        /// Error occured not IRtdServer method - see stacktrace for further information 
         /// </summary>
         Unknown = 0,
 

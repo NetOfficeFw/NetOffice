@@ -4,7 +4,7 @@ namespace NetOffice.Attributes
 {
     /*
         Duplicate Attribute means an equal type id in another type library.
-        There are also duplicates in the same type library but we dont care.
+        There are also duplicates in the same type library but we don't care.
 
         (See list of known duplicates below.)
     */
@@ -77,7 +77,7 @@ ADODB.Fields	        ADODB.Fields20_Deprecated	    0000054D-0000-0010-8000-00AA0
 ADODB.Fields15	        ADODB.Fields15_Deprecated	    00000506-0000-0010-8000-00AA006D2EA4
 ADODB.Field	            ADODB.Field20	                0000054C-0000-0010-8000-00AA006D2EA4
 ADODB.Field	            ADODB.Field_Deprecated	        0000054C-0000-0010-8000-00AA006D2EA4
-ADODB.Field	A           DODB.Field20_Deprecated	        0000054C-0000-0010-8000-00AA006D2EA4
+ADODB.Field	A           ADODB.Field20_Deprecated	        0000054C-0000-0010-8000-00AA006D2EA4
 ADODB._Parameter	    ADODB._Parameter_Deprecated	    0000050C-0000-0010-8000-00AA006D2EA4
 ADODB.Parameters	    ADODB.Parameters_Deprecated	    0000050D-0000-0010-8000-00AA006D2EA4
 ADODB._Command	        ADODB._Command_Deprecated	        0000054E-0000-0010-8000-00AA006D2EA4
@@ -122,7 +122,7 @@ ADODB.ConnectionEventsVt_Deprecated	        ADODB.ConnectionEventsVt	    0000040
 ADODB.RecordsetEventsVt_Deprecated	        ADODB.RecordsetEventsVt	        00000403-0000-0010-8000-00AA006D2EA4
 ADODB.ADORecordsetConstruction_Deprecated	ADODB.ADORecordsetConstruction	00000283-0000-0010-8000-00AA006D2EA4
 
-*  Known duplicate types by type-id in a another type library we dont spend a wrapper for
+*  Known duplicate types by type-id in a another type library we don't spend a wrapper for
 *  ----------------------------------
 MSForms.Font	stdole.Font	    BEF6E003-A874-101A-8BBA-00AA00300CAB
 MSForms.IFont	stdole.IFont	BEF6E002-A874-101A-8BBA-00AA00300CAB

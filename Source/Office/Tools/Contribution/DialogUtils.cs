@@ -712,7 +712,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <param name="copyrightHint">copyright hints of the owner assembly</param>
         /// <param name="companyName">name of the manufactor</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
-        /// <param name="licenceText">licence informations</param>
+        /// <param name="licenceText">licence information</param>
         public void ShowAbout(object modalOwner, bool modal, Size size, string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyName, string companyUrl, string licenceText)
         {
             IWin32Window owner = Running.Win32Window.Create(modalOwner);
@@ -761,7 +761,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// </summary>
         /// <param name="headerCaption">header caption on top</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
-        /// <param name="licenceText">licence informations</param>
+        /// <param name="licenceText">licence information</param>
         public void ShowAbout(string headerCaption, string companyUrl, string licenceText)
         {
             ShowAbout(null, true, Size.Empty, headerCaption, _owner.Infos.Assembly.AssemblyTitle, _owner.Infos.Assembly.AssemblyVersion, _owner.Infos.Assembly.AssemblyCopyright, _owner.Infos.Assembly.AssemblyCompany, companyUrl, licenceText);
@@ -775,7 +775,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         /// <param name="headerCaption">header caption on top</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
-        /// <param name="licenceText">licence informations</param>
+        /// <param name="licenceText">licence information</param>
         public void ShowAbout(object modalOwner, bool modal, Size size, string headerCaption, string companyUrl, string licenceText)
         {
             ShowAbout(modalOwner, modal, size, headerCaption, _owner.Infos.Assembly.AssemblyTitle, _owner.Infos.Assembly.AssemblyVersion, _owner.Infos.Assembly.AssemblyCopyright, _owner.Infos.Assembly.AssemblyCompany, companyUrl, licenceText);

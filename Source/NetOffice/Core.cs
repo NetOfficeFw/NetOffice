@@ -229,7 +229,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Occours when a new COMObject instance has been created
+        /// Occurs when a new COMObject instance has been created
         /// </summary>
         public event OnCreateInstanceEventHandler CreateInstance;
 
@@ -435,7 +435,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Contains a list of all known netoffice assembly key tokens
+        /// Contains a list of all known key tokens of NetOffice assemblies.
         /// </summary>
         [Browsable(false)]
         public KnownKeyTokens KnownNetOfficeKeyTokens
@@ -512,7 +512,7 @@ namespace NetOffice
         #region Factory Methods
 
         /// <summary>
-        /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
+        /// Receive factory infos from all loaded NetOfficeApi Assemblies in current application domain
         /// </summary>
         [Obsolete("Not necessary anymore(self-initializing)")]
         public void Initialize()
@@ -522,7 +522,7 @@ namespace NetOffice
 
         /// <summary>
         /// Must be called from client assembly for ICOMObject Support
-        /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
+        /// Receive factory infos from all loaded NetOfficeApi Assemblies in current application domain
         /// <param name="cacheOptions">NetOffice cache options</param>
         /// </summary>
         [Obsolete("Not necessary anymore(self-initializing)")]
@@ -650,7 +650,7 @@ namespace NetOffice
                 string assemblyName = itemAssembly.GetName().Name;
                 if (KnownNetOfficeKeyTokens.ContainsNetOfficeAttribute(itemAssembly))
                 {                    
-                    string[] depends = RecieveAssemblyFactory(assemblyName, itemAssembly);
+                    string[] depends = ReceiveAssemblyFactory(assemblyName, itemAssembly);
                     foreach (string depend in depends)
                     {
                         if (!DependentAssemblies.Any(e => e.Name == depend))
@@ -669,7 +669,7 @@ namespace NetOffice
                                 continue;
 
                             string deepAssemblyName = itemName.Name;
-                            string[] depends = RecieveAssemblyFactory(deepAssemblyName, deepAssembly);
+                            string[] depends = ReceiveAssemblyFactory(deepAssemblyName, deepAssembly);
                             foreach (string depend in depends)
                             {
                                 if (!DependentAssemblies.Any(e => e.Name == depend))
@@ -693,13 +693,13 @@ namespace NetOffice
             {
                 if (!Assemblies.Contains(dependAssembly.Name))
                 {
-                    string fileName = PathBuilder.BuildLocalPathFromDependentAssembly(dependAssembly);                   
+                    string fileName = PathBuilder.BuildLocalPathFromDependentAssembly(dependAssembly);
                     if (System.IO.File.Exists(fileName))
                     {
                         try
                         {
                             Assembly asssembly = CoreDomain.Load(fileName);
-                            RecieveAssemblyFactory(asssembly.GetName().Name, asssembly);
+                            ReceiveAssemblyFactory(asssembly.GetName().Name, asssembly);
                         }
                         catch (Exception exception)
                         {
@@ -715,12 +715,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Recieve factory instance from assembly and add them to factory cache
+        /// Receive factory instance from assembly and add them to factory cache
         /// </summary>
         /// <param name="name">name of the assembly</param>
-        /// <param name="assembly">assemmbly to recieve</param>
-        /// <returns>array of dependend assemblies</returns>
-        private string[] RecieveAssemblyFactory(string name, Assembly assembly)
+        /// <param name="assembly">assembly to receive</param>
+        /// <returns>array of dependent assemblies</returns>
+        private string[] ReceiveAssemblyFactory(string name, Assembly assembly)
         {
             if (false == Attributes.NetOfficeAssemblyAttribute.ContainsAttribute(assembly))
                 return new string[0];
@@ -736,7 +736,7 @@ namespace NetOffice
                 if (null == factoryInfo)
                     throw new FactoryException(String.Format("Unexpected {0} factory info. Assembly {0}", name, assembly));
                 Assemblies.Add(factoryInfo);
-                Console.WriteLine("NetOffice Core recieved IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
+                Console.WriteLine("NetOffice Core received IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
 
                 foreach (string itemDependency in factoryInfo.Dependencies)
                     dependAssemblies.Add(itemDependency);
@@ -800,7 +800,7 @@ namespace NetOffice
         /// <exception cref="ArgumentException">throws when ComProgIdAttribute is missing</exception>
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
-        /// <exception cref="COMException">throws when its failed to recieve progID Type</exception> 
+        /// <exception cref="COMException">throws when its failed to receive progID Type</exception> 
         public T CreateDuckObject<T>() where T : ICOMObject
         {
             object[] attributes = typeof(T).GetCustomAttributes(typeof(NetOffice.Attributes.ComProgIdAttribute), false);
@@ -822,14 +822,14 @@ namespace NetOffice
         /// <exception cref="ArgumentNullException">throws when progId is null or empty</exception>
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
-        /// <exception cref="COMException">throws when its failed to recieve progID Type</exception> 
+        /// <exception cref="COMException">throws when its failed to receive progID Type</exception> 
         public T CreateDuckObject<T>(string progId) where T : ICOMObject
         {
             if (String.IsNullOrWhiteSpace(progId))
                 throw new ArgumentNullException("progId");
             Type type = System.Type.GetTypeFromProgID(progId, false);
             if (null == type)
-                throw new COMException("Unable to recieve progId Type:<" + progId + ">");
+                throw new COMException("Unable to receive progId Type:<" + progId + ">");
 
             object interopProxy = null;
 
@@ -883,7 +883,7 @@ namespace NetOffice
         /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
-        /// <exception cref="FactoryException">throws when its failed to recieve factory info</exception> 
+        /// <exception cref="FactoryException">throws when its failed to receive factory info</exception> 
         public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy)
         {
             if (null == comProxy)
@@ -1215,14 +1215,14 @@ namespace NetOffice
                         {
                             if (allowDynamicObject && Settings.EnableDynamicObjects)
                             {
-                                ICOMObject unkownInstance = RaiseCreateCOMDynamic(caller, comProxy);
-                                if(null == unkownInstance)
-                                    unkownInstance = new COMDynamicObject(caller, comProxy);
-                                unkownInstance = TryReplaceInstance(caller, unkownInstance, comProxyType);
-                                return unkownInstance;
+                                ICOMObject unknownInstance = RaiseCreateCOMDynamic(caller, comProxy);
+                                if(null == unknownInstance)
+                                    unknownInstance = new COMDynamicObject(caller, comProxy);
+                                unknownInstance = TryReplaceInstance(caller, unknownInstance, comProxyType);
+                                return unknownInstance;
                             }
                             else
-                                throw new FactoryException("Class not exists: " + (true == String.IsNullOrWhiteSpace(fullClassName) ? ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy) : fullClassName));
+                                throw new FactoryException("Class does not exist: " + (true == String.IsNullOrWhiteSpace(fullClassName) ? ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy) : fullClassName));
                         }
 
                         _wrapperTypeCache.Add(fullClassName, classType);
@@ -1449,7 +1449,7 @@ namespace NetOffice
         #region Type Methods
 
         /// <summary>
-        /// Analyze an object and create wrapper arround if necessary
+        /// Analyze an object and create wrapper around if necessary
         /// </summary>
         /// <param name="value">value as any</param>
         /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
@@ -1471,7 +1471,7 @@ namespace NetOffice
         /// Returns the Type for comProxy or null if param not set
         /// </summary>
         /// <param name="comProxy">new created proxy</param>
-        /// <returns>type info or null if unkown</returns>
+        /// <returns>type info or null if unknown</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Type GetObjectType(object comProxy)
         {

@@ -3,7 +3,7 @@
 namespace NetOffice.Exceptions
 {
     /// <summary>
-    /// Indicates a child relation operation in Netoffice COM proxy management has been failed to complete
+    /// Indicates a child relation operation in NetOffice COM proxy management has been failed to complete
     /// </summary>
     public class COMChildRelationException : NetOfficeCOMException
     {

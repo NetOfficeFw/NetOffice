@@ -3,7 +3,7 @@
 namespace NetOffice.Resolver
 {
     /// <summary>
-    /// Uri Conversion methods because System.Uri doesnt handle special characters as well
+    /// Uri Conversion methods because System.Uri doesn't handle special characters as well
     /// </summary>
     internal static class UriResolver
     {

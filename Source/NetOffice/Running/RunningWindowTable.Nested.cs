@@ -36,7 +36,7 @@ namespace NetOffice.Running
             AllSupportedOfficeApplications = 3,
 
             /// <summary>
-            /// All Together, incl. unkown
+            /// All Together, incl. unknown
             /// </summary>
             All = 4
         }
