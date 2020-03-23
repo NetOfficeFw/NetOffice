@@ -378,7 +378,7 @@ namespace NetOffice.PowerPointApi.Events
                 return;
             }
 
-            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.SlideShowWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			EventBinding.RaiseCustomEvent("SlideShowBegin", ref paramsArray);
@@ -392,7 +392,7 @@ namespace NetOffice.PowerPointApi.Events
                 return;
             }
 
-            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.SlideShowWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			EventBinding.RaiseCustomEvent("SlideShowNextBuild", ref paramsArray);
@@ -406,7 +406,7 @@ namespace NetOffice.PowerPointApi.Events
                 return;
             }
 
-            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.SlideShowWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			EventBinding.RaiseCustomEvent("SlideShowNextSlide", ref paramsArray);
