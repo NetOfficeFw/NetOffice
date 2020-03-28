@@ -1379,7 +1379,7 @@ namespace NetOffice
         ///// <returns></returns>
         //public static bool operator ==(COMObject objectA, COMDynamicObject objectB)
         //{
-        //    if (!Settings.Default.EnableOperatorOverlads)
+        //    if (!Settings.Default.EnableOperatorOverloads)
         //        return Object.ReferenceEquals(objectA, objectB);
 
         //    if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1398,7 +1398,7 @@ namespace NetOffice
         ///// <returns>true if equal, otherwise false</returns>
         //public static bool operator !=(COMObject objectA, COMDynamicObject objectB)
         //{
-        //    if (!Settings.Default.EnableOperatorOverlads)
+        //    if (!Settings.Default.EnableOperatorOverloads)
         //        return Object.ReferenceEquals(objectA, objectB);
 
         //    if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1418,7 +1418,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator ==(COMObject objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1437,7 +1437,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator ==(COMObject objectA, object objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1456,7 +1456,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator ==(object objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1481,7 +1481,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(COMObject objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1500,7 +1500,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(COMObject objectA, object objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1519,7 +1519,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(object objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))

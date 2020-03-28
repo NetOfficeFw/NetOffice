@@ -37,7 +37,7 @@ namespace NetOffice
 
         private bool _enableProxyManagement = true;
         private CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
-        private bool _enableOperatorOverlads = true;
+        private bool _enableOperatorOverloads = true;
         private string _exceptionDefaultMessage = "See inner exception(s) for details.";
         private string _exceptionDiagnosticsMessage = "Failed to proceed {CallType} on {CallInstance}=>{Name}.";
         private ExceptionMessageHandling _exceptionMessageBehavior = ExceptionMessageHandling.Diagnostics;
@@ -484,18 +484,18 @@ namespace NetOffice
         /// Get or set NetOffice should create custom overloads for the "==" and "!=" operators for semantic comparisons. true by default
         /// </summary>
         [Category("Settings"), Description("Redirect equal operations like '==' or '!=' for proxy wrapping objects to the com server to determine 2 instances are equal."), DefaultValue(true)]
-        public bool EnableOperatorOverlads
+        public bool EnableOperatorOverloads
         {
             get
             {
-                return _enableOperatorOverlads;
+                return _enableOperatorOverloads;
             }
             set
             {
-                if (value != _enableOperatorOverlads)
+                if (value != _enableOperatorOverloads)
                 {
-                    _enableOperatorOverlads = value;
-                    OnPropertyChanged("EnableOperatorOverlads");
+                    _enableOperatorOverloads = value;
+                    OnPropertyChanged("EnableOperatorOverloads");
                 }
             }
         }
@@ -576,7 +576,7 @@ namespace NetOffice
                  EnableMoreDebugOutput != other.EnableMoreDebugOutput || EnableEventDebugOutput != other.EnableEventDebugOutput)
                 return false;
 
-            if (CacheOptions != other.CacheOptions || EnableOperatorOverlads != other.EnableOperatorOverlads ||
+            if (CacheOptions != other.CacheOptions || EnableOperatorOverloads != other.EnableOperatorOverloads ||
                 LoadAssembliesUnsafe != other.LoadAssembliesUnsafe)
                 return false;
 
@@ -617,7 +617,7 @@ namespace NetOffice
             EnableEventDebugOutput = settings.EnableEventDebugOutput;
 
             CacheOptions = settings.CacheOptions;
-            EnableOperatorOverlads = settings.EnableOperatorOverlads;
+            EnableOperatorOverloads = settings.EnableOperatorOverloads;
             LoadAssembliesUnsafe = settings.LoadAssembliesUnsafe;
         }
 
