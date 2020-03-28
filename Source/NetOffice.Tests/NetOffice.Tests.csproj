@@ -48,8 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessApi\Utils\ProjectInfoTests.cs" />
+    <Compile Include="Helpers\ConnectionPointStub.cs" />
+    <Compile Include="Helpers\TestableComObjectStub.cs" />
+    <Compile Include="Helpers\FakeComObject.cs" />
     <Compile Include="OutlookApi\Tools\OlRibbonTypeTests.cs" />
     <Compile Include="OutlookApi\Tools\OlCustomUIAttributeTests.cs" />
+    <Compile Include="PowerPointApi\Events\EApplication_SinkHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +68,10 @@
     <ProjectReference Include="..\Outlook\OutlookApi.csproj">
       <Project>{98DE103A-F036-4814-A740-9B4DE13001FF}</Project>
       <Name>OutlookApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj">
+      <Project>{D2DF07D1-46EA-4578-9183-9ABB368547E5}</Project>
+      <Name>PowerPointApi</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
