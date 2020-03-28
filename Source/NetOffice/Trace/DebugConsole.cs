@@ -383,11 +383,11 @@ namespace NetOffice
                         // do nothing
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException("Unknown Log Mode.");
+                        throw new ArgumentOutOfRangeException(nameof(Mode), @"Unknown value of DebugConsoleMode. Set the DebugConsole.Mode property to other value.");
                 }
 
                 TryWritePipe(output);
-            }        
+            }
         }
 
         /// <summary>
@@ -430,11 +430,11 @@ namespace NetOffice
                         // do nothing
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException("Unknown Log Mode.");
+                        throw new ArgumentOutOfRangeException(nameof(Mode), @"Unknown value of DebugConsoleMode. Set the DebugConsole.Mode property to other value.");
                 }
 
                 TryWritePipe(output);
-            }    
+            }
         }
 
         /// <summary>
