@@ -296,7 +296,7 @@ namespace NetOffice
             set
             {
                 if (null == value)
-                    throw new ArgumentNullException("ThreadCulture must have a value");
+                    throw new ArgumentNullException(nameof(value), "ThreadCulture must have a value");
 
                 if (value != _cultureInfo)
                 {
