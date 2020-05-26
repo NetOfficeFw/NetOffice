@@ -13,7 +13,7 @@ namespace NetOffice.WordApi
 	public delegate void Document_OpenEventHandler();
 	public delegate void Document_CloseEventHandler();
 	public delegate void Document_SyncEventHandler(NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType);
-	public delegate void Document_XMLAfterInsertEventHandler(NetOffice.WordApi.XMLNode nNewXMLNode, bool inUndoRedo);
+	public delegate void Document_XMLAfterInsertEventHandler(NetOffice.WordApi.XMLNode newXMLNode, bool inUndoRedo);
 	public delegate void Document_XMLBeforeDeleteEventHandler(NetOffice.WordApi.Range deletedRange, NetOffice.WordApi.XMLNode oldXMLNode, bool inUndoRedo);
 	public delegate void Document_ContentControlAfterAddEventHandler(NetOffice.WordApi.ContentControl newContentControl, bool inUndoRedo);
 	public delegate void Document_ContentControlBeforeDeleteEventHandler(NetOffice.WordApi.ContentControl oldContentControl, bool inUndoRedo);

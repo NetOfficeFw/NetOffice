@@ -16,7 +16,7 @@ namespace NetOffice.OutlookApi
 	public delegate void DocumentItem_PropertyChangeEventHandler(string name);
 	public delegate void DocumentItem_ReadEventHandler();
 	public delegate void DocumentItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
-	public delegate void DocumentItem_ReplyAllEventHandler(ICOMObject Response, ref bool cancel);
+	public delegate void DocumentItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);
 	public delegate void DocumentItem_SendEventHandler(ref bool cancel);
 	public delegate void DocumentItem_WriteEventHandler(ref bool cancel);
 	public delegate void DocumentItem_BeforeCheckNamesEventHandler(ref bool cancel);

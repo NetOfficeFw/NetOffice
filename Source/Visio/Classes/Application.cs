@@ -54,7 +54,7 @@ namespace NetOffice.VisioApi
 	public delegate void Application_DesignModeEnteredEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Application_BeforeDocumentSaveEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Application_BeforeDocumentSaveAsEventHandler(NetOffice.VisioApi.IVDocument doc);
-	public delegate void Application_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
+	public delegate void Application_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell cell);
 	public delegate void Application_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects connects);
 	public delegate void Application_ConnectionsDeletedEventHandler(NetOffice.VisioApi.IVConnects connects);
 	public delegate void Application_EnterScopeEventHandler(NetOffice.VisioApi.IVApplication app, Int32 nScopeID, string bstrDescription);
@@ -87,11 +87,11 @@ namespace NetOffice.VisioApi
 	public delegate void Application_BeforeSuspendEventHandler(NetOffice.VisioApi.IVApplication app);
 	public delegate void Application_AfterResumeEventHandler(NetOffice.VisioApi.IVApplication app);
 	public delegate void Application_OnKeystrokeMessageForAddonEventHandler(NetOffice.VisioApi.IVMSGWrap msg);
-	public delegate void Application_MouseDownEventHandler(Int32 button, Int32 KeyButtonState, Double x, Double y, ref bool cancelDefault);
-	public delegate void Application_MouseMoveEventHandler(Int32 button, Int32 KeyButtonState, Double x, Double y, ref bool cancelDefault);
-	public delegate void Application_MouseUpEventHandler(Int32 button, Int32 KeyButtonState, Double x, Double y, ref bool cancelDefault);
-	public delegate void Application_KeyDownEventHandler(Int32 keyCode, Int32 KeyButtonState, ref bool CancelDefault);
-	public delegate void Application_KeyPressEventHandler(Int32 keyAscii, ref bool CancelDefault);
+	public delegate void Application_MouseDownEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
+	public delegate void Application_MouseMoveEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
+	public delegate void Application_MouseUpEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
+	public delegate void Application_KeyDownEventHandler(Int32 keyCode, Int32 keyButtonState, ref bool cancelDefault);
+	public delegate void Application_KeyPressEventHandler(Int32 keyAscii, ref bool cancelDefault);
 	public delegate void Application_KeyUpEventHandler(Int32 keyCode, Int32 keyButtonState, ref bool cancelDefault);
 	public delegate void Application_QueryCancelSuspendEventsEventHandler(NetOffice.VisioApi.IVApplication app);
 	public delegate void Application_SuspendEventsCanceledEventHandler(NetOffice.VisioApi.IVApplication app);

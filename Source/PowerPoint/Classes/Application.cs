@@ -26,7 +26,7 @@ namespace NetOffice.PowerPointApi
 	public delegate void Application_PresentationPrintEventHandler(NetOffice.PowerPointApi.Presentation pres);
 	public delegate void Application_SlideSelectionChangedEventHandler(NetOffice.PowerPointApi.SlideRange sldRange);
 	public delegate void Application_ColorSchemeChangedEventHandler(NetOffice.PowerPointApi.SlideRange sldRange);
-	public delegate void Application_PresentationBeforeSaveEventHandler(NetOffice.PowerPointApi.Presentation pres, ref bool Cancel);
+	public delegate void Application_PresentationBeforeSaveEventHandler(NetOffice.PowerPointApi.Presentation pres, ref bool cancel);
 	public delegate void Application_SlideShowNextClickEventHandler(NetOffice.PowerPointApi.SlideShowWindow wn, NetOffice.PowerPointApi.Effect nEffect);
 	public delegate void Application_AfterNewPresentationEventHandler(NetOffice.PowerPointApi.Presentation pres);
 	public delegate void Application_AfterPresentationOpenEventHandler(NetOffice.PowerPointApi.Presentation pres);
@@ -35,12 +35,12 @@ namespace NetOffice.PowerPointApi
 	public delegate void Application_SlideShowOnPreviousEventHandler(NetOffice.PowerPointApi.SlideShowWindow wn);
 	public delegate void Application_PresentationBeforeCloseEventHandler(NetOffice.PowerPointApi.Presentation pres, ref bool cancel);
 	public delegate void Application_ProtectedViewWindowOpenEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow protViewWindow);
-	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow protViewWindow, ref bool Cancel);
+	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow protViewWindow, ref bool cancel);
 	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow protViewWindow, NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason protectedViewCloseReason, ref bool cancel);
 	public delegate void Application_ProtectedViewWindowActivateEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow protViewWindow);
 	public delegate void Application_ProtectedViewWindowDeactivateEventHandler(NetOffice.PowerPointApi.ProtectedViewWindow protViewWindow);
 	public delegate void Application_PresentationCloseFinalEventHandler(NetOffice.PowerPointApi.Presentation pres);
-	public delegate void Application_AfterDragDropOnSlideEventHandler(NetOffice.PowerPointApi.Slide sld, Single x, Single yY);
+	public delegate void Application_AfterDragDropOnSlideEventHandler(NetOffice.PowerPointApi.Slide sld, Single x, Single y);
 	public delegate void Application_AfterShapeSizeChangeEventHandler(NetOffice.PowerPointApi.Shape shp);
 	#pragma warning restore
 

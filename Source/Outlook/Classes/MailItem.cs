@@ -30,10 +30,10 @@ namespace NetOffice.OutlookApi
 	public delegate void MailItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
 	public delegate void MailItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
 	public delegate void MailItem_UnloadEventHandler();
-	public delegate void MailItem_BeforeAutoSaveEventHandler(ref bool Cancel);
+	public delegate void MailItem_BeforeAutoSaveEventHandler(ref bool cancel);
 	public delegate void MailItem_BeforeReadEventHandler();
 	public delegate void MailItem_AfterWriteEventHandler();
-	public delegate void MailItem_ReadCompleteEventHandler(ref bool Cancel);
+	public delegate void MailItem_ReadCompleteEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion

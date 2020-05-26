@@ -28,7 +28,7 @@ namespace NetOffice.AccessApi
 	public delegate void WebBrowserControl_BeforeNavigate2EventHandler(ICOMObject pDisp, ref object url, ref object flags, ref object targetFrameName, ref object postData, ref object headers, ref bool cancel);
 	public delegate void WebBrowserControl_DocumentCompleteEventHandler(ICOMObject pDisp, ref object url);
 	public delegate void WebBrowserControl_ProgressChangeEventHandler(Int32 progress, Int32 progressMax);
-	public delegate void WebBrowserControl_NavigateErrorEventHandler(ICOMObject pDisp, ref object url, ref object targetFrameName, ref object satusCode, ref bool cancel);
+	public delegate void WebBrowserControl_NavigateErrorEventHandler(ICOMObject pDisp, ref object url, ref object targetFrameName, ref object statusCode, ref bool cancel);
 	#pragma warning restore
 
 	#endregion

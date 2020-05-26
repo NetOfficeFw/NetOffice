@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	public delegate void MeetingItem_CustomPropertyChangeEventHandler(string name);
 	public delegate void MeetingItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
 	public delegate void MeetingItem_CloseEventHandler(ref bool cancel);
-	public delegate void MeetingItem_PropertyChangeEventHandler(string Name);
+	public delegate void MeetingItem_PropertyChangeEventHandler(string name);
 	public delegate void MeetingItem_ReadEventHandler();
 	public delegate void MeetingItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
 	public delegate void MeetingItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);

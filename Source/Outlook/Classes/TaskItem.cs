@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	public delegate void TaskItem_CustomPropertyChangeEventHandler(string name);
 	public delegate void TaskItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
 	public delegate void TaskItem_CloseEventHandler(ref bool cancel);
-	public delegate void TaskItem_PropertyChangeEventHandler(string Name);
+	public delegate void TaskItem_PropertyChangeEventHandler(string name);
 	public delegate void TaskItem_ReadEventHandler();
 	public delegate void TaskItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
 	public delegate void TaskItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);

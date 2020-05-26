@@ -31,7 +31,7 @@ namespace NetOffice.AccessApi
 	public delegate void Form_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	public delegate void Form_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	public delegate void Form_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
-	public delegate void Form_KeyPressEventHandler(ref Int16 KeyAscii);
+	public delegate void Form_KeyPressEventHandler(ref Int16 keyAscii);
 	public delegate void Form_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
 	public delegate void Form_ErrorEventHandler(ref Int16 dataErr, ref Int16 response);
 	public delegate void Form_TimerEventHandler();
@@ -44,7 +44,7 @@ namespace NetOffice.AccessApi
 	public delegate void Form_UndoBatchEditEventHandler(ref Int16 cancel);
 	public delegate void Form_BeforeBeginTransactionEventHandler(ref Int16 cancel, ref NetOffice.ADODBApi.Connection connection);
 	public delegate void Form_AfterBeginTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
-	public delegate void Form_BeforeCommitTransactionEventHandler(ref Int16 Cancel, ref NetOffice.ADODBApi.Connection connection);
+	public delegate void Form_BeforeCommitTransactionEventHandler(ref Int16 cancel, ref NetOffice.ADODBApi.Connection connection);
 	public delegate void Form_AfterCommitTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
 	public delegate void Form_RollbackTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
 	public delegate void Form_OnConnectEventHandler();
@@ -54,8 +54,8 @@ namespace NetOffice.AccessApi
 	public delegate void Form_BeforeQueryEventHandler();
 	public delegate void Form_SelectionChangeEventHandler();
 	public delegate void Form_CommandBeforeExecuteEventHandler(object command, ICOMObject cancel);
-	public delegate void Form_CommandCheckedEventHandler(object command, ICOMObject Checked);
-	public delegate void Form_CommandEnabledEventHandler(object command, ICOMObject Enabled);
+	public delegate void Form_CommandCheckedEventHandler(object command, ICOMObject _checked);
+	public delegate void Form_CommandEnabledEventHandler(object command, ICOMObject enabled);
 	public delegate void Form_CommandExecuteEventHandler(object command);
 	public delegate void Form_DataSetChangeEventHandler();
 	public delegate void Form_BeforeScreenTipEventHandler(ICOMObject screenTipText, ICOMObject sourceObject);

@@ -32,9 +32,9 @@ namespace NetOffice.VisioApi
 	public delegate void Masters_UngroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
 	public delegate void Masters_QueryCancelConvertToGroupEventHandler(NetOffice.VisioApi.IVSelection selection);
 	public delegate void Masters_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
-	public delegate void Masters_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection delection);
+	public delegate void Masters_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection selection);
 	public delegate void Masters_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
-	public delegate void Masters_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape dhape);
+	public delegate void Masters_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape shape);
 	#pragma warning restore
 
 	#endregion

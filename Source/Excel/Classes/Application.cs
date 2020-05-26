@@ -33,7 +33,7 @@ namespace NetOffice.ExcelApi
 	public delegate void Application_SheetPivotTableUpdateEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable target);
 	public delegate void Application_WorkbookPivotTableCloseConnectionEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target);
 	public delegate void Application_WorkbookPivotTableOpenConnectionEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target);
-	public delegate void Application_WorkbookSyncEventHandler(NetOffice.ExcelApi.Workbook Wb, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType);
+	public delegate void Application_WorkbookSyncEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType);
 	public delegate void Application_WorkbookBeforeXmlImportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, ref bool cancel);
 	public delegate void Application_WorkbookAfterXmlImportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, bool isRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult result);
 	public delegate void Application_WorkbookBeforeXmlExportEventHandler(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, ref bool cancel);

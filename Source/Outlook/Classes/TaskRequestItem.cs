@@ -10,10 +10,10 @@ namespace NetOffice.OutlookApi
 	#pragma warning disable
 	public delegate void TaskRequestItem_OpenEventHandler(ref bool cancel);
 	public delegate void TaskRequestItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
-	public delegate void TaskRequestItem_CustomPropertyChangeEventHandler(string Name);
+	public delegate void TaskRequestItem_CustomPropertyChangeEventHandler(string name);
 	public delegate void TaskRequestItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
 	public delegate void TaskRequestItem_CloseEventHandler(ref bool cancel);
-	public delegate void TaskRequestItem_PropertyChangeEventHandler(string Name);
+	public delegate void TaskRequestItem_PropertyChangeEventHandler(string name);
 	public delegate void TaskRequestItem_ReadEventHandler();
 	public delegate void TaskRequestItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
 	public delegate void TaskRequestItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);

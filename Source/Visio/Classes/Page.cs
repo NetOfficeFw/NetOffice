@@ -16,7 +16,7 @@ namespace NetOffice.VisioApi
 	public delegate void Page_SelectionAddedEventHandler(NetOffice.VisioApi.IVSelection selection);
 	public delegate void Page_BeforeShapeDeleteEventHandler(NetOffice.VisioApi.IVShape shape);
 	public delegate void Page_TextChangedEventHandler(NetOffice.VisioApi.IVShape shape);
-	public delegate void Page_CellChangedEventHandler(NetOffice.VisioApi.IVCell cCell);
+	public delegate void Page_CellChangedEventHandler(NetOffice.VisioApi.IVCell cell);
 	public delegate void Page_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell cell);
 	public delegate void Page_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects connects);
 	public delegate void Page_ConnectionsDeletedEventHandler(NetOffice.VisioApi.IVConnects connects);
@@ -33,9 +33,9 @@ namespace NetOffice.VisioApi
 	public delegate void Page_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
 	public delegate void Page_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection selection);
 	public delegate void Page_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
-	public delegate void Page_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape shape);
 	public delegate void Page_ShapeLinkAddedEventHandler(NetOffice.VisioApi.IVShape shape, Int32 dataRecordsetID, Int32 dataRowID);
-	public delegate void Page_ShapeLinkDeletedEventHandler(NetOffice.VisioApi.IVShape shape, Int32 dataRecordsetID, Int32 dtaRowID);
+	public delegate void Page_ShapeLinkDeletedEventHandler(NetOffice.VisioApi.IVShape shape, Int32 dataRecordsetID, Int32 dataRowID);
 	public delegate void Page_ContainerRelationshipAddedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent shapePair);
 	public delegate void Page_ContainerRelationshipDeletedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent shapePair);
 	public delegate void Page_CalloutRelationshipAddedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent shapePair);

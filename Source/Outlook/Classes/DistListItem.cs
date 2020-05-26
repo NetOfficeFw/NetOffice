@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	public delegate void DistListItem_CustomPropertyChangeEventHandler(string name);
 	public delegate void DistListItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
 	public delegate void DistListItem_CloseEventHandler(ref bool cancel);
-	public delegate void DistListItem_PropertyChangeEventHandler(string Name);
+	public delegate void DistListItem_PropertyChangeEventHandler(string name);
 	public delegate void DistListItem_ReadEventHandler();
 	public delegate void DistListItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
 	public delegate void DistListItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);

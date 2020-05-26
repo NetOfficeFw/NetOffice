@@ -22,7 +22,7 @@ namespace NetOffice.VisioApi
 	public delegate void Window_MouseDownEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
 	public delegate void Window_MouseMoveEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
 	public delegate void Window_MouseUpEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
-	public delegate void Window_KeyDownEventHandler(Int32 KeyCode, Int32 keyButtonState, ref bool cancelDefault);
+	public delegate void Window_KeyDownEventHandler(Int32 keyCode, Int32 keyButtonState, ref bool cancelDefault);
 	public delegate void Window_KeyPressEventHandler(Int32 keyAscii, ref bool cancelDefault);
 	public delegate void Window_KeyUpEventHandler(Int32 keyCode, Int32 keyButtonState, ref bool cancelDefault);
 	#pragma warning restore

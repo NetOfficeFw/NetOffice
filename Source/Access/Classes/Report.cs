@@ -28,7 +28,7 @@ namespace NetOffice.AccessApi
 	public delegate void Report_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	public delegate void Report_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
 	public delegate void Report_KeyPressEventHandler(ref Int16 keyAscii);
-	public delegate void Report_KeyUpEventHandler(ref Int16 keyCode, ref Int16 Shift);
+	public delegate void Report_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
 	public delegate void Report_TimerEventHandler();
 	public delegate void Report_FilterEventHandler(ref Int16 cancel, ref Int16 filterType);
 	public delegate void Report_ApplyFilterEventHandler(ref Int16 cancel, ref Int16 applyType);

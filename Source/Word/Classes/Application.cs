@@ -37,7 +37,7 @@ namespace NetOffice.WordApi
 	public delegate void Application_XMLValidationErrorEventHandler(NetOffice.WordApi.XMLNode xmlNode);
 	public delegate void Application_DocumentSyncEventHandler(NetOffice.WordApi.Document doc, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType);
 	public delegate void Application_EPostageInsertExEventHandler(NetOffice.WordApi.Document doc, Int32 cpDeliveryAddrStart, Int32 cpDeliveryAddrEnd, Int32 cpReturnAddrStart, Int32 cpReturnAddrEnd, Int32 xaWidth, Int32 yaHeight, string bstrPrinterName, string bstrPaperFeed, bool fPrint, ref bool fCancel);
-	public delegate void Application_MailMergeDataSourceValidate2EventHandler(NetOffice.WordApi.Document doc, ref bool Handled);
+	public delegate void Application_MailMergeDataSourceValidate2EventHandler(NetOffice.WordApi.Document doc, ref bool handled);
 	public delegate void Application_ProtectedViewWindowOpenEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow);
 	public delegate void Application_ProtectedViewWindowBeforeEditEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow, ref bool cancel);
 	public delegate void Application_ProtectedViewWindowBeforeCloseEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow, Int32 closeReason, ref bool cancel);

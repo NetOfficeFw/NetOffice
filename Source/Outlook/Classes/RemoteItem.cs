@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	public delegate void RemoteItem_CustomPropertyChangeEventHandler(string name);
 	public delegate void RemoteItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
 	public delegate void RemoteItem_CloseEventHandler(ref bool cancel);
-	public delegate void RemoteItem_PropertyChangeEventHandler(string Name);
+	public delegate void RemoteItem_PropertyChangeEventHandler(string name);
 	public delegate void RemoteItem_ReadEventHandler();
 	public delegate void RemoteItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
 	public delegate void RemoteItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);

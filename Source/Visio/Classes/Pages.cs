@@ -19,11 +19,11 @@ namespace NetOffice.VisioApi
 	public delegate void Pages_TextChangedEventHandler(NetOffice.VisioApi.IVShape shape);
 	public delegate void Pages_CellChangedEventHandler(NetOffice.VisioApi.IVCell cell);
 	public delegate void Pages_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell cell);
-	public delegate void Pages_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects cnnects);
+	public delegate void Pages_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects connects);
 	public delegate void Pages_ConnectionsDeletedEventHandler(NetOffice.VisioApi.IVConnects connects);
 	public delegate void Pages_QueryCancelPageDeleteEventHandler(NetOffice.VisioApi.IVPage page);
 	public delegate void Pages_PageDeleteCanceledEventHandler(NetOffice.VisioApi.IVPage page);
-	public delegate void Pages_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape sape);
+	public delegate void Pages_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape shape);
 	public delegate void Pages_BeforeShapeTextEditEventHandler(NetOffice.VisioApi.IVShape shape);
 	public delegate void Pages_ShapeExitedTextEditEventHandler(NetOffice.VisioApi.IVShape shape);
 	public delegate void Pages_QueryCancelSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection selection);

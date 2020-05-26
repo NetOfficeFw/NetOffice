@@ -13,10 +13,10 @@ namespace NetOffice.OutlookApi
 	public delegate void AppointmentItem_CustomPropertyChangeEventHandler(string name);
 	public delegate void AppointmentItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
 	public delegate void AppointmentItem_CloseEventHandler(ref bool cancel);
-	public delegate void AppointmentItem_PropertyChangeEventHandler(string Name);
+	public delegate void AppointmentItem_PropertyChangeEventHandler(string name);
 	public delegate void AppointmentItem_ReadEventHandler();
 	public delegate void AppointmentItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
-	public delegate void AppointmentItem_ReplyAllEventHandler(COMObject response, ref bool cancel);
+	public delegate void AppointmentItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);
 	public delegate void AppointmentItem_SendEventHandler(ref bool cancel);
 	public delegate void AppointmentItem_WriteEventHandler(ref bool cancel);
 	public delegate void AppointmentItem_BeforeCheckNamesEventHandler(ref bool cancel);

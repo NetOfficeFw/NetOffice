@@ -54,7 +54,7 @@ namespace NetOffice.AccessApi
 	public delegate void FormOld_BeforeQueryEventHandler();
 	public delegate void FormOld_SelectionChangeEventHandler();
 	public delegate void FormOld_CommandBeforeExecuteEventHandler(object command, ICOMObject cancel);
-	public delegate void FormOld_CommandCheckedEventHandler(object command, ICOMObject Checked);
+	public delegate void FormOld_CommandCheckedEventHandler(object command, ICOMObject _checked);
 	public delegate void FormOld_CommandEnabledEventHandler(object command, ICOMObject enabled);
 	public delegate void FormOld_CommandExecuteEventHandler(object command);
 	public delegate void FormOld_DataSetChangeEventHandler();

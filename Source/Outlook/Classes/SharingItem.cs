@@ -10,10 +10,10 @@ namespace NetOffice.OutlookApi
 	#pragma warning disable
 	public delegate void SharingItem_OpenEventHandler(ref bool cancel);
 	public delegate void SharingItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
-	public delegate void SharingItem_CustomPropertyChangeEventHandler(string Name);
+	public delegate void SharingItem_CustomPropertyChangeEventHandler(string name);
 	public delegate void SharingItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
 	public delegate void SharingItem_CloseEventHandler(ref bool cancel);
-	public delegate void SharingItem_PropertyChangeEventHandler(string Name);
+	public delegate void SharingItem_PropertyChangeEventHandler(string name);
 	public delegate void SharingItem_ReadEventHandler();
 	public delegate void SharingItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
 	public delegate void SharingItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);

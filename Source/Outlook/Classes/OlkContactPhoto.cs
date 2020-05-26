@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	#pragma warning disable
 	public delegate void OlkContactPhoto_ClickEventHandler();
 	public delegate void OlkContactPhoto_DoubleClickEventHandler();
-	public delegate void OlkContactPhoto_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single x, Single y);
+	public delegate void OlkContactPhoto_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkContactPhoto_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkContactPhoto_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkContactPhoto_EnterEventHandler();

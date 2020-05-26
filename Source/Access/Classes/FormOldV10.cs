@@ -44,7 +44,7 @@ namespace NetOffice.AccessApi
 	public delegate void FormOldV10_UndoBatchEditEventHandler(ref Int16 cancel);
 	public delegate void FormOldV10_BeforeBeginTransactionEventHandler(ref Int16 cancel, ref NetOffice.ADODBApi.Connection connection);
 	public delegate void FormOldV10_AfterBeginTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
-	public delegate void FormOldV10_BeforeCommitTransactionEventHandler(ref Int16 Cancel, ref NetOffice.ADODBApi.Connection connection);
+	public delegate void FormOldV10_BeforeCommitTransactionEventHandler(ref Int16 cancel, ref NetOffice.ADODBApi.Connection connection);
 	public delegate void FormOldV10_AfterCommitTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
 	public delegate void FormOldV10_RollbackTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
 	public delegate void FormOldV10_OnConnectEventHandler();
@@ -54,7 +54,7 @@ namespace NetOffice.AccessApi
 	public delegate void FormOldV10_BeforeQueryEventHandler();
 	public delegate void FormOldV10_SelectionChangeEventHandler();
 	public delegate void FormOldV10_CommandBeforeExecuteEventHandler(object command, ICOMObject cancel);
-	public delegate void FormOldV10_CommandCheckedEventHandler(object command, ICOMObject Checked);
+	public delegate void FormOldV10_CommandCheckedEventHandler(object command, ICOMObject _checked);
 	public delegate void FormOldV10_CommandEnabledEventHandler(object command, ICOMObject enabled);
 	public delegate void FormOldV10_CommandExecuteEventHandler(object command);
 	public delegate void FormOldV10_DataSetChangeEventHandler();
