@@ -11,18 +11,18 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 	
 	#region SinkPoint Interface
 
-	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[SupportByVersion("VBIDE", 5.3, 12, 14)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0002E118-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _dispReferencesEvents
 	{
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-        [SinkArgument("reference", typeof(NetOffice.VBIDEApi.Reference))]
+		[SupportByVersion("VBIDE", 5.3, 12, 14)]
+        [SinkArgument("reference", typeof(VBIDEApi.Reference))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-        [SinkArgument("reference", typeof(NetOffice.VBIDEApi.Reference))]
+		[SupportByVersion("VBIDE", 5.3, 12, 14)]
+        [SinkArgument("reference", typeof(VBIDEApi.Reference))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 	}

@@ -14,9 +14,9 @@ namespace NetOffice.VBIDEApi
 
 	/// <summary>
 	/// CoClass CodeModule 
-	/// SupportByVersion VBIDE, 12,14,5.3
+	/// SupportByVersion VBIDE, 5.3,12,14
 	/// </summary>
-	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[SupportByVersion("VBIDE", 5.3, 12, 14)]
 	[EntityType(EntityType.IsCoClass)]
  	public class CodeModule : _CodeModule
 	{
