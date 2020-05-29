@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 15.0.26228.4
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice", "NetOffice\NetOffice.csproj", "{65442327-D01F-4ECB-8C39-6D5C7622A80F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisioApi", "Visio\VisioApi.csproj", "{581B0DB6-8146-4729-9AE6-61B27F53B3E6}"

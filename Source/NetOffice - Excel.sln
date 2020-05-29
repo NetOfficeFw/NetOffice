@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 15.0.26228.4
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelApi", "Excel\ExcelApi.csproj", "{43C2FFD2-1680-490A-B0CF-BE425D6EEC7C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{79B19A83-A79F-446C-9B7E-9B595E918E40} = {79B19A83-A79F-446C-9B7E-9B595E918E40}
