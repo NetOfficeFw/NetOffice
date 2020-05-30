@@ -1581,7 +1581,7 @@ namespace NetOffice.MSHTMLApi
 
         #endregion
 
-        #region IEventBinding 
+	    #region IEventBinding
 
         /// <summary>
         /// Creates active sink helper

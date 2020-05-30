@@ -316,7 +316,7 @@ namespace NetOffice.MSFormsApi
 
 		#endregion
        
-	    #region IEventBinding Member
+	    #region IEventBinding
         
 		/// <summary>
         /// Creates active sink helper

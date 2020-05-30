@@ -205,7 +205,7 @@ namespace NetOffice.OfficeApi
 
 		#endregion
        
-	    #region IEventBinding Member
+	    #region IEventBinding
         
 		/// <summary>
         /// Creates active sink helper
