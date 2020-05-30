@@ -223,7 +223,7 @@ namespace NetOffice.AccessApi
         /// Creates a new Application that is a copy of the current instance
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
-        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        /// <exception cref="NetOffice.Exceptions.CloneException">An unexpected error occurred. See inner exception(s) for details.</exception>
         public new virtual Application Clone()
         {
             return base.Clone() as Application;
