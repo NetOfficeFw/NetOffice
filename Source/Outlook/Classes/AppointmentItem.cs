@@ -45,6 +45,8 @@ namespace NetOffice.OutlookApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862177.aspx </remarks>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ItemEvents_SinkHelper), typeof(Events.ItemEvents_10_SinkHelper))]
+	[ComEventInterface(typeof(Events.ItemEvents), typeof(Events.ItemEvents_10))]
 	public class AppointmentItem : _AppointmentItem, IEventBinding
 	{
 		#pragma warning disable
@@ -54,8 +56,8 @@ namespace NetOffice.OutlookApi
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
         private static Type _type;
-        Events.ItemEvents_SinkHelper _itemEvents_SinkHelper;
-        Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
+		private Events.ItemEvents_SinkHelper _itemEvents_SinkHelper;
+		private Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -756,7 +758,7 @@ namespace NetOffice.OutlookApi
 
 		#endregion
        
-	    #region IEventBinding Member
+	    #region IEventBinding
         
 		/// <summary>
         /// Creates active sink helper
