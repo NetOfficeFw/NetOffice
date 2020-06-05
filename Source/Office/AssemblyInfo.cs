@@ -36,7 +36,7 @@ using NetOffice.Attributes;
 /*
 Alias Table
  
-[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+[SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
 MsoRGBType as Int32
 
 */

@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 	PowerPoint - Microsoft PowerPoint 12.0 Object Library - 12
 	PowerPoint - <NoDescription> - 14
 	PowerPoint - <NoDescription> - 15
-    PowerPoint - <NoDescription> - 16
+	PowerPoint - <NoDescription> - 16
 */
 
 [assembly: AssemblyTitle("PowerPoint")]

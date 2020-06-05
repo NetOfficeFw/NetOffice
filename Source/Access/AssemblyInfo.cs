@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 	Access - Microsoft Access 12.0 Object Library - 12
 	Access - Microsoft Access 14.0 Object Library - 14
 	Access - Microsoft Access 15.0 Object Library - 15
-	Access - Microsoft Access 15.0 Object Library - 16
+	Access - Microsoft Access 16.0 Object Library - 16
 */
 
 [assembly: AssemblyTitle("Access")]
@@ -38,7 +38,6 @@ using NetOffice.Attributes;
 [assembly: Dependency("ADODBApi.dll", LoadHint.Default)]
 [assembly: Dependency("OWC10Api.dll", LoadHint.Default)]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
-
 
 
 /*

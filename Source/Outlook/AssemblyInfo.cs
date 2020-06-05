@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 	Outlook - Microsoft Outlook 12.0 Object Library - 12
 	Outlook - Microsoft Outlook 14.0 Object Library - 14
 	Outlook - Microsoft Outlook 15.0 Object Library - 15
-	Outlook - Microsoft Outlook 15.0 Object Library - 16
+	Outlook - Microsoft Outlook 16.0 Object Library - 16
 */
 
 [assembly: AssemblyTitle("Outlook")]
