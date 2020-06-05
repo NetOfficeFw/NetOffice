@@ -40,7 +40,7 @@ namespace AccessApi.Utils
         {
             get
             {
-                return _namespace;
+                return _name;
             }
         }
 
