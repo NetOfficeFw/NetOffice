@@ -5,7 +5,7 @@ using NetOffice.Attributes;
 
 namespace AccessApi.Utils
 {
-	#pragma warning disable
+    #pragma warning disable
     /// <summary>
     /// Necessary factory info, used from NetOffice.Core while Initialize()
     /// </summary>
@@ -19,8 +19,8 @@ namespace AccessApi.Utils
         private Assembly  _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
         private Type[]	  _exportedTypes;
-		private string[]  _dependents;
-		
+        private string[]  _dependents;
+
         #endregion
 
         #region Ctor

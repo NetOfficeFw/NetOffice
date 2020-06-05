@@ -19,7 +19,7 @@ namespace ADODBApi.Utils
         private Assembly  _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
         private Type[]	  _exportedTypes;
-		private string[]  _dependents;
+        private string[]  _dependents;
 
         #endregion
 

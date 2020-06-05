@@ -19,8 +19,8 @@ namespace WordApi.Utils
         private Assembly  _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
         private Type[]	  _exportedTypes;
-		private string[]  _dependents;
-		
+        private string[]  _dependents;
+
         #endregion
 
         #region Ctor
@@ -34,7 +34,7 @@ namespace WordApi.Utils
 
         #endregion
 
-        #region IFactoryInfo Members
+        #region IFactoryInfo
 
         public string AssemblyName
         {
