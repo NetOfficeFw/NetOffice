@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessApi\Utils\ProjectInfoTests.cs" />
+    <Compile Include="ExcelApi\DispatchInterfaces\RangeIntegrationTests.cs" />
     <Compile Include="Helpers\ConnectionPointStub.cs" />
     <Compile Include="Helpers\TestableComObjectStub.cs" />
     <Compile Include="Helpers\FakeComObject.cs" />
@@ -60,6 +61,10 @@
     <ProjectReference Include="..\Access\AccessApi.csproj">
       <Project>{61C1EB27-64CC-4E88-A3AE-1E6D002E15D1}</Project>
       <Name>AccessApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excel\ExcelApi.csproj">
+      <Project>{43c2ffd2-1680-490a-b0cf-be425d6eec7c}</Project>
+      <Name>ExcelApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
