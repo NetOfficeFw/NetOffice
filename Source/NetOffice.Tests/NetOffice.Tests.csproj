@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessApi\Utils\ProjectInfoTests.cs" />
+    <Compile Include="ExcelApi\DispatchInterfaces\CustomXMLPartIntegrationTests.cs" />
     <Compile Include="ExcelApi\DispatchInterfaces\RangeIntegrationTests.cs" />
     <Compile Include="Helpers\ConnectionPointStub.cs" />
     <Compile Include="Helpers\TestableComObjectStub.cs" />
@@ -69,6 +70,10 @@
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
       <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
+      <Name>OfficeApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Outlook\OutlookApi.csproj">
       <Project>{98DE103A-F036-4814-A740-9B4DE13001FF}</Project>
