@@ -2,6 +2,9 @@
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
+using NetOffice.OfficeApi.Enums;
+using _CustomXMLPartInterop = NetOffice.OfficeApi.DispatchInterfaces.Interop._CustomXMLPart;
+using CustomXMLNodeInterop = NetOffice.OfficeApi.DispatchInterfaces.Interop.CustomXMLNode;
 
 namespace NetOffice.OfficeApi
 {
@@ -253,10 +256,17 @@ namespace NetOffice.OfficeApi
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
 		/// <param name="nodeValue">optional string NodeValue = </param>
 		[SupportByVersion("Office", 12,14,15,16)]
-		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType, object nodeValue)
+		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, string name, string namespaceURI, NetOffice.OfficeApi.CustomXMLNode nextSibling, MsoCustomXMLNodeType nodeType, string nodeValue)
 		{
-			 Factory.ExecuteMethod(this, "AddNode", new object[]{ parent, name, namespaceURI, nextSibling, nodeType, nodeValue });
-		}
+			//Factory.ExecuteMethod(this, "AddNode", new object[]{ parent, name, namespaceURI, nextSibling, nodeType, nodeValue });
+            _CustomXMLPartInterop proxy = this.UnderlyingObject as _CustomXMLPartInterop;
+            if (proxy != null)
+            {
+                var parentProxy = parent?.UnderlyingObject as CustomXMLNodeInterop;
+                var nextSiblingProxy = nextSibling?.UnderlyingObject as CustomXMLNodeInterop;
+                proxy.AddNode(parentProxy, name, namespaceURI, nextSiblingProxy, nodeType, nodeValue);
+            }
+        }
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16

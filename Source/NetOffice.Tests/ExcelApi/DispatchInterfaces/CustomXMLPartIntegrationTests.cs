@@ -5,6 +5,7 @@ using System.Text;
 using NetOffice.ExcelApi;
 using NetOffice.Exceptions;
 using NetOffice.OfficeApi;
+using NetOffice.OfficeApi.Enums;
 using NUnit.Framework;
 
 namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
@@ -18,6 +19,8 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
         public void SetUp()
         {
             this.ExcelApplication = new Application();
+            this.ExcelApplication.Visible = false;
+            this.ExcelApplication.DisplayAlerts = false;
         }
 
         [TearDown]
@@ -95,10 +98,12 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
                 CustomXMLNode cxn = cxp1.SelectSingleNode("/invoice");
 
                 // Act
-                Assert.Throws<MethodCOMException>(() => cxp1.AddNode(cxn, null, null, null, null, null));
+                cxp1.AddNode(cxn, "upcode", "urn:invoice:namespace", null, MsoCustomXMLNodeType.msoCustomXMLNodeElement, "");
+                var actualXml = cxp1.XML;
+                workbook.Close(false);
 
                 // Assert
-                // Assert.AreEqual(@"<invoice><upccode xmlns=""urn: invoice:namespace""/></invoice>", cxp1.XML);
+                Assert.AreEqual(@"<invoice><upccode xmlns=""urn: invoice:namespace""/></invoice>", actualXml);
             }
         }
 
