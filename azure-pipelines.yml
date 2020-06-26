@@ -76,7 +76,7 @@ steps:
       --timestamp-rfc3161 http://timestamp.digicert.com ^
       --timestamp-digest sha256 ^
       --azure-key-vault-url https://opensourcesigning.vault.azure.net ^
-      --azure-key-vault-client-id "3d1cb34e-2c26-408a-ad6c-d7ff4e0881d5" ^
+      --azure-key-vault-client-id "$(KeyVaultClientId)" ^
       --azure-key-vault-client-secret "$(KeyVaultClientSecret)" ^
       --azure-key-vault-certificate "goITSolutions-2019-09" ^
       --input-file-list signlist.txt ^
