@@ -5,17 +5,26 @@ pool:
 
 variables:
   solution: Source/NetOffice.sln
-  buildPlatform: Any CPU
-  buildConfiguration: Release
+
+strategy:
+  maxParallel: 2
+  matrix:
+    Debug:
+      buildPlatform: 'Any CPU'
+      buildConfiguration: 'Debug'
+    Release:
+      buildPlatform: 'Any CPU'
+      buildConfiguration: 'Release'
 
 steps:
+- task: NuGetToolInstaller@1
+
 - task: CopyFiles@2
+  displayName: Copy source code to artifact
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)\Source'
     contents: '**' 
     targetFolder: '$(Build.ArtifactStagingDirectory)\Source'
-
-- task: NuGetToolInstaller@0
 
 - task: NuGetCommand@2
   inputs:
@@ -36,7 +45,7 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      Source\NetOffice.Tests\bin\**\NetOffice.Tests.dll
+      Source\NetOffice.Tests\bin\$(buildConfiguration)\NetOffice.Tests.dll
 
 - task: DeleteFiles@1
   displayName: Cleanup assemblies output
