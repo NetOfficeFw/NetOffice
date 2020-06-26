@@ -62,25 +62,25 @@ steps:
       'ClientApplication.*'
       'stdole.dll'
 
-- script: |
-    dir /b *.dll > signlist.txt
-    AzureSignTool.exe sign ^
-    --file-digest sha256 ^
-    --description-url "https://github.com/NetOfficeFw/NetOffice" ^
-    --no-page-hashing ^
-    --timestamp-rfc3161 http://timestamp.digicert.com ^
-    --timestamp-digest sha256 ^
-    --azure-key-vault-url https://opensourcesigning.vault.azure.net ^
-    --azure-key-vault-client-id "3d1cb34e-2c26-408a-ad6c-d7ff4e0881d5" ^
-    --azure-key-vault-client-secret "%KEYVAULTCLIENTSECRET%" ^
-    --azure-key-vault-certificate "goITSolutions-2019-09" ^
-    --input-file-list signlist.txt ^
-    --verbose
-  env:
-    KEYVAULTCLIENTSECRET: $(KeyVaultClientSecret)
+- task: CmdLine@2
   displayName: Sign NetOffice libraries
-  workingDirectory: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
   condition: eq(variables['buildConfiguration'], 'Release')
+  inputs:
+    workingDirectory: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
+    script: |
+      dir /b *.dll > signlist.txt
+      AzureSignTool.exe sign ^
+      --file-digest sha256 ^
+      --description-url "https://github.com/NetOfficeFw/NetOffice" ^
+      --no-page-hashing ^
+      --timestamp-rfc3161 http://timestamp.digicert.com ^
+      --timestamp-digest sha256 ^
+      --azure-key-vault-url https://opensourcesigning.vault.azure.net ^
+      --azure-key-vault-client-id "3d1cb34e-2c26-408a-ad6c-d7ff4e0881d5" ^
+      --azure-key-vault-client-secret "$(KeyVaultClientSecret)" ^
+      --azure-key-vault-certificate "goITSolutions-2019-09" ^
+      --input-file-list signlist.txt ^
+      --verbose
 
 - task: CopyFiles@2
   inputs:
