@@ -59,8 +59,8 @@ steps:
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
     contents: |
-      'ClientApplication.*'
-      'stdole.dll'
+      ClientApplication.**
+      stdole.dll
 
 - task: CmdLine@2
   displayName: Sign NetOffice libraries
@@ -85,7 +85,11 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
-    contents: '**' 
+    contents: |
+      **
+      !ClientApplication.**
+      !stdole.dll
+      !signlist.txt
     targetFolder: '$(Build.ArtifactStagingDirectory)\Assemblies\Any CPU'
 
 - task: ArchiveFiles@2
