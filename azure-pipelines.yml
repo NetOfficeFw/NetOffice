@@ -29,9 +29,17 @@ steps:
 - task: CopyFiles@2
   displayName: Copy source code to artifact
   inputs:
-    sourceFolder: '$(Build.SourcesDirectory)\Source'
-    contents: '**' 
-    targetFolder: '$(Build.ArtifactStagingDirectory)\Source'
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents: |
+      Source/**
+      Documentation/**
+      Examples/**
+      Tutorials/**
+      Breaking Changes.txt
+      BugFixes.txt
+      ChangeLog.txt
+      LICENSE.txt
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: NuGetCommand@2
   inputs:
