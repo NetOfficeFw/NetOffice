@@ -1,3 +1,6 @@
+--- Version 1.7.4.10 ---
+01.) Use portable symbol files in Release builds
+
 --- Version 1.7.4.9 ---
 01.) Allow TaskPaneInfo objects to be tagged from user code
 
