@@ -1,3 +1,6 @@
+--- Version 1.7.4.11 ---
+01.) Change TaskPaneInfo.TagHwnd to IntPtr type
+
 --- Version 1.7.4.10 ---
 01.) Use portable symbol files in Release builds
 
