@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi.Tools
         /// Use this property to associate a tag to a task pane so you can identify
         /// it from your own code. The tag can be in form of a window handle (HWND) 32-bit value.
         /// </remarks>
-        public int TagHwnd { get; set; }
+        public IntPtr TagHwnd { get; set; }
 
         /// <summary>
         /// properties was set from the client before the instance was created. The COMAddin class perfom latebind property set calls during this dictionary
