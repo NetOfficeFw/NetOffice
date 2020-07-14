@@ -7,6 +7,8 @@
 NetOffice supports extending and automating Microsoft Office applications: Excel, Word, Outlook,
 PowerPoint, Access, Project and Visio.
 
+:rotating_light: **Notice**: Our official packages on NuGet use [**NetOfficeFw** prefix](https://www.nuget.org/packages?q=NetOfficeFw). Using old 1.7.4 packages? [Learn how to migrate.](https://netoffice.io/migrate-notice/)
+
 ## Features
 
 * MS Office integration without version limitations
