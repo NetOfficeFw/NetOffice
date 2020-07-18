@@ -5,17 +5,41 @@ pool:
 
 variables:
   solution: Source/NetOffice.sln
-  buildPlatform: Any CPU
-  buildConfiguration: Release
+
+strategy:
+  maxParallel: 2
+  matrix:
+    Debug:
+      buildPlatform: 'Any CPU'
+      buildConfiguration: 'Debug'
+    Release:
+      buildPlatform: 'Any CPU'
+      buildConfiguration: 'Release'
 
 steps:
-- task: CopyFiles@2
-  inputs:
-    sourceFolder: '$(Build.SourcesDirectory)\Source'
-    contents: '**' 
-    targetFolder: '$(Build.ArtifactStagingDirectory)\Source'
+- task: NuGetToolInstaller@1
 
-- task: NuGetToolInstaller@0
+- task: DotNetCoreCLI@2
+  displayName: Install AzureSignTool
+  inputs:
+    command: 'custom'
+    custom: 'tool'
+    arguments: 'install --global azuresigntool'
+
+- task: CopyFiles@2
+  displayName: Copy source code to artifact
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents: |
+      Source/**
+      Documentation/**
+      Examples/**
+      Tutorials/**
+      Breaking Changes.txt
+      BugFixes.txt
+      ChangeLog.txt
+      LICENSE.txt
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: NuGetCommand@2
   inputs:
@@ -36,20 +60,44 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      Source\NetOffice.Tests\bin\**\NetOffice.Tests.dll
+      Source\NetOffice.Tests\bin\$(buildConfiguration)\NetOffice.Tests.dll
 
 - task: DeleteFiles@1
   displayName: Cleanup assemblies output
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
     contents: |
-      'ClientApplication.*'
-      'stdole.dll'
+      ClientApplication.**
+      stdole.dll
+
+- task: CmdLine@2
+  displayName: Sign NetOffice libraries
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'), eq(variables['buildConfiguration'], 'Release'))
+  inputs:
+    workingDirectory: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
+    script: |
+      dir /b *.dll > signlist.txt
+      AzureSignTool.exe sign ^
+      --file-digest sha256 ^
+      --description-url "https://github.com/NetOfficeFw/NetOffice" ^
+      --no-page-hashing ^
+      --timestamp-rfc3161 http://timestamp.digicert.com ^
+      --timestamp-digest sha256 ^
+      --azure-key-vault-url https://opensourcesigning.vault.azure.net ^
+      --azure-key-vault-client-id "$(KeyVaultClientId)" ^
+      --azure-key-vault-client-secret "$(KeyVaultClientSecret)" ^
+      --azure-key-vault-certificate "goITSolutions-2019-09" ^
+      --input-file-list signlist.txt ^
+      --verbose
 
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
-    contents: '**' 
+    contents: |
+      **
+      !ClientApplication.**
+      !stdole.dll
+      !signlist.txt
     targetFolder: '$(Build.ArtifactStagingDirectory)\Assemblies\Any CPU'
 
 - task: ArchiveFiles@2
@@ -58,10 +106,10 @@ steps:
     rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.8_unsigned_build$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.11_$(buildConfiguration)_build$(Build.BuildId).zip'
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.8_unsigned_build$(Build.BuildId).zip'
-    artifactName: NetOffice Package
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.11_$(buildConfiguration)_build$(Build.BuildId).zip'
+    artifactName: NetOffice $(buildConfiguration) Package

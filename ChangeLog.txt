@@ -1,3 +1,12 @@
+--- Version 1.7.4.11 ---
+01.) Change TaskPaneInfo.TagHwnd to IntPtr type
+
+--- Version 1.7.4.10 ---
+01.) Use portable symbol files in Release builds
+
+--- Version 1.7.4.9 ---
+01.) Allow TaskPaneInfo objects to be tagged from user code
+
 --- Version 1.7.4.6 ---
 
 01.) Fix github ticket #231 (Access library ProjectInfo returns incorrect AssemblyName value)
