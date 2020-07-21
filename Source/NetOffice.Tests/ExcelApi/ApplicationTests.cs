@@ -111,5 +111,63 @@ namespace NetOffice.Tests.ExcelApi
             // Assert
             Assert.IsTrue(actualValue);
         }
+
+        [Test]
+        public void GetEventRecipients_WithSingleSubscriber_ReturnsTheSubsriber()
+        {
+            // Arrange
+            ExcelApp.SheetActivateEvent += OnSheetActivateEventHandler1;
+
+            // Act
+            var actualRecipient = ExcelApp.GetEventRecipients("SheetActivate");
+
+            // Assert
+            CollectionAssert.IsNotEmpty(actualRecipient);
+            var recipient = actualRecipient[0];
+            Assert.AreEqual("OnSheetActivateEventHandler1", recipient.Method.Name);
+        }
+
+        [Test]
+        public void GetCountOfEventRecipients_WithNoSubscribers_ReturnsZero()
+        {
+            // Arrange
+            // ExcelApp.SheetActivateEvent += OnSheetActivateEventHandler;
+
+            // Act
+            var actualCount = ExcelApp.GetCountOfEventRecipients("SheetActivate");
+
+            // Assert
+            Assert.AreEqual(0, actualCount);
+        }
+
+        [Test]
+        public void GetCountOfEventRecipients_WithMultipleSubscribers_ReturnsZero()
+        {
+            // Arrange
+            ExcelApp.SheetActivateEvent += OnSheetActivateEventHandler1;
+            ExcelApp.SheetActivateEvent += OnSheetActivateEventHandler2;
+            ExcelApp.SheetActivateEvent += OnSheetActivateEventHandler3;
+
+            // Act
+            var actualCount = ExcelApp.GetCountOfEventRecipients("SheetActivate");
+
+            // Assert
+            Assert.AreEqual(3, actualCount);
+        }
+
+        void OnSheetActivateEventHandler1(ICOMObject sh)
+        {
+            // noop
+        }
+
+        void OnSheetActivateEventHandler2(ICOMObject sh)
+        {
+            // noop
+        }
+
+        void OnSheetActivateEventHandler3(ICOMObject sh)
+        {
+            // noop
+        }
     }
 }

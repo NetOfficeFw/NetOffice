@@ -76,5 +76,113 @@ namespace NetOffice.Tests.NetOffice.Events
             // Assert
             Assert.IsTrue(actualValue);
         }
+
+        [Test]
+        public void GetEventRecipients_WithNoSubscribers_ReturnsEmptyCollection()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+
+            // Act
+            var actualRecipient = CoClassEventReflector.GetEventRecipients(stub, typeof(EventClassStub), "Custom1");
+
+            // Assert
+            Assert.IsNotNull(actualRecipient);
+            CollectionAssert.IsEmpty(actualRecipient);
+        }
+
+        [Test]
+        public void GetEventRecipients_WithSingleSubscriber_ReturnsTheSubsriber()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+            stub.Custom1Event += OnCustom1EventHandler;
+
+            // Act
+            var actualRecipient = CoClassEventReflector.GetEventRecipients(stub, typeof(EventClassStub), "Custom1");
+
+            // Assert
+            CollectionAssert.IsNotEmpty(actualRecipient);
+            var recipient = actualRecipient[0];
+            Assert.AreEqual("OnCustom1EventHandler", recipient.Method.Name);
+        }
+
+        [Test]
+        public void GetEventRecipients_WithMultipleSubscribers_ReturnsTheCorrectSubsriber()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+            stub.Custom1Event += OnCustom1EventHandler;
+            stub.Custom2Event += OnCustom2EventHandler;
+            stub.Custom3Event += OnCustom3EventHandler;
+
+            // Act
+            var actualRecipient = CoClassEventReflector.GetEventRecipients(stub, typeof(EventClassStub), "Custom2");
+
+            // Assert
+            CollectionAssert.IsNotEmpty(actualRecipient);
+            var recipient = actualRecipient[0];
+            Assert.AreEqual("OnCustom2EventHandler", recipient.Method.Name);
+        }
+
+        [Test]
+        public void GetCountOfEventRecipients_NonExistingEventName_ThrowsException()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+
+            // Act & Assert
+            Assert.Throws<InvalidOperationException>(
+                () => CoClassEventReflector.GetCountOfEventRecipients(stub, typeof(EventClassStub), "IncorrectEventName"));
+        }
+
+        [Test]
+        public void GetCountOfEventRecipients_WithNoSubscribers_ReturnsZero()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+
+            // Act
+            var actualCount = CoClassEventReflector.GetCountOfEventRecipients(stub, typeof(EventClassStub), "Custom1");
+
+            // Assert
+            Assert.AreEqual(0, actualCount);
+        }
+
+        [Test]
+        public void GetCountOfEventRecipients_WithMultipleSubscribers_ReturnsZero()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+            stub.Custom1Event += OnCustom1EventHandler;
+
+            stub.Custom2Event += OnCustom1EventHandler;
+            stub.Custom2Event += OnCustom1EventHandler;
+            
+            stub.Custom3Event += OnCustom1EventHandler;
+            stub.Custom3Event += OnCustom1EventHandler;
+            stub.Custom3Event += OnCustom1EventHandler;
+
+            // Act
+            var actualCount = CoClassEventReflector.GetCountOfEventRecipients(stub, typeof(EventClassStub), "Custom2");
+
+            // Assert
+            Assert.AreEqual(2, actualCount);
+        }
+
+        private void OnCustom1EventHandler(object sender, EventArgs e)
+        {
+            // noop
+        }
+
+        private void OnCustom2EventHandler(object sender, EventArgs e)
+        {
+            // noop
+        }
+
+        private void OnCustom3EventHandler(object sender, EventArgs e)
+        {
+            // noop
+        }
     }
 }
