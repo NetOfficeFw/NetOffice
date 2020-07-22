@@ -48,11 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessApi\Utils\ProjectInfoTests.cs" />
+    <Compile Include="ExcelApi\ApplicationTests.cs" />
     <Compile Include="ExcelApi\DispatchInterfaces\CustomXMLPartIntegrationTests.cs" />
     <Compile Include="ExcelApi\DispatchInterfaces\RangeIntegrationTests.cs" />
     <Compile Include="Helpers\ConnectionPointStub.cs" />
     <Compile Include="Helpers\TestableComObjectStub.cs" />
     <Compile Include="Helpers\FakeComObject.cs" />
+    <Compile Include="NetOffice\Events\CoClassEventReflectorTests.cs" />
+    <Compile Include="NetOffice\Events\EventClassStub.cs" />
     <Compile Include="OutlookApi\Tools\OlRibbonTypeTests.cs" />
     <Compile Include="OutlookApi\Tools\OlCustomUIAttributeTests.cs" />
     <Compile Include="PowerPointApi\Events\EApplication_SinkHelperTests.cs" />
