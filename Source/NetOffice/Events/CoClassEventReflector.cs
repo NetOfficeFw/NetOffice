@@ -21,12 +21,14 @@ namespace NetOffice.Events
         {
             foreach (EventInfo item in type.GetEvents())
             {
-                MulticastDelegate eventDelegate = (MulticastDelegate)type.GetType().GetField(item.Name,
-                                                                            BindingFlags.NonPublic |
-                                                                            BindingFlags.Instance).GetValue(instance);
+                // public events already have "Event" suffix, we just need to add the _ prefix used by private fields
+                FieldInfo field = type.GetField("_" + item.Name, BindingFlags.Instance | BindingFlags.NonPublic);
+                MulticastDelegate eventDelegate = field?.GetValue(instance) as MulticastDelegate;
 
-                if ((null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0))
-                    return false;
+                if (eventDelegate?.GetInvocationList().Length > 0)
+                {
+                    return true;
+                }
             }
 
             return false;
