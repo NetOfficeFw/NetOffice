@@ -43,10 +43,11 @@ namespace NetOffice.Events
         /// <returns>true if event is active, otherwise false</returns>
         public static bool HasEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            FieldInfo field = type.GetField("_" + eventName + "Event", BindingFlags.Instance | BindingFlags.NonPublic);
+            string fieldName = MakeEventFieldName(eventName);
+            FieldInfo field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
             if (field == null)
             {
-                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, "Event name is incorrect.");
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, $"Event with name '{eventName}' does not exist.");
             }
 
             MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
@@ -69,10 +70,11 @@ namespace NetOffice.Events
         /// <returns>actual event recipients</returns>
         public static Delegate[] GetEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            FieldInfo field = type.GetField("_" + eventName + "Event", BindingFlags.Instance | BindingFlags.NonPublic);
+            string fieldName = MakeEventFieldName(eventName);
+            FieldInfo field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
             if (field == null)
             {
-                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, "Event name is incorrect.");
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, $"Event with name '{eventName}' does not exist.");
             }
 
             MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
@@ -95,10 +97,11 @@ namespace NetOffice.Events
         /// <returns>count of event recipients</returns>
         public static int GetCountOfEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            FieldInfo field = type.GetField("_" + eventName + "Event", BindingFlags.Instance | BindingFlags.NonPublic);
+            string fieldName = MakeEventFieldName(eventName);
+            FieldInfo field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
             if (field == null)
             {
-                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, "Event name is incorrect.");
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, $"Event with name '{eventName}' does not exist.");
             }
 
             MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
@@ -148,6 +151,16 @@ namespace NetOffice.Events
             }
             else
                 return 0;
+        }
+
+        private static string MakeEventFieldName(string eventName)
+        {
+            if (eventName.EndsWith("Event"))
+            {
+                return "_" + eventName;
+            }
+
+            return "_" + eventName + "Event";
         }
     }
 }

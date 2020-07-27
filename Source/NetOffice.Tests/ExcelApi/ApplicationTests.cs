@@ -87,6 +87,18 @@ namespace NetOffice.Tests.ExcelApi
         }
 
         [Test]
+        public void HasEventRecipients_NameofEventNameParam_WithNoSubscribers_ReturnsFalse()
+        {
+            // Arrange
+
+            // Act
+            var actualValue = ExcelApp.HasEventRecipients(nameof(ExcelApp.SheetChangeEvent));
+
+            // Assert
+            Assert.IsFalse(actualValue);
+        }
+
+        [Test]
         public void HasEventRecipients_EventNameParam_WithASubscriberOnAnotherEvent_ReturnsFalse()
         {
             // Arrange
