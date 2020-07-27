@@ -78,6 +78,21 @@ namespace NetOffice.Tests.NetOffice.Events
         }
 
         [Test]
+        public void HasEventRecipients_EventNameParam_NonExistingEventName_ThrowsArgumentException()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+
+            // Act & Assert
+            var actualException = Assert.Throws<ArgumentOutOfRangeException>(
+                () => CoClassEventReflector.HasEventRecipients(stub, typeof(EventClassStub), "NonExistingEventName")
+            );
+
+            Assert.AreEqual("eventName", actualException.ParamName);
+            Assert.AreEqual("NonExistingEventName", actualException.ActualValue);
+        }
+
+        [Test]
         public void GetEventRecipients_WithNoSubscribers_ReturnsEmptyCollection()
         {
             // Arrange
@@ -126,14 +141,32 @@ namespace NetOffice.Tests.NetOffice.Events
         }
 
         [Test]
-        public void GetCountOfEventRecipients_NonExistingEventName_ThrowsException()
+        public void GetEventRecipients_NonExistingEventName_ThrowsArgumentException()
         {
             // Arrange
             var stub = new EventClassStub();
 
             // Act & Assert
-            Assert.Throws<InvalidOperationException>(
+            var actualException = Assert.Throws<ArgumentOutOfRangeException>(
+                () => CoClassEventReflector.GetEventRecipients(stub, typeof(EventClassStub), "NonExistingEventName")
+            );
+
+            Assert.AreEqual("eventName", actualException.ParamName);
+            Assert.AreEqual("NonExistingEventName", actualException.ActualValue);
+        }
+
+        [Test]
+        public void GetCountOfEventRecipients_NonExistingEventName_ThrowsArgumentException()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+
+            // Act & Assert
+            var actualException = Assert.Throws<ArgumentOutOfRangeException>(
                 () => CoClassEventReflector.GetCountOfEventRecipients(stub, typeof(EventClassStub), "IncorrectEventName"));
+
+            Assert.AreEqual("eventName", actualException.ParamName);
+            Assert.AreEqual("IncorrectEventName", actualException.ActualValue);
         }
 
         [Test]

@@ -113,6 +113,20 @@ namespace NetOffice.Tests.ExcelApi
         }
 
         [Test]
+        public void HasEventRecipients_EventNameParam_NonExistingEventName_ThrowsArgumentException()
+        {
+            // Arrange
+
+            // Act & Assert
+            var actualException = Assert.Throws<ArgumentOutOfRangeException>(
+                () => ExcelApp.HasEventRecipients("NonExistingEventName")
+            );
+
+            Assert.AreEqual("eventName", actualException.ParamName);
+            Assert.AreEqual("NonExistingEventName", actualException.ActualValue);
+        }
+
+        [Test]
         public void GetEventRecipients_WithSingleSubscriber_ReturnsTheSubsriber()
         {
             // Arrange
@@ -125,6 +139,20 @@ namespace NetOffice.Tests.ExcelApi
             CollectionAssert.IsNotEmpty(actualRecipient);
             var recipient = actualRecipient[0];
             Assert.AreEqual("OnSheetActivateEventHandler1", recipient.Method.Name);
+        }
+
+        [Test]
+        public void GetEventRecipients_EventNameParam_NonExistingEventName_ThrowsArgumentException()
+        {
+            // Arrange
+
+            // Act & Assert
+            var actualException = Assert.Throws<ArgumentOutOfRangeException>(
+                () => ExcelApp.GetEventRecipients("NonExistingEventName")
+            );
+
+            Assert.AreEqual("eventName", actualException.ParamName);
+            Assert.AreEqual("NonExistingEventName", actualException.ActualValue);
         }
 
         [Test]
@@ -153,6 +181,20 @@ namespace NetOffice.Tests.ExcelApi
 
             // Assert
             Assert.AreEqual(3, actualCount);
+        }
+
+        [Test]
+        public void GetCountOfEventRecipients_EventNameParam_NonExistingEventName_ThrowsArgumentException()
+        {
+            // Arrange
+
+            // Act & Assert
+            var actualException = Assert.Throws<ArgumentOutOfRangeException>(
+                () => ExcelApp.GetCountOfEventRecipients("NonExistingEventName")
+            );
+
+            Assert.AreEqual("eventName", actualException.ParamName);
+            Assert.AreEqual("NonExistingEventName", actualException.ActualValue);
         }
 
         void OnSheetActivateEventHandler1(ICOMObject sh)
