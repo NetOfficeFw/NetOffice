@@ -125,10 +125,14 @@ namespace NetOffice.Events
         /// <returns>count of called event recipients</returns>
         public static int RaiseCustomEvent(ICOMObject instance, Type type, string eventName, ref object[] paramsArray)
         {
-            MulticastDelegate eventDelegate = (MulticastDelegate)type.GetField(
-                                                "_" + eventName + "Event",
-                                                BindingFlags.Instance |
-                                                BindingFlags.NonPublic).GetValue(instance);
+            string fieldName = MakeEventFieldName(eventName);
+            FieldInfo field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, $"Event with name '{eventName}' does not exist.");
+            }
+
+            MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
 
             if (null != eventDelegate)
             {
@@ -145,12 +149,15 @@ namespace NetOffice.Events
                     }
                 }
 
-                if(instance.Settings.EnableAutoDisposeEventArguments)
+                if (instance.Settings.EnableAutoDisposeEventArguments)
+                {
                     Invoker.ReleaseParamsArray(paramsArray);
+                }
+
                 return delegates.Length;
             }
-            else
-                return 0;
+
+            return 0;
         }
 
         private static string MakeEventFieldName(string eventName)

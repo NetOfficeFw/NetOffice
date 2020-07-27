@@ -294,6 +294,70 @@ namespace NetOffice.Tests.NetOffice.Events
             Assert.AreEqual(3, actualCount);
         }
 
+        [Test]
+        public void RaiseCustomEvent_WithNoSubscribers_ReturnsZero()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+            var p = new object[] { };
+
+            // Act
+            var actualCount = CoClassEventReflector.RaiseCustomEvent(stub, typeof(EventClassStub), "Custom1", ref p);
+
+            // Assert
+            Assert.AreEqual(0, actualCount);
+        }
+
+        [Test]
+        public void RaiseCustomEvent_WithTwoSubscribers_ReturnsTwo()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+            stub.Custom2Event += OnCustom2EventHandler;
+            stub.Custom2Event += OnCustom2EventHandler;
+
+            var p = new object[] { this, new EventArgs() };
+
+            // Act
+            var actualCount = CoClassEventReflector.RaiseCustomEvent(stub, typeof(EventClassStub), "Custom2", ref p);
+
+            // Assert
+            Assert.AreEqual(2, actualCount);
+        }
+
+        [Test]
+        public void RaiseCustomEvent_NameofEventName_WithThreeSubscribers_ReturnsCorrectInvocationsCount()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+            stub.Custom3Event += OnCustom3EventHandler;
+            stub.Custom3Event += OnCustom3EventHandler;
+            stub.Custom3Event += OnCustom3EventHandler;
+
+            var p = new object[] { this, new EventArgs() };
+
+            // Act
+            var actualCount = CoClassEventReflector.RaiseCustomEvent(stub, typeof(EventClassStub), nameof(EventClassStub.Custom3Event), ref p);
+
+            // Assert
+            Assert.AreEqual(3, actualCount);
+        }
+
+        [Test]
+        public void RaiseCustomEvent_NonExistingEventName_ThrowsArgumentException()
+        {
+            // Arrange
+            var stub = new EventClassStub();
+            var p = new object[] { };
+
+            // Act & Assert
+            var actualException = Assert.Throws<ArgumentOutOfRangeException>(
+                () => CoClassEventReflector.RaiseCustomEvent(stub, typeof(EventClassStub), "NonExistingEventName", ref p));
+
+            Assert.AreEqual("eventName", actualException.ParamName);
+            Assert.AreEqual("NonExistingEventName", actualException.ActualValue);
+        }
+
         private void OnCustom1EventHandler(object sender, EventArgs e)
         {
             // noop
