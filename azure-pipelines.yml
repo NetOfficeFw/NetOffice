@@ -19,6 +19,12 @@ strategy:
 steps:
 - task: NuGetToolInstaller@1
 
+- task: UseDotNet@2
+  displayName: 'Use .NET Core Runtime'
+  inputs:
+    packageType: runtime
+    version: 2.1.x
+
 - task: DotNetCoreCLI@2
   displayName: Install AzureSignTool
   inputs:
