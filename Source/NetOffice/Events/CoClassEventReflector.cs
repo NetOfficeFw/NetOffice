@@ -43,18 +43,21 @@ namespace NetOffice.Events
         /// <returns>true if event is active, otherwise false</returns>
         public static bool HasEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            MulticastDelegate eventDelegate = (MulticastDelegate)type.GetField(
-                                                "_" + eventName + "Event",
-                                                BindingFlags.Instance |
-                                                BindingFlags.NonPublic).GetValue(instance);
+            FieldInfo field = type.GetField("_" + eventName + "Event", BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, "Event name is incorrect.");
+            }
+
+            MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
 
             if (null != eventDelegate)
             {
                 Delegate[] delegates = eventDelegate.GetInvocationList();
                 return delegates.Length > 0;
             }
-            else
-                return false;
+            
+            return false;
         }
 
         /// <summary>
@@ -66,18 +69,21 @@ namespace NetOffice.Events
         /// <returns>actual event recipients</returns>
         public static Delegate[] GetEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            MulticastDelegate eventDelegate = (MulticastDelegate)type.GetField(
-                                                "_" + eventName + "Event",
-                                                BindingFlags.Instance |
-                                                BindingFlags.NonPublic).GetValue(instance);
+            FieldInfo field = type.GetField("_" + eventName + "Event", BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, "Event name is incorrect.");
+            }
+
+            MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
 
             if (null != eventDelegate)
             {
                 Delegate[] delegates = eventDelegate.GetInvocationList();
                 return delegates;
             }
-            else
-                return new Delegate[0];
+
+            return new Delegate[0];
         }
 
         /// <summary>
@@ -89,18 +95,21 @@ namespace NetOffice.Events
         /// <returns>count of event recipients</returns>
         public static int GetCountOfEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            MulticastDelegate eventDelegate = (MulticastDelegate)type.GetField(
-                                                "_" + eventName + "Event",
-                                                BindingFlags.Instance |
-                                                BindingFlags.NonPublic).GetValue(instance);
+            FieldInfo field = type.GetField("_" + eventName + "Event", BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, "Event name is incorrect.");
+            }
+
+            MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
 
             if (null != eventDelegate)
             {
                 Delegate[] delegates = eventDelegate.GetInvocationList();
                 return delegates.Length;
             }
-            else
-                return 0;
+
+            return 0;
         }
 
         /// <summary>
