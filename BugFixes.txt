@@ -1,3 +1,7 @@
+--- Version 1.7.5.0 ---
+
+01.) Fix github ticket #277 CoClassEventReflector.HasEventRecipients always return false #277
+
 --- Version 1.7.4.8 ---
 --- Version 1.7.4.7 ---
 

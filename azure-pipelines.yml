@@ -114,10 +114,10 @@ steps:
     rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.11_$(buildConfiguration)_build$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.5.0_$(buildConfiguration)_build$(Build.BuildId).zip'
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.4.11_$(buildConfiguration)_build$(Build.BuildId).zip'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.7.5.0_$(buildConfiguration)_build$(Build.BuildId).zip'
     artifactName: NetOffice $(buildConfiguration) Package
