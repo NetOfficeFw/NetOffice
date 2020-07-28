@@ -11,7 +11,7 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
 {
     [TestFixture]
     [Category("IntegrationTests")]
-    [Ignore("Integration tests require Microsoft Office.")]
+    [Category("IntegrationTests_Excel")]
     public class CustomXMLPartIntegrationTests
     {
         [SetUp]

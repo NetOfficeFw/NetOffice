@@ -8,7 +8,7 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
 {
     [TestFixture]
     [Category("IntegrationTests")]
-    [Ignore("Disable integration tests")]
+    [Category("IntegrationTests_Excel")]
     public class RangeIntegrationTests
     {
         [SetUp]
