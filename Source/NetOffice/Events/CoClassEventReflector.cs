@@ -21,12 +21,14 @@ namespace NetOffice.Events
         {
             foreach (EventInfo item in type.GetEvents())
             {
-                MulticastDelegate eventDelegate = (MulticastDelegate)type.GetType().GetField(item.Name,
-                                                                            BindingFlags.NonPublic |
-                                                                            BindingFlags.Instance).GetValue(instance);
+                // public events already have "Event" suffix, we just need to add the _ prefix used by private fields
+                FieldInfo field = type.GetField("_" + item.Name, BindingFlags.Instance | BindingFlags.NonPublic);
+                MulticastDelegate eventDelegate = field?.GetValue(instance) as MulticastDelegate;
 
-                if ((null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0))
-                    return false;
+                if (eventDelegate?.GetInvocationList().Length > 0)
+                {
+                    return true;
+                }
             }
 
             return false;
@@ -41,18 +43,22 @@ namespace NetOffice.Events
         /// <returns>true if event is active, otherwise false</returns>
         public static bool HasEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            MulticastDelegate eventDelegate = (MulticastDelegate)type.GetField(
-                                                "_" + eventName + "Event",
-                                                BindingFlags.Instance |
-                                                BindingFlags.NonPublic).GetValue(instance);
+            string fieldName = MakeEventFieldName(eventName);
+            FieldInfo field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, $"Event with name '{eventName}' does not exist.");
+            }
+
+            MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
 
             if (null != eventDelegate)
             {
                 Delegate[] delegates = eventDelegate.GetInvocationList();
                 return delegates.Length > 0;
             }
-            else
-                return false;
+            
+            return false;
         }
 
         /// <summary>
@@ -64,18 +70,22 @@ namespace NetOffice.Events
         /// <returns>actual event recipients</returns>
         public static Delegate[] GetEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            MulticastDelegate eventDelegate = (MulticastDelegate)type.GetField(
-                                                "_" + eventName + "Event",
-                                                BindingFlags.Instance |
-                                                BindingFlags.NonPublic).GetValue(instance);
+            string fieldName = MakeEventFieldName(eventName);
+            FieldInfo field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, $"Event with name '{eventName}' does not exist.");
+            }
+
+            MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
 
             if (null != eventDelegate)
             {
                 Delegate[] delegates = eventDelegate.GetInvocationList();
                 return delegates;
             }
-            else
-                return new Delegate[0];
+
+            return new Delegate[0];
         }
 
         /// <summary>
@@ -87,18 +97,22 @@ namespace NetOffice.Events
         /// <returns>count of event recipients</returns>
         public static int GetCountOfEventRecipients(ICOMObject instance, Type type, string eventName)
         {
-            MulticastDelegate eventDelegate = (MulticastDelegate)type.GetField(
-                                                "_" + eventName + "Event",
-                                                BindingFlags.Instance |
-                                                BindingFlags.NonPublic).GetValue(instance);
+            string fieldName = MakeEventFieldName(eventName);
+            FieldInfo field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, $"Event with name '{eventName}' does not exist.");
+            }
+
+            MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
 
             if (null != eventDelegate)
             {
                 Delegate[] delegates = eventDelegate.GetInvocationList();
                 return delegates.Length;
             }
-            else
-                return 0;
+
+            return 0;
         }
 
         /// <summary>
@@ -111,10 +125,14 @@ namespace NetOffice.Events
         /// <returns>count of called event recipients</returns>
         public static int RaiseCustomEvent(ICOMObject instance, Type type, string eventName, ref object[] paramsArray)
         {
-            MulticastDelegate eventDelegate = (MulticastDelegate)type.GetField(
-                                                "_" + eventName + "Event",
-                                                BindingFlags.Instance |
-                                                BindingFlags.NonPublic).GetValue(instance);
+            string fieldName = MakeEventFieldName(eventName);
+            FieldInfo field = type.GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(eventName), eventName, $"Event with name '{eventName}' does not exist.");
+            }
+
+            MulticastDelegate eventDelegate = field.GetValue(instance) as MulticastDelegate;
 
             if (null != eventDelegate)
             {
@@ -131,12 +149,25 @@ namespace NetOffice.Events
                     }
                 }
 
-                if(instance.Settings.EnableAutoDisposeEventArguments)
+                if (instance.Settings.EnableAutoDisposeEventArguments)
+                {
                     Invoker.ReleaseParamsArray(paramsArray);
+                }
+
                 return delegates.Length;
             }
-            else
-                return 0;
+
+            return 0;
+        }
+
+        private static string MakeEventFieldName(string eventName)
+        {
+            if (eventName.EndsWith("Event"))
+            {
+                return "_" + eventName;
+            }
+
+            return "_" + eventName + "Event";
         }
     }
 }

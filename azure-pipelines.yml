@@ -65,6 +65,8 @@ steps:
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
+    configuration: '$(buildConfiguration)'
+    testFiltercriteria: 'TestCategory!=IntegrationTests'
     testAssemblyVer2: |
       Source\NetOffice.Tests\bin\$(buildConfiguration)\NetOffice.Tests.dll
 
