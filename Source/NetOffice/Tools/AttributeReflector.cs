@@ -258,7 +258,7 @@ namespace NetOffice.Tools
 
             object[] array = type.GetCustomAttributes(typeof(GuidAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentOutOfRangeException("GuidAttribute is missing");
+                throw new ArgumentOutOfRangeException(nameof(type), $"The type {type.Name} does not have the [GuidAttribute] set.");
             return array[0] as GuidAttribute;
         }
 
@@ -271,7 +271,7 @@ namespace NetOffice.Tools
         {
             object[] array = type.GetCustomAttributes(typeof(ProgIdAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentOutOfRangeException("ProgIdAttribute is missing");
+                throw new ArgumentOutOfRangeException($"The type {type.Name} does not have the [ProgIdAttribute] set.");
             return array[0] as ProgIdAttribute;
         }
 
@@ -287,7 +287,7 @@ namespace NetOffice.Tools
             if (array.Length == 0)
             {
                 if (throwException)
-                    throw new ArgumentOutOfRangeException("ProgIdAttribute is missing");
+                    throw new ArgumentOutOfRangeException(nameof(type), $"The type {type.Name} does not have the [ProgIdAttribute] set.");
                 else
                     return null;
             }
@@ -331,7 +331,7 @@ namespace NetOffice.Tools
         {
             object[] array = type.GetCustomAttributes(typeof(COMAddinAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentOutOfRangeException("COMAddinAttribute is missing");
+                throw new ArgumentOutOfRangeException(nameof(type), $"The type {type.Name} does not have the [COMAddinAttribute] set.");
             else
                 return array[0] as COMAddinAttribute;
         }
