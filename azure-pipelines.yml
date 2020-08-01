@@ -80,7 +80,7 @@ steps:
 
 - task: CmdLine@2
   displayName: Sign NetOffice libraries
-  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'), eq(variables['buildConfiguration'], 'Release'))
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'), eq(variables['buildConfiguration'], 'Release'), startsWith(variables['Build.SourceBranch'], 'refs/heads/releases/'))
   inputs:
     workingDirectory: '$(Build.SourcesDirectory)\Source\ClientApplication\bin\$(buildConfiguration)'
     script: |
