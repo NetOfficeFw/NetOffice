@@ -58,6 +58,7 @@
     <Compile Include="NetOffice\Events\EventClassStub.cs" />
     <Compile Include="OutlookApi\Tools\OlRibbonTypeTests.cs" />
     <Compile Include="OutlookApi\Tools\OlCustomUIAttributeTests.cs" />
+    <Compile Include="OutlookApi\Utils\ProjectInfoTests.cs" />
     <Compile Include="PowerPointApi\Events\EApplication_SinkHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
