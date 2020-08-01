@@ -2,12 +2,11 @@
 
 [![Build Status](https://dev.azure.com/netoffice/NetOffice/_apis/build/status/NetOfficeFw.NetOffice?branchName=master)](https://dev.azure.com/netoffice/NetOffice/_build/latest?definitionId=1&branchName=master)
 
-> .NET wrapper assemblies for accessing Microsoft Office applications.
+> NetOffice is a set of libraries for building Microsoft Office Addins and automation of Microsoft Office applications.
 
-NetOffice supports extending and automating Microsoft Office applications: Excel, Word, Outlook,
-PowerPoint, Access, Project and Visio.
+Use NetOffice to extend and automate Microsoft Office applications: Excel, Word, Outlook, PowerPoint, Access, Project and Visio.
 
-:rotating_light: **Notice**: Our official packages on NuGet use [**NetOfficeFw** prefix](https://www.nuget.org/packages?q=NetOfficeFw). Using old 1.7.4 packages? [Learn how to migrate.](https://netoffice.io/migrate-notice/)
+:rotating_light: **Notice**: Use official packages with [__NetOfficeFw.*__ prefix](https://www.nuget.org/packages?q=NetOfficeFw). Using old 1.7.4 packages? [Learn how to migrate.](https://netoffice.io/migrate-notice/)
 
 ## Features
 
@@ -40,11 +39,12 @@ You can find more information about [NetOffice Git repository in documentation](
 ### Branches
 
 * `master` - main branch
-* `releases/netoffice_v1.7.4` - branch with current NetOffice 1.7.4 source code
+* `releases/netoffice_v1.7.5` - branch with **current NetOffice 1.7.5 source code**
+* `releases/netoffice_v1.7.4` - branch with NetOffice 1.7.4 source code
 
-#### Archive Branches
+#### Archived Branches
 
-These branches are archived of the source code from CodePlex and OSDN.
+These branches are archives of the source code from CodePlex and OSDN.
 
 * `import/osdn_repository` - branch with NetOffice source code imported from OSDN repository
 * `import/legacy_repository` - archive branch of original NetOffice source code imported from CodePlex Subversion
