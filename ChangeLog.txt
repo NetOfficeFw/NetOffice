@@ -1,3 +1,9 @@
+--- Version 1.7.5.0 ---
+
+01.) Fixed the CoClassEventReflector class implementation
+02.) CoClassEventReflector class will throw ArgumentOutOfRangeException when event does not exist in the class
+03.) You can use the nameof() operator with event name in the CoClassEventReflector methods
+
 --- Version 1.7.4.11 ---
 01.) Change TaskPaneInfo.TagHwnd to IntPtr type
 

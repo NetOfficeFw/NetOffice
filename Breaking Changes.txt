@@ -1,3 +1,9 @@
+  --- Version 1.7.5.0 ---
+  --- Breaking Changes ---
+
+1) methods in CoClassEventReflector class will throw ArgumentOutOfRangeException
+   instead of NullReferenceException
+
   --- Version 1.7.4.3 ---
   --- Breaking Changes ---
   
