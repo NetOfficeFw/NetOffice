@@ -1,6 +1,6 @@
 # NetOffice - Microsoft Office in .NET
 
-[![Build Status](https://dev.azure.com/netoffice/NetOffice/_apis/build/status/NetOfficeFw.NetOffice?branchName=master)](https://dev.azure.com/netoffice/NetOffice/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://dev.azure.com/netoffice/NetOffice/_apis/build/status/NetOfficeFw.NetOffice?branchName=master)](https://dev.azure.com/netoffice/NetOffice/_build/latest?definitionId=1&branchName=master) [![NetOfficeFw.Core](https://img.shields.io/nuget/v/netofficefw.core?label=NetOfficeFw.Core)](https://www.nuget.org/profiles/netoffice)
 
 > NetOffice is a set of libraries for building Microsoft Office Addins and automation of Microsoft Office applications.
 
