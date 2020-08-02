@@ -41,7 +41,6 @@ steps:
       Documentation/**
       Examples/**
       Tutorials/**
-      Breaking Changes.txt
       BugFixes.txt
       CHANGELOG.md
       LICENSE.txt
