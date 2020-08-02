@@ -43,7 +43,7 @@ steps:
       Tutorials/**
       Breaking Changes.txt
       BugFixes.txt
-      ChangeLog.txt
+      CHANGELOG.md
       LICENSE.txt
     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
