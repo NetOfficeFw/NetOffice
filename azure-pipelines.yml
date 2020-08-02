@@ -39,6 +39,7 @@ steps:
     contents: |
       Source/**
       Documentation/**
+      !Documentation/History.md
       Examples/**
       Tutorials/**
       CHANGELOG.md
