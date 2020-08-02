@@ -3,11 +3,13 @@
 ## v1.7.5
 
 ### Added
-* Fixed the `CoClassEventReflector` class implementation
 * You can use the `nameof()` operator with event name in the `CoClassEventReflector` methods
 
 ### Breaking Changes
 * `CoClassEventReflector` class will throw `ArgumentOutOfRangeException` when event does not exist in the class
+
+### Bug Fixes
+* Fix [#277](https://github.com/NetOfficeFw/NetOffice/issues/277) _CoClassEventReflector.HasEventRecipients always return false_
 
 ## v1.7.4.11
 * Change `TaskPaneInfo.TagHwnd` to `IntPtr` type
@@ -18,14 +20,27 @@
 ## v1.7.4.9
 * Allow `TaskPaneInfo` objects to be tagged from user code
 
+## v1.7.4.8
+
+### Bug Fixes
+* Fix [#262](https://github.com/NetOfficeFw/NetOffice/issues/262) _ActivePowerPointApp.SlideShowBeginEvent doesn't work in versions 1.7.4.x_
+
 ## v1.7.4.6
-* Fix #231 - Access library ProjectInfo returns incorrect AssemblyName value
+
+### Bug Fixes
+* Fix [#231](https://github.com/NetOfficeFw/NetOffice/issues/231) - Access library ProjectInfo returns incorrect AssemblyName value
+* Fix [#264](https://github.com/NetOfficeFw/NetOffice/issues/264) NetOfficeException "Keytoken missmatch" when running NetOffice in debug mode
 
 ## v1.7.4.5
-* Fix #223 - OlRibbonType.cs wrong enum for Microsoft.Outlook.Mail.Compose
+
+### Bug Fixes
+* Fix [#223](https://github.com/NetOfficeFw/NetOffice/issues/223) - _OlRibbonType.cs wrong enum for Microsoft.Outlook.Mail.Compose_
 
 ## v1.7.4.4
 * MS Publisher package contains correct assemblies #216 (Publisher NuGet Package has WordApi.dll/xml and not PublisherApi.dll/xml)
+
+### Bug Fixes
+* Fix [#216](https://github.com/NetOfficeFw/NetOffice/issues/216) _Publisher NuGet Package has WordApi.dll/xml and not PublisherApi.dll/xml_
 
 ## v1.7.4.3
 
@@ -34,8 +49,15 @@
   > The meaning of the `bool` result has been changed and it is `true` by default now.
   > `true` means the Pane should have been created, otherwise `false`.
 
+### Bug Fixes
+* Fix [#193](https://github.com/NetOfficeFw/NetOffice/issues/193) _Can not get Addin from customArguments in OnConnection of ITaskpane_
+
 ## v1.7.4.2
 * `COMAddin` supports custom addin object - see Word addin example **06 Custom Addin Object**
+
+### Bug Fixes
+* Fix [OSDN-37880](https://osdn.net/projects/netoffice/ticket/37880) _Underlying ribbon does not calling_
+* Fix [OSDN-37747](https://osdn.net/projects/netoffice/ticket/37747) _DAO Fields_
 
 ## v1.7.4.1
 

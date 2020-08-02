@@ -41,7 +41,6 @@ steps:
       Documentation/**
       Examples/**
       Tutorials/**
-      BugFixes.txt
       CHANGELOG.md
       LICENSE.txt
     targetFolder: '$(Build.ArtifactStagingDirectory)'
