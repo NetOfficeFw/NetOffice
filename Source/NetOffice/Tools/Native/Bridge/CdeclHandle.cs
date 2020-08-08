@@ -38,7 +38,7 @@ namespace NetOffice.Tools.Native.Bridge
         }
 
         /// <summary>
-        /// Underyling Module Handle is empty
+        /// Underlying Module Handle is empty
         /// </summary>
         public bool HandleIsZero
         {

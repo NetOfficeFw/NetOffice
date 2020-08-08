@@ -78,7 +78,7 @@ namespace NetOffice
         #region Ctor
 
         /// <summary>
-        /// Creates an instance of the class and aquire the given proxy
+        /// Creates an instance of the class and acquire the given proxy
         /// </summary>
         /// <param name="factory">used core</param>
         /// <param name="proxy">com proxy as any</param>
@@ -96,7 +96,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        ///  Creates an instance of the class and aquire the given proxy
+        ///  Creates an instance of the class and acquire the given proxy
         /// </summary>
         /// <param name="factory">used core</param>
         /// <param name="proxy">com proxy as any</param>
@@ -115,7 +115,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        ///  Creates an instance of the class and aquire the given proxy
+        ///  Creates an instance of the class and acquire the given proxy
         /// </summary>
         /// <param name="factory">used core</param>
         /// <param name="proxy">com proxy as any</param>
@@ -171,7 +171,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Underyling managed proxy(System._ComObject)
+        /// Underlying managed proxy(System._ComObject)
         /// </summary>
         public object Proxy
         {
