@@ -6,6 +6,7 @@ using System.Text;
 
 namespace NetOffice.Duck
 {
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
     internal class DuckTypeEventsGenerator : IDisposable
     {
         internal DuckTypeEventsGenerator(StringBuilder builder, EventInfo[] events)

@@ -7,6 +7,7 @@ using NetOffice.Attributes;
 
 namespace NetOffice.Duck
 {
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
     internal class DuckTypeEnumeratorGenerator : IDisposable
     {
         internal DuckTypeEnumeratorGenerator(StringBuilder builder, MethodInfo[] methods, EnumeratorAttribute info)

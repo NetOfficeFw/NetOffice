@@ -801,6 +801,7 @@ namespace NetOffice
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
         /// <exception cref="COMException">throws when its failed to receive progID Type</exception> 
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         public T CreateDuckObject<T>() where T : ICOMObject
         {
             object[] attributes = typeof(T).GetCustomAttributes(typeof(NetOffice.Attributes.ComProgIdAttribute), false);
@@ -823,6 +824,7 @@ namespace NetOffice
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
         /// <exception cref="COMException">throws when its failed to receive progID Type</exception> 
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         public T CreateDuckObject<T>(string progId) where T : ICOMObject
         {
             if (String.IsNullOrWhiteSpace(progId))
@@ -855,6 +857,7 @@ namespace NetOffice
         /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         public T CreateDuckObjectFromComProxy<T>(ICOMObject caller, object comProxy) where T : ICOMObject
         {
             return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
@@ -869,6 +872,7 @@ namespace NetOffice
         /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         public T CreateDuckObjectFromComProxy<T>(object comProxy) where T : ICOMObject
         {
             return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
@@ -884,6 +888,7 @@ namespace NetOffice
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
         /// <exception cref="FactoryException">throws when its failed to receive factory info</exception> 
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy)
         {
             if (null == comProxy)
@@ -909,6 +914,7 @@ namespace NetOffice
         /// <exception cref="ArgumentNullException">throws when comProxy, wrapperInterfaceType is null</exception>
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy, Type wrapperInterfaceType)
         {
             if (null == comProxy)

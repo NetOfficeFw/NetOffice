@@ -6,6 +6,7 @@ using System.IO;
 
 namespace NetOffice.Duck
 {
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
     internal static class Resources
     {
         private static string _eventBinding;

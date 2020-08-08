@@ -141,6 +141,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
         /// <returns>IEnumerator instance</returns>
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         public static IEnumerator GetDuckVariantEnumeratorAsProperty(ICOMObject comObject)
         {
             if (null == comObject)
@@ -174,6 +175,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
         /// <returns>IEnumerator instance</returns>
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         public static IEnumerator GetDuckVariantEnumeratorAsMethod(ICOMObject comObject)
         {
             if (null == comObject)

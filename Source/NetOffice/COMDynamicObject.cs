@@ -29,6 +29,7 @@ namespace NetOffice
     /// </summary>
     [DebuggerDisplay("{InstanceFriendlyName}")]
     [TypeConverter(typeof(Converter.COMDynamicObjectExpandableObjectConverter))]
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
     public class COMDynamicObject : DynamicObject, ICOMObject, ICOMProxyShareProvider
     {
         #region Nested

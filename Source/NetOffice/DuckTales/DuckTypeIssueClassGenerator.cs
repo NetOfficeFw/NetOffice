@@ -5,6 +5,7 @@ using System.Text;
 
 namespace NetOffice.Duck
 {
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
     internal class DuckTypeIssueClassGenerator : IDisposable
     {     
         internal DuckTypeIssueClassGenerator(StringBuilder classBuilder, DuckInterface proxyInterface, string implementationName)

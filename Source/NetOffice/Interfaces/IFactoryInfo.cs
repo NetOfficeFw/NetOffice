@@ -56,6 +56,7 @@ namespace NetOffice
         /// <summary>
         /// Returns information the factory serves duck interfaces only
         /// </summary>
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
         bool IsDuck { get; }
     }
 }
