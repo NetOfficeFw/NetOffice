@@ -95,32 +95,32 @@ namespace NetOffice
         private Core _factory;
 
         /// <summary>
-        /// FriendlyTypeName chache field
+        /// FriendlyTypeName cache field
         /// </summary>
         private string _friendlyTypeName;
 
         /// <summary>
-        /// UnderlyingTypeName chache field
+        /// UnderlyingTypeName cache field
         /// </summary>
         private string _underlyingTypeName;
 
         /// <summary>
-        /// UnderlyingComponentName chache field
+        /// UnderlyingComponentName cache field
         /// </summary>
         private string _underlyingComponentName;
 
         /// <summary>
-        /// ComponentRootName chache field
+        /// ComponentRootName cache field
         /// </summary>
         private string _componentRootName;
 
         /// <summary>
-        /// InstanceName chache field
+        /// InstanceName cache field
         /// </summary>
         private string _instanceName;
 
         /// <summary>
-        /// InstanceType chache field
+        /// InstanceType cache field
         /// </summary>
         private Type _instanceType;
         
