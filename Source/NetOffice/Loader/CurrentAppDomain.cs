@@ -6,7 +6,7 @@ using System.Reflection;
 namespace NetOffice.Loader
 {
     /// <summary>
-    /// Encapsulate current appdomain with loader services and exception tolerant methods
+    /// Encapsulates current AppDomain with loader services and exception tolerant methods.
     /// </summary>
     internal class CurrentAppDomain
     {
@@ -29,10 +29,8 @@ namespace NetOffice.Loader
         /// <param name="owner">owner core</param>
         internal CurrentAppDomain(Core owner)
         {
-            if (null == owner)
-                throw new ArgumentNullException("owner");
-            Owner = owner;
-            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
+            Owner = owner ?? throw new ArgumentNullException(nameof(owner));
+            AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
         }
 
         #endregion
@@ -63,7 +61,10 @@ namespace NetOffice.Loader
             get
             {
                 if (null == _assemblyVersion)
+                {
                     _assemblyVersion = Owner.ThisAssembly.GetName().Version;
+                }
+
                 return _assemblyVersion;
             }
         }
@@ -86,10 +87,6 @@ namespace NetOffice.Loader
             {
                 return new Assembly[0];
             }
-            catch (Exception)
-            {
-                throw;
-            }
         }
 
         /// <summary>
@@ -104,19 +101,22 @@ namespace NetOffice.Loader
                 if (ValidateVersion(fileName))
                 {
                     if (Owner.Settings.LoadAssembliesUnsafe)
+                    {
                         return Assembly.UnsafeLoadFrom(fileName);
+                    }
                     else
-                        return Assembly.LoadFrom(fileName);
+                    {
                         // changed Load to LoadFrom, thanks to Frank Fajardo
+                        return Assembly.LoadFrom(fileName);
+                    }
                 }
-                else
-                    return null;
             }
             catch(Exception exception)
             {
                 Owner.Console.WriteLine("AssemblyLoad Exception<{1}> {0}", Path.GetFileName(fileName), exception.GetType().Name);
-                return null;
             }
+
+            return null;
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace NetOffice.Loader
                 if (info.FileVersion == AssemblyVersion.ToString())
                     return true;
                 else
-                    Owner.Console.WriteLine("Invalid Assembly Version {0}", info.FileVersion);
+                    Owner.Console.WriteLine($"Invalid file version '{info.FileVersion}'. NetOffice expects the version to be '{AssemblyVersion}'.");
             }
             return false;
         }
@@ -202,7 +202,7 @@ namespace NetOffice.Loader
             }
             else
             { 
-                Owner.Console.WriteLine("Assembly Version {0} missmatch.", name.Version);
+                Owner.Console.WriteLine($"Assembly version mismatch. Assembly '{name.Name}' has version {name.Version}, but NetOffice expects '{AssemblyVersion}'.");
                 return false;
             }
         }
