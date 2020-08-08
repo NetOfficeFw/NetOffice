@@ -129,11 +129,11 @@ namespace NetOffice
         #region Ctor
 
         /// <summary>
-        /// Creates instance and replace the given replacedObject in proxy management
-        /// all created childs from replacedObject are now childs from the new instance
+        /// Creates instance and replaces the given <paramref name="replacedObject"/> in proxy management.
+        /// All children object created from <paramref name="replacedObject"/> are now children of the new instance.
         /// </summary>
         /// <param name="factory">current factory instance or null for default</param>
-        /// <param name="replacedObject">the instance you want replace in current NO proxy management</param>
+        /// <param name="replacedObject">the instance you want replace in current NetOffice proxy management</param>
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject replacedObject)
         {
@@ -172,10 +172,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates instance and replace the given replacedObject in proxy management
-        /// all created childs from replacedObject are now childs from the new instance
+        /// Creates instance and replaces the given <paramref name="replacedObject"/> in proxy management.
+        /// All children object created from <paramref name="replacedObject"/> are now children of the new instance.
         /// </summary>
-        /// <param name="replacedObject">the instance you want replace in current NO proxy management</param>
+        /// <param name="replacedObject">the instance you want replace in current NetOffice proxy management</param>
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(ICOMObject replacedObject)
         {
