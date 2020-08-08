@@ -182,9 +182,14 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Ignore exceptions when release underlying managed proxy(System._ComObject)
+        /// Ignore exceptions when releasing underlying managed proxy (System._ComObject).
+        /// Default is false.
         /// </summary>
-        public virtual bool SuppressReleaseExceptions { get; set; }
+        /// <remarks>
+        /// When set to true, <see cref="Release"/> method will not throw exceptions which
+        /// occuring when releasing the object.
+        /// </remarks>
+        public bool SuppressReleaseExceptions { get; set; }
 
         /// <summary>
         /// Instance is marked as enumerator provider
