@@ -3,7 +3,7 @@
 namespace NetOffice.Exceptions
 {
     /// <summary>
-    /// Indicates an uregister error
+    /// Indicates an unregister error
     /// </summary>
     public class UnregisterException : NetOfficeException
     {
