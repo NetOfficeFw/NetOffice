@@ -512,7 +512,7 @@ namespace NetOffice
         #region Factory Methods
 
         /// <summary>
-        /// Receive factory infos from all loaded NetOfficeApi Assemblies in current application domain
+        /// Receive factory information from all loaded NetOffice assemblies in current application domain.
         /// </summary>
         [Obsolete("Not necessary anymore(self-initializing)")]
         public void Initialize()
@@ -521,8 +521,8 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Must be called from client assembly for ICOMObject Support
-        /// Receive factory infos from all loaded NetOfficeApi Assemblies in current application domain
+        /// Must be called from client assembly for <see cref="ICOMObject"/> support.
+        /// Receive factory information from all loaded NetOffice assemblies in current application domain.
         /// <param name="cacheOptions">NetOffice cache options</param>
         /// </summary>
         [Obsolete("Not necessary anymore(self-initializing)")]
