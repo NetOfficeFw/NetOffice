@@ -1273,11 +1273,10 @@ namespace NetOffice
 
                 lock (_comObjectLock)
                 {
-                    Type comVariantType = null;
                     ICOMObject[] newVariantArray = new ICOMObject[comProxyArray.Length];
                     for (int i = 0; i < comProxyArray.Length; i++)
                     {
-                        comVariantType = comProxyArray[i].GetType();
+                        var comVariantType = comProxyArray[i].GetType();
                         IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxyArray[i]);
                         string className = TypeDescriptor.GetClassName(comProxyArray[i]);
                         string fullClassName = factoryInfo.AssemblyNamespace + "." + className;

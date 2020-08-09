@@ -121,13 +121,11 @@ namespace NetOffice
             if (null == dispatcher)
                 throw new IDispatchNotImplementedException();
             COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
-            COMTypes.ITypeLib parentTypeLib = null;
             Guid parentGuid = Guid.Empty;
 
             if (!value.HostCache.TryGetValue(typeGuid, out parentGuid))
             {
-                int i = 0;
-                typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
+                typeInfo.GetContainingTypeLib(out var parentTypeLib, out var i);
 
                 IntPtr attributesPointer = IntPtr.Zero;
                 parentTypeLib.GetLibAttr(out attributesPointer);
@@ -163,14 +161,12 @@ namespace NetOffice
                 throw new IDispatchNotImplementedException();
 
             COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo();
-            COMTypes.ITypeLib parentTypeLib = null;
             Guid typeGuid = typeInfo.GetTypeGuid();
             Guid parentGuid = Guid.Empty;
 
             if (!value.HostCache.TryGetValue(typeGuid, out parentGuid))
             {
-                int i = 0;
-                typeInfo.GetContainingTypeLib(out parentTypeLib, out i);
+                typeInfo.GetContainingTypeLib(out var parentTypeLib, out var i);
 
                 IntPtr attributesPointer = IntPtr.Zero;
                 parentTypeLib.GetLibAttr(out attributesPointer);
