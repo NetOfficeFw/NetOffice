@@ -475,7 +475,7 @@ namespace NetOffice
         internal CurrentAppDomain CoreDomain { get; private set; }
 
         /// <summary>
-        /// ICOMObjectAvailability Cache
+        /// <see cref="ICOMObjectAvailability"/> Cache
         /// </summary>
         internal Dictionary<string, Dictionary<string, string>> EntitiesListCache { get; private set; }
 
@@ -909,7 +909,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
-        /// <param name="wrapperInterfaceType">interface which is implemented by the returning instance. the interface must inherit from ICOMObject</param>
+        /// <param name="wrapperInterfaceType">interface which is implemented by the returning instance. the interface must inherit from <see cref="ICOMObject"/></param>
         /// <returns>new instance</returns>
         /// <exception cref="ArgumentNullException">throws when comProxy, wrapperInterfaceType is null</exception>
         /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
@@ -953,13 +953,13 @@ namespace NetOffice
         }
         
         /// <summary>
-        /// Creates a new ICOMObject based on wrapperClassType
+        /// Creates a new <see cref="ICOMObject"/> based on wrapperClassType
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
         /// <param name="wrapperClassType">type info from wrapper class</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <returns>corresponding wrapper class instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         public T CreateKnownObjectFromComProxy<T>(ICOMObject caller, object comProxy, Type wrapperClassType) where T:class,ICOMObject
         {
@@ -967,12 +967,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new ICOMObject based on wrapperClassType
+        /// Creates a new <see cref="ICOMObject"/> based on wrapperClassType
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
         /// <param name="wrapperClassType">type info from wrapper class</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <returns>corresponding wrapper class instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         public ICOMObject CreateKnownObjectFromComProxy(ICOMObject caller, object comProxy, Type wrapperClassType)
         {
@@ -1019,12 +1019,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new ICOMObject array based on wrapperClassType
+        /// Creates a new <see cref="ICOMObject"/> array based on wrapperClassType
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxyArray">new created proxies</param>
         /// <param name="wrapperClassType">type info from wrapper class</param>
-        /// <returns>corresponding wrapper class instances or plain COMObject</returns>
+        /// <returns>corresponding wrapper class instances or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         public ICOMObject[] CreateKnownObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, Type wrapperClassType)
         {
@@ -1063,11 +1063,11 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new ICOMObject based on classType of comProxy. The method use Settings.EnableDynamicEventArguments to reflect dynamics
+        /// Creates a new <see cref="ICOMObject"/> based on classType of comProxy. The method uses <see cref="Settings.EnableDynamicEventArguments"/> to reflect dynamics
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <returns>corresponding wrapper class instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         public ICOMObject CreateEventArgumentObjectFromComProxy(ICOMObject caller, object comProxy)
         {
@@ -1075,12 +1075,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new ICOMObject based on classType of comProxy 
+        /// Creates a new <see cref="ICOMObject"/> based on classType of comProxy 
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
+        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding wrapper class instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, bool allowDynamicObject)
         {
@@ -1127,13 +1127,13 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new ICOMObject based on classType of comProxy 
+        /// Creates a new <see cref="ICOMObject"/> based on classType of comProxy 
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
         /// <param name="comProxyType">Type of comProxy</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
+        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding Wrapper class Instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, Type comProxyType, bool allowDynamicObject)
         {
@@ -1173,7 +1173,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new ICOMObject from factoryInfo
+        /// Creates a new <see cref="ICOMObject"/> from factoryInfo
         /// </summary>
         /// <param name="factoryInfo">Factory Info from Wrapper Assemblies</param>
         /// <param name="caller">parent there have created comProxy</param>
@@ -1181,8 +1181,8 @@ namespace NetOffice
         /// <param name="comProxyType">Type of comProxy</param>
         /// <param name="className">name of COMServer proxy class</param>
         /// <param name="fullClassName">full namespace and name of COMServer proxy class</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
+        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding Wrapper class Instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find corresponding wrapper class type</exception>
         public ICOMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, ICOMObject caller, object comProxy, 
@@ -1255,12 +1255,12 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new ICOMObject array
+        /// Creates a new <see cref="ICOMObject"/> array
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxyArray">new created proxy array</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
-        /// <returns>corresponding Wrapper class Instance array or plain COMObject array</returns>
+        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
+        /// <returns>corresponding Wrapper class Instance array or plain <see cref="COMObject"/> array</returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find factory info</exception>
         public ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, bool allowDynamicObject)

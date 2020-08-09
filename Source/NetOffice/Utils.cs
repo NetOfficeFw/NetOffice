@@ -65,8 +65,8 @@ namespace NetOffice
         /// Creates a managed enumerator
         /// </summary>
         ///  <param name="parent">parent instance or null in com proxy management</param>
-        /// <param name="comObject">ICOMObject instance to access the enumerator</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
+        /// <param name="comObject"><see cref="ICOMObject"/> instance to access the enumerator</param>
+        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>managed enumerator</returns>
         public static ICOMObject GetComObjectEnumeratorAsProperty(ICOMObject parent, ICOMObject comObject, bool allowDynamicObject)
         {
@@ -88,8 +88,8 @@ namespace NetOffice
         /// Creates a managed enumerator
         /// </summary>
         ///  <param name="parent">parent instance or null in com proxy management</param>
-        /// <param name="comObject">ICOMObject instance to access the enumerator</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
+        /// <param name="comObject"><see cref="ICOMObject"/> instance to access the enumerator</param>
+        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>managed enumerator</returns>
         public static ICOMObject GetComObjectEnumeratorAsMethod(ICOMObject parent, ICOMObject comObject, bool allowDynamicObject)
         {
@@ -207,8 +207,8 @@ namespace NetOffice
         /// <summary>
         /// Returns an enumerator with variant items - that means item(s) can be proxy or scalar
         /// </summary>
-        /// <param name="comObject">ICOMObject instance as any</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
+        /// <param name="comObject"><see cref="ICOMObject"/> instance as any</param>
+        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>IEnumerator instance</returns>
         public static IEnumerator GetVariantEnumeratorAsProperty(ICOMObject comObject, bool allowDynamicObject)
         {

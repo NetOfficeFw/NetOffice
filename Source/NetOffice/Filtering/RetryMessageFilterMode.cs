@@ -18,7 +18,7 @@ namespace NetOffice.Filtering
         Delayed = 1,
 
         /// <summary>
-        /// Dont try rejected call again
+        /// Don't try rejected call again
         /// </summary>
         None = 2
     }

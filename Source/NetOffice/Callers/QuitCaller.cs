@@ -3,7 +3,7 @@
 namespace NetOffice.Callers
 {
     /// <summary>
-    /// ICOMObject Quit method caller
+    /// <see cref="ICOMObject"/> Quit method caller
     /// </summary>
     internal class QuitCaller
     {

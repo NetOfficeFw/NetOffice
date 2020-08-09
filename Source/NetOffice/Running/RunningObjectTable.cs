@@ -126,7 +126,7 @@ namespace NetOffice.Running
             IRunningObjectTable runningObjectTable = null;
             try
             {
-                // query table and returns null if no objects runnings
+                // query table and returns null if no objects are running
                 if (GetRunningObjectTable(0, out runningObjectTable) != 0 || runningObjectTable == null)
                     return totalCount;
 
@@ -210,7 +210,7 @@ namespace NetOffice.Running
             IRunningObjectTable runningObjectTable = null;
             try
             {
-                // query table and returns null if no objects runnings
+                // query table and returns null if no objects are running
                 if (GetRunningObjectTable(0, out runningObjectTable) != 0 || runningObjectTable == null)
                     return null;
 

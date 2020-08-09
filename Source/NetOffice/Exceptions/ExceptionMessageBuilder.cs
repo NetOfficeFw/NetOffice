@@ -142,13 +142,13 @@ namespace NetOffice.Exceptions
         /// <summary>
         /// Get exception message based on associated settings
         /// </summary>
-        /// <param name="throwedException">exception as any</param>
+        /// <param name="thrownException">exception as any</param>
         /// <param name="instance">caller instance</param>
         /// <param name="name"></param>
         /// <param name="type">name of invoke target</param>
         /// <param name="arguments">arguments as any</param>
         /// <returns>exception message</returns>
-        internal static string GetExceptionMessage(Exception throwedException, object instance, string name, CallType type, object[] arguments = null)
+        internal static string GetExceptionMessage(Exception thrownException, object instance, string name, CallType type, object[] arguments = null)
         {
             ICOMObject comObject = instance as ICOMObject;
             if (null == comObject)
@@ -162,11 +162,11 @@ namespace NetOffice.Exceptions
                 case ExceptionMessageHandling.Default:
                     return settings.ExceptionDefaultMessage;
                 case ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException:
-                    return GetExceptionInnerExceptionMessageToTopLevelMessage(throwedException);
+                    return GetExceptionInnerExceptionMessageToTopLevelMessage(thrownException);
                 case ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException:
-                    return GetExceptionAllInnerExceptionMessagesToTopLevelMessage(throwedException);
+                    return GetExceptionAllInnerExceptionMessagesToTopLevelMessage(thrownException);
                 default:
-                    throw new NetOfficeException("Unexpected ExceptionMessageBehavior.");
+                    throw new NetOfficeException("Unexpected ExceptionMessageBehavior value.");
             }
         }
 
@@ -180,10 +180,10 @@ namespace NetOffice.Exceptions
         }
 
         /// <summary>
-        /// Try get proxy class and suspress any exception
+        /// Try to get proxy class and suppress any exceptions
         /// </summary>
         /// <param name="proxy">proxy instance</param>
-        /// <returns>class name or System._ComObject</returns>
+        /// <returns>Class name of the proxy object, or <code>System._ComObject</code> value when name cannot be obtained.</returns>
         private static string TryGetProxyClassName(object proxy)
         {
             try

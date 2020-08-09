@@ -10,14 +10,14 @@ namespace NetOffice
         Marshal.ReleaseComObject does NOT! decrement the remote IUnknown interface directly - 
         its decrement its own managed reference counter and 
         if the managed ref counter is == 0 then the remote IUnknown interface want be decremented.       
-        (a common missunderstanding)
+        (a common misunderstanding)
 
         If you increment the IUnknown reference counter directly(Marshal.AddRef) means 
         the RCW(System._ComObject) does not recognize that in its own managed lifetime service. 
      
         Unfortunately Microsoft spend no possibilities to influence the managed RCW lifetime service 
         for System._ComObject except of Marshal.ReleaseComObject/Marshal.FinalReleaseComObject.
-        Thats why we spend this lifetime wrapper around to have multiple 
+        That's why we spend this lifetime wrapper around to have multiple 
         NetOffice wrapper instances with same RCW proxy and keep the managed proxy alive as long we need.
     */
 
@@ -39,7 +39,7 @@ namespace NetOffice
         #region Fields
 
         /// <summary>
-        /// Shared access thread lock in Aquire/Release
+        /// Shared access thread lock in <see cref="Acquire"/> and <see cref="Release"/> methods.
         /// </summary>
         private object _thisLock = new object();
 

@@ -3,12 +3,12 @@
 namespace NetOffice.Resolver
 {
     /// <summary>
-    /// Spend information about ICOMObject instances
+    /// Spend information about <see cref="ICOMObject"/> instances
     /// </summary>
     internal class InstanceTypeNameResolver
     {
         /// <summary>
-        /// Return the component root namespace of an ICOMObject instance
+        /// Return the component root namespace of an <see cref="ICOMObject"/> instance
         /// </summary>
         /// <param name="instance">target instance</param>
         /// <returns>root namespace</returns>
@@ -18,7 +18,7 @@ namespace NetOffice.Resolver
         }
 
         /// <summary>
-        /// Return a human readable office-like instance type description of an ICOMObject instance
+        /// Return a human readable office-like instance type description of an <see cref="ICOMObject"/> instance
         /// </summary>
         /// <param name="instance">target instance</param>
         /// <returns>type description</returns>

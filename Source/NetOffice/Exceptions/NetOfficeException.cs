@@ -3,7 +3,7 @@
 namespace NetOffice
 {
     /// <summary>
-    /// Indicates an exception occured in NetOffice.dll, not in corresonding NetOffice dependency assembly
+    /// Indicates an exception occured in NetOffice.dll, not in corresponding NetOffice dependency assembly
     /// </summary>
     public class NetOfficeException : Exception
     {

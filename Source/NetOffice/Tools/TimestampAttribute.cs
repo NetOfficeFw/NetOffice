@@ -6,13 +6,13 @@ using System.Text;
 namespace NetOffice.Tools
 {
     /// <summary>
-    /// Create a time stamp in host application addin key while register
+    /// Create a time stamp in host application add-in registry key when registering the add-in.
     /// </summary>
     [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = false)]
     public class TimestampAttribute : System.Attribute
     {
         /// <summary>
-        /// Create a time stamp in host application addin key
+        /// Create a time stamp in host application add-in registry key.
         /// </summary>
         public TimestampAttribute()
         {

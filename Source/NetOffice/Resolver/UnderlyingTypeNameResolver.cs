@@ -4,7 +4,7 @@ using System.ComponentModel;
 namespace NetOffice.Resolver
 {
     /// <summary>
-    /// Spend information about the underlying proxy of an ICOMObject instance
+    /// Spend information about the underlying proxy of an <see cref="ICOMObject"/> instance
     /// </summary>
     internal class UnderlyingTypeNameResolver
     {
