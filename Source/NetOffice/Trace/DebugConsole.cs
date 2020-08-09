@@ -366,7 +366,7 @@ namespace NetOffice
                 if (AppendTimeInfoEnabled)
                     output = DateTime.Now.ToLongTimeString() + " - " + message;
 
-                AddToMessageList(output, MessageKind.Information);
+                AddToMessageList(output);
 
                 switch (Mode)
                 {
@@ -413,7 +413,7 @@ namespace NetOffice
                 if (AppendTimeInfoEnabled)
                     output = DateTime.Now.ToLongTimeString() + " - " + message;
 
-                AddToMessageList(message, MessageKind.Information);
+                AddToMessageList(message);
 
                 switch (Mode)
                 {
@@ -498,17 +498,8 @@ namespace NetOffice
         /// Add a new item to the message list.
         /// </summary>
         /// <param name="text">text as any</param>
-        private void AddToMessageList(string text)
-        {
-            AddToMessageList(text, MessageKind.Information);
-        }
-
-        /// <summary>
-        /// Add a new item to the message list.
-        /// </summary>
-        /// <param name="text">text as any</param>
         /// <param name="kind">text kind</param>
-        private void AddToMessageList(string text, MessageKind kind)
+        private void AddToMessageList(string text, MessageKind kind = MessageKind.Information)
         {
             if (String.IsNullOrEmpty(text))
                 return;
