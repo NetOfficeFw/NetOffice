@@ -45,7 +45,8 @@ You can find more information about [NetOffice Git repository in documentation](
 ### Branches
 
 * `master` - main branch
-* `releases/netoffice_v1.7.5` - branch with **current NetOffice 1.7.5 source code**
+* `releases/netoffice_v1.7.6` - branch with **current NetOffice 1.7.6 source code**
+* `releases/netoffice_v1.7.5` - branch with NetOffice 1.7.5 source code
 * `releases/netoffice_v1.7.4` - branch with NetOffice 1.7.4 source code
 
 #### Archived Branches
