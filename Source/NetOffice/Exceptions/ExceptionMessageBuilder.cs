@@ -49,7 +49,7 @@ namespace NetOffice.Exceptions
                 diagMessage = diagMessage.Replace("{CallType}", type.ToString());
                 diagMessage = diagMessage.Replace("{CallInstance}", comObject.InstanceFriendlyName);
                 diagMessage = diagMessage.Replace("{Name}", name);
-                if (diagMessage.IndexOf("{Args}") > -1)
+                if (diagMessage.Contains("{Args}"))
                 {
                     string argsString = String.Empty;
                     if (null != arguments && arguments.Length > 0)
