@@ -7,9 +7,9 @@ using NetOffice.Contribution.CollectionsGeneric;
 namespace NetOffice.Running
 {
     /// <summary>
-    /// Try to find running com instances.
-    /// The strategy to find is -depending on the arguments- the Running Object Table(ROT) or Windows Desktop Subsystem through IAccessible.
-    /// The reason is because the Running Object Table wont give you all com instances - its just shows only the information.
+    /// Try to find running COM instances.
+    /// The strategy to find is (depending on the arguments) the Running Object Table (ROT) or Windows Desktop Subsystem through IAccessible.
+    /// The reason is because the Running Object Table won't give you all COM instances; it just shows only the information.
     /// </summary>
     public static class ProxyService
     {
@@ -18,7 +18,7 @@ namespace NetOffice.Running
         /// </summary>
         /// <param name="componentName">component name, for example Excel</param>
         /// <param name="className">class name, for example Application</param>
-        /// <returns>ICOMObject enumerator</returns>
+        /// <returns><see cref="ICOMObject"/> enumerator</returns>
         public static IDisposableSequence<T> GetActiveInstances<T>(string componentName, string className) where T : class, ICOMObject
         {
             Type typeOfT = typeof(T);

@@ -315,9 +315,9 @@ namespace NetOffice.Contribution.CollectionsGeneric
     }
 
     /// <summary>
-    /// IDisposableCOMObjectSequence'1  Default Implementation
+    /// Default implementation for <see cref="IDisposableCOMObjectSequence{T}"/> interface.
     /// </summary>
-    /// <typeparam name="T">ICOMObject as any</typeparam>
+    /// <typeparam name="T"><see cref="ICOMObject"/> as any</typeparam>
     public class DisposableComObjectList<T> : IDisposableCOMObjectSequence<T> where T : ICOMObject
     {
         private T[] _items;

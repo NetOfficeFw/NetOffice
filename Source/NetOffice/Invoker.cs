@@ -10,7 +10,7 @@ using NetOffice.Availity;
 namespace NetOffice
 {
     /// <summary>
-    /// Invokes ICOMObject instances
+    /// Invokes <see cref="ICOMObject"/> instances
     /// </summary>
     public class Invoker
     {
@@ -110,7 +110,7 @@ namespace NetOffice
         #region Method Invokes
         
         /// <summary>
-        /// Executes method as latebind call without parameters 
+        /// Executes method as late bind call without parameters 
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -120,7 +120,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call without parameters 
+        /// Executes method as late bind call without parameters 
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
@@ -130,7 +130,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters
+        /// Executes method as late bind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -161,7 +161,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters
+        /// Executes method as late bind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -198,7 +198,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters
+        /// Executes method as late bind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -227,7 +227,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters 
+        /// Executes method as late bind call with parameters 
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
@@ -273,7 +273,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters and parameter modifiers to use ref parameter(s)
+        /// Executes method as late bind call with parameters and parameter modifiers to use ref parameter(s)
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -305,7 +305,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with return value
+        /// Executes method as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -338,7 +338,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with return value
+        /// Executes method as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -372,7 +372,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with return value
+        /// Executes method as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -404,7 +404,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with return value
+        /// Executes method as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -443,7 +443,7 @@ namespace NetOffice
         #region Method (BindingFlags.InvokeMethod) Invokes
 
         /// <summary>
-        /// Executes method as latebind call without parameters 
+        /// Executes method as late bind call without parameters 
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -453,7 +453,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call without parameters 
+        /// Executes method as late bind call without parameters 
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
@@ -463,7 +463,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters
+        /// Executes method as late bind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -494,7 +494,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters
+        /// Executes method as late bind call with parameters
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -523,7 +523,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters 
+        /// Executes method as late bind call with parameters 
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
@@ -569,7 +569,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with parameters and parameter modifiers to use ref parameter(s)
+        /// Executes method as late bind call with parameters and parameter modifiers to use ref parameter(s)
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -601,7 +601,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with return value
+        /// Executes method as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -634,7 +634,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with return value
+        /// Executes method as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -668,7 +668,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with return value
+        /// Executes method as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -700,7 +700,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Executes method as latebind call with return value
+        /// Executes method as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
@@ -739,7 +739,7 @@ namespace NetOffice
         #region Property Invokes
 
         /// <summary>
-        /// Perform property get as latebind call with return value
+        /// Perform property get as late bind call with return value
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of property</param>
@@ -787,7 +787,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property get as latebind call with return value
+        /// Perform property get as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -820,7 +820,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property get as latebind call with return value
+        /// Perform property get as late bind call with return value
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of property</param>
@@ -869,7 +869,7 @@ namespace NetOffice
         }
         
         /// <summary>
-        /// Perform property get as latebind call with return value
+        /// Perform property get as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -903,7 +903,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property get as latebind call with return value
+        /// Perform property get as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -935,7 +935,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property get as latebind call with return value
+        /// Perform property get as late bind call with return value
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -970,7 +970,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property set as latebind call
+        /// Perform property set as late bind call
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -1007,7 +1007,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property set as latebind call
+        /// Perform property set as late bind call
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -1045,7 +1045,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property set as latebind call
+        /// Perform property set as late bind call
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -1076,7 +1076,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property set as latebind call
+        /// Perform property set as late bind call
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -1108,7 +1108,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property set as latebind call
+        /// Perform property set as late bind call
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
@@ -1140,9 +1140,9 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Perform property set as latebind call
+        /// Perform property set as late bind call
         /// </summary>
-        /// <param name="comObject">comobject instance</param>
+        /// <param name="comObject"><see cref="ICOMObject"/> instance</param>
         /// <param name="name">name of the property</param>
         /// <param name="value">new value of the property</param>
         public void PropertySet(ICOMObject comObject, string name, object[] value)
@@ -1177,7 +1177,7 @@ namespace NetOffice
         /// <summary>
         /// Create parameter modifiers array
         /// </summary>
-        /// <param name="isRef">parameter is given as ref(ByRef in Visual Basic)</param>
+        /// <param name="isRef">parameter is given by reference</param>
         /// <returns>ParameterModifier array</returns>
         public static ParameterModifier[] CreateParamModifiers(params bool[] isRef)
         {
@@ -1195,7 +1195,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Replace null with Type.Missing, replace COMObject with COMObject.UnderlyingObject
+        /// Replace null with <see cref="Type.Missing"/>, replace <see cref="ICOMObject"/> with <see cref="ICOMObjectProxy.UnderlyingObject"/> object.
         /// </summary>
         /// <param name="param">value to check</param>
         /// <returns>validated value</returns>
@@ -1216,7 +1216,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Calls ValidateParam for every array item
+        /// Calls <see cref="ValidateParam"/> for every array item
         /// </summary>
         /// <param name="paramsArray">array with parameters</param>
         public static object[] ValidateParamsArray(params object[] paramsArray)
@@ -1233,7 +1233,7 @@ namespace NetOffice
         }
         
         /// <summary>
-        /// Calls dispose in case if param is COMObject, calls Marshal.ReleaseComObject in case of param is a COM proxy
+        /// Calls dispose in case if param is <see cref="ICOMObject"/>, calls <see cref="Marshal.ReleaseComObject"/> in case of param is a COM proxy
         /// </summary>
         public static void ReleaseParam(object param)
         {
@@ -1258,7 +1258,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Calls ReleaseParam for every array item
+        /// Calls <see cref="ReleaseParam"/> for every array item
         /// </summary>
         /// <param name="paramsArray">any value array</param>
         public static void ReleaseParamsArray(params object[] paramsArray)
@@ -1320,9 +1320,9 @@ namespace NetOffice
         #region Methods
 
         /// <summary>
-        /// Throws an ObjectDisposedException if given ICOMObject instance is already disposed.
+        /// Throws an <see cref="ObjectDisposedException"/> if given <see cref="ICOMObject"/> instance is already disposed.
         /// </summary>
-        /// <param name="comObject">ICOMObject instance as any</param>
+        /// <param name="comObject"><see cref="ICOMObject"/> instance</param>
         private static void ValidateComObjectIsAlive(ICOMObject comObject)
         {
             if (comObject.IsDisposed || comObject.IsCurrentlyDisposing)

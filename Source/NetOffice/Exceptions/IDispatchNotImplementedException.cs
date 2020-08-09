@@ -7,7 +7,7 @@ namespace NetOffice.Exceptions
 {
     /// <summary>
     /// Indicates a given com proxy/result doesn't implement the IDispatch COM Import Interface.
-    /// The IDispatch interface is the key interface for latebinding which NetOffice use strictly.
+    /// The <see cref="IDispatch"/> interface is the key interface for late binding which NetOffice uses strictly.
     /// </summary>
     public class IDispatchNotImplementedException : NetOfficeException
     {

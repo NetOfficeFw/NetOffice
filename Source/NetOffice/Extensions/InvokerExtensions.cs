@@ -4,17 +4,17 @@ using System;
 namespace NetOffice.Extensions.Invoker
 {
     /// <summary>
-    /// ICOMObject Invoker Extensions
+    /// <see cref="ICOMObject"/> Invoker Extensions
     /// </summary>
     public static class InvokerExtensions
     {
         /// <summary>
-        /// Invoke Property if instance implement ICOMObject
+        /// Invoke Property if instance implement <see cref="ICOMObject"/>
         /// </summary>
         /// <typeparam name="T">result type</typeparam>
-        /// <param name="value">instance which is ICOMObject</param>
+        /// <param name="value">instance which is <see cref="ICOMObject"/></param>
         /// <param name="propertyName">name of property</param>
-        /// <returns>result of invoked property or default(T) if instance doesn't implement ICOMObject</returns>
+        /// <returns>result of invoked property or default(T) if instance doesn't implement <see cref="ICOMObject"/></returns>
         public static T Property<T>(this object value, string propertyName)
         {
             ICOMObject comObject = value as ICOMObject;
@@ -31,12 +31,12 @@ namespace NetOffice.Extensions.Invoker
         }
 
         /// <summary>
-        /// Invoke method if instance implement ICOMObject
+        /// Invoke method if instance implement <see cref="ICOMObject"/>
         /// </summary>
-        /// <param name="value">instance which is ICOMObject</param>
+        /// <param name="value">instance which is <see cref="ICOMObject"/></param>
         /// <param name="methodName">name of method</param>
-        /// <param name="throwException">throw exception if unable to cast ICOMObject</param>
-        /// <returns>result of invoked property or default(T) if instance doesn't implement ICOMObject</returns>
+        /// <param name="throwException">throw exception if unable to cast <see cref="ICOMObject"/></param>
+        /// <returns>result of invoked property or default(T) if instance doesn't implement <see cref="ICOMObject"/></returns>
         public static void Method(this object value, string methodName, bool throwException = false)
         {
             ICOMObject comObject = value as ICOMObject;
@@ -52,13 +52,13 @@ namespace NetOffice.Extensions.Invoker
         }
 
         /// <summary>
-        /// Invoke method if instance implement ICOMObject
+        /// Invoke method if instance implement <see cref="ICOMObject"/>
         /// </summary>
-        /// <param name="value">instance which is ICOMObject</param>
+        /// <param name="value">instance which is <see cref="ICOMObject"/></param>
         /// <param name="methodName">name of method</param>
         /// <param name="paramsArray">arguments as any</param>
-        /// <param name="throwException">throw exception if unable to cast ICOMObject</param>
-        /// <returns>result of invoked property or default(T) if instance doesn't implement ICOMObject</returns>
+        /// <param name="throwException">throw exception if unable to cast <see cref="ICOMObject"/></param>
+        /// <returns>result of invoked property or default(T) if instance doesn't implement <see cref="ICOMObject"/></returns>
         public static T MethodGet<T>(this object value, string methodName, object[] paramsArray, bool throwException = false)
         {
             ICOMObject comObject = value as ICOMObject;

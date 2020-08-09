@@ -6,16 +6,16 @@ using NetOffice.Exceptions;
 namespace NetOffice.Extensions.Calling
 {
     /// <summary>
-    /// ICOMObject Call Extensions
+    /// <see cref="ICOMObject"/> Call Extensions
     /// </summary>
     public static class CallExtensions
     {
         /// <summary>
-        /// Invoke ICOMObject method by name.
+        /// Invoke <see cref="ICOMObject"/> method by name.
         /// </summary>
         /// <remarks>Should be called when dealing with optional arguments results in ugly code because this method can handle so-called named arguments</remarks>
         /// <exception cref="NetOfficeCOMException">Unable to complete the call</exception>
-        /// <param name="comObject">target ICOMObject instance</param>
+        /// <param name="comObject">target <see cref="ICOMObject"/> instance</param>
         /// <param name="name">name of the method</param>
         /// <param name="arg1">optional argument 1</param>
         /// <param name="arg2">optional argument 2</param>
@@ -84,11 +84,11 @@ namespace NetOffice.Extensions.Calling
         }
 
         /// <summary>
-        /// Invoke ICOMObject method by name.
+        /// Invoke <see cref="ICOMObject"/> method by name.
         /// </summary>
         /// <remarks>Should be called when dealing with optional arguments results in ugly code because this method can handle so-called named arguments</remarks>
         /// <exception cref="NetOfficeCOMException">Unable to complete the call</exception>
-        /// <param name="comObject">target ICOMObject instance</param>
+        /// <param name="comObject">target <see cref="ICOMObject"/> instance</param>
         /// <param name="name">name of the method</param>
         /// <param name="arg1">optional argument 1</param>
         /// <param name="arg2">optional argument 2</param>

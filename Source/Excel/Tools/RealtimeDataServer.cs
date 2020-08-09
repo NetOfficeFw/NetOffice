@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi.Tools
         }
 
         /// <summary>
-        /// Called from registration services while ungregister
+        /// Called from registration services while unregister
         /// </summary>
         /// <param name="type">Type information for the class</param>
         [ComUnregisterFunction, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]

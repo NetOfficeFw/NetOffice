@@ -8,7 +8,7 @@ namespace NetOffice.Loader
     internal static class PathBuilder
     {
         /// <summary>
-        /// Build path from dependent assambly
+        /// Build path from dependent assembly
         /// </summary>
         /// <param name="assembly">assembly to resolve</param>
         /// <returns>resolved path</returns>

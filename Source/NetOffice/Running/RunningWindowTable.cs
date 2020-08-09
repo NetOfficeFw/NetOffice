@@ -11,7 +11,7 @@ using NetOffice.Contribution.CollectionsGeneric;
 namespace NetOffice.Running
 {
     /// <summary>
-    /// Try to find COM proxies from Desktop Subystem
+    /// Try to find COM proxies from Desktop subsystem.
     /// </summary>
     public static partial class RunningWindowTable
     {         
@@ -35,7 +35,7 @@ namespace NetOffice.Running
         #region Properties
 
         /// <summary>
-        /// Timeout for the main window lookup in miliiseconds.
+        /// Timeout for the main window lookup in milliseconds.
         /// Default: 5000, Possible Range 1000-90000
         /// </summary>
         public static int MainWindowTimeoutMilliseconds
@@ -55,7 +55,7 @@ namespace NetOffice.Running
         }
 
         /// <summary>
-        /// Timeout for the child window lookup in miliiseconds.
+        /// Timeout for the child window lookup in milliseconds.
         /// Default: 5000, Possible Range 1000-90000
         /// </summary>
         public static int ChildWindowTimeoutMilliseconds
@@ -141,7 +141,7 @@ namespace NetOffice.Running
         /// Performs a lookup for window/child windows there implement the IAccessible interface to get a COM proxy
         /// </summary>
         /// <param name="targets">one ore more targets to lookup</param>
-        /// <returns>proxy information ernumeration</returns>
+        /// <returns>proxy information enumeration</returns>
         public static IDisposableSequence<ProxyInformation> GetAccessibleProxiesFromPath(IEnumerable<AccessibleWindowTarget> targets)
         {
             return GetAccessibleProxiesFromPath(targets, Int16.MaxValue);
@@ -152,7 +152,7 @@ namespace NetOffice.Running
         /// </summary>
         /// <param name="targets">one ore more targets to lookup</param>
         /// <param name="maximumResultCount">maximum result count - the method abort if reached</param>
-        /// <returns>proxy information ernumeration</returns>
+        /// <returns>proxy information enumeration</returns>
         public static IDisposableSequence<ProxyInformation> GetAccessibleProxiesFromPath(IEnumerable<AccessibleWindowTarget> targets, int maximumResultCount)
         {
             if (null == targets || GetTargetsCount(targets) == 0)
