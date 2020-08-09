@@ -1,5 +1,5 @@
 # NetOffice project build definition
-version: 1.7.4.11-b{build}
+version: 1.7.4.12-b{build}
 
 
 image: Visual Studio 2017
@@ -45,7 +45,7 @@ after_test:
       xcopy /y LICENSE.txt build_tmp\
   - cmd: |
       cd build_tmp
-      7z a -tzip ..\artifacts\NetOffice_v1.7.4.11_unsigned.zip .
+      7z a -tzip ..\artifacts\NetOffice_v1.7.4.12_unsigned.zip .
 
 artifacts:
   - path: 'artifacts\NetOffice_*.zip'

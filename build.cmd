@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-set _version=1.7.4.11
+set _version=1.7.4.12
 set _certificate=goIT Solutions, s.r.o.
 set _thumbprint=AC6DBFFB1BF8B62281DEB8641023A66CDDC5DB57
 
