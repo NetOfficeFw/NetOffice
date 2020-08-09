@@ -105,9 +105,9 @@ namespace NetOffice.Running
         #region Fields
 
         /// <summary>
-        /// some office applications in specific version use the "Microsoft" prefix in the COM server name
+        /// Some MS Office applications in specific versions use the "Microsoft " prefix in the COM server name.
         /// </summary>
-        private static readonly string _ballmersPlace = "Microsoft "; // variable name is now depricated of course (but no warning from fxcop...)
+        private static readonly string ComponentNamePrefix = "Microsoft ";
 
         #endregion
 
@@ -163,7 +163,7 @@ namespace NetOffice.Running
                     }
                     else
                     {
-                        componentNameEqual = ((_ballmersPlace + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
+                        componentNameEqual = ((ComponentNamePrefix + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
                         if (componentNameEqual && classNameEqual)
                         {
                             totalCount++;
@@ -244,7 +244,7 @@ namespace NetOffice.Running
                     }
                     else
                     {
-                        componentNameEqual = ((_ballmersPlace + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
+                        componentNameEqual = ((ComponentNamePrefix + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
                         if (componentNameEqual && classNameEqual)
                         {
                             return comInstance;
@@ -327,7 +327,7 @@ namespace NetOffice.Running
                     }
                     else
                     {
-                        componentNameEqual = ((_ballmersPlace + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
+                        componentNameEqual = ((ComponentNamePrefix + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
                         if (componentNameEqual && classNameEqual)
                         {
                             resultList.Add(comInstance);
@@ -406,7 +406,7 @@ namespace NetOffice.Running
                     }
                     else
                     {
-                        componentNameEqual = ((_ballmersPlace + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
+                        componentNameEqual = ((ComponentNamePrefix + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
                         if (componentNameEqual && classNameEqual)
                         {
                             match = true;
