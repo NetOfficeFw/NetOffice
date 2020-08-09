@@ -252,8 +252,8 @@ namespace NetOffice.Loader
         {
             try
             {
-                // dont care for resources
-                if ((!String.IsNullOrEmpty(args.Name) && args.Name.ToLower().Trim().IndexOf(".resources") > -1))
+                // skip resource assemblies
+                if (args.Name.ContainsIgnoreCase(".resources"))
                     return null;
 
                 string thisLocalPath = Resolver.UriResolver.ResolveLocalPath(Owner.ThisAssembly.CodeBase);

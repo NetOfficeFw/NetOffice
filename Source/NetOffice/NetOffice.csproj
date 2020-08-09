@@ -165,6 +165,7 @@
     <Compile Include="Loader\PathBuilder.cs" />
     <Compile Include="Resolver\InstanceTypeNameResolver.cs" />
     <Compile Include="Diagnostics\SelfDiagnostics.cs" />
+    <Compile Include="StringEx.cs" />
     <Compile Include="Tools\DontRegisterAddinAttribute.cs" />
     <Compile Include="Dynamics\DynamicObjectEntity.cs" />
     <Compile Include="Availity\SupportedEntityFinder.cs" />

@@ -34,6 +34,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\NetOffice\NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.12.0\lib\net40\nunit.framework.dll</HintPath>
@@ -56,6 +62,7 @@
     <Compile Include="Helpers\FakeComObject.cs" />
     <Compile Include="NetOffice\Events\CoClassEventReflectorTests.cs" />
     <Compile Include="NetOffice\Events\EventClassStub.cs" />
+    <Compile Include="NetOffice\StringExTests.cs" />
     <Compile Include="OutlookApi\Tools\OlRibbonTypeTests.cs" />
     <Compile Include="OutlookApi\Tools\OlCustomUIAttributeTests.cs" />
     <Compile Include="OutlookApi\Utils\ProjectInfoTests.cs" />
@@ -89,6 +96,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\NetOffice\NetOffice_v4.0.snk">
+      <Link>NetOffice_v4.0.snk</Link>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
