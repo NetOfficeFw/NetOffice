@@ -75,7 +75,7 @@ namespace NetOffice.Running
         #region Methods
         
         /// <summary>
-        /// Converts nulllable bool to Process elevation
+        /// Converts nullable bool to <see cref="ProcessElevation"/> value.
         /// </summary>
         /// <param name="value">target value to convert</param>
         /// <returns>process elevation</returns>

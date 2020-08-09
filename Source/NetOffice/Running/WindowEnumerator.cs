@@ -15,12 +15,12 @@ namespace NetOffice.Running
         #region Embedded Types
 
         /// <summary>
-        /// Internal operatotion mode 
+        /// Internal operation mode 
         /// </summary>
         public enum FilterMode
         {
             /// <summary>
-            ///  Class name must match totaly 
+            ///  Class name must match totally
             /// </summary>
             Full = 0,
 

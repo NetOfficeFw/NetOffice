@@ -56,13 +56,13 @@ namespace NetOffice
         int RaiseCustomEvent(string eventName, ref object[] paramsArray);
 
         /// <summary>
-        /// Create the event eventbridge for the object
+        /// Create the event bridge for the object
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         void CreateEventBridge();
 
         /// <summary>
-        /// Dispose the event eventbridge for the instance
+        /// Dispose the event bridge for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         void DisposeEventBridge();

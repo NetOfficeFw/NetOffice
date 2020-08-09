@@ -29,7 +29,7 @@ namespace NetOffice
     }
 
     /// <summary>
-    /// EventHandler delegate for ICOMObjectDisposable.OnDispose
+    /// EventHandler delegate for <see cref="ICOMObjectDisposable.OnDispose"/>
     /// </summary>
     /// <param name="eventArgs">dispose arguments</param>
     public delegate void OnDisposeEventHandler(OnDisposeEventArgs eventArgs);

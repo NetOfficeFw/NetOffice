@@ -5,27 +5,29 @@ using System.Text;
 namespace NetOffice.Tools
 {
     /// <summary>
-    /// Specify the kind and condition of an register method call
+    /// Specify the kind and condition of the registration method call.
     /// </summary>
     public enum RegisterMode
     {
         /// <summary>
-        /// the base class COMAddin doesn't perform any register operations and call the specified register method with the parameter RegisterCall.Replace. The specified register method has to do all register operations
+        /// The base class <see cref="COMAddinBase"/> does not perform any registration operations
+        /// and calls the specified registration method with the parameter <see cref="RegisterCall.Replace"/>.
+        /// The specified registration method has to do all registration operations manually.
         /// </summary>
         Replace = 0,
 
         /// <summary>
-        /// the method was called with parameter RegisterCall.CallBefore before the base class do any register operations. 
+        /// The method was called with parameter <see cref="RegisterCall.CallBefore"/> before the base class does any registration operations.
         /// </summary>
         CallBefore = 1,
 
         /// <summary>
-        /// the method was called with parameter RegisterCall.CallAfter when the base register operations is done. 
+        /// The method was called with parameter <see cref="RegisterCall.CallAfter"/> when the base class registration operations are done.
         /// </summary>
         CallAfter = 2,
 
         /// <summary>
-        /// this means a combination of CallBefore and CallAfter
+        /// This means a combination of <see cref="RegisterCall.CallBefore"/> and <see cref="RegisterCall.CallAfter"/>.
         /// </summary>
         CallBeforeAndAfter = 3
     }

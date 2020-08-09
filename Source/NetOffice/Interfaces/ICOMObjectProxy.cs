@@ -15,25 +15,25 @@ namespace NetOffice
         object UnderlyingObject { get; }
 
         /// <summary>
-        /// Type information from UnderlyingObject
+        /// Type information of the <see cref="UnderlyingObject"/>
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         Type UnderlyingType { get; }
 
         /// <summary>
-        /// Full type name from UnderlyingObject
+        /// Full type name of the <see cref="UnderlyingObject"/>
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         string UnderlyingTypeName { get; }
 
         /// <summary>
-        /// Friendly type name from UnderlyingObject
+        /// Friendly type name of the <see cref="UnderlyingObject"/>
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         string UnderlyingFriendlyTypeName { get; }
 
         /// <summary>
-        /// Component name from UnderlyingObject
+        /// Component name of the <see cref="UnderlyingObject"/>
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         string UnderlyingComponentName { get; }
@@ -57,7 +57,7 @@ namespace NetOffice
         string InstanceComponentName { get; }
        
         /// <summary>
-        /// Type information from ICOMObject instance
+        /// Type information from <see cref="ICOMObject"/> instance
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         Type InstanceType { get; }

@@ -8,7 +8,7 @@ using NetOffice.Exceptions;
 namespace NetOffice.Tools
 {
     /// <summary>
-    /// Handle COMAddin unregister process
+    /// Handle <see cref="COMAddinBase"/> unregistration process.
     /// </summary>
     public static class COMAddinUnRegisterHandler
     {     

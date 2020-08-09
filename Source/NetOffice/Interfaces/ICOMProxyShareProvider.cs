@@ -6,7 +6,7 @@ using NetOffice.Attributes;
 namespace NetOffice
 {
     /// <summary>
-    /// Handle access to share an underlying COM proxy. Not intended to use outside from NetOffice infrastructure.
+    /// Handle access to shared underlying COM proxy. Not intended to be used outside of NetOffice infrastructure.
     /// </summary>
     public interface ICOMProxyShareProvider
     {
@@ -19,7 +19,7 @@ namespace NetOffice
 
         /// <summary>
         /// Set the inner proxy shared access handler.
-        /// The method want aquire the share 1x times.
+        /// The method wants to acquire the shared object one time.
         /// </summary>
         /// <param name="share">shared proxy</param>
         /// <exception cref="ArgumentNullException">Throws when given share is null(Nothing in Visual Basic)</exception>

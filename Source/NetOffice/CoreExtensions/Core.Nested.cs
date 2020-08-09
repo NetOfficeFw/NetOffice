@@ -48,7 +48,7 @@ namespace NetOffice
             /// Creates new instance of the class
             /// </summary>
             /// <param name="comProxy">target proxy</param>
-            /// <returns>ProxyInformations instance</returns>
+            /// <returns><see cref="ProxyInformations"/> instance</returns>
             public static ProxyInformations Create(object comProxy)
             {
                 string className = TypeDescriptor.GetClassName(comProxy);
