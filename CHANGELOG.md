@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.7.6
+
+* Improved documentation for many members in the **NetOffice** project
+* Refactored small portion of the `CurrentAppDomain.CurrentDomain_AssemblyResolve()` method
+* Deprecated code related to dynamic types and "duck tales" implementation (will be removed in **v1.8**) [#283](https://github.com/NetOfficeFw/NetOffice/issues/283)
+
+### Breaking Changes
+* Some exceptions have better error messages and use correct parameters  
+  _(if you rely on exact exception messages, this is a breaking change)_
+
 ## v1.7.5
 
 ### Added
