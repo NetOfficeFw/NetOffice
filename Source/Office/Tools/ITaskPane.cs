@@ -15,8 +15,8 @@ namespace NetOffice.OfficeApi.Tools
         /// After startup to serve the application instance and custom arguments(if set)
         /// </summary>
         /// <param name="application">host application instance</param>
-		/// <param name="parentPane">custom task pane definition </param>
-		/// <param name="customArguments">custom arguments</param>
+        /// <param name="parentPane">custom task pane definition </param>
+        /// <param name="customArguments">custom arguments</param>
         void OnConnection(T application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments);
     }
 
@@ -26,10 +26,10 @@ namespace NetOffice.OfficeApi.Tools
     /// </summary>
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<ICOMObject>
     {
-		/// <summary>
+        /// <summary>
         /// While Office Application shutdown. The method is not called in case of unexpected termination (may user kills the instance in task manager)
         /// </summary>
-		void OnDisconnection();
+        void OnDisconnection();
 
         /// <summary>
         /// Called after any position changes but not for size changes. Use the UserControl.Resize event instead for size changes

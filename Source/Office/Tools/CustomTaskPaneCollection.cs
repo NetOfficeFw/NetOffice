@@ -117,13 +117,13 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// properties was set from the client before the instance was created. The COMAddin class perfom latebind property set calls during this dictionary
         /// </summary>
-		[Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
         public Dictionary<string, object> ChangedProperties { get; private set; }
 
         /// <summary>
         /// info about the inner taskpane instance is already created
         /// </summary>
-		[Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
         public bool IsLoaded { get; set; }
 
         /// <summary>
@@ -319,18 +319,18 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         public Type Type { get; internal set; }
 
-		/// <summary>
+        /// <summary>
         /// Additional Arguments for OnConnection. The UserControl must implement ITaskPane to use it
         /// </summary>
-		public object[] Arguments{ get; set; }
+        public object[] Arguments{ get; set; }
 
         #endregion
 
         #region Methods / Trigger
 
-		/// <summary>
-		/// Attach the event triggers
-		/// </summary>
+        /// <summary>
+        /// Attach the event triggers
+        /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public void AssignEvents()
         {
@@ -389,12 +389,12 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         /// <param name="taskPaneType">new child</param>
         /// <param name="title">title(caption) of the child</param>
-		/// <returns>new instance</returns>
+        /// <returns>new instance</returns>
         public TaskPaneInfo Add(Type taskPaneType, string title)
         {
-			TaskPaneInfo item = new TaskPaneInfo(taskPaneType, title);
+            TaskPaneInfo item = new TaskPaneInfo(taskPaneType, title);
             InnerList.Add(item);
-			return item;
+            return item;
         }
 
         /// <summary>
@@ -410,16 +410,16 @@ namespace NetOffice.OfficeApi.Tools
                 return false;
         }
 
-		/// <summary>
+        /// <summary>
         /// Collection items count
         /// </summary>
-		public int Count
-		{
-			get
-			{
-				return InnerList.Count;
-			}
-		}
+        public int Count
+        {
+            get
+            {
+                return InnerList.Count;
+            }
+        }
 
         /// <summary>
         /// Returns an element from specified index
