@@ -402,7 +402,7 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        internal bool Remove(TaskPaneInfo item)
+        public bool Remove(TaskPaneInfo item)
         {
             if (null != item)
                 return InnerList.Remove(item);
