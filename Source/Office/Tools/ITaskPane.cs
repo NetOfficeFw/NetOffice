@@ -6,41 +6,49 @@ using NetOffice.Tools;
 namespace NetOffice.OfficeApi.Tools
 {
     /// <summary>
-    /// ITaskPane Connection Part
+    /// Connection part for the <see cref="ITaskPane"/> objects representing custom task panes.
     /// </summary>
     /// <typeparam name="T">Office Host Application</typeparam>
     public interface ITaskPaneConnection<T> where T : ICOMObject
     {
         /// <summary>
-        /// After startup to serve the application instance and custom arguments(if set)
+        /// Called after startup to set the application instance and custom arguments to the custom task pane.
         /// </summary>
         /// <param name="application">host application instance</param>
-		/// <param name="parentPane">custom task pane definition </param>
-		/// <param name="customArguments">custom arguments</param>
+        /// <param name="parentPane">custom task pane definition </param>
+        /// <param name="customArguments">custom arguments</param>
         void OnConnection(T application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments);
     }
 
     /// <summary>
-    /// Office TaskPane UserControl classes can implement these interface in a NetOffice Tools Addin(COMAddin) as a special service.
-    /// NetOffice want call ITaskPane members automaticly 
+    /// Office TaskPane UserControl classes can implement this interface in NetOffice Tools Addin (COMAddin) as a special service.
+    /// NetOffice will call ITaskPane members automatically.
     /// </summary>
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<ICOMObject>
     {
-		/// <summary>
-        /// While Office Application shutdown. The method is not called in case of unexpected termination (may user kills the instance in task manager)
+        /// <summary>
+        /// Called when Microsoft Office application is shuting down.
+        /// The method is not called in case of unexpected termination of process.
         /// </summary>
-		void OnDisconnection();
+        void OnDisconnection();
 
         /// <summary>
-        /// Called after any position changes but not for size changes. Use the UserControl.Resize event instead for size changes
+        /// Called when the user changes the dock position of the custom task pane.
         /// </summary>
         /// <param name="position">the current alignment for the instance</param>
+        /// <remarks>
+        /// This event is not fired when custom task pane size is changed.
+        /// Use the <see cref="System.Windows.Forms.Control.Resize"/> event to listen for size changes.
+        /// </remarks>
         void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position);
 
         /// <summary>
-        /// Called after any visibility changes because the UserControl.VisibleChanged event doesn't work as expected in a task pane scenario
+        /// Called when the user displays or closes the custom task pane.
         /// </summary>
         /// <param name="visible">the current visibility for the instance</param>
+        /// <remarks>
+        /// The <see cref="System.Windows.Forms.Control.VisibleChanged"/> event does not work as expected in a custom task pane scenarios.
+        /// </remarks>
         void OnVisibleStateChanged(bool visible);
     }
 }

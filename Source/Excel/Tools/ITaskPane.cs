@@ -4,23 +4,23 @@ using Excel = NetOffice.ExcelApi;
 namespace NetOffice.ExcelApi.Tools
 {   
     /// <summary>
-    /// Task pane UserControl instances can implement these interface in a NetOffice Tools Addin as a special service
+    /// Custom task pane UserControl instance may implement this interface to be notified about the lifetime of the custom task pane.
     /// </summary>
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<Excel.Application>
     {
 		/// <summary>
-        /// While Excel Application shutdown. The method is not called in case of unexpected termination (may user kill the instance in task manager)
+        /// Called when Microsoft Office application is shuting down. This method is not called in case of unexpected termination of the process.
         /// </summary>
 		void OnDisconnection();
 
         /// <summary>
-        /// Called after any position changes but not for size changes. Use the UserControl.Resize event instead for size changes
+        /// Called when the user changes the dock position of the custom task pane.
         /// </summary>
         /// <param name="position">the current alignment for the instance</param>
         void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position);
 
         /// <summary>
-        /// Called after any visibility changes because the UserControl.VisibleChanged event doesn't work as expected in a task pane scenario
+        /// Called when the user displays or closes the custom task pane.
         /// </summary>
         /// <param name="visible">the current visibility for the instance</param>
         void OnVisibleStateChanged(bool visible);

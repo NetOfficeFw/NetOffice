@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.7.7
+
+* Make the `CustomTaskPaneCollection.Remove()` method public to allow custom implementations of Task Panes to remove old objects manually
+
 ## v1.7.6
 
 * Improved documentation for many members in the **NetOffice** project
