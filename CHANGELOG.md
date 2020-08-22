@@ -5,6 +5,7 @@
 * `Settings.IsEqualTo()` method will compare objects correctly [#291](https://github.com/NetOfficeFw/NetOffice/issues/291)
 * `Settings` implements `IEquatable<Settings>` in favor of old `IsEqualTo()` method
 * `ResourceUtils.ReadImage()` will correctly read the image from resources [#292](https://github.com/NetOfficeFw/NetOffice/issues/292)
+* `ResourceUtils.ReadString()` will correctly read string resources [#292](https://github.com/NetOfficeFw/NetOffice/issues/292)
 
 ### Bug Fixes
 * Fix [#291](https://github.com/NetOfficeFw/NetOffice/issues/291) _`Settings.IsEqualTo` compares `EnableSafeMode` incorrectly_
