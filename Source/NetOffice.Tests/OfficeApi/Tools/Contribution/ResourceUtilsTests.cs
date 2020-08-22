@@ -45,5 +45,39 @@ namespace NetOffice.Tests.OfficeApi.Tools.Contribution
             Assert.AreEqual(4, actualImage.Width);
             Assert.AreEqual(ImageFormat.Png, actualImage.RawFormat);
         }
+
+        [Test]
+        public void ReadIcon_ResourceName_ReturnsTheIconFromCurrentAssembly()
+        {
+            // Arrange
+            var fakeComObject = new TestableComObjectStub();
+            var commons = new CommonUtils(fakeComObject, Assembly.GetExecutingAssembly());
+            var utils = commons.Resource;
+
+            // Act
+            var actualIcon = utils.ReadIcon("NetOffice.Tests.Data.SampleIcon.ico");
+
+            // Assert
+            Assert.IsNotNull(actualIcon);
+            Assert.AreEqual(16, actualIcon.Height);
+            Assert.AreEqual(16, actualIcon.Width);
+        }
+
+        [Test]
+        public void ReadIcon_ResourceNameAndAssembly_ReturnsTheIconFromResource()
+        {
+            // Arrange
+            var fakeComObject = new TestableComObjectStub();
+            var commons = new CommonUtils(fakeComObject);
+            var utils = commons.Resource;
+
+            // Act
+            var actualIcon = utils.ReadIcon("NetOffice.Tests.Data.SampleIcon.ico", Assembly.GetExecutingAssembly());
+
+            // Assert
+            Assert.IsNotNull(actualIcon);
+            Assert.AreEqual(16, actualIcon.Height);
+            Assert.AreEqual(16, actualIcon.Width);
+        }
     }
 }

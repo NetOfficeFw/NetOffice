@@ -107,7 +107,9 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Data\SampleIcon.ico" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Data\SampleImage.png" />
   </ItemGroup>
