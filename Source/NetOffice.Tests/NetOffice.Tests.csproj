@@ -65,6 +65,7 @@
     <Compile Include="Helpers\FakeComObject.cs" />
     <Compile Include="NetOffice\Events\CoClassEventReflectorTests.cs" />
     <Compile Include="NetOffice\Events\EventClassStub.cs" />
+    <Compile Include="NetOffice\SettingsTests.cs" />
     <Compile Include="NetOffice\StringExTests.cs" />
     <Compile Include="OutlookApi\Tools\OlRibbonTypeTests.cs" />
     <Compile Include="OutlookApi\Tools\OlCustomUIAttributeTests.cs" />
