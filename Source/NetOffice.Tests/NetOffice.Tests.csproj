@@ -113,6 +113,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Data\SampleImage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\SampleText.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

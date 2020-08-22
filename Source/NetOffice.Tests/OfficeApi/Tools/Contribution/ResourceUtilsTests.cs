@@ -11,6 +11,36 @@ namespace NetOffice.Tests.OfficeApi.Tools.Contribution
     public class ResourceUtilsTests
     {
         [Test]
+        public void ReadString_ResourceName_ReturnsTheImageFromCurrentAssembly()
+        {
+            // Arrange
+            var fakeComObject = new TestableComObjectStub();
+            var commons = new CommonUtils(fakeComObject, Assembly.GetExecutingAssembly());
+            var utils = commons.Resource;
+
+            // Act
+            var actualText = utils.ReadString("NetOffice.Tests.Data.SampleText.txt");
+
+            // Assert
+            Assert.AreEqual("Sample text resource file.", actualText);
+        }
+
+        [Test]
+        public void ReadString_ResourceNameAndAssembly_ReturnsTheImageFromResource()
+        {
+            // Arrange
+            var fakeComObject = new TestableComObjectStub();
+            var commons = new CommonUtils(fakeComObject);
+            var utils = commons.Resource;
+
+            // Act
+            var actualText = utils.ReadString("NetOffice.Tests.Data.SampleText.txt", Assembly.GetExecutingAssembly());
+
+            // Assert
+            Assert.AreEqual("Sample text resource file.", actualText);
+        }
+
+        [Test]
         public void ReadImage_ResourceName_ReturnsTheImageFromCurrentAssembly()
         {
             // Arrange
