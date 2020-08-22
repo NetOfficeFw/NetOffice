@@ -10,7 +10,7 @@ namespace NetOffice.CollectionsGeneric
     /// Provides enumerable sequence services
     /// </summary>
     /// <typeparam name="T">T as any</typeparam>
-    public interface IEnumerableProvider<T> : IEnumerable<T>
+    public interface IEnumerableProvider<out T> : IEnumerable<T>
     {
         /// <summary>
         /// Creates a managed enumerator

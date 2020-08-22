@@ -9,7 +9,7 @@ namespace NetOffice
     /// </summary>
     /// <typeparam name="T"><see cref="ICOMObject"/> implementation</typeparam>
     /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-    public interface ICloneable<T>  where T : class, ICOMObject
+    public interface ICloneable<out T>  where T : class, ICOMObject
     {
         /// <summary>
         /// Creates a new <see cref="ICOMObject"/> that is a copy of the current instance
