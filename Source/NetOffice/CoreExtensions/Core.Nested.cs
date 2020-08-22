@@ -59,38 +59,6 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Arguments in CreateCOMDynamicEvent event
-        /// </summary>
-        public class OnCreateCOMDynamicEventArgs : EventArgs
-        {
-            /// <summary>
-            /// Creates an instance of the class
-            /// </summary>
-            /// <param name="requestedFrom">calling wrapper instance</param>
-            /// <param name="comProxy">target proxy</param>
-            internal OnCreateCOMDynamicEventArgs(ICOMObject requestedFrom, object comProxy)
-            {
-                RequestedFrom = requestedFrom;
-                ComProxy = comProxy;
-            }
-
-            /// <summary>
-            /// Calling wrapper instance
-            /// </summary>
-            public ICOMObject RequestedFrom { get; private set; }
-
-            /// <summary>
-            /// Target Proxy
-            /// </summary>
-            public object ComProxy { get; private set; }
-
-            /// <summary>
-            /// COMDynamicObject instance to set or null for default
-            /// </summary>
-            public COMDynamicObject Result { get; set; }
-        }
-
-        /// <summary>
         /// Arguments in CreateProxyShare event
         /// </summary>
         public class OnCreateProxyShareEventArgs : EventArgs
@@ -195,13 +163,6 @@ namespace NetOffice
         /// <param name="sender">Core sender instance</param>
         /// <param name="args">args as provided</param>
         public delegate void ResolveEventHandler(Core sender, ResolveEventArgs args);
-
-        /// <summary>
-        /// OnCreateCOMDynamic event handler
-        /// </summary>
-        /// <param name="sender">Core sender instance</param>
-        /// <param name="args">args as provided</param>
-        public delegate void OnCreateCOMDynamicEventHandler(Core sender, OnCreateCOMDynamicEventArgs args);
 
         /// <summary>
         /// OnCreateProxy event handler
