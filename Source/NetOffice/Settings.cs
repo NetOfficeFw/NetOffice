@@ -9,7 +9,7 @@ namespace NetOffice
     /// Core Settings
     /// </summary>
     [TypeConverter(typeof(Converter.ExpandableSettingsConverter))]
-    public class Settings : INotifyPropertyChanged
+    public class Settings : INotifyPropertyChanged, IEquatable<Settings>
     {
         #region Constants
 
@@ -524,43 +524,60 @@ namespace NetOffice
 
         #region Methods
 
-        /// <summary>
-        /// Returns information given settings is different from instance
-        /// </summary>
-        /// <param name="settings">settings to compare</param>
-        /// <returns>true if equal, otherwise false</returns>
+        [Obsolete("Use the IEquatable.Equals() method to compare Settings objects. Will be removed in NetOffice 1.8")]
         public bool IsEqualTo(Settings settings)
         {
-            if (settings == null)
+            return this.Equals(settings);
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj)
+        {
+            if (obj is Settings)
+            {
+                return this.Equals((Settings)obj);
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Indicates whether the current object is equal to another Settings object.
+        /// </summary>
+        /// <param name="other">An Settings object to compare with this object.</param>
+        /// <returns>true if the current object is equal to the other parameter; otherwise, false.</returns>
+        public bool Equals(Settings other)
+        {
+            if (other == null)
                 return false;
 
-            if (settings == this)
+            if (other == this)
                 return true;
            
             // todo: handle that better by reflection
 
-            if (PerformanceTrace.Enabled != settings.PerformanceTrace.Enabled || EnableProxyManagement != settings.EnableProxyManagement ||
-                EnableDynamicObjects != settings.EnableDynamicObjects || EnableDynamicEventArguments != settings.EnableDynamicEventArguments)
+            if (PerformanceTrace.Enabled != other.PerformanceTrace.Enabled || EnableProxyManagement != other.EnableProxyManagement ||
+                EnableDynamicObjects != other.EnableDynamicObjects || EnableDynamicEventArguments != other.EnableDynamicEventArguments)
                 return false;
 
-            if ( EnableAutoDisposeEventArguments != settings.EnableAutoDisposeEventArguments || EnableDynamicEventArguments != settings.EnableDynamicEventArguments ||
-                 ExceptionMessageBehavior != settings.ExceptionMessageBehavior || ExceptionDefaultMessage != settings.ExceptionDefaultMessage)
+            if ( EnableAutoDisposeEventArguments != other.EnableAutoDisposeEventArguments || EnableDynamicEventArguments != other.EnableDynamicEventArguments ||
+                 ExceptionMessageBehavior != other.ExceptionMessageBehavior || ExceptionDefaultMessage != other.ExceptionDefaultMessage)
                 return false;
 
-            if (ExceptionDiagnosticsMessage != settings.ExceptionDiagnosticsMessage || ThreadCulture != settings.ThreadCulture ||
-                EnableEvents != settings.EnableEvents || MessageFilter.Enabled != settings.MessageFilter.Enabled)
+            if (ExceptionDiagnosticsMessage != other.ExceptionDiagnosticsMessage || ThreadCulture != other.ThreadCulture ||
+                EnableEvents != other.EnableEvents || MessageFilter.Enabled != other.MessageFilter.Enabled)
                 return false;
 
-            if (MessageFilter.RetryMode != settings.MessageFilter.RetryMode || MessageFilter.LogMode != settings.MessageFilter.LogMode ||
-               EnableAutomaticQuit != settings.EnableAutomaticQuit || EnableSafeMode != settings.EnableSafeMode)
+            if (MessageFilter.RetryMode != other.MessageFilter.RetryMode || MessageFilter.LogMode != other.MessageFilter.LogMode ||
+               EnableAutomaticQuit != other.EnableAutomaticQuit || EnableSafeMode != other.EnableSafeMode)
                 return false;
 
-            if (EnableAdHocLoading != settings.EnableAdHocLoading || EnableDeepLoading != settings.EnableDeepLoading ||
-                 EnableMoreDebugOutput != settings.EnableMoreDebugOutput || EnableEventDebugOutput != settings.EnableEventDebugOutput)
+            if (EnableAdHocLoading != other.EnableAdHocLoading || EnableDeepLoading != other.EnableDeepLoading ||
+                 EnableMoreDebugOutput != other.EnableMoreDebugOutput || EnableEventDebugOutput != other.EnableEventDebugOutput)
                 return false;
 
-            if (CacheOptions != settings.CacheOptions || EnableOperatorOverlads != settings.EnableOperatorOverlads ||
-                LoadAssembliesUnsafe != settings.LoadAssembliesUnsafe)
+            if (CacheOptions != other.CacheOptions || EnableOperatorOverlads != other.EnableOperatorOverlads ||
+                LoadAssembliesUnsafe != other.LoadAssembliesUnsafe)
                 return false;
 
             return true;

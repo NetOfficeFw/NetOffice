@@ -3,6 +3,7 @@
 ## v1.7.8
 
 * `Settings.IsEqualTo()` method will compare objects correctly [#291](https://github.com/NetOfficeFw/NetOffice/issues/291)
+* `Settings` implements `IEquatable<Settings>` in favor of old `IsEqualTo()` method
 
 ### Bug Fixes
 * Fix [#291](https://github.com/NetOfficeFw/NetOffice/issues/291) _`Settings.IsEqualTo` compares `EnableSafeMode` incorrectly_

@@ -14,7 +14,7 @@ namespace NetOffice.Tests.NetOffice
             var settings2 = new Settings();
 
             // Act
-            var actualResult = settings1.IsEqualTo(settings2);
+            var actualResult = settings1.Equals(settings2);
 
             // Assert
             Assert.IsTrue(actualResult);
@@ -27,7 +27,7 @@ namespace NetOffice.Tests.NetOffice
             var settings1 = new Settings();
 
             // Act
-            var actualResult = settings1.IsEqualTo(null);
+            var actualResult = settings1.Equals(null);
 
             // Assert
             Assert.IsFalse(actualResult, "Settings object must not be equal to null object.");
@@ -44,7 +44,7 @@ namespace NetOffice.Tests.NetOffice
             settings1.EnableSafeMode = true;
 
             // Act
-            var actualResult = settings1.IsEqualTo(settings2);
+            var actualResult = settings1.Equals(settings2);
 
             // Assert
             Assert.IsFalse(actualResult, "Settings objects must not be equal when EnableSafeMode value is different.");
