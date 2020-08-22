@@ -8,7 +8,7 @@ using NetOffice.Exceptions;
 namespace NetOffice
 {
     /// <summary>
-    /// Sink Helper Base Class for an Event Interface Sink helper class
+    /// SinkHelper is a base class for an event interface sink helper classes.
     /// </summary>
     public abstract class SinkHelper : IDisposable
     {
@@ -28,12 +28,10 @@ namespace NetOffice
         /// Creates an instance of the class
         /// </summary>
         /// <param name="eventClass">target CoClass instance</param>
-        public SinkHelper(ICOMObject eventClass)
+        protected SinkHelper(ICOMObject eventClass)
         {
-            if (null == eventClass)
-                throw new ArgumentNullException("eventClass");
-            _eventClass = eventClass;
-            _eventBinding = (IEventBinding)eventClass;
+            _eventClass = eventClass ?? throw new ArgumentNullException(nameof(eventClass));
+            _eventBinding = eventClass as IEventBinding ?? throw new ArgumentOutOfRangeException(nameof(eventClass), "The event class object must implement IEventBinding interface.");
         }
 
         #endregion
