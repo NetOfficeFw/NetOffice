@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi.Tools
     /// Connection part for the <see cref="ITaskPane"/> objects representing custom task panes.
     /// </summary>
     /// <typeparam name="T">Office Host Application</typeparam>
-    public interface ITaskPaneConnection<T> where T : ICOMObject
+    public interface ITaskPaneConnection<in T> where T : ICOMObject
     {
         /// <summary>
         /// Called after startup to set the application instance and custom arguments to the custom task pane.
