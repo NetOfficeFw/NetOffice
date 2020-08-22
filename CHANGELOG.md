@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.7.8
+
+* `Settings.IsEqualTo()` method will compare objects correctly [#291](https://github.com/NetOfficeFw/NetOffice/issues/291)
+
+### Bug Fixes
+* Fix [#291](https://github.com/NetOfficeFw/NetOffice/issues/291) _`Settings.IsEqualTo` compares `EnableSafeMode` incorrectly_
+
 ## v1.7.7
 
 * Make the `CustomTaskPaneCollection.Remove()` method public to allow custom implementations of Task Panes to remove old objects manually

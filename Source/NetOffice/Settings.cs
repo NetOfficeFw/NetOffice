@@ -531,7 +531,10 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public bool IsEqualTo(Settings settings)
         {
-            if (null == settings || settings == this)
+            if (settings == null)
+                return false;
+
+            if (settings == this)
                 return true;
            
             // todo: handle that better by reflection
@@ -549,7 +552,7 @@ namespace NetOffice
                 return false;
 
             if (MessageFilter.RetryMode != settings.MessageFilter.RetryMode || MessageFilter.LogMode != settings.MessageFilter.LogMode ||
-               EnableAutomaticQuit != settings.EnableAutomaticQuit || EnableSafeMode != EnableSafeMode)
+               EnableAutomaticQuit != settings.EnableAutomaticQuit || EnableSafeMode != settings.EnableSafeMode)
                 return false;
 
             if (EnableAdHocLoading != settings.EnableAdHocLoading || EnableDeepLoading != settings.EnableDeepLoading ||
