@@ -115,8 +115,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>resource image</returns>
         public Image ReadImage(string resourceAddress)
         {
-            Stream resourceStream = ReadStream(resourceAddress);
-            return Bitmap.FromStream(resourceStream);
+            return ReadImage(resourceAddress, _owner.OwnerAssembly);
         }
 
         /// <summary>
@@ -127,7 +126,8 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns></returns>
         public Image ReadImage(string resourceAddress, Assembly assembly)
         {
-            return ReadImage(resourceAddress, _owner.OwnerAssembly);
+            Stream resourceStream = ReadStream(resourceAddress, assembly);
+            return Image.FromStream(resourceStream);
         }
 
         /// <summary>
