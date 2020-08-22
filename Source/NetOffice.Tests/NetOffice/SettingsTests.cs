@@ -21,6 +21,19 @@ namespace NetOffice.Tests.NetOffice
         }
 
         [Test]
+        public void IsEqualTo_NullObject_ReturnsFalse()
+        {
+            // Arrange
+            var settings1 = new Settings();
+
+            // Act
+            var actualResult = settings1.IsEqualTo(null);
+
+            // Assert
+            Assert.IsFalse(actualResult, "Settings object must not be equal to null object.");
+        }
+
+        [Test]
         public void IsEqualTo_EnableSafeModeValueIsDifferent_ReturnsFalse()
         {
             // Arrange
