@@ -347,7 +347,7 @@ namespace NetOffice.Contribution.Controls
        
         private void Core_ProxyAdded(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
-            Action method = delegate
+            void ProxyAddedAction()
             {
                 try
                 {
@@ -381,13 +381,14 @@ namespace NetOffice.Contribution.Controls
                 {
                     ShowOverlayError(exception);
                 }
-            };
-            TryBeginInvoke(method);
+            }
+
+            TryBeginInvoke(ProxyAddedAction);
         }
 
         private void Core_ProxyRemoved(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
-            Action method = delegate
+            void ProxyRemoveAction()
             {
                 try
                 {
@@ -438,13 +439,14 @@ namespace NetOffice.Contribution.Controls
                 {
                     ShowOverlayError(exception);
                 }
-            };
-            TryBeginInvoke(method);
+            }
+
+            TryBeginInvoke(ProxyRemoveAction);
         }
 
         private void Core_ProxyCleared(Core sender)
         {
-            Action method = delegate
+            void ClearNodes()
             {
                 try
                 {
@@ -455,8 +457,9 @@ namespace NetOffice.Contribution.Controls
                 {
                     ShowOverlayError(exception);
                 }
-            };
-            TryBeginInvoke(method);
+            }
+
+            TryBeginInvoke(ClearNodes);
         }
 
         private void HighlightTimer_Tick(object sender, EventArgs e)

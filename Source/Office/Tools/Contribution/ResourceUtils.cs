@@ -74,7 +74,9 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             }
 
             if (resourceStream == null)
-                throw (new System.IO.IOException("Error accessing resource Stream."));
+            {
+                throw new IOException($"Resource '{resourceAddress}' does not exists in assembly '{assembly.GetName().Name}.");
+            }
 
             return resourceStream;
         }
@@ -97,15 +99,12 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>resource string</returns>
         public string ReadString(string resourceAddress, Assembly assembly)
         {
-            System.IO.Stream resourceStream = ReadStream(resourceAddress);
-            System.IO.StreamReader textStreamReader = new System.IO.StreamReader(resourceStream);
-            if (textStreamReader == null)
-                throw (new System.IO.IOException("Error accessing resource string."));
-
-            string text = textStreamReader.ReadToEnd();
-            textStreamReader.Close();
-            resourceStream.Close();
-            return text;
+            using (var resourceStream = ReadStream(resourceAddress, assembly))
+            using (var textStreamReader = new StreamReader(resourceStream))
+            {
+                var text = textStreamReader.ReadToEnd();
+                return text;
+            }
         }
 
         /// <summary>
@@ -115,8 +114,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>resource image</returns>
         public Image ReadImage(string resourceAddress)
         {
-            Stream resourceStream = ReadStream(resourceAddress);
-            return Bitmap.FromStream(resourceStream);
+            return ReadImage(resourceAddress, _owner.OwnerAssembly);
         }
 
         /// <summary>
@@ -127,7 +125,8 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns></returns>
         public Image ReadImage(string resourceAddress, Assembly assembly)
         {
-            return ReadImage(resourceAddress, _owner.OwnerAssembly);
+            Stream resourceStream = ReadStream(resourceAddress, assembly);
+            return Image.FromStream(resourceStream);
         }
 
         /// <summary>
