@@ -875,24 +875,36 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         #region IDisposableState
 
         /// <summary>
-        /// Returns information the instance is already disposed
+        /// Gets a value indicating whether the control has been disposed of.
         /// </summary>
         public bool IsDisposed { get; private set; }      
 
         /// <summary>
-        /// Dispose the instance
+        /// Dispose the instance.
         /// </summary>
         public void Dispose()
         {
-            if (IsDisposed)
+            this.Dispose(true);
+        }
+
+        /// <summary>
+        /// Dispose the instance.
+        /// </summary>
+        /// <param name="disposing"></param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this.IsDisposed)
             {
-                if (null != _contextMenu)
-                { 
-                    _contextMenu.Dispose();
-                    _contextMenu = null;
-                }
-                IsDisposed = true;
+                return;
             }
+
+            if (disposing)
+            {
+                _contextMenu?.Dispose();
+                _contextMenu = null;
+            }
+
+            this.IsDisposed = true;
         }
 
         #endregion
