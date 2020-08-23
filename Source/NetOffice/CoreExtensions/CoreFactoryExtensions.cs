@@ -244,10 +244,6 @@ namespace NetOffice
             {
                 throw new IDispatchNotImplementedException(exception);
             }
-            catch
-            {
-                throw;
-            }
         }
     }
 }
