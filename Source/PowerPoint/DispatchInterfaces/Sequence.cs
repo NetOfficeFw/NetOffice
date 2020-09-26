@@ -161,12 +161,17 @@ namespace NetOffice.PowerPointApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
 		/// <param name="shape">NetOffice.PowerPointApi.Shape shape</param>
 		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
-		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level = 0</param>
+		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level = 0</param>
 		/// <param name="trigger">optional NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger = 1</param>
-		/// <param name="index">optional Int32 Index = -1</param>
+		/// <param name="index">optional Int32 index = -1</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level, object trigger, object index)
+		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, int? index)
 		{
+			if (index == null)
+            {
+				index = -1;
+            }
+
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, new object[]{ shape, effectId, level, trigger, index });
 		}
 
@@ -192,7 +197,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level = 0</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level)
+		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, shape, effectId, level);
 		}
@@ -207,7 +212,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="trigger">optional NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger = 1</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level, object trigger)
+		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger)
 		{
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Effect>(this, "AddEffect", NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType, shape, effectId, level, trigger);
 		}
