@@ -156,14 +156,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
-		/// <param name="shape">NetOffice.PowerPointApi.Shape shape</param>
-		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
-		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level = 0</param>
-		/// <param name="trigger">optional NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger = 1</param>
-		/// <param name="index">optional Int32 index = -1</param>
+		/// <param name="shape">The shape to which the animation effect is added.</param>
+		/// <param name="effectId">The animation effect to be applied.</param>
+		/// <param name="level">For charts, diagrams, or text, the level to which the animation effect will be applied. The default value is <see cref="NetOffice.PowerPointApi.Enums.MsoAnimateByLevel.msoAnimationLevelNone"/>.</param>
+		/// <param name="trigger">The action that triggers the animation effect. The default value is <see cref="NetOffice.PowerPointApi.Enums.MsoAnimTriggerType.msoAnimTriggerOnPageClick"/>.</param>
+		/// <param name="index">The position at which the effect will be placed in the collection of animation effects. The default value is -1 (added to the end).</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, int? index)
 		{
@@ -176,11 +177,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
+		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
-		/// <param name="shape">NetOffice.PowerPointApi.Shape shape</param>
-		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
+		/// <param name="shape">The shape to which the animation effect is added.</param>
+		/// <param name="effectId">The animation effect to be applied.</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId)
@@ -189,12 +192,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
-		/// <param name="shape">NetOffice.PowerPointApi.Shape shape</param>
-		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
-		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level = 0</param>
+		/// <param name="shape">The shape to which the animation effect is added.</param>
+		/// <param name="effectId">The animation effect to be applied.</param>
+		/// <param name="level">For charts, diagrams, or text, the level to which the animation effect will be applied. The default value is <see cref="NetOffice.PowerPointApi.Enums.MsoAnimateByLevel.msoAnimationLevelNone"/>.</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level)
@@ -203,13 +207,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
-		/// <param name="shape">NetOffice.PowerPointApi.Shape shape</param>
-		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
-		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level = 0</param>
-		/// <param name="trigger">optional NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger = 1</param>
+		/// <param name="shape">The shape to which the animation effect is added.</param>
+		/// <param name="effectId">The animation effect to be applied.</param>
+		/// <param name="level">For charts, diagrams, or text, the level to which the animation effect will be applied. The default value is <see cref="NetOffice.PowerPointApi.Enums.MsoAnimateByLevel.msoAnimationLevelNone"/>.</param>
+		/// <param name="trigger">The action that triggers the animation effect. The default value is <see cref="NetOffice.PowerPointApi.Enums.MsoAnimTriggerType.msoAnimTriggerOnPageClick"/>.</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger)
