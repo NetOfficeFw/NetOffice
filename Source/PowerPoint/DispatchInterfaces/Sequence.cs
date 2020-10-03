@@ -223,11 +223,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Creates a copy of an Effect object, and adds it to the Sequences collection at the specified index position.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745243.aspx </remarks>
-		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
-		/// <param name="index">optional Int32 Index = -1</param>
+		/// <param name="effect"><see cref="NetOffice.PowerPointApi.Effect"/> object. The animation effect to be cloned.</param>
+		/// <param name="index">The position at which the cloned animation effect will be added to the Sequences collection. The default value is -1 (added to the end).</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect, object index)
 		{
@@ -235,10 +236,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Creates a copy of an Effect object, and adds it to the Sequences collection at the specified index position.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745243.aspx </remarks>
-		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
+		/// <param name="effect"><see cref="NetOffice.PowerPointApi.Effect"/> object. The animation effect to be cloned.</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect)
