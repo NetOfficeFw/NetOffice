@@ -3,10 +3,11 @@ using NetOffice;
 using NetOffice.Attributes;
 namespace NetOffice.PowerPointApi.Enums
 {
-	 /// <summary>
-	 /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-	 /// </summary>
-	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744314.aspx </remarks>
+	/// <summary>
+	/// Specifies the type of animation effect.
+	/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+	/// </summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744314.aspx </remarks>
 	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsEnum)]
 	public enum MsoAnimEffect

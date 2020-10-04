@@ -6,6 +6,7 @@ using NetOffice.Attributes;
 namespace NetOffice.PowerPointApi
 {
 	/// <summary>
+	/// Represents timing properties for an animation effect.
 	/// DispatchInterface Timing 
 	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
 	/// </summary>
@@ -138,6 +139,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns or sets the length of an animation in seconds. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
@@ -156,6 +158,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Represents the trigger that starts an animation. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
@@ -174,6 +177,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Sets or returns the delay, in seconds, from when an animation trigger is enabled. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
@@ -192,6 +196,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Sets or returns a Shape object that represents the shape associated with an animation trigger. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
@@ -210,6 +215,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Sets or returns the number of times to repeat an animation. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
@@ -228,10 +234,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Sets or returns how long repeated animations should last, in seconds. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745569.aspx </remarks>
+		/// <remarks>
+		/// An animation will stop at the end of its time sequence or the value of the RepeatDuration property, whichever is shorter.
+		/// MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745569.aspx
+		/// </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Single RepeatDuration
 		{
@@ -264,10 +274,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns or sets the percentage of the duration over which a timing acceleration should take place. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744638.aspx </remarks>
+		/// <remarks>
+		/// For example, a value of 0.9 means that an acceleration should start slower than the default speed for 90% of the total animation time, with the last 10% of the animation at the default speed.
+		/// To slow down an animation at the end, use the Decelerate property.
+		/// MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744638.aspx
+		/// </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Single Accelerate
 		{
@@ -282,10 +297,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Sets or returns the percentage of the duration over which a timing deceleration should take place. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744609.aspx </remarks>
+		/// <remarks>
+		/// For example, a value of 0.9 means that an deceleration should start at the default speed, and then start to slow down after the first ten percent of the animation.
+		/// MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744609.aspx
+		/// </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Single Decelerate
 		{
@@ -300,10 +319,16 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Determines whether an effect should play forward and then in reverse, thereby doubling its duration. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745419.aspx </remarks>
+		/// <remarks>
+		/// The value of the AutoReverse property can be one of these MsoTriState constants.
+		/// msoFalse - The default. The effect does not play forward and then in reverse.
+		/// msoTrue	- The effect plays forward and then in reverse.
+		/// MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745419.aspx
+		/// </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState AutoReverse
 		{
@@ -318,10 +343,16 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Determines whether an animation should accelerate when it starts. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745386.aspx </remarks>
+		/// <remarks>
+		/// The value of the SmoothStart property can be one of these MsoTriState constants.
+		/// msoFalse - The default. The animation does not accelerate when it starts.
+		/// msoTrue - The animation accelerates when it starts.
+		/// MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745386.aspx
+		/// </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState SmoothStart
 		{
@@ -336,10 +367,16 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Determines whether an animation should decelerate as it ends. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744834.aspx </remarks>
+		/// <remarks>
+		/// The value of the SmoothEnd property can be one of these MsoTriState constants.
+		/// msoFalse - The default. An animation does not decelerate when it ends.
+		/// msoTrue - An animation decelerates when it ends.
+		/// MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744834.aspx
+		/// </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState SmoothEnd
 		{
@@ -354,10 +391,16 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Represents whether an object returns to its beginning position after an animation has ended. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744203.aspx </remarks>
+		/// <remarks>
+		/// The value of the RewindAtEnd property can be one of these MsoTriState constants.
+		/// msoFalse - The object does not return to its beginning position after an animation has ended.
+		/// msoTrue - The object returns to its beginning position after an animation has ended.
+		/// MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744203.aspx
+		/// </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState RewindAtEnd
 		{
@@ -372,6 +415,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Represents whether the animation effect restarts after the effect has started once. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>

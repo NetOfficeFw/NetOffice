@@ -6,7 +6,8 @@ using NetOffice.Attributes;
 namespace NetOffice.PowerPointApi
 {
 	/// <summary>
-	/// DispatchInterface Effect 
+	/// Represents timing information about a slide animation.
+	/// Use the <see cref="Sequence.AddEffect"/> method to add an effect. 
 	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
@@ -102,14 +103,14 @@ namespace NetOffice.PowerPointApi
 		public Effect(string progId) : base(progId)
 		{
 		}
-		
+
 		#endregion
-		
+
 		#region Properties
 
 		/// <summary>
+		/// Returns an Application object that represents the creator of the specified object.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
@@ -121,9 +122,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns the parent object for the specified object.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
 		public object Parent
@@ -135,8 +135,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns a Shape object that represents an animated shape.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get/Set
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Shape Shape
@@ -152,8 +152,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns an integer that represents the index number for an animation effect or design. Read-only.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 Index
@@ -165,8 +165,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns a Timing object that represents the timing properties for an animation sequence.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Timing Timing
@@ -178,8 +178,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Sets or returns an MsoAnimEffect constant that represents an animation effect type. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get/Set
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.MsoAnimEffect EffectType
@@ -195,8 +195,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns an EffectParameters object that represents animation effect properties.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.EffectParameters EffectParameters
@@ -208,8 +208,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns or sets the start of a text range. Read-only.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 TextRangeStart
@@ -221,8 +221,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns or sets an integer that represents the length of a text range. Read-only.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 TextRangeLength
@@ -234,8 +234,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns or sets the paragraph in a text range to which to apply animation effects. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get/Set
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 Paragraph
@@ -251,8 +251,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns the name of an animation effect. Read-only.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public string DisplayName
@@ -264,8 +264,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Determines whether the animation effect is an exit effect. Read/write.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get/Set
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Exit
@@ -281,8 +281,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns a specified slide animation behavior as an AnimationBehaviors collection.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.AnimationBehaviors Behaviors
@@ -294,8 +294,8 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Returns an EffectInformation object that represents information for a specified animation effect.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.EffectInformation EffectInformation
@@ -311,6 +311,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
+		/// Moves the specified object to a specific location within the same collection, renumbering all other items in the collection appropriately.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="toPos">Int32 toPos</param>
@@ -321,6 +322,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Moves one animation effect to before another animation effect.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
@@ -331,6 +333,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Moves one animation effect to after another animation effect.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
@@ -341,6 +344,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Deletes the specified Effect object.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
