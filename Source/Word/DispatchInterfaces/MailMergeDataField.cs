@@ -9,7 +9,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface MailMergeDataField 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839977.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeDataField"/> </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class MailMergeDataField : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194038.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeDataField.Application"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821009.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeDataField.Creator"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840139.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeDataField.Parent"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820870.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeDataField.Value"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string Value
 		{
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835178.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeDataField.Name"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string Name
 		{
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837717.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeDataField.Index"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Index
 		{

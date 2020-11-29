@@ -12,7 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface FullSeriesCollection 
 	/// SupportByVersion PowerPoint, 15, 16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227661.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.fullseriescollection"/> </remarks>
 	[SupportByVersion("PowerPoint", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	public class FullSeriesCollection : COMObject, IEnumerableProvider<NetOffice.PowerPointApi.Series>
@@ -116,7 +116,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj684164.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.fullseriescollection.parent"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16), ProxyResult]
 		public object Parent
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227663.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.fullseriescollection.count"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public Int32 Count
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj717740.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.fullseriescollection.application"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj684239.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.fullseriescollection.creator"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public Int32 Creator
 		{

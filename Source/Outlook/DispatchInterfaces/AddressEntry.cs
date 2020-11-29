@@ -9,7 +9,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface AddressEntry 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869306.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry"/> </remarks>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class AddressEntry : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866732.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Application"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865346.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Class"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869587.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Session"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -157,7 +157,7 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861815.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Parent"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -171,7 +171,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Address"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public string Address
 		{
@@ -189,7 +189,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869330.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.DisplayType"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlDisplayType DisplayType
 		{
@@ -203,7 +203,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860641.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.ID"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public string ID
 		{
@@ -262,7 +262,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863077.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Name"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public string Name
 		{
@@ -280,7 +280,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862424.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Type"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public string Type
 		{
@@ -298,7 +298,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860674.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.AddressEntryUserType"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlAddressEntryUserType AddressEntryUserType
 		{
@@ -312,7 +312,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866395.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.PropertyAccessor"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
 		{
@@ -329,7 +329,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865383.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Delete"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public void Delete()
 		{
@@ -339,7 +339,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867301.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Details"/> </remarks>
 		/// <param name="hWnd">optional object hWnd</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public void Details(object hWnd)
@@ -350,7 +350,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867301.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Details"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public void Details()
@@ -361,7 +361,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867624.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetFreeBusy"/> </remarks>
 		/// <param name="start">DateTime start</param>
 		/// <param name="minPerChar">Int32 minPerChar</param>
 		/// <param name="completeFormat">optional object completeFormat</param>
@@ -374,7 +374,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867624.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetFreeBusy"/> </remarks>
 		/// <param name="start">DateTime start</param>
 		/// <param name="minPerChar">Int32 minPerChar</param>
 		[CustomMethod]
@@ -387,7 +387,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860722.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
 		/// <param name="makePermanent">optional object makePermanent</param>
 		/// <param name="refresh">optional object refresh</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
@@ -399,7 +399,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860722.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public void Update()
@@ -410,7 +410,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860722.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
 		/// <param name="makePermanent">optional object makePermanent</param>
 		[CustomMethod]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
@@ -432,7 +432,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862409.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetContact"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._ContactItem GetContact()
@@ -443,7 +443,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869721.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetExchangeUser"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.ExchangeUser GetExchangeUser()
 		{
@@ -453,7 +453,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860629.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetExchangeDistributionList"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.ExchangeDistributionList GetExchangeDistributionList()
 		{

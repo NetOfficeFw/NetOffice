@@ -9,7 +9,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Section 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194295.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section"/> </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class Section : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836097.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.Range"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Range
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845814.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.Application"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -140,7 +140,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192161.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.Creator"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191945.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.Parent"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840203.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.PageSetup"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.PageSetup PageSetup
 		{
@@ -187,7 +187,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820779.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.Headers"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.HeadersFooters Headers
 		{
@@ -201,7 +201,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192749.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.Footers"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.HeadersFooters Footers
 		{
@@ -215,7 +215,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840748.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.ProtectedForForms"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool ProtectedForForms
 		{
@@ -233,7 +233,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195204.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.Index"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Index
 		{
@@ -247,7 +247,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192766.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Section.Borders"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Borders Borders
 		{

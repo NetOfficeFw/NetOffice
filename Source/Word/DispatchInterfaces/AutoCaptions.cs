@@ -12,7 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface AutoCaptions 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839109.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.autocaptions"/> </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class AutoCaptions : COMObject, IEnumerableProvider<NetOffice.WordApi.AutoCaption>
@@ -115,7 +115,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837693.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.AutoCaptions.Application"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834862.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.AutoCaptions.Creator"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196608.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.AutoCaptions.Parent"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834518.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.AutoCaptions.Count"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -189,7 +189,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820789.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.AutoCaptions.CancelAutoInsert"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CancelAutoInsert()
 		{

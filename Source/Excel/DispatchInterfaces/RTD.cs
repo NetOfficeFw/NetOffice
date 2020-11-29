@@ -9,7 +9,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface RTD 
 	/// SupportByVersion Excel, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198320.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.RTD"/> </remarks>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class RTD : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837824.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.RTD.ThrottleInterval"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public Int32 ThrottleInterval
 		{
@@ -133,7 +133,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841157.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.RTD.RefreshData"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public void RefreshData()
 		{
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837825.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.RTD.RestartServers"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public void RestartServers()
 		{

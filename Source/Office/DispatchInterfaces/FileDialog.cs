@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface FileDialog 
 	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862446.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog"/> </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class FileDialog : _IMsoDispObj
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864165.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.Parent"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860295.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.Filters"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.FileDialogFilters Filters
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860516.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.FilterIndex"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 FilterIndex
 		{
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863472.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.Title"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string Title
 		{
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863394.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.ButtonName"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string ButtonName
 		{
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863824.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.AllowMultiSelect"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool AllowMultiSelect
 		{
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860561.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.InitialView"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoFileDialogView InitialView
 		{
@@ -231,7 +231,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863092.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.InitialFileName"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string InitialFileName
 		{
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863790.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.SelectedItems"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.FileDialogSelectedItems SelectedItems
 		{
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864572.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.DialogType"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoFileDialogType DialogType
 		{
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864996.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.Item"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string Item
 		{
@@ -294,7 +294,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865217.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.Show"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 Show()
 		{
@@ -304,7 +304,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862099.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.FileDialog.Execute"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void Execute()
 		{

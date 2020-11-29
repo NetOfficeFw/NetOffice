@@ -12,7 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Categories 
 	/// SupportByVersion Word, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840595.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Categories"/> </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class Categories : COMObject, IEnumerableProvider<NetOffice.WordApi.Category>
@@ -115,7 +115,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845194.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Categories.Application"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820866.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Categories.Creator"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public Int32 Creator
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835994.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Categories.Parent"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193902.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Categories.Count"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public Int32 Count
 		{

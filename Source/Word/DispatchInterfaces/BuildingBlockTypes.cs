@@ -9,7 +9,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface BuildingBlockTypes 
 	/// SupportByVersion Word, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840852.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.BuildingBlockTypes"/> </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
  	public class BuildingBlockTypes : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841047.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.BuildingBlockTypes.Application"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839821.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.BuildingBlockTypes.Creator"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public Int32 Creator
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835707.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.BuildingBlockTypes.Parent"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820797.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.BuildingBlockTypes.Count"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public Int32 Count
 		{

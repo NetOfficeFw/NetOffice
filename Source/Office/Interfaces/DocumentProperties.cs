@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// Interface DocumentProperties 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863102.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties"/> </remarks>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class DocumentProperties : COMObject, IEnumerableProvider<NetOffice.OfficeApi.DocumentProperty>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864976.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties.Parent"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863076.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties.Count"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864029.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties.Application"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
 		public object Application
 		{
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861448.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties.Creator"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -191,7 +191,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties.Add"/> </remarks>
 		/// <param name="name">string name</param>
 		/// <param name="linkToContent">bool linkToContent</param>
 		/// <param name="type">optional object type</param>
@@ -206,7 +206,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties.Add"/> </remarks>
 		/// <param name="name">string name</param>
 		/// <param name="linkToContent">bool linkToContent</param>
 		[CustomMethod]
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties.Add"/> </remarks>
 		/// <param name="name">string name</param>
 		/// <param name="linkToContent">bool linkToContent</param>
 		/// <param name="type">optional object type</param>
@@ -233,7 +233,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.DocumentProperties.Add"/> </remarks>
 		/// <param name="name">string name</param>
 		/// <param name="linkToContent">bool linkToContent</param>
 		/// <param name="type">optional object type</param>

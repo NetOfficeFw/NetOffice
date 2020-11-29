@@ -114,7 +114,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867170.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.Application"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
@@ -129,7 +129,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865787.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.Class"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
@@ -143,7 +143,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868713.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.Session"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -159,7 +159,7 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869155.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.Parent"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -173,7 +173,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866240.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.Count"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public Int32 Count
 		{
@@ -205,7 +205,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865651.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.Create"/> </remarks>
 		/// <param name="groupDisplayName">string groupDisplayName</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.NavigationGroup Create(string groupDisplayName)
@@ -216,7 +216,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868687.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.Delete"/> </remarks>
 		/// <param name="group">NetOffice.OutlookApi.NavigationGroup group</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void Delete(NetOffice.OutlookApi.NavigationGroup group)
@@ -227,7 +227,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868509.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.GetDefaultNavigationGroup"/> </remarks>
 		/// <param name="defaultFolderGroup">NetOffice.OutlookApi.Enums.OlGroupType defaultFolderGroup</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.NavigationGroup GetDefaultNavigationGroup(NetOffice.OutlookApi.Enums.OlGroupType defaultFolderGroup)

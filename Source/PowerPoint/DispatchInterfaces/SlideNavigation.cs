@@ -9,7 +9,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface SlideNavigation 
 	/// SupportByVersion PowerPoint, 15, 16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228031.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.slidenavigation"/> </remarks>
 	[SupportByVersion("PowerPoint", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class SlideNavigation : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj684238.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.slidenavigation.application"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj684216.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.slidenavigation.parent"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16), ProxyResult]
 		public object Parent
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228775.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.slidenavigation.visible"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public bool Visible
 		{

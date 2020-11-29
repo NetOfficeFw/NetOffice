@@ -42,7 +42,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass TaskRequestItem 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862698.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem"/> </remarks>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.ItemEvents_SinkHelper), typeof(Events.ItemEvents_10_SinkHelper))]
@@ -166,7 +166,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860373.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.Open"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_OpenEventHandler OpenEvent
 		{
@@ -189,7 +189,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861909.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.CustomAction"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_CustomActionEventHandler CustomActionEvent
 		{
@@ -212,7 +212,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865663.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.CustomPropertyChange"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
@@ -235,7 +235,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863894.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.Forward"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_ForwardEventHandler ForwardEvent
 		{
@@ -258,7 +258,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869320.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.Close(even)"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_CloseEventHandler CloseEvent
 		{
@@ -281,7 +281,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867884.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.PropertyChange"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
@@ -304,7 +304,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865285.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.Read"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_ReadEventHandler ReadEvent
 		{
@@ -327,7 +327,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868174.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.Reply"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_ReplyEventHandler ReplyEvent
 		{
@@ -350,7 +350,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869989.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.ReplyAll"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_ReplyAllEventHandler ReplyAllEvent
 		{
@@ -373,7 +373,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860969.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.Send"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_SendEventHandler SendEvent
 		{
@@ -396,7 +396,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869268.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.Write"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_WriteEventHandler WriteEvent
 		{
@@ -419,7 +419,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865678.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeCheckNames"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
@@ -442,7 +442,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868630.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.AttachmentAdd"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
@@ -465,7 +465,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860695.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.AttachmentRead"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
@@ -488,7 +488,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869305.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeAttachmentSave"/> </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event TaskRequestItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
@@ -511,7 +511,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868701.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeDelete"/> </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event TaskRequestItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
@@ -534,7 +534,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869723.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.AttachmentRemove"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event TaskRequestItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
@@ -557,7 +557,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866413.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeAttachmentAdd"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event TaskRequestItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
@@ -580,7 +580,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863923.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeAttachmentPreview"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event TaskRequestItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
@@ -603,7 +603,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867589.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeAttachmentRead"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event TaskRequestItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
@@ -626,7 +626,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869778.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeAttachmentWriteToTempFile"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event TaskRequestItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
@@ -649,7 +649,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868072.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.Unload"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event TaskRequestItem_UnloadEventHandler UnloadEvent
 		{
@@ -672,7 +672,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860697.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeAutoSave"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event TaskRequestItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
@@ -695,7 +695,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869784.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.BeforeRead"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public event TaskRequestItem_BeforeReadEventHandler BeforeReadEvent
 		{
@@ -718,7 +718,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867184.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TaskRequestItem.AfterWrite"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public event TaskRequestItem_AfterWriteEventHandler AfterWriteEvent
 		{
@@ -741,7 +741,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228141.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.taskrequestitem.readcomplete"/> </remarks>
 		[SupportByVersion("Outlook", 15, 16)]
 		public event TaskRequestItem_ReadCompleteEventHandler ReadCompleteEvent
 		{

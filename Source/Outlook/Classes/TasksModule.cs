@@ -16,7 +16,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass TasksModule 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870133.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TasksModule"/> </remarks>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
  	public class TasksModule : _TasksModule

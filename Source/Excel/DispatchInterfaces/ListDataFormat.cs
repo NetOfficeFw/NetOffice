@@ -9,7 +9,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface ListDataFormat 
 	/// SupportByVersion Excel, 11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839751.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat"/> </remarks>
 	[SupportByVersion("Excel", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class ListDataFormat : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834648.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.Application"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841124.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.Creator"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834464.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.Parent"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838807.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.Choices"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public object Choices
 		{
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197836.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.DecimalPlaces"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public Int32 DecimalPlaces
 		{
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198254.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.DefaultValue"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public object DefaultValue
 		{
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196341.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.IsPercent"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public bool IsPercent
 		{
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836203.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.lcid"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public Int32 lcid
 		{
@@ -238,7 +238,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838252.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.MaxCharacters"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public Int32 MaxCharacters
 		{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821665.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.MaxNumber"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public object MaxNumber
 		{
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836462.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.MinNumber"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public object MinNumber
 		{
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839183.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.Required"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public bool Required
 		{
@@ -294,7 +294,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836844.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.Type"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlListDataType Type
 		{
@@ -308,7 +308,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836449.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.ReadOnly"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public bool ReadOnly
 		{
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838058.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListDataFormat.AllowFillIn"/> </remarks>
 		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public bool AllowFillIn
 		{

@@ -33,7 +33,7 @@ namespace NetOffice.AccessApi
 	/// CoClass TextBox 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835063.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox"/> </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._TextBoxEvents_SinkHelper), typeof(Events.DispTextBoxEvents_SinkHelper))]
@@ -157,7 +157,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845199.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.BeforeUpdate-event"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -180,7 +180,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194818.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.AfterUpdate-event"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -203,7 +203,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821734.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.Change"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_ChangeEventHandler ChangeEvent
 		{
@@ -226,7 +226,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197769.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.Enter"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_EnterEventHandler EnterEvent
 		{
@@ -249,7 +249,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844925.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.Exit"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_ExitEventHandler ExitEvent
 		{
@@ -272,7 +272,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822716.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.GotFocus"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_GotFocusEventHandler GotFocusEvent
 		{
@@ -295,7 +295,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193542.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.LostFocus"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_LostFocusEventHandler LostFocusEvent
 		{
@@ -318,7 +318,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834731.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.Click"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_ClickEventHandler ClickEvent
 		{
@@ -341,7 +341,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821748.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.DblClick"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_DblClickEventHandler DblClickEvent
 		{
@@ -364,7 +364,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821739.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.MouseDown"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_MouseDownEventHandler MouseDownEvent
 		{
@@ -387,7 +387,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197411.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.MouseMove"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -410,7 +410,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845232.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.MouseUp"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_MouseUpEventHandler MouseUpEvent
 		{
@@ -433,7 +433,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844722.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.KeyDown"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_KeyDownEventHandler KeyDownEvent
 		{
@@ -456,7 +456,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197040.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.KeyPress"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_KeyPressEventHandler KeyPressEvent
 		{
@@ -479,7 +479,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191709.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.KeyUp"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event TextBox_KeyUpEventHandler KeyUpEvent
 		{
@@ -502,7 +502,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835038.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.Dirty"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event TextBox_DirtyEventHandler DirtyEvent
 		{
@@ -525,7 +525,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836364.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TextBox.Undo(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event TextBox_UndoEventHandler UndoEvent
 		{

@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface OfficeTheme 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860320.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeTheme"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class OfficeTheme : _IMsoDispObj
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863403.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeTheme.Parent"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860546.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeTheme.ThemeColorScheme"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.ThemeColorScheme ThemeColorScheme
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862826.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeTheme.ThemeFontScheme"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.ThemeFontScheme ThemeFontScheme
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865234.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeTheme.ThemeEffectScheme"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.ThemeEffectScheme ThemeEffectScheme
 		{

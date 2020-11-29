@@ -6,7 +6,7 @@ namespace NetOffice.WordApi.Enums
 	 /// <summary>
 	 /// SupportByVersion Word 12, 14, 15, 16
 	 /// </summary>
-	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845186.aspx </remarks>
+	 ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.WdRelativeVerticalSize"/> </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsEnum)]
 	public enum WdRelativeVerticalSize

@@ -9,7 +9,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface Protection 
 	/// SupportByVersion Excel, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839872.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection"/> </remarks>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class Protection : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822646.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowFormattingCells"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowFormattingCells
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194806.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowFormattingColumns"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowFormattingColumns
 		{
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838830.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowFormattingRows"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowFormattingRows
 		{
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835264.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowInsertingColumns"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowInsertingColumns
 		{
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197743.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowInsertingRows"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowInsertingRows
 		{
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840705.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowInsertingHyperlinks"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowInsertingHyperlinks
 		{
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821624.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowDeletingColumns"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowDeletingColumns
 		{
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839800.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowDeletingRows"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowDeletingRows
 		{
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839266.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowSorting"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowSorting
 		{
@@ -238,7 +238,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839866.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowFiltering"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowFiltering
 		{
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197311.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowUsingPivotTables"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowUsingPivotTables
 		{
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834945.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Protection.AllowEditRanges"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.AllowEditRanges AllowEditRanges
 		{

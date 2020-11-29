@@ -19,7 +19,7 @@ namespace NetOffice.OfficeApi
 	/// CoClass CustomXMLParts 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863162.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events._CustomXMLPartsEvents_SinkHelper))]
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864147.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartAfterAdd"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLParts_PartAfterAddEventHandler PartAfterAddEvent
 		{
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861735.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartBeforeDelete"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLParts_PartBeforeDeleteEventHandler PartBeforeDeleteEvent
 		{
@@ -188,7 +188,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864879.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartAfterLoad"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLParts_PartAfterLoadEventHandler PartAfterLoadEvent
 		{

@@ -9,7 +9,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface EmailOptions 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194477.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions"/> </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class EmailOptions : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197525.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.Application"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191741.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.Creator"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840769.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.Parent"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839521.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.UseThemeStyle"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool UseThemeStyle
 		{
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840320.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.MarkCommentsWith"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string MarkCommentsWith
 		{
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821277.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.MarkComments"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool MarkComments
 		{
@@ -209,7 +209,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822191.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.EmailSignature"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.EmailSignature EmailSignature
 		{
@@ -223,7 +223,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845385.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.ComposeStyle"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Style ComposeStyle
 		{
@@ -237,7 +237,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836350.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.ReplyStyle"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Style ReplyStyle
 		{
@@ -251,7 +251,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840027.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.ThemeName"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string ThemeName
 		{
@@ -297,7 +297,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840679.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.NewColorOnReply"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool NewColorOnReply
 		{
@@ -315,7 +315,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839519.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.PlainTextStyle"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Style PlainTextStyle
 		{
@@ -329,7 +329,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845433.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.UseThemeStyleOnReply"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool UseThemeStyleOnReply
 		{
@@ -347,7 +347,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192628.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeApplyHeadings"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeApplyHeadings
 		{
@@ -365,7 +365,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192399.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeApplyBorders"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeApplyBorders
 		{
@@ -383,7 +383,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837236.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeApplyBulletedLists"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeApplyBulletedLists
 		{
@@ -401,7 +401,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193750.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeApplyNumberedLists"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeApplyNumberedLists
 		{
@@ -419,7 +419,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193405.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeReplaceQuotes"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeReplaceQuotes
 		{
@@ -437,7 +437,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838943.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeReplaceSymbols"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeReplaceSymbols
 		{
@@ -455,7 +455,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837891.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeReplaceOrdinals"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeReplaceOrdinals
 		{
@@ -473,7 +473,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194415.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeReplaceFractions"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeReplaceFractions
 		{
@@ -491,7 +491,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193085.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeReplacePlainTextEmphasis"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeReplacePlainTextEmphasis
 		{
@@ -509,7 +509,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837035.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeFormatListItemBeginning"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeFormatListItemBeginning
 		{
@@ -527,7 +527,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840029.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeDefineStyles"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeDefineStyles
 		{
@@ -545,7 +545,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823235.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeReplaceHyperlinks"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeReplaceHyperlinks
 		{
@@ -563,7 +563,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839729.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeApplyTables"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeApplyTables
 		{
@@ -581,7 +581,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835434.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeApplyFirstIndents"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeApplyFirstIndents
 		{
@@ -599,7 +599,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839691.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeApplyDates"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeApplyDates
 		{
@@ -617,7 +617,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837002.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeApplyClosings"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeApplyClosings
 		{
@@ -635,7 +635,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837502.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeMatchParentheses"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeMatchParentheses
 		{
@@ -653,7 +653,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845297.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeReplaceFarEastDashes"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeReplaceFarEastDashes
 		{
@@ -671,7 +671,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838514.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeDeleteAutoSpaces"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeDeleteAutoSpaces
 		{
@@ -689,7 +689,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840277.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeInsertClosings"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeInsertClosings
 		{
@@ -707,7 +707,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193845.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeAutoLetterWizard"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeAutoLetterWizard
 		{
@@ -725,7 +725,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845410.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.AutoFormatAsYouTypeInsertOvers"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool AutoFormatAsYouTypeInsertOvers
 		{
@@ -743,7 +743,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195336.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.RelyOnCSS"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool RelyOnCSS
 		{
@@ -761,7 +761,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195303.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.HTMLFidelity"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdEmailHTMLFidelity HTMLFidelity
 		{
@@ -796,7 +796,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195043.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.EmailOptions.TabIndentKey"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool TabIndentKey
 		{

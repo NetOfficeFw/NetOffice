@@ -114,7 +114,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869536.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimeZones.Application"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
@@ -129,7 +129,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865050.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimeZones.Class"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
@@ -143,7 +143,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869616.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimeZones.Session"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -159,7 +159,7 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866936.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimeZones.Parent"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -173,7 +173,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868840.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimeZones.Count"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public Int32 Count
 		{
@@ -187,7 +187,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869781.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimeZones.CurrentTimeZone"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._TimeZone CurrentTimeZone
@@ -220,7 +220,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866193.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimeZones.ConvertTime"/> </remarks>
 		/// <param name="sourceDateTime">DateTime sourceDateTime</param>
 		/// <param name="sourceTimeZone">NetOffice.OutlookApi._TimeZone sourceTimeZone</param>
 		/// <param name="destinationTimeZone">NetOffice.OutlookApi._TimeZone destinationTimeZone</param>

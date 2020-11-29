@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SmartArtLayouts 
 	/// SupportByVersion Office, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860829.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SmartArtLayouts"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class SmartArtLayouts : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SmartArtLayout>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864628.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SmartArtLayouts.Parent"/> </remarks>
 		[SupportByVersion("Office", 14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864623.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SmartArtLayouts.Count"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 Count
 		{

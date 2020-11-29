@@ -9,7 +9,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface OMathEqArray 
 	/// SupportByVersion Word, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835153.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray"/> </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class OMathEqArray : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844882.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.Application"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840628.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.Creator"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public Int32 Creator
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197800.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.Parent"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840021.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.E"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.OMathArgs E
 		{
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845015.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.MaxDist"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public bool MaxDist
 		{
@@ -187,7 +187,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839934.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.ObjDist"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public bool ObjDist
 		{
@@ -205,7 +205,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191853.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.Align"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdOMathVertAlignType Align
 		{
@@ -223,7 +223,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821078.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.RowSpacingRule"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdOMathSpacingRule RowSpacingRule
 		{
@@ -241,7 +241,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845329.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathEqArray.RowSpacing"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public Int32 RowSpacing
 		{

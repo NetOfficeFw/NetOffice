@@ -30,7 +30,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkDateControl 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868818.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl"/> </remarks>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.OlkDateControlEvents_SinkHelper))]
@@ -153,7 +153,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869739.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Click"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_ClickEventHandler ClickEvent
 		{
@@ -176,7 +176,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861813.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.DoubleClick"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_DoubleClickEventHandler DoubleClickEvent
 		{
@@ -199,7 +199,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869518.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.MouseDown"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_MouseDownEventHandler MouseDownEvent
 		{
@@ -222,7 +222,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868326.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.MouseMove"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -245,7 +245,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868492.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.MouseUp"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_MouseUpEventHandler MouseUpEvent
 		{
@@ -268,7 +268,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862109.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Enter"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_EnterEventHandler EnterEvent
 		{
@@ -291,7 +291,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866191.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Exit"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_ExitEventHandler ExitEvent
 		{
@@ -314,7 +314,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867492.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.KeyDown"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_KeyDownEventHandler KeyDownEvent
 		{
@@ -337,7 +337,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865350.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.KeyPress"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_KeyPressEventHandler KeyPressEvent
 		{
@@ -360,7 +360,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866753.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.KeyUp"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_KeyUpEventHandler KeyUpEvent
 		{
@@ -383,7 +383,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861622.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Change"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_ChangeEventHandler ChangeEvent
 		{
@@ -406,7 +406,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864198.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.DropButtonClick"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_DropButtonClickEventHandler DropButtonClickEvent
 		{
@@ -429,7 +429,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866407.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.AfterUpdate"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -452,7 +452,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862404.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.BeforeUpdate"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkDateControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{

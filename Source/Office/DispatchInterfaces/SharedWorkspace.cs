@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SharedWorkspace 
 	/// SupportByVersion Office, 11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862502.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace"/> </remarks>
 	[SupportByVersion("Office", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class SharedWorkspace : _IMsoDispObj
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861084.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Name"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string Name
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863506.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Members"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.SharedWorkspaceMembers Members
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863392.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Tasks"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.SharedWorkspaceTasks Tasks
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865183.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Files"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.SharedWorkspaceFiles Files
 		{
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863702.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Folders"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.SharedWorkspaceFolders Folders
 		{
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862483.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Links"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.SharedWorkspaceLinks Links
 		{
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861765.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Parent"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865214.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.URL"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string URL
 		{
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860257.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Connected"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public bool Connected
 		{
@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861389.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.LastRefreshed"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public object LastRefreshed
 		{
@@ -257,7 +257,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860917.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.SourceURL"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string SourceURL
 		{
@@ -278,7 +278,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862068.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Refresh"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void Refresh()
 		{
@@ -288,7 +288,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.CreateNew"/> </remarks>
 		/// <param name="uRL">optional object uRL</param>
 		/// <param name="name">optional object name</param>
 		[SupportByVersion("Office", 11,12,14,15,16)]
@@ -300,7 +300,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.CreateNew"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void CreateNew()
@@ -311,7 +311,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.CreateNew"/> </remarks>
 		/// <param name="uRL">optional object uRL</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 11,12,14,15,16)]
@@ -323,7 +323,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862550.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Delete"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void Delete()
 		{
@@ -333,7 +333,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861519.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.RemoveDocument"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void RemoveDocument()
 		{
@@ -343,7 +343,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863540.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspace.Disconnect"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void Disconnect()
 		{

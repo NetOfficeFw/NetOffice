@@ -9,7 +9,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface WSParameter 
 	/// SupportByVersion Access, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195541.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WSParameter"/> </remarks>
 	[SupportByVersion("Access", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class WSParameter : COMObject
@@ -113,7 +113,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834430.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WSParameter.Parent"/> </remarks>
 		[SupportByVersion("Access", 14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192946.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WSParameter.Name"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string Name
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823042.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WSParameter.Type"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 Type
 		{

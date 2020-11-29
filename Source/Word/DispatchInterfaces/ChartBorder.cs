@@ -9,7 +9,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface ChartBorder 
 	/// SupportByVersion Word, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840177.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartBorder"/> </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class ChartBorder : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192811.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartBorder.Color"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public object Color
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839845.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartBorder.ColorIndex"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public object ColorIndex
 		{
@@ -148,7 +148,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840331.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartBorder.LineStyle"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public object LineStyle
 		{
@@ -166,7 +166,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840382.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartBorder.Weight"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public object Weight
 		{
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838468.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartBorder.Application"/> </remarks>
 		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Application
 		{
@@ -199,7 +199,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844906.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartBorder.Creator"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Creator
 		{
@@ -214,7 +214,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191747.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartBorder.Parent"/> </remarks>
 		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Parent
 		{

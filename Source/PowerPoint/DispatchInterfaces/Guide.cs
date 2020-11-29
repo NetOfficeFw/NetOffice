@@ -9,7 +9,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface Guide 
 	/// SupportByVersion PowerPoint, 15, 16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227239.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.guide"/> </remarks>
 	[SupportByVersion("PowerPoint", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class Guide : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj684145.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.guide.application"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj684268.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.guide.parent"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16), ProxyResult]
 		public object Parent
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229820.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.guide.orientation"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.Enums.PpGuideOrientation Orientation
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227901.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.guide.position"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public Single Position
 		{
@@ -173,7 +173,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228235.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.guide.color"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.ColorFormat Color
 		{
@@ -190,7 +190,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230354.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.guide.delete"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public void Delete()
 		{

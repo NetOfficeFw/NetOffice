@@ -12,7 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Axes 
 	/// SupportByVersion Word, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196213.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Axes"/> </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	public class Axes : COMObject, IEnumerableProvider<NetOffice.WordApi.Axis>
@@ -115,7 +115,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839419.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Axes.Count"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Count
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837689.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Axes.Application"/> </remarks>
 		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Application
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845255.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Axes.Creator"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Creator
 		{
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835806.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Axes.Parent"/> </remarks>
 		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Parent
 		{

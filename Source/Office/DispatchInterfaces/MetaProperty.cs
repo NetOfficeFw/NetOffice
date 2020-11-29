@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface MetaProperty 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861404.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class MetaProperty : _IMsoDispObj
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861427.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty.Value"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public object Value
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864616.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty.Name"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string Name
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864639.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty.Id"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string Id
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861401.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty.IsReadOnly"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool IsReadOnly
 		{
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863489.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty.IsRequired"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool IsRequired
 		{
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862165.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty.Type"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoMetaPropertyType Type
 		{
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862549.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty.Parent"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865233.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MetaProperty.Validate"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string Validate()
 		{

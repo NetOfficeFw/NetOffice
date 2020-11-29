@@ -8,7 +8,7 @@ namespace NetOffice.OfficeApi.Native
     /// <summary>
     /// An object that provides the ability to manipulate blog entries.
     /// </summary>
-    /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863146.aspx </remarks>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility"/> </remarks>
     [ComImport, Guid("000C03C4-0000-0000-C000-000000000046"), TypeLibType(4288)]
     public interface IBlogExtensibility
     {

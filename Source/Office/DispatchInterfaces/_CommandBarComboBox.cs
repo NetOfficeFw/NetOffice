@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862439.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.DropDownLines"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 DropDownLines
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860247.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.DropDownWidth"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 DropDownWidth
 		{
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864610.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.List"/> </remarks>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Alias for get_List
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864610.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.List"/> </remarks>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16), Redirect("get_List")]
 		public string List(Int32 index)
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861189.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.ListCount"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 ListCount
 		{
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861774.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.ListHeaderCount"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 ListHeaderCount
 		{
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861121.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.ListIndex"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 ListIndex
 		{
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860245.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.Style"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoComboStyle Style
 		{
@@ -253,7 +253,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863116.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.Text"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public string Text
 		{
@@ -420,7 +420,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862141.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.AddItem"/> </remarks>
 		/// <param name="text">string text</param>
 		/// <param name="index">optional object index</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
@@ -432,7 +432,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862141.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.AddItem"/> </remarks>
 		/// <param name="text">string text</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
@@ -444,7 +444,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865479.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.Clear"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void Clear()
 		{
@@ -454,7 +454,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862859.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.RemoveItem"/> </remarks>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void RemoveItem(Int32 index)

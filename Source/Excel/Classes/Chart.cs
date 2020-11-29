@@ -29,7 +29,7 @@ namespace NetOffice.ExcelApi
 	/// CoClass Chart 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194426.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart(object)"/> </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.ChartEvents_SinkHelper))]
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834456.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Activate(even)"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_ActivateEventHandler ActivateEvent
 		{
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838241.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Deactivate"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_DeactivateEventHandler DeactivateEvent
 		{
@@ -199,7 +199,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839406.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Resize"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_ResizeEventHandler ResizeEvent
 		{
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822567.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.MouseDown"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_MouseDownEventHandler MouseDownEvent
 		{
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197532.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.MouseUp"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_MouseUpEventHandler MouseUpEvent
 		{
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837995.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.MouseMove"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839270.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.BeforeRightClick"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_BeforeRightClickEventHandler BeforeRightClickEvent
 		{
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197223.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.BeforeDoubleClick"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_BeforeDoubleClickEventHandler BeforeDoubleClickEvent
 		{
@@ -381,7 +381,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192964.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Select(even)"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_SelectEventHandler SelectEvent
 		{
@@ -404,7 +404,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834746.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.SeriesChange"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_SeriesChangeEventHandler SeriesChangeEvent
 		{
@@ -427,7 +427,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820890.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Calculate"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event Chart_CalculateEventHandler CalculateEvent
 		{

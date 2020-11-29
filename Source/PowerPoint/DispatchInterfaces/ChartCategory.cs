@@ -9,7 +9,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface ChartCategory 
 	/// SupportByVersion PowerPoint, 15, 16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230331.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.chartcategory"/> </remarks>
 	[SupportByVersion("PowerPoint", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class ChartCategory : COMObject
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj684143.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.chartcategory.parent"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16), ProxyResult]
 		public object Parent
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229693.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.chartcategory.name"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public string Name
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 15,16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230154.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.chartcategory.isfiltered"/> </remarks>
 		[SupportByVersion("PowerPoint", 15, 16)]
 		public bool IsFiltered
 		{

@@ -12,7 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Trendlines 
 	/// SupportByVersion Word, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845131.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines"/> </remarks>
 	[SupportByVersion("Word", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	public class Trendlines : COMObject, IEnumerableProvider<NetOffice.WordApi.Trendline>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823212.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Parent"/> </remarks>
 		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821991.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Count"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Count
 		{
@@ -145,7 +145,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822618.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Application"/> </remarks>
 		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Application
 		{
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192418.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Creator"/> </remarks>
 		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Creator
 		{
@@ -176,7 +176,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object order</param>
 		/// <param name="period">optional object period</param>
@@ -195,7 +195,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add()
@@ -206,7 +206,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 14,15,16)]
@@ -218,7 +218,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object order</param>
 		[CustomMethod]
@@ -231,7 +231,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object order</param>
 		/// <param name="period">optional object period</param>
@@ -245,7 +245,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object order</param>
 		/// <param name="period">optional object period</param>
@@ -260,7 +260,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object order</param>
 		/// <param name="period">optional object period</param>
@@ -276,7 +276,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object order</param>
 		/// <param name="period">optional object period</param>
@@ -293,7 +293,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object order</param>
 		/// <param name="period">optional object period</param>
@@ -311,7 +311,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Trendlines.Add"/> </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object order</param>
 		/// <param name="period">optional object period</param>

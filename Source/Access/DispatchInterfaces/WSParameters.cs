@@ -12,7 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface WSParameters 
 	/// SupportByVersion Access, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191766.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WSParameters"/> </remarks>
 	[SupportByVersion("Access", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class WSParameters : COMObject, IEnumerableProvider<NetOffice.AccessApi.WSParameter>
@@ -116,7 +116,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195975.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WSParameters.Parent"/> </remarks>
 		[SupportByVersion("Access", 14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -145,7 +145,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197098.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WSParameters.Count"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 Count
 		{

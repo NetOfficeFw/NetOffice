@@ -28,7 +28,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkCommandButton 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868781.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton"/> </remarks>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.OlkCommandButtonEvents_SinkHelper))]
@@ -151,7 +151,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863427.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.Click"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_ClickEventHandler ClickEvent
 		{
@@ -174,7 +174,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869593.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.DoubleClick"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_DoubleClickEventHandler DoubleClickEvent
 		{
@@ -197,7 +197,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868329.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.MouseDown"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_MouseDownEventHandler MouseDownEvent
 		{
@@ -220,7 +220,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862982.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.MouseMove"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -243,7 +243,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860671.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.MouseUp"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_MouseUpEventHandler MouseUpEvent
 		{
@@ -266,7 +266,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868553.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.Enter"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_EnterEventHandler EnterEvent
 		{
@@ -289,7 +289,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868836.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.Exit"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_ExitEventHandler ExitEvent
 		{
@@ -312,7 +312,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865822.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.KeyDown"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_KeyDownEventHandler KeyDownEvent
 		{
@@ -335,7 +335,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869029.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.KeyPress"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_KeyPressEventHandler KeyPressEvent
 		{
@@ -358,7 +358,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865850.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.KeyUp"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_KeyUpEventHandler KeyUpEvent
 		{
@@ -381,7 +381,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863036.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.AfterUpdate"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -404,7 +404,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865606.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkCommandButton.BeforeUpdate"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkCommandButton_BeforeUpdateEventHandler BeforeUpdateEvent
 		{

@@ -18,7 +18,7 @@ namespace NetOffice.ExcelApi
 	/// CoClass OLEObject 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838421.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEObject"/> </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.OLEObjectEvents_SinkHelper))]
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195806.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEObject.GotFocus"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event OLEObject_GotFocusEventHandler GotFocusEvent
 		{
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836813.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEObject.LostFocus"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event OLEObject_LostFocusEventHandler LostFocusEvent
 		{

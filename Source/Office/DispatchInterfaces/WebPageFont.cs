@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface WebPageFont 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864941.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont"/> </remarks>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class WebPageFont : _IMsoDispObj
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865546.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.ProportionalFont"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public string ProportionalFont
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863960.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.ProportionalFontSize"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Single ProportionalFontSize
 		{
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865471.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.FixedWidthFont"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public string FixedWidthFont
 		{
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863486.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.FixedWidthFontSize"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Single FixedWidthFontSize
 		{

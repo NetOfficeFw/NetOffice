@@ -111,7 +111,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869453.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ConversationHeader.Application"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
@@ -126,7 +126,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864386.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ConversationHeader.Class"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
@@ -140,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861297.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ConversationHeader.Session"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -156,7 +156,7 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863021.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ConversationHeader.Parent"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -170,7 +170,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862787.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ConversationHeader.ConversationID"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public string ConversationID
 		{
@@ -184,7 +184,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864459.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ConversationHeader.ConversationTopic"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public string ConversationTopic
 		{
@@ -201,7 +201,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869015.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ConversationHeader.GetConversation"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._Conversation GetConversation()
@@ -212,7 +212,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860331.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ConversationHeader.GetItems"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.SimpleItems GetItems()
 		{

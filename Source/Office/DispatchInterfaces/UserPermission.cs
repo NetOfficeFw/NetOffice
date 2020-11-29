@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface UserPermission 
 	/// SupportByVersion Office, 11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860810.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.UserPermission"/> </remarks>
 	[SupportByVersion("Office", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class UserPermission : _IMsoDispObj
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862102.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.UserPermission.UserId"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string UserId
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862094.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.UserPermission.Permission"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public Int32 Permission
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862529.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.UserPermission.ExpirationDate"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public object ExpirationDate
 		{
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861797.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.UserPermission.Parent"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864865.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.UserPermission.Remove"/> </remarks>
 		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void Remove()
 		{

@@ -9,7 +9,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface Dialog 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837805.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog"/> </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class Dialog : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196391.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Application"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839743.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Creator"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194078.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Parent"/> </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show()
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		[CustomMethod]
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
@@ -221,7 +221,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		[CustomMethod]
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -296,7 +296,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -353,7 +353,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -396,7 +396,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -419,7 +419,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -443,7 +443,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -468,7 +468,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -494,7 +494,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -521,7 +521,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -549,7 +549,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -578,7 +578,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -608,7 +608,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -639,7 +639,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -671,7 +671,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -704,7 +704,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -738,7 +738,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -773,7 +773,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -809,7 +809,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -846,7 +846,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -884,7 +884,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>
@@ -923,7 +923,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Dialog.Show"/> </remarks>
 		/// <param name="arg1">optional object arg1</param>
 		/// <param name="arg2">optional object arg2</param>
 		/// <param name="arg3">optional object arg3</param>

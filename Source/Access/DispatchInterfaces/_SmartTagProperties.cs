@@ -114,7 +114,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193480.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTagProperties.Application"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -128,7 +128,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197958.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTagProperties.Count"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -143,7 +143,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821066.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTagProperties.Parent"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -176,7 +176,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193196.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTagProperties.Add"/> </remarks>
 		/// <param name="name">string name</param>
 		/// <param name="value">object value</param>
 		[SupportByVersion("Access", 11,12,14,15,16)]

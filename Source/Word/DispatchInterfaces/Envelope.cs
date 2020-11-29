@@ -9,7 +9,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Envelope 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844948.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope"/> </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class Envelope : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839987.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Application"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837451.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Creator"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837283.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Parent"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844876.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Address"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Address
 		{
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838288.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.ReturnAddress"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range ReturnAddress
 		{
@@ -200,7 +200,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845764.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.DefaultPrintFIMA"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool DefaultPrintFIMA
 		{
@@ -218,7 +218,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195334.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.DefaultHeight"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single DefaultHeight
 		{
@@ -236,7 +236,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192764.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.DefaultWidth"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single DefaultWidth
 		{
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192360.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.DefaultSize"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string DefaultSize
 		{
@@ -272,7 +272,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838668.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.DefaultOmitReturnAddress"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool DefaultOmitReturnAddress
 		{
@@ -290,7 +290,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837953.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.FeedSource"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdPaperTray FeedSource
 		{
@@ -308,7 +308,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194709.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.AddressFromLeft"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single AddressFromLeft
 		{
@@ -326,7 +326,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194512.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.AddressFromTop"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single AddressFromTop
 		{
@@ -344,7 +344,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836104.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.ReturnAddressFromLeft"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single ReturnAddressFromLeft
 		{
@@ -362,7 +362,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845802.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.ReturnAddressFromTop"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single ReturnAddressFromTop
 		{
@@ -380,7 +380,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194331.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.AddressStyle"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Style AddressStyle
 		{
@@ -394,7 +394,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838363.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.ReturnAddressStyle"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Style ReturnAddressStyle
 		{
@@ -408,7 +408,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836699.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.DefaultOrientation"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdEnvelopeOrientation DefaultOrientation
 		{
@@ -426,7 +426,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838355.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.DefaultFaceUp"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool DefaultFaceUp
 		{
@@ -444,7 +444,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192380.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Vertical"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool Vertical
 		{
@@ -462,7 +462,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838725.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.RecipientNamefromLeft"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Single RecipientNamefromLeft
 		{
@@ -480,7 +480,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196823.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.RecipientNamefromTop"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Single RecipientNamefromTop
 		{
@@ -498,7 +498,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838472.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.RecipientPostalfromLeft"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Single RecipientPostalfromLeft
 		{
@@ -516,7 +516,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837337.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.RecipientPostalfromTop"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Single RecipientPostalfromTop
 		{
@@ -534,7 +534,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194048.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.SenderNamefromLeft"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Single SenderNamefromLeft
 		{
@@ -552,7 +552,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844790.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.SenderNamefromTop"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Single SenderNamefromTop
 		{
@@ -570,7 +570,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194353.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.SenderPostalfromLeft"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Single SenderPostalfromLeft
 		{
@@ -588,7 +588,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835494.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.SenderPostalfromTop"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Single SenderPostalfromTop
 		{
@@ -609,7 +609,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -637,7 +637,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -675,7 +675,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Insert()
@@ -686,7 +686,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -698,7 +698,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		[CustomMethod]
@@ -711,7 +711,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -725,7 +725,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -740,7 +740,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -756,7 +756,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -773,7 +773,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -791,7 +791,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -810,7 +810,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -830,7 +830,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -851,7 +851,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -873,7 +873,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -896,7 +896,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -920,7 +920,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -945,7 +945,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -971,7 +971,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -998,7 +998,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1026,7 +1026,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1056,7 +1056,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1087,7 +1087,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1119,7 +1119,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1152,7 +1152,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1186,7 +1186,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1221,7 +1221,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1257,7 +1257,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1294,7 +1294,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Insert"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1332,7 +1332,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1360,7 +1360,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1398,7 +1398,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut()
@@ -1409,7 +1409,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -1421,7 +1421,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		[CustomMethod]
@@ -1434,7 +1434,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1448,7 +1448,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1463,7 +1463,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1479,7 +1479,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1496,7 +1496,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1514,7 +1514,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1533,7 +1533,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1553,7 +1553,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1574,7 +1574,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1596,7 +1596,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1619,7 +1619,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1643,7 +1643,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1668,7 +1668,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1694,7 +1694,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1721,7 +1721,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1749,7 +1749,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1779,7 +1779,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1810,7 +1810,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1842,7 +1842,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1875,7 +1875,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1909,7 +1909,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1944,7 +1944,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -1980,7 +1980,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -2017,7 +2017,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.PrintOut"/> </remarks>
 		/// <param name="extractAddress">optional object extractAddress</param>
 		/// <param name="address">optional object address</param>
 		/// <param name="autoText">optional object autoText</param>
@@ -2055,7 +2055,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197914.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.UpdateDocument"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void UpdateDocument()
 		{
@@ -2823,7 +2823,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196101.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Envelope.Options"/> </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void Options()
 		{

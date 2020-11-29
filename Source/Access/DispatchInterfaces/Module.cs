@@ -10,7 +10,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface Module 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835649.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module"/> </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class Module : COMObject
@@ -113,7 +113,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197648.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Application"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -128,7 +128,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845790.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Parent"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -142,7 +142,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192086.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Name"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string Name
 		{
@@ -160,7 +160,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820960.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Lines"/> </remarks>
 		/// <param name="line">Int32 line</param>
 		/// <param name="numLines">Int32 numLines</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -174,7 +174,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Alias for get_Lines
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820960.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Lines"/> </remarks>
 		/// <param name="line">Int32 line</param>
 		/// <param name="numLines">Int32 numLines</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), Redirect("get_Lines")]
@@ -187,7 +187,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195500.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.CountOfLines"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int32 CountOfLines
 		{
@@ -201,7 +201,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836419.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ProcStartLine"/> </remarks>
 		/// <param name="procName">string procName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -215,7 +215,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Alias for get_ProcStartLine
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836419.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ProcStartLine"/> </remarks>
 		/// <param name="procName">string procName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), Redirect("get_ProcStartLine")]
@@ -228,7 +228,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835086.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ProcCountLines"/> </remarks>
 		/// <param name="procName">string procName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -242,7 +242,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Alias for get_ProcCountLines
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835086.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ProcCountLines"/> </remarks>
 		/// <param name="procName">string procName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), Redirect("get_ProcCountLines")]
@@ -255,7 +255,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822434.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ProcBodyLine"/> </remarks>
 		/// <param name="procName">string procName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -269,7 +269,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Alias for get_ProcBodyLine
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822434.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ProcBodyLine"/> </remarks>
 		/// <param name="procName">string procName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), Redirect("get_ProcBodyLine")]
@@ -282,7 +282,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195085.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ProcOfLine"/> </remarks>
 		/// <param name="line">Int32 line</param>
 		/// <param name="pprockind">NetOffice.VBIDEApi.Enums.vbext_ProcKind pprockind</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -301,7 +301,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Alias for get_ProcOfLine
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195085.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ProcOfLine"/> </remarks>
 		/// <param name="line">Int32 line</param>
 		/// <param name="pprockind">NetOffice.VBIDEApi.Enums.vbext_ProcKind pprockind</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16), Redirect("get_ProcOfLine")]
@@ -314,7 +314,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.CountOfDeclarationLines"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int32 CountOfDeclarationLines
 		{
@@ -328,7 +328,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835633.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Type"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcModuleType Type
 		{
@@ -345,7 +345,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845332.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.InsertText"/> </remarks>
 		/// <param name="text">string text</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void InsertText(string text)
@@ -356,7 +356,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845379.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.AddFromString"/> </remarks>
 		/// <param name="_string">string string</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void AddFromString(string _string)
@@ -367,7 +367,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821352.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.AddFromFile"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void AddFromFile(string fileName)
@@ -378,7 +378,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194137.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.InsertLines"/> </remarks>
 		/// <param name="line">Int32 line</param>
 		/// <param name="_string">string string</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -390,7 +390,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194301.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.DeleteLines"/> </remarks>
 		/// <param name="startLine">Int32 startLine</param>
 		/// <param name="count">Int32 count</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -402,7 +402,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198276.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.ReplaceLine"/> </remarks>
 		/// <param name="line">Int32 line</param>
 		/// <param name="_string">string string</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -414,7 +414,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845440.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.CreateEventProc"/> </remarks>
 		/// <param name="eventName">string eventName</param>
 		/// <param name="objectName">string objectName</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -426,7 +426,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195471.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Find"/> </remarks>
 		/// <param name="target">string target</param>
 		/// <param name="startLine">Int32 startLine</param>
 		/// <param name="startColumn">Int32 startColumn</param>
@@ -444,7 +444,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195471.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Find"/> </remarks>
 		/// <param name="target">string target</param>
 		/// <param name="startLine">Int32 startLine</param>
 		/// <param name="startColumn">Int32 startColumn</param>
@@ -460,7 +460,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195471.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Find"/> </remarks>
 		/// <param name="target">string target</param>
 		/// <param name="startLine">Int32 startLine</param>
 		/// <param name="startColumn">Int32 startColumn</param>
@@ -477,7 +477,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195471.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Module.Find"/> </remarks>
 		/// <param name="target">string target</param>
 		/// <param name="startLine">Int32 startLine</param>
 		/// <param name="startColumn">Int32 startColumn</param>

@@ -12,7 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface MailMergeFields 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835151.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.mailmergefields"/> </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class MailMergeFields : COMObject, IEnumerableProvider<NetOffice.WordApi.MailMergeField>
@@ -115,7 +115,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195330.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.Application"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834563.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.Creator"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840148.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.Parent"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837178.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.Count"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -189,7 +189,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836028.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.Add"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="name">string name</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -201,7 +201,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddAsk"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="name">string name</param>
 		/// <param name="prompt">optional object prompt</param>
@@ -216,7 +216,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddAsk"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="name">string name</param>
 		[CustomMethod]
@@ -229,7 +229,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddAsk"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="name">string name</param>
 		/// <param name="prompt">optional object prompt</param>
@@ -243,7 +243,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddAsk"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="name">string name</param>
 		/// <param name="prompt">optional object prompt</param>
@@ -258,7 +258,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddFillIn"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="prompt">optional object prompt</param>
 		/// <param name="defaultFillInText">optional object defaultFillInText</param>
@@ -272,7 +272,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddFillIn"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -284,7 +284,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddFillIn"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="prompt">optional object prompt</param>
 		[CustomMethod]
@@ -297,7 +297,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddFillIn"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="prompt">optional object prompt</param>
 		/// <param name="defaultFillInText">optional object defaultFillInText</param>
@@ -311,7 +311,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -329,7 +329,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -343,7 +343,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -358,7 +358,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -374,7 +374,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -409,7 +409,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195621.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddMergeRec"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddMergeRec(NetOffice.WordApi.Range range)
@@ -420,7 +420,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839562.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddMergeSeq"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddMergeSeq(NetOffice.WordApi.Range range)
@@ -431,7 +431,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837747.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddNext"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddNext(NetOffice.WordApi.Range range)
@@ -442,7 +442,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836276.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddNextIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -456,7 +456,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836276.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddNextIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -470,7 +470,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddSet"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="name">string name</param>
 		/// <param name="valueText">optional object valueText</param>
@@ -484,7 +484,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddSet"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="name">string name</param>
 		[CustomMethod]
@@ -497,7 +497,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddSet"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="name">string name</param>
 		/// <param name="valueText">optional object valueText</param>
@@ -511,7 +511,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841008.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddSkipIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
@@ -525,7 +525,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841008.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMergeFields.AddSkipIf"/> </remarks>
 		/// <param name="range">NetOffice.WordApi.Range range</param>
 		/// <param name="mergeField">string mergeField</param>
 		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>

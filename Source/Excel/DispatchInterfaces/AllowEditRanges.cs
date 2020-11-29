@@ -12,7 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface AllowEditRanges 
 	/// SupportByVersion Excel, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838626.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AllowEditRanges"/> </remarks>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
 	public class AllowEditRanges : COMObject, IEnumerableProvider<NetOffice.ExcelApi.AllowEditRange>
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839256.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AllowEditRanges.Count"/> </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841109.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AllowEditRanges.Add"/> </remarks>
 		/// <param name="title">string title</param>
 		/// <param name="range">NetOffice.ExcelApi.Range range</param>
 		/// <param name="password">optional object password</param>
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841109.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AllowEditRanges.Add"/> </remarks>
 		/// <param name="title">string title</param>
 		/// <param name="range">NetOffice.ExcelApi.Range range</param>
 		[CustomMethod]

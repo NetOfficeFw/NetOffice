@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SignatureInfo 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865566.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class SignatureInfo : _IMsoDispObj
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860243.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.ReadOnly"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ReadOnly
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865010.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.SignatureProvider"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string SignatureProvider
 		{
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860281.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.SignatureText"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string SignatureText
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861498.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.SignatureImage"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16), NativeResult]
 		public stdole.Picture SignatureImage
 		{
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860921.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.SignatureComment"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string SignatureComment
 		{
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860572.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.ContentVerificationResults"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.ContentVerificationResults ContentVerificationResults
 		{
@@ -211,7 +211,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864945.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.CertificateVerificationResults"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.CertificateVerificationResults CertificateVerificationResults
 		{
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862453.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.IsValid"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool IsValid
 		{
@@ -239,7 +239,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860786.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.IsCertificateExpired"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool IsCertificateExpired
 		{
@@ -253,7 +253,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865218.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.IsCertificateRevoked"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool IsCertificateRevoked
 		{
@@ -267,7 +267,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864566.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.IsCertificateUntrusted"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool IsCertificateUntrusted
 		{
@@ -284,7 +284,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862539.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.GetSignatureDetail"/> </remarks>
 		/// <param name="sigdet">NetOffice.OfficeApi.Enums.SignatureDetail sigdet</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public object GetSignatureDetail(NetOffice.OfficeApi.Enums.SignatureDetail sigdet)
@@ -295,7 +295,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865451.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.GetCertificateDetail"/> </remarks>
 		/// <param name="certdet">NetOffice.OfficeApi.Enums.CertificateDetail certdet</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public object GetCertificateDetail(NetOffice.OfficeApi.Enums.CertificateDetail certdet)
@@ -306,7 +306,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863087.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.ShowSignatureCertificate"/> </remarks>
 		/// <param name="parentWindow">object parentWindow</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void ShowSignatureCertificate(object parentWindow)
@@ -317,7 +317,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863741.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.SelectSignatureCertificate"/> </remarks>
 		/// <param name="parentWindow">object parentWindow</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void SelectSignatureCertificate(object parentWindow)
@@ -328,7 +328,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863290.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureInfo.SelectCertificateDetailByThumbprint"/> </remarks>
 		/// <param name="bstrThumbprint">string bstrThumbprint</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void SelectCertificateDetailByThumbprint(string bstrThumbprint)

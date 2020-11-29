@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface PickerProperties 
 	/// SupportByVersion Office, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861162.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerProperties"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class PickerProperties : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.PickerProperty>
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861123.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerProperties.Count"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 Count
 		{
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863501.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerProperties.Add"/> </remarks>
 		/// <param name="id">string id</param>
 		/// <param name="value">string value</param>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoPickerField type</param>
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863845.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerProperties.Remove"/> </remarks>
 		/// <param name="id">string id</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public void Remove(string id)

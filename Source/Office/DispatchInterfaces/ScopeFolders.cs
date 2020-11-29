@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface ScopeFolders 
 	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860833.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ScopeFolders"/> </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class ScopeFolders : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.ScopeFolder>
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864965.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ScopeFolders.Count"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 Count
 		{

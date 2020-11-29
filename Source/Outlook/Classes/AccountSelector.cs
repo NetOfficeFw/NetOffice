@@ -17,7 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass AccountSelector 
 	/// SupportByVersion Outlook, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867249.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AccountSelector"/> </remarks>
 	[SupportByVersion("Outlook", 14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.AccountSelectorEvents_SinkHelper))]
@@ -140,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869081.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AccountSelector.SelectedAccountChange"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public event AccountSelector_SelectedAccountChangeEventHandler SelectedAccountChangeEvent
 		{

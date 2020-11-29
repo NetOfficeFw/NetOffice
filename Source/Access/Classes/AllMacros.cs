@@ -16,7 +16,7 @@ namespace NetOffice.AccessApi
 	/// CoClass AllMacros 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821035.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.allmacros"/> </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
  	public class AllMacros : AllObjects

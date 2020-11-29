@@ -111,7 +111,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869259.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.Application"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
@@ -126,7 +126,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868054.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.Class"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
@@ -140,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866390.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.Session"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -156,7 +156,7 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869565.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.Parent"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -170,7 +170,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869792.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.ConversationID"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public string ConversationID
 		{
@@ -187,7 +187,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866231.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetTable"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.Table GetTable()
 		{
@@ -197,7 +197,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868807.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetChildren"/> </remarks>
 		/// <param name="item">object item</param>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.SimpleItems GetChildren(object item)
@@ -208,7 +208,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869780.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetParent"/> </remarks>
 		/// <param name="item">object item</param>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public object GetParent(object item)
@@ -219,7 +219,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866457.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetRootItems"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.SimpleItems GetRootItems()
 		{
@@ -229,7 +229,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869225.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetAlwaysAssignCategories"/> </remarks>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public string GetAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
@@ -240,7 +240,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867861.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetAlwaysDelete"/> </remarks>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation GetAlwaysDelete(NetOffice.OutlookApi._Store store)
@@ -251,7 +251,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869753.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetAlwaysMoveToFolder"/> </remarks>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
 		[BaseResult]
@@ -263,7 +263,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867852.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.MarkAsRead"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public void MarkAsRead()
 		{
@@ -273,7 +273,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868412.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.MarkAsUnread"/> </remarks>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public void MarkAsUnread()
 		{
@@ -283,7 +283,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868084.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.SetAlwaysAssignCategories"/> </remarks>
 		/// <param name="categories">string categories</param>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
@@ -295,7 +295,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869857.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.SetAlwaysDelete"/> </remarks>
 		/// <param name="alwaysDelete">NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation alwaysDelete</param>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
@@ -307,7 +307,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865038.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.SetAlwaysMoveToFolder"/> </remarks>
 		/// <param name="moveToFolder">NetOffice.OutlookApi.MAPIFolder moveToFolder</param>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
@@ -319,7 +319,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860425.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.ClearAlwaysAssignCategories"/> </remarks>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public void ClearAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
@@ -330,7 +330,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869032.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.StopAlwaysDelete"/> </remarks>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public void StopAlwaysDelete(NetOffice.OutlookApi._Store store)
@@ -341,7 +341,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863707.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.StopAlwaysMoveToFolder"/> </remarks>
 		/// <param name="store">NetOffice.OutlookApi._Store store</param>
 		[SupportByVersion("Outlook", 14,15,16)]
 		public void StopAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)

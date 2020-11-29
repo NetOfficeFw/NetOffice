@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface TabStops2 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860606.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TabStops2"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class TabStops2 : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.TabStop2>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865323.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TabStops2.Parent"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862735.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TabStops2.Count"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Count
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862551.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TabStops2.DefaultSpacing"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Single DefaultSpacing
 		{
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862827.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TabStops2.Add"/> </remarks>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoTabStopType type</param>
 		/// <param name="position">Single position</param>
 		[SupportByVersion("Office", 12,14,15,16)]

@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface PickerResults 
 	/// SupportByVersion Office, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864136.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerResults"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class PickerResults : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.PickerResult>
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865190.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerResults.Count"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 Count
 		{
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864663.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerResults.Add"/> </remarks>
 		/// <param name="id">string id</param>
 		/// <param name="displayName">string displayName</param>
 		/// <param name="type">string type</param>
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864663.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerResults.Add"/> </remarks>
 		/// <param name="id">string id</param>
 		/// <param name="displayName">string displayName</param>
 		/// <param name="type">string type</param>
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864663.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerResults.Add"/> </remarks>
 		/// <param name="id">string id</param>
 		/// <param name="displayName">string displayName</param>
 		/// <param name="type">string type</param>
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864663.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerResults.Add"/> </remarks>
 		/// <param name="id">string id</param>
 		/// <param name="displayName">string displayName</param>
 		/// <param name="type">string type</param>

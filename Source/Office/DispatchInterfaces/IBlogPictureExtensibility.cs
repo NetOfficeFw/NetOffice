@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface IBlogPictureExtensibility 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860265.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogPictureExtensibility"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class IBlogPictureExtensibility : COMObject
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860839.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogPictureExtensibility.BlogPictureProviderProperties"/> </remarks>
 		/// <param name="blogPictureProvider">string blogPictureProvider</param>
 		/// <param name="friendlyName">string friendlyName</param>
 		[SupportByVersion("Office", 12,14,15,16)]
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862798.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogPictureExtensibility.CreatePictureAccount"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="blogProvider">string blogProvider</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864012.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogPictureExtensibility.PublishPicture"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
 		/// <param name="document">object document</param>

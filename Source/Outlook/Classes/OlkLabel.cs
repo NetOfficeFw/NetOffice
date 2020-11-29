@@ -21,7 +21,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkLabel 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865045.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel"/> </remarks>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.OlkLabelEvents_SinkHelper))]
@@ -144,7 +144,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868708.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.Click"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkLabel_ClickEventHandler ClickEvent
 		{
@@ -167,7 +167,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867817.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.DoubleClick"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkLabel_DoubleClickEventHandler DoubleClickEvent
 		{
@@ -190,7 +190,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867139.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.MouseDown"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkLabel_MouseDownEventHandler MouseDownEvent
 		{
@@ -213,7 +213,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868754.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.MouseMove"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkLabel_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -236,7 +236,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869776.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.MouseUp"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkLabel_MouseUpEventHandler MouseUpEvent
 		{

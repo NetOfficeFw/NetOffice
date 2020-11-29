@@ -12,7 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface FullSeriesCollection 
 	/// SupportByVersion Word, 15, 16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231236.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.fullseriescollection"/> </remarks>
 	[SupportByVersion("Word", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
 	public class FullSeriesCollection : COMObject, IEnumerableProvider<NetOffice.WordApi.Series>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230202.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.fullseriescollection.parent"/> </remarks>
 		[SupportByVersion("Word", 15, 16), ProxyResult]
 		public object Parent
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227348.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.fullseriescollection.count"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public Int32 Count
 		{
@@ -145,7 +145,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231922.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.fullseriescollection.application"/> </remarks>
 		[SupportByVersion("Word", 15, 16), ProxyResult]
 		public object Application
 		{
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227448.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.fullseriescollection.creator"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public Int32 Creator
 		{

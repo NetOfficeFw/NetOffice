@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface ODSOFilters 
 	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865224.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters"/> </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class ODSOFilters : _IMsoDispObj, IEnumerableProvider<object>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860835.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Count"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861525.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Parent"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
 		/// <param name="column">string column</param>
 		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
@@ -176,7 +176,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
 		/// <param name="column">string column</param>
 		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
@@ -190,7 +190,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
 		/// <param name="column">string column</param>
 		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
@@ -205,7 +205,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860318.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Delete"/> </remarks>
 		/// <param name="index">Int32 index</param>
 		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860318.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Delete"/> </remarks>
 		/// <param name="index">Int32 index</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]

@@ -12,7 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface Printers 
 	/// SupportByVersion Access, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193898.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printers"/> </remarks>
 	[SupportByVersion("Access", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class Printers : COMObject, IEnumerableProvider<NetOffice.AccessApi._Printer>
@@ -115,7 +115,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193183.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printers.Application"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194830.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printers.Parent"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -160,7 +160,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835104.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printers.Count"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 Count
 		{

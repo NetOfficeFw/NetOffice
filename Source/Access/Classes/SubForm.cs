@@ -18,7 +18,7 @@ namespace NetOffice.AccessApi
 	/// CoClass SubForm 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194842.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SubForm"/> </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._SubFormEvents_SinkHelper), typeof(Events.DispSubFormEvents_SinkHelper))]
@@ -142,7 +142,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198039.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SubForm.Enter"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event SubForm_EnterEventHandler EnterEvent
 		{
@@ -165,7 +165,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836988.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SubForm.Exit"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event SubForm_ExitEventHandler ExitEvent
 		{

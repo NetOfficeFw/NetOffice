@@ -21,7 +21,7 @@ namespace NetOffice.AccessApi
 	/// CoClass Label 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192712.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Label"/> </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._LabelEvents_SinkHelper), typeof(Events.DispLabelEvents_SinkHelper))]
@@ -145,7 +145,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845292.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Label.Click"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Label_ClickEventHandler ClickEvent
 		{
@@ -168,7 +168,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845177.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Label.DblClick"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Label_DblClickEventHandler DblClickEvent
 		{
@@ -191,7 +191,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845612.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Label.MouseDown"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Label_MouseDownEventHandler MouseDownEvent
 		{
@@ -214,7 +214,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820764.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Label.MouseMove"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Label_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -237,7 +237,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835323.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Label.MouseUp"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Label_MouseUpEventHandler MouseUpEvent
 		{

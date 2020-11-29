@@ -18,7 +18,7 @@ namespace NetOffice.AccessApi
 	/// CoClass References 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821489.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.References"/> </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._References_Events_SinkHelper))]
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823174.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.References.ItemAdded"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event References_ItemAddedEventHandler ItemAddedEvent
 		{
@@ -164,7 +164,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845638.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.References.ItemRemoved"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event References_ItemRemovedEventHandler ItemRemovedEvent
 		{

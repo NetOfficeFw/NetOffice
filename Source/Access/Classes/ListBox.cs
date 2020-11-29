@@ -30,7 +30,7 @@ namespace NetOffice.AccessApi
 	/// CoClass ListBox 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195480.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox"/> </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._ListBoxEvents_SinkHelper), typeof(Events.DispListBoxEvents_SinkHelper))]
@@ -154,7 +154,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192062.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.BeforeUpdate-event"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -177,7 +177,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822464.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.AfterUpdate-event"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -200,7 +200,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194346.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.Enter"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_EnterEventHandler EnterEvent
 		{
@@ -223,7 +223,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195415.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.Exit"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_ExitEventHandler ExitEvent
 		{
@@ -246,7 +246,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822062.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.GotFocus"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_GotFocusEventHandler GotFocusEvent
 		{
@@ -269,7 +269,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844967.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.LostFocus"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_LostFocusEventHandler LostFocusEvent
 		{
@@ -292,7 +292,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197659.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.Click"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_ClickEventHandler ClickEvent
 		{
@@ -315,7 +315,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837260.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.DblClick"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_DblClickEventHandler DblClickEvent
 		{
@@ -338,7 +338,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822715.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.MouseDown"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_MouseDownEventHandler MouseDownEvent
 		{
@@ -361,7 +361,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836717.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.MouseMove"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -384,7 +384,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197349.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.MouseUp"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_MouseUpEventHandler MouseUpEvent
 		{
@@ -407,7 +407,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194748.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.KeyDown"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_KeyDownEventHandler KeyDownEvent
 		{
@@ -430,7 +430,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845356.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.KeyPress"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_KeyPressEventHandler KeyPressEvent
 		{
@@ -453,7 +453,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192236.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ListBox.KeyUp"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event ListBox_KeyUpEventHandler KeyUpEvent
 		{

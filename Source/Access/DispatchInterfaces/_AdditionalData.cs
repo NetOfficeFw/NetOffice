@@ -114,7 +114,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834471.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.AdditionalData.Name"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public string Name
 		{
@@ -148,7 +148,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198239.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.AdditionalData.Count"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -165,7 +165,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192052.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.AdditionalData.Add"/> </remarks>
 		/// <param name="var">string var</param>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		[BaseResult]

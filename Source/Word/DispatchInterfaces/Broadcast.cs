@@ -9,7 +9,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Broadcast 
 	/// SupportByVersion Word, 15, 16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229208.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast"/> </remarks>
 	[SupportByVersion("Word", 15, 16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class Broadcast : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231615.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.application"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231440.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.parent"/> </remarks>
 		[SupportByVersion("Word", 15, 16), ProxyResult]
 		public object Parent
 		{
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228838.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.attendeeurl"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public string AttendeeUrl
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231748.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.state"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public NetOffice.OfficeApi.Enums.MsoBroadcastState State
 		{
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230812.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.capabilities"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public Int32 Capabilities
 		{
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228473.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.presenterserviceurl"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public string PresenterServiceUrl
 		{
@@ -197,7 +197,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230720.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.sessionid"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public string SessionID
 		{
@@ -214,7 +214,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227544.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.start"/> </remarks>
 		/// <param name="serverUrl">string serverUrl</param>
 		[SupportByVersion("Word", 15, 16)]
 		public void Start(string serverUrl)
@@ -225,7 +225,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228106.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.pause"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public void Pause()
 		{
@@ -235,7 +235,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230520.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.resume"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public void Resume()
 		{
@@ -245,7 +245,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj232060.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.end"/> </remarks>
 		[SupportByVersion("Word", 15, 16)]
 		public void End()
 		{
@@ -255,7 +255,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj232140.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.broadcast.addmeetingnotes"/> </remarks>
 		/// <param name="notesUrl">string notesUrl</param>
 		/// <param name="notesWacUrl">string notesWacUrl</param>
 		[SupportByVersion("Word", 15, 16)]

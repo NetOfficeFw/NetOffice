@@ -111,7 +111,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822469.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Application"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835973.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Parent"/> </remarks>
 		[SupportByVersion("Access", 14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -140,7 +140,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835390.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OldValue"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public object OldValue
 		{
@@ -154,7 +154,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195251.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Properties"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.Properties Properties
 		{
@@ -168,7 +168,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195260.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Controls"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.Children Controls
 		{
@@ -182,7 +182,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192112.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Hyperlink"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		[BaseResult]
 		public NetOffice.AccessApi._Hyperlink Hyperlink
@@ -197,7 +197,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845896.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.FormatConditions"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.FormatConditions FormatConditions
 		{
@@ -211,7 +211,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198282.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Value"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public object Value
 		{
@@ -229,7 +229,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835034.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.EventProcPrefix"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string EventProcPrefix
 		{
@@ -265,7 +265,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822813.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.ControlType"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte ControlType
 		{
@@ -283,7 +283,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197345.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.StatusBarText"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string StatusBarText
 		{
@@ -301,7 +301,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197643.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Visible"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public bool Visible
 		{
@@ -319,7 +319,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835678.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.DisplayWhen"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte DisplayWhen
 		{
@@ -337,7 +337,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194929.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Enabled"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public bool Enabled
 		{
@@ -355,7 +355,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823039.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.FilterLookup"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte FilterLookup
 		{
@@ -373,7 +373,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192703.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.AutoTab"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public bool AutoTab
 		{
@@ -391,7 +391,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192878.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.TabStop"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public bool TabStop
 		{
@@ -409,7 +409,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192261.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.TabIndex"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 TabIndex
 		{
@@ -427,7 +427,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192730.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Left"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 Left
 		{
@@ -445,7 +445,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196002.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Top"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 Top
 		{
@@ -463,7 +463,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192486.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Width"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 Width
 		{
@@ -481,7 +481,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822786.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Height"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 Height
 		{
@@ -499,7 +499,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845838.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BackStyle"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte BackStyle
 		{
@@ -517,7 +517,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835065.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BackColor"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 BackColor
 		{
@@ -535,7 +535,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821470.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.SpecialEffect"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte SpecialEffect
 		{
@@ -553,7 +553,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197622.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BorderStyle"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte BorderStyle
 		{
@@ -571,7 +571,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194298.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OldBorderStyle"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte OldBorderStyle
 		{
@@ -589,7 +589,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196470.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BorderColor"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 BorderColor
 		{
@@ -607,7 +607,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820774.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BorderWidth"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte BorderWidth
 		{
@@ -643,7 +643,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197085.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.ShortcutMenuBar"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string ShortcutMenuBar
 		{
@@ -661,7 +661,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192529.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.ControlTipText"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string ControlTipText
 		{
@@ -679,7 +679,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822084.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.HelpContextId"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 HelpContextId
 		{
@@ -697,7 +697,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195229.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Section"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 Section
 		{
@@ -733,7 +733,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195482.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Tag"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string Tag
 		{
@@ -751,7 +751,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195169.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.IsVisible"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public bool IsVisible
 		{
@@ -769,7 +769,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197757.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.InSelection"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool InSelection
@@ -788,7 +788,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194936.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnGotFocus"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnGotFocus
 		{
@@ -806,7 +806,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845848.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnLostFocus"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnLostFocus
 		{
@@ -824,7 +824,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192893.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnClick"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnClick
 		{
@@ -842,7 +842,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845655.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnDblClick"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnDblClick
 		{
@@ -860,7 +860,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823167.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnMouseDown"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnMouseDown
 		{
@@ -878,7 +878,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845388.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnMouseMove"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnMouseMove
 		{
@@ -896,7 +896,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837196.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnMouseUp"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnMouseUp
 		{
@@ -914,7 +914,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197363.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnKeyDown"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnKeyDown
 		{
@@ -932,7 +932,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821490.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnKeyUp"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnKeyUp
 		{
@@ -950,7 +950,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194738.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.OnKeyPress"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string OnKeyPress
 		{
@@ -968,7 +968,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836320.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.ReadingOrder"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public byte ReadingOrder
@@ -987,7 +987,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194460.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.KeyboardLanguage"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte KeyboardLanguage
 		{
@@ -1023,7 +1023,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822408.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.ScrollBarAlign"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte ScrollBarAlign
 		{
@@ -1041,7 +1041,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845881.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.NumeralShapes"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte NumeralShapes
 		{
@@ -1059,7 +1059,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845214.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Name"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string Name
 		{
@@ -1077,7 +1077,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822780.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.LineSpacing"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 LineSpacing
 		{
@@ -1095,7 +1095,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835941.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.SmartTags"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		[BaseResult]
 		public NetOffice.AccessApi._SmartTags SmartTags
@@ -1110,7 +1110,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836263.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Layout"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.Enums.AcLayoutType Layout
 		{
@@ -1124,7 +1124,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845088.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.LeftPadding"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 LeftPadding
 		{
@@ -1142,7 +1142,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194235.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.TopPadding"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 TopPadding
 		{
@@ -1160,7 +1160,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197331.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.RightPadding"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 RightPadding
 		{
@@ -1178,7 +1178,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837170.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BottomPadding"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int16 BottomPadding
 		{
@@ -1196,7 +1196,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195206.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineStyleLeft"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte GridlineStyleLeft
 		{
@@ -1214,7 +1214,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193991.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineStyleTop"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte GridlineStyleTop
 		{
@@ -1232,7 +1232,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197059.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineStyleRight"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte GridlineStyleRight
 		{
@@ -1250,7 +1250,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198068.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineStyleBottom"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte GridlineStyleBottom
 		{
@@ -1268,7 +1268,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197052.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineWidthLeft"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte GridlineWidthLeft
 		{
@@ -1286,7 +1286,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836077.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineWidthTop"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte GridlineWidthTop
 		{
@@ -1304,7 +1304,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845523.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineWidthRight"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte GridlineWidthRight
 		{
@@ -1322,7 +1322,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193841.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineWidthBottom"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte GridlineWidthBottom
 		{
@@ -1340,7 +1340,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845904.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineColor"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 GridlineColor
 		{
@@ -1358,7 +1358,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192238.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.HorizontalAnchor"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
 		{
@@ -1376,7 +1376,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844719.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.VerticalAnchor"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
 		{
@@ -1574,7 +1574,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192262.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.LayoutID"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 LayoutID
 		{
@@ -1606,7 +1606,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196463.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BackThemeColorIndex"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 BackThemeColorIndex
 		{
@@ -1624,7 +1624,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834358.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BackTint"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single BackTint
 		{
@@ -1642,7 +1642,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192682.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BackShade"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single BackShade
 		{
@@ -1660,7 +1660,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198253.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BorderThemeColorIndex"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 BorderThemeColorIndex
 		{
@@ -1678,7 +1678,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197368.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BorderTint"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single BorderTint
 		{
@@ -1696,7 +1696,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194107.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.BorderShade"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single BorderShade
 		{
@@ -1714,7 +1714,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194329.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineThemeColorIndex"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 GridlineThemeColorIndex
 		{
@@ -1732,7 +1732,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837332.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineTint"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single GridlineTint
 		{
@@ -1750,7 +1750,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836553.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.GridlineShade"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single GridlineShade
 		{
@@ -1768,7 +1768,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836071.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.SubForm"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public string SubForm
 		{
@@ -1786,7 +1786,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821405.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Tabs"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.Children Tabs
 		{
@@ -1800,7 +1800,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197379.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.SelectedTab"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.NavigationButton SelectedTab
 		{
@@ -1814,7 +1814,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820835.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Span"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public NetOffice.AccessApi.Enums.AcNavigationSpan Span
 		{
@@ -1835,7 +1835,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834747.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Undo(method)"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public void Undo()
 		{
@@ -1845,7 +1845,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195267.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.SizeToFit"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public void SizeToFit()
 		{
@@ -1855,7 +1855,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194868.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Requery"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public void Requery()
 		{
@@ -1875,7 +1875,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195869.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.SetFocus"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public void SetFocus()
 		{
@@ -1919,7 +1919,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822712.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Move"/> </remarks>
 		/// <param name="left">object left</param>
 		/// <param name="top">optional object top</param>
 		/// <param name="width">optional object width</param>
@@ -1933,7 +1933,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822712.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Move"/> </remarks>
 		/// <param name="left">object left</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 14,15,16)]
@@ -1945,7 +1945,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822712.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Move"/> </remarks>
 		/// <param name="left">object left</param>
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
@@ -1958,7 +1958,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822712.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationControl.Move"/> </remarks>
 		/// <param name="left">object left</param>
 		/// <param name="top">optional object top</param>
 		/// <param name="width">optional object width</param>

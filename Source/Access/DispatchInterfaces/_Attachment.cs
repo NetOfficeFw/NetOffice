@@ -82,7 +82,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		/// <param name="var">optional object var</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193567.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileName"/>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_FileName(object var)
@@ -94,7 +94,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Alias for get_FileName
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193567.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileName"/> </remarks>
 		/// <param name="var">optional object var</param>
 		[SupportByVersion("Access", 12,14,15,16), Redirect("get_FileName")]
 		public string FileName(object var)
@@ -107,7 +107,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		/// <param name="var">optional object var</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845243.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileType"/>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_FileType(object var)
@@ -119,7 +119,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Alias for get_FileType
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845243.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileType"/> </remarks>
 		/// <param name="var">optional object var</param>
 		[SupportByVersion("Access", 12,14,15,16), Redirect("get_FileType")]
 		public string FileType(object var)
@@ -132,7 +132,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		/// <param name="var">optional object var</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195201.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileURL"/>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_FileURL(object var)
@@ -144,7 +144,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Alias for get_FileURL
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195201.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileURL"/> </remarks>
 		/// <param name="var">optional object var</param>
 		[SupportByVersion("Access", 12,14,15,16), Redirect("get_FileURL")]
 		public string FileURL(object var)
@@ -312,7 +312,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835342.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Application"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -327,7 +327,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820946.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Parent"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -341,7 +341,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836659.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OldValue"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public object OldValue
 		{
@@ -355,7 +355,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192518.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Properties"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Properties Properties
 		{
@@ -369,7 +369,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196010.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Controls"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Children Controls
 		{
@@ -398,7 +398,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836727.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.EventProcPrefix"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string EventProcPrefix
 		{
@@ -434,7 +434,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836871.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.ControlType"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte ControlType
 		{
@@ -452,7 +452,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844989.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.PictureSizeMode"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte PictureSizeMode
 		{
@@ -470,7 +470,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193807.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.PictureAlignment"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte PictureAlignment
 		{
@@ -488,7 +488,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835074.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.PictureTiling"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool PictureTiling
 		{
@@ -506,7 +506,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845492.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Visible"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool Visible
 		{
@@ -524,7 +524,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195722.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.DisplayWhen"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte DisplayWhen
 		{
@@ -542,7 +542,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834511.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Left"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 Left
 		{
@@ -560,7 +560,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844867.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Top"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 Top
 		{
@@ -578,7 +578,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195738.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Width"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 Width
 		{
@@ -596,7 +596,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192489.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Height"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 Height
 		{
@@ -614,7 +614,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196447.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BackStyle"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte BackStyle
 		{
@@ -632,7 +632,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196184.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BackColor"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 BackColor
 		{
@@ -650,7 +650,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193541.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.SpecialEffect"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte SpecialEffect
 		{
@@ -668,7 +668,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820796.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BorderStyle"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte BorderStyle
 		{
@@ -686,7 +686,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821483.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OldBorderStyle"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte OldBorderStyle
 		{
@@ -704,7 +704,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834465.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BorderColor"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 BorderColor
 		{
@@ -722,7 +722,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835995.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BorderWidth"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte BorderWidth
 		{
@@ -758,7 +758,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823119.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.ControlTipText"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string ControlTipText
 		{
@@ -776,7 +776,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821449.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.HelpContextId"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 HelpContextId
 		{
@@ -794,7 +794,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837166.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Section"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 Section
 		{
@@ -830,7 +830,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194772.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.IsVisible"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool IsVisible
 		{
@@ -848,7 +848,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193160.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BeforeUpdate-property"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string BeforeUpdate
 		{
@@ -866,7 +866,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194169.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.AfterUpdate-property"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string AfterUpdate
 		{
@@ -884,7 +884,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194485.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnEnter"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnEnter
 		{
@@ -902,7 +902,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194575.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnExit"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnExit
 		{
@@ -920,7 +920,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821070.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnDirty"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnDirty
 		{
@@ -938,7 +938,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823022.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnChange"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnChange
 		{
@@ -956,7 +956,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820975.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnGotFocus"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnGotFocus
 		{
@@ -974,7 +974,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194110.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnLostFocus"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnLostFocus
 		{
@@ -992,7 +992,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822868.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnClick"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnClick
 		{
@@ -1010,7 +1010,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194550.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnDblClick"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnDblClick
 		{
@@ -1028,7 +1028,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195807.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnMouseDown"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnMouseDown
 		{
@@ -1046,7 +1046,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193537.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnMouseMove"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnMouseMove
 		{
@@ -1064,7 +1064,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844980.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnMouseUp"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnMouseUp
 		{
@@ -1082,7 +1082,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196490.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnKeyDown"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnKeyDown
 		{
@@ -1100,7 +1100,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194243.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnKeyUp"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnKeyUp
 		{
@@ -1118,7 +1118,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198361.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnKeyPress"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnKeyPress
 		{
@@ -1136,7 +1136,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196159.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.OnAttachmentCurrent"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string OnAttachmentCurrent
 		{
@@ -1460,7 +1460,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822748.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.ShortcutMenuBar"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string ShortcutMenuBar
 		{
@@ -1478,7 +1478,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835668.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.InSelection"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool InSelection
@@ -1497,7 +1497,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195530.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Tag"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string Tag
 		{
@@ -1515,7 +1515,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194767.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Name"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string Name
 		{
@@ -1533,7 +1533,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821403.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.DisplayAs"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcDisplayAs DisplayAs
 		{
@@ -1551,7 +1551,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192274.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.AttachmentCount"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 AttachmentCount
 		{
@@ -1565,7 +1565,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197073.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.CurrentAttachment"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 CurrentAttachment
 		{
@@ -1583,7 +1583,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193567.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileName"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string FileName
 		{
@@ -1597,7 +1597,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845243.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileType"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string FileType
 		{
@@ -1611,7 +1611,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195201.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.FileURL"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string FileURL
 		{
@@ -1625,7 +1625,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845195.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.HorizontalAnchor"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
 		{
@@ -1643,7 +1643,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822708.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.VerticalAnchor"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
 		{
@@ -1661,7 +1661,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845398.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Layout"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcLayoutType Layout
 		{
@@ -1675,7 +1675,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195463.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.LeftPadding"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 LeftPadding
 		{
@@ -1693,7 +1693,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845619.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.TopPadding"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 TopPadding
 		{
@@ -1711,7 +1711,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821735.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.RightPadding"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 RightPadding
 		{
@@ -1729,7 +1729,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822438.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BottomPadding"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 BottomPadding
 		{
@@ -1747,7 +1747,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845104.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineStyleLeft"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineStyleLeft
 		{
@@ -1765,7 +1765,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822793.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineStyleTop"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineStyleTop
 		{
@@ -1783,7 +1783,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823207.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineStyleRight"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineStyleRight
 		{
@@ -1801,7 +1801,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192328.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineStyleBottom"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineStyleBottom
 		{
@@ -1819,7 +1819,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192080.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineWidthLeft"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineWidthLeft
 		{
@@ -1837,7 +1837,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195855.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineWidthTop"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineWidthTop
 		{
@@ -1855,7 +1855,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195871.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineWidthRight"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineWidthRight
 		{
@@ -1873,7 +1873,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193208.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineWidthBottom"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineWidthBottom
 		{
@@ -1891,7 +1891,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836375.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineColor"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 GridlineColor
 		{
@@ -1909,7 +1909,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197948.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.DefaultPicture"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string DefaultPicture
 		{
@@ -1927,7 +1927,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835967.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.LayoutID"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 LayoutID
 		{
@@ -1941,7 +1941,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845041.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.AutoLabel"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool AutoLabel
 		{
@@ -1959,7 +1959,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197385.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.AddColon"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool AddColon
 		{
@@ -1977,7 +1977,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195238.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.LabelX"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 LabelX
 		{
@@ -1995,7 +1995,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193492.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.LabelY"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 LabelY
 		{
@@ -2013,7 +2013,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192309.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.LabelAlign"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public byte LabelAlign
 		{
@@ -2031,7 +2031,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845588.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.ColumnWidth"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 ColumnWidth
 		{
@@ -2049,7 +2049,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835664.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.ColumnOrder"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 ColumnOrder
 		{
@@ -2067,7 +2067,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196054.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.ColumnHidden"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool ColumnHidden
 		{
@@ -2085,7 +2085,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.ControlSource"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string ControlSource
 		{
@@ -2103,7 +2103,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198248.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.StatusBarText"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public string StatusBarText
 		{
@@ -2121,7 +2121,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197633.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.TabStop"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool TabStop
 		{
@@ -2139,7 +2139,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822722.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.TabIndex"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 TabIndex
 		{
@@ -2157,7 +2157,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834720.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Enabled"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool Enabled
 		{
@@ -2175,7 +2175,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834789.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Locked"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public bool Locked
 		{
@@ -2221,7 +2221,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823010.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BackThemeColorIndex"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 BackThemeColorIndex
 		{
@@ -2239,7 +2239,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836938.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BackTint"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single BackTint
 		{
@@ -2257,7 +2257,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191790.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BackShade"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single BackShade
 		{
@@ -2275,7 +2275,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820935.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BorderThemeColorIndex"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 BorderThemeColorIndex
 		{
@@ -2293,7 +2293,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196496.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BorderTint"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single BorderTint
 		{
@@ -2311,7 +2311,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192532.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BorderShade"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single BorderShade
 		{
@@ -2329,7 +2329,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845642.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineThemeColorIndex"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Int32 GridlineThemeColorIndex
 		{
@@ -2347,7 +2347,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822861.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineTint"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single GridlineTint
 		{
@@ -2365,7 +2365,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191829.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GridlineShade"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public Single GridlineShade
 		{
@@ -2383,7 +2383,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196043.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.DefaultPictureType"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public byte DefaultPictureType
 		{
@@ -2404,7 +2404,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198323.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.SizeToFit"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public void SizeToFit()
 		{
@@ -2414,7 +2414,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195435.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Requery"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public void Requery()
 		{
@@ -2434,7 +2434,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194081.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.SetFocus"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public void SetFocus()
 		{
@@ -2478,7 +2478,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834482.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Move"/> </remarks>
 		/// <param name="left">object left</param>
 		/// <param name="top">optional object top</param>
 		/// <param name="width">optional object width</param>
@@ -2492,7 +2492,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834482.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Move"/> </remarks>
 		/// <param name="left">object left</param>
 		[CustomMethod]
 		[SupportByVersion("Access", 12,14,15,16)]
@@ -2504,7 +2504,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834482.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Move"/> </remarks>
 		/// <param name="left">object left</param>
 		/// <param name="top">optional object top</param>
 		[CustomMethod]
@@ -2517,7 +2517,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834482.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Move"/> </remarks>
 		/// <param name="left">object left</param>
 		/// <param name="top">optional object top</param>
 		/// <param name="width">optional object width</param>
@@ -2531,7 +2531,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845316.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Forward"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public void Forward()
 		{
@@ -2541,7 +2541,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197753.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Back"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public void Back()
 		{

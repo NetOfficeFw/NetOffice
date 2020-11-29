@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface NewFile 
 	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862417.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile"/> </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class NewFile : _IMsoDispObj
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Add"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		/// <param name="section">optional object section</param>
 		/// <param name="displayName">optional object displayName</param>
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Add"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Add"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		/// <param name="section">optional object section</param>
 		[CustomMethod]
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Add"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		/// <param name="section">optional object section</param>
 		/// <param name="displayName">optional object displayName</param>
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Remove"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		/// <param name="section">optional object section</param>
 		/// <param name="displayName">optional object displayName</param>
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Remove"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Remove"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		/// <param name="section">optional object section</param>
 		[CustomMethod]
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Remove"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		/// <param name="section">optional object section</param>
 		/// <param name="displayName">optional object displayName</param>

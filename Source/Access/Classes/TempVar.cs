@@ -16,7 +16,7 @@ namespace NetOffice.AccessApi
 	/// CoClass TempVar 
 	/// SupportByVersion Access, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193475.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.TempVar"/> </remarks>
 	[SupportByVersion("Access", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
  	public class TempVar : _TempVar

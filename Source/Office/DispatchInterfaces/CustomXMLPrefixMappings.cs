@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface CustomXMLPrefixMappings 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862759.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPrefixMappings"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class CustomXMLPrefixMappings : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CustomXMLPrefixMapping>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860342.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPrefixMappings.Parent"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862823.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPrefixMappings.Count"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Count
 		{
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863491.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPrefixMappings.AddNamespace"/> </remarks>
 		/// <param name="prefix">string prefix</param>
 		/// <param name="namespaceURI">string namespaceURI</param>
 		[SupportByVersion("Office", 12,14,15,16)]
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861130.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPrefixMappings.LookupNamespace"/> </remarks>
 		/// <param name="prefix">string prefix</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string LookupNamespace(string prefix)
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861490.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPrefixMappings.LookupPrefix"/> </remarks>
 		/// <param name="namespaceURI">string namespaceURI</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string LookupPrefix(string namespaceURI)

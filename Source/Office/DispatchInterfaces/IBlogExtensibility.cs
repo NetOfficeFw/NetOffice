@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface IBlogExtensibility 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863146.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class IBlogExtensibility : COMObject
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862840.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility.BlogProviderProperties"/> </remarks>
 		/// <param name="blogProvider">string blogProvider</param>
 		/// <param name="friendlyName">string friendlyName</param>
 		/// <param name="categorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport</param>
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863154.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility.SetupBlogAccount"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
 		/// <param name="document">object document</param>
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860220.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility.GetUserBlogs"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
 		/// <param name="document">object document</param>
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861430.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility.GetRecentPosts"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
 		/// <param name="document">object document</param>
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861145.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility.Open"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="postID">string postID</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862458.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility.PublishPost"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
 		/// <param name="document">object document</param>
@@ -260,7 +260,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860616.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility.RepublishPost"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
 		/// <param name="document">object document</param>
@@ -284,7 +284,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865355.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogExtensibility.GetCategories"/> </remarks>
 		/// <param name="account">string account</param>
 		/// <param name="parentWindow">Int32 parentWindow</param>
 		/// <param name="document">object document</param>

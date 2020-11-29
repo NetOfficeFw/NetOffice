@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SignatureSet 
 	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861798.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet"/> </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class SignatureSet : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.Signature>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862205.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.Count"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862853.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.Parent"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865204.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.CanAddSignatureLine"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool CanAddSignatureLine
 		{
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860322.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.Subset"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoSignatureSubset Subset
 		{
@@ -191,7 +191,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860584.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.ShowSignaturesPane"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ShowSignaturesPane
 		{
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865505.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.AddNonVisibleSignature"/> </remarks>
 		/// <param name="varSigProv">optional object varSigProv</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Signature AddNonVisibleSignature(object varSigProv)
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865505.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.AddNonVisibleSignature"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Signature AddNonVisibleSignature()
@@ -252,7 +252,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865238.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.AddSignatureLine"/> </remarks>
 		/// <param name="varSigProv">optional object varSigProv</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Signature AddSignatureLine(object varSigProv)
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865238.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SignatureSet.AddSignatureLine"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Signature AddSignatureLine()

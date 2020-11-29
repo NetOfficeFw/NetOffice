@@ -111,7 +111,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194552.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.ColorMode"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcPrintColor ColorMode
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193471.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.Copies"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 Copies
 		{
@@ -147,7 +147,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822789.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.DeviceName"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public string DeviceName
 		{
@@ -161,7 +161,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195870.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.DriverName"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public string DriverName
 		{
@@ -175,7 +175,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198051.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.Duplex"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcPrintDuplex Duplex
 		{
@@ -193,7 +193,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191910.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.Orientation"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcPrintOrientation Orientation
 		{
@@ -211,7 +211,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834798.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.PaperBin"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcPrintPaperBin PaperBin
 		{
@@ -229,7 +229,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836635.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.PaperSize"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcPrintPaperSize PaperSize
 		{
@@ -247,7 +247,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845317.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.Port"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public string Port
 		{
@@ -261,7 +261,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195844.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.PrintQuality"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcPrintObjQuality PrintQuality
 		{
@@ -279,7 +279,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194827.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.LeftMargin"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 LeftMargin
 		{
@@ -297,7 +297,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834469.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.RightMargin"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 RightMargin
 		{
@@ -315,7 +315,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835658.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.TopMargin"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 TopMargin
 		{
@@ -333,7 +333,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835336.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.BottomMargin"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 BottomMargin
 		{
@@ -351,7 +351,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192121.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.DataOnly"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public bool DataOnly
 		{
@@ -369,7 +369,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195704.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.ItemsAcross"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 ItemsAcross
 		{
@@ -387,7 +387,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196146.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.RowSpacing"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 RowSpacing
 		{
@@ -405,7 +405,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844923.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.ColumnSpacing"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 ColumnSpacing
 		{
@@ -423,7 +423,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822094.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.DefaultSize"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public bool DefaultSize
 		{
@@ -441,7 +441,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196498.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.ItemSizeWidth"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 ItemSizeWidth
 		{
@@ -459,7 +459,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196765.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.ItemSizeHeight"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public Int32 ItemSizeHeight
 		{
@@ -477,7 +477,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194662.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Printer.ItemLayout"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcPrintItemLayout ItemLayout
 		{

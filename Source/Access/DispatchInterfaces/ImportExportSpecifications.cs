@@ -12,7 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface ImportExportSpecifications 
 	/// SupportByVersion Access, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198252.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications"/> </remarks>
 	[SupportByVersion("Access", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class ImportExportSpecifications : COMObject, IEnumerableProvider<NetOffice.AccessApi.ImportExportSpecification>
@@ -115,7 +115,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193839.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications.Application"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835770.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications.Count"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 Count
 		{
@@ -144,7 +144,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845598.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications.Parent"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -176,7 +176,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822822.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications.Add"/> </remarks>
 		/// <param name="name">string name</param>
 		/// <param name="specificationDefinition">string specificationDefinition</param>
 		[SupportByVersion("Access", 12,14,15,16)]

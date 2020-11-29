@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface GradientStops 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861159.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class GradientStops : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.GradientStop>
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864855.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Count"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Count
 		{
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861233.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Delete"/> </remarks>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void Delete(object index)
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861233.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Delete"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void Delete()
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863159.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Insert"/> </remarks>
 		/// <param name="rGB">Int32 rGB</param>
 		/// <param name="position">Single position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863159.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Insert"/> </remarks>
 		/// <param name="rGB">Int32 rGB</param>
 		/// <param name="position">Single position</param>
 		[CustomMethod]
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863159.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Insert"/> </remarks>
 		/// <param name="rGB">Int32 rGB</param>
 		/// <param name="position">Single position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864086.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Insert2"/> </remarks>
 		/// <param name="rGB">Int32 rGB</param>
 		/// <param name="position">Single position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864086.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Insert2"/> </remarks>
 		/// <param name="rGB">Int32 rGB</param>
 		/// <param name="position">Single position</param>
 		[CustomMethod]
@@ -238,7 +238,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864086.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Insert2"/> </remarks>
 		/// <param name="rGB">Int32 rGB</param>
 		/// <param name="position">Single position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
@@ -252,7 +252,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864086.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.GradientStops.Insert2"/> </remarks>
 		/// <param name="rGB">Int32 rGB</param>
 		/// <param name="position">Single position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>

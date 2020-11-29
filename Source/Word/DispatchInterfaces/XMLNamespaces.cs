@@ -12,7 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface XMLNamespaces 
 	/// SupportByVersion Word, 11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840328.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/previous-versions/office/ff840328(v=office.15)?redirectedfrom=MSDN"/> </remarks>
 	[SupportByVersion("Word", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class XMLNamespaces : COMObject, IEnumerableProvider<NetOffice.WordApi.XMLNamespace>
@@ -115,7 +115,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197248.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.count"/> </remarks>
 		[SupportByVersion("Word", 11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838913.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.application"/> </remarks>
 		[SupportByVersion("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836308.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.creator"/> </remarks>
 		[SupportByVersion("Word", 11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839344.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.parent"/> </remarks>
 		[SupportByVersion("Word", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -189,7 +189,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192770.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.add"/> </remarks>
 		/// <param name="path">string path</param>
 		/// <param name="namespaceURI">optional object namespaceURI</param>
 		/// <param name="alias">optional object alias</param>
@@ -203,7 +203,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192770.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.add"/> </remarks>
 		/// <param name="path">string path</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 11,12,14,15,16)]
@@ -215,7 +215,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192770.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.add"/> </remarks>
 		/// <param name="path">string path</param>
 		/// <param name="namespaceURI">optional object namespaceURI</param>
 		[CustomMethod]
@@ -228,7 +228,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192770.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.add"/> </remarks>
 		/// <param name="path">string path</param>
 		/// <param name="namespaceURI">optional object namespaceURI</param>
 		/// <param name="alias">optional object alias</param>
@@ -242,7 +242,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836116.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.installmanifest"/> </remarks>
 		/// <param name="path">string path</param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
 		[SupportByVersion("Word", 11,12,14,15,16)]
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836116.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.installmanifest"/> </remarks>
 		/// <param name="path">string path</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 11,12,14,15,16)]

@@ -9,7 +9,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface Sequence 
 	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744554.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence"/> </remarks>
 	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
  	public class Sequence : Collection
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745955.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.Application"/> </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746840.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.Parent"/> </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -159,7 +159,7 @@ namespace NetOffice.PowerPointApi
 		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.AddEffect"/> </remarks>
 		/// <param name="shape">The shape to which the animation effect is added.</param>
 		/// <param name="effectId">The animation effect to be applied.</param>
 		/// <param name="level">For charts, diagrams, or text, the level to which the animation effect will be applied. The default value is <see cref="NetOffice.PowerPointApi.Enums.MsoAnimateByLevel.msoAnimationLevelNone"/>.</param>
@@ -181,7 +181,7 @@ namespace NetOffice.PowerPointApi
 		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.AddEffect"/> </remarks>
 		/// <param name="shape">The shape to which the animation effect is added.</param>
 		/// <param name="effectId">The animation effect to be applied.</param>
 		[CustomMethod]
@@ -195,7 +195,7 @@ namespace NetOffice.PowerPointApi
 		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.AddEffect"/> </remarks>
 		/// <param name="shape">The shape to which the animation effect is added.</param>
 		/// <param name="effectId">The animation effect to be applied.</param>
 		/// <param name="level">For charts, diagrams, or text, the level to which the animation effect will be applied. The default value is <see cref="NetOffice.PowerPointApi.Enums.MsoAnimateByLevel.msoAnimationLevelNone"/>.</param>
@@ -210,7 +210,7 @@ namespace NetOffice.PowerPointApi
 		/// Returns an Effect object that represents a new animation effect added to a sequence of animation effects.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746823.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.AddEffect"/> </remarks>
 		/// <param name="shape">The shape to which the animation effect is added.</param>
 		/// <param name="effectId">The animation effect to be applied.</param>
 		/// <param name="level">For charts, diagrams, or text, the level to which the animation effect will be applied. The default value is <see cref="NetOffice.PowerPointApi.Enums.MsoAnimateByLevel.msoAnimationLevelNone"/>.</param>
@@ -226,7 +226,7 @@ namespace NetOffice.PowerPointApi
 		/// Creates a copy of an Effect object, and adds it to the Sequences collection at the specified index position.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745243.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.Clone"/> </remarks>
 		/// <param name="effect"><see cref="NetOffice.PowerPointApi.Effect"/> object. The animation effect to be cloned.</param>
 		/// <param name="index">The position at which the cloned animation effect will be added to the Sequences collection. The default value is -1 (added to the end).</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
@@ -239,7 +239,7 @@ namespace NetOffice.PowerPointApi
 		/// Creates a copy of an Effect object, and adds it to the Sequences collection at the specified index position.
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745243.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.Clone"/> </remarks>
 		/// <param name="effect"><see cref="NetOffice.PowerPointApi.Effect"/> object. The animation effect to be cloned.</param>
 		[CustomMethod]
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
@@ -251,7 +251,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744048.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.FindFirstAnimationFor"/> </remarks>
 		/// <param name="shape">NetOffice.PowerPointApi.Shape shape</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Effect FindFirstAnimationFor(NetOffice.PowerPointApi.Shape shape)
@@ -262,7 +262,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746508.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.FindFirstAnimationForClick"/> </remarks>
 		/// <param name="click">Int32 click</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Effect FindFirstAnimationForClick(Int32 click)
@@ -273,7 +273,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746657.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.ConvertToBuildLevel"/> </remarks>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="level">NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
@@ -285,7 +285,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746103.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.ConvertToAfterEffect"/> </remarks>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="after">NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after</param>
 		/// <param name="dimColor">optional Int32 DimColor = 0</param>
@@ -299,7 +299,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746103.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.ConvertToAfterEffect"/> </remarks>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="after">NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after</param>
 		[CustomMethod]
@@ -312,7 +312,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746103.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.ConvertToAfterEffect"/> </remarks>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="after">NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after</param>
 		/// <param name="dimColor">optional Int32 DimColor = 0</param>
@@ -326,7 +326,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745293.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.ConvertToAnimateBackground"/> </remarks>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="animateBackground">NetOffice.OfficeApi.Enums.MsoTriState animateBackground</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
@@ -338,7 +338,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746429.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.ConvertToAnimateInReverse"/> </remarks>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="animateInReverse">NetOffice.OfficeApi.Enums.MsoTriState animateInReverse</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
@@ -350,7 +350,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746736.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.ConvertToTextUnitEffect"/> </remarks>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
 		/// <param name="unitEffect">NetOffice.PowerPointApi.Enums.MsoAnimTextUnitEffect unitEffect</param>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
@@ -362,7 +362,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745105.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.AddTriggerEffect"/> </remarks>
 		/// <param name="pShape">NetOffice.PowerPointApi.Shape pShape</param>
 		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
 		/// <param name="trigger">NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger</param>
@@ -378,7 +378,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745105.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.AddTriggerEffect"/> </remarks>
 		/// <param name="pShape">NetOffice.PowerPointApi.Shape pShape</param>
 		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
 		/// <param name="trigger">NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger</param>
@@ -393,7 +393,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745105.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Sequence.AddTriggerEffect"/> </remarks>
 		/// <param name="pShape">NetOffice.PowerPointApi.Shape pShape</param>
 		/// <param name="effectId">NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId</param>
 		/// <param name="trigger">NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger</param>

@@ -18,7 +18,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Views 
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865619.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Views"/> </remarks>
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events._ViewsEvents_SinkHelper))]
@@ -141,7 +141,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867711.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Views.ViewAdd"/> </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Views_ViewAddEventHandler ViewAddEvent
 		{
@@ -164,7 +164,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868250.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ViewRemove"/> </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Views_ViewRemoveEventHandler ViewRemoveEvent
 		{

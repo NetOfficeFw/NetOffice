@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface IMsoContactCard 
 	/// SupportByVersion Office, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861128.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IMsoContactCard"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class IMsoContactCard : _IMsoDispObj
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865180.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IMsoContactCard.Address"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public string Address
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864963.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IMsoContactCard.AddressType"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoContactCardAddressType AddressType
 		{
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860217.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IMsoContactCard.CardType"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoContactCardType CardType
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860611.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IMsoContactCard.Parent"/> </remarks>
 		[SupportByVersion("Office", 14,15,16), ProxyResult]
 		public object Parent
 		{

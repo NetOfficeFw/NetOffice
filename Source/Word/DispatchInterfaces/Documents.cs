@@ -12,7 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface Documents 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840891.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.documents"/> </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class Documents : COMObject, IEnumerableProvider<NetOffice.WordApi.Document>
@@ -115,7 +115,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822958.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Count"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195113.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Application"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838145.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Creator"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196684.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Parent"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -189,7 +189,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844896.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Close"/> </remarks>
 		/// <param name="saveChanges">optional object saveChanges</param>
 		/// <param name="originalFormat">optional object originalFormat</param>
 		/// <param name="routeDocument">optional object routeDocument</param>
@@ -202,7 +202,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844896.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Close"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Close()
@@ -213,7 +213,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844896.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Close"/> </remarks>
 		/// <param name="saveChanges">optional object saveChanges</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -225,7 +225,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844896.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Close"/> </remarks>
 		/// <param name="saveChanges">optional object saveChanges</param>
 		/// <param name="originalFormat">optional object originalFormat</param>
 		[CustomMethod]
@@ -437,7 +437,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195961.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Save"/> </remarks>
 		/// <param name="noPrompt">optional object noPrompt</param>
 		/// <param name="originalFormat">optional object originalFormat</param>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -449,7 +449,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195961.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Save"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Save()
@@ -460,7 +460,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195961.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Save"/> </remarks>
 		/// <param name="noPrompt">optional object noPrompt</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -472,7 +472,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845011.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Add"/> </remarks>
 		/// <param name="template">optional object template</param>
 		/// <param name="newTemplate">optional object newTemplate</param>
 		/// <param name="documentType">optional object documentType</param>
@@ -486,7 +486,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845011.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Add"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document Add()
@@ -497,7 +497,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845011.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Add"/> </remarks>
 		/// <param name="template">optional object template</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -509,7 +509,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845011.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Add"/> </remarks>
 		/// <param name="template">optional object template</param>
 		/// <param name="newTemplate">optional object newTemplate</param>
 		[CustomMethod]
@@ -522,7 +522,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845011.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Add"/> </remarks>
 		/// <param name="template">optional object template</param>
 		/// <param name="newTemplate">optional object newTemplate</param>
 		/// <param name="documentType">optional object documentType</param>
@@ -536,7 +536,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -558,7 +558,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -583,7 +583,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -609,7 +609,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
@@ -621,7 +621,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		[CustomMethod]
@@ -634,7 +634,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -648,7 +648,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -663,7 +663,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -679,7 +679,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -696,7 +696,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -714,7 +714,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -733,7 +733,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -753,7 +753,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -774,7 +774,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -796,7 +796,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -820,7 +820,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835182.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1054,7 +1054,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198275.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.CheckOut"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void CheckOut(string fileName)
@@ -1065,7 +1065,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839907.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.CanCheckOut"/> </remarks>
 		/// <param name="fileName">string fileName</param>
 		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool CanCheckOut(string fileName)
@@ -1360,7 +1360,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1386,7 +1386,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		[CustomMethod]
 		[SupportByVersion("Word", 12,14,15,16)]
@@ -1398,7 +1398,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		[CustomMethod]
@@ -1411,7 +1411,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1425,7 +1425,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1440,7 +1440,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1456,7 +1456,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1473,7 +1473,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1491,7 +1491,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1510,7 +1510,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1530,7 +1530,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1551,7 +1551,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1573,7 +1573,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1596,7 +1596,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1620,7 +1620,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1645,7 +1645,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839499.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.OpenNoRepairDialog"/> </remarks>
 		/// <param name="fileName">object fileName</param>
 		/// <param name="confirmConversions">optional object confirmConversions</param>
 		/// <param name="readOnly">optional object readOnly</param>
@@ -1671,7 +1671,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838738.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.AddBlogDocument"/> </remarks>
 		/// <param name="providerID">string providerID</param>
 		/// <param name="postURL">string postURL</param>
 		/// <param name="blogName">string blogName</param>
@@ -1685,7 +1685,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838738.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.AddBlogDocument"/> </remarks>
 		/// <param name="providerID">string providerID</param>
 		/// <param name="postURL">string postURL</param>
 		/// <param name="blogName">string blogName</param>

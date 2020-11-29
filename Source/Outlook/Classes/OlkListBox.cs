@@ -29,7 +29,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkListBox 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863585.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox"/> </remarks>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.OlkListBoxEvents_SinkHelper))]
@@ -152,7 +152,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866067.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.Click"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_ClickEventHandler ClickEvent
 		{
@@ -175,7 +175,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866412.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.DoubleClick"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_DoubleClickEventHandler DoubleClickEvent
 		{
@@ -198,7 +198,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869274.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.MouseDown"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_MouseDownEventHandler MouseDownEvent
 		{
@@ -221,7 +221,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868747.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.MouseMove"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -244,7 +244,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870174.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.MouseUp"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_MouseUpEventHandler MouseUpEvent
 		{
@@ -267,7 +267,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870045.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.Enter"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_EnterEventHandler EnterEvent
 		{
@@ -290,7 +290,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866452.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.Exit"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_ExitEventHandler ExitEvent
 		{
@@ -313,7 +313,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868095.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.KeyDown"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_KeyDownEventHandler KeyDownEvent
 		{
@@ -336,7 +336,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866003.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.KeyPress"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_KeyPressEventHandler KeyPressEvent
 		{
@@ -359,7 +359,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866774.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.KeyUp"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_KeyUpEventHandler KeyUpEvent
 		{
@@ -382,7 +382,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868533.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.Change"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_ChangeEventHandler ChangeEvent
 		{
@@ -405,7 +405,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861330.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.AfterUpdate"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -428,7 +428,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862397.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkListBox.BeforeUpdate"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkListBox_BeforeUpdateEventHandler BeforeUpdateEvent
 		{

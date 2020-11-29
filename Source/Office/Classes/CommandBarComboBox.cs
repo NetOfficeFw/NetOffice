@@ -17,7 +17,7 @@ namespace NetOffice.OfficeApi
 	/// CoClass CommandBarComboBox 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865547.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox"/> </remarks>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events._CommandBarComboBoxEvents_SinkHelper))]
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864955.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.Change"/> </remarks>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public event CommandBarComboBox_ChangeEventHandler ChangeEvent
 		{

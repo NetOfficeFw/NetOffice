@@ -37,7 +37,7 @@ namespace NetOffice.AccessApi
 	/// CoClass WebBrowserControl 
 	/// SupportByVersion Access, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835067.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl"/> </remarks>
 	[SupportByVersion("Access", 14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.DispWebBrowserControlEvents_SinkHelper))]
@@ -160,7 +160,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196764.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Updated"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_UpdatedEventHandler UpdatedEvent
 		{
@@ -183,7 +183,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195884.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BeforeUpdate"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -206,7 +206,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197400.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.AfterUpdate"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -229,7 +229,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193153.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Enter"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_EnterEventHandler EnterEvent
 		{
@@ -252,7 +252,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821106.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Exit"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_ExitEventHandler ExitEvent
 		{
@@ -275,7 +275,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192440.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Dirty"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_DirtyEventHandler DirtyEvent
 		{
@@ -298,7 +298,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192510.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Change"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_ChangeEventHandler ChangeEvent
 		{
@@ -321,7 +321,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195783.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GotFocus"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_GotFocusEventHandler GotFocusEvent
 		{
@@ -344,7 +344,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193588.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.LostFocus"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_LostFocusEventHandler LostFocusEvent
 		{
@@ -367,7 +367,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192861.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Click"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_ClickEventHandler ClickEvent
 		{
@@ -390,7 +390,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835690.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.DblClick"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_DblClickEventHandler DblClickEvent
 		{
@@ -413,7 +413,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823017.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.MouseDown"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_MouseDownEventHandler MouseDownEvent
 		{
@@ -436,7 +436,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845665.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.MouseMove"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -459,7 +459,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196763.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.MouseUp"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_MouseUpEventHandler MouseUpEvent
 		{
@@ -482,7 +482,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845359.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.KeyDown"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_KeyDownEventHandler KeyDownEvent
 		{
@@ -505,7 +505,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194971.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.KeyPress"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_KeyPressEventHandler KeyPressEvent
 		{
@@ -528,7 +528,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835380.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.KeyUp"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_KeyUpEventHandler KeyUpEvent
 		{
@@ -551,7 +551,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196461.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BeforeNavigate2"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_BeforeNavigate2EventHandler BeforeNavigate2Event
 		{
@@ -574,7 +574,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197343.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.DocumentComplete"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_DocumentCompleteEventHandler DocumentCompleteEvent
 		{
@@ -597,7 +597,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845660.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ProgressChange"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_ProgressChangeEventHandler ProgressChangeEvent
 		{
@@ -620,7 +620,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845715.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.NavigateError"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event WebBrowserControl_NavigateErrorEventHandler NavigateErrorEvent
 		{

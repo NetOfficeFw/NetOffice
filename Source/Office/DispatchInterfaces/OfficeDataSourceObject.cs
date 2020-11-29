@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface OfficeDataSourceObject 
 	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864883.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject"/> </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class OfficeDataSourceObject : COMObject
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861793.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.ConnectString"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string ConnectString
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861897.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Table"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string Table
 		{
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860869.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.DataSource"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string DataSource
 		{
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860229.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Columns"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
 		public object Columns
 		{
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861767.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.RowCount"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 RowCount
 		{
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860598.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Filters"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
 		public object Filters
 		{
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864664.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Move"/> </remarks>
 		/// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow</param>
 		/// <param name="rowNbr">optional Int32 RowNbr = 1</param>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864664.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Move"/> </remarks>
 		/// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Open"/> </remarks>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
@@ -252,7 +252,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Open"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void Open()
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Open"/> </remarks>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
@@ -275,7 +275,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Open"/> </remarks>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		[CustomMethod]
@@ -288,7 +288,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Open"/> </remarks>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
@@ -302,7 +302,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Open"/> </remarks>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
@@ -317,7 +317,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.SetSortOrder"/> </remarks>
 		/// <param name="sortField1">string sortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
@@ -333,7 +333,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.SetSortOrder"/> </remarks>
 		/// <param name="sortField1">string sortField1</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
@@ -345,7 +345,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.SetSortOrder"/> </remarks>
 		/// <param name="sortField1">string sortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		[CustomMethod]
@@ -358,7 +358,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.SetSortOrder"/> </remarks>
 		/// <param name="sortField1">string sortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
@@ -372,7 +372,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.SetSortOrder"/> </remarks>
 		/// <param name="sortField1">string sortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
@@ -387,7 +387,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.SetSortOrder"/> </remarks>
 		/// <param name="sortField1">string sortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
@@ -403,7 +403,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863341.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.ApplyFilter"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void ApplyFilter()
 		{

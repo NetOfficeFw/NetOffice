@@ -111,7 +111,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821717.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTag.Application"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -125,7 +125,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192048.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTag.Name"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public string Name
 		{
@@ -140,7 +140,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194759.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTag.Parent"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -154,7 +154,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834783.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTag.Properties"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		[BaseResult]
 		public NetOffice.AccessApi._SmartTagProperties Properties
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845414.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTag.SmartTagActions"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		[BaseResult]
 		public NetOffice.AccessApi._SmartTagActions SmartTagActions
@@ -184,7 +184,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197988.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTag.XML"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public string XML
 		{
@@ -198,7 +198,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844953.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTag.IsMissing"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public bool IsMissing
 		{
@@ -215,7 +215,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192119.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTag.Delete"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public void Delete()
 		{

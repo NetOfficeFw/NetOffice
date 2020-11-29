@@ -74,7 +74,7 @@ namespace NetOffice.AccessApi
 	/// CoClass Form 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195841.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form"/> </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._FormEvents_SinkHelper), typeof(Events._FormEvents2_SinkHelper))]
@@ -198,7 +198,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821347.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Load"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_LoadEventHandler LoadEvent
 		{
@@ -221,7 +221,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193159.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Current"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_CurrentEventHandler CurrentEvent
 		{
@@ -244,7 +244,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835397.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.BeforeInsert(even)"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_BeforeInsertEventHandler BeforeInsertEvent
 		{
@@ -267,7 +267,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844951.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.AfterInsert(even)"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_AfterInsertEventHandler AfterInsertEvent
 		{
@@ -290,7 +290,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822421.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.BeforeUpdate-event"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -313,7 +313,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822097.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.AfterUpdate-event"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -336,7 +336,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197077.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Delete"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_DeleteEventHandler DeleteEvent
 		{
@@ -359,7 +359,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192478.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.BeforeDelConfirm(even)"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_BeforeDelConfirmEventHandler BeforeDelConfirmEvent
 		{
@@ -382,7 +382,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193473.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.AfterDelConfirm(even)"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_AfterDelConfirmEventHandler AfterDelConfirmEvent
 		{
@@ -405,7 +405,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196808.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Open"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_OpenEventHandler OpenEvent
 		{
@@ -428,7 +428,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835413.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Resize"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_ResizeEventHandler ResizeEvent
 		{
@@ -451,7 +451,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845441.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Unload"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_UnloadEventHandler UnloadEvent
 		{
@@ -474,7 +474,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835965.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Close"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_CloseEventHandler CloseEvent
 		{
@@ -497,7 +497,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845446.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Activate"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_ActivateEventHandler ActivateEvent
 		{
@@ -520,7 +520,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197024.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Deactivate"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_DeactivateEventHandler DeactivateEvent
 		{
@@ -543,7 +543,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835433.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.GotFocus"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_GotFocusEventHandler GotFocusEvent
 		{
@@ -566,7 +566,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845072.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.LostFocus"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_LostFocusEventHandler LostFocusEvent
 		{
@@ -589,7 +589,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193141.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Click"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_ClickEventHandler ClickEvent
 		{
@@ -612,7 +612,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822517.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.DblClick"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_DblClickEventHandler DblClickEvent
 		{
@@ -635,7 +635,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845076.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.MouseDown"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_MouseDownEventHandler MouseDownEvent
 		{
@@ -658,7 +658,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835703.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.MouseMove"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -681,7 +681,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822046.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.MouseUp"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_MouseUpEventHandler MouseUpEvent
 		{
@@ -704,7 +704,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834507.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.KeyDown"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_KeyDownEventHandler KeyDownEvent
 		{
@@ -727,7 +727,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194937.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.KeyPress"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_KeyPressEventHandler KeyPressEvent
 		{
@@ -750,7 +750,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835350.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.KeyUp"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_KeyUpEventHandler KeyUpEvent
 		{
@@ -773,7 +773,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836345.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Error"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_ErrorEventHandler ErrorEvent
 		{
@@ -796,7 +796,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192530.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Timer"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_TimerEventHandler TimerEvent
 		{
@@ -819,7 +819,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191892.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Filter(even)"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_FilterEventHandler FilterEvent
 		{
@@ -842,7 +842,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823191.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.ApplyFilter"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_ApplyFilterEventHandler ApplyFilterEvent
 		{
@@ -865,7 +865,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835655.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Dirty(even)"/> </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Form_DirtyEventHandler DirtyEvent
 		{
@@ -888,7 +888,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837253.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Undo(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_UndoEventHandler UndoEvent
 		{
@@ -1087,7 +1087,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192637.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.OnConnect(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_OnConnectEventHandler OnConnectEvent
 		{
@@ -1110,7 +1110,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822088.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.OnDisconnect(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_OnDisconnectEventHandler OnDisconnectEvent
 		{
@@ -1133,7 +1133,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197316.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.PivotTableChange(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_PivotTableChangeEventHandler PivotTableChangeEvent
 		{
@@ -1156,7 +1156,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836647.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.Query(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_QueryEventHandler QueryEvent
 		{
@@ -1179,7 +1179,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844995.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.BeforeQuery(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_BeforeQueryEventHandler BeforeQueryEvent
 		{
@@ -1202,7 +1202,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193548.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.SelectionChange(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_SelectionChangeEventHandler SelectionChangeEvent
 		{
@@ -1225,7 +1225,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193789.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.CommandBeforeExecute(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
 		{
@@ -1248,7 +1248,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836292.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.CommandChecked(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_CommandCheckedEventHandler CommandCheckedEvent
 		{
@@ -1271,7 +1271,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193487.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.CommandEnabled(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_CommandEnabledEventHandler CommandEnabledEvent
 		{
@@ -1294,7 +1294,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822074.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.CommandExecute(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_CommandExecuteEventHandler CommandExecuteEvent
 		{
@@ -1317,7 +1317,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822022.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.DataSetChange(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_DataSetChangeEventHandler DataSetChangeEvent
 		{
@@ -1340,7 +1340,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845031.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.BeforeScreenTip(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_BeforeScreenTipEventHandler BeforeScreenTipEvent
 		{
@@ -1363,7 +1363,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194217.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.BeforeRender(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_BeforeRenderEventHandler BeforeRenderEvent
 		{
@@ -1386,7 +1386,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192300.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.AfterRender(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_AfterRenderEventHandler AfterRenderEvent
 		{
@@ -1409,7 +1409,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197090.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.AfterFinalRender(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_AfterFinalRenderEventHandler AfterFinalRenderEvent
 		{
@@ -1432,7 +1432,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192662.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.AfterLayout(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_AfterLayoutEventHandler AfterLayoutEvent
 		{
@@ -1455,7 +1455,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836387.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.MouseWheel(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_MouseWheelEventHandler MouseWheelEvent
 		{
@@ -1478,7 +1478,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821041.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.ViewChange(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_ViewChangeEventHandler ViewChangeEvent
 		{
@@ -1501,7 +1501,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844766.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Form.DataChange(even)"/> </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public event Form_DataChangeEventHandler DataChangeEvent
 		{

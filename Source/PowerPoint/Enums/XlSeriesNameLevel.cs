@@ -6,7 +6,7 @@ namespace NetOffice.PowerPointApi.Enums
 	 /// <summary>
 	 /// SupportByVersion PowerPoint 15,16
 	 /// </summary>
-	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229256.aspx </remarks>
+	 ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.xlseriesnamelevel"/> </remarks>
 	[SupportByVersion("PowerPoint", 15, 16)]
 	[EntityType(EntityType.IsEnum)]
 	public enum XlSeriesNameLevel

@@ -19,7 +19,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Results 
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865331.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Results"/> </remarks>
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.ResultsEvents_SinkHelper))]
@@ -142,7 +142,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868737.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Results.ItemAdd"/> </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Results_ItemAddEventHandler ItemAddEvent
 		{
@@ -165,7 +165,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861551.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Results.ItemChange"/> </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Results_ItemChangeEventHandler ItemChangeEvent
 		{
@@ -188,7 +188,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867866.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Results.ItemRemove"/> </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Results_ItemRemoveEventHandler ItemRemoveEvent
 		{

@@ -18,7 +18,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass FormRegion 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863634.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegion"/> </remarks>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.FormRegionEvents_SinkHelper))]
@@ -141,7 +141,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868186.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegion.Expanded"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event FormRegion_ExpandedEventHandler ExpandedEvent
 		{
@@ -164,7 +164,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860943.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegion.Close"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event FormRegion_CloseEventHandler CloseEvent
 		{

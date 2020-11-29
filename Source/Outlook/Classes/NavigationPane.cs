@@ -17,7 +17,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass NavigationPane 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868696.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationPane"/> </remarks>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.NavigationPaneEvents_12_SinkHelper))]
@@ -140,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865854.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationPane.ModuleSwitch"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event NavigationPane_ModuleSwitchEventHandler ModuleSwitchEvent
 		{

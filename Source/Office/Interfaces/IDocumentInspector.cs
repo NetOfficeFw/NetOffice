@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IDocumentInspector 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861808.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IDocumentInspector"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsInterface)]
  	public class IDocumentInspector : COMObject
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862465.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IDocumentInspector.GetInfo"/> </remarks>
 		/// <param name="name">string name</param>
 		/// <param name="desc">string desc</param>
 		[SupportByVersion("Office", 12,14,15,16)]
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861133.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IDocumentInspector.Inspect"/> </remarks>
 		/// <param name="doc">object doc</param>
 		/// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
 		/// <param name="result">string result</param>
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864114.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IDocumentInspector.Fix"/> </remarks>
 		/// <param name="doc">object doc</param>
 		/// <param name="hwnd">Int32 hwnd</param>
 		/// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>

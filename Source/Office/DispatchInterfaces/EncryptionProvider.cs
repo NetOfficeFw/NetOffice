@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface EncryptionProvider 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863389.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class EncryptionProvider : COMObject
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864896.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.GetProviderDetail"/> </remarks>
 		/// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864027.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.NewSession"/> </remarks>
 		/// <param name="parentWindow">object parentWindow</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 NewSession(object parentWindow)
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864627.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.Authenticate"/> </remarks>
 		/// <param name="parentWindow">object parentWindow</param>
 		/// <param name="encryptionData">object encryptionData</param>
 		/// <param name="permissionsMask">UIntPtr permissionsMask</param>
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864902.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.CloneSession"/> </remarks>
 		/// <param name="sessionHandle">Int32 sessionHandle</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 CloneSession(Int32 sessionHandle)
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864652.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.EndSession"/> </remarks>
 		/// <param name="sessionHandle">Int32 sessionHandle</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void EndSession(Int32 sessionHandle)
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862766.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.Save"/> </remarks>
 		/// <param name="sessionHandle">Int32 sessionHandle</param>
 		/// <param name="encryptionData">object encryptionData</param>
 		[SupportByVersion("Office", 12,14,15,16)]
@@ -190,7 +190,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861839.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.EncryptStream"/> </remarks>
 		/// <param name="sessionHandle">Int32 sessionHandle</param>
 		/// <param name="streamName">string streamName</param>
 		/// <param name="unencryptedStream">object unencryptedStream</param>
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864940.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.DecryptStream"/> </remarks>
 		/// <param name="sessionHandle">Int32 sessionHandle</param>
 		/// <param name="streamName">string streamName</param>
 		/// <param name="encryptedStream">object encryptedStream</param>
@@ -218,7 +218,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863378.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.ShowSettings"/> </remarks>
 		/// <param name="sessionHandle">Int32 sessionHandle</param>
 		/// <param name="parentWindow">object parentWindow</param>
 		/// <param name="readOnly">bool readOnly</param>

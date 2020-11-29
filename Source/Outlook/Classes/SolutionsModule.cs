@@ -16,7 +16,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass SolutionsModule 
 	/// SupportByVersion Outlook, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864298.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SolutionsModule"/> </remarks>
 	[SupportByVersion("Outlook", 14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
  	public class SolutionsModule : _SolutionsModule

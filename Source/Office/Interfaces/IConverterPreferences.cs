@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IConverterPreferences 
 	/// SupportByVersion Office, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864179.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterPreferences"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsInterface)]
  	public class IConverterPreferences : COMObject
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863141.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterPreferences.HrGetMacroEnabled"/> </remarks>
 		/// <param name="pfMacroEnabled">Int32 pfMacroEnabled</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrGetMacroEnabled(out Int32 pfMacroEnabled)
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865570.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterPreferences.HrCheckFormat"/> </remarks>
 		/// <param name="pFormat">Int32 pFormat</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860851.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterPreferences.HrGetLossySave"/> </remarks>
 		/// <param name="pfLossySave">Int32 pfLossySave</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrGetLossySave(out Int32 pfLossySave)

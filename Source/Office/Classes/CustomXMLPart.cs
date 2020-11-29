@@ -19,7 +19,7 @@ namespace NetOffice.OfficeApi
 	/// CoClass CustomXMLPart 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863497.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events._CustomXMLPartEvents_SinkHelper))]
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862780.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.NodeAfterInsert"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLPart_NodeAfterInsertEventHandler NodeAfterInsertEvent
 		{
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861395.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.NodeAfterDelete"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLPart_NodeAfterDeleteEventHandler NodeAfterDeleteEvent
 		{
@@ -188,7 +188,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863732.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.NodeAfterReplace"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLPart_NodeAfterReplaceEventHandler NodeAfterReplaceEvent
 		{

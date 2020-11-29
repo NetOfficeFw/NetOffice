@@ -28,7 +28,7 @@ namespace NetOffice.AccessApi
 	/// CoClass NavigationButton 
 	/// SupportByVersion Access, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821707.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton"/> </remarks>
 	[SupportByVersion("Access", 14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.DispNavigationButtonEvents_SinkHelper))]
@@ -151,7 +151,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822048.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.Click"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_ClickEventHandler ClickEvent
 		{
@@ -174,7 +174,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822726.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.Enter"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_EnterEventHandler EnterEvent
 		{
@@ -197,7 +197,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196059.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.Exit"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_ExitEventHandler ExitEvent
 		{
@@ -220,7 +220,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192653.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.GotFocus"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_GotFocusEventHandler GotFocusEvent
 		{
@@ -243,7 +243,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835383.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.LostFocus"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_LostFocusEventHandler LostFocusEvent
 		{
@@ -266,7 +266,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820826.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.DblClick"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_DblClickEventHandler DblClickEvent
 		{
@@ -289,7 +289,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197983.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.MouseDown"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_MouseDownEventHandler MouseDownEvent
 		{
@@ -312,7 +312,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195891.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.MouseMove"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -335,7 +335,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845798.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.MouseUp"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_MouseUpEventHandler MouseUpEvent
 		{
@@ -358,7 +358,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837321.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.KeyDown"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_KeyDownEventHandler KeyDownEvent
 		{
@@ -381,7 +381,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197089.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.KeyPress"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_KeyPressEventHandler KeyPressEvent
 		{
@@ -404,7 +404,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195130.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.NavigationButton.KeyUp"/> </remarks>
 		[SupportByVersion("Access", 14,15,16)]
 		public event NavigationButton_KeyUpEventHandler KeyUpEvent
 		{

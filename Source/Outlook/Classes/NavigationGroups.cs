@@ -19,7 +19,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass NavigationGroups 
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860649.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups"/> </remarks>
 	[SupportByVersion("Outlook", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.NavigationGroupsEvents_12_SinkHelper))]
@@ -142,7 +142,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869729.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.SelectedChange"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event NavigationGroups_SelectedChangeEventHandler SelectedChangeEvent
 		{
@@ -165,7 +165,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868621.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.NavigationFolderAdd"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event NavigationGroups_NavigationFolderAddEventHandler NavigationFolderAddEvent
 		{
@@ -188,7 +188,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862126.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NavigationGroups.NavigationFolderRemove"/> </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event NavigationGroups_NavigationFolderRemoveEventHandler NavigationFolderRemoveEvent
 		{

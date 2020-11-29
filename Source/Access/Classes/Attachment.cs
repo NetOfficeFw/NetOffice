@@ -33,7 +33,7 @@ namespace NetOffice.AccessApi
 	/// CoClass Attachment 
 	/// SupportByVersion Access, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821783.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment"/> </remarks>
 	[SupportByVersion("Access", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.DispAttachmentEvents_SinkHelper))]
@@ -156,7 +156,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844829.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.BeforeUpdate-event"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -179,7 +179,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845081.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.AfterUpdate-event"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -202,7 +202,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845173.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Enter"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_EnterEventHandler EnterEvent
 		{
@@ -225,7 +225,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820770.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Exit"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_ExitEventHandler ExitEvent
 		{
@@ -248,7 +248,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834764.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Dirty"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_DirtyEventHandler DirtyEvent
 		{
@@ -271,7 +271,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194528.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Change"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_ChangeEventHandler ChangeEvent
 		{
@@ -294,7 +294,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198117.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.GotFocus"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_GotFocusEventHandler GotFocusEvent
 		{
@@ -317,7 +317,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822030.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.LostFocus"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_LostFocusEventHandler LostFocusEvent
 		{
@@ -340,7 +340,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834489.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.Click"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_ClickEventHandler ClickEvent
 		{
@@ -363,7 +363,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821484.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.DblClick"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_DblClickEventHandler DblClickEvent
 		{
@@ -386,7 +386,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193169.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.MouseDown"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_MouseDownEventHandler MouseDownEvent
 		{
@@ -409,7 +409,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194908.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.MouseMove"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -432,7 +432,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821765.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.MouseUp"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_MouseUpEventHandler MouseUpEvent
 		{
@@ -455,7 +455,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197635.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.KeyDown"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_KeyDownEventHandler KeyDownEvent
 		{
@@ -478,7 +478,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837202.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.KeyPress"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_KeyPressEventHandler KeyPressEvent
 		{
@@ -501,7 +501,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193501.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.KeyUp"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_KeyUpEventHandler KeyUpEvent
 		{
@@ -524,7 +524,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193515.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Attachment.AttachmentCurrent"/> </remarks>
 		[SupportByVersion("Access", 12,14,15,16)]
 		public event Attachment_AttachmentCurrentEventHandler AttachmentCurrentEvent
 		{

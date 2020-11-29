@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IConverterApplicationPreferences 
 	/// SupportByVersion Office, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862807.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterApplicationPreferences"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsInterface)]
  	public class IConverterApplicationPreferences : COMObject
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864148.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterApplicationPreferences.HrGetLcid"/> </remarks>
 		/// <param name="plcid">Int32 plcid</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrGetLcid(out Int32 plcid)
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860588.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterApplicationPreferences.HrGetHwnd"/> </remarks>
 		/// <param name="phwnd">Int32 phwnd</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrGetHwnd(out Int32 phwnd)
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864579.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterApplicationPreferences.HrGetApplication"/> </remarks>
 		/// <param name="pbstrApplication">string pbstrApplication</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrGetApplication(out string pbstrApplication)
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862557.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterApplicationPreferences.HrCheckFormat"/> </remarks>
 		/// <param name="pFormat">Int32 pFormat</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrCheckFormat(out Int32 pFormat)

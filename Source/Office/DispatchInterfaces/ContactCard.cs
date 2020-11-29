@@ -9,7 +9,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface ContactCard 
 	/// SupportByVersion Office, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860545.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ContactCard"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
  	public class ContactCard : _IMsoDispObj
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863157.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ContactCard.Close"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public void Close()
 		{
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ContactCard.Show"/> </remarks>
 		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle</param>
 		/// <param name="rectangleLeft">Int32 rectangleLeft</param>
 		/// <param name="rectangleRight">Int32 rectangleRight</param>
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ContactCard.Show"/> </remarks>
 		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle</param>
 		/// <param name="rectangleLeft">Int32 rectangleLeft</param>
 		/// <param name="rectangleRight">Int32 rectangleRight</param>

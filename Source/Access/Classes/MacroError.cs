@@ -16,7 +16,7 @@ namespace NetOffice.AccessApi
 	/// CoClass MacroError 
 	/// SupportByVersion Access, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194165.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.MacroError"/> </remarks>
 	[SupportByVersion("Access", 12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
  	public class MacroError : _MacroError

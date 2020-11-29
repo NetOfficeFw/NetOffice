@@ -6,7 +6,7 @@ namespace NetOffice.OfficeApi.Enums
 	 /// <summary>
 	 /// SupportByVersion Office 14, 15, 16
 	 /// </summary>
-	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860496.aspx </remarks>
+	 ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MsoContactCardAddressType"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsEnum)]
 	public enum MsoContactCardAddressType

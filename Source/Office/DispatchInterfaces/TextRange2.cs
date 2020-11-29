@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860549.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Paragraphs"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(object start, object length)
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Paragraphs
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860549.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Paragraphs"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Paragraphs")]
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860549.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Paragraphs"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(object start)
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Paragraphs
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860549.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Paragraphs"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Paragraphs")]
 		public NetOffice.OfficeApi.TextRange2 Paragraphs(object start)
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860794.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Sentences"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Sentences(object start, object length)
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Sentences
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860794.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Sentences"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Sentences")]
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860794.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Sentences"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Sentences(object start)
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Sentences
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860794.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Sentences"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Sentences")]
 		public NetOffice.OfficeApi.TextRange2 Sentences(object start)
@@ -191,7 +191,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864053.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Words"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Words(object start, object length)
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Words
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864053.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Words"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Words")]
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864053.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Words"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Words(object start)
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Words
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864053.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Words"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Words")]
 		public NetOffice.OfficeApi.TextRange2 Words(object start)
@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863305.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Characters"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Characters(object start, object length)
@@ -255,7 +255,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Characters
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863305.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Characters"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Characters")]
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863305.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Characters"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Characters(object start)
@@ -281,7 +281,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Characters
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863305.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Characters"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Characters")]
 		public NetOffice.OfficeApi.TextRange2 Characters(object start)
@@ -295,7 +295,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862044.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Lines"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Lines(object start, object length)
@@ -307,7 +307,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Lines
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862044.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Lines"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Lines")]
@@ -321,7 +321,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862044.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Lines"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Lines(object start)
@@ -333,7 +333,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Lines
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862044.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Lines"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Lines")]
 		public NetOffice.OfficeApi.TextRange2 Lines(object start)
@@ -347,7 +347,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861768.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Runs"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Runs(object start, object length)
@@ -359,7 +359,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Runs
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861768.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Runs"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Runs")]
@@ -373,7 +373,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861768.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Runs"/>
 		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Runs(object start)
@@ -385,7 +385,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Alias for get_Runs
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861768.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Runs"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Runs")]
 		public NetOffice.OfficeApi.TextRange2 Runs(object start)
@@ -399,7 +399,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860854.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.MathZones"/>
 		[SupportByVersion("Office", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_MathZones(object start, object length)
@@ -411,7 +411,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Alias for get_MathZones
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860854.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.MathZones"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		/// <param name="length">optional Int32 length</param>
 		[SupportByVersion("Office", 14,15,16), Redirect("get_MathZones")]
@@ -425,7 +425,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 start</param>
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860854.aspx
+		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.MathZones"/>
 		[SupportByVersion("Office", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_MathZones(object start)
@@ -437,7 +437,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Alias for get_MathZones
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860854.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.MathZones"/> </remarks>
 		/// <param name="start">optional Int32 start</param>
 		[SupportByVersion("Office", 14,15,16), Redirect("get_MathZones")]
 		public NetOffice.OfficeApi.TextRange2 MathZones(object start)
@@ -456,7 +456,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface TextRange2 
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863528.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2"/> </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class TextRange2 : TextRange2_, IEnumerableProvider<NetOffice.OfficeApi.TextRange2>
@@ -559,7 +559,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863807.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Text"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public string Text
 		{
@@ -577,7 +577,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861203.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Count"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Count
 		{
@@ -592,7 +592,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862210.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Parent"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
@@ -606,7 +606,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860549.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Paragraphs"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 Paragraphs
 		{
@@ -620,7 +620,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860794.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Sentences"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 Sentences
 		{
@@ -634,7 +634,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864053.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Words"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 Words
 		{
@@ -648,7 +648,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863305.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Characters"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 Characters
 		{
@@ -662,7 +662,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862044.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Lines"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 Lines
 		{
@@ -676,7 +676,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861768.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Runs"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 Runs
 		{
@@ -690,7 +690,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862198.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.ParagraphFormat"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.ParagraphFormat2 ParagraphFormat
 		{
@@ -704,7 +704,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860218.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Font"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Font2 Font
 		{
@@ -718,7 +718,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861200.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Length"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Length
 		{
@@ -732,7 +732,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861772.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Start"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Start
 		{
@@ -746,7 +746,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863024.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.BoundLeft"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Single BoundLeft
 		{
@@ -760,7 +760,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863847.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.BoundTop"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Single BoundTop
 		{
@@ -774,7 +774,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863508.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.BoundWidth"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Single BoundWidth
 		{
@@ -788,7 +788,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860263.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.BoundHeight"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public Single BoundHeight
 		{
@@ -802,7 +802,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861366.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.LanguageID"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoLanguageID LanguageID
 		{
@@ -820,7 +820,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860854.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.MathZones"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 MathZones
 		{
@@ -851,7 +851,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861091.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.TrimText"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 TrimText()
 		{
@@ -861,7 +861,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862180.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertAfter"/> </remarks>
 		/// <param name="newText">optional string NewText = </param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 InsertAfter(object newText)
@@ -872,7 +872,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862180.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertAfter"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 InsertAfter()
@@ -883,7 +883,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865495.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertBefore"/> </remarks>
 		/// <param name="newText">optional string NewText = </param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 InsertBefore(object newText)
@@ -894,7 +894,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865495.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertBefore"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 InsertBefore()
@@ -905,7 +905,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862495.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertSymbol"/> </remarks>
 		/// <param name="fontName">string fontName</param>
 		/// <param name="charNumber">Int32 charNumber</param>
 		/// <param name="unicode">optional NetOffice.OfficeApi.Enums.MsoTriState Unicode = 0</param>
@@ -918,7 +918,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862495.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertSymbol"/> </remarks>
 		/// <param name="fontName">string fontName</param>
 		/// <param name="charNumber">Int32 charNumber</param>
 		[CustomMethod]
@@ -931,7 +931,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860564.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Select"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void Select()
 		{
@@ -941,7 +941,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862117.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Cut"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void Cut()
 		{
@@ -951,7 +951,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863743.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Copy"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void Copy()
 		{
@@ -961,7 +961,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862838.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Delete"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void Delete()
 		{
@@ -971,7 +971,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863850.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Paste"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 Paste()
 		{
@@ -981,7 +981,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862719.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.PasteSpecial"/> </remarks>
 		/// <param name="format">NetOffice.OfficeApi.Enums.MsoClipboardFormat format</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.TextRange2 PasteSpecial(NetOffice.OfficeApi.Enums.MsoClipboardFormat format)
@@ -992,7 +992,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864574.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.ChangeCase"/> </remarks>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoTextChangeCase type</param>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChangeCase(NetOffice.OfficeApi.Enums.MsoTextChangeCase type)
@@ -1003,7 +1003,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861212.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.AddPeriods"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void AddPeriods()
 		{
@@ -1013,7 +1013,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861820.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.RemovePeriods"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void RemovePeriods()
 		{
@@ -1023,7 +1023,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863750.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Find"/> </remarks>
 		/// <param name="findWhat">string findWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
@@ -1037,7 +1037,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863750.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Find"/> </remarks>
 		/// <param name="findWhat">string findWhat</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 12,14,15,16)]
@@ -1049,7 +1049,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863750.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Find"/> </remarks>
 		/// <param name="findWhat">string findWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		[CustomMethod]
@@ -1062,7 +1062,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863750.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Find"/> </remarks>
 		/// <param name="findWhat">string findWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
@@ -1076,7 +1076,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864978.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Replace"/> </remarks>
 		/// <param name="findWhat">string findWhat</param>
 		/// <param name="replaceWhat">string replaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
@@ -1091,7 +1091,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864978.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Replace"/> </remarks>
 		/// <param name="findWhat">string findWhat</param>
 		/// <param name="replaceWhat">string replaceWhat</param>
 		[CustomMethod]
@@ -1104,7 +1104,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864978.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Replace"/> </remarks>
 		/// <param name="findWhat">string findWhat</param>
 		/// <param name="replaceWhat">string replaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
@@ -1118,7 +1118,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864978.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.Replace"/> </remarks>
 		/// <param name="findWhat">string findWhat</param>
 		/// <param name="replaceWhat">string replaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
@@ -1133,7 +1133,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865241.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.RotatedBounds"/> </remarks>
 		/// <param name="x1">Single x1</param>
 		/// <param name="y1">Single y1</param>
 		/// <param name="x2">Single x2</param>
@@ -1169,7 +1169,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861210.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.RtlRun"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void RtlRun()
 		{
@@ -1179,7 +1179,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861750.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.LtrRun"/> </remarks>
 		[SupportByVersion("Office", 12,14,15,16)]
 		public void LtrRun()
 		{
@@ -1189,7 +1189,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227821.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertChartField"/> </remarks>
 		/// <param name="chartFieldType">NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType</param>
 		/// <param name="formula">optional string Formula = </param>
 		/// <param name="position">optional Int32 Position = -1</param>
@@ -1202,7 +1202,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227821.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertChartField"/> </remarks>
 		/// <param name="chartFieldType">NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 15, 16)]
@@ -1214,7 +1214,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 15,16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227821.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.TextRange2.InsertChartField"/> </remarks>
 		/// <param name="chartFieldType">NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType</param>
 		/// <param name="formula">optional string Formula = </param>
 		[CustomMethod]

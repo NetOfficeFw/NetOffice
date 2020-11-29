@@ -6,7 +6,7 @@ namespace NetOffice.OfficeApi.Enums
 	 /// <summary>
 	 /// SupportByVersion Office 11, 12, 14, 15, 16
 	 /// </summary>
-	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862493.aspx </remarks>
+	 ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MsoPermission"/> </remarks>
 	[SupportByVersion("Office", 11,12,14,15,16)]
 	[EntityType(EntityType.IsEnum)]
 	public enum MsoPermission

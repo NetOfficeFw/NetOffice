@@ -114,7 +114,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866042.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegionStartup.GetFormRegionStorage"/> </remarks>
 		/// <param name="formRegionName">string formRegionName</param>
 		/// <param name="item">object item</param>
 		/// <param name="lCID">Int32 lCID</param>
@@ -129,7 +129,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869072.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegionStartup.BeforeFormRegionShow"/> </remarks>
 		/// <param name="formRegion">NetOffice.OutlookApi.FormRegion formRegion</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void BeforeFormRegionShow(NetOffice.OutlookApi.FormRegion formRegion)
@@ -140,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869502.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegionStartup.GetFormRegionManifest"/> </remarks>
 		/// <param name="formRegionName">string formRegionName</param>
 		/// <param name="lCID">Int32 lCID</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
@@ -152,7 +152,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868914.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegionStartup.GetFormRegionIcon"/> </remarks>
 		/// <param name="formRegionName">string formRegionName</param>
 		/// <param name="lCID">Int32 lCID</param>
 		/// <param name="icon">NetOffice.OutlookApi.Enums.OlFormRegionIcon icon</param>

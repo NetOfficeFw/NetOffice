@@ -30,7 +30,7 @@ namespace NetOffice.WordApi
 	/// CoClass Document 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822963.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document"/> </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.DocumentEvents_SinkHelper), typeof(Events.DocumentEvents2_SinkHelper))]
@@ -174,7 +174,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837882.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.New"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public event Document_NewEventHandler NewEvent
 		{
@@ -197,7 +197,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821870.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.Open"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public event Document_OpenEventHandler OpenEvent
 		{
@@ -220,7 +220,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821142.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.Close(even)"/> </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public event Document_CloseEventHandler CloseEvent
 		{
@@ -243,7 +243,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838305.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.Sync(even)"/> </remarks>
 		[SupportByVersion("Word", 11,12,14,15,16)]
 		public event Document_SyncEventHandler SyncEvent
 		{
@@ -266,7 +266,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197579.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.XMLAfterInsert"/> </remarks>
 		[SupportByVersion("Word", 11,12,14,15,16)]
 		public event Document_XMLAfterInsertEventHandler XMLAfterInsertEvent
 		{
@@ -289,7 +289,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191971.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.XMLBeforeDelete"/> </remarks>
 		[SupportByVersion("Word", 11,12,14,15,16)]
 		public event Document_XMLBeforeDeleteEventHandler XMLBeforeDeleteEvent
 		{
@@ -312,7 +312,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834876.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.ContentControlAfterAdd"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public event Document_ContentControlAfterAddEventHandler ContentControlAfterAddEvent
 		{
@@ -335,7 +335,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835805.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.ContentControlBeforeDelete"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public event Document_ContentControlBeforeDeleteEventHandler ContentControlBeforeDeleteEvent
 		{
@@ -358,7 +358,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191963.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.ContentControlOnExit"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public event Document_ContentControlOnExitEventHandler ContentControlOnExitEvent
 		{
@@ -381,7 +381,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196332.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.ContentControlOnEnter"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public event Document_ContentControlOnEnterEventHandler ContentControlOnEnterEvent
 		{
@@ -404,7 +404,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835822.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.ContentControlBeforeStoreUpdate"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public event Document_ContentControlBeforeStoreUpdateEventHandler ContentControlBeforeStoreUpdateEvent
 		{
@@ -427,7 +427,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192622.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.ContentControlBeforeContentUpdate"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public event Document_ContentControlBeforeContentUpdateEventHandler ContentControlBeforeContentUpdateEvent
 		{
@@ -450,7 +450,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197904.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Document.BuildingBlockInsert"/> </remarks>
 		[SupportByVersion("Word", 12,14,15,16)]
 		public event Document_BuildingBlockInsertEventHandler BuildingBlockInsertEvent
 		{

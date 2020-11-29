@@ -16,7 +16,7 @@ namespace NetOffice.AccessApi
 	/// CoClass AutoCorrect 
 	/// SupportByVersion Access, 11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822482.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.AutoCorrect"/> </remarks>
 	[SupportByVersion("Access", 11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
  	public class AutoCorrect : _AutoCorrect

@@ -18,7 +18,7 @@ namespace NetOffice.OfficeApi
 	/// CoClass MsoEnvelope 
 	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862112.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MsoEnvelope"/> </remarks>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
 	[EventSink(typeof(Events.IMsoEnvelopeVBEvents_SinkHelper))]
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861098.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MsoEnvelope.EnvelopeShow"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public event MsoEnvelope_EnvelopeShowEventHandler EnvelopeShowEvent
 		{
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10 11 12 14 15,16
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860254.aspx </remarks>
+		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MsoEnvelope.EnvelopeHide"/> </remarks>
 		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public event MsoEnvelope_EnvelopeHideEventHandler EnvelopeHideEvent
 		{

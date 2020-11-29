@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface PictureEffects 
 	/// SupportByVersion Office, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864059.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffects"/> </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class PictureEffects : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.PictureEffect>
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861170.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffects.Count"/> </remarks>
 		[SupportByVersion("Office", 14,15,16)]
 		public Int32 Count
 		{
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861830.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffects.Insert"/> </remarks>
 		/// <param name="effectType">NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType</param>
 		/// <param name="position">optional Int32 Position = -1</param>
 		[SupportByVersion("Office", 14,15,16)]
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861830.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffects.Insert"/> </remarks>
 		/// <param name="effectType">NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType</param>
 		[CustomMethod]
 		[SupportByVersion("Office", 14,15,16)]
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862552.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffects.Delete"/> </remarks>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersion("Office", 14,15,16)]
 		public void Delete(object index)
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862552.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffects.Delete"/> </remarks>
 		[CustomMethod]
 		[SupportByVersion("Office", 14,15,16)]
 		public void Delete()

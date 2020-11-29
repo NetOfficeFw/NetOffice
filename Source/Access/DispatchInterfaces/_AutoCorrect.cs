@@ -111,7 +111,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193224.aspx </remarks>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.AutoCorrect.DisplayAutoCorrectOptions"/> </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
 		public bool DisplayAutoCorrectOptions
 		{

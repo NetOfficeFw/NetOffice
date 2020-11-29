@@ -16,7 +16,7 @@ namespace NetOffice.AccessApi
 	/// CoClass EmptyCell 
 	/// SupportByVersion Access, 14,15,16
 	/// </summary>
-	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194884.aspx </remarks>
+	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.EmptyCell"/> </remarks>
 	[SupportByVersion("Access", 14,15,16)]
 	[EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.DispEmptyCellEvents_SinkHelper))]
