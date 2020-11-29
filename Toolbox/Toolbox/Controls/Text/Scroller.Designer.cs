@@ -1,4 +1,4 @@
-namespace NetOffice.DeveloperToolbox.Controls.Text
+﻿namespace NetOffice.DeveloperToolbox.Controls.Text
 {
 	partial class Scroller
 	{

@@ -1,5 +1,26 @@
 root = true
 
+[*.*]
+charset = utf-8
+
+[*.{cs,csproj}]
+charset = utf-8-bom
+indent_style = space
+indent_size = 4
+
+[*.sln]
+charset = utf-8-bom
+
+[app.{config,manifest}]
+charset = utf-8-bom
+indent_style = space
+indent_size = 2
+
+[*.resx]
+charset = utf-8-bom
+indent_style = space
+indent_size = 2
+
 [.markdownlint{.json,.yaml,.yml,rc}]
 indent_style = space
 indent_size = 2

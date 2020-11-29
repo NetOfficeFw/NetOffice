@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 
 namespace NetOffice.DeveloperToolbox.Controls.Hex
