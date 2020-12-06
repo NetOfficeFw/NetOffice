@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.7.9
+* Links now point to Microsoft Docs website
+* Documented PowerPoint types related to animations and effects
+* Documented `LoadBehavior` values
+
 ## v1.7.8
 
 * `Settings.IsEqualTo()` method will compare objects correctly [#291](https://github.com/NetOfficeFw/NetOffice/issues/291)
