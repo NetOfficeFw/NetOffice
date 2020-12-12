@@ -93,7 +93,7 @@ steps:
       --azure-key-vault-url https://opensourcesigning.vault.azure.net ^
       --azure-key-vault-client-id "$(KeyVaultClientId)" ^
       --azure-key-vault-client-secret "$(KeyVaultClientSecret)" ^
-      --azure-key-vault-certificate "goITSolutions-2019-09" ^
+      --azure-key-vault-certificate "goITSolutions-2020-10" ^
       --input-file-list signlist.txt ^
       --verbose
 
