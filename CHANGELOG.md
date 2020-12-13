@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.8.0-preview
+## v1.8.0
 
 ### Breaking Changes
 * `Settings.EnableOperatorOverlads` was renamed to `Settings.EnableOperatorOverloads` [#306](https://github.com/NetOfficeFw/NetOffice/issues/306)  
